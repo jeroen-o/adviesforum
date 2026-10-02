@@ -47,7 +47,7 @@ Komt er een expert, wees dan bij voorkeur aanwezig. Wordt de schade afgewezen of
   body:`Wij hebben veel klanten met een pakketpolis die al jaren niet zijn bekeken. Ik wil een vaste werkwijze om de passendheid periodiek te toetsen. Hoe richten jullie dat in en wat leggen jullie vast?`,
   antwoorden:[
    {id:'vbh-006-a1',auteur:'u8',datum:'2025-10-20T18:35:00',rA:{u3:5,u6:4,u1:5,u2:3},rAdv:{u7:3,u1:4,u3:3},body:`De wet schrijft geen vaste frequentie voor, maar je zorgplicht vraagt wel dat je klanten met een doorlopende dienstverlening niet uit het oog verliest. Wat ik in de praktijk zie werken:
-- leg in je dienstverleningsdocument vast welke periodieke service je biedt;
+- leg in je klantinformatie (website, opdrachtbevestiging of serviceafspraken) vast welke periodieke service je biedt;
 - plan klantcontact op basis van risico, bijvoorbeeld bij grote levensgebeurtenissen;
 - documenteer per contact welke wijzigingen zijn besproken.
 Zorg vooral dat wat je belooft ook aantoonbaar gebeurt.`},

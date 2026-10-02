@@ -63,7 +63,7 @@ Stukken opvragen:
 - pensioenoverzicht (mijnpensioenoverzicht.nl)
 - overzicht van lopende leningen en verzekeringen
 
-Vastleggen: gespreksnotitie met datum, besproken onderwerpen en afspraken, en de dienstverleningsdocumenten die zijn overhandigd.`},
+Vastleggen: gespreksnotitie met datum, besproken onderwerpen en afspraken, en de vergelijkingskaart en andere informatie vooraf die je de klant hebt gegeven.`},
  {id:'k6',peildatum:'2026-01-01',herzienVoor:'2026-12-31',cat:'fisc',titel:'Bijleenregeling in het kort',auteur:'u2',datum:'2026-09-19T12:00:00',bron:'v5',gecontroleerd:false,
   body:`De eigenwoningreserve is het verschil tussen de verkoopopbrengst van de woning (na verkoopkosten) en de resterende eigenwoningschuld. Bij aankoop van een volgende woning moet die reserve eerst worden ingezet; alleen het meerdere kwalificeert als nieuwe eigenwoningschuld met renteaftrek.
 

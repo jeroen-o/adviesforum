@@ -548,7 +548,7 @@ In het dossier leg ik vast welke specificatie is ontvangen, hoe de varianten zij
   body:`Hoe zorgen jullie dat klanten tijdig worden benaderd voor het einde van de rentevaste periode? Ik merk dat ik soms te laat ben.`,
   antwoorden:[
    {id:'vbd-070-a1',auteur:'u6',datum:'2026-06-13T09:03:00',rA:{u2:4,u8:4},rAdv:{},body:`In ons CRM staat de einddatum van de rentevaste periode als veld bij elk leningdeel. Ik heb een signaal ingesteld dat een aantal maanden ervoor een taak aanmaakt. Zo kun je tijdig een vergelijkingsgesprek inplannen. Leg in het dossier vast wanneer de klant is benaderd.`},
-   {id:'vbd-070-a2',auteur:'u8',datum:'2026-06-14T06:18:00',rA:{u1:5,u7:4,u2:4,u3:4},rAdv:{u7:4},body:`Vanuit compliance: als je een doorlopende dienstverleningsrelatie hebt, ligt het voor de hand dat je klanten tijdig informeert. Leg de afspraken over nazorg vast. Leg die afspraken vast in de dienstverleningsdocumenten.`}
+   {id:'vbd-070-a2',auteur:'u8',datum:'2026-06-14T06:18:00',rA:{u1:5,u7:4,u2:4,u3:4},rAdv:{u7:4},body:`Vanuit compliance: als je een doorlopende dienstverleningsrelatie hebt, ligt het voor de hand dat je klanten tijdig informeert. Leg de afspraken over nazorg vast in je opdrachtbevestiging en zorg dat ze aansluiten op wat je vergelijkingskaart over nazorg zegt.`}
   ]},
  {id:'vbd-071',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-06-15T18:55:00',views:320,tags:['rente','verhuisregeling','nieuwe geldverstrekker'],beste:null,
   titel:'Verhuisregeling werkt niet bij overstap naar andere geldverstrekker',

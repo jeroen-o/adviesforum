@@ -546,7 +546,7 @@ Voor een kostwinner met jonge kinderen kies ik meestal voor een periodieke dekki
   body:`Hoe vaak evalueren jullie een lopende AOV met de klant? En wat bespreek je dan?`,
   antwoorden:[
    {id:'vbg-073-a1',auteur:'u3',datum:'2026-06-23T10:43:00',rA:{},rAdv:{},body:`Ik evalueer periodiek, en altijd bij een grote wijziging in inkomen, beroep of gezin. Ik kijk naar verzekerd bedrag, wachttijd, buffer en de premie in verhouding tot de winst. Ook bespreek ik eventuele nieuwe producten of regelgeving. Elk evaluatiemoment leg ik vast in het CRM.`},
-   {id:'vbg-073-a2',auteur:'u8',datum:'2026-06-23T13:21:00',rA:{u6:4},rAdv:{},body:`Zorg dat je dienstverleningsdocument aansluit op wat je aan nazorg belooft. Leg ook vast als de klant geen evaluatie wil.`},
+   {id:'vbg-073-a2',auteur:'u8',datum:'2026-06-23T13:21:00',rA:{u6:4},rAdv:{},body:`Zorg dat je vergelijkingskaart en opdrachtbevestiging aansluiten op wat je aan nazorg belooft. Leg ook vast als de klant geen evaluatie wil.`},
    {id:'vbg-073-a3',auteur:'u6',datum:'2026-06-23T18:41:00',rA:{u7:5,u8:3},rAdv:{u7:5},body:`In het CRM kun je een terugkerende taak per relatie instellen, zodat de evaluatie niet vergeten wordt.`}
   ]},
  {id:'vbg-074',cat:'verz',auteur:null,naam:'',voorbeeld:true,datum:'2026-06-25T12:10:00',views:240,tags:['ORV','arbeidsongeschiktheid','premie'],beste:'vbg-074-a1',

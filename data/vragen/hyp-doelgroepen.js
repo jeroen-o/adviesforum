@@ -158,7 +158,7 @@ Ik zet dit in een maandoverzicht naast de nieuwe lasten, zodat de klant het tota
   titel:'Advieskosten bij doorstromer met meeneemregeling',
   body:`Hoe gaan jullie om met de advieskosten als een doorstromer uiteindelijk de bestaande lening meeneemt en alleen een klein extra leningdeel afsluit? De klant vindt de kosten dan te hoog.`,
   antwoorden:[
-   {id:'vbc-021-a1',auteur:'u8',datum:'2025-12-15T02:16:00',rA:{},rAdv:{},body:`De advieskosten horen te passen bij het werk dat je doet en dat moet vooraf duidelijk zijn in de dienstverleningsdocumentatie. Als de klant een uitgebreid advies krijgt met vergelijking van scenario's, is dat ook werk als het resultaat meenemen is. Bespreek vooraf welke werkzaamheden je doet en welke kosten daarbij horen. Leg de afspraken en de opdracht vast.`},
+   {id:'vbc-021-a1',auteur:'u8',datum:'2025-12-15T02:16:00',rA:{},rAdv:{},body:`De advieskosten horen te passen bij het werk dat je doet en dat moet vooraf duidelijk zijn op je vergelijkingskaart en in je opdrachtbevestiging. Als de klant een uitgebreid advies krijgt met vergelijking van scenario's, is dat ook werk als het resultaat meenemen is. Bespreek vooraf welke werkzaamheden je doet en welke kosten daarbij horen. Leg de afspraken en de opdracht vast.`},
    {id:'vbc-021-a2',auteur:'u1',datum:'2025-12-15T05:33:00',rA:{u4:5,u3:5,u6:4,u7:5},rAdv:{u4:5},body:`Ik werk met een vooraf besproken prijs per type traject. Bij een eenvoudige meeneem-situatie bied ik een lichter traject aan als dat past, maar dan wel met dezelfde zorgvuldigheid in de toets.`}
   ]},
  {id:'vbc-022',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2025-12-16T08:28:00',views:361,tags:['doorstromer','verhuisplannen','tijdelijk wonen'],beste:null,
