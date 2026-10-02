@@ -106,9 +106,9 @@ Controleer per geldverstrekker welke route geaccepteerd wordt en welke documente
   body:`Een jonge klant werkt via een uitzendbureau, nog in een vroege fase zonder vast uitzicht. Het inkomen is wel redelijk stabiel. Welke mogelijkheden zien jullie?`,
   antwoorden:[
    {id:'vba-015-a1',auteur:'u4',datum:'2025-11-22T03:00:00',rA:{u1:4,u5:4,u8:3},rAdv:{u1:4,u5:4},body:`Kansrijk is het vaak wel, maar niet via de klassieke route met een werkgeversverklaring. Een uitzendkracht in een vroege fase (zonder uitzicht op een vast contract) krijgt geen intentieverklaring. Opties die ik naloop:
-- Een perspectiefverklaring via een erkende aanbieder. Die kijkt naar opleiding, sector en arbeidsmarktperspectief en is bij veel geldverstrekkers ook geschikt voor uitzendkrachten.
+- Een perspectiefverklaring. Die geeft het uitzendbureau zelf af als het gecertificeerd is, anders via een externe perspectiefbeoordelaar. Volgens NHG moet de klant sinds 1 januari 2025 minimaal 26 weken via hetzelfde uitzendbureau werken en in de laatste 14 maanden minstens 12 maanden hebben gewerkt. Zit de klant daar nog onder, dan is het wachten tot hij die grens haalt.
 - Toetsen op het gemiddelde inkomen over de afgelopen jaren als de klant al langer flexibel werkt. Vaak is een minimale werkhistorie nodig; controleer de actuele eisen per geldverstrekker.
-- Een arbeidsmarktscan, als de geldverstrekker die accepteert.
+- Let op: de Arbeidsmarktscan (die kijkt naar onder meer leeftijd, beroep, opleiding en regio) is volgens NHG niet bedoeld voor uitzendkrachten; voor hen is de perspectiefverklaring de route.
 Vraag vooraf bij de geldverstrekker na welke documenten ze willen (UWV-verzekeringsbericht, jaaropgaven, loonstroken). In het dossier leg ik vast waarom er geen intentieverklaring is, welke route is gekozen en dat de klant begrijpt dat het inkomen minder zeker is dan bij een vast contract. Bespreek ook een lagere hypotheek dan het maximum als buffer.`}
   ]},
  {id:'vba-016',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2025-11-25T12:50:00',views:516,tags:['lopend krediet','BKR','ouders'],beste:'vba-016-a1',
