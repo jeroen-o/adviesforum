@@ -9,25 +9,30 @@
 <meta property="og:description" content="Snelkoppelingen naar wetten en bronnen voor financieel adviseurs: Wft, Bgfo, Trhk, NHG, Wwft, Kifid, AFM, BW, fiscaliteit, pensioen en sociale zekerheid.">
 <meta property="og:type" content="website">
 <style>
+@font-face{font-family:Montserrat;font-style:normal;font-weight:400;font-display:swap;src:url(fonts/montserrat-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:500;font-display:swap;src:url(fonts/montserrat-latin-500-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:600;font-display:swap;src:url(fonts/montserrat-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:700;font-display:swap;src:url(fonts/montserrat-latin-700-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:800;font-display:swap;src:url(fonts/montserrat-latin-800-normal.woff2) format('woff2')}
   :root{
-    --primary:#003057;
-    --accent:#E5A138;
-    --bg:#F4F7F9;
+    --primary:#141414;
+    --accent:#FFD200;
+    --bg:#F7F7F5;
     --text:#333333;
     --muted:#4A4A4A;
-    --line:#D8E2E8;
+    --line:#E4E4E4;
     --white:#fff;
-    --warn-bg:#FDF4E5;
-    --warn-line:#E5A138;
+    --warn-bg:#FFF6C7;
+    --warn-line:#E6BD00;
   }
   *{box-sizing:border-box}
   body{
     margin:0;background:var(--bg);color:var(--text);
-    font-family:"Plus Jakarta Sans","DM Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    font-family:Montserrat,system-ui,sans-serif;
     font-size:16px;line-height:1.55;
   }
   .wrap{max-width:1040px;margin:0 auto;padding:0 20px 64px}
-  header.hero{background:var(--primary);color:#fff;padding:40px 0 34px;margin-bottom:28px}
+  header.hero{background:var(--accent);color:var(--primary);padding:40px 0 34px;margin-bottom:28px}
   header.hero .wrap{padding-bottom:0}
   h1{font-size:34px;line-height:1.2;margin:0 0 10px;font-weight:700}
   .sub{opacity:.85;font-size:16px;margin:0;max-width:72ch}
@@ -44,7 +49,7 @@
   #zoek:focus{outline:2px solid var(--accent);outline-offset:1px}
   .btn{
     border:0;border-radius:7px;padding:10px 16px;font-size:14px;font-weight:600;
-    font-family:inherit;cursor:pointer;background:var(--primary);color:#fff;
+    font-family:inherit;cursor:pointer;background:var(--accent);color:var(--primary);
   }
   .btn.sec{background:#fff;color:var(--primary);border:1px solid var(--line)}
   .count{font-size:13px;color:var(--muted)}
@@ -53,7 +58,7 @@
     padding:22px 24px;margin:0 0 16px;
   }
   .tag{
-    display:inline-block;background:#EAF1F5;color:var(--primary);
+    display:inline-block;background:#FFF6C7;color:var(--primary);
     font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
     padding:4px 9px;border-radius:4px;margin-bottom:10px;
   }
@@ -102,24 +107,32 @@
   section.card li:last-child{border-bottom:0}
   section.card li a{color:var(--primary);font-weight:600;text-decoration:none}
   section.card li a:hover{text-decoration:underline}
-  .afk{background:#EAF1F5;color:var(--primary);font-size:11px;font-weight:700;padding:2px 7px;border-radius:4px}
+  .afk{background:#FFF6C7;color:var(--primary);font-size:11px;font-weight:700;padding:2px 7px;border-radius:4px}
   .id{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
   .cnt{font-size:13px;color:var(--muted);font-weight:600}
   section.card li.hide{display:none}
   .st{display:inline-block;font-size:11px;font-weight:700;padding:2px 7px;border-radius:4px;white-space:nowrap}
   .st-inw{background:#E3F4E8;color:#1E6B34}
   .st-aang{background:#E6EEFB;color:#1F4A8A}
-  .st-wv{background:#FDF4E5;color:#8A5B00}
+  .st-wv{background:#FFF6C7;color:#8A5B00}
   .st-eu{background:#EFE8F7;color:#5B3A87}
   .stinfo{flex-basis:100%;font-size:13px;color:var(--muted);overflow-wrap:anywhere}
   section.card li .stinfo a{font-weight:400;text-decoration:underline}
   #actueel{border-left:5px solid var(--accent)}
+
+  /* Huisstijl Adviesforum (geel/zwart) */
+  header.hero .back{color:var(--primary)!important;opacity:1;font-weight:700;border-bottom:2px solid var(--primary)}
+  header.hero .back:hover{text-decoration:none;border-bottom-color:transparent}
+  .btn:not(.sec):hover{background:#E6BD00}
+  .btn.sec:hover{background:#F7F7F5}
+  input:focus,select:focus,textarea:focus{border-color:var(--primary)}
+  .site a,ul.kenmerken a,section.card li a{text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:2px;text-underline-offset:3px}
 </style>
 </head>
 <body>
 <header class="hero">
   <div class="wrap">
-    <a href="index.html#hulpmiddelen" style="color:#fff;opacity:.85;font-size:13px;display:inline-block;margin-bottom:10px">← Terug naar het Adviesforum</a>
+    <a href="index.html#hulpmiddelen" style="color:#141414;font-weight:700;font-size:13px;display:inline-block;margin-bottom:10px;text-decoration:none;border-bottom:2px solid #141414">← Terug naar het Adviesforum</a>
 <h1>Wet- en regelgeving voor adviseurs</h1>
     <p class="sub">Snelkoppelingen naar de wetten, besluiten en bronnen die je als hypotheek- en financieel adviseur het vaakst nodig hebt: Wft, Bgfo, Trhk, NHG, Wck, Wwft, Kifid, AFM, BW, fiscaliteit, pensioen, toeslagen en sociale zekerheid. Bovenaan staan de wetswijzigingen 2025&ndash;2027 met hun status.</p>
     <p class="meta">130 bronnen &middot; actualiteit gecontroleerd 2 oktober 2026 &middot; links naar wetten.overheid.nl openen de geldende versie van vandaag</p>
