@@ -30,3 +30,15 @@ test('bijleenregeling, overbrugging en maandlasten: standaardvoorbeelden', async
   await page.goto('/maandlasten.html');
   await expect(page.locator('body')).toContainText('€ 1.432,25');
 });
+
+test('oversluiten, kosten koper, LTV en restschuld pensioen: standaardvoorbeelden', async ({ page }) => {
+  await volgFouten(page);
+  await page.goto('/oversluiten.html');
+  await expect(page.locator('body')).toContainText('€ 10.306,87');
+  await page.goto('/kosten-koper.html');
+  await expect(page.locator('body')).toContainText('€ 394.100');
+  await page.goto('/ltv.html');
+  await expect(page.locator('body')).toContainText('90,0%');
+  await page.goto('/restschuld-pensioen.html');
+  await expect(page.locator('body')).toContainText('€ 141.463,18');
+});
