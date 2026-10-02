@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mail- en briefsjablonen – Adviesforum</title>
+<meta name="description" content="Bibliotheek met e-mail- en briefsjablonen voor financieel adviseurs: invulvelden, live voorbeeld, kopiëren, mailen en afdrukken. Met controlepunten per sjabloon.">
+<style>
+@font-face{font-family:Montserrat;font-style:normal;font-weight:400;font-display:swap;src:url(fonts/montserrat-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:600;font-display:swap;src:url(fonts/montserrat-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:700;font-display:swap;src:url(fonts/montserrat-latin-700-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:800;font-display:swap;src:url(fonts/montserrat-latin-800-normal.woff2) format('woff2')}
+
+:root{
+  --geel:#FFD200;--geel-donker:#E6BD00;--geel-zacht:#FFF6C7;
+  --zwart:#141414;--tekst:#1F1F1F;--grijs:#5E5E5E;--lijn:#E4E4E4;--vlak:#F7F7F5;
+  --rood:#C0392B;--rood-zacht:#FFF1F0;--groen:#1E7A4B;--groen-zacht:#EFF8F2;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{margin:0;padding:0}
+body{font-family:Montserrat,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  color:var(--tekst);background:#fff;line-height:1.55;font-size:15px;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+button,input,select,textarea{font-family:inherit}
+
+.balk{background:var(--zwart);color:#fff;font-size:12.5px;padding:8px 24px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.balk a{color:#fff;text-decoration:none;opacity:.88}
+.balk a:hover{opacity:1;text-decoration:underline}
+
+.kop{background:var(--geel);color:var(--zwart);padding:34px 24px 38px}
+.kop-in{max-width:1180px;margin:0 auto}
+.merk{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.08em;font-size:12px;text-transform:uppercase;margin-bottom:16px}
+.zeshoek{width:22px;height:25px;background:var(--zwart);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);flex:none}
+.terug{display:inline-block;font-size:13.5px;font-weight:700;text-decoration:none;border-bottom:2px solid var(--zwart);margin-bottom:14px}
+.kop h1{margin:0 0 10px;font-size:clamp(27px,4.2vw,40px);line-height:1.12;font-weight:800}
+.kop p{margin:0;max-width:66ch;font-size:15.5px}
+.kop .stempel{display:inline-block;margin-top:16px;font-size:12px;font-weight:700;background:var(--zwart);color:var(--geel);padding:5px 11px;border-radius:999px}
+
+.romp{max-width:1180px;margin:0 auto;padding:28px 24px 40px;display:grid;grid-template-columns:290px minmax(0,1fr);gap:28px;align-items:start}
+
+.menu{position:sticky;top:16px;border:1px solid var(--lijn);border-radius:14px;padding:14px;background:var(--vlak);max-height:calc(100vh - 32px);overflow-y:auto}
+.menu label.klein{display:block;font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--grijs);font-weight:800;margin:0 0 5px}
+.menu input,.menu select{width:100%;padding:9px 12px;border:1px solid #CFCFCF;border-radius:9px;font-size:14px;background:#fff;margin-bottom:10px;color:var(--tekst)}
+.menu input:focus,.menu select:focus{outline:3px solid rgba(255,210,0,.6);outline-offset:1px}
+.menu .teller{font-size:12.5px;color:var(--grijs);margin:-2px 0 8px}
+.menu h3{font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--grijs);margin:12px 0 4px;padding:0 6px;font-weight:800}
+.menu button{display:flex;gap:8px;align-items:baseline;width:100%;text-align:left;border:0;background:transparent;padding:7px 10px;border-radius:8px;
+  font-size:13.5px;font-weight:600;color:var(--tekst);cursor:pointer;line-height:1.35}
+.menu button:hover{background:#fff}
+.menu button[aria-current="true"]{background:var(--zwart);color:#fff}
+.menu button .soort{margin-left:auto;font-size:10.5px;font-weight:700;opacity:.65;text-transform:uppercase;letter-spacing:.05em;flex:none}
+.menu .leeg{font-size:13px;color:var(--grijs);padding:8px 6px;display:none}
+
+.paneel{min-width:0}
+.paneel-kop{display:flex;gap:14px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;border-bottom:3px solid var(--geel);padding-bottom:14px;margin-bottom:20px}
+.paneel-kop .groep{font-size:11.5px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--grijs)}
+.paneel-kop h2{margin:2px 0 6px;font-size:24px;line-height:1.2;font-weight:800}
+.badges{display:flex;gap:6px;flex-wrap:wrap}
+.badge{display:inline-block;font-size:11.5px;font-weight:700;border-radius:999px;padding:3px 10px;line-height:1.4}
+.badge.zwart{background:var(--zwart);color:var(--geel)}
+.badge.geel{background:var(--geel-zacht);color:#7A5A00;border:1px solid var(--geel-donker)}
+.knoppen{display:flex;gap:8px;flex-wrap:wrap}
+.knop{border-radius:999px;padding:9px 16px;font-size:13.5px;font-weight:700;cursor:pointer;border:1px solid var(--zwart);background:var(--zwart);color:#fff}
+.knop:hover{background:#000}
+.knop.licht{background:#fff;color:var(--zwart);border-color:#CFCFCF}
+.knop.licht:hover{background:var(--vlak)}
+.knop:focus-visible{outline:3px solid rgba(255,210,0,.8);outline-offset:2px}
+
+.werkblad{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:22px;align-items:start}
+.invoer{border:1px solid var(--lijn);border-radius:14px;padding:18px}
+.invoer h3{margin:0 0 10px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--grijs);font-weight:800}
+.invoer details{border-top:1px solid var(--lijn);margin-top:14px;padding-top:10px}
+.invoer summary{cursor:pointer;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--grijs);font-weight:800;padding:4px 0}
+.invoer summary:focus-visible{outline:3px solid rgba(255,210,0,.6)}
+.velden{display:grid;grid-template-columns:minmax(0,1fr);gap:12px;margin-top:10px}
+.veld{min-width:0}
+.veld label{display:block;font-weight:600;font-size:13.5px;margin-bottom:5px}
+.veld .tip{display:block;font-size:12px;color:var(--grijs);margin-top:4px}
+.veld input,.veld textarea{width:100%;padding:10px 12px;border:1px solid #CFCFCF;border-radius:9px;font-size:15px;background:#fff;color:var(--tekst)}
+.veld textarea{resize:vertical;line-height:1.4;min-height:78px}
+.veld input:focus,.veld textarea:focus{outline:3px solid rgba(255,210,0,.6);outline-offset:1px;border-color:#9A9A9A}
+.veld.gevuld input,.veld.gevuld textarea{border-color:#9FCDB3;background:#FBFEFC}
+.geen-velden{font-size:13.5px;color:var(--grijs);margin:0}
+
+.voorbeeld{border:1px solid var(--lijn);border-radius:14px;overflow:hidden;background:#fff}
+.voorbeeld-kop{background:var(--vlak);border-bottom:1px solid var(--lijn);padding:12px 16px;font-size:13.5px;display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.voorbeeld-kop b{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--grijs)}
+.voorbeeld-kop .ow{font-weight:700;min-width:0;overflow-wrap:anywhere;flex:1}
+.voorbeeld-tekst{padding:18px 18px 22px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:14.5px;line-height:1.6}
+.voorbeeld-tekst .v-in{background:var(--groen-zacht);border-radius:4px;padding:0 2px}
+.voorbeeld-tekst .v-leeg{background:#FDECEA;color:var(--rood);border-radius:4px;padding:0 3px;font-weight:600}
+.voorbeeld-tekst mark,.uitleg mark{background:var(--geel);color:var(--zwart);border-radius:4px;padding:1px 4px;font-weight:600;font-size:.94em}
+.voorbeeld textarea{display:block;width:100%;min-height:440px;border:0;padding:18px;font-size:14.5px;line-height:1.6;resize:vertical;color:var(--tekst)}
+.voorbeeld textarea:focus{outline:3px solid rgba(255,210,0,.6);outline-offset:-3px}
+.opties{display:flex;gap:16px;flex-wrap:wrap;align-items:center;margin:12px 0 0;font-size:13.5px}
+.opties label{display:flex;gap:7px;align-items:center;cursor:pointer}
+.opties input{width:16px;height:16px;accent-color:var(--zwart)}
+.acties{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.melding{display:none;margin-top:12px;border-radius:10px;padding:10px 14px;font-size:13.5px;border:1px solid}
+.melding.ok{display:block;background:var(--groen-zacht);border-color:#BBDFC9;color:var(--groen)}
+.melding.let-op{display:block;background:#FFF9E0;border-color:#F0DC8A;color:#6B5000}
+.status{font-size:12.5px;color:var(--grijs);margin-top:8px}
+
+.onder{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;margin-top:22px}
+.blok{border-radius:0 10px 10px 0;padding:12px 16px;font-size:14px}
+.blok h4{margin:0 0 6px;font-size:13px;font-weight:800;letter-spacing:.04em;text-transform:uppercase}
+.blok ul{margin:0;padding-left:18px}
+.blok li{margin-bottom:4px}
+.blok p{margin:0}
+.blok.let-op{background:var(--geel-zacht);border-left:4px solid var(--geel-donker)}
+.blok.let-op h4{color:#7A5A00}
+.blok.regel{background:var(--vlak);border-left:4px solid var(--zwart)}
+.blok a{overflow-wrap:anywhere}
+.uitleg{font-size:13px;color:var(--grijs);margin:16px 0 0}
+
+.compliance{max-width:1132px;margin:0 auto;background:var(--rood-zacht);border-left:4px solid var(--rood);border-radius:0 10px 10px 0;padding:14px 18px;font-size:14px}
+.compliance strong{color:#A5281B}
+.voet{max-width:1180px;margin:0 auto;padding:24px 24px 40px;font-size:12.5px;color:var(--grijs)}
+.voet a{color:var(--zwart);font-weight:600}
+
+@media (max-width:1060px){
+  .werkblad,.onder{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:900px){
+  .romp{grid-template-columns:minmax(0,1fr);padding-top:20px}
+  .menu{position:static;max-height:none}
+  #menulijst{max-height:300px;overflow-y:auto;background:#fff;border:1px solid var(--lijn);border-radius:10px;padding:4px}
+}
+@media (max-width:560px){
+  .balk,.kop{padding-left:16px;padding-right:16px}
+  .romp,.voet{padding-left:16px;padding-right:16px}
+  .compliance{margin-left:16px;margin-right:16px}
+  .invoer{padding:14px}
+  .voorbeeld-tekst{padding:14px}
+  .paneel-kop h2{font-size:21px}
+  .acties .knop{flex:1 1 auto}
+}
+</style>
+</head>
+<body>
+
+<div class="balk">
+  <span>Adviesforum &middot; hulpmiddelen voor financieel adviseurs</span>
+  <span><a href="index.html">Naar het forum</a></span>
+</div>
+
+<header class="kop">
+  <div class="kop-in">
+    <div class="merk"><span class="zeshoek" aria-hidden="true"></span>Adviesforum &middot; Hulpmiddelen</div>
+    <a class="terug" href="index.html#hulpmiddelen">&larr; Terug naar de hulpmiddelen</a>
+    <h1>Mail- en briefsjablonen</h1>
+    <p><span id="aantal">Ruim veertig</span> sjablonen voor de vaste momenten in je dossier: van kennismaking en documenten opvragen tot klachtafhandeling, privacyverzoeken en nazorg. Vul de velden in, bekijk het resultaat direct en kopieer, mail of print de tekst.</p>
+    <span class="stempel">Voorbeeldteksten &middot; geel gemarkeerd = zelf controleren</span>
+  </div>
+</header>
+
+<main class="romp">
+  <nav class="menu" aria-label="Sjablonen">
+    <label class="klein" for="zoek">Zoeken</label>
+    <input type="search" id="zoek" placeholder="Bijv. Kifid, offerte, datalek" autocomplete="off">
+    <label class="klein" for="filter">Categorie</label>
+    <select id="filter"><option value="">Alle categorieën</option></select>
+    <div class="teller" id="teller" aria-live="polite"></div>
+    <div id="menulijst"></div>
+    <div class="leeg" id="menuleeg">Niets gevonden. Probeer een ander woord of kies alle categorieën.</div>
+  </nav>
+
+  <div class="paneel">
+    <section id="werk" aria-live="polite"></section>
+  </div>
+</main>
+
+<div class="compliance">
+  <strong>Compliance:</strong> deze sjablonen zijn voorbeeldteksten en geen juridisch advies. Pas ze aan op je eigen dienstverleningsdocument, klachtenregeling, privacyverklaring en Wwft-beleid. Termijnen bij klachten (Kifid), privacyverzoeken en datalekken zijn gecontroleerd op de vermelde officiële bronnen (peildatum 2 oktober 2026); controleer ze opnieuw voordat je een brief verstuurt. Stuur gevoelige gegevens nooit via gewone e-mail.
+</div>
+
+<footer class="voet">
+  Adviesforum &middot; collegiale kennisdeling voor financieel adviseurs &middot; <a href="index.html#hulpmiddelen">Alle hulpmiddelen</a> &middot; <a href="privacy.html">Privacy</a>. Er wordt niets opgeslagen of verstuurd: wat je invult blijft in je eigen browser en verdwijnt als je de pagina sluit.
+</footer>
+
+<script src="data/sjablonen.js"></script>
+<script>
+(function(){
+  'use strict';
+  var CATS = window.SJABLOON_CATEGORIEEN || [];
+  var VELDEN = window.SJABLOON_VELDEN || {};
+  var LIJST = window.SJABLONEN || [];
+  var CATNAAM = {};
+  CATS.forEach(function(c){ CATNAAM[c.id] = c.naam; });
+  var LIJSTVELDEN = { documentenlijst: 1, voorwaarden: 1 };
+  var ONDERTEKENING = '\n\nMet vriendelijke groet,\n\n{adviseur}\n{kantoor}\n{telefoon} | {kantooremail}';
+
+  var S = { id: null, waarden: {}, bewerk: false, markeringen: true };
+
+  var $ = function(id){ return document.getElementById(id); };
+  function esc(s){ return String(s).replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
+  function norm(s){ return String(s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, ''); }
+  function vind(id){ for (var i = 0; i < LIJST.length; i++) if (LIJST[i].id === id) return LIJST[i]; return null; }
+
+  // ---------- Datum en bedrag ----------
+  function vandaagISO(){
+    var d = new Date(), m = d.getMonth() + 1, dg = d.getDate();
+    return d.getFullYear() + '-' + (m < 10 ? '0' : '') + m + '-' + (dg < 10 ? '0' : '') + dg;
+  }
+  var MAANDEN = ['januari','februari','maart','april','mei','juni','juli','augustus','september','oktober','november','december'];
+  function datumNL(iso){
+    var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso || '');
+    if (!m) return iso;
+    return parseInt(m[3], 10) + ' ' + MAANDEN[parseInt(m[2], 10) - 1] + ' ' + m[1];
+  }
+  function bedragNL(ruw){
+    var s = String(ruw).replace(/€|eur|\s/gi, '');
+    if (!s) return '';
+    if (s.indexOf(',') > -1) s = s.replace(/\./g, '').replace(',', '.');
+    else if ((s.match(/\./g) || []).length > 1 || /^\d{1,3}\.\d{3}$/.test(s)) s = s.replace(/\./g, '');
+    var n = Number(s);
+    if (!isFinite(n)) return String(ruw).trim();
+    var vast = Math.abs(n).toFixed(2).split('.');
+    var heel = vast[0].replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+    return (n < 0 ? '- ' : '') + '€ ' + heel + ',' + vast[1];
+  }
+
+  function veldDef(k){
+    var d = VELDEN[k] || {};
+    return { label: d.label || k, type: d.type || 'tekst', hint: d.hint || '', groep: d.groep || 'sjabloon', vandaag: !!d.vandaag };
+  }
+  function waarde(k){
+    var d = veldDef(k), v = S.waarden[k];
+    if (v == null && d.vandaag) v = vandaagISO();
+    v = (v == null ? '' : String(v));
+    if (!v.trim()) return '';
+    if (d.type === 'datum') return datumNL(v);
+    if (d.type === 'bedrag') return bedragNL(v);
+    if (LIJSTVELDEN[k]) {
+      return v.split(/\r?\n/).map(function(r){ r = r.trim(); return r ? (/^[-•*]\s/.test(r) ? '- ' + r.replace(/^[-•*]\s*/, '') : '- ' + r) : ''; }).filter(Boolean).join('\n');
+    }
+    return v.replace(/\s+$/, '');
+  }
+
+  function veldenVan(t){
+    var gezien = {}, uit = [];
+    ((t.onderwerp || '') + '\n' + t.tekst + (t.type === 'brief' ? '{klantadres}{klantpostcode}{kantoorplaats}{vandaag}' : '{klantemail}') + ONDERTEKENING)
+      .replace(/\{(\w+)\}/g, function(_, k){ if (!gezien[k]) { gezien[k] = 1; uit.push(k); } return _; });
+    return uit;
+  }
+
+  // ---------- Tekst samenstellen ----------
+  // modus: 'html' (voorbeeld), 'tekst' (kopie/mail), 'print' (html voor afdruk)
+  function vul(sjabloonTekst, modus, markeringen){
+    var delen = [], re = /\[\[([\s\S]*?)\]\]/g, laatste = 0, m;
+    while ((m = re.exec(sjabloonTekst))) {
+      delen.push({ t: 'tekst', s: sjabloonTekst.slice(laatste, m.index) });
+      delen.push({ t: 'mark', s: m[1] });
+      laatste = re.lastIndex;
+    }
+    delen.push({ t: 'tekst', s: sjabloonTekst.slice(laatste) });
+
+    function velden(s, html){
+      return s.replace(/\{(\w+)\}|([^{]+|\{)/g, function(_, k, rest){
+        if (!k) return html ? esc(rest) : rest;
+        var w = waarde(k), d = veldDef(k);
+        if (!html) return w || '[' + d.label.toLowerCase() + ']';
+        return w ? '<span class="v-in">' + esc(w) + '</span>' : '<span class="v-leeg">[' + esc(d.label.toLowerCase()) + ']</span>';
+      });
+    }
+    var uit = delen.map(function(d){
+      if (d.t === 'tekst') return velden(d.s, modus !== 'tekst');
+      if (!markeringen) return '\u0000';
+      if (modus === 'tekst') return '[ADVISEUR: ' + velden(d.s, false) + ']';
+      return '<mark>Adviseur: ' + velden(d.s, true) + '</mark>';
+    }).join('');
+    if (!markeringen) {
+      // regels die alleen uit een weggelaten markering bestonden, verwijderen
+      uit = uit.split('\n').filter(function(r){ return !/^\s*\u0000\s*$/.test(r); }).join('\n')
+               .replace(/ ?\u0000/g, '').replace(/\n{3,}/g, '\n\n');
+    }
+    return uit;
+  }
+  function volledigeBron(t){ return t.tekst + (t.geenOndertekening ? '' : ONDERTEKENING); }
+  function onderwerpTekst(t){ return vul(t.onderwerp || '', 'tekst', false).replace(/\u0000/g, ''); }
+  function lichaamTekst(t){
+    if (S.bewerk) { var ta = $('bewerkvak'); if (ta) return ta.value; }
+    return vul(volledigeBron(t), 'tekst', S.markeringen);
+  }
+  function openPunten(t){
+    var leeg = veldenVan(t).filter(function(k){ return !waarde(k); });
+    var marks = (volledigeBron(t).match(/\[\[/g) || []).length;
+    return { leeg: leeg, marks: marks };
+  }
+
+  // ---------- Menu ----------
+  function bouwFilter(){
+    var sel = $('filter');
+    CATS.forEach(function(c){
+      var n = LIJST.filter(function(t){ return t.cat === c.id; }).length;
+      var o = document.createElement('option'); o.value = c.id; o.textContent = c.naam + ' (' + n + ')'; sel.appendChild(o);
+    });
+  }
+  function treffers(){
+    var q = norm($('zoek').value).split(/\s+/).filter(Boolean), cat = $('filter').value;
+    return LIJST.filter(function(t){
+      if (cat && t.cat !== cat) return false;
+      if (!q.length) return true;
+      var hooi = norm([t.titel, t.onderwerp, t.tekst, CATNAAM[t.cat], (t.controle || []).join(' '), t.type === 'brief' ? 'brief' : 'mail e-mail'].join(' '));
+      return q.every(function(w){ return hooi.indexOf(w) > -1; });
+    });
+  }
+  function tekenMenu(){
+    var lijst = treffers(), html = '';
+    CATS.forEach(function(c){
+      var groep = lijst.filter(function(t){ return t.cat === c.id; });
+      if (!groep.length) return;
+      html += '<h3>' + esc(c.naam) + '</h3>';
+      groep.forEach(function(t){
+        html += '<button type="button" data-id="' + esc(t.id) + '"' + (t.id === S.id ? ' aria-current="true"' : '') + '><span>' + esc(t.titel) + '</span><span class="soort">' + (t.type === 'brief' ? 'brief' : 'mail') + '</span></button>';
+      });
+    });
+    $('menulijst').innerHTML = html;
+    $('menuleeg').style.display = lijst.length ? 'none' : 'block';
+    $('teller').textContent = lijst.length === LIJST.length ? LIJST.length + ' sjablonen' : lijst.length + ' van ' + LIJST.length + ' sjablonen';
+  }
+
+  // ---------- Werkpaneel ----------
+  function veldHTML(k){
+    var d = veldDef(k), id = 'v-' + k, v = S.waarden[k];
+    if (v == null && d.vandaag) v = vandaagISO();
+    v = v == null ? '' : String(v);
+    var cls = 'veld' + (v.trim() ? ' gevuld' : '');
+    var tip = d.hint ? '<span class="tip">' + esc(d.hint) + '</span>' : (d.type === 'bedrag' ? '<span class="tip">Bijv. 2500 of 2.500,00</span>' : '');
+    var invoer;
+    if (d.type === 'lang') invoer = '<textarea id="' + id + '" data-veld="' + k + '" rows="3">' + esc(v) + '</textarea>';
+    else {
+      var typ = d.type === 'datum' ? 'date' : d.type === 'email' ? 'email' : d.type === 'url' ? 'url' : 'text';
+      var extra = d.type === 'bedrag' ? ' inputmode="decimal" placeholder="€"' : '';
+      invoer = '<input type="' + typ + '" id="' + id + '" data-veld="' + k + '" value="' + esc(v) + '"' + extra + ' autocomplete="off">';
+    }
+    return '<div class="' + cls + '"><label for="' + id + '">' + esc(d.label) + '</label>' + invoer + tip + '</div>';
+  }
+
+  function tekenWerk(){
+    var t = vind(S.id);
+    if (!t) { $('werk').innerHTML = ''; return; }
+    var ks = veldenVan(t);
+    var eigen = ks.filter(function(k){ return veldDef(k).groep === 'sjabloon'; });
+    var klant = ks.filter(function(k){ return veldDef(k).groep === 'klant'; });
+    var kantoor = ks.filter(function(k){ return veldDef(k).groep === 'kantoor'; });
+    var kantoorLeeg = kantoor.some(function(k){ return !waarde(k); });
+
+    var h = '';
+    h += '<div class="paneel-kop"><div style="min-width:0"><div class="groep">' + esc(CATNAAM[t.cat] || '') + '</div><h2>' + esc(t.titel) + '</h2>';
+    h += '<div class="badges"><span class="badge zwart">' + (t.type === 'brief' ? 'Brief' : 'E-mail') + '</span>';
+    if ((t.bronnen || []).length) h += '<span class="badge geel">Termijnen / bronnen gecontroleerd</span>';
+    h += '</div></div></div>';
+
+    h += '<div class="werkblad"><div class="invoer">';
+    h += '<h3>Klant</h3><div class="velden">' + klant.map(veldHTML).join('') + '</div>';
+    if (eigen.length) h += '<details open><summary>Gegevens voor dit sjabloon (' + eigen.length + ')</summary><div class="velden">' + eigen.map(veldHTML).join('') + '</div></details>';
+    else h += '<p class="geen-velden" style="margin-top:12px">Dit sjabloon heeft geen extra velden.</p>';
+    h += '<details' + (kantoorLeeg ? ' open' : '') + '><summary>Jouw gegevens en kantoor</summary><div class="velden">' + kantoor.map(veldHTML).join('') + '</div></details>';
+    h += '<p class="uitleg">Wat je invult, blijft staan als je een ander sjabloon kiest, zolang deze pagina open is. Er wordt niets opgeslagen.</p>';
+    h += '</div>';
+
+    h += '<div><div class="voorbeeld"><div class="voorbeeld-kop"><b>Onderwerp</b><span class="ow" id="ow"></span></div>';
+    h += '<div class="voorbeeld-tekst" id="vb"' + (S.bewerk ? ' hidden' : '') + '></div>';
+    h += '<textarea id="bewerkvak" aria-label="Tekst bewerken"' + (S.bewerk ? '' : ' hidden') + '></textarea></div>';
+    h += '<div class="opties"><label><input type="checkbox" id="optmark"' + (S.markeringen ? ' checked' : '') + '> Controlemarkeringen meenemen bij kopiëren, mailen en afdrukken</label></div>';
+    h += '<div class="status" id="status"></div>';
+    h += '<div class="acties">';
+    h += '<button type="button" class="knop" data-act="kopieer">Kopiëren</button>';
+    h += '<button type="button" class="knop licht" data-act="kopieer-ow">Onderwerp kopiëren</button>';
+    h += '<button type="button" class="knop licht" data-act="mail">Openen in mailprogramma</button>';
+    h += '<button type="button" class="knop licht" data-act="print">Afdrukken</button>';
+    h += '<button type="button" class="knop licht" data-act="bewerk">' + (S.bewerk ? 'Terug naar sjabloon' : 'Tekst zelf aanpassen') + '</button>';
+    h += '</div><div class="melding" id="melding" role="status"></div></div></div>';
+
+    h += '<div class="onder"><div class="blok let-op"><h4>Controleer voor verzending</h4><ul>';
+    (t.controle || []).forEach(function(c){ h += '<li>' + esc(c) + '</li>'; });
+    h += '<li>Alle geel gemarkeerde passages nagelopen en verwijderd of aangepast.</li></ul></div>';
+    h += '<div class="blok regel"><h4>Bronnen</h4>';
+    if ((t.bronnen || []).length) {
+      h += '<ul>' + t.bronnen.map(function(b){ return '<li><a href="' + esc(b.u) + '" target="_blank" rel="noopener">' + esc(b.t) + '</a></li>'; }).join('') + '</ul>';
+    } else {
+      h += '<p>Dit sjabloon bevat geen wettelijke termijnen. Stem de inhoud af op je eigen dienstverleningsdocument en werkwijze.</p>';
+    }
+    h += '</div></div>';
+
+    $('werk').innerHTML = h;
+    if (S.bewerk) $('bewerkvak').value = S.bewerkTekst != null ? S.bewerkTekst : vul(volledigeBron(t), 'tekst', S.markeringen);
+    tekenVoorbeeld();
+  }
+
+  function tekenVoorbeeld(){
+    var t = vind(S.id); if (!t) return;
+    $('ow').innerHTML = vul(t.onderwerp || '', 'html', false).replace(/\u0000/g, '');
+    if (!S.bewerk) $('vb').innerHTML = vul(volledigeBron(t), 'html', true);
+    var p = openPunten(t), st = [];
+    if (p.leeg.length) st.push(p.leeg.length + (p.leeg.length === 1 ? ' veld nog leeg' : ' velden nog leeg'));
+    if (p.marks) st.push(p.marks + (p.marks === 1 ? ' controlepunt' : ' controlepunten') + ' in de tekst');
+    if (S.bewerk) st.push('je past de tekst zelf aan: wijzigingen in de velden worden niet meer verwerkt');
+    $('status').textContent = st.length ? st.join(' · ') : 'Alle velden zijn ingevuld.';
+  }
+
+  function melding(tekst, soort){
+    var m = $('melding'); if (!m) return;
+    m.className = 'melding ' + (soort || 'ok'); m.textContent = tekst;
+    clearTimeout(melding.t); melding.t = setTimeout(function(){ m.className = 'melding'; }, 6000);
+  }
+  function waarschuwing(t){
+    var p = openPunten(t), w = [];
+    if (S.bewerk) { if (/\[ADVISEUR:|\[[a-z][^\]]*\]/.test($('bewerkvak').value)) w.push('de tekst bevat nog lege velden of controlepunten tussen haken'); }
+    else {
+      if (p.leeg.length) w.push(p.leeg.length + (p.leeg.length === 1 ? ' veld is' : ' velden zijn') + ' nog leeg');
+      if (p.marks && S.markeringen) w.push('de controlepunten staan nog in de tekst');
+    }
+    return w.length ? ' Let op: ' + w.join(' en ') + '.' : '';
+  }
+
+  // ---------- Acties ----------
+  function kopieer(tekst, klaar){
+    function terugval(){
+      var ta = document.createElement('textarea');
+      ta.value = tekst; ta.setAttribute('readonly', ''); ta.style.position = 'fixed'; ta.style.top = '0'; ta.style.left = '0'; ta.style.opacity = '0';
+      document.body.appendChild(ta); ta.select();
+      var ok = false; try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+      document.body.removeChild(ta); klaar(ok);
+    }
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(tekst).then(function(){ klaar(true); }, terugval);
+      else terugval();
+    } catch (e) { terugval(); }
+  }
+
+  function mailLink(t){
+    var aan = waarde('klantemail');
+    var crlf = function(s){ return encodeURIComponent(s.replace(/\r?\n/g, '\r\n')); };
+    return 'mailto:' + (aan ? encodeURIComponent(aan).replace(/%40/g, '@') : '') + '?subject=' + crlf(onderwerpTekst(t)) + '&body=' + crlf(lichaamTekst(t));
+  }
+
+  function printHTML(t){
+    var lichaam;
+    if (S.bewerk) lichaam = esc($('bewerkvak').value);
+    else lichaam = vul(volledigeBron(t), 'print', S.markeringen).replace(/<span class="v-in">([\s\S]*?)<\/span>/g, '$1');
+    var ow = esc(onderwerpTekst(t));
+    var kop = '';
+    if (t.type === 'brief') {
+      var afz = ['kantoor', 'telefoon', 'kantooremail'].map(waarde).filter(Boolean).map(esc).join('<br>');
+      var adres = ['klantnaam', 'klantadres', 'klantpostcode'].map(function(k){ return esc(waarde(k) || '[' + veldDef(k).label.toLowerCase() + ']'); }).join('<br>');
+      var plaatsDatum = [waarde('kantoorplaats'), waarde('vandaag')].filter(Boolean).map(esc).join(', ');
+      kop = '<div class="afz">' + afz + '</div><div class="adres">' + adres + '</div><p class="pd">' + plaatsDatum + '</p><p class="betreft"><b>Betreft:</b> ' + ow + '</p>';
+    } else {
+      var aan = waarde('klantemail');
+      kop = '<p class="mailkop">' + (aan ? '<b>Aan:</b> ' + esc(aan) + '<br>' : '') + '<b>Onderwerp:</b> ' + ow + '</p>';
+    }
+    return '<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><title>' + ow + '</title><style>' +
+      '@page{margin:22mm 20mm}body{font-family:Arial,Helvetica,sans-serif;font-size:11pt;line-height:1.5;color:#111;margin:0;padding:24px;max-width:720px}' +
+      '.afz{text-align:right;font-size:9.5pt;color:#444;margin-bottom:28px}.adres{margin-bottom:28px}.pd{margin:0 0 6px}.betreft{margin:0 0 24px}' +
+      '.mailkop{border-bottom:1px solid #ccc;padding-bottom:10px;margin:0 0 18px;font-size:10pt}' +
+      '.tekst{white-space:pre-wrap}mark{background:#FFE866;padding:0 3px;border-radius:2px}.v-leeg{background:#FDECEA;color:#B42318;font-weight:bold}' +
+      '@media print{body{padding:0}}</style></head><body>' + kop + '<div class="tekst">' + lichaam + '</div>' +
+      '<script>window.addEventListener("load",function(){setTimeout(function(){window.print();},150);});<\/script></body></html>';
+  }
+  function afdrukken(t){
+    var w = null;
+    try { w = window.open('', '_blank'); } catch (e) { w = null; }
+    if (!w) { melding('Je browser blokkeert het afdrukvenster. Sta pop-ups toe voor deze pagina, of kopieer de tekst naar je tekstverwerker.', 'let-op'); return; }
+    try { w.document.open(); w.document.write(printHTML(t)); w.document.close(); w.focus(); }
+    catch (e) { try { w.close(); } catch (x) {} melding('Afdrukken lukte niet. Kopieer de tekst naar je tekstverwerker.', 'let-op'); }
+  }
+
+  function actie(a){
+    var t = vind(S.id); if (!t) return;
+    if (a === 'kopieer') {
+      kopieer(lichaamTekst(t), function(ok){ melding(ok ? 'De tekst staat op je klembord.' + waarschuwing(t) : 'Kopiëren lukte niet. Selecteer de tekst en kopieer handmatig.', ok ? (waarschuwing(t) ? 'let-op' : 'ok') : 'let-op'); });
+    } else if (a === 'kopieer-ow') {
+      kopieer(onderwerpTekst(t), function(ok){ melding(ok ? 'Het onderwerp staat op je klembord.' : 'Kopiëren lukte niet.', ok ? 'ok' : 'let-op'); });
+    } else if (a === 'mail') {
+      var link = mailLink(t), w = waarschuwing(t);
+      if (link.length > 1900) w += ' De tekst is lang; sommige mailprogramma’s knippen hem af. Controleer de mail, of plak de gekopieerde tekst.';
+      if (t.type === 'brief') w += ' Dit is een brief: overweeg hem als bijlage of per post te sturen.';
+      melding('Je mailprogramma wordt geopend. Er wordt niets automatisch verzonden.' + w, w ? 'let-op' : 'ok');
+      window.location.href = link;
+    } else if (a === 'print') {
+      afdrukken(t);
+    } else if (a === 'bewerk') {
+      if (S.bewerk) { S.bewerk = false; S.bewerkTekst = null; }
+      else { S.bewerk = true; S.bewerkTekst = vul(volledigeBron(t), 'tekst', S.markeringen); }
+      tekenWerk();
+      if (S.bewerk) $('bewerkvak').focus();
+    }
+  }
+
+  function kies(id, scroll){
+    if (!vind(id)) return;
+    S.id = id; S.bewerk = false; S.bewerkTekst = null;
+    try { history.replaceState(null, '', '#' + id); } catch (e) {}
+    tekenMenu(); tekenWerk();
+    if (scroll && window.innerWidth <= 900) { var w = $('werk'); if (w && w.scrollIntoView) w.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+  }
+
+  // ---------- Events ----------
+  $('zoek').addEventListener('input', tekenMenu);
+  $('filter').addEventListener('change', function(){
+    tekenMenu();
+    var eerste = treffers()[0];
+    if (eerste && treffers().every(function(t){ return t.id !== S.id; })) kies(eerste.id, false);
+  });
+  $('menulijst').addEventListener('click', function(e){
+    var b = e.target.closest('button[data-id]'); if (b) kies(b.getAttribute('data-id'), true);
+  });
+  $('werk').addEventListener('input', function(e){
+    var k = e.target.getAttribute('data-veld');
+    if (k) {
+      S.waarden[k] = e.target.value;
+      var v = e.target.closest('.veld'); if (v) v.classList.toggle('gevuld', !!e.target.value.trim());
+      tekenVoorbeeld();
+    } else if (e.target.id === 'bewerkvak') {
+      S.bewerkTekst = e.target.value;
+    }
+  });
+  $('werk').addEventListener('change', function(e){
+    if (e.target.id === 'optmark') { S.markeringen = e.target.checked; if (!S.bewerk) tekenVoorbeeld(); }
+  });
+  $('werk').addEventListener('click', function(e){
+    var b = e.target.closest('button[data-act]'); if (b) actie(b.getAttribute('data-act'));
+  });
+  window.addEventListener('hashchange', function(){ var id = location.hash.slice(1); if (id && id !== S.id && vind(id)) kies(id, false); });
+
+  // ---------- Start ----------
+  $('aantal').textContent = LIJST.length;
+  bouwFilter();
+  var start = location.hash.slice(1);
+  kies(vind(start) ? start : (LIJST[0] && LIJST[0].id), false);
+})();
+</script>
+</body>
+</html>
