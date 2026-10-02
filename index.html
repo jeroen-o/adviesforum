@@ -664,9 +664,11 @@ function vrager(v){return v.auteur?user(v.auteur):{id:null,naam:v.naam||(v.voorb
 function houdbaarheid(a){const h=a.herzienVoor||new Date(new Date(a.datum).getTime()+365*864e5).toISOString().slice(0,10);const dagen=Math.floor((new Date(h+'T23:59:59')-new Date())/864e5);return{datum:h,dagen,status:dagen<0?'verlopen':(dagen<=60?'binnenkort':'ok')};}
 const fmtDag=d=>new Date(d+(d.length===10?'T12:00:00':'')).toLocaleDateString('nl-NL',{day:'numeric',month:'long',year:'numeric'});
 function expertise(uid){const t={};for(const v of VRAGEN)for(const a of v.antwoorden)if(a.auteur===uid)t[v.cat]=(t[v.cat]||0)+(v.beste===a.id?3:1);const b=Object.entries(t).sort((x,y)=>y[1]-x[1])[0];return b&&b[1]>=3?'Expert '+cat(b[0]).naam:'';}
-/* Versturen naar de beheerder (geen opslag op de site): FormSubmit mailt naar FORM_MAIL */
+/* Versturen naar de beheerder zonder opslag of formulierdienst: het mailprogramma van de bezoeker opent met een kant-en-klare e-mail */
 const FORM_MAIL='forumadvies@gmail.com';
-function naarBeheer(data){return fetch('https://formsubmit.co/ajax/'+FORM_MAIL,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(Object.assign({_template:'table',_captcha:'false'},data))}).then(r=>r.json().catch(()=>({})).then(j=>r.ok&&(j.success===true||j.success==='true'))).catch(()=>false);}
+function mailTekst(kop,secties){const r=[kop,'Datum: '+new Date().toLocaleString('nl-NL'),''];secties.forEach(([titel,velden],i)=>{r.push('═══ '+(i+1)+'. '+titel.toUpperCase()+' ═══');for(const[k,w]of Object.entries(velden))r.push(k+': '+(w||'-'));r.push('');});return r.join('\n');}
+function mailLink(onderwerp,tekst){return 'mailto:'+FORM_MAIL+'?subject='+encodeURIComponent(onderwerp)+'&body='+encodeURIComponent(tekst);}
+function openMail(href){const a=document.createElement('a');a.href=href;a.style.display='none';document.body.appendChild(a);a.click();a.remove();}
 const geldigEmail=e=>/^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(e);
 const geldigTel=t=>/^(\+31|0031|0)[1-9][0-9]{8}$/.test(t.replace(/[\s\-().]/g,''));
 function normLinkedIn(u){let s=String(u||'').trim();if(!s)return '';if(!/^https?:\/\//i.test(s))s='https://'+s.replace(/^\/+/,'');return s.split(/[?#]/)[0];}
@@ -928,7 +930,7 @@ function viewVraag(){
       <div>${v.tags.map(t=>`<span class="tag">${esc(t)}</span>`).join('')}</div>
       <div class="byline"><span class="av">${initials(u.naam)}</span><span>${u.extern?`<b style="color:var(--text)">${esc(u.naam)}</b><br>Vraagsteller`:`<button class="name" data-act="open-adviseur" data-id="${u.id}">${esc(u.naam)}</button><br>${esc(u.functie)}, ${esc(u.kantoor)}`}</span><span style="margin-left:auto;text-align:right">${relTijd(v.datum)}<br>${fmtInt(v.views)} keer bekeken</span></div>
       ${v.voorbeeld?'<div class="notice" style="margin-bottom:14px">Voorbeeldvraag: een realistische praktijksituatie om te laten zien hoe collega\u2019s elkaar helpen. Controleer de antwoorden zoals altijd aan de actuele regels.</div>':''}
-      ${v.sessie?`<div class="notice ${v.verzonden===false?'err':'ok'}" style="margin-bottom:14px">${v.verzonden===true?'Je vraag is naar de beheerder gestuurd. Na controle wordt hij op het forum gepubliceerd; tot die tijd zie alleen jij hem in deze sessie.':v.verzonden===false?`Versturen naar de beheerder is niet gelukt. <a href="mailto:${FORM_MAIL}?subject=${encodeURIComponent('Vraag voor het Adviesforum: '+v.titel)}&body=${encodeURIComponent(v.titel+'\n\n'+v.body)}">Mail je vraag</a> met je naam, telefoon en LinkedIn.`:'Je vraag wordt naar de beheerder gestuurd…'}</div>`:''}
+      ${v.sessie?`<div class="notice ok" style="margin-bottom:14px"><b>Laatste stap: verstuur de e-mail.</b> Je mailprogramma is geopend met je vraag aan de beheerder (${FORM_MAIL}); klik daar op <b>Verzenden</b>. Na controle wordt je vraag op het forum gepubliceerd; tot die tijd zie alleen jij hem in deze sessie.<div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap"><a class="btn btn-sm" id="mail-opnieuw" href="${esc(v.mailHref)}">Open de e-mail opnieuw</a><button type="button" class="btn btn-line btn-sm" data-act="mail-kopie" data-id="${v.id}">Tekst kopiëren</button></div><div style="margin-top:6px;font-size:13px">Opent er niets? Kopieer de tekst en mail hem naar ${FORM_MAIL}.</div></div>`:''}
       <div class="body">${rich(v.body)}</div>
       ${kbArt?`<div class="notice ok" style="margin-top:14px">Dit onderwerp staat in de kennisbank: <button class="btn btn-sm btn-line" style="white-space:normal;text-align:left" data-act="open-artikel" data-id="${kbArt.id}">${esc(kbArt.titel)}</button></div>`:''}
       ${kanPromoveren?`<div class="actions"><button class="btn btn-line btn-sm" data-act="naar-kb" data-vraag="${v.id}">Zet om naar kennisbankartikel</button><span style="font-size:13px;color:var(--muted);align-self:center">Vraag en beste antwoord worden als concept opgenomen; compliance controleert daarna.</span></div>`:''}
@@ -992,8 +994,8 @@ function viewNieuw(){
         <input id="nv-tel" name="tel" type="tel" required autocomplete="tel" placeholder="06 12 34 56 78">
         <label for="nv-li">LinkedIn-profiel</label>
         <input id="nv-li" name="linkedin" type="text" required placeholder="https://www.linkedin.com/in/jouwnaam">
-        <label style="display:flex;gap:10px;align-items:flex-start;font-weight:400;margin-top:14px"><input type="checkbox" name="akkoord" required style="width:auto;margin-top:4px"> <span>Ik ga ermee akkoord dat mijn vraag en gegevens via de formulierdienst FormSubmit per e-mail naar de beheerder gaan, en dat mijn naam bij de vraag zichtbaar is. Zie de <a href="privacy.html">privacyverklaring</a>.</span></label>
-        <div class="actions"><button class="btn btn-black" type="submit">Plaats vraag →</button><button class="btn btn-line" type="button" data-act="tab" data-tab="forum">Annuleren</button></div>
+        <label style="display:flex;gap:10px;align-items:flex-start;font-weight:400;margin-top:14px"><input type="checkbox" name="akkoord" required style="width:auto;margin-top:4px"> <span>Ik ga ermee akkoord dat mijn vraag en gegevens per e-mail vanuit mijn eigen mailprogramma naar de beheerder gaan, en dat mijn naam bij de vraag zichtbaar is. Zie de <a href="privacy.html">privacyverklaring</a>.</span></label>
+        <div class="actions"><button class="btn btn-black" type="submit">Plaats vraag en open e-mail →</button><button class="btn btn-line" type="button" data-act="tab" data-tab="forum">Annuleren</button></div>
       </form>
     </div></div>
   </section>
@@ -1351,7 +1353,8 @@ document.addEventListener('click',e=>{
     case 'faqmeer':S.faqMax=(S.faqMax||50)+100;render(true);break;
     case 'deel':{kopieer(location.origin+location.pathname+'#artikel-'+id,'Link naar het artikel gekopieerd');break;}
     case 'kb-kopie':{const a=ARTIKELEN.find(x=>x.id===id);if(!a)return;const o={id:a.id,cat:a.cat,titel:a.titel,auteur:a.auteur,datum:a.datum.slice(0,19),herzienVoor:a.herzienVoor,bron:a.bron,gecontroleerd:false,body:a.body};kopieer(' '+JSON.stringify(o,null,1).replace(/\n\s*/g,'').replace(/"(\w+)":/g,'$1:')+',','Artikel gekopieerd: plak het in data/kennisbank.js');break;}
-    case 'meld-zoek':{const q=S.q;naarBeheer({_subject:'Adviesforum: niets gevonden voor "'+q+'"',Zoekterm:q,Onderdeel:S.tab,Datum:new Date().toLocaleString('nl-NL')}).then(ok=>toast(ok?'Bedankt, de beheerder weet nu wat je zocht':'Versturen lukte niet; mail '+FORM_MAIL));break;}
+    case 'mail-kopie':{const v=VRAGEN.find(x=>x.id===id);if(v)kopieer(v.mailTxt,'Tekst gekopieerd; plak hem in een e-mail aan '+FORM_MAIL);break;}
+    case 'meld-zoek':{const q=S.q;openMail(mailLink('Adviesforum: niets gevonden voor "'+q+'"',mailTekst('Zoekopdracht zonder resultaat op het Adviesforum',[['Zoekopdracht',{Zoekterm:q,Onderdeel:S.tab}]])));toast('Je mailprogramma opent; klik daar op Verzenden');break;}
   }
 });
 document.addEventListener('keydown',e=>{
@@ -1382,9 +1385,11 @@ document.addEventListener('submit',e=>{
     if(!geldigTel(tel)){toast('Vul een geldig telefoonnummer in');f.tel.focus();return;}
     if(!geldigLinkedIn(li)){toast('Vul je LinkedIn-profiel in (linkedin.com/in/…)');f.linkedin.focus();return;}
     if(!f.akkoord.checked){toast('Vink het akkoord aan');return;}
-    const v={id:nid('v'),cat:f.cat.value,auteur:null,naam,datum:new Date().toISOString(),views:0,tags,beste:null,titel,body,antwoorden:[],sessie:true,verzonden:null};
-    VRAGEN.unshift(v);autoAnswer(v,false,true);S.cat='alle';S.status='alle';openVraag(v.id);toast(v.auto.hits.length?'Vraag verstuurd, automatisch antwoord toegevoegd':'Vraag verstuurd');
-    naarBeheer({_subject:'Nieuwe vraag Adviesforum: '+titel,email,Naam:naam,'E-mailadres':email,Telefoonnummer:tel,LinkedIn:li,Categorie:cat(v.cat).naam,Titel:titel,Vraag:body,Trefwoorden:tags.join(', '),'Ingediend op':new Date().toLocaleString('nl-NL')}).then(ok=>{v.verzonden=ok;rerenderIfOpen(v);});
+    const v={id:nid('v'),cat:f.cat.value,auteur:null,naam,datum:new Date().toISOString(),views:0,tags,beste:null,titel,body,antwoorden:[],sessie:true,mailHref:'',mailTxt:''};
+    VRAGEN.unshift(v);autoAnswer(v,false,true);S.cat='alle';S.status='alle';openVraag(v.id);toast('Je mailprogramma opent; klik daar op Verzenden');
+    const onderw='Nieuwe vraag Adviesforum: '+titel;
+    v.mailTxt=mailTekst('Vraag via het Adviesforum',[['Vraagsteller (alleen voor de beheerder)',{Naam:naam,'E-mailadres':email,Telefoonnummer:tel,LinkedIn:li}],['Vraag',{Categorie:cat(v.cat).naam,Titel:titel,Trefwoorden:tags.join(', ')}],['Situatie',{Toelichting:'\n'+body}]]);
+    v.mailHref=mailLink(onderw,v.mailTxt);rerenderIfOpen(v);openMail(v.mailHref);
   }
 });
 /* automatisch antwoord wordt pas berekend als een vraag wordt geopend (snelheid) */

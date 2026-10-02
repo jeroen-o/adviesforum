@@ -7,7 +7,7 @@ const PAGINAS = ['index.html', 'aanmelden.html', 'privacy.html', 'leennormen-202
 async function volgFouten(page) {
   const fouten = [];
   page.on('pageerror', e => fouten.push(e.message));
-  // FormSubmit nooit echt aanroepen in tests
+  // Geen enkele externe formulierdienst mag worden aangeroepen
   await page.route('https://formsubmit.co/**', route => {
     const cors = { 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Headers': 'Content-Type, Accept' };
     if (route.request().method() === 'OPTIONS') return route.fulfill({ status: 204, headers: cors });
