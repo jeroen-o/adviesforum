@@ -40,6 +40,9 @@ Settings → Branches → Add branch ruleset voor `main`:
 
 Vul in `.github/CODEOWNERS` de GitHub-naam van de compliance officer in.
 
+## Geverifieerde gebruikers
+Vragen stellen kan zonder inloggen; de vraagsteller vult wel een geldig LinkedIn-profiel in en meldt zich aan via aanmelden.html. Controleer de aanmelding (LinkedIn, kantoor, functie). Keur je goed, voeg de adviseur dan toe aan `data/adviseurs.js` met `geverifieerd:true`; op het forum verschijnt dan "✓ Geverifieerd" bij de naam. Alleen naam, functie en kantoor zijn openbaar.
+
 ## Formulieren (via het mailprogramma, geen formulierdienst)
 Aanmelden, vraag stellen en "niets gevonden" openen het mailprogramma van de bezoeker met een kant-en-klare e-mail aan forumadvies@gmail.com (net als op dierenkliniek.nl). De bezoeker klikt op Verzenden; de mail komt van zijn eigen adres binnen, zodat je direct kunt antwoorden. Er is geen activatie, geen externe dienst en geen opslag. Opent er geen mailprogramma, dan kan de bezoeker de tekst kopiëren.
 

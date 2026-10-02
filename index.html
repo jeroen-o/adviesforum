@@ -356,6 +356,7 @@ footer .legal{grid-column:1/-1;border-top:1px solid #2A3238;padding-top:14px;fon
 .tool h3{margin:6px 0;font-size:16px}
 .tool p{margin:0;font-size:13px;color:var(--muted)}
 .houdbaar{font-size:13px;color:var(--muted);margin:0 0 12px}
+.verif{display:inline-block;font-size:11px;font-weight:700;padding:2px 7px;border-radius:4px;background:#E7F5EC;color:#1E6B3A;margin-left:6px;white-space:nowrap}
 .expert{font-size:11px;font-weight:700;padding:2px 7px;border-radius:4px;background:var(--yellow-soft);color:var(--text);margin-left:6px}
 .az{display:flex;flex-wrap:wrap;gap:4px;margin:0 0 16px}
 .az a,.az span{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:6px;font-weight:700;font-size:13px;text-decoration:none;color:var(--text);background:var(--surface);border:1px solid var(--border)}
@@ -380,7 +381,7 @@ footer .legal{grid-column:1/-1;border-top:1px solid #2A3238;padding-top:14px;fon
       <span class="brand-name">Adviesforum</span>
     </button>
     <div class="search"><input id="search" type="search" placeholder="Zoek in forum, kennisbank en FAQ" aria-label="Zoeken"></div>
-    <div class="who"><label for="user">Ingelogd als</label><select id="user"></select></div>
+    <div class="who"><label for="user">Antwoorden als</label><select id="user"></select></div>
     <button class="btn btn-black" data-act="nieuw">Vraag stellen →</button>
   </div>
 </header>
@@ -688,6 +689,7 @@ const vraagStatus=v=>v.beste?'opgelost':(v.antwoorden.length?'beantwoord':'open'
 const statusTxt={open:'Open',beantwoord:'Beantwoord',opgelost:'Opgelost'};
 const plural=(n,e,m)=>n+' '+(n===1?e:m);
 function relTijd(iso){const s=(Date.now()-new Date(iso))/1000;if(s<0||s>=7*86400)return fmtDate(iso);if(s<3600)return Math.max(1,Math.round(s/60))+' min geleden';if(s<86400)return Math.round(s/3600)+' uur geleden';if(s<172800)return 'gisteren';return Math.floor(s/86400)+' dagen geleden';}
+const verif=u=>u&&u.geverifieerd?'<span class="verif" title="Aangemeld met een geldig LinkedIn-profiel en goedgekeurd door de beheerder">✓ Geverifieerd</span>':'';
 function vrager(v){return v.auteur?user(v.auteur):{id:null,naam:v.naam||(v.voorbeeld?'Voorbeeldvraag':'Vraagsteller'),functie:v.voorbeeld?'Voorbeeld uit de praktijk':'Vraagsteller',kantoor:'',extern:true};}
 function houdbaarheid(a){const h=a.herzienVoor||new Date(new Date(a.datum).getTime()+365*864e5).toISOString().slice(0,10);const dagen=Math.floor((new Date(h+'T23:59:59')-new Date())/864e5);return{datum:h,dagen,status:dagen<0?'verlopen':(dagen<=60?'binnenkort':'ok')};}
 const fmtDag=d=>new Date(d+(d.length===10?'T12:00:00':'')).toLocaleDateString('nl-NL',{day:'numeric',month:'long',year:'numeric'});
@@ -938,7 +940,7 @@ function viewVraag(){
     const mineA=a.rA[ik.id]||0,mineAdv=a.rAdv[ik.id]||0;
     return `<article class="ans ${best?'best':''}" id="${a.id}">
       <div class="top-row">
-        <div class="byline" style="margin:0"><span class="av">${initials(au.naam)}</span><span><button class="name" data-act="open-adviseur" data-id="${au.id}">${esc(au.naam)}</button>${expertise(au.id)?`<span class="expert">${esc(expertise(au.id))}</span>`:''}<br><span>${esc(au.functie)}, ${esc(au.kantoor)} <span class="lvl">${esc(st2.level)}</span></span></span></div>
+        <div class="byline" style="margin:0"><span class="av">${initials(au.naam)}</span><span><button class="name" data-act="open-adviseur" data-id="${au.id}">${esc(au.naam)}</button>${verif(au)}${expertise(au.id)?`<span class="expert">${esc(expertise(au.id))}</span>`:''}<br><span>${esc(au.functie)}, ${esc(au.kantoor)} <span class="lvl">${esc(st2.level)}</span></span></span></div>
         <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap"><span style="font-size:13px;color:var(--muted)">${fmtDate(a.datum)}</span>${best?'<span class="best-badge">✓ Beste antwoord</span>':''}</div>
       </div>
       <div class="body">${rich(a.body)}</div>
@@ -956,7 +958,7 @@ function viewVraag(){
     <div class="card"><div class="pad">
       <div class="qhead"><h1>${esc(v.titel)}</h1><span class="status s-${st}">${statusTxt[st]}</span></div>
       <div>${v.tags.map(t=>`<span class="tag">${esc(t)}</span>`).join('')}</div>
-      <div class="byline"><span class="av">${initials(u.naam)}</span><span>${u.extern?`<b style="color:var(--text)">${esc(u.naam)}</b><br>Vraagsteller`:`<button class="name" data-act="open-adviseur" data-id="${u.id}">${esc(u.naam)}</button><br>${esc(u.functie)}, ${esc(u.kantoor)}`}</span><span style="margin-left:auto;text-align:right">${relTijd(v.datum)}<br>${fmtInt(v.views)} keer bekeken</span></div>
+      <div class="byline"><span class="av">${initials(u.naam)}</span><span>${u.extern?`<b style="color:var(--text)">${esc(u.naam)}</b><br>Vraagsteller`:`<button class="name" data-act="open-adviseur" data-id="${u.id}">${esc(u.naam)}</button>${verif(u)}<br>${esc(u.functie)}, ${esc(u.kantoor)}`}</span><span style="margin-left:auto;text-align:right">${relTijd(v.datum)}<br>${fmtInt(v.views)} keer bekeken</span></div>
       ${v.voorbeeld?'<div class="notice" style="margin-bottom:14px">Voorbeeldvraag: een realistische praktijksituatie om te laten zien hoe collega\u2019s elkaar helpen. Controleer de antwoorden zoals altijd aan de actuele regels.</div>':''}
       ${v.sessie?`<div class="notice ok" style="margin-bottom:14px"><b>Laatste stap: verstuur de e-mail.</b> Je mailprogramma is geopend met je vraag aan de beheerder (${FORM_MAIL}); klik daar op <b>Verzenden</b>. Na controle wordt je vraag op het forum gepubliceerd; tot die tijd zie alleen jij hem in deze sessie.<div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap"><a class="btn btn-sm" id="mail-opnieuw" href="${esc(v.mailHref)}">Open de e-mail opnieuw</a><button type="button" class="btn btn-line btn-sm" data-act="mail-kopie" data-id="${v.id}">Tekst kopiëren</button></div><div style="margin-top:6px;font-size:13px">Opent er niets? Kopieer de tekst en mail hem naar ${FORM_MAIL}.</div></div>`:''}
       <div class="body">${rich(v.body)}</div>
@@ -1000,6 +1002,7 @@ function viewNieuw(){
     <div class="crumbs"><button data-act="tab" data-tab="forum">Forum</button> &rsaquo; Nieuwe vraag</div>
     <div class="card"><div class="pad form">
       <h1 style="margin-bottom:16px">Stel een vraag aan collega's</h1>
+      <div class="notice ok" style="margin-bottom:14px">Je hoeft niet in te loggen om een vraag te stellen. Je hebt wel een geldig LinkedIn-profiel nodig en je <a href="aanmelden.html">meldt je aan</a>. Keurt de beheerder je aanmelding goed, dan ben je een <b>geverifieerde gebruiker</b> en staat er een vinkje bij je naam.</div>
       <form id="f-vraag">
         <label for="nv-titel">Titel</label>
         <input id="nv-titel" name="titel" type="text" required minlength="12" placeholder="Formuleer de vraag zoals je hem aan een collega zou stellen" value="${esc(S.prefill||'')}">
@@ -1066,7 +1069,7 @@ function viewArtikel(){
     <div class="crumbs"><button data-act="tab" data-tab="kennisbank">Kennisbank</button> &rsaquo; <button data-act="kbcat-go" data-cat="${a.cat}">${esc(cat(a.cat).naam)}</button></div>
     <div class="card"><div class="pad">
       <div class="qhead"><h1>${esc(a.titel)}</h1><span class="check ${a.gecontroleerd?'ok':'draft'}">${a.gecontroleerd?'✓ Gecontroleerd door compliance':'Concept, nog niet gecontroleerd'}</span></div>
-      <div class="byline"><span class="av">${initials(u.naam)}</span><span><button class="name" data-act="open-adviseur" data-id="${u.id}">${esc(u.naam)}</button><br>${esc(u.functie)}, ${esc(u.kantoor)}</span><span style="margin-left:auto;text-align:right">${fmtDate(a.datum)}<br>${fmtInt(a.views)} keer bekeken</span></div>
+      <div class="byline"><span class="av">${initials(u.naam)}</span><span><button class="name" data-act="open-adviseur" data-id="${u.id}">${esc(u.naam)}</button>${verif(u)}<br>${esc(u.functie)}, ${esc(u.kantoor)}</span><span style="margin-left:auto;text-align:right">${fmtDate(a.datum)}<br>${fmtInt(a.views)} keer bekeken</span></div>
       ${(h=>`<div class="houdbaar">${a.peildatum?'Peildatum '+fmtDag(a.peildatum)+' · ':''}${a.gecontroleerd&&a.gecontroleerdOp?'Gecontroleerd op '+fmtDag(a.gecontroleerdOp)+' · ':''}Opnieuw controleren vóór ${fmtDag(h.datum)}</div>${h.status==='verlopen'?`<div class="notice err" style="margin-bottom:14px"><b>Mogelijk verouderd.</b> Dit artikel had vóór ${fmtDag(h.datum)} opnieuw gecontroleerd moeten worden. Controleer de actuele regels en normen voordat je het gebruikt.</div>`:''}`)(houdbaarheid(a))}
       ${a.gecontroleerd?'':'<div class="notice" style="margin-bottom:14px">Dit artikel is een concept uit het forum. Gebruik het als collegiale tip, niet als kantoorwerkwijze, totdat compliance het heeft gecontroleerd.</div>'}
       <div class="body">${rich(a.body)}</div>
@@ -1167,7 +1170,7 @@ function viewAdviseur(){
   return `<section>
     <div class="crumbs"><button data-act="tab" data-tab="adviseurs">Adviseurs</button> &rsaquo; ${esc(u.naam)}</div>
     <div class="card"><div class="pad">
-      <div class="profile-head"><span class="av lg">${initials(u.naam)}</span><div><h1>${esc(u.naam)}</h1><div class="sub">${esc(u.functie)}, ${esc(u.kantoor)}</div></div><span class="lvl" style="margin-left:auto;font-size:14px;padding:6px 12px">${esc(s.level)}</span></div>
+      <div class="profile-head"><span class="av lg">${initials(u.naam)}</span><div><h1>${esc(u.naam)}${verif(u)}</h1><div class="sub">${esc(u.functie)}, ${esc(u.kantoor)}</div></div><span class="lvl" style="margin-left:auto;font-size:14px;padding:6px 12px">${esc(s.level)}</span></div>
       <div class="stats">
         <div class="kpi"><b>${fmtInt(s.punten)}</b><span>punten</span></div>
         <div class="kpi"><b>${s.nA?fmtNum(s.gemA):'–'}</b><span>gem. antwoordscore (${s.nA})</span></div>
@@ -1310,7 +1313,7 @@ function viewVoorWie(){
       </ul>
 
       <h2>Toegang</h2>
-      <p>Het forum is bedoeld voor medewerkers van kantoren die klant zijn bij Blinqx Verzekering & Hypotheek. In deze demoversie kies je bovenin met "Ingelogd als" een voorbeeldaccount; in de productieversie log je in met je kantooraccount, zodat naam, functie en kantoor automatisch kloppen. Nog geen profiel? Meld je aan met het aanmeldformulier; de forumbeheerder maakt je profiel aan.</p>
+      <p>Je hoeft niet in te loggen om een vraag te stellen. Je hebt wel een geldig LinkedIn-profiel nodig en je meldt je aan met het aanmeldformulier. De forumbeheerder controleert je aanmelding; na akkoord ben je een geverifieerde gebruiker (✓ Geverifieerd bij je naam) en kun je ook antwoorden geven. Alleen je naam is openbaar; e-mail en telefoon ziet alleen de beheerder.</p>
       <div class="actions"><button class="btn btn-black" data-act="nieuw">Stel je eerste vraag →</button><a class="btn btn-line" href="aanmelden.html">Meld je aan als adviseur →</a><button class="btn btn-line" data-act="tab" data-tab="handleiding">Lees de handleiding →</button></div>
     </div></div>
   </section>
@@ -1390,7 +1393,7 @@ document.addEventListener('keydown',e=>{
 });
 document.addEventListener('change',e=>{
   const el=e.target;
-  if(el.id==='user'){S.me=el.value;render(true);toast('Ingelogd als '+user(S.me).naam);return;}
+  if(el.id==='user'){S.me=el.value;render(true);toast('Je antwoordt als '+user(S.me).naam);return;}
   if(el.dataset.act==='status'){S.status=el.value;render();}
   if(el.dataset.act==='sort'){S.sort=el.value;render();}
   if(el.dataset.act==='kbstatus'){S.kbStatus=el.value;render();}
