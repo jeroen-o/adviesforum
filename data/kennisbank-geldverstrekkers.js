@@ -55,7 +55,7 @@ Concept. De termijnen en voorwaarden komen uit openbare adviseurs- en klantinfor
 
  {id:'k41',cat:'hyp',titel:'Boetevrij aflossen en de vergoeding voor renteverlies vergeleken',auteur:'u5',datum:'2026-10-02T12:00:00',herzienVoor:'2027-04-02',bron:null,gecontroleerd:false,
   kw:'boetevrij aflossen vergoedingsvrij aflossen boeterente vergoeding renteverlies 10% 15% 20% 25% eigen middelen herfinanciering oversluiten renteherzieningsdatum verkoop overlijden',
-  links:[{titel:'Partijenwegwijzer (intern)',url:'partijen.html'},{titel:'AFM: vergoeding bij vervroegd aflossen',url:'https://www.afm.nl'},{titel:'Rabobank: vergoeding vervroegd aflossen',url:'https://www.rabobank.nl/particulieren/hypotheek/service/vergoeding-vervroegd-aflossen/'},{titel:'Florius: vergoedingsrente',url:'https://www.florius.nl/hypotheek/vergoedingsrente'},{titel:'Merius Hypotheekgids',url:'https://meriushypotheken.nl/app/uploads/2024/07/Merius-Hypotheekgids-2024-01.pdf'}],
+  links:[{titel:'Partijenwegwijzer (intern)',url:'partijen.html'},{titel:'Besluit Gedragstoezicht financiële ondernemingen (wetten.overheid.nl)',url:'https://wetten.overheid.nl/BWBR0020421'},{titel:'Rabobank: vergoeding vervroegd aflossen',url:'https://www.rabobank.nl/particulieren/hypotheek/service/vergoeding-vervroegd-aflossen/'},{titel:'Florius: vergoedingsrente',url:'https://www.florius.nl/hypotheek/vergoedingsrente'},{titel:'Merius Hypotheekgids',url:'https://meriushypotheken.nl/app/uploads/2024/07/Merius-Hypotheekgids-2024-01.pdf'}],
   body:`Extra aflossen is voor veel klanten een belangrijk onderdeel van het hypotheekplan, en bij oversluiten bepaalt de vergoeding voor renteverlies of het rendabel is. De vrije ruimte verschilt per verstrekker meer dan klanten denken.
 
 ## Drie soorten vrije ruimte
