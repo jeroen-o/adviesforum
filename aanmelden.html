@@ -87,9 +87,9 @@
 
   .knop-primair[disabled]{opacity:.6;cursor:progress}
   .melding.fout-blok{display:block;background:#FDECEA;border-color:#F3C1BB;color:var(--rood)}
-  .melding .knoppen{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
-  .melding .knoppen button,.melding .knoppen a{font-size:14px;padding:10px 18px;text-decoration:none;display:inline-block}
-  .melding .knoppen a{border-radius:999px;font-weight:700;border:1px solid transparent}
+  #succes .knoppen,.melding .knoppen{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+  #succes .knoppen button,#succes .knoppen a,.melding .knoppen button,.melding .knoppen a{font-size:14px;padding:10px 18px;text-decoration:none;display:inline-block}
+  #succes .knoppen a,.melding .knoppen a{border-radius:999px;font-weight:700;border:1px solid transparent}
   .succes{display:none;text-align:left}
   .kaart.succes{margin-top:0}
   .succes h2{margin:0 0 8px;font-size:22px}
@@ -208,7 +208,7 @@
 
       <div class="akkoord veld" data-veld="akkoord">
         <input type="checkbox" id="akkoord" name="akkoord">
-        <label for="akkoord">Ik ga ermee akkoord dat mijn gegevens via de formulierdienst FormSubmit per e-mail naar de forumbeheerder worden gestuurd, en dat mijn naam, kantoor, functie, plaats en LinkedIn-profiel zichtbaar zijn voor andere deelnemers van het Adviesforum. Mijn telefoonnummer en e-mailadres worden alleen gebruikt om mijn aanmelding af te handelen.</label>
+        <label for="akkoord">Ik ga ermee akkoord dat mijn gegevens vanuit mijn eigen mailprogramma naar de forumbeheerder worden gestuurd, en dat mijn naam, kantoor, functie, plaats en LinkedIn-profiel zichtbaar zijn voor andere deelnemers van het Adviesforum. Mijn telefoonnummer en e-mailadres worden alleen gebruikt om mijn aanmelding af te handelen.</label>
       </div>
       <div class="fout" id="fout-akkoord" style="margin-top:8px">Vink het akkoord aan om je aan te melden.</div>
 
@@ -222,8 +222,8 @@
 
     <div class="kaart succes" id="succes" role="status" aria-live="polite">
       <div class="vink" aria-hidden="true">✓</div>
-      <h2 id="succes-titel">Bedankt voor je aanmelding</h2>
-      <p id="succes-tekst">Je gegevens zijn verstuurd naar de forumbeheerder. Je ontvangt binnen twee werkdagen bericht.</p>
+      <h2 id="succes-titel">Bijna klaar</h2>
+      <div id="succes-tekst"></div>
       <div class="acties" style="margin-top:0">
         <a class="knop-primair" href="index.html" style="text-decoration:none;border-radius:999px;padding:13px 24px;font-weight:700">Naar het forum →</a>
         <button type="button" class="knop-tweede" id="nogmaals">Nog iemand aanmelden</button>
@@ -236,10 +236,10 @@
       <h2>Hoe het verder gaat</h2>
       <ol>
         <li>Je vult het formulier in en klikt op <strong>Aanmelding versturen</strong>.</li>
-        <li>Je gegevens gaan direct per e-mail naar de forumbeheerder.</li>
+        <li>Je mailprogramma opent met een kant-en-klare e-mail aan de forumbeheerder; klik op <strong>Verzenden</strong>.</li>
         <li>Wij maken je profiel aan en sturen je binnen twee werkdagen een bevestiging.</li>
       </ol>
-      <p class="privacy">Je gegevens worden via de formulierdienst FormSubmit (formsubmit.co) verstuurd naar <a href="mailto:forumadvies@gmail.com">forumadvies@gmail.com</a> en alleen gebruikt om je aanmelding af te handelen. Lees de <a href="privacy.html">privacyverklaring</a>. Lukt versturen niet? Dan kun je je gegevens ook zelf mailen.</p>
+      <p class="privacy">Je gegevens gaan vanuit je eigen mailprogramma naar <a href="mailto:forumadvies@gmail.com">forumadvies@gmail.com</a>; er is geen formulierdienst en niets wordt op de site opgeslagen. Ze worden alleen gebruikt om je aanmelding af te handelen. Lees de <a href="privacy.html">privacyverklaring</a>.</p>
     </div>
   </aside>
 </main>
@@ -253,9 +253,7 @@
   "use strict";
 
   var ONTVANGER = "forumadvies@gmail.com";
-  // Een statische pagina kan zelf geen e-mail versturen; FormSubmit stuurt het formulier door naar ONTVANGER.
-  // Eenmalig activeren: na de eerste aanmelding vanaf de live pagina komt er een activatiemail op ONTVANGER.
-  var ENDPOINT  = "https://formsubmit.co/ajax/" + ONTVANGER;
+  // Geen formulierdienst en geen opslag: het mailprogramma van de bezoeker opent met een kant-en-klare e-mail aan ONTVANGER.
 
   var form      = document.getElementById("aanmeldform");
   var functie   = document.getElementById("functie");
@@ -266,7 +264,6 @@
   var kopieBlok = document.getElementById("kopie-blok");
   var knop      = document.getElementById("verstuur");
   var succes    = document.getElementById("succes");
-  var bezig     = false;
 
   functie.addEventListener("change", function(){
     andersWrap.style.display = (functie.value === "__anders") ? "" : "none";
@@ -355,10 +352,17 @@
   }
 
   function berichtTekst(){
-    var g = gegevens(), r = ["Nieuwe aanmelding voor het Adviesforum", ""];
-    Object.keys(g).forEach(function(k){
-      var label = (k + ":").padEnd ? (k + ":").padEnd(17, " ") : k + ": ";
-      r.push(label + g[k]);
+    var g = gegevens();
+    var r = ["Aanmelding via het Adviesforum — " + v("voornaam") + " " + v("achternaam"), "Datum: " + g["Aangemeld op"], ""];
+    var secties = [
+      ["1. CONTACT", ["Voornaam","Achternaam","E-mailadres","Telefoonnummer"]],
+      ["2. KANTOOR", ["Bedrijfsnaam","Plaats","Functie"]],
+      ["3. PROFIEL", ["LinkedIn","Akkoord zichtbaarheid"]]
+    ];
+    secties.forEach(function(sec){
+      r.push("═══ " + sec[0] + " ═══");
+      sec[1].forEach(function(k){ r.push(k + ": " + g[k]); });
+      r.push("");
     });
     return r.join("\n");
   }
@@ -374,33 +378,18 @@
     melding.innerHTML = html;
   }
 
-  function zetBezig(aan){
-    bezig = aan;
-    knop.disabled = aan;
-    knop.textContent = aan ? "Bezig met versturen…" : "Aanmelding versturen →";
-  }
-
   function toonSucces(){
     form.style.display = "none";
-    document.getElementById("succes-titel").textContent = "Bedankt, " + v("voornaam") + "!";
-    document.getElementById("succes-tekst").textContent =
-      "Je aanmelding is verstuurd naar de forumbeheerder. Je ontvangt binnen twee werkdagen bericht op " + v("email") + ".";
+    document.getElementById("succes-titel").textContent = "Bijna klaar, " + v("voornaam") + "!";
+    document.getElementById("succes-tekst").innerHTML =
+      "<strong>Laatste stap:</strong> je mailprogramma is geopend met je aanmelding aan " + ONTVANGER +
+      ". Klik daar op <strong>Verzenden</strong>. Daarna ontvang je binnen twee werkdagen bericht op " + esc(v("email")) + "." +
+      "<div class=\"knoppen\" style=\"margin-top:12px\"><a class=\"knop-primair\" id=\"mail-opnieuw\" href=\"" + esc(mailtoLink()) + "\">Open de e-mail opnieuw</a>" +
+      "<button type=\"button\" class=\"knop-tweede\" id=\"kopieer\">Tekst kopiëren</button></div>" +
+      "<p style=\"font-size:13px;margin:8px 0 0\">Opent er niets? Kopieer de tekst en mail hem naar " + ONTVANGER + ".</p>";
+    document.getElementById("kopieer").addEventListener("click", kopieer);
     succes.style.display = "block";
     succes.scrollIntoView({behavior:"smooth", block:"start"});
-  }
-
-  function toonFout(reden){
-    toonMelding("fout-blok",
-      "<strong>Je aanmelding is niet verstuurd.</strong> " + esc(reden) +
-      " Verstuur je gegevens via je mailprogramma of kopieer ze en mail ze naar " +
-      "<a href=\"mailto:" + ONTVANGER + "\">" + ONTVANGER + "</a>." +
-      "<div class=\"knoppen\"><a class=\"knop-primair\" id=\"via-mail\" href=\"#\">Verstuur via mailprogramma</a>" +
-      "<button type=\"button\" class=\"knop-tweede\" id=\"kopieer\">Gegevens kopiëren</button></div>");
-    document.getElementById("via-mail").addEventListener("click", function(e){
-      e.preventDefault();
-      window.location.href = mailtoLink();
-    });
-    document.getElementById("kopieer").addEventListener("click", kopieer);
   }
 
   function kopieer(){
@@ -420,47 +409,15 @@
 
   form.addEventListener("submit", function(e){
     e.preventDefault();
-    if (bezig) return;
     melding.className = "melding";
     kopieBlok.style.display = "none";
     if (!controleer()) return;
 
-    var data = gegevens();
-    data.email     = v("email");          // FormSubmit: antwoordadres = de aanmelder
-    data._subject  = onderwerp();
-    data._template = "table";
-    data._captcha  = "false";
-    data._honey    = v("website");        // honeypot: gevuld = spam, wordt genegeerd
-
-    var ctrl = window.AbortController ? new AbortController() : null;
-    var timer = setTimeout(function(){ if (ctrl) ctrl.abort(); }, 20000);
-    zetBezig(true);
-
-    fetch(ENDPOINT, {
-      method: "POST",
-      headers: {"Content-Type": "application/json", "Accept": "application/json"},
-      body: JSON.stringify(data),
-      signal: ctrl ? ctrl.signal : undefined
-    })
-    .then(function(r){
-      return r.json().catch(function(){ return {}; }).then(function(j){ return {ok: r.ok, j: j || {}}; });
-    })
-    .then(function(res){
-      clearTimeout(timer);
-      zetBezig(false);
-      var gelukt = res.ok && (res.j.success === true || res.j.success === "true");
-      if (gelukt) { toonSucces(); return; }
-      var msg = String(res.j.message || "");
-      if (window.console) console.warn("FormSubmit:", msg || res.j);
-      toonFout(/activat/i.test(msg)
-        ? "Het aanmeldformulier wordt nog geactiveerd door de forumbeheerder."
-        : "Er ging iets mis bij het versturen.");
-    })
-    .catch(function(){
-      clearTimeout(timer);
-      zetBezig(false);
-      toonFout("Er is geen verbinding met de verzenddienst.");
-    });
+    if (v("website")) return;                // honeypot: gevuld = spam
+    var a = document.createElement("a");
+    a.href = mailtoLink(); a.style.display = "none";
+    document.body.appendChild(a); a.click(); a.remove();
+    toonSucces();
   });
 
   document.getElementById("nogmaals").addEventListener("click", function(){

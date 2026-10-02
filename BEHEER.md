@@ -16,7 +16,7 @@ Het Adviesforum is een statische website op GitHub Pages: geen database, geen ac
 | `tests/` | automatische tests (draaien bij elke pull request) |
 
 ## Een vraag publiceren
-1. Een adviseur stelt een vraag op het forum. Naam, e-mail, telefoon, LinkedIn en de vraag komen per e-mail binnen op forumadvies@gmail.com (via FormSubmit).
+1. Een adviseur stelt een vraag op het forum. Naam, e-mail, telefoon, LinkedIn en de vraag komen per e-mail binnen op forumadvies@gmail.com (vanuit het mailprogramma van de vraagsteller).
 2. Controleer of de vraagsteller financieel adviseur is (LinkedIn) en of de vraag geen klantgegevens bevat.
 3. Voeg de vraag toe in `data/vragen.js` met alleen het veld `naam`. Zet **nooit** e-mail, telefoon of LinkedIn in de repository: die is openbaar.
 
@@ -40,14 +40,13 @@ Settings → Branches → Add branch ruleset voor `main`:
 
 Vul in `.github/CODEOWNERS` de GitHub-naam van de compliance officer in.
 
-## Formulieren (FormSubmit)
-Aanmelden, vraag stellen en "niets gevonden" sturen een e-mail via FormSubmit naar forumadvies@gmail.com. Na de eerste inzending vanaf de live site komt er een activatiemail: klik op **Activate Form**. Vraagt FormSubmit later opnieuw om activatie (bijvoorbeeld vanaf een andere pagina), doe dat dan ook.
+## Formulieren (via het mailprogramma, geen formulierdienst)
+Aanmelden, vraag stellen en "niets gevonden" openen het mailprogramma van de bezoeker met een kant-en-klare e-mail aan forumadvies@gmail.com (net als op dierenkliniek.nl). De bezoeker klikt op Verzenden; de mail komt van zijn eigen adres binnen, zodat je direct kunt antwoorden. Er is geen activatie, geen externe dienst en geen opslag. Opent er geen mailprogramma, dan kan de bezoeker de tekst kopiëren.
 
 Het mailadres staat in `aanmelden.html` (`ONTVANGER`), `index.html` (`FORM_MAIL`) en `privacy.html`.
 
 ## AVG: nog te regelen
 - [ ] Een zakelijk mailadres op een eigen domein in plaats van Gmail (met Gmail is geen verwerkersovereenkomst mogelijk).
-- [ ] Verwerkersovereenkomst of voorwaarden van FormSubmit beoordelen.
 - [ ] Bewaartermijnen in `privacy.html` bevestigen of aanpassen.
 - [ ] Verantwoordelijke organisatie in `privacy.html` invullen als dat niet "de beheerder" is.
 
