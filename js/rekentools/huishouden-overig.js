@@ -49,7 +49,7 @@
   const pos = x => Math.max(0, x);
   const tekenEuro = x => (x >= 0 ? '+ ' : '') + fmt.euro(x);
   const tekenEuro0 = x => (x >= 0 ? '+ ' : '') + fmt.euro0(x);
-  const tekenPct = (x, d = 2) => (x >= 0 ? '+ ' : '') + fmt.pct(x, d);
+  const tekenPct = (x, d = 2) => (x >= 0 ? '+ ' : '− ') + fmt.pct(Math.abs(x), d);
   const INDICATIEF = 'Indicatief: de gebruikte norm is een werkwaarde voor ' + N.peildatum + ' die nog niet is geverifieerd. Controleer de actuele norm';
 
   /* =====================================================================

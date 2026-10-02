@@ -764,9 +764,9 @@
   });
 
   RT.add({
-    id: 'kleinschaligheidsaftrek', groep: 'ondernemer', naam: 'Kleinschaligheidsinvesteringsaftrek',
-    intro: 'Hoeveel extra aftrek levert een investering in bedrijfsmiddelen op via de kleinschaligheidsinvesteringsaftrek (KIA)?',
-    kw: 'kia investeringsaftrek kleinschaligheid bedrijfsmiddelen investering',
+    id: 'kleinschaligheidsaftrek', groep: 'ondernemer', naam: 'Kleinschalige investeringsaftrek (KIA)',
+    intro: 'Hoeveel extra aftrek levert een investering in bedrijfsmiddelen op via de investeringsaftrek voor kleinschalige investeringen?',
+    kw: 'kia kleinschaligheidsinvesteringsaftrek investeringsaftrek kleinschaligheid bedrijfsmiddelen investering',
     fiscaal: ['KIA-staffel'], peildatum: N.peildatum,
     velden: [
       { k: 'i', l: 'Totaal investeringen in het jaar', s: 'eur', std: 95000 },
