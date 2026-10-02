@@ -1,0 +1,11 @@
+{
+  "name": "adviesforum",
+  "private": true,
+  "description": "Tests voor het Adviesforum (statische site, geen build-stap)",
+  "scripts": {
+    "test": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.56.1"
+  }
+}

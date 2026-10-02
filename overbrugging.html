@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Overbruggingskrediet</title>
+<style>
+  :root{
+    --primary:#003057;--accent:#E5A138;--bg:#F4F7F9;--text:#333333;--muted:#4A4A4A;
+    --line:#D8E2E8;--white:#fff;--soft:#EAF1F5;--warn-bg:#FDF4E5;--warn-line:#E5A138;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:"Plus Jakarta Sans","DM Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    font-size:16px;line-height:1.55}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 20px 64px}
+  header.hero{background:var(--primary);color:#fff;padding:36px 0 30px;margin-bottom:24px}
+  header.hero .wrap{padding-bottom:0}
+  h1{font-size:32px;line-height:1.2;margin:0 0 10px;font-weight:700}
+  .sub{opacity:.88;margin:0;max-width:75ch}
+  .meta{margin-top:14px;font-size:13px;opacity:.75}
+  .tabs{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 18px}
+  .tabs button{border:1px solid var(--line);background:#fff;color:var(--primary);font:inherit;font-weight:600;
+    font-size:14px;padding:9px 14px;border-radius:999px;cursor:pointer}
+  .tabs button.on{background:var(--primary);color:#fff;border-color:var(--primary)}
+  section.card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:22px 24px;margin:0 0 16px}
+  h2{font-size:20px;margin:0 0 12px;color:var(--primary)}
+  h3{font-size:16px;margin:18px 0 8px;color:var(--primary)}
+  .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px}
+  .fields{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px 14px}
+  .fields .full{grid-column:1/-1}
+  label{display:block;font-size:13.5px;font-weight:600;color:var(--primary);margin-bottom:4px}
+  .hint{display:block;font-size:12.5px;font-weight:400;color:var(--muted);margin-top:3px}
+  input[type=text],select{width:100%;padding:10px 12px;font:inherit;font-size:15px;border:1px solid var(--line);
+    border-radius:7px;background:#fff;color:var(--text)}
+  input:focus,select:focus{outline:2px solid var(--accent);outline-offset:1px}
+  .eur{position:relative}
+  .eur span{position:absolute;left:11px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:15px}
+  .eur input{padding-left:26px}
+  .pct{position:relative}
+  .pct span{position:absolute;right:11px;top:50%;transform:translateY(-50%);color:var(--muted)}
+  .pct input{padding-right:28px}
+  .result{background:var(--primary);color:#fff;border-radius:10px;padding:20px 22px}
+  .result .big{font-size:34px;font-weight:700;line-height:1.15;margin:4px 0 2px}
+  .result .lbl{font-size:13px;opacity:.85}
+  .rows{margin:16px 0 0;border-top:1px solid rgba(255,255,255,.25)}
+  .rows div{display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.15);font-size:14.5px}
+  .rows div b{font-weight:600;white-space:nowrap}
+  .let-op{background:var(--warn-bg);border-left:4px solid var(--warn-line);padding:12px 14px;border-radius:0 6px 6px 0;margin:14px 0 0;font-size:14.5px}
+  .let-op strong{color:#8A5B00}
+  .compliance{background:#FFF1F1;border-left:4px solid #C0392B;padding:12px 14px;border-radius:0 6px 6px 0;margin:14px 0 0;font-size:14.5px}
+  .compliance strong{color:#A5281B}
+  .msg{font-size:13.5px;margin-top:10px;color:#FFE3B0}
+  .tblwrap{overflow-x:auto;border:1px solid var(--line);border-radius:8px;max-height:560px;overflow-y:auto}
+  table{border-collapse:collapse;width:100%;font-size:13.5px;font-variant-numeric:tabular-nums}
+  th,td{padding:7px 9px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
+  th{background:var(--soft);color:var(--primary);position:sticky;top:0;z-index:1;font-weight:700}
+  td:first-child,th:first-child{text-align:left;position:sticky;left:0;background:#fff;z-index:2}
+  th:first-child{background:var(--soft);z-index:3}
+  tr.hl td{background:#FFF4DD}
+  tr.hl td:first-child{background:#FFE7B8}
+  td.hl{outline:2px solid var(--accent);outline-offset:-2px;font-weight:700}
+  .simple td,.simple th{text-align:left}
+  .simple td.n,.simple th.n{text-align:right}
+  .toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:flex-end;margin-bottom:12px}
+  .toolbar > div{flex:1 1 200px}
+  .btn{border:0;border-radius:7px;padding:10px 16px;font-size:14px;font-weight:600;font-family:inherit;cursor:pointer;background:var(--primary);color:#fff}
+  .btn.sec{background:#fff;color:var(--primary);border:1px solid var(--line)}
+  .pane{display:none}.pane.on{display:block}
+  footer{margin-top:28px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+  footer a{color:var(--primary)}
+  @media (max-width:820px){
+    .grid{grid-template-columns:minmax(0,1fr)}
+    h1{font-size:26px}
+  }
+  @media (max-width:520px){
+    .wrap{padding:0 16px 48px}
+    .fields{grid-template-columns:minmax(0,1fr)}
+    section.card{padding:18px 16px}
+    .result .big{font-size:28px}
+  }
+  @media print{
+    .tabs,.toolbar .btn,.noprint{display:none!important}
+    body{background:#fff}
+    .pane{display:block!important}
+    .tblwrap{max-height:none;overflow:visible}
+    th{position:static}
+    td:first-child,th:first-child{position:static}
+    header.hero{background:#fff;color:#000;border-bottom:3px solid var(--primary)}
+    .result{background:#fff;color:#000;border:2px solid var(--primary)}
+    .rows div{border-color:#ccc}
+    section.card{break-inside:avoid}
+  }
+  .back{display:inline-block;font-size:13px;margin:0 0 10px;opacity:.9;text-decoration:none}
+  .back:hover{text-decoration:underline}
+  .chk{display:flex;align-items:center;gap:8px;font-size:14.5px;font-weight:600;color:var(--primary);margin:0;cursor:pointer}
+  .chk input{width:18px;height:18px;margin:0;accent-color:var(--primary)}
+  input:disabled{background:var(--soft);color:var(--muted)}
+  .rows div.tot{border-bottom:0;font-size:15.5px}
+  .rows div.tot b{font-weight:700}
+  .warn{color:#A5281B;font-weight:600}
+  @media print{ .back{display:none} }
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <a class="back noprint" href="index.html#hulpmiddelen" style="color:#fff">&larr; Terug naar het Adviesforum</a>
+    <h1>Overbruggingskrediet</h1>
+    <p class="sub">Bereken het maximale overbruggingskrediet op de overwaarde van de oude woning, de rente en de dubbele woonlasten tot de verkoop.</p>
+    <p class="meta">Indicatieve rekenhulp &middot; voorwaarden van de geldverstrekker zijn leidend</p>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="tabs noprint">
+    <button type="button" id="print" style="margin-left:auto">Printen / PDF</button>
+  </div>
+  <section class="card">
+    <div class="grid">
+      <div>
+        <h2>Invoer</h2>
+        <div class="fields">
+          <div>
+            <label for="waarde">Verwachte verkoopprijs / marktwaarde oude woning</label>
+            <div class="eur"><span>&euro;</span><input type="text" inputmode="numeric" id="waarde" value="400.000"></div>
+          </div>
+          <div>
+            <label for="pct">Percentage van de waarde</label>
+            <div class="pct"><input type="text" inputmode="decimal" id="pct" value="90"><span>%</span></div>
+            <span class="hint">Verschilt per geldverstrekker.</span>
+          </div>
+          <div class="full">
+            <label class="chk"><input type="checkbox" id="verkocht"> Woning is onvoorwaardelijk verkocht</label>
+            <span class="hint">Zet het percentage op 100 (over de verkoopprijs); pas aan als de geldverstrekker anders rekent.</span>
+          </div>
+          <div class="full">
+            <label for="rest">Resterende hypotheekschuld oude woning</label>
+            <div class="eur"><span>&euro;</span><input type="text" inputmode="numeric" id="rest" value="200.000"></div>
+          </div>
+          <div>
+            <label class="chk" style="margin-bottom:6px"><input type="checkbox" id="vkaan"> Verkoopkosten aftrekken</label>
+            <div class="eur"><span>&euro;</span><input type="text" inputmode="numeric" id="vk" value="0" disabled aria-label="Verkoopkosten"></div>
+          </div>
+          <div>
+            <label for="rente">Rente overbruggingskrediet (per jaar)</label>
+            <div class="pct"><input type="text" inputmode="decimal" id="rente" value="6,00"><span>%</span></div>
+          </div>
+          <div>
+            <label for="mnd">Verwachte looptijd (maanden)</label>
+            <input type="text" inputmode="numeric" id="mnd" value="6">
+            <span class="hint">Meestal maximaal 24 maanden.</span>
+          </div>
+          <div>
+            <label for="huidig">Maandlast huidige hypotheek</label>
+            <div class="eur"><span>&euro;</span><input type="text" inputmode="numeric" id="huidig" value="0" placeholder="bijv. 1.100"></div>
+          </div>
+          <div class="full">
+            <label for="nieuw">Bruto maandlast nieuwe hypotheek</label>
+            <div class="eur"><span>&euro;</span><input type="text" inputmode="numeric" id="nieuw" value="0" placeholder="bijv. 1.950"></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="result" aria-live="polite">
+          <div class="lbl">Maximaal overbruggingskrediet (indicatief)</div>
+          <div class="big" id="r-max">&ndash;</div>
+          <div class="lbl" id="r-basis"></div>
+          <div class="rows">
+            <div><span id="r-pctlbl">Percentage van de waarde</span><b id="r-pctw"></b></div>
+            <div><span>Af: resterende hypotheekschuld</span><b id="r-rest"></b></div>
+            <div><span>Af: verkoopkosten</span><b id="r-vk"></b></div>
+            <div><span>Rente overbrugging per maand</span><b id="r-rpm"></b></div>
+            <div><span id="r-rtotlbl">Totale rente over looptijd</span><b id="r-rtot"></b></div>
+            <div><span>Maandlast huidige hypotheek</span><b id="r-huidig"></b></div>
+            <div><span>Bruto maandlast nieuwe hypotheek</span><b id="r-nieuw"></b></div>
+            <div class="tot"><span>Dubbele woonlasten per maand</span><b id="r-dubbel"></b></div>
+            <div class="tot"><span id="r-dtotlbl">Totaal over looptijd</span><b id="r-dtot"></b></div>
+          </div>
+          <div class="msg" id="r-msg"></div>
+        </div>
+        <div class="compliance"><strong>Compliance:</strong> deze berekening is indicatief; de voorwaarden van de geldverstrekker zijn leidend (percentage, looptijd, rente, wel of niet aftrekken van verkoopkosten). Toets of de klant de dubbele woonlasten kan dragen, ook in het scenario dat de oude woning niet of later dan verwacht wordt verkocht of minder opbrengt, en leg dit vast in het dossier.</div>
+      </div>
+    </div>
+    <div class="let-op"><strong>Rekenwijze:</strong> maximaal overbruggingskrediet = percentage &times; verwachte verkoopprijs &minus; resterende hypotheekschuld &minus; verkoopkosten (indien aangevinkt), minimaal nul. Het krediet is aflossingsvrij: rente per maand = bedrag &times; rente / 12. Dubbele woonlasten = maandlast huidige hypotheek + bruto maandlast nieuwe hypotheek + rente overbrugging, bruto en zonder overige eigenaarslasten.</div>
+  </section>
+
+  <section class="card">
+    <h2>Toelichting</h2>
+    <div class="let-op"><strong>Percentage:</strong> het percentage verschilt per geldverstrekker. Veel gebruikt is 90% van de verwachte verkoopprijs (of marktwaarde volgens taxatie); bij een onvoorwaardelijk verkochte woning rekenen geldverstrekkers vaak met de volledige verkoopprijs uit de koopovereenkomst.</div>
+    <div class="let-op"><strong>Renteaftrek:</strong> de rente op een overbruggingskrediet is in de regel aftrekbaar, omdat het krediet dient voor de verwerving van de nieuwe eigen woning. Houd rekening met de eigenwoningreserve; controleer de fiscale positie.</div>
+    <div class="let-op"><strong>Leegstand:</strong> de oude woning blijft na verhuizing maximaal drie jaar fiscaal eigen woning, mits zij leegstaat en te koop staat. Zo lang blijft ook de rente op de oude hypotheek aftrekbaar.</div>
+  </section>
+
+  <footer>
+    <p>Indicatieve rekenhulp. Voorwaarden van de geldverstrekker zijn leidend. Deze pagina slaat niets op.</p>
+  </footer>
+</div>
+<script>
+(function(){
+  var $ = function(id){ return document.getElementById(id); };
+  var eur0 = new Intl.NumberFormat('nl-NL',{style:'currency',currency:'EUR',minimumFractionDigits:0,maximumFractionDigits:0});
+  var eur2 = new Intl.NumberFormat('nl-NL',{style:'currency',currency:'EUR',minimumFractionDigits:2,maximumFractionDigits:2});
+  var int0 = new Intl.NumberFormat('nl-NL',{maximumFractionDigits:0});
+  var dec2 = new Intl.NumberFormat('nl-NL',{minimumFractionDigits:2,maximumFractionDigits:2});
+  function fmtE(v){ return eur0.format(v).replace(/ /g,' '); }
+  function fmtE2(v){ return eur2.format(v).replace(/ /g,' '); }
+  function parseNum(s){
+    s = String(s||'').replace(/[^\d,.-]/g,'');
+    if (s.indexOf(',') > -1) s = s.replace(/\./g,'').replace(',', '.');
+    else s = s.replace(/\./g,'');
+    var v = parseFloat(s); return isNaN(v) ? 0 : v;
+  }
+  function parsePct(s){
+    s = String(s||'').replace(/[^\d,.-]/g,'').replace(',', '.');
+    var v = parseFloat(s); return isNaN(v) ? 0 : v;
+  }
+  // Euro-invoer met duizendtalscheiding, cursor blijft achteraan staan
+  function euroInput(el, cb){
+    el.addEventListener('input', function(){
+      var digits = el.value.replace(/\D/g,'');
+      el.value = digits ? int0.format(parseInt(digits,10)) : '';
+      cb && cb();
+    });
+  }
+
+
+  function reken(){
+    var waarde = parseNum($('waarde').value), pct = parsePct($('pct').value), rest = parseNum($('rest').value);
+    var vkAan = $('vkaan').checked, vk = vkAan ? parseNum($('vk').value) : 0;
+    var rente = parsePct($('rente').value), mnd = Math.max(0, Math.round(parseNum($('mnd').value)));
+    var huidig = parseNum($('huidig').value), nieuw = parseNum($('nieuw').value);
+    var msg = [];
+    var pw = pct/100 * waarde;
+    var bruto = pw - rest - vk;
+    var max = Math.max(0, bruto);
+    var rpm = max * rente/100/12;
+    var rtot = rpm * mnd;
+    var dubbel = huidig + nieuw + rpm;
+    $('r-max').textContent = fmtE2(max);
+    $('r-basis').textContent = dec2.format(pct) + '% van ' + fmtE2(waarde);
+    $('r-pctlbl').textContent = dec2.format(pct) + '% van de waarde';
+    $('r-pctw').textContent = fmtE2(pw);
+    $('r-rest').textContent = '− ' + fmtE2(rest);
+    $('r-vk').textContent = vkAan ? '− ' + fmtE2(vk) : 'niet afgetrokken';
+    $('r-rpm').textContent = fmtE2(rpm);
+    $('r-rtotlbl').textContent = 'Totale rente over ' + mnd + ' maand' + (mnd === 1 ? '' : 'en');
+    $('r-rtot').textContent = fmtE2(rtot);
+    $('r-huidig').textContent = fmtE2(huidig);
+    $('r-nieuw').textContent = fmtE2(nieuw);
+    $('r-dubbel').textContent = fmtE2(dubbel);
+    $('r-dtotlbl').textContent = 'Totaal woonlasten over ' + mnd + ' maand' + (mnd === 1 ? '' : 'en');
+    $('r-dtot').textContent = fmtE2(dubbel * mnd);
+    if (bruto <= 0 && waarde > 0) msg.push('Geen overwaarde beschikbaar binnen het gekozen percentage: er is geen overbruggingskrediet mogelijk.');
+    if (pct > 100) msg.push('Een percentage boven 100% is ongebruikelijk.');
+    if (mnd > 24) msg.push('Let op: een looptijd langer dan 24 maanden is bij de meeste geldverstrekkers niet mogelijk.');
+    $('r-msg').textContent = msg.join(' ');
+  }
+  ['waarde','rest','vk','huidig','nieuw'].forEach(function(id){ euroInput($(id), reken); });
+  ['pct','rente'].forEach(function(id){ $(id).addEventListener('input', reken); });
+  $('mnd').addEventListener('input', function(){ $('mnd').value = $('mnd').value.replace(/\D/g,''); reken(); });
+  $('verkocht').addEventListener('change', function(){ $('pct').value = this.checked ? '100' : '90'; reken(); });
+  $('vkaan').addEventListener('change', function(){ $('vk').disabled = !this.checked; if (this.checked) $('vk').focus(); reken(); });
+
+
+  // Print via eigen venster: window.print() wordt binnen een iframe (o.a. Google Sites) geblokkeerd.
+  $('print').addEventListener('click', function(){
+    try {
+      var w = window.open('', '_blank');
+      if (!w) { window.print(); return; }
+      var body = document.body.cloneNode(true);
+      Array.prototype.forEach.call(body.querySelectorAll('input'), function(i, idx){
+        var orig = document.querySelectorAll('input')[idx];
+        if (orig.type === 'checkbox') { if (orig.checked) i.setAttribute('checked','checked'); else i.removeAttribute('checked'); }
+        else i.setAttribute('value', orig.value);
+      });
+      Array.prototype.forEach.call(body.querySelectorAll('select'), function(s, idx){
+        var orig = document.querySelectorAll('select')[idx];
+        Array.prototype.forEach.call(s.options, function(o, j){ if (j === orig.selectedIndex) o.setAttribute('selected','selected'); else o.removeAttribute('selected'); });
+      });
+      Array.prototype.forEach.call(body.querySelectorAll('script'), function(s){ s.remove(); });
+      w.document.open();
+      w.document.write('<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><title>' + document.title +
+        '</title><style>' + document.querySelector('style').textContent + '</style></head><body>' + body.innerHTML + '</body></html>');
+      w.document.close(); w.focus();
+      setTimeout(function(){ w.print(); }, 350);
+    } catch (e) { window.print(); }
+  });
+
+  reken();
+})();
+</script>
+</body>
+</html>
