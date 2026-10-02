@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oefenen voor PE en Wft – Adviesforum</title>
+<meta name="description" content="Eigen oefenvragen voor financieel adviseurs: Wft Basis, hypothecair krediet, inkomen, pensioen, vermogen, consumptief krediet en schade particulier. Geen officiële examenvragen.">
+<style>
+@font-face{font-family:Montserrat;font-style:normal;font-weight:400;font-display:swap;src:url(fonts/montserrat-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:500;font-display:swap;src:url(fonts/montserrat-latin-500-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:600;font-display:swap;src:url(fonts/montserrat-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:700;font-display:swap;src:url(fonts/montserrat-latin-700-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:800;font-display:swap;src:url(fonts/montserrat-latin-800-normal.woff2) format('woff2')}
+
+:root{
+  --geel:#FFD200;--geel-donker:#E6BD00;--geel-zacht:#FFF6C7;
+  --zwart:#141414;--tekst:#1F1F1F;--grijs:#5E5E5E;--lijn:#E4E4E4;--vlak:#F7F7F5;
+  --rood:#C0392B;--rood-zacht:#FFF1F0;--groen:#1E7A4B;--groen-zacht:#EAF6EF;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:Montserrat,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  color:var(--tekst);background:#fff;line-height:1.55;font-size:15px;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+button,input,select{font-family:inherit}
+
+.balk{background:var(--zwart);color:#fff;font-size:12.5px;padding:8px 24px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.balk a{color:#fff;text-decoration:none;opacity:.88}
+.balk a:hover{opacity:1;text-decoration:underline}
+
+.kop{background:var(--geel);color:var(--zwart);padding:34px 24px 38px}
+.kop-in{max-width:980px;margin:0 auto}
+.merk{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.08em;font-size:12px;text-transform:uppercase;margin-bottom:16px}
+.zeshoek{width:22px;height:25px;background:var(--zwart);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);flex:none}
+.terug{display:inline-block;font-size:13.5px;font-weight:700;text-decoration:none;border-bottom:2px solid var(--zwart);margin-bottom:14px}
+.kop h1{margin:0 0 10px;font-size:clamp(27px,4.2vw,40px);line-height:1.12;font-weight:800}
+.kop p{margin:0;max-width:66ch;font-size:15.5px}
+.kop .stempel{display:inline-block;margin-top:16px;font-size:12px;font-weight:700;background:var(--zwart);color:var(--geel);padding:5px 11px;border-radius:999px}
+
+.romp{max-width:980px;margin:0 auto;padding:28px 24px 40px}
+.disclaimer{background:var(--rood-zacht);border-left:4px solid var(--rood);border-radius:0 10px 10px 0;padding:14px 18px;font-size:14px;margin-bottom:24px}
+.disclaimer strong{color:#A5281B}
+.disclaimer p{margin:0}.disclaimer p+p{margin-top:6px}
+
+.kaart{border:1px solid var(--lijn);border-radius:14px;padding:22px}
+.kaart h2{margin:0 0 4px;font-size:22px;font-weight:800;line-height:1.2}
+.kaart .sub{margin:0 0 18px;color:var(--grijs);font-size:14px}
+.sectie{font-size:11.5px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--grijs);margin:20px 0 8px}
+.sectie:first-of-type{margin-top:0}
+
+.modules{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
+.keuze{position:relative;display:block;border:1px solid var(--lijn);border-radius:12px;padding:12px 14px;background:#fff;cursor:pointer;min-width:0}
+.keuze:hover{border-color:#9A9A9A}
+.keuze input{position:absolute;opacity:0;pointer-events:none}
+.keuze b{display:block;font-size:14px;line-height:1.3;padding-right:44px}
+.keuze span{display:block;font-size:12.5px;color:var(--grijs);margin-top:4px;line-height:1.4}
+.keuze em{position:absolute;top:11px;right:12px;font-style:normal;font-size:11.5px;font-weight:700;background:var(--vlak);border-radius:999px;padding:2px 8px}
+.keuze:has(input:checked){border-color:var(--zwart);box-shadow:inset 0 0 0 1px var(--zwart);background:var(--geel-zacht)}
+.keuze:has(input:focus-visible){outline:3px solid rgba(255,210,0,.7);outline-offset:1px}
+
+.rij{display:flex;flex-wrap:wrap;gap:8px}
+.pil{position:relative;display:inline-flex;align-items:center;border:1px solid #CFCFCF;border-radius:999px;padding:8px 16px;font-size:14px;font-weight:700;cursor:pointer;background:#fff}
+.pil input{position:absolute;opacity:0;pointer-events:none}
+.pil:has(input:checked){background:var(--zwart);color:#fff;border-color:var(--zwart)}
+.pil:has(input:focus-visible){outline:3px solid rgba(255,210,0,.7);outline-offset:1px}
+.pil:has(input:disabled){opacity:.45;cursor:not-allowed}
+.modi{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px}
+.hint{font-size:12.5px;color:var(--grijs);margin-top:6px}
+
+.knoppen{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.knop{border-radius:999px;padding:10px 18px;font-size:14px;font-weight:700;cursor:pointer;border:1px solid var(--zwart);background:var(--zwart);color:#fff}
+.knop:hover{background:#000}
+.knop:disabled{opacity:.4;cursor:not-allowed}
+.knop.geel{background:var(--geel);color:var(--zwart);border-color:var(--geel-donker)}
+.knop.geel:hover{background:var(--geel-donker)}
+.knop.licht{background:#fff;color:var(--zwart);border-color:#CFCFCF}
+.knop.licht:hover{background:var(--vlak)}
+.start{margin-top:22px}
+
+.voortgang{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;font-size:13px;font-weight:700;color:var(--grijs);margin-bottom:8px}
+.balkje{height:8px;background:var(--vlak);border-radius:999px;overflow:hidden;margin-bottom:18px}
+.balkje i{display:block;height:100%;background:var(--geel);width:0;transition:width .2s}
+.label{display:inline-block;font-size:11.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;background:var(--vlak);border-radius:999px;padding:3px 10px;margin-bottom:10px}
+.vraag{font-size:18px;font-weight:700;line-height:1.4;margin:0 0 16px}
+.opties{display:grid;gap:8px;margin:0;padding:0;list-style:none}
+.optie{display:flex;gap:12px;align-items:flex-start;width:100%;text-align:left;border:1px solid #CFCFCF;border-radius:12px;background:#fff;padding:12px 14px;font-size:15px;cursor:pointer;color:var(--tekst);line-height:1.45}
+.optie:hover:not(:disabled){border-color:var(--zwart);background:var(--vlak)}
+.optie:focus-visible{outline:3px solid rgba(255,210,0,.7);outline-offset:1px}
+.optie .lt{flex:none;width:26px;height:26px;border-radius:50%;background:var(--vlak);display:inline-flex;align-items:center;justify-content:center;font-weight:800;font-size:13px}
+.optie span:last-child{min-width:0;overflow-wrap:anywhere}
+.optie[aria-pressed="true"]{border-color:var(--zwart);box-shadow:inset 0 0 0 1px var(--zwart);background:var(--geel-zacht)}
+.optie[aria-pressed="true"] .lt{background:var(--zwart);color:#fff}
+.optie:disabled{cursor:default}
+.optie.goed{border-color:var(--groen);background:var(--groen-zacht);box-shadow:inset 0 0 0 1px var(--groen)}
+.optie.goed .lt{background:var(--groen);color:#fff}
+.optie.fout{border-color:var(--rood);background:var(--rood-zacht);box-shadow:inset 0 0 0 1px var(--rood)}
+.optie.fout .lt{background:var(--rood);color:#fff}
+.feedback{margin-top:16px;border-radius:0 10px 10px 0;padding:12px 16px;font-size:14.5px}
+.feedback.goed{background:var(--groen-zacht);border-left:4px solid var(--groen)}
+.feedback.fout{background:var(--rood-zacht);border-left:4px solid var(--rood)}
+.feedback h3{margin:0 0 4px;font-size:14px;font-weight:800}
+.feedback p{margin:0}
+.bron{margin-top:8px;font-size:13.5px}
+.bron a{font-weight:700;color:var(--zwart);overflow-wrap:anywhere}
+.navigatie{margin-top:20px;justify-content:space-between}
+.navigatie .knoppen{gap:8px}
+
+.score{display:grid;grid-template-columns:auto minmax(0,1fr);gap:20px;align-items:center;background:var(--zwart);color:#fff;border-radius:14px;padding:20px 22px;margin-bottom:20px}
+.score .groot{font-size:44px;font-weight:800;color:var(--geel);line-height:1}
+.score .lbl{font-size:13px;opacity:.85}
+.score p{margin:4px 0 0;font-size:14.5px}
+.permodule{width:100%;border-collapse:collapse;font-size:14px;margin-bottom:22px}
+.permodule th,.permodule td{padding:8px 10px;border-bottom:1px solid var(--lijn);text-align:left}
+.permodule th{background:var(--geel);font-weight:700}
+.permodule td.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.fouten{display:grid;gap:12px}
+.fout-item{border:1px solid var(--lijn);border-left:4px solid var(--rood);border-radius:0 12px 12px 0;padding:14px 16px}
+.fout-item h4{margin:0 0 8px;font-size:15px;line-height:1.4}
+.fout-item dl{margin:0;font-size:14px}
+.fout-item dt{font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--grijs);margin-top:6px}
+.fout-item dd{margin:2px 0 0;overflow-wrap:anywhere}
+.alles-goed{background:var(--groen-zacht);border-left:4px solid var(--groen);border-radius:0 10px 10px 0;padding:12px 16px}
+.verborgen{display:none !important}
+
+.voet{max-width:980px;margin:0 auto;padding:8px 24px 40px;font-size:12.5px;color:var(--grijs)}
+.voet a{color:var(--zwart);font-weight:600}
+
+@media (max-width:560px){
+  .balk,.kop{padding-left:16px;padding-right:16px}
+  .romp,.voet{padding-left:16px;padding-right:16px}
+  .kaart{padding:16px}
+  .vraag{font-size:16.5px}
+  .score{grid-template-columns:minmax(0,1fr)}
+  .score .groot{font-size:38px}
+  .navigatie .knop{flex:1 1 auto}
+}
+</style>
+</head>
+<body>
+
+<div class="balk">
+  <span>Adviesforum &middot; hulpmiddelen voor financieel adviseurs</span>
+  <span><a href="index.html">Naar het forum</a></span>
+</div>
+
+<header class="kop">
+  <div class="kop-in">
+    <div class="merk"><span class="zeshoek" aria-hidden="true"></span>Adviesforum &middot; Hulpmiddelen</div>
+    <a class="terug" href="index.html#hulpmiddelen">&larr; Terug naar de hulpmiddelen</a>
+    <h1>Oefenen voor PE en Wft</h1>
+    <p>Houd je kennis scherp met <span id="totaal">eigen</span> meerkeuzevragen over Wft Basis, hypothecair krediet, inkomen, pensioen, vermogen, consumptief krediet en schade particulier. Bij elke vraag lees je waarom het juiste antwoord juist is, met een verwijzing naar de kennisbank of een officiële bron.</p>
+    <span class="stempel">Oefenmateriaal &middot; geen officiële examenvragen &middot; peildatum oktober 2026</span>
+  </div>
+</header>
+
+<main class="romp">
+  <div class="disclaimer" role="note">
+    <p><strong>Let op: dit is oefenmateriaal.</strong> Deze vragen zijn door het Adviesforum zelf opgesteld en zijn geen officiële examenvragen van het CDFD of van een andere examenorganisatie. Ze zeggen niets over de inhoud of het niveau van een PE- of Wft-examen.</p>
+    <p>Bedragen en regels gelden per oktober 2026 en kunnen wijzigen. Controleer voor je advies altijd de actuele bron. Je antwoorden worden nergens opgeslagen: na het sluiten of verversen van de pagina zijn ze weg.</p>
+  </div>
+
+  <!-- Instellingen -->
+  <section class="kaart" id="scherm-start" aria-labelledby="start-titel">
+    <h2 id="start-titel">Stel je oefening samen</h2>
+    <p class="sub">Kies een module, het aantal vragen en hoe je wilt oefenen. De vragen en antwoorden komen elke keer in een andere volgorde.</p>
+
+    <div class="sectie" id="lbl-module">Module</div>
+    <div class="modules" id="modules" role="radiogroup" aria-labelledby="lbl-module"></div>
+
+    <div class="sectie" id="lbl-aantal">Aantal vragen</div>
+    <div class="rij" role="radiogroup" aria-labelledby="lbl-aantal" id="aantallen">
+      <label class="pil"><input type="radio" name="aantal" value="10" checked>10</label>
+      <label class="pil"><input type="radio" name="aantal" value="20">20</label>
+      <label class="pil"><input type="radio" name="aantal" value="40">40</label>
+    </div>
+    <div class="hint" id="aantal-hint"></div>
+
+    <div class="sectie" id="lbl-modus">Manier van oefenen</div>
+    <div class="modi" role="radiogroup" aria-labelledby="lbl-modus">
+      <label class="keuze"><input type="radio" name="modus" value="direct" checked><b>Direct feedback</b><span>Na elke vraag zie je meteen of je antwoord klopt, met uitleg.</span></label>
+      <label class="keuze"><input type="radio" name="modus" value="toets"><b>Toetsmodus</b><span>Beantwoord alle vragen eerst; aan het eind zie je je score en de uitleg bij je fouten.</span></label>
+    </div>
+
+    <div class="knoppen start">
+      <button class="knop geel" type="button" id="btn-start">Start de oefening</button>
+    </div>
+  </section>
+
+  <!-- Vraag -->
+  <section class="kaart verborgen" id="scherm-vraag" aria-live="polite">
+    <div class="voortgang"><span id="vg-tekst"></span><span id="vg-modus"></span></div>
+    <div class="balkje" aria-hidden="true"><i id="vg-balk"></i></div>
+    <span class="label" id="vr-label"></span>
+    <p class="vraag" id="vr-tekst"></p>
+    <ul class="opties" id="vr-opties"></ul>
+    <div id="vr-feedback"></div>
+    <div class="knoppen navigatie">
+      <div class="knoppen">
+        <button class="knop licht" type="button" id="btn-vorige">&larr; Vorige</button>
+        <button class="knop licht" type="button" id="btn-stop">Stoppen</button>
+      </div>
+      <div class="knoppen">
+        <button class="knop" type="button" id="btn-volgende">Volgende &rarr;</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resultaat -->
+  <section class="kaart verborgen" id="scherm-resultaat" aria-labelledby="res-titel">
+    <h2 id="res-titel" tabindex="-1">Je resultaat</h2>
+    <p class="sub" id="res-sub"></p>
+    <div class="score">
+      <div><div class="lbl">Score</div><div class="groot" id="res-score"></div></div>
+      <div><p id="res-oordeel"></p><p class="lbl" id="res-detail"></p></div>
+    </div>
+    <div class="knoppen" style="margin-bottom:22px">
+      <button class="knop geel" type="button" id="btn-fouten">Oefen alleen de foute vragen opnieuw</button>
+      <button class="knop" type="button" id="btn-opnieuw">Nieuwe oefening</button>
+      <button class="knop licht" type="button" id="btn-print">Print resultaat</button>
+    </div>
+    <div class="sectie">Score per module</div>
+    <div style="overflow-x:auto"><table class="permodule" id="res-modules"></table></div>
+    <div class="sectie" id="res-fouten-kop">Fouten met uitleg</div>
+    <div class="fouten" id="res-fouten"></div>
+  </section>
+</main>
+
+<footer class="voet">
+  <p>Oefenvragen opgesteld door het Adviesforum op basis van de kennisbank, de fiscale normen 2026 in de rekenhulpen en officiële bronnen (AFM, Kifid, Belastingdienst, SVB, UWV, DNB, NHG). Geen officiële CDFD-examenvragen. Zie ook de <a href="index.html#kennisbank">kennisbank</a> en de <a href="rekentools.html">rekenhulpen</a>.</p>
+</footer>
+
+<script src="data/kennisbank.js"></script>
+<script src="data/kennisbank-planning.js"></script>
+<script src="data/kennisbank-geldverstrekkers.js"></script>
+<script src="data/kennisbank-eblinqx.js"></script>
+<script src="data/kennisbank-afm.js"></script>
+<script src="data/kennisbank-kifid.js"></script>
+<script src="data/kennisbank-nhg.js"></script>
+<script src="data/kennisbank-thema.js"></script>
+<script src="data/oefenvragen.js"></script>
+<script>
+(function () {
+  'use strict';
+  const VRAGEN = window.OEFENVRAGEN || [];
+  const MODULES = window.OEFENVRAGEN_MODULES || [];
+  const KB = {};
+  (window.KENNISBANK || []).forEach(a => { KB[a.id] = a.titel; });
+  const $ = id => document.getElementById(id);
+  const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const LETTERS = ['A', 'B', 'C', 'D'];
+  const modNaam = id => (MODULES.find(m => m.id === id) || { naam: id }).naam;
+  const nl = n => n.toLocaleString('nl-NL');
+
+  function shuffle(arr) {
+    const a = arr.slice();
+    for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; }
+    return a;
+  }
+  function bronInfo(bron) {
+    if (/^k\d+$/.test(bron)) return { url: 'index.html#artikel-' + bron, titel: 'Kennisbank: ' + (KB[bron] || bron) };
+    if (/^https?:\/\//.test(bron)) return { url: bron, titel: bron.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, ''), extern: true };
+    return { url: bron, titel: 'Rekenhulp: ' + bron.replace(/\.html$/, '').replace(/-/g, ' ') };
+  }
+  function bronLink(bron) {
+    const b = bronInfo(bron);
+    return '<a href="' + esc(b.url) + '"' + (b.extern ? ' target="_blank" rel="noopener"' : '') + '>' + esc(b.titel) + '</a>';
+  }
+
+  /* ---------- staat (alleen in geheugen) ---------- */
+  const S = { module: 'alle', aantal: 10, modus: 'direct', set: [], idx: 0, antwoorden: [], klaar: false, herhaling: false };
+
+  /* ---------- startscherm ---------- */
+  $('totaal').textContent = nl(VRAGEN.length);
+  const telPerModule = id => id === 'alle' ? VRAGEN.length : VRAGEN.filter(v => v.module === id).length;
+  $('modules').innerHTML = [{ id: 'alle', naam: 'Alle modules door elkaar', omschrijving: 'Een mix van alle onderwerpen' }].concat(MODULES).map((m, i) =>
+    '<label class="keuze"><input type="radio" name="module" value="' + esc(m.id) + '"' + (i === 0 ? ' checked' : '') + '><b>' + esc(m.naam) + '</b><em>' + telPerModule(m.id) + '</em><span>' + esc(m.omschrijving) + '</span></label>'
+  ).join('');
+
+  function werkAantalBij() {
+    const mod = document.querySelector('input[name=module]:checked').value;
+    const max = telPerModule(mod);
+    let hint = '';
+    document.querySelectorAll('input[name=aantal]').forEach(inp => {
+      const n = +inp.value;
+      inp.disabled = false;
+      if (n > max) hint = 'Deze module heeft ' + max + ' vragen; bij een groter aantal krijg je ze allemaal.';
+    });
+    $('aantal-hint').textContent = hint;
+  }
+  document.querySelectorAll('input[name=module]').forEach(i => i.addEventListener('change', werkAantalBij));
+  werkAantalBij();
+
+  function toon(scherm) {
+    ['scherm-start', 'scherm-vraag', 'scherm-resultaat'].forEach(id => $(id).classList.toggle('verborgen', id !== scherm));
+    const el = $(scherm);
+    if (el.getBoundingClientRect().top < 0) el.scrollIntoView({ block: 'start' });
+  }
+
+  function maakSet(bron, aantal) {
+    return shuffle(bron).slice(0, aantal).map(v => ({ v, volgorde: shuffle([0, 1, 2, 3]) }));
+  }
+
+  $('btn-start').addEventListener('click', () => {
+    S.module = document.querySelector('input[name=module]:checked').value;
+    S.aantal = +document.querySelector('input[name=aantal]:checked').value;
+    S.modus = document.querySelector('input[name=modus]:checked').value;
+    const pool = S.module === 'alle' ? VRAGEN : VRAGEN.filter(v => v.module === S.module);
+    S.herhaling = false;
+    begin(maakSet(pool, S.aantal));
+  });
+
+  function begin(set) {
+    S.set = set; S.idx = 0; S.antwoorden = new Array(set.length).fill(null); S.klaar = false;
+    toon('scherm-vraag');
+    tekenVraag();
+  }
+
+  /* ---------- vraagscherm ---------- */
+  function tekenVraag() {
+    const item = S.set[S.idx], v = item.v, gekozen = S.antwoorden[S.idx];
+    const toonFeedback = S.modus === 'direct' && gekozen !== null;
+    $('vg-tekst').textContent = 'Vraag ' + (S.idx + 1) + ' van ' + S.set.length;
+    $('vg-modus').textContent = (S.herhaling ? 'Herhaling foute vragen · ' : '') + (S.modus === 'direct' ? 'Direct feedback' : 'Toetsmodus');
+    const beantwoord = S.antwoorden.filter(a => a !== null).length;
+    $('vg-balk').style.width = (beantwoord / S.set.length * 100) + '%';
+    $('vr-label').textContent = modNaam(v.module) + ' · ' + v.onderwerp;
+    $('vr-tekst').textContent = v.vraag;
+    $('vr-opties').innerHTML = item.volgorde.map((oi, pos) => {
+      let cls = 'optie';
+      if (toonFeedback) {
+        if (oi === v.juist) cls += ' goed';
+        else if (oi === gekozen) cls += ' fout';
+      }
+      return '<li><button type="button" class="' + cls + '" data-oi="' + oi + '" aria-pressed="' + (gekozen === oi) + '"' + (toonFeedback ? ' disabled' : '') + '>' +
+        '<span class="lt">' + LETTERS[pos] + '</span><span>' + esc(v.opties[oi]) + '</span></button></li>';
+    }).join('');
+    if (toonFeedback) {
+      const goed = gekozen === v.juist;
+      const juistPos = item.volgorde.indexOf(v.juist);
+      $('vr-feedback').innerHTML = '<div class="feedback ' + (goed ? 'goed' : 'fout') + '"><h3>' + (goed ? 'Juist!' : 'Helaas, het juiste antwoord is ' + LETTERS[juistPos] + '.') + '</h3>' +
+        '<p>' + esc(v.uitleg) + '</p><div class="bron">Lees verder: ' + bronLink(v.bron) + '</div></div>';
+    } else {
+      $('vr-feedback').innerHTML = '';
+    }
+    $('btn-vorige').disabled = S.idx === 0;
+    const laatste = S.idx === S.set.length - 1;
+    const btn = $('btn-volgende');
+    if (S.modus === 'direct') {
+      btn.textContent = laatste ? 'Bekijk resultaat' : 'Volgende →';
+      btn.disabled = gekozen === null;
+    } else {
+      btn.textContent = laatste ? 'Inleveren' : 'Volgende →';
+      btn.disabled = false;
+    }
+  }
+
+  $('vr-opties').addEventListener('click', e => {
+    const b = e.target.closest('button.optie');
+    if (!b || b.disabled) return;
+    S.antwoorden[S.idx] = +b.dataset.oi;
+    tekenVraag();
+    if (S.modus === 'direct') $('vr-feedback').scrollIntoView({ block: 'nearest' });
+    const focus = S.modus === 'direct' ? $('btn-volgende') : document.querySelector('#vr-opties button[aria-pressed="true"]');
+    if (focus) focus.focus();
+  });
+  $('btn-vorige').addEventListener('click', () => { if (S.idx > 0) { S.idx--; tekenVraag(); } });
+  $('btn-volgende').addEventListener('click', () => {
+    if (S.idx < S.set.length - 1) { S.idx++; tekenVraag(); return; }
+    const open = S.antwoorden.filter(a => a === null).length;
+    if (S.modus === 'toets' && open > 0 &&
+        !window.confirm('Je hebt ' + open + (open === 1 ? ' vraag' : ' vragen') + ' nog niet beantwoord. Die tellen als fout. Toch inleveren?')) return;
+    resultaat();
+  });
+  $('btn-stop').addEventListener('click', () => {
+    const beantwoord = S.antwoorden.filter(a => a !== null).length;
+    if (beantwoord === 0) { toon('scherm-start'); return; }
+    if (window.confirm('Stoppen en het resultaat van de beantwoorde vragen bekijken?')) {
+      const keep = [];
+      S.set.forEach((it, i) => { if (S.antwoorden[i] !== null) keep.push([it, S.antwoorden[i]]); });
+      S.set = keep.map(k => k[0]); S.antwoorden = keep.map(k => k[1]);
+      resultaat();
+    }
+  });
+
+  /* ---------- resultaat ---------- */
+  function analyse() {
+    const fout = [], perMod = {};
+    S.set.forEach((it, i) => {
+      const a = S.antwoorden[i], ok = a === it.v.juist;
+      const m = perMod[it.v.module] || (perMod[it.v.module] = { goed: 0, totaal: 0 });
+      m.totaal++; if (ok) m.goed++;
+      if (!ok) fout.push({ item: it, gekozen: a });
+    });
+    const goed = S.set.length - fout.length;
+    return { goed, totaal: S.set.length, fout, perMod, pct: S.set.length ? Math.round(goed / S.set.length * 100) : 0 };
+  }
+  function oordeel(pct) {
+    if (pct >= 90) return 'Uitstekend. Je beheerst deze onderwerpen goed.';
+    if (pct >= 70) return 'Goed gedaan. Neem de uitleg bij je fouten nog even door.';
+    if (pct >= 50) return 'Redelijk. Lees de gekoppelde artikelen en oefen de foute vragen opnieuw.';
+    return 'Hier valt nog winst te behalen. Lees de uitleg en oefen de foute vragen opnieuw.';
+  }
+
+  function resultaat() {
+    S.klaar = true;
+    const r = analyse();
+    S.laatste = r;
+    $('res-score').textContent = r.goed + '/' + r.totaal;
+    $('res-oordeel').textContent = oordeel(r.pct);
+    $('res-detail').textContent = r.pct + '% juist · ' + (S.modus === 'direct' ? 'direct feedback' : 'toetsmodus') + (S.herhaling ? ' · herhaling foute vragen' : '');
+    $('res-sub').textContent = (S.module === 'alle' ? 'Alle modules' : modNaam(S.module)) + ' · ' + r.totaal + (r.totaal === 1 ? ' vraag' : ' vragen');
+    $('res-modules').innerHTML = '<thead><tr><th>Module</th><th class="n">Juist</th><th class="n">Score</th></tr></thead><tbody>' +
+      Object.keys(r.perMod).map(m => { const x = r.perMod[m]; return '<tr><td>' + esc(modNaam(m)) + '</td><td class="n">' + x.goed + ' van ' + x.totaal + '</td><td class="n">' + Math.round(x.goed / x.totaal * 100) + '%</td></tr>'; }).join('') + '</tbody>';
+    $('btn-fouten').disabled = r.fout.length === 0;
+    $('res-fouten-kop').textContent = r.fout.length ? 'Fouten met uitleg (' + r.fout.length + ')' : 'Fouten met uitleg';
+    $('res-fouten').innerHTML = r.fout.length ? r.fout.map(f => {
+      const v = f.item.v;
+      return '<div class="fout-item"><h4>' + esc(v.vraag) + '</h4><dl>' +
+        '<dt>Jouw antwoord</dt><dd>' + (f.gekozen === null ? '<em>Niet beantwoord</em>' : esc(v.opties[f.gekozen])) + '</dd>' +
+        '<dt>Juist antwoord</dt><dd><strong>' + esc(v.opties[v.juist]) + '</strong></dd>' +
+        '<dt>Uitleg</dt><dd>' + esc(v.uitleg) + '</dd>' +
+        '<dt>Bron</dt><dd>' + bronLink(v.bron) + '</dd></dl></div>';
+    }).join('') : '<div class="alles-goed">Alle vragen goed beantwoord. Kies een nieuwe oefening of een andere module.</div>';
+    toon('scherm-resultaat');
+    $('res-titel').focus();
+  }
+
+  $('btn-fouten').addEventListener('click', () => {
+    const r = S.laatste; if (!r || !r.fout.length) return;
+    S.herhaling = true;
+    begin(shuffle(r.fout.map(f => ({ v: f.item.v, volgorde: shuffle([0, 1, 2, 3]) }))));
+  });
+  $('btn-opnieuw').addEventListener('click', () => { S.herhaling = false; toon('scherm-start'); });
+
+  /* ---------- printen via een nieuw venster ---------- */
+  $('btn-print').addEventListener('click', () => {
+    const r = S.laatste; if (!r) return;
+    const basis = location.href.replace(/[#?].*$/, '').replace(/[^/]*$/, '');
+    const absUrl = u => /^https?:/.test(u) ? u : basis + u;
+    const datum = new Date().toLocaleDateString('nl-NL', { day: 'numeric', month: 'long', year: 'numeric' });
+    const rijen = S.set.map((it, i) => {
+      const v = it.v, a = S.antwoorden[i], ok = a === v.juist, b = bronInfo(v.bron);
+      return '<tr class="' + (ok ? 'ok' : 'nok') + '"><td>' + (i + 1) + '</td><td><b>' + esc(v.vraag) + '</b>' +
+        '<div class="kl">' + esc(modNaam(v.module)) + ' · ' + esc(v.onderwerp) + '</div>' +
+        (ok ? '' : '<div>Jouw antwoord: ' + (a === null ? '<em>niet beantwoord</em>' : esc(v.opties[a])) + '</div>') +
+        '<div>Juist antwoord: <b>' + esc(v.opties[v.juist]) + '</b></div>' +
+        '<div class="kl">' + esc(v.uitleg) + '</div><div class="kl">Bron: ' + esc(b.titel) + ' – ' + esc(absUrl(b.url)) + '</div></td>' +
+        '<td>' + (ok ? 'Juist' : 'Fout') + '</td></tr>';
+    }).join('');
+    const html = '<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><title>Oefenresultaat – Adviesforum</title><style>' +
+      'body{font-family:Arial,Helvetica,sans-serif;color:#141414;margin:24px;font-size:12.5px;line-height:1.45}' +
+      'h1{font-size:20px;margin:0 0 4px}.meta{color:#555;margin:0 0 14px}.disc{border-left:4px solid #C0392B;background:#FFF1F0;padding:8px 12px;margin:0 0 14px}' +
+      '.score{font-size:16px;font-weight:bold;margin:0 0 12px}table{border-collapse:collapse;width:100%}th,td{border-bottom:1px solid #ddd;padding:6px 8px;text-align:left;vertical-align:top}' +
+      'th{background:#FFD200}tr.nok td:last-child{color:#C0392B;font-weight:bold}tr.ok td:last-child{color:#1E7A4B;font-weight:bold}.kl{color:#555;margin-top:3px}tr{page-break-inside:avoid}' +
+      '</style></head><body><h1>Oefenresultaat: Oefenen voor PE en Wft</h1>' +
+      '<p class="meta">Adviesforum · ' + esc(datum) + ' · ' + esc(S.module === 'alle' ? 'Alle modules' : modNaam(S.module)) + ' · ' + (S.modus === 'direct' ? 'direct feedback' : 'toetsmodus') + (S.herhaling ? ' · herhaling foute vragen' : '') + '</p>' +
+      '<p class="disc"><b>Oefenmateriaal.</b> Eigen vragen van het Adviesforum, geen officiële CDFD-examenvragen. Peildatum oktober 2026; controleer altijd de actuele bron.</p>' +
+      '<p class="score">Score: ' + r.goed + ' van ' + r.totaal + ' juist (' + r.pct + '%)</p>' +
+      '<table><thead><tr><th>#</th><th>Vraag, antwoord en uitleg</th><th>Uitkomst</th></tr></thead><tbody>' + rijen + '</tbody></table>' +
+      '<script>window.onload=function(){window.print();}<\/script></body></html>';
+    const w = window.open('', '_blank');
+    if (!w) { window.alert('Het printvenster is geblokkeerd. Sta pop-ups toe voor deze pagina en probeer het opnieuw.'); return; }
+    w.document.open(); w.document.write(html); w.document.close();
+  });
+})();
+</script>
+</body>
+</html>
