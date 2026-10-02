@@ -17,7 +17,7 @@ Alleen verwijzen naar het oude profiel zonder toetsing houdt bij een klacht geen
    {id:'vbk-002-a1',auteur:'u8',datum:'2025-10-06T18:38:00',rA:{u1:4,u2:4,u3:3,u7:4},rAdv:{u1:3,u3:5,u6:4,u7:3},body:`Execution only is bij hypotheken niet verboden, maar je moet het zuiver inrichten. Het grootste risico is dat je in de praktijk toch adviseert, bijvoorbeeld door een product of looptijd aan te raden. Dan ben je voor advies aansprakelijk zonder dat je een adviesdossier hebt.
 - Laat de klant schriftelijk bevestigen dat hij bewust zonder advies kiest.
 - Wijs hem op de risicos van die keuze.
-- Controleer of je eigen dienstverleningsdocument execution only ook beschrijft.
+- Controleer of je vergelijkingskaart en opdrachtbevestiging execution only ook beschrijven.
 - Check bij de geldverstrekker of zij execution only aanvragen accepteren en onder welke voorwaarden.`},
    {id:'vbk-002-a2',auteur:'u5',datum:'2025-10-06T22:42:00',rA:{u1:3,u3:4,u6:4,u7:4},rAdv:{u4:5},body:`Ik doe het zelden, en alleen bij klanten die echt weten wat ze doen. Zodra ik merk dat de klant vragen gaat stellen als welke rentevaste periode zou jij kiezen, stop ik en bied ik alsnog advies aan. Dat moment leg ik ook vast in een notitie.`}
   ]},
@@ -33,11 +33,11 @@ Let op: afwijken van je advies mag, maar je blijft verantwoordelijk voor de bemi
    {id:'vbk-003-a2',auteur:'u5',datum:'2025-10-10T21:30:00',rA:{u2:4,u4:3},rAdv:{u2:3,u3:4,u4:4,u7:5},body:`Ik werk in zo'n geval altijd met een berekening naast elkaar: mijn advies en de keuze van de klant, met de lasten na pensioendatum. Die bijlage gaat mee in het dossier. Vaak kiest de klant dan toch voor een tussenvorm, bijvoorbeeld een deel annuitair. Geef de klant ook mee dat hij later extra kan aflossen, maar check de boetevrije ruimte in de voorwaarden.`},
    {id:'vbk-003-a3',auteur:'u2',datum:'2025-10-11T04:39:00',rA:{},rAdv:{u6:5,u8:4},body:`Bespreek ook welk vermogen of pensioen er straks wel is. Soms is aflossingsvrij te onderbouwen als er elders voldoende vermogen staat, maar dan moet dat concreet in het dossier staan en niet als aanname.`}
   ]},
- {id:'vbk-004',cat:'comp',auteur:null,naam:'',voorbeeld:true,datum:'2025-10-14T20:30:00',views:165,tags:['dienstverleningsdocument','informatieverstrekking'],beste:'vbk-004-a1',
-  titel:'Hoe vaak moet het dienstverleningsdocument worden bijgewerkt?',
-  body:`Ons dienstverleningsdocument is al een paar jaar oud. De tarieven zijn intussen aangepast en we bieden ook een nieuw abonnement aan. Is er een vaste termijn voor actualisatie?`,
+ {id:'vbk-004',cat:'comp',auteur:null,naam:'',voorbeeld:true,datum:'2025-10-14T20:30:00',views:165,tags:['vergelijkingskaart','informatieverstrekking'],beste:'vbk-004-a1',
+  titel:'Hoe vaak moet de vergelijkingskaart worden bijgewerkt?',
+  body:`Onze vergelijkingskaart is al een paar jaar oud. De tarieven zijn intussen aangepast en we bieden ook een nieuw abonnement aan. Is er een vaste termijn voor actualisatie?`,
   antwoorden:[
-   {id:'vbk-004-a1',auteur:'u8',datum:'2025-10-15T14:19:00',rA:{u6:5,u7:3},rAdv:{u4:3,u6:3},body:`Er is geen vaste termijn, maar het document moet kloppen op het moment dat je het aan de klant geeft. Gewijzigde tarieven, diensten of beloningsvormen betekenen dus direct een nieuwe versie. Zet een versiedatum op het document en bewaar per klant welke versie is verstrekt. Neem het actualiseren op in je jaarlijkse compliance-check, zodat je het niet vergeet.`}
+   {id:'vbk-004-a1',auteur:'u8',datum:'2025-10-15T14:19:00',rA:{u6:5,u7:3},rAdv:{u4:3,u6:3},body:`Er is geen vaste termijn, maar de kaart moet kloppen op het moment dat je hem aan de klant geeft. Gewijzigde tarieven, diensten of beloningsvormen betekenen dus direct een nieuwe versie, ook van de kaart op je website. Zet een versiedatum op de kaart en bewaar per klant welke versie is verstrekt. Neem het actualiseren op in je jaarlijkse compliance-check, zodat je het niet vergeet.`}
   ]},
  {id:'vbk-005',cat:'comp',auteur:null,naam:'',voorbeeld:true,datum:'2025-10-17T21:10:00',views:183,tags:['PE','vakbekwaamheid','Wft'],beste:null,
   titel:'PE-deadline gemist door ziekte: wat zijn de gevolgen?',
@@ -329,7 +329,7 @@ Kom je er niet uit, dan is dat op zich al een signaal om het cliëntenonderzoek 
   titel:'Is een zorgplichtbrief na het afsluiten nog nodig?',
   body:`Na het passeren sturen wij geen brief meer. Een collega-kantoor stuurt een afsluitende brief met uitleg over rentevaste periodes en wanneer de klant zich moet melden. Is dat verplicht?`,
   antwoorden:[
-   {id:'vbk-043-a1',auteur:'u8',datum:'2026-03-06T09:30:00',rA:{u1:4,u4:4,u5:5},rAdv:{u1:4,u5:4},body:`Er is geen wettelijk voorgeschreven afsluitende brief, maar je zorgplicht eindigt niet bij de passeerdatum. Uit je vergelijkingskaart (die sinds april 2023 het dienstverleningsdocument vervangt) en je opdrachtbevestiging blijkt welke nazorg je belooft; die moet je dan ook waarmaken. De herziene Leidraad Hypotheekadvisering van de AFM (april 2026) vraagt om duidelijke afspraken over de omvang van de nazorg en de vergoeding daarvoor. Een afsluitende brief is een eenvoudige manier om dat aan te tonen.
+   {id:'vbk-043-a1',auteur:'u8',datum:'2026-03-06T09:30:00',rA:{u1:4,u4:4,u5:5},rAdv:{u1:4,u5:4},body:`Er is geen wettelijk voorgeschreven afsluitende brief, maar je zorgplicht eindigt niet bij de passeerdatum. Uit je vergelijkingskaart (die sinds 1 april 2023 het dienstverleningsdocument vervangt) en je opdrachtbevestiging blijkt welke nazorg je belooft; die moet je dan ook waarmaken. De herziene Leidraad Hypotheekadvisering van de AFM (april 2026) vraagt om duidelijke afspraken over de omvang van de nazorg en de vergoeding daarvoor. Een afsluitende brief is een eenvoudige manier om dat aan te tonen.
 Wat ik erin zou zetten:
 - Een samenvatting van de afgesloten producten en de einddatum van de rentevaste periodes.
 - Wanneer de klant zich moet melden: bij wijziging van inkomen, relatie, gezinssituatie of verhuizing.
@@ -340,7 +340,7 @@ Bewaar een kopie in het dossier. Doen jullie aan abonnementsnazorg, dan is de br
   titel:'Erkenning voor schadeverzekeringen en hypotheken tegelijk',
   body:`We willen naast hypotheken ook schadeverzekeringen gaan adviseren. Wat moeten we regelen voordat we daarmee starten?`,
   antwoorden:[
-   {id:'vbk-044-a1',auteur:'u3',datum:'2026-03-08T11:53:00',rA:{u5:5,u6:4},rAdv:{u8:3},body:`Controleer eerst of jullie vergunning bij de AFM de juiste productcategorieën omvat. Zo niet, dan moet je die uitbreiden voordat je adviseert. Daarnaast moeten de adviseurs die gaan adviseren de juiste diploma's hebben en hun PE bijhouden. Pas ook je dienstverleningsdocument en je beroepsaansprakelijkheidsverzekering aan.`},
+   {id:'vbk-044-a1',auteur:'u3',datum:'2026-03-08T11:53:00',rA:{u5:5,u6:4},rAdv:{u8:3},body:`Controleer eerst of jullie vergunning bij de AFM de juiste productcategorieën omvat. Zo niet, dan moet je die uitbreiden voordat je adviseert. Daarnaast moeten de adviseurs die gaan adviseren de juiste diploma's hebben en hun PE bijhouden. Pas ook je vergelijkingskaart (diensten en kosten), je website en je beroepsaansprakelijkheidsverzekering aan.`},
    {id:'vbk-044-a2',auteur:'u8',datum:'2026-03-08T13:28:00',rA:{u2:5,u5:4,u6:3},rAdv:{},body:`Vergeet het productaanbod niet: leg vast met welke verzekeraars je werkt en hoe je selecteert. Dat hoort ook in je informatie aan de klant.`}
   ]},
  {id:'vbk-045',cat:'comp',auteur:null,naam:'',voorbeeld:true,datum:'2026-03-11T15:15:00',views:285,tags:['integriteit','fraude','dossier'],beste:'vbk-045-a1',
@@ -520,7 +520,7 @@ Twijfel je of de klant het overziet, plan dan een kort vervolggesprek. Haast is 
   titel:'Provisieverbod bij complexe producten: wat valt eronder?',
   body:`Een nieuwe collega vraagt of we voor een overlijdensrisicoverzekering bij een hypotheek nog provisie mogen ontvangen. Hoe zit dat?`,
   antwoorden:[
-   {id:'vbk-067-a1',auteur:'u8',datum:'2026-06-01T02:30:00',rA:{u2:3,u3:4,u4:4,u6:5},rAdv:{u3:4,u5:3,u6:4},body:`Voor complexe producten en een aantal andere producten, waaronder hypotheken en verzekeringen die daaraan gekoppeld zijn, geldt een provisieverbod. De klant betaalt dan direct voor het advies en de bemiddeling. Controleer per product in de actuele regelgeving of het onder het verbod valt. Zorg dat je dienstverleningsdocument en opdrachtbevestiging duidelijk maken hoe je beloond wordt.`}
+   {id:'vbk-067-a1',auteur:'u8',datum:'2026-06-01T02:30:00',rA:{u2:3,u3:4,u4:4,u6:5},rAdv:{u3:4,u5:3,u6:4},body:`Voor complexe producten en een aantal andere producten, waaronder hypotheken en verzekeringen die daaraan gekoppeld zijn, geldt een provisieverbod. De klant betaalt dan direct voor het advies en de bemiddeling. Controleer per product in de actuele regelgeving of het onder het verbod valt. Zorg dat je vergelijkingskaart en opdrachtbevestiging duidelijk maken hoe je beloond wordt.`}
   ]},
  {id:'vbk-068',cat:'comp',auteur:null,naam:'',voorbeeld:true,datum:'2026-06-05T09:40:00',views:8,tags:['klachten','verwachtingen','communicatie'],beste:'vbk-068-a1',
   titel:'Klant is ontevreden over de looptijd van het traject',
@@ -536,11 +536,11 @@ Twijfel je of de klant het overziet, plan dan een kort vervolggesprek. Haast is 
    {id:'vbk-069-a2',auteur:'u6',datum:'2026-06-10T05:50:00',rA:{u5:3,u7:4},rAdv:{u4:3},body:`Test de tool met verschillende klantprofielen en bewaar die testresultaten. Bij elke update van de rekenregels herhaal je dat.`},
    {id:'vbk-069-a3',auteur:'u1',datum:'2026-06-10T07:47:00',rA:{u4:4,u6:3},rAdv:{u2:4,u6:5,u7:3},body:`Klanten lezen een indicatie vaak als een toezegging. Een duidelijke disclaimer en een vervolgafspraak met een adviseur zijn echt nodig.`}
   ]},
- {id:'vbk-070',cat:'comp',auteur:null,naam:'',voorbeeld:true,datum:'2026-06-13T16:40:00',views:110,tags:['dienstverleningsdocument','zakelijk','informatie'],beste:null,
-  titel:'Wat zet je in een dienstverleningsdocument voor zakelijke klanten?',
-  body:`We adviseren ook ondernemers over zakelijke verzekeringen. Kunnen we hetzelfde dienstverleningsdocument gebruiken als voor particulieren?`,
+ {id:'vbk-070',cat:'comp',auteur:null,naam:'',voorbeeld:true,datum:'2026-06-13T16:40:00',views:110,tags:['vergelijkingskaart','zakelijk','informatie'],beste:null,
+  titel:'Welke informatie vooraf geef je zakelijke klanten?',
+  body:`We adviseren ook ondernemers over zakelijke verzekeringen. Kunnen we dezelfde informatie over onze dienstverlening gebruiken als voor particulieren, zoals onze vergelijkingskaart?`,
   antwoorden:[
-   {id:'vbk-070-a1',auteur:'u3',datum:'2026-06-14T13:43:00',rA:{},rAdv:{u2:3,u5:5,u8:3},body:`In grote lijnen wel, maar controleer of de onderwerpen kloppen voor de zakelijke dienstverlening, zoals hoe je beloond wordt en welke verzekeraars je gebruikt. Zakelijke klanten verwachten vaak andere afspraken over service en schademelding. Het is overzichtelijker om een aparte versie te maken.`}
+   {id:'vbk-070-a1',auteur:'u3',datum:'2026-06-14T13:43:00',rA:{},rAdv:{u2:3,u5:5,u8:3},body:`De vergelijkingskaart is verplicht bij consumenten en producten onder het provisieverbod; voor zakelijke schadeverzekeringen is hij dat niet. Je kunt wel dezelfde opzet gebruiken, maar controleer of de onderwerpen kloppen voor de zakelijke dienstverlening, zoals hoe je beloond wordt en welke verzekeraars je gebruikt. Zakelijke klanten verwachten vaak andere afspraken over service en schademelding. Het is overzichtelijker om een aparte versie te maken.`}
   ]},
  {id:'vbk-071',cat:'comp',auteur:null,naam:'',voorbeeld:true,datum:'2026-06-16T17:30:00',views:188,tags:['Wwft','identificatie','actualisatie'],beste:'vbk-071-a1',
   titel:'Wanneer moet ik een klant opnieuw identificeren?',
@@ -697,7 +697,7 @@ Bewaar de getekende opdrachtbevestiging bij het rapport in het dossier.`}
   titel:'Klachtenregeling op de website verplicht?',
   body:`Moeten we onze klachtenregeling op de website publiceren of is het genoeg om die op verzoek te verstrekken?`,
   antwoorden:[
-   {id:'vbk-092-a1',auteur:'u8',datum:'2026-08-31T09:30:00',rA:{u1:4,u5:4,u6:4},rAdv:{u4:4,u6:5},body:`Je moet de klant in elk geval informeren over je interne klachtenprocedure en over Kifid (artikel 4:17 Wft en het BGfo). Dat doe je meestal via de informatie die de klant vooraf krijgt, zoals je vergelijkingskaart (die sinds april 2023 het dienstverleningsdocument vervangt) of je algemene voorwaarden. Daarnaast geldt voor ondernemers die bij een geschilleninstantie zijn aangesloten dat ze die instantie ook vermelden op hun website, als ze er een hebben. Controleer de actuele eisen bij Kifid of je compliance officer.
+   {id:'vbk-092-a1',auteur:'u8',datum:'2026-08-31T09:30:00',rA:{u1:4,u5:4,u6:4},rAdv:{u4:4,u6:5},body:`Je moet de klant in elk geval informeren over je interne klachtenprocedure en over Kifid (artikel 4:17 Wft en het BGfo). Dat doe je meestal via de informatie die de klant vooraf krijgt, zoals je website, je opdrachtbevestiging of je algemene voorwaarden. De vergelijkingskaart (die sinds 1 april 2023 het dienstverleningsdocument vervangt) gaat over je dienstverlening en kosten, niet over de klachtenregeling. Daarnaast geldt voor ondernemers die bij een geschilleninstantie zijn aangesloten dat ze die instantie ook vermelden op hun website, als ze er een hebben. Controleer de actuele eisen bij Kifid of je compliance officer.
 In de praktijk is publiceren op de website de eenvoudigste weg:
 - Zet de klachtenregeling als pagina of PDF online, met contactgegevens en termijnen.
 - Vermeld duidelijk de aansluiting bij Kifid.

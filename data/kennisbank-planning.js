@@ -6,7 +6,7 @@
  */
 window.KENNISBANK=(window.KENNISBANK||[]).concat([
  {id:'k20',cat:'comp',titel:'Wet- en regelgeving voor de hypothecair planner: het Wft-kader',auteur:'u5',datum:'2026-10-02T23:00:00',herzienVoor:'2027-10-02',bron:null,gecontroleerd:false,
-  kw:'Wft BGfo zorgplicht ken-uw-klant informatieplicht vakbekwaamheid PE Kifid AFM leidraad hypotheekadvisering dienstverleningsdocument ESIS hypothecair planner',
+  kw:'Wft BGfo zorgplicht ken-uw-klant informatieplicht vakbekwaamheid PE Kifid AFM leidraad hypotheekadvisering vergelijkingskaart dienstverleningsdocument ESIS hypothecair planner',
   links:[{titel:'Wet op het financieel toezicht (wetten.overheid.nl)',url:'https://wetten.overheid.nl/BWBR0020368'},{titel:'AFM',url:'https://www.afm.nl'},{titel:'Overzicht wetgeving (intern)',url:'wetgeving.html'}],
   body:`Een hypothecair planner kijkt verder dan de vraag of een hypotheek past. Juist daardoor is het wettelijke kader breder relevant: hoe verder je vooruit plant, hoe zwaarder de zorgplicht weegt. Dit artikel zet de hoofdlijnen op een rij.
 
@@ -17,7 +17,7 @@ De Wet op het financieel toezicht (Wft) regelt wie mag adviseren over hypothecai
 De kernverplichtingen voor de adviseur:
 - Klantbelang centraal: het advies moet passen bij de klant en zijn situatie, nu en in de te verwachten toekomst.
 - Ken-uw-klant: je wint informatie in over financiële positie, kennis en ervaring, doelstellingen en risicobereidheid, en je legt vast waarom het advies daarbij past.
-- Informatieverstrekking: de klant krijgt vooraf informatie over je dienstverlening en kosten (dienstverleningsdocument) en over het product (onder meer het ESIS-formulier van de geldverstrekker).
+- Informatieverstrekking: de klant krijgt vooraf informatie over je dienstverlening en kosten (de vergelijkingskaart, die sinds 1 april 2023 het dienstverleningsdocument vervangt) en over het product (onder meer het ESIS-formulier van de geldverstrekker).
 - Verantwoord krediet: de geldverstrekker toetst op overkreditering; de normen daarvoor staan in de Tijdelijke regeling hypothecair krediet. Als adviseur kijk je daarnaast naar wat voor deze klant verantwoord is, niet alleen naar wat maximaal mag.
 
 ## Vakbekwaamheid en organisatie
@@ -39,7 +39,7 @@ Praktische aandachtspunten:
 
 ## Vastleggen in het dossier
 
-1. Het dienstverleningsdocument en de bevestiging dat de klant het heeft ontvangen.
+1. De vergelijkingskaart en de bevestiging dat de klant die vóór het advies heeft ontvangen, plus de overige informatie vooraf (onder meer klachtenprocedure en Kifid).
 2. De volledige inventarisatie, inclusief doelen en risicobereidheid in de woorden van de klant.
 3. De toetsing aan de leennormen en, apart daarvan, de eigen betaalbaarheidsanalyse.
 4. De besproken scenario's (arbeidsongeschiktheid, werkloosheid, overlijden, pensionering, relatiebeëindiging) met de conclusie per scenario.

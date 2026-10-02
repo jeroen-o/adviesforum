@@ -619,7 +619,7 @@ Overleg bij twijfel met een fiscalist of mediator.`},
   body:`Als ik bemiddel in een persoonlijke lening ontvang ik een vergoeding van de kredietverstrekker. Wat moet ik hierover aan de klant laten weten?`,
   antwoorden:[
    {id:'vbj-058-a1',auteur:'u8',datum:'2026-04-26T16:36:00',rA:{u2:5,u3:3,u5:3,u7:3},rAdv:{},body:`Je moet de klant transparant informeren over je dienstverlening en de wijze waarop je wordt beloond. Dat doe je vooraf, zodat de klant een geïnformeerde keuze kan maken.
-- Vermeld de beloningsvorm in je dienstverleningsdocument.
+- Vermeld de beloningsvorm in de informatie die de klant vooraf van je krijgt, bijvoorbeeld op je website of in je opdrachtbevestiging.
 - Licht in het gesprek toe wat je ontvangt.
 - Leg vast dat de klant dit heeft ontvangen.
 Controleer de actuele regels, want die kunnen per productsoort verschillen.`}

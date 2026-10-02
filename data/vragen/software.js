@@ -74,8 +74,8 @@ window.VRAGEN_DATA=(window.VRAGEN_DATA||[]).concat([
   titel:'Advieskosten en bemiddelingskosten apart houden voor de aanvraag',
   body:`Wij rekenen één bedrag aan advies- en bemiddelingskosten. Moet ik dat in de software splitsen, en waarom eigenlijk?`,
   antwoorden:[
-   {id:'vbl-011-a1',auteur:'u6',datum:'2025-11-06T22:23:00',rA:{u5:4,u3:4,u8:5},rAdv:{u5:4},body:`Ja, vul advieskosten en bemiddelingskosten apart in en houd ze gescheiden. Dat is vereist voor HDN-aanvragen. Gebruik dezelfde verdeling als in je dienstverleningsdocument en je factuur.`},
-   {id:'vbl-011-a2',auteur:'u8',datum:'2025-11-07T07:40:00',rA:{u6:5,u3:4},rAdv:{u6:5},body:`Vanuit compliance: zorg dat de verdeling in de opzet, het dienstverleningsdocument en de factuur overeenkomt. Een verschil daartussen roept vragen op bij een controle. Leg ook vast dat je de kosten vooraf met de klant hebt besproken.`}
+   {id:'vbl-011-a1',auteur:'u6',datum:'2025-11-06T22:23:00',rA:{u5:4,u3:4,u8:5},rAdv:{u5:4},body:`Ja, vul advieskosten en bemiddelingskosten apart in en houd ze gescheiden. Dat is vereist voor HDN-aanvragen. Gebruik dezelfde verdeling als op je vergelijkingskaart, in je opdrachtbevestiging en op je factuur.`},
+   {id:'vbl-011-a2',auteur:'u8',datum:'2025-11-07T07:40:00',rA:{u6:5,u3:4},rAdv:{u6:5},body:`Vanuit compliance: zorg dat de verdeling in de opzet, de vergelijkingskaart, de opdrachtbevestiging en de factuur overeenkomt. Een verschil daartussen roept vragen op bij een controle. Leg ook vast dat je de kosten vooraf met de klant hebt besproken.`}
   ]},
  {id:'vbl-012',cat:'adv',auteur:null,naam:'',voorbeeld:true,datum:'2025-11-10T09:55:00',views:508,tags:['familiehypotheek','hdn','toetsing'],beste:'vbl-012-a1',
   titel:'Familiehypotheek combineren met een reguliere hypotheek in de software',
@@ -527,11 +527,11 @@ Gebruik de ingevulde gegevens als voorbereiding en niet als vervanging van het g
    {id:'vbl-073-a1',auteur:'u6',datum:'2026-06-20T07:36:00',rA:{u5:5,u2:3,u4:5,u3:5},rAdv:{u5:5,u2:3,u4:5,u3:5},body:`Als beide vestigingen in dezelfde omgeving werken, kun je de relatie en het dossier toewijzen aan een andere adviseur of vestiging. Werken ze in aparte omgevingen, dan is overzetten afhankelijk van de exportmogelijkheden. Overleg met je beheerder.`},
    {id:'vbl-073-a2',auteur:'u8',datum:'2026-06-22T11:28:00',rA:{},rAdv:{},body:`Informeer de klant dat zijn dossier wordt overgedragen en leg dat vast. De nieuwe adviseur moet zelf controleren of de gegevens nog actueel zijn voordat hij verder adviseert.`}
   ]},
- {id:'vbl-074',cat:'adv',auteur:null,naam:'',voorbeeld:true,datum:'2026-06-23T14:25:00',views:567,tags:['advieskosten','dienstverleningsdocument','transparantie'],beste:'vbl-074-a1',
+ {id:'vbl-074',cat:'adv',auteur:null,naam:'',voorbeeld:true,datum:'2026-06-23T14:25:00',views:567,tags:['advieskosten','opdrachtbevestiging','transparantie'],beste:'vbl-074-a1',
   titel:'Kosten voor advies en bemiddeling laten zien in het CRM',
   body:`Ik wil dat in het dossier zichtbaar is welke kosten we met de klant hebben afgesproken. Waar leggen jullie de opdracht tot dienstverlening vast?`,
   antwoorden:[
-   {id:'vbl-074-a1',auteur:'u8',datum:'2026-06-24T06:55:00',rA:{},rAdv:{},body:`Leg de getekende opdracht tot dienstverlening of het dienstverleningsdocument bij de relatie of het dossier vast. Daarin staan de afgesproken diensten en kosten. Bij een wijziging van de opdracht leg je ook de nieuwe afspraak vast, getekend of aantoonbaar akkoord.`},
+   {id:'vbl-074-a1',auteur:'u8',datum:'2026-06-24T06:55:00',rA:{},rAdv:{},body:`Leg de getekende opdracht tot dienstverlening (opdrachtbevestiging) bij de relatie of het dossier vast, samen met de versie van de vergelijkingskaart die de klant vooraf heeft gekregen. Daarin staan de afgesproken diensten en kosten. Bij een wijziging van de opdracht leg je ook de nieuwe afspraak vast, getekend of aantoonbaar akkoord.`},
    {id:'vbl-074-a2',auteur:'u2',datum:'2026-06-25T11:00:00',rA:{u3:4,u8:3},rAdv:{u3:4,u8:3},body:`Ik zet het afgesproken bedrag ook in een vast veld, zodat ik bij het factureren niet het document hoef te openen.`}
   ]},
  {id:'vbl-075',cat:'adv',auteur:null,naam:'',voorbeeld:true,datum:'2026-06-27T14:00:00',views:501,tags:['datalek','AVG','rapport'],beste:'vbl-075-a1',
