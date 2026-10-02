@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wet- en regelgeving</title>
+<style>
+  :root{
+    --primary:#003057;
+    --accent:#E5A138;
+    --bg:#F4F7F9;
+    --text:#333333;
+    --muted:#4A4A4A;
+    --line:#D8E2E8;
+    --white:#fff;
+    --warn-bg:#FDF4E5;
+    --warn-line:#E5A138;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;background:var(--bg);color:var(--text);
+    font-family:"Plus Jakarta Sans","DM Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    font-size:16px;line-height:1.55;
+  }
+  .wrap{max-width:1040px;margin:0 auto;padding:0 20px 64px}
+  header.hero{background:var(--primary);color:#fff;padding:40px 0 34px;margin-bottom:28px}
+  header.hero .wrap{padding-bottom:0}
+  h1{font-size:34px;line-height:1.2;margin:0 0 10px;font-weight:700}
+  .sub{opacity:.85;font-size:16px;margin:0;max-width:72ch}
+  .meta{margin-top:18px;font-size:13px;opacity:.7}
+  .toolbar{
+    display:flex;gap:12px;flex-wrap:wrap;align-items:center;
+    background:var(--white);border:1px solid var(--line);border-radius:10px;
+    padding:14px 16px;margin:0 0 26px;position:sticky;top:0;z-index:5;
+  }
+  #zoek{
+    flex:1 1 260px;min-width:220px;padding:10px 12px;font-size:15px;font-family:inherit;
+    border:1px solid var(--line);border-radius:7px;color:var(--text);background:#fff;
+  }
+  #zoek:focus{outline:2px solid var(--accent);outline-offset:1px}
+  .btn{
+    border:0;border-radius:7px;padding:10px 16px;font-size:14px;font-weight:600;
+    font-family:inherit;cursor:pointer;background:var(--primary);color:#fff;
+  }
+  .btn.sec{background:#fff;color:var(--primary);border:1px solid var(--line)}
+  .count{font-size:13px;color:var(--muted)}
+  section.card{
+    background:var(--white);border:1px solid var(--line);border-radius:10px;
+    padding:22px 24px;margin:0 0 16px;
+  }
+  .tag{
+    display:inline-block;background:#EAF1F5;color:var(--primary);
+    font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+    padding:4px 9px;border-radius:4px;margin-bottom:10px;
+  }
+  h2{font-size:21px;line-height:1.3;margin:0 0 4px;color:var(--primary)}
+  .vraag{font-size:13px;color:var(--muted);font-style:italic;margin:0 0 14px}
+  ol,ul{margin:8px 0 12px;padding-left:22px}
+  li{margin:4px 0}
+  .lead{margin:0 0 10px}
+  .sublabel{font-weight:700;color:var(--primary);margin:14px 0 2px;font-size:15px}
+  .let-op{
+    background:var(--warn-bg);border-left:4px solid var(--warn-line);
+    padding:12px 14px;border-radius:0 6px 6px 0;margin:14px 0 0;font-size:14.5px;
+  }
+  .let-op strong{color:#8A5B00}
+  .compliance{
+    background:#FFF1F1;border-left:4px solid #C0392B;
+    padding:12px 14px;border-radius:0 6px 6px 0;margin:12px 0 0;font-size:14.5px;
+  }
+  .compliance strong{color:#A5281B}
+  .intro-block{
+    background:var(--white);border:1px solid var(--line);border-left:5px solid var(--accent);
+    border-radius:10px;padding:20px 24px;margin:0 0 24px;
+  }
+  footer{
+    margin-top:34px;padding-top:20px;border-top:1px solid var(--line);
+    font-size:13px;color:var(--muted);
+  }
+  footer a{color:var(--primary)}
+  .bronnen li{font-size:13.5px}
+  .leeg{display:none;background:#fff;border:1px dashed var(--line);border-radius:10px;padding:28px;text-align:center;color:var(--muted)}
+  @media (max-width:640px){
+    h1{font-size:26px}
+    section.card{padding:18px 16px}
+    .toolbar{position:static}
+  }
+  @media print{
+    .toolbar{display:none}
+    body{background:#fff}
+    section.card{break-inside:avoid;border:1px solid #ccc}
+    header.hero{background:#fff;color:#000;border-bottom:3px solid var(--primary)}
+    header.hero .sub,.meta{color:#333;opacity:1}
+  }
+
+  section.card ul{list-style:none;padding:0;margin:0}
+  section.card li{padding:8px 0;border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline}
+  section.card li:last-child{border-bottom:0}
+  section.card li a{color:var(--primary);font-weight:600;text-decoration:none}
+  section.card li a:hover{text-decoration:underline}
+  .afk{background:#EAF1F5;color:var(--primary);font-size:11px;font-weight:700;padding:2px 7px;border-radius:4px}
+  .id{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+  .cnt{font-size:13px;color:var(--muted);font-weight:600}
+  section.card li.hide{display:none}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <h1>Wet- en regelgeving voor adviseurs</h1>
+    <p class="sub">Snelkoppelingen naar de wetten, besluiten en bronnen die je als hypotheek- en financieel adviseur het vaakst nodig hebt: Wft, Bgfo, Trhk, NHG, Wck, Wwft, Kifid, AFM, BW, fiscaliteit, pensioen, toeslagen en sociale zekerheid.</p>
+    <p class="meta">113 bronnen &middot; links naar wetten.overheid.nl openen de geldende versie van vandaag</p>
+  </div>
+</header>
+<div class="wrap">
+  <div class="toolbar">
+    <input id="zoek" type="search" placeholder="Zoek op naam, afkorting of BWBR-nummer, bijv. Bgfo, erfrecht, BWBR0032503&hellip;" aria-label="Zoeken in bronnen">
+    <button class="btn sec" id="wis" type="button">Wissen</button>
+    <button class="btn" id="print" type="button">Printen / PDF</button>
+    <span class="count" id="teller"></span>
+  </div>
+  <section class="card"><h2>Financiële wetgeving en toezicht <span class="cnt">14</span></h2><ul><li><a href="https://wetten.overheid.nl/BWBR0020368" target="_blank" rel="noopener">Wet op het financieel toezicht</a> <span class="afk">Wft</span> <span class="id">BWBR0020368</span></li><li><a href="https://wetten.overheid.nl/BWBR0020421" target="_blank" rel="noopener">Besluit Gedragstoezicht financiële ondernemingen Wft</a> <span class="afk">Bgfo</span> <span class="id">BWBR0020421</span></li><li><a href="https://wetten.overheid.nl/BWBR0032503" target="_blank" rel="noopener">Tijdelijke regeling hypothecair krediet</a> <span class="afk">Trhk</span> <span class="id">BWBR0032503</span></li><li><a href="https://wetten.overheid.nl/BWBR0032503/#Paragraaf4" target="_blank" rel="noopener">Financieringslastpercentages (Trhk, paragraaf 4)</a> <span class="afk">Trhk §4</span> <span class="id">BWBR0032503</span></li><li><a href="https://www.nhg.nl/professional/" target="_blank" rel="noopener">Voorwaarden &amp; normen NHG (professionals)</a> <span class="afk">NHG</span></li><li><a href="https://wetten.overheid.nl/BWBR0004815" target="_blank" rel="noopener">Wet op het consumentenkrediet</a> <span class="afk">Wck</span> <span class="id">BWBR0004815</span></li><li><a href="https://wetten.overheid.nl/BWBR0024281" target="_blank" rel="noopener">Wet ter voorkoming van witwassen en financieren van terrorisme</a> <span class="afk">Wwft</span> <span class="id">BWBR0024281</span></li><li><a href="https://wetten.overheid.nl/BWBR0041193" target="_blank" rel="noopener">Uitvoeringsbesluit Wwft 2018</a> <span class="id">BWBR0041193</span></li><li><a href="https://www.kifid.nl/kifid-kennis-en-uitspraken/uitspraken/" target="_blank" rel="noopener">Uitsprakenregister Kifid</a> <span class="afk">Kifid</span></li><li><a href="https://www.kifid.nl/nieuws/nieuw-reglement-commissie-van-beroep-kifid/" target="_blank" rel="noopener">Reglement Commissie van Beroep Kifid</a> <span class="afk">Kifid</span></li><li><a href="https://www.afm.nl/nl-nl/sector/adviseurs-bemiddelaars-en-gevolmachtigde-agenten" target="_blank" rel="noopener">AFM: adviseurs, bemiddelaars en gevolmachtigden</a> <span class="afk">AFM</span></li><li><a href="documenten/Leidraad-Hypotheekadvisering-2026.pdf">Leidraad Hypotheekadvisering (april 2026, lokale kopie)</a> <span class="afk">AFM</span></li><li><a href="https://digital-strategy.ec.europa.eu/nl/policies/regulatory-framework-ai" target="_blank" rel="noopener">AI-verordening: Europees regelgevingskader voor AI</a> <span class="afk">AI</span></li><li><a href="https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/artificiele-intelligentie-ai/ai-verordening/" target="_blank" rel="noopener">AI-verordening: toelichting Digitale Overheid</a> <span class="afk">AI</span></li></ul></section><section class="card"><h2>Grondwet <span class="cnt">1</span></h2><ul><li><a href="https://wetten.overheid.nl/BWBR0001840" target="_blank" rel="noopener">Grondwet</a> <span class="id">BWBR0001840</span></li></ul></section><section class="card"><h2>Burgerlijk Wetboek en overige wetten <span class="cnt">13</span></h2><ul><li><a href="https://wetten.overheid.nl/BWBR0002656" target="_blank" rel="noopener">Boek 1 Personen- en familierecht</a> <span class="afk">BW 1</span> <span class="id">BWBR0002656</span></li><li><a href="https://wetten.overheid.nl/BWBR0003045" target="_blank" rel="noopener">Boek 2 Rechtspersonen</a> <span class="afk">BW 2</span> <span class="id">BWBR0003045</span></li><li><a href="https://wetten.overheid.nl/BWBR0005291" target="_blank" rel="noopener">Boek 3 Vermogensrecht in het algemeen</a> <span class="afk">BW 3</span> <span class="id">BWBR0005291</span></li><li><a href="https://wetten.overheid.nl/BWBR0002761" target="_blank" rel="noopener">Boek 4 Erfrecht</a> <span class="afk">BW 4</span> <span class="id">BWBR0002761</span></li><li><a href="https://wetten.overheid.nl/BWBR0005288" target="_blank" rel="noopener">Boek 5 Zakelijke rechten</a> <span class="afk">BW 5</span> <span class="id">BWBR0005288</span></li><li><a href="https://wetten.overheid.nl/BWBR0005289" target="_blank" rel="noopener">Boek 6 Algemeen gedeelte van het verbintenissenrecht</a> <span class="afk">BW 6</span> <span class="id">BWBR0005289</span></li><li><a href="https://wetten.overheid.nl/BWBR0005290" target="_blank" rel="noopener">Boek 7 Bijzondere overeenkomsten</a> <span class="afk">BW 7</span> <span class="id">BWBR0005290</span></li><li><a href="https://wetten.overheid.nl/BWBR0006000" target="_blank" rel="noopener">Boek 7A Bijzondere overeenkomsten; vervolg</a> <span class="afk">BW 7A</span> <span class="id">BWBR0006000</span></li><li><a href="https://wetten.overheid.nl/BWBR0001860/#TiteldeelIII_AfdelingEerste_Artikel287" target="_blank" rel="noopener">Faillissementswet (art. 287 e.v., schuldsanering natuurlijke personen)</a> <span class="afk">Fw</span> <span class="id">BWBR0001860</span></li><li><a href="https://www.rechtspraak.nl/onderwerpen/schulden/wet-schuldsanering-natuurlijke-personen/aanvragen-wsnp" target="_blank" rel="noopener">Wettelijke schuldsanering natuurlijke personen (Rechtspraak.nl)</a> <span class="afk">WSNP</span></li><li><a href="https://wetten.overheid.nl/BWBR0001838" target="_blank" rel="noopener">Wetboek van Koophandel</a> <span class="afk">WvK</span> <span class="id">BWBR0001838</span></li><li><a href="https://wetten.overheid.nl/BWBR0013008" target="_blank" rel="noopener">Wet arbeid en zorg</a> <span class="afk">Wazo</span> <span class="id">BWBR0013008</span></li><li><a href="https://wetten.overheid.nl/BWBR0040940" target="_blank" rel="noopener">Uitvoeringswet Algemene verordening gegevensbescherming</a> <span class="afk">UAVG</span> <span class="id">BWBR0040940</span></li></ul></section><section class="card"><h2>Belastingwetgeving <span class="cnt">29</span></h2><ul><li><a href="https://wetten.overheid.nl/BWBR0002320" target="_blank" rel="noopener">Algemene wet inzake rijksbelastingen</a> <span class="afk">AWR</span> <span class="id">BWBR0002320</span></li><li><a href="https://wetten.overheid.nl/BWBR0006736" target="_blank" rel="noopener">Uitvoeringsregeling Algemene wet inzake rijksbelastingen 1994</a> <span class="id">BWBR0006736</span></li><li><a href="https://wetten.overheid.nl/BWBR0011353" target="_blank" rel="noopener">Wet inkomstenbelasting 2001</a> <span class="afk">Wet IB 2001</span> <span class="id">BWBR0011353</span></li><li><a href="https://wetten.overheid.nl/BWBR0011354" target="_blank" rel="noopener">Invoeringswet Wet inkomstenbelasting 2001 (overgangsrecht)</a> <span class="id">BWBR0011354</span></li><li><a href="https://wetten.overheid.nl/BWBR0012066" target="_blank" rel="noopener">Uitvoeringsbesluit inkomstenbelasting 2001</a> <span class="id">BWBR0012066</span></li><li><a href="https://wetten.overheid.nl/BWBR0012067" target="_blank" rel="noopener">Uitvoeringsregeling inkomstenbelasting 2001</a> <span class="id">BWBR0012067</span></li><li><a href="https://wetten.overheid.nl/BWBR0047699" target="_blank" rel="noopener">Wet rechtsherstel box 3</a> <span class="id">BWBR0047699</span></li><li><a href="https://wetten.overheid.nl/BWBR0045648" target="_blank" rel="noopener">Betaalpauze rente en aflossing eigenwoningschuld (eigenwoningrente)</a> <span class="id">BWBR0045648</span></li><li><a href="https://wetten.overheid.nl/BWBR0050034" target="_blank" rel="noopener">Verzamelbesluit kapitaalverzekeringen, SEW en BEW</a> <span class="id">BWBR0050034</span></li><li><a href="https://wetten.overheid.nl/BWBR0002471" target="_blank" rel="noopener">Wet op de loonbelasting 1964</a> <span class="afk">Wet LB</span> <span class="id">BWBR0002471</span></li><li><a href="https://wetten.overheid.nl/BWBR0002489" target="_blank" rel="noopener">Uitvoeringsbesluit loonbelasting 1965</a> <span class="id">BWBR0002489</span></li><li><a href="https://wetten.overheid.nl/BWBR0028965" target="_blank" rel="noopener">Uitvoeringsregeling loonbelasting 2011</a> <span class="id">BWBR0028965</span></li><li><a href="https://wetten.overheid.nl/BWBR0002672" target="_blank" rel="noopener">Wet op de vennootschapsbelasting 1969</a> <span class="afk">Wet Vpb</span> <span class="id">BWBR0002672</span></li><li><a href="https://wetten.overheid.nl/BWBR0002741" target="_blank" rel="noopener">Uitvoeringsbesluit vennootschapsbelasting 1971</a> <span class="id">BWBR0002741</span></li><li><a href="https://wetten.overheid.nl/BWBR0002784" target="_blank" rel="noopener">Uitvoeringsbeschikking vennootschapsbelasting 1971</a> <span class="id">BWBR0002784</span></li><li><a href="https://wetten.overheid.nl/BWBR0002515" target="_blank" rel="noopener">Wet op de dividendbelasting 1965</a> <span class="id">BWBR0002515</span></li><li><a href="https://wetten.overheid.nl/BWBR0002740" target="_blank" rel="noopener">Wet op belastingen van rechtsverkeer (overdrachtsbelasting)</a> <span class="afk">WBR</span> <span class="id">BWBR0002740</span></li><li><a href="https://wetten.overheid.nl/BWBR0002758" target="_blank" rel="noopener">Uitvoeringsbesluit belastingen van rechtsverkeer</a> <span class="id">BWBR0002758</span></li><li><a href="https://wetten.overheid.nl/BWBR0002226" target="_blank" rel="noopener">Successiewet 1956</a> <span class="afk">SW</span> <span class="id">BWBR0002226</span></li><li><a href="https://wetten.overheid.nl/BWBR0002227" target="_blank" rel="noopener">Uitvoeringsbesluit Successiewet 1956</a> <span class="id">BWBR0002227</span></li><li><a href="https://wetten.overheid.nl/BWBR0027018" target="_blank" rel="noopener">Uitvoeringsregeling schenk- en erfbelasting</a> <span class="id">BWBR0027018</span></li><li><a href="https://wetten.overheid.nl/BWBR0001939" target="_blank" rel="noopener">Natuurschoonwet 1928</a> <span class="id">BWBR0001939</span></li><li><a href="https://wetten.overheid.nl/BWBR0002739" target="_blank" rel="noopener">Registratiewet 1970</a> <span class="id">BWBR0002739</span></li><li><a href="https://wetten.overheid.nl/BWBR0004770" target="_blank" rel="noopener">Invorderingswet 1990</a> <span class="afk">IW</span> <span class="id">BWBR0004770</span></li><li><a href="https://wetten.overheid.nl/BWBR0004772" target="_blank" rel="noopener">Uitvoeringsbesluit Invorderingswet 1990</a> <span class="id">BWBR0004772</span></li><li><a href="https://wetten.overheid.nl/BWBR0004766" target="_blank" rel="noopener">Uitvoeringsregeling Invorderingswet 1990</a> <span class="id">BWBR0004766</span></li><li><a href="https://wetten.overheid.nl/BWBR0007119" target="_blank" rel="noopener">Wet waardering onroerende zaken</a> <span class="afk">WOZ</span> <span class="id">BWBR0007119</span></li><li><a href="https://wetten.overheid.nl/BWBR0007142" target="_blank" rel="noopener">Uitvoeringsregeling uitgezonderde objecten Wet WOZ</a> <span class="id">BWBR0007142</span></li><li><a href="https://wetten.overheid.nl/BWBR0012095" target="_blank" rel="noopener">Besluit voorkoming dubbele belasting 2001</a> <span class="id">BWBR0012095</span></li></ul></section><section class="card"><h2>Pensioen <span class="cnt">6</span></h2><ul><li><a href="https://wetten.overheid.nl/BWBR0020809" target="_blank" rel="noopener">Pensioenwet</a> <span class="afk">PW</span> <span class="id">BWBR0020809</span></li><li><a href="https://wetten.overheid.nl/BWBR0007369" target="_blank" rel="noopener">Regeling voor berekening bij waardeoverdracht</a> <span class="id">BWBR0007369</span></li><li><a href="https://wetten.overheid.nl/BWBR0020892" target="_blank" rel="noopener">Besluit uitvoering Pensioenwet en Wet verplichte beroepspensioenregeling</a> <span class="id">BWBR0020892</span></li><li><a href="https://wetten.overheid.nl/BWBR0020917" target="_blank" rel="noopener">Regeling Pensioenwet en Wet verplichte beroepspensioenregeling</a> <span class="id">BWBR0020917</span></li><li><a href="https://wetten.overheid.nl/BWBR0006641" target="_blank" rel="noopener">Wet verevening pensioenrechten bij scheiding</a> <span class="afk">WVPS</span> <span class="id">BWBR0006641</span></li><li><a href="https://wetten.overheid.nl/BWBR0007144" target="_blank" rel="noopener">Regeling vaststelling regels pensioenberekening deelnemingsjaren vóór 1 mei 1995</a> <span class="id">BWBR0007144</span></li></ul></section><section class="card"><h2>Toeslagen <span class="cnt">9</span></h2><ul><li><a href="https://wetten.overheid.nl/BWBR0018472" target="_blank" rel="noopener">Algemene wet inkomensafhankelijke regelingen</a> <span class="afk">AWIR</span> <span class="id">BWBR0018472</span></li><li><a href="https://wetten.overheid.nl/BWBR0018590" target="_blank" rel="noopener">Uitvoeringsbesluit AWIR</a> <span class="id">BWBR0018590</span></li><li><a href="https://wetten.overheid.nl/BWBR0019237" target="_blank" rel="noopener">Uitvoeringsregeling AWIR</a> <span class="id">BWBR0019237</span></li><li><a href="https://wetten.overheid.nl/BWBR0017252" target="_blank" rel="noopener">Wet kinderopvang</a> <span class="id">BWBR0017252</span></li><li><a href="https://wetten.overheid.nl/BWBR0017321" target="_blank" rel="noopener">Besluit kinderopvangtoeslag</a> <span class="id">BWBR0017321</span></li><li><a href="https://wetten.overheid.nl/BWBR0022751" target="_blank" rel="noopener">Wet op het kindgebonden budget</a> <span class="id">BWBR0022751</span></li><li><a href="https://wetten.overheid.nl/BWBR0018451" target="_blank" rel="noopener">Wet op de zorgtoeslag</a> <span class="id">BWBR0018451</span></li><li><a href="https://wetten.overheid.nl/BWBR0008659" target="_blank" rel="noopener">Wet op de huurtoeslag</a> <span class="id">BWBR0008659</span></li><li><a href="https://wetten.overheid.nl/BWBR0008763" target="_blank" rel="noopener">Besluit op de huurtoeslag</a> <span class="id">BWBR0008763</span></li></ul></section><section class="card"><h2>Sociale zekerheid <span class="cnt">21</span></h2><ul><li><a href="https://wetten.overheid.nl/BWBR0002638" target="_blank" rel="noopener">Wet minimumloon en minimumvakantiebijslag</a> <span class="afk">WML</span> <span class="id">BWBR0002638</span></li><li><a href="https://wetten.overheid.nl/BWBR0011453" target="_blank" rel="noopener">Wet studiefinanciering 2000</a> <span class="afk">WSF</span> <span class="id">BWBR0011453</span></li><li><a href="https://wetten.overheid.nl/BWBR0004045" target="_blank" rel="noopener">Werkloosheidswet</a> <span class="afk">WW</span> <span class="id">BWBR0004045</span></li><li><a href="https://wetten.overheid.nl/BWBR0004043" target="_blank" rel="noopener">Toeslagenwet</a> <span class="afk">TW</span> <span class="id">BWBR0004043</span></li><li><a href="https://wetten.overheid.nl/BWBR0017745" target="_blank" rel="noopener">Wet financiering sociale verzekeringen</a> <span class="id">BWBR0017745</span></li><li><a href="https://wetten.overheid.nl/BWBR0002221" target="_blank" rel="noopener">Algemene Ouderdomswet</a> <span class="afk">AOW</span> <span class="id">BWBR0002221</span></li><li><a href="https://wetten.overheid.nl/BWBR0007795" target="_blank" rel="noopener">Algemene nabestaandenwet</a> <span class="afk">Anw</span> <span class="id">BWBR0007795</span></li><li><a href="https://wetten.overheid.nl/BWBR0002368" target="_blank" rel="noopener">Algemene Kinderbijslagwet</a> <span class="afk">AKW</span> <span class="id">BWBR0002368</span></li><li><a href="https://wetten.overheid.nl/BWBR0035261" target="_blank" rel="noopener">Besluit uitvoering kinderbijslag</a> <span class="id">BWBR0035261</span></li><li><a href="https://wetten.overheid.nl/BWBR0001888" target="_blank" rel="noopener">Ziektewet</a> <span class="afk">ZW</span> <span class="id">BWBR0001888</span></li><li><a href="https://wetten.overheid.nl/BWBR0019057" target="_blank" rel="noopener">Wet werk en inkomen naar arbeidsvermogen</a> <span class="afk">WIA</span> <span class="id">BWBR0019057</span></li><li><a href="https://wetten.overheid.nl/BWBR0008657" target="_blank" rel="noopener">Wet arbeidsongeschiktheidsvoorziening jonggehandicapten</a> <span class="afk">Wajong</span> <span class="id">BWBR0008657</span></li><li><a href="https://wetten.overheid.nl/BWBR0029368" target="_blank" rel="noopener">Algemeen inkomensbesluit socialezekerheidswetten</a> <span class="id">BWBR0029368</span></li><li><a href="https://wetten.overheid.nl/BWBR0033486" target="_blank" rel="noopener">Dagloonbesluit werknemersverzekeringen</a> <span class="id">BWBR0033486</span></li><li><a href="https://wetten.overheid.nl/BWBR0024394" target="_blank" rel="noopener">Wet inkomensvoorziening oudere werklozen</a> <span class="afk">IOW</span> <span class="id">BWBR0024394</span></li><li><a href="https://wetten.overheid.nl/BWBR0004044" target="_blank" rel="noopener">Wet inkomensvoorziening oudere en gedeeltelijk arbeidsongeschikte werkloze werknemers</a> <span class="afk">IOAW</span> <span class="id">BWBR0004044</span></li><li><a href="https://wetten.overheid.nl/BWBR0004163" target="_blank" rel="noopener">Wet inkomensvoorziening oudere en gedeeltelijk arbeidsongeschikte gewezen zelfstandigen</a> <span class="afk">IOAZ</span> <span class="id">BWBR0004163</span></li><li><a href="https://wetten.overheid.nl/BWBR0015703" target="_blank" rel="noopener">Participatiewet</a> <span class="afk">PW</span> <span class="id">BWBR0015703</span></li><li><a href="https://wetten.overheid.nl/BWBR0018450" target="_blank" rel="noopener">Zorgverzekeringswet</a> <span class="afk">Zvw</span> <span class="id">BWBR0018450</span></li><li><a href="https://wetten.overheid.nl/BWBR0018715" target="_blank" rel="noopener">Regeling zorgverzekering</a> <span class="id">BWBR0018715</span></li><li><a href="https://wetten.overheid.nl/BWBR0036819" target="_blank" rel="noopener">Regeling aanwijzing directeur-grootaandeelhouder 2016</a> <span class="id">BWBR0036819</span></li></ul></section><section class="card"><h2>Buitenland <span class="cnt">5</span></h2><ul><li><a href="https://wetten.overheid.nl/BWBR0030068" target="_blank" rel="noopener">Boek 10 Internationaal privaatrecht</a> <span class="afk">BW 10</span> <span class="id">BWBR0030068</span></li><li><a href="https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX:32012R0650" target="_blank" rel="noopener">Europese Erfrechtverordening 650/2012 (EUR-Lex)</a> <span class="afk">EU</span></li><li><a href="https://wetten.overheid.nl/BWBR0035741" target="_blank" rel="noopener">Uitvoeringswet Verordening erfrecht</a> <span class="id">BWBR0035741</span></li><li><a href="https://wetten.overheid.nl/BWBR0029674/#Hoofdstuk1_Artikel1" target="_blank" rel="noopener">Besluit voorkoming dubbele belasting BES</a> <span class="afk">BES</span> <span class="id">BWBR0029674</span></li><li><a href="https://wetten.overheid.nl/BWBR0033855" target="_blank" rel="noopener">Loonheffingen, extraterritoriale werknemers; 30%-regeling</a> <span class="afk">30%</span> <span class="id">BWBR0033855</span></li></ul></section><section class="card"><h2>Overgangsrecht <span class="cnt">4</span></h2><ul><li><a href="https://wetten.overheid.nl/BWBR0029955" target="_blank" rel="noopener">Wet aanpassing wettelijke gemeenschap van goederen (2012)</a> <span class="id">BWBR0029955</span></li><li><a href="https://wetten.overheid.nl/BWBR0036595" target="_blank" rel="noopener">Besluit overgangsrecht transitievergoeding</a> <span class="id">BWBR0036595</span></li><li><a href="https://wetten.overheid.nl/BWBR0039474" target="_blank" rel="noopener">Wet beperking gemeenschap van goederen (2018)</a> <span class="id">BWBR0039474</span></li><li><a href="https://wetten.overheid.nl/BWBR0042499" target="_blank" rel="noopener">Wet herziening partneralimentatie (2020)</a> <span class="id">BWBR0042499</span></li></ul></section><section class="card"><h2>Hulpmiddelen en overige info <span class="cnt">11</span></h2><ul><li><a href="leennormen-2026.html">Leennormen 2026: rekenhulp en financieringslasttabellen (intern)</a> <span class="afk">Nibud</span></li><li><a href="documenten/Rapport-Advies-hypotheeknormen-2026.pdf">Advies hypotheeknormen 2026 (lokale kopie)</a> <span class="afk">Nibud</span></li><li><a href="documenten/Bijlage-financieringslastnormen-2026.xlsx">Bijlage financieringslastnormen 2026, Excel (lokale kopie)</a> <span class="afk">Nibud</span></li><li><a href="https://www.belastingdienst.nl/wps/wcm/connect/nl/aftrek-en-kortingen/content/hulpmiddel-lijfrentepremie-2016-en-daarna" target="_blank" rel="noopener">Aftrek lijfrentepremie berekenen (Belastingdienst)</a> <span class="afk">BD</span></li><li><a href="https://www.belastingdienst.nl/wps/wcm/connect/nl/koopwoning/content/hulpmiddel-aflossingsverplichting-annuiteitenlening-berekenen" target="_blank" rel="noopener">Aflossingsverplichting annuïteitenlening berekenen (Belastingdienst)</a> <span class="afk">BD</span></li><li><a href="https://www.belastingdienst.nl/wps/wcm/connect/nl/aftrek-en-kortingen/content/hoe-bereken-ik-mijn-jaarruimte" target="_blank" rel="noopener">Jaarruimte berekenen (Belastingdienst)</a> <span class="afk">BD</span></li><li><a href="https://www.cbs.nl/nl-nl/cijfers/detail/70701ned" target="_blank" rel="noopener">Overlevingstafel (CBS StatLine 70701ned)</a> <span class="afk">CBS</span></li><li><a href="https://www.hypothecairplanner.nl/adviseur/lidmaatschap/lid-worden" target="_blank" rel="noopener">Opleiding Hypothecair planner: lid worden</a> <span class="afk">EHP</span></li><li><a href="https://www.hypothecairplanner.nl/adviseur/kenniscentrum/masterclasses" target="_blank" rel="noopener">Masterclasses Hypothecair planner</a> <span class="afk">EHP</span></li><li><a href="https://www.hypothecairplanner.nl/adviseur/publicaties" target="_blank" rel="noopener">Publicaties Hypothecair planner</a> <span class="afk">EHP</span></li><li><a href="https://www.hypothecairplanner.nl/adviseur/publicaties/nieuws" target="_blank" rel="noopener">Nieuws Hypothecair planner</a> <span class="afk">EHP</span></li></ul></section>
+  <div class="leeg" id="leeg">Geen bronnen gevonden voor deze zoekterm.</div>
+  <footer>
+    <p>De links naar wetten.overheid.nl verwijzen naar de actuele (geldende) tekst. Kijk bij een dossier altijd naar de versie die gold op de relevante datum; op wetten.overheid.nl kies je die via &ldquo;Toon wijzigingen&rdquo; of de datumkiezer. Dit overzicht is een verzameling verwijzingen en geen juridisch advies.</p>
+  </footer>
+</div>
+<script>
+(function(){
+  var zoek=document.getElementById('zoek'),teller=document.getElementById('teller'),leeg=document.getElementById('leeg');
+  var kaarten=[].slice.call(document.querySelectorAll('section.card'));
+  var totaal=document.querySelectorAll('section.card li').length;
+  function update(){
+    var q=zoek.value.trim().toLowerCase(),zicht=0;
+    kaarten.forEach(function(k){
+      var n=0;
+      [].forEach.call(k.querySelectorAll('li'),function(li){
+        var hit=q===''||li.textContent.toLowerCase().indexOf(q)!==-1||k.querySelector('h2').textContent.toLowerCase().indexOf(q)!==-1;
+        li.classList.toggle('hide',!hit); if(hit)n++;
+      });
+      k.style.display=n?'':'none'; zicht+=n;
+    });
+    leeg.style.display=zicht===0?'block':'none';
+    teller.textContent=zicht+' van '+totaal+' bronnen';
+  }
+  zoek.addEventListener('input',update);
+  document.getElementById('wis').addEventListener('click',function(){zoek.value='';update();zoek.focus();});
+  // Print via eigen venster: window.print() wordt binnen een iframe (o.a. Google Sites) geblokkeerd.
+  document.getElementById('print').addEventListener('click',function(){
+    try{
+      var w=window.open('','_blank'); if(!w){window.print();return;}
+      w.document.open();
+      w.document.write('<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><title>'+document.title+'</title><style>'+document.querySelector('style').textContent+'</style></head><body>'+document.body.innerHTML.replace(/<script[\s\S]*?<\/script>/gi,'')+'</body></html>');
+      w.document.close(); w.focus(); setTimeout(function(){w.print();},350);
+    }catch(e){window.print();}
+  });
+  update();
+})();
+</script>
+</body>
+</html>
