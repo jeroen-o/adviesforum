@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aanmelden als adviseur – Adviesforum Blinqx</title>
+<style>
+  :root{
+    --geel:#FFD200;
+    --geel-donker:#E6BD00;
+    --zwart:#141414;
+    --tekst:#1F1F1F;
+    --grijs:#6B6B6B;
+    --lijn:#E4E4E4;
+    --vlak:#F7F7F5;
+    --rood:#C0392B;
+    --groen:#1E7A4B;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    color:var(--tekst);background:#fff;line-height:1.55;-webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit}
+
+  .topbar{background:var(--zwart);color:#fff;font-size:12px;padding:8px 24px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .topbar a{color:#fff;text-decoration:none;opacity:.85}
+  .topbar a:hover{opacity:1;text-decoration:underline}
+
+  header.site{border-bottom:1px solid var(--lijn);padding:16px 24px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+  .merk{display:flex;align-items:center;gap:12px}
+  .hex{width:30px;height:34px;background:var(--geel);clip-path:polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%);flex:none}
+  .merknaam{font-weight:800;letter-spacing:.06em;font-size:17px}
+  .merksub{font-size:10px;color:var(--grijs);letter-spacing:.04em}
+  .sectie-naam{font-weight:700;font-size:15px;padding-left:16px;border-left:1px solid var(--lijn);margin-left:4px}
+  .terug{margin-left:auto;font-size:14px;text-decoration:none;font-weight:600;border:1px solid var(--lijn);padding:9px 16px;border-radius:999px}
+  .terug:hover{background:var(--vlak)}
+
+  .hero{background:var(--geel);padding:40px 24px}
+  .hero-in{max-width:1080px;margin:0 auto}
+  .hero h1{margin:0 0 10px;font-size:clamp(28px,4.4vw,42px);line-height:1.1;font-weight:800}
+  .hero p{margin:0;max-width:62ch;font-size:16px}
+
+  main{max-width:1080px;margin:0 auto;padding:32px 24px 64px;display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:32px;align-items:start}
+  @media(max-width:860px){main{grid-template-columns:1fr}}
+
+  .kaart{border:1px solid var(--lijn);border-radius:14px;padding:24px;background:#fff}
+  .kaart + .kaart{margin-top:20px}
+  fieldset{border:0;padding:0;margin:0 0 24px}
+  legend{font-weight:800;font-size:13px;letter-spacing:.07em;text-transform:uppercase;color:var(--grijs);margin-bottom:14px;padding:0}
+
+  .rij{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media(max-width:560px){.rij{grid-template-columns:1fr}}
+  .veld{margin-bottom:16px}
+  label{display:block;font-weight:600;font-size:14px;margin-bottom:6px}
+  .optioneel{font-weight:400;color:var(--grijs)}
+  input[type=text],input[type=email],input[type=tel],input[type=url],select{
+    width:100%;padding:11px 13px;border:1px solid #CFCFCF;border-radius:9px;font-size:15px;
+    font-family:inherit;color:inherit;background:#fff;
+  }
+  input:focus,select:focus{outline:3px solid rgba(255,210,0,.55);outline-offset:1px;border-color:#9a9a9a}
+  .hint{font-size:12.5px;color:var(--grijs);margin-top:5px}
+  .fout{color:var(--rood);font-size:13px;margin-top:5px;display:none;font-weight:600}
+  .veld.is-fout input,.veld.is-fout select{border-color:var(--rood)}
+  .veld.is-fout .fout{display:block}
+
+  .akkoord{display:flex;gap:11px;align-items:flex-start;background:var(--vlak);border:1px solid var(--lijn);border-radius:11px;padding:14px}
+  .akkoord input{margin-top:3px;width:17px;height:17px;flex:none;accent-color:var(--zwart)}
+  .akkoord label{font-weight:400;font-size:13.5px;margin:0}
+
+  .acties{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:22px}
+  button{font-family:inherit;font-size:15px;font-weight:700;border-radius:999px;cursor:pointer;border:1px solid transparent;padding:13px 24px}
+  .knop-primair{background:var(--zwart);color:#fff}
+  .knop-primair:hover{background:#000}
+  .knop-tweede{background:#fff;color:var(--zwart);border-color:#CFCFCF}
+  .knop-tweede:hover{background:var(--vlak)}
+
+  .melding{display:none;margin-top:18px;border-radius:11px;padding:14px 16px;font-size:14px;border:1px solid}
+  .melding.ok{display:block;background:#EFF8F2;border-color:#BBDFC9;color:var(--groen)}
+  .melding.let-op{display:block;background:#FFF9E0;border-color:#F0DC8A;color:#7A5C00}
+
+  .zijkant h2{font-size:14px;letter-spacing:.07em;text-transform:uppercase;color:var(--grijs);margin:0 0 12px}
+  .zijkant ol{margin:0;padding-left:20px;font-size:14px}
+  .zijkant li{margin-bottom:9px}
+  .privacy{font-size:12.5px;color:var(--grijs);margin-top:18px}
+
+  .knop-primair[disabled]{opacity:.6;cursor:progress}
+  .melding.fout-blok{display:block;background:#FDECEA;border-color:#F3C1BB;color:var(--rood)}
+  .melding .knoppen{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+  .melding .knoppen button,.melding .knoppen a{font-size:14px;padding:10px 18px;text-decoration:none;display:inline-block}
+  .melding .knoppen a{border-radius:999px;font-weight:700;border:1px solid transparent}
+  .succes{display:none;text-align:left}
+  .kaart.succes{margin-top:0}
+  .succes h2{margin:0 0 8px;font-size:22px}
+  .succes p{margin:0 0 14px}
+  .succes .vink{width:44px;height:48px;background:var(--groen);clip-path:polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:22px;margin-bottom:14px}
+  .honing{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+  pre.kopie{display:none;white-space:pre-wrap;background:var(--vlak);border:1px solid var(--lijn);border-radius:11px;padding:14px;font-size:13px;margin-top:16px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+  footer{border-top:1px solid var(--lijn);padding:22px 24px;font-size:12.5px;color:var(--grijs);text-align:center}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span>Aanmelden kost één minuut. Je ontvangt binnen twee werkdagen bericht.</span>
+  <span><a href="index.html">Terug naar het forum</a></span>
+</div>
+
+<header class="site">
+  <div class="merk">
+    <div class="hex" aria-hidden="true"></div>
+    <div>
+      <div class="merknaam">BLINQX</div>
+      <div class="merksub">Verzekering &amp; Hypotheek</div>
+    </div>
+  </div>
+  <div class="sectie-naam">Adviesforum</div>
+  <a class="terug" href="index.html">← Terug</a>
+</header>
+
+<section class="hero">
+  <div class="hero-in">
+    <h1>Meld je aan als adviseur</h1>
+    <p>Het Adviesforum is er voor adviseurs die elkaar vooruit helpen. Vul je gegevens in, dan maken wij een profiel voor je aan en krijg je toegang om vragen te stellen, te beantwoorden en collega's te beoordelen.</p>
+  </div>
+</section>
+
+<main>
+  <div>
+    <form class="kaart" id="aanmeldform" novalidate>
+
+      <fieldset>
+        <legend>Je gegevens</legend>
+        <div class="rij">
+          <div class="veld" data-veld="voornaam">
+            <label for="voornaam">Voornaam</label>
+            <input type="text" id="voornaam" name="voornaam" autocomplete="given-name" required>
+            <div class="fout">Vul je voornaam in.</div>
+          </div>
+          <div class="veld" data-veld="achternaam">
+            <label for="achternaam">Achternaam</label>
+            <input type="text" id="achternaam" name="achternaam" autocomplete="family-name" required>
+            <div class="fout">Vul je achternaam in.</div>
+          </div>
+        </div>
+        <div class="rij">
+          <div class="veld" data-veld="email">
+            <label for="email">E-mailadres</label>
+            <input type="email" id="email" name="email" autocomplete="email" placeholder="naam@kantoor.nl" required>
+            <div class="fout">Vul een geldig e-mailadres in.</div>
+          </div>
+          <div class="veld" data-veld="telefoon">
+            <label for="telefoon">Telefoonnummer</label>
+            <input type="tel" id="telefoon" name="telefoon" autocomplete="tel" placeholder="06 12 34 56 78" required>
+            <div class="fout">Vul een geldig Nederlands telefoonnummer in.</div>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Je kantoor en functie</legend>
+        <div class="rij">
+          <div class="veld" data-veld="bedrijf">
+            <label for="bedrijf">Bedrijfsnaam</label>
+            <input type="text" id="bedrijf" name="bedrijf" autocomplete="organization" required>
+            <div class="fout">Vul de naam van je kantoor in.</div>
+          </div>
+          <div class="veld" data-veld="plaats">
+            <label for="plaats">Plaats <span class="optioneel">(optioneel)</span></label>
+            <input type="text" id="plaats" name="plaats" autocomplete="address-level2">
+            <div class="hint">Wordt getoond bij je naam in de adviseurslijst.</div>
+          </div>
+        </div>
+        <div class="veld" data-veld="functie">
+          <label for="functie">Functie</label>
+          <select id="functie" name="functie" required>
+            <option value="">— Kies je functie —</option>
+            <option>Hypotheekadviseur</option>
+            <option>Erkend Hypothecair Planner</option>
+            <option>Verzekeringsadviseur</option>
+            <option>Financieel planner</option>
+            <option>Pensioenadviseur</option>
+            <option>Compliance officer</option>
+            <option>Applicatiebeheerder</option>
+            <option>Kantoormanager / directie</option>
+            <option value="__anders">Anders, namelijk…</option>
+          </select>
+          <div class="fout">Kies je functie.</div>
+        </div>
+        <div class="veld" id="anders-wrap" data-veld="functie_anders" style="display:none">
+          <label for="functie_anders">Functie, namelijk</label>
+          <input type="text" id="functie_anders" name="functie_anders">
+          <div class="fout">Vul je functie in.</div>
+        </div>
+        <div class="veld" data-veld="linkedin">
+          <label for="linkedin">LinkedIn-profiel</label>
+          <input type="url" id="linkedin" name="linkedin" placeholder="https://www.linkedin.com/in/jouwnaam" required>
+          <div class="hint">Zo kunnen collega's zien met wie ze te maken hebben.</div>
+          <div class="fout">Vul een geldige LinkedIn-profiellink in (linkedin.com/in/…).</div>
+        </div>
+      </fieldset>
+
+      <div class="honing" aria-hidden="true">
+        <label for="website">Laat dit veld leeg</label>
+        <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+      </div>
+
+      <div class="akkoord veld" data-veld="akkoord">
+        <input type="checkbox" id="akkoord" name="akkoord">
+        <label for="akkoord">Ik ga ermee akkoord dat mijn gegevens via de formulierdienst FormSubmit per e-mail naar de forumbeheerder worden gestuurd, en dat mijn naam, kantoor, functie, plaats en LinkedIn-profiel zichtbaar zijn voor andere deelnemers van het Adviesforum. Mijn telefoonnummer en e-mailadres worden alleen gebruikt om mijn aanmelding af te handelen.</label>
+      </div>
+      <div class="fout" id="fout-akkoord" style="margin-top:8px">Vink het akkoord aan om je aan te melden.</div>
+
+      <div class="acties">
+        <button type="submit" class="knop-primair" id="verstuur">Aanmelding versturen →</button>
+      </div>
+
+      <div class="melding" id="melding"></div>
+      <pre class="kopie" id="kopie-blok"></pre>
+    </form>
+
+    <div class="kaart succes" id="succes" role="status" aria-live="polite">
+      <div class="vink" aria-hidden="true">✓</div>
+      <h2 id="succes-titel">Bedankt voor je aanmelding</h2>
+      <p id="succes-tekst">Je gegevens zijn verstuurd naar de forumbeheerder. Je ontvangt binnen twee werkdagen bericht.</p>
+      <div class="acties" style="margin-top:0">
+        <a class="knop-primair" href="index.html" style="text-decoration:none;border-radius:999px;padding:13px 24px;font-weight:700">Naar het forum →</a>
+        <button type="button" class="knop-tweede" id="nogmaals">Nog iemand aanmelden</button>
+      </div>
+    </div>
+  </div>
+
+  <aside class="zijkant">
+    <div class="kaart">
+      <h2>Hoe het verder gaat</h2>
+      <ol>
+        <li>Je vult het formulier in en klikt op <strong>Aanmelding versturen</strong>.</li>
+        <li>Je gegevens gaan direct per e-mail naar de forumbeheerder.</li>
+        <li>Wij maken je profiel aan en sturen je binnen twee werkdagen een bevestiging.</li>
+      </ol>
+      <p class="privacy">Je gegevens worden via de formulierdienst FormSubmit (formsubmit.co) verstuurd naar <a href="mailto:forumadvies@gmail.com">forumadvies@gmail.com</a> en alleen gebruikt om je aanmelding af te handelen. Lukt versturen niet? Dan kun je je gegevens ook zelf mailen.</p>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  Adviesforum — Blinqx Verzekering &amp; Hypotheek · Vragen over je aanmelding? Mail <a href="mailto:forumadvies@gmail.com">forumadvies@gmail.com</a>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  var ONTVANGER = "forumadvies@gmail.com";
+  // Een statische pagina kan zelf geen e-mail versturen; FormSubmit stuurt het formulier door naar ONTVANGER.
+  // Eenmalig activeren: na de eerste aanmelding vanaf de live pagina komt er een activatiemail op ONTVANGER.
+  var ENDPOINT  = "https://formsubmit.co/ajax/" + ONTVANGER;
+
+  var form      = document.getElementById("aanmeldform");
+  var functie   = document.getElementById("functie");
+  var andersWrap= document.getElementById("anders-wrap");
+  var akkoord   = document.getElementById("akkoord");
+  var foutAkk   = document.getElementById("fout-akkoord");
+  var melding   = document.getElementById("melding");
+  var kopieBlok = document.getElementById("kopie-blok");
+  var knop      = document.getElementById("verstuur");
+  var succes    = document.getElementById("succes");
+  var bezig     = false;
+
+  functie.addEventListener("change", function(){
+    andersWrap.style.display = (functie.value === "__anders") ? "" : "none";
+  });
+
+  function v(id){ return (document.getElementById(id).value || "").trim(); }
+  function vak(id){ return document.querySelector('[data-veld="'+id+'"]'); }
+  function markeer(id, fout){
+    var el = vak(id);
+    if (el) el.classList.toggle("is-fout", !!fout);
+  }
+  function esc(t){
+    return String(t).replace(/[&<>"']/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]; });
+  }
+
+  function geldigTelefoon(t){
+    var s = t.replace(/[\s\-().]/g, "");
+    return /^(\+31|0031|0)[1-9][0-9]{8}$/.test(s);
+  }
+  function geldigEmail(e){
+    return /^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(e);
+  }
+  function normaliseerLinkedIn(u){
+    var s = u.trim();
+    if (!s) return "";
+    if (!/^https?:\/\//i.test(s)) s = "https://" + s.replace(/^\/+/, "");
+    // Deellinks uit de LinkedIn-app bevatten vaak ?utm_...; die laten we weg.
+    return s.split(/[?#]/)[0];
+  }
+  function geldigLinkedIn(u){
+    return /^https?:\/\/([a-z]{2,3}\.)?linkedin\.com\/(in|pub)\/[^\s\/?#]+\/?$/i.test(u);
+  }
+
+  function functieWaarde(){
+    return functie.value === "__anders" ? v("functie_anders") : functie.value;
+  }
+
+  function controleer(){
+    var ok = true;
+    var checks = [
+      ["voornaam",  v("voornaam").length  >= 2],
+      ["achternaam",v("achternaam").length>= 2],
+      ["email",     geldigEmail(v("email"))],
+      ["telefoon",  geldigTelefoon(v("telefoon"))],
+      ["bedrijf",   v("bedrijf").length   >= 2],
+      ["functie",   functie.value !== ""],
+      ["linkedin",  geldigLinkedIn(normaliseerLinkedIn(v("linkedin")))]
+    ];
+    if (functie.value === "__anders") checks.push(["functie_anders", v("functie_anders").length >= 2]);
+    else markeer("functie_anders", false);
+
+    checks.forEach(function(c){
+      markeer(c[0], !c[1]);
+      if (!c[1]) ok = false;
+    });
+
+    var akkOk = akkoord.checked;
+    foutAkk.style.display = akkOk ? "none" : "block";
+    vak("akkoord").style.borderColor = akkOk ? "" : "#C0392B";
+    if (!akkOk) ok = false;
+
+    if (!ok){
+      var eerste = form.querySelector(".is-fout input, .is-fout select");
+      if (eerste) eerste.focus();
+    }
+    return ok;
+  }
+
+  function gegevens(){
+    return {
+      "Voornaam":       v("voornaam"),
+      "Achternaam":     v("achternaam"),
+      "E-mailadres":    v("email"),
+      "Telefoonnummer": v("telefoon"),
+      "Bedrijfsnaam":   v("bedrijf"),
+      "Plaats":         v("plaats") || "-",
+      "Functie":        functieWaarde(),
+      "LinkedIn":       normaliseerLinkedIn(v("linkedin")),
+      "Akkoord zichtbaarheid": "ja",
+      "Aangemeld op":   new Date().toLocaleString("nl-NL")
+    };
+  }
+
+  function onderwerp(){
+    return "Aanmelding adviseur: " + v("voornaam") + " " + v("achternaam") + " (" + v("bedrijf") + ")";
+  }
+
+  function berichtTekst(){
+    var g = gegevens(), r = ["Nieuwe aanmelding voor het Adviesforum", ""];
+    Object.keys(g).forEach(function(k){
+      var label = (k + ":").padEnd ? (k + ":").padEnd(17, " ") : k + ": ";
+      r.push(label + g[k]);
+    });
+    return r.join("\n");
+  }
+
+  function mailtoLink(){
+    return "mailto:" + ONTVANGER +
+           "?subject=" + encodeURIComponent(onderwerp()) +
+           "&body="    + encodeURIComponent(berichtTekst());
+  }
+
+  function toonMelding(type, html){
+    melding.className = "melding " + type;
+    melding.innerHTML = html;
+  }
+
+  function zetBezig(aan){
+    bezig = aan;
+    knop.disabled = aan;
+    knop.textContent = aan ? "Bezig met versturen…" : "Aanmelding versturen →";
+  }
+
+  function toonSucces(){
+    form.style.display = "none";
+    document.getElementById("succes-titel").textContent = "Bedankt, " + v("voornaam") + "!";
+    document.getElementById("succes-tekst").textContent =
+      "Je aanmelding is verstuurd naar de forumbeheerder. Je ontvangt binnen twee werkdagen bericht op " + v("email") + ".";
+    succes.style.display = "block";
+    succes.scrollIntoView({behavior:"smooth", block:"start"});
+  }
+
+  function toonFout(reden){
+    toonMelding("fout-blok",
+      "<strong>Je aanmelding is niet verstuurd.</strong> " + esc(reden) +
+      " Verstuur je gegevens via je mailprogramma of kopieer ze en mail ze naar " +
+      "<a href=\"mailto:" + ONTVANGER + "\">" + ONTVANGER + "</a>." +
+      "<div class=\"knoppen\"><a class=\"knop-primair\" id=\"via-mail\" href=\"#\">Verstuur via mailprogramma</a>" +
+      "<button type=\"button\" class=\"knop-tweede\" id=\"kopieer\">Gegevens kopiëren</button></div>");
+    document.getElementById("via-mail").addEventListener("click", function(e){
+      e.preventDefault();
+      window.location.href = mailtoLink();
+    });
+    document.getElementById("kopieer").addEventListener("click", kopieer);
+  }
+
+  function kopieer(){
+    var tekst = berichtTekst();
+    kopieBlok.textContent = tekst;
+    kopieBlok.style.display = "block";
+    var knopK = document.getElementById("kopieer");
+    var klaar = function(gelukt){
+      if (knopK) knopK.textContent = gelukt ? "Gekopieerd ✓" : "Selecteer de tekst hieronder";
+    };
+    if (navigator.clipboard && window.isSecureContext){
+      navigator.clipboard.writeText(tekst).then(function(){ klaar(true); }, function(){ klaar(false); });
+    } else {
+      klaar(false);
+    }
+  }
+
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    if (bezig) return;
+    melding.className = "melding";
+    kopieBlok.style.display = "none";
+    if (!controleer()) return;
+
+    var data = gegevens();
+    data.email     = v("email");          // FormSubmit: antwoordadres = de aanmelder
+    data._subject  = onderwerp();
+    data._template = "table";
+    data._captcha  = "false";
+    data._honey    = v("website");        // honeypot: gevuld = spam, wordt genegeerd
+
+    var ctrl = window.AbortController ? new AbortController() : null;
+    var timer = setTimeout(function(){ if (ctrl) ctrl.abort(); }, 20000);
+    zetBezig(true);
+
+    fetch(ENDPOINT, {
+      method: "POST",
+      headers: {"Content-Type": "application/json", "Accept": "application/json"},
+      body: JSON.stringify(data),
+      signal: ctrl ? ctrl.signal : undefined
+    })
+    .then(function(r){
+      return r.json().catch(function(){ return {}; }).then(function(j){ return {ok: r.ok, j: j || {}}; });
+    })
+    .then(function(res){
+      clearTimeout(timer);
+      zetBezig(false);
+      var gelukt = res.ok && (res.j.success === true || res.j.success === "true");
+      if (gelukt) { toonSucces(); return; }
+      var msg = String(res.j.message || "");
+      if (window.console) console.warn("FormSubmit:", msg || res.j);
+      toonFout(/activat/i.test(msg)
+        ? "Het aanmeldformulier wordt nog geactiveerd door de forumbeheerder."
+        : "Er ging iets mis bij het versturen.");
+    })
+    .catch(function(){
+      clearTimeout(timer);
+      zetBezig(false);
+      toonFout("Er is geen verbinding met de verzenddienst.");
+    });
+  });
+
+  document.getElementById("nogmaals").addEventListener("click", function(){
+    form.reset();
+    andersWrap.style.display = "none";
+    melding.className = "melding";
+    kopieBlok.style.display = "none";
+    succes.style.display = "none";
+    form.style.display = "";
+    document.getElementById("voornaam").focus();
+  });
+
+  ["voornaam","achternaam","email","telefoon","bedrijf","functie","functie_anders","linkedin"].forEach(function(id){
+    var el = document.getElementById(id);
+    if (el) el.addEventListener("input", function(){ markeer(id, false); });
+  });
+  akkoord.addEventListener("change", function(){
+    foutAkk.style.display = "none";
+    vak("akkoord").style.borderColor = "";
+  });
+})();
+</script>
+</body>
+</html>
