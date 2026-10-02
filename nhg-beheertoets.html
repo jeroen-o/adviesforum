@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NHG-beheertoets 2026</title>
+<style>
+  :root{
+    --primary:#003057;--accent:#E5A138;--bg:#F4F7F9;--text:#333333;--muted:#4A4A4A;
+    --line:#D8E2E8;--white:#fff;--soft:#EAF1F5;--warn-bg:#FDF4E5;--warn-line:#E5A138;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:"Plus Jakarta Sans","DM Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    font-size:16px;line-height:1.55}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 20px 64px}
+  header.hero{background:var(--primary);color:#fff;padding:36px 0 30px;margin-bottom:24px}
+  header.hero .wrap{padding-bottom:0}
+  h1{font-size:32px;line-height:1.2;margin:0 0 10px;font-weight:700}
+  .sub{opacity:.88;margin:0;max-width:75ch}
+  .meta{margin-top:14px;font-size:13px;opacity:.75}
+  .tabs{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 18px}
+  .tabs button{border:1px solid var(--line);background:#fff;color:var(--primary);font:inherit;font-weight:600;
+    font-size:14px;padding:9px 14px;border-radius:999px;cursor:pointer}
+  .tabs button.on{background:var(--primary);color:#fff;border-color:var(--primary)}
+  section.card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:22px 24px;margin:0 0 16px}
+  h2{font-size:20px;margin:0 0 12px;color:var(--primary)}
+  h3{font-size:16px;margin:18px 0 8px;color:var(--primary)}
+  .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px}
+  .fields{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px 14px}
+  .fields .full{grid-column:1/-1}
+  label{display:block;font-size:13.5px;font-weight:600;color:var(--primary);margin-bottom:4px}
+  .hint{display:block;font-size:12.5px;font-weight:400;color:var(--muted);margin-top:3px}
+  input[type=text],select{width:100%;padding:10px 12px;font:inherit;font-size:15px;border:1px solid var(--line);
+    border-radius:7px;background:#fff;color:var(--text)}
+  input:focus,select:focus{outline:2px solid var(--accent);outline-offset:1px}
+  .eur{position:relative}
+  .eur span{position:absolute;left:11px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:15px}
+  .eur input{padding-left:26px}
+  .pct{position:relative}
+  .pct span{position:absolute;right:11px;top:50%;transform:translateY(-50%);color:var(--muted)}
+  .pct input{padding-right:28px}
+  .result{background:var(--primary);color:#fff;border-radius:10px;padding:20px 22px}
+  .result .big{font-size:34px;font-weight:700;line-height:1.15;margin:4px 0 2px}
+  .result .lbl{font-size:13px;opacity:.85}
+  .rows{margin:16px 0 0;border-top:1px solid rgba(255,255,255,.25)}
+  .rows div{display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.15);font-size:14.5px}
+  .rows div b{font-weight:600;white-space:nowrap}
+  .let-op{background:var(--warn-bg);border-left:4px solid var(--warn-line);padding:12px 14px;border-radius:0 6px 6px 0;margin:14px 0 0;font-size:14.5px}
+  .let-op strong{color:#8A5B00}
+  .compliance{background:#FFF1F1;border-left:4px solid #C0392B;padding:12px 14px;border-radius:0 6px 6px 0;margin:14px 0 0;font-size:14.5px}
+  .compliance strong{color:#A5281B}
+  .msg{font-size:13.5px;margin-top:10px;color:#FFE3B0}
+  .tblwrap{overflow-x:auto;border:1px solid var(--line);border-radius:8px;max-height:560px;overflow-y:auto}
+  table{border-collapse:collapse;width:100%;font-size:13.5px;font-variant-numeric:tabular-nums}
+  th,td{padding:7px 9px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
+  th{background:var(--soft);color:var(--primary);position:sticky;top:0;z-index:1;font-weight:700}
+  td:first-child,th:first-child{text-align:left;position:sticky;left:0;background:#fff;z-index:2}
+  th:first-child{background:var(--soft);z-index:3}
+  tr.hl td{background:#FFF4DD}
+  tr.hl td:first-child{background:#FFE7B8}
+  td.hl{outline:2px solid var(--accent);outline-offset:-2px;font-weight:700}
+  .simple td,.simple th{text-align:left}
+  .simple td.n,.simple th.n{text-align:right}
+  .toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:flex-end;margin-bottom:12px}
+  .toolbar > div{flex:1 1 200px}
+  .btn{border:0;border-radius:7px;padding:10px 16px;font-size:14px;font-weight:600;font-family:inherit;cursor:pointer;background:var(--primary);color:#fff}
+  .btn.sec{background:#fff;color:var(--primary);border:1px solid var(--line)}
+  .pane{display:none}.pane.on{display:block}
+  footer{margin-top:28px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+  footer a{color:var(--primary)}
+  @media (max-width:820px){
+    .grid{grid-template-columns:minmax(0,1fr)}
+    h1{font-size:26px}
+  }
+  @media (max-width:520px){
+    .wrap{padding:0 16px 48px}
+    .fields{grid-template-columns:minmax(0,1fr)}
+    section.card{padding:18px 16px}
+    .result .big{font-size:28px}
+  }
+  @media print{
+    .tabs,.toolbar .btn,.noprint{display:none!important}
+    body{background:#fff}
+    .pane{display:block!important}
+    .tblwrap{max-height:none;overflow:visible}
+    th{position:static}
+    td:first-child,th:first-child{position:static}
+    header.hero{background:#fff;color:#000;border-bottom:3px solid var(--primary)}
+    .result{background:#fff;color:#000;border:2px solid var(--primary)}
+    .rows div{border-color:#ccc}
+    section.card{break-inside:avoid}
+  }
+  .back{display:inline-block;font-size:13px;margin:0 0 10px;opacity:.9;text-decoration:none}
+  .back:hover{text-decoration:underline}
+  .chk{display:flex;align-items:center;gap:8px;font-size:14.5px;font-weight:600;color:var(--primary);margin:0;cursor:pointer}
+  .chk input{width:18px;height:18px;margin:0;accent-color:var(--primary)}
+  input:disabled{background:var(--soft);color:var(--muted)}
+  .rows div.tot{border-bottom:0;font-size:15.5px}
+  .rows div.tot b{font-weight:700}
+  .warn{color:#A5281B;font-weight:600}
+  @media print{ .back{display:none} }
+  .seg{display:flex;gap:0;border:1px solid var(--line);border-radius:7px;overflow:hidden}
+  .seg label{flex:1 1 0;margin:0;padding:9px 8px;text-align:center;font-size:14px;cursor:pointer;background:#fff;color:var(--primary)}
+  .seg input{position:absolute;opacity:0;width:1px;height:1px}
+  .seg label.on{background:var(--primary);color:#fff}
+  .seg label + label{border-left:1px solid var(--line)}
+  .seg label:focus-within{outline:2px solid var(--accent);outline-offset:-2px}
+  .ruimte{color:#BFF0CD}
+  .tekort{color:#FFC2B8}
+  ul.plain{margin:6px 0 0;padding-left:20px}
+  ul.plain li{margin:3px 0}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <a class="back noprint" href="index.html#hulpmiddelen" style="color:#fff">&larr; Terug naar het Adviesforum</a>
+    <h1>NHG-beheer: woonlasten volgens bijlage 5</h1>
+    <p class="sub">Bepaal het financieringslastpercentage uit de Financieringslasttabel Beheer 2026 en de maximaal toegestane financieringslast per jaar en per maand. Vergelijk desgewenst met de huidige werkelijke maandlast.</p>
+    <p class="meta">Indicatieve rekenhulp &middot; geen advies &middot; de geldverstrekker en NHG beslissen &middot; <span id="versie"></span></p>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="tabs noprint">
+    <button type="button" id="print" style="margin-left:auto">Printen / PDF</button>
+  </div>
+
+  <section class="card">
+    <div class="grid">
+      <div>
+        <h2>Invoer</h2>
+        <div class="fields">
+          <div class="full">
+            <label for="hh">Huishouden</label>
+            <select id="hh"></select>
+            <span class="hint">De uiteindelijke situatie van de consument (D.6.2), bijvoorbeeld na een scheiding of bij ontslag uit de hoofdelijke aansprakelijkheid.</span>
+          </div>
+          <div class="full">
+            <span id="box-lbl" style="display:block;font-size:13.5px;font-weight:600;color:var(--primary);margin-bottom:4px">Fiscale behandeling van de rente</span>
+            <div class="seg" role="radiogroup" aria-labelledby="box-lbl">
+              <label class="on"><input type="radio" name="box" value="box1" checked> Box 1 (rente aftrekbaar)</label>
+              <label><input type="radio" name="box" value="box3"> Box 3 (niet aftrekbaar)</label>
+            </div>
+          </div>
+          <div>
+            <label for="ink">Toetsinkomen (bruto per jaar)</label>
+            <div class="eur"><span>&euro;</span><input type="text" inputmode="numeric" id="ink" value="50.000"></div>
+            <span class="hint">Volgens de beheercriteria van D.6.3.</span>
+          </div>
+          <div>
+            <label for="rente">Toetsrente</label>
+            <div class="pct"><input type="text" inputmode="decimal" id="rente" value="3,800"><span>%</span></div>
+            <span class="hint">Gewogen gemiddelde, afgerond op 3 decimalen (D.6.2, D.6.5).</span>
+          </div>
+          <div>
+            <label for="kind">Kinderen in het huishouden</label>
+            <select id="kind">
+              <option value="0">Geen</option>
+              <option value="1">1 kind</option>
+              <option value="2">2 kinderen</option>
+              <option value="3">3 of meer kinderen</option>
+            </select>
+          </div>
+          <div>
+            <label for="verpl">Overige financi&euml;le verplichtingen per maand</label>
+            <div class="eur"><span>&euro;</span><input type="text" inputmode="numeric" id="verpl" value="0"></div>
+            <span class="hint">Werkelijke last; zakelijke verplichtingen niet (D.6.4).</span>
+          </div>
+          <div class="full">
+            <label for="huidig">Huidige werkelijke maandlast woning (optioneel)</label>
+            <div class="eur"><span>&euro;</span><input type="text" inputmode="numeric" id="huidig" value="" placeholder="bijv. 1.250"></div>
+            <span class="hint">Rente + aflossing + inleg opbouwproduct + erfpachtcanon + ligplaatskosten (D.6.5).</span>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="result" aria-live="polite">
+          <div class="lbl">Financieringslastpercentage Beheer</div>
+          <div class="big" id="r-pct">&ndash;</div>
+          <div class="lbl" id="r-bron"></div>
+          <div class="rows">
+            <div><span>Tabelrij (toetsinkomen)</span><b id="r-rij"></b></div>
+            <div><span>Renteklasse</span><b id="r-klasse"></b></div>
+            <div><span>Maximale financieringslast per jaar</span><b id="r-jaar"></b></div>
+            <div><span>Maximale financieringslast per maand</span><b id="r-maand"></b></div>
+            <div><span>Af: overige financi&euml;le verplichtingen</span><b id="r-verpl"></b></div>
+            <div class="tot"><span>Beschikbaar voor woonlasten per maand</span><b id="r-beschik"></b></div>
+            <div id="row-huidig"><span>Huidige werkelijke maandlast</span><b id="r-huidig"></b></div>
+            <div id="row-saldo" class="tot"><span id="r-saldo-l">Ruimte / tekort per maand</span><b id="r-saldo"></b></div>
+            <div><span id="r-ander-l">Ter vergelijking: box 3</span><b id="r-ander"></b></div>
+          </div>
+          <div class="msg" id="r-msg"></div>
+        </div>
+        <div class="compliance"><strong>Compliance:</strong> indicatief en geen advies. De Financieringslasttabel Beheer is alleen bedoeld voor de NHG-beheercriteria, niet voor de acceptatietoets van een nieuwe lening (die volgt de Tijdelijke regeling hypothecair krediet, V&amp;N C.7). De geldverstrekker beoordeelt of de lening verantwoord en bestendig betaalbaar is en legt dit vast; NHG kan op verzoek een uitzondering maken (D.6.7). Gebruik voor de formele toets de NHG-beheertoets van NHG of de geldverstrekker.</div>
+      </div>
+    </div>
+
+    <h3>Tabelrij bij dit toetsinkomen</h3>
+    <div class="tblwrap" style="max-height:none">
+      <table id="tbl"><thead></thead><tbody></tbody></table>
+    </div>
+    <div class="let-op"><strong>Aanname afronding:</strong> de tabel loopt per &euro; 1.000 toetsinkomen. Hoe NHG een toetsinkomen tussen twee rijen afrondt, staat niet in bijlage 5 of de V&amp;N. Deze rekenhulp rondt af <em>naar beneden</em> op hele duizenden (bijv. &euro; 50.999 &rarr; rij &euro; 50.000). Onder de eerste rij geldt de rij &lsquo;-&rsquo; (gelijk aan de eerste rij); boven de laatste rij wordt de laatste rij gebruikt. Controleer bij NHG of de geldverstrekker, zeker als het inkomen dicht bij een rijgrens of buiten de tabel ligt.</div>
+  </section>
+
+  <section class="card">
+    <h2>Wanneer gebruik je de beheertabel?</h2>
+    <p style="margin:0 0 8px">De NHG-beheercriteria (V&amp;N hoofdstuk D.6) toetsen of een consument een <em>bestaande</em> lening met NHG nog kan betalen. Ze wijken op een paar punten af van de acceptatiecriteria.</p>
+    <h3>Verplicht (D.6.1)</h3>
+    <ul class="plain">
+      <li><strong>Betalingsproblemen en verkoop met verlies:</strong> voor de kwijtscheldingsbeoordeling als de consument de woning met verlies gaat verkopen of dat dreigt.</li>
+      <li><strong>Woningbehoud:</strong> voordat je de lening aanpast (D.5.3) of schulden consolideert (D.5.5), en om na aanpassing vast te stellen of de lening betaalbaar is.</li>
+    </ul>
+    <h3>Mag (D.6.1)</h3>
+    <ul class="plain">
+      <li>Tijdens de looptijd, bijvoorbeeld na een life-event (scheiding, werkloosheid, overlijden), om te bepalen of hulp nodig is.</li>
+      <li>Om de draagkracht te bepalen, bijvoorbeeld voor de Woonlastenfaciliteit (D.5.6).</li>
+    </ul>
+    <h3>Ontslag uit de hoofdelijke aansprakelijkheid (D.4.2)</h3>
+    <p style="margin:0">Hier geldt in principe de acceptatietoets (C.7). Is de financieringslast daarmee te hoog, dan mag de geldverstrekker bij een explain de maximale financieringslast vaststellen met het toetsinkomen en het percentage uit de Financieringslasttabel Beheer, en de financieringslast op de werkelijke lasten baseren (D.4.2.2). Hetzelfde geldt bij consolidatie van schulden (D.5.5.4).</p>
+    <h3>Toetsrente en financieringslast (D.6.5)</h3>
+    <ul class="plain">
+      <li>Rentevast nog 3 jaar of langer: de huidige rente is de toetsrente.</li>
+      <li>Rentevast korter dan 3 jaar: de rente van de geldverstrekker voor nieuwe NHG-leningen met 3 jaar rentevast (of de eerstvolgende rentevaste periode), tenzij de huidige rente hoger is.</li>
+      <li>Meerdere leningdelen: gewogen gemiddelde rente, afgerond op 3 decimalen (D.6.2).</li>
+      <li>De financieringslast is de werkelijke last, uitgaande van een zo groot mogelijk aflossingsvrij deel; is die nog te hoog, dan mag vermogen of de waarde van een opbouwproduct (rekenkundig) op de hoofdsom in mindering komen.</li>
+      <li>Eindigt de renteaftrek van een leningdeel binnen 3 jaar, reken dan ook met het box 3-percentage voor de periode daarna (D.6.2).</li>
+    </ul>
+    <div class="let-op"><strong>Bron:</strong> <a href="documenten/nhg-voorwaarden-normen-2026.pdf">V&amp;N NHG 2026-1</a> hoofdstuk D.4, D.5 en D.6; tabellen uit <a href="documenten/nhg-2026-bijlage5-financieringslasttabel-beheer.pdf">bijlage 5 (pdf)</a> / <a href="documenten/nhg-2026-bijlage5-financieringslasttabel-beheer.xlsx">(Excel)</a>, geldig vanaf 1 januari 2026. Box 1 = bijlage 5a t/m 5f, box 3 = bijlage 5g t/m 5l.</div>
+  </section>
+
+  <footer>
+    <p>Indicatieve rekenhulp, geen advies. De geldverstrekker en NHG beslissen. Deze pagina slaat niets op.</p>
+  </footer>
+</div>
+<script src="data/nhg-beheer-financieringslast-2026.js"></script>
+<script>
+(function(){
+  var $ = function(id){ return document.getElementById(id); };
+  var D = window.NHG_BEHEER_FLT;
+  var eur0 = new Intl.NumberFormat('nl-NL',{style:'currency',currency:'EUR',minimumFractionDigits:0,maximumFractionDigits:0});
+  var eur2 = new Intl.NumberFormat('nl-NL',{style:'currency',currency:'EUR',minimumFractionDigits:2,maximumFractionDigits:2});
+  var int0 = new Intl.NumberFormat('nl-NL',{maximumFractionDigits:0});
+  var pct1 = new Intl.NumberFormat('nl-NL',{minimumFractionDigits:1,maximumFractionDigits:1});
+  var dec3 = new Intl.NumberFormat('nl-NL',{minimumFractionDigits:3,maximumFractionDigits:3});
+  function parseNum(s){
+    s = String(s||'').replace(/[^\d,.-]/g,'');
+    if (s.indexOf(',') > -1) s = s.replace(/\./g,'').replace(',', '.');
+    else s = s.replace(/\./g,'');
+    var v = parseFloat(s); return isNaN(v) || v < 0 ? 0 : v;
+  }
+  function parseRente(s){
+    s = String(s||'').replace(/[^\d,.]/g,'').replace(',', '.');
+    var v = parseFloat(s); return isNaN(v) || v < 0 ? 0 : v;
+  }
+  function euroInput(el, cb){
+    el.addEventListener('input', function(){
+      var digits = el.value.replace(/\D/g,'');
+      el.value = digits ? int0.format(parseInt(digits,10)) : '';
+      cb && cb();
+    });
+  }
+  if (!D || typeof D.zoek !== 'function') {
+    $('r-pct').textContent = 'Tabel niet geladen';
+    return;
+  }
+  $('versie').textContent = D.versie;
+  Object.keys(D.tabellen).forEach(function(k){
+    var o = document.createElement('option'); o.value = k; o.textContent = D.tabellen[k].titel; $('hh').appendChild(o);
+  });
+
+  function box(){ var r = document.querySelector('input[name=box]:checked'); return r ? r.value : 'box1'; }
+  function rijIndex(t, ink){ return Math.max(0, Math.min(t.pct.length - 1, Math.floor((ink - t.vanaf) / t.stap))); }
+  function klasseIndex(rente){ var r = Math.round(rente * 1000) / 1000; return D.renteklassen.findIndex(function(c){ return r <= c.tot; }); }
+
+  function reken(){
+    Array.prototype.forEach.call(document.querySelectorAll('.seg label'), function(l){ l.classList.toggle('on', l.querySelector('input').checked); });
+    var hh = $('hh').value, bx = box(), t = D.tabellen[hh][bx];
+    var ink = parseNum($('ink').value), rente = parseRente($('rente').value);
+    var verpl = parseNum($('verpl').value), huidigRaw = $('huidig').value.trim(), huidig = parseNum(huidigRaw);
+    var kind = parseInt($('kind').value, 10);
+    var msg = [];
+    var pct = D.zoek(hh, bx, ink, rente);
+    var ri = rijIndex(t, ink), ki = klasseIndex(rente);
+    var rijBedrag = t.vanaf + ri * t.stap;
+    var rijTxt;
+    if (ink < t.vanaf) { rijTxt = '- (onder ' + eur0.format(t.vanaf) + ')'; }
+    else if (ink >= t.tot + t.stap) { rijTxt = eur0.format(t.tot) + ' (laatste rij)'; msg.push('Het toetsinkomen ligt boven de laatste tabelrij (' + eur0.format(t.tot) + '); de laatste rij is gebruikt. Dat is een aanname: controleer bij NHG.'); }
+    else { rijTxt = eur0.format(rijBedrag); }
+    if (ink >= t.vanaf && ink < t.tot + t.stap && ink % t.stap !== 0) msg.push('Toetsinkomen afgerond naar beneden op de rij ' + eur0.format(rijBedrag) + ' (aanname).');
+
+    var jaar = pct / 100 * ink, maand = jaar / 12, beschik = maand - verpl;
+    $('r-pct').textContent = pct1.format(pct) + '%';
+    $('r-bron').textContent = 'Bijlage ' + t.bijlage + ' · ' + D.tabellen[hh].titel + ' · ' + (bx === 'box1' ? 'box 1' : 'box 3');
+    $('r-rij').textContent = rijTxt;
+    $('r-klasse').textContent = D.renteklassen[ki].label + ' (' + dec3.format(Math.round(rente * 1000) / 1000) + '%)';
+    $('r-jaar').textContent = eur2.format(jaar);
+    $('r-maand').textContent = eur2.format(maand);
+    $('r-verpl').textContent = '− ' + eur2.format(verpl);
+    $('r-beschik').textContent = eur2.format(beschik);
+    $('row-huidig').classList.toggle('hide', !huidigRaw);
+    $('row-saldo').classList.toggle('hide', !huidigRaw);
+    $('row-huidig').style.display = huidigRaw ? '' : 'none';
+    $('row-saldo').style.display = huidigRaw ? '' : 'none';
+    if (huidigRaw) {
+      var saldo = beschik - huidig;
+      $('r-huidig').textContent = eur2.format(huidig);
+      $('r-saldo-l').textContent = saldo >= 0 ? 'Ruimte per maand' : 'Tekort per maand';
+      $('r-saldo').textContent = eur2.format(Math.abs(saldo));
+      $('r-saldo').className = saldo >= 0 ? 'ruimte' : 'tekort';
+    }
+    var ander = bx === 'box1' ? 'box3' : 'box1';
+    var pa = D.zoek(hh, ander, ink, rente), ta = D.tabellen[hh][ander];
+    $('r-ander-l').textContent = 'Ter vergelijking: ' + (ander === 'box1' ? 'box 1' : 'box 3') + ' (bijlage ' + ta.bijlage + ')';
+    $('r-ander').textContent = pct1.format(pa) + '% = ' + eur2.format(pa / 100 * ink / 12) + ' p/m';
+
+    if (rente <= 0) msg.push('Vul een toetsrente in.');
+    if (ink <= 0) msg.push('Vul een toetsinkomen in.');
+    if ((kind === 2 && ink <= 25000) || (kind >= 3 && ink <= 30000))
+      msg.push('Let op: huishouden met ' + (kind >= 3 ? '3 of meer kinderen en toetsinkomen tot € 30.000' : '2 kinderen en toetsinkomen tot € 25.000') + '. Beoordeel of naast de financieringslast voldoende ruimte is voor de basisuitgaven van het gezin (D.6.2).');
+    if (beschik < 0) msg.push('De overige verplichtingen zijn hoger dan de maximale financieringslast.');
+    $('r-msg').textContent = msg.join(' ');
+
+    // Tabelrij met omliggende rijen
+    var thead = '<tr><th>Toetsinkomen</th>' + D.renteklassen.map(function(c){ return '<th>' + c.label + '</th>'; }).join('') + '</tr>';
+    var rows = '';
+    for (var r = Math.max(0, ri - 2); r <= Math.min(t.pct.length - 1, ri + 2); r++) {
+      var hl = r === ri;
+      rows += '<tr' + (hl ? ' class="hl"' : '') + '><td>' + eur0.format(t.vanaf + r * t.stap) + '</td>' +
+        t.pct[r].map(function(p, k){ return '<td' + (hl && k === ki ? ' class="hl"' : '') + '>' + pct1.format(p) + '%</td>'; }).join('') + '</tr>';
+    }
+    $('tbl').querySelector('thead').innerHTML = thead;
+    $('tbl').querySelector('tbody').innerHTML = rows;
+  }
+
+  ['ink','verpl','huidig'].forEach(function(id){ euroInput($(id), reken); });
+  $('rente').addEventListener('input', reken);
+  ['hh','kind'].forEach(function(id){ $(id).addEventListener('change', reken); });
+  Array.prototype.forEach.call(document.querySelectorAll('input[name=box]'), function(r){ r.addEventListener('change', reken); });
+
+  // Print via eigen venster: window.print() wordt binnen een iframe (o.a. Google Sites) geblokkeerd.
+  $('print').addEventListener('click', function(){
+    try {
+      var w = window.open('', '_blank');
+      if (!w) { window.print(); return; }
+      var body = document.body.cloneNode(true);
+      var origInputs = document.querySelectorAll('input');
+      Array.prototype.forEach.call(body.querySelectorAll('input'), function(i, idx){
+        var orig = origInputs[idx];
+        if (orig.type === 'checkbox' || orig.type === 'radio') { if (orig.checked) i.setAttribute('checked','checked'); else i.removeAttribute('checked'); }
+        else i.setAttribute('value', orig.value);
+      });
+      var origSel = document.querySelectorAll('select');
+      Array.prototype.forEach.call(body.querySelectorAll('select'), function(s, idx){
+        var orig = origSel[idx];
+        Array.prototype.forEach.call(s.options, function(o, j){ if (j === orig.selectedIndex) o.setAttribute('selected','selected'); else o.removeAttribute('selected'); });
+      });
+      Array.prototype.forEach.call(body.querySelectorAll('script'), function(s){ s.remove(); });
+      w.document.open();
+      w.document.write('<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><title>' + document.title +
+        '</title><style>' + document.querySelector('style').textContent + '</style></head><body>' + body.innerHTML + '</body></html>');
+      w.document.close(); w.focus();
+      setTimeout(function(){ w.print(); }, 350);
+    } catch (e) { window.print(); }
+  });
+
+  reken();
+})();
+</script>
+</body>
+</html>
