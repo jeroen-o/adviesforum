@@ -36,7 +36,7 @@ Wat geldverstrekkers meestal vragen:
 - Een specificatie of offerte van de maatregelen (isolatie, warmtepomp, glas) die laat zien dat het om energiebesparing gaat.
 - Een bouwdepot waaruit de facturen worden betaald.
 - Het energielabel van de woning bij aankoop.
-Bij NHG is er een verruimde kostengrens met energiebesparende voorzieningen; kijk in de Voorwaarden en Normen. Bespreek ook dat de maandlasten hoger worden en dat de besparing op de energierekening een schatting is. In het dossier leg ik vast welke maatregelen worden uitgevoerd, het label, de opbouw van de extra ruimte en dat de klant de lasten ook zonder volledig behaalde besparing kan dragen.`}
+Bij NHG is er een verruimde NHG-grens met energiebesparende voorzieningen; kijk in de Voorwaarden en Normen. Bespreek ook dat de maandlasten hoger worden en dat de besparing op de energierekening een schatting is. In het dossier leg ik vast welke maatregelen worden uitgevoerd, het label, de opbouw van de extra ruimte en dat de klant de lasten ook zonder volledig behaalde besparing kan dragen.`}
   ]},
  {id:'vbc-006',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2025-10-21T15:19:00',views:257,tags:['doorstromer','overwaarde','aflossen'],beste:'vbc-006-a2',
   titel:'Overwaarde volledig inbrengen of deel aanhouden als buffer',
@@ -112,11 +112,11 @@ In het dossier leg ik vast welke opties zijn besproken, of toestemming is gevraa
    {id:'vbc-015-a1',auteur:'u5',datum:'2025-11-21T11:31:00',rA:{},rAdv:{},body:`Kosten van verbetering van de woning tellen mee bij de verwervingskosten, mits de verbouwing binnen de daarvoor geldende termijn plaatsvindt en het om verbetering of onderhoud gaat. Je zet de koopprijs plus kosten koper plus de verbouwing tegenover de eigenwoningreserve. Ik leg de offertes van de aannemer vast en spreek met de klant af dat facturen bewaard worden. Bij twijfel over welke kosten kwalificeren, verwijs ik naar de actuele informatie van de Belastingdienst.`},
    {id:'vbc-015-a2',auteur:'u1',datum:'2025-11-21T17:42:00',rA:{},rAdv:{},body:`Praktisch: een bouwdepot helpt bij het aantonen van de besteding, omdat de uitbetalingen gedocumenteerd zijn. Let op de looptijd van het bouwdepot en wat er gebeurt met een restant.`}
   ]},
- {id:'vbc-016',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2025-11-26T22:21:00',views:243,tags:['doorstromer','NHG','kostengrens'],beste:'vbc-016-a1',
+ {id:'vbc-016',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2025-11-26T22:21:00',views:243,tags:['doorstromer','NHG','NHG-grens','kostengrens'],beste:'vbc-016-a1',
   titel:'NHG aanvragen voor doorstromer met hogere koopsom',
-  body:`Een doorstromer koopt een woning rond de NHG-kostengrens. Met de verbouwing erbij gaan ze er net overheen. Zijn er manieren om toch binnen de NHG te blijven?`,
+  body:`Een doorstromer koopt een woning rond de NHG-grens. Met de verbouwing erbij gaan ze er net overheen. Zijn er manieren om toch binnen de NHG te blijven?`,
   antwoorden:[
-   {id:'vbc-016-a1',auteur:'u4',datum:'2025-11-27T11:59:00',rA:{u1:3,u6:5,u2:5,u7:4},rAdv:{},body:`Kijk eerst of energiebesparende voorzieningen in aanmerking komen voor een hogere kostengrens; de voorwaarden en bedragen staan in de actuele normen van NHG. Verder kan de klant eigen middelen inbrengen zodat de lening binnen de grens blijft. Een deel van de verbouwing later uitvoeren is ook een optie, maar dan moet de klant die later anders financieren. Leg vast welke opties je hebt besproken en waarom gekozen is.`}
+   {id:'vbc-016-a1',auteur:'u4',datum:'2025-11-27T11:59:00',rA:{u1:3,u6:5,u2:5,u7:4},rAdv:{},body:`Kijk eerst of energiebesparende voorzieningen in aanmerking komen voor een hogere NHG-grens; de voorwaarden en bedragen staan in de actuele normen van NHG. Verder kan de klant eigen middelen inbrengen zodat de lening binnen de grens blijft. Een deel van de verbouwing later uitvoeren is ook een optie, maar dan moet de klant die later anders financieren. Leg vast welke opties je hebt besproken en waarom gekozen is.`}
   ]},
  {id:'vbc-017',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2025-11-29T19:15:00',views:212,tags:['doorstromer','overwaarde','kinderen'],beste:'vbc-017-a1',
   titel:'Doorstromer wil overwaarde deels schenken aan kinderen',
@@ -319,11 +319,11 @@ De rente over een nieuwe restschuld is in de regel niet aftrekbaar. De restschul
    {id:'vbc-042-a1',auteur:'u2',datum:'2026-03-02T08:27:00',rA:{},rAdv:{},body:`Een woning die leeg te koop staat, kan onder voorwaarden nog als eigen woning worden aangemerkt in het jaar van de verhuizing en de drie jaren daarna. Daarbij moet de woning leeg staan en te koop staan, en niet worden verhuurd. Controleer de actuele regels van de Belastingdienst. Leg in het dossier vast wanneer de klant is verhuisd en sinds wanneer de woning te koop staat.`},
    {id:'vbc-042-a2',auteur:'u5',datum:'2026-03-02T15:32:00',rA:{u2:3,u8:4},rAdv:{u2:3},body:`Ik wijs de klant er ook op dat tijdelijke verhuur gevolgen kan hebben voor die regeling. Klanten denken daar vaak niet aan. Ik leg in het dossier vast dat ik dit heb besproken en adviseer bij twijfel een belastingadviseur.`}
   ]},
- {id:'vbc-043',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-03-05T20:40:00',views:303,tags:['overbrugging','NHG','kostengrens'],beste:'vbc-043-a1',
+ {id:'vbc-043',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-03-05T20:40:00',views:303,tags:['overbrugging','NHG','NHG-grens','kostengrens'],beste:'vbc-043-a1',
   titel:'Overbrugging en NHG bij de nieuwe woning',
   body:`Een doorstromer wil de nieuwe hypotheek met NHG afsluiten. De overbrugging gaat via dezelfde geldverstrekker. Valt de overbrugging ook onder NHG en hoe tellen jullie dit mee in de toetsing?`,
   antwoorden:[
-   {id:'vbc-043-a1',auteur:'u4',datum:'2026-03-06T17:24:00',rA:{u7:4},rAdv:{u7:4},body:`Of en hoe een overbruggingskrediet samengaat met NHG, hangt af van de actuele NHG-voorwaarden en de voorwaarden van de geldverstrekker, dus controleer die vooraf. De nieuwe hypotheek moet in elk geval binnen de actuele NHG-kostengrens passen. Ik stem de opzet altijd vooraf af met de acceptant. Ik leg in het dossier vast hoe de totale financiering is opgebouwd en welke delen onder NHG vallen.`}
+   {id:'vbc-043-a1',auteur:'u4',datum:'2026-03-06T17:24:00',rA:{u7:4},rAdv:{u7:4},body:`Of en hoe een overbruggingskrediet samengaat met NHG, hangt af van de actuele NHG-voorwaarden en de voorwaarden van de geldverstrekker, dus controleer die vooraf. De nieuwe hypotheek moet in elk geval binnen de actuele NHG-grens passen. Ik stem de opzet altijd vooraf af met de acceptant. Ik leg in het dossier vast hoe de totale financiering is opgebouwd en welke delen onder NHG vallen.`}
   ]},
  {id:'vbc-044',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-03-09T14:50:00',views:62,tags:['overbrugging','risicobeheer','klantwens'],beste:null,
   titel:'Klant wil voor de veiligheid een lager percentage van de verkoopprijs overbruggen',

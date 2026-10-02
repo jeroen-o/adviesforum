@@ -168,7 +168,7 @@ Blijft het verschil bestaan, meld het dan bij de supportdesk met een schermafdru
   body:`Een collega zegt dat je met NHG strenger getoetst wordt dan zonder. Ik dacht dat de leennormen hetzelfde zijn. Wie weet hoe het precies zit?`,
   antwoorden:[
    {id:'vba-023-a1',auteur:'u5',datum:'2025-12-20T19:35:00',rA:{u1:4,u4:5,u2:3},rAdv:{u1:4,u4:5},body:`De basis is hetzelfde. Voor hypotheken met en zonder NHG gelden de wettelijke leennormen uit de Tijdelijke regeling hypothecair krediet (financieringslastpercentages en het maximum van de woningwaarde). NHG werkt met dezelfde normen, maar heeft daarnaast eigen Voorwaarden en Normen. Daarin zitten de verschillen, bijvoorbeeld:
-- de kostengrens en de regels over welke kosten je mag meefinancieren;
+- de NHG-grens en de regels over welke kosten je mag meefinancieren;
 - strengere regels bij een negatieve BKR-registratie of een eerdere NHG-claim;
 - eisen aan het gebruik van de woning als hoofdverblijf en aan aflossing.
 Zonder NHG hanteren geldverstrekkers hun eigen acceptatiebeleid, dat soms ruimer en soms juist strenger is. Strenger getoetst is dus niet helemaal waar, eerder anders getoetst. Controleer de actuele Voorwaarden en Normen op nhg.nl en de leennormen in de rekenhulp leennormen-2026.html. Leg in het dossier vast waarom wel of geen NHG is gekozen, inclusief het rentevoordeel en de dekking bij gedwongen verkoop.`}
