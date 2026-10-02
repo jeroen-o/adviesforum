@@ -135,5 +135,14 @@ Deze stukken geven inzicht in toekomstige kosten en risico's.`,tags:['vve','appa
 - energielabel en eventuele verduurzamingsplannen
 - erfpacht- of VvE-stukken
 - bouwkundige of funderingsrisico's
-Zo is het advies achteraf navolgbaar.`,tags:['dossier','woning','zorgplicht'],bron:''}
+Zo is het advies achteraf navolgbaar.`,tags:['dossier','woning','zorgplicht'],bron:''},
+ {id:'hyp-101',thema:'hypotheek-producten',vraag:'Wat is looptijdrente?',antwoord:`Looptijdrente is de gemiddelde rente die een klant naar verwachting betaalt over de hele looptijd van de hypotheek, niet alleen over de eerste rentevaste periode. Het begrip houdt rekening met automatische risicoklasseverlaging: lost de klant af (annuïtair of lineair), dan zakt de lening naar een lagere loan-to-value-klasse en verlaagt de geldverstrekker de renteopslag.
+
+Daardoor kan een geldverstrekker met een iets hogere startrente over de hele looptijd toch goedkoper uitkomen. Bij een aflossingsvrije lening wordt niet afgelost en speelt dit effect nauwelijks.`,tags:['looptijdrente','risicoklasse','rente','ltv'],bron:'looptijdrente.nl; De Nationale Hypotheekbond'},
+ {id:'hyp-102',thema:'hypotheek-producten',vraag:'Wat is looptijdrente.nl en hoe gebruik je het?',antwoord:`Looptijdrente.nl is een consumentensite die hypotheekrentes vergelijkt op basis van de looptijdrente in plaats van alleen de startrente. De site laat zien welke geldverstrekkers de rente automatisch verlagen bij een lagere risicoklasse en wat dat over de looptijd scheelt.
+
+Gebruik het als extra invalshoek bij de productkeuze, bijvoorbeeld in het gesprek over rentevaste periode en aflossingsvorm. Leg in het dossier vast welke rente je hebt vergeleken en op welke datum, en controleer altijd de actuele voorwaarden en tarieven bij de geldverstrekker. Een vergelijking van looptijdrente is een indicatie: toekomstige renteherzieningen en opslagen zijn niet gegarandeerd.`,tags:['looptijdrente','looptijdrente.nl','rentevergelijking','productkeuze'],bron:'looptijdrente.nl'},
+ {id:'hyp-103',thema:'hypotheek-producten',vraag:'Welke geldverstrekkers verlagen de rente automatisch bij een lagere risicoklasse?',antwoord:`Volgens looptijdrente.nl doen onder meer a.s.r., Hypotrust, Centraal Beheer, Obvion, Vista, Jungo, Triodos, Robuust, NIBC, Tulp, Merius, MUNT, Venn, Allianz, Attens, Colibri, Reaal en IQWOON dit automatisch, al geldt dat niet voor al hun producten. Bij andere geldverstrekkers moet de klant de verlaging zelf aanvragen, soms met een (her)taxatie.
+
+Controleer per product hoe vaak de geldverstrekker toetst (bijvoorbeeld jaarlijks of per maand), op welke waarde (oorspronkelijke marktwaarde of actuele WOZ/taxatie) en of extra aflossingen meetellen. Zie ook de Partijenwegwijzer onder Hulpmiddelen.`,tags:['looptijdrente','risicoklasse','renteverlaging','geldverstrekker'],bron:'looptijdrente.nl (peildatum 2026)'}
 ]);
