@@ -104,7 +104,13 @@ Controleer per geldverstrekker welke route geaccepteerd wordt en welke documente
  {id:'vba-015',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2025-11-21T18:00:00',views:236,tags:['uitzendkracht','flexibel inkomen','perspectiefverklaring'],beste:null,
   titel:'Uitzendkracht in een vroege fase: is er een kans op financiering?',
   body:`Een jonge klant werkt via een uitzendbureau, nog in een vroege fase zonder vast uitzicht. Het inkomen is wel redelijk stabiel. Welke mogelijkheden zien jullie?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vba-015-a1',auteur:'u4',datum:'2025-11-22T03:00:00',rA:{u1:4,u5:4,u8:3},rAdv:{u1:4,u5:4},body:`Kansrijk is het vaak wel, maar niet via de klassieke route met een werkgeversverklaring. Een uitzendkracht in een vroege fase (zonder uitzicht op een vast contract) krijgt geen intentieverklaring. Opties die ik naloop:
+- Een perspectiefverklaring via een erkende aanbieder. Die kijkt naar opleiding, sector en arbeidsmarktperspectief en is bij veel geldverstrekkers ook geschikt voor uitzendkrachten.
+- Toetsen op het gemiddelde inkomen over de afgelopen jaren als de klant al langer flexibel werkt. Vaak is een minimale werkhistorie nodig; controleer de actuele eisen per geldverstrekker.
+- Een arbeidsmarktscan, als de geldverstrekker die accepteert.
+Vraag vooraf bij de geldverstrekker na welke documenten ze willen (UWV-verzekeringsbericht, jaaropgaven, loonstroken). In het dossier leg ik vast waarom er geen intentieverklaring is, welke route is gekozen en dat de klant begrijpt dat het inkomen minder zeker is dan bij een vast contract. Bespreek ook een lagere hypotheek dan het maximum als buffer.`}
+  ]},
  {id:'vba-016',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2025-11-25T12:50:00',views:516,tags:['lopend krediet','BKR','ouders'],beste:'vba-016-a1',
   titel:'Onderhandse lening bij familie die niet in BKR staat',
   body:`Een klant heeft een lening bij zijn ouders voor een auto. Die lening staat niet in BKR. Moet ik deze meenemen in de toetsing?`,
@@ -160,7 +166,13 @@ Blijft het verschil bestaan, meld het dan bij de supportdesk met een schermafdru
  {id:'vba-023',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2025-12-20T12:35:00',views:441,tags:['NHG','leennormen','toetsing'],beste:null,
   titel:'Gelden voor NHG andere leennormen dan zonder NHG?',
   body:`Een collega zegt dat je met NHG strenger getoetst wordt dan zonder. Ik dacht dat de leennormen hetzelfde zijn. Wie weet hoe het precies zit?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vba-023-a1',auteur:'u5',datum:'2025-12-20T19:35:00',rA:{u1:4,u4:5,u2:3},rAdv:{u1:4,u4:5},body:`De basis is hetzelfde. Voor hypotheken met en zonder NHG gelden de wettelijke leennormen uit de Tijdelijke regeling hypothecair krediet (financieringslastpercentages en het maximum van de woningwaarde). NHG werkt met dezelfde normen, maar heeft daarnaast eigen Voorwaarden en Normen. Daarin zitten de verschillen, bijvoorbeeld:
+- de kostengrens en de regels over welke kosten je mag meefinancieren;
+- strengere regels bij een negatieve BKR-registratie of een eerdere NHG-claim;
+- eisen aan het gebruik van de woning als hoofdverblijf en aan aflossing.
+Zonder NHG hanteren geldverstrekkers hun eigen acceptatiebeleid, dat soms ruimer en soms juist strenger is. Strenger getoetst is dus niet helemaal waar, eerder anders getoetst. Controleer de actuele Voorwaarden en Normen op nhg.nl en de leennormen in de rekenhulp leennormen-2026.html. Leg in het dossier vast waarom wel of geen NHG is gekozen, inclusief het rentevoordeel en de dekking bij gedwongen verkoop.`}
+  ]},
  {id:'vba-024',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2025-12-24T09:00:00',views:471,tags:['overbrugging','dubbele lasten','doorstromer'],beste:'vba-024-a1',
   titel:'Dubbele lasten toetsen bij een overbruggingskrediet',
   body:`Een doorstromer koopt eerst en verkoopt daarna. De geldverstrekker wil weten of de klant beide hypotheken tijdelijk kan dragen. Hoe pakken jullie die toetsing aan?`,
@@ -253,7 +265,14 @@ Blijft het verschil bestaan, meld het dan bij de supportdesk met een schermafdru
  {id:'vba-037',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-02-09T15:05:00',views:335,tags:['lijfrente','pensioen','toetsinkomen'],beste:null,
   titel:'Lijfrente-uitkering meetellen als inkomen',
   body:`Een klant ontvangt een tijdelijke lijfrente-uitkering naast zijn pensioen. Telt deze uitkering mee bij de maximale hypotheek?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vba-037-a1',auteur:'u7',datum:'2026-02-10T02:05:00',rA:{u1:4,u5:4,u2:4},rAdv:{u1:4,u5:4},body:`Ja, meestal wel, maar let op de looptijd. Geldverstrekkers tellen een lijfrente-uitkering in principe mee als vast inkomen, op basis van een uitkeringsoverzicht van de verzekeraar of bank. Bij een tijdelijke lijfrente kijken ze naar wat er na afloop overblijft. Loopt de uitkering binnen een kortere termijn af, dan toetsen veel geldverstrekkers (ook) op het inkomen na het einde van de lijfrente. Controleer per geldverstrekker welke resterende looptijd nodig is om de uitkering volledig mee te tellen.
+Praktisch:
+- Vraag de polis en het uitkeringsoverzicht op, met begin- en einddatum.
+- Maak een berekening met en zonder de lijfrente.
+- Laat zien wat de lasten zijn na afloop van de lijfrente, naast het pensioen.
+Leg in het dossier vast hoe het inkomen is opgebouwd, welke einddatum de lijfrente heeft en dat de klant de woonlasten ook na afloop kan dragen. Bij twijfel wijs ik op een lagere hypotheek of extra aflossen vóór de einddatum.`}
+  ]},
  {id:'vba-038',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-02-13T19:30:00',views:422,tags:['aflossingsvrij','overgangsrecht','toetsing'],beste:'vba-038-a1',
   titel:'Aflossingsvrij deel meenemen naar een nieuwe woning',
   body:`Een doorstromer heeft een oude hypotheek met een aflossingsvrij deel. Hij wil dat deel meenemen. Hoe wordt dat getoetst bij de nieuwe aanvraag?`,
@@ -367,7 +386,14 @@ Blijft het verschil bestaan, meld het dan bij de supportdesk met een schermafdru
  {id:'vba-054',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-04-12T07:05:00',views:172,tags:['vermogen','toetsinkomen','beleggingen'],beste:null,
   titel:'Kan vermogen worden omgezet in toetsinkomen?',
   body:`Een klant heeft een fors belegd vermogen maar een bescheiden inkomen. Hij vraagt of het vermogen kan helpen om meer te lenen. Welke mogelijkheden zien jullie?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vba-054-a1',auteur:'u5',datum:'2026-04-12T17:05:00',rA:{u2:5,u1:4,u4:3},rAdv:{u2:5,u1:4},body:`Het hangt van de geldverstrekker af. De leennormen gaan uit van inkomen. Een aantal geldverstrekkers biedt de mogelijkheid om vrij beschikbaar vermogen om te rekenen naar een fictief inkomen, bijvoorbeeld door het vermogen over een aantal jaren uit te smeren als annuïtaire uitkering. Of dat kan, welke vermogensvormen meetellen en welke voorwaarden gelden verschilt sterk; controleer het actuele acceptatiebeleid en vraag zo nodig vooraf een akkoord.
+Andere routes die ik altijd bespreek:
+- Een deel van het vermogen inbrengen als eigen geld, zodat de hypotheek lager uitvalt.
+- Een lagere woningwaarde-verhouding, wat soms een lagere rente oplevert.
+- De gevolgen voor box 3 en voor de buffer: niet al het vermogen inzetten.
+Leg in het dossier vast welk vermogen aanwezig is (bewijsstukken), welke route is gekozen en waarom. Bij een fictief inkomen moet ook duidelijk zijn dat het vermogen daadwerkelijk beschikbaar blijft voor de woonlasten. Dat is een punt waar je bij een dossiercontrole op wordt bevraagd.`}
+  ]},
  {id:'vba-055',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-04-16T07:30:00',views:253,tags:['ontslag','aanvraag','wijziging'],beste:'vba-055-a1',
   titel:'Klant hoort na het bindend aanbod dat hij ontslagen wordt',
   body:`Kort na het bindend aanbod laat een klant weten dat zijn werkgever een reorganisatie aankondigt en dat hij waarschijnlijk zijn baan verliest. Wat zijn de verplichtingen van de klant en van mij?`,
@@ -460,7 +486,14 @@ Een reviewer moet het advies kunnen volgen zonder je te spreken.`},
  {id:'vba-067',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-05-30T21:40:00',views:20,tags:['statushouder','uitkering','acceptatie'],beste:null,
   titel:'Klant heeft een tijdelijke uitkering en verwacht snel een baan',
   body:`Een klant ontvangt een tijdelijke uitkering en heeft een baan in het vooruitzicht. Kan ik al een aanvraag voorbereiden?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vba-067-a1',auteur:'u1',datum:'2026-05-31T11:40:00',rA:{u4:4,u5:4,u8:4},rAdv:{u4:4,u5:4},body:`Voorbereiden kan, aanvragen meestal pas als het arbeidscontract er ligt. Een tijdelijke uitkering, zoals WW, telt bij de meeste geldverstrekkers niet mee als toetsinkomen. Het nieuwe dienstverband wel, als er een getekende arbeidsovereenkomst is. Sommige geldverstrekkers accepteren een contract dat nog moet ingaan, mits de startdatum binnen een bepaalde termijn ligt en eventuele proeftijd of voorwaarden duidelijk zijn. Controleer de actuele eisen per geldverstrekker.
+Wat je nu al kunt doen:
+- Inventarisatie en oriënterende berekening op basis van het verwachte salaris, met de nadrukkelijke kanttekening dat het nog niet vaststaat.
+- Documenten verzamelen: identiteitsbewijs, verblijfsdocument bij een statushouder, BKR, eigen middelen.
+- Bespreken wat er gebeurt als de baan niet doorgaat of de proeftijd niet wordt doorstaan.
+Leg in het dossier vast dat de berekening oriënterend is en dat geen aanvraag is gedaan zolang het contract ontbreekt. Wees terughoudend met het tekenen van een koopovereenkomst zonder financieringsvoorbehoud.`}
+  ]},
  {id:'vba-068',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-06-03T17:15:00',views:208,tags:['looptijd contract','ambtenaar','aanstelling'],beste:'vba-068-a1',
   titel:'Tijdelijke aanstelling bij de overheid met uitzicht op vast',
   body:`Een klant werkt bij de overheid met een tijdelijke aanstelling, met uitzicht op een vaste. De werkgever is bereid een verklaring af te geven. Wat moet erin staan?`,
@@ -564,7 +597,13 @@ Een reviewer moet het advies kunnen volgen zonder je te spreken.`},
  {id:'vba-083',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-07-27T07:35:00',views:585,tags:['medisch','acceptatie','AOV'],beste:null,
   titel:'Gezondheid van de klant en de acceptatie van de hypotheek',
   body:`Een klant is recent ziek geweest maar werkt weer volledig. Speelt de gezondheid een rol bij de acceptatie van de hypotheek?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vba-083-a1',auteur:'u3',datum:'2026-07-27T19:35:00',rA:{u1:4,u5:4,u4:3},rAdv:{u1:4,u5:4},body:`Voor de hypotheek zelf speelt de gezondheid in principe geen rol: de geldverstrekker toetst inkomen, lasten en onderpand, niet de medische situatie. Wel kan het indirect meespelen:
+- Werkt de klant weer volledig en ontvangt hij zijn normale salaris, dan is er voor de inkomenstoets geen probleem. Is er nog sprake van re-integratie of een verlaagd inkomen, dan kan de werkgeversverklaring dat laten zien.
+- Een overlijdensrisicoverzekering kan verplicht zijn bij sommige geldverstrekkers of verstandig zijn voor de partner. Daarvoor geldt wel een gezondheidswaarborg; boven de vragengrens volgt een medische keuring.
+- Bij een AOV of woonlastenverzekering kan een uitsluiting of premieopslag volgen.
+Wijs de klant op het recht om vergeten te worden bij bepaalde aandoeningen en op de regels van het Protocol Verzekeringskeuringen; controleer de actuele voorwaarden. In het dossier leg ik vast welke verzekeringen zijn besproken, welke uitsluitingen of opslagen er zijn en hoe de klant het risico afdekt als een verzekering niet of beperkt mogelijk is.`}
+  ]},
  {id:'vba-084',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-07-31T19:05:00',views:49,tags:['zelfstandige','jaarcijfers','aangifte'],beste:'vba-084-a1',
   titel:'Welke jaarcijfers en aangiften vragen jullie op bij een zzp-er?',
   body:`Ik bereid een aanvraag voor van een zelfstandige. Ik twijfel welke documenten ik moet opvragen naast de inkomensverklaring. Wat is jullie checklist?`,
@@ -595,7 +634,13 @@ Controleer de exacte eisen per geldverstrekker. Ik leg in het dossier vast welke
  {id:'vba-087',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-08-11T12:25:00',views:56,tags:['restschuld','BKR','acceptatie'],beste:null,
   titel:'Klant heeft een afgeloste restschuld van een eerdere woning',
   body:`Een klant had na verkoop van een eerdere woning een restschuld en heeft die met een regeling afgelost. Staat dat de acceptatie nu in de weg?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vba-087-a1',auteur:'u4',datum:'2026-08-11T20:25:00',rA:{u1:4,u5:5,u8:3},rAdv:{u1:4,u5:5},body:`Niet per se, maar zoek uit hoe het is geregistreerd. Een afgeloste restschuld staat de acceptatie meestal niet in de weg, mits er geen negatieve registratie (meer) is. Aandachtspunten:
+- Vraag een BKR-overzicht op. Is de restschuld als krediet of met een achterstandscode geregistreerd, dan blijft die na aflossing nog een periode zichtbaar. Controleer de actuele termijn bij BKR.
+- Had de vorige hypotheek NHG en heeft NHG de restschuld (deels) betaald of kwijtgescholden, dan kan dat gevolgen hebben voor een nieuwe NHG-aanvraag. Kijk in de Voorwaarden en Normen hoe NHG omgaat met een eerdere claim en verwijtbaarheid.
+- Vraag de bewijsstukken op: verkoopafrekening, de regeling met de geldverstrekker en de finale kwijting of bevestiging van aflossing.
+Leg in het dossier vast hoe de restschuld is ontstaan, hoe die is afgelost en wat het BKR-overzicht laat zien. Een korte toelichting bij de aanvraag voorkomt vragen van de acceptant.`}
+  ]},
  {id:'vba-088',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-08-15T17:00:00',views:285,tags:['maximaal lenen','starter','rentestijging'],beste:'vba-088-a1',
   titel:'Starter leent maximaal: welke scenarios laten jullie zien?',
   body:`Een starter leent bijna het maximale bedrag. Welke scenarios bespreken jullie standaard om de risico's inzichtelijk te maken?`,
@@ -618,7 +663,14 @@ In het dossier leg ik de besproken scenarios en de reactie van de klant vast.`},
  {id:'vba-090',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-08-22T21:25:00',views:537,tags:['hypotheek ex-partner','meeverbonden','acceptatie'],beste:null,
   titel:'Klant is meeverbonden voor een lening van een familielid',
   body:`Een klant blijkt borg te staan voor een lening van een familielid. Telt die borgstelling mee in de toetsing?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vba-090-a1',auteur:'u1',datum:'2026-08-23T07:25:00',rA:{u4:4,u5:4,u8:4},rAdv:{u4:4,u5:4},body:`Maak eerst onderscheid tussen borg en hoofdelijk medeschuldenaar. Is de klant medeschuldenaar (meeverbonden), dan staat de lening meestal op zijn BKR-registratie en telt de last volledig mee in de toetsing, alsof het zijn eigen lening is. Een borgstelling wordt in de regel niet bij BKR geregistreerd en telt bij veel geldverstrekkers niet mee zolang de borg niet is aangesproken. Controleer wel het acceptatiebeleid, want sommige geldverstrekkers vragen ernaar en houden er rekening mee.
+Wat ik doe:
+- De overeenkomst opvragen om te zien welke rol de klant precies heeft.
+- BKR-overzicht controleren.
+- Bespreken wat er gebeurt als het familielid niet meer betaalt, en of de klant uit de verbintenis kan worden ontslagen.
+Ook als het formeel niet meetelt, meld ik het in de aanvraag en zie ik het als risico in het advies. In het dossier leg ik vast welke verplichting er is, hoe die in de toetsing is meegenomen en dat de klant het risico begrijpt.`}
+  ]},
  {id:'vba-091',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-08-26T13:20:00',views:185,tags:['aflossen','buffer','leenruimte'],beste:'vba-091-a1',
   titel:'Extra aflossen op een autolening om meer leenruimte te krijgen',
   body:`Een klant heeft een persoonlijke lening voor een auto. Door die lening af te lossen, krijgt hij meer leenruimte. Is dat verstandig?`,
@@ -670,7 +722,14 @@ Ik noteer in het dossier wanneer ik de verklaring heb gecontroleerd.`},
  {id:'vba-097',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-09-16T08:15:00',views:479,tags:['WOZ','marktwaarde','verbouwing'],beste:null,
   titel:'Marktwaarde bepalen voor een verhoging zonder nieuwe taxatie',
   body:`Een klant wil een kleine verhoging van zijn hypotheek. Kan de geldverstrekker uitgaan van de WOZ-waarde, of is een taxatie altijd nodig?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vba-097-a1',auteur:'u4',datum:'2026-09-16T17:15:00',rA:{u1:4,u5:4,u2:3},rAdv:{u1:4,u5:4},body:`Een taxatie is niet altijd nodig. Bij een verhoging accepteren sommige geldverstrekkers de WOZ-waarde of een modelmatige waardebepaling, meestal alleen als de hypotheek na verhoging ruim onder de waarde van de woning blijft. Bij een hogere verhouding tussen lening en waarde, bij NHG of bij een verbouwing waarbij de waarde na verbouwing nodig is, wordt bijna altijd een gevalideerd taxatierapport gevraagd. Controleer de actuele voorwaarden per geldverstrekker en bij NHG de Voorwaarden en Normen.
+Praktisch:
+- Bereken eerst de verhouding lening-waarde op basis van de WOZ-waarde (zie ltv.html).
+- Check of de WOZ-waarde actueel is; die loopt vaak achter op de markt.
+- Weeg de kosten van een taxatie af tegen een mogelijk lagere rente in een lagere risicoklasse.
+Leg in het dossier vast welke waarde is gebruikt, waarom dat volgens het beleid van de geldverstrekker voldoende is en welk doel de verhoging heeft. Dat laatste is ook van belang voor de fiscale behandeling.`}
+  ]},
  {id:'vba-098',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-09-20T09:10:00',views:76,tags:['onderhandse lening','eigen woning','toetsing'],beste:'vba-098-a1',
   titel:'Onderhandse lening van ouders voor de eigen woning',
   body:`Ouders willen hun kind een deel van de woning financieren met een onderhandse lening. Hoe wordt die lening meegenomen in de toetsing van de hypotheek?`,
