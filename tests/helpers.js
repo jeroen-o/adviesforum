@@ -2,7 +2,8 @@
 const PAGINAS = ['index.html', 'aanmelden.html', 'privacy.html', 'leennormen-2026.html', 'bijleenregeling.html',
   'overbrugging.html', 'maandlasten.html', 'oversluiten.html', 'kosten-koper.html', 'ltv.html',
   'restschuld-pensioen.html', 'extra-aflossen.html', 'rentemiddeling.html', 'erfpacht.html', 'draagplicht.html', 'orv.html', 'aov-tekort.html', 'inkomen-ziekte-werknemer.html', 'werkloosheid.html', 'herbouwwaarde.html', 'wetgeving.html', 'werkinstructie-financieringsopzet.html', 'partijen.html', 'rekentools.html',
-  'inventarisatie.html', 'documentenchecklist.html', 'afwijkend-advies.html', 'gespreksverslag.html', 'nazorg-check.html', 'wijziging-doorgeven.html'];
+  'inventarisatie.html', 'documentenchecklist.html', 'afwijkend-advies.html', 'gespreksverslag.html', 'nazorg-check.html', 'wijziging-doorgeven.html',
+  'scan-nazorg-jaarlijks.html', 'scan-hypotheek.html', 'scan-aflossingsvrij.html', 'scan-overlijdensrisico.html', 'scan-pensioen.html', 'scan-schadeverzekeringen.html', 'scan-autoverzekering.html', 'scan-bedrijfsverzekeringen.html', 'scan-uitvaart.html', 'scan-klanttevredenheid.html'];
 
 async function volgFouten(page) {
   const fouten = [];
