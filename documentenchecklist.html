@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Inventarisatie en klantprofiel</title>
+<title>Documentenchecklist hypotheekaanvraag</title>
 <style>
 
   :root{
@@ -184,9 +184,9 @@
 <header class="hero">
   <div class="wrap">
     <a class="back noprint" href="index.html#hulpmiddelen" style="color:#fff">&larr; Terug naar het Adviesforum</a>
-    <h1>Inventarisatie en klantprofiel</h1>
-    <p class="sub" id="sub">Breng de persoonlijke en financiële situatie, doelstellingen, risicobereidheid en kennis en ervaring van de klant gestructureerd in kaart, met per thema wat volgens de AFM-Leidraad Hypotheekadvisering uitgewerkt moet worden.</p>
-    <p class="meta">Hulpmiddel voor het klantprofiel &middot; geen advies &middot; controleer altijd de actuele tekst van de leidraad</p>
+    <h1>Documentenchecklist hypotheekaanvraag</h1>
+    <p class="sub" id="sub">Vink de situatie van de klant aan en krijg een ontdubbelde, afvinkbare lijst van documenten die geldverstrekkers doorgaans vragen.</p>
+    <p class="meta">Indicatieve checklist &middot; iedere geldverstrekker heeft eigen eisen</p>
   </div>
 </header>
 
@@ -199,181 +199,165 @@
 </div>
 <script>
 (function(){
-  var JN = [['ja','Ja'],['nee','Nee']];
-  var JNW = [['ja','Ja'],['nee','Nee'],['onbekend','Weet ik niet']];
-  function partner(V){ return V('partner') === 'ja'; }
-  function inkomen(p, wie, show){
-    var has = function(v){ return function(V){ return V.in(p + 'bron', v); }; };
-    return { id: p + 'ink', title: 'Inkomen ' + wie, titleKlant: p ? 'Inkomen van je partner' : 'Jouw inkomen', show: show,
-      note: 'breng hoogte, samenstelling en stabiliteit van het inkomen in kaart, inclusief verwachte ontwikkelingen (einde contract, einde uitkering, inkomen na pensioen). Toets naast de maximale hypotheek ook de <em>verantwoorde</em> woonlasten op basis van het werkelijke uitgavenpatroon en leg dat verschil vast.',
-      fields: [
-        { id: p + 'bron', type: 'checks', label: 'Inkomensbronnen', req: true, opts: [['loon','Loondienst'],['ond','Ondernemer, zzp of DGA'],['uitk','Uitkering'],['pens','Pensioen of AOW'],['geen','Geen inkomen']] },
-        { id: p + 'werkgever', type: 'text', label: 'Functie en werkgever', show: has('loon') },
-        { id: p + 'dienst', type: 'select', label: 'Soort dienstverband', req: true, show: has('loon'), opts: ['Vast contract','Tijdelijk contract met intentieverklaring','Tijdelijk contract zonder intentieverklaring','Flexibel (oproep, uitzend, payroll)','In proeftijd'] },
-        { id: p + 'loon', type: 'eur', label: 'Bruto jaarinkomen (incl. vakantiegeld en vaste 13e maand)', req: true, show: has('loon') },
-        { id: p + 'loonvar', type: 'radio', label: 'Variabel inkomen (overwerk, provisie, bonus)?', opts: JN, show: has('loon') },
-        { id: p + 'loonvarbedrag', type: 'eur', label: 'Variabel inkomen per jaar (gemiddeld)', show: function(V){ return V(p + 'loonvar') === 'ja'; } },
-        { id: p + 'ondvorm', type: 'select', label: 'Rechtsvorm', req: true, show: has('ond'), opts: ['Eenmanszaak of zzp','Vof of maatschap','BV (DGA)','Anders'] },
-        { id: p + 'ondsinds', type: 'int', label: 'Onderneming gestart in (jaar)', ph: 'bijv. 2019', show: has('ond') },
-        { id: p + 'ondwinst', type: 'eur', label: 'Gemiddeld inkomen uit onderneming laatste 3 jaar (per jaar)', req: true, show: has('ond') },
-        { id: p + 'uitksoort', type: 'select', label: 'Soort uitkering', req: true, show: has('uitk'), opts: ['WW','WIA (IVA of WGA)','Wajong','Ziektewet','Anw of nabestaandenuitkering','Bijstand','Anders'] },
-        { id: p + 'uitkbedrag', type: 'eur', label: 'Bruto uitkering per jaar', req: true, show: has('uitk') },
-        { id: p + 'uitkeind', type: 'date', label: 'Einddatum uitkering (als bekend)', show: has('uitk') },
-        { id: p + 'pensbedrag', type: 'eur', label: 'Bruto pensioen en AOW per jaar', req: true, show: has('pens') },
-        { id: p + 'pensverw', type: 'eur', label: 'Verwacht bruto inkomen na pensionering (per jaar)', hint: 'Zie mijnpensioenoverzicht.nl. Leeg laten als je het niet weet.', show: function(V){ return !V.in(p + 'bron', 'pens') && V(p + 'bron').length > 0 && !V.in(p + 'bron', 'geen'); } },
-        { id: p + 'inkverw', type: 'textarea', label: 'Verwachte veranderingen in inkomen of werk', rows: 2, ph: 'bijv. minder werken, studie, einde contract', show: function(V){ return V(p + 'bron').length > 0; } }
-      ] };
+  var SIT = [
+    ['loonvast','Loondienst, vast contract'],
+    ['flex','Loondienst, tijdelijk of flexibel'],
+    ['ond','Ondernemer of zzp'],
+    ['dga','Directeur-grootaandeelhouder (DGA)'],
+    ['uitk','Uitkering'],
+    ['pens','Pensioen of AOW'],
+    ['starter','Starter (eerste woning)'],
+    ['door','Doorstromer (huidige koopwoning)'],
+    ['scheiding','Scheiding of relatiebeëindiging'],
+    ['nieuwbouw','Nieuwbouw'],
+    ['verbouw','Verbouwing of verduurzaming'],
+    ['schenking','Schenking of eigen geld'],
+    ['nhg','Nationale Hypotheek Garantie (NHG)']
+  ];
+  var SITL = {}; SIT.forEach(function(s){ SITL[s[0]] = s[1]; });
+  var GROUPS = ['Identiteit en algemeen','Inkomen','Huidige woning en situatie','Nieuwe woning','Verbouwing en verduurzaming','Eigen geld en schenking','Verplichtingen'];
+  // [id, groep-index, tekst, persoonsgebonden]
+  var D = {
+    id: [0,'Geldig paspoort of identiteitskaart (geen rijbewijs)',1],
+    bank: [0,'Recent bankafschrift met naam, IBAN en bijschrijving van het inkomen',1],
+    verpl: [6,'Overzicht van lopende leningen, kredieten, private lease en studieschuld (DUO-overzicht)',1],
+    wgv: [1,'Werkgeversverklaring (getekend, niet ouder dan 3 maanden)',1],
+    strook: [1,'Recente salarisstrook (niet ouder dan 3 maanden)',1],
+    ibl: [1,'UWV-verzekeringsbericht voor Inkomensbepaling Loondienst (IBL), als de geldverstrekker dit gebruikt',1],
+    contract: [1,'Arbeidsovereenkomst',1],
+    persp: [1,'Perspectiefverklaring of arbeidsmarktscan bij flexibel inkomen (afhankelijk van geldverstrekker)',1],
+    jaarc: [1,'Jaarcijfers van de laatste 3 jaar',1],
+    ib: [1,'Aangiften en aanslagen inkomstenbelasting van de laatste 3 jaar',1],
+    kvk: [1,'Recent uittreksel Kamer van Koophandel',1],
+    inkv: [1,'Inkomensverklaring ondernemer van een erkende rekenexpert',1],
+    prognose: [1,'Prognose of ondernemingsplan (bij korter dan 3 jaar ondernemen)',1],
+    jaarcbv: [1,'Jaarcijfers van de BV (en eventuele holding) van de laatste 3 jaar',1],
+    dgaloon: [1,'Salarisstrook en jaaropgave DGA-salaris',1],
+    uitkbes: [1,'Toekenningsbesluit of beschikking van de uitkeringsinstantie',1],
+    uitkspec: [1,'Recente uitkeringsspecificatie',1],
+    wiabes: [1,'WIA-beschikking met mate en duur van arbeidsongeschiktheid',1],
+    pensspec: [1,'Recente pensioen- en AOW-specificatie',1],
+    upo: [1,'Uniform Pensioenoverzicht (UPO) of overzicht van mijnpensioenoverzicht.nl',1],
+    hypov: [2,'Recent overzicht huidige hypotheek (jaaroverzicht of saldo-opgave)',0],
+    verkoop: [2,'Getekende verkoopovereenkomst of taxatie van de huidige woning',0],
+    polis: [2,'Overzicht polissen bij de huidige hypotheek (bijv. overlijdensrisico, kapitaalverzekering)',0],
+    ewr: [2,'Gegevens fiscale historie: eigenwoningschuld, eigenwoningreserve en eventueel overgangsrecht',1],
+    convenant: [2,'Getekend echtscheidingsconvenant of vaststellingsovereenkomst',1],
+    inschr: [2,'Bewijs inschrijving echtscheiding of beschikking van de rechtbank',1],
+    conceptconv: [2,'Concept-convenant en verklaring van advocaat of mediator (scheiding nog niet ingeschreven)',1],
+    alim: [2,'Afspraken over partner- en kinderalimentatie',1],
+    ontslag: [2,'Ontslag uit hoofdelijke aansprakelijkheid of afspraken over de echtelijke woning',1],
+    koop: [3,'Getekende koopovereenkomst',0],
+    tax: [3,'Gevalideerd taxatierapport',0],
+    bouwk: [3,'Bouwkundig rapport (indien van toepassing)',0],
+    kka: [3,'Koop- en aannemingsovereenkomst',0],
+    meerwerk: [3,'Specificatie meer- en minderwerk',0],
+    garantie: [3,'Garantiecertificaat van de garantie-instelling',0],
+    termijn: [3,'Termijnschema en technische omschrijving',0],
+    nhgkost: [3,'Specificatie van kosten (notaris, taxatie, advies) voor de NHG-toets',0],
+    nhgtax: [3,'Taxatierapport dat voldoet aan de NHG-voorwaarden',0],
+    offerte: [4,'Offerte(s) of specificatie van de verbouwing of verduurzaming',0],
+    taxna: [4,'Taxatierapport met de waarde na verbouwing',0],
+    label: [4,'Energielabel of maatwerkadvies (bij verduurzaming)',0],
+    eigen: [5,'Bankafschrift waaruit het eigen geld blijkt',1],
+    schenkov: [5,'Schenkingsovereenkomst of schenkingsverklaring',0],
+    schenkbew: [5,'Bewijs dat het geschonken bedrag beschikbaar is of is overgemaakt',0],
+    schenkakte: [5,'Notariële akte of aangifte schenkbelasting (indien van toepassing)',0]
+  };
+  var MAP = {
+    loonvast: ['wgv','strook','ibl'],
+    flex: ['contract','strook','ibl','persp'],
+    ond: ['jaarc','ib','kvk','inkv'],
+    dga: ['jaarcbv','ib','kvk','inkv','dgaloon'],
+    uitk: ['uitkbes','uitkspec'],
+    pens: ['pensspec','upo'],
+    starter: ['koop','tax','bouwk','eigen'],
+    door: ['hypov','verkoop','polis','ewr','koop','tax'],
+    scheiding: ['alim','ontslag','hypov'],
+    nieuwbouw: ['kka','meerwerk','garantie','termijn'],
+    verbouw: ['offerte','taxna','label'],
+    schenking: ['eigen','schenkov','schenkbew','schenkakte'],
+    nhg: ['nhgkost','nhgtax']
+  };
+  var got = {};
+  function build(V){
+    var sits = V('sit'); if (!sits.length) return null;
+    var why = {}, order = [];
+    function add(id, s){ if (!why[id]) { why[id] = []; order.push(id); } if (s && why[id].indexOf(s) < 0) why[id].push(s); }
+    ['id','bank','verpl'].forEach(function(d){ add(d, 'altijd'); });
+    sits.forEach(function(s){
+      (MAP[s] || []).forEach(function(d){ add(d, SITL[s]); });
+      if (s === 'ond' || s === 'dga') { if (V('ondjaren') === '1' || V('ondjaren') === '2') add('prognose', SITL[s]); }
+      if (s === 'uitk' && V('uitksoort') === 'wia') add('wiabes', SITL[s]);
+      if (s === 'scheiding') { if (V('ingeschreven') === 'ja') { add('convenant', SITL[s]); add('inschr', SITL[s]); } else add('conceptconv', SITL[s]); }
+    });
+    var both = V('samen') === 'ja';
+    return GROUPS.map(function(g, gi){
+      return { title: g, items: order.filter(function(id){ return D[id][0] === gi; }).map(function(id){
+        return { id: id, t: D[id][1] + (both && D[id][2] ? ' (voor beide aanvragers)' : ''), why: why[id] }; }) };
+    }).filter(function(g){ return g.items.length; });
   }
-  function risico(id, label, hint, show){
-    return { id: 'r_' + id, type: 'select', label: label, hint: hint, req: true, show: show, full: true,
-      opts: [['afdekken','Ik wil dit risico zo veel mogelijk afdekken'],['deels','Ik accepteer een beperkte terugval (buffer of gedeeltelijke dekking)'],['accepteer','Ik accepteer dit risico zelf'],['bespreken','Weet ik nog niet, wil ik bespreken']] };
-  }
-  function kennis(id, label){ return { id: 'k_' + id, type: 'select', label: label, req: true, opts: [['weinig','Geen of weinig kennis'],['basis','Basiskennis'],['goed','Goede kennis']] }; }
-
   window.FORM = {
-    id: 'inventarisatie', klant: true,
-    title: 'Inventarisatie en klantprofiel',
-    sub: 'Breng de persoonlijke en financiële situatie, doelstellingen, risicobereidheid en kennis en ervaring van de klant gestructureerd in kaart, met per thema wat volgens de AFM-Leidraad Hypotheekadvisering uitgewerkt moet worden.',
-    subKlant: 'Vul vooraf in wat je weet over je situatie en wensen. Zo kan het gesprek met je adviseur meteen over de inhoud gaan.',
-    meta: 'Hulpmiddel voor het klantprofiel &middot; geen advies &middot; controleer altijd de actuele tekst van de leidraad',
-    klantIntro: 'Met deze vragenlijst krijgt je adviseur een goed beeld van je situatie, je wensen en hoe je tegen risico&rsquo;s aankijkt. Het is geen advies en geen aanvraag: je adviseur loopt alles met je door.',
-    docTitle: 'Inventarisatie en klantprofiel',
-    mailSubject: function(V){ return 'Inventarisatie hypotheekadvies' + (V('naam') ? ' - ' + V('naam') : ''); },
+    id: 'documentenchecklist', klant: true,
+    title: 'Documentenchecklist hypotheekaanvraag',
+    sub: 'Vink de situatie van de klant aan en krijg een ontdubbelde, afvinkbare lijst van documenten die geldverstrekkers doorgaans vragen.',
+    subKlant: 'Vink aan wat op jou van toepassing is. Je krijgt een lijst met documenten die je kunt verzamelen voor je hypotheekaanvraag.',
+    meta: 'Indicatieve checklist &middot; iedere geldverstrekker heeft eigen eisen',
+    metaKlant: 'Indicatieve checklist &middot; je adviseur laat weten wat de geldverstrekker precies vraagt',
+    klantIntro: 'Met deze lijst kun je alvast documenten verzamelen. Geldverstrekkers hebben eigen eisen, dus je adviseur kan om meer of andere stukken vragen. Stuur geen documenten via deze pagina: ze verlaat je computer niet.',
+    docTitle: 'Documentenchecklist hypotheekaanvraag',
+    mailSubject: function(V){ return 'Documentenchecklist hypotheekaanvraag' + (V('naam') ? ' - ' + V('naam') : ''); },
     sections: [
-      { id: 'pers', title: 'Persoonlijke situatie', titleKlant: 'Over jou',
-        note: 'leg de huishoudsamenstelling en verwachte veranderingen vast (kinderwens, samenwonen, pensioen). Life events horen mee te wegen in de betaalbaarheid op de lange termijn. Leg bij partners de samenlevingsvorm en het vermogensregime vast; die bepalen de gevolgen van relatiebeëindiging en overlijden.',
-        fields: [
-          { id: 'naam', type: 'text', label: 'Naam klant', labelKlant: 'Je naam', req: true, ph: 'Voorletters en achternaam' },
-          { id: 'geb', type: 'date', label: 'Geboortedatum klant', labelKlant: 'Je geboortedatum', req: true },
-          { id: 'partner', type: 'radio', label: 'Is er een partner die meedoet in de hypotheek?', labelKlant: 'Koop of woon je samen met een partner?', req: true, opts: JN },
-          { id: 'pnaam', type: 'text', label: 'Naam partner', req: true, show: partner },
-          { id: 'pgeb', type: 'date', label: 'Geboortedatum partner', req: true, show: partner },
-          { id: 'samenvorm', type: 'select', label: 'Samenlevingsvorm', req: true, show: partner, full: true, opts: [['gemeenschap','Gehuwd of geregistreerd partnerschap, (beperkte) gemeenschap van goederen'],['hv','Gehuwd of geregistreerd partnerschap, huwelijkse of partnerschapsvoorwaarden'],['contract','Samenwonend met samenlevingscontract'],['geen','Samenwonend zonder samenlevingscontract'],['plannen','Plannen om te gaan trouwen of samenwonen']] },
-          { id: 'kinderen', type: 'radio', label: 'Thuiswonende kinderen?', labelKlant: 'Heb je thuiswonende kinderen?', req: true, opts: JN },
-          { id: 'kindaantal', type: 'int', label: 'Aantal kinderen', req: true, show: function(V){ return V('kinderen') === 'ja'; } },
-          { id: 'kindleeftijd', type: 'text', label: 'Leeftijden kinderen', ph: 'bijv. 3 en 6', show: function(V){ return V('kinderen') === 'ja'; } },
-          { id: 'kinderwens', type: 'radio', label: 'Kinderwens?', labelKlant: 'Heb je (nog) een kinderwens?', req: true, opts: [['ja','Ja'],['nee','Nee'],['misschien','Misschien']] },
-          { id: 'kinderwensterm', type: 'select', label: 'Op welke termijn?', show: function(V){ return V.any('kinderwens', ['ja','misschien']); }, opts: ['Binnen 2 jaar','Over 2 tot 5 jaar','Later of onbekend'] }
-        ] },
-      inkomen('', 'klant', null),
-      inkomen('p_', 'partner', partner),
-      { id: 'verpl', title: 'Verplichtingen', titleKlant: 'Leningen en vaste verplichtingen',
-        note: 'neem alle lopende verplichtingen mee, ook studieschuld (oorspronkelijk bedrag en stelsel), private lease, roodstand en alimentatie. Controleer BKR en leg vast hoe de verplichtingen de leencapaciteit en de betaalbaarheid beïnvloeden.',
-        fields: [
-          { id: 'krediet', type: 'radio', label: 'Lopende kredieten of private lease?', labelKlant: 'Heb je lopende leningen, kredieten of private lease?', req: true, opts: JN },
-          { id: 'kredietsoort', type: 'checks', label: 'Soort', req: true, show: function(V){ return V('krediet') === 'ja'; }, opts: ['Doorlopend krediet','Persoonlijke lening','Private lease','Roodstand of creditcardlimiet','Koop op afbetaling','Anders'] },
-          { id: 'kredietlimiet', type: 'eur', label: 'Totaal limiet of openstaand saldo', req: true, show: function(V){ return V('krediet') === 'ja'; } },
-          { id: 'kredietmnd', type: 'eur', label: 'Totale maandlast', show: function(V){ return V('krediet') === 'ja'; } },
-          { id: 'studie', type: 'radio', label: 'Studieschuld (DUO)?', labelKlant: 'Heb je (of je partner) een studieschuld?', req: true, opts: JN },
-          { id: 'studiebedrag', type: 'eur', label: 'Oorspronkelijke studieschuld', req: true, show: function(V){ return V('studie') === 'ja'; } },
-          { id: 'studiemnd', type: 'eur', label: 'Huidige maandlast DUO', show: function(V){ return V('studie') === 'ja'; } },
-          { id: 'studiestelsel', type: 'select', label: 'Terugbetaalregels', show: function(V){ return V('studie') === 'ja'; }, opts: ['35 jaar (SF35, vanaf 2015)','15 jaar (SF15, oud stelsel)','Weet ik niet'] },
-          { id: 'alimentatie', type: 'radio', label: 'Betaalt of ontvangt de klant alimentatie?', labelKlant: 'Betaal of ontvang je alimentatie?', req: true, opts: [['nee','Nee'],['betaalt','Ja, ik betaal'],['ontvangt','Ja, ik ontvang']] },
-          { id: 'alipartner', type: 'eur', label: 'Partneralimentatie per maand', show: function(V){ return V('alimentatie') !== 'nee' && V('alimentatie') !== ''; } },
-          { id: 'alikind', type: 'eur', label: 'Kinderalimentatie per maand', show: function(V){ return V('alimentatie') !== 'nee' && V('alimentatie') !== ''; } },
-          { id: 'aliend', type: 'date', label: 'Einddatum partneralimentatie', show: function(V){ return V('alimentatie') !== 'nee' && V('alimentatie') !== ''; } }
-        ] },
-      { id: 'verm', title: 'Vermogen', titleKlant: 'Spaargeld en vermogen',
-        note: 'leg vrij vermogen, eigen inbreng en de gewenste financiële buffer vast. Bespreek de inzet van eigen geld (inbrengen, aflossen of aanhouden) en leg de herkomst van middelen vast.',
-        fields: [
-          { id: 'spaar', type: 'eur', label: 'Spaargeld', req: true },
-          { id: 'beleg', type: 'eur', label: 'Beleggingen' },
-          { id: 'inbreng', type: 'eur', label: 'Beschikbaar als eigen inbreng' },
-          { id: 'buffer', type: 'eur', label: 'Gewenste buffer die je wilt aanhouden' },
-          { id: 'schenking', type: 'radio', label: 'Schenking of erfenis verwacht?', labelKlant: 'Verwacht je een schenking of erfenis?', opts: JN },
-          { id: 'schenkbedrag', type: 'eur', label: 'Verwacht bedrag', show: function(V){ return V('schenking') === 'ja'; } },
-          { id: 'schenkvan', type: 'text', label: 'Van wie (relatie, geen namen)', ph: 'bijv. ouders', show: function(V){ return V('schenking') === 'ja'; } }
-        ] },
-      { id: 'woning', title: 'Huidige woning en hypotheek', titleKlant: 'Je huidige woning',
-        note: 'vraag bij doorstromers en eerdere eigenaren de fiscale historie actief uit: bestaande eigenwoningschuld, eigenwoningreserve, overgangsrecht voor leningen van vóór 2013, resterende looptijd van de renteaftrek (30-jaarstermijn) en eventuele restschuld. Breng dubbele woonlasten en overbrugging in beeld en leg de gebruikte bronnen vast.',
-        fields: [
-          { id: 'woonsit', type: 'radio', label: 'Huidige woonsituatie', req: true, col: true, opts: [['huur','Huurwoning'],['inwonend','Inwonend (bijv. bij ouders)'],['koop','Eigen koopwoning (doorstromer)']] },
-          { id: 'wwaarde', type: 'eur', label: 'Geschatte marktwaarde huidige woning', req: true, show: function(V){ return V('woonsit') === 'koop'; } },
-          { id: 'whyp', type: 'eur', label: 'Openstaande hypotheek', req: true, show: function(V){ return V('woonsit') === 'koop'; } },
-          { id: 'wlast', type: 'eur', label: 'Bruto maandlast huidige hypotheek', show: function(V){ return V('woonsit') === 'koop'; } },
-          { id: 'wrvp', type: 'date', label: 'Einde rentevaste periode', show: function(V){ return V('woonsit') === 'koop'; } },
-          { id: 'wplan', type: 'select', label: 'Plan met huidige woning', req: true, show: function(V){ return V('woonsit') === 'koop'; }, opts: ['Verkopen','Al verkocht','Aanhouden of verhuren','Nog onbekend'] },
-          { id: 'huur', type: 'eur', label: 'Huidige huur per maand', show: function(V){ return V('woonsit') === 'huur'; } },
-          { id: 'eerder', type: 'radio', label: 'Eerder een eigen woning gehad?', labelKlant: 'Heb je eerder een eigen woning gehad?', req: true, show: function(V){ return V('woonsit') !== 'koop' && V('woonsit') !== ''; }, opts: JN },
-          { id: 'ewr', type: 'radio', label: 'Eigenwoningreserve (overwaarde uit eerdere verkoop niet herbelegd)?', req: true, show: function(V){ return V('woonsit') === 'koop' || V('eerder') === 'ja'; }, opts: JNW },
-          { id: 'ewrbedrag', type: 'eur', label: 'Hoogte eigenwoningreserve', show: function(V){ return V('ewr') === 'ja'; } },
-          { id: 'overgang', type: 'radio', label: 'Hypotheek afgesloten vóór 1 januari 2013 (overgangsrecht)?', req: true, show: function(V){ return V('woonsit') === 'koop' || V('eerder') === 'ja'; }, opts: JNW },
-          { id: 'aftrekjaren', type: 'int', label: 'Jaren hypotheekrenteaftrek al gebruikt (ongeveer)', unit: 'jaar', show: function(V){ return V('woonsit') === 'koop' || V('eerder') === 'ja'; } },
-          { id: 'restschuld', type: 'radio', label: 'Restschuld uit een eerdere woning?', show: function(V){ return V('woonsit') === 'koop' || V('eerder') === 'ja'; }, opts: JN },
-          { id: 'restbedrag', type: 'eur', label: 'Hoogte restschuld', req: true, show: function(V){ return V('restschuld') === 'ja'; } }
-        ] },
-      { id: 'doel', title: 'Doelstellingen', titleKlant: 'Je wensen',
-        note: 'leg de doelstellingen in de woorden van de klant vast en prioriteer ze. Werk aflossen richting pensioen en verduurzaming (energiebesparende maatregelen en de financieringsmogelijkheden daarvan) uit als onderdeel van het advies, niet als bijzaak.',
-        fields: [
-          { id: 'woonwens', type: 'textarea', label: 'Woonwensen', labelKlant: 'Wat zoek je (soort woning, plaats, wanneer)?', req: true },
-          { id: 'koopsom', type: 'eur', label: 'Indicatie koopsom', labelKlant: 'Ongeveer welke koopsom?' },
-          { id: 'maxlast', type: 'eur', label: 'Maximale netto maandlast waar de klant zich prettig bij voelt', labelKlant: 'Welke netto maandlast voelt voor jou prettig?' },
-          { id: 'aflossen', type: 'radio', label: 'Voorkeur aflossen', labelKlant: 'Wat vind je belangrijk bij aflossen?', req: true, col: true, opts: [['volledig','Volledig aflossen binnen de looptijd'],['laag','Zo laag mogelijke maandlasten'],['deels','Deels aflossingsvrij is acceptabel'],['bespreken','Wil ik bespreken']] },
-          { id: 'pensafgelost', type: 'radio', label: 'Wens: hypotheek (grotendeels) afgelost bij pensioen?', labelKlant: 'Wil je de hypotheek (grotendeels) afgelost hebben als je met pensioen gaat?', opts: [['ja','Ja'],['nee','Nee'],['bespreken','Wil ik bespreken']] },
-          { id: 'pensleeftijd', type: 'int', label: 'Gewenste leeftijd stoppen met werken', unit: 'jaar', ph: 'bijv. 67' },
-          { id: 'duurzaam', type: 'radio', label: 'Interesse in verduurzaming?', labelKlant: 'Wil je de woning verduurzamen?', req: true, opts: [['ja','Ja'],['nee','Nee'],['misschien','Misschien']] },
-          { id: 'duurzaamplan', type: 'textarea', label: 'Plannen verduurzaming', rows: 2, ph: 'bijv. isolatie, warmtepomp, zonnepanelen', show: function(V){ return V.any('duurzaam', ['ja','misschien']); } },
-          { id: 'duurzaambudget', type: 'eur', label: 'Indicatief budget verduurzaming', show: function(V){ return V.any('duurzaam', ['ja','misschien']); } },
-          { id: 'doelanders', type: 'textarea', label: 'Overige doelen of wensen', rows: 2 }
-        ] },
-      { id: 'risico', title: 'Risicobereidheid per thema', titleKlant: 'Hoe kijk je tegen risico’s aan?',
-        intro: 'Per thema: wat wil de klant als de situatie verandert? Werk de gevolgen daarna in het advies uit met concrete bedragen.',
-        introKlant: 'Stel dat er iets verandert. Hoe wil je daar financieel mee omgaan? Er is geen goed of fout antwoord.',
-        note: 'werk ieder risico concreet uit met bedragen: wat gebeurt er met het inkomen en de woonlasten, welk tekort ontstaat, hoe lang, wat accepteert de klant en welke oplossingen passen (buffer, aflossen, verzekeren, rentevast). Leg de risicobereidheid per thema onderbouwd vast. Relatiebeëindiging hoort daar nadrukkelijk bij.',
-        fields: [
-          risico('rente', 'Rentestijging', 'De rente gaat omhoog als je rentevaste periode afloopt.'),
-          risico('overl', 'Overlijden', 'Overlijden van jou of je partner.'),
-          risico('ao', 'Arbeidsongeschiktheid', 'Je kunt (gedeeltelijk) niet meer werken door ziekte.'),
-          risico('ww', 'Werkloosheid', 'Je verliest je baan of opdrachten.'),
-          risico('relatie', 'Relatiebeëindiging', 'Jullie gaan uit elkaar.', partner),
-          { id: 'risicotoel', type: 'textarea', label: 'Toelichting risicobereidheid', rows: 2 }
-        ] },
-      { id: 'kennis', title: 'Kennis en ervaring', titleKlant: 'Je kennis en ervaring',
-        note: 'toets kennis en ervaring op de onderdelen die in het advies terugkomen en stem de uitleg daarop af. Leg vast welke informatie is verstrekt en of de klant de risico’s begrijpt.',
-        fields: [
-          { id: 'ervaring', type: 'radio', label: 'Eerder een hypotheek afgesloten?', labelKlant: 'Heb je eerder een hypotheek afgesloten?', req: true, opts: JN },
-          kennis('vorm', 'Hypotheekvormen (annuïtair, lineair, aflossingsvrij)'),
-          kennis('rente', 'Rente en rentevaste periode'),
-          kennis('fiscaal', 'Fiscale regels eigen woning (renteaftrek, eigenwoningreserve)'),
-          kennis('verz', 'Verzekeringen (overlijden, arbeidsongeschiktheid, werkloosheid)'),
-          { id: 'beleggen', type: 'radio', label: 'Ervaring met beleggen?', labelKlant: 'Heb je ervaring met beleggen?', opts: JN },
-          { id: 'kennistoel', type: 'textarea', label: 'Vragen of onderwerpen voor extra uitleg', rows: 2 }
-        ] },
-      { id: 'onder', title: 'Datum', titleKlant: 'Datum',
-        fields: [ { id: 'datum', type: 'date', label: 'Datum invullen', req: true, def: 'today' }, { id: 'plaats', type: 'text', label: 'Plaats' } ] }
+      { id: 'aanvr', title: 'Aanvraag', titleKlant: 'Over je aanvraag', fields: [
+        { id: 'naam', type: 'text', label: 'Naam aanvrager(s)', labelKlant: 'Je naam', ph: 'Voorletters en achternaam' },
+        { id: 'samen', type: 'radio', label: 'Aanvraag samen met een partner?', labelKlant: 'Vraag je de hypotheek samen met een partner aan?', req: true, opts: [['ja','Ja'],['nee','Nee']] }
+      ] },
+      { id: 'sits', title: 'Situatie', titleKlant: 'Wat is op jou van toepassing?', intro: 'Meerdere situaties tegelijk kan; dubbele documenten worden samengevoegd.', fields: [
+        { id: 'sit', type: 'checks', label: 'Situaties', labelKlant: 'Kies alles wat past (ook voor je partner)', req: true, opts: SIT },
+        { id: 'ondjaren', type: 'select', label: 'Hoe lang onderneemt de klant al?', labelKlant: 'Hoe lang onderneem je al?', req: true, show: function(V){ return V.any('sit', ['ond','dga']); }, opts: [['1','Korter dan 1 jaar'],['2','1 tot 3 jaar'],['3','3 jaar of langer']] },
+        { id: 'uitksoort', type: 'select', label: 'Soort uitkering', req: true, show: function(V){ return V.in('sit', 'uitk'); }, opts: [['ww','WW'],['wia','WIA (IVA of WGA)'],['anw','Anw of nabestaandenuitkering'],['anders','Anders']] },
+        { id: 'ingeschreven', type: 'radio', label: 'Is de scheiding al ingeschreven of afgerond?', req: true, show: function(V){ return V.in('sit', 'scheiding'); }, opts: [['ja','Ja'],['nee','Nee, nog in behandeling']] },
+        { id: 'opm', type: 'textarea', label: 'Opmerkingen', rows: 2 }
+      ] }
     ],
+    liveMain: function(V, U){
+      var groups = build(V);
+      var h = '<h2>' + (U.klant ? 'Jouw documentenlijst' : 'Checklist') + '</h2>';
+      h += '<div class="let-op" style="margin-top:0"><strong>Let op:</strong> geldverstrekkers hebben eigen eisen en kunnen andere of aanvullende documenten vragen (bijvoorbeeld over geldigheid of ouderdom van stukken). Deze lijst is indicatief.</div>';
+      if (!groups) return h + '<p class="none">Kies hierboven minstens één situatie; de lijst verschijnt dan hier.</p>';
+      var tot = 0, ok = 0;
+      groups.forEach(function(g){ g.items.forEach(function(i){ tot++; if (got[i.id]) ok++; }); });
+      h += '<p class="small" style="margin:12px 0 0"><b>' + ok + ' van ' + tot + '</b> documenten afgevinkt (' + (U.klant ? 'heb ik' : 'ontvangen') + ').</p>';
+      groups.forEach(function(g){
+        h += '<div class="cl-group"><h3>' + U.esc(g.title) + '</h3><ul class="cl">' + g.items.map(function(i){
+          return '<li class="' + (got[i.id] ? 'got' : '') + '"><label><input type="checkbox" data-doc="' + i.id + '"' + (got[i.id] ? ' checked' : '') + '> <span>' + U.esc(i.t) +
+            (U.klant ? '' : '<span class="why">' + U.esc(i.why.join(', ')) + '</span>') + '</span></label></li>';
+        }).join('') + '</ul></div>';
+      });
+      return h;
+    },
+    onLive: function(app, update){
+      app.addEventListener('change', function(e){ var d = e.target.getAttribute && e.target.getAttribute('data-doc'); if (!d) return; got[d] = e.target.checked; update(); });
+    },
     live: function(V, U){
-      if (U.klant) return '';
-      var p = [], age = function(id){ var d = U.parseDate(V(id)); return d ? (new Date() - d) / 31557600000 : 0; };
-      if (V.any('kinderwens', ['ja','misschien'])) p.push('Kinderwens: betaalbaarheid bij minder werken en hogere kosten uitwerken.');
-      if (V.any('dienst', ['Tijdelijk contract zonder intentieverklaring','Flexibel (oproep, uitzend, payroll)','In proeftijd']) || V.any('p_dienst', ['Tijdelijk contract zonder intentieverklaring','Flexibel (oproep, uitzend, payroll)','In proeftijd'])) p.push('Geen vast dienstverband: inkomensbepaling (bijv. IBL of perspectiefverklaring) en werkloosheidsrisico.');
-      if (V.in('bron', 'ond') || V.in('p_bron', 'ond')) p.push('Ondernemer: inkomen via jaarcijfers en het AO-risico als ondernemer uitwerken.');
-      if (V.in('bron', 'uitk') || V.in('p_bron', 'uitk')) p.push('Uitkering: duur en toetsbaarheid van het uitkeringsinkomen.');
-      if (V('studie') === 'ja') p.push('Studieschuld: toetslast op basis van het oorspronkelijke bedrag.');
-      if (V('alimentatie') === 'betaalt') p.push('Betaalde alimentatie meenemen in de toets en de betaalbaarheid.');
-      if (V('woonsit') === 'koop') p.push('Doorstromer: bestaande eigenwoningschuld, eigenwoningreserve, dubbele lasten of overbrugging.');
-      if (V('overgang') === 'ja') p.push('Overgangsrecht vóór 2013: fiscale historie en bewijsstukken vastleggen.');
-      if (V('restschuld') === 'ja') p.push('Restschuld: financiering en fiscale behandeling uitzoeken.');
-      if (age('geb') > 45 || age('pgeb') > 45) p.push('Pensioen binnen de looptijd: betaalbaarheid na de AOW-leeftijd uitwerken.');
-      if (V('aflossen') === 'deels' || V('aflossen') === 'laag') p.push('Voorkeur lage lasten of aflossingsvrij: restschuld bij pensioen en renterisico concreet maken.');
-      if (V.any('duurzaam', ['ja','misschien'])) p.push('Verduurzaming: maatregelen en financieringsruimte bespreken.');
-      if (V('samenvorm') === 'geen') p.push('Samenwonend zonder contract: gevolgen bij overlijden en uit elkaar gaan (samenlevingscontract, testament).');
-      [['rente','renterisico'],['overl','overlijden'],['ao','arbeidsongeschiktheid'],['ww','werkloosheid'],['relatie','relatiebeëindiging']].forEach(function(r){ if (V('r_' + r[0]) === 'afdekken') p.push('Klant wil ' + r[1] + ' afdekken: oplossingen met bedragen uitwerken.'); });
-      if (['k_vorm','k_rente','k_fiscaal','k_verz'].some(function(k){ return V(k) === 'weinig'; })) p.push('Beperkte kennis op een of meer onderwerpen: extra uitleg geven en vastleggen.');
-      return '<h3>Aandachtspunten voor het advies</h3>' + (p.length ? '<ul>' + p.map(function(x){ return '<li>' + x + '</li>'; }).join('') + '</ul>' : '<p class="none">Nog geen bijzonderheden. Ze verschijnen hier zodra je gegevens invult.</p>') + '<p class="small">Automatisch afgeleid uit de invoer; geen advies.</p>';
+      var groups = build(V); if (!groups) return '';
+      var n = 0; groups.forEach(function(g){ n += g.items.length; });
+      return '<h3>Checklist</h3><p class="small">' + n + ' documenten na ontdubbeling, in ' + groups.length + ' groepen.</p>';
     },
-    sign: function(V, U){
-      var s = [{ role: 'Klant', name: V('naam'), date: U.fmtDate(V('datum')), place: V('plaats') }];
-      if (V('partner') === 'ja') s.push({ role: 'Partner', name: V('pnaam'), date: U.fmtDate(V('datum')), place: V('plaats') });
-      return s;
+    extras: function(V, U){
+      var groups = build(V); if (!groups) return [];
+      var html = '', text = '';
+      groups.forEach(function(g){
+        html += '<h3 style="font-size:13.5px;color:#003057;margin:12px 0 4px">' + U.esc(g.title) + '</h3><ul class="cl">' + g.items.map(function(i){ return '<li><span class="ck">' + (got[i.id] ? '&#9745;' : '&#9744;') + '</span>' + U.esc(i.t) + '</li>'; }).join('') + '</ul>';
+        text += g.title + ':\n' + g.items.map(function(i){ return (got[i.id] ? '[x] ' : '[ ] ') + i.t; }).join('\n') + '\n';
+      });
+      html += '<div class="box"><p><strong>Let op:</strong> geldverstrekkers hebben eigen eisen. De adviseur laat weten welke documenten precies nodig zijn en hoe oud ze mogen zijn.</p></div>';
+      return [{ title: 'Documenten (\u2611 = ' + (V.klant ? 'heb ik' : 'ontvangen') + ')', html: html, text: text + 'Let op: geldverstrekkers hebben eigen eisen.' }];
     },
-    signTitle: 'Ondertekening',
-    signText: 'Ondergetekende(n) verklaren dat de gegevens naar waarheid en zo volledig mogelijk zijn ingevuld.',
-    docFoot: 'Deze inventarisatie is geen advies. Het advies volgt na bespreking en controle van de gegevens.',
+    docFoot: 'Indicatieve checklist. Geldverstrekkers hebben eigen eisen; de adviseur bepaalt welke documenten nodig zijn.',
     after: '<section class="card adv"><h2>Toelichting voor de adviseur</h2>' +
-      '<div class="let-op"><strong>Klantprofiel:</strong> het klantprofiel is de basis voor een passend advies. Volgens de AFM-Leidraad Hypotheekadvisering (april 2026) hoort het de financiële positie, de doelstellingen, de risicobereidheid en de kennis en ervaring van de klant te omvatten, en moet het advies daar aantoonbaar op aansluiten. De toelichting per thema hierboven geeft de hoofdlijnen; controleer altijd de actuele tekst van de leidraad.</div>' +
-      '<div class="let-op"><strong>Maximaal versus verantwoord:</strong> de maximale hypotheek volgens de leennormen is niet automatisch een verantwoorde woonlast. Leg vast hoe je met de klant tot een verantwoorde maandlast bent gekomen.</div>' +
-      '<div class="compliance"><strong>Compliance:</strong> deze inventarisatie is een hulpmiddel en geen advies. Controleer de gegevens met bewijsstukken en leg het klantprofiel en de onderbouwing van het advies vast in het dossier.</div></section>'
+      '<div class="let-op"><strong>Eigen eisen:</strong> iedere geldverstrekker stelt eigen eisen aan documenten, bijvoorbeeld aan de maximale ouderdom, de vorm van de inkomensbepaling (werkgeversverklaring of IBL) en het aantal jaren jaarcijfers. Controleer altijd de actuele acceptatievoorwaarden en de NHG-voorwaarden.</div>' +
+      '<div class="compliance"><strong>Compliance en privacy:</strong> vraag alleen de documenten op die je nodig hebt (dataminimalisatie) en laat de klant documenten via een beveiligde omgeving aanleveren, niet via gewone e-mail. Kopieën van identiteitsbewijzen: laat het BSN en de pasfoto afschermen waar dat mag.</div></section>'
   };
 })();
 </script>
