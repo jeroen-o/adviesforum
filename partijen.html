@@ -9,28 +9,33 @@
 <meta property="og:description" content="Wegwijzer langs banken, geldverstrekkers, verzekeraars, PPI’s en pensioenfondsen: intermediairsites, acceptatiegidsen en kenmerken met bronlink.">
 <meta property="og:type" content="website">
 <style>
+@font-face{font-family:Montserrat;font-style:normal;font-weight:400;font-display:swap;src:url(fonts/montserrat-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:500;font-display:swap;src:url(fonts/montserrat-latin-500-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:600;font-display:swap;src:url(fonts/montserrat-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:700;font-display:swap;src:url(fonts/montserrat-latin-700-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:800;font-display:swap;src:url(fonts/montserrat-latin-800-normal.woff2) format('woff2')}
   :root{
-    --primary:#003057;
-    --accent:#E5A138;
-    --bg:#F4F7F9;
+    --primary:#141414;
+    --accent:#FFD200;
+    --bg:#F7F7F5;
     --text:#333333;
     --muted:#4A4A4A;
-    --line:#D8E2E8;
+    --line:#E4E4E4;
     --white:#fff;
-    --warn-bg:#FDF4E5;
-    --warn-line:#E5A138;
+    --warn-bg:#FFF6C7;
+    --warn-line:#E6BD00;
   }
   *{box-sizing:border-box}
   html,body{overflow-x:hidden}
   body{
     margin:0;background:var(--bg);color:var(--text);
-    font-family:"Plus Jakarta Sans","DM Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    font-family:Montserrat,system-ui,sans-serif;
     font-size:16px;line-height:1.55;
   }
   .wrap{max-width:1040px;margin:0 auto;padding:0 20px 64px}
-  header.hero{background:var(--primary);color:#fff;padding:40px 0 34px;margin-bottom:28px}
+  header.hero{background:var(--accent);color:var(--primary);padding:40px 0 34px;margin-bottom:28px}
   header.hero .wrap{padding-bottom:0}
-  .terug{color:#fff;opacity:.85;font-size:13px;display:inline-block;margin-bottom:10px}
+  .terug{color:var(--primary);font-weight:700;font-size:13px;display:inline-block;margin-bottom:10px;text-decoration:none;border-bottom:2px solid var(--primary)}
   h1{font-size:34px;line-height:1.2;margin:0 0 10px;font-weight:700}
   .sub{opacity:.85;font-size:16px;margin:0;max-width:72ch}
   .meta{margin-top:18px;font-size:13px;opacity:.7}
@@ -55,7 +60,7 @@
   }
   .btn{
     border:0;border-radius:7px;padding:10px 16px;font-size:14px;font-weight:600;
-    font-family:inherit;cursor:pointer;background:var(--primary);color:#fff;
+    font-family:inherit;cursor:pointer;background:var(--accent);color:var(--primary);
   }
   .btn.sec{background:#fff;color:var(--primary);border:1px solid var(--line)}
   .count{font-size:13px;color:var(--muted)}
@@ -65,13 +70,13 @@
     padding:20px 22px;display:flex;flex-direction:column;min-width:0;
   }
   .tag{
-    display:inline-block;align-self:flex-start;background:#EAF1F5;color:var(--primary);
+    display:inline-block;align-self:flex-start;background:#FFF6C7;color:var(--primary);
     font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
     padding:4px 9px;border-radius:4px;margin-bottom:10px;
   }
   h2{font-size:20px;line-height:1.3;margin:0 0 10px;color:var(--primary);overflow-wrap:anywhere}
   .producten{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 12px;padding:0;list-style:none}
-  .producten li{background:#F4F7F9;border:1px solid var(--line);color:var(--muted);font-size:12.5px;padding:2px 8px;border-radius:999px}
+  .producten li{background:#F7F7F5;border:1px solid var(--line);color:var(--muted);font-size:12.5px;padding:2px 8px;border-radius:999px}
   .sublabel{font-weight:700;color:var(--primary);margin:4px 0 4px;font-size:14px}
   ul.kenmerken{margin:0 0 14px;padding-left:18px}
   ul.kenmerken li{margin:6px 0;font-size:14.5px;overflow-wrap:anywhere}
@@ -114,6 +119,14 @@
     header.hero{background:#fff;color:#000;border-bottom:3px solid var(--primary)}
     header.hero .sub,.meta,.terug{color:#333;opacity:1}
   }
+
+  /* Huisstijl Adviesforum (geel/zwart) */
+  header.hero .back{color:var(--primary)!important;opacity:1;font-weight:700;border-bottom:2px solid var(--primary)}
+  header.hero .back:hover{text-decoration:none;border-bottom-color:transparent}
+  .btn:not(.sec):hover{background:#E6BD00}
+  .btn.sec:hover{background:#F7F7F5}
+  input:focus,select:focus,textarea:focus{border-color:var(--primary)}
+  .site a,ul.kenmerken a,section.card li a{text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:2px;text-underline-offset:3px}
 </style>
 </head>
 <body>

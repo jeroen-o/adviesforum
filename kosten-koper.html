@@ -9,16 +9,21 @@
 <meta property="og:description" content="Bereken overdrachtsbelasting (2%, 8% of startersvrijstelling 2026), overige kosten koper en de benodigde hypotheek na inbreng van eigen geld.">
 <meta property="og:type" content="website">
 <style>
+@font-face{font-family:Montserrat;font-style:normal;font-weight:400;font-display:swap;src:url(fonts/montserrat-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:500;font-display:swap;src:url(fonts/montserrat-latin-500-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:600;font-display:swap;src:url(fonts/montserrat-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:700;font-display:swap;src:url(fonts/montserrat-latin-700-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:800;font-display:swap;src:url(fonts/montserrat-latin-800-normal.woff2) format('woff2')}
   :root{
-    --primary:#003057;--accent:#E5A138;--bg:#F4F7F9;--text:#333333;--muted:#4A4A4A;
-    --line:#D8E2E8;--white:#fff;--soft:#EAF1F5;--warn-bg:#FDF4E5;--warn-line:#E5A138;
+    --primary:#141414;--accent:#FFD200;--bg:#F7F7F5;--text:#333333;--muted:#4A4A4A;
+    --line:#E4E4E4;--white:#fff;--soft:#F7F7F5;--warn-bg:#FFF6C7;--warn-line:#E6BD00;
   }
   *{box-sizing:border-box}
   body{margin:0;background:var(--bg);color:var(--text);
-    font-family:"Plus Jakarta Sans","DM Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    font-family:Montserrat,system-ui,sans-serif;
     font-size:16px;line-height:1.55}
   .wrap{max-width:1100px;margin:0 auto;padding:0 20px 64px}
-  header.hero{background:var(--primary);color:#fff;padding:36px 0 30px;margin-bottom:24px}
+  header.hero{background:var(--accent);color:var(--primary);padding:36px 0 30px;margin-bottom:24px}
   header.hero .wrap{padding-bottom:0}
   h1{font-size:32px;line-height:1.2;margin:0 0 10px;font-weight:700}
   .sub{opacity:.88;margin:0;max-width:75ch}
@@ -61,14 +66,14 @@
   th{background:var(--soft);color:var(--primary);position:sticky;top:0;z-index:1;font-weight:700}
   td:first-child,th:first-child{text-align:left;position:sticky;left:0;background:#fff;z-index:2}
   th:first-child{background:var(--soft);z-index:3}
-  tr.hl td{background:#FFF4DD}
-  tr.hl td:first-child{background:#FFE7B8}
+  tr.hl td{background:#FFF6C7}
+  tr.hl td:first-child{background:#FFEB85}
   td.hl{outline:2px solid var(--accent);outline-offset:-2px;font-weight:700}
   .simple td,.simple th{text-align:left}
   .simple td.n,.simple th.n{text-align:right}
   .toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:flex-end;margin-bottom:12px}
   .toolbar > div{flex:1 1 200px}
-  .btn{border:0;border-radius:7px;padding:10px 16px;font-size:14px;font-weight:600;font-family:inherit;cursor:pointer;background:var(--primary);color:#fff}
+  .btn{border:0;border-radius:7px;padding:10px 16px;font-size:14px;font-weight:600;font-family:inherit;cursor:pointer;background:var(--accent);color:var(--primary)}
   .btn.sec{background:#fff;color:var(--primary);border:1px solid var(--line)}
   .pane{display:none}.pane.on{display:block}
   footer{margin-top:28px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
@@ -108,18 +113,25 @@
   .starter .chk input{flex:0 0 auto;margin-top:2px}
   .st-out{margin-top:10px;font-size:13.5px;padding:8px 10px;border-radius:6px;background:var(--soft)}
   .st-out.ok{background:#E8F5EC;color:#1E5631}
-  .st-out.nee{background:#FDF4E5;color:#7A4B00}
+  .st-out.nee{background:#FFF6C7;color:#7A4B00}
   @media (max-width:560px){.starter-grid{grid-template-columns:1fr}}
   .rows div.tot{border-bottom:0;font-size:15.5px}
   .rows div.tot b{font-weight:700}
   .warn{color:#A5281B;font-weight:600}
   @media print{ .back{display:none} }
+
+  /* Huisstijl Adviesforum (geel/zwart) */
+  header.hero .back{color:var(--primary)!important;opacity:1;font-weight:700;border-bottom:2px solid var(--primary)}
+  header.hero .back:hover{text-decoration:none;border-bottom-color:transparent}
+  .btn:not(.sec):hover{background:#E6BD00}
+  .btn.sec:hover{background:#F7F7F5}
+  input:focus,select:focus,textarea:focus{border-color:var(--primary)}
 </style>
 </head>
 <body>
 <header class="hero">
   <div class="wrap">
-    <a class="back noprint" href="index.html#hulpmiddelen" style="color:#fff">&larr; Terug naar het Adviesforum</a>
+    <a class="back noprint" href="index.html#hulpmiddelen">&larr; Terug naar het Adviesforum</a>
     <h1>Kosten koper en totale financieringsbehoefte</h1>
     <p class="sub">Bereken de overdrachtsbelasting en de overige kosten koper, gesplitst in verwervings- en financieringskosten, en de benodigde hypotheek na inbreng van eigen middelen.</p>
     <p class="meta">Indicatieve rekenhulp &middot; voorwaarden van de geldverstrekker zijn leidend &middot; tarieven overdrachtsbelasting: peildatum 2026</p>
