@@ -128,7 +128,14 @@ Leg in het dossier vast welke verzekeraars je hebt benaderd en met welke uitkoms
  {id:'vbg-018',cat:'verz',auteur:null,naam:'',voorbeeld:true,datum:'2025-12-04T09:15:00',views:215,tags:['ORV','ouders','schenking'],beste:null,
   titel:'ORV voor hypotheek bij verhuur aan kind',
   body:`Ouders kopen een appartement en verhuren het aan hun studerende kind. Ze vragen of een ORV nodig is. Hoe kijken jullie hiertegen aan?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbg-018-a1',auteur:'u3',datum:'2025-12-05T22:15:00',rA:{u2:5,u8:5},rAdv:{u2:5},body:`Een ORV is hier niet automatisch nodig, maar de vraag is wat er gebeurt als een van de ouders overlijdt. De hypotheek blijft dan staan, de huur van een studerend kind is vaak laag of onzeker en de langstlevende moet de lasten van twee woningen dragen.
+- Breng de nabestaandensituatie in kaart: inkomen, lasten van de eigen woning en van het appartement. De rekenhulp orv.html helpt om het tekort zichtbaar te maken.
+- Controleer of de geldverstrekker een ORV eist, bijvoorbeeld bij een hoge financiering ten opzichte van de waarde.
+- Stem verzekeringnemer en begunstiging af op het testament, zodat de uitkering terechtkomt waar de schuld ligt en erfbelasting niet onnodig drukt.
+- Bespreek ook verkoop als alternatief: soms is dat de logische oplossing na overlijden.
+Leg in het dossier vast welk risico je hebt besproken, welke dekking is gekozen en waarom, of dat de ouders het risico bewust zelf dragen.`}
+  ]},
  {id:'vbg-019',cat:'verz',auteur:null,naam:'',voorbeeld:true,datum:'2025-12-06T11:00:00',views:324,tags:['ORV','indexatie','inflatie'],beste:'vbg-019-a1',
   titel:'Indexatie van verzekerd bedrag bij ORV',
   body:`Een klant wil een ORV voor inkomensvervanging van de partner, met een looptijd van twintig jaar. Bieden verzekeraars indexatie van het verzekerd bedrag en is dat zinvol?`,
@@ -160,7 +167,14 @@ Leg in het dossier vast welke verzekeraars je hebt benaderd en met welke uitkoms
  {id:'vbg-023',cat:'verz',auteur:null,naam:'',voorbeeld:true,datum:'2025-12-21T13:05:00',views:363,tags:['ORV','uitsluiting','hobby'],beste:null,
   titel:'Dekking bij overlijden door riskante hobby',
   body:`Een klant doet aan wedstrijdmotorsport. Hij vraagt of hij gedekt is bij overlijden tijdens een race. Hoe zoeken jullie dat uit?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbg-023-a1',auteur:'u3',datum:'2025-12-22T11:05:00',rA:{u1:5,u2:4},rAdv:{u1:5,u2:4},body:`Dat is per polis verschillend, dus begin bij de voorwaarden en de aanvraag.
+- Lees de uitsluitingen: veel ORV-voorwaarden sluiten bepaalde risicovolle sporten of wedstrijden met motorvoertuigen uit, of alleen als dat bij de aanvraag niet is gemeld.
+- Kijk wat de klant bij de aanvraag heeft ingevuld. Werd naar gevaarlijke hobby's gevraagd en is motorsport niet gemeld, dan kan de verzekeraar zich beroepen op schending van de mededelingsplicht.
+- Is de hobby pas na het sluiten begonnen, dan is er meestal geen meldplicht, tenzij de voorwaarden anders bepalen.
+- Vraag de verzekeraar schriftelijk om bevestiging van de dekking voor deze specifieke activiteit.
+Is er geen dekking, onderzoek dan een premieopslag of een aanbieder die dit risico wel accepteert. Leg de vraag, het antwoord van de verzekeraar en de keuze van de klant vast in het dossier.`}
+  ]},
  {id:'vbg-024',cat:'verz',auteur:null,naam:'',voorbeeld:true,datum:'2025-12-24T19:35:00',views:441,tags:['ORV','ondernemer','inkomen'],beste:'vbg-024-a1',
   titel:'ORV bij partner met inkomen uit eigen onderneming',
   body:`De partner van mijn klant heeft een eenmanszaak en verdient wisselend. Hoe bepalen jullie bij overlijden van de klant het inkomen van de nabestaande voor de nabestaandenberekening?`,
@@ -219,7 +233,14 @@ Leg in het dossier vast welke verzekeraars je hebt benaderd en met welke uitkoms
  {id:'vbg-032',cat:'verz',auteur:null,naam:'',voorbeeld:true,datum:'2026-01-25T08:50:00',views:484,tags:['AOV','opzeggen','premie'],beste:null,
   titel:'Klant wil AOV opzeggen wegens hoge premie',
   body:`Een zelfstandige met een lopende AOV wil opzeggen omdat de premie flink is gestegen. Hij heeft een kleine buffer en een hypotheek. Welke alternatieven bespreken jullie voordat hij opzegt?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbg-032-a1',auteur:'u3',datum:'2026-01-27T02:50:00',rA:{u1:4,u8:5},rAdv:{u1:4},body:`Opzeggen is vaak onomkeerbaar: later opnieuw verzekeren lukt door leeftijd of gezondheid niet altijd. Daarom bespreek ik eerst de knoppen waaraan je kunt draaien.
+- Verzekerd bedrag: verlaag naar wat echt nodig is voor vaste lasten en hypotheek. De rekenhulp aov-tekort.html helpt om dat te onderbouwen.
+- Eigen risicotermijn: een langere wachttijd verlaagt de premie, mits de buffer die periode kan overbruggen.
+- Eindleeftijd en dekkingsomschrijving: een eerdere eindleeftijd of een ander arbeidsongeschiktheidscriterium is goedkoper, maar dekt minder.
+- Combinaties: bijvoorbeeld een broodfonds voor de eerste periode met een AOV met lange wachttijd.
+Vraag bij de verzekeraar na welke wijzigingen zonder nieuwe medische beoordeling mogelijk zijn. Volg ook de ontwikkelingen rond een basisverzekering voor zelfstandigen en controleer de actuele stand. Kiest de klant toch voor opzeggen, leg dan vast dat hij het risico voor zijn inkomen en hypotheek bewust accepteert, liefst door hem te laten tekenen.`}
+  ]},
  {id:'vbg-033',cat:'verz',auteur:null,naam:'',voorbeeld:true,datum:'2026-01-28T18:00:00',views:168,tags:['AOV','DGA','loondienst'],beste:'vbg-033-a1',
   titel:'AOV voor DGA naast loondienst bij eigen BV',
   body:`Een DGA met een meerderheidsbelang is niet verplicht verzekerd voor de werknemersverzekeringen. Hoe richten jullie de AOV in: op naam van de DGA of via de BV?`,
@@ -288,7 +309,13 @@ Leg in het dossier vast welke verzekeraars je hebt benaderd en met welke uitkoms
  {id:'vbg-042',cat:'verz',auteur:null,naam:'',voorbeeld:true,datum:'2026-03-02T18:00:00',views:215,tags:['Anw-hiaat','samenwonen','nabestaanden'],beste:null,
   titel:'Anw-hiaat bij samenwoners zonder kinderen',
   body:`Twee samenwoners zonder kinderen vragen of zij een Anw-hiaatverzekering nodig hebben. Beiden werken in loondienst. Hoe gaan jullie hiermee om?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbg-042-a1',auteur:'u2',datum:'2026-03-03T20:00:00',rA:{u4:5,u8:5,u3:5},rAdv:{u4:5,u3:5},body:`Zonder kinderen heeft een nabestaande meestal geen recht op een Anw-uitkering, tenzij hij of zij zelf grotendeels arbeidsongeschikt is. Er valt dan dus ook weinig aan te vullen; de echte vraag is of de langstlevende de lasten alleen kan dragen.
+- Reken het overlijden van beide partners door: netto inkomen van de nabestaande tegenover woonlasten en vaste lasten. De rekenhulp orv.html helpt daarbij.
+- Controleer in beide pensioenregelingen of er partnerpensioen is voor ongehuwd samenwonenden en wat de voorwaarden zijn, zoals een notarieel samenlevingscontract of aanmelding bij het fonds.
+- Kijk of de werkgever een Anw-hiaatverzekering aanbiedt; die is bij deze situatie vaak weinig zinvol.
+Blijkt er een tekort, dan is een ORV gericht op de hypotheek meestal doelmatiger dan een Anw-hiaatpolis. Leg vast welke regelingen je hebt gecontroleerd, met welk document, en welke keuze het stel maakt.`}
+  ]},
  {id:'vbg-043',cat:'verz',auteur:null,naam:'',voorbeeld:true,datum:'2026-03-05T08:15:00',views:474,tags:['Anw','nabestaanden','voorwaarden'],beste:'vbg-043-a1',
   titel:'Anw-uitkering voorwaarden kort uitleggen',
   body:`Ik merk dat klanten denken dat de nabestaande altijd een Anw-uitkering krijgt. Hoe leggen jullie de voorwaarden kort en juist uit?`,
@@ -320,7 +347,15 @@ Leg in het dossier vast welke verzekeraars je hebt benaderd en met welke uitkoms
  {id:'vbg-047',cat:'verz',auteur:null,naam:'',voorbeeld:true,datum:'2026-03-20T13:10:00',views:199,tags:['premievrijstelling','AOV','levensverzekering'],beste:null,
   titel:'Premievrijstelling bij AOV en lopende levensverzekering',
   body:`Een klant heeft een AOV en een lopende levensverzekering met premievrijstelling bij arbeidsongeschiktheid. Hoe stem je de definities van arbeidsongeschiktheid op elkaar af?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbg-047-a1',auteur:'u3',datum:'2026-03-21T11:10:00',rA:{u1:5,u7:5,u4:4},rAdv:{u1:5,u7:5,u4:4},body:`Leg beide voorwaarden naast elkaar, want ze gebruiken vaak verschillende maatstaven. Ik maak een tabelletje met:
+- het criterium: eigen beroep, passende arbeid of gangbare arbeid;
+- de ondergrens: vanaf welk percentage arbeidsongeschiktheid er uitkering of premievrijstelling is;
+- de wachttijd en of die met terugwerkende kracht wordt vergoed;
+- de eindleeftijd en de manier van beoordelen.
+Het risico is dat de AOV uitkeert terwijl de levensverzekering nog geen premievrijstelling geeft, of andersom. Je kunt dat ondervangen door de premie van de levensverzekering mee te nemen in het verzekerde bedrag van de AOV, zodat de klant die kan blijven betalen als de premievrijstelling (nog) niet ingaat.
+Controleer ook of de premievrijstelling blijft gelden bij een wijziging van beroep of bij omzetting van de polis. Leg de vergelijking en je conclusie in het dossier en bespreek het verschil expliciet met de klant.`}
+  ]},
  {id:'vbg-048',cat:'verz',auteur:null,naam:'',voorbeeld:true,datum:'2026-03-23T08:00:00',views:79,tags:['AOV','adviesrapport','dossier'],beste:'vbg-048-a1',
   titel:'Kosten AOV in adviesrapport vastleggen',
   body:`Welke onderdelen nemen jullie op in het adviesrapport bij een AOV-advies? Ik wil zeker weten dat het dossier compleet is.`,
@@ -380,7 +415,13 @@ Leg in het dossier vast welke verzekeraars je hebt benaderd en met welke uitkoms
  {id:'vbg-056',cat:'verz',auteur:null,naam:'',voorbeeld:true,datum:'2026-04-21T11:30:00',views:75,tags:['Anw-hiaat','leeftijdsverschil'],beste:null,
   titel:'Anw-hiaat bij gehuwden met grote leeftijdsverschil',
   body:`Bij een echtpaar met een groot leeftijdsverschil twijfel ik over de looptijd van de Anw-hiaatverzekering en de koppeling met de AOW van de oudste partner. Hoe pakken jullie dit aan?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbg-056-a1',auteur:'u2',datum:'2026-04-23T05:30:00',rA:{u5:5,u4:5,u3:5,u6:4},rAdv:{u5:5,u4:5,u3:5},body:`Bij een groot leeftijdsverschil werk ik met periodes in plaats van één looptijd.
+- Periode 1: beiden voor de AOW-leeftijd. Hier speelt het Anw-hiaat, maar alleen als de nabestaande recht op Anw zou hebben, bijvoorbeeld met een kind onder de 18. Een Anw-hiaatdekking eindigt doorgaans op de AOW-leeftijd van de nabestaande.
+- Periode 2: de oudste heeft AOW en pensioen, de jongste nog niet. Overlijdt de oudste, dan vervallen zijn AOW en ouderdomspensioen en blijft alleen het partnerpensioen over. Dat gat vult een Anw-hiaatpolis niet.
+- Periode 3: beiden AOW-gerechtigd.
+Controleer in de pensioenregeling of er een korting op het partnerpensioen geldt bij een groot leeftijdsverschil en of er een Anw-hiaatregeling is. Bereken per periode het tekort, bijvoorbeeld met orv.html, en kies dan per periode de dekking: vaak een combinatie van Anw-hiaat en een tijdelijke ORV. Leg de berekening per periode vast in het dossier.`}
+  ]},
  {id:'vbg-057',cat:'verz',auteur:null,naam:'',voorbeeld:true,datum:'2026-04-25T16:10:00',views:477,tags:['WIA','hypotheekadvies','inkomen'],beste:'vbg-057-a1',
   titel:'WIA en hypotheekadvies: welk inkomen hanteren',
   body:`Bij het beoordelen van arbeidsongeschiktheid in een hypotheekadvies: rekenen jullie met volledige arbeidsongeschiktheid of met een gedeeltelijk scenario?`,
@@ -419,7 +460,14 @@ Leg in het dossier vast welke verzekeraars je hebt benaderd en met welke uitkoms
  {id:'vbg-062',cat:'verz',auteur:null,naam:'',voorbeeld:true,datum:'2026-05-13T11:45:00',views:311,tags:['woonlastenverzekering','opzeggen'],beste:null,
   titel:'Woonlastenverzekering opzeggen bij overstap naar vast contract',
   body:`Een klant met een woonlastenverzekering heeft nu een vast contract met goede arbeidsvoorwaarden inclusief een WGA-hiaatverzekering. Hij wil opzeggen. Waar letten jullie op?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbg-062-a1',auteur:'u3',datum:'2026-05-14T17:45:00',rA:{u5:5,u4:5},rAdv:{u5:5,u4:5},body:`Een vast contract verkleint het werkloosheidsrisico, maar haalt het niet weg. Check daarom eerst wat er precies vervalt.
+- Werkloosheid: de WW geeft een tijdelijke, lagere uitkering. Reken het tekort na met werkloosheid.html; bij een korte arbeidsverleden kan dat fors zijn.
+- Arbeidsongeschiktheid: vraag het reglement van de WGA-hiaatverzekering op. Dekt die alleen het hiaat of ook een aanvulling op de vervolguitkering? Is het een collectieve polis waaraan de werknemer meebetaalt, en blijft hij gedekt bij een andere baan?
+- Inkomen boven het maximum dagloon is niet gedekt door de WIA; kijk of er een excedentregeling is.
+- Bevat de woonlastenverzekering ook een overlijdensdekking, dan moet die apart worden geregeld.
+Controleer opzegtermijn en eventuele eisen van de geldverstrekker. Leg in het dossier de vergelijking vast en, als hij opzegt, dat hij de resterende risico's kent en accepteert.`}
+  ]},
  {id:'vbg-063',cat:'verz',auteur:null,naam:'',voorbeeld:true,datum:'2026-05-17T17:30:00',views:345,tags:['nabestaandenpensioen','ORV','berekening'],beste:'vbg-063-a1',
   titel:'Nabestaandenpensioen en ORV-hoogte afstemmen',
   body:`Hoe nemen jullie het partnerpensioen uit de werkgeversregeling mee bij het bepalen van de ORV-hoogte?`,
@@ -459,7 +507,12 @@ Leg in het dossier vast welke verzekeraars je hebt benaderd en met welke uitkoms
  {id:'vbg-068',cat:'verz',auteur:null,naam:'',voorbeeld:true,datum:'2026-06-04T11:25:00',views:178,tags:['AOV','kostwinner','keuze'],beste:null,
   titel:'AOV of arbeidsongeschiktheidsrente voor kostwinner',
   body:`Ik twijfel bij een kostwinner in een gezin of een AOV met een lange looptijd of een kapitaalverzekering bij arbeidsongeschiktheid beter past. Hoe maken jullie die afweging?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbg-068-a1',auteur:'u3',datum:'2026-06-05T18:25:00',rA:{u1:5,u2:4,u4:5},rAdv:{u1:5,u2:4,u4:5},body:`De kern is welk risico je afdekt: een blijvend inkomensverlies of een te hoge hypotheek.
+- Een AOV, of bij loondienst een aanvulling op de WIA, geeft een periodieke uitkering zolang de arbeidsongeschiktheid duurt. Dat sluit aan bij doorlopende lasten zoals opleiding van de kinderen en levensonderhoud.
+- Een kapitaal bij arbeidsongeschiktheid gebruik je om de hypotheek af te lossen en zo de woonlasten blijvend te verlagen. Het dekt het inkomensverlies niet volledig en houdt geen rekening met de duur.
+Voor een kostwinner met jonge kinderen kies ik meestal voor een periodieke dekking als basis en eventueel een kapitaal als aanvulling voor de woning. Breng eerst het tekort in kaart met aov-tekort.html. Let ook op de fiscale behandeling van premie en uitkering, die verschilt per producttype; controleer die aan de actuele regels. Leg de afweging en de keuze van de klant vast in het dossier.`}
+  ]},
  {id:'vbg-069',cat:'verz',auteur:null,naam:'',voorbeeld:true,datum:'2026-06-07T09:05:00',views:78,tags:['woonlastenverzekering','tweeverdieners'],beste:'vbg-069-a1',
   titel:'Woonlastenverzekering bij partner met eigen inkomen',
   body:`Bij tweeverdieners: verzekeren jullie beide partners op een woonlastenverzekering of alleen de hoofdverdiener?`,
@@ -534,7 +587,13 @@ Leg in het dossier vast welke verzekeraars je hebt benaderd en met welke uitkoms
  {id:'vbg-079',cat:'verz',auteur:null,naam:'',voorbeeld:true,datum:'2026-07-13T19:40:00',views:556,tags:['AOV','buitenland','dekking'],beste:null,
   titel:'AOV-dekking bij verblijf in het buitenland',
   body:`Een zelfstandige gaat een half jaar in het buitenland werken. Blijft zijn AOV geldig en wat als hij daar arbeidsongeschikt raakt?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbg-079-a1',auteur:'u3',datum:'2026-07-15T01:40:00',rA:{u6:5,u1:4},rAdv:{u1:4},body:`Dat hangt af van de voorwaarden en van wat hij daar gaat doen.
+- Territoriale dekking: veel AOV-polissen dekken verblijf buiten Nederland, soms met een maximale duur of beperkingen buiten de EU. Check de voorwaarden.
+- Wijziging van werkzaamheden: verandert zijn beroep of het soort werk, dan is dat vaak een meldplichtige risicowijziging.
+- Claimbeoordeling: de verzekeraar wil arbeidsongeschiktheid kunnen vaststellen. Soms moet de verzekerde voor keuringen naar Nederland komen; dat kan tot vertraging of opschorting van de uitkering leiden.
+Laat de klant het verblijf vooraf schriftelijk melden en vraag om een bevestiging van de dekking, inclusief hoe een claim vanuit het buitenland wordt behandeld. Wijs hem ook op de sociale zekerheid en zorgverzekering in het werkland. Leg de melding en het antwoord van de verzekeraar in het dossier.`}
+  ]},
  {id:'vbg-080',cat:'verz',auteur:null,naam:'',voorbeeld:true,datum:'2026-07-17T12:10:00',views:558,tags:['premievrijstelling','hypotheek','polis'],beste:'vbg-080-a1',
   titel:'Arbeidsongeschiktheid en premievrijstelling hypotheekgebonden polis',
   body:`Een klant heeft een oudere hypotheekgebonden polis met premievrijstelling bij arbeidsongeschiktheid. Hoe beoordelen jullie of die dekking nog toereikend is?`,
@@ -601,7 +660,13 @@ Leg in het dossier vast welke verzekeraars je hebt benaderd en met welke uitkoms
  {id:'vbg-089',cat:'verz',auteur:null,naam:'',voorbeeld:true,datum:'2026-08-18T14:20:00',views:348,tags:['woonlastenverzekering','aflossen','aanpassen'],beste:null,
   titel:'Woonlastenverzekering bij vervroegde aflossing hypotheek',
   body:`Een klant lost een groot deel van de hypotheek af. Moet hij de woonlastenverzekering verlagen en kan dat tussentijds?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbg-089-a1',auteur:'u3',datum:'2026-08-20T05:20:00',rA:{u1:4,u2:5},rAdv:{u1:4,u2:5},body:`Na een flinke aflossing dalen de woonlasten, dus is de woonlastenverzekering vaak te hoog. Afhankelijk van de voorwaarden keert de polis het verzekerde bedrag uit of maximaal de werkelijke lasten; in het tweede geval betaalt de klant premie voor dekking die hij niet kan gebruiken.
+- Bereken de nieuwe maandlast en het nieuwe tekort bij arbeidsongeschiktheid en werkloosheid, met aov-tekort.html en werkloosheid.html.
+- Vraag bij de verzekeraar of tussentijds verlagen mogelijk is en per wanneer. Verlagen kan meestal zonder medische vragen, later weer verhogen vaak niet.
+- Kijk ook naar een eventuele ORV of andere dekking die aan de hypotheek is gekoppeld.
+Leg de nieuwe berekening, de wijziging en de bevestiging van de verzekeraar vast in het dossier.`}
+  ]},
  {id:'vbg-090',cat:'verz',auteur:null,naam:'',voorbeeld:true,datum:'2026-08-22T15:45:00',views:388,tags:['AOV','hybride','loondienst'],beste:'vbg-090-a1',
   titel:'Twee jaar loondoorbetaling en AOV voor bijbaan als zelfstandige',
   body:`Een klant werkt deels in loondienst en deels als zelfstandige. Hoe dekken jullie het inkomen uit het zelfstandige deel af?`,
