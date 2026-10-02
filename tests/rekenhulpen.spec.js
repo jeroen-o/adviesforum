@@ -30,3 +30,41 @@ test('bijleenregeling, overbrugging en maandlasten: standaardvoorbeelden', async
   await page.goto('/maandlasten.html');
   await expect(page.locator('body')).toContainText('€ 1.432,25');
 });
+
+test('oversluiten, kosten koper, LTV en restschuld pensioen: standaardvoorbeelden', async ({ page }) => {
+  await volgFouten(page);
+  await page.goto('/oversluiten.html');
+  await expect(page.locator('body')).toContainText('€ 10.306,87');
+  await page.goto('/kosten-koper.html');
+  await expect(page.locator('body')).toContainText('€ 394.100');
+  await page.goto('/ltv.html');
+  await expect(page.locator('body')).toContainText('90,0%');
+  await page.goto('/restschuld-pensioen.html');
+  await expect(page.locator('body')).toContainText('€ 141.463,18');
+});
+
+test('extra aflossen, rentemiddeling, erfpacht en draagplicht: standaardvoorbeelden', async ({ page }) => {
+  await volgFouten(page);
+  await page.goto('/extra-aflossen.html');
+  await expect(page.locator('body')).toContainText('€ 1.214,02');
+  await page.goto('/rentemiddeling.html');
+  await expect(page.locator('body')).toContainText('4,06');
+  await page.goto('/erfpacht.html');
+  await expect(page.locator('body')).toContainText('€ 166,67');
+  await page.goto('/draagplicht.html');
+  await expect(page.locator('a[href^="https://www.draagplicht.nl"]').first()).toBeVisible();
+});
+
+test('verzekeringstools: standaardvoorbeelden', async ({ page }) => {
+  await volgFouten(page);
+  await page.goto('/orv.html');
+  await expect(page.locator('body')).toContainText('115.844');
+  await page.goto('/aov-tekort.html');
+  await expect(page.locator('body')).toContainText('€ 48.000');
+  await page.goto('/inkomen-ziekte-werknemer.html');
+  await expect(page.locator('body')).toContainText('€ 2.916,67');
+  await page.goto('/werkloosheid.html');
+  await expect(page.locator('body')).toContainText('€ 14.000');
+  await page.goto('/herbouwwaarde.html');
+  await expect(page.locator('body')).toContainText('€ 32.000');
+});

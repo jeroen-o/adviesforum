@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Erfpacht canon of afkopen</title>
+<style>
+  :root{
+    --primary:#003057;--accent:#E5A138;--bg:#F4F7F9;--text:#333333;--muted:#4A4A4A;
+    --line:#D8E2E8;--white:#fff;--soft:#EAF1F5;--warn-bg:#FDF4E5;--warn-line:#E5A138;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:"Plus Jakarta Sans","DM Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    font-size:16px;line-height:1.55}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 20px 64px}
+  header.hero{background:var(--primary);color:#fff;padding:36px 0 30px;margin-bottom:24px}
+  header.hero .wrap{padding-bottom:0}
+  h1{font-size:32px;line-height:1.2;margin:0 0 10px;font-weight:700}
+  .sub{opacity:.88;margin:0;max-width:75ch}
+  .meta{margin-top:14px;font-size:13px;opacity:.75}
+  .tabs{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 18px}
+  .tabs button{border:1px solid var(--line);background:#fff;color:var(--primary);font:inherit;font-weight:600;
+    font-size:14px;padding:9px 14px;border-radius:999px;cursor:pointer}
+  .tabs button.on{background:var(--primary);color:#fff;border-color:var(--primary)}
+  section.card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:22px 24px;margin:0 0 16px}
+  h2{font-size:20px;margin:0 0 12px;color:var(--primary)}
+  h3{font-size:16px;margin:18px 0 8px;color:var(--primary)}
+  .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px}
+  .fields{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px 14px}
+  .fields .full{grid-column:1/-1}
+  label{display:block;font-size:13.5px;font-weight:600;color:var(--primary);margin-bottom:4px}
+  .hint{display:block;font-size:12.5px;font-weight:400;color:var(--muted);margin-top:3px}
+  input[type=text],select{width:100%;padding:10px 12px;font:inherit;font-size:15px;border:1px solid var(--line);
+    border-radius:7px;background:#fff;color:var(--text)}
+  input:focus,select:focus{outline:2px solid var(--accent);outline-offset:1px}
+  .eur{position:relative}
+  .eur span{position:absolute;left:11px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:15px}
+  .eur input{padding-left:26px}
+  .pct{position:relative}
+  .pct span{position:absolute;right:11px;top:50%;transform:translateY(-50%);color:var(--muted)}
+  .pct input{padding-right:28px}
+  .result{background:var(--primary);color:#fff;border-radius:10px;padding:20px 22px}
+  .result .big{font-size:34px;font-weight:700;line-height:1.15;margin:4px 0 2px}
+  .result .lbl{font-size:13px;opacity:.85}
+  .rows{margin:16px 0 0;border-top:1px solid rgba(255,255,255,.25)}
+  .rows div{display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.15);font-size:14.5px}
+  .rows div b{font-weight:600;white-space:nowrap}
+  .let-op{background:var(--warn-bg);border-left:4px solid var(--warn-line);padding:12px 14px;border-radius:0 6px 6px 0;margin:14px 0 0;font-size:14.5px}
+  .let-op strong{color:#8A5B00}
+  .compliance{background:#FFF1F1;border-left:4px solid #C0392B;padding:12px 14px;border-radius:0 6px 6px 0;margin:14px 0 0;font-size:14.5px}
+  .compliance strong{color:#A5281B}
+  .msg{font-size:13.5px;margin-top:10px;color:#FFE3B0}
+  .tblwrap{overflow-x:auto;border:1px solid var(--line);border-radius:8px;max-height:560px;overflow-y:auto}
+  table{border-collapse:collapse;width:100%;font-size:13.5px;font-variant-numeric:tabular-nums}
+  th,td{padding:7px 9px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
+  th{background:var(--soft);color:var(--primary);position:sticky;top:0;z-index:1;font-weight:700}
+  td:first-child,th:first-child{text-align:left;position:sticky;left:0;background:#fff;z-index:2}
+  th:first-child{background:var(--soft);z-index:3}
+  tr.hl td{background:#FFF4DD}
+  tr.hl td:first-child{background:#FFE7B8}
+  td.hl{outline:2px solid var(--accent);outline-offset:-2px;font-weight:700}
+  .simple td,.simple th{text-align:left}
+  .simple td.n,.simple th.n{text-align:right}
+  .toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:flex-end;margin-bottom:12px}
+  .toolbar > div{flex:1 1 200px}
+  .btn{border:0;border-radius:7px;padding:10px 16px;font-size:14px;font-weight:600;font-family:inherit;cursor:pointer;background:var(--primary);color:#fff}
+  .btn.sec{background:#fff;color:var(--primary);border:1px solid var(--line)}
+  .pane{display:none}.pane.on{display:block}
+  footer{margin-top:28px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+  footer a{color:var(--primary)}
+  @media (max-width:820px){
+    .grid{grid-template-columns:minmax(0,1fr)}
+    h1{font-size:26px}
+  }
+  @media (max-width:520px){
+    .wrap{padding:0 16px 48px}
+    .fields{grid-template-columns:minmax(0,1fr)}
+    section.card{padding:18px 16px}
+    .result .big{font-size:28px}
+  }
+  @media print{
+    .tabs,.toolbar .btn,.noprint{display:none!important}
+    body{background:#fff}
+    .pane{display:block!important}
+    .tblwrap{max-height:none;overflow:visible}
+    th{position:static}
+    td:first-child,th:first-child{position:static}
+    header.hero{background:#fff;color:#000;border-bottom:3px solid var(--primary)}
+    .result{background:#fff;color:#000;border:2px solid var(--primary)}
+    .rows div{border-color:#ccc}
+    section.card{break-inside:avoid}
+  }
+  .back{display:inline-block;font-size:13px;margin:0 0 10px;opacity:.9;text-decoration:none}
+  .back:hover{text-decoration:underline}
+  .chk{display:flex;align-items:center;gap:8px;font-size:14.5px;font-weight:600;color:var(--primary);margin:0;cursor:pointer}
+  .chk input{width:18px;height:18px;margin:0;accent-color:var(--primary)}
+  input:disabled{background:var(--soft);color:var(--muted)}
+  .rows div.tot{border-bottom:0;font-size:15.5px}
+  .rows div.tot b{font-weight:700}
+  .warn{color:#A5281B;font-weight:600}
+  @media print{ .back{display:none} }
+  a.btn{display:inline-block;text-decoration:none;text-align:center}
+  a.btn:hover{background:#00457C}
+  .ext{margin:14px 0 0}
+  .rows div span{min-width:0}
+  @media print{ .ext{display:none} }
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <a class="back noprint" href="index.html#hulpmiddelen" style="color:#fff">&larr; Terug naar het Adviesforum</a>
+    <h1>Erfpacht: canon of afkopen</h1>
+    <p class="sub">Vergelijk het betalen van een jaarlijkse canon met het afkopen van de erfpacht: canon per jaar en per maand, totale canon over een periode met indexatie, en de contante waarde tegenover de afkoopsom.</p>
+    <p class="meta">Indicatieve rekenhulp &middot; voorwaarden van de geldverstrekker zijn leidend</p>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="tabs noprint">
+    <button type="button" id="print" style="margin-left:auto">Printen / PDF</button>
+  </div>
+  <section class="card">
+    <div class="grid">
+      <div>
+        <h2>Invoer</h2>
+        <div class="fields">
+          <div class="full">
+            <label for="grond">Grondwaarde</label>
+            <div class="eur"><span>&euro;</span><input type="text" inputmode="numeric" id="grond" value="100.000"></div>
+            <span class="hint">Volgens de gemeente of erfverpachter.</span>
+          </div>
+          <div>
+            <label for="canon">Canonpercentage (per jaar)</label>
+            <div class="pct"><input type="text" inputmode="decimal" id="canon" value="2,00"><span>%</span></div>
+            
+          </div>
+          <div>
+            <label for="index">Jaarlijkse indexatie</label>
+            <div class="pct"><input type="text" inputmode="decimal" id="index" value="0,00"><span>%</span></div>
+            <span class="hint">Bijv. inflatie-indexatie; 0 bij een vaste canon.</span>
+          </div>
+          <div class="full">
+            <label for="afkoop">Afkoopsom</label>
+            <div class="eur"><span>&euro;</span><input type="text" inputmode="numeric" id="afkoop" value="60.000"></div>
+            
+          </div>
+          <div>
+            <label for="jaren">Vergelijkingsperiode (jaren)</label>
+            <input type="text" inputmode="numeric" id="jaren" value="30">
+            
+          </div>
+          <div>
+            <label for="disc">Rente / rendement om contant te maken</label>
+            <div class="pct"><input type="text" inputmode="decimal" id="disc" value="3,00"><span>%</span></div>
+            <span class="hint">Bijv. hypotheekrente of rendement op spaargeld.</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="result" aria-live="polite">
+          <div class="lbl">Canon per maand (nu)</div>
+          <div class="big" id="r-cpm">&ndash;</div>
+          <div class="lbl" id="r-sub"></div>
+          <div class="rows">
+            <div><span>Canon per jaar (nu)</span><b id="r-cpj"></b></div>
+            <div><span id="r-totlbl">Totale canon over de periode</span><b id="r-tot"></b></div>
+            <div><span>Contante waarde canon</span><b id="r-cw"></b></div>
+            <div><span>Afkoopsom</span><b id="r-afk"></b></div>
+            <div class="tot"><span id="r-diflbl">Verschil afkoopsom &minus; contante waarde</span><b id="r-dif"></b></div>
+            <div><span>Rente per maand bij meefinancieren afkoopsom</span><b id="r-rafk"></b></div>
+            <div><span>Omslagpunt (contante waarde &ge; afkoopsom)</span><b id="r-oms"></b></div>
+          </div>
+          <div class="msg" id="r-msg"></div>
+        </div>
+        <div class="compliance"><strong>Compliance:</strong> de vergelijking is indicatief en bruto (zonder fiscaal effect). Controleer de erfpachtvoorwaarden van de gemeente of erfverpachter (algemene bepalingen, tijdvak, herziening van de canon, eeuwigdurend of tijdelijk afkopen) en neem de canon mee in de woonlasten en de toetsing van de geldverstrekker. Leg de gemaakte keuze en de onderbouwing vast in het dossier.</div>
+      </div>
+    </div>
+    <div class="let-op"><strong>Rekenwijze:</strong> canon per jaar = grondwaarde &times; canonpercentage; per maand = jaar / 12. Totale canon = som over de periode, ieder jaar verhoogd met de indexatie. Contante waarde: de canon wordt jaarlijks aan het begin van elk jaar betaald en contant gemaakt tegen de opgegeven rente: canon<sub>t</sub> / (1 + rente)<sup>t</sup>, t = 0 &hellip; jaren &minus; 1. Rente bij meefinancieren = afkoopsom &times; dezelfde rente / 12 (aflossingsvrij, indicatief). Een herziening van de grondwaarde of het canonpercentage na afloop van een tijdvak is niet meegenomen.</div>
+  </section>
+
+  <section class="card">
+    <h2>Toelichting</h2>
+    <div class="let-op"><strong>Woonlasten en toetsing:</strong> de canon is een vaste woonlast. Geldverstrekkers houden er bij de toetsing rekening mee (de canon verlaagt de maximale hypotheek, of telt mee in de maandlasten). Een hoge of sterk ge&iuml;ndexeerde canon kan de leencapaciteit merkbaar beperken.</div>
+    <div class="let-op"><strong>Fiscaal:</strong> de canon en een afkoopsom kunnen onder voorwaarden aftrekbaar zijn als kosten van de eigen woning (aftrekbare kosten in box 1). Controleer de actuele fiscale regels en de voorwaarden, bijvoorbeeld rond annu&iuml;taire aflossing bij meefinanciering en het tarief waartegen de aftrek plaatsvindt.</div>
+    <div class="let-op"><strong>Meefinancieren afkoopsom:</strong> wordt de afkoopsom meegefinancierd, dan maakt dat deel uit van de hypotheek en kan het onder voorwaarden tot de eigenwoningschuld behoren (vereisten zoals annu&iuml;taire aflossing in maximaal 30 jaar). Het verschil tussen canon en afkoop wordt dan in feite: canon tegenover rente en aflossing over de afkoopsom.</div>
+    <div class="let-op"><strong>Voorwaarden gemeente:</strong> afkopen kan eeuwigdurend of voor een tijdvak; na afloop van een tijdvak kan de canon worden herzien op basis van een nieuwe grondwaarde. Overstapregelingen, kortingen en termijnen verschillen per gemeente. Vraag de actuele aanbieding en de algemene bepalingen op.</div>
+  </section>
+
+  <footer>
+    <p>Indicatieve rekenhulp. Voorwaarden van de geldverstrekker zijn leidend. Deze pagina slaat niets op.</p>
+  </footer>
+</div>
+<script>
+(function(){
+  var $ = function(id){ return document.getElementById(id); };
+  var eur0 = new Intl.NumberFormat('nl-NL',{style:'currency',currency:'EUR',minimumFractionDigits:0,maximumFractionDigits:0});
+  var eur2 = new Intl.NumberFormat('nl-NL',{style:'currency',currency:'EUR',minimumFractionDigits:2,maximumFractionDigits:2});
+  var int0 = new Intl.NumberFormat('nl-NL',{maximumFractionDigits:0});
+  var dec2 = new Intl.NumberFormat('nl-NL',{minimumFractionDigits:2,maximumFractionDigits:2});
+  function fmtE(v){ return eur0.format(v).replace(/ /g,' '); }
+  function fmtE2(v){ return eur2.format(v).replace(/ /g,' '); }
+  function parseNum(s){
+    s = String(s||'').replace(/[^\d,.-]/g,'');
+    if (s.indexOf(',') > -1) s = s.replace(/\./g,'').replace(',', '.');
+    else s = s.replace(/\./g,'');
+    var v = parseFloat(s); return isNaN(v) ? 0 : v;
+  }
+  function parsePct(s){
+    s = String(s||'').replace(/[^\d,.-]/g,'').replace(',', '.');
+    var v = parseFloat(s); return isNaN(v) ? 0 : v;
+  }
+  // Euro-invoer met duizendtalscheiding, cursor blijft achteraan staan
+  function euroInput(el, cb){
+    el.addEventListener('input', function(){
+      var digits = el.value.replace(/\D/g,'');
+      el.value = digits ? int0.format(parseInt(digits,10)) : '';
+      cb && cb();
+    });
+  }
+
+  function reken(){
+    var G = parseNum($('grond').value), c = parsePct($('canon').value), g = parsePct($('index').value)/100;
+    var A = parseNum($('afkoop').value), N = Math.max(0, Math.round(parseNum($('jaren').value))), d = parsePct($('disc').value)/100, msg = [];
+    var C = G * c/100, tot = 0, cw = 0;
+    for (var t = 0; t < N; t++) { var ct = C * Math.pow(1 + g, t); tot += ct; cw += ct / Math.pow(1 + d, t); }
+    var oms = null, cum = 0;
+    for (var u = 0; u < 200 && C > 0; u++) { cum += C * Math.pow(1 + g, u) / Math.pow(1 + d, u); if (cum >= A) { oms = u + 1; break; } }
+    $('r-cpm').textContent = fmtE2(C / 12);
+    $('r-sub').textContent = dec2.format(c) + '% van ' + fmtE2(G) + (g ? ' · indexatie ' + dec2.format(g*100) + '% per jaar' : '');
+    $('r-cpj').textContent = fmtE2(C);
+    $('r-totlbl').textContent = 'Totale canon over ' + N + ' jaar';
+    $('r-tot').textContent = fmtE2(tot);
+    $('r-cw').textContent = fmtE2(cw);
+    $('r-afk').textContent = fmtE2(A);
+    var dif = A - cw;
+    $('r-diflbl').textContent = dif >= 0 ? 'Canon voordeliger (contant) met' : 'Afkopen voordeliger (contant) met';
+    $('r-dif').textContent = fmtE2(Math.abs(dif));
+    $('r-rafk').textContent = fmtE2(A * d / 12);
+    $('r-oms').textContent = oms ? 'na ' + oms + ' jaar' : 'niet binnen 200 jaar';
+    if (N === 0) msg.push('Vul een vergelijkingsperiode in.');
+    if (N > 0 && dif >= 0 && oms && oms > N) msg.push('Binnen de gekozen periode is de canon goedkoper dan afkopen; bij een langere periode (of eeuwigdurende afkoop) kan dat omslaan.');
+    $('r-msg').textContent = msg.join(' ');
+  }
+
+  ['grond','afkoop'].forEach(function(id){ euroInput($(id), reken); });
+  ['canon','index','disc'].forEach(function(id){ $(id).addEventListener('input', reken); });
+  ['jaren'].forEach(function(id){ $(id).addEventListener('input', function(){ $(id).value = $(id).value.replace(/\D/g,''); reken(); }); });
+
+  // Print via eigen venster: window.print() wordt binnen een iframe (o.a. Google Sites) geblokkeerd.
+  $('print').addEventListener('click', function(){
+    try {
+      var w = window.open('', '_blank');
+      if (!w) { window.print(); return; }
+      var body = document.body.cloneNode(true);
+      Array.prototype.forEach.call(body.querySelectorAll('input'), function(i, idx){
+        var orig = document.querySelectorAll('input')[idx];
+        if (orig.type === 'checkbox') { if (orig.checked) i.setAttribute('checked','checked'); else i.removeAttribute('checked'); }
+        else i.setAttribute('value', orig.value);
+      });
+      Array.prototype.forEach.call(body.querySelectorAll('select'), function(s, idx){
+        var orig = document.querySelectorAll('select')[idx];
+        Array.prototype.forEach.call(s.options, function(o, j){ if (j === orig.selectedIndex) o.setAttribute('selected','selected'); else o.removeAttribute('selected'); });
+      });
+      Array.prototype.forEach.call(body.querySelectorAll('script'), function(s){ s.remove(); });
+      w.document.open();
+      w.document.write('<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><title>' + document.title +
+        '</title><style>' + document.querySelector('style').textContent + '</style></head><body>' + body.innerHTML + '</body></html>');
+      w.document.close(); w.focus();
+      setTimeout(function(){ w.print(); }, 350);
+    } catch (e) { window.print(); }
+  });
+
+  reken();
+})();
+</script>
+</body>
+</html>

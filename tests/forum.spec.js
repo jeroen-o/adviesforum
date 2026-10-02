@@ -60,3 +60,16 @@ test('aanmeldformulier verstuurt naar FormSubmit', async ({ page }) => {
   await page.click('#verstuur');
   await expect(page.locator('#succes')).toBeVisible();
 });
+
+test('mobiel: alle tabbladen zonder horizontale scroll en volle formuliervelden', async ({ page }) => {
+  const fouten = await volgFouten(page);
+  await page.setViewportSize({ width: 390, height: 844 });
+  for (const h of ['', '#kennisbank', '#faq', '#hulpmiddelen', '#begrippen', '#adviseurs', '#handleiding', '#voorwie', '#artikel-k10']) {
+    await page.goto('/index.html' + h);
+    expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(392);
+  }
+  await page.click('header [data-act="nieuw"]');
+  const smal = await page.$$eval('#f-vraag input:not([type=checkbox]), #f-vraag textarea, #f-vraag select', els => els.filter(e => e.getBoundingClientRect().width < 250).map(e => e.name));
+  expect(smal).toEqual([]);
+  expect(fouten).toEqual([]);
+});

@@ -22,7 +22,11 @@ test('alle interne links en bronnen bestaan', async ({ page, request }) => {
     for (const r of new Set(refs)) if (!fs.existsSync(r)) ontbreekt.push(`${pagina} → ${r}`);
   }
   // links die in de kennisbankdata staan
-  const data = fs.readFileSync('data/kennisbank.js', 'utf8');
-  for (const m of data.matchAll(/url:'([^':]+)'/g)) if (!fs.existsSync(m[1])) ontbreekt.push(`data/kennisbank.js → ${m[1]}`);
+  // links in de data en in de lijst met hulpmiddelen
+  const bestanden = ['index.html', ...fs.readdirSync('data').filter(f => f.endsWith('.js')).map(f => 'data/' + f)];
+  for (const b of bestanden) {
+    const tekst = fs.readFileSync(b, 'utf8');
+    for (const m of tekst.matchAll(/url:'([^':]+)'/g)) if (!fs.existsSync(m[1].split('#')[0])) ontbreekt.push(`${b} → ${m[1]}`);
+  }
   expect(ontbreekt).toEqual([]);
 });

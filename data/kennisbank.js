@@ -277,6 +277,7 @@ De AFM stelt de minimale toetsrente per kwartaal vast; die is geen onderdeel van
   kw:'AFM leidraad hypotheekadvisering 2026 passend advies artikel 4:23 Wft adviesnorm zelfstandige rol adviseur inventarisatie analyse adviesrapport nazorg verantwoorde woonlasten LTI pensioen uitgavenpatroon netto besteedbaar inkomen rentevastperiode renteschok scenario verduurzaming energielabel EBV EBB funderingsschade fundering fiscaliteit fiscaal verleden eigenwoningschuld eigenwoningreserve box 1 box 3 hypotheekproduct voorwaarden verhuisregeling life events arbeidsongeschiktheid overlijden werkloosheid relatiebeëindiging scheiding oversluiten terugverdientijd afwijken advies vastleggen dossier',
   links:[
    {titel:'AFM: Leidraad Hypotheekadvisering, april 2026 (PDF)',url:'documenten/Leidraad-Hypotheekadvisering-2026.pdf'},
+   {titel:'AFM: feedbackstatement bij de herziene Leidraad Hypotheekadvisering 2026 (PDF)',url:'https://www.afm.nl/~/profmedia/files/wet-regelgeving/beleidsuitingen/leidraden/feedback-statement-hypotheekadvies-bij-herziene-leidraad-2026.pdf'},
    {titel:'AFM: adviseurs, bemiddelaars en gevolmachtigden',url:'https://www.afm.nl/nl-nl/sector/adviseurs-bemiddelaars-en-gevolmachtigde-agenten'},
    {titel:'Wft, artikel 4:23 (wetten.overheid.nl)',url:'https://wetten.overheid.nl/BWBR0020368'},
    {titel:'Overzicht wet- en regelgeving (eigen pagina)',url:'wetgeving.html'}
@@ -366,6 +367,34 @@ Bron: AFM, Leidraad Hypotheekadvisering, april 2026. Deze samenvatting vervangt 
 
 ## Let op
 Links naar wetten.overheid.nl openen de tekst die vandaag geldt. Voor een dossier heb je soms de versie nodig die gold op een eerdere datum, bijvoorbeeld bij overgangsrecht of bij een klacht over een oud advies. Die kies je op wetten.overheid.nl met de datumkiezer.`},
+ {id:'k14',cat:'crm',titel:'Finly (eBlinqx CRM): klantformulieren en waar je hulp vindt',auteur:'u6',datum:'2026-10-02T23:30:00',herzienVoor:'2027-04-02',bron:null,gecontroleerd:false,
+  kw:'finly eblinqx crm formulieren klantformulieren schademelding opzegging finconnect kennisbank support trainingen nazorg',
+  links:[
+   {titel:'Supportsite Finly (Blinqx V&H)',url:'https://support-finly.vh.blinqx.tech/nl/'},
+   {titel:'Finly: kennisbank en handleidingen eBlinqx CRM',url:'https://www.getfinly.com/kennisbank'},
+   {titel:'Finly: klantformulieren',url:'https://www.getfinly.com/kennisbank/klant-formulieren'},
+   {titel:'Faster Forward: gemakkelijk formulieren toesturen met Finly',url:'https://support.fasterforward.nl/kennisbank/gemakkelijk-formulieren-toesturen-met-finly/'},
+   {titel:'Finly: Finconnect FAQ',url:'https://www.getfinly.com/finconnect-faq'},
+   {titel:'Blinqx V&H: supportoverzicht',url:'https://blinqx.tech/sectoren-overzicht/verzekering-hypotheek/support'}
+  ],
+  body:`Finly is het CRM van eBlinqx voor Verzekering & Hypotheek. Met de formulieren in Finly laat je klanten zelf gegevens aanleveren, bijvoorbeeld een schademelding of een opzegging, zonder dat je kantoor alles handmatig hoeft over te nemen.
+
+## Waar gebruik je klantformulieren voor
+- inventarisatie vooraf, zodat het eerste gesprek over advies gaat in plaats van over gegevens verzamelen
+- schademeldingen en opzeggingen
+- nazorg: de klant geeft wijzigingen door, zoals een nieuwe baan, verhuizing of gezinsuitbreiding
+
+## Formulieren op het Adviesforum
+Heb je (nog) geen formulieren in je CRM, gebruik dan de formulieren bij Hulpmiddelen: inventarisatie en klantprofiel, documentenchecklist, wijziging doorgeven en de periodieke nazorgcheck. Je maakt er een klantlink van; de klant vult in en stuurt het overzicht naar jou. Er wordt niets op het forum opgeslagen.
+
+## Hulp en training
+- De kennisbank van Finly heeft handleidingen voor het CRM, de modules (koppelingen, agenda, formulieren) en trainingen.
+- Voor problemen met eBlinqx CRM kun je terecht bij support-crm@blinqx.tech.
+
+## Let op
+Bij klantformulieren verwerk je persoonsgegevens. Vraag alleen wat je nodig hebt, leg vast waarom, en bewaar de gegevens in het klantdossier en niet in losse mailboxen.
+
+Bron: openbare zoekresultaten over de kennisbank van Finly en Faster Forward op 2 oktober 2026. De pagina's zelf konden bij het opstellen niet worden geopend; controleer de werking in je eigen omgeving.`},
  {id:'k13',cat:'adv',titel:'Adviesbox Online koppelen aan eBlinqx (GUID en HBX-export)',auteur:'u6',datum:'2026-10-02T22:00:00',herzienVoor:'2027-04-02',bron:null,gecontroleerd:false,
   kw:'adviesbox adviesbox online eblinqx fastlane koppeling guid hbx export naw elements importkoppeling softwarekoppelingen faster forward adviespakket',
   links:[
