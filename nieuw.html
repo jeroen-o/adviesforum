@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wat is nieuw – Adviesforum</title>
+<meta name="description" content="Wat is nieuw op het Adviesforum: overzicht van nieuwe onderdelen en verbeteringen voor financieel adviseurs, per datum en per thema.">
+<style>
+@font-face{font-family:Montserrat;font-style:normal;font-weight:400;font-display:swap;src:url(fonts/montserrat-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:600;font-display:swap;src:url(fonts/montserrat-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:700;font-display:swap;src:url(fonts/montserrat-latin-700-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:800;font-display:swap;src:url(fonts/montserrat-latin-800-normal.woff2) format('woff2')}
+:root{
+  --geel:#FFD200;--geel-donker:#E6BD00;--geel-zacht:#FFF6C7;
+  --zwart:#141414;--tekst:#1F1F1F;--grijs:#5E5E5E;--lijn:#E4E4E4;--vlak:#F7F7F5;
+  --rood:#C0392B;--rood-zacht:#FFF1F0;--groen:#1E7A4B;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:Montserrat,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;color:var(--tekst);background:#fff;line-height:1.55;font-size:15px;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+button{font-family:inherit}
+.balk{background:var(--zwart);color:#fff;font-size:12.5px;padding:8px 24px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.balk a{color:#fff;text-decoration:none;opacity:.88}
+.balk a:hover{opacity:1;text-decoration:underline}
+.kop{background:var(--geel);color:var(--zwart);padding:34px 24px 38px}
+.kop-in{max-width:1180px;margin:0 auto}
+.merk{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.08em;font-size:12px;text-transform:uppercase;margin-bottom:16px}
+.zeshoek{width:22px;height:25px;background:var(--zwart);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);flex:none}
+.terug{display:inline-block;font-size:13.5px;font-weight:700;text-decoration:none;border-bottom:2px solid var(--zwart);margin-bottom:14px}
+.kop h1{margin:0 0 10px;font-size:clamp(27px,4.2vw,40px);line-height:1.12;font-weight:800}
+.kop p{margin:0;max-width:66ch;font-size:15.5px}
+.kop .stempel{display:inline-block;margin-top:16px;font-size:12px;font-weight:700;background:var(--zwart);color:var(--geel);padding:5px 11px;border-radius:999px}
+.romp{max-width:1180px;margin:0 auto;padding:28px 24px 40px}
+h2.sectie{font-size:22px;font-weight:800;margin:28px 0 6px;padding-bottom:10px;border-bottom:3px solid var(--geel)}
+.sub{color:var(--grijs);margin:0 0 18px;max-width:70ch}
+.tegels{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.tegel{display:flex;flex-direction:column;border:1px solid var(--lijn);border-radius:14px;padding:16px 18px;text-decoration:none;background:#fff;min-width:0}
+.tegel:hover{border-color:var(--zwart)}
+.tegel .getal{font-size:30px;font-weight:800;line-height:1.1}
+.tegel .getal small{font-size:13px;font-weight:700;color:var(--grijs);margin-left:4px}
+.tegel b{display:block;font-size:15px;margin-top:4px}
+.tegel span{display:block;font-size:13px;color:var(--grijs);margin-top:4px}
+.tegel .pijl{margin-top:auto;padding-top:10px;font-size:13px;font-weight:700}
+.knoppen{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 16px}
+.chip{border-radius:999px;padding:7px 14px;font-size:13px;font-weight:700;cursor:pointer;border:1px solid #CFCFCF;background:#fff;color:var(--zwart)}
+.chip[aria-pressed="true"]{background:var(--zwart);color:#fff;border-color:var(--zwart)}
+.dag{margin:0 0 26px}
+.dag h3{font-size:16px;font-weight:800;margin:0 0 10px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.dag h3 .tel{font-size:12px;font-weight:700;background:var(--geel);padding:2px 9px;border-radius:999px}
+.item{border-left:4px solid var(--geel);background:var(--vlak);border-radius:0 12px 12px 0;padding:12px 16px;margin:0 0 10px}
+.item .meta{font-size:11.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--grijs);display:flex;gap:8px;flex-wrap:wrap}
+.item .meta .th{color:#7A5A00}
+.item h4{margin:3px 0 4px;font-size:15.5px;font-weight:700}
+.item p{margin:0;font-size:14px;color:#333}
+.item a.lees{font-size:13px;font-weight:700}
+.let{background:var(--rood-zacht);border-left:4px solid var(--rood);border-radius:0 10px 10px 0;padding:14px 18px;font-size:14px;margin:24px 0 0}
+.let strong{color:#A5281B}
+.voet{max-width:1180px;margin:0 auto;padding:24px 24px 40px;font-size:12.5px;color:var(--grijs)}
+.voet a{color:var(--zwart);font-weight:600}
+@media (max-width:560px){
+  .balk,.kop,.romp,.voet{padding-left:16px;padding-right:16px}
+  .tegels{grid-template-columns:minmax(0,1fr)}
+  h2.sectie{font-size:20px}
+}
+@media print{.balk,.knoppen,.terug{display:none}.kop{padding:12px 0}.item{break-inside:avoid}}
+</style>
+</head>
+<body>
+
+<div class="balk">
+  <span>Adviesforum &middot; voor en door financieel adviseurs</span>
+  <span><a href="index.html">Naar het forum</a></span>
+</div>
+
+<header class="kop">
+  <div class="kop-in">
+    <div class="merk"><span class="zeshoek" aria-hidden="true"></span>Adviesforum &middot; Nieuws</div>
+    <a class="terug" href="index.html#hulpmiddelen">&larr; Terug naar de hulpmiddelen</a>
+    <h1>Wat is nieuw op het Adviesforum</h1>
+    <p>Een overzicht van alles wat er de afgelopen tijd is bijgekomen of verbeterd: van rekentools en klantscans tot nieuwe kennisbankartikelen en FAQ. De aantallen hieronder worden live uit de inhoud van het forum geteld.</p>
+    <span class="stempel">Laatst bijgewerkt: 3 oktober 2026</span>
+  </div>
+</header>
+
+<main class="romp">
+  <h2 class="sectie">Alle onderdelen in één oogopslag</h2>
+  <p class="sub">Klik op een onderdeel om er direct naartoe te gaan.</p>
+  <div class="tegels" id="tegels"></div>
+
+  <h2 class="sectie">Wijzigingen</h2>
+  <p class="sub">Bekijk de wijzigingen per datum (nieuwste eerst) of per thema.</p>
+  <div class="knoppen" id="weergave" role="group" aria-label="Weergave">
+    <button class="chip" data-w="datum" aria-pressed="true">Per datum</button>
+    <button class="chip" data-w="thema" aria-pressed="false">Per thema</button>
+  </div>
+  <div class="knoppen" id="filter" role="group" aria-label="Filter op thema"></div>
+  <div id="log"></div>
+
+  <div class="let"><strong>Let op:</strong> alles op het Adviesforum is collegiale kennisdeling, geen klantadvies. Alleen kennisbankartikelen met het label &ldquo;Gecontroleerd&rdquo; zijn door compliance beoordeeld; nieuwe artikelen en FAQ staan als concept tot die beoordeling. Controleer altijd de actuele regels en voorwaarden voordat je iets in een klantdossier overneemt.</div>
+</main>
+
+<footer class="voet">
+  Adviesforum &middot; collegiale kennisdeling voor financieel adviseurs &middot; <a href="index.html#hulpmiddelen">Alle hulpmiddelen</a> &middot; <a href="privacy.html">Privacy</a>
+</footer>
+
+<script>window.__KB={};window.__mk=function(n){var t=(window.KENNISBANK||[]).length;var v=0;for(var k in window.__KB)v+=window.__KB[k];window.__KB[n]=t-v;};</script>
+<script src="data/adviseurs.js"></script>
+<script src="data/vragen.js"></script>
+<script src="data/vragen/hyp-acceptatie.js"></script>
+<script src="data/vragen/hyp-woning.js"></script>
+<script src="data/vragen/hyp-doelgroepen.js"></script>
+<script src="data/vragen/hyp-producten.js"></script>
+<script src="data/vragen/fisc-eigenwoning.js"></script>
+<script src="data/vragen/fisc-vermogen.js"></script>
+<script src="data/vragen/verz-inkomen.js"></script>
+<script src="data/vragen/verz-schade.js"></script>
+<script src="data/vragen/pens.js"></script>
+<script src="data/vragen/kred.js"></script>
+<script src="data/vragen/comp.js"></script>
+<script src="data/vragen/software.js"></script>
+<script src="data/rekentools-index.js"></script>
+<script src="data/kennisbank.js"></script><script>__mk('basis')</script>
+<script src="data/kennisbank-planning.js"></script><script>__mk('planning')</script>
+<script src="data/kennisbank-geldverstrekkers.js"></script><script>__mk('geldverstrekkers')</script>
+<script src="data/kennisbank-eblinqx.js"></script><script>__mk('eblinqx')</script>
+<script src="data/kennisbank-afm.js"></script><script>__mk('afm')</script>
+<script src="data/kennisbank-nhg.js"></script><script>__mk('nhg')</script>
+<script src="data/kennisbank-thema.js"></script><script>__mk('thema')</script>
+<script src="data/kennisbank-kifid.js"></script><script>__mk('kifid')</script>
+<script src="data/begrippen.js"></script>
+<script src="data/faq/hypotheek.js"></script>
+<script src="data/faq/fiscaal-producten.js"></script>
+<script src="data/faq/doelgroepen-verzekeringen.js"></script>
+<script src="data/faq/pensioen-compliance.js"></script>
+<script src="data/faq/krediet-praktijk.js"></script>
+<script src="data/faq/extra-hypotheek-normen.js"></script>
+<script src="data/faq/extra-hypotheek-woning.js"></script>
+<script src="data/faq/extra-fiscaal.js"></script>
+<script src="data/faq/extra-producten.js"></script>
+<script src="data/faq/extra-doelgroepen.js"></script>
+<script src="data/faq/extra-verzekeringen.js"></script>
+<script src="data/faq/extra-pensioen.js"></script>
+<script src="data/faq/extra-compliance.js"></script>
+<script src="data/faq/extra-krediet.js"></script>
+<script src="data/faq/extra-praktijk.js"></script>
+<script src="data/faq/software-blinqx.js"></script>
+<script src="data/faq/software-eblinqx.js"></script>
+<script src="data/faq/afm.js"></script>
+<script src="data/faq/nhg-2026.js"></script>
+<script src="data/partijen.js"></script>
+<script src="data/sjablonen.js"></script>
+<script src="data/kalender.js"></script>
+<script src="data/levensgebeurtenissen.js"></script>
+<script>
+(function(){
+'use strict';
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+function n(x){return Number(x||0).toLocaleString('nl-NL');}
+function len(a){return Array.isArray(a)?a.length:0;}
+var W=window, KB=W.KENNISBANK||[], FAQ=W.FAQ||[], VR=W.VRAGEN_DATA||[];
+
+/* ---------- onderdelen met actuele aantallen ---------- */
+var scans=['scan-nazorg-jaarlijks','scan-hypotheek','scan-aflossingsvrij','scan-overlijdensrisico','scan-pensioen','scan-schadeverzekeringen','scan-autoverzekering','scan-bedrijfsverzekeringen','scan-uitvaart','scan-klanttevredenheid'];
+var formulieren=['inventarisatie','documentenchecklist','afwijkend-advies','gespreksverslag','nazorg-check','wijziging-doorgeven'];
+var gecontroleerd=KB.filter(function(a){return a.gecontroleerd;}).length;
+var voorbeeld=VR.filter(function(v){return v.voorbeeld;}).length;
+var afmFaq=FAQ.filter(function(f){return /^afm-/.test(f.id);}).length;
+var nhgFaq=FAQ.filter(function(f){return /^nhg26-/.test(f.id);}).length;
+var geverifieerd=(W.ADVISEURS||[]).filter(function(a){return a.geverifieerd;}).length;
+var kalItems=W.KALENDER&&Array.isArray(W.KALENDER.items)?W.KALENDER.items.length:0;
+
+var T=[
+ {g:len(W.REKENTOOLS),e:'tools',t:'Rekentools',d:'Rekenhulpen voor hypotheek, rente, vermogen, pensioen, inkomen, fiscaal en verzekeringen, met fiscale normen 2026.',u:'rekentools.html'},
+ {g:2,e:'hulpen',t:'NHG-check en NHG-beheertoets',d:'Past de financiering binnen de NHG-normen 2026? En de beheertoets met de financieringslasttabel (bijlage 5).',u:'nhg-check.html',extra:'<a class="lees" href="nhg-beheertoets.html">Naar de NHG-beheertoets →</a>'},
+ {g:scans.length,e:'scans',t:'Klantscans',d:'Nazorg, hypotheek, aflossingsvrij, ORV, pensioen, schade, auto, bedrijf, uitvaart en klanttevredenheid.',u:'index.html#hulpmiddelen'},
+ {g:formulieren.length,e:'formulieren',t:'Slimme formulieren',d:'Inventarisatie, documentenchecklist, afwijkend advies, gespreksverslag, nazorg-check en wijziging doorgeven. Ook als klantlink.',u:'index.html#hulpmiddelen'},
+ {g:len(W.SJABLONEN),e:'sjablonen',t:'Sjablonen voor mails en brieven',d:'Kant-en-klare teksten met invulvelden en controlepunten.',u:'sjablonen.html'},
+ {g:kalItems,e:'data',t:'Kalender 2026–2027',d:'Belangrijke data en deadlines voor adviseurs, ook te zetten in je eigen agenda.',u:'kalender.html'},
+ W.LEVENSGEBEURTENISSEN?{g:len(W.LEVENSGEBEURTENISSEN),e:'gebeurtenissen',t:'Levensgebeurtenissen',d:'Wat verandert er bij trouwen, scheiden, overlijden, baanverlies of verhuizen? Met checklist en termijnen.',u:'levensgebeurtenissen.html'}:null,
+ {g:len(W.PARTIJEN),e:'partijen',t:'Partijenwegwijzer',d:'Banken, geldverstrekkers, verzekeraars en pensioenuitvoerders: portals, producten en voorwaarden, met bron.',u:'partijen.html'},
+ {g:KB.length,e:'artikelen',t:'Kennisbank',d:n(gecontroleerd)+' gecontroleerd door compliance, de rest is concept.',u:'index.html#kennisbank'},
+ {g:FAQ.length,e:'vragen',t:'Veelgestelde vragen (FAQ)',d:'Korte antwoorden over hypotheek, fiscaal, verzekeringen, pensioen, krediet, compliance en software.',u:'index.html#faq'},
+ {g:len(W.BEGRIPPEN),e:'begrippen',t:'Begrippenlijst A–Z',d:'Vaktermen kort en helder uitgelegd.',u:'index.html#begrippen'},
+ {g:W.__KB.kifid||0,e:'lessen',t:'Lessen uit Kifid-uitspraken',d:'Per thema de feiten, het oordeel en wat je in het dossier vastlegt.',u:'index.html#kennisbank'},
+ {g:(W.__KB.afm||0)+afmFaq,e:'items',t:'AFM-kennis',d:n(W.__KB.afm||0)+' kennisbankartikelen en '+n(afmFaq)+' FAQ op basis van AFM-publicaties.',u:'index.html#kennisbank'},
+ {g:voorbeeld,e:'vragen',t:'Voorbeeldvragen op het forum',d:'Praktijkvragen met antwoorden van collega’s, doorzoekbaar per categorie.',u:'index.html#forum'},
+ {g:geverifieerd,e:'adviseurs',t:'Inloggen adviseur',d:'Geverifieerde adviseurs loggen in met een persoonlijke code of inloglink om antwoorden te geven en te beoordelen.',u:'index.html#forum'}
+].filter(Boolean);
+document.getElementById('tegels').innerHTML=T.map(function(x){
+  return '<div class="tegel"><div class="getal">'+n(x.g)+'<small>'+esc(x.e)+'</small></div><b>'+esc(x.t)+'</b><span>'+esc(x.d)+'</span>'+
+    '<a class="pijl" href="'+esc(x.u)+'">Openen →</a>'+(x.extra?'<span>'+x.extra+'</span>':'')+'</div>';
+}).join('');
+
+/* ---------- wijzigingen (uit git-historie en pull requests, in adviseurstaal) ---------- */
+var TH={forum:'Forum en inloggen',kennis:'Kennisbank',faq:'FAQ en begrippen',reken:'Rekentools',scan:'Klantscans en formulieren',naslag:'Naslag en wegwijzers',comp:'Compliance en AFM',nhg:'NHG'};
+var L=[
+ {d:'2026-10-03',pr:25,th:'scan',t:'50 sjablonen voor mails en brieven',x:'Kant-en-klare teksten voor onder meer offerte, documenten opvragen, rentevast, nazorg, klachten, AVG en Wwft. Met invulvelden en geel gemarkeerde controlepunten.',u:'sjablonen.html'},
+ {d:'2026-10-03',pr:25,th:'naslag',t:'Kalender 2026–2027 voor adviseurs',x:'Alle belangrijke data en deadlines op een rij, plus wat er per 1 januari 2027 verandert. Te exporteren naar je eigen agenda.',u:'kalender.html'},
+ {d:'2026-10-03',pr:25,th:'kennis',t:'17 nieuwe thema-artikelen',x:'Praktische artikelen over onder meer de Wtp, scheiding, senioren, starters, ORV, AOV, verduurzamen, erfpacht, tweede woning, BKR en studieschuld.',u:'index.html#kennisbank'},
+ {d:'2026-10-03',pr:25,th:'faq',t:'Begrippenlijst uitgebreid naar 418 termen',x:'Meer vaktermen uitgelegd, zodat je ze snel kunt opzoeken of naar een klant kunt doorsturen.',u:'index.html#begrippen'},
+ {d:'2026-10-03',pr:24,th:'comp',t:'Lessen uit Kifid-uitspraken',x:'15 artikelen met per uitspraak de feiten, het oordeel en de les voor je eigen dossier. De kennisbanklijst past ook weer goed op je telefoon.',u:'index.html#kennisbank'},
+ {d:'2026-10-03',pr:23,th:'reken',t:'275 rekentools, los vindbaar',x:'Alle rekentools staan nu afzonderlijk in de zoekfunctie onder Hulpmiddelen. De fiscale normen 2026 zijn gecontroleerd tegen officiële bronnen; de Zvw-grondslag en huurtoeslag zijn gecorrigeerd.',u:'rekentools.html'},
+ {d:'2026-10-03',pr:23,th:'naslag',t:'Partijenwegwijzer: 75 partijen',x:'Top 10 per categorie en een filter op categorie (hypotheek, leven, schade, inkomen en meer).',u:'partijen.html'},
+ {d:'2026-10-03',pr:23,th:'forum',t:'Menu blijft in beeld',x:'De bovenbalk blijft staan tijdens het scrollen, zodat je sneller wisselt tussen forum, kennisbank en FAQ.',u:'index.html'},
+ {d:'2026-10-03',pr:22,th:'forum',t:'Nettere adviseurstabel',x:'Kleine verbetering in de weergave van de adviseurs.',u:'index.html'},
+ {d:'2026-10-03',pr:21,th:'forum',t:'Inloggen als adviseur',x:'Log in met je persoonlijke code of via de inloglink uit de mail van de beheerder. Kies zelf of je ingelogd blijft op dit apparaat of alleen voor deze sessie.',u:'index.html'},
+ {d:'2026-10-03',pr:20,th:'faq',t:'Handleiding bijgewerkt; looptijdrente toegelicht',x:'De handleiding legt uit hoe je zonder inloggen een vraag stelt, je aanmeldt en geverifieerd wordt. Looptijdrente staat nu in de FAQ en de begrippenlijst.',u:'index.html#faq'},
+ {d:'2026-10-03',pr:19,th:'forum',t:'Vraag stellen zonder inloggen en badge Geverifieerd',x:'Iedereen kan een vraag insturen. Adviseurs die door de beheerder zijn goedgekeurd krijgen een vinkje bij hun naam.',u:'index.html'},
+ {d:'2026-10-03',pr:19,th:'reken',t:'Beleggingsscenario’s',x:'Nieuwe rekentool om verschillende rendementsscenario’s naast elkaar te zetten.',u:'rekentools.html'},
+ {d:'2026-10-03',pr:18,th:'reken',t:'Rekentools uitgebreid',x:'Onder meer aanbiedingen vergelijken, bouwdepot, risicoklasse, omslagrente en slottermijn.',u:'rekentools.html'},
+ {d:'2026-10-03',pr:17,th:'nhg',t:'NHG-check 2026 en NHG-beheertoets',x:'Controleer snel of een financiering binnen de NHG-normen 2026 past, en voer de beheertoets uit met de financieringslasttabel (bijlage 5).',u:'nhg-check.html'},
+ {d:'2026-10-02',pr:16,th:'comp',t:'Vergelijkingskaart in plaats van dienstverleningsdocument',x:'Teksten op het forum (28 plekken) en de begrippenlijst verwijzen nu naar de vergelijkingskaart.',u:'index.html#kennisbank'},
+ {d:'2026-10-02',pr:15,th:'nhg',t:'NHG 2026: artikelen, FAQ en documenten',x:'8 kennisbankartikelen en 100 FAQ over de Voorwaarden & Normen 2026, plus de beheertabel en checklists als download.',u:'index.html#kennisbank'},
+ {d:'2026-10-02',pr:14,th:'comp',t:'AFM-kennis',x:'8 kennisbankartikelen en 55 FAQ op basis van AFM-publicaties, en getoetste antwoorden op compliancevragen.',u:'index.html#kennisbank'},
+ {d:'2026-10-02',pr:13,th:'scan',t:'Tien klantscans',x:'Nazorg, hypotheek, aflossingsvrij, overlijdensrisico, pensioen, schade, auto, bedrijf, uitvaart en klanttevredenheid.',u:'index.html#hulpmiddelen'},
+ {d:'2026-10-02',pr:12,th:'naslag',t:'Partijenwegwijzer verdiept',x:'Meer partijen en kenmerken, plus 6 vergelijkende artikelen over voorwaarden van geldverstrekkers.',u:'partijen.html'},
+ {d:'2026-10-02',pr:12,th:'kennis',t:'eBlinqx en Quinn',x:'3 kennisbankartikelen en 62 FAQ over eBlinqx en de AI-assistent Quinn.',u:'index.html#kennisbank'},
+ {d:'2026-10-02',pr:11,th:'kennis',t:'Adviesbox-handleiding per onderwerp',x:'Uitgebreid kennisbankartikel en 41 extra software-FAQ.',u:'index.html#kennisbank'},
+ {d:'2026-10-02',pr:10,th:'reken',t:'20 eigen rekenhulpen',x:'De eerste reeks rekenhulpen, gekoppeld onder Hulpmiddelen.',u:'rekentools.html'},
+ {d:'2026-10-02',pr:9,th:'forum',t:'122 open vragen beantwoord',x:'Antwoorden op open vragen over hypotheek, compliance, fiscaal, verzekeringen, pensioen, krediet en software, plus supportinformatie over Blinqx V&H.',u:'index.html#forum'},
+ {d:'2026-10-02',pr:8,th:'scan',t:'Formulieren via je eigen mailprogramma',x:'Ingevulde formulieren gaan via je eigen mailprogramma; er hoeft niets meer geactiveerd te worden.',u:'index.html#hulpmiddelen'},
+ {d:'2026-10-02',pr:7,th:'scan',t:'Zes slimme formulieren met klantmodus',x:'Inventarisatie, documentenchecklist, afwijkend advies, gespreksverslag, nazorg-check en wijziging doorgeven. Ook als link naar de klant.',u:'inventarisatie.html'},
+ {d:'2026-10-02',pr:6,th:'naslag',t:'Partijenwegwijzer gestart',x:'Eerste versie met 50 banken, geldverstrekkers, verzekeraars en pensioenfondsen.',u:'partijen.html'},
+ {d:'2026-10-02',pr:5,th:'forum',t:'1.200 voorbeeldvragen',x:'Praktijkvragen met antwoorden van collega’s. Het automatische antwoord verschijnt pas als je een vraag opent.',u:'index.html#forum'},
+ {d:'2026-10-02',pr:4,th:'faq',t:'FAQ naar 3.000 vragen',x:'Grote uitbreiding over alle thema’s. Het automatische antwoord toont maximaal 2 FAQ-treffers en de best passende rekenhulp.',u:'index.html#faq'},
+ {d:'2026-10-02',pr:4,th:'reken',t:'Rekenhulpen en verzekeringstools',x:'Extra aflossen, rentemiddeling, erfpacht, draagplicht, oversluiten, kosten koper, LTV, restschuld op pensioendatum, ORV, AOV-tekort, inkomen bij ziekte, werkloosheid en herbouwwaarde.',u:'index.html#hulpmiddelen'},
+ {d:'2026-10-02',pr:4,th:'kennis',t:'Hypothecaire planning',x:'14 kennisbankartikelen over de thema’s van de hypothecair planner.',u:'index.html#kennisbank'},
+ {d:'2026-10-02',pr:3,th:'faq',t:'FAQ, begrippenlijst en hulpmiddelen',x:'Start van de FAQ en de begrippenlijst A–Z, het tabblad Hulpmiddelen en de privacyverklaring.',u:'index.html#hulpmiddelen'},
+ {d:'2026-10-02',pr:2,th:'comp',t:'Leennormen 2026, AFM-leidraad en wetgeving',x:'Kennisbank over de leennormen 2026 en de AFM-leidraad, een overzicht van wet- en regelgeving en het aanmeldformulier voor adviseurs.',u:'wetgeving.html'},
+ {d:'2026-10-02',pr:1,th:'kennis',t:'Werkinstructie financieringsopzet',x:'Volledige werkinstructie voor het opstellen van een financieringsopzet.',u:'werkinstructie-financieringsopzet.html'}
+];
+var MAAND=['januari','februari','maart','april','mei','juni','juli','augustus','september','oktober','november','december'];
+function datum(s){var p=s.split('-');return (+p[2])+' '+MAAND[+p[1]-1]+' '+p[0];}
+var S={w:'datum',f:'alle'};
+function item(x,toonDatum){return '<div class="item"><div class="meta"><span class="th">'+esc(TH[x.th])+'</span>'+(toonDatum?'<span>'+datum(x.d)+'</span>':'')+'</div><h4>'+esc(x.t)+'</h4><p>'+esc(x.x)+' <a class="lees" href="'+esc(x.u)+'">Bekijken →</a></p></div>';}
+function groep(titel,lijst,toonDatum){return '<section class="dag"><h3>'+esc(titel)+' <span class="tel">'+lijst.length+'</span></h3>'+lijst.map(function(x){return item(x,toonDatum);}).join('')+'</section>';}
+function render(){
+  var lijst=L.filter(function(x){return S.f==='alle'||x.th===S.f;});
+  var out='';
+  if(S.w==='datum'){
+    var data=[];lijst.forEach(function(x){if(data.indexOf(x.d)<0)data.push(x.d);});
+    out=data.map(function(d){return groep(datum(d),lijst.filter(function(x){return x.d===d;}),false);}).join('');
+  }else{
+    out=Object.keys(TH).map(function(k){var l=lijst.filter(function(x){return x.th===k;});return l.length?groep(TH[k],l,true):'';}).join('');
+  }
+  document.getElementById('log').innerHTML=out||'<p>Geen wijzigingen in dit thema.</p>';
+  document.getElementById('filter').innerHTML=[['alle','Alle thema’s']].concat(Object.keys(TH).map(function(k){return [k,TH[k]];})).map(function(p){return '<button class="chip" data-f="'+p[0]+'" aria-pressed="'+(S.f===p[0])+'">'+esc(p[1])+'</button>';}).join('');
+  Array.prototype.forEach.call(document.querySelectorAll('#weergave .chip'),function(b){b.setAttribute('aria-pressed',String(b.dataset.w===S.w));});
+}
+document.getElementById('weergave').addEventListener('click',function(e){var b=e.target.closest('[data-w]');if(b){S.w=b.dataset.w;render();}});
+document.getElementById('filter').addEventListener('click',function(e){var b=e.target.closest('[data-f]');if(b){S.f=b.dataset.f;render();}});
+render();
+})();
+</script>
+</body>
+</html>

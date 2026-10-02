@@ -3,7 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Schadeverzekeringscan</title>
+<title>Schadeverzekeringsscan – Adviesforum</title>
+<meta name="description" content="Klantscan voor particulieren: woning, inboedel, aansprakelijkheid, kostbaarheden en verbouwingen naast de lopende schadeverzekeringen.">
+<meta property="og:title" content="Schadeverzekeringsscan – Adviesforum">
+<meta property="og:description" content="Klantscan voor particulieren: woning, inboedel, aansprakelijkheid, kostbaarheden en verbouwingen naast de lopende schadeverzekeringen.">
+<meta property="og:type" content="website">
 <style>
 
   :root{
@@ -196,7 +200,7 @@
 <header class="hero">
   <div class="wrap">
     <a class="back noprint" href="index.html#hulpmiddelen" style="color:#fff">&larr; Terug naar het Adviesforum</a>
-    <h1>Schadeverzekeringscan</h1>
+    <h1>Schadeverzekeringsscan</h1>
     <p class="sub" id="sub">Een check voor particulieren: woning, inboedel, aansprakelijkheid, kostbare spullen, verbouwingen en bijzondere situaties tegenover de verzekeringen die er zijn.</p>
     <p class="meta">Klantscan &middot; ongeveer 7 minuten &middot; geen advies</p>
   </div>
@@ -312,14 +316,14 @@
   }
   window.FORM = {
     id: 'scan-schadeverzekeringen', klant: true,
-    title: 'Schadeverzekeringscan',
+    title: 'Schadeverzekeringsscan',
     sub: 'Een check voor particulieren: woning, inboedel, aansprakelijkheid, kostbare spullen, verbouwingen en bijzondere situaties tegenover de verzekeringen die er zijn.',
     subKlant: 'Zijn je huis, je spullen en je aansprakelijkheid nog goed verzekerd? Beantwoord de vragen; je ziet meteen welke punten je met je adviseur kunt bespreken.',
     meta: 'Klantscan &middot; ongeveer 7 minuten &middot; geen advies',
     metaKlant: 'Ongeveer 7 minuten &middot; geen advies, je adviseur kijkt met je mee',
     klantIntro: 'Je hoeft niets op te zoeken. Vink bij je verzekeringen alleen aan wat je zeker weet; je adviseur controleert de rest.',
-    docTitle: 'Schadeverzekeringscan',
-    mailSubject: function(V){ return 'Schadeverzekeringscan' + (V('naam') ? ' - ' + V('naam') : ''); },
+    docTitle: 'Schadeverzekeringsscan',
+    mailSubject: function(V){ return 'Schadeverzekeringsscan' + (V('naam') ? ' - ' + V('naam') : ''); },
     footer: S.foot, docFoot: S.docFoot,
     sections: [
       { id: 'over', title: 'Over jou', fields: S.over(false).concat([

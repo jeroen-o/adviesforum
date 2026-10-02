@@ -3,7 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Partijenwegwijzer</title>
+<title>Partijenwegwijzer – Adviesforum</title>
+<meta name="description" content="Wegwijzer langs banken, geldverstrekkers, verzekeraars, PPI’s en pensioenfondsen: intermediairsites, acceptatiegidsen en kenmerken met bronlink.">
+<meta property="og:title" content="Partijenwegwijzer – Adviesforum">
+<meta property="og:description" content="Wegwijzer langs banken, geldverstrekkers, verzekeraars, PPI’s en pensioenfondsen: intermediairsites, acceptatiegidsen en kenmerken met bronlink.">
+<meta property="og:type" content="website">
 <style>
   :root{
     --primary:#003057;
@@ -109,11 +113,11 @@
     <a class="terug" href="index.html#hulpmiddelen">← Terug naar het Adviesforum</a>
     <h1>Partijenwegwijzer</h1>
     <p class="sub">Wat banken, geldverstrekkers, verzekeraars, lijfrenteaanbieders, kredietverstrekkers, PPI's en pensioenfondsen openbaar voor adviseurs publiceren: intermediairsites, acceptatiegidsen, opvallende productkenmerken en wie bij wie hoort. Elk kenmerk heeft een bronlink.</p>
-    <p class="meta" id="meta">Peildatum 3 oktober 2026</p>
+    <p class="meta" id="meta">Peildatum 2 oktober 2026</p>
   </div>
 </header>
 <div class="wrap">
-  <div class="let-op" role="note"><strong>Let op:</strong> Overzicht op basis van openbare informatie (peildatum 3 oktober 2026). Voorwaarden en acceptatiebeleid veranderen: controleer altijd de actuele informatie bij de partij zelf.</div>
+  <div class="let-op" role="note"><strong>Let op:</strong> Overzicht op basis van openbare informatie (peildatum 2 oktober 2026). Voorwaarden en acceptatiebeleid veranderen: controleer altijd de actuele informatie bij de partij zelf.</div>
   <div class="toolbar">
     <input id="zoek" type="search" placeholder="Zoek op partij, product of kenmerk, bijv. verhuisregeling, boetevrij, senioren, status gewijzigd&hellip;" aria-label="Zoeken in partijen">
     <select id="type" aria-label="Filter op type">
@@ -213,7 +217,7 @@
     return {el:a,type:p.type,cats:p.categorieen||[],tekst:zoektekst};
   });
 
-  document.getElementById('meta').textContent=data.length+' partijen · peildatum 3 oktober 2026 · elk kenmerk met bronlink';
+  document.getElementById('meta').textContent=data.length+' partijen · peildatum 2 oktober 2026 · elk kenmerk met bronlink';
 
   function update(){
     var q=zoek.value.trim().toLowerCase(),t=typeSel.value,c=catSel.value,zicht=0;

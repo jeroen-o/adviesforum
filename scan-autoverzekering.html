@@ -3,7 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Autoverzekeringscan</title>
+<title>Autoverzekeringsscan – Adviesforum</title>
+<meta name="description" content="Korte klantscan over gebruik en verzekering van de auto: waarde, bestuurders, kilometers en dekking. Laat zien waar polis en situatie uiteenlopen.">
+<meta property="og:title" content="Autoverzekeringsscan – Adviesforum">
+<meta property="og:description" content="Korte klantscan over gebruik en verzekering van de auto: waarde, bestuurders, kilometers en dekking. Laat zien waar polis en situatie uiteenlopen.">
+<meta property="og:type" content="website">
 <style>
 
   :root{
@@ -196,7 +200,7 @@
 <header class="hero">
   <div class="wrap">
     <a class="back noprint" href="index.html#hulpmiddelen" style="color:#fff">&larr; Terug naar het Adviesforum</a>
-    <h1>Autoverzekeringscan</h1>
+    <h1>Autoverzekeringsscan</h1>
     <p class="sub" id="sub">Laat de klant in een paar minuten vertellen hoe de auto wordt gebruikt en verzekerd. Je ziet meteen waar dekking en situatie mogelijk niet meer op elkaar aansluiten.</p>
     <p class="meta">Klantscan &middot; ongeveer 5 minuten &middot; geen advies</p>
   </div>
@@ -302,14 +306,14 @@
   }
   window.FORM = {
     id: 'scan-autoverzekering', klant: true,
-    title: 'Autoverzekeringscan',
+    title: 'Autoverzekeringsscan',
     sub: 'Laat de klant in een paar minuten vertellen hoe de auto wordt gebruikt en verzekerd. Je ziet meteen waar dekking en situatie mogelijk niet meer op elkaar aansluiten.',
     subKlant: 'Past je autoverzekering nog bij je auto en hoe je rijdt? Beantwoord een paar korte vragen; je adviseur kijkt daarna met je mee.',
     meta: 'Klantscan &middot; ongeveer 5 minuten &middot; geen advies',
     metaKlant: 'Ongeveer 5 minuten &middot; geen advies, je adviseur kijkt met je mee',
     klantIntro: 'Auto&rsquo;s worden ouder, situaties veranderen. Met deze vragen kan je adviseur nagaan of je verzekering nog past. Weet je iets niet? Kies &lsquo;Weet ik niet&rsquo; of laat het leeg.',
-    docTitle: 'Autoverzekeringscan',
-    mailSubject: function(V){ return 'Autoverzekeringscan' + (V('naam') ? ' - ' + V('naam') : ''); },
+    docTitle: 'Autoverzekeringsscan',
+    mailSubject: function(V){ return 'Autoverzekeringsscan' + (V('naam') ? ' - ' + V('naam') : ''); },
     footer: S.foot, docFoot: S.docFoot,
     sections: [
       { id: 'over', title: 'Over jou', fields: S.over(false) },

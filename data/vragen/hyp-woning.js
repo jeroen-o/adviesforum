@@ -86,16 +86,16 @@ Bijzondere voorwaarden waar ik op let:
 - VvE: bij appartementen een gesplitst complex en een actieve VvE.
 Laat de taxateur de korting en het beding vermelden. In het dossier leg ik vast welke waarde is gebruikt, welke bedingen gelden en dat de klant de gevolgen bij verkoop kent.`}
   ]},
- {id:'vbb-011',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2025-11-08T13:05:00',views:462,tags:['NHG','kostengrens','energiebesparing'],beste:'vbb-011-a1',
+ {id:'vbb-011',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2025-11-08T13:05:00',views:462,tags:['NHG','NHG-grens','kostengrens','energiebesparing'],beste:'vbb-011-a1',
   titel:'NHG en extra ruimte voor energiebesparende maatregelen',
-  body:`Een starter wil een woning kopen met NHG en direct isoleren en zonnepanelen laten plaatsen. Hoe werkt de verhoogde kostengrens bij energiebesparende maatregelen en welke stukken heb ik nodig?`,
+  body:`Een starter wil een woning kopen met NHG en direct isoleren en zonnepanelen laten plaatsen. Hoe werkt de verhoogde NHG-grens bij energiebesparende maatregelen en welke stukken heb ik nodig?`,
   antwoorden:[
-   {id:'vbb-011-a1',auteur:'u1',datum:'2025-11-09T19:17:00',rA:{u4:4,u6:5},rAdv:{},body:`Bij NHG geldt een hogere kostengrens als energiebesparende voorzieningen worden meegefinancierd. De actuele bedragen staan in de voorwaarden en normen van NHG van het lopende jaar; die wijzigen jaarlijks. Je hebt een specificatie of offerte van de maatregelen nodig en de maatregelen moeten in de lijst van toegestane voorzieningen passen. Controleer ook of de geldverstrekker een bouwdepot verplicht stelt. In het dossier leg ik de offertes en de berekening van de kostengrens vast.`},
-   {id:'vbb-011-a2',auteur:'u5',datum:'2025-11-10T23:08:00',rA:{u4:4,u2:3,u3:5,u8:4},rAdv:{u4:5,u3:4,u8:3},body:`Let op de samenhang met de leennormen: de extra leenruimte voor energiebesparende voorzieningen volgt uit de leennormen en kan afhangen van het energielabel en een energiebespaarbudget of maatwerkadvies. Dat is iets anders dan de NHG-kostengrens. Beide apart toetsen.`}
+   {id:'vbb-011-a1',auteur:'u1',datum:'2025-11-09T19:17:00',rA:{u4:4,u6:5},rAdv:{},body:`Bij NHG geldt een hogere NHG-grens als energiebesparende voorzieningen worden meegefinancierd. De actuele bedragen staan in de voorwaarden en normen van NHG van het lopende jaar; die wijzigen jaarlijks. Je hebt een specificatie of offerte van de maatregelen nodig en de maatregelen moeten in de lijst van toegestane voorzieningen passen. Controleer ook of de geldverstrekker een bouwdepot verplicht stelt. In het dossier leg ik de offertes en de berekening van de NHG-grens vast.`},
+   {id:'vbb-011-a2',auteur:'u5',datum:'2025-11-10T23:08:00',rA:{u4:4,u2:3,u3:5,u8:4},rAdv:{u4:5,u3:4,u8:3},body:`Let op de samenhang met de leennormen: de extra leenruimte voor energiebesparende voorzieningen volgt uit de leennormen en kan afhangen van het energielabel en een energiebespaarbudget of maatwerkadvies. Dat is iets anders dan de NHG-grens. Beide apart toetsen.`}
   ]},
- {id:'vbb-012',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2025-11-12T08:55:00',views:508,tags:['NHG','verbouwing','kostengrens'],beste:'vbb-012-a1',
+ {id:'vbb-012',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2025-11-12T08:55:00',views:508,tags:['NHG','verbouwing','NHG-grens','kostengrens'],beste:'vbb-012-a1',
   titel:'NHG bij verbouwing: telt de waarde voor of na verbouwing?',
-  body:`Een klant koopt een woning en wil die direct verbouwen met NHG. Hoe toets ik de kostengrens: op de koopsom plus verbouwing of op de waarde na verbouwing?`,
+  body:`Een klant koopt een woning en wil die direct verbouwen met NHG. Hoe toets ik de NHG-grens: op de koopsom plus verbouwing of op de waarde na verbouwing?`,
   antwoorden:[
    {id:'vbb-012-a1',auteur:'u4',datum:'2025-11-13T23:35:00',rA:{u2:4,u3:5,u1:5},rAdv:{u2:5},body:`Bij aankoop met verbouwing kijkt NHG naar de totale verwervingskosten inclusief verbouwing en de waarde na verbouwing volgens het taxatierapport. Controleer de actuele NHG-voorwaarden voor de exacte berekening, want de regels over welke kosten meetellen en tot welk percentage van de waarde gefinancierd mag worden zijn specifiek. Ik zet de berekening in het dossier met de taxatie en de verbouwingsspecificatie als onderbouwing.`},
    {id:'vbb-012-a2',auteur:'u1',datum:'2025-11-15T04:06:00',rA:{u5:3,u4:3},rAdv:{},body:`Praktisch tip: laat de taxateur expliciet een waarde na verbouwing opnemen die aansluit op dezelfde specificatie als het bouwdepot. Zonder die waarde wordt de aanvraag vaak teruggelegd.`}
@@ -104,7 +104,7 @@ Laat de taxateur de korting en het beding vermelden. In het dossier leg ik vast 
   titel:'NHG bij overname van de woning na scheiding',
   body:`Een cliënt wil na de scheiding de woning overnemen en de ex-partner uitkopen. De bestaande hypotheek heeft NHG. Kan de nieuwe financiering ook met NHG en waar moet ik op letten?`,
   antwoorden:[
-   {id:'vbb-013-a1',auteur:'u5',datum:'2025-11-16T03:08:00',rA:{u6:3},rAdv:{u6:5},body:`Dat kan in principe, mits de nieuwe financiering binnen de NHG-voorwaarden en de kostengrens valt. Aandachtspunten die ik controleer:
+   {id:'vbb-013-a1',auteur:'u5',datum:'2025-11-16T03:08:00',rA:{u6:3},rAdv:{u6:5},body:`Dat kan in principe, mits de nieuwe financiering binnen de NHG-voorwaarden en binnen de NHG-grens valt. Aandachtspunten die ik controleer:
 - de uitkoopsom en de verdeling uit het echtscheidingsconvenant;
 - het ontslag uit de hoofdelijke aansprakelijkheid van de ex-partner;
 - de toetsing van de woonlasten op het eigen inkomen, inclusief ontvangen of te betalen alimentatie volgens de normen.
@@ -122,11 +122,11 @@ Voor de woonlastentoets na scheiding kent NHG specifieke regels; controleer de a
   titel:'Hypotheek verhogen voor verduurzaming bij een lopende NHG-lening',
   body:`Een klant heeft een hypotheek met NHG en wil een tweede hypotheek voor isolatie en een warmtepomp. Moet de verhoging ook onder NHG en kan dat bij de huidige geldverstrekker?`,
   antwoorden:[
-   {id:'vbb-015-a1',auteur:'u4',datum:'2025-11-22T01:49:00',rA:{},rAdv:{},body:`Een verhoging voor energiebesparende voorzieningen kan onder voorwaarden met NHG, maar dan moet de totale lening binnen de kostengrens en de NHG-normen blijven. Controleer bij de huidige geldverstrekker of een verhoging met NHG mogelijk is en of er een nieuwe taxatie of modelmatige waardering nodig is. Als de verhoging niet met NHG kan, let dan op de gevolgen voor de rente van de bestaande leningdelen. Ik leg de vergelijking tussen de opties vast.`},
+   {id:'vbb-015-a1',auteur:'u4',datum:'2025-11-22T01:49:00',rA:{},rAdv:{},body:`Een verhoging voor energiebesparende voorzieningen kan onder voorwaarden met NHG, maar dan moet de totale lening binnen de NHG-grens en de NHG-normen blijven. Controleer bij de huidige geldverstrekker of een verhoging met NHG mogelijk is en of er een nieuwe taxatie of modelmatige waardering nodig is. Als de verhoging niet met NHG kan, let dan op de gevolgen voor de rente van de bestaande leningdelen. Ik leg de vergelijking tussen de opties vast.`},
    {id:'vbb-015-a2',auteur:'u5',datum:'2025-11-22T17:51:00',rA:{u4:4,u3:4,u1:4},rAdv:{u1:4},body:`Kijk ook naar alternatieven zoals een energiebespaarlening of een subsidie. Voor sommige klanten is dat goedkoper of eenvoudiger dan een verhoging. Leg vast dat je die alternatieven hebt besproken.`}
   ]},
  {id:'vbb-016',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2025-11-26T14:25:00',views:356,tags:['NHG','rentekorting','vergelijking'],beste:'vbb-016-a1',
-  titel:'Is NHG altijd voordeliger als de woning onder de kostengrens valt?',
+  titel:'Is NHG altijd voordeliger als de woning onder de NHG-grens valt?',
   body:`Een klant met veel eigen geld twijfelt of NHG zin heeft. De lening is laag ten opzichte van de woningwaarde. Hoe onderbouwen jullie het advies wel of geen NHG?`,
   antwoorden:[
    {id:'vbb-016-a1',auteur:'u1',datum:'2025-11-27T23:16:00',rA:{},rAdv:{},body:`Niet automatisch. Bij een lage verhouding tussen lening en waarde is het renteverschil met en zonder NHG soms beperkt, terwijl de borgtochtprovisie eenmalig wordt betaald. Ik reken beide varianten door over de rentevaste periode en kijk naar de risicobescherming die NHG biedt. Ik leg de berekening en de afweging van de klant vast. Uiteindelijk gaat het om de combinatie van kosten en zekerheid.`},
@@ -200,11 +200,11 @@ In het dossier leg ik vast wat de situatie is, welke toestemming is gevraagd en 
    {id:'vbb-025-a1',auteur:'u4',datum:'2025-12-27T18:02:00',rA:{u8:3},rAdv:{u7:4},body:`In de regel vragen geldverstrekkers een taxatie met inpandige opname, en een validatie-instituut zal een rapport zonder opname meestal niet valideren als regulier taxatierapport. Ik zou de makelaar van de verkoper vragen alsnog een afspraak te regelen en daarbij wijzen op het financieringsvoorbehoud. Lukt dat niet, bespreek dan met de klant dat de financiering mogelijk niet rondkomt. Ik leg vast welke pogingen zijn gedaan en wat de geldverstrekker heeft aangegeven.`},
    {id:'vbb-025-a2',auteur:'u1',datum:'2025-12-29T21:53:00',rA:{u2:5,u8:4,u7:4,u4:4},rAdv:{u4:4},body:`Ik heb dit een keer opgelost door de verkoper te laten weten dat de koper anders een beroep moet doen op het voorbehoud. Dat hielp. Vraag de acceptant van de geldverstrekker wel vooraf of er een uitzondering mogelijk is, maar reken daar niet op.`}
   ]},
- {id:'vbb-026',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2025-12-31T18:15:00',views:115,tags:['NHG','kostengrens','verduurzaming'],beste:'vbb-026-a1',
-  titel:'NHG-kostengrens bij aankoop plus verduurzaming in één keer',
-  body:`Een klant koopt een woning en wil direct isoleren en zonnepanelen laten plaatsen. Daarmee komt de totale investering dicht bij de NHG-kostengrens. Hoe bepalen jullie of NHG nog mogelijk is?`,
+ {id:'vbb-026',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2025-12-31T18:15:00',views:115,tags:['NHG','NHG-grens','kostengrens','verduurzaming'],beste:'vbb-026-a1',
+  titel:'NHG-grens bij aankoop plus verduurzaming in één keer',
+  body:`Een klant koopt een woning en wil direct isoleren en zonnepanelen laten plaatsen. Daarmee komt de totale investering dicht bij de NHG-grens. Hoe bepalen jullie of NHG nog mogelijk is?`,
   antwoorden:[
-   {id:'vbb-026-a1',auteur:'u5',datum:'2026-01-01T01:54:00',rA:{},rAdv:{u3:3},body:`Kijk naar de actuele NHG-normen: voor energiebesparende voorzieningen geldt een verhoogde kostengrens, mits de maatregelen in de financiering zijn opgenomen en worden onderbouwd met een offerte of specificatie. Ik reken de totale financieringsbehoefte door en vergelijk die met de kostengrens inclusief de verhoging. Vastleggen: de offertes, de maatregelen per post en de berekening van de kostengrens. Controleer ook of de maatregelen via een bouwdepot moeten lopen.`},
+   {id:'vbb-026-a1',auteur:'u5',datum:'2026-01-01T01:54:00',rA:{},rAdv:{u3:3},body:`Kijk naar de actuele NHG-normen: voor energiebesparende voorzieningen geldt een verhoogde NHG-grens, mits de maatregelen in de financiering zijn opgenomen en worden onderbouwd met een offerte of specificatie. Ik reken de totale financieringsbehoefte door en vergelijk die met de NHG-grens inclusief de verhoging. Vastleggen: de offertes, de maatregelen per post en de berekening van de NHG-grens. Controleer ook of de maatregelen via een bouwdepot moeten lopen.`},
    {id:'vbb-026-a2',auteur:'u4',datum:'2026-01-03T01:42:00',rA:{},rAdv:{u8:3,u1:5},body:`Aanvulling: de waarde na verbouwing moet in het taxatierapport staan als je daarop financiert. Vraag de taxateur dus om beide waarden. Geef hem daarvoor de offertes mee, zodat de bedragen in rapport en aanvraag gelijk zijn.`}
   ]},
  {id:'vbb-027',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-01-03T17:35:00',views:81,tags:['verduurzaming','energielabel','leennormen'],beste:null,

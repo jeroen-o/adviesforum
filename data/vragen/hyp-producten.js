@@ -117,7 +117,7 @@ In het dossier leg ik de keuze en de motivatie van de klant vast.`},
   titel:'NHG behouden bij oversluiten met verhoging',
   body:`Een klant heeft een hypotheek met NHG en wil oversluiten met een kleine verhoging voor een verbouwing. Kan de NHG behouden blijven en wat betekent dat voor de rente?`,
   antwoorden:[
-   {id:'vbd-015-a1',auteur:'u5',datum:'2025-11-21T19:14:00',rA:{},rAdv:{},body:`Oversluiten met NHG kan, mits de nieuwe lening binnen de geldende NHG-normen en kostengrens valt. Bij een verhoging gelden aanvullende voorwaarden, bijvoorbeeld over het doel van de verhoging. Raadpleeg de actuele voorwaarden en normen van NHG. Een hypotheek met NHG heeft meestal een lagere rente, wat het verschil met de borgtochtprovisie vaak goedmaakt. Leg de toets aan de NHG-voorwaarden vast in het dossier.`},
+   {id:'vbd-015-a1',auteur:'u5',datum:'2025-11-21T19:14:00',rA:{},rAdv:{},body:`Oversluiten met NHG kan, mits de nieuwe lening binnen de geldende NHG-normen en de NHG-grens valt. Bij een verhoging gelden aanvullende voorwaarden, bijvoorbeeld over het doel van de verhoging. Raadpleeg de actuele voorwaarden en normen van NHG. Een hypotheek met NHG heeft meestal een lagere rente, wat het verschil met de borgtochtprovisie vaak goedmaakt. Leg de toets aan de NHG-voorwaarden vast in het dossier.`},
    {id:'vbd-015-a2',auteur:'u1',datum:'2025-11-22T17:22:00',rA:{u3:3},rAdv:{},body:`Praktisch: let op dat de borgtochtprovisie opnieuw verschuldigd is over het nieuwe bedrag. Neem dat mee in de kostenvergelijking. Leg de kosten ook vast in het dossier.`}
   ]},
  {id:'vbd-016',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2025-11-25T20:05:00',views:356,tags:['rentemiddeling','vergelijking','advies'],beste:'vbd-016-a1',
@@ -517,11 +517,11 @@ In het dossier leg ik vast welke opties zijn besproken, welke keuze is gemaakt e
 Gebruik rentemiddeling.html om de varianten naast elkaar te zetten. Een opslag die hoger is dan nodig om de boete te dekken, is een verborgen kostenpost.
 In het dossier leg ik vast welke specificatie is ontvangen, hoe de varianten zijn vergeleken en waarom de klant kiest. Bij twijfel over de berekening vraag ik de geldverstrekker om een toelichting en leg ik het antwoord vast.`}
   ]},
- {id:'vbd-066',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-05-28T12:10:00',views:267,tags:['oversluiten','NHG','kostengrens'],beste:'vbd-066-a1',
+ {id:'vbd-066',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-05-28T12:10:00',views:267,tags:['oversluiten','NHG','NHG-grens','kostengrens'],beste:'vbd-066-a1',
   titel:'Oversluiten met NHG naar een andere geldverstrekker',
   body:`Een klant met NHG wil oversluiten. Kan de NHG worden overgedragen naar een nieuwe geldverstrekker of moet die opnieuw worden aangevraagd?`,
   antwoorden:[
-   {id:'vbd-066-a1',auteur:'u5',datum:'2026-05-29T08:50:00',rA:{u4:4,u3:5,u1:4,u6:5},rAdv:{u1:4,u6:5},body:`Bij oversluiten wordt NHG opnieuw aangevraagd bij de nieuwe geldverstrekker. Er gelden voorwaarden, zoals de kostengrens en het doel van de lening. De borgtochtprovisie is opnieuw verschuldigd. Raadpleeg de actuele NHG-voorwaarden. Leg de toets vast in het dossier.`}
+   {id:'vbd-066-a1',auteur:'u5',datum:'2026-05-29T08:50:00',rA:{u4:4,u3:5,u1:4,u6:5},rAdv:{u1:4,u6:5},body:`Bij oversluiten wordt NHG opnieuw aangevraagd bij de nieuwe geldverstrekker. Er gelden voorwaarden, zoals de NHG-grens en het doel van de lening. De borgtochtprovisie is opnieuw verschuldigd. Raadpleeg de actuele NHG-voorwaarden. Leg de toets vast in het dossier.`}
   ]},
  {id:'vbd-067',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-06-01T16:20:00',views:182,tags:['rente','partner','hoofdelijk'],beste:null,
   titel:'Rente-aanbod bij het toevoegen van een nieuwe partner',
@@ -682,7 +682,7 @@ In het dossier leg ik vast dat de aflossingsvorm is uitgelegd en dat de klant he
   ]},
  {id:'vbd-089',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-08-21T08:10:00',views:180,tags:['NHG','verhuisregeling','meenemen'],beste:null,
   titel:'Verhuisregeling met NHG naar een duurdere woning',
-  body:`Een klant heeft NHG en verhuist naar een woning boven de kostengrens. Kan hij de rente meenemen en wat gebeurt er met de NHG?`,
+  body:`Een klant heeft NHG en verhuist naar een woning boven de NHG-grens. Kan hij de rente meenemen en wat gebeurt er met de NHG?`,
   antwoorden:[
    {id:'vbd-089-a1',auteur:'u5',datum:'2026-08-21T21:18:00',rA:{u2:4,u7:3,u3:4},rAdv:{u2:4,u3:4},body:`De rente kan vaak worden meegenomen, maar de NHG kan niet blijven bestaan als de nieuwe financiering niet aan de NHG-voorwaarden voldoet. Sommige geldverstrekkers rekenen dan een andere rente, omdat de NHG-korting vervalt. Raadpleeg de actuele NHG-voorwaarden en de voorwaarden van de geldverstrekker. Leg de gevolgen voor de rente vast in het dossier.`}
   ]},
