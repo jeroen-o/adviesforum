@@ -83,6 +83,14 @@
   .site a{color:var(--primary);font-weight:700;text-decoration:none;overflow-wrap:anywhere}
   .site a:hover{text-decoration:underline}
   .site .geen{color:var(--muted)}
+  article.card{scroll-margin-top:150px;transition:box-shadow .3s,border-color .3s}
+  article.card.doel{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent)}
+  .kaartvoet{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;justify-content:space-between;margin-top:10px;font-size:12.5px;color:var(--muted)}
+  .kopieer{border:1px solid var(--line);background:#fff;color:var(--primary);border-radius:6px;padding:5px 10px;font-size:12.5px;font-weight:600;font-family:inherit;cursor:pointer}
+  .kopieer:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+  .kopieer.ok{border-color:#2E7D32;color:#2E7D32}
+  .themas{margin:0 0 12px;font-size:12.5px;color:var(--muted);overflow-wrap:anywhere}
+  .themas b{color:var(--primary);font-weight:700}
   .leeg{display:none;background:#fff;border:1px dashed var(--line);border-radius:10px;padding:28px;text-align:center;color:var(--muted)}
   footer{
     margin-top:34px;padding-top:20px;border-top:1px solid var(--line);
@@ -96,10 +104,11 @@
     .toolbar{position:static;padding:12px}
     #zoek,#type,#cat{flex:1 1 100%}
     .grid{grid-template-columns:1fr}
-    article.card{padding:18px 16px}
+    article.card{padding:18px 16px;scroll-margin-top:16px}
   }
   @media print{
-    .toolbar{display:none}
+    .toolbar,.kopieer{display:none}
+    article.card.doel{box-shadow:none}
     body{background:#fff}
     article.card{break-inside:avoid;border:1px solid #ccc}
     header.hero{background:#fff;color:#000;border-bottom:3px solid var(--primary)}
@@ -157,6 +166,27 @@
     'krediet':'Consumptief krediet',
     'pensioen':'Pensioen (werkgever)'
   };
+  /* Slugfunctie voor partij-ankers: IDENTIEK houden in partijen.html en vergelijken.html. */
+  function partijSlug(naam){
+    return String(naam||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase()
+      .replace(/&/g,' en ').replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'')||'partij';
+  }
+  /* Kent elke partij in window.PARTIJEN (bronvolgorde) een uniek p._slug toe; dubbel krijgt -2, -3, ... */
+  function partijSlugsToekennen(lijst){
+    var gezien={};
+    (lijst||[]).forEach(function(p){
+      var s=partijSlug(p.naam),b=s,i=2;
+      while(gezien[s]){s=b+'-'+(i++);}
+      gezien[s]=1;p._slug=s;
+    });
+  }
+  partijSlugsToekennen(window.PARTIJEN);
+
+  var NL_MAAND=['januari','februari','maart','april','mei','juni','juli','augustus','september','oktober','november','december'];
+  function datumNL(s){
+    if(!/^\d{4}-\d{2}-\d{2}$/.test(s||''))return '';
+    var d=s.split('-');return (+d[2])+' '+NL_MAAND[+d[1]-1]+' '+d[0];
+  }
   var data=(window.PARTIJEN||[]).slice().sort(function(a,b){return a.naam.localeCompare(b.naam,'nl');});
   var zoek=document.getElementById('zoek'),typeSel=document.getElementById('type'),catSel=document.getElementById('cat'),
       lijst=document.getElementById('lijst'),leeg=document.getElementById('leeg'),
@@ -180,7 +210,7 @@
   });
 
   var kaarten=data.map(function(p){
-    var a=el('article','card');
+    var a=el('article','card');a.id='partij-'+p._slug;
     a.appendChild(el('span','tag',TYPES[p.type]||p.type));
     a.appendChild(el('h2',null,p.naam));
     if(p.status){
@@ -197,6 +227,12 @@
     }
     if(p.kenmerken&&p.kenmerken.length){
       a.appendChild(el('p','sublabel','Opvallend voor adviseurs'));
+      var tel={},volg=[];
+      p.kenmerken.forEach(function(k){var t=k.thema||'Overig';if(!tel[t]){tel[t]=0;volg.push(t);}tel[t]++;});
+      volg.sort(function(x,y){return (x==='Overig')-(y==='Overig')||tel[y]-tel[x]||x.localeCompare(y,'nl');});
+      var th=el('p','themas');th.appendChild(el('b',null,p.kenmerken.length+(p.kenmerken.length===1?' kenmerk':' kenmerken')+' per thema: '));
+      th.appendChild(document.createTextNode(volg.map(function(t){return t+' ('+tel[t]+')';}).join(' · ')));
+      a.appendChild(th);
       var km=el('ul','kenmerken');
       p.kenmerken.forEach(function(k){
         var li=el('li');
@@ -212,10 +248,39 @@
     if(u){var l=el('a',null,'Naar site / adviseursinformatie ↗');l.href=u;l.target='_blank';l.rel='noopener';l.title=u;s.appendChild(l);}
     else s.appendChild(el('span','geen','Geen eigen site of adviseursportaal gevonden'));
     a.appendChild(s);
+    var voet=el('div','kaartvoet');
+    var bw=datumNL(p.bijgewerkt);
+    voet.appendChild(el('span','bijgewerkt',bw?'Bijgewerkt '+bw:'Bijwerkdatum onbekend'));
+    var kb=el('button','kopieer','Link kopiëren');kb.type='button';
+    kb.setAttribute('aria-label','Link naar '+p.naam+' kopiëren');
+    kb.addEventListener('click',function(){kopieerLink(p._slug,kb);});
+    voet.appendChild(kb);
+    a.appendChild(voet);
     var zoektekst=[p.naam,TYPES[p.type]||'',(p.producten||[]).join(' '),(p.categorieen||[]).map(function(c){return CATS[c]||c;}).join(' ')].concat((p.kenmerken||[]).map(function(k){return (k.thema||'')+' '+k.tekst;})).concat(p.status?['status gewijzigd '+p.status]:[]).join(' ').toLowerCase();
     lijst.appendChild(a);
-    return {el:a,type:p.type,cats:p.categorieen||[],tekst:zoektekst};
+    return {el:a,slug:p._slug,type:p.type,cats:p.categorieen||[],tekst:zoektekst};
   });
+  var perSlug={};kaarten.forEach(function(k){perSlug[k.slug]=k;});
+
+  function basisUrl(){return location.href.split('#')[0].split('?')[0];}
+  function kopieerLink(slug,knop){
+    var url=basisUrl()+'#partij-'+slug;
+    function klaar(ok){
+      knop.textContent=ok?'Gekopieerd':'Kopiëren mislukt';knop.classList.toggle('ok',ok);
+      if(!ok)window.prompt('Kopieer deze link:',url);
+      setTimeout(function(){knop.textContent='Link kopiëren';knop.classList.remove('ok');},2000);
+    }
+    function terugval(){
+      var t=document.createElement('textarea');t.value=url;t.setAttribute('readonly','');
+      t.style.position='fixed';t.style.top='0';t.style.left='0';t.style.opacity='0';
+      document.body.appendChild(t);t.select();
+      var ok=false;try{ok=document.execCommand('copy');}catch(e){}
+      document.body.removeChild(t);klaar(ok);
+    }
+    if(navigator.clipboard&&window.isSecureContext){
+      navigator.clipboard.writeText(url).then(function(){klaar(true);},terugval);
+    }else terugval();
+  }
 
   document.getElementById('meta').textContent=data.length+' partijen · peildatum 2 oktober 2026 · elk kenmerk met bronlink';
 
@@ -229,11 +294,66 @@
     leeg.style.display=zicht===0?'block':'none';
     teller.textContent=zicht+' van '+kaarten.length+' partijen';
   }
-  zoek.addEventListener('input',update);
-  typeSel.addEventListener('change',update);
-  catSel.addEventListener('change',update);
-  document.getElementById('wis').addEventListener('click',function(){zoek.value='';typeSel.value='';catSel.value='';update();zoek.focus();});
+  // URL-status: #partij-<slug> | #type=..&categorie=..&q=.. | ?q=..
+  function hashParams(){
+    var h=location.hash.replace(/^#/,''),r={};
+    if(!h||/^partij-/.test(h))return r;
+    h.split('&').forEach(function(d){
+      var i=d.indexOf('=');if(i<1)return;
+      var k=d.slice(0,i),v;
+      try{v=decodeURIComponent(d.slice(i+1).replace(/\+/g,' '));}catch(e){v=d.slice(i+1);}
+      r[k]=v;
+    });
+    return r;
+  }
+  function zetSelect(sel,v){
+    sel.value=v||'';if(sel.value!==(v||''))sel.value='';
+  }
+  var bezigMetHash=false;
+  function schrijfHash(){
+    var d=[];
+    if(typeSel.value)d.push('type='+encodeURIComponent(typeSel.value));
+    if(catSel.value)d.push('categorie='+encodeURIComponent(catSel.value));
+    var q=zoek.value.trim();if(q)d.push('q='+encodeURIComponent(q));
+    var nieuw=basisUrl()+(d.length?'#'+d.join('&'):'');
+    bezigMetHash=true;
+    try{history.replaceState(null,'',nieuw);}catch(e){}
+    bezigMetHash=false;
+  }
+  var markeerTimer=null;
+  function gaNaarPartij(slug){
+    var k=perSlug[slug];if(!k)return false;
+    if(k.el.style.display==='none'){zoek.value='';typeSel.value='';catSel.value='';update();}
+    kaarten.forEach(function(x){x.el.classList.remove('doel');});
+    k.el.classList.add('doel');
+    if(k.el.tagName==='DETAILS')k.el.open=true;
+    var dt=k.el.querySelector('details');if(dt)dt.open=true;
+    k.el.scrollIntoView({block:'start'});
+    var kop=k.el.querySelector('h2');if(kop){kop.tabIndex=-1;try{kop.focus({preventScroll:true});}catch(e){}}
+    clearTimeout(markeerTimer);
+    markeerTimer=setTimeout(function(){k.el.classList.remove('doel');},6000);
+    return true;
+  }
+  function leesUrl(){
+    var h=location.hash.replace(/^#/,'');
+    var m=/^partij-(.+)$/.exec(h);
+    if(m){var s;try{s=decodeURIComponent(m[1]);}catch(e){s=m[1];}gaNaarPartij(s.toLowerCase());return;}
+    var hp=hashParams(),q=null;
+    try{q=new URLSearchParams(location.search).get('q');}catch(e){}
+    if(hp.q!=null)q=hp.q;
+    zoek.value=q||'';
+    zetSelect(typeSel,hp.type);
+    zetSelect(catSel,hp.categorie||hp.cat);
+    update();
+  }
+  function opInvoer(){update();schrijfHash();}
+  zoek.addEventListener('input',opInvoer);
+  typeSel.addEventListener('change',opInvoer);
+  catSel.addEventListener('change',opInvoer);
+  document.getElementById('wis').addEventListener('click',function(){zoek.value='';typeSel.value='';catSel.value='';opInvoer();zoek.focus();});
+  window.addEventListener('hashchange',function(){if(!bezigMetHash)leesUrl();});
   update();
+  leesUrl();
 })();
 </script>
 </body>

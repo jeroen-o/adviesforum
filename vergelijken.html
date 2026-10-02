@@ -233,6 +233,22 @@ footer.voet a{color:var(--zwart);font-weight:700}
   var OVERIG='__overig__',OVERIG_LABEL='Overige kenmerken (zonder thema)',ONBEKEND='niet bekend in de wegwijzer';
   var STANDAARD=['Verhuisregeling','Boetevrij aflossen','Renteafspraken','Zzp en flexibel inkomen'];
 
+  /* Slugfunctie voor partij-ankers: IDENTIEK houden in partijen.html en vergelijken.html. */
+  function partijSlug(naam){
+    return String(naam||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase()
+      .replace(/&/g,' en ').replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'')||'partij';
+  }
+  /* Kent elke partij in window.PARTIJEN (bronvolgorde) een uniek p._slug toe; dubbel krijgt -2, -3, ... */
+  function partijSlugsToekennen(lijst){
+    var gezien={};
+    (lijst||[]).forEach(function(p){
+      var s=partijSlug(p.naam),b=s,i=2;
+      while(gezien[s]){s=b+'-'+(i++);}
+      gezien[s]=1;p._slug=s;
+    });
+  }
+  partijSlugsToekennen(window.PARTIJEN);
+
   var data=(window.PARTIJEN||[]).slice().sort(function(a,b){return a.naam.localeCompare(b.naam,'nl');});
   var $=function(id){return document.getElementById(id);};
   var catSel=$('cat'),zoek=$('zoek'),chips=$('chips'),kopregel=$('kopregel'),romp=$('romp'),kaarten=$('kaarten'),
@@ -334,8 +350,7 @@ footer.voet a{color:var(--zwart);font-weight:700}
     wrap.appendChild(el('span','pnaam',p.naam));
     wrap.appendChild(el('span','ptype',TYPES[p.type]||p.type||''));
     var st=statusBlok(p);if(st)wrap.appendChild(st);
-    // partijen.html kent (nog) geen ankers per partij: link naar de wegwijzer zelf.
-    var l=el('a','plink','In de wegwijzer →');l.href='partijen.html';l.title='Open de Partijenwegwijzer en zoek op '+p.naam;wrap.appendChild(l);
+    var l=el('a','plink','In de wegwijzer →');l.href='partijen.html#partij-'+p._slug;l.title='Open '+p.naam+' in de Partijenwegwijzer';wrap.appendChild(l);
   }
 
   function teken(){
