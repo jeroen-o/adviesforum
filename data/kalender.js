@@ -32,7 +32,7 @@ window.KALENDER = {
   },
   items: [
     /* ---------- Oktober 2026 ---------- */
-    {id:'c01', datum:'2026-10-01', datumTekst:'oktober 2026', thema:'hypotheek', status:'verwacht',
+    {id:'c01', datum:'2026-10-08', datumTekst:'begin oktober 2026 (verwacht)', thema:'hypotheek', status:'verwacht',
       titel:'NHG-grens 2027 bekend',
       tekst:'De NHG-grens voor 2027 is op de peildatum nog niet gepubliceerd. Vorig jaar volgde de bekendmaking begin oktober (8 oktober 2025). De grens wordt afgeleid van de gemiddelde koopsom van de afgelopen 27 maanden plus 5%, afgerond op € 5.000.',
       bron:{label:'NHG – NHG-grens 2026 vastgesteld', url:'https://www.nhg.nl/nhg-actueel/nhg-grens-in-2026-vastgesteld-op-470000/'}},

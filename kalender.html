@@ -76,6 +76,7 @@ select{padding:9px 11px;border:1px solid #CFCFCF;border-radius:9px;font-size:14p
 .dag.leeg{background:#FBFBFA}
 .dag.vandaag .nr{background:var(--geel);border-radius:6px;padding:0 5px}
 .dag .nr{font-size:12.5px;font-weight:700;color:var(--grijs);display:inline-block}
+.dag.vandaag .nr{color:var(--zwart)}
 .dag.heeft .nr{color:var(--zwart)}
 .ev{display:block;width:100%;text-align:left;border:0;border-left:3px solid var(--grijs);background:var(--vlak);border-radius:4px;padding:2px 5px;margin-top:4px;font-size:11.5px;font-weight:600;line-height:1.3;cursor:pointer;color:var(--tekst);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .ev.verwacht{border-left-style:dashed;font-style:italic}
@@ -261,9 +262,14 @@ footer{border-top:1px solid var(--lijn);padding:22px 24px;font-size:12.5px;color
   // ---------- ICS ----------
   function icsEsc(s){ return String(s).replace(/\\/g,'\\\\').replace(/;/g,'\\;').replace(/,/g,'\\,').replace(/\r?\n/g,'\\n'); }
   function vouw(regel){
-    var uit=[], r=regel;
-    while (r.length>73){ uit.push(r.slice(0,73)); r=' '+r.slice(73); }
-    uit.push(r); return uit.join('\r\n');
+    // RFC 5545: max. 75 octets per regel; knip op UTF-8-bytes zonder tekens te splitsen
+    var uit=[], huidig='', bytes=0, max=75;
+    Array.from(regel).forEach(function(ch){
+      var n=unescape(encodeURIComponent(ch)).length;
+      if (bytes+n>max){ uit.push(huidig); huidig=' '; bytes=1; }
+      huidig+=ch; bytes+=n;
+    });
+    uit.push(huidig); return uit.join('\r\n');
   }
   function ymd(d){ return d.getFullYear()+('0'+(d.getMonth()+1)).slice(-2)+('0'+d.getDate()).slice(-2); }
   function vevent(it){
@@ -418,14 +424,27 @@ footer{border-top:1px solid var(--lijn);padding:22px 24px;font-size:12.5px;color
   });
 
   var tabs = ['maand','lijst','2027'];
-  tabs.forEach(function(t){
-    $('tab-'+t).addEventListener('click', function(){
-      tabs.forEach(function(u){
-        $('tab-'+u).setAttribute('aria-selected', u===t?'true':'false');
-        $('p-'+u).classList.toggle('aan', u===t);
-      });
+  function kiesTab(t, focus){
+    tabs.forEach(function(u){
+      var b=$('tab-'+u);
+      b.setAttribute('aria-selected', u===t?'true':'false');
+      b.tabIndex = u===t?0:-1;
+      $('p-'+u).classList.toggle('aan', u===t);
+    });
+    if (focus) $('tab-'+t).focus();
+  }
+  tabs.forEach(function(t, i){
+    $('tab-'+t).addEventListener('click', function(){ kiesTab(t); });
+    $('tab-'+t).addEventListener('keydown', function(e){
+      var j=null;
+      if (e.key==='ArrowRight') j=(i+1)%tabs.length;
+      else if (e.key==='ArrowLeft') j=(i-1+tabs.length)%tabs.length;
+      else if (e.key==='Home') j=0;
+      else if (e.key==='End') j=tabs.length-1;
+      if (j!==null){ e.preventDefault(); kiesTab(tabs[j], true); }
     });
   });
+  kiesTab('maand');
 
   // ---------- Afdrukken (eigen venster; window.print() wordt in iframes soms geblokkeerd) ----------
   $('print').addEventListener('click', function(){

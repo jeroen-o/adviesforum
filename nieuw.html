@@ -128,6 +128,7 @@ h2.sectie{font-size:22px;font-weight:800;margin:28px 0 6px;padding-bottom:10px;b
 <script src="data/kennisbank-nhg.js"></script><script>__mk('nhg')</script>
 <script src="data/kennisbank-thema.js"></script><script>__mk('thema')</script>
 <script src="data/kennisbank-kifid.js"></script><script>__mk('kifid')</script>
+<script src="data/kennisbank-wetgeving.js"></script><script>__mk('wetgeving')</script>
 <script src="data/begrippen.js"></script>
 <script src="data/faq/hypotheek.js"></script>
 <script src="data/faq/fiscaal-producten.js"></script>
@@ -152,6 +153,8 @@ h2.sectie{font-size:22px;font-weight:800;margin:28px 0 6px;padding-bottom:10px;b
 <script src="data/sjablonen.js"></script>
 <script src="data/kalender.js"></script>
 <script src="data/levensgebeurtenissen.js"></script>
+<script src="data/adviesroute.js"></script>
+<script src="data/klantuitleg.js"></script>
 <script>
 (function(){
 'use strict';
@@ -167,7 +170,7 @@ var gecontroleerd=KB.filter(function(a){return a.gecontroleerd;}).length;
 var voorbeeld=VR.filter(function(v){return v.voorbeeld;}).length;
 var afmFaq=FAQ.filter(function(f){return /^afm-/.test(f.id);}).length;
 var nhgFaq=FAQ.filter(function(f){return /^nhg26-/.test(f.id);}).length;
-var geverifieerd=(W.ADVISEURS||[]).filter(function(a){return a.geverifieerd;}).length;
+var geverifieerd=(W.ADVISEURS||[]).filter(function(a){return a.geverifieerd&&!a.demo;}).length;
 var kalItems=W.KALENDER&&Array.isArray(W.KALENDER.items)?W.KALENDER.items.length:0;
 
 var T=[
@@ -178,6 +181,11 @@ var T=[
  {g:len(W.SJABLONEN),e:'sjablonen',t:'Sjablonen voor mails en brieven',d:'Kant-en-klare teksten met invulvelden en controlepunten.',u:'sjablonen.html'},
  {g:kalItems,e:'data',t:'Kalender 2026–2027',d:'Belangrijke data en deadlines voor adviseurs, ook te zetten in je eigen agenda.',u:'kalender.html'},
  W.LEVENSGEBEURTENISSEN?{g:len(W.LEVENSGEBEURTENISSEN),e:'gebeurtenissen',t:'Levensgebeurtenissen',d:'Wat verandert er bij trouwen, scheiden, overlijden, baanverlies of verhuizen? Met checklist en termijnen.',u:'levensgebeurtenissen.html'}:null,
+ W.ADVIESROUTE?{g:len(W.ADVIESROUTE.routes),e:'routes',t:'Adviesroute stap voor stap',d:'Hypotheek, verzekeren, pensioen en krediet: per stap het doel, de AFM-eisen en wat je vastlegt.',u:'adviesroute.html'}:null,
+ W.KLANTUITLEG?{g:len(W.KLANTUITLEG),e:'uitlegbladen',t:'Klantuitleg in begrijpelijke taal',d:'Printbare uitlegbladen voor klanten, in B1-taal.',u:'klantuitleg.html'}:null,
+ {g:3,e:'categorieën',t:'Vergelijken',d:'Partijen naast elkaar op voorwaarden en kenmerken, met bron.',u:'vergelijken.html'},
+ {g:W.__KB.wetgeving||0,e:'artikelen',t:'Wetgeving: nieuw en op komst',d:'Wat verandert er in 2025–2027 (Wtp, CCD2, DORA, AMLR, AI-verordening, box 3) en wat moet je doen.',u:'wetgeving.html#actueel'},
+ {g:1,e:'overzicht',t:'Compliance-overzicht',d:'Alle AFM- en compliance-onderwerpen van het forum op één pagina.',u:'compliance-overzicht.html'},
  {g:len(W.PARTIJEN),e:'partijen',t:'Partijenwegwijzer',d:'Banken, geldverstrekkers, verzekeraars en pensioenuitvoerders: portals, producten en voorwaarden, met bron.',u:'partijen.html'},
  {g:KB.length,e:'artikelen',t:'Kennisbank',d:n(gecontroleerd)+' gecontroleerd door compliance, de rest is concept.',u:'index.html#kennisbank'},
  {g:FAQ.length,e:'vragen',t:'Veelgestelde vragen (FAQ)',d:'Korte antwoorden over hypotheek, fiscaal, verzekeringen, pensioen, krediet, compliance en software.',u:'index.html#faq'},
@@ -185,7 +193,7 @@ var T=[
  {g:W.__KB.kifid||0,e:'lessen',t:'Lessen uit Kifid-uitspraken',d:'Per thema de feiten, het oordeel en wat je in het dossier vastlegt.',u:'index.html#kennisbank'},
  {g:(W.__KB.afm||0)+afmFaq,e:'items',t:'AFM-kennis',d:n(W.__KB.afm||0)+' kennisbankartikelen en '+n(afmFaq)+' FAQ op basis van AFM-publicaties.',u:'index.html#kennisbank'},
  {g:voorbeeld,e:'vragen',t:'Voorbeeldvragen op het forum',d:'Praktijkvragen met antwoorden van collega’s, doorzoekbaar per categorie.',u:'index.html#forum'},
- {g:geverifieerd,e:'adviseurs',t:'Inloggen adviseur',d:'Geverifieerde adviseurs loggen in met een persoonlijke code of inloglink om antwoorden te geven en te beoordelen.',u:'index.html#forum'}
+ geverifieerd?{g:geverifieerd,e:'adviseurs',t:'Inloggen adviseur',d:'Geverifieerde adviseurs loggen in met een persoonlijke code of inloglink om antwoorden te geven en te beoordelen.',u:'index.html#forum'}:{g:len(W.ADVISEURS),e:'voorbeeldprofielen',t:'Aanmelden als adviseur',d:'Meld je aan met je LinkedIn-profiel. Na goedkeuring door de beheerder ben je geverifieerd en log je in met een persoonlijke code.',u:'aanmelden.html'}
 ].filter(Boolean);
 document.getElementById('tegels').innerHTML=T.map(function(x){
   return '<div class="tegel"><div class="getal">'+n(x.g)+'<small>'+esc(x.e)+'</small></div><b>'+esc(x.t)+'</b><span>'+esc(x.d)+'</span>'+
@@ -195,6 +203,9 @@ document.getElementById('tegels').innerHTML=T.map(function(x){
 /* ---------- wijzigingen (uit git-historie en pull requests, in adviseurstaal) ---------- */
 var TH={forum:'Forum en inloggen',kennis:'Kennisbank',faq:'FAQ en begrippen',reken:'Rekentools',scan:'Klantscans en formulieren',naslag:'Naslag en wegwijzers',comp:'Compliance en AFM',nhg:'NHG'};
 var L=[
+ {d:'2026-10-03',pr:30,th:'comp',t:'Wetgeving: nieuw en op komst 2025–2027',x:'16 wetswijzigingen met status (Wtp, CCD2, DORA, AMLR, AI-verordening, box 3 en meer), plus artikelen over CCD2 voor kredietbemiddelaars en AMLR en de Wwft.',u:'wetgeving.html#actueel'},
+ {d:'2026-10-03',pr:27,th:'naslag',t:'Adviesroute, vergelijken en klantuitleg',x:'Stap-voor-stap adviesroutes met AFM-eisen, een vergelijker voor partijen en printbare uitlegbladen voor klanten in begrijpelijke taal.',u:'adviesroute.html'},
+ {d:'2026-10-03',pr:27,th:'comp',t:'Compliance-overzicht',x:'Alle compliance- en AFM-onderwerpen gebundeld op één pagina.',u:'compliance-overzicht.html'},
  {d:'2026-10-03',pr:25,th:'scan',t:'50 sjablonen voor mails en brieven',x:'Kant-en-klare teksten voor onder meer offerte, documenten opvragen, rentevast, nazorg, klachten, AVG en Wwft. Met invulvelden en geel gemarkeerde controlepunten.',u:'sjablonen.html'},
  {d:'2026-10-03',pr:25,th:'naslag',t:'Kalender 2026–2027 voor adviseurs',x:'Alle belangrijke data en deadlines op een rij, plus wat er per 1 januari 2027 verandert. Te exporteren naar je eigen agenda.',u:'kalender.html'},
  {d:'2026-10-03',pr:25,th:'kennis',t:'17 nieuwe thema-artikelen',x:'Praktische artikelen over onder meer de Wtp, scheiding, senioren, starters, ORV, AOV, verduurzamen, erfpacht, tweede woning, BKR en studieschuld.',u:'index.html#kennisbank'},
