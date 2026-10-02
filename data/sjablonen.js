@@ -112,28 +112,28 @@ Dank voor uw belangstelling. Hierbij bevestig ik onze afspraak voor een kennisma
 
 In dit gesprek leren we elkaar kennen. Ik vertel hoe wij werken en wat onze dienstverlening kost. U vertelt wat u wilt bereiken. Daarna beslist u of u ons de opdracht geeft. [[Vermeld of het kennismakingsgesprek kosteloos en vrijblijvend is.]]
 
-Vooraf stuur ik u ons dienstverleningsdocument. Daarin leest u wie wij zijn, onder welk toezicht wij werken en hoe wij betaald worden.
+Vooraf stuur ik u onze vergelijkingskaart. Daarin leest u wat wij voor u doen en wat dat kost. Wie wij zijn en onder welk toezicht wij werken, leest u op onze website.
 
 Lukt de afspraak niet? Laat het mij dan even weten, dan plannen we een nieuw moment.`,
-  controle: ['Klopt het of het eerste gesprek gratis en vrijblijvend is?', 'Stuur het actuele dienstverleningsdocument mee.', 'Bij videobellen: stuur de link apart en veilig.']
+  controle: ['Klopt het of het eerste gesprek gratis en vrijblijvend is?', 'Stuur de actuele vergelijkingskaart mee.', 'Bij videobellen: stuur de link apart en veilig.']
 },
 {
   id: 'km-ddoc-kosten', cat: 'kennismaking', type: 'mail',
-  titel: 'Dienstverleningsdocument en kosten na kennismaking',
+  titel: 'Vergelijkingskaart en kosten na kennismaking',
   onderwerp: 'Onze dienstverlening en kosten',
   tekst: `Beste {klantnaam},
 
-Dank voor het prettige gesprek. Zoals afgesproken stuur ik u ons dienstverleningsdocument. Daarin leest u wat wij voor u doen, onder welk toezicht wij werken en hoe wij betaald worden.
+Dank voor het prettige gesprek. Zoals afgesproken stuur ik u onze vergelijkingskaart. Daarin leest u wat wij voor u doen en hoe wij betaald worden. Wie wij zijn en onder welk toezicht wij werken, leest u op onze website.
 
 Voor {dienst} brengen wij de volgende kosten in rekening:
 - advieskosten: {advieskosten}
 - bemiddelingskosten: {bemiddelingskosten}
-[[Controleer of je een vast bedrag of een uurtarief rekent en of de bedragen gelijk zijn aan je dienstverleningsdocument.]]
+[[Controleer of je een vast bedrag of een uurtarief rekent en of de bedragen gelijk zijn aan je vergelijkingskaart.]]
 
 U betaalt deze kosten aan ons. Wij ontvangen geen provisie van de geldverstrekker of verzekeraar. [[Controleer: geldt voor jouw producten het provisieverbod, of ontvang je voor een deel van de producten wel provisie? Pas de zin zo nodig aan.]]
 
 Wilt u ons de opdracht geven? Dan stuur ik u een opdrachtbevestiging om te ondertekenen. Heeft u nog vragen, bel of mail mij gerust.`,
-  controle: ['Bedragen gelijk aan het dienstverleningsdocument en de opdrachtbevestiging.', 'Provisie: de zin moet kloppen met jouw verdienmodel en de productsoort.', 'Is het dienstverleningsdocument de nieuwste versie?']
+  controle: ['Bedragen gelijk aan de vergelijkingskaart en de opdrachtbevestiging.', 'Provisie: de zin moet kloppen met jouw verdienmodel en de productsoort.', 'Is de vergelijkingskaart de nieuwste versie?']
 },
 {
   id: 'km-opdrachtbevestiging', cat: 'kennismaking', type: 'brief',
@@ -158,12 +158,12 @@ Wat wij van u nodig hebben
 U geeft ons op tijd juiste en volledige informatie. Verandert er iets in uw situatie, laat het ons dan direct weten.
 
 Akkoord?
-Onderteken deze brief en stuur hem terug. Daarmee geeft u ons de opdracht. Ons dienstverleningsdocument en onze algemene voorwaarden horen bij deze afspraak. [[Controleer of je algemene voorwaarden gebruikt en of die vóór of bij het sluiten van de overeenkomst aan de klant zijn gegeven.]]
+Onderteken deze brief en stuur hem terug. Daarmee geeft u ons de opdracht. Onze vergelijkingskaart en onze algemene voorwaarden horen bij deze afspraak. [[Controleer of je algemene voorwaarden gebruikt en of die vóór of bij het sluiten van de overeenkomst aan de klant zijn gegeven.]]
 
 Datum: ____________________
 
 Handtekening klant: ____________________`,
-  controle: ['Omschrijving van de opdracht klopt met wat is afgesproken.', 'Kosten gelijk aan dienstverleningsdocument.', 'Regeling bij tussentijds stoppen staat erin.', 'Algemene voorwaarden en dienstverleningsdocument meesturen.']
+  controle: ['Omschrijving van de opdracht klopt met wat is afgesproken.', 'Kosten gelijk aan de vergelijkingskaart.', 'Regeling bij tussentijds stoppen staat erin.', 'Algemene voorwaarden en vergelijkingskaart meesturen.']
 },
 {
   id: 'km-offerte-advieskosten', cat: 'kennismaking', type: 'mail',
@@ -418,7 +418,7 @@ Nog een paar tips:
 - Verandert er iets in uw leven, zoals werk, gezin of gezondheid? Laat het mij weten. Misschien moet er dan iets aan uw hypotheek of verzekeringen veranderen.
 
 Ik neem over {nazorgtermijn} weer contact met u op om te kijken of alles nog goed past.`,
-  controle: ['Nazorgafspraak vastgelegd volgens je dienstverleningsdocument.', 'Fiscale tip klopt voor deze klant.']
+  controle: ['Nazorgafspraak vastgelegd volgens je vergelijkingskaart en opdrachtbevestiging.', 'Fiscale tip klopt voor deze klant.']
 },
 
 /* ---------- Rentevast en rentemiddeling ---------- */
@@ -493,7 +493,7 @@ Denk bijvoorbeeld aan:
 Het gesprek duurt ongeveer {gespreksduur} en kan ook via video. [[Vermeld of dit binnen het nazorgabonnement valt.]]
 
 Wanneer komt het u uit? Kies een moment door te reageren op deze e-mail.`,
-  controle: ['Nazorgafspraken uit het dienstverleningsdocument nagekomen.', 'Kosten vermeld.']
+  controle: ['Nazorgafspraken uit de vergelijkingskaart en opdrachtbevestiging nagekomen.', 'Kosten vermeld.']
 },
 {
   id: 'nz-aflossingsvrij', cat: 'nazorg', type: 'brief',
@@ -938,12 +938,12 @@ Per {einddatumrelatie} gaat ons kantoor verder onder de naam {nieuwkantoor}. Wij
 Wat verandert er voor u?
 - Uw hypotheek en verzekeringen blijven gewoon doorlopen.
 - Uw dossier gaat over naar {nieuwkantoor}. [[Controleer de juridische vorm van de overname en of de klant bezwaar kan maken of moet instemmen met overdracht van gegevens en klantrelatie.]]
-- U krijgt een nieuw dienstverleningsdocument.
+- U krijgt een nieuwe vergelijkingskaart.
 
 Wilt u niet dat uw dossier wordt overgedragen? Laat het ons dan voor {deadline} weten.
 
 Uw contactpersoon wordt {contactpersoon}, bereikbaar via {telefoon} of {kantooremail}.`,
-  controle: ['Juridische en AVG-aspecten van de overname getoetst.', 'Vergunning en Kifid-aansluiting van het nieuwe kantoor gecontroleerd.', 'Nieuw dienstverleningsdocument klaar.']
+  controle: ['Juridische en AVG-aspecten van de overname getoetst.', 'Vergunning en Kifid-aansluiting van het nieuwe kantoor gecontroleerd.', 'Nieuwe vergelijkingskaart klaar.']
 },
 
 /* ---------- Reviews en klanttevredenheid ---------- */
