@@ -72,6 +72,9 @@
   ul.kenmerken{margin:0 0 14px;padding-left:18px}
   ul.kenmerken li{margin:6px 0;font-size:14.5px;overflow-wrap:anywhere}
   ul.kenmerken a{color:var(--primary);font-size:12.5px;font-weight:600;white-space:nowrap}
+  ul.kenmerken .thema{font-weight:700;color:var(--primary)}
+  .statusmelding{margin:0 0 12px;padding:8px 10px;border-left:4px solid #C0392B;background:#FDF0EE;color:#7A1F14;font-size:14px;border-radius:4px;overflow-wrap:anywhere}
+  .statusmelding a{color:#7A1F14;font-size:12.5px;font-weight:600;white-space:nowrap}
   .site{margin-top:auto;padding-top:10px;border-top:1px solid var(--line);font-size:14px}
   .site a{color:var(--primary);font-weight:700;text-decoration:none;overflow-wrap:anywhere}
   .site a:hover{text-decoration:underline}
@@ -112,7 +115,7 @@
 <div class="wrap">
   <div class="let-op" role="note"><strong>Let op:</strong> Overzicht op basis van openbare informatie (peildatum 3 oktober 2026). Voorwaarden en acceptatiebeleid veranderen: controleer altijd de actuele informatie bij de partij zelf.</div>
   <div class="toolbar">
-    <input id="zoek" type="search" placeholder="Zoek op partij, product of kenmerk, bijv. senioren, energielabel, AOV&hellip;" aria-label="Zoeken in partijen">
+    <input id="zoek" type="search" placeholder="Zoek op partij, product of kenmerk, bijv. verhuisregeling, boetevrij, senioren, status gewijzigd&hellip;" aria-label="Zoeken in partijen">
     <select id="type" aria-label="Filter op type">
       <option value="">Alle typen</option>
     </select>
@@ -156,6 +159,13 @@
     var a=el('article','card');
     a.appendChild(el('span','tag',TYPES[p.type]||p.type));
     a.appendChild(el('h2',null,p.naam));
+    if(p.status){
+      var st=el('p','statusmelding');st.appendChild(el('strong',null,'Status gewijzigd: '));
+      st.appendChild(document.createTextNode(p.status+' '));
+      var sb=veiligeUrl(p.statusBron);
+      if(sb){var sl=el('a',null,'bron: '+host(sb));sl.href=sb;sl.target='_blank';sl.rel='noopener';st.appendChild(sl);}
+      a.appendChild(st);
+    }
     if(p.producten&&p.producten.length){
       var ul=el('ul','producten');ul.setAttribute('aria-label','Producten');
       p.producten.forEach(function(x){ul.appendChild(el('li',null,x));});
@@ -165,7 +175,9 @@
       a.appendChild(el('p','sublabel','Opvallend voor adviseurs'));
       var km=el('ul','kenmerken');
       p.kenmerken.forEach(function(k){
-        var li=el('li');li.appendChild(document.createTextNode(k.tekst+' '));
+        var li=el('li');
+        if(k.thema)li.appendChild(el('span','thema',k.thema+': '));
+        li.appendChild(document.createTextNode(k.tekst+' '));
         var b=veiligeUrl(k.bron);
         if(b){var ln=el('a',null,'bron: '+host(b));ln.href=b;ln.target='_blank';ln.rel='noopener';li.appendChild(ln);}
         km.appendChild(li);
@@ -176,7 +188,7 @@
     if(u){var l=el('a',null,'Naar site / adviseursinformatie ↗');l.href=u;l.target='_blank';l.rel='noopener';l.title=u;s.appendChild(l);}
     else s.appendChild(el('span','geen','Geen eigen site of adviseursportaal gevonden'));
     a.appendChild(s);
-    var zoektekst=[p.naam,TYPES[p.type]||'',(p.producten||[]).join(' ')].concat((p.kenmerken||[]).map(function(k){return k.tekst;})).join(' ').toLowerCase();
+    var zoektekst=[p.naam,TYPES[p.type]||'',(p.producten||[]).join(' ')].concat((p.kenmerken||[]).map(function(k){return (k.thema||'')+' '+k.tekst;})).concat(p.status?['status gewijzigd '+p.status]:[]).join(' ').toLowerCase();
     lijst.appendChild(a);
     return {el:a,type:p.type,tekst:zoektekst};
   });
