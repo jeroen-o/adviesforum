@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eigenwoningreserve en bijleenregeling</title>
+<style>
+  :root{
+    --primary:#003057;--accent:#E5A138;--bg:#F4F7F9;--text:#333333;--muted:#4A4A4A;
+    --line:#D8E2E8;--white:#fff;--soft:#EAF1F5;--warn-bg:#FDF4E5;--warn-line:#E5A138;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:"Plus Jakarta Sans","DM Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    font-size:16px;line-height:1.55}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 20px 64px}
+  header.hero{background:var(--primary);color:#fff;padding:36px 0 30px;margin-bottom:24px}
+  header.hero .wrap{padding-bottom:0}
+  h1{font-size:32px;line-height:1.2;margin:0 0 10px;font-weight:700}
+  .sub{opacity:.88;margin:0;max-width:75ch}
+  .meta{margin-top:14px;font-size:13px;opacity:.75}
+  .tabs{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 18px}
+  .tabs button{border:1px solid var(--line);background:#fff;color:var(--primary);font:inherit;font-weight:600;
+    font-size:14px;padding:9px 14px;border-radius:999px;cursor:pointer}
+  .tabs button.on{background:var(--primary);color:#fff;border-color:var(--primary)}
+  section.card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:22px 24px;margin:0 0 16px}
+  h2{font-size:20px;margin:0 0 12px;color:var(--primary)}
+  h3{font-size:16px;margin:18px 0 8px;color:var(--primary)}
+  .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px}
+  .fields{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px 14px}
+  .fields .full{grid-column:1/-1}
+  label{display:block;font-size:13.5px;font-weight:600;color:var(--primary);margin-bottom:4px}
+  .hint{display:block;font-size:12.5px;font-weight:400;color:var(--muted);margin-top:3px}
+  input[type=text],select{width:100%;padding:10px 12px;font:inherit;font-size:15px;border:1px solid var(--line);
+    border-radius:7px;background:#fff;color:var(--text)}
+  input:focus,select:focus{outline:2px solid var(--accent);outline-offset:1px}
+  .eur{position:relative}
+  .eur span{position:absolute;left:11px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:15px}
+  .eur input{padding-left:26px}
+  .pct{position:relative}
+  .pct span{position:absolute;right:11px;top:50%;transform:translateY(-50%);color:var(--muted)}
+  .pct input{padding-right:28px}
+  .result{background:var(--primary);color:#fff;border-radius:10px;padding:20px 22px}
+  .result .big{font-size:34px;font-weight:700;line-height:1.15;margin:4px 0 2px}
+  .result .lbl{font-size:13px;opacity:.85}
+  .rows{margin:16px 0 0;border-top:1px solid rgba(255,255,255,.25)}
+  .rows div{display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.15);font-size:14.5px}
+  .rows div b{font-weight:600;white-space:nowrap}
+  .let-op{background:var(--warn-bg);border-left:4px solid var(--warn-line);padding:12px 14px;border-radius:0 6px 6px 0;margin:14px 0 0;font-size:14.5px}
+  .let-op strong{color:#8A5B00}
+  .compliance{background:#FFF1F1;border-left:4px solid #C0392B;padding:12px 14px;border-radius:0 6px 6px 0;margin:14px 0 0;font-size:14.5px}
+  .compliance strong{color:#A5281B}
+  .msg{font-size:13.5px;margin-top:10px;color:#FFE3B0}
+  .tblwrap{overflow-x:auto;border:1px solid var(--line);border-radius:8px;max-height:560px;overflow-y:auto}
+  table{border-collapse:collapse;width:100%;font-size:13.5px;font-variant-numeric:tabular-nums}
+  th,td{padding:7px 9px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
+  th{background:var(--soft);color:var(--primary);position:sticky;top:0;z-index:1;font-weight:700}
+  td:first-child,th:first-child{text-align:left;position:sticky;left:0;background:#fff;z-index:2}
+  th:first-child{background:var(--soft);z-index:3}
+  tr.hl td{background:#FFF4DD}
+  tr.hl td:first-child{background:#FFE7B8}
+  td.hl{outline:2px solid var(--accent);outline-offset:-2px;font-weight:700}
+  .simple td,.simple th{text-align:left}
+  .simple td.n,.simple th.n{text-align:right}
+  .toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:flex-end;margin-bottom:12px}
+  .toolbar > div{flex:1 1 200px}
+  .btn{border:0;border-radius:7px;padding:10px 16px;font-size:14px;font-weight:600;font-family:inherit;cursor:pointer;background:var(--primary);color:#fff}
+  .btn.sec{background:#fff;color:var(--primary);border:1px solid var(--line)}
+  .pane{display:none}.pane.on{display:block}
+  footer{margin-top:28px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+  footer a{color:var(--primary)}
+  @media (max-width:820px){
+    .grid{grid-template-columns:minmax(0,1fr)}
+    h1{font-size:26px}
+  }
+  @media (max-width:520px){
+    .wrap{padding:0 16px 48px}
+    .fields{grid-template-columns:minmax(0,1fr)}
+    section.card{padding:18px 16px}
+    .result .big{font-size:28px}
+  }
+  @media print{
+    .tabs,.toolbar .btn,.noprint{display:none!important}
+    body{background:#fff}
+    .pane{display:block!important}
+    .tblwrap{max-height:none;overflow:visible}
+    th{position:static}
+    td:first-child,th:first-child{position:static}
+    header.hero{background:#fff;color:#000;border-bottom:3px solid var(--primary)}
+    .result{background:#fff;color:#000;border:2px solid var(--primary)}
+    .rows div{border-color:#ccc}
+    section.card{break-inside:avoid}
+  }
+  .back{display:inline-block;font-size:13px;margin:0 0 10px;opacity:.9;text-decoration:none}
+  .back:hover{text-decoration:underline}
+  .chk{display:flex;align-items:center;gap:8px;font-size:14.5px;font-weight:600;color:var(--primary);margin:0;cursor:pointer}
+  .chk input{width:18px;height:18px;margin:0;accent-color:var(--primary)}
+  input:disabled{background:var(--soft);color:var(--muted)}
+  .rows div.tot{border-bottom:0;font-size:15.5px}
+  .rows div.tot b{font-weight:700}
+  .warn{color:#A5281B;font-weight:600}
+  @media print{ .back{display:none} }
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <a class="back noprint" href="index.html#hulpmiddelen" style="color:#fff">&larr; Terug naar het Adviesforum</a>
+    <h1>Eigenwoningreserve en bijleenregeling</h1>
+    <p class="sub">Bereken de eigenwoningreserve bij verkoop van de oude woning en welk deel van de nieuwe hypotheek fiscaal eigenwoningschuld (box 1) kan zijn.</p>
+    <p class="meta">Bron: Wet IB 2001 art. 3.119a en 3.119aa &middot; interne rekenhulp, indicatief</p>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="tabs noprint">
+    <button type="button" id="print" style="margin-left:auto">Printen / PDF</button>
+  </div>
+  <section class="card">
+    <div class="grid">
+      <div>
+        <h2>Oude woning</h2>
+        <div class="fields">
+            <div>
+              <label for="verkoop">Verkoopprijs oude woning</label>
+              <div class="eur"><span>&euro;</span><input type="text" inputmode="numeric" id="verkoop" value="400.000"></div>
+            </div>
+            <div>
+              <label for="vkosten">Verkoopkosten</label>
+              <div class="eur"><span>&euro;</span><input type="text" inputmode="numeric" id="vkosten" value="6.000"></div>
+              <span class="hint">Makelaarscourtage, kosten verkoop e.d.</span>
+            </div>
+            <div class="full">
+              <label for="ews">Eigenwoningschuld vlak voor verkoop</label>
+              <div class="eur"><span>&euro;</span><input type="text" inputmode="numeric" id="ews" value="250.000"></div>
+              <span class="hint">Alleen het deel van de hypotheek dat fiscaal eigenwoningschuld is (box 1).</span>
+            </div>
+        </div>
+        <h3 style="margin-top:22px;font-size:20px">Nieuwe woning</h3>
+        <div class="fields">
+            <div class="full">
+              <label for="verw">Verwervingskosten nieuwe woning</label>
+              <div class="eur"><span>&euro;</span><input type="text" inputmode="numeric" id="verw" value="520.000"></div>
+              <span class="hint">Koopsom plus kosten die tot de verwerving horen, zoals overdrachtsbelasting en notariskosten voor de akte van levering. Financieringskosten (advies, taxatie, hypotheekakte, bemiddeling) horen hier niet bij.</span>
+            </div>
+            <div>
+              <label for="verb">Kosten verbetering/verbouwing (optioneel)</label>
+              <div class="eur"><span>&euro;</span><input type="text" inputmode="numeric" id="verb" value="0"></div>
+              <span class="hint">Verbouwing direct na aankoop.</span>
+            </div>
+            <div>
+              <label for="gewenst">Gewenste nieuwe hypotheek</label>
+              <div class="eur"><span>&euro;</span><input type="text" inputmode="numeric" id="gewenst" value="400.000"></div>
+            </div>
+        </div>
+      </div>
+      <div>
+        <div class="result" aria-live="polite">
+          <div class="lbl">Maximale nieuwe eigenwoningschuld (box 1)</div>
+          <div class="big" id="r-max">&ndash;</div>
+          <div class="lbl" id="r-split"></div>
+          <div class="rows">
+            <div><span>Vervreemdingssaldo (verkoopprijs &minus; verkoopkosten)</span><b id="r-saldo"></b></div>
+            <div><span>Eigenwoningschuld vlak voor verkoop</span><b id="r-ews"></b></div>
+            <div><span>Eigenwoningreserve (EWR)</span><b id="r-ewr"></b></div>
+            <div><span>Restschuld</span><b id="r-rest"></b></div>
+            <div><span>Verwervingskosten + verbetering</span><b id="r-verw"></b></div>
+            <div><span>Af: eigenwoningreserve</span><b id="r-afewr"></b></div>
+            <div><span>Gewenste nieuwe hypotheek</span><b id="r-gew"></b></div>
+            <div><span>Waarvan box 1 (eigenwoningschuld)</span><b id="r-box1"></b></div>
+            <div><span>Waarvan box 3</span><b id="r-box3"></b></div>
+            <div><span>Fiscaal in te brengen in nieuwe woning (EWR)</span><b id="r-inbreng"></b></div>
+            <div><span>Eigen middelen bij gewenste hypotheek</span><b id="r-eigen"></b></div>
+          </div>
+          <div class="msg" id="r-msg"></div>
+        </div>
+        <div class="compliance"><strong>Compliance:</strong> deze berekening is indicatief en geen fiscaal advies. Overgangsrecht (eigenwoningschulden van v&oacute;&oacute;r 2013), de verdeling tussen fiscale partners, eerdere eigenwoningreserves en de aflossingseis zijn niet doorgerekend. Controleer de uitkomst in het adviespakket en bij twijfel bij de Belastingdienst of een fiscalist, en leg de berekening vast in het dossier.</div>
+      </div>
+    </div>
+    <div class="let-op"><strong>Rekenwijze:</strong> vervreemdingssaldo = verkoopprijs &minus; verkoopkosten. Eigenwoningreserve = vervreemdingssaldo &minus; eigenwoningschuld (minimaal nul). Maximale nieuwe eigenwoningschuld = verwervingskosten + kosten verbetering &minus; eigenwoningreserve. Het deel van de gewenste hypotheek boven dit maximum valt in box 3 (geen renteaftrek). De eigenwoningreserve moet fiscaal in de nieuwe woning worden ingebracht, ook als de klant het geld feitelijk anders besteedt; wie minder eigen geld inbrengt dan de EWR, krijgt een box 3-deel.</div>
+  </section>
+
+  <section class="card">
+    <h2>Toelichting</h2>
+    <div class="let-op"><strong>Drie jaar:</strong> de eigenwoningreserve blijft drie jaar na verkoop van de oude woning bestaan en vermindert in die periode de eigenwoningschuld bij aankoop of verbetering van een (volgende) eigen woning. Daarna vervalt zij.</div>
+    <div class="let-op"><strong>Eerst kopen, later verkopen:</strong> wordt de oude woning binnen drie jaar na aankoop van de nieuwe woning verkocht, dan telt de eigenwoningreserve die bij die verkoop ontstaat alsnog mee. De eigenwoningschuld van de nieuwe woning wordt dan achteraf verminderd; het betreffende deel van de lening gaat vanaf dat moment naar box 3.</div>
+    <div class="let-op"><strong>Restschuld:</strong> een restschuld is geen eigenwoningschuld en hoeft niet van de verwervingskosten te worden afgetrokken. Uitzondering: rente op een lening voor een restschuld die is ontstaan tussen 29 oktober 2012 en 31 december 2017 is maximaal 15 jaar aftrekbaar (restschuldfinanciering).</div>
+    <div class="let-op"><strong>Aflossingseis:</strong> voor renteaftrek moet nieuwe eigenwoningschuld in maximaal 30 jaar ten minste annu&iuml;tair worden afgelost. Voor bestaande eigenwoningschulden van v&oacute;&oacute;r 2013 geldt overgangsrecht; dat is hier niet doorgerekend, controleer dit apart.</div>
+  </section>
+
+  <footer>
+    <p><strong>Bronnen</strong></p>
+    <ul>
+      <li>Wet inkomstenbelasting 2001, <a href="https://wetten.overheid.nl/BWBR0011353">art. 3.119a (eigenwoningschuld) en art. 3.119aa (eigenwoningreserve)</a></li>
+    </ul>
+    <p>Indicatieve rekenhulp. Deze pagina slaat niets op.</p>
+  </footer>
+</div>
+<script>
+(function(){
+  var $ = function(id){ return document.getElementById(id); };
+  var eur0 = new Intl.NumberFormat('nl-NL',{style:'currency',currency:'EUR',minimumFractionDigits:0,maximumFractionDigits:0});
+  var eur2 = new Intl.NumberFormat('nl-NL',{style:'currency',currency:'EUR',minimumFractionDigits:2,maximumFractionDigits:2});
+  var int0 = new Intl.NumberFormat('nl-NL',{maximumFractionDigits:0});
+  var dec2 = new Intl.NumberFormat('nl-NL',{minimumFractionDigits:2,maximumFractionDigits:2});
+  function fmtE(v){ return eur0.format(v).replace(/ /g,' '); }
+  function fmtE2(v){ return eur2.format(v).replace(/ /g,' '); }
+  function parseNum(s){
+    s = String(s||'').replace(/[^\d,.-]/g,'');
+    if (s.indexOf(',') > -1) s = s.replace(/\./g,'').replace(',', '.');
+    else s = s.replace(/\./g,'');
+    var v = parseFloat(s); return isNaN(v) ? 0 : v;
+  }
+  function parsePct(s){
+    s = String(s||'').replace(/[^\d,.-]/g,'').replace(',', '.');
+    var v = parseFloat(s); return isNaN(v) ? 0 : v;
+  }
+  // Euro-invoer met duizendtalscheiding, cursor blijft achteraan staan
+  function euroInput(el, cb){
+    el.addEventListener('input', function(){
+      var digits = el.value.replace(/\D/g,'');
+      el.value = digits ? int0.format(parseInt(digits,10)) : '';
+      cb && cb();
+    });
+  }
+
+
+  function reken(){
+    var verkoop = parseNum($('verkoop').value), vk = parseNum($('vkosten').value), ews = parseNum($('ews').value);
+    var verw = parseNum($('verw').value), verb = parseNum($('verb').value), gew = parseNum($('gewenst').value);
+    var saldo = verkoop - vk;
+    var ewr = Math.max(0, saldo - ews);
+    var rest = Math.max(0, ews - saldo);
+    var kosten = verw + verb;
+    var max = Math.max(0, kosten - ewr);
+    var box1 = Math.min(gew, max);
+    var box3 = Math.max(0, gew - max);
+    var eigen = Math.max(0, kosten - gew);
+    var msg = [];
+    $('r-max').textContent = fmtE2(max);
+    $('r-split').textContent = 'Box 1: ' + fmtE2(box1) + ' · box 3: ' + fmtE2(box3);
+    $('r-saldo').textContent = fmtE2(saldo);
+    $('r-ews').textContent = fmtE2(ews);
+    $('r-ewr').textContent = fmtE2(ewr);
+    $('r-rest').textContent = fmtE2(rest);
+    $('r-verw').textContent = fmtE2(kosten);
+    $('r-afewr').textContent = '− ' + fmtE2(ewr);
+    $('r-gew').textContent = fmtE2(gew);
+    $('r-box1').textContent = fmtE2(box1);
+    $('r-box3').textContent = fmtE2(box3);
+    $('r-inbreng').textContent = fmtE2(ewr);
+    $('r-eigen').textContent = fmtE2(eigen);
+    if (box3 > 0) msg.push('Er wordt ' + fmtE2(eigen) + ' eigen geld ingebracht, minder dan de eigenwoningreserve van ' + fmtE2(ewr) + '. Het verschil van ' + fmtE2(box3) + ' valt in box 3.');
+    if (rest > 0) msg.push('Er ontstaat een restschuld van ' + fmtE2(rest) + '; die is geen eigenwoningschuld (zie toelichting).');
+    if (gew > kosten && kosten > 0) msg.push('De gewenste hypotheek is hoger dan verwervingskosten + verbetering; het meerdere kan nooit eigenwoningschuld zijn.');
+    $('r-msg').textContent = msg.join(' ');
+  }
+  ['verkoop','vkosten','ews','verw','verb','gewenst'].forEach(function(id){ euroInput($(id), reken); });
+
+
+  // Print via eigen venster: window.print() wordt binnen een iframe (o.a. Google Sites) geblokkeerd.
+  $('print').addEventListener('click', function(){
+    try {
+      var w = window.open('', '_blank');
+      if (!w) { window.print(); return; }
+      var body = document.body.cloneNode(true);
+      Array.prototype.forEach.call(body.querySelectorAll('input'), function(i, idx){
+        var orig = document.querySelectorAll('input')[idx];
+        if (orig.type === 'checkbox') { if (orig.checked) i.setAttribute('checked','checked'); else i.removeAttribute('checked'); }
+        else i.setAttribute('value', orig.value);
+      });
+      Array.prototype.forEach.call(body.querySelectorAll('select'), function(s, idx){
+        var orig = document.querySelectorAll('select')[idx];
+        Array.prototype.forEach.call(s.options, function(o, j){ if (j === orig.selectedIndex) o.setAttribute('selected','selected'); else o.removeAttribute('selected'); });
+      });
+      Array.prototype.forEach.call(body.querySelectorAll('script'), function(s){ s.remove(); });
+      w.document.open();
+      w.document.write('<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><title>' + document.title +
+        '</title><style>' + document.querySelector('style').textContent + '</style></head><body>' + body.innerHTML + '</body></html>');
+      w.document.close(); w.focus();
+      setTimeout(function(){ w.print(); }, 350);
+    } catch (e) { window.print(); }
+  });
+
+  reken();
+})();
+</script>
+</body>
+</html>
