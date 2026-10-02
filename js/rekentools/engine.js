@@ -235,6 +235,63 @@
     return f.std == null ? '' : f.std;
   };
   const invoerVan = t => opslag[t.id] || (opslag[t.id] = Object.fromEntries(t.velden.map(f => [f.k, standaard(f)])));
+
+  /* ---------- deeplinks: #id?k=waarde&k2=waarde ----------
+   * Getallen gaan in machinevorm de URL in (300000, 4.1), keuzes als optiewaarde, datums als jjjj-mm-dd.
+   * Bij inlezen accepteren we ook NL-notatie (4,1 of 300.000). */
+  const machine = (f, r) => {
+    if (f.s === 'eur' || f.s === 'pct' || f.s === 'num' || f.s === 'bedrag') {
+      const x = leesVeld(f, r);
+      return Number.isFinite(x) ? String(f.s === 'eur' ? x : Math.round(x * 1e8) / 1e8) : '';
+    }
+    return r == null ? '' : String(r);
+  };
+  const uitMachine = (f, s) => {
+    s = String(s == null ? '' : s).trim();
+    if (f.s === 'keuze') return f.opties.some(o => o[0] === s) ? s : null;
+    if (f.s === 'datum') return s === '' || lees.datum(s) ? s : null;
+    if (f.s === 'tekst') return s;
+    if (s === '') return '';
+    let x = /^-?\d+(\.\d+)?$/.test(s) ? Number(s) : leesVeld(f, s);
+    if (!Number.isFinite(x)) return null;
+    if (f.s === 'eur') x = Math.round(Math.abs(x));
+    return standaard(Object.assign({}, f, { std: x }));
+  };
+  RT.hashVan = t => {
+    t = t || actief;
+    if (!t) return '';
+    const ruw = invoerVan(t), p = [];
+    t.velden.forEach(f => p.push(encodeURIComponent(f.k) + '=' + encodeURIComponent(machine(f, ruw[f.k]))));
+    return t.id + (p.length ? '?' + p.join('&') : '');
+  };
+  const leesHash = h => {
+    h = String(h || '').replace(/^#/, '');
+    const i = h.indexOf('?');
+    let id = i < 0 ? h : h.slice(0, i);
+    try { id = decodeURIComponent(id); } catch (e) { /* ongeldige codering */ }
+    const params = {};
+    if (i >= 0) h.slice(i + 1).split('&').forEach(deel => {
+      if (!deel) return;
+      const j = deel.indexOf('=');
+      const dec = s => { try { return decodeURIComponent(s.replace(/\+/g, ' ')); } catch (e) { return s; } };
+      params[dec(j < 0 ? deel : deel.slice(0, j))] = j < 0 ? '' : dec(deel.slice(j + 1));
+    });
+    return { id, params, heeftParams: i >= 0 };
+  };
+  RT.leesHash = leesHash;
+  const zetInvoerUitHash = (t, params) => {
+    const ruw = invoerVan(t);
+    t.velden.forEach(f => {
+      if (!(f.k in params)) return;
+      const x = uitMachine(f, params[f.k]);
+      if (x !== null) ruw[f.k] = x;
+    });
+  };
+  const linkNaar = t => location.href.split('#')[0] + '#' + RT.hashVan(t);
+  const werkHash = () => {
+    if (!actief) return;
+    try { history.replaceState(null, '', '#' + RT.hashVan(actief)); } catch (e) { /* geen history beschikbaar */ }
+  };
   const leesVeld = (f, r) => {
     if (f.s === 'eur') return lees.euro(r);
     if (f.s === 'bedrag') return lees.getal(r);
@@ -280,12 +337,11 @@
       return '<details class="mgroep" data-g="' + g.id + '"><summary>' + esc(g.naam) + ' <span class="aantal">' + lijst.length + '</span></summary>' +
         lijst.map(t => '<button type="button" data-id="' + t.id + '">' + esc(t.naam) + '</button>').join('') + '</details>';
     }).join('');
-    $('kies').innerHTML = RT.GROEPEN.map(g => {
+    $('kies').innerHTML = '<option value="">Overzicht van alle ' + RT.tools.length + ' rekenhulpen</option>' + RT.GROEPEN.map(g => {
       const lijst = RT.tools.filter(t => t.groep === g.id);
       return lijst.length ? '<optgroup label="' + esc(g.naam) + '">' + lijst.map(t => '<option value="' + t.id + '">' + esc(t.naam) + '</option>').join('') + '</optgroup>' : '';
     }).join('');
-    const teller = $('aantal-tools');
-    if (teller) teller.textContent = RT.tools.length;
+    document.querySelectorAll('#aantal-tools,[data-aantal-tools]').forEach(el => { el.textContent = RT.tools.length; });
   }
 
   function veldHTML(f, ruw) {
@@ -311,15 +367,23 @@
       (f.tip ? '<span class="tip">' + esc(f.tip) + '</span>' : '') + '</div>';
   }
 
-  function toon(id, vanuitHash) {
+  function toon(id, vanuitHash, params) {
+    if (!actief && !vanuitHash) { try { history.pushState(null, '', '#' + id); } catch (e) { /* geen history */ } }
     actief = RT.get(id) || RT.tools[0];
+    if (params) zetInvoerUitHash(actief, params);
     const ruw = invoerVan(actief);
     const g = groepVan(actief.groep);
     $('werk').innerHTML =
+      '<a class="naar-overzicht" href="#">&larr; Alle ' + RT.tools.length + ' rekenhulpen</a>' +
       '<div class="paneel-kop"><div><div class="groep">' + esc(g.naam) + '</div><h2>' + esc(actief.naam) + '</h2><p>' + esc(actief.intro) + '</p>' + badges(actief) + '</div>' +
       '<div class="knoppen"><button type="button" class="knop licht" id="herstel">Voorbeeld herstellen</button><button type="button" class="knop" id="print">Printen / PDF</button></div></div>' +
       '<div class="werkblad"><form class="invoer" id="invoer" autocomplete="off" onsubmit="return false">' + actief.velden.map(f => veldHTML(f, ruw[f.k])).join('') + '</form>' +
-      '<div class="uitkomst" id="uitkomst"></div></div>' +
+      '<div class="uitkomstkolom"><div class="uitkomst" id="uitkomst"></div>' +
+      '<div class="deel"><button type="button" class="knop licht" id="kopieer-dossier">Kopieer als dossiertekst</button>' +
+      '<button type="button" class="knop licht" id="kopieer-link">Kopieer link naar deze berekening</button>' +
+      '<span class="deel-status" id="deel-status" role="status" aria-live="polite"></span></div>' +
+      '<div class="deel-handmatig" id="deel-handmatig" hidden><label for="deel-tekst">Kopiëren lukte niet automatisch. Selecteer de tekst en kopieer met Ctrl+C of Cmd+C.</label>' +
+      '<textarea id="deel-tekst" rows="8" readonly></textarea></div></div></div>' +
       '<div id="tabel"></div>' +
       '<div class="toelichting"><div class="blok regel"><h4>Zo wordt gerekend</h4><p>' + (actief.uitleg || '') + '</p></div>' +
       '<div class="blok let-op"><h4>Let op</h4><p>' + (actief.letop || '') + '</p></div></div>';
@@ -328,7 +392,6 @@
     if (open && !$('zoek').value.trim()) open.open = true;
     $('kies').value = actief.id;
     document.title = actief.naam + ' – Rekenhulpen – Adviesforum';
-    if (!vanuitHash) { try { history.replaceState(null, '', '#' + actief.id); } catch (e) { /* geen history beschikbaar */ } }
     reken();
   }
 
@@ -355,6 +418,7 @@
       try { res = actief.bereken(v) || { fout: 'Geen uitkomst.' }; } catch (e) { res = { fout: 'Deze combinatie van gegevens kan niet worden berekend.' }; if (w.console) console.warn(actief.id, e); }
     }
     laatste = res;
+    werkHash();
     const box = $('uitkomst');
     if (res.fout) {
       box.innerHTML = '<div class="lbl">Uitkomst</div><div class="groot" style="font-size:20px">Nog geen uitkomst</div><div class="signaal"><p>' + res.fout + '</p></div>';
@@ -368,18 +432,101 @@
     $('tabel').innerHTML = alleTabellen(res).map(tabelHTML).join('');
   }
 
-  /* ---------- afdrukken in een eigen venster ---------- */
-  function afdrukken() {
-    const v = waardenVan(actief), ruw = invoerVan(actief), res = laatste || {};
-    const invoerRijen = actief.velden.filter(f => !f.als || f.als(v)).map(f => {
-      let x = ruw[f.k];
+  /* ---------- invoer leesbaar (print en dossiertekst) ---------- */
+  const invoerLijst = t => {
+    const v = waardenVan(t), ruw = invoerVan(t);
+    return t.velden.filter(f => !f.als || f.als(v)).map(f => {
+      let x = ruw[f.k] == null ? '' : String(ruw[f.k]);
       if (f.s === 'keuze') x = (f.opties.find(o => o[0] === x) || ['', x])[1];
+      else if (x.trim() === '') x = '';
       else if (f.s === 'eur' || f.s === 'bedrag') x = '€ ' + x + (f.na ? ' ' + f.na : '');
       else if (f.s === 'pct') x = x + '%';
       else if (f.s === 'datum') x = v[f.k] ? fmt.datum(v[f.k]) : '';
       else if (f.na) x = x + ' ' + f.na;
-      return '<tr><td>' + esc(f.l) + '</td><td class="r">' + esc(x) + '</td></tr>';
-    }).join('');
+      return [f.l, x];
+    });
+  };
+  const platteTekst = html => {
+    const s = String(html || '');
+    let t;
+    if (typeof DOMParser !== 'undefined') t = new DOMParser().parseFromString('<body>' + s + '</body>', 'text/html').body.textContent;
+    else t = s.replace(/<[^>]+>/g, '');
+    return t.replace(/\s+/g, ' ').trim();
+  };
+  const kort = (s, max = 420) => {
+    if (s.length <= max) return s;
+    const snede = s.slice(0, max), punt = snede.lastIndexOf('. ');
+    return punt > max * 0.5 ? snede.slice(0, punt + 1) : snede.replace(/\s+\S*$/, '') + ' …';
+  };
+
+  /* ---------- dossiertekst (platte tekst voor klantdossier of adviesrapport) ---------- */
+  RT.dossiertekst = function () {
+    if (!actief) return '';
+    const t = actief, res = laatste || {}, r = [];
+    r.push(t.naam);
+    r.push('Adviesforum rekenhulp · berekend op ' + fmt.datum(new Date()));
+    r.push('');
+    r.push('Invoer');
+    invoerLijst(t).forEach(([l, x]) => r.push('- ' + l + ': ' + (x || '(niet ingevuld)')));
+    r.push('');
+    r.push('Uitkomst');
+    if (res.fout) r.push(platteTekst(res.fout));
+    else {
+      r.push(res.lbl + ': ' + res.groot + (res.onder ? ' (' + res.onder + ')' : ''));
+      (res.rijen || []).forEach(x => r.push('- ' + x[0] + ': ' + x[1]));
+      (res.signalen || []).forEach(x => r.push('! ' + platteTekst(x)));
+      const tb = alleTabellen(res);
+      if (tb.length) r.push('(' + (tb.length === 1 ? 'Tabel ' + (tb[0].titel ? '“' + tb[0].titel + '” ' : '') : tb.length + ' tabellen ') + 'niet opgenomen; zie de link.)');
+    }
+    const uitleg = platteTekst(t.uitleg), letop = platteTekst(t.letop);
+    if (uitleg || letop) r.push('');
+    if (uitleg) r.push('Aannames: ' + kort(uitleg));
+    if (letop) r.push('Let op: ' + kort(letop));
+    const normen = [];
+    if (t.peildatum) normen.push('normen ' + t.peildatum);
+    if (t.fiscaal) normen.push('fiscale norm: controleer de actuele waarden' + (Array.isArray(t.fiscaal) ? ' (' + t.fiscaal.join(', ') + ')' : ''));
+    if (normen.length) r.push('Normjaar/peildatum: ' + normen.join('; '));
+    r.push('');
+    r.push('Indicatieve berekening, geen advies en geen toets aan leennormen of productvoorwaarden.');
+    r.push('Berekening: ' + linkNaar(t));
+    return r.join('\n');
+  };
+
+  /* ---------- kopiëren met terugval ---------- */
+  function meld(tekst) {
+    const st = $('deel-status');
+    if (!st) return;
+    st.textContent = tekst;
+    clearTimeout(meld.t);
+    meld.t = setTimeout(() => { if (st.isConnected) st.textContent = ''; }, 4000);
+  }
+  function kopieer(tekst, wat) {
+    const handmatig = () => {
+      const vak = $('deel-handmatig'), ta = $('deel-tekst');
+      if (vak && ta) { vak.hidden = false; ta.value = tekst; ta.focus(); ta.select(); meld('Selecteer de tekst hieronder om te kopiëren.'); return; }
+      try { w.prompt('Kopieer de tekst:', tekst); } catch (e) { /* geen prompt */ }
+    };
+    const viaCommand = () => {
+      let ok = false;
+      try {
+        const ta = document.createElement('textarea');
+        ta.value = tekst; ta.setAttribute('readonly', ''); ta.style.position = 'fixed'; ta.style.top = '-1000px'; ta.style.opacity = '0';
+        document.body.appendChild(ta); ta.select();
+        ok = document.execCommand && document.execCommand('copy');
+        document.body.removeChild(ta);
+      } catch (e) { ok = false; }
+      if (ok) { meld(wat + ' gekopieerd.'); const vak = $('deel-handmatig'); if (vak) vak.hidden = true; }
+      else handmatig();
+    };
+    if (w.navigator && navigator.clipboard && navigator.clipboard.writeText && w.isSecureContext !== false) {
+      navigator.clipboard.writeText(tekst).then(() => { meld(wat + ' gekopieerd.'); const vak = $('deel-handmatig'); if (vak) vak.hidden = true; }, viaCommand);
+    } else viaCommand();
+  }
+
+  /* ---------- afdrukken in een eigen venster ---------- */
+  function afdrukken() {
+    const res = laatste || {};
+    const invoerRijen = invoerLijst(actief).map(([l, x]) => '<tr><td>' + esc(l) + '</td><td class="r">' + esc(x) + '</td></tr>').join('');
     const uit = res.fout ? '<p>' + res.fout + '</p>' :
       '<p class="kern">' + esc(res.lbl) + ': <b>' + esc(res.groot) + '</b>' + (res.onder ? ' <span>(' + esc(res.onder) + ')</span>' : '') + '</p>' +
       '<table>' + (res.rijen || []).map(r => '<tr><td>' + esc(r[0]) + '</td><td class="r">' + esc(r[1]) + '</td></tr>').join('') + '</table>' +
@@ -398,7 +545,7 @@
       '<h1>' + esc(actief.naam) + '</h1><div class="meta">Adviesforum · rekenhulp · afgedrukt op ' + esc(fmt.datum(nu)) + (extra ? ' · ' + esc(extra) : '') + '</div>' +
       '<h2>Invoer</h2><table>' + invoerRijen + '</table><h2>Uitkomst</h2>' + uit +
       '<div class="blok"><b>Zo wordt gerekend:</b> <p>' + (actief.uitleg || '') + '</p></div><div class="blok"><b>Let op:</b> <p>' + (actief.letop || '') + '</p></div>' +
-      '<p class="disc">Indicatieve berekening, geen advies en geen toets aan leennormen of productvoorwaarden. Controleer de actuele wet- en regelgeving en de voorwaarden van de geldverstrekker of verzekeraar.</p></body></html>';
+      '<p class="disc">Berekening online: <a href="' + esc(linkNaar(actief)) + '">' + esc(linkNaar(actief)) + '</a><br>Indicatieve berekening, geen advies en geen toets aan leennormen of productvoorwaarden. Controleer de actuele wet- en regelgeving en de voorwaarden van de geldverstrekker of verzekeraar.</p></body></html>';
     let venster = null;
     try { venster = w.open('', '_blank'); } catch (e) { venster = null; }
     if (!venster) { w.print(); return; }
@@ -426,12 +573,59 @@
     $('menuleeg').style.display = zicht ? 'none' : 'block';
   }
 
+  /* ---------- startscherm: overzicht ---------- */
+  // Kerntools voor adviseurs; ids die (nog) niet bestaan worden overgeslagen
+  RT.POPULAIR = ['renteherziening', 'offertes', 'rentemix', 'maximaal-krediet', 'box3-heffing', 'bruto-netto-salaris', 'lijfrente-jaarruimte', 'erfbelasting'];
+  const tegel = t => '<a class="ov-tegel" href="#' + esc(t.id) + '" data-id="' + esc(t.id) + '"><b>' + esc(t.naam) + '</b><span>' + esc(t.intro) + '</span></a>';
+  function overzichtLijst(q, groep) {
+    const doel = $('ov-lijst');
+    if (!doel) return;
+    const woorden = normaal(String(q || '').trim()).split(/\s+/).filter(Boolean);
+    let lijst, kop;
+    if (woorden.length) {
+      lijst = RT.tools.filter(t => { const hooi = normaal(t.naam + ' ' + t.intro + ' ' + (t.kw || '')); return woorden.every(x => hooi.includes(x)); });
+      kop = lijst.length + (lijst.length === 1 ? ' rekenhulp gevonden' : ' rekenhulpen gevonden');
+    } else if (groep) {
+      const g = groepVan(groep);
+      lijst = RT.tools.filter(t => t.groep === groep);
+      kop = g.naam + ' (' + lijst.length + ')';
+    } else { doel.innerHTML = ''; $('ov-standaard').hidden = false; return; }
+    $('ov-standaard').hidden = true;
+    doel.innerHTML = '<div class="ov-lijstkop"><h3>' + esc(kop) + '</h3><button type="button" class="knop licht" id="ov-terug">Terug naar het overzicht</button></div>' +
+      (lijst.length ? '<div class="ov-tegels">' + lijst.map(tegel).join('') + '</div>' : '<p class="ov-leeg">Niets gevonden. Probeer een ander woord, bijvoorbeeld “rente”, “box 3” of “netto”.</p>');
+  }
+  function overzicht() {
+    actief = null; laatste = null;
+    const n = RT.tools.length;
+    const pop = RT.POPULAIR.map(RT.get).filter(Boolean);
+    $('werk').innerHTML =
+      '<div class="ov" id="overzicht">' +
+      '<div class="paneel-kop ov-kop"><div><div class="groep">Overzicht</div><h2 id="ov-titel"><span data-aantal-tools>' + n + '</span> rekenhulpen</h2>' +
+      '<p>Zoek een rekenhulp, begin bij de meest gebruikte of blader per onderwerp. Elke berekening kun je als dossiertekst of als link kopiëren.</p></div></div>' +
+      '<div class="veld ov-zoekveld"><label for="ov-zoek">Zoek in alle rekenhulpen</label><input type="search" id="ov-zoek" placeholder="Bijvoorbeeld: renteherziening, box 3, jaarruimte" autocomplete="off"></div>' +
+      '<div id="ov-lijst" aria-live="polite"></div>' +
+      '<div id="ov-standaard">' +
+      (pop.length ? '<h3 class="ov-sub">Populair</h3><div class="ov-tegels ov-pop">' + pop.map(tegel).join('') + '</div>' : '') +
+      '<h3 class="ov-sub">Per onderwerp</h3><div class="ov-groepen">' + RT.GROEPEN.map(g => {
+        const aantal = RT.tools.filter(t => t.groep === g.id).length;
+        return aantal ? '<button type="button" class="ov-groep" data-groep="' + g.id + '"><b>' + esc(g.naam) + '</b><span>' + aantal + (aantal === 1 ? ' rekenhulp' : ' rekenhulpen') + '</span></button>' : '';
+      }).join('') + '</div>' +
+      (RT.get('fiscale-normen') ? '<p class="ov-normen">Welke belastingtarieven en grensbedragen de hulpen gebruiken, staat in <a href="#fiscale-normen">Gebruikte fiscale normen</a>.</p>' : '') +
+      '</div></div>';
+    document.querySelectorAll('#menulijst button').forEach(b => b.setAttribute('aria-current', 'false'));
+    if (!$('zoek').value.trim()) document.querySelectorAll('#menulijst .mgroep').forEach(g => { g.open = false; });
+    $('kies').value = '';
+    document.title = 'Rekenhulpen – Adviesforum';
+  }
+
   /* ---------- start ---------- */
   RT.start = function () {
     if (!RT.tools.length) return;
     $('werk').addEventListener('input', e => {
+      if (e.target.id === 'ov-zoek') { overzichtLijst(e.target.value); return; }
       const el = e.target, k = el.dataset && el.dataset.k;
       if (!k) return;
+      if (!actief) return;
       const f = actief.velden.find(x => x.k === k);
       if (!f) return;
       if (f.s === 'eur') { const c = el.value.replace(/\D/g, ''); el.value = c ? geheel.format(parseInt(c, 10)) : ''; }
@@ -442,7 +636,7 @@
     });
     $('werk').addEventListener('change', e => {
       const el = e.target, k = el.dataset && el.dataset.k;
-      if (!k) return;
+      if (!k || !actief) return;
       if (el.tagName === 'SELECT' || el.type === 'date') { invoerVan(actief)[k] = el.value; reken(); return; }
       const f = actief.velden.find(x => x.k === k);
       if (f && f.s === 'bedrag') { // na verlaten van het veld netjes opmaken: 1.234,5 -> 1.234,50
@@ -451,21 +645,38 @@
       }
     });
     $('werk').addEventListener('click', e => {
-      if (e.target.id === 'print') afdrukken();
-      if (e.target.id === 'herstel') { delete opslag[actief.id]; toon(actief.id); }
+      const id = e.target.id;
+      if (!actief) {
+        const g = e.target.closest('.ov-groep');
+        if (g) { overzichtLijst('', g.dataset.groep); $('ov-lijst').scrollIntoView({ block: 'nearest' }); }
+        if (id === 'ov-terug') { $('ov-zoek').value = ''; overzichtLijst(''); }
+        return;
+      }
+      if (id === 'print') afdrukken();
+      if (id === 'herstel') { delete opslag[actief.id]; toon(actief.id); }
+      if (id === 'kopieer-dossier') kopieer(RT.dossiertekst(), 'Dossiertekst');
+      if (id === 'kopieer-link') { werkHash(); kopieer(linkNaar(actief), 'Link'); }
     });
     $('menulijst').addEventListener('click', e => {
       const b = e.target.closest('button[data-id]');
       if (b) { toon(b.dataset.id); if (w.innerWidth > 900) $('werk').scrollIntoView({ block: 'nearest' }); }
     });
-    $('kies').addEventListener('change', e => toon(e.target.value));
-    $('zoek').addEventListener('input', e => filter(e.target.value));
-    w.addEventListener('hashchange', () => {
-      const id = decodeURIComponent(location.hash.slice(1));
-      if (id && id !== actief.id && RT.get(id)) toon(id, true);
+    $('kies').addEventListener('change', e => {
+      if (e.target.value) toon(e.target.value);
+      else { try { history.pushState(null, '', location.pathname + location.search); } catch (x) { /* geen history */ } overzicht(); }
     });
+    $('zoek').addEventListener('input', e => filter(e.target.value));
+    const volgHash = () => {
+      const h = leesHash(location.hash);
+      if (!RT.get(h.id)) { if (actief) overzicht(); return; }
+      if (actief && h.id === actief.id && (!h.heeftParams || location.hash.slice(1) === RT.hashVan(actief))) return;
+      toon(h.id, true, h.heeftParams ? h.params : null);
+    };
+    w.addEventListener('hashchange', volgHash);
+    w.addEventListener('popstate', volgHash);
     bouwMenu();
-    const start = decodeURIComponent(location.hash.slice(1));
-    toon(RT.get(start) ? start : RT.tools[0].id, true);
+    const h = leesHash(location.hash);
+    if (RT.get(h.id)) toon(h.id, true, h.heeftParams ? h.params : null);
+    else overzicht();
   };
 })(typeof window !== 'undefined' ? window : globalThis);

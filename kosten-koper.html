@@ -96,6 +96,16 @@
   .chk{display:flex;align-items:center;gap:8px;font-size:14.5px;font-weight:600;color:var(--primary);margin:0;cursor:pointer}
   .chk input{width:18px;height:18px;margin:0;accent-color:var(--primary)}
   input:disabled{background:var(--soft);color:var(--muted)}
+  fieldset.starter{border:1px solid var(--line);border-radius:6px;padding:10px 12px 12px;margin:0;min-width:0}
+  fieldset.starter legend{font-size:13.5px;font-weight:700;color:var(--primary);padding:0 4px}
+  .starter-grid{display:grid;grid-template-columns:minmax(0,160px) minmax(0,1fr);gap:12px;align-items:start}
+  .starter .checks{display:flex;flex-direction:column;gap:8px;padding-top:4px}
+  .starter .chk{align-items:flex-start;font-weight:400;font-size:14px}
+  .starter .chk input{flex:0 0 auto;margin-top:2px}
+  .st-out{margin-top:10px;font-size:13.5px;padding:8px 10px;border-radius:6px;background:var(--soft)}
+  .st-out.ok{background:#E8F5EC;color:#1E5631}
+  .st-out.nee{background:#FDF4E5;color:#7A4B00}
+  @media (max-width:560px){.starter-grid{grid-template-columns:1fr}}
   .rows div.tot{border-bottom:0;font-size:15.5px}
   .rows div.tot b{font-weight:700}
   .warn{color:#A5281B;font-weight:600}
@@ -108,7 +118,7 @@
     <a class="back noprint" href="index.html#hulpmiddelen" style="color:#fff">&larr; Terug naar het Adviesforum</a>
     <h1>Kosten koper en totale financieringsbehoefte</h1>
     <p class="sub">Bereken de overdrachtsbelasting en de overige kosten koper, gesplitst in verwervings- en financieringskosten, en de benodigde hypotheek na inbreng van eigen middelen.</p>
-    <p class="meta">Indicatieve rekenhulp &middot; voorwaarden van de geldverstrekker zijn leidend</p>
+    <p class="meta">Indicatieve rekenhulp &middot; voorwaarden van de geldverstrekker zijn leidend &middot; tarieven overdrachtsbelasting: peildatum 2026</p>
   </div>
 </header>
 
@@ -130,13 +140,29 @@
             <select id="ovbsel">
               <option value="2" selected>Eigen bewoning (2%)</option>
               <option value="0">Startersvrijstelling (0%)</option>
+              <option value="8">8% (niet zelf bewonen/beleggen)</option>
               <option value="x">Anders: %</option>
             </select>
+            <span class="hint">Tarieven en grens peildatum 2026.</span>
           </div>
           <div>
             <label for="ovbpct">Percentage (bij &lsquo;anders&rsquo;)</label>
             <div class="pct"><input type="text" inputmode="decimal" id="ovbpct" value="2" disabled><span>%</span></div>
           </div>
+          <fieldset class="full starter" id="starterbox">
+            <legend>Toets startersvrijstelling (2026)</legend>
+            <div class="starter-grid">
+              <div>
+                <label for="lft">Leeftijd koper bij levering</label>
+                <input type="text" inputmode="numeric" id="lft" value="" placeholder="bijv. 29">
+              </div>
+              <div class="checks">
+                <label class="chk"><input type="checkbox" id="st-bewonen" checked> Koper gaat de woning zelf duurzaam bewonen (hoofdverblijf)</label>
+                <label class="chk"><input type="checkbox" id="st-eerder"> Koper heeft de startersvrijstelling al eerder gebruikt</label>
+              </div>
+            </div>
+            <div class="st-out" id="st-out" aria-live="polite"></div>
+          </fieldset>
           <div>
             <label for="nlev">Notaris leveringsakte</label>
             <div class="eur"><span>&euro;</span><input type="text" inputmode="numeric" id="nlev" value="1.000"></div>
@@ -209,7 +235,8 @@
 
   <section class="card">
     <h2>Toelichting</h2>
-    <div class="let-op"><strong>Startersvrijstelling:</strong> alleen voor een koper van 18 tot en met 34 jaar, eenmalig, die de woning zelf als hoofdverblijf gaat bewonen, en alleen als de woningwaarde onder de jaarlijks vastgestelde woningwaardegrens blijft. Controleer de actuele grens en voorwaarden. Bij twee kopers wordt per koper beoordeeld.</div>
+    <div class="let-op"><strong>Startersvrijstelling (peildatum 2026):</strong> 0% overdrachtsbelasting alleen als de koper op het moment van de notariële akte 18 tot en met 34 jaar is, de vrijstelling nog niet eerder heeft gebruikt (eenmalig), de woning zelf langere tijd als hoofdverblijf gaat bewonen en de woningwaarde niet hoger is dan &euro;&nbsp;555.000 (grens 2026; de grens wordt jaarlijks aangepast). Bij twee kopers wordt per koper getoetst; zo nodig geldt 0% over het ene deel en 2% over het andere. Koopt de koper binnen 12 maanden een tweede woning of bijbehorende grond, dan telt de waarde daarvan mee voor de grens. Laat de koper de verklaring voor de notaris invullen en bewaar die in het dossier. Bron: <a href="https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/prive/woning/overdrachtsbelasting/startersvrijstelling/startersvrijstelling" target="_blank" rel="noopener">Belastingdienst, startersvrijstelling</a>.</div>
+    <div class="let-op"><strong>Tarieven 2026:</strong> 2% voor een woning die de koper zelf als hoofdverblijf gaat bewonen, 0% bij de startersvrijstelling en 8% voor een woning die de koper niet zelf bewoont, zoals een beleggings- of tweede woning. Voor andere onroerende zaken (bijvoorbeeld bedrijfspanden) geldt een ander tarief; vul dat in via &lsquo;Anders&rsquo;. Bron: <a href="https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/prive/woning/overdrachtsbelasting/tarieven_overdrachtsbelasting/het_tarief_van_de_overdrachtbelasting" target="_blank" rel="noopener">Belastingdienst, tarief overdrachtsbelasting</a>.</div>
     <div class="let-op"><strong>Fiscaal:</strong> financieringskosten (notaris hypotheekakte, taxatie, advies, NHG-provisie, bankgarantie) zijn in het jaar van betaling aftrekbaar. Verwervingskosten (overdrachtsbelasting, notaris leveringsakte, keuring) zijn niet aftrekbaar, maar mogen wel als eigenwoningschuld worden meegefinancierd.</div>
     <div class="let-op"><strong>Meefinancieren:</strong> de LTV-grens is 100% van de marktwaarde. Ligt de koopsom boven de marktwaarde of zijn de kosten koper hoger dan de ruimte tot 100%, dan zijn extra eigen middelen nodig.</div>
   </section>
@@ -250,6 +277,17 @@
   function ovbPct(){
     var v = $('ovbsel').value;
     return v === 'x' ? parsePct($('ovbpct').value) : parseFloat(v);
+  }
+  var GRENS_STARTER_2026 = 555000;
+  // Toets startersvrijstelling (peildatum 2026); geeft lijst knelpunten terug
+  function toetsStarter(koop){
+    var uit = [], lftTxt = $('lft').value.trim(), lft = parseInt(lftTxt.replace(/\D/g,''),10);
+    if (lftTxt === '' || isNaN(lft)) uit.push('vul de leeftijd van de koper in');
+    else if (lft < 18 || lft > 34) uit.push('de koper is ' + lft + ' jaar (vereist: 18 t/m 34)');
+    if (koop > GRENS_STARTER_2026) uit.push('de woningwaarde is hoger dan ' + fmtE(GRENS_STARTER_2026));
+    if (!$('st-bewonen').checked) uit.push('de koper gaat de woning niet zelf bewonen');
+    if ($('st-eerder').checked) uit.push('de vrijstelling is al eerder gebruikt');
+    return uit;
   }
   function reken(){
     var koop = parseNum($('koop').value), p = ovbPct();
@@ -292,10 +330,18 @@
     if (hyp < 0) msg.push('De eigen middelen zijn hoger dan de financieringsbehoefte: er is geen hypotheek nodig.');
     if (koop > 0 && hyp > koop) msg.push('De benodigde hypotheek is hoger dan de koopsom: controleer of dit binnen 100% van de marktwaarde (LTV) blijft.');
     if (nhgP >= 100) msg.push('Controleer het NHG-percentage.');
+    var st = toetsStarter(koop), sel = $('ovbsel').value, out = $('st-out');
+    var lftOk = st.length === 0 || (st.length === 1 && st[0] === 'vul de leeftijd van de koper in');
+    if (st.length === 0) { out.className = 'st-out ok'; out.textContent = 'Voldoet op basis van deze invoer aan de voorwaarden voor de startersvrijstelling (0%). Controleer met stukken.'; }
+    else { out.className = 'st-out ' + (lftOk ? '' : 'nee'); out.textContent = (lftOk ? 'Nog niet te beoordelen: ' : 'Geen startersvrijstelling: ') + st.join('; ') + '.'; }
+    if (sel === '0' && st.length) msg.push('Startersvrijstelling gekozen, maar: ' + st.join('; ') + '. Kies zo nodig 2% (zelf bewonen) of 8% (niet zelf bewonen).');
+    if (sel === '2' && !$('st-bewonen').checked) msg.push('De koper gaat de woning niet zelf bewonen: dan geldt in 2026 in de regel 8%.');
+    if (sel === '8' && $('st-bewonen').checked) msg.push('8% gekozen terwijl de koper de woning zelf gaat bewonen: controleer of 2% of de startersvrijstelling van toepassing is.');
     $('r-msg').textContent = msg.join(' ');
   }
   ['koop','nlev','nhyp','tax','keur','adv','bg','ov','em'].forEach(function(id){ euroInput($(id), reken); });
-  ['ovbpct','nhg'].forEach(function(id){ $(id).addEventListener('input', reken); });
+  ['ovbpct','nhg','lft'].forEach(function(id){ $(id).addEventListener('input', reken); });
+  ['st-bewonen','st-eerder'].forEach(function(id){ $(id).addEventListener('change', reken); });
   $('ovbsel').addEventListener('change', function(){
     var x = this.value === 'x';
     $('ovbpct').disabled = !x;

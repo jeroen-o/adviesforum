@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Rekenhulpen – Adviesforum</title>
-<meta name="description" content="Indicatieve rekenhulpen van het Adviesforum voor financieel adviseurs: rente, aflossen, vermogen, wonen, inkomen en termijnen.">
+<meta name="description" content="275 indicatieve rekenhulpen van het Adviesforum voor financieel adviseurs: rente, aflossen, vermogen, wonen, inkomen en termijnen.">
 <style>
 @font-face{font-family:Montserrat;font-style:normal;font-weight:400;font-display:swap;src:url(fonts/montserrat-latin-400-normal.woff2) format('woff2')}
 @font-face{font-family:Montserrat;font-style:normal;font-weight:500;font-display:swap;src:url(fonts/montserrat-latin-500-normal.woff2) format('woff2')}
@@ -108,6 +108,36 @@ button,input,select,textarea{font-family:inherit}
 .blok.let-op{background:var(--geel-zacht);border-left:4px solid var(--geel-donker)}
 .blok.let-op h4{color:#7A5A00}
 
+.uitkomstkolom{min-width:0}
+.deel{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:12px}
+.deel .knop{padding:8px 14px;font-size:13px}
+.deel-status{font-size:13px;font-weight:600;color:var(--groen)}
+.deel-handmatig{margin-top:10px}
+.deel-handmatig label{display:block;font-size:12.5px;color:var(--grijs);margin-bottom:5px}
+.deel-handmatig textarea{width:100%;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12.5px;padding:10px;border:1px solid #CFCFCF;border-radius:9px;resize:vertical}
+.naar-overzicht{display:inline-block;font-size:13px;font-weight:700;text-decoration:none;border-bottom:2px solid var(--geel);margin-bottom:12px}
+.naar-overzicht:hover{border-color:var(--zwart)}
+
+.ov-zoekveld{max-width:560px;margin-bottom:6px}
+.ov-zoekveld input{font-size:16px}
+.ov-sub{font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--grijs);margin:24px 0 10px}
+.ov-tegels{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px}
+.ov-tegel{display:block;text-decoration:none;border:1px solid var(--lijn);border-radius:12px;padding:12px 14px;background:#fff;min-width:0}
+.ov-tegel:hover,.ov-tegel:focus-visible{border-color:var(--zwart);outline:none}
+.ov-tegel b{display:block;font-size:14px;line-height:1.3}
+.ov-tegel span{display:block;font-size:12.5px;color:var(--grijs);margin-top:4px;line-height:1.4}
+.ov-pop .ov-tegel{border-left:4px solid var(--geel)}
+.ov-groepen{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px}
+.ov-groep{display:flex;flex-direction:column;align-items:flex-start;text-align:left;border:1px solid var(--lijn);border-radius:12px;padding:12px 14px;background:var(--vlak);cursor:pointer;color:var(--tekst);min-width:0}
+.ov-groep:hover,.ov-groep:focus-visible{border-color:var(--zwart);background:#fff;outline:none}
+.ov-groep b{font-size:14px;line-height:1.3}
+.ov-groep span{font-size:12.5px;color:var(--grijs);margin-top:4px}
+.ov-lijstkop{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin:18px 0 10px}
+.ov-lijstkop h3{margin:0;font-size:17px;font-weight:800}
+.ov-leeg{color:var(--grijs);font-size:14px}
+.ov-normen{margin:20px 0 0;font-size:13.5px;color:var(--grijs)}
+.ov-normen a{color:var(--zwart);font-weight:700}
+
 .tabeltitel{font-size:14px;font-weight:800;margin:22px 0 -10px}
 .tabelvak{margin-top:20px;border:1px solid var(--lijn);border-radius:12px;overflow:auto;max-height:440px}
 .tabelvak table{border-collapse:collapse;width:100%;font-size:13.5px;font-variant-numeric:tabular-nums}
@@ -158,8 +188,8 @@ button,input,select,textarea{font-family:inherit}
   <div class="kop-in">
     <div class="merk"><span class="zeshoek" aria-hidden="true"></span>Adviesforum &middot; Hulpmiddelen</div>
     <a class="terug" href="index.html#hulpmiddelen">&larr; Terug naar de hulpmiddelen</a>
-    <h1>Rekenhulpen voor de adviespraktijk</h1>
-    <p><span id="aantal-tools">Tientallen</span> compacte rekenhulpen voor de vragen die tussen twee adviesgesprekken door opduiken: wat doet een nieuwe rente met de maandlast, hoeveel moet een klant inleggen voor een doelbedrag, hoeveel werkdagen zitten er tot de passeerdatum?</p>
+    <h1><span id="aantal-tools">275</span> rekenhulpen voor de adviespraktijk</h1>
+    <p>Compacte rekenhulpen voor de vragen die tussen twee adviesgesprekken door opduiken: wat doet een nieuwe rente met de maandlast, hoeveel moet een klant inleggen voor een doelbedrag, hoeveel werkdagen zitten er tot de passeerdatum?</p>
     <span class="stempel">Indicatief &middot; geen advies &middot; controleer altijd de actuele normen</span>
   </div>
 </header>
