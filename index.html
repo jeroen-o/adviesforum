@@ -404,6 +404,16 @@ footer .legal{grid-column:1/-1;border-top:1px solid #2A3238;padding-top:14px;fon
 <script src="data/faq/doelgroepen-verzekeringen.js"></script>
 <script src="data/faq/pensioen-compliance.js"></script>
 <script src="data/faq/krediet-praktijk.js"></script>
+<script src="data/faq/extra-hypotheek-normen.js"></script>
+<script src="data/faq/extra-hypotheek-woning.js"></script>
+<script src="data/faq/extra-fiscaal.js"></script>
+<script src="data/faq/extra-producten.js"></script>
+<script src="data/faq/extra-doelgroepen.js"></script>
+<script src="data/faq/extra-verzekeringen.js"></script>
+<script src="data/faq/extra-pensioen.js"></script>
+<script src="data/faq/extra-compliance.js"></script>
+<script src="data/faq/extra-krediet.js"></script>
+<script src="data/faq/extra-praktijk.js"></script>
 <script>
 /* ---------- Data ---------- */
 /* Gegevens staan in data/adviseurs.js, data/vragen.js en data/kennisbank.js */
@@ -1021,7 +1031,7 @@ function viewFaq(){
     <div class="listhead"><div><h1>Veelgestelde vragen</h1><div class="sub">${plural(list.length,'vraag','vragen')}${S.q?` voor “${esc(S.q)}”`:''} · zoek via de balk bovenin</div></div></div>
     <div class="quick">${[['alle','Alle thema\'s',FAQ.length],...Object.keys(FAQ_THEMAS).filter(k=>counts[k]).map(k=>[k,FAQ_THEMAS[k],counts[k]])].map(([k,n,c])=>`<button class="${th===k?'on':''}" data-act="faqthema" data-thema="${k}">${esc(n)} (${c})</button>`).join('')}</div>
     <div class="notice" style="margin-bottom:14px">Concept: deze antwoorden zijn nog niet door compliance gecontroleerd. Gebruik ze als startpunt en controleer de actuele regels en de voorwaarden van de geldverstrekker.</div>
-    <div class="card"><div class="pad">${list.length?list.map(f=>`<details class="term" id="faq-${esc(f.id)}"${S.faqOpen===f.id?' open':''}><summary style="cursor:pointer;font-weight:700">${esc(f.vraag)}</summary><div class="body" style="margin-top:8px">${rich(f.antwoord)}</div><div class="waar">${esc(FAQ_THEMAS[f.thema]||f.thema)}${f.bron?' · Bron: '+esc(f.bron):''}${(f.tags||[]).length?' · '+f.tags.map(esc).join(', '):''}</div></details>`).join(''):`<div class="empty"><b>Geen vragen gevonden</b>Stel je vraag op het forum.${zoekMeld()}<div style="margin-top:10px"><button class="btn btn-black btn-sm" data-act="nieuw">Vraag stellen →</button></div></div>`}</div></div>
+    <div class="card"><div class="pad">${list.length?list.slice(0,S.faqMax||50).map(f=>`<details class="term" id="faq-${esc(f.id)}"${S.faqOpen===f.id?' open':''}><summary style="cursor:pointer;font-weight:700">${esc(f.vraag)}</summary><div class="body" style="margin-top:8px">${rich(f.antwoord)}</div><div class="waar">${esc(FAQ_THEMAS[f.thema]||f.thema)}${f.bron?' · Bron: '+esc(f.bron):''}${(f.tags||[]).length?' · '+f.tags.map(esc).join(', '):''}</div></details>`).join('')+(list.length>(S.faqMax||50)?`<div style="text-align:center;margin-top:14px"><button class="btn btn-line" data-act="faqmeer">Meer tonen (${list.length-(S.faqMax||50)} over)</button></div>`:''):`<div class="empty"><b>Geen vragen gevonden</b>Stel je vraag op het forum.${zoekMeld()}<div style="margin-top:10px"><button class="btn btn-black btn-sm" data-act="nieuw">Vraag stellen →</button></div></div>`}</div></div>
   </section>`;
 }
 /* ---------- Begrippen A-Z ---------- */
@@ -1288,8 +1298,9 @@ document.addEventListener('click',e=>{
     case 'messenger':{const v=VRAGEN.find(x=>x.id===el.dataset.vraag);if(window.Intercom){window.Intercom('showNewMessage',v?v.titel+'\n\n'+v.body:'');}else toast('Intercom Messenger is niet geladen');break;}
     case 'kb-export':{const n=exportKbVoorFin();toast(plural(n,'gecontroleerd artikel geëxporteerd','gecontroleerde artikelen geëxporteerd'));break;}
     case 'quick':{const q=el.dataset.q;if(q==='nieuw')go('forum',{tab:'forum',sort:'nieuw',status:'alle'});else if(q==='populair')go('forum',{tab:'forum',sort:'views',status:'alle'});else go('forum',{tab:'forum',sort:'nieuw',status:'open'});break;}
-    case 'open-faq':{S.q='';$('#search').value='';S.faqOpen=id;go('faq',{tab:'faq',faqThema:'alle'});setTimeout(()=>{const d=document.getElementById('faq-'+id);if(d){d.open=true;d.scrollIntoView({block:'start'});}},30);break;}
-    case 'faqthema':go('faq',{tab:'faq',faqThema:el.dataset.thema});break;
+    case 'open-faq':{S.q='';$('#search').value='';S.faqOpen=id;go('faq',{tab:'faq',faqThema:(FAQ.find(f=>f.id===id)||{}).thema||'alle',faqMax:1000});setTimeout(()=>{const d=document.getElementById('faq-'+id);if(d){d.open=true;d.scrollIntoView({block:'start'});}},30);break;}
+    case 'faqthema':go('faq',{tab:'faq',faqThema:el.dataset.thema,faqMax:50});break;
+    case 'faqmeer':S.faqMax=(S.faqMax||50)+100;render(true);break;
     case 'deel':{kopieer(location.origin+location.pathname+'#artikel-'+id,'Link naar het artikel gekopieerd');break;}
     case 'kb-kopie':{const a=ARTIKELEN.find(x=>x.id===id);if(!a)return;const o={id:a.id,cat:a.cat,titel:a.titel,auteur:a.auteur,datum:a.datum.slice(0,19),herzienVoor:a.herzienVoor,bron:a.bron,gecontroleerd:false,body:a.body};kopieer(' '+JSON.stringify(o,null,1).replace(/\n\s*/g,'').replace(/"(\w+)":/g,'$1:')+',','Artikel gekopieerd: plak het in data/kennisbank.js');break;}
     case 'meld-zoek':{const q=S.q;naarBeheer({_subject:'Adviesforum: niets gevonden voor "'+q+'"',Zoekterm:q,Onderdeel:S.tab,Datum:new Date().toLocaleString('nl-NL')}).then(ok=>toast(ok?'Bedankt, de beheerder weet nu wat je zocht':'Versturen lukte niet; mail '+FORM_MAIL));break;}
@@ -1332,6 +1343,7 @@ VRAGEN.filter(v=>!v.antwoorden.length).forEach(v=>autoAnswer(v));
 if(FIN.messengerAppId){window.intercomSettings={app_id:FIN.messengerAppId,api_base:FIN.messengerApiBase};const sc=document.createElement('script');sc.async=true;sc.src='https://widget.intercom.io/widget/'+encodeURIComponent(FIN.messengerAppId);document.head.appendChild(sc);}
 $('#search').addEventListener('input',e=>{
   S.q=e.target.value;
+  S.faqMax=50;
   if(['kennisbank','faq','hulpmiddelen','begrippen'].includes(S.tab))S.view=S.tab;else{S.tab='forum';S.view='forum';}
   render(true);
 });
