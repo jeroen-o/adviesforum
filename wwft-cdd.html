@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wwft- en CDD-checklist – Adviesforum</title>
+<meta name="description" content="Checklist cliëntenonderzoek (Wwft/CDD) met eenvoudige risicoscore en afdrukbaar vastleggingsformulier voor financieel adviseurs en bemiddelaars. Met de AMLR-wijzigingen vanaf juli 2027.">
+<style>
+@font-face{font-family:Montserrat;font-style:normal;font-weight:400;font-display:swap;src:url(fonts/montserrat-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:500;font-display:swap;src:url(fonts/montserrat-latin-500-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:600;font-display:swap;src:url(fonts/montserrat-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:700;font-display:swap;src:url(fonts/montserrat-latin-700-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:800;font-display:swap;src:url(fonts/montserrat-latin-800-normal.woff2) format('woff2')}
+:root{
+  --geel:#FFD200;--geel-donker:#E6BD00;--geel-zacht:#FFF6C7;
+  --zwart:#141414;--tekst:#1F1F1F;--grijs:#5E5E5E;--lijn:#E4E4E4;--vlak:#F7F7F5;
+  --rood:#C0392B;--rood-zacht:#FFF1F0;--groen:#1E7A4B;--groen-zacht:#EAF6EF;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:Montserrat,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;color:var(--tekst);background:#fff;line-height:1.55;font-size:15px;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+button,input,select,textarea{font-family:inherit}
+.balk{background:var(--zwart);color:#fff;font-size:12.5px;padding:8px 24px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.balk a{color:#fff;text-decoration:none;opacity:.88}
+.balk a:hover{opacity:1;text-decoration:underline}
+.kop{background:var(--geel);color:var(--zwart);padding:34px 24px 38px}
+.kop-in{max-width:1000px;margin:0 auto}
+.merk{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.08em;font-size:12px;text-transform:uppercase;margin-bottom:16px}
+.zeshoek{width:22px;height:25px;background:var(--zwart);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);flex:none}
+.terug{display:inline-block;font-size:13.5px;font-weight:700;text-decoration:none;border-bottom:2px solid var(--zwart);margin-bottom:14px}
+.kop h1{margin:0 0 10px;font-size:clamp(27px,4.2vw,40px);line-height:1.12;font-weight:800}
+.kop p{margin:0;max-width:66ch;font-size:15.5px}
+.stempels{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.stempel{display:inline-block;font-size:12px;font-weight:700;background:var(--zwart);color:var(--geel);padding:5px 11px;border-radius:999px}
+.stempel.afm{background:var(--rood);color:#fff}
+.romp{max-width:1000px;margin:0 auto;padding:28px 24px 40px}
+.sectie{margin:0 0 30px}
+.sectie>h2{font-size:22px;font-weight:800;margin:0 0 6px;border-bottom:3px solid var(--geel);padding-bottom:8px}
+.sectie>p.intro{margin:8px 0 14px;color:#3A3A3A;max-width:72ch}
+.kaart{border:1px solid var(--lijn);border-radius:14px;padding:18px 20px;margin-bottom:14px;background:#fff;min-width:0}
+.kaart h3{margin:0 0 6px;font-size:16.5px;font-weight:800}
+.kaart p{margin:6px 0}
+.kaart ul{margin:6px 0;padding-left:20px}
+.kaart li{margin:3px 0}
+.stapnr{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:var(--zwart);color:var(--geel);font-size:13px;font-weight:800;margin-right:8px;flex:none}
+.stapkop{display:flex;align-items:center;gap:0;margin-bottom:6px}
+.stapkop h3{margin:0}
+.vink{display:flex;gap:10px;align-items:flex-start;padding:6px 0;font-size:14.5px}
+.vink input{margin-top:4px;width:18px;height:18px;flex:none;accent-color:var(--zwart)}
+.vink label{min-width:0}
+.veld{min-width:0;margin-top:8px}
+.veld label{display:block;font-weight:600;font-size:13.5px;margin-bottom:5px}
+.veld .tip{display:block;font-size:12px;color:var(--grijs);margin-top:4px}
+.veld input,.veld select,.veld textarea{width:100%;padding:10px 12px;border:1px solid #CFCFCF;border-radius:9px;font-size:15px;background:#fff;color:var(--tekst)}
+.veld textarea{resize:vertical;line-height:1.4;min-height:62px}
+.veld input:focus,.veld select:focus,.veld textarea:focus{outline:3px solid rgba(255,210,0,.6);outline-offset:1px;border-color:#9A9A9A}
+.raster{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:4px 16px}
+.keuze{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.keuze label{display:flex;align-items:center;gap:7px;border:1px solid #CFCFCF;border-radius:999px;padding:7px 14px;font-size:14px;font-weight:600;cursor:pointer;background:#fff}
+.keuze input{accent-color:var(--zwart)}
+.uitslag{margin-top:12px;border-radius:10px;padding:12px 14px;font-size:14.5px;display:none}
+.uitslag.ja{display:block;background:var(--geel-zacht);border-left:4px solid var(--geel-donker)}
+.uitslag.nee{display:block;background:var(--vlak);border-left:4px solid var(--zwart)}
+.uitslag p{margin:0}.uitslag p+p{margin-top:6px}
+.score{background:var(--zwart);color:#fff;border-radius:14px;padding:20px 22px;margin-top:6px}
+.score .lbl{font-size:12.5px;font-weight:600;opacity:.8}
+.score .groot{font-size:30px;font-weight:800;color:var(--geel);line-height:1.15;margin:4px 0 2px;word-break:break-word}
+.score .onder{font-size:13.5px;opacity:.9}
+.score ul{margin:10px 0 0;padding-left:18px;font-size:13.5px}
+.score dl{margin:14px 0 0;border-top:1px solid rgba(255,255,255,.22)}
+.score dl div{display:flex;justify-content:space-between;gap:12px;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.12);font-size:14px}
+.score dt{min-width:0;opacity:.9}
+.score dd{margin:0;font-weight:700;white-space:nowrap}
+.knoppen{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.knop{border-radius:999px;padding:10px 18px;font-size:14px;font-weight:700;cursor:pointer;border:1px solid var(--zwart);background:var(--zwart);color:#fff}
+.knop:hover{background:#000}
+.knop.licht{background:#fff;color:var(--zwart);border-color:#CFCFCF}
+.knop.licht:hover{background:var(--vlak)}
+.blok{border-radius:0 10px 10px 0;padding:12px 16px;font-size:14px;margin:10px 0}
+.blok h4{margin:0 0 4px;font-size:13px;font-weight:800;letter-spacing:.04em;text-transform:uppercase}
+.blok p{margin:0}.blok p+p{margin-top:6px}
+.blok.regel{background:var(--vlak);border-left:4px solid var(--zwart)}
+.blok.let-op{background:var(--geel-zacht);border-left:4px solid var(--geel-donker)}
+.blok.let-op h4{color:#7A5A00}
+.blok.rood{background:var(--rood-zacht);border-left:4px solid var(--rood)}
+.blok.rood h4{color:#A5281B}
+.tabelvak{border:1px solid var(--lijn);border-radius:12px;overflow-x:auto}
+.tabelvak table{border-collapse:collapse;width:100%;font-size:13.5px}
+.tabelvak th,.tabelvak td{padding:8px 12px;text-align:left;border-bottom:1px solid var(--lijn);vertical-align:top}
+.tabelvak th{background:var(--geel);color:var(--zwart);font-weight:700}
+.bronnen{font-size:14px;padding-left:20px}
+.bronnen li{margin:4px 0;overflow-wrap:anywhere}
+.compliance{max-width:952px;margin:0 auto;background:var(--rood-zacht);border-left:4px solid var(--rood);border-radius:0 10px 10px 0;padding:14px 18px;font-size:14px}
+.compliance strong{color:#A5281B}
+.voet{max-width:1000px;margin:0 auto;padding:24px 24px 40px;font-size:12.5px;color:var(--grijs)}
+.voet a{color:var(--zwart);font-weight:600}
+@media (max-width:700px){.raster{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:560px){
+  .balk,.kop,.romp,.voet{padding-left:16px;padding-right:16px}
+  .compliance{margin-left:16px;margin-right:16px}
+  .kaart{padding:16px}
+  .score .groot{font-size:25px}
+}
+</style>
+</head>
+<body>
+
+<div class="balk">
+  <span>Adviesforum &middot; hulpmiddelen voor financieel adviseurs</span>
+  <span><a href="index.html">Naar het forum</a></span>
+</div>
+
+<header class="kop">
+  <div class="kop-in">
+    <div class="merk"><span class="zeshoek" aria-hidden="true"></span>Adviesforum &middot; Hulpmiddelen</div>
+    <a class="terug" href="index.html#hulpmiddelen">&larr; Terug naar de hulpmiddelen</a>
+    <h1>Wwft- en CDD-checklist met risicoscore</h1>
+    <p>Loop het cliëntenonderzoek stap voor stap door, bepaal met een eenvoudige puntentelling of vereenvoudigd, normaal of verscherpt onderzoek past, en druk een vastleggingsformulier af voor het klantdossier.</p>
+    <div class="stempels">
+      <span class="stempel afm">AFM- en compliance-relevant</span>
+      <span class="stempel">Hulpmiddel &middot; vervangt geen eigen beleid of SIRA</span>
+      <span class="stempel">Niets wordt opgeslagen</span>
+    </div>
+  </div>
+</header>
+
+<main class="romp">
+
+  <!-- 0. Reikwijdte -->
+  <section class="sectie" id="reikwijdte">
+    <h2>Eerst: valt jouw kantoor onder de Wwft?</h2>
+    <p class="intro">Niet elke financieel adviseur of bemiddelaar is een Wwft-instelling. De wet (artikel 1a, derde lid) noemt onder meer banken, levensverzekeraars, beleggingsondernemingen en de financiëledienstverlener <em>voor zover die bemiddelt in levensverzekeringen</em>. De AFM houdt toezicht op die bemiddelaars.</p>
+    <div class="kaart">
+      <h3>Bemiddel je in levensverzekeringen?</h3>
+      <p style="font-size:14px;color:var(--grijs)">Volgens de AFM vallen daar ook overlijdensrisicoverzekeringen en uitvaartverzekeringen onder. Alleen adviseren zonder te bemiddelen valt niet onder deze categorie.</p>
+      <div class="keuze" role="radiogroup" aria-label="Bemiddeling in levensverzekeringen">
+        <label><input type="radio" name="plicht" value="ja"> Ja, ook levensverzekeringen</label>
+        <label><input type="radio" name="plicht" value="nee"> Nee (bijv. alleen hypotheken, schade of krediet)</label>
+      </div>
+      <div class="uitslag" id="plicht-uit"></div>
+    </div>
+    <div class="blok regel">
+      <h4>Ook zonder Wwft-plicht</h4>
+      <p><strong>Sanctiewet en EU-sancties.</strong> De sanctieregels gelden voor iedereen. Je mag geen geld of economische middelen beschikbaar stellen aan personen of organisaties op een sanctielijst. Een sanctiecheck hoort dus altijd bij het aangaan van een klantrelatie. Aanvullende administratieve en meldplichten uit de Regeling toezicht Sanctiewet 1977 gelden alleen voor bepaalde instellingen: ga na of jouw kantoor daaronder valt.</p>
+      <p><strong>Integere bedrijfsvoering (Wft).</strong> Elke vergunninghouder moet integriteitsrisico's beheersen (onder andere art. 4:11 Wft en het Besluit Gedragstoezicht financiële ondernemingen). Je mag bijvoorbeeld niet betrokken raken bij strafbare feiten van klanten. Daarvoor moet je weten met wie je zaken doet. Dat vraagt geen volledig Wwft-onderzoek, maar wel een vastgelegde, op risico gebaseerde aanpak.</p>
+      <p><strong>Geldverstrekkers en verzekeraars</strong> doen hun eigen cliëntenonderzoek en kunnen in de samenwerkingsovereenkomst eisen aan jou als intermediair stellen. Ook als jij een cliënt hebt geïdentificeerd, blijft de verzekeraar zelf verantwoordelijk.</p>
+    </div>
+  </section>
+
+  <!-- Klant -->
+  <section class="sectie" id="checklist">
+    <h2>Checklist cliëntenonderzoek</h2>
+    <p class="intro">Vink per stap af wat je hebt gedaan en noteer kort je bevindingen. Wat je hier invult, blijft in deze pagina: na verversen of sluiten is het weg. Gebruik het afdrukformulier om het vast te leggen in je eigen dossier.</p>
+
+    <div class="kaart">
+      <div class="raster">
+        <div class="veld"><label for="k-naam">Cliënt (naam of dossiernummer)</label><input id="k-naam" type="text" autocomplete="off"></div>
+        <div class="veld"><label for="k-soort">Soort cliënt</label>
+          <select id="k-soort"><option value="np">Natuurlijk persoon</option><option value="rp">Rechtspersoon of andere entiteit</option></select></div>
+        <div class="veld"><label for="k-product">Product / dienst</label><input id="k-product" type="text" autocomplete="off" placeholder="bijv. overlijdensrisicoverzekering"></div>
+        <div class="veld"><label for="k-datum">Datum onderzoek</label><input id="k-datum" type="date"></div>
+      </div>
+    </div>
+
+    <div id="stappen"></div>
+  </section>
+
+  <!-- Risicoscore -->
+  <section class="sectie" id="risico">
+    <h2>Risicoscore</h2>
+    <p class="intro">Eenvoudige puntentelling per risicofactor. De score is een hulpmiddel om je oordeel te onderbouwen; jouw eigen beleid en systematische integriteitsrisicoanalyse (SIRA) gaan voor. Sommige situaties schrijven verscherpt onderzoek voor, ongeacht de score.</p>
+    <div class="kaart" id="factoren"></div>
+    <div class="score" aria-live="polite">
+      <div class="lbl">Uitkomst</div>
+      <div class="groot" id="s-uitkomst">Normaal cliëntenonderzoek</div>
+      <div class="onder" id="s-onder"></div>
+      <dl id="s-detail"></dl>
+      <ul id="s-redenen"></ul>
+    </div>
+    <div class="kaart" style="margin-top:14px">
+      <div class="veld" style="margin-top:0"><label for="motivatie">Motivering van de uitkomst (eigen woorden)</label>
+        <textarea id="motivatie" rows="3" placeholder="Waarom past dit niveau van onderzoek bij deze cliënt? Welke factoren wegen het zwaarst?"></textarea>
+        <span class="tip">Wijk je af van de voorgestelde uitkomst, leg dan vast waarom.</span></div>
+      <div class="raster">
+        <div class="veld"><label for="beoordelaar">Beoordeeld door</label><input id="beoordelaar" type="text" autocomplete="off"></div>
+        <div class="veld"><label for="akkoord">Akkoord compliance / tweede beoordelaar (bij verscherpt)</label><input id="akkoord" type="text" autocomplete="off"></div>
+      </div>
+      <div class="knoppen">
+        <button class="knop" type="button" id="print">Vastleggingsformulier afdrukken</button>
+        <button class="knop licht" type="button" id="wis">Alles wissen</button>
+      </div>
+    </div>
+    <div class="tabelvak" style="margin-top:6px">
+      <table>
+        <thead><tr><th>Score</th><th>Voorstel</th><th>Wat betekent dat</th></tr></thead>
+        <tbody>
+          <tr><td>0 – 2</td><td>Vereenvoudigd mogelijk</td><td>Alleen als je beleid en SIRA dit voor dit product en deze cliënt toestaan (art. 6 Wwft) en er geen enkele verplichte verscherping speelt. Je blijft de relatie monitoren.</td></tr>
+          <tr><td>3 – 5</td><td>Normaal</td><td>Volledige identificatie en verificatie, UBO bij een entiteit, doel en aard van de relatie, doorlopende controle (art. 3 Wwft).</td></tr>
+          <tr><td>6 of meer</td><td>Verscherpt</td><td>Aanvullende informatie en onderbouwing, herkomst van vermogen aantonen, goedkeuring door een daartoe aangewezen persoon, strakkere monitoring (art. 8 en 9 Wwft).</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- FIU -->
+  <section class="sectie" id="fiu">
+    <h2>Ongebruikelijke transactie melden bij de FIU</h2>
+    <div class="kaart">
+      <p>Wwft-instellingen melden een verrichte of voorgenomen ongebruikelijke transactie <strong>onverwijld</strong> bij FIU-Nederland nadat het ongebruikelijke karakter bekend is geworden (art. 16 Wwft). Voor bemiddelaars in levensverzekeringen geldt in de praktijk vooral de subjectieve indicator: je hebt reden om aan te nemen dat de transactie verband kan houden met witwassen of terrorismefinanciering.</p>
+      <ul>
+        <li>Melden gaat via het meldportaal van FIU-Nederland; registratie vooraf is nodig.</li>
+        <li>Vertel de cliënt niet dat je meldt of overweegt te melden (geheimhoudingsplicht, art. 23 Wwft).</li>
+        <li>Kun je het cliëntenonderzoek niet afronden, dan ga je de relatie niet aan of beëindig je die, en beoordeel je of een melding nodig is (art. 5 Wwft).</li>
+        <li>Bewaar de gegevens van het onderzoek en de melding vijf jaar (art. 33 en 34 Wwft).</li>
+        <li>Een treffer op een sanctielijst is iets anders dan een FIU-melding: voer niets uit, bevries waar dat voorgeschreven is en volg de sanctieregels. Overleg direct met je compliance officer.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- AMLR -->
+  <section class="sectie" id="amlr">
+    <h2>AMLR vanaf juli 2027: wat verandert</h2>
+    <div class="kaart">
+      <p>Op <strong>10 juli 2027</strong> gaat de Europese anti-witwasverordening gelden (AMLR, Verordening (EU) 2024/1624), samen met de zesde anti-witwasrichtlijn (AMLD6). Tot die datum blijft de Wwft onverkort van toepassing. Zie ook het kennisbankartikel <a href="index.html#artikel-k122">AMLR en Wwft: wat komt eraan</a>.</p>
+      <ul>
+        <li><strong>Rechtstreekse werking.</strong> Een verordening geldt direct in alle lidstaten. Veel regels die nu in de Wwft staan, komen straks uit de AMLR. Nederland past de eigen wetgeving aan via een implementatiewet (in voorbereiding).</li>
+        <li><strong>Europese toezichthouder.</strong> De Anti-Money Laundering Authority (AMLA) in Frankfurt stelt technische standaarden op en coördineert het toezicht.</li>
+        <li><strong>Wie valt eronder.</strong> Bemiddelaars in levensverzekeringen blijven meldingsplichtig. De AMLR noemt daarnaast bemiddelaars in hypothecair en consumptief krediet, met een uitzondering voor bemiddeling namens en onder verantwoordelijkheid van de kredietgever. Hoe dat voor Nederlandse kantoren uitpakt, is nog niet definitief: volg de implementatiewet en de communicatie van de AFM.</li>
+        <li><strong>UBO-drempel.</strong> Uiteindelijk belanghebbende wordt in de AMLR iemand met een belang van 25% <em>of meer</em> (nu in Nederland: meer dan 25%).</li>
+        <li><strong>Actualiseren cliëntenonderzoek.</strong> De AMLR geeft vaste maximumtermijnen voor het bijwerken van cliëntgegevens, korter bij een hoger risico.</li>
+        <li><strong>Kern blijft gelijk:</strong> cliëntenonderzoek vóór de relatie, UBO vaststellen en verifiëren, ongebruikelijke transacties melden, vastleggen wat je deed en waarom.</li>
+      </ul>
+      <div class="blok let-op"><h4>Let op</h4><p>De precieze verplichtingen hangen af van de definitieve teksten, de technische standaarden van AMLA en de Nederlandse implementatiewet. Plan in 2027 een herziening van je procedures en deze checklist.</p></div>
+    </div>
+  </section>
+
+  <!-- Bronnen -->
+  <section class="sectie" id="bronnen">
+    <h2>Bronnen</h2>
+    <ul class="bronnen">
+      <li><a href="https://wetten.overheid.nl/BWBR0024281" rel="noopener">Wet ter voorkoming van witwassen en financieren van terrorisme (Wwft), wetten.overheid.nl</a></li>
+      <li><a href="https://wetten.overheid.nl/BWBR0041193" rel="noopener">Uitvoeringsbesluit Wwft 2018, wetten.overheid.nl</a></li>
+      <li><a href="https://www.afm.nl/nl-nl/professionals/veelgestelde-vragen/wwft-algemeen/wie-wwft" rel="noopener">AFM: welke partijen vallen onder de Wwft?</a></li>
+      <li><a href="https://www.afm.nl/~/profmedia/files/wet-regelgeving/beleidsuitingen/leidraden/herziene-leidraad-wwft-2024.pdf" rel="noopener">AFM: Leidraad Wwft en Sanctiewet (2024)</a></li>
+      <li><a href="https://www.afm.nl/en/sector/themas/voorkomen-witwassen-terrorismefinanciering-naleving-sanctiewet/nieuwe-europese-wetgeving" rel="noopener">AFM: nieuwe Europese AML/CFT-wetgeving</a></li>
+      <li><a href="https://www.dnb.nl/media/fjag2ojs/dnb-sira-gp-2025-nl.pdf" rel="noopener">DNB: Good practices SIRA (2025)</a></li>
+      <li><a href="https://www.dnb.nl/en/sector-information/open-book-supervision/laws-and-eu-regulations/european-amlcft-framework/" rel="noopener">DNB: European AML/CFT framework</a></li>
+      <li><a href="https://www.fiu-nederland.nl/" rel="noopener">FIU-Nederland: melden van ongebruikelijke transacties</a></li>
+      <li><a href="https://www.rijksoverheid.nl/documenten/2015/08/27/nationale-terrorismelijst" rel="noopener">Rijksoverheid: nationale sanctielijst terrorisme</a></li>
+      <li><a href="https://eur-lex.europa.eu/eli/reg/2024/1624/oj" rel="noopener">Verordening (EU) 2024/1624 (AMLR), EUR-Lex</a></li>
+    </ul>
+  </section>
+</main>
+
+<div class="compliance">
+  <strong>Compliance:</strong> dit hulpmiddel vervangt geen eigen Wwft-beleid, procedures of systematische integriteitsrisicoanalyse (SIRA) en is geen juridisch advies. De risicoscore is een vereenvoudiging; jouw beleid bepaalt welke factoren en drempels gelden. Controleer de actuele wet- en regelgeving en de leidraden van AFM en DNB, en stem af met je compliance officer.
+</div>
+
+<footer class="voet">
+  Adviesforum &middot; collegiale kennisdeling voor financieel adviseurs &middot; <a href="index.html#hulpmiddelen">Alle hulpmiddelen</a> &middot; <a href="privacy.html">Privacy</a>. Er wordt niets opgeslagen of verstuurd: alles blijft in je eigen browser. Inhoud gecontroleerd op 2 oktober 2026.
+</footer>
+
+<script>
+(function () {
+  'use strict';
+  function $(id) { return document.getElementById(id); }
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+
+  /* ---------- Reikwijdte ---------- */
+  var plichtUit = $('plicht-uit');
+  function toonPlicht() {
+    var g = document.querySelector('input[name="plicht"]:checked');
+    if (!g) { plichtUit.className = 'uitslag'; plichtUit.innerHTML = ''; return; }
+    if (g.value === 'ja') {
+      plichtUit.className = 'uitslag ja';
+      plichtUit.innerHTML = '<p><strong>Waarschijnlijk Wwft-plichtig voor die bemiddeling.</strong> Voor de bemiddeling in levensverzekeringen geldt de Wwft volledig: cliëntenonderzoek, melden van ongebruikelijke transacties, vastleggen, opleiding van medewerkers en een eigen risicoanalyse. Voor je overige activiteiten (hypotheken, schade) geldt de Wwft in de huidige wet niet als zodanig, maar wel de Sanctiewet en de integriteitseisen.</p>';
+    } else {
+      plichtUit.className = 'uitslag nee';
+      plichtUit.innerHTML = '<p><strong>De Wwft is dan waarschijnlijk niet op je kantoor van toepassing.</strong> De checklist blijft bruikbaar als goede praktijk voor je integriteitsbeleid. Een sanctiecheck en het kennen van je klant blijven nodig, en een melding bij de FIU kan dan vrijwillig of via de geldverstrekker. Let op: vanaf juli 2027 kan dit voor kredietbemiddelaars veranderen (zie AMLR hieronder).</p>';
+    }
+  }
+  document.querySelectorAll('input[name="plicht"]').forEach(function (r) { r.addEventListener('change', function () { toonPlicht(); }); });
+
+  /* ---------- Stappen ---------- */
+  var STAPPEN = [
+    { id: 'id', titel: 'Identificatie en verificatie', alleenRp: false, punten: [
+      'Identiteit vastgesteld (naam, geboortedatum, adres) vóór het aangaan van de relatie',
+      'Geverifieerd met een geldig identiteitsdocument (paspoort, ID-kaart, rijbewijs) of betrouwbare digitale bron',
+      'Kopie of gegevens van het document vastgelegd, met datum en wie heeft geverifieerd',
+      'Bij een vertegenwoordiger: identiteit en vertegenwoordigingsbevoegdheid gecontroleerd'] },
+    { id: 'ubo', titel: 'Uiteindelijk belanghebbende (UBO)', alleenRp: true, punten: [
+      'Uittreksel Handelsregister en UBO-register geraadpleegd',
+      'UBO\'s vastgesteld (eigendom of zeggenschap, nu: meer dan 25%) en redelijke maatregelen genomen om te verifiëren',
+      'Eigendoms- en zeggenschapsstructuur begrepen en vastgelegd',
+      'Geen UBO te vinden: hoger leidinggevend personeel als pseudo-UBO vastgelegd, met de genomen stappen',
+      'Afwijking tussen eigen bevinding en UBO-register beoordeeld (en waar vereist teruggemeld)'] },
+    { id: 'pep', titel: 'PEP-check', alleenRp: false, punten: [
+      'Nagegaan of cliënt (of UBO) een politiek prominent persoon is, of familielid of naaste geassocieerde',
+      'Bij een PEP: goedkeuring hoger leidinggevende, herkomst vermogen en middelen vastgesteld, verscherpte monitoring'] },
+    { id: 'sanctie', titel: 'Sanctielijsten', alleenRp: false, punten: [
+      'Cliënt, UBO en vertegenwoordigers getoetst aan de EU-sanctielijsten en de nationale terrorismelijst',
+      'Datum en gebruikte bron vastgelegd; hertoetsing bij wijziging lijsten of cliëntgegevens geregeld',
+      'Bij een (mogelijke) treffer: niets uitgevoerd, compliance ingelicht, sanctieregels gevolgd'] },
+    { id: 'doel', titel: 'Doel en beoogde aard van de relatie', alleenRp: false, punten: [
+      'Vastgelegd waarom de cliënt het product wil (bijv. dekking hypotheek, uitvaart, vermogensopbouw)',
+      'Hoogte van premie of inleg past bij inkomen, vermogen en situatie van de cliënt'] },
+    { id: 'herkomst', titel: 'Herkomst van middelen en vermogen', alleenRp: false, punten: [
+      'Herkomst van de middelen voor premie of koopsom nagevraagd (bijv. salaris, verkoop woning, erfenis)',
+      'Bij hoger risico of grote koopsom: onderbouwd met documenten (bankafschrift, akte, jaaropgave)',
+      'Betaling komt van een rekening op naam van de cliënt'] },
+    { id: 'factoren', titel: 'Risicofactoren beoordeeld', alleenRp: false, punten: [
+      'Land, product, kanaal en cliënt beoordeeld (zie risicoscore hieronder)',
+      'Uitkomst vereenvoudigd, normaal of verscherpt gemotiveerd vastgelegd'] },
+    { id: 'monitoring', titel: 'Doorlopende controle en melding', alleenRp: false, punten: [
+      'Afspraken over periodieke actualisatie van het dossier, frequentie passend bij het risico',
+      'Ongebruikelijke signalen (afkoop kort na afsluiten, wisseling begunstigde, betaling door derde) beoordeeld',
+      'Indien ongebruikelijk: onverwijld gemeld bij FIU-Nederland en vastgelegd, cliënt niet ingelicht'] }
+  ];
+  var stappenEl = $('stappen');
+  stappenEl.innerHTML = STAPPEN.map(function (s, i) {
+    return '<div class="kaart stap" data-stap="' + s.id + '"' + (s.alleenRp ? ' data-rp="1"' : '') + '>' +
+      '<div class="stapkop"><span class="stapnr">' + (i + 1) + '</span><h3>' + esc(s.titel) + (s.alleenRp ? ' <span style="font-weight:600;font-size:13px;color:var(--grijs)">(bij rechtspersoon)</span>' : '') + '</h3></div>' +
+      s.punten.map(function (p, j) {
+        var id = 'c-' + s.id + '-' + j;
+        return '<div class="vink"><input type="checkbox" id="' + id + '"><label for="' + id + '">' + esc(p) + '</label></div>';
+      }).join('') +
+      '<div class="veld"><label for="n-' + s.id + '">Bevindingen</label><textarea id="n-' + s.id + '" rows="2"></textarea></div>' +
+      '</div>';
+  }).join('');
+  function toonRp() {
+    var rp = $('k-soort').value === 'rp';
+    document.querySelectorAll('.stap[data-rp]').forEach(function (el) { el.style.display = rp ? '' : 'none'; });
+  }
+  $('k-soort').addEventListener('change', function () { toonRp(); bereken(); });
+  toonRp();
+
+  /* ---------- Risicofactoren ---------- */
+  var FACTOREN = [
+    { id: 'land', titel: 'Land (woonplaats, vestiging, herkomst geld)', opties: [
+      ['Nederland of andere EER-lidstaat', 0], ['Derde land, geen verhoogd risico bekend', 1],
+      ['Land met verhoogd risico volgens eigen beleid / FATF-aandacht', 2], ['Hoog-risicoland op de EU-lijst', 3, 'verplicht']] },
+    { id: 'product', titel: 'Product', opties: [
+      ['Overlijdensrisico- of uitvaartverzekering, reguliere premie', 0], ['Lijfrente of kapitaalverzekering met periodieke premie', 1],
+      ['Koopsom of storting ineens', 2], ['Grote koopsom, afkoopbaar, of betaling door een derde', 3]] },
+    { id: 'kanaal', titel: 'Kanaal', opties: [
+      ['Persoonlijk contact met fysieke ID-controle', 0], ['Op afstand met betrouwbare digitale verificatie', 1],
+      ['Op afstand zonder betrouwbare verificatie, of via een onbekende tussenpersoon', 2]] },
+    { id: 'klant', titel: 'Cliënt', opties: [
+      ['Natuurlijk persoon, situatie helder en passend', 0], ['Rechtspersoon met eenvoudige, transparante structuur', 1],
+      ['Complexe of ondoorzichtige structuur, trust of nominee', 3], ['Ontwijkend gedrag, haast, tegenstrijdige informatie', 3]] },
+    { id: 'pep', titel: 'PEP-status (cliënt of UBO)', opties: [
+      ['Geen PEP', 0], ['PEP, familielid of naaste geassocieerde', 3, 'verplicht']] },
+    { id: 'herkomst', titel: 'Herkomst van middelen', opties: [
+      ['Verklaard en onderbouwd met documenten', 0], ['Aannemelijk, maar (nog) niet onderbouwd', 1], ['Onduidelijk of niet te verklaren', 3]] },
+    { id: 'sanctie', titel: 'Sanctiecheck', opties: [
+      ['Geen treffer', 0], ['Mogelijke treffer, nog in onderzoek', 0, 'stop'], ['Bevestigde treffer', 0, 'stop']] }
+  ];
+  $('factoren').innerHTML = '<div class="raster">' + FACTOREN.map(function (f) {
+    return '<div class="veld"><label for="f-' + f.id + '">' + esc(f.titel) + '</label><select id="f-' + f.id + '">' +
+      f.opties.map(function (o, i) { return '<option value="' + i + '">' + esc(o[0]) + ' (' + o[1] + ')</option>'; }).join('') + '</select></div>';
+  }).join('') + '</div>';
+
+  var laatste = null;
+  function bereken() {
+    var totaal = 0, verplicht = [], stop = [], regels = [];
+    FACTOREN.forEach(function (f) {
+      var o = f.opties[+$('f-' + f.id).value || 0];
+      totaal += o[1];
+      regels.push([f.titel, o[0], o[1]]);
+      if (o[2] === 'verplicht') verplicht.push(f.titel + ': ' + o[0]);
+      if (o[2] === 'stop') stop.push(o[0]);
+    });
+    var uitkomst, onder, redenen = [];
+    if (stop.length) {
+      uitkomst = 'Stop: eerst sanctietreffer afhandelen';
+      onder = 'Ga de relatie niet aan en voer niets uit tot de treffer is uitgezocht. Volg de sanctieregels en overleg met compliance.';
+    } else if (verplicht.length || totaal >= 6) {
+      uitkomst = 'Verscherpt cliëntenonderzoek';
+      onder = verplicht.length ? 'Verscherpt onderzoek is hier voorgeschreven, ongeacht de score.' : 'De score wijst op een hoger risico.';
+      verplicht.forEach(function (v) { redenen.push('Verplichte verscherping: ' + v); });
+      redenen.push('Leg vast welke aanvullende maatregelen je neemt en wie de relatie heeft goedgekeurd.');
+    } else if (totaal <= 2) {
+      uitkomst = 'Vereenvoudigd mogelijk';
+      onder = 'Alleen als je beleid en SIRA dit toestaan voor dit product en deze cliënt. Twijfel je, kies dan normaal.';
+    } else {
+      uitkomst = 'Normaal cliëntenonderzoek';
+      onder = 'Volledig onderzoek volgens art. 3 Wwft.';
+    }
+    if ($('k-soort').value === 'rp' && $('f-klant').value === '0') redenen.push('Soort cliënt is een rechtspersoon: controleer de keuze bij de factor Cliënt.');
+    if ($('f-herkomst').value === '2') redenen.push('Onverklaarbare herkomst van middelen: beoordeel of een melding bij FIU-Nederland nodig is.');
+    if ($('f-klant').value === '3') redenen.push('Ontwijkend gedrag is op zichzelf een signaal: beoordeel of de transactie ongebruikelijk is.');
+    $('s-uitkomst').textContent = uitkomst;
+    $('s-onder').textContent = onder + ' Totaalscore: ' + totaal + ' punten.';
+    $('s-detail').innerHTML = regels.map(function (r) { return '<div><dt>' + esc(r[0]) + '</dt><dd>' + r[2] + '</dd></div>'; }).join('');
+    $('s-redenen').innerHTML = redenen.map(function (r) { return '<li>' + esc(r) + '</li>'; }).join('');
+    $('s-redenen').style.display = redenen.length ? '' : 'none';
+    laatste = { totaal: totaal, uitkomst: uitkomst, onder: onder, regels: regels, redenen: redenen };
+  }
+  FACTOREN.forEach(function (f) { $('f-' + f.id).addEventListener('change', bereken); });
+  bereken();
+
+  // Datum van vandaag als standaard
+  (function () { var d = new Date(); $('k-datum').value = d.getFullYear() + '-' + ('0' + (d.getMonth() + 1)).slice(-2) + '-' + ('0' + d.getDate()).slice(-2); })();
+
+  function datumNL(iso) {
+    var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso || ''); return m ? (+m[3]) + '-' + (+m[2]) + '-' + m[1] : '';
+  }
+
+  /* ---------- Afdrukken ---------- */
+  $('print').addEventListener('click', function () {
+    bereken();
+    var rp = $('k-soort').value === 'rp';
+    var g = document.querySelector('input[name="plicht"]:checked');
+    var stapHtml = STAPPEN.filter(function (s) { return !s.alleenRp || rp; }).map(function (s, i) {
+      return '<h3>' + (i + 1) + '. ' + esc(s.titel) + '</h3><ul class="cl">' + s.punten.map(function (p, j) {
+        var c = $('c-' + s.id + '-' + j).checked; return '<li><span class="vk">' + (c ? '&#9746;' : '&#9744;') + '</span> ' + esc(p) + '</li>';
+      }).join('') + '</ul><div class="nt"><b>Bevindingen:</b> ' + (esc($('n-' + s.id).value) || '<span class="leeg">&nbsp;</span>') + '</div>';
+    }).join('');
+    var css = 'body{font-family:Montserrat,Arial,sans-serif;color:#141414;margin:28px;font-size:12.5px;line-height:1.45}h1{font-size:20px;margin:0 0 4px}h2{font-size:15px;border-bottom:3px solid #FFD200;padding-bottom:4px;margin:20px 0 8px}h3{font-size:13px;margin:12px 0 4px}' +
+      'table{border-collapse:collapse;width:100%}td,th{border:1px solid #ccc;padding:5px 8px;text-align:left;vertical-align:top}th{background:#FFF6C7}.cl{list-style:none;padding:0;margin:0}.cl li{margin:2px 0}.vk{font-size:14px}' +
+      '.nt{border:1px solid #ccc;min-height:28px;padding:5px 8px;margin-top:4px;white-space:pre-wrap}.leeg{display:inline-block;min-height:18px}.uit{background:#141414;color:#FFD200;padding:10px 12px;font-weight:700;font-size:15px}.klein{font-size:11px;color:#555}' +
+      '.hand td{height:34px}@media print{body{margin:12mm}h2{break-after:avoid}}';
+    var html = '<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><title>Vastlegging cliëntenonderzoek</title><style>' + css + '</style></head><body>' +
+      '<h1>Vastlegging cliëntenonderzoek (Wwft/CDD)</h1><div class="klein">Opgesteld met het Adviesforum-hulpmiddel. Dit formulier vervangt geen eigen beleid of SIRA.</div>' +
+      '<h2>Cliënt</h2><table><tr><th>Cliënt</th><td>' + esc($('k-naam').value) + '</td><th>Soort</th><td>' + (rp ? 'Rechtspersoon / entiteit' : 'Natuurlijk persoon') + '</td></tr>' +
+      '<tr><th>Product / dienst</th><td>' + esc($('k-product').value) + '</td><th>Datum</th><td>' + esc(datumNL($('k-datum').value)) + '</td></tr>' +
+      '<tr><th>Wwft van toepassing</th><td colspan="3">' + (g ? (g.value === 'ja' ? 'Ja: bemiddeling in levensverzekeringen' : 'Nee: vastgelegd als goede praktijk (Sanctiewet / integriteit Wft)') : 'Niet beantwoord') + '</td></tr></table>' +
+      '<h2>Checklist</h2>' + stapHtml +
+      '<h2>Risicoscore</h2><table><tr><th>Factor</th><th>Keuze</th><th>Punten</th></tr>' +
+      laatste.regels.map(function (r) { return '<tr><td>' + esc(r[0]) + '</td><td>' + esc(r[1]) + '</td><td>' + r[2] + '</td></tr>'; }).join('') +
+      '<tr><th colspan="2">Totaal</th><th>' + laatste.totaal + '</th></tr></table>' +
+      '<p class="uit">Uitkomst: ' + esc(laatste.uitkomst) + '</p><p>' + esc(laatste.onder) + '</p>' +
+      (laatste.redenen.length ? '<ul>' + laatste.redenen.map(function (r) { return '<li>' + esc(r) + '</li>'; }).join('') + '</ul>' : '') +
+      '<h3>Motivering</h3><div class="nt">' + (esc($('motivatie').value) || '<span class="leeg">&nbsp;</span>') + '</div>' +
+      '<h2>Melding ongebruikelijke transactie</h2><table class="hand"><tr><th style="width:40%">Melding FIU-Nederland gedaan?</th><td>&#9744; nee &nbsp; &#9744; ja, datum en meldnummer:</td></tr><tr><th>Toelichting</th><td></td></tr></table>' +
+      '<h2>Akkoord</h2><table class="hand"><tr><th style="width:40%">Beoordeeld door</th><td>' + esc($('beoordelaar').value) + '</td></tr><tr><th>Akkoord compliance / tweede beoordelaar</th><td>' + esc($('akkoord').value) + '</td></tr><tr><th>Handtekening en datum</th><td></td></tr><tr><th>Volgende actualisatie dossier</th><td></td></tr></table>' +
+      '<p class="klein">Bewaar dit formulier bij het klantdossier (bewaartermijn Wwft: vijf jaar na einde relatie of transactie). Bronnen: wetten.overheid.nl (Wwft), afm.nl, dnb.nl, fiu-nederland.nl.</p>' +
+      '</body></html>';
+    var w = window.open('', '_blank');
+    if (!w) { alert('Je browser blokkeert het printvenster. Sta pop-ups toe voor deze pagina.'); return; }
+    w.document.open(); w.document.write(html); w.document.close();
+    w.focus(); setTimeout(function () { try { w.print(); } catch (e) {} }, 300);
+  });
+
+  $('wis').addEventListener('click', function () {
+    document.querySelectorAll('main input[type="checkbox"]').forEach(function (c) { c.checked = false; });
+    document.querySelectorAll('main textarea, main input[type="text"]').forEach(function (t) { t.value = ''; });
+    document.querySelectorAll('main input[type="radio"]').forEach(function (r) { r.checked = false; });
+    FACTOREN.forEach(function (f) { $('f-' + f.id).value = '0'; });
+    $('k-soort').value = 'np'; toonRp(); toonPlicht(); bereken();
+  });
+})();
+</script>
+</body>
+</html>
