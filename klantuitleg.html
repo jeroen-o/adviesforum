@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Klantuitleg – Adviesforum</title>
+<meta name="description" content="Korte, printbare uitlegbladen in eenvoudige taal (B1) die je als adviseur kunt meegeven of mailen: hypotheek, verzekeren, belasting, pensioen, klachten en privacy.">
+<meta property="og:title" content="Klantuitleg – Adviesforum">
+<meta property="og:description" content="Korte, printbare uitlegbladen in B1-taal om mee te geven of te mailen aan klanten.">
+<meta property="og:type" content="website">
+<style>
+@font-face{font-family:Montserrat;font-style:normal;font-weight:400;font-display:swap;src:url(fonts/montserrat-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:600;font-display:swap;src:url(fonts/montserrat-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:700;font-display:swap;src:url(fonts/montserrat-latin-700-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:800;font-display:swap;src:url(fonts/montserrat-latin-800-normal.woff2) format('woff2')}
+:root{
+  --geel:#FFD200;--geel-donker:#E6BD00;--geel-zacht:#FFF6C7;
+  --zwart:#141414;--tekst:#1F1F1F;--grijs:#5E5E5E;--lijn:#E4E4E4;--vlak:#F7F7F5;
+  --rood:#C0392B;--groen:#1E7A4B;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:Montserrat,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  color:var(--tekst);background:#fff;line-height:1.55;font-size:15px;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+button,input,select{font-family:inherit}
+
+.balk{background:var(--zwart);color:#fff;font-size:12.5px;padding:8px 24px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.balk a{color:#fff;text-decoration:none;opacity:.88}
+.balk a:hover{opacity:1;text-decoration:underline}
+
+.kop{background:var(--geel);color:var(--zwart);padding:34px 24px 38px}
+.kop-in{max-width:1180px;margin:0 auto}
+.merk{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.08em;font-size:12px;text-transform:uppercase;margin-bottom:16px}
+.zeshoek{width:22px;height:25px;background:var(--zwart);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);flex:none}
+.terug{display:inline-block;font-size:13.5px;font-weight:700;text-decoration:none;border-bottom:2px solid var(--zwart);margin-bottom:14px}
+.kop h1{margin:0 0 10px;font-size:clamp(27px,4.2vw,40px);line-height:1.12;font-weight:800}
+.kop p{margin:0;max-width:66ch;font-size:15.5px}
+.stempel{display:inline-block;margin-top:16px;font-size:12px;font-weight:700;background:var(--zwart);color:var(--geel);padding:5px 11px;border-radius:999px}
+
+.romp{max-width:1180px;margin:0 auto;padding:28px 24px 56px;display:grid;grid-template-columns:290px minmax(0,1fr);gap:28px;align-items:start}
+@media(max-width:900px){.romp{grid-template-columns:minmax(0,1fr);padding:22px 16px 48px;gap:20px}}
+
+.menu{position:sticky;top:12px;max-height:calc(100vh - 24px);overflow:auto;border:1px solid var(--lijn);border-radius:14px;padding:14px;background:#fff}
+@media(max-width:900px){.menu{position:static;max-height:360px}}
+.menu input{width:100%;padding:10px 12px;border:1px solid #CFCFCF;border-radius:9px;font-size:14px;background:#fff}
+.menu input:focus,.instel input:focus{outline:3px solid rgba(255,210,0,.6);outline-offset:1px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 6px}
+.chip{border:1px solid #CFCFCF;background:#fff;border-radius:999px;font-size:12px;font-weight:700;padding:5px 10px;cursor:pointer;color:var(--tekst)}
+.chip[aria-pressed="true"]{background:var(--zwart);border-color:var(--zwart);color:var(--geel)}
+.groep{font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--grijs);margin:12px 0 4px;padding:0 6px;font-weight:800}
+.item{display:block;width:100%;overflow-wrap:anywhere;hyphens:auto;text-align:left;border:0;background:none;padding:7px 8px;border-radius:8px;font-size:13.5px;font-weight:600;color:var(--tekst);cursor:pointer;line-height:1.35}
+.item:hover{background:var(--vlak)}
+.item[aria-current="true"]{background:var(--geel-zacht);box-shadow:inset 3px 0 0 var(--geel-donker)}
+.leeg{font-size:13px;color:var(--grijs);padding:8px 6px;display:none}
+.telling{font-size:12px;color:var(--grijs);margin-top:4px}
+
+.instel{border:1px solid var(--lijn);border-radius:14px;padding:16px 18px;background:var(--vlak);margin-bottom:20px}
+.instel h2{margin:0 0 4px;font-size:13px;letter-spacing:.07em;text-transform:uppercase;color:var(--grijs)}
+.instel p{margin:0 0 12px;font-size:13px;color:var(--grijs)}
+.rij{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+@media(max-width:1100px){.rij{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.rij{grid-template-columns:minmax(0,1fr)}}
+.instel label{display:block;font-size:12.5px;font-weight:700;margin-bottom:4px}
+.instel input{width:100%;padding:9px 11px;border:1px solid #CFCFCF;border-radius:9px;font-size:14px;background:#fff}
+
+.acties{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.knop{font-size:14px;font-weight:700;border-radius:999px;cursor:pointer;border:1px solid #CFCFCF;padding:10px 18px;background:#fff;color:var(--zwart);text-decoration:none;display:inline-block}
+.knop:hover{background:var(--vlak)}
+.knop.primair{background:var(--zwart);border-color:var(--zwart);color:#fff}
+.knop.primair:hover{background:#000}
+.melding{font-size:13px;font-weight:600;color:var(--groen);min-height:20px;margin-bottom:8px}
+.melding.fout{color:var(--rood)}
+
+/* Blad (scherm) */
+.blad{border:1px solid var(--lijn);border-radius:14px;padding:28px 30px;background:#fff;box-shadow:0 1px 0 rgba(0,0,0,.02)}
+@media(max-width:520px){.blad{padding:20px 16px}}
+.blad-kop{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-bottom:3px solid var(--geel);padding-bottom:10px;margin-bottom:18px;font-size:12.5px}
+.blad-kop .kantoor{font-weight:800}
+.blad-kop .cat{color:var(--grijs);font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:11.5px}
+.blad h2.titel{margin:0 0 14px;font-size:clamp(22px,3vw,28px);line-height:1.2;font-weight:800;overflow-wrap:anywhere}
+.blad h3{margin:20px 0 8px;font-size:15px;font-weight:800}
+.kort{background:var(--geel-zacht);border-left:4px solid var(--geel-donker);border-radius:8px;padding:12px 16px 12px 14px}
+.kort h3{margin-top:0}
+.blad ul{margin:0;padding-left:20px}
+.blad li{margin-bottom:6px}
+.blad p{margin:0 0 10px;overflow-wrap:break-word}
+.vragen{border:1px dashed #BDBDBD;border-radius:8px;padding:12px 16px}
+.vragen h3{margin-top:0}
+.bron{font-size:12px;color:var(--grijs);margin-top:18px;border-top:1px solid var(--lijn);padding-top:10px;overflow-wrap:anywhere}
+.bron a{color:var(--grijs)}
+.disclaimer{font-size:12px;color:var(--grijs);margin-top:8px;font-style:italic}
+.contact{font-size:13px;margin-top:14px;background:var(--vlak);border-radius:8px;padding:10px 14px}
+
+.uitleg-onder{margin-top:22px;font-size:13px;color:var(--grijs)}
+footer{border-top:1px solid var(--lijn);padding:22px 24px;font-size:12.5px;color:var(--grijs);text-align:center}
+.sr{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+</style>
+</head>
+<body>
+
+<div class="balk">
+  <span>Adviesforum &middot; hulpmiddelen voor financieel adviseurs</span>
+  <span><a href="index.html">Naar het forum</a></span>
+</div>
+
+<header class="kop">
+  <div class="kop-in">
+    <div class="merk"><span class="zeshoek" aria-hidden="true"></span>Adviesforum &middot; Hulpmiddelen</div>
+    <a class="terug" href="index.html#hulpmiddelen">&larr; Terug naar de hulpmiddelen</a>
+    <h1>Klantuitleg: <span id="aantal">32</span> uitlegbladen voor je klant</h1>
+    <p>Korte bladen in eenvoudige taal (B1) om mee te geven, te printen of te mailen. Vul je kantoornaam en naam in, dan staan die op elk blad. Bewaar als PDF via het printvenster.</p>
+    <span class="stempel">Algemene informatie &middot; geen advies &middot; bedragen 2026</span>
+  </div>
+</header>
+
+<main class="romp">
+  <nav class="menu" aria-label="Uitlegbladen">
+    <label class="sr" for="zoek">Zoek een uitlegblad</label>
+    <input type="search" id="zoek" placeholder="Zoek, bijv. NHG of scheiding" autocomplete="off">
+    <div class="chips" id="chips" role="group" aria-label="Categorieën"></div>
+    <div class="telling" id="telling"></div>
+    <div id="lijst"></div>
+    <div class="leeg" id="leeg">Niets gevonden. Probeer een ander woord.</div>
+  </nav>
+
+  <div>
+    <section class="instel" aria-labelledby="instel-kop">
+      <h2 id="instel-kop">Jouw gegevens op het blad</h2>
+      <p>Wordt niet opgeslagen. Alleen zichtbaar op dit scherm, de print en de tekst die je kopieert of mailt.</p>
+      <div class="rij">
+        <div><label for="i-kantoor">Kantoornaam</label><input id="i-kantoor" type="text" maxlength="80" placeholder="Advieskantoor"></div>
+        <div><label for="i-adviseur">Adviseur</label><input id="i-adviseur" type="text" maxlength="80" placeholder="Naam adviseur"></div>
+        <div><label for="i-tel">Telefoon <span style="font-weight:400;color:var(--grijs)">(optioneel)</span></label><input id="i-tel" type="tel" maxlength="40"></div>
+        <div><label for="i-mail">E-mail <span style="font-weight:400;color:var(--grijs)">(optioneel)</span></label><input id="i-mail" type="email" maxlength="80"></div>
+      </div>
+    </section>
+
+    <div class="acties" role="toolbar" aria-label="Acties voor dit blad">
+      <button class="knop primair" type="button" id="b-print">Afdrukken / PDF</button>
+      <button class="knop" type="button" id="b-kopie">Kopieer als tekst</button>
+      <a class="knop" id="b-mail" href="#">Mail naar klant</a>
+    </div>
+    <div class="melding" id="melding" role="status" aria-live="polite"></div>
+
+    <article class="blad" id="blad" aria-live="polite"></article>
+
+    <p class="uitleg-onder">De inhoud is in eigen woorden geschreven op basis van officiële bronnen (AFM, Belastingdienst, NHG, Rijksoverheid, SVB, UWV, Kifid, Autoriteit Persoonsgegevens, BKR, Verbond van Verzekeraars). Controleer bedragen en regels altijd vóór gebruik; ze veranderen meestal per 1 januari. Het blad is algemene informatie en vervangt geen persoonlijk advies.</p>
+  </div>
+</main>
+
+<footer>Adviesforum &middot; Klantuitleg &middot; peildatum zie per blad</footer>
+
+<script src="data/klantuitleg.js"></script>
+<script>
+(function () {
+  'use strict';
+  var DATA = (window.KLANTUITLEG || []).slice();
+  var CATS = [];
+  DATA.forEach(function (b) { if (CATS.indexOf(b.cat) < 0) CATS.push(b.cat); });
+  var DISCLAIMER = 'Dit blad geeft algemene informatie. Het is geen persoonlijk advies. Regels en bedragen kunnen veranderen. Vraag je adviseur wat dit voor jouw situatie betekent.';
+
+  var $ = function (id) { return document.getElementById(id); };
+  var zoek = $('zoek'), lijst = $('lijst'), leeg = $('leeg'), chips = $('chips'), blad = $('blad'), melding = $('melding');
+  var velden = { kantoor: $('i-kantoor'), adviseur: $('i-adviseur'), tel: $('i-tel'), mail: $('i-mail') };
+  var actieveCat = '', huidig = null;
+
+  $('aantal').textContent = DATA.length;
+
+  function esc(s) {
+    return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+  function norm(s) {
+    return String(s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+  }
+  function gegevens() {
+    return {
+      kantoor: velden.kantoor.value.trim(), adviseur: velden.adviseur.value.trim(),
+      tel: velden.tel.value.trim(), mail: velden.mail.value.trim()
+    };
+  }
+  function contactRegel(g) {
+    var d = [];
+    if (g.adviseur) d.push('Je adviseur: ' + g.adviseur + (g.kantoor ? ', ' + g.kantoor : ''));
+    else if (g.kantoor) d.push(g.kantoor);
+    if (g.tel) d.push('Telefoon: ' + g.tel);
+    if (g.mail) d.push('E-mail: ' + g.mail);
+    return d;
+  }
+
+  /* ---------- Menu ---------- */
+  function bouwChips() {
+    var html = '<button type="button" class="chip" data-cat="" aria-pressed="true">Alles</button>';
+    CATS.forEach(function (c) { html += '<button type="button" class="chip" data-cat="' + esc(c) + '" aria-pressed="false">' + esc(c) + '</button>'; });
+    chips.innerHTML = html;
+  }
+  function past(b, q) {
+    if (actieveCat && b.cat !== actieveCat) return false;
+    if (!q) return true;
+    var hooi = norm([b.titel, b.cat, b.kw, b.kort.join(' '), b.uitleg.join(' ')].join(' '));
+    return q.split(/\s+/).every(function (w) { return hooi.indexOf(w) >= 0; });
+  }
+  function bouwLijst() {
+    var q = norm(zoek.value.trim()), html = '', n = 0;
+    CATS.forEach(function (c) {
+      var items = DATA.filter(function (b) { return b.cat === c && past(b, q); });
+      if (!items.length) return;
+      html += '<div class="groep">' + esc(c) + '</div>';
+      items.forEach(function (b) {
+        n++;
+        html += '<button type="button" class="item" data-id="' + esc(b.id) + '"' + (huidig && huidig.id === b.id ? ' aria-current="true"' : '') + '>' + esc(b.titel) + '</button>';
+      });
+    });
+    lijst.innerHTML = html;
+    leeg.style.display = n ? 'none' : 'block';
+    $('telling').textContent = n + ' van ' + DATA.length + ' bladen';
+  }
+
+  /* ---------- Blad renderen ---------- */
+  function bladHTML(b, g) {
+    var kopLinks = g.kantoor ? '<span class="kantoor">' + esc(g.kantoor) + '</span>' : '<span class="kantoor">Uitleg voor klanten</span>';
+    var h = '<div class="blad-kop">' + kopLinks + '<span class="cat">' + esc(b.cat) + '</span></div>';
+    h += '<h2 class="titel">' + esc(b.titel) + '</h2>';
+    h += '<div class="kort"><h3>In het kort</h3><ul>' + b.kort.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ul></div>';
+    h += '<h3>Uitleg</h3>' + b.uitleg.map(function (x) { return '<p>' + esc(x) + '</p>'; }).join('');
+    h += '<h3>Waar moet je op letten?</h3><ul>' + b.letop.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ul>';
+    h += '<div class="vragen" style="margin-top:18px"><h3>Vraag je adviseur</h3><ul>' + b.vragen.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ul></div>';
+    var c = contactRegel(g);
+    if (c.length) h += '<div class="contact">' + c.map(esc).join('<br>') + '</div>';
+    h += '<div class="bron"><strong>Bron:</strong> ' + b.bronnen.map(function (x) {
+      var d = x.u.replace(/^https?:\/\/(www\.)?/, '').split('/')[0];
+      return '<a href="' + esc(x.u) + '" target="_blank" rel="noopener">' + esc(x.t) + '</a> <span class="dom">(' + esc(d) + ')</span>';
+    }).join(' &middot; ') + '<br><strong>Peildatum:</strong> ' + esc(b.peildatum) + '.</div>';
+    h += '<div class="disclaimer">' + esc(DISCLAIMER) + '</div>';
+    return h;
+  }
+  function bladTekst(b, g) {
+    var t = [];
+    t.push(b.titel.toUpperCase());
+    if (g.kantoor) t.push(g.kantoor);
+    t.push('');
+    t.push('IN HET KORT');
+    b.kort.forEach(function (x) { t.push('- ' + x); });
+    t.push('');
+    t.push('UITLEG');
+    b.uitleg.forEach(function (x) { t.push(x); t.push(''); });
+    t.push('WAAR MOET JE OP LETTEN?');
+    b.letop.forEach(function (x) { t.push('- ' + x); });
+    t.push('');
+    t.push('VRAAG JE ADVISEUR');
+    b.vragen.forEach(function (x) { t.push('- ' + x); });
+    t.push('');
+    var c = contactRegel(g);
+    if (c.length) { c.forEach(function (x) { t.push(x); }); t.push(''); }
+    t.push('Bron: ' + b.bronnen.map(function (x) { return x.t + ' (' + x.u + ')'; }).join('; '));
+    t.push('Peildatum: ' + b.peildatum);
+    t.push('');
+    t.push(DISCLAIMER);
+    return t.join('\n');
+  }
+
+  function toon(id, scroll) {
+    var b = DATA.filter(function (x) { return x.id === id; })[0] || DATA[0];
+    if (!b) { blad.innerHTML = '<p>Geen bladen gevonden.</p>'; return; }
+    huidig = b;
+    blad.innerHTML = bladHTML(b, gegevens());
+    Array.prototype.forEach.call(lijst.querySelectorAll('.item'), function (el) {
+      if (el.getAttribute('data-id') === b.id) el.setAttribute('aria-current', 'true'); else el.removeAttribute('aria-current');
+    });
+    zetMail();
+    melding.textContent = '';
+    if (location.hash !== '#' + b.id) {
+      try { history.replaceState(null, '', '#' + b.id); } catch (e) { /* bestand:// of sandbox */ }
+    }
+    if (scroll && window.innerWidth <= 900) blad.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  /* ---------- Acties ---------- */
+  function zetMail() {
+    if (!huidig) return;
+    var g = gegevens();
+    var onderwerp = 'Uitleg: ' + huidig.titel;
+    var body = bladTekst(huidig, g);
+    var href = 'mailto:?subject=' + encodeURIComponent(onderwerp) + '&body=' + encodeURIComponent(body);
+    if (href.length > 1900) {
+      // Lange mailto-links worden door sommige mailprogramma's afgekapt: stuur dan een korte versie.
+      var kort = ['Hierbij een korte uitleg over: ' + huidig.titel, '', 'IN HET KORT']
+        .concat(huidig.kort.map(function (x) { return '- ' + x; }))
+        .concat(['', 'VRAAG JE ADVISEUR']).concat(huidig.vragen.map(function (x) { return '- ' + x; }))
+        .concat(['', 'Het volledige uitlegblad sturen we als bijlage (PDF) mee.'])
+        .concat(contactRegel(g).length ? [''].concat(contactRegel(g)) : [])
+        .concat(['', DISCLAIMER]).join('\n');
+      href = 'mailto:?subject=' + encodeURIComponent(onderwerp) + '&body=' + encodeURIComponent(kort);
+    }
+    $('b-mail').setAttribute('href', href);
+  }
+
+  function meld(tekst, fout) {
+    melding.textContent = tekst;
+    melding.className = 'melding' + (fout ? ' fout' : '');
+  }
+
+  function kopieer() {
+    if (!huidig) return;
+    var tekst = bladTekst(huidig, gegevens());
+    function terugval() {
+      var ta = document.createElement('textarea');
+      ta.value = tekst; ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed'; ta.style.top = '0'; ta.style.left = '0'; ta.style.width = '1px'; ta.style.height = '1px'; ta.style.opacity = '0';
+      document.body.appendChild(ta); ta.select();
+      var ok = false;
+      try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+      document.body.removeChild(ta);
+      meld(ok ? 'Tekst gekopieerd. Plak hem in je mail of document.' : 'Kopiëren lukte niet. Selecteer de tekst op het blad handmatig.', !ok);
+    }
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(tekst).then(function () { meld('Tekst gekopieerd. Plak hem in je mail of document.'); }, terugval);
+    } else terugval();
+  }
+
+  var PRINT_CSS = [
+    '@page{size:A4;margin:16mm 16mm 18mm}',
+    '*{box-sizing:border-box}',
+    'html,body{margin:0;padding:0}',
+    'body{font-family:Montserrat,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:#1F1F1F;font-size:10.8pt;line-height:1.45;-webkit-print-color-adjust:exact;print-color-adjust:exact}',
+    '.pagina{max-width:178mm;margin:0 auto;padding:8mm 0}',
+    '@media print{.pagina{padding:0}.noprint{display:none!important}}',
+    '.noprint{background:#FFF6C7;border:1px solid #E6BD00;border-radius:8px;padding:10px 14px;margin-bottom:14px;font-size:10pt}',
+    '.noprint button{font:inherit;font-weight:700;background:#141414;color:#fff;border:0;border-radius:999px;padding:7px 14px;margin-left:8px;cursor:pointer}',
+    '.blad-kop{display:flex;justify-content:space-between;gap:10px;border-bottom:3pt solid #FFD200;padding-bottom:6pt;margin-bottom:12pt;font-size:9.5pt}',
+    '.kantoor{font-weight:800}.cat{color:#5E5E5E;font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:8.5pt}',
+    'h2.titel{margin:0 0 10pt;font-size:19pt;line-height:1.2;font-weight:800}',
+    'h3{margin:12pt 0 5pt;font-size:11.5pt;font-weight:800;break-after:avoid;page-break-after:avoid}',
+    '.kort{background:#FFF6C7;border-left:4pt solid #E6BD00;border-radius:4pt;padding:8pt 12pt;break-inside:avoid}',
+    '.kort h3,.vragen h3{margin-top:0}',
+    'ul{margin:0;padding-left:16pt}li{margin-bottom:3pt}p{margin:0 0 7pt;orphans:3;widows:3}',
+    '.vragen{border:1pt dashed #9A9A9A;border-radius:4pt;padding:8pt 12pt;break-inside:avoid}',
+    '.contact{margin-top:10pt;background:#F7F7F5;border-radius:4pt;padding:7pt 12pt;font-size:10pt;break-inside:avoid}',
+    '.bron{font-size:8.5pt;color:#5E5E5E;margin-top:12pt;border-top:1pt solid #E4E4E4;padding-top:6pt;overflow-wrap:anywhere}',
+    '.bron a{color:#5E5E5E;text-decoration:none}',
+    '.dom{white-space:nowrap}',
+    '.disclaimer{font-size:8.5pt;color:#5E5E5E;margin-top:5pt;font-style:italic}',
+    '.sr{position:absolute;left:-9999px}'
+  ].join('\n');
+
+  function fontFaces() {
+    var base = location.href.replace(/[#?].*$/, '').replace(/[^\/]*$/, '');
+    return [400, 600, 700, 800].map(function (w) {
+      return "@font-face{font-family:Montserrat;font-weight:" + w + ";src:url('" + base + "fonts/montserrat-latin-" + w + "-normal.woff2') format('woff2')}";
+    }).join('\n');
+  }
+
+  function afdrukken() {
+    if (!huidig) return;
+    var g = gegevens();
+    var w = window.open('', '_blank');
+    if (!w) { meld('Het printvenster werd geblokkeerd. Sta pop-ups toe voor deze pagina en probeer opnieuw.', true); return; }
+    var titel = huidig.titel + (g.kantoor ? ' – ' + g.kantoor : '');
+    var doc = '<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">' +
+      '<title>' + esc(titel) + '</title><style>' + fontFaces() + '\n' + PRINT_CSS + '</style></head><body><div class="pagina">' +
+      '<div class="noprint">Kies in het printvenster <strong>Opslaan als PDF</strong> om het blad te bewaren of te mailen.<button type="button" onclick="window.print()">Afdrukken</button></div>' +
+      bladHTML(huidig, g) + '</div>' +
+      '<script>window.addEventListener("load",function(){setTimeout(function(){try{window.focus();window.print();}catch(e){}},350);});<\/script>' +
+      '</body></html>';
+    w.document.open();
+    w.document.write(doc);
+    w.document.close();
+    meld('Printvenster geopend.');
+  }
+
+  /* ---------- Events ---------- */
+  zoek.addEventListener('input', bouwLijst);
+  chips.addEventListener('click', function (e) {
+    var el = e.target.closest('.chip'); if (!el) return;
+    actieveCat = el.getAttribute('data-cat') || '';
+    Array.prototype.forEach.call(chips.querySelectorAll('.chip'), function (c) { c.setAttribute('aria-pressed', c === el ? 'true' : 'false'); });
+    bouwLijst();
+  });
+  lijst.addEventListener('click', function (e) {
+    var el = e.target.closest('.item'); if (!el) return;
+    toon(el.getAttribute('data-id'), true);
+  });
+  Object.keys(velden).forEach(function (k) {
+    velden[k].addEventListener('input', function () { if (huidig) { blad.innerHTML = bladHTML(huidig, gegevens()); zetMail(); } });
+  });
+  $('b-print').addEventListener('click', afdrukken);
+  $('b-kopie').addEventListener('click', kopieer);
+  $('b-mail').addEventListener('click', function () { zetMail(); });
+  window.addEventListener('hashchange', function () {
+    var id = location.hash.slice(1);
+    if (id && (!huidig || huidig.id !== id)) toon(id, false);
+  });
+
+  bouwChips();
+  bouwLijst();
+  toon(location.hash.slice(1) || (DATA[0] && DATA[0].id), false);
+})();
+</script>
+</body>
+</html>

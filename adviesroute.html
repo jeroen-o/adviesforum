@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Adviesroute – Adviesforum</title>
+<meta name="description" content="Interactieve stap-voor-stap procesgids voor het adviesproces: hypotheek aankoop, oversluiten, inkomens- en ORV-advies en pensioenoriëntatie, met checklists, dossierstukken, valkuilen en hulpmiddelen.">
+<style>
+@font-face{font-family:Montserrat;font-style:normal;font-weight:400;font-display:swap;src:url(fonts/montserrat-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:600;font-display:swap;src:url(fonts/montserrat-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:700;font-display:swap;src:url(fonts/montserrat-latin-700-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:800;font-display:swap;src:url(fonts/montserrat-latin-800-normal.woff2) format('woff2')}
+
+:root{
+  --geel:#FFD200;--geel-donker:#E6BD00;--geel-zacht:#FFF6C7;
+  --zwart:#141414;--tekst:#1F1F1F;--grijs:#5E5E5E;--lijn:#E4E4E4;--vlak:#F7F7F5;
+  --rood:#C0392B;--rood-zacht:#FFF1F0;--groen:#1E7A4B;--groen-zacht:#EAF6EF;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:Montserrat,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  color:var(--tekst);background:#fff;line-height:1.55;font-size:15px;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+button,input{font-family:inherit}
+
+.balk{background:var(--zwart);color:#fff;font-size:12.5px;padding:8px 24px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.balk a{color:#fff;text-decoration:none;opacity:.88}
+.balk a:hover{opacity:1;text-decoration:underline}
+
+.kop{background:var(--geel);color:var(--zwart);padding:34px 24px 38px}
+.kop-in{max-width:1180px;margin:0 auto}
+.merk{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.08em;font-size:12px;text-transform:uppercase;margin-bottom:16px}
+.zeshoek{width:22px;height:25px;background:var(--zwart);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);flex:none}
+.terug{display:inline-block;font-size:13.5px;font-weight:700;text-decoration:none;border-bottom:2px solid var(--zwart);margin-bottom:14px}
+.kop h1{margin:0 0 10px;font-size:clamp(27px,4.2vw,40px);line-height:1.12;font-weight:800}
+.kop p{margin:0;max-width:70ch;font-size:15.5px}
+.kop .stempel{display:inline-block;margin-top:16px;font-size:12px;font-weight:700;background:var(--zwart);color:var(--geel);padding:5px 11px;border-radius:999px}
+
+.wrap{max-width:1180px;margin:0 auto;padding:24px 24px 56px}
+
+/* tabbladen */
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.tab{border:1px solid #CFCFCF;background:#fff;color:var(--zwart);border-radius:999px;padding:9px 16px;font-size:14px;font-weight:700;cursor:pointer;display:flex;align-items:center;gap:8px}
+.tab:hover{border-color:var(--zwart)}
+.tab[aria-selected="true"]{background:var(--zwart);color:#fff;border-color:var(--zwart)}
+.tab .nr{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--geel);color:var(--zwart);font-size:12px;font-weight:800}
+.tab:focus-visible,.knop:focus-visible,.stap-nav button:focus-visible{outline:3px solid rgba(255,210,0,.8);outline-offset:2px}
+
+/* route-kop */
+.route-kop{border:1px solid var(--lijn);border-radius:14px;padding:18px 20px;background:var(--vlak);margin-bottom:22px}
+.route-kop h2{margin:0 0 6px;font-size:22px;font-weight:800;line-height:1.2}
+.route-kop p.intro{margin:0 0 14px;color:#3A3A3A;max-width:80ch}
+.voortgang{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.balkje{flex:1 1 220px;height:12px;background:#fff;border:1px solid var(--lijn);border-radius:999px;overflow:hidden;min-width:0}
+.balkje span{display:block;height:100%;width:0;background:var(--geel);transition:width .2s}
+.voortgang .tekst{font-size:13.5px;font-weight:700;white-space:nowrap}
+.acties{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;align-items:flex-end}
+.veld{min-width:0;flex:1 1 220px;max-width:340px}
+.veld label{display:block;font-size:12.5px;font-weight:700;margin-bottom:4px}
+.veld input{width:100%;padding:9px 12px;border:1px solid #CFCFCF;border-radius:9px;font-size:15px;background:#fff}
+.veld input:focus{outline:3px solid rgba(255,210,0,.6);outline-offset:1px}
+.knop{border-radius:999px;padding:9px 16px;font-size:13.5px;font-weight:700;cursor:pointer;border:1px solid var(--zwart);background:var(--zwart);color:#fff}
+.knop:hover{background:#000}
+.knop.licht{background:#fff;color:var(--zwart);border-color:#CFCFCF}
+.knop.licht:hover{background:var(--vlak)}
+.status{font-size:13px;color:var(--grijs);margin-top:8px;min-height:1em}
+
+/* layout */
+.romp{display:grid;grid-template-columns:260px minmax(0,1fr);gap:26px;align-items:start}
+.stap-nav{position:sticky;top:16px;border:1px solid var(--lijn);border-radius:14px;padding:10px;background:#fff}
+.stap-nav ol{list-style:none;margin:0;padding:0}
+.stap-nav button{display:flex;width:100%;gap:10px;align-items:flex-start;text-align:left;border:0;background:transparent;padding:7px 8px;border-radius:8px;font-size:13.5px;font-weight:600;color:var(--tekst);cursor:pointer;line-height:1.35}
+.stap-nav button:hover{background:var(--vlak)}
+.stap-nav .bol{flex:none;display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;border:2px solid var(--zwart);font-size:11px;font-weight:800}
+.stap-nav .klaar .bol{background:var(--groen);border-color:var(--groen);color:#fff}
+.stap-nav .bezig .bol{background:var(--geel)}
+.stap-nav .tel{margin-left:auto;font-size:11.5px;color:var(--grijs);white-space:nowrap;padding-left:6px}
+
+.stappen{min-width:0;display:flex;flex-direction:column;gap:14px}
+.stap{border:1px solid var(--lijn);border-radius:14px;background:#fff;scroll-margin-top:12px}
+.stap > summary{list-style:none;cursor:pointer;display:flex;gap:12px;align-items:center;padding:14px 16px}
+.stap > summary::-webkit-details-marker{display:none}
+.stap > summary:focus-visible{outline:3px solid rgba(255,210,0,.8);outline-offset:-3px;border-radius:14px}
+.stap .nummer{flex:none;display:inline-grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--zwart);color:var(--geel);font-weight:800;font-size:14px}
+.stap.klaar .nummer{background:var(--groen);color:#fff}
+.stap h3{margin:0;font-size:16.5px;font-weight:800;line-height:1.3;min-width:0;flex:1}
+.stap .stand{font-size:12px;font-weight:700;background:var(--vlak);border-radius:999px;padding:3px 10px;white-space:nowrap}
+.stap.klaar .stand{background:var(--groen-zacht);color:var(--groen)}
+.stap .pijl{flex:none;transition:transform .15s;font-size:14px}
+.stap[open] .pijl{transform:rotate(90deg)}
+.stap-in{padding:0 18px 18px;border-top:1px solid var(--lijn)}
+.doel{margin:14px 0 12px;font-size:14.5px}
+.doel b{font-weight:800}
+
+.afm{border-left:4px solid var(--zwart);background:var(--vlak);border-radius:0 10px 10px 0;padding:12px 14px;font-size:14px;margin-bottom:16px}
+.afm.kb{border-left-color:var(--geel-donker);background:var(--geel-zacht)}
+.afm.geen{border-left-color:#B8B8B8;background:#fff;border:1px dashed #CFCFCF;border-left:4px solid #B8B8B8}
+.afm h4{margin:0 0 4px;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.afm p{margin:0}
+.afm .bron{display:block;margin-top:6px;font-size:12.5px;color:var(--grijs)}
+.afm .bron a{color:var(--zwart);font-weight:700}
+
+.kolommen{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+.lijst h4,.valkuilen h4,.hulp h4{margin:0 0 8px;font-size:13px;font-weight:800;letter-spacing:.05em;text-transform:uppercase}
+.lijst{border:1px solid var(--lijn);border-radius:12px;padding:12px 14px;min-width:0}
+.lijst ul{list-style:none;margin:0;padding:0}
+.lijst li + li{margin-top:6px}
+.lijst label{display:flex;gap:9px;align-items:flex-start;font-size:14px;cursor:pointer;line-height:1.4}
+.lijst input{flex:none;width:18px;height:18px;margin:1px 0 0;accent-color:var(--zwart);cursor:pointer}
+.lijst input:checked + span{color:var(--grijs);text-decoration:line-through;text-decoration-color:rgba(0,0,0,.35)}
+
+.valkuilen{margin-top:16px;background:var(--rood-zacht);border-left:4px solid var(--rood);border-radius:0 10px 10px 0;padding:12px 14px}
+.valkuilen h4{color:var(--rood)}
+.valkuilen ul{margin:0;padding-left:18px;font-size:14px}
+.valkuilen li + li{margin-top:5px}
+.valkuilen a{font-size:12.5px;font-weight:700;white-space:nowrap}
+
+.hulp{margin-top:16px}
+.hulp ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.hulp a{display:inline-block;text-decoration:none;border:1px solid var(--lijn);border-radius:999px;padding:5px 11px;font-size:13px;font-weight:600;background:#fff;max-width:100%}
+.hulp a:hover{border-color:var(--zwart);background:var(--geel-zacht)}
+
+.noot{margin-top:28px;font-size:13px;color:var(--grijs);border-top:1px solid var(--lijn);padding-top:16px}
+.noot p{margin:0 0 8px}
+.noot a{color:var(--zwart);font-weight:700}
+.voet{background:var(--zwart);color:#fff;font-size:12.5px;padding:18px 24px;text-align:center}
+.voet a{color:var(--geel)}
+
+@media (max-width:900px){
+  .romp{grid-template-columns:minmax(0,1fr)}
+  .stap-nav{position:static}
+  .stap-nav ol{display:flex;flex-wrap:wrap;gap:4px}
+  .stap-nav li{flex:0 0 auto}
+  .stap-nav button{padding:4px;width:auto}
+  .stap-nav .lbl,.stap-nav .tel{display:none}
+  .stap-nav .bol{width:30px;height:30px;font-size:12px}
+}
+@media (max-width:640px){
+  .kop{padding:26px 16px 30px}
+  .balk{padding:8px 16px}
+  .wrap{padding:18px 16px 40px}
+  .kolommen{grid-template-columns:minmax(0,1fr)}
+  .stap > summary{padding:12px;gap:10px}
+  .stap-in{padding:0 12px 14px}
+  .stap .stand{display:none}
+  .tab{padding:8px 12px;font-size:13.5px}
+  .veld{max-width:none}
+}
+@media print{
+  .balk,.tabs,.acties,.stap-nav,.voet{display:none}
+  .romp{display:block}
+}
+</style>
+</head>
+<body>
+
+<div class="balk">
+  <span>Adviesforum &middot; hulpmiddelen voor financieel adviseurs</span>
+  <span><a href="index.html">Naar het forum</a></span>
+</div>
+
+<header class="kop">
+  <div class="kop-in">
+    <div class="merk"><span class="zeshoek" aria-hidden="true"></span>Adviesforum &middot; Hulpmiddelen</div>
+    <a class="terug" href="index.html#hulpmiddelen">&larr; Terug naar de hulpmiddelen</a>
+    <h1>Adviesroute</h1>
+    <p>Een stap-voor-stap procesgids voor het adviestraject. Per stap: het doel, wat de AFM-Leidraad Hypotheekadvisering (april 2026) erover zegt, een afvinkbare checklist, de stukken voor het dossier, valkuilen uit Kifid-uitspraken en de passende hulpmiddelen op deze site.</p>
+    <span class="stempel">Hulpmiddel &middot; geen norm &middot; afvinken wordt niet bewaard</span>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="tabs" role="tablist" aria-label="Kies een adviesroute" id="tabs"></div>
+
+  <section id="paneel" role="tabpanel" aria-live="polite">
+    <div class="route-kop">
+      <h2 id="route-titel"></h2>
+      <p class="intro" id="route-intro"></p>
+      <div class="voortgang">
+        <div class="balkje" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Voortgang van deze route" id="balkje"><span id="balk-vul"></span></div>
+        <span class="tekst" id="voortgang-tekst">0 van 0 punten</span>
+      </div>
+      <div class="acties">
+        <div class="veld">
+          <label for="dossiernaam">Klant of dossiernummer (alleen voor de afdruk)</label>
+          <input id="dossiernaam" type="text" autocomplete="off" placeholder="Bijv. Jansen / 2026-041">
+        </div>
+        <button type="button" class="knop" id="print">Dossier-checklist printen</button>
+        <button type="button" class="knop licht" id="alles-open">Alle stappen openen</button>
+        <button type="button" class="knop licht" id="wissen">Vinkjes wissen</button>
+      </div>
+      <div class="status" id="status" role="status"></div>
+    </div>
+
+    <div class="romp">
+      <nav class="stap-nav" aria-label="Stappen in deze route"><ol id="stap-nav"></ol></nav>
+      <div class="stappen" id="stappen"></div>
+    </div>
+  </section>
+
+  <div class="noot">
+    <p><b>Hoe lees je het AFM-blok?</b> Een zwart blok is een samenvatting in eigen woorden van de <a href="documenten/Leidraad-Hypotheekadvisering-2026.pdf">AFM-Leidraad Hypotheekadvisering (april 2026)</a>, met paginaverwijzing. Een geel blok komt uit de kennisbank van dit forum (concept). Een gestippeld blok betekent dat de Leidraad over die stap niets specifieks zegt; dan staat er praktijk of een Kifid-les. De Leidraad heeft volgens de AFM zelf niet de status van wet- en regelgeving, de voorbeelden erin zijn geen vaste richtlijnen, en informatieverstrekking (art. 4:19 en 4:20 Wft) en het bemiddelingstraject vallen erbuiten.</p>
+    <p>De checklists zijn een hulpmiddel en niet uitputtend. Iedere klantsituatie bepaalt wat en hoe diep je inventariseert. Vinkjes staan alleen in deze browsertab en verdwijnen bij herladen. Controleer altijd de actuele wet- en regelgeving en de voorwaarden van de aanbieder.</p>
+  </div>
+</main>
+
+<footer class="voet">Adviesforum &middot; collegiale kennisuitwisseling, geen klantadvies &middot; <a href="index.html#hulpmiddelen">Alle hulpmiddelen</a></footer>
+
+<script src="data/adviesroute.js"></script>
+<script>
+(function(){
+  'use strict';
+  var DATA = window.ADVIESROUTE || { routes: [] };
+  var ROUTES = DATA.routes;
+  var LEIDRAAD = (DATA.bronnen && DATA.bronnen.leidraad) ? DATA.bronnen.leidraad.url : 'documenten/Leidraad-Hypotheekadvisering-2026.pdf';
+
+  /* vinkjes alleen in geheugen: vink[routeId][stapId] = { 'c0': true, 'd1': true } */
+  var vink = {};
+  var huidig = ROUTES.length ? ROUTES[0].id : '';
+
+  function $(id){ return document.getElementById(id); }
+  function esc(s){ return String(s == null ? '' : s).replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
+  function route(id){ for (var i = 0; i < ROUTES.length; i++) if (ROUTES[i].id === id) return ROUTES[i]; return null; }
+  function vinkVan(r, s){ vink[r] = vink[r] || {}; vink[r][s] = vink[r][s] || {}; return vink[r][s]; }
+  function aantalPunten(stap){ return stap.check.length + stap.dossier.length; }
+  function aantalAan(rId, stap){ var v = vinkVan(rId, stap.id), n = 0; for (var k in v) if (v[k]) n++; return n; }
+  function fmtGetal(n){ return Number(n).toLocaleString('nl-NL'); }
+
+  /* ---------- tabs ---------- */
+  function tekenTabs(){
+    $('tabs').innerHTML = ROUTES.map(function(r, i){
+      return '<button type="button" class="tab" role="tab" id="tab-' + esc(r.id) + '" aria-controls="paneel" data-route="' + esc(r.id) + '" aria-selected="' + (r.id === huidig) + '" tabindex="' + (r.id === huidig ? '0' : '-1') + '">' +
+        '<span class="nr">' + (i + 1) + '</span>' + esc(r.naam) + '</button>';
+    }).join('');
+  }
+
+  /* ---------- route ---------- */
+  function afmBlok(a){
+    if (!a) return '';
+    var cls = a.bron === 'leidraad' ? '' : (a.bron === 'kb' ? ' kb' : ' geen');
+    var kop = a.bron === 'leidraad' ? 'Wat de AFM-Leidraad hierover zegt' : (a.bron === 'kb' ? 'Uit de kennisbank (concept)' : 'Geen specifieke Leidraad-passage');
+    var bron = '';
+    if (a.bron === 'leidraad') {
+      bron = '<span class="bron">Bron: <a href="' + esc(LEIDRAAD) + '#page=' + esc(a.p) + '" target="_blank" rel="noopener">AFM-Leidraad Hypotheekadvisering 2026, ' + esc(a.ref) + ', p. ' + esc(a.p) + '</a> &middot; parafrase, lees de Leidraad voor de precieze tekst.</span>';
+    } else if (a.bron === 'kb') {
+      bron = '<span class="bron">Bron: <a href="index.html#artikel-' + esc(a.ref) + '">kennisbank ' + esc(a.ref) + '</a> &middot; nog niet door compliance gecontroleerd.</span>';
+    }
+    return '<div class="afm' + cls + '"><h4>' + kop + '</h4><p>' + esc(a.tekst) + '</p>' + bron + '</div>';
+  }
+
+  function lijst(rId, stap, soort, items, kop){
+    var v = vinkVan(rId, stap.id);
+    return '<div class="lijst"><h4>' + kop + '</h4><ul>' + items.map(function(t, i){
+      var key = soort + i, id = 'v-' + rId + '-' + stap.id + '-' + key;
+      return '<li><label for="' + esc(id) + '"><input type="checkbox" id="' + esc(id) + '" data-r="' + esc(rId) + '" data-s="' + esc(stap.id) + '" data-k="' + key + '"' + (v[key] ? ' checked' : '') + '><span>' + esc(t) + '</span></label></li>';
+    }).join('') + '</ul></div>';
+  }
+
+  function tekenRoute(){
+    var r = route(huidig); if (!r) return;
+    $('route-titel').textContent = r.naam;
+    $('route-intro').textContent = r.intro;
+    $('alles-open').textContent = 'Alle stappen openen';
+
+    $('stap-nav').innerHTML = r.stappen.map(function(s, i){
+      return '<li><button type="button" data-ga="' + esc(s.id) + '" id="nav-' + esc(s.id) + '" title="' + esc(s.titel) + '">' +
+        '<span class="bol">' + (i + 1) + '</span><span class="lbl">' + esc(s.titel) + '</span><span class="tel"></span></button></li>';
+    }).join('');
+
+    $('stappen').innerHTML = r.stappen.map(function(s, i){
+      var valk = (s.valkuilen || []).map(function(v){
+        return '<li>' + esc(v.t) + (v.kb ? ' <a href="index.html#artikel-' + esc(v.kb) + '">Kifid/kennisbank ' + esc(v.kb) + ' &rarr;</a>' : '') + '</li>';
+      }).join('');
+      var hulp = (s.links || []).map(function(l){ return '<li><a href="' + esc(l[1]) + '">' + esc(l[0]) + '</a></li>'; }).join('');
+      return '<details class="stap" id="stap-' + esc(s.id) + '"' + (i === 0 ? ' open' : '') + '>' +
+        '<summary><span class="nummer">' + (i + 1) + '</span><h3>' + esc(s.titel) + '</h3><span class="stand"></span><span class="pijl" aria-hidden="true">&#9656;</span></summary>' +
+        '<div class="stap-in">' +
+          '<p class="doel"><b>Doel.</b> ' + esc(s.doel) + '</p>' +
+          afmBlok(s.afm) +
+          '<div class="kolommen">' + lijst(r.id, s, 'c', s.check, 'Checklist') + lijst(r.id, s, 'd', s.dossier, 'In het dossier') + '</div>' +
+          (valk ? '<div class="valkuilen"><h4>Valkuilen</h4><ul>' + valk + '</ul></div>' : '') +
+          (hulp ? '<div class="hulp"><h4>Hulpmiddelen</h4><ul>' + hulp + '</ul></div>' : '') +
+        '</div></details>';
+    }).join('');
+    werkVoortgangBij();
+  }
+
+  function werkVoortgangBij(){
+    var r = route(huidig); if (!r) return;
+    var tot = 0, aan = 0;
+    r.stappen.forEach(function(s){
+      var n = aantalPunten(s), a = aantalAan(r.id, s);
+      tot += n; aan += a;
+      var klaar = n > 0 && a === n;
+      var el = $('stap-' + s.id);
+      if (el) { el.classList.toggle('klaar', klaar); el.querySelector('.stand').textContent = a + '/' + n; }
+      var nb = $('nav-' + s.id);
+      if (nb) {
+        nb.classList.toggle('klaar', klaar);
+        nb.classList.toggle('bezig', a > 0 && !klaar);
+        nb.querySelector('.tel').textContent = a + '/' + n;
+        nb.setAttribute('aria-label', 'Stap ' + (r.stappen.indexOf(s) + 1) + ': ' + s.titel + ' (' + a + ' van ' + n + ' afgevinkt)');
+      }
+    });
+    var pct = tot ? Math.round(aan / tot * 100) : 0;
+    $('balk-vul').style.width = pct + '%';
+    $('balkje').setAttribute('aria-valuenow', String(pct));
+    $('voortgang-tekst').textContent = fmtGetal(aan) + ' van ' + fmtGetal(tot) + ' punten (' + pct + '%)';
+  }
+
+  function kiesRoute(id, focus){
+    if (!route(id)) return;
+    huidig = id;
+    tekenTabs();
+    tekenRoute();
+    $('status').textContent = '';
+    if (focus) { var t = $('tab-' + id); if (t) t.focus(); }
+  }
+
+  function zetHash(h){ try { history.replaceState(null, '', '#' + h); } catch (e) {} }
+
+  function gaNaarStap(id){
+    var el = $('stap-' + id); if (!el) return;
+    el.open = true;
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    var sum = el.querySelector('summary'); if (sum) sum.focus({ preventScroll: true });
+    zetHash(huidig + '-' + id);
+  }
+
+  function leesHash(){
+    var h = decodeURIComponent((location.hash || '').slice(1));
+    if (!h) return;
+    for (var i = 0; i < ROUTES.length; i++) {
+      var r = ROUTES[i];
+      if (h === r.id) { if (huidig !== r.id) kiesRoute(r.id); return; }
+      if (h.indexOf(r.id + '-') === 0) {
+        var sid = h.slice(r.id.length + 1);
+        if (huidig !== r.id) kiesRoute(r.id);
+        setTimeout(function(){ gaNaarStap(sid); }, 0);
+        return;
+      }
+    }
+  }
+
+  /* ---------- printen ---------- */
+  function printen(){
+    var r = route(huidig); if (!r) return;
+    var naam = $('dossiernaam').value.trim();
+    var datum = new Date().toLocaleDateString('nl-NL', { day: 'numeric', month: 'long', year: 'numeric' });
+    var tot = 0, aan = 0, openLijst = [];
+    var stappenHtml = r.stappen.map(function(s, i){
+      var v = vinkVan(r.id, s.id);
+      function regels(items, soort){
+        var af = [], open = [];
+        items.forEach(function(t, j){ (v[soort + j] ? af : open).push(t); });
+        return { af: af, open: open };
+      }
+      var c = regels(s.check, 'c'), d = regels(s.dossier, 'd');
+      tot += aantalPunten(s); aan += c.af.length + d.af.length;
+      c.open.forEach(function(t){ openLijst.push([i + 1, s.titel, 'Checklist', t]); });
+      d.open.forEach(function(t){ openLijst.push([i + 1, s.titel, 'Dossier', t]); });
+      function ul(items, teken, cls){ return items.length ? '<ul class="' + cls + '">' + items.map(function(t){ return '<li><span class="vk">' + teken + '</span>' + esc(t) + '</li>'; }).join('') + '</ul>' : '<p class="leeg">Geen.</p>'; }
+      return '<section><h2>' + (i + 1) + '. ' + esc(s.titel) + ' <small>' + (c.af.length + d.af.length) + '/' + aantalPunten(s) + '</small></h2>' +
+        '<div class="k2"><div><h3>Checklist &ndash; afgevinkt</h3>' + ul(c.af, '&#10003;', 'af') + '<h3>Checklist &ndash; open</h3>' + ul(c.open, '&#9744;', 'open') + '</div>' +
+        '<div><h3>Dossier &ndash; aanwezig</h3>' + ul(d.af, '&#10003;', 'af') + '<h3>Dossier &ndash; open</h3>' + ul(d.open, '&#9744;', 'open') + '</div></div></section>';
+    }).join('');
+    var pct = tot ? Math.round(aan / tot * 100) : 0;
+    var openHtml = openLijst.length
+      ? '<table><thead><tr><th>Stap</th><th>Soort</th><th>Open punt</th></tr></thead><tbody>' + openLijst.map(function(o){ return '<tr><td>' + o[0] + '. ' + esc(o[1]) + '</td><td>' + o[2] + '</td><td>' + esc(o[3]) + '</td></tr>'; }).join('') + '</tbody></table>'
+      : '<p>Alle punten zijn afgevinkt.</p>';
+
+    var css = 'body{font-family:Montserrat,Arial,sans-serif;color:#1F1F1F;margin:0;padding:28px 32px;font-size:12.5px;line-height:1.45}' +
+      'h1{font-size:20px;margin:0 0 4px}.meta{color:#5E5E5E;margin:0 0 4px}.balk{height:8px;background:#eee;border-radius:4px;overflow:hidden;margin:8px 0 16px;max-width:360px}.balk span{display:block;height:100%;background:#FFD200}' +
+      'h2{font-size:14px;margin:18px 0 6px;border-bottom:2px solid #FFD200;padding-bottom:3px}h2 small{font-weight:400;color:#5E5E5E}h3{font-size:11px;text-transform:uppercase;letter-spacing:.05em;margin:8px 0 3px;color:#5E5E5E}' +
+      'ul{list-style:none;margin:0;padding:0}li{margin:2px 0;padding-left:20px;position:relative}.vk{position:absolute;left:0}.af{color:#1E7A4B}.leeg{margin:0;color:#999}' +
+      '.k2{display:grid;grid-template-columns:1fr 1fr;gap:16px}section{break-inside:avoid}' +
+      'table{border-collapse:collapse;width:100%;margin-top:6px}th,td{border:1px solid #ddd;padding:4px 6px;text-align:left;vertical-align:top}th{background:#FFD200}' +
+      '.voet{margin-top:22px;color:#5E5E5E;font-size:11px;border-top:1px solid #ddd;padding-top:8px}' +
+      '@media (max-width:600px){body{padding:16px}.k2{grid-template-columns:1fr}}';
+    var html = '<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Dossier-checklist ' + esc(r.naam) + '</title><style>' + css + '</style></head><body>' +
+      '<h1>Dossier-checklist: ' + esc(r.naam) + '</h1>' +
+      '<p class="meta">' + (naam ? 'Klant/dossier: <b>' + esc(naam) + '</b> &middot; ' : '') + 'Afgedrukt op ' + esc(datum) + '</p>' +
+      '<p class="meta">Voortgang: ' + fmtGetal(aan) + ' van ' + fmtGetal(tot) + ' punten afgevinkt (' + pct + '%) &middot; ' + openLijst.length + ' open punten</p>' +
+      '<div class="balk"><span style="width:' + pct + '%"></span></div>' +
+      '<h2>Open punten</h2>' + openHtml +
+      stappenHtml +
+      '<p class="voet">Gemaakt met de Adviesroute van het Adviesforum. Hulpmiddel, geen norm: de checklist is niet uitputtend en vervangt geen eigen professionele beoordeling. AFM-verwijzingen zijn gebaseerd op de AFM-Leidraad Hypotheekadvisering (april 2026), die volgens de AFM zelf geen wet- of regelgeving is.</p>' +
+      '</body></html>';
+
+    var w = null;
+    try { w = window.open('', '_blank'); } catch (e) { w = null; }
+    if (!w) { $('status').textContent = 'Het printvenster is geblokkeerd. Sta pop-ups toe voor deze pagina en probeer het opnieuw.'; return; }
+    w.document.open();
+    w.document.write(html);
+    w.document.close();
+    w.focus();
+    setTimeout(function(){ try { w.print(); } catch (e) {} }, 300);
+    $('status').textContent = 'De dossier-checklist is in een nieuw venster geopend.';
+  }
+
+  /* ---------- events ---------- */
+  $('tabs').addEventListener('click', function(e){
+    var b = e.target.closest('[data-route]'); if (!b) return;
+    kiesRoute(b.getAttribute('data-route'));
+    zetHash(huidig);
+  });
+  $('tabs').addEventListener('keydown', function(e){
+    if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft' && e.key !== 'Home' && e.key !== 'End') return;
+    var i = ROUTES.indexOf(route(huidig)), n = ROUTES.length;
+    if (e.key === 'ArrowRight') i = (i + 1) % n;
+    else if (e.key === 'ArrowLeft') i = (i - 1 + n) % n;
+    else if (e.key === 'Home') i = 0; else i = n - 1;
+    e.preventDefault();
+    kiesRoute(ROUTES[i].id, true);
+    zetHash(huidig);
+  });
+  $('stappen').addEventListener('change', function(e){
+    var t = e.target; if (!t || t.type !== 'checkbox') return;
+    vinkVan(t.getAttribute('data-r'), t.getAttribute('data-s'))[t.getAttribute('data-k')] = t.checked;
+    werkVoortgangBij();
+  });
+  $('stap-nav').addEventListener('click', function(e){
+    var b = e.target.closest('[data-ga]'); if (b) gaNaarStap(b.getAttribute('data-ga'));
+  });
+  $('alles-open').addEventListener('click', function(){
+    var d = document.querySelectorAll('#stappen details'), allesOpen = true;
+    Array.prototype.forEach.call(d, function(x){ if (!x.open) allesOpen = false; });
+    Array.prototype.forEach.call(d, function(x){ x.open = !allesOpen; });
+    this.textContent = allesOpen ? 'Alle stappen openen' : 'Alle stappen sluiten';
+  });
+  $('wissen').addEventListener('click', function(){
+    vink[huidig] = {};
+    tekenRoute();
+    $('status').textContent = 'Alle vinkjes in deze route zijn gewist.';
+  });
+  $('print').addEventListener('click', printen);
+  window.addEventListener('hashchange', leesHash);
+
+  tekenTabs();
+  tekenRoute();
+  leesHash();
+})();
+</script>
+</body>
+</html>

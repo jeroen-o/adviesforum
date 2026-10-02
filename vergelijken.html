@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Partijen naast elkaar – Adviesforum</title>
+<meta name="description" content="Zet partijen uit de Partijenwegwijzer per thema naast elkaar: verhuisregeling, boetevrij aflossen, renteafspraken, zzp-inkomen, senioren en meer, elk kenmerk met bronlink. Geen productvergelijking en geen advies.">
+<meta property="og:title" content="Partijen naast elkaar – Adviesforum">
+<meta property="og:description" content="Kenmerken uit de Partijenwegwijzer per thema naast elkaar, met bronlink. Geen productvergelijking en geen advies.">
+<meta property="og:type" content="website">
+<style>
+@font-face{font-family:Montserrat;font-style:normal;font-weight:400;font-display:swap;src:url(fonts/montserrat-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:600;font-display:swap;src:url(fonts/montserrat-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:700;font-display:swap;src:url(fonts/montserrat-latin-700-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:800;font-display:swap;src:url(fonts/montserrat-latin-800-normal.woff2) format('woff2')}
+
+:root{
+  --geel:#FFD200;--geel-donker:#E6BD00;--geel-zacht:#FFF6C7;
+  --zwart:#141414;--tekst:#1F1F1F;--grijs:#5E5E5E;--lijn:#E4E4E4;--vlak:#F7F7F5;
+  --rood:#C0392B;--rood-zacht:#FFF1F0;--oranje:#9A5B00;--oranje-zacht:#FFF4E0;--blauw:#1F4E79;--blauw-zacht:#EEF4FA;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:Montserrat,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  color:var(--tekst);background:#fff;line-height:1.55;font-size:15px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+button,input,select{font-family:inherit}
+
+.balk{background:var(--zwart);color:#fff;font-size:12.5px;padding:8px 24px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.balk a{color:#fff;text-decoration:none;opacity:.88}
+.balk a:hover{opacity:1;text-decoration:underline}
+
+.kop{background:var(--geel);color:var(--zwart);padding:34px 24px 38px}
+.kop-in{max-width:1280px;margin:0 auto}
+.merk{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.08em;font-size:12px;text-transform:uppercase;margin-bottom:16px}
+.zeshoek{width:22px;height:25px;background:var(--zwart);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);flex:none}
+.terugs{display:flex;gap:8px 18px;flex-wrap:wrap;margin-bottom:14px}
+.terug{display:inline-block;font-size:13.5px;font-weight:700;text-decoration:none;border-bottom:2px solid var(--zwart)}
+.kop h1{margin:0 0 10px;font-size:clamp(27px,4.2vw,40px);line-height:1.12;font-weight:800}
+.kop p{margin:0;max-width:70ch;font-size:15.5px}
+.kop .stempel{display:inline-block;margin-top:16px;font-size:12px;font-weight:700;background:var(--zwart);color:var(--geel);padding:5px 11px;border-radius:999px}
+
+.romp{max-width:1280px;margin:0 auto;padding:24px 24px 56px}
+
+.disclaimer{border:2px solid var(--zwart);border-left-width:8px;border-radius:0 12px 12px 0;padding:14px 18px;margin:0 0 22px;background:var(--geel-zacht)}
+.disclaimer h2{margin:0 0 6px;font-size:15px;font-weight:800;letter-spacing:.03em;text-transform:uppercase}
+.disclaimer ul{margin:0;padding-left:18px;font-size:14px}
+.disclaimer li{margin:3px 0}
+
+.paneel{border:1px solid var(--lijn);border-radius:14px;background:var(--vlak);padding:16px 18px;margin-bottom:18px}
+.rij{display:flex;flex-wrap:wrap;gap:12px 16px;align-items:flex-end}
+.veld{min-width:0;flex:1 1 220px}
+.veld label,.veldlabel{display:block;font-weight:700;font-size:13px;margin-bottom:5px}
+.veld input,.veld select{width:100%;padding:10px 12px;border:1px solid #CFCFCF;border-radius:9px;font-size:15px;background:#fff;color:var(--tekst)}
+.veld input:focus,.veld select:focus,.knop:focus-visible,.chip input:focus-visible+span,.vink input:focus-visible{outline:3px solid rgba(255,210,0,.7);outline-offset:1px}
+.themas{margin-top:14px}
+.themakop{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin-bottom:8px}
+.themakop .veldlabel{margin:0}
+.linkknop{border:0;background:none;padding:0;font-size:12.5px;font-weight:700;text-decoration:underline;cursor:pointer;color:var(--zwart)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{position:relative;display:inline-flex;min-width:0}
+.chip input{position:absolute;opacity:0;width:1px;height:1px}
+.chip span{display:inline-block;border:1px solid #CFCFCF;background:#fff;border-radius:999px;padding:5px 11px;font-size:13px;font-weight:600;cursor:pointer;line-height:1.35;overflow-wrap:anywhere}
+.chip span small{font-weight:600;color:var(--grijs);margin-left:4px}
+.chip input:checked+span{background:var(--zwart);color:#fff;border-color:var(--zwart)}
+.chip input:checked+span small{color:var(--geel)}
+.chip.overig span{border-style:dashed}
+.opties{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:14px;font-size:14px}
+.vink{display:inline-flex;align-items:flex-start;gap:8px;cursor:pointer;min-width:0}
+.vink input{margin:3px 0 0;width:16px;height:16px;flex:none;accent-color:var(--zwart)}
+
+.actiebalk{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;justify-content:space-between;margin:0 0 12px}
+.teller{font-size:13.5px;color:var(--grijs);font-weight:600}
+.knoppen{display:flex;gap:8px;flex-wrap:wrap}
+.knop{display:inline-block;text-decoration:none;border-radius:999px;padding:9px 16px;font-size:13.5px;font-weight:700;cursor:pointer;border:1px solid var(--zwart);background:var(--zwart);color:#fff}
+.knop:hover{background:#000}
+.knop.licht{background:#fff;color:var(--zwart);border-color:#CFCFCF}
+.knop.licht:hover{background:var(--vlak)}
+
+/* Tabel: eigen scrollvak zodat kolomkop en partijkolom sticky blijven */
+.tabelvak{border:1px solid var(--lijn);border-radius:12px;overflow:auto;max-height:78vh;background:#fff}
+table.matrix{border-collapse:separate;border-spacing:0;width:100%;font-size:13.5px}
+.matrix th,.matrix td{border-bottom:1px solid var(--lijn);border-right:1px solid var(--lijn);padding:10px 12px;vertical-align:top;text-align:left}
+.matrix thead th{position:sticky;top:0;z-index:2;background:var(--zwart);color:#fff;font-size:12.5px;font-weight:800;letter-spacing:.02em;min-width:240px;border-right-color:#3a3a3a}
+.matrix thead th.partijkop{left:0;z-index:3;min-width:200px;width:200px}
+.matrix tbody th{position:sticky;left:0;z-index:1;background:#fff;min-width:200px;width:200px;font-weight:400;box-shadow:2px 0 0 var(--lijn)}
+.matrix tbody tr:nth-child(even) td{background:#FCFCFB}
+.matrix tbody tr.is-gestopt th,.matrix tbody tr.is-gestopt td{background:#FBF6F5}
+.pnaam{display:block;font-weight:800;font-size:14px;line-height:1.3;overflow-wrap:anywhere}
+.ptype{display:block;font-size:11.5px;color:var(--grijs);margin-top:2px}
+.plink{display:inline-block;font-size:12px;font-weight:700;margin-top:6px}
+.ksn{margin:0;padding:0;list-style:none}
+.ksn li{margin:0 0 8px;overflow-wrap:anywhere}
+.ksn li:last-child{margin-bottom:0}
+.bron{font-size:11.5px;font-weight:700;color:var(--blauw);white-space:nowrap}
+.onbekend{color:#8A8A8A;font-style:italic;font-size:12.5px}
+
+.status{display:block;margin-top:8px;border-radius:7px;padding:6px 8px;font-size:12px;line-height:1.4;overflow-wrap:anywhere}
+.status b{display:block;font-size:11px;letter-spacing:.05em;text-transform:uppercase}
+.status.gestopt{background:var(--rood-zacht);color:#7A1F14;border-left:3px solid var(--rood)}
+.status.fusie{background:var(--oranje-zacht);color:#6B3F00;border-left:3px solid #E59A1A}
+.status.naam{background:var(--blauw-zacht);color:var(--blauw);border-left:3px solid var(--blauw)}
+.status a{color:inherit;font-weight:700;white-space:nowrap}
+
+/* Kaarten (mobiel) */
+.kaarten{display:none}
+.kaart{border:1px solid var(--lijn);border-radius:12px;padding:14px 14px 10px;margin-bottom:12px;background:#fff;min-width:0}
+.kaart.is-gestopt{background:#FBF6F5}
+.kaart h3{margin:0;font-size:16px;font-weight:800;line-height:1.3;overflow-wrap:anywhere}
+.kaart dl{margin:10px 0 0}
+.kaart dt{font-size:11.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--grijs);border-top:1px solid var(--lijn);padding-top:8px;margin-top:8px}
+.kaart dd{margin:4px 0 0;font-size:14px}
+
+.leeg{display:none;border:1px dashed #CFCFCF;border-radius:12px;padding:26px;text-align:center;color:var(--grijs);background:#fff}
+
+.legenda{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:12.5px;color:var(--grijs);margin:12px 0 0}
+.legenda span{display:inline-flex;align-items:center;gap:6px}
+.legenda i{display:inline-block;width:12px;height:12px;border-radius:3px}
+
+footer.voet{max-width:1280px;margin:0 auto;padding:0 24px 40px;font-size:13px;color:var(--grijs)}
+footer.voet p{border-top:1px solid var(--lijn);padding-top:16px;margin:0 0 6px}
+footer.voet a{color:var(--zwart);font-weight:700}
+
+@media (max-width:760px){
+  .balk{padding:8px 16px}
+  .kop{padding:26px 16px 28px}
+  .romp{padding:18px 16px 44px}
+  footer.voet{padding:0 16px 32px}
+  .tabelvak{display:none}
+  .kaarten{display:block}
+  .veld{flex:1 1 100%}
+  .actiebalk{align-items:flex-start}
+}
+@media print{
+  .balk,.paneel,.actiebalk .knoppen{display:none}
+  .kop{background:#fff;border-bottom:3px solid var(--zwart)}
+  .tabelvak{max-height:none;overflow:visible}
+  .matrix thead th,.matrix tbody th{position:static}
+}
+</style>
+</head>
+<body>
+
+<div class="balk">
+  <span>Adviesforum &middot; hulpmiddelen voor financieel adviseurs</span>
+  <span><a href="index.html">Naar het forum</a></span>
+</div>
+
+<header class="kop">
+  <div class="kop-in">
+    <div class="merk"><span class="zeshoek" aria-hidden="true"></span>Adviesforum &middot; Hulpmiddelen</div>
+    <div class="terugs">
+      <a class="terug" href="partijen.html">&larr; Terug naar de Partijenwegwijzer</a>
+      <a class="terug" href="index.html#hulpmiddelen">Alle hulpmiddelen</a>
+    </div>
+    <h1>Partijen naast elkaar per thema</h1>
+    <p>Kies een productcategorie en de thema's die u wilt zien. U krijgt een matrix met per partij wat de Partijenwegwijzer over dat thema vastlegde, steeds met een link naar de bron van de partij zelf. Handig als startpunt voor uw eigen uitzoekwerk; niet als eindpunt.</p>
+    <span class="stempel" id="stempel">Geen productvergelijking &middot; geen advies &middot; controleer altijd de actuele voorwaarden</span>
+  </div>
+</header>
+
+<main class="romp">
+  <section class="disclaimer" role="note" aria-labelledby="disc-kop">
+    <h2 id="disc-kop">Lees dit eerst</h2>
+    <ul>
+      <li><strong>Geen productvergelijking en geen advies.</strong> Dit overzicht zet openbare kenmerken uit de Partijenwegwijzer naast elkaar. Het rangschikt niets, is niet volledig en is geen vergelijkingsinstrument in de zin van de Wft. Het vervangt uw eigen onderzoek naar de passendheid van een product voor de klant niet.</li>
+      <li><strong>Gegevens kunnen verouderd zijn.</strong> Alles is gebaseerd op openbare bronnen met de peildatum <span id="peil">2 oktober 2026</span>. Voorwaarden, acceptatiebeleid en regelingen veranderen, soms zonder aankondiging.</li>
+      <li><strong>Controleer altijd de actuele voorwaarden en de acceptatiegids van de partij</strong> (via het adviseursportaal of de actuele productvoorwaarden) voordat u iets in een advies of offerte gebruikt. Een lege cel betekent alleen dat het thema niet in de wegwijzer staat, niet dat de partij het niet aanbiedt.</li>
+    </ul>
+  </section>
+
+  <section class="paneel" aria-label="Selectie">
+    <div class="rij">
+      <div class="veld">
+        <label for="cat">Productcategorie</label>
+        <select id="cat"></select>
+      </div>
+      <div class="veld">
+        <label for="zoek">Zoeken in partij of kenmerk</label>
+        <input id="zoek" type="search" placeholder="Bijv. NHG, overbrugging, ASN" autocomplete="off">
+      </div>
+    </div>
+    <div class="themas">
+      <div class="themakop">
+        <span class="veldlabel" id="thema-label">Thema's (kolommen)</span>
+        <button type="button" class="linkknop" id="alle">alles aan</button>
+        <button type="button" class="linkknop" id="geen">alles uit</button>
+      </div>
+      <div class="chips" id="chips" role="group" aria-labelledby="thema-label"></div>
+    </div>
+    <div class="opties">
+      <label class="vink"><input type="checkbox" id="verberg-gestopt"> <span>Verberg partijen die gestopt zijn (geen nieuwe aanvragen of label beëindigd)</span></label>
+      <label class="vink"><input type="checkbox" id="alleen-gevuld"> <span>Alleen partijen met minstens één bekend kenmerk in de gekozen thema's</span></label>
+    </div>
+  </section>
+
+  <div class="actiebalk">
+    <span class="teller" id="teller" aria-live="polite"></span>
+    <div class="knoppen">
+      <a class="knop licht" id="csv" href="#" download="partijen-per-thema.csv">Exporteer CSV</a>
+      <button type="button" class="knop" id="print">Afdrukken</button>
+    </div>
+  </div>
+
+  <div class="tabelvak" id="tabelvak">
+    <table class="matrix" id="matrix">
+      <thead><tr id="kopregel"></tr></thead>
+      <tbody id="romp"></tbody>
+    </table>
+  </div>
+  <div class="kaarten" id="kaarten"></div>
+  <div class="leeg" id="leeg"></div>
+
+  <div class="legenda" aria-label="Legenda statusmeldingen">
+    <span><i style="background:var(--rood)"></i>Gestopt: geen nieuwe aanvragen of label beëindigd</span>
+    <span><i style="background:#E59A1A"></i>Gefuseerd of overgenomen</span>
+    <span><i style="background:var(--blauw)"></i>Naam gewijzigd</span>
+  </div>
+</main>
+
+<footer class="voet">
+  <p>Bron van alle gegevens: de <a href="partijen.html">Partijenwegwijzer</a> van het Adviesforum, samengesteld uit openbare informatie van de partijen zelf en vakpers. Rentes, premies en tijdelijke acties staan er bewust niet in. Dit overzicht is geen advies, geen productvergelijking en niet volledig; de bronpagina kan sinds de peildatum zijn gewijzigd.</p>
+</footer>
+
+<script src="data/partijen.js"></script>
+<script>
+(function(){
+  'use strict';
+  var TYPES={bank:'Bank',geldverstrekker:'Geldverstrekker / fonds',verzekeraar:'Verzekeraar',pensioenverzekeraar:'Pensioenverzekeraar',
+    pensioenfonds:'Pensioenfonds',ppi:'Premiepensioeninstelling (PPI)',beleggingsinstelling:'Beleggingsinstelling / broker',kredietverstrekker:'Kredietverstrekker'};
+  var CATS={hypotheek:'Hypotheek',leven:'Leven (ORV, uitvaart)',schade:'Schade',inkomen:'Inkomen (AOV, WIA, verzuim)',
+    lijfrente:'Lijfrente en banksparen',krediet:'Consumptief krediet',pensioen:'Pensioen (werkgever)'};
+  var OVERIG='__overig__',OVERIG_LABEL='Overige kenmerken (zonder thema)',ONBEKEND='niet bekend in de wegwijzer';
+  var STANDAARD=['Verhuisregeling','Boetevrij aflossen','Renteafspraken','Zzp en flexibel inkomen'];
+
+  var data=(window.PARTIJEN||[]).slice().sort(function(a,b){return a.naam.localeCompare(b.naam,'nl');});
+  var $=function(id){return document.getElementById(id);};
+  var catSel=$('cat'),zoek=$('zoek'),chips=$('chips'),kopregel=$('kopregel'),romp=$('romp'),kaarten=$('kaarten'),
+      leeg=$('leeg'),teller=$('teller'),tabelvak=$('tabelvak'),csv=$('csv'),verbergGestopt=$('verberg-gestopt'),alleenGevuld=$('alleen-gevuld');
+  var gekozen={};   // thema -> true
+  var zichtbaar=[]; // huidige rijen, voor export en print
+
+  // Peildatum uit de data (meest recente 'bijgewerkt')
+  var NL_MAAND=['januari','februari','maart','april','mei','juni','juli','augustus','september','oktober','november','december'];
+  var laatste=data.reduce(function(m,p){return p.bijgewerkt&&p.bijgewerkt>m?p.bijgewerkt:m;},'');
+  if(/^\d{4}-\d{2}-\d{2}$/.test(laatste)){var d=laatste.split('-');$('peil').textContent=(+d[2])+' '+NL_MAAND[+d[1]-1]+' '+d[0];}
+
+  function el(tag,cls,txt){var e=document.createElement(tag);if(cls)e.className=cls;if(txt!=null)e.textContent=txt;return e;}
+  function veiligeUrl(u){return typeof u==='string'&&/^https:\/\//i.test(u)?u:'';}
+  function host(u){try{return new URL(u).hostname.replace(/^www\./,'');}catch(e){return u;}}
+  function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+  function themaLabel(t){return t===OVERIG?OVERIG_LABEL:t;}
+
+  // Statusmelding indelen. Volgorde telt: 'gestopt' gaat voor 'fusie'.
+  function statusSoort(p){
+    if(!p.status)return null;
+    var s=p.status.toLowerCase();
+    if(/gestopt|geen nieuwe|beëindigd|stopt|niet meer via/.test(s))return {cls:'gestopt',label:'Gestopt / geen nieuwe aanvragen'};
+    if(/nieuwe naam|heet nu/.test(s))return {cls:'naam',label:'Naam gewijzigd'};
+    if(/fusie|gefuseerd|overgenomen|overname|opgegaan|onderdeel van|overgegaan|gaat op in|valt .*onder/.test(s))return {cls:'fusie',label:'Gefuseerd / overgenomen'};
+    return {cls:'naam',label:'Status gewijzigd'};
+  }
+  data.forEach(function(p){p._status=statusSoort(p);});
+
+  // Categorie-keuze, dynamisch uit de data
+  var catsInData={};
+  data.forEach(function(p){(p.categorieen||[]).forEach(function(c){catsInData[c]=(catsInData[c]||0)+1;});});
+  var catVolgorde=Object.keys(CATS).filter(function(c){return catsInData[c];})
+    .concat(Object.keys(catsInData).filter(function(c){return !CATS[c];}).sort());
+  catVolgorde.forEach(function(c){var o=el('option',null,(CATS[c]||c)+' ('+catsInData[c]+')');o.value=c;catSel.appendChild(o);});
+  var oAlle=el('option',null,'Alle categorieën ('+data.length+')');oAlle.value='';catSel.appendChild(oAlle);
+  catSel.value=catsInData.hypotheek?'hypotheek':(catVolgorde[0]||'');
+
+  function partijenInCat(){var c=catSel.value;return data.filter(function(p){return !c||(p.categorieen||[]).indexOf(c)!==-1;});}
+
+  // Thema-chips per categorie, gesorteerd op hoe vaak het thema voorkomt
+  function bouwChips(){
+    var tel={},overig=0;
+    partijenInCat().forEach(function(p){
+      var gezien={};
+      (p.kenmerken||[]).forEach(function(k){
+        if(k.thema){if(!gezien[k.thema]){gezien[k.thema]=1;tel[k.thema]=(tel[k.thema]||0)+1;}}
+        else if(!gezien[OVERIG]){gezien[OVERIG]=1;overig++;}
+      });
+    });
+    var themas=Object.keys(tel).sort(function(a,b){return tel[b]-tel[a]||a.localeCompare(b,'nl');});
+    var nieuw={};
+    themas.forEach(function(t){if(gekozen[t])nieuw[t]=true;});
+    if(gekozen[OVERIG]&&overig)nieuw[OVERIG]=true;
+    if(!Object.keys(nieuw).length){
+      STANDAARD.forEach(function(t){if(tel[t])nieuw[t]=true;});
+      if(!Object.keys(nieuw).length)themas.slice(0,4).forEach(function(t){nieuw[t]=true;});
+    }
+    gekozen=nieuw;
+    chips.textContent='';
+    var lijst=themas.map(function(t){return {t:t,n:tel[t]};});
+    if(overig)lijst.push({t:OVERIG,n:overig});
+    lijst.forEach(function(x){
+      var lab=el('label','chip'+(x.t===OVERIG?' overig':''));
+      var inp=el('input');inp.type='checkbox';inp.value=x.t;inp.checked=!!gekozen[x.t];
+      inp.addEventListener('change',function(){if(inp.checked)gekozen[x.t]=true;else delete gekozen[x.t];teken();});
+      var sp=el('span',null,themaLabel(x.t));sp.appendChild(el('small',null,String(x.n)));
+      sp.title=x.n+(x.n===1?' partij':' partijen')+' met dit thema in deze categorie';
+      lab.appendChild(inp);lab.appendChild(sp);chips.appendChild(lab);
+    });
+    chips._volgorde=lijst.map(function(x){return x.t;});
+  }
+
+  function gekozenThemas(){return (chips._volgorde||[]).filter(function(t){return gekozen[t];});}
+  function kenmerkenVoor(p,t){
+    return (p.kenmerken||[]).filter(function(k){return t===OVERIG?!k.thema:k.thema===t;});
+  }
+
+  function celInhoud(lijst){
+    if(!lijst.length)return el('span','onbekend',ONBEKEND);
+    var ul=el('ul','ksn');
+    lijst.forEach(function(k){
+      var li=el('li');li.appendChild(document.createTextNode(k.tekst+' '));
+      var b=veiligeUrl(k.bron);
+      if(b){var a=el('a','bron','bron: '+host(b));a.href=b;a.target='_blank';a.rel='noopener';a.title=b;li.appendChild(a);}
+      ul.appendChild(li);
+    });
+    return ul;
+  }
+  function statusBlok(p){
+    var s=p._status;if(!s)return null;
+    var d=el('span','status '+s.cls);d.appendChild(el('b',null,s.label));
+    d.appendChild(document.createTextNode(p.status+' '));
+    var b=veiligeUrl(p.statusBron);
+    if(b){var a=el('a',null,'bron: '+host(b));a.href=b;a.target='_blank';a.rel='noopener';d.appendChild(a);}
+    return d;
+  }
+  function partijKop(p,wrap){
+    wrap.appendChild(el('span','pnaam',p.naam));
+    wrap.appendChild(el('span','ptype',TYPES[p.type]||p.type||''));
+    var st=statusBlok(p);if(st)wrap.appendChild(st);
+    // partijen.html kent (nog) geen ankers per partij: link naar de wegwijzer zelf.
+    var l=el('a','plink','In de wegwijzer →');l.href='partijen.html';l.title='Open de Partijenwegwijzer en zoek op '+p.naam;wrap.appendChild(l);
+  }
+
+  function teken(){
+    var themas=gekozenThemas();
+    var woorden=zoek.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
+    var basis=partijenInCat();
+    zichtbaar=basis.filter(function(p){
+      if(verbergGestopt.checked&&p._status&&p._status.cls==='gestopt')return false;
+      if(alleenGevuld.checked&&themas.length&&!themas.some(function(t){return kenmerkenVoor(p,t).length;}))return false;
+      if(woorden.length){
+        var tekst=[p.naam,TYPES[p.type]||'',p.status||'',(p.producten||[]).join(' ')]
+          .concat(themas.map(function(t){return kenmerkenVoor(p,t).map(function(k){return k.tekst;}).join(' ');})).join(' ').toLowerCase();
+        if(!woorden.every(function(w){return tekst.indexOf(w)!==-1;}))return false;
+      }
+      return true;
+    });
+
+    // Kolomkop
+    kopregel.textContent='';
+    var pk=el('th','partijkop','Partij');pk.scope='col';kopregel.appendChild(pk);
+    themas.forEach(function(t){var th=el('th',null,themaLabel(t));th.scope='col';kopregel.appendChild(th);});
+
+    // Tabel en kaarten
+    romp.textContent='';kaarten.textContent='';
+    var fragT=document.createDocumentFragment(),fragK=document.createDocumentFragment();
+    zichtbaar.forEach(function(p){
+      var gestopt=p._status&&p._status.cls==='gestopt';
+      var tr=el('tr',gestopt?'is-gestopt':'');
+      var th=el('th');th.scope='row';partijKop(p,th);tr.appendChild(th);
+      var kaart=el('article','kaart'+(gestopt?' is-gestopt':''));
+      var kk=el('div');partijKop(p,kk);kk.firstChild.className='pnaam';
+      var h=el('h3',null,p.naam);kk.replaceChild(h,kk.firstChild);kaart.appendChild(kk);
+      var dl=el('dl');
+      themas.forEach(function(t){
+        var lijst=kenmerkenVoor(p,t);
+        var td=el('td');td.appendChild(celInhoud(lijst));tr.appendChild(td);
+        dl.appendChild(el('dt',null,themaLabel(t)));
+        var dd=el('dd');dd.appendChild(celInhoud(lijst));dl.appendChild(dd);
+      });
+      if(themas.length)kaart.appendChild(dl);
+      fragT.appendChild(tr);fragK.appendChild(kaart);
+    });
+    romp.appendChild(fragT);kaarten.appendChild(fragK);
+
+    var geenThema=!themas.length,geenRij=!zichtbaar.length;
+    leeg.textContent=geenThema?'Kies hierboven minstens één thema om de matrix te tonen.':'Geen partijen gevonden voor deze categorie, zoekterm of filters.';
+    leeg.style.display=(geenThema||geenRij)?'block':'none';
+    tabelvak.style.visibility=(geenThema||geenRij)?'hidden':'';
+    tabelvak.style.height=(geenThema||geenRij)?'0':'';
+    tabelvak.style.border=(geenThema||geenRij)?'0':'';
+    kaarten.style.display=(geenThema||geenRij)?'none':'';
+
+    var gevuld=0,cellen=zichtbaar.length*themas.length;
+    zichtbaar.forEach(function(p){themas.forEach(function(t){if(kenmerkenVoor(p,t).length)gevuld++;});});
+    teller.textContent=zichtbaar.length+' van '+basis.length+' partijen · '+themas.length+(themas.length===1?' thema':' thema\'s')+
+      (cellen?' · '+gevuld+' van '+cellen+' cellen gevuld':'');
+
+    csv.href='data:text/csv;charset=utf-8,'+encodeURIComponent(maakCsv(themas));
+    csv.setAttribute('download','partijen-per-thema-'+(catSel.value||'alle')+'.csv');
+  }
+
+  // CSV met puntkomma (Nederlandse Excel), BOM voor UTF-8
+  function csvVeld(s){s=String(s==null?'':s);return '"'+s.replace(/"/g,'""')+'"';}
+  function maakCsv(themas){
+    var regels=[];
+    regels.push(['Partij','Type','Status','Statusbron'].concat(themas.map(themaLabel)).map(csvVeld).join(';'));
+    zichtbaar.forEach(function(p){
+      var rij=[p.naam,TYPES[p.type]||p.type||'',p.status?((p._status?p._status.label+': ':'')+p.status):'',veiligeUrl(p.statusBron)];
+      themas.forEach(function(t){
+        var l=kenmerkenVoor(p,t);
+        rij.push(l.length?l.map(function(k){return k.tekst+(veiligeUrl(k.bron)?' (bron: '+k.bron+')':'');}).join(' | '):ONBEKEND);
+      });
+      regels.push(rij.map(csvVeld).join(';'));
+    });
+    regels.push('');
+    regels.push(csvVeld('Geen productvergelijking en geen advies. Bron: Partijenwegwijzer Adviesforum, peildatum '+$('peil').textContent+'. Gegevens kunnen verouderd zijn; controleer altijd de actuele voorwaarden en acceptatiegids van de partij.'));
+    return '﻿'+regels.join('\r\n');
+  }
+
+  // Afdrukken via een nieuw venster met alleen de matrix
+  function afdrukken(){
+    var themas=gekozenThemas();
+    if(!themas.length||!zichtbaar.length){alert('Er is nog niets om af te drukken: kies een thema en controleer de filters.');return;}
+    var w=window.open('','_blank');
+    if(!w){alert('Het afdrukvenster werd geblokkeerd. Sta pop-ups voor deze pagina toe en probeer het opnieuw.');return;}
+    var cat=catSel.value?(CATS[catSel.value]||catSel.value):'Alle categorieën';
+    var h='<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><title>Partijen per thema – '+esc(cat)+'</title><style>'+
+      'body{font-family:Montserrat,Arial,sans-serif;color:#141414;margin:18px;font-size:10.5px;line-height:1.4}'+
+      'h1{font-size:18px;margin:0 0 4px}.sub{margin:0 0 10px;color:#444}'+
+      '.disc{border:1.5px solid #141414;border-left:6px solid #FFD200;padding:7px 10px;margin:0 0 12px}'+
+      'table{border-collapse:collapse;width:100%}th,td{border:1px solid #bbb;padding:5px 6px;vertical-align:top;text-align:left}'+
+      'thead th{background:#141414;color:#fff}thead{display:table-header-group}tr{break-inside:avoid}'+
+      '.st{display:block;margin-top:3px;color:#7A1F14}.ok{color:#888;font-style:italic}.b{color:#1F4E79;word-break:break-all}'+
+      'ul{margin:0;padding-left:13px}li{margin:0 0 3px}@page{size:A4 landscape;margin:12mm}</style></head><body>';
+    h+='<h1>Partijen per thema: '+esc(cat)+'</h1>';
+    h+='<p class="sub">'+zichtbaar.length+' partijen · thema\'s: '+esc(themas.map(themaLabel).join(', '))+(zoek.value.trim()?' · zoekterm: “'+esc(zoek.value.trim())+'”':'')+
+      (verbergGestopt.checked?' · gestopte partijen verborgen':'')+' · peildatum '+esc($('peil').textContent)+'</p>';
+    h+='<div class="disc"><strong>Geen productvergelijking en geen advies.</strong> Openbare kenmerken uit de Partijenwegwijzer van het Adviesforum; niet volledig. Gegevens kunnen verouderd zijn: controleer altijd de actuele voorwaarden en acceptatiegids van de partij. Een lege cel betekent alleen dat het thema niet in de wegwijzer staat.</div>';
+    h+='<table><thead><tr><th>Partij</th>'+themas.map(function(t){return '<th>'+esc(themaLabel(t))+'</th>';}).join('')+'</tr></thead><tbody>';
+    zichtbaar.forEach(function(p){
+      h+='<tr><th><strong>'+esc(p.naam)+'</strong><br>'+esc(TYPES[p.type]||p.type||'')+
+        (p.status?'<span class="st"><strong>'+esc(p._status?p._status.label:'Status')+':</strong> '+esc(p.status)+'</span>':'')+'</th>';
+      themas.forEach(function(t){
+        var l=kenmerkenVoor(p,t);
+        h+='<td>'+(l.length?'<ul>'+l.map(function(k){var b=veiligeUrl(k.bron);return '<li>'+esc(k.tekst)+(b?' <span class="b">('+esc(host(b))+')</span>':'')+'</li>';}).join('')+'</ul>':'<span class="ok">'+ONBEKEND+'</span>')+'</td>';
+      });
+      h+='</tr>';
+    });
+    h+='</tbody></table><p class="sub" style="margin-top:10px">Afgedrukt van het Adviesforum (vergelijken.html). Volledige bronlinks staan op de pagina en in de CSV-export.</p></body></html>';
+    w.document.open();w.document.write(h);w.document.close();
+    w.focus();setTimeout(function(){try{w.print();}catch(e){}},300);
+  }
+
+  catSel.addEventListener('change',function(){bouwChips();teken();});
+  zoek.addEventListener('input',teken);
+  verbergGestopt.addEventListener('change',teken);
+  alleenGevuld.addEventListener('change',teken);
+  $('alle').addEventListener('click',function(){(chips._volgorde||[]).forEach(function(t){gekozen[t]=true;});bouwChips();teken();});
+  $('geen').addEventListener('click',function(){gekozen={};bouwChips();
+    // bouwChips zet bij een lege keuze de standaardthema's; hier willen we echt niets
+    gekozen={};Array.prototype.forEach.call(chips.querySelectorAll('input'),function(i){i.checked=false;});teken();});
+  $('print').addEventListener('click',afdrukken);
+
+  if(!data.length){leeg.textContent='De partijgegevens konden niet worden geladen.';leeg.style.display='block';return;}
+  bouwChips();teken();
+})();
+</script>
+</body>
+</html>
