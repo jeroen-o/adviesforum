@@ -42,6 +42,7 @@ a{color:var(--accent-deep)}
 h1,h2,h3{margin:0;line-height:1.25;letter-spacing:-.01em}
 h1{font-size:26px;font-weight:800}
 h2{font-size:18px;font-weight:700}
+.listhead h2.kop{font-size:26px;font-weight:800}
 h3{font-size:15px;font-weight:600}
 p{margin:0 0 12px}
 ul{margin:0 0 12px;padding-left:20px}
@@ -330,7 +331,7 @@ footer .legal{grid-column:1/-1;border-top:1px solid #2A3238;padding-top:14px;fon
   .side .filters{display:flex;gap:10px;flex-wrap:wrap}
   .side .filters label{flex:1;min-width:140px;margin-bottom:0}
   .rail{order:3}
-  .listhead h1{font-size:22px}
+  .listhead h1,.listhead h2.kop{font-size:22px}
   .q,.art,.ans,.card .pad,.auto .pad{padding-left:14px;padding-right:14px}
   .qhead h1{font-size:22px}
   .rating-row{gap:14px}
@@ -414,9 +415,9 @@ main .wrap>*{min-width:0}
 <main><div id="hero"></div><div id="app" class="wrap"></div></main>
 
 <footer><div class="wrap">
-  <div><h2>Samen vooruit.</h2><p>Het Adviesforum is een platform voor en door financieel adviseurs die elkaar helpen: collegiale kennisuitwisseling, geen klantadvies. Controleer altijd de actuele wet- en regelgeving en de voorwaarden van geldverstrekker of verzekeraar voordat je iets in een klantdossier overneemt. Alleen kennisbankartikelen met het label “Gecontroleerd” zijn beoordeeld door compliance.</p><p><button data-act="tab" data-tab="handleiding">Handleiding →</button> &nbsp;&nbsp; <button data-act="tab" data-tab="voorwie">Voor wie →</button> &nbsp;&nbsp; <a href="aanmelden.html">Aanmelden →</a> &nbsp;&nbsp; <button data-act="tab" data-tab="hulpmiddelen">Hulpmiddelen →</button> &nbsp;&nbsp; <a href="privacy.html">Privacy →</a></p></div>
+  <div><h2>Samen vooruit.</h2><p>Het Adviesforum is een platform voor en door financieel adviseurs die elkaar helpen: collegiale kennisuitwisseling, geen klantadvies. Controleer altijd de actuele wet- en regelgeving en de voorwaarden van geldverstrekker of verzekeraar voordat je iets in een klantdossier overneemt. Alleen kennisbankartikelen met het label “Gecontroleerd” zijn beoordeeld door compliance.</p><p><button data-act="tab" data-tab="handleiding">Handleiding →</button> &nbsp;&nbsp; <button data-act="tab" data-tab="voorwie">Voor wie →</button> &nbsp;&nbsp; <a href="aanmelden.html">Aanmelden →</a> &nbsp;&nbsp; <button data-act="tab" data-tab="hulpmiddelen">Hulpmiddelen →</button> &nbsp;&nbsp; <a href="privacy.html">Privacy →</a> &nbsp;&nbsp; <a href="nieuw.html">Wat is nieuw →</a> &nbsp;&nbsp; <a href="compliance-overzicht.html">Compliance-overzicht →</a></p></div>
   <div><h3>Blinqx Verzekering &amp; Hypotheek</h3><p>Harderwijkweg 5b<br>2803 PW Gouda<br><a href="mailto:relatie-vh@blinqx.tech">relatie-vh@blinqx.tech</a></p><p><a href="https://verzekeringhypotheek.blinqx.tech/support" target="_blank" rel="noopener">Support</a> &nbsp;&nbsp; <a href="https://verzekeringhypotheek.blinqx.tech/academy" target="_blank" rel="noopener">Academy</a> &nbsp;&nbsp; <a href="https://verzekeringhypotheek.blinqx.tech" target="_blank" rel="noopener">verzekeringhypotheek.blinqx.tech</a></p></div>
-  <div class="legal"><span>2026 Blinqx Verzekering &amp; Hypotheek</span><span>Adviesforum</span></div>
+  <div class="legal"><span>© 2026 Blinqx Verzekering &amp; Hypotheek</span><span>Adviesforum</span></div>
 </div></footer>
 <div id="toast" role="status" aria-live="polite"></div>
 
@@ -495,7 +496,7 @@ const FAQ_THEMAS={'hypotheek-normen':'Leennormen en maximale hypotheek','hypothe
 const HULP=[
  {groep:'Rekenhulpen',titel:'NHG-check 2026: past het binnen NHG?',url:'nhg-check.html',tekst:'Kostentoets, leningtoets en LTV volgens de V&N 2026, plus borgtochtprovisie bij aankoop, nieuwbouw, oversluiten en verhogen.',kw:'nhg check grens 470000 498200 borgtochtprovisie kostengrens oversluiten verhogen nieuwbouw ebv'},
  {groep:'Rekenhulpen',titel:'NHG-beheertoets: woonlasten bijlage 5',url:'nhg-beheertoets.html',tekst:'Financieringslastpercentage en maximale woonlast volgens de NHG-beheertabel 2026, met ruimte of tekort.',kw:'nhg beheer beheertoets financieringslast bijlage 5 woningbehoud betalingsproblemen ontslag hoofdelijke aansprakelijkheid'},
- {groep:'Rekenhulpen',titel:'Rekentools: alle 275 berekeningen',url:'rekentools.html',tekst:'Aanbiedingen vergelijken, bouwdepot, risicoklasse, omslagrente, slottermijn, renteherziening, gewogen rente, partner uitkopen, verduurzaming, vermogensopbouw, contante waarde, werkdagen en meer.',kw:'rekentools renteherziening gewogen rente leningdelen uitkopen partner woningwaarde verduurzaming terugverdientijd aflostijd effectieve rente restschuld vermogen inleg interen contante waarde inflatie jaarinkomen werkdagen termijn datum'},
+ {groep:'Rekenhulpen',titel:'Rekentools: alle '+((window.REKENTOOLS||[]).length||275).toLocaleString('nl-NL')+' berekeningen',url:'rekentools.html',tekst:'Aanbiedingen vergelijken, bouwdepot, risicoklasse, omslagrente, slottermijn, renteherziening, gewogen rente, partner uitkopen, verduurzaming, vermogensopbouw, contante waarde, werkdagen en meer.',kw:'rekentools renteherziening gewogen rente leningdelen uitkopen partner woningwaarde verduurzaming terugverdientijd aflostijd effectieve rente restschuld vermogen inleg interen contante waarde inflatie jaarinkomen werkdagen termijn datum'},
  {groep:'Rekenhulpen',titel:'Leennormen 2026',url:'leennormen-2026.html',tekst:'Maximale hypotheek volgens de Nibud-tabellen 2026, met energielabel, studieschuld, AOW en box 3.',kw:'leennormen maximale hypotheek financieringslast financieringslastpercentage nibud trhk energielabel studieschuld toetsrente woonquote toetsinkomen'},
  {groep:'Rekenhulpen',titel:'Eigenwoningreserve en bijleenregeling',url:'bijleenregeling.html',tekst:'Bereken de eigenwoningreserve, de maximale nieuwe eigenwoningschuld en het deel in box 3.',kw:'bijleenregeling eigenwoningreserve ewr eigenwoningschuld ews box overwaarde verkoop restschuld doorstromer'},
  {groep:'Rekenhulpen',titel:'Overbruggingskrediet',url:'overbrugging.html',tekst:'Maximaal overbruggingskrediet, rentelasten en dubbele woonlasten tijdens de overbrugging.',kw:'overbrugging overbruggingskrediet dubbele lasten verkoop oude woning doorstromer'},
@@ -531,6 +532,7 @@ const HULP=[
  {groep:'Formulieren',tp:'Formulier',titel:'Gespreksverslag',url:'gespreksverslag.html',tekst:'Verslag van een adviesgesprek met controle op kernonderwerpen.',kw:'gespreksverslag adviesgesprek verslag dossier kennismaking'},
  {groep:'Formulieren',tp:'Formulier',titel:'Nazorg-check',url:'nazorg-check.html',tekst:'Periodieke controle van hypotheek en verzekeringen, met signalen zoals einde rentevast; ook als klantlink.',kw:'nazorg periodiek klantcontact rentevast aow onderhoud jaarlijks'},
  {groep:'Formulieren',tp:'Formulier',titel:'Wijziging doorgeven',url:'wijziging-doorgeven.html',tekst:'Klant geeft een levensgebeurtenis door; toont welke producten geraakt kunnen worden.',kw:'wijziging levensgebeurtenis scheiding verhuizing baan geboorte klantformulier'},
+ {groep:'Naslag',titel:'Levensgebeurtenissen: wegwijzer',url:'levensgebeurtenissen.html',tekst:'15 levensgebeurtenissen (samenwonen, kind, scheiding, overlijden, werkloos, ziek, zzp, verhuizen, verduurzamen, erfenis, pensioen, emigratie e.a.) met checklist, documenten, termijnen en zorgplichtsignalen.',kw:'levensgebeurtenis scheiding overlijden geboorte kind trouwen samenwonen werkloos arbeidsongeschikt zzp verhuizen verbouwen erfenis schenking pensioen emigratie mantelzorg senior checklist'},
  {groep:'Naslag',titel:'Kalender 2026–2027 voor adviseurs',url:'kalender.html',tekst:'Belangrijke data en deadlines (aangifte, toeslagen, jaarruimte, schenken, NHG, Wtp, saldering) plus wat er verandert per 1 januari 2027. Te exporteren naar je agenda.',kw:'kalender agenda deadline data 2027 jaarruimte schenken aangifte toeslagen saldering wtp nhg 1 januari wijzigingen ics'},
  {groep:'Naslag',titel:'Partijenwegwijzer',url:'partijen.html',tekst:'75 banken, geldverstrekkers, verzekeraars, lijfrente- en kredietaanbieders, PPI\'s en pensioenfondsen: portals, producten, voorwaarden (verhuisregeling, boetevrij aflossen, zzp, duurzaamheid) en statuswijzigingen, met bron.',kw:'partijen geldverstrekker bank verzekeraar pensioenfonds portal intermediair ing abn rabobank obvion asr nn goudse zwitserleven abp munt'},
  {groep:'Naslag',titel:'Wet- en regelgeving',url:'wetgeving.html',tekst:'113 wetten, besluiten en bronnen met zoekfunctie: Wft, Bgfo, Trhk, NHG, Wwft, Kifid, BW, fiscaal, pensioen.',kw:'wet wetgeving wetten regelgeving wft bgfo trhk wck wwft kifid burgerlijk wetboek inkomstenbelasting successiewet pensioenwet toeslagen bwbr'},
@@ -914,13 +916,22 @@ function renderShell(){
   const open=VRAGEN.filter(v=>vraagStatus(v)==='open').length;
   $('#tabs').innerHTML=[
     ['forum','Forum',VRAGEN.length],['kennisbank','Kennisbank',ARTIKELEN.length],['faq','FAQ',FAQ_GELADEN?FAQ.length:null],['hulpmiddelen','Hulpmiddelen',HULP.length],['begrippen','Begrippen A-Z',BEGRIPPEN.length],['adviseurs','Adviseurs',USERS.length],['handleiding','Handleiding',null],['voorwie','Voor wie',null]
-  ].map(([id,t,n])=>`<button class="tab ${S.tab===id?'on':''}" data-act="tab" data-tab="${id}">${t}${n!=null?`<span class="n">${n}</span>`:''}</button>`).join('')
+  ].map(([id,t,n])=>`<button class="tab ${S.tab===id?'on':''}" data-act="tab" data-tab="${id}">${t}${n!=null?`<span class="n">${fmtInt(n)}</span>`:''}</button>`).join('')
   +(open?`<span style="margin-left:auto;align-self:center;font-size:13px;color:var(--muted);padding:0 8px;white-space:nowrap">${plural(open,'onbeantwoorde vraag','onbeantwoorde vragen')}</span>`:'');
 }
 
+const heroZichtbaar=()=>S.view==='forum'&&S.cat==='alle'&&S.status==='alle'&&!S.q;
+/* Venstertitel per weergave */
+function zetTitel(){const T={forum:'Forum',nieuw:'Vraag stellen',kennisbank:'Kennisbank',faq:'Veelgestelde vragen',hulpmiddelen:'Hulpmiddelen',begrippen:'Begrippen A-Z',adviseurs:'Adviseurs',handleiding:'Handleiding',voorwie:'Voor wie'};
+  let t=T[S.view]||'Forum';
+  if(S.view==='vraag'){const v=VRAGEN.find(x=>x.id===S.vraag);if(v)t=v.titel;}
+  else if(S.view==='artikel'){const a=ARTIKELEN.find(x=>x.id===S.artikel);if(a)t=a.titel;}
+  else if(S.view==='adviseur'){const u=user(S.adviseur);if(u)t=u.naam;}
+  else if(S.view==='forum'&&S.cat!=='alle'&&cat(S.cat))t=cat(S.cat).naam;
+  document.title=t+' – Adviesforum';}
 function render(keepScroll){
   renderShell();
-  $('#hero').innerHTML=(S.view==='forum'&&S.cat==='alle'&&S.status==='alle'&&!S.q)?heroHtml():'';
+  $('#hero').innerHTML=heroZichtbaar()?heroHtml():'';
   const app=$('#app');
   app.className='wrap';
   switch(S.view){
@@ -937,6 +948,7 @@ function render(keepScroll){
     case 'begrippen':app.className='wrap one';app.innerHTML=viewBegrippen();break;
     case 'faq':app.className='wrap one';app.innerHTML=viewFaq();break;
   }
+  zetTitel();
   if(!keepScroll)window.scrollTo({top:0});
 }
 
@@ -944,7 +956,7 @@ function render(keepScroll){
 function heroHtml(){
   return `<div class="hero"><div class="hero-wrap">
     <div class="hero-text">
-      <h1><span class="outline">Voor adviseurs</span><br><span class="outline">die elkaar</span><br>vooruit helpen.</h1>
+      <h1><span class="outline">Voor adviseurs</span><br><span class="outline">die elkaar</span><br>vooruithelpen.</h1>
       <ul class="hero-points">
         <li>Voor en door financieel adviseurs die elkaar helpen</li>
         <li>Stel je vraag en krijg direct een automatisch antwoord</li>
@@ -990,15 +1002,15 @@ function viewForum(){
       <h3>${esc(v.titel)}</h3>
       <span class="status s-${st}">${statusTxt[st]}</span>
       <div class="ex">${v.voorbeeld?'<span class="chip" style="margin-right:6px">Voorbeeld</span>':''}${esc(v.body)}</div>
-      <div class="meta"><span class="chip">${esc(cat(v.cat).naam)}</span>${v.auto&&v.auto.hits.length?'<span class="chip auto-chip">Auto-antwoord</span>':''}<span><b>${esc(u.naam)}</b> ${esc(u.kantoor)}</span><span title="${fmtDate(v.datum)}">${relTijd(v.datum)}</span><span>${plural(v.antwoorden.length,'antwoord','antwoorden')}</span><span>${fmtInt(v.views)} keer bekeken</span>${br?`<span>${starsStatic(br)} ${fmtNum(br)}</span>`:''}</div>
+      <div class="meta"><span class="chip">${esc(cat(v.cat).naam)}</span>${v.auto&&v.auto.hits.length?'<span class="chip auto-chip">Auto-antwoord</span>':''}<span><b>${esc(u.naam)}</b> ${esc(u.kantoor)}</span><span title="${fmtDate(v.datum)}">${tijdVraag(v)}</span><span>${plural(v.antwoorden.length,'antwoord','antwoorden')}</span><span>${fmtInt(v.views)} keer bekeken</span>${br?`<span>${starsStatic(br)} ${fmtNum(br)}</span>`:''}</div>
     </div>`;}).join('')
   :`<div class="empty"><b>Geen vragen gevonden</b>${S.q?'Probeer een andere zoekterm of ':''}stel zelf de eerste vraag in deze categorie.<div style="margin-top:14px"><button class="btn btn-black" data-act="nieuw">Vraag stellen →</button></div>${zoekMeld()}</div>`;
   return sideForum()+`<section>
     ${ookGevonden('forum')}
-    <div class="listhead"><div><h1>${esc(catNaam)}</h1><div class="sub">${plural(list.length,'vraag','vragen')}${S.q?` voor “${esc(S.q)}”`:''}</div></div><button class="btn btn-black" data-act="nieuw">Vraag stellen →</button></div>
+    <div class="listhead"><div>${heroZichtbaar()?`<h2 class="kop">${esc(catNaam)}</h2>`:`<h1>${esc(catNaam)}</h1>`}<div class="sub">${plural(list.length,'vraag','vragen')}${S.q?` voor “${esc(S.q)}”`:''}</div></div><button class="btn btn-black" data-act="nieuw">Vraag stellen →</button></div>
     <div class="quick" role="group" aria-label="Snelfilter"><button class="${S.sort==='nieuw'&&S.status==='alle'?'on':''}" data-act="quick" data-q="nieuw">Nieuw</button><button class="${S.sort==='views'?'on':''}" data-act="quick" data-q="populair">Populair</button><button class="${S.status==='open'?'on':''}" data-act="quick" data-q="open">Onbeantwoord</button></div>
     <div class="card">${rows}</div>
-    ${list.length>max?`<div style="text-align:center;margin-top:14px"><button class="btn btn-line" data-act="forummeer">Meer tonen (${list.length-max} over)</button></div>`:''}
+    ${list.length>max?`<div style="text-align:center;margin-top:14px"><button class="btn btn-line" data-act="forummeer">Meer tonen (${fmtInt(list.length-max)} over)</button></div>`:''}
   </section>`+rail();
 }
 function rail(){
@@ -1051,7 +1063,7 @@ function viewVraag(){
     <div class="card"><div class="pad">
       <div class="qhead"><h1>${esc(v.titel)}</h1><span class="status s-${st}">${statusTxt[st]}</span></div>
       <div>${v.tags.map(t=>`<span class="tag">${esc(t)}</span>`).join('')}</div>
-      <div class="byline"><span class="av">${initials(u.naam)}</span><span>${u.extern?`<b style="color:var(--text)">${esc(u.naam)}</b><br>Vraagsteller`:`<button class="name" data-act="open-adviseur" data-id="${u.id}">${esc(u.naam)}</button>${verif(u)}<br>${esc(u.functie)}, ${esc(u.kantoor)}`}</span><span style="margin-left:auto;text-align:right">${relTijd(v.datum)}<br>${fmtInt(v.views)} keer bekeken</span></div>
+      <div class="byline"><span class="av">${initials(u.naam)}</span><span>${u.extern?`<b style="color:var(--text)">${esc(u.naam)}</b><br>Vraagsteller`:`<button class="name" data-act="open-adviseur" data-id="${u.id}">${esc(u.naam)}</button>${verif(u)}<br>${esc(u.functie)}, ${esc(u.kantoor)}`}</span><span style="margin-left:auto;text-align:right">${tijdVraag(v)}<br>${fmtInt(v.views)} keer bekeken</span></div>
       ${v.voorbeeld?'<div class="notice" style="margin-bottom:14px">Voorbeeldvraag: een realistische praktijksituatie om te laten zien hoe collega\u2019s elkaar helpen. Controleer de antwoorden zoals altijd aan de actuele regels.</div>':''}
       ${v.sessie?`<div class="notice ok" style="margin-bottom:14px"><b>Laatste stap: verstuur de e-mail.</b> Je mailprogramma is geopend met je vraag aan de beheerder (${FORM_MAIL}); klik daar op <b>Verzenden</b>. Na controle wordt je vraag op het forum gepubliceerd; tot die tijd zie alleen jij hem in deze sessie.<div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap"><a class="btn btn-sm" id="mail-opnieuw" href="${esc(v.mailHref)}">Open de e-mail opnieuw</a><button type="button" class="btn btn-line btn-sm" data-act="mail-kopie" data-id="${v.id}">Tekst kopiëren</button></div><div style="margin-top:6px;font-size:13px">Opent er niets? Kopieer de tekst en mail hem naar ${FORM_MAIL}.</div></div>`:''}
       <div class="body">${rich(v.body)}</div>
@@ -1187,7 +1199,7 @@ function viewArtikel(){
 function viewHulpmiddelen(){
   const list=HULP.filter(h=>zoekt('hulp',h));
   const groepen=[...new Set(HULP.map(h=>h.groep))];
-  const blok=g=>{let items=list.filter(h=>h.groep===g);const rt=g.startsWith('Rekentools · ');const totaal=items.length;if(rt&&!S.q&&!(S.hulpOpen||{})[g])items=items.slice(0,6);const meer=rt&&items.length<totaal?`<div style="margin:-4px 0 18px"><button class="btn btn-line btn-sm" data-act="hulpmeer" data-groep="${esc(g)}">Alle ${totaal} tonen</button></div>`:'';return items.length?`<h2 style="margin:6px 0 10px">${esc(g)}</h2><div class="tools">${items.map(h=>`<a class="tool" href="${esc(h.url)}"${/^https?:/.test(h.url)?' target="_blank" rel="noopener"':''}><span class="tp">${esc(h.tp||g)}</span><h3>${esc(h.titel)}</h3><p>${esc(h.tekst)}</p></a>`).join('')}</div>${meer}`:'';};
+  const blok=g=>{let items=list.filter(h=>h.groep===g);const rt=g.startsWith('Rekentools · ');const totaal=items.length;if(rt&&!S.q&&!(S.hulpOpen||{})[g])items=items.slice(0,6);const meer=rt&&items.length<totaal?`<div style="margin:-4px 0 18px"><button class="btn btn-line btn-sm" data-act="hulpmeer" data-groep="${esc(g)}">Alle ${fmtInt(totaal)} tonen</button></div>`:'';return items.length?`<h2 style="margin:6px 0 10px">${esc(g)}</h2><div class="tools">${items.map(h=>`<a class="tool" href="${esc(h.url)}"${/^https?:/.test(h.url)?' target="_blank" rel="noopener"':''}><span class="tp">${esc(h.tp||g)}</span><h3>${esc(h.titel)}</h3><p>${esc(h.tekst)}</p></a>`).join('')}</div>${meer}`:'';};
   return `<section>
     ${ookGevonden('hulpmiddelen')}
     <div class="listhead"><div><h1>Hulpmiddelen</h1><div class="sub">Rekenhulpen, naslag en documenten voor de adviespraktijk${S.q?` · zoekterm “${esc(S.q)}”`:''}</div></div></div>
@@ -1204,9 +1216,9 @@ function viewFaq(){
   return `<section>
     ${ookGevonden('faq')}
     <div class="listhead"><div><h1>Veelgestelde vragen</h1><div class="sub">${plural(list.length,'vraag','vragen')}${S.q?` voor “${esc(S.q)}”`:''} · zoek via de balk bovenin</div></div></div>
-    <div class="quick">${[['alle','Alle thema\'s',FAQ.length],...Object.keys(FAQ_THEMAS).filter(k=>counts[k]).map(k=>[k,FAQ_THEMAS[k],counts[k]])].map(([k,n,c])=>`<button class="${th===k?'on':''}" data-act="faqthema" data-thema="${k}">${esc(n)} (${c})</button>`).join('')}</div>
+    <div class="quick">${[['alle','Alle thema\'s',FAQ.length],...Object.keys(FAQ_THEMAS).filter(k=>counts[k]).map(k=>[k,FAQ_THEMAS[k],counts[k]])].map(([k,n,c])=>`<button class="${th===k?'on':''}" data-act="faqthema" data-thema="${k}">${esc(n)} (${fmtInt(c)})</button>`).join('')}</div>
     <div class="notice" style="margin-bottom:14px">Concept: deze antwoorden zijn nog niet door compliance gecontroleerd. Gebruik ze als startpunt en controleer de actuele regels en de voorwaarden van de geldverstrekker.</div>
-    <div class="card"><div class="pad">${list.length?list.slice(0,S.faqMax||50).map(f=>`<details class="term" id="faq-${esc(f.id)}"${S.faqOpen===f.id?' open':''}><summary style="cursor:pointer;font-weight:700">${esc(f.vraag)}</summary><div class="body" style="margin-top:8px">${rich(f.antwoord)}</div><div class="waar">${esc(FAQ_THEMAS[f.thema]||f.thema)}${f.bron?' · Bron: '+esc(f.bron):''}${(f.tags||[]).length?' · '+f.tags.map(esc).join(', '):''}</div></details>`).join('')+(list.length>(S.faqMax||50)?`<div style="text-align:center;margin-top:14px"><button class="btn btn-line" data-act="faqmeer">Meer tonen (${list.length-(S.faqMax||50)} over)</button></div>`:''):`<div class="empty"><b>Geen vragen gevonden</b>Stel je vraag op het forum.${zoekMeld()}<div style="margin-top:10px"><button class="btn btn-black btn-sm" data-act="nieuw">Vraag stellen →</button></div></div>`}</div></div>
+    <div class="card"><div class="pad">${list.length?list.slice(0,S.faqMax||50).map(f=>`<details class="term" id="faq-${esc(f.id)}"${S.faqOpen===f.id?' open':''}><summary style="cursor:pointer;font-weight:700">${esc(f.vraag)}</summary><div class="body" style="margin-top:8px">${rich(f.antwoord)}</div><div class="waar">${esc(FAQ_THEMAS[f.thema]||f.thema)}${f.bron?' · Bron: '+esc(f.bron):''}${(f.tags||[]).length?' · '+f.tags.map(esc).join(', '):''}</div></details>`).join('')+(list.length>(S.faqMax||50)?`<div style="text-align:center;margin-top:14px"><button class="btn btn-line" data-act="faqmeer">Meer tonen (${fmtInt(list.length-(S.faqMax||50))} over)</button></div>`:''):`<div class="empty"><b>Geen vragen gevonden</b>Stel je vraag op het forum.${zoekMeld()}<div style="margin-top:10px"><button class="btn btn-black btn-sm" data-act="nieuw">Vraag stellen →</button></div></div>`}</div></div>
   </section>`;
 }
 /* ---------- Begrippen A-Z ---------- */
@@ -1244,11 +1256,12 @@ function viewAdviseurs(){
   const rows=USERS.map(u=>({u,s:statsFor(u.id)})).sort((a,b)=>b.s.punten-a.s.punten||b.s.gemAdv-a.s.gemAdv);
   return `<section>
     <div class="listhead"><div><h1>Adviseurs</h1><div class="sub">Reputatie op basis van beoordelingen door collega's. Punten: 10 per antwoord, 25 per beste antwoord, plus elke ontvangen ster.</div></div></div>
+    ${USERS.some(u=>u.demo)?'<div class="notice" id="demo-melding" style="margin-bottom:14px"><b>Voorbeelddata.</b> De adviseurs met het label “Voorbeeldprofiel” zijn fictief en laten zien hoe de ranglijst werkt. Ze worden vervangen zodra echte, geverifieerde adviseurs zijn toegevoegd.</div>':''}
     <div class="card"><div class="tblwrap"><table class="tbl">
-      <thead><tr><th>#</th><th>Adviseur</th><th>Niveau</th><th class="num">Punten</th><th>Antwoorden</th><th>Adviseur</th><th class="num">Antwoorden</th><th class="num">Beste</th></tr></thead>
+      <thead><tr><th>#</th><th>Adviseur</th><th>Niveau</th><th class="num">Punten</th><th>Score antwoord</th><th>Score adviseur</th><th class="num">Antwoorden</th><th class="num">Beste</th></tr></thead>
       <tbody>${rows.map(({u,s},i)=>`<tr>
         <td class="num">${i+1}</td>
-        <td><div class="who-cell"><span class="av">${initials(u.naam)}</span><button data-act="open-adviseur" data-id="${u.id}"><b>${esc(u.naam)}</b><span>${esc(u.functie)}, ${esc(u.kantoor)}</span></button></div></td>
+        <td><div class="who-cell"><span class="av">${initials(u.naam)}</span><button data-act="open-adviseur" data-id="${u.id}"><b>${esc(u.naam)}</b><span>${esc(u.functie)}, ${esc(u.kantoor)}</span></button>${verif(u)}</div></td>
         <td><span class="lvl">${esc(s.level)}</span></td>
         <td class="num"><b>${fmtInt(s.punten)}</b></td>
         <td>${s.nA?starsStatic(s.gemA)+' <span style="font-size:13px;color:var(--muted)">'+fmtNum(s.gemA)+'</span>':'<span style="font-size:13px;color:var(--muted)">–</span>'}</td>
@@ -1257,7 +1270,7 @@ function viewAdviseurs(){
         <td class="num">${fmtInt(s.best)}</td>
       </tr>`).join('')}</tbody>
     </table></div></div>
-    <div style="font-size:12px;color:var(--muted);margin-top:10px">Kolom “Antwoorden” met sterren = gemiddelde score van de antwoorden; kolom “Adviseur” = gemiddelde score als adviseur (behulpzaam, duidelijk, onderbouwd).</div>
+    <div style="font-size:12px;color:var(--muted);margin-top:10px">“Score antwoord” = gemiddelde score van de antwoorden; “Score adviseur” = gemiddelde score als adviseur (behulpzaam, duidelijk, onderbouwd); “Antwoorden” = aantal gegeven antwoorden; “Beste” = aantal gekozen beste antwoorden.</div>
   </section>`;
 }
 function viewAdviseur(){
@@ -1351,7 +1364,7 @@ function viewHandleiding(){
       <h2 id="h-hulp">8. Hulpmiddelen</h2>
       <p>Het tabblad Hulpmiddelen bundelt alles wat je in de praktijk nodig hebt. Gebruik het zoekveld om snel de juiste tool te vinden.</p>
       <ul>
-        <li><b>Rekenhulpen</b>: o.a. leennormen 2026, overbrugging, oversluiten, rentemiddeling, LTV, kosten koper, restschuld bij pensioen, NHG-check 2026 en NHG-beheertoets, plus de pagina Rekentools met tientallen snelle berekeningen.</li>
+        <li><b>Rekenhulpen</b>: o.a. leennormen 2026, overbrugging, oversluiten, rentemiddeling, LTV, kosten koper, restschuld bij pensioen, NHG-check 2026 en NHG-beheertoets, plus de pagina Rekentools met ${fmtInt((window.REKENTOOLS||[]).length)} snelle berekeningen.</li>
         <li><b>Verzekeringen</b>: ORV, AOV-tekort, inkomen bij ziekte, werkloosheid en herbouwwaarde.</li>
         <li><b>Formulieren</b>: inventarisatie, documentenchecklist, afwijkend advies, gespreksverslag, nazorg-check en wijziging doorgeven.</li>
         <li><b>Klantscans</b>: tien scans (o.a. nazorg, hypotheek, aflossingsvrij, ORV, pensioen, schade, auto, bedrijf, uitvaart en klanttevredenheid) die je als link naar je klant stuurt. De klant mailt het resultaat naar jou; er wordt niets opgeslagen.</li>
@@ -1363,7 +1376,7 @@ function viewHandleiding(){
       <h2 id="h-rollen">9. Rollen</h2>
       <div class="two-col">
         <div class="rolecard"><h3>Adviseur</h3><ul><li>Vragen stellen en beantwoorden</li><li>Antwoorden en collega's beoordelen</li><li>Beste antwoord kiezen bij eigen vragen</li><li>Opgeloste vragen voorstellen voor de kennisbank</li></ul></div>
-        <div class="rolecard"><h3>Applicatiebeheer</h3><ul><li>Alles wat een adviseur kan</li><li>Eerste aanspreekpunt bij vragen over Adviespakket en CRM</li><li>Opgeloste vragen omzetten naar de kennisbank</li><li>Gecontroleerde kennisbank exporteren voor Fin</li></ul></div>
+        <div class="rolecard"><h3>Applicatiebeheer</h3><ul><li>Alles wat een adviseur kan</li><li>Eerste aanspreekpunt bij vragen over Adviespakket en CRM</li><li>Opgeloste vragen omzetten naar de kennisbank</li>${fin?'<li>Gecontroleerde kennisbank exporteren voor Fin</li>':''}</ul></div>
         <div class="rolecard"><h3>Compliance</h3><ul><li>Artikelen controleren en markeren als Gecontroleerd</li><li>Controle intrekken bij gewijzigde regelgeving</li><li>Reageren op vragen met zorgplicht- of AVG-impact</li></ul></div>
         <div class="rolecard"><h3>Kantoormanager</h3><ul><li>Ziet via het tabblad Adviseurs wie veel bijdraagt</li><li>Signaleert terugkerende vragen voor training of werkinstructies</li></ul></div>
       </div>
@@ -1568,7 +1581,7 @@ document.addEventListener('submit',async e=>{if(e.target.id!=='f-login')return;e
   const f=e.target,code=normCode(f.code.value);if(code.length<14){toast('Vul je volledige code in');return;}
   const h=await sha256(code);const u=USERS.find(x=>x.geverifieerd&&x.codeHash===h);
   if(!u){toast('Deze code is niet bekend');f.code.select();return;}
-  S.me=u.id;zetCookie(code,f.onthoud.checked);$('#login-dlg').close();render(true);toast('Ingelogd als '+u.naam);},true);
+  S.me=u.id;zetCookie(code,f.onthoud.checked);$('#login-dlg').close();render(true);toast('Welkom terug, '+u.naam);},true);
 document.addEventListener('click',e=>{if(e.target.closest('[data-act="login-sluit"]')){const d=$('#login-dlg');if(d)d.close();}});
 herstelLogin();
 $('#search').addEventListener('input',e=>{

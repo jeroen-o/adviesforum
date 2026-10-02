@@ -846,7 +846,7 @@
     {t:'NHG-check 2026', url:'nhg-check.html', d:'Grens inclusief EBV'},
     {t:'Loan-to-value', url:'ltv.html', d:'LTV na verbouwing'},
     {t:'Herbouwwaarde en onderverzekering', url:'herbouwwaarde.html', d:'Opstal aanpassen'},
-    {t:'Schadeverzekeringscan', url:'scan-schadeverzekeringen.html', d:'Opstal en inboedel'}
+    {t:'Schadeverzekeringsscan', url:'scan-schadeverzekeringen.html', d:'Opstal en inboedel'}
    ],
    bronnen:['isde','leidraad','nhgvn']
   },
