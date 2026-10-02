@@ -823,7 +823,7 @@
         { k: 'h', l: 'Leningbedrag', s: 'eur', std: 200000 },
         { k: 'r', l: 'Rente lening ouders', s: 'pct', std: 4.5 },
         { k: 'rb', l: 'Rente bij een bank (vergelijking)', s: 'pct', std: 4.1 },
-        { k: 'sch', l: 'Jaarlijkse schenking aan het kind', s: 'eur', std: NR.schenkErf.schenkVrijstellingKind, opt: true },
+        { k: 'sch', l: 'Jaarlijkse schenking aan het kind', s: 'eur', std: 3000, opt: true, tip: 'Jaarlijkse vrijstelling voor een kind: ' + fmt.euro0(NR.schenkErf.schenkVrijstellingKind) + ' (' + PEIL + ').' },
         { k: 'tar', l: 'Aftrektarief kind', s: 'pct', std: NR.aftrekTariefMax },
         { k: 'b3', l: 'Ouder valt al boven het heffingsvrij vermogen', s: 'keuze', opties: JANEE, std: 'ja' }
       ],
@@ -1071,7 +1071,7 @@
         { k: 'eg', l: 'Eigen geld', s: 'eur', std: 50000, opt: true },
         { k: 'kost', l: 'Overige aankoopkosten', s: 'eur', std: 6000, opt: true },
         { k: 'st', l: 'Startersvrijstelling overdrachtsbelasting', s: 'keuze', opties: JANEE, std: 'nee' },
-        { k: 'ink', l: 'Toetsinkomen', s: 'eur', std: 85000 },
+        { k: 'ink', l: 'Toetsinkomen', s: 'eur', std: 90000 },
         { k: 'flp', l: 'Financieringslastpercentage', s: 'pct', std: N.financieringslastPct },
         { k: 'r', l: 'Rente', s: 'pct', std: 4.1 },
         { k: 'jr', l: 'Looptijd', s: 'num', na: 'jaar', std: 30 }
