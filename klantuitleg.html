@@ -49,7 +49,7 @@ button,input,select{font-family:inherit}
 .chip{border:1px solid #CFCFCF;background:#fff;border-radius:999px;font-size:12px;font-weight:700;padding:5px 10px;cursor:pointer;color:var(--tekst)}
 .chip[aria-pressed="true"]{background:var(--zwart);border-color:var(--zwart);color:var(--geel)}
 .groep{font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--grijs);margin:12px 0 4px;padding:0 6px;font-weight:800}
-.item{display:block;width:100%;text-align:left;border:0;background:none;padding:7px 8px;border-radius:8px;font-size:13.5px;font-weight:600;color:var(--tekst);cursor:pointer;line-height:1.35}
+.item{display:block;width:100%;overflow-wrap:anywhere;hyphens:auto;text-align:left;border:0;background:none;padding:7px 8px;border-radius:8px;font-size:13.5px;font-weight:600;color:var(--tekst);cursor:pointer;line-height:1.35}
 .item:hover{background:var(--vlak)}
 .item[aria-current="true"]{background:var(--geel-zacht);box-shadow:inset 3px 0 0 var(--geel-donker)}
 .leeg{font-size:13px;color:var(--grijs);padding:8px 6px;display:none}
@@ -226,12 +226,13 @@ footer{border-top:1px solid var(--lijn);padding:22px 24px;font-size:12.5px;color
     h += '<div class="kort"><h3>In het kort</h3><ul>' + b.kort.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ul></div>';
     h += '<h3>Uitleg</h3>' + b.uitleg.map(function (x) { return '<p>' + esc(x) + '</p>'; }).join('');
     h += '<h3>Waar moet je op letten?</h3><ul>' + b.letop.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ul>';
-    h += '<h3 class="sr">Vragen</h3><div class="vragen" style="margin-top:18px"><h3>Vraag je adviseur</h3><ul>' + b.vragen.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ul></div>';
+    h += '<div class="vragen" style="margin-top:18px"><h3>Vraag je adviseur</h3><ul>' + b.vragen.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ul></div>';
     var c = contactRegel(g);
     if (c.length) h += '<div class="contact">' + c.map(esc).join('<br>') + '</div>';
     h += '<div class="bron"><strong>Bron:</strong> ' + b.bronnen.map(function (x) {
-      return '<a href="' + esc(x.u) + '" target="_blank" rel="noopener">' + esc(x.t) + '</a>';
-    }).join('; ') + '.<br><strong>Peildatum:</strong> ' + esc(b.peildatum) + '.</div>';
+      var d = x.u.replace(/^https?:\/\/(www\.)?/, '').split('/')[0];
+      return '<a href="' + esc(x.u) + '" target="_blank" rel="noopener">' + esc(x.t) + '</a> <span class="dom">(' + esc(d) + ')</span>';
+    }).join(' &middot; ') + '<br><strong>Peildatum:</strong> ' + esc(b.peildatum) + '.</div>';
     h += '<div class="disclaimer">' + esc(DISCLAIMER) + '</div>';
     return h;
   }
@@ -339,6 +340,7 @@ footer{border-top:1px solid var(--lijn);padding:22px 24px;font-size:12.5px;color
     '.contact{margin-top:10pt;background:#F7F7F5;border-radius:4pt;padding:7pt 12pt;font-size:10pt;break-inside:avoid}',
     '.bron{font-size:8.5pt;color:#5E5E5E;margin-top:12pt;border-top:1pt solid #E4E4E4;padding-top:6pt;overflow-wrap:anywhere}',
     '.bron a{color:#5E5E5E;text-decoration:none}',
+    '.dom{white-space:nowrap}',
     '.disclaimer{font-size:8.5pt;color:#5E5E5E;margin-top:5pt;font-style:italic}',
     '.sr{position:absolute;left:-9999px}'
   ].join('\n');
