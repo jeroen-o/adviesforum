@@ -101,3 +101,56 @@ test('inloggen adviseur: zonder code geen antwoordformulier, met cookie of code 
   expect(page.url()).not.toContain('login-');
   expect(fouten).toEqual([]);
 });
+
+test('voorbeeldadviseurs tonen "Voorbeeldprofiel" in plaats van "Geverifieerd"; echte adviseurs blijven geverifieerd', async ({ page }) => {
+  const fouten = await volgFouten(page);
+  await page.addInitScript(() => {
+    Object.defineProperty(window, 'ADVISEURS', { configurable: true, set(v) { v.push({ id: 'ut', naam: 'Echte Adviseur', functie: 'Hypotheekadviseur', kantoor: 'Test', rol: 'adviseur', geverifieerd: true, codeHash: 'x' }); this._a = v; }, get() { return this._a; } });
+  });
+  await page.goto('/index.html#adviseurs');
+  await expect(page.locator('#demo-melding')).toContainText('Voorbeelddata');
+  await expect(page.locator('.tbl thead')).toContainText('Score antwoord');
+  await expect(page.locator('.tbl tr', { hasText: 'Sanne de Vries' })).toContainText('Voorbeeldprofiel');
+  await expect(page.locator('.tbl tr', { hasText: 'Sanne de Vries' })).not.toContainText('Geverifieerd');
+  await expect(page.locator('.tbl tr', { hasText: 'Echte Adviseur' })).toContainText('✓ Geverifieerd');
+  await page.goto('/index.html#vraag-v2');
+  await expect(page.locator('main')).toContainText('Voorbeeldprofiel');
+  await expect(page.locator('main')).not.toContainText('Geverifieerd');
+  await expect(page).toHaveTitle(/ – Adviesforum$/);
+  expect(fouten).toEqual([]);
+});
+
+test('zoeken: "nhg grens" vindt resultaten (woorden, synoniemen, leestekens) en toont "Ook gevonden in"', async ({ page }) => {
+  const fouten = await volgFouten(page);
+  await page.goto('/index.html');
+  await page.fill('#search', 'nhg grens');
+  await expect(page.locator('#app .q').first()).toBeVisible();
+  const rij = page.locator('.ook');
+  await expect(rij).toContainText('Ook gevonden in');
+  for (const n of ['Forum', 'Kennisbank', 'FAQ', 'Begrippen', 'Hulpmiddelen']) await expect(rij).toContainText(n + ' (');
+  await expect(rij).toContainText(/FAQ \([1-9]/);
+  await page.click('.ook button[data-tab="kennisbank"]');
+  await expect(page).toHaveURL(/#kennisbank$/);
+  await expect(page.locator('#app h1')).toHaveText('Kennisbank');
+  await expect(page.locator('#search')).toHaveValue('nhg grens');
+  await expect(page.locator('#app .art').first()).toBeVisible();
+  await page.click('.ook button[data-tab="faq"]');
+  await expect(page.locator('#app details.term').first()).toBeVisible();
+  // accenten en streepjes maken niet uit
+  await page.fill('#search', 'NHG-grens');
+  await expect(page.locator('#app details.term').first()).toBeVisible();
+  expect(fouten).toEqual([]);
+});
+
+test('mobiel: geen horizontale scroll bij een zoekterm zonder resultaten', async ({ page }) => {
+  const fouten = await volgFouten(page);
+  await page.setViewportSize({ width: 390, height: 844 });
+  for (const h of ['', '#kennisbank', '#faq', '#hulpmiddelen', '#begrippen']) {
+    await page.goto('/index.html' + h);
+    await page.fill('#search', 'xyzqqq geen resultaat');
+    await expect(page.locator('.ook')).toBeVisible();
+    await expect(page.locator('#app .empty').first()).toBeVisible();
+    expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(392);
+  }
+  expect(fouten).toEqual([]);
+});
