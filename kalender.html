@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Adviseurskalender 2026–2027 – Adviesforum</title>
+<meta name="description" content="Jaarkalender en tijdlijn voor financieel adviseurs, oktober 2026 t/m december 2027: aangifte, toeslagen, jaarruimte, schenken, NHG, leennormen, AOW, Wtp, saldering, box 3, AFM en PE. Met bronnen en .ics-export.">
+<style>
+@font-face{font-family:Montserrat;font-style:normal;font-weight:400;font-display:swap;src:url(fonts/montserrat-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:600;font-display:swap;src:url(fonts/montserrat-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:700;font-display:swap;src:url(fonts/montserrat-latin-700-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:800;font-display:swap;src:url(fonts/montserrat-latin-800-normal.woff2) format('woff2')}
+
+:root{
+  --geel:#FFD200;--geel-donker:#E6BD00;--geel-zacht:#FFF6C7;
+  --zwart:#141414;--tekst:#1F1F1F;--grijs:#5E5E5E;--lijn:#E4E4E4;--vlak:#F7F7F5;
+  --rood:#C0392B;--groen:#1E7A4B;--groen-zacht:#EAF6EF;--oranje:#8A5A00;--oranje-zacht:#FFF3D6;
+  --t-belasting:#2F5DA8;--t-toeslagen:#8E44AD;--t-vermogen:#1E7A4B;--t-hypotheek:#B8860B;--t-pensioen:#C0392B;
+  --t-energie:#16A085;--t-inkomen:#D35400;--t-toezicht:#34495E;--t-wetgeving:#7F8C8D;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:Montserrat,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  color:var(--tekst);background:#fff;line-height:1.55;font-size:15px;-webkit-font-smoothing:antialiased;overflow-wrap:anywhere}
+a{color:inherit}
+button,input,select{font-family:inherit}
+
+.balk{background:var(--zwart);color:#fff;font-size:12.5px;padding:8px 24px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.balk a{color:#fff;text-decoration:none;opacity:.88}
+.balk a:hover{opacity:1;text-decoration:underline}
+
+.kop{background:var(--geel);color:var(--zwart);padding:34px 24px 38px}
+.kop-in{max-width:1180px;margin:0 auto}
+.merk{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.08em;font-size:12px;text-transform:uppercase;margin-bottom:16px}
+.zeshoek{width:22px;height:25px;background:var(--zwart);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);flex:none}
+.terug{display:inline-block;font-size:13.5px;font-weight:700;text-decoration:none;border-bottom:2px solid var(--zwart);margin-bottom:14px}
+.kop h1{margin:0 0 10px;font-size:clamp(27px,4.2vw,40px);line-height:1.12;font-weight:800}
+.kop p{margin:0;max-width:68ch;font-size:15.5px}
+.stempel{display:inline-block;margin-top:16px;font-size:12px;font-weight:700;background:var(--zwart);color:var(--geel);padding:5px 11px;border-radius:999px}
+
+.romp{max-width:1180px;margin:0 auto;padding:26px 24px 56px}
+
+.gereedschap{border:1px solid var(--lijn);border-radius:14px;padding:16px;background:var(--vlak);display:grid;gap:12px}
+.rij{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.zoek{flex:1 1 260px;min-width:0;padding:10px 13px;border:1px solid #CFCFCF;border-radius:9px;font-size:15px;background:#fff}
+.zoek:focus,select:focus,button:focus-visible,a:focus-visible{outline:3px solid rgba(255,210,0,.7);outline-offset:1px}
+select{padding:9px 11px;border:1px solid #CFCFCF;border-radius:9px;font-size:14px;background:#fff;max-width:100%}
+.label-klein{font-size:11.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--grijs);margin-right:2px}
+.chip{border:1px solid #CFCFCF;background:#fff;border-radius:999px;padding:6px 12px;font-size:13px;font-weight:600;cursor:pointer;display:inline-flex;align-items:center;gap:7px;color:var(--tekst)}
+.chip[aria-pressed="true"]{background:var(--zwart);color:#fff;border-color:var(--zwart)}
+.stip{width:9px;height:9px;border-radius:50%;flex:none;display:inline-block}
+
+.knop{border-radius:999px;padding:9px 16px;font-size:13.5px;font-weight:700;cursor:pointer;border:1px solid var(--zwart);background:var(--zwart);color:#fff;text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+.knop:hover{background:#000}
+.knop.licht{background:#fff;color:var(--zwart);border-color:#CFCFCF}
+.knop.licht:hover{background:var(--vlak)}
+.knop.klein{padding:6px 12px;font-size:12.5px}
+
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin:22px 0 16px;border-bottom:3px solid var(--geel);padding-bottom:10px}
+.tabs button{border:1px solid #CFCFCF;background:#fff;border-radius:999px;padding:8px 16px;font-weight:700;font-size:14px;cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--zwart);color:#fff;border-color:var(--zwart)}
+.paneel{display:none}
+.paneel.aan{display:block}
+.teller{font-size:13px;color:var(--grijs);margin:0 0 12px}
+
+/* Maandoverzicht */
+.maandnav{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.maandnav h2{margin:0 8px 0 0;font-size:22px;font-weight:800;flex:1 1 auto;text-transform:capitalize}
+.raster{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));border:1px solid var(--lijn);border-radius:12px;overflow:hidden}
+.raster .wd{background:var(--vlak);font-size:11.5px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--grijs);padding:6px 8px;border-bottom:1px solid var(--lijn)}
+.dag{min-height:92px;border-right:1px solid var(--lijn);border-bottom:1px solid var(--lijn);padding:6px;min-width:0;background:#fff}
+.dag:nth-child(7n){border-right:0}
+.dag.leeg{background:#FBFBFA}
+.dag.vandaag .nr{background:var(--geel);border-radius:6px;padding:0 5px}
+.dag .nr{font-size:12.5px;font-weight:700;color:var(--grijs);display:inline-block}
+.dag.heeft .nr{color:var(--zwart)}
+.ev{display:block;width:100%;text-align:left;border:0;border-left:3px solid var(--grijs);background:var(--vlak);border-radius:4px;padding:2px 5px;margin-top:4px;font-size:11.5px;font-weight:600;line-height:1.3;cursor:pointer;color:var(--tekst);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ev.verwacht{border-left-style:dashed;font-style:italic}
+.ev:hover{background:var(--geel-zacht)}
+.stippen{display:none;gap:3px;flex-wrap:wrap;margin-top:4px}
+@media(max-width:760px){
+  .dag{min-height:52px;padding:4px}
+  .dag .ev{display:none}
+  .stippen{display:flex}
+  .maandnav h2{flex-basis:100%}
+  .raster .wd{padding:5px 2px;text-align:center;font-size:10.5px;letter-spacing:0}
+}
+.maand-lijst{margin-top:18px}
+.maand-lijst h3{font-size:14px;letter-spacing:.07em;text-transform:uppercase;color:var(--grijs);margin:0 0 10px}
+
+/* Kaarten */
+.item{border:1px solid var(--lijn);border-left:5px solid var(--grijs);border-radius:12px;padding:14px 16px;background:#fff;margin-bottom:12px;display:grid;grid-template-columns:110px minmax(0,1fr);gap:4px 16px;scroll-margin-top:16px}
+.item.flits{box-shadow:0 0 0 3px var(--geel)}
+.item .wanneer{font-weight:800;font-size:14px;line-height:1.3}
+.item .wanneer small{display:block;font-weight:600;color:var(--grijs);font-size:12px}
+.item h4{margin:0 0 4px;font-size:16px;line-height:1.3}
+.item p{margin:0 0 8px;color:#333;font-size:14.5px}
+.badges{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:6px}
+.badge{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:700;border-radius:999px;padding:2px 9px;line-height:1.5;background:var(--vlak);border:1px solid var(--lijn)}
+.badge.bevestigd{background:var(--groen-zacht);color:var(--groen);border-color:#BBDFC9}
+.badge.verwacht{background:var(--oranje-zacht);color:var(--oranje);border-color:#F0D58A}
+.voet{display:flex;gap:10px 16px;flex-wrap:wrap;align-items:center;font-size:13px}
+.voet a.bron{color:var(--grijs)}
+@media(max-width:560px){.item{grid-template-columns:1fr}}
+
+.maandkop{font-size:18px;font-weight:800;margin:24px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--lijn);text-transform:capitalize}
+.maandkop:first-child{margin-top:0}
+.leeg-melding{padding:20px;border:1px dashed #CFCFCF;border-radius:12px;color:var(--grijs);text-align:center;display:none}
+
+/* Per 1 januari 2027 */
+.per-raster{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr));gap:14px}
+.per{border:1px solid var(--lijn);border-top:4px solid var(--grijs);border-radius:12px;padding:14px 16px;background:#fff}
+.per h4{margin:4px 0 6px;font-size:15.5px}
+.per p{margin:0 0 8px;font-size:14px;color:#333}
+.per a{font-size:13px;color:var(--grijs)}
+
+.toelichting{margin-top:28px;border:1px solid var(--lijn);border-radius:14px;padding:16px 18px;background:var(--vlak);font-size:13.5px}
+.toelichting h2{font-size:14px;letter-spacing:.07em;text-transform:uppercase;color:var(--grijs);margin:0 0 8px}
+.toelichting ul{margin:0;padding-left:18px}
+.toelichting li{margin-bottom:5px}
+
+footer{border-top:1px solid var(--lijn);padding:22px 24px;font-size:12.5px;color:var(--grijs);text-align:center}
+
+@media print{
+  .balk,.gereedschap,.tabs,.knop,.maandnav button,.maandnav select{display:none!important}
+  .kop{padding:12px 0;background:#fff}
+  .item,.per{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+
+<div class="balk">
+  <span>Adviesforum &middot; hulpmiddelen voor financieel adviseurs</span>
+  <span><a href="index.html">Naar het forum</a></span>
+</div>
+
+<header class="kop">
+  <div class="kop-in">
+    <div class="merk"><span class="zeshoek" aria-hidden="true"></span>Adviesforum &middot; Hulpmiddelen</div>
+    <a class="terug" href="index.html#hulpmiddelen">&larr; Terug naar de hulpmiddelen</a>
+    <h1>Adviseurskalender oktober 2026 – december 2027</h1>
+    <p>Alle data die ertoe doen in de adviespraktijk op één plek: aangifte en voorlopige aanslag, toeslagen, jaarruimte en schenken vóór de jaarwisseling, NHG en leennormen, AOW en de Wtp-overstap van grote fondsen, het einde van salderen, box 3 en de toezichtagenda. Elk item heeft een bronlink; wat nog niet vaststaat, staat als <strong>verwacht</strong> gemarkeerd.</p>
+    <span class="stempel" id="stempel">Peildatum 2 oktober 2026 &middot; controleer altijd de bron</span>
+  </div>
+</header>
+
+<main class="romp">
+  <section class="gereedschap" aria-label="Filters">
+    <div class="rij">
+      <label for="zoek" class="label-klein">Zoeken</label>
+      <input id="zoek" class="zoek" type="search" placeholder="Bijv. jaarruimte, ABP, NHG, saldering…" autocomplete="off">
+    </div>
+    <div class="rij" id="themaknoppen" role="group" aria-label="Filter op thema">
+      <span class="label-klein">Thema</span>
+    </div>
+    <div class="rij">
+      <label for="status" class="label-klein">Status</label>
+      <select id="status">
+        <option value="">Bevestigd en verwacht</option>
+        <option value="bevestigd">Alleen bevestigd</option>
+        <option value="verwacht">Alleen verwacht</option>
+      </select>
+      <button type="button" class="knop licht klein" id="wis">Filters wissen</button>
+      <span style="flex:1"></span>
+      <a class="knop klein" id="ics-alles" href="#" download="adviseurskalender.ics">Zichtbare items naar agenda (.ics)</a>
+      <button type="button" class="knop licht klein" id="print">Afdrukken</button>
+    </div>
+  </section>
+
+  <div class="tabs" role="tablist">
+    <button type="button" role="tab" id="tab-maand" aria-selected="true" aria-controls="p-maand">Maandoverzicht</button>
+    <button type="button" role="tab" id="tab-lijst" aria-selected="false" aria-controls="p-lijst">Lijst / tijdlijn</button>
+    <button type="button" role="tab" id="tab-2027" aria-selected="false" aria-controls="p-2027">Wat verandert per 1 januari 2027</button>
+  </div>
+
+  <section class="paneel aan" id="p-maand" role="tabpanel" aria-labelledby="tab-maand">
+    <div class="maandnav">
+      <h2 id="maandtitel">oktober 2026</h2>
+      <button type="button" class="knop licht klein" id="vorige" aria-label="Vorige maand">&larr;</button>
+      <select id="maandkeuze" aria-label="Kies maand"></select>
+      <button type="button" class="knop licht klein" id="volgende" aria-label="Volgende maand">&rarr;</button>
+    </div>
+    <div class="raster" id="raster" aria-label="Maandkalender"></div>
+    <div class="maand-lijst">
+      <h3 id="maandlijst-kop">Deze maand</h3>
+      <div id="maandlijst"></div>
+      <div class="leeg-melding" id="maand-leeg">Geen items in deze maand voor de gekozen filters.</div>
+    </div>
+  </section>
+
+  <section class="paneel" id="p-lijst" role="tabpanel" aria-labelledby="tab-lijst">
+    <p class="teller" id="teller"></p>
+    <div id="lijst"></div>
+    <div class="leeg-melding" id="lijst-leeg">Geen items gevonden. Pas de zoekterm of filters aan.</div>
+  </section>
+
+  <section class="paneel" id="p-2027" role="tabpanel" aria-labelledby="tab-2027">
+    <p class="teller">De belangrijkste wijzigingen per de jaarwisseling, voor zover bekend op de peildatum. Fiscale voorstellen uit het Belastingplan 2027 zijn pas definitief na aanneming door de Eerste Kamer.</p>
+    <div class="per-raster" id="per2027"></div>
+  </section>
+
+  <section class="toelichting">
+    <h2>Zo lees je deze kalender</h2>
+    <ul>
+      <li><strong>Bevestigd</strong>: de datum staat vast volgens wet, regeling of een officiële aankondiging van de genoemde bron.</li>
+      <li><strong>Verwacht</strong>: de datum volgt uit het gebruikelijke jaarpatroon, een planning of een wetsvoorstel dat nog niet is aangenomen. Datum en inhoud kunnen wijzigen.</li>
+      <li>Deze kalender is een hulpmiddel en geen advies. Bedragen, normen en percentages staan alleen vermeld als ze officieel zijn gepubliceerd; rentes en premies worden niet getoond.</li>
+      <li>Met &lsquo;Naar agenda&rsquo; download je een .ics-bestand (hele-dag-afspraak) dat je in Outlook, Google Agenda of Apple Agenda kunt importeren. Er wordt niets verstuurd of opgeslagen.</li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  Adviesforum &middot; collegiale kennisdeling voor financieel adviseurs &middot; <a href="index.html#hulpmiddelen">Alle hulpmiddelen</a> &middot; <a href="privacy.html">Privacy</a>. <span id="voet-peil"></span>
+</footer>
+
+<script src="data/kalender.js"></script>
+<script>
+(function(){
+  'use strict';
+  var K = window.KALENDER || {items:[],per2027:[],themas:{}};
+  var MAANDEN = ['januari','februari','maart','april','mei','juni','juli','augustus','september','oktober','november','december'];
+  var MAAND_KORT = ['jan','feb','mrt','apr','mei','jun','jul','aug','sep','okt','nov','dec'];
+  var WEEKDAGEN = ['ma','di','wo','do','vr','za','zo'];
+  var WEEKDAG_LANG = ['zondag','maandag','dinsdag','woensdag','donderdag','vrijdag','zaterdag'];
+  var KLEUR = {belasting:'var(--t-belasting)',toeslagen:'var(--t-toeslagen)',vermogen:'var(--t-vermogen)',hypotheek:'var(--t-hypotheek)',
+    pensioen:'var(--t-pensioen)',energie:'var(--t-energie)',inkomen:'var(--t-inkomen)',toezicht:'var(--t-toezicht)',wetgeving:'var(--t-wetgeving)'};
+  var BEGIN = {j:2026,m:9}, EINDE = {j:2028,m:0};
+
+  function $(id){ return document.getElementById(id); }
+  function esc(s){ return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];}); }
+  function parse(d){ var p=d.split('-'); return new Date(+p[0],+p[1]-1,+p[2]); }
+  function datumLang(d){ var x=parse(d); return WEEKDAG_LANG[x.getDay()]+' '+x.getDate()+' '+MAANDEN[x.getMonth()]+' '+x.getFullYear(); }
+  function datumKort(d){ var x=parse(d); return x.getDate()+' '+MAAND_KORT[x.getMonth()]+' '+x.getFullYear(); }
+  function exact(it){ return !it.datumTekst; }
+
+  // ---------- Staat ----------
+  var vandaag = new Date();
+  var staat = {zoek:'', themas:{}, status:'', j:BEGIN.j, m:BEGIN.m};
+  if (vandaag >= new Date(BEGIN.j,BEGIN.m,1) && vandaag < new Date(EINDE.j,EINDE.m+1,1)) { staat.j=vandaag.getFullYear(); staat.m=vandaag.getMonth(); }
+
+  var items = K.items.slice().sort(function(a,b){ return a.datum<b.datum?-1:a.datum>b.datum?1:(a.datumTekst?1:0)-(b.datumTekst?1:0); });
+
+  function past(it){
+    var actief = Object.keys(staat.themas).filter(function(k){return staat.themas[k];});
+    if (actief.length && actief.indexOf(it.thema)<0) return false;
+    if (staat.status && it.status!==staat.status) return false;
+    if (staat.zoek){
+      var hooi = (it.titel+' '+it.tekst+' '+(K.themas[it.thema]||'')+' '+(it.datumTekst||'')+' '+datumLang(it.datum)+' '+it.status).toLowerCase();
+      var woorden = staat.zoek.toLowerCase().split(/\s+/).filter(Boolean);
+      for (var i=0;i<woorden.length;i++) if (hooi.indexOf(woorden[i])<0) return false;
+    }
+    return true;
+  }
+  function zichtbaar(){ return items.filter(past); }
+
+  // ---------- ICS ----------
+  function icsEsc(s){ return String(s).replace(/\\/g,'\\\\').replace(/;/g,'\\;').replace(/,/g,'\\,').replace(/\r?\n/g,'\\n'); }
+  function vouw(regel){
+    var uit=[], r=regel;
+    while (r.length>73){ uit.push(r.slice(0,73)); r=' '+r.slice(73); }
+    uit.push(r); return uit.join('\r\n');
+  }
+  function ymd(d){ return d.getFullYear()+('0'+(d.getMonth()+1)).slice(-2)+('0'+d.getDate()).slice(-2); }
+  function vevent(it){
+    var start = parse(it.datum), eind = new Date(start.getFullYear(),start.getMonth(),start.getDate()+1);
+    var titel = (it.status==='verwacht'?'(verwacht) ':'')+it.titel;
+    var oms = it.tekst+(it.datumTekst?'\nDatum nog niet exact: '+it.datumTekst+'.':'')+'\nStatus: '+it.status+'.\nBron: '+it.bron.label+' – '+it.bron.url+'\nAdviesforum adviseurskalender, peildatum '+K.peildatum+'.';
+    return ['BEGIN:VEVENT',
+      'UID:'+it.id+'-'+it.datum+'@adviesforum-kalender',
+      'DTSTAMP:'+ymd(new Date())+'T000000Z',
+      'DTSTART;VALUE=DATE:'+ymd(start),
+      'DTEND;VALUE=DATE:'+ymd(eind),
+      'SUMMARY:'+icsEsc(titel),
+      'DESCRIPTION:'+icsEsc(oms),
+      'URL:'+it.bron.url,
+      'CATEGORIES:'+icsEsc(K.themas[it.thema]||it.thema),
+      'TRANSP:TRANSPARENT',
+      'END:VEVENT'].map(vouw).join('\r\n');
+  }
+  function ics(lijst){
+    return ['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Adviesforum//Adviseurskalender//NL','CALSCALE:GREGORIAN','METHOD:PUBLISH','X-WR-CALNAME:Adviseurskalender']
+      .concat(lijst.map(vevent)).concat(['END:VCALENDAR']).join('\r\n')+'\r\n';
+  }
+  function icsUrl(lijst){ return 'data:text/calendar;charset=utf-8,'+encodeURIComponent(ics(lijst)); }
+
+  // ---------- Bouwstenen ----------
+  function badges(it){
+    return '<div class="badges"><span class="badge"><span class="stip" style="background:'+KLEUR[it.thema]+'"></span>'+esc(K.themas[it.thema]||it.thema)+'</span>'+
+      '<span class="badge '+it.status+'">'+(it.status==='bevestigd'?'Bevestigd':'Verwacht')+'</span></div>';
+  }
+  function kaart(it, prefix){
+    var x = parse(it.datum);
+    var wanneer = exact(it)
+      ? x.getDate()+' '+MAAND_KORT[x.getMonth()]+' '+x.getFullYear()+'<small>'+WEEKDAG_LANG[x.getDay()]+'</small>'
+      : esc(it.datumTekst)+'<small>datum volgt</small>';
+    return '<article class="item" id="'+prefix+it.id+'" style="border-left-color:'+KLEUR[it.thema]+'">'+
+      '<div class="wanneer">'+wanneer+'</div>'+
+      '<div>'+badges(it)+'<h4>'+esc(it.titel)+'</h4><p>'+esc(it.tekst)+'</p>'+
+      '<div class="voet"><a class="bron" href="'+esc(it.bron.url)+'" target="_blank" rel="noopener">Bron: '+esc(it.bron.label)+'</a>'+
+      '<a class="knop licht klein" href="'+icsUrl([it])+'" download="'+it.id+'-'+it.datum+'.ics">+ Naar agenda</a></div></div></article>';
+  }
+
+  // ---------- Thema-knoppen ----------
+  var tk = $('themaknoppen');
+  Object.keys(K.themas).forEach(function(k){
+    var b = document.createElement('button');
+    b.type='button'; b.className='chip'; b.setAttribute('aria-pressed','false'); b.dataset.thema=k;
+    b.innerHTML = '<span class="stip" style="background:'+KLEUR[k]+'"></span>'+esc(K.themas[k]);
+    b.addEventListener('click', function(){
+      staat.themas[k] = !staat.themas[k];
+      b.setAttribute('aria-pressed', staat.themas[k]?'true':'false');
+      teken();
+    });
+    tk.appendChild(b);
+  });
+
+  // ---------- Maandkeuze ----------
+  var mk = $('maandkeuze');
+  (function(){
+    var j=BEGIN.j, m=BEGIN.m;
+    while (j<EINDE.j || (j===EINDE.j && m<=EINDE.m)){
+      var o=document.createElement('option'); o.value=j+'-'+m; o.textContent=MAANDEN[m]+' '+j; mk.appendChild(o);
+      m++; if(m>11){m=0;j++;}
+    }
+  })();
+  mk.addEventListener('change', function(){ var p=mk.value.split('-'); staat.j=+p[0]; staat.m=+p[1]; tekenMaand(); });
+  function stap(d){
+    var m=staat.m+d, j=staat.j; if(m<0){m=11;j--;} if(m>11){m=0;j++;}
+    if (j<BEGIN.j || (j===BEGIN.j && m<BEGIN.m) || j>EINDE.j || (j===EINDE.j && m>EINDE.m)) return;
+    staat.j=j; staat.m=m; tekenMaand();
+  }
+  $('vorige').addEventListener('click', function(){ stap(-1); });
+  $('volgende').addEventListener('click', function(){ stap(1); });
+
+  // ---------- Tekenen ----------
+  function tekenMaand(){
+    var j=staat.j, m=staat.m, vis=zichtbaar();
+    $('maandtitel').textContent = MAANDEN[m]+' '+j;
+    mk.value = j+'-'+m;
+    $('vorige').disabled = (j===BEGIN.j && m===BEGIN.m);
+    $('volgende').disabled = (j===EINDE.j && m===EINDE.m);
+    var inMaand = vis.filter(function(it){ var x=parse(it.datum); return x.getFullYear()===j && x.getMonth()===m; });
+    var perDag = {};
+    inMaand.forEach(function(it){ if(exact(it)){ var d=parse(it.datum).getDate(); (perDag[d]=perDag[d]||[]).push(it);} });
+
+    var h = WEEKDAGEN.map(function(w){ return '<div class="wd">'+w+'</div>'; }).join('');
+    var eerste = new Date(j,m,1), offset = (eerste.getDay()+6)%7, dagen = new Date(j,m+1,0).getDate();
+    for (var i=0;i<offset;i++) h+='<div class="dag leeg" aria-hidden="true"></div>';
+    for (var d=1; d<=dagen; d++){
+      var lijst = perDag[d]||[];
+      var isVandaag = (vandaag.getFullYear()===j && vandaag.getMonth()===m && vandaag.getDate()===d);
+      h += '<div class="dag'+(lijst.length?' heeft':'')+(isVandaag?' vandaag':'')+'"><span class="nr">'+d+'</span>'+
+        lijst.map(function(it){ return '<button type="button" class="ev'+(it.status==='verwacht'?' verwacht':'')+'" data-id="'+it.id+'" style="border-left-color:'+KLEUR[it.thema]+'" title="'+esc(it.titel)+'">'+esc(it.titel)+'</button>'; }).join('')+
+        (lijst.length?'<div class="stippen" aria-hidden="true">'+lijst.map(function(it){return '<span class="stip" style="background:'+KLEUR[it.thema]+'"></span>';}).join('')+'</div>':'')+
+        '</div>';
+    }
+    var rest = (offset+dagen)%7; if (rest) for (var r=rest;r<7;r++) h+='<div class="dag leeg" aria-hidden="true"></div>';
+    $('raster').innerHTML = h;
+    $('maandlijst-kop').textContent = 'In '+MAANDEN[m]+' '+j+' ('+inMaand.length+')';
+    $('maandlijst').innerHTML = inMaand.map(function(it){ return kaart(it,'m-'); }).join('');
+    $('maand-leeg').style.display = inMaand.length?'none':'block';
+  }
+
+  function tekenLijst(){
+    var vis = zichtbaar(), h='', huidig='';
+    vis.forEach(function(it){
+      var x=parse(it.datum), sleutel=x.getFullYear()+'-'+x.getMonth();
+      if (sleutel!==huidig){ huidig=sleutel; h+='<h3 class="maandkop">'+MAANDEN[x.getMonth()]+' '+x.getFullYear()+(x.getFullYear()===2028?' &middot; vooruitblik':'')+'</h3>'; }
+      h+=kaart(it,'l-');
+    });
+    $('lijst').innerHTML = h;
+    var nb = vis.filter(function(i){return i.status==='bevestigd';}).length;
+    $('teller').textContent = vis.length+' van '+items.length+' items · '+nb+' bevestigd, '+(vis.length-nb)+' verwacht';
+    $('lijst-leeg').style.display = vis.length?'none':'block';
+    $('ics-alles').href = icsUrl(vis);
+    $('ics-alles').setAttribute('aria-disabled', vis.length?'false':'true');
+  }
+
+  function tekenPer2027(){
+    var actief = Object.keys(staat.themas).filter(function(k){return staat.themas[k];});
+    var z = staat.zoek.toLowerCase();
+    var lijst = (K.per2027||[]).filter(function(p){
+      if (actief.length && actief.indexOf(p.thema)<0) return false;
+      if (staat.status && p.status!==staat.status) return false;
+      if (z && (p.titel+' '+p.tekst+' '+(K.themas[p.thema]||'')).toLowerCase().indexOf(z)<0) return false;
+      return true;
+    });
+    $('per2027').innerHTML = lijst.length ? lijst.map(function(p){
+      return '<div class="per" style="border-top-color:'+KLEUR[p.thema]+'">'+badges(p)+'<h4>'+esc(p.titel)+'</h4><p>'+esc(p.tekst)+'</p>'+
+        '<a href="'+esc(p.bron.url)+'" target="_blank" rel="noopener">Bron: '+esc(p.bron.label)+'</a></div>';
+    }).join('') : '<div class="leeg-melding" style="display:block">Geen wijzigingen voor de gekozen filters.</div>';
+  }
+
+  function teken(){ tekenMaand(); tekenLijst(); tekenPer2027(); }
+
+  // ---------- Interactie ----------
+  var zoekTimer;
+  $('zoek').addEventListener('input', function(){ var v=this.value; clearTimeout(zoekTimer); zoekTimer=setTimeout(function(){ staat.zoek=v.trim(); teken(); },120); });
+  $('status').addEventListener('change', function(){ staat.status=this.value; teken(); });
+  $('wis').addEventListener('click', function(){
+    staat.zoek=''; staat.status=''; staat.themas={}; $('zoek').value=''; $('status').value='';
+    Array.prototype.forEach.call(tk.querySelectorAll('.chip'), function(b){ b.setAttribute('aria-pressed','false'); });
+    teken();
+  });
+  $('ics-alles').addEventListener('click', function(e){ if (!zichtbaar().length) e.preventDefault(); });
+
+  $('raster').addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('.ev') : null;
+    if (!b) return;
+    var el = $('m-'+b.dataset.id); if (!el) return;
+    el.scrollIntoView({behavior:'smooth',block:'start'});
+    el.classList.add('flits'); setTimeout(function(){ el.classList.remove('flits'); },1600);
+  });
+
+  var tabs = ['maand','lijst','2027'];
+  tabs.forEach(function(t){
+    $('tab-'+t).addEventListener('click', function(){
+      tabs.forEach(function(u){
+        $('tab-'+u).setAttribute('aria-selected', u===t?'true':'false');
+        $('p-'+u).classList.toggle('aan', u===t);
+      });
+    });
+  });
+
+  // ---------- Afdrukken (eigen venster; window.print() wordt in iframes soms geblokkeerd) ----------
+  $('print').addEventListener('click', function(){
+    var vis = zichtbaar();
+    var filt = [];
+    var act = Object.keys(staat.themas).filter(function(k){return staat.themas[k];}).map(function(k){return K.themas[k];});
+    if (act.length) filt.push('thema: '+act.join(', '));
+    if (staat.status) filt.push('status: '+staat.status);
+    if (staat.zoek) filt.push('zoekterm: “'+staat.zoek+'”');
+    var rijen = vis.map(function(it){
+      return '<tr><td>'+(exact(it)?esc(datumKort(it.datum)):esc(it.datumTekst))+'</td><td>'+esc(K.themas[it.thema])+'</td><td>'+(it.status==='bevestigd'?'Bevestigd':'Verwacht')+'</td>'+
+        '<td><strong>'+esc(it.titel)+'</strong><br>'+esc(it.tekst)+'<br><span class="b">Bron: '+esc(it.bron.label)+' – '+esc(it.bron.url)+'</span></td></tr>';
+    }).join('');
+    var per = (K.per2027||[]).map(function(p){
+      return '<li><strong>'+esc(p.titel)+'</strong> ('+p.status+'): '+esc(p.tekst)+' <span class="b">'+esc(p.bron.url)+'</span></li>';
+    }).join('');
+    var html = '<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><title>'+esc(document.title)+'</title><style>'+
+      'body{font-family:Montserrat,Arial,sans-serif;color:#141414;margin:24px;font-size:11.5px;line-height:1.45}h1{font-size:20px;margin:0 0 4px}h2{font-size:14px;margin:22px 0 8px;border-bottom:3px solid #FFD200;padding-bottom:4px}'+
+      'p.s{color:#555;margin:0 0 12px}table{width:100%;border-collapse:collapse}th,td{text-align:left;vertical-align:top;border-bottom:1px solid #ddd;padding:6px 6px}th{background:#f4f4f2;font-size:10.5px;text-transform:uppercase}'+
+      'td:first-child{white-space:nowrap}.b{color:#666;font-size:10px;word-break:break-all}tr{break-inside:avoid}li{margin-bottom:6px}'+
+      '</style></head><body><h1>Adviseurskalender oktober 2026 – december 2027</h1><p class="s">Adviesforum · peildatum '+esc(K.peildatum)+(filt.length?' · filter: '+esc(filt.join('; ')):'')+' · '+vis.length+' items. Geen advies; controleer altijd de bron.</p>'+
+      '<table><thead><tr><th>Datum</th><th>Thema</th><th>Status</th><th>Omschrijving</th></tr></thead><tbody>'+rijen+'</tbody></table>'+
+      '<h2>Wat verandert per 1 januari 2027</h2><ul>'+per+'</ul></body></html>';
+    try {
+      var w = window.open('', '_blank');
+      if (!w) { window.print(); return; }
+      w.document.open(); w.document.write(html); w.document.close(); w.focus();
+      setTimeout(function(){ w.print(); }, 350);
+    } catch (e) { window.print(); }
+  });
+
+  $('voet-peil').textContent = 'Peildatum '+K.peildatum.split('-').reverse().join('-')+', herzien vóór '+K.herzienVoor.split('-').reverse().join('-')+'. Er wordt niets opgeslagen of verstuurd.';
+  teken();
+})();
+</script>
+</body>
+</html>
