@@ -483,7 +483,7 @@
     if (uitleg) r.push('Aannames: ' + kort(uitleg));
     if (letop) r.push('Let op: ' + kort(letop));
     const normen = [];
-    if (t.peildatum) normen.push('normen ' + t.peildatum);
+    if (t.peildatum) normen.push(String(t.peildatum));
     if (t.fiscaal) normen.push('fiscale norm: controleer de actuele waarden' + (Array.isArray(t.fiscaal) ? ' (' + t.fiscaal.join(', ') + ')' : ''));
     if (normen.length) r.push('Normjaar/peildatum: ' + normen.join('; '));
     r.push('');

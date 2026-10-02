@@ -537,7 +537,7 @@ Bron: openbare zoekresultaten over de kennisbank van Finly, Faster Forward en de
 ## NHG en nieuwe normen
 - Nieuwe normen komen ruim voor de jaarwisseling beschikbaar. Voor 2025 kon je vanaf 7 november 2024 al rekenen met de nieuwe normen.
 - In de Sneltoets en op het tabblad Analyse - Aanleiding kies je of je rekent met de normen van voor of vanaf 1 januari. Kies je de toekomstige normen, dan past Adviesbox die toe op het huidige acceptatiebeleid van de verstrekkers.
-- Bij de normen 2025 hoorden onder meer een NHG-kostengrens van 450.000 euro (477.000 euro met energiebesparende voorzieningen) en een NHG-premie van 0,4 procent. Check voor latere jaren de actuele normen en het normenartikel in de kennisbank.
+- Bij de normen 2025 hoorden onder meer een NHG-grens (toen nog kostengrens) van 450.000 euro (477.000 euro met energiebesparende voorzieningen) en een NHG-premie van 0,4 procent. Check voor latere jaren de actuele normen en het normenartikel in de kennisbank.
 
 ## Inkomen bepalen
 - Het UWV Verzekeringsbericht kan dienen als alternatief voor de werkgeversverklaring. De klant downloadt het bij UWV; met het SV-loon en de pensioenpremie van de loonstrook bereken je het toetsinkomen en dat vul je in Adviesbox in.

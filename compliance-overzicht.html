@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Compliance-overzicht – Adviesforum</title>
+<meta name="description" content="Beheeroverzicht voor compliance: status van kennisbankartikelen, herzieningsdata, FAQ per thema en verificatie van de fiscale normen.">
+<style>
+@font-face{font-family:Montserrat;font-style:normal;font-weight:400;font-display:swap;src:url(fonts/montserrat-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:600;font-display:swap;src:url(fonts/montserrat-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:700;font-display:swap;src:url(fonts/montserrat-latin-700-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:800;font-display:swap;src:url(fonts/montserrat-latin-800-normal.woff2) format('woff2')}
+:root{
+  --geel:#FFD200;--geel-donker:#E6BD00;--geel-zacht:#FFF6C7;
+  --zwart:#141414;--tekst:#1F1F1F;--grijs:#5E5E5E;--lijn:#E4E4E4;--vlak:#F7F7F5;
+  --rood:#C0392B;--rood-zacht:#FFF1F0;--groen:#1E7A4B;--groen-zacht:#EAF6EF;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:Montserrat,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;color:var(--tekst);background:#fff;line-height:1.55;font-size:15px;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+button,input,select{font-family:inherit}
+.balk{background:var(--zwart);color:#fff;font-size:12.5px;padding:8px 24px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.balk a{color:#fff;text-decoration:none;opacity:.88}
+.kop{background:var(--geel);color:var(--zwart);padding:34px 24px 38px}
+.kop-in{max-width:1180px;margin:0 auto}
+.merk{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.08em;font-size:12px;text-transform:uppercase;margin-bottom:16px}
+.zeshoek{width:22px;height:25px;background:var(--zwart);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);flex:none}
+.terug{display:inline-block;font-size:13.5px;font-weight:700;text-decoration:none;border-bottom:2px solid var(--zwart);margin-bottom:14px}
+.kop h1{margin:0 0 10px;font-size:clamp(27px,4.2vw,40px);line-height:1.12;font-weight:800}
+.kop p{margin:0;max-width:70ch;font-size:15.5px}
+.kop .stempel{display:inline-block;margin-top:16px;font-size:12px;font-weight:700;background:var(--zwart);color:var(--geel);padding:5px 11px;border-radius:999px}
+.romp{max-width:1180px;margin:0 auto;padding:24px 24px 40px}
+.let{background:var(--rood-zacht);border-left:4px solid var(--rood);border-radius:0 10px 10px 0;padding:14px 18px;font-size:14px;margin:0 0 8px}
+.let strong{color:#A5281B}
+.let ul{margin:6px 0 0;padding-left:20px}
+h2.sectie{font-size:22px;font-weight:800;margin:30px 0 6px;padding-bottom:10px;border-bottom:3px solid var(--geel)}
+.sub{color:var(--grijs);margin:0 0 14px;max-width:75ch;font-size:14px}
+.tegels{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:12px;margin:0 0 6px}
+.tegel{border:1px solid var(--lijn);border-radius:14px;padding:14px 16px;background:#fff;min-width:0}
+.tegel .getal{font-size:28px;font-weight:800;line-height:1.1}
+.tegel span{display:block;font-size:12.5px;color:var(--grijs);margin-top:4px}
+.tegel.rood{border-color:var(--rood);background:var(--rood-zacht)}
+.tegel.geel{border-color:var(--geel-donker);background:var(--geel-zacht)}
+.tegel.groen{border-color:var(--groen);background:var(--groen-zacht)}
+.filters{display:grid;grid-template-columns:2fr repeat(4,minmax(0,1fr));gap:10px;margin:0 0 12px;align-items:end}
+.filters label{display:block;font-size:12px;font-weight:700;margin-bottom:4px}
+.filters input,.filters select{width:100%;padding:9px 11px;border:1px solid #CFCFCF;border-radius:9px;font-size:14px;background:#fff;min-width:0}
+.filters input:focus,.filters select:focus{outline:3px solid rgba(255,210,0,.6);outline-offset:1px}
+.acties{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:0 0 12px}
+.acties .tel{font-size:13px;color:var(--grijs);margin-right:auto}
+.knop{border-radius:999px;padding:9px 16px;font-size:13.5px;font-weight:700;cursor:pointer;border:1px solid var(--zwart);background:var(--zwart);color:#fff;text-decoration:none;display:inline-block}
+.knop.licht{background:#fff;color:var(--zwart);border-color:#CFCFCF}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--lijn);vertical-align:top}
+th{font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--grijs);background:var(--vlak);font-weight:800}
+td.num,th.num{text-align:right;white-space:nowrap}
+.titel a{font-weight:700;text-decoration:none}
+.titel a:hover{text-decoration:underline}
+.titel small{display:block;color:var(--grijs);font-size:12px}
+.lbl{display:inline-block;font-size:11.5px;font-weight:700;border-radius:999px;padding:2px 9px;white-space:nowrap}
+.lbl.ok{background:var(--groen-zacht);color:var(--groen);border:1px solid #9BD3B4}
+.lbl.concept{background:var(--geel-zacht);color:#7A5A00;border:1px solid var(--geel-donker)}
+.lbl.verlopen{background:var(--rood);color:#fff}
+.lbl.binnenkort{background:var(--rood-zacht);color:#A5281B;border:1px solid #E7A8A1}
+.lbl.later{background:var(--vlak);color:var(--grijs);border:1px solid var(--lijn)}
+.lbl.niet{background:var(--rood);color:#fff}
+.leeg{padding:18px;color:var(--grijs);text-align:center}
+.bronnen{font-size:12.5px;padding-left:18px;word-break:break-all}
+.voet{max-width:1180px;margin:0 auto;padding:24px 24px 40px;font-size:12.5px;color:var(--grijs)}
+.voet a{color:var(--zwart);font-weight:600}
+@media (max-width:900px){.filters{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.filters .zoek{grid-column:1/-1}}
+@media (max-width:700px){
+  table.kaart thead{display:none}
+  table.kaart,table.kaart tbody,table.kaart tr,table.kaart td{display:block;width:100%}
+  table.kaart tr{border:1px solid var(--lijn);border-radius:12px;padding:8px 12px;margin:0 0 10px}
+  table.kaart td{border:0;padding:3px 0;text-align:left}
+  table.kaart td[data-k]::before{content:attr(data-k) ": ";font-weight:700;font-size:12px;color:var(--grijs)}
+  table.kaart td.num{text-align:left}
+}
+@media (max-width:560px){
+  .balk,.kop,.romp,.voet{padding-left:16px;padding-right:16px}
+  .filters{grid-template-columns:minmax(0,1fr)}
+  h2.sectie{font-size:20px}
+}
+</style>
+</head>
+<body>
+
+<div class="balk">
+  <span>Adviesforum &middot; beheer en compliance</span>
+  <span><a href="index.html">Naar het forum</a></span>
+</div>
+
+<header class="kop">
+  <div class="kop-in">
+    <div class="merk"><span class="zeshoek" aria-hidden="true"></span>Adviesforum &middot; Beheer</div>
+    <a class="terug" href="index.html#hulpmiddelen">&larr; Terug naar de hulpmiddelen</a>
+    <h1>Compliance-overzicht</h1>
+    <p>Werkoverzicht voor beheer en compliance: welke kennisbankartikelen zijn gecontroleerd, welke moeten worden herzien, hoeveel FAQ er per thema staan en hoe de fiscale normen in de rekentools zijn geverifieerd. Alles wordt live geteld uit de databestanden van het forum.</p>
+    <span class="stempel" id="peil">Peildatum: vandaag</span>
+  </div>
+</header>
+
+<main class="romp">
+  <div class="let">
+    <strong>Alleen gecontroleerde artikelen gelden als kantoorwerkwijze.</strong>
+    <ul>
+      <li>Een kennisbankartikel krijgt pas het label &ldquo;Gecontroleerd&rdquo; na goedkeuring door compliance (via de review van de pull request). Alle overige artikelen zijn concept: bruikbaar als naslag, maar niet als vastgestelde werkwijze.</li>
+      <li>De FAQ en de voorbeeldvragen op het forum zijn in hun geheel concept en niet door compliance beoordeeld.</li>
+      <li>Is de herzieningsdatum verstreken, dan moet het artikel opnieuw worden beoordeeld voordat het nog als werkwijze wordt gebruikt.</li>
+    </ul>
+  </div>
+
+  <h2 class="sectie">Kennisbank</h2>
+  <div class="tegels" id="kb-tegels"></div>
+
+  <div class="filters" role="search">
+    <div class="zoek"><label for="f-q">Zoeken</label><input id="f-q" type="search" placeholder="Titel, id of trefwoord"></div>
+    <div><label for="f-status">Status</label><select id="f-status"><option value="">Alle</option><option value="ok">Gecontroleerd</option><option value="concept">Concept</option></select></div>
+    <div><label for="f-herz">Herziening</label><select id="f-herz"><option value="">Alle</option><option value="verlopen">Verlopen</option><option value="binnenkort">Binnen 60 dagen</option><option value="aandacht">Verlopen of binnen 60 dagen</option><option value="later">Later</option><option value="geen">Geen datum</option></select></div>
+    <div><label for="f-cat">Categorie</label><select id="f-cat"><option value="">Alle</option></select></div>
+    <div><label for="f-auteur">Auteur</label><select id="f-auteur"><option value="">Alle</option></select></div>
+  </div>
+  <div class="acties">
+    <span class="tel" id="kb-tel"></span>
+    <button class="knop licht" id="kb-reset" type="button">Filters wissen</button>
+    <a class="knop licht" id="kb-csv" href="#" download="kennisbank-compliance.csv">Exporteer CSV</a>
+    <button class="knop" id="kb-print" type="button">Printen</button>
+  </div>
+  <table class="kaart" id="kb-tabel">
+    <thead><tr><th>Id</th><th>Artikel</th><th>Categorie</th><th>Auteur</th><th>Status</th><th>Herzien voor</th><th>Bestand</th></tr></thead>
+    <tbody></tbody>
+  </table>
+
+  <h2 class="sectie">FAQ per thema</h2>
+  <p class="sub">Alle FAQ zijn concept: ze zijn niet afzonderlijk door compliance beoordeeld.</p>
+  <table class="kaart" id="faq-tabel">
+    <thead><tr><th>Thema</th><th class="num">Aantal</th><th class="num">Concept</th><th class="num">Met bronvermelding</th></tr></thead>
+    <tbody></tbody>
+  </table>
+
+  <h2 class="sectie">Forumvragen</h2>
+  <div class="tegels" id="vr-tegels"></div>
+
+  <h2 class="sectie">Fiscale normen in de rekentools</h2>
+  <div id="normen"></div>
+</main>
+
+<footer class="voet">
+  Adviesforum &middot; beheeroverzicht, niet opgenomen in het hoofdmenu &middot; <a href="index.html">Forum</a> &middot; <a href="privacy.html">Privacy</a>. Er wordt niets opgeslagen of verstuurd: het overzicht wordt in je eigen browser opgebouwd.
+</footer>
+
+<script>window.__KBF={};window.__mk=function(f){(window.KENNISBANK||[]).forEach(function(a){if(!window.__KBF[a.id])window.__KBF[a.id]=f;});};</script>
+<script src="data/adviseurs.js"></script>
+<script src="data/kennisbank.js"></script><script>__mk('kennisbank.js')</script>
+<script src="data/kennisbank-planning.js"></script><script>__mk('kennisbank-planning.js')</script>
+<script src="data/kennisbank-geldverstrekkers.js"></script><script>__mk('kennisbank-geldverstrekkers.js')</script>
+<script src="data/kennisbank-eblinqx.js"></script><script>__mk('kennisbank-eblinqx.js')</script>
+<script src="data/kennisbank-afm.js"></script><script>__mk('kennisbank-afm.js')</script>
+<script src="data/kennisbank-nhg.js"></script><script>__mk('kennisbank-nhg.js')</script>
+<script src="data/kennisbank-thema.js"></script><script>__mk('kennisbank-thema.js')</script>
+<script src="data/kennisbank-kifid.js"></script><script>__mk('kennisbank-kifid.js')</script>
+<script src="data/faq/hypotheek.js"></script>
+<script src="data/faq/fiscaal-producten.js"></script>
+<script src="data/faq/doelgroepen-verzekeringen.js"></script>
+<script src="data/faq/pensioen-compliance.js"></script>
+<script src="data/faq/krediet-praktijk.js"></script>
+<script src="data/faq/extra-hypotheek-normen.js"></script>
+<script src="data/faq/extra-hypotheek-woning.js"></script>
+<script src="data/faq/extra-fiscaal.js"></script>
+<script src="data/faq/extra-producten.js"></script>
+<script src="data/faq/extra-doelgroepen.js"></script>
+<script src="data/faq/extra-verzekeringen.js"></script>
+<script src="data/faq/extra-pensioen.js"></script>
+<script src="data/faq/extra-compliance.js"></script>
+<script src="data/faq/extra-krediet.js"></script>
+<script src="data/faq/extra-praktijk.js"></script>
+<script src="data/faq/software-blinqx.js"></script>
+<script src="data/faq/software-eblinqx.js"></script>
+<script src="data/faq/afm.js"></script>
+<script src="data/faq/nhg-2026.js"></script>
+<script src="data/vragen.js"></script>
+<script src="data/vragen/hyp-acceptatie.js"></script>
+<script src="data/vragen/hyp-woning.js"></script>
+<script src="data/vragen/hyp-doelgroepen.js"></script>
+<script src="data/vragen/hyp-producten.js"></script>
+<script src="data/vragen/fisc-eigenwoning.js"></script>
+<script src="data/vragen/fisc-vermogen.js"></script>
+<script src="data/vragen/verz-inkomen.js"></script>
+<script src="data/vragen/verz-schade.js"></script>
+<script src="data/vragen/pens.js"></script>
+<script src="data/vragen/kred.js"></script>
+<script src="data/vragen/comp.js"></script>
+<script src="data/vragen/software.js"></script>
+<script src="js/rekentools/engine.js"></script>
+<script src="js/rekentools/normen.js"></script>
+<script>
+(function(){
+'use strict';
+var $=function(s){return document.querySelector(s);};
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+function n(x){return Number(x||0).toLocaleString('nl-NL');}
+var MAAND=['jan','feb','mrt','apr','mei','jun','jul','aug','sep','okt','nov','dec'];
+function dtm(s){if(!s)return '';var p=String(s).slice(0,10).split('-');return (+p[2])+' '+MAAND[+p[1]-1]+' '+p[0];}
+
+var CATS={hyp:'Hypotheken',verz:'Verzekeringen',pens:'Pensioen & vermogen',fisc:'Fiscaal',kred:'Kredieten',adv:'Adviespakket (Blinqx)',crm:'CRM (Blinqx)',comp:'Compliance & AFM',ov:'Overig'};
+var FAQ_THEMAS={'hypotheek-normen':'Leennormen en maximale hypotheek','hypotheek-nhg-woning':'NHG, woning en verduurzaming','fiscaal-eigen-woning':'Fiscaal: eigen woning','hypotheek-producten':'Hypotheekproducten en rente','doelgroepen':'Doelgroepen','verzekeringen':'Verzekeringen','pensioen':'Pensioen','compliance':'Compliance en Wft','krediet-vermogen':'Krediet en vermogen','praktijk-software':'Praktijk en dossier'};
+var USERS={};(window.ADVISEURS||[]).forEach(function(u){USERS[u.id]=u;});
+function auteur(id){var u=USERS[id];return u?u.naam:(id||'onbekend');}
+
+var nu=new Date();var vandaag=new Date(nu.getFullYear(),nu.getMonth(),nu.getDate());
+$('#peil').textContent='Peildatum: '+vandaag.getDate()+' '+['januari','februari','maart','april','mei','juni','juli','augustus','september','oktober','november','december'][vandaag.getMonth()]+' '+vandaag.getFullYear();
+function herz(s){
+  if(!s)return {k:'geen',l:'Geen datum',d:null};
+  var p=String(s).slice(0,10).split('-');var d=new Date(+p[0],+p[1]-1,+p[2]);
+  var dagen=Math.round((d-vandaag)/86400000);
+  if(dagen<0)return {k:'verlopen',l:'Verlopen',d:dagen};
+  if(dagen<=60)return {k:'binnenkort',l:'Over '+dagen+' dag'+(dagen===1?'':'en'),d:dagen};
+  return {k:'later',l:'Over '+dagen+' dagen',d:dagen};
+}
+
+/* ---------- kennisbank ---------- */
+var KB=(window.KENNISBANK||[]).map(function(a){
+  var h=herz(a.herzienVoor);
+  return {id:a.id,titel:a.titel,cat:a.cat,catNaam:CATS[a.cat]||a.cat||'',auteur:a.auteur,auteurNaam:auteur(a.auteur),ok:!!a.gecontroleerd,gecontroleerdOp:a.gecontroleerdOp||'',
+    herzienVoor:a.herzienVoor||'',h:h,datum:a.datum||'',bijgewerkt:a.bijgewerkt||'',bestand:window.__KBF[a.id]||'',zoek:(a.id+' '+a.titel+' '+(a.kw||'')).toLowerCase()};
+});
+var tel={tot:KB.length,ok:0,concept:0,verlopen:0,binnenkort:0,geen:0};
+KB.forEach(function(a){tel[a.ok?'ok':'concept']++;if(a.h.k==='verlopen')tel.verlopen++;if(a.h.k==='binnenkort')tel.binnenkort++;if(a.h.k==='geen')tel.geen++;});
+$('#kb-tegels').innerHTML=[
+  ['',tel.tot,'artikelen in totaal'],['groen',tel.ok,'gecontroleerd (kantoorwerkwijze)'],['geel',tel.concept,'concept, nog niet beoordeeld'],
+  [tel.verlopen?'rood':'',tel.verlopen,'herziening verlopen'],[tel.binnenkort?'rood':'',tel.binnenkort,'herzien binnen 60 dagen'],['',tel.geen,'zonder herzieningsdatum']
+].map(function(t){return '<div class="tegel '+t[0]+'"><div class="getal">'+n(t[1])+'</div><span>'+esc(t[2])+'</span></div>';}).join('');
+
+function opties(sel,map){$(sel).insertAdjacentHTML('beforeend',map.map(function(p){return '<option value="'+esc(p[0])+'">'+esc(p[1])+'</option>';}).join(''));}
+var catIds=[];KB.forEach(function(a){if(catIds.indexOf(a.cat)<0)catIds.push(a.cat);});
+opties('#f-cat',Object.keys(CATS).filter(function(k){return catIds.indexOf(k)>=0;}).concat(catIds.filter(function(k){return !CATS[k];})).map(function(k){return [k,(CATS[k]||k)+' ('+KB.filter(function(a){return a.cat===k;}).length+')'];}));
+var auIds=[];KB.forEach(function(a){if(auIds.indexOf(a.auteur)<0)auIds.push(a.auteur);});
+opties('#f-auteur',auIds.map(function(k){return [k||'',auteur(k)+' ('+KB.filter(function(a){return a.auteur===k;}).length+')'];}).sort(function(x,y){return x[1].localeCompare(y[1],'nl');}));
+
+function gefilterd(){
+  var q=$('#f-q').value.trim().toLowerCase(),st=$('#f-status').value,hz=$('#f-herz').value,ct=$('#f-cat').value,au=$('#f-auteur').value;
+  return KB.filter(function(a){
+    if(q&&q.split(/\s+/).some(function(w){return a.zoek.indexOf(w)<0;}))return false;
+    if(st==='ok'&&!a.ok)return false;if(st==='concept'&&a.ok)return false;
+    if(hz==='aandacht'){if(a.h.k!=='verlopen'&&a.h.k!=='binnenkort')return false;}else if(hz&&a.h.k!==hz)return false;
+    if(ct&&a.cat!==ct)return false;if(au&&a.auteur!==au)return false;
+    return true;
+  }).sort(function(x,y){var dx=x.h.d==null?1e9:x.h.d,dy=y.h.d==null?1e9:y.h.d;return dx-dy||x.id.localeCompare(y.id,'nl',{numeric:true});});
+}
+function rij(a){
+  return '<tr><td data-k="Id">'+esc(a.id)+'</td><td class="titel"><a href="index.html#artikel-'+encodeURIComponent(a.id)+'">'+esc(a.titel)+'</a>'+(a.bijgewerkt?'<small>Bijgewerkt '+dtm(a.bijgewerkt)+'</small>':'')+'</td>'+
+    '<td data-k="Categorie">'+esc(a.catNaam)+'</td><td data-k="Auteur">'+esc(a.auteurNaam)+'</td>'+
+    '<td data-k="Status">'+(a.ok?'<span class="lbl ok">Gecontroleerd</span>'+(a.gecontroleerdOp?' <small>'+dtm(a.gecontroleerdOp)+'</small>':''):'<span class="lbl concept">Concept</span>')+'</td>'+
+    '<td data-k="Herzien voor">'+(a.herzienVoor?dtm(a.herzienVoor)+' ':'')+'<span class="lbl '+a.h.k+'">'+esc(a.h.l)+'</span></td><td data-k="Bestand">'+esc(a.bestand)+'</td></tr>';
+}
+function csvVeld(v){v=String(v==null?'':v);return /[";\n]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v;}
+function render(){
+  var l=gefilterd();
+  $('#kb-tabel tbody').innerHTML=l.length?l.map(rij).join(''):'<tr><td colspan="7" class="leeg">Geen artikelen gevonden met deze filters.</td></tr>';
+  $('#kb-tel').textContent=n(l.length)+' van '+n(KB.length)+' artikelen';
+  var regels=[['id','titel','categorie','auteur','status','gecontroleerd op','herzien voor','herziening','dagen tot herziening','datum','bijgewerkt','bestand']].concat(l.map(function(a){
+    return [a.id,a.titel,a.catNaam,a.auteurNaam,a.ok?'gecontroleerd':'concept',a.gecontroleerdOp.slice(0,10),a.herzienVoor,a.h.k,a.h.d==null?'':a.h.d,a.datum.slice(0,10),a.bijgewerkt.slice(0,10),a.bestand];
+  }));
+  var csv='﻿'+regels.map(function(r){return r.map(csvVeld).join(';');}).join('\r\n');
+  var link=$('#kb-csv');link.href='data:text/csv;charset=utf-8,'+encodeURIComponent(csv);
+  link.setAttribute('download','kennisbank-compliance-'+vandaag.getFullYear()+'-'+String(vandaag.getMonth()+1).padStart(2,'0')+'-'+String(vandaag.getDate()).padStart(2,'0')+'.csv');
+}
+['#f-q','#f-status','#f-herz','#f-cat','#f-auteur'].forEach(function(s){$(s).addEventListener(s==='#f-q'?'input':'change',render);});
+$('#kb-reset').addEventListener('click',function(){['#f-q','#f-status','#f-herz','#f-cat','#f-auteur'].forEach(function(s){$(s).value='';});render();});
+$('#kb-print').addEventListener('click',function(){
+  var l=gefilterd();
+  var w=window.open('','_blank');
+  if(!w){alert('Sta pop-ups toe om te kunnen printen.');return;}
+  w.document.write('<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><title>Compliance-overzicht kennisbank</title><style>body{font-family:Arial,sans-serif;font-size:11px;margin:18px;color:#141414}h1{font-size:17px;margin:0 0 4px}p{margin:0 0 10px}table{width:100%;border-collapse:collapse}th,td{border-bottom:1px solid #ccc;padding:4px 6px;text-align:left;vertical-align:top}th{background:#FFD200}</style></head><body>'+
+    '<h1>Compliance-overzicht kennisbank</h1><p>Peildatum '+esc($('#peil').textContent.replace('Peildatum: ',''))+' · '+n(l.length)+' van '+n(KB.length)+' artikelen · Alleen gecontroleerde artikelen gelden als kantoorwerkwijze.</p>'+
+    '<table><thead><tr><th>Id</th><th>Titel</th><th>Categorie</th><th>Auteur</th><th>Status</th><th>Herzien voor</th><th>Herziening</th></tr></thead><tbody>'+
+    l.map(function(a){return '<tr><td>'+esc(a.id)+'</td><td>'+esc(a.titel)+'</td><td>'+esc(a.catNaam)+'</td><td>'+esc(a.auteurNaam)+'</td><td>'+(a.ok?'Gecontroleerd':'Concept')+'</td><td>'+esc(dtm(a.herzienVoor))+'</td><td>'+esc(a.h.l)+'</td></tr>';}).join('')+
+    '</tbody></table></body></html>');
+  w.document.close();w.focus();w.print();
+});
+render();
+
+/* ---------- FAQ per thema ---------- */
+var FAQ=window.FAQ||[];var ft={};
+FAQ.forEach(function(f){var t=ft[f.thema]||(ft[f.thema]={n:0,c:0,b:0});t.n++;if(!f.gecontroleerd)t.c++;if(f.bron)t.b++;});
+var fk=Object.keys(FAQ_THEMAS).filter(function(k){return ft[k];}).concat(Object.keys(ft).filter(function(k){return !FAQ_THEMAS[k];}));
+var ftot={n:0,c:0,b:0};fk.forEach(function(k){ftot.n+=ft[k].n;ftot.c+=ft[k].c;ftot.b+=ft[k].b;});
+$('#faq-tabel tbody').innerHTML=fk.map(function(k){var t=ft[k];return '<tr><td><b>'+esc(FAQ_THEMAS[k]||k)+'</b></td><td class="num" data-k="Aantal">'+n(t.n)+'</td><td class="num" data-k="Concept">'+n(t.c)+'</td><td class="num" data-k="Met bronvermelding">'+n(t.b)+'</td></tr>';}).join('')+
+  '<tr><td><b>Totaal</b></td><td class="num" data-k="Aantal"><b>'+n(ftot.n)+'</b></td><td class="num" data-k="Concept"><b>'+n(ftot.c)+'</b></td><td class="num" data-k="Met bronvermelding"><b>'+n(ftot.b)+'</b></td></tr>';
+
+/* ---------- forumvragen ---------- */
+var VR=window.VRAGEN_DATA||[];var vb=0,ant=0,zonder=0;
+VR.forEach(function(v){if(v.voorbeeld)vb++;var a=(v.antwoorden||[]).length;ant+=a;if(!a)zonder++;});
+$('#vr-tegels').innerHTML=[['',VR.length,'vragen in totaal'],['',VR.length-vb,'echte vragen van adviseurs'],['geel',vb,'voorbeeldvragen (concept)'],['',ant,'antwoorden'],[zonder?'rood':'groen',zonder,'vragen zonder antwoord']]
+  .map(function(t){return '<div class="tegel '+t[0]+'"><div class="getal">'+n(t[1])+'</div><span>'+esc(t[2])+'</span></div>';}).join('');
+
+/* ---------- fiscale normen ---------- */
+var RT=window.RT||{},N=RT.normen;
+var el=$('#normen');
+if(!N||!N._geverifieerd){
+  el.innerHTML='<p class="sub">Er is geen verificatiestatus van de fiscale normen beschikbaar (RT.normen._geverifieerd ontbreekt).</p>';
+}else{
+  var namen={};(RT.normenOverzicht||[]).forEach(function(b){if(b&&b[0])namen[b[0]]=b[0];});
+  var G=N._geverifieerd;var st={bevestigd:0,aangepast:0,niet:0};
+  var rijen=Object.keys(G).map(function(k){
+    var v=String(G[k]),lv=v.toLowerCase(),s;
+    if(/^niet/.test(lv))s='niet';else if(/^bevestigd/.test(lv)&&!/niet bevestigd/.test(lv.replace(/^bevestigd/,'')))s='bevestigd';else s='aangepast';
+    if(/^bevestigd \(/.test(lv)&&/niet bevestigd/.test(lv))s='aangepast';
+    st[s]++;return {k:k,v:v,s:s};
+  });
+  var lbl={bevestigd:'<span class="lbl ok">Bevestigd</span>',aangepast:'<span class="lbl concept">Deels / aangepast</span>',niet:'<span class="lbl niet">Niet bevestigd</span>'};
+  el.innerHTML='<p class="sub">Peildatum normen: <b>'+esc(N.peildatum||'onbekend')+'</b> · geverifieerd op <b>'+esc(dtm(N._verificatiedatum)||'onbekend')+'</b> · status normenbestand: '+(N.gecontroleerd?'<span class="lbl ok">Gecontroleerd</span>':'<span class="lbl concept">Nog niet volledig gecontroleerd</span>')+'</p>'+
+    '<div class="tegels"><div class="tegel groen"><div class="getal">'+st.bevestigd+'</div><span>onderdelen bevestigd</span></div><div class="tegel geel"><div class="getal">'+st.aangepast+'</div><span>deels bevestigd of aangepast</span></div><div class="tegel '+(st.niet?'rood':'')+'"><div class="getal">'+st.niet+'</div><span>niet bevestigd</span></div></div>'+
+    '<table class="kaart" style="margin-top:12px"><thead><tr><th>Onderdeel</th><th>Status</th><th>Toelichting</th></tr></thead><tbody>'+
+    rijen.map(function(r){return '<tr><td><b>'+esc(r.k)+'</b></td><td data-k="Status">'+lbl[r.s]+'</td><td data-k="Toelichting">'+esc(r.v)+'</td></tr>';}).join('')+'</tbody></table>'+
+    (Array.isArray(N._bronnen)&&N._bronnen.length?'<details style="margin-top:12px"><summary style="cursor:pointer;font-weight:700">Gebruikte bronnen ('+N._bronnen.length+')</summary><ul class="bronnen">'+N._bronnen.map(function(u){return '<li><a href="'+esc(u)+'" target="_blank" rel="noopener">'+esc(u)+'</a></li>';}).join('')+'</ul></details>':'');
+}
+})();
+</script>
+</body>
+</html>
