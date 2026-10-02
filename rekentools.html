@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rekenhulpen – Adviesforum</title>
+<meta name="description" content="Indicatieve rekenhulpen van het Adviesforum voor financieel adviseurs: rente, aflossen, vermogen, wonen, inkomen en termijnen.">
+<style>
+@font-face{font-family:Montserrat;font-style:normal;font-weight:400;font-display:swap;src:url(fonts/montserrat-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:500;font-display:swap;src:url(fonts/montserrat-latin-500-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:600;font-display:swap;src:url(fonts/montserrat-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:700;font-display:swap;src:url(fonts/montserrat-latin-700-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:800;font-display:swap;src:url(fonts/montserrat-latin-800-normal.woff2) format('woff2')}
+
+:root{
+  --geel:#FFD200;--geel-donker:#E6BD00;--geel-zacht:#FFF6C7;
+  --zwart:#141414;--tekst:#1F1F1F;--grijs:#5E5E5E;--lijn:#E4E4E4;--vlak:#F7F7F5;
+  --rood:#C0392B;--rood-zacht:#FFF1F0;--groen:#1E7A4B;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:Montserrat,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  color:var(--tekst);background:#fff;line-height:1.55;font-size:15px;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+button,input,select{font-family:inherit}
+
+.balk{background:var(--zwart);color:#fff;font-size:12.5px;padding:8px 24px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.balk a{color:#fff;text-decoration:none;opacity:.88}
+.balk a:hover{opacity:1;text-decoration:underline}
+
+.kop{background:var(--geel);color:var(--zwart);padding:34px 24px 38px}
+.kop-in{max-width:1180px;margin:0 auto}
+.merk{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.08em;font-size:12px;text-transform:uppercase;margin-bottom:16px}
+.zeshoek{width:22px;height:25px;background:var(--zwart);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);flex:none}
+.terug{display:inline-block;font-size:13.5px;font-weight:700;text-decoration:none;border-bottom:2px solid var(--zwart);margin-bottom:14px}
+.kop h1{margin:0 0 10px;font-size:clamp(27px,4.2vw,40px);line-height:1.12;font-weight:800}
+.kop p{margin:0;max-width:66ch;font-size:15.5px}
+.kop .stempel{display:inline-block;margin-top:16px;font-size:12px;font-weight:700;background:var(--zwart);color:var(--geel);padding:5px 11px;border-radius:999px}
+
+.romp{max-width:1180px;margin:0 auto;padding:28px 24px 56px;display:grid;grid-template-columns:270px minmax(0,1fr);gap:28px;align-items:start}
+
+.menu{position:sticky;top:16px;border:1px solid var(--lijn);border-radius:14px;padding:14px;background:var(--vlak);max-height:calc(100vh - 32px);overflow-y:auto}
+.menu input{width:100%;padding:9px 12px;border:1px solid #CFCFCF;border-radius:9px;font-size:14px;background:#fff;margin-bottom:6px}
+.menu input:focus{outline:3px solid rgba(255,210,0,.6);outline-offset:1px}
+.menu h3{font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--grijs);margin:14px 6px 6px;font-weight:800}
+.menu button{display:block;width:100%;text-align:left;border:0;background:transparent;padding:7px 10px;border-radius:8px;
+  font-size:13.5px;font-weight:600;color:var(--tekst);cursor:pointer;line-height:1.35}
+.menu button:hover{background:#fff}
+.menu button[aria-current="true"]{background:var(--zwart);color:#fff}
+.menu .leeg{font-size:13px;color:var(--grijs);padding:8px 6px;display:none}
+
+.kiezer{display:none;margin-bottom:16px}
+.kiezer label{display:block;font-weight:700;font-size:13px;margin-bottom:6px}
+
+.paneel{min-width:0}
+.paneel-kop{display:flex;gap:14px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;border-bottom:3px solid var(--geel);padding-bottom:14px;margin-bottom:20px}
+.paneel-kop .groep{font-size:11.5px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--grijs)}
+.paneel-kop h2{margin:2px 0 6px;font-size:24px;line-height:1.2;font-weight:800}
+.paneel-kop p{margin:0;max-width:62ch;color:#3A3A3A}
+.knoppen{display:flex;gap:8px;flex-wrap:wrap}
+.knop{border-radius:999px;padding:9px 16px;font-size:13.5px;font-weight:700;cursor:pointer;border:1px solid var(--zwart);background:var(--zwart);color:#fff}
+.knop:hover{background:#000}
+.knop.licht{background:#fff;color:var(--zwart);border-color:#CFCFCF}
+.knop.licht:hover{background:var(--vlak)}
+
+.werkblad{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px;align-items:start}
+.invoer{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px 16px;border:1px solid var(--lijn);border-radius:14px;padding:20px}
+.veld{min-width:0}
+.veld.breed{grid-column:1/-1}
+.veld.verborgen{display:none}
+.veld label{display:block;font-weight:600;font-size:13.5px;margin-bottom:5px}
+.veld .tip{display:block;font-size:12px;color:var(--grijs);margin-top:4px}
+.veld input,.veld select{width:100%;padding:10px 12px;border:1px solid #CFCFCF;border-radius:9px;font-size:15px;background:#fff;color:var(--tekst)}
+.veld input:focus,.veld select:focus{outline:3px solid rgba(255,210,0,.6);outline-offset:1px;border-color:#9A9A9A}
+.met{position:relative}
+.met .voor,.met .na{position:absolute;top:50%;transform:translateY(-50%);color:var(--grijs);font-size:14px;pointer-events:none}
+.met .voor{left:12px}.met .na{right:12px}
+.met.v input{padding-left:28px}.met.n input{padding-right:30px}.met.lang input{padding-right:52px}
+
+.uitkomst{background:var(--zwart);color:#fff;border-radius:14px;padding:20px 22px}
+.uitkomst .lbl{font-size:12.5px;font-weight:600;opacity:.8}
+.uitkomst .groot{font-size:32px;font-weight:800;color:var(--geel);line-height:1.15;margin:4px 0 2px;word-break:break-word}
+.uitkomst .onder{font-size:13px;opacity:.8}
+.uitkomst dl{margin:14px 0 0;border-top:1px solid rgba(255,255,255,.22)}
+.uitkomst dl div{display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.12);font-size:14px}
+.uitkomst dt{opacity:.9;min-width:0}
+.uitkomst dd{margin:0;font-weight:700;text-align:right;white-space:nowrap}
+.uitkomst dl div.som dd{color:var(--geel)}
+.signaal{margin-top:12px;background:var(--geel-zacht);color:var(--zwart);border-radius:9px;padding:10px 12px;font-size:13.5px}
+.signaal p{margin:0}.signaal p+p{margin-top:6px}
+
+.toelichting{margin-top:22px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+.blok{border-radius:0 10px 10px 0;padding:12px 16px;font-size:14px}
+.blok h4{margin:0 0 4px;font-size:13px;font-weight:800;letter-spacing:.04em;text-transform:uppercase}
+.blok p{margin:0}
+.blok.regel{background:var(--vlak);border-left:4px solid var(--zwart)}
+.blok.let-op{background:var(--geel-zacht);border-left:4px solid var(--geel-donker)}
+.blok.let-op h4{color:#7A5A00}
+
+.tabelvak{margin-top:20px;border:1px solid var(--lijn);border-radius:12px;overflow:auto;max-height:440px}
+.tabelvak table{border-collapse:collapse;width:100%;font-size:13.5px;font-variant-numeric:tabular-nums}
+.tabelvak th,.tabelvak td{padding:7px 12px;text-align:right;border-bottom:1px solid var(--lijn);white-space:nowrap}
+.tabelvak th{position:sticky;top:0;background:var(--geel);color:var(--zwart);font-weight:700}
+.tabelvak th:first-child,.tabelvak td:first-child{text-align:left}
+
+.verder{max-width:1180px;margin:0 auto;padding:0 24px 24px}
+.verder h2{font-size:20px;font-weight:800;margin:0 0 6px}
+.verder > p{margin:0 0 14px;color:var(--grijs);font-size:14px}
+.tegels{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
+.tegels a{display:block;text-decoration:none;border:1px solid var(--lijn);border-radius:12px;padding:12px 14px;background:#fff}
+.tegels a:hover{border-color:var(--zwart)}
+.tegels b{display:block;font-size:14px}
+.tegels span{display:block;font-size:12.5px;color:var(--grijs);margin-top:2px}
+
+.compliance{max-width:1132px;margin:10px auto 0;background:var(--rood-zacht);border-left:4px solid var(--rood);border-radius:0 10px 10px 0;padding:14px 18px;font-size:14px}
+.compliance strong{color:#A5281B}
+.voet{max-width:1180px;margin:0 auto;padding:24px 24px 40px;font-size:12.5px;color:var(--grijs)}
+.voet a{color:var(--zwart);font-weight:600}
+
+@media (max-width:1000px){
+  .werkblad,.toelichting{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:900px){
+  .romp{grid-template-columns:minmax(0,1fr);padding-top:20px}
+  .menu{display:none}
+  .kiezer{display:block}
+}
+@media (max-width:560px){
+  .balk,.kop{padding-left:16px;padding-right:16px}
+  .romp,.verder,.voet{padding-left:16px;padding-right:16px}
+  .compliance{margin-left:16px;margin-right:16px}
+  .invoer{grid-template-columns:minmax(0,1fr);padding:16px}
+  .uitkomst .groot{font-size:27px}
+  .paneel-kop h2{font-size:21px}
+}
+</style>
+</head>
+<body>
+
+<div class="balk">
+  <span>Adviesforum &middot; hulpmiddelen voor financieel adviseurs</span>
+  <span><a href="index.html">Naar het forum</a></span>
+</div>
+
+<header class="kop">
+  <div class="kop-in">
+    <div class="merk"><span class="zeshoek" aria-hidden="true"></span>Adviesforum &middot; Hulpmiddelen</div>
+    <a class="terug" href="index.html#hulpmiddelen">&larr; Terug naar de hulpmiddelen</a>
+    <h1>Rekenhulpen voor de adviespraktijk</h1>
+    <p>Twintig compacte rekenhulpen voor de vragen die tussen twee adviesgesprekken door opduiken: wat doet een nieuwe rente met de maandlast, hoeveel moet een klant inleggen voor een doelbedrag, hoeveel werkdagen zitten er tot de passeerdatum?</p>
+    <span class="stempel">Indicatief &middot; geen advies &middot; controleer altijd de actuele normen</span>
+  </div>
+</header>
+
+<main class="romp">
+  <nav class="menu" id="menu" aria-label="Rekenhulpen">
+    <input type="search" id="zoek" placeholder="Zoek een rekenhulp" aria-label="Zoek een rekenhulp">
+    <div id="menulijst"></div>
+    <div class="leeg" id="menuleeg">Niets gevonden. Probeer een ander woord.</div>
+  </nav>
+
+  <div class="paneel">
+    <div class="kiezer">
+      <label for="kies">Kies een rekenhulp</label>
+      <div class="veld"><select id="kies"></select></div>
+    </div>
+    <section id="werk" aria-live="polite"></section>
+  </div>
+</main>
+
+<section class="verder">
+  <h2>Uitgebreidere rekenhulpen in het Adviesforum</h2>
+  <p>Voor deze onderwerpen staat al een eigen pagina klaar, met meer invoer en toelichting.</p>
+  <div class="tegels">
+    <a href="maandlasten.html"><b>Bruto maandlasten</b><span>Annuïtair, lineair of aflossingsvrij, met aflosschema</span></a>
+    <a href="leennormen-2026.html"><b>Leennormen 2026</b><span>Financieringslast en maximale hypotheek</span></a>
+    <a href="kosten-koper.html"><b>Kosten koper</b><span>Overdrachtsbelasting en bijkomende kosten</span></a>
+    <a href="ltv.html"><b>Loan-to-value</b><span>Lening tegenover woningwaarde</span></a>
+    <a href="oversluiten.html"><b>Oversluiten</b><span>Vergoeding, besparing en terugverdientijd</span></a>
+    <a href="rentemiddeling.html"><b>Rentemiddeling</b><span>Gemiddelde rente bij tussentijds verlengen</span></a>
+    <a href="extra-aflossen.html"><b>Extra aflossen</b><span>Lagere last of kortere looptijd</span></a>
+    <a href="bijleenregeling.html"><b>Bijleenregeling</b><span>Eigenwoningreserve en box 1-deel</span></a>
+    <a href="overbrugging.html"><b>Overbruggingskrediet</b><span>Overwaarde en dubbele lasten</span></a>
+    <a href="restschuld-pensioen.html"><b>Restschuld bij pensioen</b><span>Schuld en woonlast na pensionering</span></a>
+    <a href="erfpacht.html"><b>Erfpacht</b><span>Canon tegenover afkopen</span></a>
+    <a href="draagplicht.html"><b>Draagplicht en inbreng</b><span>Verhouding tussen partners</span></a>
+    <a href="orv.html"><b>Overlijdensrisico</b><span>Benodigd verzekerd bedrag</span></a>
+    <a href="aov-tekort.html"><b>AOV-tekort</b><span>Verzekerbaar bedrag en wachttijd</span></a>
+    <a href="inkomen-ziekte-werknemer.html"><b>Inkomen bij ziekte</b><span>Loondoorbetaling en WIA-fasen</span></a>
+    <a href="werkloosheid.html"><b>Inkomen bij werkloosheid</b><span>WW en woonlasten</span></a>
+    <a href="herbouwwaarde.html"><b>Herbouwwaarde</b><span>Indicatie en onderverzekering</span></a>
+  </div>
+</section>
+
+<div class="compliance">
+  <strong>Compliance:</strong> deze rekenhulpen geven een rekenkundige indicatie en zijn geen advies, geen toets aan de leennormen en geen offerte. Fiscale en wettelijke normen wijzigen jaarlijks; controleer de actuele regels en de voorwaarden van geldverstrekker of verzekeraar voordat je een uitkomst in een klantdossier of adviesrapport gebruikt. Leg vast welke aannames je hebt gebruikt.
+</div>
+
+<footer class="voet">
+  Adviesforum &middot; collegiale kennisdeling voor financieel adviseurs &middot; <a href="index.html#hulpmiddelen">Alle hulpmiddelen</a> &middot; <a href="privacy.html">Privacy</a>. Er wordt niets opgeslagen of verstuurd: alle berekeningen draaien in je eigen browser.
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ---------- opmaak ---------- */
+  const fmt = {};
+  const nfCache = {};
+  const nf = d => nfCache[d] || (nfCache[d] = new Intl.NumberFormat('nl-NL', { minimumFractionDigits: d, maximumFractionDigits: d }));
+  const geheel = new Intl.NumberFormat('nl-NL', { maximumFractionDigits: 0 });
+  fmt.euro = (x, d = 2) => Number.isFinite(x) ? (x < -0.004 ? '− ' : '') + '€ ' + nf(d).format(Math.abs(x)) : '–';
+  fmt.euro0 = x => fmt.euro(x, 0);
+  fmt.pct = (x, d = 2) => Number.isFinite(x) ? nf(d).format(x) + '%' : '–';
+  fmt.getal = (x, d = 0) => Number.isFinite(x) ? nf(d).format(x) : '–';
+  fmt.duur = mnd => {
+    if (!Number.isFinite(mnd)) return '–';
+    const j = Math.floor(mnd / 12), m = mnd - j * 12;
+    const dj = j ? j + ' jaar' : '', dm = m ? m + (m === 1 ? ' maand' : ' maanden') : '';
+    return dj && dm ? dj + ' en ' + dm : (dj || dm || '0 maanden');
+  };
+  const DAG = ['zondag', 'maandag', 'dinsdag', 'woensdag', 'donderdag', 'vrijdag', 'zaterdag'];
+  const MAAND = ['januari', 'februari', 'maart', 'april', 'mei', 'juni', 'juli', 'augustus', 'september', 'oktober', 'november', 'december'];
+  fmt.datum = d => d ? DAG[d.getDay()] + ' ' + d.getDate() + ' ' + MAAND[d.getMonth()] + ' ' + d.getFullYear() : '–';
+  fmt.datumKort = d => d.getDate() + ' ' + MAAND[d.getMonth()].slice(0, 3);
+
+  /* ---------- invoer lezen ---------- */
+  const leesEuro = s => { const c = String(s || '').replace(/\D/g, ''); return c ? parseInt(c, 10) : NaN; };
+  const leesGetal = s => {
+    let c = String(s || '').replace(/[\s€%]/g, '');
+    if (c === '') return NaN;
+    if (c.includes(',')) c = c.replace(/\./g, '').replace(',', '.');
+    const v = Number(c);
+    return Number.isFinite(v) ? v : NaN;
+  };
+  const leesDatum = s => {
+    const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(String(s || ''));
+    return m ? new Date(+m[1], +m[2] - 1, +m[3]) : null;
+  };
+
+  /* ---------- financiële kern ---------- */
+  // Termijnbedrag bij annuïtaire aflossing: hoofdsom h, rente per periode r, aantal perioden n
+  const annTermijn = (h, r, n) => r === 0 ? h / n : h * r / (1 - Math.pow(1 + r, -n));
+  // Omgekeerd: welke hoofdsom hoort bij termijn t
+  const annHoofdsom = (t, r, n) => r === 0 ? t * n : t * (1 - Math.pow(1 + r, -n)) / r;
+  // Annuïtaire restschuld na k termijnen
+  const annRest = (h, r, n, k) => {
+    if (r === 0) return h - h / n * k;
+    const t = annTermijn(h, r, n), g = Math.pow(1 + r, k);
+    return h * g - t * (g - 1) / r;
+  };
+  // Eindwaarde van startbedrag plus vaste inleg per periode (vooraf of achteraf)
+  const eindwaarde = (start, inleg, r, n, vooraf) => {
+    const g = Math.pow(1 + r, n);
+    const reeks = r === 0 ? inleg * n : inleg * (g - 1) / r * (vooraf ? 1 + r : 1);
+    return start * g + reeks;
+  };
+  const maandUitJaar = jaarPct => Math.pow(1 + jaarPct / 100, 1 / 12) - 1; // samengesteld
+  const zoekNul = (f, lo, hi) => { // halveringsmethode, f stijgend
+    for (let s = 0; s < 200; s++) { const mid = (lo + hi) / 2; if (f(mid) > 0) hi = mid; else lo = mid; }
+    return (lo + hi) / 2;
+  };
+
+  /* ---------- kalender ---------- */
+  const paasdatum = jaar => {
+    const a = jaar % 19, b = Math.floor(jaar / 100), c = jaar % 100;
+    const d = Math.floor(b / 4), e = b % 4, f = Math.floor((b + 8) / 25), g = Math.floor((b - f + 1) / 3);
+    const h = (19 * a + b - d - g + 15) % 30, i = Math.floor(c / 4), k = c % 4;
+    const l = (32 + 2 * e + 2 * i - h - k) % 7, m = Math.floor((a + 11 * h + 22 * l) / 451);
+    const som = h + l - 7 * m + 114;
+    return new Date(jaar, Math.floor(som / 31) - 1, (som % 31) + 1);
+  };
+  const plusDagen = (d, n) => new Date(d.getFullYear(), d.getMonth(), d.getDate() + n);
+  const sleutel = d => d.getFullYear() + '-' + d.getMonth() + '-' + d.getDate();
+  const feestCache = {};
+  const feestdagen = (jaar, ruim) => {
+    const k = jaar + (ruim ? 'r' : 's');
+    if (feestCache[k]) return feestCache[k];
+    const p = paasdatum(jaar);
+    let koning = new Date(jaar, 3, 27);
+    if (koning.getDay() === 0) koning = new Date(jaar, 3, 26);
+    const lijst = [
+      [new Date(jaar, 0, 1), 'Nieuwjaarsdag'], [p, 'Eerste paasdag'], [plusDagen(p, 1), 'Tweede paasdag'],
+      [koning, 'Koningsdag'], [plusDagen(p, 39), 'Hemelvaartsdag'], [plusDagen(p, 49), 'Eerste pinksterdag'],
+      [plusDagen(p, 50), 'Tweede pinksterdag'], [new Date(jaar, 11, 25), 'Eerste kerstdag'], [new Date(jaar, 11, 26), 'Tweede kerstdag']
+    ];
+    if (ruim) lijst.push([plusDagen(p, -2), 'Goede Vrijdag'], [new Date(jaar, 4, 5), 'Bevrijdingsdag']);
+    const map = {};
+    lijst.forEach(([d, naam]) => { map[sleutel(d)] = naam; });
+    return (feestCache[k] = map);
+  };
+  const feestnaam = (d, ruim) => feestdagen(d.getFullYear(), ruim)[sleutel(d)] || null;
+  const isWerkdag = (d, ruim) => d.getDay() !== 0 && d.getDay() !== 6 && !feestnaam(d, ruim);
+  const dagVerschil = (a, b) => Math.round((Date.UTC(b.getFullYear(), b.getMonth(), b.getDate()) - Date.UTC(a.getFullYear(), a.getMonth(), a.getDate())) / 864e5);
+  const plusMaanden = (d, n) => {
+    const doel = new Date(d.getFullYear(), d.getMonth() + n, 1);
+    const laatste = new Date(doel.getFullYear(), doel.getMonth() + 1, 0).getDate();
+    return new Date(doel.getFullYear(), doel.getMonth(), Math.min(d.getDate(), laatste));
+  };
+
+  /* ---------- keuzelijsten ---------- */
+  const VORM2 = [['ann', 'Annuïtair'], ['lin', 'Lineair']];
+  const MOMENT = [['eind', 'Aan het eind van de maand'], ['begin', 'Aan het begin van de maand']];
+  const VRIJ = [['ruim', 'Erkende feestdagen, ook Goede Vrijdag en 5 mei'], ['smal', 'Feestdagen zonder Goede Vrijdag en 5 mei']];
+
+  /* ---------- de rekenhulpen ---------- */
+  const GROEPEN = ['Hypotheek en woning', 'Lenen en rente', 'Vermogen en pensioen', 'Inkomen en termijnen'];
+  const T = [];
+
+  T.push({
+    id: 'renteherziening', groep: 0, titel: 'Maandlast na renteherziening',
+    intro: 'De rentevaste periode loopt af. Wat wordt de nieuwe bruto maandlast over de schuld die dan nog openstaat?',
+    velden: [
+      { k: 'h', l: 'Oorspronkelijke hoofdsom', s: 'eur', std: 320000 },
+      { k: 'jr', l: 'Totale looptijd', s: 'num', na: 'jaar', std: 30 },
+      { k: 'ro', l: 'Huidige rente', s: 'pct', std: 1.9 },
+      { k: 'rn', l: 'Rente voor de nieuwe periode', s: 'pct', std: 4.1 },
+      { k: 'vj', l: 'Jaren verstreken bij herziening', s: 'num', na: 'jaar', std: 10 },
+      { k: 'vorm', l: 'Aflosvorm', s: 'keuze', opties: VORM2, std: 'ann' }
+    ],
+    reken(v) {
+      const n = Math.round(v.jr * 12), k = Math.round(v.vj * 12);
+      if (n <= 0 || k < 0) return { fout: 'Vul een looptijd groter dan nul in.' };
+      if (k >= n) return { fout: 'Het aantal verstreken jaren moet kleiner zijn dan de totale looptijd.' };
+      const io = v.ro / 1200, inw = v.rn / 1200;
+      let rest, oud, nieuw;
+      if (v.vorm === 'ann') {
+        rest = annRest(v.h, io, n, k);
+        oud = annTermijn(v.h, io, n);
+        nieuw = annTermijn(rest, inw, n - k);
+      } else {
+        const afl = v.h / n;
+        rest = v.h - afl * k;
+        oud = afl + rest * io;
+        nieuw = afl + rest * inw;
+      }
+      const verschil = nieuw - oud;
+      return {
+        lbl: 'Nieuwe bruto maandlast', groot: fmt.euro(nieuw),
+        onder: v.vorm === 'ann' ? 'gelijk over de resterende ' + fmt.duur(n - k) : 'eerste termijn van de nieuwe periode; daalt daarna',
+        rijen: [
+          ['Openstaande schuld bij herziening', fmt.euro(rest)],
+          [v.vorm === 'ann' ? 'Maandlast tegen huidige rente' : 'Termijn als de rente gelijk was gebleven', fmt.euro(oud)],
+          ['Verschil per maand', (verschil >= 0 ? '+ ' : '') + fmt.euro(verschil), 'som'],
+          ['Rentedeel eerste maand nieuwe periode', fmt.euro(rest * inw)]
+        ],
+        signalen: verschil > 0 && oud > 0 && verschil / oud > 0.2 ? ['De maandlast stijgt met meer dan 20%. Bespreek tijdig of de nieuwe last past binnen het budget.'] : []
+      };
+    },
+    regel: 'Restschuld = schuld na het aantal verstreken maandtermijnen. Annuïtair: nieuwe termijn = restschuld × i / (1 − (1 + i)<sup>−m</sup>), met i = nieuwe jaarrente / 12 en m = resterende maanden. Lineair: vaste aflossing + restschuld × i.',
+    letop: 'Fiscaal blijft de oorspronkelijke aflosverplichting (30-jaarstermijn) leidend voor de eigenwoningschuld. De geldverstrekker kan een renteopslag rekenen op basis van de actuele LTV.'
+  });
+
+  T.push({
+    id: 'rentemix', groep: 0, titel: 'Gewogen rente over leningdelen',
+    intro: 'Eén percentage voor een hypotheek die uit meerdere delen met elk een eigen rente bestaat.',
+    velden: [
+      { k: 'b1', l: 'Leningdeel 1', s: 'eur', std: 210000, opt: true }, { k: 'r1', l: 'Rente deel 1', s: 'pct', std: 3.75, opt: true },
+      { k: 'b2', l: 'Leningdeel 2', s: 'eur', std: 95000, opt: true }, { k: 'r2', l: 'Rente deel 2', s: 'pct', std: 4.35, opt: true },
+      { k: 'b3', l: 'Leningdeel 3', s: 'eur', std: 40000, opt: true, tip: 'Laat op 0 als het deel er niet is.' }, { k: 'r3', l: 'Rente deel 3', s: 'pct', std: 2.6, opt: true },
+      { k: 'b4', l: 'Leningdeel 4', s: 'eur', std: 0, opt: true }, { k: 'r4', l: 'Rente deel 4', s: 'pct', std: 0, opt: true }
+    ],
+    reken(v) {
+      const delen = [1, 2, 3, 4].map(x => [v['b' + x] || 0, v['r' + x] || 0]).filter(d => d[0] > 0);
+      const tot = delen.reduce((s, d) => s + d[0], 0);
+      if (!tot) return { fout: 'Vul minstens één leningdeel in.' };
+      const renteJaar = delen.reduce((s, d) => s + d[0] * d[1] / 100, 0);
+      const gem = renteJaar / tot * 100;
+      return {
+        lbl: 'Gewogen gemiddelde rente', groot: fmt.pct(gem, 3), onder: 'over ' + delen.length + (delen.length === 1 ? ' deel' : ' delen'),
+        rijen: [
+          ['Totale schuld', fmt.euro(tot)],
+          ['Bruto rente per jaar (beginstand)', fmt.euro(renteJaar)],
+          ['Bruto rente eerste maand', fmt.euro(renteJaar / 12), 'som']
+        ],
+        tabel: {
+          kop: ['Deel', 'Bedrag', 'Rente', 'Aandeel', 'Rente per maand'],
+          rijen: delen.map((d, i) => ['Deel ' + (i + 1), fmt.euro0(d[0]), fmt.pct(d[1]), fmt.pct(d[0] / tot * 100, 1), fmt.euro(d[0] * d[1] / 1200)])
+        }
+      };
+    },
+    regel: 'Gewogen rente = Σ (bedrag × rente) / Σ bedrag. Gewogen naar de huidige stand van elk deel.',
+    letop: 'Rentevaste perioden en aflosvormen per deel tellen niet mee. Door aflossen verschuift de verhouding tussen de delen, en daarmee het gemiddelde.'
+  });
+
+  T.push({
+    id: 'budgetlening', groep: 0, titel: 'Lening bij een vast maandbudget',
+    intro: 'Rekent terug: welke hoofdsom hoort bij een bruto maandlast die de klant wil of kan dragen?',
+    velden: [
+      { k: 't', l: 'Gewenste bruto maandlast', s: 'eur', std: 1650 },
+      { k: 'r', l: 'Rente per jaar', s: 'pct', std: 4.0 },
+      { k: 'jr', l: 'Looptijd', s: 'num', na: 'jaar', std: 30 },
+      { k: 'vorm', l: 'Aflosvorm', s: 'keuze', opties: [['ann', 'Annuïtair'], ['lin', 'Lineair (eerste termijn)'], ['vrij', 'Aflossingsvrij']], std: 'ann' }
+    ],
+    reken(v) {
+      const n = Math.round(v.jr * 12), i = v.r / 1200;
+      if (n <= 0) return { fout: 'Vul een looptijd groter dan nul in.' };
+      let h, renteTot;
+      if (v.vorm === 'ann') { h = annHoofdsom(v.t, i, n); renteTot = v.t * n - h; }
+      else if (v.vorm === 'lin') { h = v.t / (1 / n + i); renteTot = h * i * (n + 1) / 2; }
+      else { if (i === 0) return { fout: 'Bij aflossingsvrij is een rente groter dan nul nodig.' }; h = v.t / i; renteTot = v.t * n; }
+      return {
+        lbl: 'Hoofdsom die bij dit maandbedrag past', groot: fmt.euro0(Math.floor(h)),
+        onder: v.vorm === 'vrij' ? 'zonder aflossing; de schuld blijft staan' : 'rekenkundig, zonder toets aan inkomen',
+        rijen: [
+          ['Rente in de eerste maand', fmt.euro(h * i)],
+          ['Aflossing in de eerste maand', fmt.euro(v.vorm === 'vrij' ? 0 : v.t - h * i)],
+          ['Totale bruto rente over de looptijd', fmt.euro0(renteTot), 'som']
+        ],
+        signalen: ['Dit is géén maximale hypotheek. Toets de leencapaciteit altijd aan de leennormen: zie <a href="leennormen-2026.html">Leennormen 2026</a>.']
+      };
+    },
+    regel: 'Annuïtair: H = T × (1 − (1 + i)<sup>−n</sup>) / i. Lineair: H = T / (1/n + i), gebaseerd op de eerste (hoogste) termijn. Aflossingsvrij: H = T / i. Daarbij i = jaarrente / 12 en n = looptijd in maanden.',
+    letop: 'Verantwoorde kredietverlening vraagt een toets op inkomen, lasten en LTV. Gebruik deze uitkomst alleen als oriëntatie in het gesprek.'
+  });
+
+  T.push({
+    id: 'uitkoop', groep: 0, titel: 'Partner uitkopen uit de woning',
+    intro: 'Wat moet de achterblijvende partner betalen bij een scheiding, en hoe hoog wordt de nieuwe financiering?',
+    velden: [
+      { k: 'w', l: 'Waarde van de woning', s: 'eur', std: 440000, tip: 'Getaxeerde of afgesproken waarde.' },
+      { k: 's', l: 'Huidige hypotheekschuld', s: 'eur', std: 265000 },
+      { k: 'ae', l: 'Aandeel vertrekkende partner in de woning', s: 'pct', std: 50 },
+      { k: 'as', l: 'Aandeel vertrekkende partner in de schuld', s: 'pct', std: 50 },
+      { k: 'kst', l: 'Bijkomende kosten', s: 'eur', std: 5500, opt: true, tip: 'Bijvoorbeeld notaris, taxatie en advies.' },
+      { k: 'eg', l: 'Inbreng eigen geld', s: 'eur', std: 0, opt: true }
+    ],
+    reken(v) {
+      const som = v.ae / 100 * v.w - v.as / 100 * v.s;
+      const nieuw = Math.max(0, v.s + som + v.kst - v.eg);
+      const ltv = v.w > 0 ? nieuw / v.w * 100 : NaN;
+      const sig = [];
+      if (som < 0) sig.push('Er is onderwaarde: de vertrekkende partner betaalt ' + fmt.euro0(-som) + ' bij in plaats van te ontvangen.');
+      if (ltv > 100) sig.push('De nieuwe lening is hoger dan de woningwaarde. Controleer de mogelijkheden in <a href="ltv.html">Loan-to-value</a>.');
+      return {
+        lbl: som >= 0 ? 'Uitkoopsom voor de vertrekkende partner' : 'Bijbetaling door de vertrekkende partner',
+        groot: fmt.euro0(Math.abs(som)),
+        onder: 'aandeel in de waarde minus aandeel in de schuld',
+        rijen: [
+          ['Overwaarde van de woning', fmt.euro0(v.w - v.s)],
+          ['Aandeel in de waarde', fmt.euro0(v.ae / 100 * v.w)],
+          ['Aandeel in de schuld', '− ' + fmt.euro0(v.as / 100 * v.s)],
+          ['Benodigde nieuwe financiering', fmt.euro0(nieuw), 'som'],
+          ['Lening ten opzichte van de waarde', fmt.pct(ltv, 1)]
+        ],
+        signalen: sig
+      };
+    },
+    regel: 'Uitkoopsom = aandeel woning × waarde − aandeel schuld × schuld. Nieuwe financiering = huidige schuld + uitkoopsom + kosten − eigen geld.',
+    letop: 'Afspraken in het convenant of de huwelijkse voorwaarden gaan voor. De fiscale kwalificatie van het uitkoopdeel en het ontslag uit de hoofdelijke aansprakelijkheid beoordeel je apart (zie ook <a href="bijleenregeling.html">Bijleenregeling</a> en <a href="draagplicht.html">Draagplicht</a>).'
+  });
+
+  T.push({
+    id: 'waardeprognose', groep: 0, titel: 'Woningwaarde vooruit',
+    intro: 'Een scenario voor de waarde van de woning over een aantal jaren, bij een vaste stijging of daling per jaar.',
+    velden: [
+      { k: 'w', l: 'Huidige waarde', s: 'eur', std: 395000 },
+      { k: 'g', l: 'Waardeverandering per jaar', s: 'pct', std: 2.5, tip: 'Gebruik een minteken voor daling, bijvoorbeeld -1,5.' },
+      { k: 'jr', l: 'Aantal jaren', s: 'num', na: 'jaar', std: 10 },
+      { k: 's', l: 'Verwachte schuld op dat moment', s: 'eur', std: 250000, opt: true, tip: 'Optioneel, voor de overwaarde.' }
+    ],
+    reken(v) {
+      const jaren = Math.round(v.jr);
+      if (jaren < 0 || jaren > 100) return { fout: 'Kies een aantal jaren tussen 0 en 100.' };
+      const f = 1 + v.g / 100, eind = v.w * Math.pow(f, jaren);
+      const rijen = [];
+      for (let j = 1; j <= jaren; j++) { const w = v.w * Math.pow(f, j); rijen.push([String(j), fmt.euro0(w), fmt.euro0(w - v.w)]); }
+      return {
+        lbl: 'Waarde over ' + jaren + ' jaar', groot: fmt.euro0(eind), onder: 'bij ' + fmt.pct(v.g, 1) + ' per jaar',
+        rijen: [
+          ['Verandering ten opzichte van nu', (eind >= v.w ? '+ ' : '') + fmt.euro0(eind - v.w)],
+          ['Overwaarde bij opgegeven schuld', fmt.euro0(eind - v.s), 'som'],
+          ['Schuld ten opzichte van de waarde', fmt.pct(eind > 0 ? v.s / eind * 100 : NaN, 1)]
+        ],
+        tabel: { kop: ['Jaar', 'Waarde', 'Verandering'], rijen }
+      };
+    },
+    regel: 'Waarde na j jaar = huidige waarde × (1 + verandering)<sup>j</sup>.',
+    letop: 'Een prognose is geen taxatie. Reken in een advies ook een scenario met waardedaling door, zeker bij een hoge LTV.'
+  });
+
+  T.push({
+    id: 'verduurzamen', groep: 0, titel: 'Terugverdientijd verduurzaming',
+    intro: 'Isolatie, zonnepanelen of een warmtepomp: na hoeveel jaar heeft de besparing de investering terugbetaald?',
+    velden: [
+      { k: 'inv', l: 'Investering', s: 'eur', std: 14000 },
+      { k: 'sub', l: 'Subsidie of teruggave', s: 'eur', std: 3000, opt: true },
+      { k: 'bes', l: 'Besparing in het eerste jaar', s: 'eur', std: 1100 },
+      { k: 'pst', l: 'Stijging energieprijs per jaar', s: 'pct', std: 2 },
+      { k: 'lv', l: 'Verwachte levensduur', s: 'num', na: 'jaar', std: 20 },
+      { k: 'fr', l: 'Rente bij financieren', s: 'pct', std: 4.2, opt: true, tip: 'Op 0 laten bij betalen uit eigen geld.' },
+      { k: 'fj', l: 'Looptijd financiering', s: 'num', na: 'jaar', std: 15 }
+    ],
+    reken(v) {
+      const netto = Math.max(0, v.inv - v.sub);
+      if (v.bes <= 0) return { fout: 'Vul een besparing groter dan nul in.' };
+      const groei = 1 + v.pst / 100, lv = Math.round(v.lv);
+      let cum = 0, tvt = NaN, totaal = 0;
+      for (let j = 1; j <= 100; j++) {
+        const b = v.bes * Math.pow(groei, j - 1);
+        if (Number.isNaN(tvt) && cum + b >= netto) tvt = j - 1 + (netto - cum) / b;
+        cum += b;
+        if (j <= lv) totaal = cum;
+      }
+      const rijen = [
+        ['Netto investering', fmt.euro0(netto)],
+        ['Eenvoudige terugverdientijd', fmt.getal(netto / v.bes, 1) + ' jaar'],
+        ['Besparing over de levensduur', fmt.euro0(totaal)],
+        ['Saldo na de levensduur', fmt.euro0(totaal - netto), 'som']
+      ];
+      const sig = [];
+      if (v.fr > 0 && v.fj > 0 && netto > 0) {
+        const last = annTermijn(netto, v.fr / 1200, Math.round(v.fj * 12));
+        rijen.push(['Bruto maandlast bij financieren', fmt.euro(last)], ['Besparing per maand in jaar 1', fmt.euro(v.bes / 12)]);
+        if (last > v.bes / 12) sig.push('In het eerste jaar is de bruto maandlast van de financiering hoger dan de maandelijkse besparing.');
+      }
+      if (!(tvt <= lv)) sig.push('De investering verdient zich niet terug binnen de opgegeven levensduur.');
+      return {
+        lbl: 'Terugverdientijd met prijsstijging', groot: Number.isFinite(tvt) ? fmt.getal(tvt, 1) + ' jaar' : 'meer dan 100 jaar',
+        onder: 'zonder rentekosten en onderhoud', rijen, signalen: sig
+      };
+    },
+    regel: 'Besparing in jaar j = besparing jaar 1 × (1 + prijsstijging)<sup>j−1</sup>. De terugverdientijd is het moment waarop de opgetelde besparing de netto investering bereikt (binnen het jaar lineair verdeeld). Maandlast financiering: annuïtair, rente / 12.',
+    letop: 'De besparing is een schatting van de klant of leverancier. Extra leenruimte voor energiebesparende voorzieningen volgt uit de leennormen, zie <a href="leennormen-2026.html">Leennormen 2026</a>; subsidievoorwaarden veranderen regelmatig.'
+  });
+
+  T.push({
+    id: 'aflostijd', groep: 1, titel: 'Aflostijd bij vast termijnbedrag',
+    intro: 'Hoe lang duurt het om een lening af te lossen als de klant elke maand hetzelfde bedrag betaalt?',
+    velden: [
+      { k: 'h', l: 'Openstaande schuld', s: 'eur', std: 18000 },
+      { k: 'r', l: 'Rente per jaar', s: 'pct', std: 7.9 },
+      { k: 't', l: 'Betaling per maand', s: 'eur', std: 400 }
+    ],
+    reken(v) {
+      const i = v.r / 1200;
+      if (v.h <= 0 || v.t <= 0) return { fout: 'Vul een schuld en een maandbedrag groter dan nul in.' };
+      if (v.t <= v.h * i) return { fout: 'Het maandbedrag dekt de rente niet (rente eerste maand ' + fmt.euro(v.h * i) + '). De schuld wordt zo nooit afgelost.' };
+      let rest = v.h, mnd = 0, rente = 0, laatst = 0;
+      while (rest > 0.005 && mnd < 1200) {
+        const r = rest * i, afl = Math.min(v.t - r, rest);
+        rente += r; rest -= afl; laatst = afl + r; mnd++;
+      }
+      return {
+        lbl: 'Aflostijd', groot: fmt.duur(mnd), onder: mnd + ' maandbetalingen',
+        rijen: [
+          ['Laatste betaling', fmt.euro(laatst)],
+          ['Totaal betaalde rente', fmt.euro(rente)],
+          ['Totaal betaald', fmt.euro(v.h + rente), 'som']
+        ]
+      };
+    },
+    regel: 'Per maand: rente = schuld × jaarrente / 12; de rest van de betaling gaat naar aflossing. Dit wordt doorgerekend tot de schuld nul is.',
+    letop: 'Bij consumptief krediet kan de geldverstrekker een andere rentemethode of extra kosten hanteren. Een doorlopend krediet kent vaak een minimale maandtermijn als percentage van de limiet.'
+  });
+
+  T.push({
+    id: 'rente-terug', groep: 1, titel: 'Rente terugrekenen uit een termijn',
+    intro: 'Hoofdsom, maandbedrag en aantal termijnen zijn bekend. Welke rente zit erin verwerkt?',
+    velden: [
+      { k: 'h', l: 'Geleend bedrag', s: 'eur', std: 15000 },
+      { k: 't', l: 'Maandbedrag', s: 'eur', std: 305 },
+      { k: 'n', l: 'Aantal maandtermijnen', s: 'num', std: 60 }
+    ],
+    reken(v) {
+      const n = Math.round(v.n);
+      if (v.h <= 0 || v.t <= 0 || n <= 0) return { fout: 'Vul bedragen en een aantal termijnen groter dan nul in.' };
+      if (v.t * n <= v.h) return { fout: 'Samen betalen de termijnen niet meer dan het geleende bedrag; er zit geen positieve rente in.' };
+      if (annTermijn(v.h, 1, n) < v.t) return { fout: 'Het maandbedrag is onrealistisch hoog ten opzichte van de lening.' };
+      const i = zoekNul(r => annTermijn(v.h, r, n) - v.t, 0, 1);
+      const eff = (Math.pow(1 + i, 12) - 1) * 100;
+      return {
+        lbl: 'Effectieve rente per jaar', groot: fmt.pct(eff, 2), onder: 'zonder bijkomende kosten',
+        rijen: [
+          ['Rente per maand', fmt.pct(i * 100, 4)],
+          ['Nominale jaarrente (maandrente × 12)', fmt.pct(i * 1200, 2)],
+          ['Totaal te betalen', fmt.euro(v.t * n)],
+          ['Waarvan rente', fmt.euro(v.t * n - v.h), 'som']
+        ]
+      };
+    },
+    regel: 'De maandrente i wordt numeriek gezocht zodat H × i / (1 − (1 + i)<sup>−n</sup>) gelijk is aan het maandbedrag. Effectief per jaar = (1 + i)<sup>12</sup> − 1.',
+    letop: 'Het wettelijke jaarlijkse kostenpercentage bij consumptief krediet rekent ook verplichte kosten mee en kan dus hoger uitvallen. Toets een aanbieding aan de actuele wettelijke maximale kredietvergoeding.'
+  });
+
+  T.push({
+    id: 'tussenstand', groep: 1, titel: 'Schuld na een aantal maanden',
+    intro: 'De stand van een lening na een gekozen aantal betaalde termijnen: schuld, aflossing en betaalde rente tot dan.',
+    velden: [
+      { k: 'h', l: 'Hoofdsom', s: 'eur', std: 280000 },
+      { k: 'r', l: 'Rente per jaar', s: 'pct', std: 3.8 },
+      { k: 'jr', l: 'Looptijd', s: 'num', na: 'jaar', std: 30 },
+      { k: 'k', l: 'Aantal betaalde maanden', s: 'num', std: 84 },
+      { k: 'vorm', l: 'Aflosvorm', s: 'keuze', opties: VORM2, std: 'ann' }
+    ],
+    reken(v) {
+      const n = Math.round(v.jr * 12), k = Math.round(v.k), i = v.r / 1200;
+      if (n <= 0) return { fout: 'Vul een looptijd groter dan nul in.' };
+      if (k < 0 || k > n) return { fout: 'Het aantal betaalde maanden ligt tussen 0 en ' + n + '.' };
+      let rest, rente, termijn;
+      if (v.vorm === 'ann') {
+        termijn = annTermijn(v.h, i, n); rest = annRest(v.h, i, n, k); rente = termijn * k - (v.h - rest);
+      } else {
+        const afl = v.h / n; rest = v.h - afl * k;
+        rente = i * (k * v.h - afl * k * (k - 1) / 2);
+        termijn = k < n ? afl + rest * i : 0;
+      }
+      return {
+        lbl: 'Openstaande schuld na ' + k + ' maanden', groot: fmt.euro(Math.max(0, rest)), onder: 'nog ' + fmt.duur(n - k) + ' te gaan',
+        rijen: [
+          ['Afgelost tot nu', fmt.euro(v.h - rest)],
+          ['Betaalde rente tot nu', fmt.euro(rente)],
+          [v.vorm === 'ann' ? 'Maandtermijn' : 'Volgende termijn', fmt.euro(termijn), 'som']
+        ]
+      };
+    },
+    regel: 'Annuïtair: schuld na k maanden = H × (1 + i)<sup>k</sup> − T × ((1 + i)<sup>k</sup> − 1) / i. Lineair: H − k × H / n. Rente per maand i = jaarrente / 12.',
+    letop: 'Uitgaande van een gelijke rente over de hele periode en zonder extra aflossingen. Voor een volledig schema per jaar: zie <a href="maandlasten.html">Bruto maandlasten</a>.'
+  });
+
+  T.push({
+    id: 'rente-omrekenen', groep: 1, titel: 'Nominale en effectieve rente',
+    intro: 'Zet een rente om tussen nominaal en effectief, en zie de rente per maand, kwartaal of halfjaar.',
+    velden: [
+      { k: 'r', l: 'Rente per jaar', s: 'pct', std: 4.5 },
+      { k: 'soort', l: 'Dit percentage is', s: 'keuze', opties: [['nom', 'Nominaal'], ['eff', 'Effectief']], std: 'nom' },
+      { k: 'm', l: 'Rente wordt bijgeschreven', s: 'keuze', opties: [['12', 'Per maand'], ['4', 'Per kwartaal'], ['2', 'Per halfjaar'], ['1', 'Per jaar']], std: '12' }
+    ],
+    reken(v) {
+      const m = +v.m, r = v.r / 100;
+      let nom, eff;
+      if (v.soort === 'nom') { nom = r; eff = Math.pow(1 + r / m, m) - 1; }
+      else { eff = r; nom = m * (Math.pow(1 + r, 1 / m) - 1); }
+      const per = { 12: 'maand', 4: 'kwartaal', 2: 'halfjaar', 1: 'jaar' }[m];
+      return {
+        lbl: v.soort === 'nom' ? 'Effectieve jaarrente' : 'Nominale jaarrente',
+        groot: fmt.pct((v.soort === 'nom' ? eff : nom) * 100, 3),
+        onder: 'bij bijschrijving per ' + per,
+        rijen: [
+          ['Nominaal per jaar', fmt.pct(nom * 100, 3)],
+          ['Effectief per jaar', fmt.pct(eff * 100, 3)],
+          ['Rente per ' + per, fmt.pct(nom / m * 100, 4), 'som']
+        ]
+      };
+    },
+    regel: 'Effectief = (1 + nominaal / m)<sup>m</sup> − 1. Nominaal = m × ((1 + effectief)<sup>1/m</sup> − 1). m = aantal bijschrijvingen per jaar.',
+    letop: 'Nederlandse hypotheekverstrekkers rekenen de maandrente meestal als nominale jaarrente gedeeld door 12; het effectieve percentage ligt daardoor iets hoger dan de offerterente.'
+  });
+
+  T.push({
+    id: 'opbouw', groep: 2, titel: 'Vermogensopbouw met maandinleg',
+    intro: 'Wat groeit een startbedrag met een vaste maandelijkse inleg uit tot bij een verwacht rendement?',
+    velden: [
+      { k: 'st', l: 'Startbedrag', s: 'eur', std: 10000, opt: true },
+      { k: 'in', l: 'Inleg per maand', s: 'eur', std: 250 },
+      { k: 'r', l: 'Verwacht rendement per jaar', s: 'pct', std: 4 },
+      { k: 'jr', l: 'Looptijd', s: 'num', na: 'jaar', std: 20 },
+      { k: 'mom', l: 'Moment van inleggen', s: 'keuze', opties: MOMENT, std: 'begin' }
+    ],
+    reken(v) {
+      const jaren = Math.round(v.jr), i = maandUitJaar(v.r), vooraf = v.mom === 'begin';
+      if (jaren <= 0 || jaren > 100) return { fout: 'Kies een looptijd tussen 1 en 100 jaar.' };
+      const eind = eindwaarde(v.st, v.in, i, jaren * 12, vooraf), ingelegd = v.st + v.in * jaren * 12;
+      const rijen = [];
+      for (let j = 1; j <= jaren; j++) {
+        const w = eindwaarde(v.st, v.in, i, j * 12, vooraf), inl = v.st + v.in * j * 12;
+        rijen.push([String(j), fmt.euro0(inl), fmt.euro0(w - inl), fmt.euro0(w)]);
+      }
+      return {
+        lbl: 'Vermogen na ' + jaren + ' jaar', groot: fmt.euro0(eind), onder: 'vóór belasting en kosten',
+        rijen: [
+          ['Totaal ingelegd', fmt.euro0(ingelegd)],
+          ['Opbrengst uit rendement', fmt.euro0(eind - ingelegd), 'som'],
+          ['Gebruikt rendement per maand', fmt.pct(i * 100, 4)]
+        ],
+        tabel: { kop: ['Jaar', 'Ingelegd', 'Rendement', 'Vermogen'], rijen }
+      };
+    },
+    regel: 'Maandrendement i = (1 + jaarrendement)<sup>1/12</sup> − 1. Vermogen = start × (1 + i)<sup>n</sup> + inleg × ((1 + i)<sup>n</sup> − 1) / i, bij inleg aan het begin van de maand nog × (1 + i).',
+    letop: 'Rendement op beleggingen is niet gegarandeerd. Vermogensrendementsheffing (box 3) en kosten zijn niet meegenomen. Bij beleggingsadvies gelden de eisen uit de Wft voor productinformatie en risicoprofiel.'
+  });
+
+  T.push({
+    id: 'doelinleg', groep: 2, titel: 'Maandinleg voor een doelbedrag',
+    intro: 'Hoeveel moet er per maand opzij om op een bepaald moment een gewenst bedrag te hebben?',
+    velden: [
+      { k: 'doel', l: 'Doelbedrag', s: 'eur', std: 60000 },
+      { k: 'st', l: 'Al beschikbaar', s: 'eur', std: 5000, opt: true },
+      { k: 'r', l: 'Verwacht rendement per jaar', s: 'pct', std: 3 },
+      { k: 'jr', l: 'Periode', s: 'num', na: 'jaar', std: 12 },
+      { k: 'mom', l: 'Moment van inleggen', s: 'keuze', opties: MOMENT, std: 'begin' }
+    ],
+    reken(v) {
+      const n = Math.round(v.jr * 12), i = maandUitJaar(v.r), vooraf = v.mom === 'begin';
+      if (n <= 0) return { fout: 'Vul een periode groter dan nul in.' };
+      const g = Math.pow(1 + i, n), groeiStart = v.st * g;
+      const factor = i === 0 ? n : (g - 1) / i * (vooraf ? 1 + i : 1);
+      const inleg = Math.max(0, (v.doel - groeiStart) / factor);
+      return {
+        lbl: 'Benodigde inleg per maand', groot: fmt.euro(inleg),
+        onder: inleg === 0 ? 'het beschikbare bedrag groeit vanzelf naar het doel' : 'gedurende ' + fmt.duur(n),
+        rijen: [
+          ['Beschikbaar bedrag groeit naar', fmt.euro0(groeiStart)],
+          ['Totaal nog in te leggen', fmt.euro0(inleg * n)],
+          ['Bijdrage van rendement', fmt.euro0(Math.max(0, v.doel - v.st - inleg * n)), 'som']
+        ]
+      };
+    },
+    regel: 'Inleg = (doel − start × (1 + i)<sup>n</sup>) / (((1 + i)<sup>n</sup> − 1) / i), met i het maandrendement afgeleid van het jaarrendement. Bij inleg aan het begin van de maand wordt de noemer × (1 + i).',
+    letop: 'Houd bij een langere periode rekening met inflatie: zie de rekenhulp Koopkracht.'
+  });
+
+  T.push({
+    id: 'doeltijd', groep: 2, titel: 'Spaartijd tot een doelbedrag',
+    intro: 'Met een vaste maandinleg: wanneer is het doelbedrag bereikt?',
+    velden: [
+      { k: 'st', l: 'Startbedrag', s: 'eur', std: 4000, opt: true },
+      { k: 'in', l: 'Inleg per maand', s: 'eur', std: 350 },
+      { k: 'r', l: 'Verwacht rendement per jaar', s: 'pct', std: 2.5 },
+      { k: 'doel', l: 'Doelbedrag', s: 'eur', std: 40000 }
+    ],
+    reken(v) {
+      const i = maandUitJaar(v.r);
+      if (v.st >= v.doel) return { lbl: 'Spaartijd', groot: 'al bereikt', onder: 'het startbedrag is minstens het doelbedrag', rijen: [] };
+      let w = v.st, m = 0;
+      while (w < v.doel && m < 1200) { w = w * (1 + i) + v.in; m++; }
+      if (w < v.doel) return { fout: 'Binnen 100 jaar wordt het doel niet bereikt. Verhoog de inleg of het startbedrag.' };
+      const ingelegd = v.st + v.in * m;
+      return {
+        lbl: 'Spaartijd', groot: fmt.duur(m), onder: m + ' maandelijkse stortingen',
+        rijen: [
+          ['Vermogen op dat moment', fmt.euro0(w)],
+          ['Totaal ingelegd', fmt.euro0(ingelegd)],
+          ['Opbrengst uit rendement', fmt.euro0(w - ingelegd), 'som']
+        ]
+      };
+    },
+    regel: 'Per maand: vermogen × (1 + i) + inleg, met i = (1 + jaarrendement)<sup>1/12</sup> − 1. Doorgerekend tot het doel is bereikt.',
+    letop: 'Uitkomst vóór belasting en kosten; bij beleggen kan het werkelijke verloop sterk afwijken.'
+  });
+
+  T.push({
+    id: 'jaarrendement', groep: 2, titel: 'Gemiddeld rendement per jaar',
+    intro: 'Van een begin- en eindwaarde naar één gemiddeld jaarrendement, zonder tussentijdse stortingen.',
+    velden: [
+      { k: 'b', l: 'Beginwaarde', s: 'eur', std: 50000 },
+      { k: 'e', l: 'Eindwaarde', s: 'eur', std: 71500 },
+      { k: 'jr', l: 'Periode', s: 'num', na: 'jaar', std: 7, tip: 'Decimalen mogen, bijvoorbeeld 6,5.' }
+    ],
+    reken(v) {
+      if (v.b <= 0 || v.jr <= 0) return { fout: 'Vul een beginwaarde en een periode groter dan nul in.' };
+      const totaal = v.e / v.b - 1, jaar = Math.pow(v.e / v.b, 1 / v.jr) - 1;
+      return {
+        lbl: 'Gemiddeld rendement per jaar', groot: fmt.pct(jaar * 100, 2), onder: 'samengesteld (meetkundig gemiddelde)',
+        rijen: [
+          ['Totaal rendement over de periode', fmt.pct(totaal * 100, 2)],
+          ['Waardeverandering', fmt.euro0(v.e - v.b), 'som']
+        ]
+      };
+    },
+    regel: 'Jaarrendement = (eindwaarde / beginwaarde)<sup>1/jaren</sup> − 1.',
+    letop: 'Met tussentijdse stortingen of opnames is deze methode niet zuiver; dan is een geldgewogen rendement nodig.'
+  });
+
+  T.push({
+    id: 'interen', groep: 2, titel: 'Interen op vermogen',
+    intro: 'Hoeveel kan er maandelijks uit een vermogen, of hoe lang gaat het mee bij een vaste opname?',
+    velden: [
+      { k: 'kap', l: 'Beschikbaar vermogen', s: 'eur', std: 180000 },
+      { k: 'r', l: 'Verwacht rendement per jaar', s: 'pct', std: 2.5 },
+      { k: 'vraag', l: 'Wat wil je weten?', s: 'keuze', opties: [['bedrag', 'Maandbedrag bij een gekozen periode'], ['duur', 'Hoe lang een vast maandbedrag meegaat']], std: 'bedrag', breed: true },
+      { k: 'jr', l: 'Periode', s: 'num', na: 'jaar', std: 20, als: v => v.vraag === 'bedrag' },
+      { k: 'op', l: 'Opname per maand', s: 'eur', std: 1200, als: v => v.vraag === 'duur' },
+      { k: 'mom', l: 'Moment van opnemen', s: 'keuze', opties: MOMENT, std: 'begin' }
+    ],
+    reken(v) {
+      const i = maandUitJaar(v.r), vooraf = v.mom === 'begin';
+      if (v.kap <= 0) return { fout: 'Vul een vermogen groter dan nul in.' };
+      if (v.vraag === 'bedrag') {
+        const n = Math.round(v.jr * 12);
+        if (n <= 0) return { fout: 'Vul een periode groter dan nul in.' };
+        const op = annTermijn(v.kap, i, n) / (vooraf ? 1 + i : 1);
+        return {
+          lbl: 'Maandelijkse opname', groot: fmt.euro(op), onder: 'gedurende ' + fmt.duur(n) + ', daarna is het vermogen op',
+          rijen: [['Totaal opgenomen', fmt.euro0(op * n)], ['Waarvan rendement', fmt.euro0(op * n - v.kap), 'som']]
+        };
+      }
+      if (v.op <= 0) return { fout: 'Vul een opname groter dan nul in.' };
+      let w = v.kap, m = 0, tot = 0;
+      while (w > 0.005 && m < 1200) {
+        if (vooraf) { const o = Math.min(v.op, w); w -= o; tot += o; w *= 1 + i; }
+        else { w *= 1 + i; const o = Math.min(v.op, w); w -= o; tot += o; }
+        m++;
+      }
+      if (m >= 1200) return { lbl: 'Het vermogen gaat mee', groot: 'langer dan 100 jaar', onder: 'het rendement dekt (vrijwel) de opname', rijen: [] };
+      return {
+        lbl: 'Het vermogen gaat mee', groot: fmt.duur(m), onder: 'laatste opname kan lager zijn',
+        rijen: [['Totaal opgenomen', fmt.euro0(tot)], ['Waarvan rendement', fmt.euro0(tot - v.kap), 'som']]
+      };
+    },
+    regel: 'Opname = vermogen × i / (1 − (1 + i)<sup>−n</sup>), bij opname aan het begin van de maand gedeeld door (1 + i). Bij een vast bedrag wordt maand voor maand doorgerekend tot het vermogen op is.',
+    letop: 'Inflatie, belasting en kosten verlagen de werkelijke opname. Voor een lijfrente-uitkering gelden fiscale eisen aan duur en hoogte; die zijn hier niet getoetst.'
+  });
+
+  T.push({
+    id: 'nuwaarde', groep: 2, titel: 'Contante waarde',
+    intro: 'Wat is een bedrag in de toekomst, of een reeks uitkeringen, vandaag waard bij een gekozen rekenrente?',
+    velden: [
+      { k: 'soort', l: 'Soort betaling', s: 'keuze', opties: [['reeks', 'Reeks gelijke uitkeringen'], ['een', 'Eenmalig bedrag in de toekomst']], std: 'reeks', breed: true },
+      { k: 'b', l: 'Bedrag (per uitkering)', s: 'eur', std: 1000 },
+      { k: 'jr', l: 'Aantal jaren', s: 'num', na: 'jaar', std: 15 },
+      { k: 'r', l: 'Rekenrente per jaar', s: 'pct', std: 3 },
+      { k: 'f', l: 'Uitkering', s: 'keuze', opties: [['12', 'Per maand'], ['1', 'Per jaar']], std: '12', als: v => v.soort === 'reeks' },
+      { k: 'mom', l: 'Moment van uitkeren', s: 'keuze', opties: [['achteraf', 'Achteraf (eind van de periode)'], ['vooraf', 'Vooraf (begin van de periode)']], std: 'achteraf', als: v => v.soort === 'reeks' }
+    ],
+    reken(v) {
+      if (v.jr <= 0) return { fout: 'Vul een aantal jaren groter dan nul in.' };
+      if (v.soort === 'een') {
+        const cw = v.b / Math.pow(1 + v.r / 100, v.jr);
+        return {
+          lbl: 'Waarde vandaag', groot: fmt.euro(cw), onder: 'van ' + fmt.euro0(v.b) + ' over ' + fmt.getal(v.jr, v.jr % 1 ? 1 : 0) + ' jaar',
+          rijen: [['Verschil door de tijd', fmt.euro(v.b - cw), 'som']]
+        };
+      }
+      const f = +v.f, n = Math.round(v.jr * f), i = Math.pow(1 + v.r / 100, 1 / f) - 1;
+      if (n <= 0) return { fout: 'Te weinig uitkeringen.' };
+      const cw = annHoofdsom(v.b, i, n) * (v.mom === 'vooraf' ? 1 + i : 1);
+      return {
+        lbl: 'Waarde vandaag', groot: fmt.euro(cw), onder: n + ' uitkeringen van ' + fmt.euro(v.b),
+        rijen: [['Som van alle uitkeringen', fmt.euro(v.b * n)], ['Verschil door de tijd', fmt.euro(v.b * n - cw), 'som']]
+      };
+    },
+    regel: 'Eenmalig: CW = bedrag / (1 + r)<sup>t</sup>. Reeks: CW = bedrag × (1 − (1 + i)<sup>−n</sup>) / i, bij vooraf × (1 + i); i is de rekenrente per periode, afgeleid van de jaarrente.',
+    letop: 'De uitkomst is erg gevoelig voor de gekozen rekenrente. Voor fiscale waarderingen (bijvoorbeeld van periodieke uitkeringen of vruchtgebruik) gelden wettelijke factoren; deze rekenhulp gebruikt die niet.'
+  });
+
+  T.push({
+    id: 'koopkracht', groep: 2, titel: 'Koopkracht en inflatie',
+    intro: 'Wat is een bedrag later nog waard, en hoeveel is dan nodig om hetzelfde te kunnen kopen?',
+    velden: [
+      { k: 'b', l: 'Bedrag in euro’s van nu', s: 'eur', std: 3000, tip: 'Bijvoorbeeld een gewenst netto maandinkomen na pensioen.' },
+      { k: 'inf', l: 'Inflatie per jaar', s: 'pct', std: 2.5 },
+      { k: 'jr', l: 'Aantal jaren', s: 'num', na: 'jaar', std: 20 }
+    ],
+    reken(v) {
+      const f = Math.pow(1 + v.inf / 100, v.jr);
+      return {
+        lbl: 'Nodig voor dezelfde koopkracht', groot: fmt.euro0(v.b * f), onder: 'over ' + fmt.getal(v.jr, v.jr % 1 ? 1 : 0) + ' jaar',
+        rijen: [
+          ['Een gelijk bedrag is dan nog waard', fmt.euro0(v.b / f)],
+          ['Verlies aan koopkracht', fmt.pct((1 - 1 / f) * 100, 1), 'som']
+        ]
+      };
+    },
+    regel: 'Benodigd = bedrag × (1 + inflatie)<sup>jaren</sup>. Waarde in euro’s van nu = bedrag / (1 + inflatie)<sup>jaren</sup>.',
+    letop: 'Inflatie is een aanname. Pensioen- en AOW-uitkeringen worden geheel of gedeeltelijk geïndexeerd; reken daarmee als je een inkomenstekort bepaalt.'
+  });
+
+  T.push({
+    id: 'jaarinkomen', groep: 3, titel: 'Jaarinkomen uit maandloon',
+    intro: 'Van bruto maandloon naar bruto jaarinkomen met vakantiegeld, eindejaarsuitkering en vaste toeslagen, plus het uurloon.',
+    velden: [
+      { k: 'ml', l: 'Bruto maandloon', s: 'eur', std: 4100 },
+      { k: 'tsl', l: 'Vaste toeslagen per maand', s: 'eur', std: 0, opt: true, tip: 'Bijvoorbeeld een vaste ploegentoeslag.' },
+      { k: 'vg', l: 'Vakantiegeld', s: 'pct', std: 8 },
+      { k: 'ejr', l: 'Eindejaarsuitkering of 13e maand', s: 'pct', std: 0, opt: true, tip: 'Een volledige 13e maand is 8,33%.' },
+      { k: 'u', l: 'Contracturen per week', s: 'num', na: 'uur', std: 38 }
+    ],
+    reken(v) {
+      const basis = v.ml * 12, tsl = v.tsl * 12;
+      const vg = (basis + tsl) * v.vg / 100, ejr = basis * v.ejr / 100;
+      const jaar = basis + tsl + vg + ejr;
+      const uur = v.u > 0 ? v.ml / (v.u * 52 / 12) : NaN;
+      return {
+        lbl: 'Bruto jaarinkomen', groot: fmt.euro0(jaar), onder: 'gemiddeld ' + fmt.euro0(jaar / 12) + ' per maand',
+        rijen: [
+          ['Maandloon × 12', fmt.euro0(basis)],
+          ['Vaste toeslagen × 12', fmt.euro0(tsl)],
+          ['Vakantiegeld', fmt.euro0(vg)],
+          ['Eindejaarsuitkering', fmt.euro0(ejr)],
+          ['Bruto uurloon (zonder toeslagen)', fmt.euro(uur), 'som']
+        ]
+      };
+    },
+    regel: 'Jaarinkomen = 12 × (maandloon + toeslagen) × (1 + vakantiegeld) + 12 × maandloon × eindejaarspercentage. Uurloon = maandloon / (uren per week × 52 / 12).',
+    letop: 'Of een toeslag of eindejaarsuitkering meetelt voor het toetsinkomen, bepaalt de geldverstrekker op basis van de werkgeversverklaring of het inkomensbepalingsdocument. Vakantiegeld kan over een andere grondslag worden berekend dan hier is aangenomen.'
+  });
+
+  T.push({
+    id: 'periode', groep: 3, titel: 'Dagen en werkdagen tussen twee data',
+    intro: 'Handig voor ontbindende voorwaarden, een offertetermijn of de tijd tot de passeerdatum.',
+    velden: [
+      { k: 'van', l: 'Van', s: 'datum', std: '2026-10-05' },
+      { k: 'tot', l: 'Tot en met', s: 'datum', std: '2026-12-31' },
+      { k: 'vrij', l: 'Welke feestdagen tellen als vrij?', s: 'keuze', opties: VRIJ, std: 'ruim', breed: true }
+    ],
+    reken(v) {
+      if (!v.van || !v.tot) return { fout: 'Vul beide data in.' };
+      let a = v.van, b = v.tot, om = false;
+      if (b < a) { [a, b] = [b, a]; om = true; }
+      const ruim = v.vrij === 'ruim', dagen = dagVerschil(a, b);
+      let werk = 0, weekend = 0; const vrij = [];
+      for (let d = a; d <= b; d = plusDagen(d, 1)) {
+        const w = d.getDay();
+        if (w === 0 || w === 6) { weekend++; continue; }
+        const f = feestnaam(d, ruim);
+        if (f) vrij.push(f + ' (' + fmt.datumKort(d) + ')'); else werk++;
+      }
+      let jj = b.getFullYear() - a.getFullYear(), mm = b.getMonth() - a.getMonth(), dd = b.getDate() - a.getDate();
+      if (dd < 0) { mm--; dd += new Date(b.getFullYear(), b.getMonth(), 0).getDate(); }
+      if (mm < 0) { jj--; mm += 12; }
+      return {
+        lbl: 'Werkdagen (beide data meegeteld)', groot: fmt.getal(werk), onder: 'maandag tot en met vrijdag, zonder feestdagen',
+        rijen: [
+          ['Kalenderdagen ertussen', fmt.getal(dagen)],
+          ['Kalenderdagen inclusief beide data', fmt.getal(dagen + 1)],
+          ['In jaren, maanden en dagen', jj + ' j, ' + mm + ' m, ' + dd + ' d'],
+          ['Weekenddagen', fmt.getal(weekend)],
+          ['Feestdagen op een doordeweekse dag', fmt.getal(vrij.length), 'som']
+        ],
+        signalen: (om ? ['De data waren omgedraaid; er is gerekend van de vroegste naar de laatste datum.'] : []).concat(vrij.length ? ['Vrij in deze periode: ' + vrij.join(', ') + '.'] : [])
+      };
+    },
+    regel: 'Kalenderdagen = verschil tussen de data. Werkdagen = alle maandagen tot en met vrijdagen van de begin- tot en met de einddatum, minus de gekozen feestdagen. Pasen wordt per jaar berekend; Koningsdag schuift naar 26 april als 27 april op zondag valt.',
+    letop: 'Hoe een contractuele of wettelijke termijn telt (wel of niet de begindag, wat er gebeurt als de laatste dag in het weekend valt) volgt uit de koopovereenkomst of de wet. Controleer kritieke data altijd met de notaris of makelaar.'
+  });
+
+  T.push({
+    id: 'datum', groep: 3, titel: 'Datum vooruit of terug rekenen',
+    intro: 'Welke datum ligt een aantal dagen, werkdagen, weken of maanden voor of na een startdatum?',
+    velden: [
+      { k: 'start', l: 'Startdatum', s: 'datum', std: '2026-10-05' },
+      { k: 'n', l: 'Aantal', s: 'num', std: 14 },
+      { k: 'eenh', l: 'Eenheid', s: 'keuze', opties: [['dag', 'Kalenderdagen'], ['werk', 'Werkdagen'], ['week', 'Weken'], ['mnd', 'Maanden']], std: 'dag' },
+      { k: 'richting', l: 'Richting', s: 'keuze', opties: [['na', 'Na de startdatum'], ['voor', 'Vóór de startdatum']], std: 'na' },
+      { k: 'vrij', l: 'Welke feestdagen tellen als vrij?', s: 'keuze', opties: VRIJ, std: 'ruim', breed: true }
+    ],
+    reken(v) {
+      if (!v.start) return { fout: 'Vul een startdatum in.' };
+      const n = Math.round(v.n), z = v.richting === 'voor' ? -1 : 1, ruim = v.vrij === 'ruim';
+      if (n < 0 || n > 20000) return { fout: 'Kies een aantal tussen 0 en 20.000.' };
+      let d;
+      if (v.eenh === 'dag') d = plusDagen(v.start, z * n);
+      else if (v.eenh === 'week') d = plusDagen(v.start, z * n * 7);
+      else if (v.eenh === 'mnd') d = plusMaanden(v.start, z * n);
+      else { d = v.start; let k = 0; while (k < n) { d = plusDagen(d, z); if (isWerkdag(d, ruim)) k++; } }
+      const sig = [];
+      const f = feestnaam(d, ruim);
+      if (v.eenh !== 'werk') {
+        if (f) sig.push('Deze datum is een feestdag: ' + f + '.');
+        else if (d.getDay() === 0 || d.getDay() === 6) sig.push('Deze datum valt in het weekend.');
+      }
+      if (v.eenh === 'werk') sig.push('De startdatum zelf telt niet mee als werkdag.');
+      return {
+        lbl: 'Uitkomst', groot: fmt.datum(d), onder: 'week ' + isoWeek(d),
+        rijen: [['Kalenderdagen ten opzichte van de start', (z > 0 ? '+' : '') + fmt.getal(dagVerschil(v.start, d)), 'som']],
+        signalen: sig
+      };
+    },
+    regel: 'Kalenderdagen en weken: optellen of aftrekken. Maanden: zelfde dagnummer, of de laatste dag van de maand als die dag niet bestaat (31 januari + 1 maand = 28 of 29 februari). Werkdagen: dag voor dag verder, weekenden en gekozen feestdagen overslaan.',
+    letop: 'Een rekenkundige uitkomst; of een termijn juridisch op deze dag eindigt, hangt af van de afspraken en de wet.'
+  });
+
+  function isoWeek(d) {
+    const t = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
+    const dag = t.getUTCDay() || 7;
+    t.setUTCDate(t.getUTCDate() + 4 - dag);
+    const jan1 = new Date(Date.UTC(t.getUTCFullYear(), 0, 1));
+    return Math.ceil(((t - jan1) / 864e5 + 1) / 7);
+  }
+
+  /* ---------- toestand en opbouw ---------- */
+  const $ = id => document.getElementById(id);
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const opslag = {}; // invoer per rekenhulp, alleen in het geheugen
+  let actief = T[0];
+
+  const standaard = f => f.s === 'eur' ? geheel.format(f.std) : (f.s === 'pct' || f.s === 'num') ? String(f.std).replace('.', ',') : f.std;
+  const invoerVan = t => opslag[t.id] || (opslag[t.id] = Object.fromEntries(t.velden.map(f => [f.k, standaard(f)])));
+  const waardenVan = t => {
+    const ruw = invoerVan(t), uit = {};
+    t.velden.forEach(f => {
+      const r = ruw[f.k];
+      uit[f.k] = f.s === 'eur' ? leesEuro(r) : (f.s === 'pct' || f.s === 'num') ? leesGetal(r) : f.s === 'datum' ? leesDatum(r) : r;
+      if (f.opt && Number.isNaN(uit[f.k])) uit[f.k] = 0;
+    });
+    return uit;
+  };
+
+  function bouwMenu() {
+    $('menulijst').innerHTML = GROEPEN.map((g, gi) =>
+      '<div class="mgroep" data-g="' + gi + '"><h3>' + esc(g) + '</h3>' +
+      T.filter(t => t.groep === gi).map(t => '<button type="button" data-id="' + t.id + '">' + esc(t.titel) + '</button>').join('') + '</div>'
+    ).join('');
+    $('kies').innerHTML = GROEPEN.map((g, gi) =>
+      '<optgroup label="' + esc(g) + '">' + T.filter(t => t.groep === gi).map(t => '<option value="' + t.id + '">' + esc(t.titel) + '</option>').join('') + '</optgroup>'
+    ).join('');
+  }
+
+  function veldHTML(f, ruw) {
+    const id = 'v-' + f.k;
+    let inp;
+    if (f.s === 'keuze') {
+      inp = '<select id="' + id + '" data-k="' + f.k + '">' + f.opties.map(o => '<option value="' + o[0] + '"' + (o[0] === ruw ? ' selected' : '') + '>' + esc(o[1]) + '</option>').join('') + '</select>';
+    } else if (f.s === 'datum') {
+      inp = '<input type="date" id="' + id + '" data-k="' + f.k + '" value="' + esc(ruw) + '">';
+    } else {
+      const mode = f.s === 'eur' ? 'numeric' : 'decimal';
+      const el = '<input type="text" inputmode="' + mode + '" autocomplete="off" id="' + id + '" data-k="' + f.k + '" value="' + esc(ruw) + '">';
+      if (f.s === 'eur') inp = '<div class="met v"><span class="voor">€</span>' + el + '</div>';
+      else if (f.s === 'pct') inp = '<div class="met n">' + el + '<span class="na">%</span></div>';
+      else if (f.na) inp = '<div class="met n lang">' + el + '<span class="na">' + esc(f.na) + '</span></div>';
+      else inp = el;
+    }
+    return '<div class="veld' + (f.breed ? ' breed' : '') + '" data-veld="' + f.k + '"><label for="' + id + '">' + esc(f.l) + '</label>' + inp +
+      (f.tip ? '<span class="tip">' + esc(f.tip) + '</span>' : '') + '</div>';
+  }
+
+  function toon(id, vanuitHash) {
+    actief = T.find(t => t.id === id) || T[0];
+    const ruw = invoerVan(actief);
+    $('werk').innerHTML =
+      '<div class="paneel-kop"><div><div class="groep">' + esc(GROEPEN[actief.groep]) + '</div><h2>' + esc(actief.titel) + '</h2><p>' + esc(actief.intro) + '</p></div>' +
+      '<div class="knoppen"><button type="button" class="knop licht" id="herstel">Voorbeeld herstellen</button><button type="button" class="knop" id="print">Printen / PDF</button></div></div>' +
+      '<div class="werkblad"><form class="invoer" id="invoer" autocomplete="off" onsubmit="return false">' + actief.velden.map(f => veldHTML(f, ruw[f.k])).join('') + '</form>' +
+      '<div class="uitkomst" id="uitkomst"></div></div>' +
+      '<div id="tabel"></div>' +
+      '<div class="toelichting"><div class="blok regel"><h4>Zo wordt gerekend</h4><p>' + actief.regel + '</p></div>' +
+      '<div class="blok let-op"><h4>Let op</h4><p>' + actief.letop + '</p></div></div>';
+    document.querySelectorAll('#menulijst button').forEach(b => b.setAttribute('aria-current', b.dataset.id === actief.id ? 'true' : 'false'));
+    $('kies').value = actief.id;
+    if (!vanuitHash) { try { history.replaceState(null, '', '#' + actief.id); } catch (e) { /* geen history beschikbaar */ } }
+    reken();
+  }
+
+  function zichtbaarheid(v) {
+    actief.velden.forEach(f => {
+      const el = document.querySelector('[data-veld="' + f.k + '"]');
+      if (el) el.classList.toggle('verborgen', !!f.als && !f.als(v));
+    });
+  }
+
+  let laatste = null;
+  function reken() {
+    const v = waardenVan(actief);
+    zichtbaarheid(v);
+    const nodig = actief.velden.filter(f => (!f.als || f.als(v)) && f.s !== 'keuze');
+    const leeg = nodig.filter(f => f.s === 'datum' ? !v[f.k] : Number.isNaN(v[f.k]));
+    let res;
+    if (leeg.length) res = { fout: 'Vul ' + leeg.map(f => '“' + f.l.toLowerCase() + '”').join(', ') + ' in.' };
+    else {
+      try { res = actief.reken(v); } catch (e) { res = { fout: 'Deze combinatie van gegevens kan niet worden berekend.' }; }
+    }
+    laatste = res;
+    const box = $('uitkomst');
+    if (res.fout) {
+      box.innerHTML = '<div class="lbl">Uitkomst</div><div class="groot" style="font-size:20px">Nog geen uitkomst</div><div class="signaal"><p>' + res.fout + '</p></div>';
+      $('tabel').innerHTML = '';
+      return;
+    }
+    box.innerHTML = '<div class="lbl">' + esc(res.lbl) + '</div><div class="groot" id="hoofduitkomst">' + esc(res.groot) + '</div>' +
+      (res.onder ? '<div class="onder">' + esc(res.onder) + '</div>' : '') +
+      (res.rijen && res.rijen.length ? '<dl>' + res.rijen.map(r => '<div' + (r[2] ? ' class="' + r[2] + '"' : '') + '><dt>' + esc(r[0]) + '</dt><dd>' + esc(r[1]) + '</dd></div>').join('') + '</dl>' : '') +
+      (res.signalen && res.signalen.length ? '<div class="signaal">' + res.signalen.map(s => '<p>' + s + '</p>').join('') + '</div>' : '');
+    $('tabel').innerHTML = res.tabel ? '<div class="tabelvak"><table><thead><tr>' + res.tabel.kop.map(h => '<th>' + esc(h) + '</th>').join('') +
+      '</tr></thead><tbody>' + res.tabel.rijen.map(r => '<tr>' + r.map(c => '<td>' + esc(c) + '</td>').join('') + '</tr>').join('') + '</tbody></table></div>' : '';
+  }
+
+  /* ---------- afdrukken in een eigen venster ---------- */
+  function afdrukken() {
+    const v = waardenVan(actief), ruw = invoerVan(actief), res = laatste || {};
+    const invoerRijen = actief.velden.filter(f => !f.als || f.als(v)).map(f => {
+      let w = ruw[f.k];
+      if (f.s === 'keuze') w = (f.opties.find(o => o[0] === w) || ['', w])[1];
+      else if (f.s === 'eur') w = '€ ' + w;
+      else if (f.s === 'pct') w = w + '%';
+      else if (f.s === 'datum') w = v[f.k] ? fmt.datum(v[f.k]) : '';
+      else if (f.na) w = w + ' ' + f.na;
+      return '<tr><td>' + esc(f.l) + '</td><td class="r">' + esc(w) + '</td></tr>';
+    }).join('');
+    const uit = res.fout ? '<p>' + res.fout + '</p>' :
+      '<p class="kern">' + esc(res.lbl) + ': <b>' + esc(res.groot) + '</b>' + (res.onder ? ' <span>(' + esc(res.onder) + ')</span>' : '') + '</p>' +
+      '<table>' + (res.rijen || []).map(r => '<tr><td>' + esc(r[0]) + '</td><td class="r">' + esc(r[1]) + '</td></tr>').join('') + '</table>' +
+      (res.signalen && res.signalen.length ? '<div class="sig">' + res.signalen.map(s => '<p>' + s + '</p>').join('') + '</div>' : '') +
+      (res.tabel ? '<h2>Verloop</h2><table class="lijst"><tr>' + res.tabel.kop.map(h => '<th>' + esc(h) + '</th>').join('') + '</tr>' +
+        res.tabel.rijen.map(r => '<tr>' + r.map(c => '<td>' + esc(c) + '</td>').join('') + '</tr>').join('') + '</table>' : '');
+    const nu = new Date();
+    const html = '<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><title>' + esc(actief.titel) + ' – Adviesforum</title><style>' +
+      'body{font-family:Arial,Helvetica,sans-serif;color:#141414;margin:28px;font-size:13px;line-height:1.5}' +
+      'h1{font-size:21px;margin:0 0 4px;border-bottom:4px solid #FFD200;padding-bottom:6px}h2{font-size:14px;margin:18px 0 6px;text-transform:uppercase;letter-spacing:.05em}' +
+      '.meta{color:#5E5E5E;font-size:11.5px;margin-bottom:10px}table{border-collapse:collapse;width:100%;max-width:640px}td,th{padding:4px 6px;border-bottom:1px solid #ddd;text-align:left}' +
+      '.r{text-align:right}.lijst td,.lijst th{text-align:right}.lijst td:first-child,.lijst th:first-child{text-align:left}th{background:#FFD200}' +
+      '.kern{font-size:15px}.sig{background:#FFF6C7;padding:6px 10px;margin-top:8px}.sig p,.blok p{margin:3px 0}.blok{margin-top:10px;padding:6px 10px;border-left:3px solid #141414;background:#F7F7F5}' +
+      '.disc{margin-top:18px;font-size:11px;color:#5E5E5E;border-top:1px solid #ddd;padding-top:8px}a{color:#141414}</style></head><body>' +
+      '<h1>' + esc(actief.titel) + '</h1><div class="meta">Adviesforum · rekenhulp · afgedrukt op ' + esc(fmt.datum(nu)) + '</div>' +
+      '<h2>Invoer</h2><table>' + invoerRijen + '</table><h2>Uitkomst</h2>' + uit +
+      '<div class="blok"><b>Zo wordt gerekend:</b> <p>' + actief.regel + '</p></div><div class="blok"><b>Let op:</b> <p>' + actief.letop + '</p></div>' +
+      '<p class="disc">Indicatieve berekening, geen advies en geen toets aan leennormen of productvoorwaarden. Controleer de actuele wet- en regelgeving en de voorwaarden van de geldverstrekker of verzekeraar.</p></body></html>';
+    let w = null;
+    try { w = window.open('', '_blank'); } catch (e) { w = null; }
+    if (!w) { window.print(); return; }
+    w.document.open(); w.document.write(html); w.document.close(); w.focus();
+    setTimeout(() => { try { w.print(); } catch (e) { /* venster gesloten */ } }, 300);
+  }
+
+  /* ---------- gebeurtenissen ---------- */
+  $('werk').addEventListener('input', e => {
+    const el = e.target, k = el.dataset && el.dataset.k;
+    if (!k) return;
+    const f = actief.velden.find(x => x.k === k);
+    if (f.s === 'eur') { const c = el.value.replace(/\D/g, ''); el.value = c ? geheel.format(parseInt(c, 10)) : ''; }
+    else if (f.s === 'pct' || f.s === 'num') { el.value = el.value.replace(/[^\d,.\-]/g, ''); }
+    invoerVan(actief)[k] = el.value;
+    reken();
+  });
+  $('werk').addEventListener('change', e => { if (e.target.tagName === 'SELECT' || e.target.type === 'date') { invoerVan(actief)[e.target.dataset.k] = e.target.value; reken(); } });
+  $('werk').addEventListener('click', e => {
+    if (e.target.id === 'print') afdrukken();
+    if (e.target.id === 'herstel') { delete opslag[actief.id]; toon(actief.id); }
+  });
+  $('menulijst').addEventListener('click', e => {
+    const b = e.target.closest('button[data-id]');
+    if (b) { toon(b.dataset.id); if (window.innerWidth > 900) $('werk').scrollIntoView({ block: 'nearest' }); }
+  });
+  $('kies').addEventListener('change', e => toon(e.target.value));
+  $('zoek').addEventListener('input', e => {
+    const q = e.target.value.trim().toLowerCase();
+    let zicht = 0;
+    document.querySelectorAll('#menulijst .mgroep').forEach(g => {
+      let n = 0;
+      g.querySelectorAll('button').forEach(b => {
+        const t = T.find(x => x.id === b.dataset.id);
+        const hit = !q || (t.titel + ' ' + t.intro).toLowerCase().includes(q);
+        b.style.display = hit ? '' : 'none'; if (hit) n++;
+      });
+      g.style.display = n ? '' : 'none'; zicht += n;
+    });
+    $('menuleeg').style.display = zicht ? 'none' : 'block';
+  });
+  window.addEventListener('hashchange', () => {
+    const id = location.hash.slice(1);
+    if (id && id !== actief.id && T.some(t => t.id === id)) toon(id, true);
+  });
+
+  bouwMenu();
+  const start = location.hash.slice(1);
+  toon(T.some(t => t.id === start) ? start : T[0].id, true);
+})();
+</script>
+</body>
+</html>
