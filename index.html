@@ -397,18 +397,6 @@ footer .legal{grid-column:1/-1;border-top:1px solid #2A3238;padding-top:14px;fon
 
 <script src="data/adviseurs.js"></script>
 <script src="data/vragen.js"></script>
-<script src="data/vragen/hyp-acceptatie.js"></script>
-<script src="data/vragen/hyp-woning.js"></script>
-<script src="data/vragen/hyp-doelgroepen.js"></script>
-<script src="data/vragen/hyp-producten.js"></script>
-<script src="data/vragen/fisc-eigenwoning.js"></script>
-<script src="data/vragen/fisc-vermogen.js"></script>
-<script src="data/vragen/verz-inkomen.js"></script>
-<script src="data/vragen/verz-schade.js"></script>
-<script src="data/vragen/pens.js"></script>
-<script src="data/vragen/kred.js"></script>
-<script src="data/vragen/comp.js"></script>
-<script src="data/vragen/software.js"></script>
 <script src="data/kennisbank.js"></script>
 <script src="data/kennisbank-planning.js"></script>
 <script src="data/begrippen.js"></script>
@@ -462,12 +450,6 @@ const HULP=[
  {groep:'Verzekeringen',titel:'Inkomen bij ziekte en arbeidsongeschiktheid',url:'inkomen-ziekte-werknemer.html',tekst:'Inkomen per periode (jaar 1, jaar 2, WIA) tegenover de woonlasten van een werknemer.',kw:'ziekte arbeidsongeschiktheid wia wga iva loondoorbetaling werknemer hiaat'},
  {groep:'Verzekeringen',titel:'Inkomen bij werkloosheid en woonlasten',url:'werkloosheid.html',tekst:'WW-inkomen per periode, het tekort en het effect van een woonlastenverzekering.',kw:'werkloosheid ww woonlastenverzekering ontslag'},
  {groep:'Verzekeringen',titel:'Herbouwwaarde en onderverzekering',url:'herbouwwaarde.html',tekst:'Indicatie van de herbouwwaarde en wat onderverzekering kost bij schade.',kw:'herbouwwaarde opstal inboedel onderverzekering schade'},
- {groep:'Formulieren',tp:'Formulier',titel:'Inventarisatie en klantprofiel',url:'inventarisatie.html',tekst:'Slim inventarisatieformulier volgens de AFM-Leidraad, ook als klantlink om vooraf in te vullen.',kw:'inventarisatie klantprofiel formulier risicobereidheid kennis ervaring'},
- {groep:'Formulieren',tp:'Formulier',titel:'Documentenchecklist hypotheekaanvraag',url:'documentenchecklist.html',tekst:'Checklist op maat per situatie: loondienst, ondernemer, starter, doorstromer, scheiding.',kw:'documenten checklist aanvraag stukken werkgeversverklaring'},
- {groep:'Formulieren',tp:'Formulier',titel:'Verklaring afwijkend advies',url:'afwijkend-advies.html',tekst:'Verklaring met advies, keuze, concrete risico\'s en motivatie van de klant, klaar om te ondertekenen.',kw:'afwijkend advies verklaring afstandsverklaring'},
- {groep:'Formulieren',tp:'Formulier',titel:'Gespreksverslag adviesgesprek',url:'gespreksverslag.html',tekst:'Verslag met besproken onderwerpen, afspraken en vervolgacties.',kw:'gespreksverslag verslag adviesgesprek afspraken'},
- {groep:'Formulieren',tp:'Formulier',titel:'Periodieke nazorgcheck',url:'nazorg-check.html',tekst:'Klant geeft wijzigingen door; jij krijgt de aandachtspunten voor het nazorggesprek.',kw:'nazorg check periodiek rentevaste periode klantbeheer'},
- {groep:'Formulieren',tp:'Formulier',titel:'Wijziging doorgeven',url:'wijziging-doorgeven.html',tekst:'Klant meldt een life event; het formulier toont welke producten geraakt kunnen worden.',kw:'wijziging doorgeven life event verhuizen scheiding baan'},
  {groep:'Externe tools',tp:'Extern',titel:'draagplicht.nl',url:'https://www.draagplicht.nl',tekst:'Externe dienst voor het berekenen en vastleggen van draagplicht tussen partners.',kw:'draagplicht draagplichtovereenkomst partners'},
  {groep:'Naslag',titel:'Wet- en regelgeving',url:'wetgeving.html',tekst:'113 wetten, besluiten en bronnen met zoekfunctie: Wft, Bgfo, Trhk, NHG, Wwft, Kifid, BW, fiscaal, pensioen.',kw:'wet wetgeving wetten regelgeving wft bgfo trhk wck wwft kifid burgerlijk wetboek inkomstenbelasting successiewet pensioenwet toeslagen bwbr'},
  {groep:'Naslag',titel:'Werkinstructie financieringsopzet (eBlinqx)',url:'werkinstructie-financieringsopzet.html',tekst:'Alle varianten om de financieringsopzet in eBlinqx Hypotheekadvies aan te passen.',kw:'financieringsopzet eblinqx werkinstructie kosten koper eigen middelen boeterente kostenpost'},
@@ -749,6 +731,11 @@ function autoAnswer(v,force,live){
   for(const h of HULP){const s=scoreMatch(q,h.titel+' '+h.kw,h.tekst);if(s>=MIN_SCORE)hits.push({type:'hulp',url:h.url,titel:h.titel,snippet:h.tekst,score:s+0.2});}
   for(const h of SUPPORT){const s=scoreMatch(q,h.titel+' '+h.kw,h.sam);if(s>=MIN_SCORE)hits.push({type:'support',url:h.url,bron:h.bron,titel:h.titel,snippet:h.sam,score:s});}
   hits.sort((a,b)=>b.score-a.score);
+  /* maximaal 2 FAQ-treffers; de best passende rekenhulp krijgt altijd een plek */
+  const gekozen=[];let nFaq=0;const hulp=hits.find(h=>h.type==='hulp');
+  for(const h of hits){if(gekozen.length>=(hulp?4:5))break;if(h===hulp)continue;if(h.type==='faq'){if(nFaq>=2)continue;nFaq++;}gekozen.push(h);}
+  if(hulp)gekozen.splice(Math.min(1,gekozen.length),0,hulp);
+  hits.length=0;hits.push(...gekozen);
   v.auto={datum:(v.auto&&v.auto.datum)||v.datum||new Date().toISOString(),product:detectProduct(v),hits:hits.slice(0,5),feedback:(v.auto&&v.auto.feedback)||{},fin:(v.auto&&v.auto.fin)||null};
   if(live&&FIN.enabled&&FIN.autoAsk&&!v.auto.fin)finAsk(v);
 }
