@@ -78,7 +78,14 @@ Vraag de taxateur om ervaring met dit type object. Controleer de acceptatievoorw
  {id:'vbb-010',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2025-11-05T14:15:00',views:414,tags:['taxatie','huurwoning','beleggingspand'],beste:null,
   titel:'Taxatie bij aankoop van de huidige huurwoning van de klant',
   body:`Een klant kan zijn huurwoning kopen van de verhuurder met een korting op de marktwaarde. Op welke waarde wordt de financiering gebaseerd: de koopsom of de marktwaarde? En zijn er bijzondere voorwaarden zoals een antispeculatiebeding?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbb-010-a1',auteur:'u1',datum:'2025-11-05T23:15:00',rA:{u4:4,u5:5,u2:4},rAdv:{u4:4,u5:5},body:`De financiering wordt in de regel gebaseerd op de laagste van koopsom en marktwaarde. Bij aankoop van de eigen huurwoning wordt de woning getaxeerd in vrij opleverbare staat, omdat de huurder zelf eigenaar wordt. Sommige geldverstrekkers rekenen met de marktwaarde als de korting een vaste regeling is; controleer het acceptatiebeleid en, bij NHG, de Voorwaarden en Normen.
+Bijzondere voorwaarden waar ik op let:
+- Antispeculatiebeding of terugkoopregeling: de verhuurder kan bij doorverkoop binnen een periode een deel van de korting terugvorderen, of de woning terugkopen. Bij sommige constructies (zoals een koopgarantregeling) gelden aparte regels voor waardering en NHG.
+- Kettingbeding of voorkeursrecht.
+- VvE: bij appartementen een gesplitst complex en een actieve VvE.
+Laat de taxateur de korting en het beding vermelden. In het dossier leg ik vast welke waarde is gebruikt, welke bedingen gelden en dat de klant de gevolgen bij verkoop kent.`}
+  ]},
  {id:'vbb-011',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2025-11-08T13:05:00',views:462,tags:['NHG','kostengrens','energiebesparing'],beste:'vbb-011-a1',
   titel:'NHG en extra ruimte voor energiebesparende maatregelen',
   body:`Een starter wil een woning kopen met NHG en direct isoleren en zonnepanelen laten plaatsen. Hoe werkt de verhoogde kostengrens bij energiebesparende maatregelen en welke stukken heb ik nodig?`,
@@ -149,7 +156,15 @@ Voor de woonlastentoets na scheiding kent NHG specifieke regels; controleer de a
  {id:'vbb-020',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2025-12-09T14:35:00',views:343,tags:['NHG','tweede woning','hoofdverblijf'],beste:null,
   titel:'NHG bij een woning die tijdelijk niet als hoofdverblijf wordt gebruikt',
   body:`Een klant koopt een woning maar kan er door een uitzending pas over een jaar wonen. Tussentijds wil de klant de woning tijdelijk verhuren. Is NHG dan mogelijk en wat zijn de fiscale gevolgen?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbb-020-a1',auteur:'u2',datum:'2025-12-10T00:35:00',rA:{u1:4,u4:4,u5:4},rAdv:{u1:4,u4:4},body:`Dat is lastig. NHG vereist dat de woning als hoofdverblijf wordt gebruikt. Verhuur is alleen in uitzonderingsgevallen mogelijk met toestemming van de geldverstrekker en NHG. Controleer de actuele Voorwaarden en Normen.
+Fiscaal: een nieuw gekochte woning die nog niet wordt bewoond, kan onder voorwaarden al als eigen woning gelden (bijvoorbeeld als die leeg staat en bestemd is als hoofdverblijf). Wordt de woning verhuurd, dan is dat in de regel niet zo, en valt de woning in box 3. Controleer de regels bij de Belastingdienst.
+Praktisch:
+- Bespreek met de geldverstrekker of tijdelijke verhuur toegestaan is.
+- Kijk of de klant de woning beter leeg kan laten staan.
+- Laat de fiscale gevolgen doorrekenen.
+In het dossier leg ik vast wat de situatie is, welke toestemming is gevraagd en wat de fiscale gevolgen zijn. Dit is een punt waar je ook later bij een dossiercontrole op aangesproken kunt worden.`}
+  ]},
  {id:'vbb-021',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2025-12-14T15:05:00',views:600,tags:['taxatie','fundering','bouwkundig'],beste:null,
   titel:'Taxatierapport noemt funderingsproblemen: wat nu?',
   body:`In het taxatierapport staat een opmerking over mogelijke funderingsproblemen. De geldverstrekker vraagt nu om aanvullend onderzoek. Hoe begeleiden jullie de klant in zo'n traject?`,
@@ -202,7 +217,14 @@ Voor de woonlastentoets na scheiding kent NHG specifieke regels; controleer de a
  {id:'vbb-028',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-01-07T08:55:00',views:557,tags:['verduurzaming','bouwdepot','energiebesparing'],beste:null,
   titel:'Bouwdepot voor verduurzaming: welke facturen worden geaccepteerd?',
   body:`Een klant heeft een bouwdepot voor isolatie en een warmtepomp. Hij wil een deel zelf uitvoeren en materialen bij een bouwmarkt kopen. Kan hij die bonnen indienen bij het depot?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbb-028-a1',auteur:'u4',datum:'2026-01-07T16:55:00',rA:{u1:4,u5:4,u2:3},rAdv:{u1:4,u5:4},body:`Meestal wel, maar niet onbeperkt. Veel geldverstrekkers accepteren facturen en bonnen voor materialen van een bouwmarkt, mits duidelijk is dat het om de woning en de maatregelen gaat. Eigen arbeid (uren van de klant zelf) wordt in de regel niet vergoed uit het depot. Controleer de voorwaarden van de geldverstrekker.
+Aandachtspunten:
+- Als de extra leenruimte voor energiebesparende maatregelen wordt gebruikt, moet duidelijk zijn dat de facturen daarvoor zijn. Sommige maatregelen moeten door een vakman worden uitgevoerd, bijvoorbeeld een warmtepomp, ook voor subsidie.
+- Bonnen moeten op naam staan of herleidbaar zijn.
+- Let op de termijn van het depot.
+In het dossier leg ik vast welke maatregelen de klant zelf uitvoert, welke door een vakman en welke voorwaarden de geldverstrekker stelt.`}
+  ]},
  {id:'vbb-029',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-01-11T15:05:00',views:411,tags:['verduurzaming','tweede hypotheek','oversluiten'],beste:'vbb-029-a1',
   titel:'Bestaande hypotheek verhogen voor verduurzaming of apart leningdeel?',
   body:`Een klant wil zijn woning verduurzamen en heeft een lage rente op de bestaande lening. Ophogen bij dezelfde geldverstrekker of een apart leningdeel elders: wat wegen jullie mee?`,
@@ -294,7 +316,17 @@ Voor de woonlastentoets na scheiding kent NHG specifieke regels; controleer de a
  {id:'vbb-042',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-02-27T17:05:00',views:293,tags:['zelfbouw','kavel','bouwdepot'],beste:null,
   titel:'Financiering van een vrije kavel met eigen bouw',
   body:`Een klant koopt een bouwkavel en laat zelf een woning ontwerpen. Hoe zien jullie de financiering: eerst de grond en later de bouw?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbb-042-a1',auteur:'u5',datum:'2026-02-28T03:05:00',rA:{u1:4,u4:5,u2:4},rAdv:{u1:4,u4:5},body:`De financiering bestaat meestal uit één hypotheek met een bouwdepot. Bij aankoop van de kavel wordt de hypotheek afgesloten voor de grond en de bouwkosten. Het bouwdepot wordt uitgekeerd op basis van facturen of termijnen.
+Aandachtspunten:
+- Taxatie: op basis van bouwtekeningen, bestek en begroting, met de waarde na oplevering.
+- Bouwkosten: aannemingsovereenkomst of begroting. Bij eigen bouw is er risico op meerkosten. Een buffer is verstandig.
+- Dubbele lasten: tijdens de bouw betaalt de klant de huidige woonlasten en de rente over de hypotheek.
+- Bouwrente: rente over het niet-opgenomen deel van het depot.
+- Fiscaal: een woning in aanbouw kan onder voorwaarden als eigen woning gelden, met een beperkte termijn. Controleer de regels.
+- NHG: mogelijk onder voorwaarden; controleer de Voorwaarden en Normen.
+In het dossier leg ik vast welke risico's zijn besproken, welke buffer is aangehouden en hoe het bouwdepot werkt.`}
+  ]},
  {id:'vbb-043',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-03-03T07:20:00',views:575,tags:['nieuwbouw','koopsom','termijnen'],beste:'vbb-043-a1',
   titel:'Termijnen die al vervallen zijn voor het passeren',
   body:`Bij een nieuwbouwproject zijn al termijnen vervallen voordat de klant bij de notaris komt. Wie betaalt die en hoe zit het met de rente?`,
@@ -324,7 +356,16 @@ Voor de woonlastentoets na scheiding kent NHG specifieke regels; controleer de a
  {id:'vbb-047',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-03-18T12:05:00',views:78,tags:['VvE','reservefonds','acceptatie'],beste:null,
   titel:'Toetsen jullie het reservefonds van de VvE?',
   body:`Bij de aankoop van een appartement krijg ik vaak vragen over de hoogte van het reservefonds. Hoe beoordelen jullie de financiële gezondheid van een VvE?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbb-047-a1',auteur:'u1',datum:'2026-03-18T23:05:00',rA:{u4:4,u5:4,u2:4},rAdv:{u4:4,u5:4},body:`Geldverstrekkers vragen vaak of er een actieve VvE is en soms om stukken. Ik beoordeel de VvE zelf ook:
+- Is er een meerjarenonderhoudsplan (MJOP), en is dat actueel?
+- Wordt er voldoende gereserveerd volgens dat plan? Er geldt een wettelijke minimale reservering; controleer de actuele norm.
+- Zijn er grote onderhoudswerkzaamheden gepland, met een extra heffing?
+- Notulen van de ledenvergaderingen: zijn er geschillen, achterstanden of plannen voor verduurzaming?
+- Hoe hoog is de maandelijkse bijdrage?
+De VvE-bijdrage telt mee in de maandlasten van de klant, ook al wordt die niet altijd meegenomen in de toetsing.
+In het dossier leg ik vast welke VvE-stukken zijn bekeken, welke risico's zijn besproken en of de VvE-bijdrage in het advies is meegenomen.`}
+  ]},
  {id:'vbb-048',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-03-22T15:25:00',views:211,tags:['VvE','servicekosten','toetsing'],beste:null,
   titel:'Servicekosten van de VvE in de toetsing',
   body:`Een klant koopt een appartement met hoge servicekosten. Tellen die mee in de maximale financiering?`,
@@ -402,7 +443,17 @@ Ik leg deze punten vast in het dossier en bespreek ze met de klant.`},
  {id:'vbb-058',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-04-27T16:15:00',views:111,tags:['erfpacht','overstap','eeuwigdurend'],beste:null,
   titel:'Overstap naar eeuwigdurende erfpacht tijdens de looptijd',
   body:`Een klant heeft voortdurende erfpacht en kan overstappen naar eeuwigdurende erfpacht. Hoe bepalen jullie of dat verstandig is?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbb-058-a1',auteur:'u2',datum:'2026-04-28T04:15:00',rA:{u1:4,u4:4,u5:5},rAdv:{u1:4,u4:4},body:`Ik vergelijk de kosten van beide opties over een langere periode. Zo pak ik het aan:
+- Huidige situatie: wat is de canon nu, wanneer wordt die herzien, wat is de verwachting na herziening?
+- Overstap: wat is de nieuwe canon of de afkoopsom bij eeuwigdurende erfpacht?
+- Afkoop: financieren met een hypotheek kost rente, maar geeft zekerheid.
+- Fiscaal: de canon en de rente over de afkoopsom zijn onder voorwaarden aftrekbaar. Controleer de regels.
+- Waarde: een woning met eeuwigdurende erfpacht en afgekochte canon kan beter verkoopbaar zijn.
+- Termijn: overstapregelingen hebben vaak een uiterste datum.
+Gebruik erfpacht.html om de varianten naast elkaar te zetten.
+In het dossier leg ik vast welke opties zijn vergeleken, welke uitgangspunten zijn gebruikt en welke keuze de klant heeft gemaakt.`}
+  ]},
  {id:'vbb-059',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-05-01T10:05:00',views:437,tags:['verbouwing','vergunning','bouwdepot'],beste:'vbb-059-a1',
   titel:'Verbouwing waarvoor een vergunning nodig is',
   body:`Een klant wil uitbouwen en heeft daarvoor een vergunning nodig. Die is nog niet verleend. Kan de financiering al worden aangevraagd?`,
@@ -469,7 +520,15 @@ Ik leg deze punten vast in het dossier en bespreek ze met de klant.`},
  {id:'vbb-069',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-06-07T17:00:00',views:590,tags:['taxatie','verbouwing','bouwdepot'],beste:null,
   titel:'Taxatie na verbouwing voor vrijgave depot',
   body:`Een geldverstrekker vraagt een tweede taxatie na de verbouwing voor de vrijgave van het depot. Is dat gebruikelijk?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbb-069-a1',auteur:'u4',datum:'2026-06-08T03:00:00',rA:{u1:4,u5:4,u2:3},rAdv:{u1:4,u5:4},body:`Ja, dat is gebruikelijk als de financiering is gebaseerd op de waarde na verbouwing. De geldverstrekker wil dan bevestigen dat de verbouwing is uitgevoerd en dat de waarde is bereikt. Vaak gebeurt dat met een hertaxatie of een eindinspectie voordat het laatste deel van het depot wordt vrijgegeven. Controleer de voorwaarden van de geldverstrekker.
+Aandachtspunten:
+- Kosten van de tweede taxatie, en wie die betaalt.
+- Timing: de laatste factuur moet soms wachten tot na de taxatie.
+- Wat als de waarde lager is dan verwacht?
+Bespreek dit vooraf met de klant, zodat hij niet verrast wordt.
+In het dossier leg ik vast welke voorwaarden de geldverstrekker stelt en dat de klant daarover is geïnformeerd.`}
+  ]},
  {id:'vbb-070',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-06-11T08:20:00',views:512,tags:['VvE','collectieve lening','verduurzaming'],beste:'vbb-070-a1',
   titel:'Collectieve VvE-lening voor verduurzaming',
   body:`De VvE van een klant gaat een collectieve lening aan voor verduurzaming. Heeft dat invloed op de hypotheek?`,
@@ -531,7 +590,16 @@ Ik leg deze punten vast in het dossier en bespreek ze met de klant.`},
  {id:'vbb-079',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-07-14T09:35:00',views:532,tags:['erfpacht','afkoop','fiscaal'],beste:null,
   titel:'Afgekochte erfpacht en de waarde in het taxatierapport',
   body:`Bij een woning met afgekochte erfpacht vermeldt het taxatierapport een waarde die lager is dan die van vergelijkbare woningen op eigen grond. Klopt dat?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbb-079-a1',auteur:'u5',datum:'2026-07-14T18:35:00',rA:{u1:4,u4:4,u2:5},rAdv:{u1:4,u4:4},body:`Dat kan kloppen. De waarde van een woning op erfpacht is vaak lager dan op eigen grond, ook als de canon is afgekocht. Redenen:
+- De afkoop geldt voor een bepaald tijdvak. Na afloop moet de canon opnieuw worden betaald of afgekocht.
+- De voorwaarden van de erfpacht beperken het gebruik.
+- Kopers zijn soms terughoudend met erfpacht.
+Bij eeuwigdurend afgekochte erfpacht is het verschil meestal kleiner.
+Controleer in het taxatierapport hoe de erfpacht is meegenomen en of de afkoop en het tijdvak goed zijn vermeld. Als dat niet duidelijk is, vraag de taxateur om een toelichting.
+Met erfpacht.html kun je de gevolgen laten zien.
+In het dossier leg ik vast wat de erfpachtvoorwaarden zijn, hoe die in de taxatie zijn verwerkt en dat de klant de gevolgen voor de waarde kent.`}
+  ]},
  {id:'vbb-080',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-07-17T11:30:00',views:546,tags:['nieuwbouw','bouwdepot','rente'],beste:'vbb-080-a1',
   titel:'Rentevergoeding op het bouwdepot: hoe lang loopt die?',
   body:`Een klant vraagt hoe lang hij een rentevergoeding krijgt op het bouwdepot bij nieuwbouw. Wat leggen jullie uit?`,
@@ -582,7 +650,15 @@ Ik leg deze punten vast in het dossier en bespreek ze met de klant.`},
  {id:'vbb-087',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-08-12T09:55:00',views:460,tags:['taxatie','praktijkruimte','gemengd gebruik'],beste:null,
   titel:'Woning met praktijkruimte aan huis: hoe wordt dat beoordeeld?',
   body:`Een klant koopt een woning met een aparte praktijkruimte waar zij haar eigen bedrijf in uitoefent. De taxateur vraagt hoe hij dit moet waarderen. Hoe gaan geldverstrekkers hiermee om?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbb-087-a1',auteur:'u2',datum:'2026-08-12T19:55:00',rA:{u1:4,u4:4,u5:4},rAdv:{u1:4,u4:4},body:`Geldverstrekkers accepteren dit meestal als de woonfunctie overheerst. De taxateur waardeert de woning dan als woning, met de praktijkruimte als onderdeel. Is de praktijkruimte groot of zelfstandig, dan kan de geldverstrekker eisen dat die apart wordt gewaardeerd of zakelijk wordt gefinancierd. Controleer het acceptatiebeleid en, bij NHG, de Voorwaarden en Normen.
+Aandachtspunten:
+- Bestemmingsplan: is het gebruik als praktijkruimte toegestaan?
+- Fiscaal: het deel dat zakelijk wordt gebruikt, is geen eigen woning. De rente over dat deel is niet aftrekbaar in box 1. Controleer de regels.
+- Verzekering: de opstal- en inboedelverzekering moet het zakelijk gebruik dekken.
+Geef de taxateur duidelijke informatie over het gebruik en de oppervlakte.
+In het dossier leg ik vast hoe de praktijkruimte is gewaardeerd, hoe de financiering is opgebouwd en wat de fiscale gevolgen zijn.`}
+  ]},
  {id:'vbb-088',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-08-16T13:15:00',views:489,tags:['tiny house','kavel','acceptatie'],beste:null,
   titel:'Financiering van een tiny house op een eigen kavel',
   body:`Een klant wil een kavel kopen en daar een tiny house op laten plaatsen. Hij vraagt of dat met een gewone hypotheek kan. Wat zijn jullie ervaringen?`,
@@ -614,7 +690,16 @@ Ik leg deze punten vast in het dossier en bespreek ze met de klant.`},
  {id:'vbb-092',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-08-31T13:40:00',views:206,tags:['nieuwbouw','grond','levering'],beste:null,
   titel:'Grond eerst geleverd, opstal pas later gebouwd',
   body:`Bij een project wordt de grond eerst aan de koper geleverd en sluit hij daarna een aannemingsovereenkomst voor de bouw. Hoe werkt de financiering in zo een constructie?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbb-092-a1',auteur:'u4',datum:'2026-08-31T22:40:00',rA:{u1:4,u5:4,u2:3},rAdv:{u1:4,u5:4},body:`Dat lijkt op een gewone nieuwbouwconstructie met een koop- en aannemingsovereenkomst, maar dan in twee stappen. De hypotheek wordt afgesloten bij levering van de grond. Het deel voor de bouw komt in een bouwdepot. De termijnen van de aannemer worden uit het depot betaald.
+Aandachtspunten:
+- Garantie: is de aannemer aangesloten bij een garantieregeling? Veel geldverstrekkers en NHG vereisen dat.
+- Bouwrente: rente over het niet-opgenomen deel van het depot.
+- Dubbele lasten: de klant betaalt rente tijdens de bouw.
+- Fiscaal: de woning in aanbouw kan onder voorwaarden als eigen woning gelden. Controleer de regels.
+- Planning: let op de geldigheid van de offerte en de termijn van het depot.
+In het dossier leg ik vast hoe de constructie werkt, welke garanties er zijn en wat de klant aan lasten heeft tijdens de bouw.`}
+  ]},
  {id:'vbb-093',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-09-03T20:35:00',views:152,tags:['erfpacht','NHG','voorwaarden'],beste:'vbb-093-a1',
   titel:'NHG bij een woning op erfpachtgrond',
   body:`Een starter wil een woning op erfpacht kopen en wil graag NHG. Is erfpacht een belemmering?`,

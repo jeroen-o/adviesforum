@@ -229,7 +229,13 @@ window.VRAGEN_DATA=(window.VRAGEN_DATA||[]).concat([
  {id:'vbl-033',cat:'adv',auteur:null,naam:'',voorbeeld:true,datum:'2026-01-24T11:55:00',views:78,tags:['inkomen','UWV','invoer'],beste:null,
   titel:'Inkomensgegevens uit UWV-verzekeringsbericht overnemen',
   body:`Mijn klant heeft een UWV-verzekeringsbericht aangeleverd. Kan ik die gegevens ergens automatisch inlezen, of moet ik alles handmatig overtypen in het adviespakket?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbl-033-a1',auteur:'u6',datum:'2026-01-25T21:55:00',rA:{u4:5,u5:5,u3:5},rAdv:{u4:5,u5:5,u3:5},body:`Het verzekeringsbericht als losse PDF lees je voor zover bekend niet automatisch in. De route om UWV-gegevens automatisch binnen te krijgen is de Ockto-koppeling. De klant haalt dan met DigiD zijn gegevens op bij onder andere UWV, Belastingdienst en Mijnpensioenoverzicht, en geeft toestemming om ze te delen.
+- Het Ockto-bericht wordt automatisch aan het dossier gekoppeld en staat in het dossier onder Home, Brondata.
+- Vanuit daar gebruik je de gegevens in het adviestraject, zodat je minder hoeft over te typen.
+- Op de supportsite staat een artikel over het instellen en gebruiken van de Ockto-koppeling; daar heb je mogelijk beheerrechten voor nodig. Werkt de koppeling niet, mail dan support-eblinqx@blinqx.tech.
+Controleer ingelezen gegevens altijd tegen de brondocumenten, zeker inkomensbestanddelen zoals onregelmatigheidstoeslag of een vaste eindejaarsuitkering. Leg vast welke bron je hebt gebruikt.`}
+  ]},
  {id:'vbl-034',cat:'adv',auteur:null,naam:'',voorbeeld:true,datum:'2026-01-28T08:50:00',views:581,tags:['offerte','ondertekenen','HDN'],beste:null,
   titel:'Klant wil de offerte digitaal ondertekenen',
   body:`De geldverstrekker biedt de mogelijkheid om de offerte digitaal te laten ondertekenen. Zie ik in het adviespakket terug wanneer de klant heeft getekend? Of moet ik dat bij de geldverstrekker zelf controleren?`,
@@ -288,7 +294,13 @@ window.VRAGEN_DATA=(window.VRAGEN_DATA||[]).concat([
  {id:'vbl-042',cat:'adv',auteur:null,naam:'',voorbeeld:true,datum:'2026-02-26T11:10:00',views:86,tags:['archief','PDF','dossier'],beste:null,
   titel:'Exporteren van een dossier naar PDF voor het archief',
   body:`Wij willen dossiers na afronding als PDF archiveren buiten het adviespakket. Kan ik het hele dossier inclusief notities in één keer exporteren?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbl-042-a1',auteur:'u6',datum:'2026-02-28T00:10:00',rA:{u1:4,u2:4,u5:5},rAdv:{u1:4,u2:4,u5:5},body:`Een knop om het hele dossier inclusief notities in één keer als PDF te exporteren ken ik niet. Wel zijn er onderdelen die je kunt gebruiken:
+- Brieven en formulieren in het dossier zet je om naar PDF; die komen in de tab Documenten.
+- In het klantdossier kun je een samenvatting afdrukken, die volgens de AVG-veelgestelde vragen ook bedoeld is voor inzageverzoeken.
+- Volgens dezelfde informatie kunnen alle klantgegevens worden geëxporteerd.
+Vraag bij de eBlinqx-support (support-eblinqx@blinqx.tech) na wat in jullie omgeving mogelijk is voor archivering. Leg daarnaast in je beleid vast welke onderdelen het archief moet bevatten, zoals het adviesrapport, de inventarisatie, de berekeningen, de correspondentie en de notities, en hoe lang je ze bewaart. Controleer na de export steeds of alles compleet is.`}
+  ]},
  {id:'vbl-043',cat:'adv',auteur:null,naam:'',voorbeeld:true,datum:'2026-03-02T17:25:00',views:79,tags:['machtiging','toestemming','dossier'],beste:'vbl-043-a1',
   titel:'Machtiging voor het opvragen van gegevens vastleggen',
   body:`Ik vraag met toestemming van de klant gegevens op bij externe bronnen. Waar leggen jullie die toestemming vast in het adviespakket of het CRM?`,
@@ -327,7 +339,11 @@ window.VRAGEN_DATA=(window.VRAGEN_DATA||[]).concat([
  {id:'vbl-048',cat:'adv',auteur:null,naam:'',voorbeeld:true,datum:'2026-03-20T12:20:00',views:75,tags:['rapport','standaardtekst','sjabloon'],beste:null,
   titel:'Kan ik een eigen standaardtekst toevoegen aan het rapport?',
   body:`Ik gebruik vaak dezelfde toelichting over de risico’s van een lange looptijd met aflossingsvrij leningdeel. Kan ik die als standaardtekst opslaan zodat ik hem niet steeds opnieuw hoef te typen?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbl-048-a1',auteur:'u6',datum:'2026-03-21T19:20:00',rA:{u4:4,u3:5},rAdv:{u4:4,u3:5},body:`In eBlinqx kun je standaardteksten aanmaken en centraal beheren. Ze zijn bedoeld als basis voor e-mails en brieven, die je vanuit het dossier kunt maken. Je kiest de tekst aan de linkerkant en voegt hem toe met het plusteken. Na opslaan kun je een standaardtekst aan workflowgroepen koppelen, zodat alleen de juiste gebruikers hem zien.
+Of je in het adviesrapport van eBlinqx Hypotheekadvies zelf een eigen tekstblok kunt opslaan, heb ik niet kunnen bevestigen; vraag het na via support-hypotheekadvies@blinqx.tech. Een werkbare oplossing is de toelichting op te nemen in de begeleidende brief of e-mail.
+Let op: een standaardtekst over risico's van aflossingsvrij is prima als basis, maar pas hem aan op de situatie van de klant. Algemene teksten zonder koppeling aan de klant zijn een bekend aandachtspunt bij dossiercontroles.`}
+  ]},
  {id:'vbl-049',cat:'adv',auteur:null,naam:'',voorbeeld:true,datum:'2026-03-24T17:35:00',views:108,tags:['koopsom','kosten koper','financieringsopzet'],beste:'vbl-049-a1',
   titel:'Kosten koper en eigen geld kloppen niet na wijziging koopsom',
   body:`Ik heb de koopsom in het dossier aangepast na een nieuw bod, maar de overdrachtsbelasting en het eigen geld lijken niet automatisch mee te veranderen. Moet ik iets opnieuw laten berekenen?`,
@@ -386,7 +402,13 @@ window.VRAGEN_DATA=(window.VRAGEN_DATA||[]).concat([
  {id:'vbl-057',cat:'adv',auteur:null,naam:'',voorbeeld:true,datum:'2026-04-22T16:40:00',views:10,tags:['e-mail','koppeling','CRM'],beste:null,
   titel:'Gedeelde mailbox koppelen aan het CRM',
   body:`Wij hebben een gedeelde mailbox voor hypotheekvragen. Kunnen we e-mails daaruit automatisch bij de juiste relatie opslaan?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbl-057-a1',auteur:'u6',datum:'2026-04-24T12:40:00',rA:{u1:5,u2:5,u7:4},rAdv:{u1:5,u2:5,u7:4},body:`Ja, dat kan. De kennisbank van Finly heeft een artikel over de gedeelde mailbox. Kort:
+- Een gedeelde mailbox, zoals een algemeen adres voor hypotheekvragen, kun je in het CRM koppelen zodat je vanuit één adres verstuurt en ontvangt.
+- Per mailbox stel je in of e-mails automatisch aan relaties of dossiers worden gekoppeld, of dat je dat handmatig doet.
+- Voor automatisch koppelen is er ook Quinn Mail. Dat koppelt alleen als de herkenning voldoende zeker is; de rest blijft over om handmatig te koppelen.
+Daarvoor heb je meestal beheerrechten nodig; vragen over de inrichting kun je stellen aan support-crm@blinqx.tech. Spreek af wie de ongekoppelde mails verwerkt en controleer regelmatig of mails bij de juiste relatie staan. Een verkeerd gekoppelde mail kan een datalek zijn.`}
+  ]},
  {id:'vbl-058',cat:'adv',auteur:null,naam:'',voorbeeld:true,datum:'2026-04-26T12:45:00',views:241,tags:['autorisatie','toegang','AVG'],beste:'vbl-058-a1',
   titel:'Wie heeft er toegang tot welk dossier?',
   body:`Op ons kantoor kan iedereen alle dossiers inzien, ook stagiairs. Is dat een probleem en hoe richten jullie rechten in?`,
@@ -433,7 +455,14 @@ window.VRAGEN_DATA=(window.VRAGEN_DATA||[]).concat([
  {id:'vbl-064',cat:'adv',auteur:null,naam:'',voorbeeld:true,datum:'2026-05-18T11:45:00',views:65,tags:['import','relaties','CRM'],beste:null,
   titel:'Import van relaties uit een Excel-bestand',
   body:`We stappen over van een ander systeem en hebben een export in Excel. Kunnen we die relaties in één keer in het CRM importeren?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbl-064-a1',auteur:'u6',datum:'2026-05-19T20:45:00',rA:{u8:4,u5:5,u3:4,u2:4},rAdv:{u5:5,u3:4,u2:4},body:`Dat kan, maar een grote migratie zou ik eerst afstemmen met de CRM-support (support-crm@blinqx.tech). Uit de kennisbank van Finly:
+- Het importbestand kan een Excel-bestand of een CSV in UTF-8 zijn. Met UTF-8 komen letters met accenten goed door.
+- Komt het bestand uit een ander systeem, kopieer dan de inhoud en plak die in Excel als waarden. Dat verwijdert verborgen gegevens die de import kunnen blokkeren.
+- Zet datumkolommen in het juiste formaat, dag-maand-jaar.
+Voor groepen relaties is er ook de respondentengroep. Voor een volledige overstap met dossiers en documenten is een migratietraject vaak handiger.
+Test eerst met een klein bestand, controleer op dubbelen en kijk of alle velden goed aankomen. Bewaar het exportbestand veilig en verwijder het na de migratie, want er staan veel persoonsgegevens in.`}
+  ]},
  {id:'vbl-065',cat:'adv',auteur:null,naam:'',voorbeeld:true,datum:'2026-05-21T09:25:00',views:464,tags:['agenda','afspraak','CRM'],beste:null,
   titel:'Afspraak plannen vanuit het CRM in de agenda',
   body:`Kan ik vanuit het dossier direct een afspraak inplannen die in mijn eigen agenda verschijnt? Nu plan ik dubbel.`,
@@ -476,7 +505,14 @@ window.VRAGEN_DATA=(window.VRAGEN_DATA||[]).concat([
  {id:'vbl-071',cat:'adv',auteur:null,naam:'',voorbeeld:true,datum:'2026-06-12T09:35:00',views:46,tags:['inventarisatie','klantportaal','formulier'],beste:null,
   titel:'Inventarisatieformulier laten invullen door de klant',
   body:`Kan de klant zelf vooraf een inventarisatie invullen die ik daarna in het dossier zie? Dat bespaart tijd in het eerste gesprek.`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbl-071-a1',auteur:'u6',datum:'2026-06-13T19:35:00',rA:{u7:5,u4:5,u3:4},rAdv:{u7:5,u4:5,u3:4},body:`Ja, daar zijn een paar routes voor.
+- Klantprofiel in Uwkluis: de klant vult een vragenlijst in over doelen, kennis en ervaring, financiële positie en risicobereidheid. Je start het verzoek vanuit de workflow in eBlinqx of vanuit PortefeuilleSignalen. Het ingevulde profiel komt als PDF in eBlinqx.
+- Procesversneller: de klant levert digitaal de gegevens aan die nodig zijn voor een hypotheekaanvraag, die je daarna voor inventarisatie en advies kunt gebruiken.
+- Brondata via Ockto voor inkomen en pensioen.
+- Formulieren in Finly; bij vragen daarover kun je terecht bij support-finconnect@blinqx.tech.
+Gebruik de ingevulde gegevens als voorbereiding en niet als vervanging van het gesprek. Bespreek de antwoorden met de klant, zeker over risicobereidheid en wensen, en leg vast wat je hebt gecontroleerd en aangepast.`}
+  ]},
  {id:'vbl-072',cat:'adv',auteur:null,naam:'',voorbeeld:true,datum:'2026-06-16T15:30:00',views:115,tags:['werkgeversverklaring','inkomen','documenten'],beste:null,
   titel:'Werkgeversverklaring koppelen aan het juiste inkomen',
   body:`Mijn klant heeft twee werkgevers en dus twee werkgeversverklaringen. Hoe koppelen jullie elk document aan het juiste inkomen in het dossier?`,
@@ -530,7 +566,11 @@ window.VRAGEN_DATA=(window.VRAGEN_DATA||[]).concat([
  {id:'vbl-079',cat:'adv',auteur:null,naam:'',voorbeeld:true,datum:'2026-07-11T16:55:00',views:23,tags:['rapport','Engels','expat'],beste:null,
   titel:'Rapport in het Engels voor een expat',
   body:`Ik adviseer een expat die geen Nederlands spreekt. Kan ik het adviesrapport in het Engels laten maken?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbl-079-a1',auteur:'u6',datum:'2026-07-13T04:55:00',rA:{u3:4,u8:5,u7:4,u2:4},rAdv:{u3:4,u7:4,u2:4},body:`In eBlinqx kun je per persoon een voorkeurstaal instellen, Nederlands of Engels. Workflows kunnen daarop reageren, zodat bijvoorbeeld conceptmails in het Engels klaarstaan, en de voortgang in Uwkluis wordt dan in het Engels getoond.
+Of het adviesrapport uit eBlinqx Hypotheekadvies volledig in het Engels kan worden gemaakt, heb ik niet kunnen bevestigen. Vraag het na via support-hypotheekadvies@blinqx.tech voordat je de klant iets toezegt. Een alternatief is een Engelstalige toelichting naast het Nederlandse rapport.
+Belangrijk is dat de klant het advies begrijpt. Bespreek het rapport mondeling in het Engels en leg vast in welke taal je het hebt besproken. Let op dat offerte en akte meestal in het Nederlands zijn. Bij de notaris kan een tolk nodig zijn; stem dat op tijd af.`}
+  ]},
  {id:'vbl-080',cat:'adv',auteur:null,naam:'',voorbeeld:true,datum:'2026-07-15T15:40:00',views:318,tags:['grafiek','maandlasten','rapport'],beste:null,
   titel:'Grafiek met maandlasten over de looptijd klopt niet met de tabel',
   body:`In het rapport zie ik een grafiek van de netto maandlasten die niet overeenkomt met de tabel. Welke klopt er?`,
@@ -582,7 +622,15 @@ window.VRAGEN_DATA=(window.VRAGEN_DATA||[]).concat([
  {id:'vbl-087',cat:'adv',auteur:null,naam:'',voorbeeld:true,datum:'2026-08-09T11:00:00',views:23,tags:['vergelijken','rapport','scenario'],beste:null,
   titel:'Gegevens uit de Berekening vergelijken naar het rapport',
   body:`Ik heb drie berekeningen vergeleken. Kan ik dat vergelijkingsoverzicht in het rapport opnemen?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbl-087-a1',auteur:'u6',datum:'2026-08-11T08:00:00',rA:{u3:5,u7:5},rAdv:{u3:5,u7:5},body:`Ja. Open de berekening, klik rechtsboven op Berekeningen vergelijken en daarna op het PDF-icoon. Dan maak je een PDF met de varianten naast elkaar.
+Of dat overzicht automatisch als hoofdstuk in het adviesrapport komt, verschilt; ik voeg het meestal als bijlage toe aan het rapport en sla het op in het dossier.
+Tips:
+- Geef de varianten een duidelijke naam, bijvoorbeeld met de rentevaste periode of de aflosvorm erin.
+- Beperk je tot de varianten die je echt hebt besproken.
+- Leg in het rapport uit waarom je de gekozen variant adviseert en waarom de andere minder goed passen.
+Bewaar de vergelijking die de klant heeft gezien, met de datum, in het dossier.`}
+  ]},
  {id:'vbl-088',cat:'adv',auteur:null,naam:'',voorbeeld:true,datum:'2026-08-13T16:50:00',views:447,tags:['afwijkende keuze','rapport','vastleggen'],beste:'vbl-088-a1',
   titel:'Klant kiest een ander product dan geadviseerd',
   body:`De klant kiest uiteindelijk voor een langere rentevaste periode dan ik had geadviseerd. Moet ik het rapport aanpassen?`,
@@ -639,7 +687,19 @@ window.VRAGEN_DATA=(window.VRAGEN_DATA||[]).concat([
  {id:'vbl-096',cat:'adv',auteur:null,naam:'',voorbeeld:true,datum:'2026-09-11T14:05:00',views:52,tags:['inzageverzoek','AVG','export'],beste:null,
   titel:'Klant wil alle gegevens ontvangen die we bewaren',
   body:`Een klant doet een inzageverzoek. Kan ik alle gegevens die we over hem hebben makkelijk uit het CRM halen?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbl-096-a1',auteur:'u6',datum:'2026-09-12T15:05:00',rA:{u5:4,u4:5,u8:5},rAdv:{u5:4,u4:5},body:`Volgens de AVG-veelgestelde vragen van eBlinqx kun je in het klantdossier een samenvatting afdrukken voor een inzageverzoek, en kun je alle klantgegevens exporteren. Met de dossiergeschiedenis onder Dossieropties zie je ook wie het dossier heeft geopend en waar het naartoe is gestuurd.
+Let op dat er vaak ook gegevens buiten het CRM staan:
+- in het adviespakket of een gekoppeld pakket zoals Adviesbox;
+- in mailboxen;
+- in papieren archieven of netwerkmappen.
+Loop die bronnen ook na. Controleer de identiteit van de aanvrager voordat je iets verstuurt en gebruik een beveiligde manier van versturen.`},
+   {id:'vbl-096-a2',auteur:'u8',datum:'2026-09-12T20:05:00',rA:{u2:5,u4:4,u5:5,u1:4},rAdv:{u2:5,u4:4,u5:5,u1:4},body:`Vanuit compliance: je moet binnen een maand reageren, met een mogelijke verlenging bij complexe verzoeken. Informeer de klant dan wel binnen die maand. De klant heeft recht op een kopie van zijn persoonsgegevens, de doelen van de verwerking, de ontvangers en de bewaartermijn.
+- Registreer het verzoek met datum en termijn.
+- Stel vast welke systemen je moet doorzoeken.
+- Interne aantekeningen en gegevens van anderen, zoals een ex-partner, beoordeel je apart voordat je ze verstrekt.
+Leg vast wat je hebt verstrekt, wanneer en hoe. Bewaar dat bij de relatie.`}
+  ]},
  {id:'vbl-097',cat:'adv',auteur:null,naam:'',voorbeeld:true,datum:'2026-09-15T16:05:00',views:239,tags:['migratie','nieuwe versie','training'],beste:'vbl-097-a1',
   titel:'Overgang naar nieuwe versie van het adviespakket',
   body:`Ons kantoor gaat over naar een nieuwe versie van het adviespakket. Hoe hebben jullie de overgang voorbereid?`,
@@ -650,7 +710,11 @@ window.VRAGEN_DATA=(window.VRAGEN_DATA||[]).concat([
  {id:'vbl-098',cat:'adv',auteur:null,naam:'',voorbeeld:true,datum:'2026-09-19T10:20:00',views:50,tags:['meerdere panden','dossier','berekening'],beste:null,
   titel:'Hypotheekadvies voor twee panden in één dossier',
   body:`Mijn klant heeft een eigen woning en een tweede woning. Kan ik beide in één dossier opnemen?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbl-098-a1',auteur:'u6',datum:'2026-09-20T23:20:00',rA:{u3:5,u5:5,u4:5,u1:5},rAdv:{u3:5,u5:5,u4:5,u1:5},body:`In het CRM is dat geen probleem: je kunt bij één relatie meerdere dossiers of producten vastleggen. Ik zou per onderpand een eigen dossier of in elk geval een eigen berekening aanhouden, omdat het om aparte financieringen gaat met een eigen onderpand, een eigen fiscale behandeling en vaak een eigen aanvraag.
+Of je in eBlinqx Hypotheekadvies meerdere onderpanden in één berekening kunt opnemen, heb ik niet kunnen bevestigen. Vraag het na via support-hypotheekadvies@blinqx.tech.
+Inhoudelijk: neem de lasten van de tweede woning mee als verplichting bij de toetsing van de eigen woning, en andersom. Let ook op het onderscheid tussen box 1 en box 3. Leg in het dossier vast hoe je beide financieringen in samenhang hebt beoordeeld.`}
+  ]},
  {id:'vbl-099',cat:'adv',auteur:null,naam:'',voorbeeld:true,datum:'2026-09-22T14:15:00',views:453,tags:['partner','inkomen','invoer'],beste:'vbl-099-a1',
   titel:'Gezamenlijk dossier wanneer één partner geen inkomen heeft',
   body:`Een van de aanvragers heeft geen inkomen. Moet ik die persoon toch volledig invoeren als aanvrager?`,

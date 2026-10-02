@@ -230,7 +230,15 @@ Een kredietverzekering die bij de kredietverstrekker wordt aangeboden is niet al
  {id:'vbj-022',cat:'kred',auteur:null,naam:'',voorbeeld:true,datum:'2025-12-16T07:25:00',views:361,tags:['verduurzaming','persoonlijke lening','hypotheek'],beste:null,
   titel:'Persoonlijke lening voor verduurzaming via hypotheek of los?',
   body:`Een klant wil zonnepanelen en een warmtepomp laten plaatsen. Hij twijfelt tussen een persoonlijke lening en een verhoging van de hypotheek. Wat zijn jullie afwegingen?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbj-022-a1',auteur:'u1',datum:'2025-12-18T07:25:00',rA:{u3:5,u6:5,u5:4},rAdv:{u3:5,u5:4},body:`Ik leg de volgende punten naast elkaar:
+- Rente en fiscaal: een hypotheekverhoging heeft meestal een lagere rente, en kan onder voorwaarden tot de eigenwoningschuld behoren. Toets dat aan de actuele fiscale regels.
+- Kosten: een verhoging brengt vaak kosten mee voor notaris, taxatie en advies. Bij een klein bedrag kan dat het rentevoordeel tenietdoen.
+- Leenruimte: voor energiebesparende maatregelen is er vaak extra leenruimte. Controleer de actuele normen.
+- Alternatieven: kijk naar de leningen van het Nationaal Warmtefonds en subsidies zoals de ISDE.
+- Persoonlijke lening: snel geregeld, maar staat op het BKR-overzicht en beperkt een volgende hypotheek. De looptijd moet passen bij de levensduur van de installatie.
+Maak een vergelijking van de totale kosten over de looptijd. Leg de alternatieven, de berekening en de keuze van de klant vast in het dossier.`}
+  ]},
  {id:'vbj-023',cat:'kred',auteur:null,naam:'',voorbeeld:true,datum:'2025-12-21T12:35:00',views:595,tags:['BKR','bewaartermijn','registratie'],beste:null,
   titel:'Hoe lang blijft een registratie na aflossing zichtbaar?',
   body:`Een klant heeft vorig jaar een krediet volledig afgelost. Het krediet staat nog op het BKR-overzicht, met een einddatum. Hoe lang blijft dit zichtbaar en speelt het nog een rol?`,
@@ -255,7 +263,13 @@ Bespreek het ook intern met compliance.`},
  {id:'vbj-025',cat:'kred',auteur:null,naam:'',voorbeeld:true,datum:'2025-12-27T11:10:00',views:372,tags:['doorlopend krediet','limiet','acceptatie'],beste:null,
   titel:'Kredietlimiet verlagen in plaats van opzeggen: accepteren geldverstrekkers dat?',
   body:`Een klant wil zijn doorlopend krediet niet opzeggen, omdat hij het als buffer wil houden voor noodgevallen. Hij is wel bereid de limiet flink te verlagen. Hoe snel is zo'n verlaging zichtbaar op het BKR-overzicht en accepteren geldverstrekkers een bevestiging van de kredietverstrekker?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbj-025-a1',auteur:'u4',datum:'2025-12-28T08:10:00',rA:{u7:5,u8:5,u2:5,u6:5},rAdv:{u7:5,u2:5},body:`Een limietverlaging is meestal goed te regelen, maar let op de timing.
+- De kredietverstrekker geeft de nieuwe limiet door aan BKR. Hoe snel dat gebeurt verschilt; reken op enkele dagen tot een paar weken. Vraag het na bij de kredietverstrekker.
+- Geldverstrekkers rekenen met een vast deel van de limiet als maandlast, ook als er niets is opgenomen. Een lagere limiet levert dus direct leenruimte op.
+- Veel geldverstrekkers accepteren een schriftelijke bevestiging van de kredietverstrekker met de nieuwe limiet en de ingangsdatum, sommige willen een bijgewerkt BKR-overzicht. Controleer het acceptatiebeleid.
+Laat de klant de verlaging regelen voordat je de aanvraag indient. Bespreek ook dat een doorlopend krediet geen echte buffer is, want het blijft een schuld. Leg de bevestiging en het nieuwe BKR-overzicht vast in het dossier.`}
+  ]},
  {id:'vbj-026',cat:'kred',auteur:null,naam:'',voorbeeld:true,datum:'2026-01-01T12:55:00',views:599,tags:['adviespakket','dossier','BKR'],beste:'vbj-026-a1',
   titel:'Hoe leggen jullie het BKR-overzicht vast in het adviespakket?',
   body:`Ik wil het BKR-overzicht van de klant netjes in het dossier opnemen en de kredieten in het adviespakket invoeren. Is er een vaste plek voor, of hangen jullie het gewoon als bijlage aan het dossier?`,
@@ -380,7 +394,14 @@ Leg de doorrekening vast en laat de klant de keuze maken.`},
  {id:'vbj-037',cat:'kred',auteur:null,naam:'',voorbeeld:true,datum:'2026-02-10T15:05:00',views:244,tags:['buitenland','krediet','toets'],beste:null,
   titel:'Klant heeft een krediet bij een buitenlandse aanbieder',
   body:`Een klant die enige tijd in het buitenland heeft gewerkt, heeft daar nog een lening lopen. Deze staat niet op het Nederlandse BKR-overzicht. Hoe gaan jullie hiermee om?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbj-037-a1',auteur:'u4',datum:'2026-02-12T08:05:00',rA:{u8:5,u1:5,u7:5},rAdv:{u1:5,u7:5},body:`Een lening die niet op het BKR-overzicht staat, is nog steeds een verplichting en moet mee in de toetsing.
+- Vraag de klant om het contract, een recent overzicht met het openstaande saldo en de maandlast, en betalingsbewijzen.
+- Reken de maandlast om naar euro's en houd rekening met valutarisico.
+- Controleer het acceptatiebeleid: sommige geldverstrekkers vragen ook een overzicht van een buitenlands kredietregister.
+- Overweeg met de klant of aflossen voor de aanvraag verstandig is.
+Wijs de klant op zijn plicht om alle verplichtingen te melden. Het verzwijgen van een lening bij een aanvraag kan als fraude worden aangemerkt, met gevolgen zoals registratie bij de geldverstrekker. Leg in het dossier vast welke lening er is, welke stukken je hebt gezien en hoe je hem in de toetsing hebt meegenomen.`}
+  ]},
  {id:'vbj-038',cat:'kred',auteur:null,naam:'',voorbeeld:true,datum:'2026-02-12T13:55:00',views:447,tags:['aflopend krediet','einddatum','toets'],beste:null,
   titel:'Toetsing bij een krediet dat binnenkort afloopt',
   body:`Een klant heeft een persoonlijke lening die over een paar maanden is afgelost. Telt de volledige maandlast nog mee in de toets?`,
@@ -498,7 +519,15 @@ Zo is het advies voor een buitenstaander na te volgen.`}
  {id:'vbj-049',cat:'kred',auteur:null,naam:'',voorbeeld:true,datum:'2026-03-25T15:40:00',views:264,tags:['WSNP','schuldsanering','acceptatie'],beste:null,
   titel:'Acceptatie na een WSNP-traject',
   body:`Een klant heeft een wettelijk schuldsaneringstraject afgerond en een schone lei gekregen. Hij wil een woning kopen. Is dat haalbaar?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbj-049-a1',auteur:'u4',datum:'2026-03-26T22:40:00',rA:{u1:5,u7:4},rAdv:{u1:5,u7:4},body:`Haalbaar, maar vaak niet direct. Een schuldsanering blijft na afloop nog een aantal jaren zichtbaar op het BKR-overzicht. Volgens BKR is dat nu vijf jaar na het einde van het traject; controleer de actuele termijn op bkr.nl. Zolang die registratie er staat, accepteren de meeste geldverstrekkers geen hypotheek.
+Wat ik doe:
+- Vraag het BKR-overzicht op en kijk naar de einddatum van alle registraties, niet alleen die van de schuldsanering.
+- Breng de situatie in kaart: inkomen, eigen geld, buffer en betaalgedrag sinds de schone lei.
+- Bespreek eerlijk de vooruitzichten en wanneer een aanvraag kansrijk wordt.
+- Help de klant ondertussen om een buffer en eigen geld op te bouwen.
+Leg het BKR-overzicht, je inschatting en wat je met de klant hebt besproken vast in het dossier.`}
+  ]},
  {id:'vbj-050',cat:'kred',auteur:null,naam:'',voorbeeld:true,datum:'2026-03-26T21:15:00',views:399,tags:['samenwonen','gezamenlijk krediet','toets'],beste:'vbj-050-a3',
   titel:'Gezamenlijk krediet bij samenwonen: wie draagt de last?',
   body:`Een stel heeft een gezamenlijke lening. Bij de hypotheekaanvraag wil maar één partner op de hypotheek. Telt de volledige last van de gezamenlijke lening mee?`,
@@ -619,7 +648,14 @@ Leg alles vast.`},
  {id:'vbj-061',cat:'kred',auteur:null,naam:'',voorbeeld:true,datum:'2026-05-05T08:00:00',views:172,tags:['tweede woning','krediet','box 3'],beste:null,
   titel:'Krediet voor een tweede woning of vakantiehuis',
   body:`Een klant wil een vakantiehuis kopen en denkt aan een consumptief krediet als aanvulling op een lening op het vakantiehuis. Hoe beoordelen jullie dat?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbj-061-a1',auteur:'u5',datum:'2026-05-06T13:00:00',rA:{u1:4,u2:5,u3:5},rAdv:{u1:4,u2:5,u3:5},body:`Hier ben ik terughoudend. Een recreatiewoning valt in box 3 en geldverstrekkers financieren meestal een lager deel van de waarde dan bij een eigen woning. Een consumptief krediet om het tekort te dichten betekent een duurdere financiering en meer risico.
+- Bekijk eerst de eigen middelen en de mogelijkheid om de eigen woning te verhogen, rekening houdend met de fiscale gevolgen.
+- Het krediet weegt mee in de toetsing van alle andere financieringen.
+- Veel geldverstrekkers accepteren geen inbreng die met een krediet is gefinancierd.
+- Kijk naar de bestemming: mag de woning permanent worden bewoond of verhuurd, en zijn huurinkomsten realistisch?
+Verantwoorde kredietverlening vraagt dat de klant de totale lasten ook bij tegenvallers kan dragen. Leg de toetsing, de alternatieven en je conclusie vast. Past het niet, zeg dat dan ook duidelijk.`}
+  ]},
  {id:'vbj-062',cat:'kred',auteur:null,naam:'',voorbeeld:true,datum:'2026-05-09T12:30:00',views:6,tags:['verkoop','aflossen','doorstromer'],beste:null,
   titel:'Toetsing van een krediet dat de klant wil aflossen uit verkoopwinst',
   body:`Een doorstromer heeft een persoonlijke lening. Hij wil die aflossen uit de overwaarde bij verkoop van de huidige woning. Telt de lening in de toets dan nog mee?`,
@@ -684,7 +720,13 @@ Controleer bij twijfel de voorwaarden van de geldverstrekker.`}
  {id:'vbj-068',cat:'kred',auteur:null,naam:'',voorbeeld:true,datum:'2026-06-01T16:50:00',views:237,tags:['BKR','jongeren','registratie'],beste:null,
   titel:'Klant met een minderjarige registratie',
   body:`Een jonge klant heeft een registratie van een krediet dat hij heeft afgesloten kort nadat hij volwassen werd. Hij vindt het vervelend dat het er nog op staat. Wat kan ik hem adviseren?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbj-068-a1',auteur:'u4',datum:'2026-06-02T16:50:00',rA:{u3:4,u2:5},rAdv:{u3:4,u2:5},body:`Een juiste registratie kun je niet laten verwijderen. Wel kun je het overzicht samen bekijken.
+- Staat het krediet zonder achterstandscode geregistreerd, dan is het geen negatieve registratie. Het weegt mee in de toetsing zolang het loopt, en na aflossing blijft het nog een periode zichtbaar. Controleer de actuele bewaartermijn op bkr.nl.
+- Is er een achterstand geregistreerd, kijk dan of die klopt en of er een herstelmelding is.
+- Vindt de klant dat de registratie onjuist is, dan moet hij eerst de kredietverstrekker vragen om correctie. Helpt dat niet, dan zijn er klachtprocedures bij BKR.
+Praktisch advies: los het krediet zo mogelijk af, betaal op tijd en zeg ongebruikte limieten op. Leg in het dossier vast wat je op het overzicht hebt gezien en wat je de klant hebt geadviseerd.`}
+  ]},
  {id:'vbj-069',cat:'kred',auteur:null,naam:'',voorbeeld:true,datum:'2026-06-03T08:15:00',views:325,tags:['voorlichting','maximale hypotheek','krediet'],beste:'vbj-069-a2',
   titel:'Hoe maak je de klant bewust van het effect van een krediet op de maximale hypotheek?',
   body:`Veel klanten schrikken als ze horen hoeveel hun krediet kost aan leenruimte. Hoe maken jullie dat duidelijk zonder dat het een preek wordt?`,
@@ -747,7 +789,15 @@ Het doel is het beschermen van de klant, niet het beschuldigen van een collega.`
  {id:'vbj-075',cat:'kred',auteur:null,naam:'',voorbeeld:true,datum:'2026-06-26T17:15:00',views:596,tags:['overlijden','nalatenschap','krediet'],beste:null,
   titel:'Krediet op naam van een overleden partner',
   body:`Een weduwe wil haar hypotheek aanpassen. Op het BKR-overzicht staat nog een doorlopend krediet dat op naam van haar overleden partner en haar samen stond. Hoe pakken jullie dit aan en wat vraag je op bij de kredietverstrekker?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbj-075-a1',auteur:'u1',datum:'2026-06-27T21:15:00',rA:{u8:5,u7:5,u6:4,u5:4},rAdv:{u7:5,u5:4},body:`Bij een gezamenlijk krediet blijft de langstlevende meestal hoofdelijk aansprakelijk. Het krediet telt dus mee in de toetsing totdat het is afgelost of beëindigd.
+Vraag bij de kredietverstrekker:
+- het actuele saldo en de limiet;
+- of het krediet op haar naam doorloopt of is opgezegd;
+- of er een overlijdensdekking aan het krediet was gekoppeld en of die heeft uitgekeerd;
+- of er achterstanden zijn.
+Laat de weduwe de akte van overlijden of een verklaring van erfrecht meesturen. Wil ze het krediet niet houden, laat het dan aflossen en opzeggen en vraag een bewijs van beëindiging; dat helpt bij de aanvraag tot het BKR is bijgewerkt. Controleer daarna het BKR-overzicht. Leg de correspondentie met de kredietverstrekker en de afspraken in het dossier vast.`}
+  ]},
  {id:'vbj-076',cat:'kred',auteur:null,naam:'',voorbeeld:true,datum:'2026-06-29T21:10:00',views:459,tags:['opzeggen','BKR','afmelding'],beste:'vbj-076-a1',
   titel:'Krediet opgezegd, maar nog steeds zichtbaar op het BKR-overzicht',
   body:`Een klant heeft een doorlopend krediet een maand geleden opgezegd. Op het nieuwe BKR-overzicht staat het nog als lopend. De aanvraag moet binnenkort de deur uit. Hoe lossen jullie dit op?`,
@@ -885,7 +935,14 @@ Weigert de klant openheid, overleg dan met compliance.`},
  {id:'vbj-089',cat:'kred',auteur:null,naam:'',voorbeeld:true,datum:'2026-08-16T12:30:00',views:202,tags:['buffer','aflossen','afweging'],beste:null,
   titel:'Mag ik de klant adviseren een krediet af te lossen met zijn buffer?',
   body:`Een klant kan meer lenen als hij zijn persoonlijke lening aflost met zijn spaargeld. Daarna heeft hij weinig buffer. Wat is passend?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbj-089-a1',auteur:'u5',datum:'2026-08-18T07:30:00',rA:{u6:5,u7:5,u2:4},rAdv:{u7:5,u2:4},body:`Het mag, maar alleen als het passend is voor deze klant. Meer lenen is geen doel op zich.
+- Bepaal welke buffer de klant nodig heeft voor onverwachte uitgaven en inkomensrisico's. Controleer de actuele richtlijnen van het Nibud.
+- Kijk wat er na aflossing overblijft voor kosten koper, verhuizing en inrichting.
+- Bespreek alternatieven: gedeeltelijk aflossen, een lager hypotheekbedrag of later aankopen.
+- Laat zien wat er gebeurt bij een tegenvaller, zoals een kapotte auto of inkomensdaling.
+Het voordeel is reëel: een krediet aflossen verlaagt de lasten en verbetert de leenruimte. Maar zonder buffer kan een kleine tegenvaller tot betalingsproblemen leiden. Leg in het dossier vast welke buffer er overblijft, welke risico's je hebt besproken en dat de klant bewust kiest. Raad je het af, zeg dat dan ook duidelijk.`}
+  ]},
  {id:'vbj-090',cat:'kred',auteur:null,naam:'',voorbeeld:true,datum:'2026-08-18T12:15:00',views:156,tags:['samenwerking','krediet','complex'],beste:'vbj-090-a2',
   titel:'Wanneer schakel je een collega in voor krediet in de toets?',
   body:`Bij complexe situaties met meerdere kredieten, lease en een studieschuld twijfel ik soms over de juiste rekenwijze. Hoe organiseren jullie dat intern?`,
@@ -973,7 +1030,14 @@ Heb je de registratie vooraf besproken en vastgelegd, dan sta je sterk.`},
  {id:'vbj-098',cat:'kred',auteur:null,naam:'',voorbeeld:true,datum:'2026-09-17T09:10:00',views:394,tags:['ouders','krediet','gezin'],beste:null,
   titel:'Krediet van een minderjarig kind op naam van de ouders',
   body:`Ouders hebben een lening op hun naam voor de auto van hun kind. Het kind betaalt de maandlast. Telt die lening in de toets voor de ouders?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbj-098-a1',auteur:'u4',datum:'2026-09-18T06:10:00',rA:{u5:5,u8:5},rAdv:{u5:5},body:`Ja, de lening telt mee. De ouders zijn de schuldenaar, de lening staat op hun naam bij BKR en de kredietverstrekker kan hen aanspreken. Dat het kind de maandlast betaalt, is een onderlinge afspraak die een geldverstrekker niet als vermindering van de last ziet.
+Opties:
+- De lening aflossen voor de aanvraag.
+- Als het kind meerderjarig wordt, kan het een eigen lening afsluiten om die van de ouders af te lossen, met een eigen toetsing.
+- De lening laten staan en met de lagere leenruimte werken.
+Leg in het dossier vast hoe de lening in de toetsing is meegenomen en welke opties je hebt besproken. Bespreek ook met de ouders wat het betekent als het kind de betalingen niet meer doet.`}
+  ]},
  {id:'vbj-099',cat:'kred',auteur:null,naam:'',voorbeeld:true,datum:'2026-09-19T17:00:00',views:258,tags:['doorlopend krediet','berekening','uitleg'],beste:'vbj-099-a1',
   titel:'Hoe reken je het effect van een doorlopend krediet uit voor de klant?',
   body:`Ik wil de klant laten zien hoeveel minder hypotheek hij kan krijgen door zijn doorlopend krediet. Hoe rekenen jullie dat voor?`,

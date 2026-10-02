@@ -73,7 +73,15 @@ Controleer de voorwaarden van de geldverstrekker over verlenging en kosten. Leg 
  {id:'vbd-010',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2025-11-03T16:40:00',views:255,tags:['renteverlenging','rentevoorstel','looptijd'],beste:null,
   titel:'Renteverlengingsvoorstel ontvangen: hoeveel tijd heeft de klant?',
   body:`Een klant krijgt binnenkort een renteverlengingsvoorstel van zijn huidige geldverstrekker. Hij wil weten of hij moet tekenen of kan onderzoeken of oversluiten loont. Hoe pakken jullie dit traject aan?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbd-010-a1',auteur:'u4',datum:'2025-11-04T02:40:00',rA:{u1:4,u5:4,u2:3},rAdv:{u1:4,u5:4},body:`De geldverstrekker stuurt het renteverlengingsvoorstel enige tijd voor de renteherzieningsdatum, en geeft een termijn waarbinnen de klant moet kiezen. Hoe lang die termijn is en wat er gebeurt als de klant niet reageert, staat in de voorwaarden; controleer dat per geldverstrekker. Vaak wordt dan automatisch een standaard rentevaste periode gekozen.
+Mijn aanpak:
+- Zodra het voorstel binnen is: alle rentevaste periodes en de opslagen opvragen.
+- Vergelijken met de rente bij andere geldverstrekkers. Op de renteherzieningsdatum kan in de regel boetevrij worden overgesloten; controleer dat.
+- Rekenen met de kosten van oversluiten: advies, notaris, taxatie.
+- Bespreken of de klant gelijk wil blijven of de hypotheek wil aanpassen (aflossen, looptijd, risicoklasse).
+Gebruik oversluiten.html om de kosten af te zetten tegen het renteverschil. In het dossier leg ik vast welke opties zijn vergeleken en waarom de klant tekent of overstapt.`}
+  ]},
  {id:'vbd-011',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2025-11-07T14:30:00',views:63,tags:['rentevast','renteherziening','variabel'],beste:null,
   titel:'Wanneer adviseren jullie een variabele rente?',
   body:`Een klant met ruim vermogen en een lage leenbehoefte vraagt naar variabele rente omdat hij op korte termijn extra wil aflossen. In welke situaties vinden jullie variabele rente passend?`,
@@ -141,7 +149,15 @@ In het dossier leg ik de keuze en de motivatie van de klant vast.`},
  {id:'vbd-020',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2025-12-10T10:15:00',views:580,tags:['looptijd','30 jaar','rentevast'],beste:null,
   titel:'Rentevaste periode langer dan de resterende looptijd',
   body:`Een klant heeft nog ongeveer achttien jaar looptijd en wil de rente voor twintig jaar vastzetten. Kan dat, en wat zijn de gevolgen?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbd-020-a1',auteur:'u1',datum:'2025-12-10T18:15:00',rA:{u4:4,u5:4,u2:4},rAdv:{u4:4,u5:4},body:`Meestal niet. Geldverstrekkers staan doorgaans geen rentevaste periode toe die langer is dan de resterende looptijd van het leningdeel. De klant kan dan kiezen voor de langste periode die wel binnen de looptijd past, of de looptijd verlengen.
+Let bij verlengen van de looptijd op:
+- Fiscaal: de renteaftrek is beperkt tot de resterende termijn van de dertigjaarstermijn. Een langere looptijd betekent na die termijn geen aftrek meer.
+- Toetsing: een langere looptijd is een wijziging waarvoor de geldverstrekker opnieuw kan toetsen.
+- Pensioen: een langere looptijd kan doorlopen na de AOW-datum.
+Bekijk ook of de klant extra aflost, zodat een kortere looptijd beter past. Wat de klant eigenlijk zoekt, is zekerheid tot het einde. Een rentevaste periode tot de einddatum, voor zover aangeboden, levert dat ook.
+Leg in het dossier vast waarom voor deze rentevaste periode is gekozen en wat de fiscale gevolgen zijn.`}
+  ]},
  {id:'vbd-021',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2025-12-14T13:45:00',views:183,tags:['oversluiten','kosten','advies'],beste:'vbd-021-a1',
   titel:'Wanneer loont oversluiten niet?',
   body:`Klanten vragen regelmatig of oversluiten zin heeft nu de rente lager is dan hun contractrente. Wat zijn voor jullie signalen dat oversluiten waarschijnlijk niet loont?`,
@@ -249,7 +265,14 @@ Controleer of de verhoging een nieuwe hypotheekakte vereist en welke kosten dat 
  {id:'vbd-033',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-01-27T14:35:00',views:444,tags:['verhuisregeling','nieuwbouw','bouwtijd'],beste:null,
   titel:'Verhuisregeling bij nieuwbouw met lange bouwtijd',
   body:`Een klant koopt nieuwbouw en wil zijn bestaande rente meenemen. De oplevering duurt nog lang. Ik twijfel of de termijn van de verhuisregeling daarvoor ruim genoeg is.`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbd-033-a1',auteur:'u5',datum:'2026-01-28T01:35:00',rA:{u1:4,u4:5,u2:3},rAdv:{u1:4,u4:5},body:`Terechte twijfel. De verhuisregeling heeft een termijn die loopt vanaf het moment van aflossing van de oude hypotheek, en die termijn verschilt per geldverstrekker. Controleer de voorwaarden.
+Bij nieuwbouw zijn er twee scenario's:
+- De klant blijft in de oude woning tot de oplevering. Dan wordt de oude hypotheek pas na de oplevering afgelost en is de timing meestal geen probleem. Er is dan wel een overbrugging nodig als de nieuwe hypotheek eerder ingaat (bij het notarieel transport van de grond).
+- De klant verkoopt eerst. Dan begint de termijn eerder en kan die te kort zijn.
+Alternatief: een offerte met een lange geldigheidsduur voor nieuwbouw, of een renteafspraak die bij de geldverstrekker wordt vastgezet. Let ook op de bouwrente.
+In het dossier leg ik vast welke termijn geldt, hoe de planning eruitziet en wat er gebeurt als de bouw vertraagt.`}
+  ]},
  {id:'vbd-034',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-01-30T20:10:00',views:448,tags:['rentevast','combinatie','leningdelen'],beste:null,
   titel:'Leningdelen met verschillende rentevaste periodes: zinvol?',
   body:`Een klant wil risico spreiden door leningdelen met verschillende rentevaste periodes af te sluiten. Is dat in de praktijk verstandig en wat zijn de nadelen?`,
@@ -330,7 +353,15 @@ Bij betalingsproblemen adviseer ik vroegtijdig contact op te nemen met de geldve
  {id:'vbd-044',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-03-09T08:15:00',views:439,tags:['rente','offerte','verlopen'],beste:null,
   titel:'Offerte verlopen: nieuwe offerte tegen hogere rente',
   body:`Door vertraging bij de notaris is de offerte van een klant verlopen. De nieuwe offerte heeft een hogere rente. Is er iets wat ik kan doen?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbd-044-a1',auteur:'u4',datum:'2026-03-09T17:15:00',rA:{u1:4,u5:4,u8:4},rAdv:{u1:4,u5:4},body:`Een paar mogelijkheden:
+- Vraag de geldverstrekker om verlenging van de offerte. Sommige geldverstrekkers staan dat toe, soms tegen een vergoeding of een renteaanpassing.
+- Kijk of de geldverstrekker een rentedaalgarantie of renteafspraak heeft waarbij de laagste rente geldt.
+- Vergelijk de nieuwe offerte met andere geldverstrekkers. Het kan zijn dat elders een lagere rente mogelijk is.
+- Ga na waar de vertraging is ontstaan. Ligt die bij de notaris, dan kan dat een kwestie van aansprakelijkheid zijn.
+Bespreek de gevolgen voor de maandlasten en controleer of de hypotheek nog binnen de leennormen past.
+In het dossier leg ik vast hoe de vertraging is ontstaan, welke opties zijn onderzocht, wat de gevolgen zijn en welke keuze de klant heeft gemaakt. Ik leg ook vast wanneer ik de klant heb geïnformeerd, omdat dat punt bij een eventuele klacht van belang is.`}
+  ]},
  {id:'vbd-045',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-03-12T13:45:00',views:254,tags:['verhuisregeling','gedeeltelijk','leningdelen'],beste:'vbd-045-a1',
   titel:'Verhuisregeling voor een deel van de leningdelen',
   body:`Een klant heeft drie leningdelen en wil alleen het deel met de laagste rente meenemen naar zijn nieuwe woning. De andere delen wil hij aflossen. Kan dat?`,
@@ -411,7 +442,16 @@ Plan ruim en houd rekening met de geldigheid van de offerte. Leg de planning vas
  {id:'vbd-056',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-04-21T12:10:00',views:579,tags:['hypotheek','looptijd','einddatum'],beste:null,
   titel:'Hypotheek loopt af terwijl er nog schuld is',
   body:`Een klant heeft een hypotheekdeel met een einddatum in de komende jaren, maar er staat nog schuld open. Hoe gaan jullie hiermee om?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbd-056-a1',auteur:'u5',datum:'2026-04-21T22:10:00',rA:{u1:4,u4:4,u2:5},rAdv:{u1:4,u4:4},body:`Begin op tijd: niet in het laatste jaar, maar ruim van tevoren. Dat is het belangrijkste. De opties:
+- Aflossen uit vermogen of een bestaande polis.
+- Het leningdeel verlengen of herfinancieren. Dat is een nieuw krediet met toetsing aan de leennormen, wat lastig kan zijn als het inkomen inmiddels lager is (bijvoorbeeld na pensionering).
+- Verkopen en kleiner wonen.
+- Verzilveren met een andere constructie, zoals een verzilverhypotheek.
+Let op de fiscale gevolgen: een herfinanciering kan het overgangsrecht beïnvloeden; controleer de regels. Neem ook contact op met de geldverstrekker. Veel geldverstrekkers benaderen klanten met een aflossingsvrij deel zelf, in lijn met de oproep van de AFM.
+Gebruik restschuld-pensioen.html om de situatie bij de einddatum te laten zien.
+In het dossier leg ik vast welke opties zijn besproken, welke keuze is gemaakt en wat er gebeurt als de klant niets doet.`}
+  ]},
  {id:'vbd-057',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-04-25T11:10:00',views:210,tags:['rente','inkomensdaling','betalingsachterstand'],beste:'vbd-057-a1',
   titel:'Klant met betalingsproblemen wil lagere rente',
   body:`Een klant heeft door inkomensdaling betalingsproblemen. Hij vraagt of oversluiten naar een lagere rente kan helpen. Wat adviseren jullie?`,
@@ -468,7 +508,15 @@ Plan ruim en houd rekening met de geldigheid van de offerte. Leg de planning vas
  {id:'vbd-065',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-05-24T22:35:00',views:281,tags:['rentemiddeling','kosten','transparantie'],beste:null,
   titel:'Hoe controleer je de opslag bij rentemiddeling?',
   body:`Een geldverstrekker biedt rentemiddeling aan met een opslag. Hoe controleren jullie of die opslag redelijk is?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbd-065-a1',auteur:'u1',datum:'2026-05-25T10:35:00',rA:{u4:4,u5:5,u2:4},rAdv:{u4:4,u5:5},body:`Bij rentemiddeling wordt de boeterente verwerkt in een nieuwe rente. De opslag is het deel bovenop de actuele rente. Zo controleer ik dat:
+- Vraag de geldverstrekker om een specificatie: de huidige rente, de nieuwe rente, de opslag en de berekening van de boeterente.
+- Controleer de boeteberekening: de contante waarde van het renteverschil over de resterende looptijd, de gebruikte vergelijkingsrente en de vergoedingsvrije ruimte.
+- Vergelijk de gemiddelde rente met de actuele rente plus opslag.
+- Vergelijk met oversluiten en de boete ineens betalen.
+Gebruik rentemiddeling.html om de varianten naast elkaar te zetten. Een opslag die hoger is dan nodig om de boete te dekken, is een verborgen kostenpost.
+In het dossier leg ik vast welke specificatie is ontvangen, hoe de varianten zijn vergeleken en waarom de klant kiest. Bij twijfel over de berekening vraag ik de geldverstrekker om een toelichting en leg ik het antwoord vast.`}
+  ]},
  {id:'vbd-066',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-05-28T12:10:00',views:267,tags:['oversluiten','NHG','kostengrens'],beste:'vbd-066-a1',
   titel:'Oversluiten met NHG naar een andere geldverstrekker',
   body:`Een klant met NHG wil oversluiten. Kan de NHG worden overgedragen naar een nieuwe geldverstrekker of moet die opnieuw worden aangevraagd?`,
@@ -557,7 +605,15 @@ Plan ruim en houd rekening met de geldigheid van de offerte. Leg de planning vas
  {id:'vbd-079',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-07-15T19:15:00',views:464,tags:['rentemiddeling','opslag','vergelijking'],beste:null,
   titel:'Rentemiddeling aangeboden met een rente hoger dan verwacht',
   body:`Een klant kreeg een rentemiddelingsvoorstel met een rente hoger dan we hadden ingeschat. Hoe controleren jullie of de berekening klopt?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbd-079-a1',auteur:'u4',datum:'2026-07-16T06:15:00',rA:{u1:4,u5:4,u2:4},rAdv:{u1:4,u5:4},body:`Een hogere rente dan verwacht zit vaak in de details. Zo controleer ik:
+- Specificatie: welke boeterente, welke opslag, welke rente zonder middeling.
+- Boeteberekening: is de vergoedingsvrije ruimte meegenomen? Welke vergelijkingsrente is gebruikt? Is de juiste resterende rentevaste periode gebruikt?
+- Risicoklasse: is de woningwaarde actueel? Een verouderde waarde kan tot een hogere risicoklasse leiden.
+- Rentevaste periode: is dezelfde periode vergeleken?
+Als iets niet klopt, vraag de geldverstrekker om een herberekening. Met rentemiddeling.html kun je de varianten vergelijken.
+In het dossier leg ik vast welke gegevens zijn gebruikt, welke vragen zijn gesteld en welke conclusie is getrokken. Als de klant toch voor rentemiddeling kiest, leg ik vast dat hij de alternatieven kent.`}
+  ]},
  {id:'vbd-080',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-07-19T07:15:00',views:438,tags:['oversluiten','aflossingsvrij','box 3'],beste:'vbd-080-a1',
   titel:'Box 3-deel bij oversluiten apart houden',
   body:`Een klant heeft een leningdeel dat fiscaal in box 3 valt naast een eigenwoningschuld. Hoe zorgen jullie bij oversluiten dat de delen goed gescheiden blijven?`,
@@ -608,7 +664,15 @@ Plan ruim en houd rekening met de geldigheid van de offerte. Leg de planning vas
  {id:'vbd-087',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-08-14T10:15:00',views:382,tags:['rente','annuiteit','aflossingsschema'],beste:null,
   titel:'Klant snapt het annuitaire aflossingsschema niet',
   body:`Een klant vraagt waarom hij in het begin weinig aflost en vooral rente betaalt bij een annuitaire hypotheek. Hoe leggen jullie dit eenvoudig uit?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbd-087-a1',auteur:'u1',datum:'2026-08-14T20:15:00',rA:{u4:4,u5:5,u3:4},rAdv:{u4:4,u5:5},body:`Ik leg het zo uit: bij een annuïtaire hypotheek betaal je elke maand hetzelfde bruto bedrag. Dat bedrag bestaat uit rente en aflossing. De rente wordt berekend over de schuld die nog openstaat. In het begin is die schuld hoog, dus is de rente hoog en blijft er weinig over voor aflossing. Elke maand wordt de schuld een beetje lager, dus de rente ook. Daardoor gaat er elk jaar meer naar aflossing.
+Wat helpt:
+- Laat een aflossingsschema zien met het verloop van rente en aflossing per jaar.
+- Laat zien dat de netto lasten door de dalende renteaftrek in de loop van de tijd stijgen.
+- Laat met extra-aflossen.html zien wat extra aflossen doet.
+- Vergelijk met lineair: hogere lasten in het begin, sneller lagere schuld.
+In het dossier leg ik vast dat de aflossingsvorm is uitgelegd en dat de klant het verloop van de netto lasten begrijpt.`}
+  ]},
  {id:'vbd-088',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-08-17T19:10:00',views:537,tags:['rente','verbouwingsdepot','extra aflossen'],beste:'vbd-088-a1',
   titel:'Ongebruikt bouwdepot: aflossen of laten staan?',
   body:`Bij een klant blijft na de verbouwing een deel van het bouwdepot over. Moet dat worden afgelost of kan het worden gebruikt voor andere doelen?`,
@@ -652,7 +716,16 @@ Plan ruim en houd rekening met de geldigheid van de offerte. Leg de planning vas
  {id:'vbd-094',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-09-08T09:20:00',views:546,tags:['rente','groene hypotheek','energiebesparing'],beste:null,
   titel:'Groen leningdeel voor verduurzaming: rente en voorwaarden',
   body:`Een klant wil verduurzamen en vraagt naar een groen leningdeel met rentekorting. Waar moet ik op letten?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbd-094-a1',auteur:'u5',datum:'2026-09-08T20:20:00',rA:{u1:4,u4:4,u2:4},rAdv:{u1:4,u4:4},body:`Aandachtspunten bij een groen leningdeel:
+- Voorwaarden voor de korting: vaak gekoppeld aan het energielabel na de verbouwing of aan specifieke maatregelen. Controleer welke maatregelen geaccepteerd worden en welke bewijsstukken nodig zijn.
+- Bouwdepot: het geld komt meestal in een depot, met een termijn om de maatregelen uit te voeren. Wat als de termijn verloopt?
+- Maximum: er kan een maximum zijn voor het groene deel.
+- Korting: de rentekorting geldt soms alleen voor een bepaalde periode of alleen voor het groene deel.
+- Alternatieven: een lening van het Warmtefonds of subsidie kan voordeliger zijn.
+- Leenruimte: de extra leenruimte voor energiebesparende maatregelen (zie leennormen-2026.html).
+In het dossier leg ik vast welke maatregelen zijn gepland, welke voorwaarden gelden en welke alternatieven zijn vergeleken.`}
+  ]},
  {id:'vbd-095',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-09-12T08:00:00',views:562,tags:['rentevast','inkomen','zzp'],beste:'vbd-095-a1',
   titel:'Rentevaste periode voor een zzper met wisselend inkomen',
   body:`Een zzper met wisselend inkomen twijfelt over de rentevaste periode. Hoe nemen jullie de inkomensonzekerheid mee in de keuze?`,
@@ -683,7 +756,15 @@ Plan ruim en houd rekening met de geldigheid van de offerte. Leg de planning vas
  {id:'vbd-099',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-09-27T09:25:00',views:29,tags:['verhuisregeling','rente','tijdelijk dubbele lasten'],beste:null,
   titel:'Verhuisregeling en overbrugging: twee hypotheken tegelijk',
   body:`Een klant koopt een nieuwe woning voordat de oude is verkocht. Kan hij de rente meenemen terwijl de oude hypotheek nog loopt?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbd-099-a1',auteur:'u4',datum:'2026-09-27T19:25:00',rA:{u1:4,u5:5,u2:3},rAdv:{u1:4,u5:5},body:`Vaak wel, maar het verschilt per geldverstrekker. De verhuisregeling gaat meestal pas in als de oude hypotheek is afgelost. Bij een overbrugging loopt de oude hypotheek nog door. Sommige geldverstrekkers laten de rente van de oude hypotheek direct meenemen naar de nieuwe, waarbij de oude hypotheek voor een tijd blijft bestaan naast de nieuwe; andere geldverstrekkers stellen als voorwaarde dat de oude woning verkocht is. Controleer de voorwaarden.
+Let op:
+- De verhuisregeling geldt vaak alleen bij dezelfde geldverstrekker.
+- Het deel van de nieuwe hypotheek boven de meegenomen hypotheek krijgt de actuele rente.
+- De toetsing gebeurt op de dubbele lasten, tenzij de oude woning onvoorwaardelijk verkocht is.
+Gebruik overbrugging.html om de dubbele lasten en de overbrugging te berekenen.
+In het dossier leg ik vast hoe de rente wordt meegenomen, welke termijnen gelden en hoe de dubbele lasten zijn getoetst.`}
+  ]},
  {id:'vbd-100',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-09-26T18:00:00',views:147,tags:['rente','aflosvorm','kinderen'],beste:'vbd-100-a1',
   titel:'Aflosvorm afstemmen op de gezinssituatie',
   body:`Een jong gezin vraagt naar een aflosvorm die past bij hogere kosten voor kinderen in de komende jaren. Hoe adviseren jullie hierover?`,

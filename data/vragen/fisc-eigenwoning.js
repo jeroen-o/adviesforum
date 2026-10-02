@@ -57,7 +57,13 @@ Niet aftrekbaar zijn de overdrachtsbelasting en de kosten van de leveringsakte. 
  {id:'vbe-007',cat:'fisc',auteur:null,naam:'',voorbeeld:true,datum:'2025-10-23T13:25:00',views:469,tags:['overgangsrecht','huren','herleven'],beste:null,
   titel:'Overgangsrecht na periode van huren: termijn voor herleven',
   body:`Een klant heeft in 2019 de woning verkocht en is gaan huren. Nu wil hij weer kopen. Hij had een aflossingsvrije lening uit 2006. Kan hij het overgangsrecht nog gebruiken en zo ja tot welk bedrag?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbe-007-a1',auteur:'u5',datum:'2025-10-24T09:40:00',rA:{u1:4,u2:4,u4:5},rAdv:{u1:4,u2:5},body:`Waarschijnlijk niet meer. Bij verkoop met tussentijds huren blijft het overgangsrecht alleen behouden als de klant uiterlijk in het jaar na het jaar van verkoop weer een eigen woning met schuld heeft. Bij verkoop in 2019 was dat dus eind 2020. Die termijn is verstreken, ook al loopt de termijn van de eigenwoningreserve (drie jaar) anders.
+Gevolg:
+- Een nieuwe lening moet voldoen aan de aflossingseis: annuïtair of lineair in maximaal 30 jaar.
+- Controleer of er nog een eigenwoningreserve speelt; die termijn is inmiddels ook verlopen, maar check de verkoopdatum.
+Vraag de aangiftes van 2019 en 2020 op om de verkoopdatum en schuld te bevestigen. Leg in het dossier vast hoe je de fiscale status hebt vastgesteld. Bij twijfel: laat het toetsen bij een fiscalist of via de Belastingdienst.`}
+  ]},
  {id:'vbe-008',cat:'fisc',auteur:null,naam:'',voorbeeld:true,datum:'2025-10-28T19:40:00',views:535,tags:['verbouwing','eigenwoningschuld','bouwdepot'],beste:'vbe-008-a1',
   titel:'Bijlenen voor verbouwing: is de lening eigenwoningschuld?',
   body:`Een klant wil extra lenen voor een nieuwe keuken en een aanbouw. Valt dat volledig onder de eigenwoningschuld? En hoe toon je aan dat het geld echt in de woning is gestoken?`,
@@ -151,7 +157,15 @@ Leg in het dossier vast hoe de rente is onderbouwd.`},
  {id:'vbe-019',cat:'fisc',auteur:null,naam:'',voorbeeld:true,datum:'2025-12-08T07:00:00',views:209,tags:['verhuur','buitenland','overgangsrecht'],beste:null,
   titel:'Woning tijdelijk verhuren tijdens buitenlandse detachering',
   body:`Een klant gaat twee jaar naar het buitenland en wil de woning in die periode verhuren. Wat betekent dat voor de renteaftrek en het overgangsrecht?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbe-019-a1',auteur:'u5',datum:'2025-12-08T15:20:00',rA:{u1:4,u2:5,u4:4},rAdv:{u2:4,u4:4},body:`Bij verhuur is de woning geen eigen woning meer. De woning en de schuld gaan in die periode naar box 3, er is dus geen renteaftrek. De huurinkomsten zelf worden niet apart belast, maar de waarde telt mee in box 3.
+Overgangsrecht: volgens een kennisgroepstandpunt van de Belastingdienst herleeft het overgangsrecht wanneer de klant weer in dezelfde woning gaat wonen met dezelfde schuld. Laat de schuld in die periode dus ongewijzigd en verhoog of herfinancier niet.
+Aandachtspunten:
+- Toestemming van de geldverstrekker voor verhuur.
+- Informeer de opstalverzekeraar.
+- De woonsituatie in het buitenland kan gevolgen hebben voor de belastingplicht; laat dat door een fiscalist toetsen.
+Leg in het dossier vast wat met de klant is besproken over aftrek, overgangsrecht en de voorwaarden van de geldverstrekker.`}
+  ]},
  {id:'vbe-020',cat:'fisc',auteur:null,naam:'',voorbeeld:true,datum:'2025-12-10T15:35:00',views:343,tags:['scheiding','uitkoop','aflossingseis'],beste:'vbe-020-a1',
   titel:'Uitkoop ex-partner bij scheiding: nieuwe lening eigenwoningschuld?',
   body:`Bij een scheiding koopt de ene partner de andere uit. Is de nieuwe lening voor het overgenomen aandeel eigenwoningschuld? En moet die lening aan de aflossingseis voldoen?`,
@@ -277,7 +291,14 @@ Leg in het dossier vast dat de klant is gewezen op de box 3-gevolgen en op de vo
  {id:'vbe-035',cat:'fisc',auteur:null,naam:'',voorbeeld:true,datum:'2026-02-04T10:40:00',views:65,tags:['overlijden','overgangsrecht','langstlevende'],beste:null,
   titel:'Overgangsrecht bij overlijden partner',
   body:`De partner van een klant is overleden. Samen hadden ze een aflossingsvrije lening uit de periode voor 2013. Kan de langstlevende het overgangsrecht van het aandeel van de overleden partner behouden?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbe-035-a1',auteur:'u5',datum:'2026-02-05T10:10:00',rA:{u1:4,u2:5,u7:4},rAdv:{u2:4,u7:5},body:`In de regel wel. Gaat het aandeel in de schuld van de overleden partner via het erfrecht over op de langstlevende, dan gaat de fiscale status van die schuld mee, inclusief het overgangsrecht. Voorwaarde is dat de woning de eigen woning blijft van de langstlevende.
+Praktische stappen:
+- Controleer in de verklaring van erfrecht of testament hoe de woning en schuld zijn verdeeld. Bij een wettelijke verdeling krijgen de kinderen een vordering, maar woning en schuld gaan naar de langstlevende.
+- Laat de lening op naam van de langstlevende zetten zonder deze te verhogen; een verhoging valt niet onder het overgangsrecht.
+- Verwerk een eventuele ORV-uitkering: als die gebruikt wordt om af te lossen, vervalt het overgangsrecht over dat deel.
+Leg in het dossier vast welke schuld en welk overgangsrecht vóór en na het overlijden bestonden.`}
+  ]},
  {id:'vbe-036',cat:'fisc',auteur:null,naam:'',voorbeeld:true,datum:'2026-02-08T22:20:00',views:253,tags:['restschuld','box 3','verhuizing'],beste:'vbe-036-a1',
   titel:'Restschuld meefinancieren in nieuwe hypotheek',
   body:`Een klant verkoopt met verlies en wil de restschuld meefinancieren in de nieuwe hypotheek. De verkoop vindt dit jaar plaats. Is de rente over het restschulddeel aftrekbaar?`,
@@ -357,7 +378,15 @@ Leg vast welke woning het hoofdverblijf is en waar de klant staat ingeschreven, 
  {id:'vbe-045',cat:'fisc',auteur:null,naam:'',voorbeeld:true,datum:'2026-03-12T12:45:00',views:324,tags:['onderhoud','bijlenen','eigenwoningschuld'],beste:null,
   titel:'Kosten van onderhoud financieren: eigenwoningschuld?',
   body:`Een klant wil bijlenen om een nieuw dak te laten leggen en de kozijnen te schilderen. Is dat eigenwoningschuld, of alleen als het een verbetering is?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbe-045-a1',auteur:'u1',datum:'2026-03-13T09:05:00',rA:{u4:4,u5:5},rAdv:{u4:4,u5:4,u2:4},body:`Beide kunnen eigenwoningschuld zijn. De wet noemt verwerving, verbetering en onderhoud van de eigen woning, dus een nieuw dak en schilderwerk aan de kozijnen tellen allebei mee. Inrichting en losse spullen niet.
+Voorwaarden:
+- De lening moet voldoen aan de aflossingseis (annuïtair of lineair in maximaal 30 jaar).
+- Houd rekening met een eventuele eigenwoningreserve.
+- De klant moet de besteding kunnen aantonen met offertes en facturen. Een bouwdepot maakt dat eenvoudig.
+- Wordt het geld niet binnen de termijn van de Belastingdienst besteed, dan gaat het onbestede deel naar box 3; controleer de actuele termijn.
+Leg in het dossier vast: de offerte(s), de bestedingsopzet en de bespreking van de aflossingseis.`}
+  ]},
  {id:'vbe-046',cat:'fisc',auteur:null,naam:'',voorbeeld:true,datum:'2026-03-15T07:20:00',views:214,tags:['voorlopige aanslag','teruggaaf','starter'],beste:'vbe-046-a1',
   titel:'Hypotheekrente teruggaaf via voorlopige aanslag',
   body:`Een starter vraagt hoe hij de renteaftrek maandelijks terugkrijgt. Moet ik daar in mijn advies iets over zeggen of is dat aan de klant?`,
@@ -387,7 +416,13 @@ Leg de premiehistorie en de wijziging vast.`},
  {id:'vbe-049',cat:'fisc',auteur:null,naam:'',voorbeeld:true,datum:'2026-03-27T11:50:00',views:251,tags:['praktijkruimte','ondernemer','eigen woning'],beste:null,
   titel:'Woning gedeeltelijk gebruikt als praktijkruimte',
   body:`Een zelfstandige gebruikt een deel van zijn woning als praktijkruimte met eigen ingang. Heeft dat invloed op de renteaftrek?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbe-049-a1',auteur:'u5',datum:'2026-03-28T10:30:00',rA:{u1:4,u2:4,u4:4},rAdv:{u2:5,u4:4},body:`Ja. Het deel van de woning dat zakelijk wordt gebruikt valt niet onder de eigenwoningregeling. Je moet de woning en de schuld dan splitsen naar rato, meestal op basis van oppervlakte of waarde.
+- Het zakelijke deel kan bij een ondernemer tot het ondernemingsvermogen behoren, of privé blijven. Dat bepaalt waar de rente en kosten terechtkomen.
+- Een zelfstandige werkruimte (eigen ingang, eigen sanitair) valt eerder buiten de eigen woning dan een kamer die als werkkamer wordt gebruikt.
+- Kosten voor een werkruimte zijn alleen onder voorwaarden aftrekbaar; daar gelden aparte inkomenseisen.
+Laat de keuze voor ondernemings- of privévermogen door de boekhouder of fiscalist bepalen, en neem de uitkomst over in je berekening. Leg vast welk deel van de schuld eigenwoningschuld is en hoe die verdeling tot stand kwam.`}
+  ]},
  {id:'vbe-050',cat:'fisc',auteur:null,naam:'',voorbeeld:true,datum:'2026-03-29T08:10:00',views:87,tags:['verbouwing','herfinanciering','eigen geld'],beste:'vbe-050-a1',
   titel:'Herfinancieren verbouwing achteraf: eigenwoningschuld?',
   body:`Een klant heeft vorig jaar een verbouwing met eigen spaargeld betaald. Nu wil hij dat bedrag bijlenen. Is die nieuwe lening eigenwoningschuld?`,
@@ -442,7 +477,14 @@ Leg de eigendomsverhouding en de verdeling van de schuld vast.`},
  {id:'vbe-056',cat:'fisc',auteur:null,naam:'',voorbeeld:true,datum:'2026-04-21T19:15:00',views:533,tags:['eigendom','hoofdelijk','fiscaal partner'],beste:null,
   titel:'Woning op naam van een partner, beide hoofdelijk aansprakelijk',
   body:`Bij gehuwde klanten staat de woning op naam van een van beiden, maar ze zijn allebei hoofdelijk aansprakelijk. Maakt dat uit voor de renteaftrek?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbe-056-a1',auteur:'u5',datum:'2026-04-22T09:15:00',rA:{u1:4,u2:4,u4:5},rAdv:{u1:4,u2:4},body:`Voor de renteaftrek maakt het bij fiscale partners weinig uit. De woning telt als eigen woning voor beide partners, en de aftrekbare rente mag tussen hen worden verdeeld. De partner die geen eigenaar is maar wel hoofdelijk aansprakelijk is en meebetaalt, kan dus ook aftrek claimen.
+Wel aandacht voor:
+- Het huwelijksvermogensregime: bij huwelijkse voorwaarden of een beperkte gemeenschap kan de partner zonder eigendom later een vordering hebben of juist niet.
+- Draagplicht: wie draagt de schuld onderling? Dat speelt bij scheiding of overlijden. Zie draagplicht.nl of draagplicht.html.
+- Bij uit elkaar gaan vervalt het fiscaal partnerschap en wijzigt de situatie direct.
+Leg in het dossier vast wie eigenaar is, het regime en wat je over de draagplicht hebt besproken.`}
+  ]},
  {id:'vbe-057',cat:'fisc',auteur:null,naam:'',voorbeeld:true,datum:'2026-04-26T20:25:00',views:578,tags:['pensioen','bedrag ineens','aflossen'],beste:'vbe-057-a1',
   titel:'Aflossen met bedrag ineens uit pensioen',
   body:`Een klant gaat met pensioen en overweegt een bedrag ineens op te nemen om de hypotheek af te lossen. Wat zijn de fiscale aandachtspunten voor de eigen woning?`,
@@ -505,7 +547,12 @@ Werkt het niet, controleer dan of het leningdeel als box 1 is gemarkeerd. Dat ga
  {id:'vbe-064',cat:'fisc',auteur:null,naam:'',voorbeeld:true,datum:'2026-05-21T11:15:00',views:197,tags:['verbouwing','eigen geld','termijn'],beste:null,
   titel:'Verbouwen met lening na aankoop binnen zes maanden',
   body:`Een klant heeft de woning grotendeels met eigen geld gekocht en wil een paar maanden later alsnog een hypotheek afsluiten. Kan dat nog eigenwoningschuld zijn?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbe-064-a1',auteur:'u5',datum:'2026-05-22T10:00:00',rA:{u1:4,u2:4,u4:4},rAdv:{u1:4,u4:5},body:`Splits de vraag in twee delen.
+Verbouwing: een lening voor verbetering of onderhoud van de eigen woning kan eigenwoningschuld zijn, ook als die later wordt aangegaan. Het geld moet daadwerkelijk aan de verbouwing worden besteed; onbesteed geld gaat na de termijn van de Belastingdienst naar box 3. Controleer die termijn en houd rekening met de eigenwoningreserve.
+Aankoop met eigen geld: een lening die later wordt afgesloten om eigen geld terug te halen, is in principe geen eigenwoningschuld. Er is dan geen verband met de verwerving. Alleen als de financiering bij aankoop al vaststond en aantoonbaar tijdelijk met eigen geld is overbrugd, is er een verdedigbare positie. Laat dat vooraf toetsen.
+Leg in het dossier vast: bestedingsdoel, offertes, aankoopdatum en de afweging over de kwalificatie.`}
+  ]},
  {id:'vbe-065',cat:'fisc',auteur:null,naam:'',voorbeeld:true,datum:'2026-05-27T08:25:00',views:311,tags:['restschuld','aflossing','box 3'],beste:null,
   titel:'Restschuld afbetalen naast nieuwe eigenwoningschuld',
   body:`Een klant heeft een box 3-restschuld en een nieuwe hypotheek. Hij wil extra aflossen. Moet hij eerst de restschuld aflossen?`,
@@ -564,7 +611,15 @@ Leg de opleverplanning vast.`}
  {id:'vbe-072',cat:'fisc',auteur:null,naam:'',voorbeeld:true,datum:'2026-06-20T10:05:00',views:111,tags:['uitzending','eigen woning','tijdelijk'],beste:null,
   titel:'Aftrek bij tijdelijke uitzending naar het buitenland',
   body:`Een klant gaat twee jaar voor zijn werkgever naar het buitenland en laat de woning leeg staan. Blijft de woning eigen woning?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbe-072-a1',auteur:'u5',datum:'2026-06-21T09:25:00',rA:{u1:4,u2:4,u7:4},rAdv:{u2:4,u4:4},body:`Ja, onder voorwaarden. Bij tijdelijke afwezigheid blijft de woning eigen woning als die vóór vertrek het hoofdverblijf was, het de bedoeling is om terug te keren en de woning niet aan anderen ter beschikking wordt gesteld. Leegstand of gebruik door gezinsleden is dan geen probleem; verhuur wel.
+Aandachtspunten:
+- Leg de detacheringsbrief van de werkgever vast als bewijs van tijdelijkheid.
+- Door de verhuizing kan de klant buitenlands belastingplichtig worden. Of de aftrek dan in Nederland blijft, hangt af van de kwalificatie en het belastingverdrag; laat dit door een fiscalist toetsen.
+- Informeer de opstalverzekeraar: lange leegstand kan de dekking beperken.
+- Check de voorwaarden van de geldverstrekker.
+Leg in het dossier de besproken risico's en het advies over fiscale begeleiding vast.`}
+  ]},
  {id:'vbe-073',cat:'fisc',auteur:null,naam:'',voorbeeld:true,datum:'2026-06-26T08:00:00',views:78,tags:['netto lasten','overgangsrecht','leningdelen'],beste:'vbe-073-a1',
   titel:'Netto lasten bij combinatie oud en nieuw leningdeel',
   body:`Ik maak een advies met een oud aflossingsvrij deel en een nieuw annuitair deel. De klant snapt de netto lasten niet. Hoe leggen jullie dit uit?`,
@@ -653,7 +708,15 @@ Leg vast dat je dit hebt besproken.`},
  {id:'vbe-084',cat:'fisc',auteur:null,naam:'',voorbeeld:true,datum:'2026-08-03T22:45:00',views:267,tags:['kamerverhuur','student','vrijstelling'],beste:null,
   titel:'Kamer in eigen woning verhuren aan student',
   body:`Een klant met een ruime woning wil een kamer verhuren aan een student. Welke voorwaarden controleren jullie voordat je zegt dat dit fiscaal geen probleem is?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbe-084-a1',auteur:'u1',datum:'2026-08-04T09:10:00',rA:{u4:4,u5:5},rAdv:{u4:4,u5:4,u3:4},body:`Met de kamerverhuurvrijstelling blijft de hele woning eigen woning en zijn de huurinkomsten onbelast. Ik controleer altijd:
+- De kamer is geen zelfstandige woonruimte (geen eigen voordeur, keuken én toilet).
+- Klant en huurder staan beiden op het adres ingeschreven tijdens de hele verhuur.
+- Het gaat om verhuur voor langere tijd, niet om korte verhuur aan toeristen.
+- De totale huurinkomsten blijven onder het jaarlijkse maximum, inclusief vergoedingen voor energie en meubels. Controleer het actuele bedrag bij belastingdienst.nl.
+Daarnaast: toestemming van de geldverstrekker, melding aan de opstal- en inboedelverzekeraar, en eventuele regels van de gemeente.
+Wordt het maximum overschreden, dan gaat een deel van de woning naar box 3. Leg vast welke voorwaarden je hebt gecontroleerd en wat de klant heeft opgegeven.`}
+  ]},
  {id:'vbe-085',cat:'fisc',auteur:null,naam:'',voorbeeld:true,datum:'2026-08-07T22:30:00',views:27,tags:['familie','aankoop','eigenwoningschuld'],beste:'vbe-085-a1',
   titel:'Woningruil binnen familie: eigenwoningschuld?',
   body:`Een klant koopt de woning van zijn ouders. Er wordt een deel geleend bij een geldverstrekker en een deel bij de ouders. Waar moet ik op letten?`,
@@ -711,7 +774,14 @@ Leg de bestemming en de risicos vast.`}
  {id:'vbe-092',cat:'fisc',auteur:null,naam:'',voorbeeld:true,datum:'2026-08-30T17:55:00',views:20,tags:['eigenwoningreserve','volgorde','doorstromer'],beste:null,
   titel:'Verhuizen en eigenwoningreserve bij verkoop na aankoop',
   body:`Een klant koopt eerst een nieuwe woning en verkoopt daarna de oude. Telt de eigenwoningreserve van de latere verkoop dan nog mee voor de nieuwe lening?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbe-092-a1',auteur:'u5',datum:'2026-08-31T09:20:00',rA:{u1:5,u2:4,u4:4},rAdv:{u1:4,u4:5},body:`Ja. Volgens de Belastingdienst hoeft de klant bij de aankoop van de nieuwe woning nog geen rekening te houden met de overwaarde van de oude woning zolang die nog niet verkocht is. Maar zodra de oude woning verkocht wordt, moet de eigenwoningschuld van de nieuwe woning worden verminderd met de positieve eigenwoningreserve. Dat geldt ook als de woning drie jaar te koop staat zonder verkocht te worden.
+In de praktijk:
+- Maak bij het advies al een prognose van de eigenwoningreserve.
+- Adviseer om de overwaarde direct af te lossen op het nieuwe leningdeel; anders gaat een deel van de schuld na de verkoop naar box 3.
+- Check of de geldverstrekker boetevrij aflossen bij verkoop van de oude woning toestaat.
+Leg de berekening en de afspraak over aflossing vast. Zie overbrugging.html voor de lasten in de tussentijd.`}
+  ]},
  {id:'vbe-093',cat:'fisc',auteur:null,naam:'',voorbeeld:true,datum:'2026-09-02T20:00:00',views:109,tags:['vakantieverhuur','eigen woning','box 3'],beste:'vbe-093-a1',
   titel:'Woning deels verhuurd via vakantieverhuur',
   body:`Een klant verhuurt de woning een paar weken per jaar via een verhuurplatform als hij op vakantie is. Heeft dat gevolgen voor de eigenwoningstatus?`,
@@ -754,7 +824,14 @@ Leg de verdeling van eigendom en schuld vast.`},
  {id:'vbe-098',cat:'fisc',auteur:null,naam:'',voorbeeld:true,datum:'2026-09-20T15:35:00',views:332,tags:['overgangsrecht','verhuur','herleven'],beste:null,
   titel:'Overgangsrecht na verhuurperiode van de woning',
   body:`Een klant heeft zijn woning enkele jaren verhuurd en gaat er nu weer zelf wonen. Herleeft het overgangsrecht?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbe-098-a1',auteur:'u5',datum:'2026-09-21T10:05:00',rA:{u1:4,u2:4,u4:4},rAdv:{u2:5,u4:4},body:`Volgens een standpunt van de kennisgroep van de Belastingdienst kwalificeert de schuld weer als bestaande eigenwoningschuld wanneer de klant terugkeert in dezelfde woning met dezelfde lening. Het overgangsrecht herleeft dan dus, maar alleen voor de schuld zoals die er was.
+Controleer:
+- Is de lening tijdens de verhuurperiode afgelost, verhoogd of geherfinancierd? Een verhoging valt niet onder het overgangsrecht.
+- Is de woning in de tussentijd verkocht of anders van eigenaar gewisseld? Dan gelden andere regels.
+- Gebruikt de klant de woning nu echt als hoofdverblijf (inschrijving en feitelijke bewoning)?
+Vraag de aangiftes over de verhuurperiode op om te zien hoe woning en schuld in box 3 zijn verwerkt. Leg in het dossier vast van welke schuld je uitgaat en waarom. Bij twijfel een fiscalist inschakelen.`}
+  ]},
  {id:'vbe-099',cat:'fisc',auteur:null,naam:'',voorbeeld:true,datum:'2026-09-24T11:15:00',views:200,tags:['aangifte','jaaropgave','controle'],beste:'vbe-099-a1',
   titel:'Hypotheekrente in aangifte: jaaropgave controleren',
   body:`Een klant vraagt me de jaaropgave te controleren voordat hij aangifte doet. Waar letten jullie op?`,

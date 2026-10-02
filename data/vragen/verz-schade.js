@@ -33,7 +33,15 @@ Ik leg de afweging en de keuze van de klant vast in het dossier.`},
  {id:'vbh-005',cat:'verz',auteur:null,naam:'',voorbeeld:true,datum:'2025-10-17T13:40:00',views:425,tags:['storm','dakschade','preventie'],beste:null,
   titel:'Stormschade aan dak met oude dakpannen: kans op afwijzing?',
   body:`Een klant heeft stormschade aan een dak waarvan de pannen al tientallen jaren oud zijn. Hij vreest dat de verzekeraar zich beroept op achterstallig onderhoud. Hoe bereiden jullie zo een melding voor?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbh-005-a1',auteur:'u3',datum:'2025-10-19T01:40:00',rA:{u1:5,u5:4,u2:4},rAdv:{u1:5,u5:4,u2:4},body:`Een verzekeraar die zich op slecht onderhoud beroept, moet dat in principe aantonen. Je kunt de klant helpen het dossier sterk te maken.
+- Leg vast dat het om storm gaat volgens de polisdefinitie. Gebruik de windgegevens van het KNMI voor de datum en plaats.
+- Laat direct foto's maken van de schade, van het hele dak en van eventuele schade in de buurt.
+- Laat de dakdekker in de offerte of een verklaring de oorzaak beschrijven en of de pannen verder in redelijke staat waren.
+- Verzamel bewijs van onderhoud, zoals facturen of inspecties.
+- Laat noodmaatregelen nemen om erger te voorkomen en bewaar de bonnen.
+Komt er een expert, wees dan bij voorkeur aanwezig. Wordt de schade afgewezen of gekort, bespreek dan een contra-expertise; controleer in de voorwaarden welke kosten de verzekeraar daarvan vergoedt. Leg de melding, de stukken en de communicatie vast in het dossier.`}
+  ]},
  {id:'vbh-006',cat:'verz',auteur:null,naam:'',voorbeeld:true,datum:'2025-10-20T10:35:00',views:17,tags:['zorgplicht','schadeverzekering','periodieke check'],beste:'vbh-006-a2',
   titel:'Hoe vaak toetsen jullie lopende schadeverzekeringen opnieuw?',
   body:`Wij hebben veel klanten met een pakketpolis die al jaren niet zijn bekeken. Ik wil een vaste werkwijze om de passendheid periodiek te toetsen. Hoe richten jullie dat in en wat leggen jullie vast?`,
@@ -100,7 +108,15 @@ Ik vraag de klant de factuur te bewaren en leg de wijziging en de aangepaste ver
  {id:'vbh-014',cat:'verz',auteur:null,naam:'',voorbeeld:true,datum:'2025-11-18T10:20:00',views:40,tags:['opstal','leegstand','acceptatie'],beste:null,
   titel:'Woning staat maanden leeg na overlijden: blijft opstal geldig?',
   body:`De erfgenamen van een overleden klant laten de woning leeg staan totdat deze is verkocht. Ik weet dat leegstand gevolgen kan hebben voor de dekking. Wat moeten zij regelen?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbh-014-a1',auteur:'u3',datum:'2025-11-19T10:20:00',rA:{u8:5,u4:5},rAdv:{u4:5},body:`De polis loopt na overlijden door, maar leegstand is een risicowijziging die de erfgenamen moeten melden. Veel voorwaarden beperken de dekking na een bepaalde periode van leegstand, bijvoorbeeld voor inbraak, vandalisme of waterschade.
+- Meld het overlijden en de leegstand schriftelijk aan de verzekeraar en vraag welke voorwaarden gelden.
+- Spreek af wie de woning regelmatig controleert en leg dat vast.
+- Sluit in de winter het water af of zorg voor verwarming tegen vorstschade.
+- Zorg dat ramen en deuren goed afgesloten zijn.
+- Pas de inboedelverzekering aan zodra de woning is ontruimd.
+Weigert de verzekeraar of wordt de dekking te beperkt, zoek dan een leegstandsverzekering bij een gespecialiseerde aanbieder. Leg in het dossier vast wie namens de nalatenschap optreedt, wat is gemeld en wat de verzekeraar heeft bevestigd.`}
+  ]},
  {id:'vbh-015',cat:'verz',auteur:null,naam:'',voorbeeld:true,datum:'2025-11-21T11:35:00',views:541,tags:['schadebehandeling','Kifid','klacht'],beste:'vbh-015-a1',
   titel:'Klant wil naar het Kifid na afwijzing inboedelschade',
   body:`De verzekeraar heeft een inboedelschade afgewezen en ook de interne klachtprocedure heeft niets opgeleverd. De klant wil naar het Kifid. Hoe begeleiden jullie dit als adviseur?`,
@@ -152,7 +168,13 @@ Ik vraag de klant de factuur te bewaren en leg de wijziging en de aangepaste ver
  {id:'vbh-022',cat:'verz',auteur:null,naam:'',voorbeeld:true,datum:'2025-12-16T16:25:00',views:93,tags:['opstal','zwembad','tuin'],beste:null,
   titel:'Zwembad en tuinaanleg: meeverzekerd onder opstal?',
   body:`Een klant heeft een ingegraven zwembad laten aanleggen en een dure tuin. Hij vraagt of dit onder zijn opstalverzekering valt. Wat zien jullie in de praktijk?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbh-022-a1',auteur:'u3',datum:'2025-12-17T21:25:00',rA:{u8:5,u6:5},rAdv:{},body:`In de praktijk is dit vaak maar beperkt verzekerd, dus voorwaarden lezen.
+- Tuinaanleg en beplanting zijn bij veel opstalpolissen tot een maximumbedrag meeverzekerd, en dan alleen voor bepaalde gebeurtenissen. Storm is daarbij vaak uitgezonderd.
+- Een ingegraven zwembad valt soms onder opstal als vast onderdeel van het perceel, maar wordt ook geregeld uitgesloten of beperkt. Kijk apart naar techniek zoals de pomp en verwarming.
+- Neem het zwembad en de tuin mee in de herbouwwaarde als de polis dat toelaat. De rekenhulp herbouwwaarde.html helpt bij de opbouw.
+Meld de aanleg bij de verzekeraar en vraag schriftelijk hoe het is verzekerd. Is de dekking onvoldoende, kijk dan naar een aanvullende dekking of een andere polis. Denk ook aan de aansprakelijkheid: een zwembad brengt risico's mee voor bezoekers, check de AVP. Leg vast wat er is gemeld en welke dekking er geldt.`}
+  ]},
  {id:'vbh-023',cat:'verz',auteur:null,naam:'',voorbeeld:true,datum:'2025-12-21T14:35:00',views:133,tags:['schadebehandeling','bereddingskosten','waterschade'],beste:null,
   titel:'Worden kosten van het beperken van schade vergoed?',
   body:`Bij een lekkage heeft een klant direct een loodgieter met spoedtoeslag laten komen en bouwdrogers gehuurd. Worden deze kosten vergoed?`,
@@ -212,7 +234,13 @@ Ik vraag de klant de factuur te bewaren en leg de wijziging en de aangepaste ver
  {id:'vbh-031',cat:'verz',auteur:null,naam:'',voorbeeld:true,datum:'2026-01-16T08:35:00',views:423,tags:['kamerverhuur','inboedel','AVP'],beste:null,
   titel:'Kamer verhuren aan een student: wat betekent dat voor de verzekeringen?',
   body:`Een klant gaat een kamer in haar woning verhuren aan een student. Moet ze dit melden bij de woonverzekering en is de inboedel van de student meeverzekerd?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbh-031-a1',auteur:'u3',datum:'2026-01-18T09:35:00',rA:{u7:5,u6:5,u5:4},rAdv:{u7:5,u5:4},body:`Ja, laat de klant het melden. Verhuur is bij veel verzekeraars een risicowijziging, en sommige voorwaarden beperken de dekking, bijvoorbeeld bij diefstal zonder braak door een medebewoner.
+- Opstal en inboedel: meld de verhuur en vraag of de dekking ongewijzigd blijft.
+- Inboedel van de student: valt niet onder de polis van de verhuurder, omdat de student geen deel uitmaakt van haar gezin. Soms is de spullen van een uitwonend studerend kind meeverzekerd op de inboedelpolis van de ouders; anders heeft de student een eigen inboedelverzekering nodig.
+- Aansprakelijkheid: de student heeft een eigen AVP nodig of valt mogelijk onder die van de ouders.
+Controleer ook de hypotheekvoorwaarden van de geldverstrekker, de regels van de gemeente en de fiscale gevolgen van kamerverhuur aan de actuele regels. Leg de melding en het advies aan de student vast in het dossier.`}
+  ]},
  {id:'vbh-032',cat:'verz',auteur:null,naam:'',voorbeeld:true,datum:'2026-01-20T18:15:00',views:513,tags:['inboedel','thuiswerken','zakelijk'],beste:'vbh-032-a1',
   titel:'Thuiswerkplek: is zakelijke apparatuur meeverzekerd onder de inboedel?',
   body:`Een klant werkt grotendeels thuis en heeft een laptop en scherm van zijn werkgever. Daarnaast heeft hij als zzp'er eigen apparatuur. Wat valt hiervan onder de particuliere inboedelpolis?`,
@@ -277,7 +305,14 @@ Ik vraag de klant de factuur te bewaren en leg de wijziging en de aangepaste ver
  {id:'vbh-041',cat:'verz',auteur:null,naam:'',voorbeeld:true,datum:'2026-02-22T18:05:00',views:107,tags:['herbouwwaarde','duurzaamheid','opstal'],beste:null,
   titel:'Thuisbatterij en warmtepomp: moet de herbouwwaarde omhoog?',
   body:`Een klant heeft flink geïnvesteerd in verduurzaming: warmtepomp, thuisbatterij en extra isolatie. Moet de opstalverzekering worden aangepast en zijn er aandachtspunten voor de batterij?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbh-041-a1',auteur:'u3',datum:'2026-02-24T12:05:00',rA:{u6:4,u4:5,u7:5},rAdv:{u4:5,u7:5},body:`Ja, verduurzaming verhoogt vaak de herbouwwaarde, dus laat die opnieuw bepalen. Gebruik de herbouwwaardemeter van de verzekeraar of de rekenhulp herbouwwaarde.html. Een verzekeraar geeft vaak alleen garantie tegen onderverzekering als de waarde via de eigen meter is vastgesteld.
+Aandachtspunten:
+- Thuisbatterij: vraag of de verzekeraar eisen stelt, zoals installatie door een erkende installateur, een geschikte plaats en melding vooraf. Brandrisico is het belangrijkste aandachtspunt.
+- Warmtepomp: de buitenunit kan schade oplopen door storm of diefstal. Schade door eigen gebrek of slijtage is meestal uitgesloten; daarvoor is de garantie van de installateur van belang.
+- Zonnepanelen: check of ze onder opstal vallen en of er een maximum geldt.
+Laat de klant de facturen en installatiecertificaten bewaren. Leg de nieuwe herbouwwaarde, de melding en de reactie van de verzekeraar vast in het dossier.`}
+  ]},
  {id:'vbh-042',cat:'verz',auteur:null,naam:'',voorbeeld:true,datum:'2026-02-26T15:45:00',views:510,tags:['VvE','appartement','opstal'],beste:'vbh-042-a1',
   titel:'Appartement: wat verzekert de VvE en wat de eigenaar zelf?',
   body:`Een klant koopt een appartement. De VvE heeft een opstalverzekering voor het gebouw. Welke verzekeringen moet de eigenaar dan nog zelf regelen?`,
@@ -357,7 +392,13 @@ Ik vraag de klant de factuur te bewaren en leg de wijziging en de aangepaste ver
  {id:'vbh-053',cat:'verz',auteur:null,naam:'',voorbeeld:true,datum:'2026-04-08T21:10:00',views:5,tags:['AVP','alcohol','uitsluiting'],beste:null,
   titel:'Schade onder invloed van alcohol: kan de AVP dekking weigeren?',
   body:`Een klant heeft na een feest met alcohol op schade veroorzaakt bij een derde. Hij vreest dat de AVP niet uitkeert. Wat is jullie ervaring?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbh-053-a1',auteur:'u3',datum:'2026-04-10T12:10:00',rA:{u1:5,u2:4,u4:5,u5:4},rAdv:{u1:5,u2:4,u4:5,u5:4},body:`In de meeste AVP-voorwaarden is alcoholgebruik geen zelfstandige uitsluitingsgrond, anders dan bij bijvoorbeeld motorrijtuigen. Lees de voorwaarden van deze polis wel na.
+De belangrijkere vragen zijn:
+- Is de klant aansprakelijk? Een AVP keert alleen uit als hij juridisch aansprakelijk is.
+- Was er opzet? Opzet is vrijwel altijd uitgesloten, en de verzekeraar kan onderzoeken of de handeling bewust was. Drank kan in die beoordeling een rol spelen, maar maakt het niet automatisch opzet.
+Adviseer de klant om de schade snel te melden, eerlijk te vertellen wat er is gebeurd en tegenover de benadeelde geen aansprakelijkheid te erkennen of betalingen toe te zeggen; dat laat hij aan de verzekeraar. Laat hem een verklaring opstellen en eventuele getuigen noteren. Leg de melding en de beslissing van de verzekeraar vast.`}
+  ]},
  {id:'vbh-054',cat:'verz',auteur:null,naam:'',voorbeeld:true,datum:'2026-04-12T16:30:00',views:429,tags:['huurwoning','oplevering','AVP'],beste:null,
   titel:'Huurwoning bij oplevering beschadigd: valt dat onder de AVP?',
   body:`Bij het opleveren van een huurwoning brengt de verhuurder schade in rekening voor beschadigingen in vloer en deuren. De klant wil dit claimen op zijn AVP. Kan dat?`,
@@ -443,7 +484,15 @@ Ik vraag de klant de factuur te bewaren en leg de wijziging en de aangepaste ver
  {id:'vbh-066',cat:'verz',auteur:null,naam:'',voorbeeld:true,datum:'2026-05-26T21:35:00',views:360,tags:['behandeltijd','schadebehandeling','klacht'],beste:null,
   titel:'Lange behandeltijd van een schade: wat kan de klant doen?',
   body:`Een schade bij een klant loopt al maanden zonder duidelijke beslissing. De klant raakt gefrustreerd. Wat doen jullie om de zaak vlot te trekken?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbh-066-a1',auteur:'u3',datum:'2026-05-28T21:35:00',rA:{u1:5,u2:5},rAdv:{u1:5,u2:5},body:`Ik pak dat stapsgewijs aan.
+- Vraag schriftelijk naar de stand van zaken: wat ontbreekt nog, wie behandelt de schade en wanneer volgt een beslissing.
+- Controleer of de klant zelf nog stukken moet aanleveren; dat is vaak de oorzaak.
+- Bij uitblijven van een reactie: escaleer naar de teamleider schade. De Gedragscode Behandeling Claims van het Verbond van Verzekeraars bevat afspraken over communicatie en voortgang; verwijs daarnaar.
+- Helpt dat niet, laat de klant dan een klacht indienen bij de verzekeraar zelf. Volgt geen bevredigend antwoord, dan kan hij naar het Kifid; controleer de actuele termijnen en voorwaarden op kifid.nl.
+- Is er een geschil over de omvang, bespreek dan een contra-expertise.
+Houd een logboek bij met data en afspraken en informeer de klant actief. Leg alle correspondentie in het dossier.`}
+  ]},
  {id:'vbh-067',cat:'verz',auteur:null,naam:'',voorbeeld:true,datum:'2026-05-30T10:05:00',views:576,tags:['overstappen','lopende schade','woonverzekering'],beste:'vbh-067-a1',
   titel:'Overstappen naar andere verzekeraar met een lopende schade',
   body:`Een klant wil zijn woonverzekering overzetten, maar er loopt nog een schade bij de huidige verzekeraar. Kan dat zonder problemen?`,
@@ -511,7 +560,14 @@ Ik vraag de klant de factuur te bewaren en leg de wijziging en de aangepaste ver
  {id:'vbh-076',cat:'verz',auteur:null,naam:'',voorbeeld:true,datum:'2026-07-02T11:25:00',views:222,tags:['huurdersbelang','inboedel','huurwoning'],beste:null,
   titel:'Huurdersbelang: moet een huurder dat apart verzekeren?',
   body:`Een klant huurt een woning en heeft zelf een nieuwe keuken en vloer laten plaatsen. Zijn die aanpassingen verzekerd?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbh-076-a1',auteur:'u3',datum:'2026-07-03T22:25:00',rA:{u6:5,u5:5,u4:5},rAdv:{u5:5,u4:5},body:`Aanpassingen die een huurder op eigen kosten aanbrengt, zoals een keuken of vloer, vallen niet onder de opstalverzekering van de verhuurder. Dat heet huurdersbelang.
+- Huurdersbelang is bij veel inboedelverzekeringen meeverzekerd, maar vaak tot een maximumbedrag. Controleer dat bedrag in de voorwaarden.
+- Is de investering hoger, verhoog dan het verzekerde bedrag of kies een polis met een ruimere dekking voor huurdersbelang.
+- Laat de klant de facturen bewaren, die heeft hij nodig bij schade.
+- Bespreek ook de afspraken met de verhuurder: mag hij de aanpassingen bij vertrek meenemen of moet hij ze laten zitten, en krijgt hij een vergoeding?
+Leg in het dossier vast welke aanpassingen zijn gedaan, voor welk bedrag en hoe ze zijn verzekerd.`}
+  ]},
  {id:'vbh-077',cat:'verz',auteur:null,naam:'',voorbeeld:true,datum:'2026-07-06T16:00:00',views:427,tags:['glas','condens','opstal'],beste:'vbh-077-a1',
   titel:'Condens tussen dubbel glas: is dat glasschade?',
   body:`Bij een klant zitten een paar ruiten met condens tussen de glasbladen. Hij wil dit claimen op de glasverzekering. Kan dat?`,
@@ -576,7 +632,14 @@ Ik vraag de klant de factuur te bewaren en leg de wijziging en de aangepaste ver
  {id:'vbh-086',cat:'verz',auteur:null,naam:'',voorbeeld:true,datum:'2026-08-08T18:10:00',views:418,tags:['riool','waterschade','opstal'],beste:null,
   titel:'Riool verstopt en water komt uit de afvoer: dekking?',
   body:`Bij een klant is het riool verstopt geraakt en is er water uit het toilet en de doucheafvoer gestroomd. Is deze schade verzekerd?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbh-086-a1',auteur:'u3',datum:'2026-08-09T16:10:00',rA:{u7:4,u6:4,u5:4},rAdv:{u7:4,u5:4},body:`Vaak wel, maar het hangt af van de oorzaak en de voorwaarden.
+- Water dat onverwacht uit de afvoer stroomt door een verstopping, is bij veel inboedel- en opstalpolissen gedekt. Lees na of verstopping uitdrukkelijk is genoemd.
+- Komt rioolwater binnen door hevige neerslag, dan valt het meestal onder een aparte dekking voor neerslag of rioolwater die niet in elke polis zit.
+- De kosten van ontstoppen zelf worden niet altijd vergoed. Opsporen en herstellen van een beschadigde leiding vaak wel.
+- Slijtage of achterstallig onderhoud van leidingen is meestal uitgesloten.
+Kijk ook waar de verstopping zit: voorbij de perceelgrens is de gemeente meestal verantwoordelijk. Adviseer de klant om direct foto's te maken, de schade te beperken en de factuur van de ontstopper te bewaren met de oorzaak erop. Leg de melding en de beoordeling vast in het dossier.`}
+  ]},
  {id:'vbh-087',cat:'verz',auteur:null,naam:'',voorbeeld:true,datum:'2026-08-12T20:35:00',views:121,tags:['bliksem','overspanning','inboedel'],beste:'vbh-087-a1',
   titel:'Blikseminslag in de buurt: apparatuur kapot door overspanning',
   body:`Na een onweersbui werken bij een klant meerdere apparaten niet meer. Er is geen directe inslag op de woning geweest. Valt overspanning onder de inboedel?`,
@@ -627,7 +690,14 @@ Ik vraag de klant de factuur te bewaren en leg de wijziging en de aangepaste ver
  {id:'vbh-094',cat:'verz',auteur:null,naam:'',voorbeeld:true,datum:'2026-09-07T11:45:00',views:239,tags:['stacaravan','camping','verzekeren'],beste:null,
   titel:'Stacaravan op een camping: onder welke polis?',
   body:`Een klant heeft een stacaravan op een camping. Kan die onder de inboedel of moet het apart?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbh-094-a1',auteur:'u3',datum:'2026-09-08T23:45:00',rA:{u4:4,u6:4},rAdv:{u4:4},body:`Een stacaravan valt doorgaans niet onder de reguliere inboedelverzekering. Die dekt de spullen in de woning en buiten de woning vaak maar beperkt. Een stacaravan is een zelfstandig object en heeft daarom meestal een eigen stacaravanverzekering nodig, die het object zelf en de inboedel erin dekt.
+- Kijk naar de eisen van de camping, sommige vragen een bewijs van verzekering en een aansprakelijkheidsdekking.
+- Let op het verschil tussen een stacaravan en een chalet die vast staat: dat laatste kan soms als opstal worden verzekerd.
+- Bepaal de verzekerde waarde, rekening houdend met de leeftijd van de caravan.
+- Controleer hoe storm, wateroverlast en diefstal zijn gedekt, en of er beperkingen gelden buiten het seizoen.
+Leg in het dossier vast welke polis is gekozen, welke waarde is verzekerd en welke eisen de camping stelt.`}
+  ]},
  {id:'vbh-095',cat:'verz',auteur:null,naam:'',voorbeeld:true,datum:'2026-09-11T07:30:00',views:42,tags:['schademelding','premie','advies'],beste:'vbh-095-a1',
   titel:'Klant wil kleine schade niet melden: verstandig?',
   body:`Een klant heeft een kleine schade en twijfelt of hij die moet melden omdat hij bang is voor een hogere premie. Wat adviseren jullie?`,

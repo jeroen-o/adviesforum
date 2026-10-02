@@ -8,15 +8,36 @@ window.VRAGEN_DATA=[
  {id:'v13',cat:'hyp',auteur:null,naam:'Jeroen Visser',datum:'2026-10-02T07:30:00',views:152,tags:['BKR','doorstromer','overbrugging'],beste:null,
   titel:'Acceptatie overbruggingskrediet bij herstelde A-codering BKR',
   body:`Een doorstromer heeft een herstelde A-codering op een oud postorderkrediet (ruim 2,5 jaar geleden hersteld). De klant wil nu een overbruggingskrediet. De geldverstrekker wijst in eerste instantie af. Heeft iemand ervaring met een succesvol maatwerkverzoek in een vergelijkbare situatie?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'v13-a1',auteur:'u4',datum:'2026-10-02T10:20:00',rA:{u1:5,u5:4,u8:4},rAdv:{u1:4,u5:5},body:`Ja, dat lukt regelmatig, mits je het verzoek goed onderbouwt. Een herstelde A-codering blijft nog enige tijd zichtbaar na herstel, dus de eerste afwijzing is vaak een automatische uitkomst. Controleer de actuele registratietermijnen bij BKR.
+- Laat de klant een eigen BKR-overzicht opvragen, zodat je exact weet wat geregistreerd staat en sinds wanneer het hersteld is.
+- Schrijf een korte motivatie: oorzaak van de achterstand, eenmalig karakter, aantoonbaar goed betaalgedrag sindsdien en de huidige financiële situatie.
+- Benadruk het lage risico van de overbrugging: lever bij voorkeur een definitieve koopakte van de huidige woning aan met verstreken ontbindende voorwaarden.
+- Lukt het niet, toets dan bij een andere geldverstrekker; het acceptatiebeleid voor herstelde coderingen verschilt flink. Bij NHG gelden eigen normen, check de actuele Voorwaarden & Normen.
+Leg in het dossier vast: BKR-overzicht, verklaring van de klant, het maatwerkverzoek en de reactie van de geldverstrekker. Voor de dubbele lasten kun je overbrugging.html gebruiken.`}
+  ]},
  {id:'v14',cat:'pens',auteur:null,naam:'Sander Kok',datum:'2026-10-02T04:30:00',views:45,tags:['DGA','pensioen in eigen beheer','Wtp'],beste:null,
   titel:'DGA met pensioen in eigen beheer: omzetten in ODV of afkopen?',
   body:`Een DGA van 58 jaar heeft nog een aanzienlijk pensioen in eigen beheer op de balans. Is omzetten in een oudedagsverplichting nog steeds de beste route, of moeten we een afkoopscenario doorrekenen gezien de huidige rente? Welke afwegingen leggen jullie vast?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'v14-a1',auteur:'u7',datum:'2026-10-02T11:05:00',rA:{u2:5,u8:4,u5:4},rAdv:{u2:5,u8:5},body:`Let op: beide routes uit de uitfaseringswet zijn voorbij. Afkopen met korting of omzetten in een ODV kon fiscaal alleen tot en met 31 december 2019. Wie toen niets heeft gedaan, heeft nu een premievrije, bevroren pensioenaanspraak in eigen beheer. Afkoop nu is in principe een onzuivere handeling: de volledige waarde wordt belast en er kan revisierente bij komen. Dat is zelden aantrekkelijk.
+Wat je wel moet uitzoeken:
+- Kan de BV de toekomstige uitkeringen dragen? Vergelijk de fiscale waarde met de commerciële waarde en kijk naar het dekkingstekort.
+- Is overdracht naar een verzekeraar een optie, en wat kost het tekort?
+- Wat betekent het voor de partner (nabestaandenpensioen) en bij verkoop of liquidatie van de BV?
+Leg in het dossier vast: de pensioenbrief, de actuele balanswaardering, de besproken scenario's en de rol van de fiscalist of accountant. Laat dit laatste deel door de fiscalist van de DGA toetsen.`}
+  ]},
  {id:'v15',cat:'verz',auteur:null,naam:'Lisa Meijer',datum:'2026-10-01T15:00:00',views:12,tags:['AOV','zzp','Broodfonds'],beste:null,
   titel:'AOV voor startende zzp\'er in een zwaar beroep: premie onbetaalbaar',
   body:`Ik adviseer een startende zzp'er (timmerman). De AOV-premies voor deze beroepsklasse zijn erg hoog ten opzichte van de verwachte winst. Is een Broodfonds in combinatie met een AOV met lange wachttijd passend advies, of schiet de dekking dan tekort?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'v15-a1',auteur:'u3',datum:'2026-10-01T18:30:00',rA:{u7:4,u2:5,u8:4},rAdv:{u7:4,u2:4,u1:3},body:`Die combinatie kan passend zijn, maar alleen als je het gat duidelijk maakt. Een Broodfonds keert maar een beperkte periode uit en het bedrag hangt af van de inleg; de AOV met lange wachttijd (bijvoorbeeld een of twee jaar) moet daar naadloos op aansluiten. Controleer de actuele voorwaarden van het betreffende Broodfonds.
+- Reken de periode na: sluit de maximale uitkeringsduur van het Broodfonds aan op de wachttijd van de AOV?
+- Zoek de premie omlaag via een lager verzekerd bedrag, een staffelpremie voor starters of een eindleeftijd die past, en vergelijk beroepsklassen tussen verzekeraars.
+- Bespreek wat er gebeurt bij blijvende ongeschiktheid voor het eigen beroep: veel goedkope dekkingen keren dan uit op basis van passende arbeid.
+- Volg de status van de verplichte basisverzekering voor zelfstandigen bij rijksoverheid.nl.
+Leg vast welke opties je hebt besproken, welke risico's de klant zelf draagt en waarom hij voor deze combinatie kiest. Zie ook aov-tekort.html voor de berekening van het tekort.`}
+  ]},
  {id:'v12',cat:'adv',auteur:'u1',datum:'2026-10-02T08:05:00',views:1,tags:['financieringsopzet','bedragen','eigen middelen'],beste:null,
   titel:'Hoe kan ik de bedragen in de financieringsopzet aanpassen in eBlinqx Hypotheekadvies?',
   body:`De financieringsopzet toont bedragen die ik wil corrigeren, onder andere de eigen middelen en het hypotheekbedrag. Waar pas ik die aan in eBlinqx Hypotheekadvies?`,
@@ -108,7 +129,14 @@ In de opbouwfase kies ik meestal voor bank of beleggen; de keuze voor levenslang
  {id:'v7',cat:'hyp',auteur:'u5',datum:'2026-10-01T16:40:00',views:23,tags:['verhuisregeling','meeneemregeling'],beste:null,
   titel:'Verhuisregeling meenemen naar een andere geldverstrekker: kan dat?',
   body:`Klant heeft een lage rente die nog zes jaar vaststaat en wil verhuizen, maar de huidige geldverstrekker financiert het nieuwe object niet. Zijn er constructies om de rente toch mee te nemen?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'v7-a1',auteur:'u1',datum:'2026-10-01T19:10:00',rA:{u4:5,u5:4},rAdv:{u4:4,u2:4},body:`Helaas, een verhuisregeling werkt alleen binnen dezelfde geldverstrekker. De rente is een afspraak met die partij en gaat niet mee naar een andere bank. Wel zijn er nog een paar knoppen:
+- Vraag de huidige geldverstrekker om maatwerk: waarom wordt het object niet gefinancierd, en is er een oplossing met een extra taxatie of aanvullende stukken?
+- Controleer de voorwaarden: bij verkoop van de woning is aflossen vaak boetevrij, zodat de klant in ieder geval geen boeterente betaalt.
+- Reken het renteverschil door over de resterende zes jaar en vergelijk dat met de nieuwe rente bij een andere geldverstrekker, eventueel met een kortere rentevaste periode. Gebruik oversluiten.html als hulp.
+- Kijk of een andere geldverstrekker een tijdelijke rentekorting of een rentemiddeling-achtige oplossing biedt; dat is uitzondering, geen regel.
+Leg in het dossier vast dat meenemen niet mogelijk was, welke alternatieven zijn vergeleken en welke keuze de klant maakt.`}
+  ]},
  {id:'v8',cat:'comp',auteur:'u1',datum:'2026-09-10T08:50:00',views:264,tags:['bewaartermijn','AVG','Wft'],beste:'a10',
   titel:'Hoe lang bewaren jullie adviesdossiers na het einde van de relatie?',
   body:`We ruimen oude dossiers op. Wat is de minimale bewaartermijn en wanneer moet je juist verwijderen vanwege de AVG?`,

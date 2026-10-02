@@ -30,7 +30,14 @@ window.VRAGEN_DATA=(window.VRAGEN_DATA||[]).concat([
  {id:'vbc-005',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2025-10-17T07:47:00',views:400,tags:['doorstromer','energielabel','verduurzaming'],beste:null,
   titel:'Extra leenruimte voor verduurzaming bij doorstromer met slecht energielabel',
   body:`Een doorstromer koopt een oudere woning met een slecht energielabel en wil direct isoleren en een warmtepomp laten plaatsen. Hoe verwerken jullie de extra leenruimte voor energiebesparende maatregelen in de aanvraag en wat vragen geldverstrekkers aan onderbouwing?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbc-005-a1',auteur:'u5',datum:'2025-10-17T17:47:00',rA:{u1:5,u4:4,u2:4},rAdv:{u1:5,u4:4},body:`De extra leenruimte voor energiebesparende maatregelen hangt af van het energielabel van de woning. Voor slechte labels is de extra ruimte het grootst, en die mag boven het normale maximum op basis van inkomen uitkomen. Controleer de actuele bedragen in de Tijdelijke regeling of in leennormen-2026.html, want ze worden jaarlijks aangepast.
+Wat geldverstrekkers meestal vragen:
+- Een specificatie of offerte van de maatregelen (isolatie, warmtepomp, glas) die laat zien dat het om energiebesparing gaat.
+- Een bouwdepot waaruit de facturen worden betaald.
+- Het energielabel van de woning bij aankoop.
+Bij NHG is er een verruimde kostengrens met energiebesparende voorzieningen; kijk in de Voorwaarden en Normen. Bespreek ook dat de maandlasten hoger worden en dat de besparing op de energierekening een schatting is. In het dossier leg ik vast welke maatregelen worden uitgevoerd, het label, de opbouw van de extra ruimte en dat de klant de lasten ook zonder volledig behaalde besparing kan dragen.`}
+  ]},
  {id:'vbc-006',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2025-10-21T15:19:00',views:257,tags:['doorstromer','overwaarde','aflossen'],beste:'vbc-006-a2',
   titel:'Overwaarde volledig inbrengen of deel aanhouden als buffer',
   body:`Een doorstromer heeft veel overwaarde en wil die volledig inbrengen om de nieuwe hypotheek laag te houden. Er is verder weinig spaargeld. Adviseren jullie om een deel aan te houden als buffer?`,
@@ -89,7 +96,15 @@ window.VRAGEN_DATA=(window.VRAGEN_DATA||[]).concat([
  {id:'vbc-014',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2025-11-19T09:50:00',views:593,tags:['doorstromer','verhuurd','oude woning'],beste:null,
   titel:'Oude woning verhuren in plaats van verkopen',
   body:`Een doorstromer overweegt de oude woning te verhuren in plaats van te verkopen. Wat zijn de belangrijkste aandachtspunten voor de bestaande hypotheek en de nieuwe financiering?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbc-014-a1',auteur:'u2',datum:'2025-11-19T21:50:00',rA:{u1:4,u5:5,u4:4},rAdv:{u1:4,u5:5},body:`Een paar punten om eerst uit te zoeken:
+- Toestemming: in de meeste hypotheekakten staat een verhuurverbod. Verhuur zonder toestemming kan leiden tot opeising. Vraag toestemming of stap over naar een verhuurhypotheek of een financiering voor beleggers.
+- Fiscaal: de verhuurde woning is geen eigen woning meer. De schuld gaat naar box 3 en de renteaftrek vervalt. Laat de fiscale gevolgen voor beide woningen doorrekenen.
+- Nieuwe financiering: de geldverstrekker toetst op dubbele lasten. Huurinkomsten tellen niet of maar beperkt mee; controleer het acceptatiebeleid. Bij NHG gelden aanvullende regels.
+- Huurrecht: verhuren is niet zomaar tijdelijk. Laat de klant de regels over huurcontracten en huurprijs nakijken.
+- Overwaarde: zonder verkoop is er geen eigen geld uit de oude woning; dat beïnvloedt de nieuwe hypotheek.
+In het dossier leg ik vast welke opties zijn besproken, of toestemming is gevraagd, hoe de lasten getoetst zijn en dat de klant de risico's van verhuur (leegstand, onderhoud, huurrecht) kent.`}
+  ]},
  {id:'vbc-015',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2025-11-21T08:18:00',views:258,tags:['doorstromer','bijleenregeling','verbouwing'],beste:null,
   titel:'Verbouwing van de nieuwe woning financieren bij doorstromer met eigenwoningreserve',
   body:`Een doorstromer heeft een eigenwoningreserve en wil de nieuwe woning direct verbouwen. Telt de verbouwing mee in de berekening van de maximale aftrekbare schuld?`,
@@ -149,7 +164,14 @@ Ik zet dit in een maandoverzicht naast de nieuwe lasten, zodat de klant het tota
  {id:'vbc-022',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2025-12-16T08:28:00',views:361,tags:['doorstromer','verhuisplannen','tijdelijk wonen'],beste:null,
   titel:'Tijdelijk huren tussen verkoop en aankoop',
   body:`Een doorstromer verkoopt eerst en wil pas daarna een nieuwe woning kopen, met een periode van tijdelijk huren. Welke fiscale punten bespreken jullie?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbc-022-a1',auteur:'u2',datum:'2025-12-16T17:28:00',rA:{u1:4,u5:4,u4:4},rAdv:{u1:4,u5:4},body:`De belangrijkste fiscale punten die ik bespreek:
+- Eigenwoningreserve: de overwaarde uit de verkoop wordt een eigenwoningreserve. Bij aankoop van de nieuwe woning moet die worden ingebracht, anders is een deel van de nieuwe lening geen eigenwoningschuld. De reserve vervalt na een vaste termijn; controleer de actuele regels bij de Belastingdienst. Het overzicht bijleenregeling.html helpt bij het doorrekenen.
+- Overgangsrecht: lost de klant de hypotheek volledig af en heeft hij tijdelijk geen eigen woning, dan kan het overgangsrecht (voor hypotheken van vóór 2013) verloren gaan als de periode zonder eigenwoningschuld te lang duurt. Controleer de termijn.
+- Box 3: de verkoopopbrengst valt tijdens de huurperiode in box 3.
+- Aflossingsboete: bij verkoop geldt vaak een boetevrije aflossing; controleer de voorwaarden.
+Leg in het dossier vast hoe groot de eigenwoningreserve is, welke termijnen gelden en dat de klant weet wat het betekent als hij binnen of buiten die termijnen koopt.`}
+  ]},
  {id:'vbc-023',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2025-12-21T15:06:00',views:595,tags:['doorstromer','scheiding','bijleenregeling'],beste:'vbc-023-a1',
   titel:'Doorstromer met eigenwoningreserve uit een eerdere relatie',
   body:`Een klant heeft na een eerdere relatie een eigenwoningreserve meegekregen. Nu koopt de klant met een nieuwe partner. Hoe verwerken jullie de reserve bij een gezamenlijke aankoop?`,
@@ -222,7 +244,13 @@ Ik zet dit in een totaaloverzicht dat de klant mee naar huis krijgt.`},
  {id:'vbc-032',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-01-25T13:40:00',views:197,tags:['overbrugging','restschuld','doorstromer'],beste:null,
   titel:'Hoe gaan jullie om met een negatieve overwaarde bij doorstromers',
   body:`Een doorstromer heeft een woning met een verwachte verkoopprijs onder de hypotheek. De klant wil wel verhuizen. Welke mogelijkheden zien jullie in de praktijk om de restschuld mee te financieren?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbc-032-a1',auteur:'u1',datum:'2026-01-26T00:40:00',rA:{u4:4,u5:5,u2:4},rAdv:{u4:4,u5:5},body:`Meefinancieren van een restschuld kan, maar de ruimte is beperkt en het beleid verschilt per geldverstrekker. Wat ik in de praktijk zie:
+- Met NHG: als de oude hypotheek NHG had en de nieuwe ook, kan de restschuld onder voorwaarden worden meegefinancierd. De kosten inclusief restschuld moeten binnen de NHG-grens vallen, de restschuld moet annuïtair of lineair worden afgelost en de nieuwe hypotheek moet passen bij het inkomen. Controleer de actuele voorwaarden op nhg.nl.
+- Zonder NHG: sommige geldverstrekkers financieren de restschuld als apart leningdeel, binnen de leennormen. Vaak moet de oude woning eerst verkocht zijn.
+- Alternatief: een restschuldlening of aflossen uit spaargeld.
+De rente over een nieuwe restschuld is in de regel niet aftrekbaar. De restschuld telt mee in de maandlasten, dus de hypotheek voor de nieuwe woning valt lager uit. In het dossier leg ik vast hoe de restschuld is bepaald (verkoopprijs, verwachte opbrengst), welke route is gekozen en wat dat betekent voor de lasten.`}
+  ]},
  {id:'vbc-033',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-01-28T10:30:00',views:64,tags:['overbrugging','nieuwbouw','bouwdepot'],beste:'vbc-033-a1',
   titel:'Overbrugging bij nieuwbouw met lange bouwtijd',
   body:`Een klant koopt nieuwbouw met een verwachte oplevering over anderhalf jaar. De oude woning wil hij pas vlak voor de oplevering verkopen. Hoe richten jullie de overbrugging en de financiering in voor deze periode?`,
@@ -320,7 +348,15 @@ Ik zet dit in een totaaloverzicht dat de klant mee naar huis krijgt.`},
  {id:'vbc-047',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-03-21T08:05:00',views:284,tags:['overbrugging','senior','pensioen'],beste:null,
   titel:'Overbrugging met een klant die al gepensioneerd is',
   body:`Een gepensioneerde klant wil verhuizen naar een kleinere woning en heeft een overbrugging nodig. Toetst de geldverstrekker de dubbele lasten op het pensioeninkomen? Wat zien jullie in de praktijk?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbc-047-a1',auteur:'u7',datum:'2026-03-21T18:05:00',rA:{u1:4,u4:4,u5:5},rAdv:{u1:4,u4:4},body:`In de praktijk is dat afhankelijk van de verkoopsituatie. Is de oude woning onvoorwaardelijk verkocht, dan toetsen veel geldverstrekkers niet op dubbele lasten. Is de woning nog niet verkocht, dan kijken sommige geldverstrekkers wel of de klant de lasten van beide woningen een tijd kan dragen, en dan op basis van het pensioeninkomen. Controleer het acceptatiebeleid.
+Bij gepensioneerden let ik extra op:
+- Het pensioeninkomen is vaak lager dan het oude salaris, dus de ruimte voor dubbele lasten is kleiner.
+- Een voorzichtige inschatting van de verkoopprijs; ik reken vaak met een marge (zie overbrugging.html).
+- Liquiditeit: kan de klant een vertraging in de verkoop opvangen uit spaargeld?
+- Looptijd van de overbrugging en kosten.
+Bespreek ook of verkopen vóór kopen een optie is, met eventueel tijdelijk huren. In het dossier leg ik vast hoe de verkoopprijs is bepaald, welke buffer er is en hoe lang de klant de dubbele lasten kan dragen.`}
+  ]},
  {id:'vbc-048',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-03-24T16:30:00',views:501,tags:['overbrugging','makelaar','vraagprijs'],beste:null,
   titel:'Afspraken met de makelaar over de verkoopprijs in het overbruggingsadvies',
   body:`In het overbruggingsadvies gebruiken we de verwachte verkoopprijs. Nemen jullie de vraagprijs van de makelaar over of rekenen jullie met een lager bedrag?`,
@@ -395,7 +431,14 @@ Ik zet dit in een totaaloverzicht dat de klant mee naar huis krijgt.`},
  {id:'vbc-058',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-04-28T10:45:00',views:115,tags:['scheiding','gezamenlijk eigendom','kinderen'],beste:null,
   titel:'Tijdelijk in de woning blijven tot de kinderen groot zijn',
   body:`Ex-partners willen de woning in gezamenlijk eigendom houden tot de kinderen zijn uitgevlogen. Een van beiden blijft in de woning wonen. Wat zijn de aandachtspunten voor de hypotheek en de fiscale behandeling?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbc-058-a1',auteur:'u2',datum:'2026-04-28T23:45:00',rA:{u1:4,u5:5,u4:4},rAdv:{u1:4,u5:5},body:`Kan, maar regel het goed. Aandachtspunten:
+- Hypotheek: beide ex-partners blijven hoofdelijk aansprakelijk. De geldverstrekker moet akkoord gaan met de situatie. Bespreek wat er gebeurt als de vertrokken partner zelf een woning wil kopen; zijn leencapaciteit is beperkt zolang hij aan deze hypotheek vastzit.
+- Fiscaal: voor de partner die in de woning blijft is het een eigen woning. Voor de vertrokken partner kan de woning nog een beperkte periode als eigen woning gelden, daarna valt zijn deel in box 3. Controleer de actuele termijn bij de Belastingdienst.
+- Afspraken vastleggen in het convenant: wie betaalt rente, aflossing, onderhoud en verzekeringen, hoe de overwaarde wordt verdeeld en wanneer de woning wordt verkocht of overgenomen.
+- Draagplicht en verdeling: laat de verdeling van lasten doorrekenen (draagplicht.html of draagplicht.nl).
+In het dossier leg ik vast welke afspraken er zijn, dat de geldverstrekker akkoord is en dat beide partijen de fiscale en financiële gevolgen kennen.`}
+  ]},
  {id:'vbc-059',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-05-02T08:30:00',views:219,tags:['scheiding','renteaftrek','vertrekkende partner'],beste:'vbc-059-a2',
   titel:'Woning blijft eigen woning voor de vertrekkende partner',
   body:`De vertrekkende partner betaalt nog een deel van de hypotheeklasten. Kan hij of zij de rente nog aftrekken terwijl de ex-partner in de woning woont?`,
@@ -470,7 +513,15 @@ Ik zet dit in een totaaloverzicht dat de klant mee naar huis krijgt.`},
  {id:'vbc-069',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-06-06T20:55:00',views:339,tags:['scheiding','doorlooptijd','planning'],beste:null,
   titel:'Hoeveel tijd hebben jullie nodig voor een uitkoop na scheiding',
   body:`Klanten vragen vaak hoe lang het duurt voordat de uitkoop rond is. Wat is jullie ervaring met de doorlooptijd en waar zit de vertraging meestal?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbc-069-a1',auteur:'u4',datum:'2026-06-07T06:55:00',rA:{u1:4,u5:4,u2:4},rAdv:{u1:4,u5:4},body:`Reken eerder in maanden dan in weken. De doorlooptijd hangt vooral af van de ex-partners zelf. Waar de vertraging meestal zit:
+- Afspraken: zolang het convenant of de verdeling niet rond is, kan de geldverstrekker niets beoordelen.
+- Taxatie: nodig voor de waarde en de verdeling van de overwaarde.
+- Inkomen: na scheiding verandert het inkomen (alimentatie, kinderopvang). Alimentatie wordt vaak pas meegenomen als er een definitieve regeling of uitspraak is; controleer het beleid.
+- Ontslag uit hoofdelijke aansprakelijkheid: de geldverstrekker moet dat beoordelen en dat kost tijd.
+- Notaris: de akte van verdeling en eventueel een nieuwe hypotheekakte.
+Wat helpt: vroeg beginnen met een oriënterende berekening, documenten tegelijk opvragen en duidelijke afspraken over wie wat aanlevert. In het dossier leg ik vast welke planning met de klant is afgesproken, wie verantwoordelijk is voor welk onderdeel en welke afhankelijkheden er zijn.`}
+  ]},
  {id:'vbc-070',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-06-12T16:40:00',views:33,tags:['scheiding','bijleenregeling','uitkopen'],beste:'vbc-070-a2',
   titel:'Bijleenregeling bij uitkoop na scheiding',
   body:`De blijvende partner koopt de helft van de ex-partner. Valt de nieuwe lening onder de bijleenregeling en moet er een eigenwoningreserve worden ingebracht?`,
@@ -542,7 +593,17 @@ Zo is het advies voor een buitenstaander goed te volgen.`},
  {id:'vbc-079',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-07-13T16:35:00',views:118,tags:['senioren','doorstromer','appartement'],beste:null,
   titel:'Senior koopt een appartement en verkoopt de eengezinswoning',
   body:`Een senior stel wil verhuizen naar een appartement. De verkoop van de huidige woning levert veel op. Ze willen geen hypotheek meer. Waar letten jullie op in het advies?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbc-079-a1',auteur:'u7',datum:'2026-07-14T03:35:00',rA:{u2:5,u1:4,u5:4},rAdv:{u2:5,u1:4},body:`Ook zonder hypotheek is er genoeg te adviseren. Waar ik op let:
+- Eigenwoningreserve: als ze later toch willen lenen, geldt de bijleenregeling. Bereken die nu al (bijleenregeling.html).
+- Liquiditeit: zorg dat er na de aankoop een buffer overblijft voor onderhoud, VvE-bijdrage, zorg en onvoorziene kosten. Steek niet alles in de woning.
+- Box 3: de overwaarde die niet in de woning gaat, valt in box 3.
+- VvE: check de financiële gezondheid en het reservefonds.
+- Toekomst: een kleine hypotheek houden kan liquiditeit geven, maar kost rente. Overleg dat met de klant.
+- Nalatenschap: testament, schenkingen aan kinderen en de gevolgen voor erfbelasting.
+- Toegankelijkheid van het appartement bij ouder worden.
+In het dossier leg ik vast welke keuzes zijn besproken, waarom geen hypotheek is gekozen en dat de klant weet welke buffer er overblijft.`}
+  ]},
  {id:'vbc-080',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-07-18T15:10:00',views:305,tags:['senioren','AOW','betaalbaarheid'],beste:'vbc-080-a1',
   titel:'Hypotheek aanvragen voor een klant met alleen AOW en een klein pensioen',
   body:`Een klant met AOW en een klein aanvullend pensioen wil een kleine hypotheek voor een appartement. Is dat haalbaar en waar letten geldverstrekkers op?`,
@@ -617,7 +678,15 @@ Zo is het advies voor een buitenstaander goed te volgen.`},
  {id:'vbc-090',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-08-22T15:55:00',views:508,tags:['starters','tijdelijk contract','inkomen'],beste:null,
   titel:'Starter met een tijdelijk contract',
   body:`Een starter heeft een tijdelijk contract zonder intentieverklaring. Is een hypotheek dan mogelijk en welke opties zijn er?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbc-090-a1',auteur:'u1',datum:'2026-08-23T00:55:00',rA:{u4:5,u5:4,u8:3},rAdv:{u4:5,u5:4},body:`Ja, het kan nog wel. De gebruikelijke routes:
+- Een perspectiefverklaring via een erkende aanbieder. Die beoordeelt opleiding, beroep en arbeidsmarkt en wordt door veel geldverstrekkers geaccepteerd.
+- Een arbeidsmarktscan, als de geldverstrekker die accepteert.
+- Toetsen op het gemiddelde inkomen, als de starter al langer werkt in flexibele contracten.
+Controleer per geldverstrekker welke route mogelijk is en welke documenten nodig zijn. Sommige geldverstrekkers hebben eisen aan de resterende looptijd van het contract.
+Bespreek met de starter ook de risico's van een tijdelijk contract. Wat als het contract niet wordt verlengd? Is er een buffer? Is een woonlastenverzekering zinvol?
+In het dossier leg ik vast waarom de intentieverklaring ontbreekt, welke route is gekozen en dat de klant de risico's kent.`}
+  ]},
  {id:'vbc-091',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-08-25T08:10:00',views:294,tags:['starters','schenking','eigen middelen'],beste:null,
   titel:'Schenking van ouders voor de eerste woning',
   body:`Ouders willen hun kind helpen met een schenking voor de eerste woning. Wat moet ik vastleggen en waar moet de klant op letten?`,
@@ -676,7 +745,16 @@ Zo is het advies voor een buitenstaander goed te volgen.`},
  {id:'vbc-099',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-09-23T10:30:00',views:88,tags:['starters','risico','betaalbaarheid'],beste:null,
   titel:'Hoe bespreken jullie de risicos van een maximale hypotheek met starters',
   body:`Starters willen vaak maximaal lenen om een woning te kunnen kopen. Hoe bespreken jullie de risico's en hoe leggen jullie dit vast?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbc-099-a1',auteur:'u5',datum:'2026-09-23T20:30:00',rA:{u1:5,u4:4,u8:5},rAdv:{u1:5,u4:4},body:`Ik maak de risico's concreet in plaats van algemeen. Wat ik bespreek:
+- Netto maandlasten naast de vaste lasten, met een realistisch budget. De Nibud-normen zijn een minimum.
+- Scenario's: wat gebeurt er bij ziekte, werkloosheid, gezinsuitbreiding of minder werken (zie maandlasten.html en werkloosheid.html).
+- Rente: wat als de rente na de rentevaste periode hoger is?
+- Waardedaling: met een maximale hypotheek is er weinig marge als de woning minder waard wordt.
+- Buffer: na aankoop moet er nog geld over zijn voor onvoorziene kosten.
+Ik laat de klant ook een lagere hypotheek zien om het verschil in maandlasten en ruimte te tonen.
+In het dossier leg ik vast welke risico's zijn besproken, welke scenario's zijn doorgerekend, welke keuze de klant maakt en waarom. Kiest de klant voor maximaal lenen, dan vermeld ik dat expliciet. Dat is belangrijk voor de zorgplicht.`}
+  ]},
  {id:'vbc-100',cat:'hyp',auteur:null,naam:'',voorbeeld:true,datum:'2026-09-28T09:10:00',views:454,tags:['starters','koopgarant','korting'],beste:'vbc-100-a2',
   titel:'Starter wil een woning kopen met een koopgarantconstructie',
   body:`Een starter overweegt een woning met een korting via een koopgarantconstructie. Hoe gaan geldverstrekkers hiermee om en wat bespreken jullie met de klant?`,

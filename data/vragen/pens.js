@@ -187,7 +187,14 @@ De ondernemingsraad moet hierbij betrokken worden.`},
  {id:'vbi-018',cat:'pens',auteur:null,naam:'',voorbeeld:true,datum:'2025-12-02T16:37:00',views:428,tags:['AOW','vrijwillig','premie'],beste:null,
   titel:'Wat kost vrijwillig bijverzekeren voor de AOW',
   body:`Een klant wil zijn AOW-gat dichten door vrijwillig bij te verzekeren. Hoe bepaal je of dat financieel zinvol is?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbi-018-a1',auteur:'u7',datum:'2025-12-04T01:37:00',rA:{u8:5,u5:5,u3:4,u1:5},rAdv:{u5:5,u3:4,u1:5},body:`Begin met het in kaart brengen van het gat: elk jaar dat iemand niet verzekerd was, scheelt een vast deel van de AOW. Vraag het actuele overzicht op bij de SVB.
+Daarna maak je de rekensom:
+- Premie: de SVB berekent die als percentage van het inkomen, met een minimum en maximum. Controleer de actuele bedragen op svb.nl.
+- Opbrengst: het extra AOW-bedrag per ingekocht jaar, levenslang vanaf de AOW-leeftijd.
+- Terugverdientijd: hoeveel jaar AOW moet de klant ontvangen voordat de premie is terugverdiend? Vergelijk dat met zijn levensverwachting en gezondheid.
+Let op de aanvraagtermijnen: die zijn beperkt en verschillen per situatie. Kijk ook naar alternatieven, zoals lijfrente of vrij vermogen, en naar de fiscale behandeling van premie en uitkering aan de hand van de actuele regels. Leg het SVB-overzicht, de berekening en de keuze van de klant vast in het dossier.`}
+  ]},
  {id:'vbi-019',cat:'pens',auteur:null,naam:'',voorbeeld:true,datum:'2025-12-05T07:00:00',views:209,tags:['AOW','emigratie','remigratie'],beste:'vbi-019-a1',
   titel:'Klant komt terug uit het buitenland: AOW-opbouw herstellen',
   body:`Een klant komt na jaren buitenland terug naar Nederland. Hij heeft geen vrijwillige verzekering gehad. Kan hij de ontbrekende jaren alsnog inkopen?`,
@@ -243,7 +250,17 @@ Gebruik de actuele voorwaarden van de SVB.`},
  {id:'vbi-024',cat:'pens',auteur:null,naam:'',voorbeeld:true,datum:'2025-12-24T09:01:00',views:237,tags:['Wtp','uitvoeringskosten','vergelijking'],beste:null,
   titel:'Kosten van pensioenuitvoerders vergelijken bij overstap',
   body:`Een werkgever wil bij de overgang naar het nieuwe stelsel ook van uitvoerder wisselen. Hoe vergelijken jullie de kosten en kwaliteit?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbi-024-a1',auteur:'u7',datum:'2025-12-26T01:01:00',rA:{u1:4,u2:5,u3:5},rAdv:{u1:4,u2:5,u3:5},body:`Controleer eerst of de werkgever onder een verplichtgesteld bedrijfstakpensioenfonds valt. Dan is wisselen meestal niet mogelijk.
+Is de keuze vrij, dan vergelijk ik op deze punten:
+- Kosten: uitvoeringskosten per deelnemer, vermogensbeheerkosten en transactiekosten. Vraag ze op in een uniforme opstelling, anders vergelijk je appels met peren.
+- Regeling: past het type contract onder het nieuwe stelsel bij de wensen van werkgever en werknemers?
+- Beleggingsbeleid en lifecycles, en de risicodekkingen zoals partnerpensioen en premievrijstelling.
+- Service: werkgeversportaal, communicatie naar deelnemers en kwaliteit van de administratie.
+- Wat gebeurt met de bestaande aanspraken: invaren, waardeoverdracht of achterlaten?
+De ondernemingsraad heeft instemmingsrecht bij wijzigingen van de pensioenregeling, betrek die op tijd. Let op dat je voor dit advies over de juiste Wft-bevoegdheid beschikt. Leg de vergelijking, de uitgangspunten en de keuze van de werkgever vast in het dossier.`},
+   {id:'vbi-024-a2',auteur:'u8',datum:'2025-12-27T01:01:00',rA:{u2:5,u1:4,u6:5},rAdv:{u2:5,u1:4},body:`Aanvulling vanuit compliance: leg in je opdrachtbevestiging vast dat je de werkgever adviseert en niet de individuele werknemers, en hoe je wordt beloond. Werknemers moeten goed worden geïnformeerd over de nieuwe regeling; spreek af wie dat doet. Bewaar de offertes en de vergelijking met datum, zodat je de keuze later kunt onderbouwen.`}
+  ]},
  {id:'vbi-025',cat:'pens',auteur:null,naam:'',voorbeeld:true,datum:'2025-12-27T19:16:00',views:155,tags:['AOW','ingangsdatum','planning'],beste:'vbi-025-a1',
   titel:'AOW-ingangsdatum en verjaardag: wanneer start de uitkering precies',
   body:`Een klant vraagt op welke dag de AOW precies ingaat. Hij wil zijn laatste werkdag daarop afstemmen. Wat kan ik hem vertellen?`,
@@ -374,7 +391,14 @@ Te laat beslissen kan fiscale gevolgen hebben.`}
  {id:'vbi-037',cat:'pens',auteur:null,naam:'',voorbeeld:true,datum:'2026-02-09T10:32:00',views:126,tags:['lijfrente','scheiding','verdeling'],beste:null,
   titel:'Lijfrente verdelen bij scheiding',
   body:`Een stel gaat scheiden. Een van hen heeft een lijfrenteverzekering. Hoe wordt die verdeeld?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbi-037-a1',auteur:'u7',datum:'2026-02-10T07:32:00',rA:{u6:5,u2:4},rAdv:{u2:4},body:`Een lijfrente valt niet onder de pensioenverevening; het hangt af van het huwelijksvermogensrecht en de afspraken in het convenant.
+- Valt de lijfrente in de gemeenschap, dan wordt hij verdeeld. Staat hij buiten de gemeenschap, kijk dan naar de huwelijkse voorwaarden of er verrekend moet worden.
+- Verdelen kan door de polis bij de verzekeraar te splitsen of door de waarde te verrekenen met andere bezittingen.
+- Verreken je de waarde, houd dan rekening met de latente belasting: over de uitkering wordt later nog inkomstenbelasting geheven, dus de netto waarde is lager.
+- Fiscaal kan een overdracht aan de ex-partner onder voorwaarden plaatsvinden zonder dat het als afkoop wordt belast. Controleer die voorwaarden aan de actuele regels voordat er iets wordt gesplitst.
+Vraag een actuele waardeopgave op en stem het af met de mediator of notaris. Leg de gekozen verdeling en de stukken vast in het dossier.`}
+  ]},
  {id:'vbi-038',cat:'pens',auteur:null,naam:'',voorbeeld:true,datum:'2026-02-13T14:47:00',views:447,tags:['lijfrente','zzp','pensioenopbouw'],beste:'vbi-038-a2',
   titel:'Pensioenopbouw voor een zzp-er',
   body:`Een zzp-er heeft geen pensioen opgebouwd. Hij vraagt wat de beste manier is om nu te beginnen. Welke opties bespreken jullie?`,
@@ -430,7 +454,14 @@ Let op de minimale duur van een tijdelijke uitkering.`}
  {id:'vbi-043',cat:'pens',auteur:null,naam:'',voorbeeld:true,datum:'2026-03-03T09:12:00',views:575,tags:['lijfrente','emigratie','fiscaal'],beste:null,
   titel:'Lijfrente bij emigratie',
   body:`Een klant emigreert binnenkort en heeft een lijfrentepolis waarvoor hij in het verleden premies heeft afgetrokken. Hij vraagt of hij die kan meenemen of laten staan. Wat zijn de fiscale gevolgen?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbi-043-a1',auteur:'u7',datum:'2026-03-04T20:12:00',rA:{u8:4,u1:4},rAdv:{u1:4},body:`Bij emigratie legt de Belastingdienst over de waarde van de lijfrente doorgaans een conserverende aanslag op. Daarvoor krijgt de klant uitstel van betaling. Die aanslag vervalt na een bepaalde periode, mits de klant de polis niet afkoopt of op een andere manier niet volgens de regels gebruikt. Controleer de actuele termijn en voorwaarden bij de Belastingdienst.
+Praktisch:
+- Laten staan is meestal de veiligste optie. Vraag de verzekeraar of hij een polis met een buitenlands adres kan blijven beheren en uitkeren.
+- Meenemen naar een buitenlandse aanbieder is in de regel niet mogelijk zonder fiscale gevolgen.
+- Waar de uitkeringen later worden belast, hangt af van het belastingverdrag met het nieuwe woonland.
+Gezien de complexiteit adviseer ik een fiscalist in te schakelen, zeker bij een land buiten de EU. Leg de polisgegevens, de waarde op de emigratiedatum en de besproken gevolgen vast in het dossier.`}
+  ]},
  {id:'vbi-044',cat:'pens',auteur:null,naam:'',voorbeeld:true,datum:'2026-03-07T21:27:00',views:585,tags:['lijfrente','informatie','klant'],beste:null,
   titel:'Hoe leg je fiscale regels begrijpelijk uit',
   body:`Klanten haken vaak af bij de uitleg over jaarruimte en lijfrente. Hoe maken jullie het begrijpelijk?`,
@@ -495,7 +526,15 @@ Een tijdige inleg voorkomt stress.`}
  {id:'vbi-050',cat:'pens',auteur:null,naam:'',voorbeeld:true,datum:'2026-03-28T10:46:00',views:399,tags:['lijfrente','beleggen','sparen'],beste:null,
   titel:'Sparen of beleggen voor lijfrente',
   body:`Een klant twijfelt of hij moet sparen of beleggen binnen zijn lijfrente. Hoe adviseren jullie?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbi-050-a1',auteur:'u7',datum:'2026-03-30T02:46:00',rA:{u3:5,u4:5},rAdv:{u3:5,u4:5},body:`Ik begin bij de klant, niet bij het product.
+- Beleggingshorizon: hoeveel jaar tot de uitkering? Bij een korte horizon past sparen beter.
+- Risicobereidheid en draagkracht: wat gebeurt er als de waarde vlak voor de uitkeringsdatum fors daalt? Heeft hij andere inkomsten op de pensioendatum?
+- Kennis en ervaring: begrijpt hij de risico's van beleggen?
+- Kosten: vergelijk de totale kosten van beide varianten.
+Een tussenweg is beleggen met afbouw van risico naarmate de einddatum nadert, of een verdeling over sparen en beleggen. Bespreek ook de uitkeringsfase: vaste of variabele uitkering.
+Let op: advies over beleggen binnen een lijfrente vraagt om de juiste vergunning en een zorgvuldige toets van de geschiktheid. Leg het klantprofiel, de afweging en de keuze in het dossier vast.`}
+  ]},
  {id:'vbi-051',cat:'pens',auteur:null,naam:'',voorbeeld:true,datum:'2026-04-01T08:10:00',views:458,tags:['DGA','pensioen in eigen beheer','premievrij'],beste:'vbi-051-a1',
   titel:'Premievrij pensioen in eigen beheer: welke opties zijn er nog',
   body:`Een DGA heeft sinds de uitfasering een premievrij pensioen in eigen beheer staan. De faciliteiten voor afkoop met korting en omzetting naar een oudedagsverplichting zijn verlopen. Welke routes bespreken jullie nu nog met zo een klant?`,
@@ -667,7 +706,15 @@ Een overzicht per jaar helpt de klant.`}
  {id:'vbi-067',cat:'pens',auteur:null,naam:'',voorbeeld:true,datum:'2026-05-30T16:19:00',views:524,tags:['pensioen','emigratie','uitkering'],beste:null,
   titel:'Pensioen uitkeren bij emigratie',
   body:`Een klant gaat na pensionering in het buitenland wonen. Hij vraagt waar hij belasting betaalt over zijn pensioen. Wat moet ik controleren?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbi-067-a1',auteur:'u7',datum:'2026-05-31T12:19:00',rA:{u3:4,u5:5,u1:4,u6:4},rAdv:{u3:4,u5:5,u1:4},body:`Waar hij belasting betaalt, wordt bepaald door het belastingverdrag tussen Nederland en zijn nieuwe woonland. De regels verschillen sterk per land.
+- Zoek het verdrag op en kijk naar de artikelen over pensioenen en sociale-zekerheidsuitkeringen. Bij nieuwere verdragen houdt Nederland vaak heffingsrecht over pensioenen boven een bepaald bedrag.
+- AOW en particuliere pensioenen kunnen verschillend zijn geregeld.
+- Heeft het woonland het heffingsrecht, dan moet de klant bij de Belastingdienst vrijstelling van loonheffing aanvragen. Anders houdt de uitvoerder gewoon Nederlandse loonheffing in.
+- Controleer of de AOW volledig wordt uitbetaald in het woonland; de SVB heeft daar informatie over.
+- Vergeet de zorgverzekering niet.
+Bij twijfel schakel je een fiscalist in. Leg vast welk land het is, welk verdrag je hebt geraadpleegd en welke stappen de klant moet nemen.`}
+  ]},
  {id:'vbi-068',cat:'pens',auteur:null,naam:'',voorbeeld:true,datum:'2026-06-02T19:42:00',views:237,tags:['DGA','pensioen','overlijden'],beste:null,
   titel:'Nabestaandenpensioen van een DGA in eigen beheer',
   body:`Een DGA vraagt wat er met het nabestaandenpensioen in eigen beheer gebeurt als hij overlijdt. De BV heeft beperkte middelen. Hoe bespreken jullie dit?`,
@@ -713,7 +760,15 @@ Let op het moment van inkoop bij een vaste uitkering.`}
  {id:'vbi-072',cat:'pens',auteur:null,naam:'',voorbeeld:true,datum:'2026-06-16T09:02:00',views:562,tags:['DGA','gebruikelijk loon','pensioen'],beste:null,
   titel:'Gebruikelijk loon en pensioengrondslag van een DGA',
   body:`Een DGA wil zijn salaris verlagen om meer in de BV te laten. Wat betekent dit voor zijn pensioenopbouw?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbi-072-a1',auteur:'u7',datum:'2026-06-18T05:02:00',rA:{u1:4,u2:4,u5:4},rAdv:{u1:4,u2:4,u5:4},body:`Een lager salaris heeft vaak meer gevolgen dan de DGA verwacht.
+- Gebruikelijk loon: hij moet zich houden aan de gebruikelijkloonregeling. Controleer de actuele norm bij de Belastingdienst en overleg met de accountant.
+- Pensioenopbouw: als er een pensioenregeling via de BV is, daalt het pensioengevend salaris en dus de opbouw.
+- Lijfrente: zijn jaarruimte daalt mee, waardoor hij minder fiscaal kan sparen.
+- Risicodekkingen: een AOV of ORV die op het salaris is gebaseerd, kan te laag worden.
+- Hypotheek: geldverstrekkers kijken bij een DGA vaak naar het salaris en de resultaten van de BV, een lager salaris kan de leenruimte beperken.
+Maak een overzicht van wat hij aan inkomen op pensioendatum verwacht en wat hij in de BV opbouwt. Leg de berekening, de afspraken met de accountant en de keuze van de klant vast in het dossier.`}
+  ]},
  {id:'vbi-073',cat:'pens',auteur:null,naam:'',voorbeeld:true,datum:'2026-06-20T20:57:00',views:250,tags:['pensioen','werkgever','ontslag'],beste:'vbi-073-a1',
   titel:'Pensioen bij ontslag of werkloosheid',
   body:`Een klant wordt ontslagen en vraagt wat er met zijn pensioenopbouw gebeurt. Hoe bespreken jullie dit?`,
@@ -822,7 +877,13 @@ Controleer het acceptatiebeleid.`},
  {id:'vbi-083',cat:'pens',auteur:null,naam:'',voorbeeld:true,datum:'2026-07-27T07:30:00',views:534,tags:['hypotheek','senioren','looptijd'],beste:null,
   titel:'Looptijd hypotheek voor senioren',
   body:`Een klant van ruim zeventig wil een nieuwe hypotheek. Wat zijn de mogelijkheden qua looptijd?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbi-083-a1',auteur:'u5',datum:'2026-07-29T05:30:00',rA:{u4:4,u6:5},rAdv:{u4:4},body:`De mogelijkheden verschillen sterk per geldverstrekker, dus begin bij het acceptatiebeleid.
+- Reguliere looptijd: een nieuwe hypotheek kan doorgaans een looptijd tot dertig jaar hebben. Sommige geldverstrekkers hanteren een maximale leeftijd aan het einde van de looptijd, andere niet.
+- Aflossingsvrij: hiermee blijven de lasten laag, maar de schuld blijft staan. Bij overlijden moeten de erfgenamen aflossen, meestal uit de verkoop.
+- Levenslange hypotheek of verzilverhypotheek: dan wordt de rente vaak bijgeschreven, met een maximale schuld afhankelijk van leeftijd en woningwaarde.
+De toetsing gebeurt op het pensioeninkomen; controleer de actuele normen bij de geldverstrekker. Breng in kaart wat er gebeurt bij overlijden van een van beide partners, de rekenhulp restschuld-pensioen.html kan daarbij helpen. Betrek eventueel de kinderen. Leg de opties, de risico's en de keuze van de klant vast in het dossier.`}
+  ]},
  {id:'vbi-084',cat:'pens',auteur:null,naam:'',voorbeeld:true,datum:'2026-07-30T08:33:00',views:362,tags:['hypotheek','pensioen','inkomensdaling'],beste:'vbi-084-a1',
   titel:'Inkomensdaling bij pensioen opvangen',
   body:`Een klant verwacht een forse inkomensdaling bij pensionering. Hoe zorgen jullie dat de hypotheek betaalbaar blijft?`,
@@ -896,7 +957,15 @@ Dit is belangrijk bij toezicht.`}
  {id:'vbi-091',cat:'pens',auteur:null,naam:'',voorbeeld:true,datum:'2026-08-25T14:48:00',views:265,tags:['hypotheek','pensioen','partner'],beste:null,
   titel:'Jongere partner en hypotheek na pensionering',
   body:`Een klant gaat met pensioen en zijn partner is veel jonger. Hoe nemen jullie dit mee in het hypotheekadvies?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbi-091-a1',auteur:'u5',datum:'2026-08-26T22:48:00',rA:{u8:5,u7:5,u3:5,u4:5},rAdv:{u7:5,u3:5,u4:5},body:`Bij een groot leeftijdsverschil reken ik meerdere scenario's door.
+- Nu: de oudste partner met pensioen, de jongste nog aan het werk.
+- Overlijden van de oudste: AOW en ouderdomspensioen vervallen, alleen een eventueel partnerpensioen blijft. Kan de jongste partner de lasten dan alleen dragen?
+- Pensionering van de jongste: daalt het inkomen dan nog verder?
+- Arbeidsongeschiktheid of werkloosheid van de jongste partner.
+Geldverstrekkers toetsen ook op het inkomen na pensionering als dat binnen een bepaalde periode valt. Controleer de actuele regels.
+Oplossingen kunnen zijn: een kortere looptijd, extra aflossen zolang beide inkomens er zijn, een ORV op het leven van de oudste (let op leeftijdsgrenzen bij acceptatie) of een gedeeltelijk aflossingsvrij deel. Gebruik de rekenhulp restschuld-pensioen.html om het verloop te tonen. Leg alle scenario's en de keuze vast in het dossier.`}
+  ]},
  {id:'vbi-092',cat:'pens',auteur:null,naam:'',voorbeeld:true,datum:'2026-08-29T09:39:00',views:400,tags:['hypotheek','pensioen','arbeidsongeschikt'],beste:'vbi-092-a1',
   titel:'Arbeidsongeschiktheid kort voor pensioen',
   body:`Een klant van zestig raakt arbeidsongeschikt. Wat betekent dit voor zijn hypotheek en pensioen?`,
@@ -920,7 +989,13 @@ Bespreek de gezondheid en de wensen van de klant.`}
  {id:'vbi-094',cat:'pens',auteur:null,naam:'',voorbeeld:true,datum:'2026-09-05T16:43:00',views:400,tags:['hypotheek','pensioen','verzilveren'],beste:null,
   titel:'Verzilverhypotheek of verkoop met terughuur',
   body:`Een klant wil zijn overwaarde verzilveren. Hoe vergelijken jullie de opties?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbi-094-a1',auteur:'u5',datum:'2026-09-07T06:43:00',rA:{u1:5,u2:5},rAdv:{u1:5,u2:5},body:`Ik vergelijk de opties op dezelfde punten.
+- Verzilverhypotheek: de klant blijft eigenaar. Rente wordt vaak bijgeschreven, zodat de schuld groeit. De maximale schuld hangt af van leeftijd en woningwaarde. Waardestijging blijft bij de klant en de erfgenamen.
+- Verkoop met terughuur: de klant krijgt de verkoopopbrengst, maar is geen eigenaar meer. De huur kan stijgen, de verkoopprijs ligt vaak onder de marktwaarde en waardestijging gaat naar de koper. Lees de huurvoorwaarden goed, zoals duur en huurverhogingen.
+Daarnaast: wat doet het met box 3, met toeslagen, met de nalatenschap? En wat gebeurt er als de klant naar een zorginstelling moet?
+Laat de klant de netto opbrengst, het maandelijkse effect en het risico per variant zien. Betrek bij voorkeur de kinderen. Let op: een verzilverhypotheek is een Wft-product, verkoop met terughuur niet; leg je rol daarbij duidelijk vast. Leg de vergelijking en de keuze in het dossier vast.`}
+  ]},
  {id:'vbi-095',cat:'pens',auteur:null,naam:'',voorbeeld:true,datum:'2026-09-08T08:00:00',views:382,tags:['hypotheek','pensioen','bedrag ineens'],beste:null,
   titel:'Bedrag ineens gebruiken om af te lossen',
   body:`Een klant wil het bedrag ineens van zijn pensioen gebruiken om af te lossen. Is dat verstandig?`,
