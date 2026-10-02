@@ -42,3 +42,15 @@ test('oversluiten, kosten koper, LTV en restschuld pensioen: standaardvoorbeelde
   await page.goto('/restschuld-pensioen.html');
   await expect(page.locator('body')).toContainText('€ 141.463,18');
 });
+
+test('extra aflossen, rentemiddeling, erfpacht en draagplicht: standaardvoorbeelden', async ({ page }) => {
+  await volgFouten(page);
+  await page.goto('/extra-aflossen.html');
+  await expect(page.locator('body')).toContainText('€ 1.214,02');
+  await page.goto('/rentemiddeling.html');
+  await expect(page.locator('body')).toContainText('4,06');
+  await page.goto('/erfpacht.html');
+  await expect(page.locator('body')).toContainText('€ 166,67');
+  await page.goto('/draagplicht.html');
+  await expect(page.locator('a[href^="https://www.draagplicht.nl"]').first()).toBeVisible();
+});

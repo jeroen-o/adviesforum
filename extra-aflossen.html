@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Extra aflossen</title>
+<style>
+  :root{
+    --primary:#003057;--accent:#E5A138;--bg:#F4F7F9;--text:#333333;--muted:#4A4A4A;
+    --line:#D8E2E8;--white:#fff;--soft:#EAF1F5;--warn-bg:#FDF4E5;--warn-line:#E5A138;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:"Plus Jakarta Sans","DM Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    font-size:16px;line-height:1.55}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 20px 64px}
+  header.hero{background:var(--primary);color:#fff;padding:36px 0 30px;margin-bottom:24px}
+  header.hero .wrap{padding-bottom:0}
+  h1{font-size:32px;line-height:1.2;margin:0 0 10px;font-weight:700}
+  .sub{opacity:.88;margin:0;max-width:75ch}
+  .meta{margin-top:14px;font-size:13px;opacity:.75}
+  .tabs{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 18px}
+  .tabs button{border:1px solid var(--line);background:#fff;color:var(--primary);font:inherit;font-weight:600;
+    font-size:14px;padding:9px 14px;border-radius:999px;cursor:pointer}
+  .tabs button.on{background:var(--primary);color:#fff;border-color:var(--primary)}
+  section.card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:22px 24px;margin:0 0 16px}
+  h2{font-size:20px;margin:0 0 12px;color:var(--primary)}
+  h3{font-size:16px;margin:18px 0 8px;color:var(--primary)}
+  .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px}
+  .fields{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px 14px}
+  .fields .full{grid-column:1/-1}
+  label{display:block;font-size:13.5px;font-weight:600;color:var(--primary);margin-bottom:4px}
+  .hint{display:block;font-size:12.5px;font-weight:400;color:var(--muted);margin-top:3px}
+  input[type=text],select{width:100%;padding:10px 12px;font:inherit;font-size:15px;border:1px solid var(--line);
+    border-radius:7px;background:#fff;color:var(--text)}
+  input:focus,select:focus{outline:2px solid var(--accent);outline-offset:1px}
+  .eur{position:relative}
+  .eur span{position:absolute;left:11px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:15px}
+  .eur input{padding-left:26px}
+  .pct{position:relative}
+  .pct span{position:absolute;right:11px;top:50%;transform:translateY(-50%);color:var(--muted)}
+  .pct input{padding-right:28px}
+  .result{background:var(--primary);color:#fff;border-radius:10px;padding:20px 22px}
+  .result .big{font-size:34px;font-weight:700;line-height:1.15;margin:4px 0 2px}
+  .result .lbl{font-size:13px;opacity:.85}
+  .rows{margin:16px 0 0;border-top:1px solid rgba(255,255,255,.25)}
+  .rows div{display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.15);font-size:14.5px}
+  .rows div b{font-weight:600;white-space:nowrap}
+  .let-op{background:var(--warn-bg);border-left:4px solid var(--warn-line);padding:12px 14px;border-radius:0 6px 6px 0;margin:14px 0 0;font-size:14.5px}
+  .let-op strong{color:#8A5B00}
+  .compliance{background:#FFF1F1;border-left:4px solid #C0392B;padding:12px 14px;border-radius:0 6px 6px 0;margin:14px 0 0;font-size:14.5px}
+  .compliance strong{color:#A5281B}
+  .msg{font-size:13.5px;margin-top:10px;color:#FFE3B0}
+  .tblwrap{overflow-x:auto;border:1px solid var(--line);border-radius:8px;max-height:560px;overflow-y:auto}
+  table{border-collapse:collapse;width:100%;font-size:13.5px;font-variant-numeric:tabular-nums}
+  th,td{padding:7px 9px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
+  th{background:var(--soft);color:var(--primary);position:sticky;top:0;z-index:1;font-weight:700}
+  td:first-child,th:first-child{text-align:left;position:sticky;left:0;background:#fff;z-index:2}
+  th:first-child{background:var(--soft);z-index:3}
+  tr.hl td{background:#FFF4DD}
+  tr.hl td:first-child{background:#FFE7B8}
+  td.hl{outline:2px solid var(--accent);outline-offset:-2px;font-weight:700}
+  .simple td,.simple th{text-align:left}
+  .simple td.n,.simple th.n{text-align:right}
+  .toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:flex-end;margin-bottom:12px}
+  .toolbar > div{flex:1 1 200px}
+  .btn{border:0;border-radius:7px;padding:10px 16px;font-size:14px;font-weight:600;font-family:inherit;cursor:pointer;background:var(--primary);color:#fff}
+  .btn.sec{background:#fff;color:var(--primary);border:1px solid var(--line)}
+  .pane{display:none}.pane.on{display:block}
+  footer{margin-top:28px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+  footer a{color:var(--primary)}
+  @media (max-width:820px){
+    .grid{grid-template-columns:minmax(0,1fr)}
+    h1{font-size:26px}
+  }
+  @media (max-width:520px){
+    .wrap{padding:0 16px 48px}
+    .fields{grid-template-columns:minmax(0,1fr)}
+    section.card{padding:18px 16px}
+    .result .big{font-size:28px}
+  }
+  @media print{
+    .tabs,.toolbar .btn,.noprint{display:none!important}
+    body{background:#fff}
+    .pane{display:block!important}
+    .tblwrap{max-height:none;overflow:visible}
+    th{position:static}
+    td:first-child,th:first-child{position:static}
+    header.hero{background:#fff;color:#000;border-bottom:3px solid var(--primary)}
+    .result{background:#fff;color:#000;border:2px solid var(--primary)}
+    .rows div{border-color:#ccc}
+    section.card{break-inside:avoid}
+  }
+  .back{display:inline-block;font-size:13px;margin:0 0 10px;opacity:.9;text-decoration:none}
+  .back:hover{text-decoration:underline}
+  .chk{display:flex;align-items:center;gap:8px;font-size:14.5px;font-weight:600;color:var(--primary);margin:0;cursor:pointer}
+  .chk input{width:18px;height:18px;margin:0;accent-color:var(--primary)}
+  input:disabled{background:var(--soft);color:var(--muted)}
+  .rows div.tot{border-bottom:0;font-size:15.5px}
+  .rows div.tot b{font-weight:700}
+  .warn{color:#A5281B;font-weight:600}
+  @media print{ .back{display:none} }
+  a.btn{display:inline-block;text-decoration:none;text-align:center}
+  a.btn:hover{background:#00457C}
+  .ext{margin:14px 0 0}
+  .rows div span{min-width:0}
+  @media print{ .ext{display:none} }
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <a class="back noprint" href="index.html#hulpmiddelen" style="color:#fff">&larr; Terug naar het Adviesforum</a>
+    <h1>Extra aflossen: lagere maandlast of kortere looptijd</h1>
+    <p class="sub">Bereken het effect van een eenmalige extra aflossing op een annu&iuml;taire lening: een lagere maandlast bij gelijke looptijd, of een kortere looptijd bij gelijke maandlast, en de rentebesparing.</p>
+    <p class="meta">Indicatieve rekenhulp &middot; voorwaarden van de geldverstrekker zijn leidend</p>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="tabs noprint">
+    <button type="button" id="print" style="margin-left:auto">Printen / PDF</button>
+  </div>
+  <section class="card">
+    <div class="grid">
+      <div>
+        <h2>Invoer</h2>
+        <div class="fields">
+          <div class="full">
+            <label for="schuld">Restschuld (leningdeel)</label>
+            <div class="eur"><span>&euro;</span><input type="text" inputmode="numeric" id="schuld" value="250.000"></div>
+            
+          </div>
+          <div>
+            <label for="rente">Rente (per jaar)</label>
+            <div class="pct"><input type="text" inputmode="decimal" id="rente" value="4,00"><span>%</span></div>
+            
+          </div>
+          <div>
+            <label for="mnd">Resterende looptijd (maanden)</label>
+            <input type="text" inputmode="numeric" id="mnd" value="300">
+            <span class="hint">300 maanden = 25 jaar.</span>
+          </div>
+          <div class="full">
+            <label for="extra">Extra aflossing (eenmalig)</label>
+            <div class="eur"><span>&euro;</span><input type="text" inputmode="numeric" id="extra" value="20.000"></div>
+            <span class="hint">Controleer de boetevrije ruimte.</span>
+          </div>
+          <div class="full">
+            <label for="keuze">Effect van de extra aflossing</label>
+            <select id="keuze">
+              <option value="ml" selected>Maandlast verlagen (looptijd gelijk)</option>
+              <option value="lt">Looptijd verkorten (maandlast gelijk)</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="result" aria-live="polite">
+          <div class="lbl" id="r-biglbl">Nieuwe bruto maandlast</div>
+          <div class="big" id="r-big">&ndash;</div>
+          <div class="lbl" id="r-sub"></div>
+          <div class="rows">
+            <div><span>Huidige bruto maandlast</span><b id="r-m0"></b></div>
+            <div><span>Nieuwe bruto maandlast</span><b id="r-m1"></b></div>
+            <div><span>Verschil per maand</span><b id="r-dm"></b></div>
+            <div><span>Restschuld na extra aflossing</span><b id="r-s2"></b></div>
+            <div><span>Resterende looptijd</span><b id="r-n0"></b></div>
+            <div><span>Nieuwe looptijd</span><b id="r-n1"></b></div>
+            <div><span>Totale rente zonder extra aflossing</span><b id="r-i0"></b></div>
+            <div><span>Totale rente met extra aflossing</span><b id="r-i1"></b></div>
+            <div class="tot"><span>Rentebesparing over de looptijd (bruto)</span><b id="r-bes"></b></div>
+          </div>
+          <div class="msg" id="r-msg"></div>
+        </div>
+        <div class="compliance"><strong>Compliance:</strong> de rentebesparing is bruto, v&oacute;&oacute;r renteaftrek: door lagere aftrekbare rente is de netto besparing kleiner. Controleer de boetevrije ruimte en de voorwaarden van de geldverstrekker (o.a. of de maandlast automatisch wordt herberekend), en leg vast dat de klant na de aflossing een voldoende liquiditeitsbuffer overhoudt.</div>
+      </div>
+    </div>
+    <div class="let-op"><strong>Rekenwijze:</strong> annu&iuml;taire lening, rente per maand = jaarrente / 12, gelijkblijvende rente over de hele resterende looptijd. Maandlast verlagen: nieuwe annu&iuml;teit op (restschuld &minus; extra aflossing) over dezelfde looptijd. Looptijd verkorten: de huidige maandlast blijft gelijk en de lening is eerder afgelost; de laatste termijn kan lager zijn. Totale rente = som van alle rentedelen. Rentewijzigingen na afloop van de rentevaste periode zijn niet meegenomen.</div>
+  </section>
+
+  <section class="card">
+    <h2>Toelichting</h2>
+    <div class="let-op"><strong>Boetevrije ruimte:</strong> de meeste geldverstrekkers staan per kalenderjaar een deel boetevrij extra aflossen toe, vaak 10% tot 20% van de oorspronkelijke hoofdsom. Lost de klant meer af binnen de rentevaste periode, dan kan een vergoeding voor vervroegde aflossing verschuldigd zijn. Controleer de voorwaarden van de geldverstrekker en per leningdeel.</div>
+    <div class="let-op"><strong>Fiscaal:</strong> extra aflossen verlaagt de eigenwoningschuld en daarmee de aftrekbare rente. Bij verkoop van de woning leidt een lagere eigenwoningschuld tot een hogere overwaarde en dus een grotere eigenwoningreserve (bijleenregeling): dat deel moet bij een volgende woning met eigen geld worden ingebracht om volledige renteaftrek te houden. Zie ook de <a href="bijleenregeling.html">rekenhulp eigenwoningreserve en bijleenregeling</a>.</div>
+    <div class="let-op"><strong>Liquiditeitsbuffer:</strong> geld dat in de woning is afgelost, is niet zomaar weer op te nemen. Laat de klant voldoende vrij opneembare buffer houden voor onverwachte uitgaven, inkomensdaling en onderhoud; extra aflossen is meestal pas verstandig n&aacute; het aanhouden van die buffer.</div>
+    <div class="let-op"><strong>Keuze maandlast of looptijd:</strong> een lagere maandlast geeft meer financi&euml;le ruimte per maand; een kortere looptijd geeft bij dezelfde aflossing een grotere rentebesparing. Niet iedere geldverstrekker biedt beide opties; soms wordt de maandlast pas bij een renteherziening aangepast.</div>
+  </section>
+
+  <footer>
+    <p>Indicatieve rekenhulp. Voorwaarden van de geldverstrekker zijn leidend. Deze pagina slaat niets op.</p>
+  </footer>
+</div>
+<script>
+(function(){
+  var $ = function(id){ return document.getElementById(id); };
+  var eur0 = new Intl.NumberFormat('nl-NL',{style:'currency',currency:'EUR',minimumFractionDigits:0,maximumFractionDigits:0});
+  var eur2 = new Intl.NumberFormat('nl-NL',{style:'currency',currency:'EUR',minimumFractionDigits:2,maximumFractionDigits:2});
+  var int0 = new Intl.NumberFormat('nl-NL',{maximumFractionDigits:0});
+  var dec2 = new Intl.NumberFormat('nl-NL',{minimumFractionDigits:2,maximumFractionDigits:2});
+  function fmtE(v){ return eur0.format(v).replace(/ /g,' '); }
+  function fmtE2(v){ return eur2.format(v).replace(/ /g,' '); }
+  function parseNum(s){
+    s = String(s||'').replace(/[^\d,.-]/g,'');
+    if (s.indexOf(',') > -1) s = s.replace(/\./g,'').replace(',', '.');
+    else s = s.replace(/\./g,'');
+    var v = parseFloat(s); return isNaN(v) ? 0 : v;
+  }
+  function parsePct(s){
+    s = String(s||'').replace(/[^\d,.-]/g,'').replace(',', '.');
+    var v = parseFloat(s); return isNaN(v) ? 0 : v;
+  }
+  // Euro-invoer met duizendtalscheiding, cursor blijft achteraan staan
+  function euroInput(el, cb){
+    el.addEventListener('input', function(){
+      var digits = el.value.replace(/\D/g,'');
+      el.value = digits ? int0.format(parseInt(digits,10)) : '';
+      cb && cb();
+    });
+  }
+
+  function ann(P, r, n){ if (n <= 0) return 0; if (r === 0) return P / n; return P * r / (1 - Math.pow(1 + r, -n)); }
+  function looptijd(n){ var j = Math.floor(n/12), m = n % 12; return n + ' mnd (' + j + ' jaar' + (m ? ' en ' + m + ' mnd' : '') + ')'; }
+  function reken(){
+    var S = parseNum($('schuld').value), rj = parsePct($('rente').value), n = Math.max(0, Math.round(parseNum($('mnd').value)));
+    var X = parseNum($('extra').value), keuze = $('keuze').value, r = rj/100/12, msg = [];
+    if (X > S) { msg.push('De extra aflossing is hoger dan de restschuld; gerekend is met volledige aflossing.'); X = S; }
+    var S2 = S - X;
+    var M0 = ann(S, r, n), I0 = M0 * n - S;
+    var M1, n1, I1;
+    if (keuze === 'ml') { M1 = ann(S2, r, n); n1 = n; I1 = M1 * n - S2; }
+    else {
+      M1 = M0; n1 = 0; I1 = 0; var s = S2;
+      while (s > 0.005 && n1 < n) { var i = s * r; I1 += i; s -= Math.min(s, M0 - i); n1++; }
+    }
+    if (n === 0) { M0 = M1 = I0 = I1 = 0; n1 = 0; }
+    $('r-m0').textContent = fmtE2(M0);
+    $('r-m1').textContent = fmtE2(M1);
+    $('r-dm').textContent = fmtE2(M0 - M1);
+    $('r-s2').textContent = fmtE2(S2);
+    $('r-n0').textContent = looptijd(n);
+    $('r-n1').textContent = looptijd(n1);
+    $('r-i0').textContent = fmtE2(I0);
+    $('r-i1').textContent = fmtE2(I1);
+    $('r-bes').textContent = fmtE2(I0 - I1);
+    if (keuze === 'ml') {
+      $('r-biglbl').textContent = 'Nieuwe bruto maandlast';
+      $('r-big').textContent = fmtE2(M1);
+      $('r-sub').textContent = 'Was ' + fmtE2(M0) + ' · ' + fmtE2(M0 - M1) + ' lager per maand';
+    } else {
+      $('r-biglbl').textContent = 'Nieuwe resterende looptijd';
+      $('r-big').textContent = n1 + ' maanden';
+      $('r-sub').textContent = Math.floor(n1/12) + ' jaar en ' + (n1 % 12) + ' mnd · ' + (n - n1) + ' maanden eerder afgelost';
+    }
+    if (n === 0 && S > 0) msg.push('Vul een resterende looptijd in.');
+    if (S > 0 && X < S && X > 0.2 * S) msg.push('Let op: de extra aflossing is meer dan 20% van de restschuld; controleer de boetevrije ruimte (die geldt meestal over de oorspronkelijke hoofdsom).');
+    $('r-msg').textContent = msg.join(' ');
+  }
+  $('keuze').addEventListener('change', reken);
+
+  ['schuld','extra'].forEach(function(id){ euroInput($(id), reken); });
+  ['rente'].forEach(function(id){ $(id).addEventListener('input', reken); });
+  ['mnd'].forEach(function(id){ $(id).addEventListener('input', function(){ $(id).value = $(id).value.replace(/\D/g,''); reken(); }); });
+
+  // Print via eigen venster: window.print() wordt binnen een iframe (o.a. Google Sites) geblokkeerd.
+  $('print').addEventListener('click', function(){
+    try {
+      var w = window.open('', '_blank');
+      if (!w) { window.print(); return; }
+      var body = document.body.cloneNode(true);
+      Array.prototype.forEach.call(body.querySelectorAll('input'), function(i, idx){
+        var orig = document.querySelectorAll('input')[idx];
+        if (orig.type === 'checkbox') { if (orig.checked) i.setAttribute('checked','checked'); else i.removeAttribute('checked'); }
+        else i.setAttribute('value', orig.value);
+      });
+      Array.prototype.forEach.call(body.querySelectorAll('select'), function(s, idx){
+        var orig = document.querySelectorAll('select')[idx];
+        Array.prototype.forEach.call(s.options, function(o, j){ if (j === orig.selectedIndex) o.setAttribute('selected','selected'); else o.removeAttribute('selected'); });
+      });
+      Array.prototype.forEach.call(body.querySelectorAll('script'), function(s){ s.remove(); });
+      w.document.open();
+      w.document.write('<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><title>' + document.title +
+        '</title><style>' + document.querySelector('style').textContent + '</style></head><body>' + body.innerHTML + '</body></html>');
+      w.document.close(); w.focus();
+      setTimeout(function(){ w.print(); }, 350);
+    } catch (e) { window.print(); }
+  });
+
+  reken();
+})();
+</script>
+</body>
+</html>
