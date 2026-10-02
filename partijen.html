@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Partijenwegwijzer</title>
+<style>
+  :root{
+    --primary:#003057;
+    --accent:#E5A138;
+    --bg:#F4F7F9;
+    --text:#333333;
+    --muted:#4A4A4A;
+    --line:#D8E2E8;
+    --white:#fff;
+    --warn-bg:#FDF4E5;
+    --warn-line:#E5A138;
+  }
+  *{box-sizing:border-box}
+  html,body{overflow-x:hidden}
+  body{
+    margin:0;background:var(--bg);color:var(--text);
+    font-family:"Plus Jakarta Sans","DM Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    font-size:16px;line-height:1.55;
+  }
+  .wrap{max-width:1040px;margin:0 auto;padding:0 20px 64px}
+  header.hero{background:var(--primary);color:#fff;padding:40px 0 34px;margin-bottom:28px}
+  header.hero .wrap{padding-bottom:0}
+  .terug{color:#fff;opacity:.85;font-size:13px;display:inline-block;margin-bottom:10px}
+  h1{font-size:34px;line-height:1.2;margin:0 0 10px;font-weight:700}
+  .sub{opacity:.85;font-size:16px;margin:0;max-width:72ch}
+  .meta{margin-top:18px;font-size:13px;opacity:.7}
+  .let-op{
+    background:var(--warn-bg);border-left:4px solid var(--warn-line);
+    padding:12px 14px;border-radius:0 6px 6px 0;margin:0 0 20px;font-size:14.5px;
+  }
+  .let-op strong{color:#8A5B00}
+  .toolbar{
+    display:flex;gap:12px;flex-wrap:wrap;align-items:center;
+    background:var(--white);border:1px solid var(--line);border-radius:10px;
+    padding:14px 16px;margin:0 0 22px;position:sticky;top:0;z-index:5;
+  }
+  #zoek{
+    flex:1 1 260px;min-width:0;width:100%;padding:10px 12px;font-size:15px;font-family:inherit;
+    border:1px solid var(--line);border-radius:7px;color:var(--text);background:#fff;
+  }
+  #zoek:focus,#type:focus,.btn:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+  #type{
+    flex:0 1 220px;min-width:0;padding:10px 12px;font-size:15px;font-family:inherit;
+    border:1px solid var(--line);border-radius:7px;color:var(--text);background:#fff;
+  }
+  .btn{
+    border:0;border-radius:7px;padding:10px 16px;font-size:14px;font-weight:600;
+    font-family:inherit;cursor:pointer;background:var(--primary);color:#fff;
+  }
+  .btn.sec{background:#fff;color:var(--primary);border:1px solid var(--line)}
+  .count{font-size:13px;color:var(--muted)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+  article.card{
+    background:var(--white);border:1px solid var(--line);border-radius:10px;
+    padding:20px 22px;display:flex;flex-direction:column;min-width:0;
+  }
+  .tag{
+    display:inline-block;align-self:flex-start;background:#EAF1F5;color:var(--primary);
+    font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+    padding:4px 9px;border-radius:4px;margin-bottom:10px;
+  }
+  h2{font-size:20px;line-height:1.3;margin:0 0 10px;color:var(--primary);overflow-wrap:anywhere}
+  .producten{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 12px;padding:0;list-style:none}
+  .producten li{background:#F4F7F9;border:1px solid var(--line);color:var(--muted);font-size:12.5px;padding:2px 8px;border-radius:999px}
+  .sublabel{font-weight:700;color:var(--primary);margin:4px 0 4px;font-size:14px}
+  ul.kenmerken{margin:0 0 14px;padding-left:18px}
+  ul.kenmerken li{margin:6px 0;font-size:14.5px;overflow-wrap:anywhere}
+  ul.kenmerken a{color:var(--primary);font-size:12.5px;font-weight:600;white-space:nowrap}
+  .site{margin-top:auto;padding-top:10px;border-top:1px solid var(--line);font-size:14px}
+  .site a{color:var(--primary);font-weight:700;text-decoration:none;overflow-wrap:anywhere}
+  .site a:hover{text-decoration:underline}
+  .site .geen{color:var(--muted)}
+  .leeg{display:none;background:#fff;border:1px dashed var(--line);border-radius:10px;padding:28px;text-align:center;color:var(--muted)}
+  footer{
+    margin-top:34px;padding-top:20px;border-top:1px solid var(--line);
+    font-size:13px;color:var(--muted);
+  }
+  footer a{color:var(--primary)}
+  @media (max-width:640px){
+    .wrap{padding:0 16px 48px}
+    h1{font-size:26px}
+    header.hero{padding:28px 0 24px}
+    .toolbar{position:static;padding:12px}
+    #zoek,#type{flex:1 1 100%}
+    .grid{grid-template-columns:1fr}
+    article.card{padding:18px 16px}
+  }
+  @media print{
+    .toolbar{display:none}
+    body{background:#fff}
+    article.card{break-inside:avoid;border:1px solid #ccc}
+    header.hero{background:#fff;color:#000;border-bottom:3px solid var(--primary)}
+    header.hero .sub,.meta,.terug{color:#333;opacity:1}
+  }
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <a class="terug" href="index.html#hulpmiddelen">← Terug naar het Adviesforum</a>
+    <h1>Partijenwegwijzer</h1>
+    <p class="sub">Wat geldverstrekkers, verzekeraars, pensioenverzekeraars en pensioenfondsen openbaar voor adviseurs publiceren: intermediairsites, acceptatiegidsen, opvallende productkenmerken en wie bij wie hoort. Elk kenmerk heeft een bronlink.</p>
+    <p class="meta" id="meta">Peildatum 3 oktober 2026</p>
+  </div>
+</header>
+<div class="wrap">
+  <div class="let-op" role="note"><strong>Let op:</strong> Overzicht op basis van openbare informatie (peildatum 3 oktober 2026). Voorwaarden en acceptatiebeleid veranderen: controleer altijd de actuele informatie bij de partij zelf.</div>
+  <div class="toolbar">
+    <input id="zoek" type="search" placeholder="Zoek op partij, product of kenmerk, bijv. senioren, energielabel, AOV&hellip;" aria-label="Zoeken in partijen">
+    <select id="type" aria-label="Filter op type">
+      <option value="">Alle typen</option>
+    </select>
+    <button class="btn sec" id="wis" type="button">Wissen</button>
+    <span class="count" id="teller" aria-live="polite"></span>
+  </div>
+  <div class="grid" id="lijst"></div>
+  <div class="leeg" id="leeg">Geen partijen gevonden voor deze zoekterm of dit filter.</div>
+  <footer>
+    <p>Deze wegwijzer verwijst naar openbare bronnen van de partijen zelf en naar vakpers. Rentes, premies en tijdelijke acties staan er bewust niet in. Dit overzicht is geen advies en geen volledige productvergelijking; de bronpagina kan sinds de peildatum zijn gewijzigd.</p>
+  </footer>
+</div>
+<script src="data/partijen.js"></script>
+<script>
+(function(){
+  var TYPES={
+    'bank':'Bank',
+    'geldverstrekker':'Geldverstrekker / fonds',
+    'verzekeraar':'Verzekeraar',
+    'pensioenverzekeraar':'Pensioenverzekeraar',
+    'pensioenfonds':'Pensioenfonds',
+    'kredietverstrekker':'Kredietverstrekker'
+  };
+  var data=(window.PARTIJEN||[]).slice().sort(function(a,b){return a.naam.localeCompare(b.naam,'nl');});
+  var zoek=document.getElementById('zoek'),typeSel=document.getElementById('type'),
+      lijst=document.getElementById('lijst'),leeg=document.getElementById('leeg'),
+      teller=document.getElementById('teller');
+
+  function el(tag,cls,txt){var e=document.createElement(tag);if(cls)e.className=cls;if(txt!=null)e.textContent=txt;return e;}
+  function veiligeUrl(u){return typeof u==='string'&&/^https:\/\//i.test(u)?u:'';}
+  function host(u){try{return new URL(u).hostname.replace(/^www\./,'');}catch(e){return u;}}
+
+  // Typefilter vullen met aantallen
+  Object.keys(TYPES).forEach(function(t){
+    var n=data.filter(function(p){return p.type===t;}).length;
+    if(!n)return;
+    var o=el('option',null,TYPES[t]+' ('+n+')');o.value=t;typeSel.appendChild(o);
+  });
+
+  var kaarten=data.map(function(p){
+    var a=el('article','card');
+    a.appendChild(el('span','tag',TYPES[p.type]||p.type));
+    a.appendChild(el('h2',null,p.naam));
+    if(p.producten&&p.producten.length){
+      var ul=el('ul','producten');ul.setAttribute('aria-label','Producten');
+      p.producten.forEach(function(x){ul.appendChild(el('li',null,x));});
+      a.appendChild(ul);
+    }
+    if(p.kenmerken&&p.kenmerken.length){
+      a.appendChild(el('p','sublabel','Opvallend voor adviseurs'));
+      var km=el('ul','kenmerken');
+      p.kenmerken.forEach(function(k){
+        var li=el('li');li.appendChild(document.createTextNode(k.tekst+' '));
+        var b=veiligeUrl(k.bron);
+        if(b){var ln=el('a',null,'bron: '+host(b));ln.href=b;ln.target='_blank';ln.rel='noopener';li.appendChild(ln);}
+        km.appendChild(li);
+      });
+      a.appendChild(km);
+    }
+    var s=el('div','site'),u=veiligeUrl(p.url);
+    if(u){var l=el('a',null,'Naar site / adviseursinformatie ↗');l.href=u;l.target='_blank';l.rel='noopener';l.title=u;s.appendChild(l);}
+    else s.appendChild(el('span','geen','Geen eigen site of adviseursportaal gevonden'));
+    a.appendChild(s);
+    var zoektekst=[p.naam,TYPES[p.type]||'',(p.producten||[]).join(' ')].concat((p.kenmerken||[]).map(function(k){return k.tekst;})).join(' ').toLowerCase();
+    lijst.appendChild(a);
+    return {el:a,type:p.type,tekst:zoektekst};
+  });
+
+  document.getElementById('meta').textContent=data.length+' partijen · peildatum 3 oktober 2026 · elk kenmerk met bronlink';
+
+  function update(){
+    var q=zoek.value.trim().toLowerCase(),t=typeSel.value,zicht=0;
+    var woorden=q?q.split(/\s+/):[];
+    kaarten.forEach(function(k){
+      var hit=(!t||k.type===t)&&woorden.every(function(w){return k.tekst.indexOf(w)!==-1;});
+      k.el.style.display=hit?'':'none';if(hit)zicht++;
+    });
+    leeg.style.display=zicht===0?'block':'none';
+    teller.textContent=zicht+' van '+kaarten.length+' partijen';
+  }
+  zoek.addEventListener('input',update);
+  typeSel.addEventListener('change',update);
+  document.getElementById('wis').addEventListener('click',function(){zoek.value='';typeSel.value='';update();zoek.focus();});
+  update();
+})();
+</script>
+</body>
+</html>
