@@ -445,7 +445,7 @@ Plan ruim en houd rekening met de geldigheid van de offerte. Leg de planning vas
   antwoorden:[
    {id:'vbd-056-a1',auteur:'u5',datum:'2026-04-21T22:10:00',rA:{u1:4,u4:4,u2:5},rAdv:{u1:4,u4:4},body:`Begin op tijd: niet in het laatste jaar, maar ruim van tevoren. Dat is het belangrijkste. De opties:
 - Aflossen uit vermogen of een bestaande polis.
-- Het leningdeel verlengen of herfinancieren. Dat is een nieuw krediet met toetsing aan de leennormen, wat lastig kan zijn als het inkomen inmiddels lager is (bijvoorbeeld na pensionering).
+- Het leningdeel verlengen of herfinancieren. Dat is een nieuw krediet met toetsing aan de leennormen, wat lastig kan zijn als het inkomen inmiddels lager is (bijvoorbeeld na pensionering). De Tijdelijke regeling hypothecair krediet laat de geldverstrekker wel ruimte om af te wijken bij oversluiten, als de klant in de woning blijft wonen en de nieuwe lening niet hoger is dan de af te lossen schuld plus de kosten van het oversluiten. Of een geldverstrekker die ruimte gebruikt, verschilt.
 - Verkopen en kleiner wonen.
 - Verzilveren met een andere constructie, zoals een verzilverhypotheek.
 Let op de fiscale gevolgen: een herfinanciering kan het overgangsrecht beïnvloeden; controleer de regels. Neem ook contact op met de geldverstrekker. Veel geldverstrekkers benaderen klanten met een aflossingsvrij deel zelf, in lijn met de oproep van de AFM.

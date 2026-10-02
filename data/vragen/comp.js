@@ -197,7 +197,7 @@ Vermeld de datum van de gebruikte rentes, want die veranderen snel.`},
 - Laat de klacht behandelen door iemand die niet zelf het advies gaf.
 - Vraag het dossier op en hoor de adviseur.
 - Geef een schriftelijk, gemotiveerd standpunt.
-- Noem in die brief expliciet dat de klant naar Kifid kan, met de termijn waarbinnen dat moet. Controleer de actuele termijnen in het reglement van Kifid.
+- Noem in die brief expliciet dat de klant naar Kifid kan, met de termijn waarbinnen dat moet: drie maanden na jullie definitieve standpunt. Die termijn geldt alleen als je er in de brief op wijst; daarnaast kan de klant in elk geval binnen een jaar na het indienen van de klacht bij jullie naar Kifid. Controleer de actuele termijnen in het reglement van Kifid.
 Registreer de klacht in de klachtenregistratie, inclusief datum van binnenkomst, standpunt en eventuele verbetermaatregel.`}
   ]},
  {id:'vbk-026',cat:'comp',auteur:null,naam:'',voorbeeld:true,datum:'2026-01-05T20:00:00',views:98,tags:['Wwft','UBO','cliëntenonderzoek'],beste:'vbk-026-a1',
@@ -329,7 +329,7 @@ Kom je er niet uit, dan is dat op zich al een signaal om het cliëntenonderzoek 
   titel:'Is een zorgplichtbrief na het afsluiten nog nodig?',
   body:`Na het passeren sturen wij geen brief meer. Een collega-kantoor stuurt een afsluitende brief met uitleg over rentevaste periodes en wanneer de klant zich moet melden. Is dat verplicht?`,
   antwoorden:[
-   {id:'vbk-043-a1',auteur:'u8',datum:'2026-03-06T09:30:00',rA:{u1:4,u4:4,u5:5},rAdv:{u1:4,u5:4},body:`Er is geen wettelijk voorgeschreven afsluitende brief, maar je zorgplicht eindigt niet bij de passeerdatum. Uit je dienstverleningsdocument en opdrachtbevestiging blijkt welke nazorg je belooft; die moet je dan ook waarmaken. Een afsluitende brief is een eenvoudige manier om dat aan te tonen.
+   {id:'vbk-043-a1',auteur:'u8',datum:'2026-03-06T09:30:00',rA:{u1:4,u4:4,u5:5},rAdv:{u1:4,u5:4},body:`Er is geen wettelijk voorgeschreven afsluitende brief, maar je zorgplicht eindigt niet bij de passeerdatum. Uit je vergelijkingskaart (die sinds april 2023 het dienstverleningsdocument vervangt) en je opdrachtbevestiging blijkt welke nazorg je belooft; die moet je dan ook waarmaken. De herziene Leidraad Hypotheekadvisering van de AFM (april 2026) vraagt om duidelijke afspraken over de omvang van de nazorg en de vergoeding daarvoor. Een afsluitende brief is een eenvoudige manier om dat aan te tonen.
 Wat ik erin zou zetten:
 - Een samenvatting van de afgesloten producten en de einddatum van de rentevaste periodes.
 - Wanneer de klant zich moet melden: bij wijziging van inkomen, relatie, gezinssituatie of verhuizing.
@@ -468,7 +468,7 @@ Controleer de voorwaarden van de geldverstrekker voor de maximale looptijd.`},
   titel:'Adviseren aan een klant die in het buitenland woont',
   body:`Een expat die nog in het buitenland woont wil een woning in Nederland kopen. Wat moet ik extra regelen voor identificatie en het cliëntenonderzoek?`,
   antwoorden:[
-   {id:'vbk-061-a1',auteur:'u8',datum:'2026-05-11T14:20:00',rA:{u1:4,u4:5,u5:4},rAdv:{u1:5,u4:4},body:`Op afstand mag, maar je moet de identiteit net zo betrouwbaar vaststellen als bij een fysiek gesprek.
+   {id:'vbk-061-a1',auteur:'u8',datum:'2026-05-11T14:20:00',rA:{u1:4,u4:5,u5:4},rAdv:{u1:5,u4:4},body:`Op afstand mag, maar je moet de identiteit net zo betrouwbaar vaststellen als bij een fysiek gesprek. Let op de afbakening: het wettelijke Wwft-cliëntenonderzoek geldt voor Wwft-instellingen, zoals bemiddelaars in levensverzekeringen. Bemiddel je alleen in de hypotheek, dan doen de geldverstrekker en de notaris dat onderzoek; zorgvuldige identificatie blijft dan wel nodig voor je eigen zorgplicht en om fraude te voorkomen.
 - Gebruik een betrouwbare digitale identificatie, of laat een kopie legitimeren via een notaris of ambassade. Combineer dat met een videogesprek waarin de klant zijn document toont.
 - Leg het buitenlandse woonadres vast met een recent bewijsstuk.
 - Check PEP- en sanctielijsten en vraag gericht naar de herkomst van het eigen geld, zeker bij buitenlandse rekeningen.
@@ -487,7 +487,7 @@ Leg vast hoe je identiteit en herkomst van middelen hebt vastgesteld. Verwijs vo
   titel:'Hoeveel tijd moet een klant krijgen om het advies te overwegen?',
   body:`Een klant wil het advies en de aanvraag in één gesprek afronden omdat hij snel wil kopen. Is dat verantwoord?`,
   antwoorden:[
-   {id:'vbk-063-a1',auteur:'u8',datum:'2026-05-19T09:00:00',rA:{u1:4,u4:4,u5:5},rAdv:{u1:4,u5:5},body:`Er is geen vaste wettelijke bedenktijd tussen advies en aanvraag. Wel moet het advies passend zijn en moet de klant het begrijpen. De bedenktijd na het bindend aanbod van de geldverstrekker blijft bovendien gewoon gelden; de klant kan wel eerder tekenen. Controleer de actuele regels bij afm.nl.
+   {id:'vbk-063-a1',auteur:'u8',datum:'2026-05-19T09:00:00',rA:{u1:4,u4:4,u5:5},rAdv:{u1:4,u5:5},body:`Er is geen vaste wettelijke bedenktijd tussen advies en aanvraag. Wel moet het advies passend zijn en moet de klant het begrijpen. De bedenktijd na het bindend aanbod van de geldverstrekker blijft bovendien gewoon gelden: minimaal veertien dagen, waarin de geldverstrekker het aanbod niet mag intrekken of in het nadeel van de klant mag wijzigen. De klant kan wel eerder tekenen. Controleer de actuele regels bij afm.nl.
 Snel afronden kan dus, onder voorwaarden:
 - Inventarisatie en analyse moeten volledig zijn, niet ingekort vanwege tijdsdruk.
 - Bespreek de belangrijkste risico's expliciet en laat de klant het advies in eigen woorden samenvatten.
@@ -560,11 +560,12 @@ Twijfel je of de klant het overziet, plan dan een kort vervolggesprek. Haast is 
   titel:'Rapportage aan de AFM: wie is verantwoordelijk?',
   body:`De jaarlijkse uitvraag van de AFM komt eraan. Ons kantoor heeft geen compliance officer. Wie moet die invullen?`,
   antwoorden:[
-   {id:'vbk-073-a1',auteur:'u8',datum:'2026-06-25T10:40:00',rA:{u1:4,u5:4,u6:4},rAdv:{u4:4,u6:5},body:`De vergunninghouder is verantwoordelijk, en daarmee de dagelijks beleidsbepalers. Iemand anders mag de uitvraag voorbereiden, maar een beleidsbepaler moet de antwoorden controleren en indienen. Een compliance officer is voor een klein kantoor niet altijd verplicht.
+   {id:'vbk-073-a1',auteur:'u8',datum:'2026-06-25T10:40:00',rA:{u1:4,u5:4,u6:4},rAdv:{u4:4,u6:5},body:`De vergunninghouder is verantwoordelijk, en daarmee de dagelijks beleidsbepalers. Volgens de AFM zijn de beleidsbepalers persoonlijk verantwoordelijk voor het volledig, juist en naar waarheid invullen van de Marktmonitor adviseurs en bemiddelaars (MMAB). Iemand anders mag de uitvraag voorbereiden, maar een beleidsbepaler moet de antwoorden controleren en indienen. Een compliance officer is voor een klein kantoor niet altijd verplicht.
 - Wijs een vaste persoon aan die de gegevens verzamelt: aantallen klanten, producten, omzet en beloningsvormen, klachten.
 - Laat de beleidsbepaler de antwoorden controleren voordat ze worden ingediend via het AFM-portaal.
 - Bewaar een kopie van de ingediende uitvraag en de bronbestanden.
-- Let op de deadline; te laat of onjuist indienen kan tot handhaving leiden.
+- Let op de deadline: in 2026 was dat zes weken vanaf je eigen startdatum. Meewerken is verplicht (artikel 5:20 Awb); te laat of onjuist indienen kan leiden tot een waarschuwing of een last onder dwangsom.
+- Controleer de omzetvraag extra zorgvuldig: die is ook de maatstaf voor je bijdrage aan de toezichtkosten.
 Zet de uitvraag in je compliancekalender, zodat het niet afhangt van één persoon.`}
   ]},
  {id:'vbk-074',cat:'comp',auteur:null,naam:'',voorbeeld:true,datum:'2026-06-28T09:50:00',views:415,tags:['aflossingsvrij','oversluiten','passend advies'],beste:'vbk-074-a1',
@@ -652,7 +653,7 @@ Zet de uitvraag in je compliancekalender, zodat het niet afhangt van één perso
   titel:'Verplichte vermelding van de adviesfee in het adviesrapport',
   body:`Moet de hoogte van de fee ook in het adviesrapport staan als hij al in de opdrachtbevestiging staat?`,
   antwoorden:[
-   {id:'vbk-086-a1',auteur:'u8',datum:'2026-08-12T08:45:00',rA:{u1:4,u4:4},rAdv:{u1:5,u5:4,u6:4},body:`De wettelijke verplichting draait om informatie vooraf: de klant moet voordat de dienstverlening begint weten wat het advies kost. Dat doe je met het dienstverleningsdocument en de opdrachtbevestiging. Een herhaling in het adviesrapport is niet expliciet voorgeschreven, maar ik raad het wel aan.
+   {id:'vbk-086-a1',auteur:'u8',datum:'2026-08-12T08:45:00',rA:{u1:4,u4:4},rAdv:{u1:5,u5:4,u6:4},body:`De wettelijke verplichting draait om informatie vooraf: de klant moet voordat de dienstverlening begint weten wat het advies kost. Dat doe je met de vergelijkingskaart (sinds 1 april 2023 de opvolger van het dienstverleningsdocument, uiterlijk te geven voordat je advies geeft) en de opdrachtbevestiging. Een herhaling in het adviesrapport is niet expliciet voorgeschreven, maar ik raad het wel aan.
 - In het rapport hoort een overzicht van de totale kosten van het advies, inclusief de fee, zodat de klant het advies en de kosten in samenhang ziet.
 - Controleer dat de bedragen in opdrachtbevestiging, rapport en factuur gelijk zijn. Verschillen leveren vragen op bij klachten.
 - Is de fee tussentijds gewijzigd, bijvoorbeeld door extra werk, leg dan vast dat de klant daarmee akkoord ging.
@@ -696,11 +697,11 @@ Bewaar de getekende opdrachtbevestiging bij het rapport in het dossier.`}
   titel:'Klachtenregeling op de website verplicht?',
   body:`Moeten we onze klachtenregeling op de website publiceren of is het genoeg om die op verzoek te verstrekken?`,
   antwoorden:[
-   {id:'vbk-092-a1',auteur:'u8',datum:'2026-08-31T09:30:00',rA:{u1:4,u5:4,u6:4},rAdv:{u4:4,u6:5},body:`Je moet de klant in elk geval informeren over je interne klachtenprocedure en over Kifid. Dat doe je meestal via het dienstverleningsdocument. Daarnaast geldt voor ondernemers die bij een geschilleninstantie zijn aangesloten dat ze die instantie ook vermelden op hun website, als ze er een hebben. Controleer de actuele eisen bij Kifid of je compliance officer.
+   {id:'vbk-092-a1',auteur:'u8',datum:'2026-08-31T09:30:00',rA:{u1:4,u5:4,u6:4},rAdv:{u4:4,u6:5},body:`Je moet de klant in elk geval informeren over je interne klachtenprocedure en over Kifid (artikel 4:17 Wft en het BGfo). Dat doe je meestal via de informatie die de klant vooraf krijgt, zoals je vergelijkingskaart (die sinds april 2023 het dienstverleningsdocument vervangt) of je algemene voorwaarden. Daarnaast geldt voor ondernemers die bij een geschilleninstantie zijn aangesloten dat ze die instantie ook vermelden op hun website, als ze er een hebben. Controleer de actuele eisen bij Kifid of je compliance officer.
 In de praktijk is publiceren op de website de eenvoudigste weg:
 - Zet de klachtenregeling als pagina of PDF online, met contactgegevens en termijnen.
 - Vermeld duidelijk de aansluiting bij Kifid.
-- Verwijs ernaar in je dienstverleningsdocument en algemene voorwaarden.
+- Verwijs ernaar in je vergelijkingskaart en algemene voorwaarden.
 Houd versiebeheer bij, zodat je kunt aantonen welke regeling gold op het moment van een klacht.`}
   ]},
  {id:'vbk-093',cat:'comp',auteur:null,naam:'',voorbeeld:true,datum:'2026-09-04T12:10:00',views:448,tags:['adviesrapport','bewijs','akkoord'],beste:'vbk-093-a1',
@@ -746,7 +747,7 @@ Houd versiebeheer bij, zodat je kunt aantonen welke regeling gold op het moment 
   titel:'Wat doen we als de AFM een dossier opvraagt?',
   body:`We kregen een verzoek van de AFM om een aantal dossiers aan te leveren. Hoe bereiden we ons voor?`,
   antwoorden:[
-   {id:'vbk-099-a1',auteur:'u8',datum:'2026-09-24T08:50:00',rA:{u1:5,u4:4,u5:5},rAdv:{u1:5,u5:4,u6:4},body:`Lever volledig en op tijd aan, en pas niets aan in de dossiers. Achteraf aanvullen of wijzigen is een groot risico; als er iets ontbreekt, benoem dat liever eerlijk.
+   {id:'vbk-099-a1',auteur:'u8',datum:'2026-09-24T08:50:00',rA:{u1:5,u4:4,u5:5},rAdv:{u1:5,u5:4,u6:4},body:`Lever volledig en op tijd aan, en pas niets aan in de dossiers. Meewerken aan een informatieverzoek van de AFM is verplicht (artikel 5:20 Awb). Achteraf aanvullen of wijzigen is een groot risico; als er iets ontbreekt, benoem dat liever eerlijk.
 - Noteer de deadline en wie contactpersoon is. Vraag bij onduidelijkheid direct na bij de AFM wat precies wordt gevraagd.
 - Exporteer de gevraagde dossiers volledig: inventarisatie, klantprofiel, berekeningen, adviesrapport, correspondentie en offertes.
 - Maak een overzicht per dossier met de inhoud en eventuele toelichting.
