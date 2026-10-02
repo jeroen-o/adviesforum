@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Overlijdensrisicoscan</title>
+<style>
+
+  :root{
+    --primary:#003057;--accent:#E5A138;--bg:#F4F7F9;--text:#333333;--muted:#4A4A4A;
+    --line:#D8E2E8;--white:#fff;--soft:#EAF1F5;--warn-bg:#FDF4E5;--warn-line:#E5A138;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:"Plus Jakarta Sans","DM Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    font-size:16px;line-height:1.55}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 20px 64px}
+  header.hero{background:var(--primary);color:#fff;padding:36px 0 30px;margin-bottom:24px}
+  header.hero .wrap{padding-bottom:0}
+  h1{font-size:32px;line-height:1.2;margin:0 0 10px;font-weight:700}
+  .sub{opacity:.88;margin:0;max-width:75ch}
+  .meta{margin-top:14px;font-size:13px;opacity:.75}
+  .tabs{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 18px}
+  .tabs button{border:1px solid var(--line);background:#fff;color:var(--primary);font:inherit;font-weight:600;
+    font-size:14px;padding:9px 14px;border-radius:999px;cursor:pointer}
+  .tabs button.on{background:var(--primary);color:#fff;border-color:var(--primary)}
+  section.card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:22px 24px;margin:0 0 16px}
+  h2{font-size:20px;margin:0 0 12px;color:var(--primary)}
+  h3{font-size:16px;margin:18px 0 8px;color:var(--primary)}
+  .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px}
+  .fields{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px 14px}
+  .fields .full{grid-column:1/-1}
+  label{display:block;font-size:13.5px;font-weight:600;color:var(--primary);margin-bottom:4px}
+  .hint{display:block;font-size:12.5px;font-weight:400;color:var(--muted);margin-top:3px}
+  input[type=text],select{width:100%;padding:10px 12px;font:inherit;font-size:15px;border:1px solid var(--line);
+    border-radius:7px;background:#fff;color:var(--text)}
+  input:focus,select:focus{outline:2px solid var(--accent);outline-offset:1px}
+  .eur{position:relative}
+  .eur span{position:absolute;left:11px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:15px}
+  .eur input{padding-left:26px}
+  .pct{position:relative}
+  .pct span{position:absolute;right:11px;top:50%;transform:translateY(-50%);color:var(--muted)}
+  .pct input{padding-right:28px}
+  .result{background:var(--primary);color:#fff;border-radius:10px;padding:20px 22px}
+  .result .big{font-size:34px;font-weight:700;line-height:1.15;margin:4px 0 2px}
+  .result .lbl{font-size:13px;opacity:.85}
+  .rows{margin:16px 0 0;border-top:1px solid rgba(255,255,255,.25)}
+  .rows div{display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.15);font-size:14.5px}
+  .rows div b{font-weight:600;white-space:nowrap}
+  .let-op{background:var(--warn-bg);border-left:4px solid var(--warn-line);padding:12px 14px;border-radius:0 6px 6px 0;margin:14px 0 0;font-size:14.5px}
+  .let-op strong{color:#8A5B00}
+  .compliance{background:#FFF1F1;border-left:4px solid #C0392B;padding:12px 14px;border-radius:0 6px 6px 0;margin:14px 0 0;font-size:14.5px}
+  .compliance strong{color:#A5281B}
+  .msg{font-size:13.5px;margin-top:10px;color:#FFE3B0}
+  .tblwrap{overflow-x:auto;border:1px solid var(--line);border-radius:8px;max-height:560px;overflow-y:auto}
+  table{border-collapse:collapse;width:100%;font-size:13.5px;font-variant-numeric:tabular-nums}
+  th,td{padding:7px 9px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
+  th{background:var(--soft);color:var(--primary);position:sticky;top:0;z-index:1;font-weight:700}
+  td:first-child,th:first-child{text-align:left;position:sticky;left:0;background:#fff;z-index:2}
+  th:first-child{background:var(--soft);z-index:3}
+  tr.hl td{background:#FFF4DD}
+  tr.hl td:first-child{background:#FFE7B8}
+  td.hl{outline:2px solid var(--accent);outline-offset:-2px;font-weight:700}
+  .simple td,.simple th{text-align:left}
+  .simple td.n,.simple th.n{text-align:right}
+  .toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:flex-end;margin-bottom:12px}
+  .toolbar > div{flex:1 1 200px}
+  .btn{border:0;border-radius:7px;padding:10px 16px;font-size:14px;font-weight:600;font-family:inherit;cursor:pointer;background:var(--primary);color:#fff}
+  .btn.sec{background:#fff;color:var(--primary);border:1px solid var(--line)}
+  .pane{display:none}.pane.on{display:block}
+  footer{margin-top:28px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+  footer a{color:var(--primary)}
+  @media (max-width:820px){
+    .grid{grid-template-columns:minmax(0,1fr)}
+    h1{font-size:26px}
+  }
+  @media (max-width:520px){
+    .wrap{padding:0 16px 48px}
+    .fields{grid-template-columns:minmax(0,1fr)}
+    section.card{padding:18px 16px}
+    .result .big{font-size:28px}
+  }
+  @media print{
+    .tabs,.toolbar .btn,.noprint{display:none!important}
+    body{background:#fff}
+    .pane{display:block!important}
+    .tblwrap{max-height:none;overflow:visible}
+    th{position:static}
+    td:first-child,th:first-child{position:static}
+    header.hero{background:#fff;color:#000;border-bottom:3px solid var(--primary)}
+    .result{background:#fff;color:#000;border:2px solid var(--primary)}
+    .rows div{border-color:#ccc}
+    section.card{break-inside:avoid}
+  }
+  .back{display:inline-block;font-size:13px;margin:0 0 10px;opacity:.9;text-decoration:none}
+  .back:hover{text-decoration:underline}
+  .chk{display:flex;align-items:center;gap:8px;font-size:14.5px;font-weight:600;color:var(--primary);margin:0;cursor:pointer}
+  .chk input{width:18px;height:18px;margin:0;accent-color:var(--primary)}
+  input:disabled{background:var(--soft);color:var(--muted)}
+  .rows div.tot{border-bottom:0;font-size:15.5px}
+  .rows div.tot b{font-weight:700}
+  .warn{color:#A5281B;font-weight:600}
+  @media print{ .back{display:none} }
+  /* Slimme formulieren */
+  html{-webkit-text-size-adjust:100%}
+  body{overflow-x:hidden}
+  .notice{background:#E8F4EC;border-left:4px solid #2E7D4F;padding:12px 14px;border-radius:0 6px 6px 0;margin:0 0 16px;font-size:14.5px}
+  .notice strong{color:#1E5A37}
+  .small{font-size:13.5px;color:var(--muted)}
+  input[type=email],input[type=tel],input[type=date],textarea{width:100%;padding:10px 12px;font:inherit;font-size:15px;border:1px solid var(--line);
+    border-radius:7px;background:#fff;color:var(--text);max-width:100%}
+  input[type=date]{min-height:44px}
+  textarea{min-height:84px;resize:vertical}
+  textarea:focus{outline:2px solid var(--accent);outline-offset:1px}
+  input[readonly]{background:var(--soft)}
+  .layout{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:20px;align-items:start}
+  .layout > *{min-width:0}
+  aside .sticky{position:sticky;top:64px;max-height:calc(100vh - 80px);overflow:auto}
+  .progress{position:sticky;top:0;z-index:5;background:var(--bg);padding:10px 0 10px;margin:0 0 6px}
+  .pbar{height:8px;background:var(--line);border-radius:99px;overflow:hidden}
+  .pbar i{display:block;height:100%;width:0;background:var(--accent);transition:width .2s}
+  .ptxt{display:flex;justify-content:space-between;gap:4px 12px;flex-wrap:wrap;font-size:13px;color:var(--muted);margin-top:5px}
+  .ptxt b{color:var(--primary)}
+  .fld{min-width:0}
+  .flabel{display:block;font-size:13.5px;font-weight:600;color:var(--primary);margin-bottom:6px}
+  .reqmark{color:#A5281B;font-weight:700;margin-left:2px}
+  .opts{display:flex;flex-wrap:wrap;gap:6px 18px}
+  .opts.col{flex-direction:column;gap:7px}
+  .opts label{display:flex;align-items:flex-start;gap:8px;font-weight:400;color:var(--text);font-size:14.5px;margin:0;cursor:pointer}
+  .opts input{width:18px;height:18px;margin:2px 0 0;flex:0 0 auto;accent-color:var(--primary)}
+  .fld.err input[type=text],.fld.err input[type=email],.fld.err input[type=tel],.fld.err input[type=date],.fld.err select,.fld.err textarea{border-color:#C0392B;background:#FFF8F8}
+  .fld.err .opts{outline:1px solid #C0392B;outline-offset:4px;border-radius:4px}
+  .errmsg{display:block;color:#A5281B;font-size:12.5px;font-weight:600;margin-top:4px}
+  .formmsg{background:#FFF1F1;border-left:4px solid #C0392B;padding:12px 14px;border-radius:0 6px 6px 0;margin:0 0 16px;font-size:14.5px}
+  .rep-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px 10px;align-items:end;border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin:0 0 8px;background:#FBFCFD}
+  .rep-row label{font-size:12.5px}
+  .rep-empty{font-size:13.5px;color:var(--muted);margin:0 0 8px}
+  .side h2{font-size:17px}
+  .side h3{margin-top:14px}
+  .sumlist{list-style:none;margin:0;padding:0;font-size:13.5px}
+  .sumlist li{display:flex;justify-content:space-between;gap:10px;padding:5px 0;border-bottom:1px solid var(--line)}
+  .sumlist li span:last-child{white-space:nowrap;color:var(--muted)}
+  .sumlist li.done span:last-child{color:#2E7D4F;font-weight:600}
+  .misslist{margin:6px 0 0;padding:0;list-style:none;font-size:13.5px}
+  .misslist button{background:none;border:0;padding:2px 0;color:#A5281B;font:inherit;text-decoration:underline;cursor:pointer;text-align:left}
+  .live ul{margin:6px 0 0;padding-left:18px;font-size:14px}
+  .live li{margin:0 0 6px;overflow-wrap:anywhere}
+  .live .none{font-size:13.5px;color:var(--muted)}
+  .tag{display:inline-block;font-size:11.5px;font-weight:700;background:var(--soft);color:var(--primary);border-radius:99px;padding:1px 8px;margin:0 4px 2px 0}
+  .actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+  .actions .btn{font-size:15px;padding:12px 18px;text-decoration:none;display:inline-block;text-align:center}
+  .row{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+  .row .btn{text-decoration:none}
+  .linkout{margin-top:12px}
+  .ok{color:#2E7D4F;font-weight:600;font-size:13.5px}
+  .bad{color:#A5281B;font-weight:600;font-size:13.5px}
+  .cl-group{margin:0 0 14px}
+  .cl-group h3{margin:12px 0 6px}
+  .cl{list-style:none;margin:0;padding:0}
+  .cl li{border-bottom:1px solid var(--line);padding:7px 0}
+  .cl label{display:flex;gap:10px;align-items:flex-start;font-weight:400;color:var(--text);font-size:14.5px;margin:0;cursor:pointer}
+  .cl input{width:18px;height:18px;margin:2px 0 0;flex:0 0 auto;accent-color:var(--primary)}
+  .cl .why{display:block;font-size:12.5px;color:var(--muted)}
+  .cl li.got label > span{text-decoration:line-through;color:var(--muted)}
+  #printdoc{display:none}
+  body.klant .adv{display:none!important}
+  section.card > .let-op:first-child{margin-top:0}
+  @media (max-width:980px){
+    .layout{grid-template-columns:minmax(0,1fr)}
+    aside .sticky{position:static}
+  }
+  @media (max-width:520px){
+    .actions .btn{flex:1 1 100%}
+    .opts{gap:8px 14px}
+  }
+  @media print{
+    body.printfallback > *:not(#printdoc){display:none!important}
+    body.printfallback #printdoc{display:block!important}
+  }
+  /* Scans */
+  .opts.scale{display:grid;grid-template-columns:repeat(auto-fill,minmax(40px,1fr));gap:6px;max-width:520px}
+  .opts.scale label{position:relative;flex-direction:column;align-items:center;gap:2px;border:1px solid var(--line);border-radius:7px;padding:7px 0 6px;background:#fff;font-weight:600;font-size:14.5px}
+  .opts.scale label:has(input:checked){background:var(--primary);border-color:var(--primary);color:#fff}
+  .opts.scale input{margin:0;width:16px;height:16px}
+  .scaleends{display:flex;justify-content:space-between;gap:10px;max-width:520px;font-size:12.5px;color:var(--muted);margin-top:4px}
+  .tag.hi{background:var(--warn-bg);color:#8A5B00;border:1px solid var(--warn-line)}
+  .live .disc{font-size:12.5px;color:var(--muted);margin:8px 0 0}
+  .live .stat{display:flex;justify-content:space-between;gap:10px;padding:5px 0;border-bottom:1px solid var(--line);font-size:14px}
+  .live .stat b{white-space:nowrap}
+  header.hero h1{overflow-wrap:break-word;hyphens:auto;-webkit-hyphens:auto}
+  @media (max-width:520px){header.hero h1{font-size:27px}}
+
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <a class="back noprint" href="index.html#hulpmiddelen" style="color:#fff">&larr; Terug naar het Adviesforum</a>
+    <h1>Overlijdensrisicoscan</h1>
+    <p class="sub" id="sub">Controleer met de klant of de overlijdensrisicodekking nog past bij gezin, hypotheek en wensen: verzekerd bedrag, looptijd, begunstiging en veranderingen sinds het afsluiten.</p>
+    <p class="meta">Klantscan &middot; ongeveer 7 minuten &middot; geen advies</p>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="notice" role="note"><strong>Er wordt niets opgeslagen of verstuurd.</strong> Print of bewaar als PDF voordat je de pagina sluit.</div>
+  <div id="app"><noscript><p>Dit formulier heeft JavaScript nodig.</p></noscript></div>
+  <footer>
+    <p><span>Deze scan is geen advies. Je adviseur beoordeelt je antwoorden en bespreekt met je of er iets moet veranderen. </span>Deze pagina slaat niets op en verstuurt niets.</p>
+  </footer>
+</div>
+<script>
+(function(){
+  // Gedeelde bouwstenen voor de klantscans. Alles draait lokaal in de pagina.
+  var S = {};
+  S.JN = [['ja','Ja'],['nee','Nee']];
+  S.JNW = [['ja','Ja'],['nee','Nee'],['weetniet','Weet ik niet']];
+  S.yes = function(id){ return function(V){ return V(id) === 'ja'; }; };
+  S.is = function(id, val){ return function(V){ return V.in(id, val); }; };
+  S.any = function(id, vals){ return function(V){ return V.any(id, vals); }; };
+  S.e = function(U, n){ return U.fmtE2(n); };
+  S.age = function(U, s){
+    var d = U.parseDate(s); if (!d) return null;
+    var n = new Date(), a = n.getFullYear() - d.getFullYear();
+    if (n.getMonth() < d.getMonth() || (n.getMonth() === d.getMonth() && n.getDate() < d.getDate())) a--;
+    return a >= 0 && a < 120 ? a : null;
+  };
+  // Indicatief: AOW-leeftijd 67 jaar (de echte AOW-datum kan later liggen; zie svb.nl).
+  S.aow = function(U, s){ var d = U.parseDate(s); return d ? new Date(d.getFullYear() + 67, d.getMonth(), d.getDate()) : null; };
+  S.yearsUntil = function(U, s){ var d = U.parseDate(s); return d ? (d - new Date()) / (365.25 * 86400000) : null; };
+  S.thisYear = function(){ return new Date().getFullYear(); };
+
+  // Live paneel en documentonderdeel met signalen. Een signaal is [onderwerp, tekst, belangrijk].
+  S.live = function(fn, emptyTxt){
+    return function(V, U){
+      var p = fn(V, U);
+      return '<h3>' + (U.klant ? 'Punten voor het gesprek met je adviseur' : 'Signalen voor de adviseur') + '</h3>' +
+        (p.length ? '<ul>' + p.map(function(x){ return '<li><span class="tag' + (x[2] ? ' hi' : '') + '">' + U.esc(x[0]) + '</span>' + U.esc(x[1]) + '</li>'; }).join('') + '</ul>' +
+          '<p class="disc">Automatisch afgeleid uit je antwoorden. Dit is geen advies en geen oordeel; je adviseur kijkt er samen met je naar.</p>'
+          : '<p class="none">' + (emptyTxt || 'Nog geen punten. Ze verschijnen hier zodra je vragen beantwoordt.') + '</p>');
+    };
+  };
+  S.extras = function(fn, emptyTxt){
+    return function(V, U){
+      var p = fn(V, U);
+      if (!p.length) p = [['Algemeen', emptyTxt || 'Geen bijzonderheden uit de antwoorden: je adviseur loopt de gegevens met je door.']];
+      return [{ title: 'Punten voor het gesprek met je adviseur',
+        html: '<ul>' + p.map(function(x){ return '<li><b>' + U.esc(x[0]) + ':</b> ' + U.esc(x[1]) + '</li>'; }).join('') + '</ul><p style="font-size:12.5px;color:#555">Deze punten zijn automatisch afgeleid uit de antwoorden. Ze zijn geen advies en geen oordeel over je huidige verzekeringen of hypotheek.</p>',
+        text: p.map(function(x){ return '- ' + x[0] + ': ' + x[1]; }).join('\n') }];
+    };
+  };
+  // Standaard slotvragen.
+  S.slot = function(extraLabel){
+    return { id: 'slot', title: 'Tot slot', fields: [
+      { id: 'vragen', type: 'textarea', label: extraLabel || 'Wil je nog iets kwijt of heb je een vraag voor je adviseur?', rows: 3 },
+      { id: 'contact', type: 'radio', label: 'Hoe wil je het liefst contact?', col: true, opts: [['mail','Per e-mail'],['tel','Telefonisch'],['afspraak','In een afspraak (op kantoor of online)'],['geen','Alleen als het nodig is']] },
+      { id: 'telnr', type: 'tel', label: 'Telefoonnummer', show: function(V){ return V('contact') === 'tel'; } }
+    ] };
+  };
+  S.over = function(geb, gebReq){
+    var f = [
+      { id: 'naam', type: 'text', label: 'Naam', labelKlant: 'Je naam', req: true, ph: 'Voorletters en achternaam', docLabel: 'Naam' },
+      { id: 'datum', type: 'date', label: 'Datum', req: true, def: 'today' }
+    ];
+    if (geb) f.push({ id: 'geb', type: 'date', label: 'Geboortedatum', labelKlant: 'Je geboortedatum', req: !!gebReq, hint: geb === true ? '' : geb });
+    return f;
+  };
+  S.foot = 'Deze scan is geen advies. Je adviseur beoordeelt je antwoorden en bespreekt met je of er iets moet veranderen.';
+  S.docFoot = 'Ingevulde antwoorden van de klant. De punten voor het gesprek zijn automatisch afgeleid en vormen geen advies; de adviseur beoordeelt de situatie.';
+  window.SCAN = S;
+})();
+(function(){
+  var S = window.SCAN, yes = S.yes;
+  function zorg(V){ return V('partner') === 'ja' || V.n('kinderen') > 0; }
+  function points(V, U){
+    var p = [];
+    var hyp = V.n('hyp'), vb = V.n('verzbedrag'), heeft = V('heeftorv');
+    if (heeft === 'nee' && zorg(V) && hyp > 0) p.push(['Dekking', 'Er is geen overlijdensrisicoverzekering, terwijl er een hypotheek is en een partner en/of kinderen. Bespreek wat er financieel gebeurt als jij of je partner overlijdt.', true]);
+    else if (heeft === 'nee' && zorg(V)) p.push(['Dekking', 'Geen overlijdensrisicoverzekering en wel een partner en/of kinderen: bespreek of nabestaanden voldoende inkomen houden.']);
+    if (heeft === 'weetniet') p.push(['Dekking', 'Onbekend of er een overlijdensrisicoverzekering is: samen polissen en hypotheekstukken nakijken.']);
+    if (heeft === 'ja' && vb > 0 && hyp > 0 && vb < hyp) p.push(['Bedrag', 'Het verzekerde bedrag (' + S.e(U, vb) + ') is lager dan de hypotheek (' + S.e(U, hyp) + '); verschil ongeveer ' + S.e(U, hyp - vb) + '. Dat kan een bewuste keuze zijn; bespreek of het nog past.', true]);
+    if (heeft === 'ja' && V('vorm') === 'dalend') p.push(['Bedrag', 'Dalende dekking: het bedrag dat nu verzekerd is, ligt waarschijnlijk lager dan bij het afsluiten. Laat het actuele bedrag nagaan.']);
+    if (heeft === 'ja' && V('vorm') === 'weetniet') p.push(['Bedrag', 'Onbekend of het verzekerde bedrag gelijk blijft of daalt: nakijken op de polis.']);
+    var oe = U.parseDate(V('orveind')), he = U.parseDate(V('hypeind'));
+    if (heeft === 'ja' && oe && he && oe < he) p.push(['Looptijd', 'De verzekering eindigt (' + U.fmtDate(V('orveind')) + ') eerder dan de hypotheek (' + U.fmtDate(V('hypeind')) + ').']);
+    var jk = V.n('jongste'), jr = S.thisYear();
+    if (heeft === 'ja' && oe && jk > 1990 && jk <= jr && oe.getFullYear() < jk + 18) p.push(['Looptijd', 'De verzekering eindigt voordat je jongste kind 18 wordt: bespreek of dat aansluit bij je wensen.']);
+    var ch = V('wijz');
+    if (ch.length && ch.indexOf('geen') < 0) {
+      if (ch.indexOf('samen') > -1) p.push(['Gezin', 'Samenwonen of trouwen sinds het afsluiten: wie is verzekerd en wie ontvangt de uitkering?', true]);
+      if (ch.indexOf('uit') > -1) p.push(['Gezin', 'Uit elkaar sinds het afsluiten: begunstiging, verzekerde personen en premiebetaling moeten waarschijnlijk worden aangepast.', true]);
+      if (ch.indexOf('kind') > -1) p.push(['Gezin', 'Kinderen erbij: past het verzekerde bedrag en de looptijd nog bij de zorg voor de kinderen?']);
+      if (ch.indexOf('hypotheek') > -1) p.push(['Hypotheek', 'Hypotheek verhoogd of nieuwe woning: past het verzekerde bedrag nog bij de huidige hypotheek?', true]);
+      if (ch.indexOf('inkomen') > -1) p.push(['Inkomen', 'Inkomensverandering: kan de achterblijvende partner de woonlasten en het levensonderhoud alleen dragen?']);
+      if (ch.indexOf('roken') > -1) p.push(['Premie', 'Gestopt met roken: bij veel verzekeraars kan de premie omlaag als je langere tijd niet rookt. Vraag na wat de voorwaarden zijn.']);
+    }
+    if (V('relatie') === 'samenwonend') p.push(['Erfrecht', 'Ongehuwd samenwonend: de partner is niet automatisch erfgenaam, en een uitkering kan belast zijn met erfbelasting. Bespreek begunstiging, testament en of de verzekering ‘kruislings’ is ingericht.', true]);
+    if (V('begunstigde') === 'weetniet') p.push(['Begunstiging', 'Onbekend wie de uitkering krijgt: begunstiging controleren.', true]);
+    if (V('begunstigde') === 'expartner') p.push(['Begunstiging', 'Je ex-partner staat (mogelijk) nog als begunstigde: laten nagaan of dit nog klopt en of er afspraken uit de scheiding zijn.', true]);
+    if (V('nabestaanden') === 'nee' || V('nabestaanden') === 'weetniet') p.push(['Partnerpensioen', 'Onbekend wat je partner krijgt uit partnerpensioen of Anw bij overlijden. Met de nieuwe pensioenregels kan dat veranderen; samen op mijnpensioenoverzicht.nl kijken.']);
+    if (V('wensblijven') === 'ja' && V('wensdekking') === 'weetniet') p.push(['Wens', 'Je partner wil in het huis blijven wonen: bespreek welk bedrag daarvoor nodig is.']);
+    return p;
+  }
+  window.FORM = {
+    id: 'scan-overlijdensrisico', klant: true,
+    title: 'Overlijdensrisicoscan',
+    sub: 'Controleer met de klant of de overlijdensrisicodekking nog past bij gezin, hypotheek en wensen: verzekerd bedrag, looptijd, begunstiging en veranderingen sinds het afsluiten.',
+    subKlant: 'Een lastig onderwerp, maar wel belangrijk: wat gebeurt er financieel als jij of je partner overlijdt? Met deze vragen kijkt je adviseur of je verzekering daar nog bij past.',
+    meta: 'Klantscan &middot; ongeveer 7 minuten &middot; geen advies',
+    metaKlant: 'Ongeveer 7 minuten &middot; geen advies, je adviseur kijkt met je mee',
+    klantIntro: 'Er wordt niet naar je gezondheid gevraagd. Pak als het kan je polis van de overlijdensrisicoverzekering en het jaaroverzicht van je hypotheek erbij.',
+    docTitle: 'Overlijdensrisicoscan',
+    mailSubject: function(V){ return 'Overlijdensrisicoscan' + (V('naam') ? ' - ' + V('naam') : ''); },
+    footer: S.foot, docFoot: S.docFoot,
+    sections: [
+      { id: 'over', title: 'Over jou', fields: S.over(false) },
+      { id: 'gezin', title: 'Je gezin', fields: [
+        { id: 'partner', type: 'radio', label: 'Heb je een partner?', req: true, opts: S.JN },
+        { id: 'relatie', type: 'radio', label: 'Hoe woon je samen?', req: true, col: true, show: yes('partner'), opts: [['gehuwd','Getrouwd of geregistreerd partnerschap'],['contract','Samenwonend met samenlevingscontract'],['samenwonend','Samenwonend zonder contract'],['apart','We wonen niet samen']] },
+        { id: 'kinderen', type: 'int', label: 'Aantal thuiswonende kinderen', ph: '0' },
+        { id: 'jongste', type: 'int', label: 'Geboortejaar van het jongste kind', ph: 'Bijvoorbeeld 2019', show: function(V){ return V.n('kinderen') > 0; } }
+      ] },
+      { id: 'hyp', title: 'Je hypotheek', fields: [
+        { id: 'hyp', type: 'eur', label: 'Hoe hoog is je hypotheek nu ongeveer?', hint: 'Laat leeg als je geen hypotheek hebt.' },
+        { id: 'hypeind', type: 'date', label: 'Wanneer eindigt de hypotheek?', show: function(V){ return V.n('hyp') > 0; } }
+      ] },
+      { id: 'orv', title: 'Je overlijdensrisicoverzekering', fields: [
+        { id: 'heeftorv', type: 'radio', label: 'Heb je een overlijdensrisicoverzekering?', req: true, opts: S.JNW },
+        { id: 'verzbedrag', type: 'eur', label: 'Welk bedrag is verzekerd?', show: yes('heeftorv'), hint: 'Bij meerdere verzekeringen: het totaal per persoon.' },
+        { id: 'vorm', type: 'radio', label: 'Blijft het verzekerde bedrag gelijk of daalt het?', col: true, show: yes('heeftorv'), opts: [['gelijk','Blijft gelijk'],['dalend','Daalt in de loop van de jaren'],['weetniet','Weet ik niet']] },
+        { id: 'wie', type: 'radio', label: 'Wie zijn er verzekerd?', col: true, show: function(V){ return V('heeftorv') === 'ja' && V('partner') === 'ja'; }, opts: [['beiden','Mijn partner en ik'],['ik','Alleen ik'],['partner','Alleen mijn partner'],['weetniet','Weet ik niet']] },
+        { id: 'orveind', type: 'date', label: 'Wanneer eindigt de verzekering?', show: yes('heeftorv') },
+        { id: 'begunstigde', type: 'radio', label: 'Wie krijgt de uitkering?', col: true, show: yes('heeftorv'), opts: [['partner','Mijn (huidige) partner'],['geldverstrekker','De geldverstrekker (de verzekering is verpand)'],['erfgenamen','Mijn erfgenamen of kinderen'],['expartner','Mijn ex-partner'],['weetniet','Weet ik niet']] }
+      ] },
+      { id: 'veranderd', title: 'Wat is er veranderd?', fields: [
+        { id: 'wijz', type: 'checks', label: 'Is er iets veranderd sinds je de verzekering afsloot (of de afgelopen jaren)?', req: true, opts: [['samen','Gaan samenwonen of getrouwd'],['uit','Uit elkaar of gescheiden'],['kind','Kind(eren) gekregen'],['hypotheek','Hypotheek verhoogd of verhuisd'],['inkomen','Inkomen flink veranderd'],['roken','Gestopt met roken'],['geen','Nee, niets veranderd']] },
+        { id: 'nabestaanden', type: 'radio', label: 'Weet je wat je partner krijgt uit pensioen of Anw als jij overlijdt?', opts: S.JNW, show: yes('partner') },
+        { id: 'wensblijven', type: 'radio', label: 'Wil de achterblijvende partner in de woning kunnen blijven wonen?', opts: S.JNW, show: yes('partner') },
+        { id: 'wensdekking', type: 'radio', label: 'Weet je welk bedrag daarvoor nodig is?', opts: S.JNW, show: yes('wensblijven') }
+      ] },
+      S.slot()
+    ],
+    validate: function(V){
+      var e = [], j = V.n('jongste');
+      if (V('jongste') && (j < 1990 || j > S.thisYear())) e.push({ id: 'jongste', msg: 'Vul een geboortejaar in, bijvoorbeeld 2019.' });
+      return e;
+    },
+    live: S.live(points), extras: S.extras(points),
+    after: '<section class="card adv"><h2>Toelichting voor de adviseur</h2>' +
+      '<div class="let-op"><strong>Gesprek:</strong> de scan vraagt bewust niet naar gezondheid of medische gegevens. Een verzekerd bedrag lager dan de hypotheek kan een bewuste keuze zijn (bijvoorbeeld door nabestaandenpensioen of vermogen); het signaal is een gespreksaanleiding. Het erfrecht- en erfbelastingsignaal bij ongehuwd samenwonen is algemeen; laat de juridische uitwerking zo nodig over aan een notaris.</div>' +
+      '<div class="compliance"><strong>Compliance:</strong> geen advies. Een aanpassing van dekking, begunstiging of verzekerden vraagt een (nieuw) advies met inventarisatie van de financiële gevolgen van overlijden en vastlegging van de afweging. Bij oversluiten van een bestaande ORV: letten op opnieuw medische acceptatie en de risico&rsquo;s daarvan.</div></section>'
+  };
+})();
+</script>
+<script>
+(function(){
+  'use strict';
+  // Slim formulier: alles draait in deze pagina. Er wordt niets opgeslagen of verstuurd.
+  var F = window.FORM;
+  var $ = function(id){ return document.getElementById(id); };
+  var int0 = new Intl.NumberFormat('nl-NL',{maximumFractionDigits:0});
+  var dec2 = new Intl.NumberFormat('nl-NL',{minimumFractionDigits:2,maximumFractionDigits:2});
+  function fmtE2(v){ return '€ ' + dec2.format(v); }
+  function esc(s){ return String(s == null ? '' : s).replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
+  function parseNum(s){
+    s = String(s||'').replace(/[^\d,.-]/g,'');
+    if (s.indexOf(',') > -1) s = s.replace(/\./g,'').replace(',', '.');
+    else s = s.replace(/\./g,'');
+    var v = parseFloat(s); return isNaN(v) ? 0 : v;
+  }
+  function pad(n){ return (n < 10 ? '0' : '') + n; }
+  function isoToday(){ var d = new Date(); return d.getFullYear() + '-' + pad(d.getMonth()+1) + '-' + pad(d.getDate()); }
+  function parseDate(s){ var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(s||''); return m ? new Date(+m[1], +m[2]-1, +m[3]) : null; }
+  function fmtDate(s){ var d = parseDate(s); return d ? pad(d.getDate()) + '-' + pad(d.getMonth()+1) + '-' + d.getFullYear() : String(s||''); }
+  function longToday(){ return new Date().toLocaleDateString('nl-NL',{day:'numeric',month:'long',year:'numeric'}); }
+  var EMAILRE = /^[^\s@<>()\[\]",;:\\\/?&=#%]+@[^\s@<>()\[\]",;:\\\/?&=#%]+\.[A-Za-z]{2,}$/;
+
+  var qs; try { qs = new URLSearchParams(location.search); } catch (e) { qs = { get: function(){ return null; } }; }
+  var KLANT = !!F.klant && qs.get('klant') === '1';
+  var ADV = (qs.get('adviseur') || '').trim();
+  var KANTOOR = (qs.get('kantoor') || '').trim().slice(0, 80);
+  var ADV_OK = KLANT && EMAILRE.test(ADV);
+  if (KLANT) document.body.classList.add('klant');
+
+  var U = { klant: KLANT, kantoor: KANTOOR, esc: esc, fmtE2: fmtE2, parseNum: parseNum, parseDate: parseDate, fmtDate: fmtDate, today: isoToday };
+
+  // ---------- Schema ----------
+  var FIELDS = [], BYID = {};
+  F.sections.forEach(function(s){ s.fields.forEach(function(f){ f.sec = s; FIELDS.push(f); BYID[f.id] = f; }); });
+  function opts(o){ return (o || []).map(function(x){ return Array.isArray(x) ? x : [x, x]; }); }
+  function optLabel(f, v){ var o = opts(f.opts).filter(function(x){ return x[0] === v; })[0]; return o ? (o[2] || o[1]) : v; }
+  function lbl(f){ return (KLANT && f.labelKlant) || f.label; }
+
+  function ctrl(f, id, extra){
+    extra = extra || '';
+    var ph = f.ph ? ' placeholder="' + esc(f.ph) + '"' : '';
+    switch (f.type) {
+      case 'eur': return '<div class="eur"><span>&euro;</span><input type="text" inputmode="numeric" class="eurin" id="' + id + '"' + ph + ' ' + extra + ' autocomplete="off"></div>';
+      case 'int': return '<input type="text" inputmode="numeric" class="intin" id="' + id + '"' + ph + ' ' + extra + ' autocomplete="off">';
+      case 'textarea': return '<textarea id="' + id + '" rows="' + (f.rows || 3) + '"' + ph + ' ' + extra + '></textarea>';
+      case 'select': return '<select id="' + id + '" ' + extra + '><option value="">Maak een keuze</option>' + opts(f.opts).map(function(o){ return '<option value="' + esc(o[0]) + '">' + esc(o[1]) + '</option>'; }).join('') + '</select>';
+      case 'date': return '<input type="date" id="' + id + '" ' + extra + '>';
+      case 'email': return '<input type="email" id="' + id + '"' + ph + ' ' + extra + ' autocomplete="off">';
+      case 'tel': return '<input type="tel" id="' + id + '"' + ph + ' ' + extra + ' autocomplete="off">';
+      default: return '<input type="text" id="' + id + '"' + ph + ' ' + extra + ' autocomplete="off">';
+    }
+  }
+  function reqMark(){ return '<span class="reqmark" hidden aria-hidden="true">*</span>'; }
+  function hints(f){
+    var h = '';
+    if (f.hint) h += '<span class="hint">' + f.hint + '</span>';
+    if (f.hintAdv) h += '<span class="hint adv">' + f.hintAdv + '</span>';
+    return h;
+  }
+  function fieldHTML(f){
+    var full = f.full || (f.type === 'textarea' || f.type === 'checks' || f.type === 'repeat' || f.type === 'info' || f.type === 'check');
+    var cls = 'fld' + (full ? ' full' : '') + (f.adv ? ' adv' : '');
+    var h = '<div class="' + cls + '" id="w-' + f.id + '">';
+    if (f.type === 'info') return h + '<div class="' + (f.cls || 'let-op') + '">' + f.html + '</div></div>';
+    if (f.type === 'radio' || f.type === 'checks') {
+      var t = f.type === 'radio' ? 'radio' : 'checkbox';
+      h += '<div class="flabel" id="l-' + f.id + '">' + esc(lbl(f)) + reqMark() + '</div>';
+      h += '<div class="opts' + (f.scale ? ' scale' : (f.type === 'checks' || f.col ? ' col' : '')) + '" role="' + (t === 'radio' ? 'radiogroup' : 'group') + '" aria-labelledby="l-' + f.id + '">';
+      h += opts(f.opts).map(function(o, i){
+        return '<label><input type="' + t + '" name="' + f.id + '" value="' + esc(o[0]) + '" id="' + f.id + '_' + i + '"> <span>' + esc(o[1]) + (o[3] ? '<span class="hint">' + o[3] + '</span>' : '') + '</span></label>';
+      }).join('');
+      return h + '</div>' + hints(f) + '</div>';
+    }
+    if (f.type === 'check') return h + '<label class="chk"><input type="checkbox" id="' + f.id + '"> <span>' + esc(lbl(f)) + reqMark() + '</span></label>' + hints(f) + '</div>';
+    if (f.type === 'repeat') {
+      h += '<div class="flabel">' + esc(lbl(f)) + reqMark() + '</div><div class="rep" id="' + f.id + '"></div>';
+      return h + '<button type="button" class="btn sec" data-add="' + f.id + '">+ ' + esc(f.addLabel || 'Regel toevoegen') + '</button>' + hints(f) + '</div>';
+    }
+    return h + '<label for="' + f.id + '">' + esc(lbl(f)) + reqMark() + '</label>' + ctrl(f, f.id) + hints(f) + '</div>';
+  }
+  function addRow(f){
+    var c = $(f.id); c._n = (c._n || 0) + 1; var n = c._n;
+    var row = document.createElement('div'); row.className = 'rep-row';
+    row.innerHTML = f.sub.map(function(s){ var id = f.id + '-' + n + '-' + s.id;
+      return '<div><label for="' + id + '">' + esc(s.label) + '</label>' + ctrl(s, id, 'data-k="' + s.id + '"') + '</div>'; }).join('') +
+      '<div><button type="button" class="btn sec" data-rm="1" aria-label="Verwijder deze regel">Verwijder</button></div>';
+    c.appendChild(row);
+    return row;
+  }
+
+  // ---------- Opbouw pagina ----------
+  var app = $('app');
+  var html = '';
+  if (KLANT) {
+    html += '<section class="card" id="klantintro"><h2>' + (F.klantTitle ? (KANTOOR ? F.klantTitle[0].replace('{kantoor}', function(){ return esc(KANTOOR); }) : F.klantTitle[1]) : (KANTOOR ? 'Je adviseur ' + esc(KANTOOR) + ' vraagt je dit vooraf in te vullen' : 'Je adviseur vraagt je dit vooraf in te vullen')) + '</h2>' +
+      '<p>' + (F.klantIntro || '') + '</p><p class="small">Velden met <span class="reqmark">*</span> zijn verplicht. Weet je iets niet zeker? Laat het leeg of zet het bij de toelichting; je adviseur bespreekt het met je.</p></section>';
+  } else if (F.klant) {
+    html += '<section class="card noprint" id="linkpanel"><h2>Klantlink maken <span class="small" style="font-weight:400">(optioneel)</span></h2>' +
+      '<p class="small" style="margin-top:0">Laat de klant dit formulier vooraf zelf invullen. De link bevat alleen jouw e-mailadres en kantoornaam, nooit klantgegevens. De klant ziet een vriendelijke intro, geen adviseurstoelichting, en kan het resultaat als PDF bewaren en naar jou mailen vanuit het eigen e-mailprogramma.</p>' +
+      '<div class="fields"><div><label for="lk-mail">Jouw e-mailadres</label><input type="email" id="lk-mail" placeholder="naam@kantoor.nl" autocomplete="off"><span class="hint">Zonder e-mailadres ziet de klant alleen &lsquo;Bewaar als PDF&rsquo;.</span></div>' +
+      '<div><label for="lk-kantoor">Kantoornaam</label><input type="text" id="lk-kantoor" maxlength="80" autocomplete="off"></div></div>' +
+      '<div class="row"><button type="button" class="btn" id="lk-make">Maak klantlink</button></div><div id="lk-msg" class="bad" role="status"></div>' +
+      '<div class="linkout" id="lk-out" hidden><label for="lk-url">Klantlink</label><input type="text" id="lk-url" readonly>' +
+      '<div class="row"><button type="button" class="btn sec" id="lk-copy">Kopieer link</button><a class="btn sec" id="lk-open" href="#" target="_blank" rel="noopener">Bekijk als klant</a></div><div id="lk-copied" class="ok" role="status"></div></div></section>';
+  }
+  html += '<div class="progress noprint" aria-live="polite"><div class="pbar"><i id="pbar"></i></div><div class="ptxt"><span id="ptxt"></span><span id="ptxt2"></span></div></div>';
+  html += '<div class="formmsg" id="formmsg" role="alert" hidden></div>';
+  html += '<div class="layout"><div class="main"><div id="form">';
+  F.sections.forEach(function(s){
+    html += '<section class="card' + (s.adv ? ' adv' : '') + '" id="s-' + s.id + '"><h2>' + esc((KLANT && s.titleKlant) || s.title) + '</h2>';
+    if (s.intro) html += '<p class="small" style="margin-top:-4px">' + ((KLANT && s.introKlant) || s.intro) + '</p>';
+    html += '<div class="fields">' + s.fields.map(fieldHTML).join('') + '</div>';
+    if (s.note) html += '<div class="let-op adv"><strong>' + (s.noteTitle || 'AFM-Leidraad:') + '</strong> ' + s.note + '</div>';
+    html += '</section>';
+  });
+  html += '</div>';
+  if (F.liveMain) html += '<section class="card live" id="livemain"></section>';
+  html += '</div><aside class="side"><div class="card sticky" style="background:#fff;border:1px solid var(--line);border-radius:10px;padding:18px 18px">' +
+    '<h2>Samenvatting</h2><ul class="sumlist" id="sumlist"></ul><div id="missing"></div>' +
+    (F.live ? '<div class="live" id="live"></div>' : '') + '</div></aside></div>';
+  html += '<section class="card noprint" id="actions"><h2>' + (KLANT ? 'Klaar?' : 'Document maken') + '</h2><div class="actions">';
+  if (KLANT) {
+    html += '<button type="button" class="btn" id="pdf">Bewaar als PDF</button>';
+    if (ADV_OK) html += '<a class="btn sec" id="sendmail" href="#">Stuur naar mijn adviseur</a>';
+    html += '</div><p class="small">' + (ADV_OK ? 'Kies eerst &lsquo;Bewaar als PDF&rsquo; en bewaar het bestand. &lsquo;Stuur naar mijn adviseur&rsquo; opent je eigen e-mailprogramma met een korte samenvatting; voeg daar de PDF als bijlage aan toe en verstuur zelf. Deze pagina verstuurt niets.' : 'Kies &lsquo;Bewaar als PDF&rsquo; en stuur het bestand op de manier die je met je adviseur hebt afgesproken. Deze pagina verstuurt niets.') + '</p>';
+  } else {
+    html += '<button type="button" class="btn" id="make">Maak document</button></div><p class="small">Opent een nette printversie in een nieuw venster met kop, datum en alleen de ingevulde gegevens' + (F.sign ? ', inclusief ondertekenvelden' : '') + '. Kies daar &lsquo;Printen / Bewaar als PDF&rsquo;.</p>';
+  }
+  html += '</section>';
+  if (F.after) html += F.after;
+  app.innerHTML = html;
+  if (KLANT && F.subKlant) $('sub').innerHTML = F.subKlant;
+  var metaEl = document.querySelector('header.hero .meta'); if (KLANT && metaEl) metaEl.innerHTML = F.metaKlant || 'Vragenlijst ter voorbereiding op het gesprek met je adviseur &middot; geen advies';
+  var back = document.querySelector('a.back'); if (KLANT && back) back.style.display = 'none';
+
+  // standaardwaarden en eerste regels
+  FIELDS.forEach(function(f){
+    if (f.def === 'today' && $(f.id)) $(f.id).value = isoToday();
+    if (f.type === 'repeat') { for (var i = 0; i < (f.rows0 == null ? 1 : f.rows0); i++) addRow(f); }
+  });
+
+  // ---------- Waarden ----------
+  var VIS = {};
+  function raw(f){
+    switch (f.type) {
+      case 'radio': var c = document.querySelector('input[name="' + f.id + '"]:checked'); return c ? c.value : '';
+      case 'checks': return Array.prototype.map.call(document.querySelectorAll('input[name="' + f.id + '"]:checked'), function(i){ return i.value; });
+      case 'check': return $(f.id).checked;
+      case 'repeat': return rows(f);
+      case 'info': return '';
+      default: return $(f.id).value.trim();
+    }
+  }
+  function rows(f){
+    return Array.prototype.map.call($(f.id).querySelectorAll('.rep-row'), function(r){
+      var o = {}; f.sub.forEach(function(s){ o[s.id] = r.querySelector('[data-k="' + s.id + '"]').value.trim(); }); return o;
+    }).filter(function(o){ return Object.keys(o).some(function(k){ return o[k]; }); });
+  }
+  function empty(f){ return f.type === 'checks' || f.type === 'repeat' ? [] : (f.type === 'check' ? false : ''); }
+  function V(id){ var f = BYID[id]; if (!f) return ''; return VIS[id] === false ? empty(f) : raw(f); }
+  V.in = function(id, val){ var x = V(id); return Array.isArray(x) ? x.indexOf(val) > -1 : x === val; };
+  V.any = function(id, vals){ return vals.some(function(v){ return V.in(id, v); }); };
+  V.n = function(id){ return parseNum(V(id)); };
+  V.klant = KLANT;
+  function filled(v){ return Array.isArray(v) ? v.length > 0 : (v === true || (typeof v === 'string' && v !== '')); }
+
+  function computeVis(){
+    VIS = {};
+    F.sections.forEach(function(s){
+      var sv = !(KLANT && s.adv) && (!s.show || !!s.show(V));
+      s._vis = sv; $('s-' + s.id).hidden = !sv;
+      s.fields.forEach(function(f){
+        var v = sv && !(KLANT && f.adv) && (!f.show || !!f.show(V));
+        VIS[f.id] = v; $('w-' + f.id).hidden = !v;
+      });
+    });
+  }
+  function isReq(f){ return VIS[f.id] !== false && f.type !== 'info' && (typeof f.req === 'function' ? !!f.req(V) : !!f.req); }
+
+  // ---------- Live bijwerken ----------
+  function update(){
+    computeVis();
+    var tot = 0, ok = 0, missing = [], filledAll = 0;
+    FIELDS.forEach(function(f){
+      var w = $('w-' + f.id), r = isReq(f), m = w.querySelector('.reqmark');
+      if (m) m.hidden = !r;
+      var isF = VIS[f.id] && f.type !== 'info' && filled(V(f.id));
+      if (isF) { filledAll++; w.classList.remove('err'); var em = w.querySelector('.errmsg'); if (em) em.remove(); }
+      if (!r) return;
+      tot++; if (isF) ok++; else missing.push(f);
+    });
+    var pct = tot ? Math.round(ok / tot * 100) : 100;
+    $('pbar').style.width = pct + '%';
+    $('ptxt').innerHTML = '<b>' + ok + ' van ' + tot + '</b> verplichte velden ingevuld';
+    $('ptxt2').textContent = filledAll + (filledAll === 1 ? ' veld' : ' velden') + ' ingevuld in totaal';
+    var sl = '';
+    F.sections.forEach(function(s){
+      if (!s._vis || s.noSum) return;
+      var n = 0, fl = 0, rq = 0, rqok = 0;
+      s.fields.forEach(function(f){ if (!VIS[f.id] || f.type === 'info') return; n++; var isF = filled(V(f.id)); if (isF) fl++; if (isReq(f)) { rq++; if (isF) rqok++; } });
+      if (!n) return;
+      var done = rq ? rqok === rq : fl > 0;
+      sl += '<li class="' + (done ? 'done' : '') + '"><span>' + esc((KLANT && s.titleKlant) || s.title) + '</span><span>' + (done && rq ? '&#10003; ' : '') + fl + '/' + n + '</span></li>';
+    });
+    $('sumlist').innerHTML = sl;
+    $('missing').innerHTML = missing.length ? '<h3>Nog verplicht</h3><ul class="misslist">' + missing.slice(0, 12).map(function(f){ return '<li><button type="button" data-goto="' + f.id + '">' + esc(lbl(f)) + '</button></li>'; }).join('') + (missing.length > 12 ? '<li class="small">en ' + (missing.length - 12) + ' meer</li>' : '') + '</ul>' : '<p class="ok">Alle verplichte velden zijn ingevuld.</p>';
+    if (F.live && $('live')) $('live').innerHTML = F.live(V, U) || '';
+    if (F.liveMain && $('livemain')) $('livemain').innerHTML = F.liveMain(V, U) || '';
+    var mail = $('sendmail'); if (mail) mail.setAttribute('href', mailHref());
+  }
+
+  // ---------- Validatie ----------
+  function validate(){
+    update();
+    var errs = [], seen = {};
+    FIELDS.forEach(function(f){
+      var w = $('w-' + f.id); w.classList.remove('err'); var em = w.querySelector('.errmsg'); if (em) em.remove();
+      if (isReq(f) && !filled(V(f.id))) { errs.push([f, f.type === 'checks' ? 'Kies minstens één optie.' : 'Dit veld is verplicht.']); seen[f.id] = 1; }
+    });
+    if (F.validate) F.validate(V, U).forEach(function(e){ if (!seen[e.id] && BYID[e.id] && VIS[e.id]) { errs.push([BYID[e.id], e.msg]); seen[e.id] = 1; } });
+    errs.forEach(function(e){ var w = $('w-' + e[0].id); w.classList.add('err'); w.insertAdjacentHTML('beforeend', '<span class="errmsg">' + esc(e[1]) + '</span>'); });
+    var box = $('formmsg');
+    if (errs.length) {
+      box.innerHTML = '<strong>Nog niet compleet.</strong> Controleer ' + errs.length + (errs.length === 1 ? ' veld' : ' velden') + ': ' + errs.slice(0, 6).map(function(e){ return esc(lbl(e[0])); }).join('; ') + (errs.length > 6 ? '; &hellip;' : '') + '.';
+      box.hidden = false;
+      var first = $('w-' + errs[0][0].id);
+      first.scrollIntoView({block:'center'});
+      var inp = first.querySelector('input,select,textarea'); if (inp) try { inp.focus({preventScroll:true}); } catch (x) {}
+      return false;
+    }
+    box.hidden = true; return true;
+  }
+
+  // ---------- Document ----------
+  function valHTML(f, v){
+    switch (f.type) {
+      case 'eur': return esc(fmtE2(parseNum(v)));
+      case 'date': return esc(fmtDate(v));
+      case 'select': case 'radio': return esc(optLabel(f, v));
+      case 'checks': return v.map(function(x){ return esc(optLabel(f, x)); }).join('<br>');
+      case 'check': return 'Ja';
+      case 'textarea': return esc(v).replace(/\n/g, '<br>');
+      case 'repeat':
+        return '<table class="sub"><thead><tr>' + f.sub.map(function(s){ return '<th>' + esc(s.label) + '</th>'; }).join('') + '</tr></thead><tbody>' +
+          v.map(function(r){ return '<tr>' + f.sub.map(function(s){ return '<td>' + (r[s.id] ? valHTML(s, r[s.id]) : '&ndash;') + '</td>'; }).join('') + '</tr>'; }).join('') + '</tbody></table>';
+      default: return esc(v) + (f.unit ? ' ' + esc(f.unit) : '');
+    }
+  }
+  function valText(f, v){
+    switch (f.type) {
+      case 'eur': return fmtE2(parseNum(v)).replace(/ /g, ' ');
+      case 'date': return fmtDate(v);
+      case 'select': case 'radio': return optLabel(f, v);
+      case 'checks': return v.map(function(x){ return optLabel(f, x); }).join(', ');
+      case 'check': return 'ja';
+      case 'repeat': return v.map(function(r){ return '\n  - ' + f.sub.map(function(s){ return r[s.id] ? valText(s, r[s.id]) : '-'; }).join(' | '); }).join('');
+      default: return v + (f.unit ? ' ' + f.unit : '');
+    }
+  }
+  function collect(){
+    var out = [];
+    F.sections.forEach(function(s){
+      if (!s._vis || s.noDoc) return;
+      var rws = [];
+      s.fields.forEach(function(f){
+        if (!VIS[f.id] || f.type === 'info' || f.noDoc) return;
+        var v = V(f.id); if (!filled(v)) return;
+        rws.push({ f: f, label: f.docLabel || lbl(f), html: valHTML(f, v), text: valText(f, v) });
+      });
+      if (rws.length) out.push({ title: s.docTitle || ((KLANT && s.titleKlant) || s.title), rows: rws });
+    });
+    return out;
+  }
+  var DOC_CSS = '.doc{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;color:#222;font-size:13.5px;line-height:1.5;max-width:820px;margin:0 auto;padding:24px 20px 40px}' +
+    '.doc .bar{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 18px}.doc .bar button{border:0;border-radius:7px;padding:10px 16px;font:inherit;font-weight:600;cursor:pointer;background:#003057;color:#fff}.doc .bar button.sec{background:#fff;color:#003057;border:1px solid #D8E2E8}' +
+    '.doc .dh{border-bottom:3px solid #003057;padding-bottom:10px;margin-bottom:14px}.doc h1{font-size:22px;line-height:1.25;color:#003057;margin:0 0 4px}.doc .dm{font-size:12.5px;color:#555}' +
+    '.doc h2{font-size:15px;color:#003057;margin:20px 0 6px;border-bottom:1px solid #D8E2E8;padding-bottom:3px;break-after:avoid}' +
+    '.doc table{width:100%;border-collapse:collapse}.doc th,.doc td{text-align:left;vertical-align:top;padding:5px 8px;border-bottom:1px solid #E5EBEF;overflow-wrap:anywhere}' +
+    '.doc table.kv > tbody > tr > th{width:38%;font-weight:600;color:#333}.doc table.sub th{background:#EAF1F5;font-size:12.5px}.doc table.sub td{font-size:12.5px}.doc tr{break-inside:avoid}' +
+    '.doc .box{border:1px solid #D8E2E8;border-radius:6px;padding:10px 14px;margin:10px 0;background:#F8FAFB}.doc .box p{margin:0 0 6px}.doc ul{margin:4px 0;padding-left:20px}.doc li{margin:0 0 4px}' +
+    '.doc ul.cl{list-style:none;padding:0}.doc ul.cl li{padding:3px 0;border-bottom:1px solid #EEF2F4}.doc .ck{display:inline-block;width:1.4em;font-weight:700}' +
+    '.doc .sig{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:10px}.doc .sigbox{border:1px solid #bbb;border-radius:6px;padding:10px 12px;break-inside:avoid}' +
+    '.doc .sigbox b{display:block;color:#003057;margin-bottom:6px}.doc .sl{display:flex;gap:6px;align-items:flex-end;margin:10px 0 0;font-size:12.5px}.doc .sl span:last-child{flex:1;border-bottom:1px solid #888;min-height:18px}.doc .sl.big span:last-child{min-height:46px}' +
+    '.doc .foot{margin-top:26px;font-size:11.5px;color:#666;border-top:1px solid #ddd;padding-top:8px}' +
+    '@media (max-width:600px){.doc table.kv > tbody > tr > th,.doc table.kv > tbody > tr > td{display:block;width:auto;border:0;padding:3px 0}.doc table.kv > tbody > tr{display:block;border-bottom:1px solid #E5EBEF;padding:4px 0}}' +
+    '@media print{.doc{padding:0;max-width:none}.doc .bar{display:none}@page{margin:16mm 14mm}}';
+
+  function docBody(){
+    var data = collect();
+    var b = '<div class="doc"><div class="bar"><button type="button" onclick="window.print()">Printen / Bewaar als PDF</button><button type="button" class="sec" onclick="window.close()">Sluiten</button></div>';
+    b += '<div class="dh"><h1>' + esc(F.docTitle || F.title) + '</h1><div class="dm">Opgesteld op ' + esc(longToday()) +
+      (KLANT ? ' &middot; ingevuld door de klant' + (KANTOOR ? ' voor ' + esc(KANTOOR) : '') : '') + '</div></div>';
+    if (F.docIntro) b += F.docIntro(V, U).html || '';
+    data.forEach(function(s){
+      b += '<h2>' + esc(s.title) + '</h2><table class="kv"><tbody>' + s.rows.map(function(r){ return '<tr><th>' + esc(r.label) + '</th><td>' + r.html + '</td></tr>'; }).join('') + '</tbody></table>';
+    });
+    (F.extras ? F.extras(V, U) : []).forEach(function(x){ if (x && x.html) b += '<h2>' + esc(x.title) + '</h2>' + x.html; });
+    var sign = F.sign ? F.sign(V, U) : [];
+    if (sign.length) {
+      b += '<h2>' + esc(F.signTitle || 'Ondertekening') + '</h2>' + (F.signText ? '<p>' + F.signText + '</p>' : '') + '<div class="sig">' + sign.map(function(s){
+        return '<div class="sigbox"><b>' + esc(s.role) + '</b><div class="sl"><span>Naam:</span><span>' + esc(s.name || '') + '</span></div>' +
+          '<div class="sl"><span>Datum:</span><span>' + esc(s.date || '') + '</span></div><div class="sl"><span>Plaats:</span><span>' + esc(s.place || '') + '</span></div>' +
+          '<div class="sl big"><span>Handtekening:</span><span></span></div></div>';
+      }).join('') + '</div>';
+    }
+    b += '<div class="foot">' + (F.docFoot || '') + ' Dit document is gemaakt met een hulpmiddel van het Adviesforum; de pagina heeft niets opgeslagen of verstuurd.</div></div>';
+    return b;
+  }
+  function docHTML(autoPrint){
+    return '<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>' + esc(F.docTitle || F.title) + '</title><style>body{margin:0;background:#fff}' + DOC_CSS + '</style></head><body>' + docBody() +
+      (autoPrint ? '<script>setTimeout(function(){window.print()},350)<\/script>' : '') + '</body></html>';
+  }
+  function fallbackPrint(){
+    var pd = $('printdoc');
+    if (!pd) { pd = document.createElement('div'); pd.id = 'printdoc'; document.body.appendChild(pd); var st = document.createElement('style'); st.textContent = DOC_CSS; document.head.appendChild(st); }
+    pd.innerHTML = docBody();
+    document.body.classList.add('printfallback');
+    var off = function(){ document.body.classList.remove('printfallback'); window.removeEventListener('afterprint', off); };
+    window.addEventListener('afterprint', off);
+    window.print();
+    setTimeout(off, 1500);
+  }
+  // Eigen venster: window.print() wordt binnen een iframe (o.a. Google Sites) geblokkeerd. window.print() alleen als fallback.
+  function openDoc(autoPrint){
+    if (!validate()) return false;
+    var w = null;
+    try { w = window.open('', '_blank'); } catch (e) { w = null; }
+    if (!w) { fallbackPrint(); return true; }
+    try { w.document.open(); w.document.write(docHTML(autoPrint)); w.document.close(); w.focus(); }
+    catch (e) { try { w.close(); } catch (x) {} fallbackPrint(); }
+    return true;
+  }
+
+  // ---------- Tekst voor e-mail ----------
+  function plainText(){
+    var t = F.title + '\nIngevuld op ' + longToday() + '\n';
+    if (F.docIntro) { var di = F.docIntro(V, U).text; if (di) t += '\n' + di + '\n'; }
+    collect().forEach(function(s){ t += '\n' + s.title.toUpperCase() + '\n' + s.rows.map(function(r){ return '- ' + r.label + ': ' + r.text; }).join('\n') + '\n'; });
+    (F.extras ? F.extras(V, U) : []).forEach(function(x){ if (x && x.text) t += '\n' + x.title.toUpperCase() + '\n' + x.text + '\n'; });
+    return t;
+  }
+  function mailHref(){
+    var subj = F.mailSubject ? F.mailSubject(V, U) : F.title;
+    var body = plainText();
+    var MAX = 1800;
+    if (body.length > MAX) body = body.slice(0, MAX).replace(/\s+\S*$/, '') + '\n\n[... ingekort: de volledige gegevens staan in de PDF]';
+    body += '\n\nLet op: voeg de PDF (via "Bewaar als PDF") als bijlage toe aan deze e-mail.';
+    return 'mailto:' + ADV + '?subject=' + encodeURIComponent(subj) + '&body=' + encodeURIComponent(body);
+  }
+
+  // ---------- Gebeurtenissen ----------
+  var form = $('form');
+  function onInput(e){
+    var t = e.target;
+    if (t.classList && t.classList.contains('eurin')) { var d = t.value.replace(/\D/g, '').replace(/^0+(?=\d)/, '').slice(0, 12); t.value = d ? int0.format(parseInt(d, 10)) : ''; }
+    if (t.classList && t.classList.contains('intin')) t.value = t.value.replace(/\D/g, '').slice(0, 6);
+    update();
+  }
+  form.addEventListener('input', onInput);
+  form.addEventListener('change', update);
+  form.addEventListener('click', function(e){
+    var a = e.target.closest('[data-add]'), r = e.target.closest('[data-rm]');
+    if (a) { var row = addRow(BYID[a.getAttribute('data-add')]); var i = row.querySelector('input,select,textarea'); if (i) i.focus(); update(); }
+    if (r) { r.closest('.rep-row').remove(); update(); }
+  });
+  app.addEventListener('click', function(e){
+    var g = e.target.closest('[data-goto]'); if (!g) return;
+    var w = $('w-' + g.getAttribute('data-goto')); w.scrollIntoView({block:'center'});
+    var i = w.querySelector('input,select,textarea'); if (i) try { i.focus({preventScroll:true}); } catch (x) {}
+  });
+  if (F.onLive) F.onLive(app, update);
+  if ($('make')) $('make').addEventListener('click', function(){ openDoc(false); });
+  if ($('pdf')) $('pdf').addEventListener('click', function(){ openDoc(true); });
+  if ($('sendmail')) $('sendmail').addEventListener('click', function(e){ if (!validate()) { e.preventDefault(); return; } this.setAttribute('href', mailHref()); });
+
+  // Klantlink (adviseursweergave)
+  if ($('lk-make')) {
+    $('lk-make').addEventListener('click', function(){
+      var mail = $('lk-mail').value.trim(), kantoor = $('lk-kantoor').value.trim();
+      $('lk-copied').textContent = '';
+      if (mail && !EMAILRE.test(mail)) { $('lk-msg').textContent = 'Dit e-mailadres lijkt niet geldig. Controleer het of laat het leeg.'; $('lk-mail').focus(); $('lk-out').hidden = true; return; }
+      $('lk-msg').textContent = '';
+      var base = location.href.split(/[?#]/)[0];
+      var url = base + '?klant=1' + (mail ? '&adviseur=' + encodeURIComponent(mail) : '') + (kantoor ? '&kantoor=' + encodeURIComponent(kantoor) : '');
+      $('lk-url').value = url; $('lk-open').setAttribute('href', url); $('lk-out').hidden = false;
+      $('lk-copied').textContent = mail ? '' : 'Zonder e-mailadres krijgt de klant alleen de knop ‘Bewaar als PDF’.';
+    });
+    $('lk-copy').addEventListener('click', function(){
+      var inp = $('lk-url'), done = function(){ $('lk-copied').textContent = 'Link gekopieerd.'; };
+      inp.select();
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(inp.value).then(done, function(){ try { document.execCommand('copy'); done(); } catch (e) {} });
+      else { try { document.execCommand('copy'); done(); } catch (e) { $('lk-copied').textContent = 'Selecteer en kopieer de link handmatig.'; } }
+    });
+  }
+  window.addEventListener('beforeunload', function(e){
+    var any = FIELDS.some(function(f){ return f.type !== 'info' && !f.def && VIS[f.id] && filled(V(f.id)); });
+    if (any) { e.preventDefault(); e.returnValue = ''; }
+  });
+  update();
+})();
+</script>
+</body>
+</html>
