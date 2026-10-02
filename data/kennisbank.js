@@ -277,6 +277,7 @@ De AFM stelt de minimale toetsrente per kwartaal vast; die is geen onderdeel van
   kw:'AFM leidraad hypotheekadvisering 2026 passend advies artikel 4:23 Wft adviesnorm zelfstandige rol adviseur inventarisatie analyse adviesrapport nazorg verantwoorde woonlasten LTI pensioen uitgavenpatroon netto besteedbaar inkomen rentevastperiode renteschok scenario verduurzaming energielabel EBV EBB funderingsschade fundering fiscaliteit fiscaal verleden eigenwoningschuld eigenwoningreserve box 1 box 3 hypotheekproduct voorwaarden verhuisregeling life events arbeidsongeschiktheid overlijden werkloosheid relatiebeëindiging scheiding oversluiten terugverdientijd afwijken advies vastleggen dossier',
   links:[
    {titel:'AFM: Leidraad Hypotheekadvisering, april 2026 (PDF)',url:'documenten/Leidraad-Hypotheekadvisering-2026.pdf'},
+   {titel:'AFM: feedbackstatement bij de herziene Leidraad Hypotheekadvisering 2026 (PDF)',url:'https://www.afm.nl/~/profmedia/files/wet-regelgeving/beleidsuitingen/leidraden/feedback-statement-hypotheekadvies-bij-herziene-leidraad-2026.pdf'},
    {titel:'AFM: adviseurs, bemiddelaars en gevolmachtigden',url:'https://www.afm.nl/nl-nl/sector/adviseurs-bemiddelaars-en-gevolmachtigde-agenten'},
    {titel:'Wft, artikel 4:23 (wetten.overheid.nl)',url:'https://wetten.overheid.nl/BWBR0020368'},
    {titel:'Overzicht wet- en regelgeving (eigen pagina)',url:'wetgeving.html'}
