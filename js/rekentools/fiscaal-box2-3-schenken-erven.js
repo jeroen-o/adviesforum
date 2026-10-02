@@ -46,33 +46,40 @@
   const { annHoofdsom, zoekNul } = RT.fin;
   const pos = x => Math.max(0, x);
 
-  /* Ontbrekende normen. Peildatum 2026; waarde uit bron, niet geverifieerd. Niet in normen.js gezet (eigendom basis). */
+  /* Ontbrekende normen. Peildatum 2026; gecontroleerd op 2026-10-02 tegen de Belastingdienst, status per regel.
+   * Niet in normen.js gezet (eigendom basis). */
   const N = {
     peildatum: '2026',
-    // Erfbelasting: vrijstellingen buiten partner en kind (waarde uit bron, niet geverifieerd)
-    erf: { kleinkind: 25900, ouder: 61300, overig: 2800, partnerMinimum: 162248 },
-    // Schenkbelasting: eenmalig verhoogde vrijstellingen en overige verkrijgers (waarde uit bron, niet geverifieerd)
-    schenk: { kind40: 32200, studie: 67100, overig: 2800 },
-    // Tarieven groep II (kleinkinderen) en groep III (overigen); groep I staat in RT.normen.schenkErf (waarde uit bron, niet geverifieerd)
+    // Erfbelasting 2026: vrijstelling kleinkind € 26.230, ouders € 62.110, overige € 2.769, minimale partnervrijstelling bij
+    // pensioenverrekening € 213.915 – bevestigd: https://www.belastingdienst.nl/wps/wcm/connect/nl/erfbelasting/content/vrijstelling-erfbelasting
+    erf: { kleinkind: 26230, ouder: 62110, overig: 2769, partnerMinimum: 213915 },
+    // Schenkbelasting 2026: eenmalig verhoogd kind 18–40 jaar € 33.129, voor dure studie € 69.009, overige verkrijgers (incl. kleinkind) € 2.769 –
+    // bevestigd: https://www.belastingdienst.nl/wps/wcm/connect/nl/schenken/content/tot-welk-bedrag-belastingvrij-schenken
+    schenk: { kind40: 33129, studie: 69009, overig: 2769 },
+    // Tarieven groep II (kleinkinderen) en groep III (overigen); groep I staat in RT.normen.schenkErf. Schijfgrens 2026 € 158.669 –
+    // bevestigd: https://www.belastingdienst.nl/wps/wcm/connect/nl/erfbelasting/content/tarieven-erfbelasting
     tariefII: [18, 36], tariefIII: [30, 40],
-    // Waardering vruchtgebruik en periodieke uitkeringen: rekenrente en leeftijdsfactoren (waarde uit bron, niet geverifieerd)
+    // Waardering vruchtgebruik en periodieke uitkeringen: rekenrente en leeftijdsfactoren – niet bevestigd
     rekenrente: 6,
     leeftijdsfactor: [[20, 16], [30, 15], [40, 14], [50, 13], [55, 12], [60, 11], [65, 10], [70, 9], [75, 8], [80, 7], [85, 5], [90, 4], [Infinity, 3]],
-    // Giftenaftrek inkomstenbelasting (waarde uit bron, niet geverifieerd)
-    gift: { drempelPct: 1, drempelMin: 60, maxPct: 10, periodiekPlafond: 250000 },
-    // Giftenaftrek vennootschapsbelasting (waarde uit bron, niet geverifieerd)
+    // Giftenaftrek IB 2026: drempel 1% (min. € 60), max. 10%; periodieke giften max. € 1.500.000 per jaar (sinds 2025; 2024: € 250.000) –
+    // bevestigd: https://www.belastingdienst.nl/wps/wcm/connect/fisin/fisin2026/aftrek_giften
+    gift: { drempelPct: 1, drempelMin: 60, maxPct: 10, periodiekPlafond: 1500000 },
+    // Giftenaftrek vennootschapsbelasting: max. 50% van de winst en € 100.000 – bevestigd (Belastingdienst, aftrekbare giften vpb)
     giftBv: { maxPct: 50, maxBedrag: 100000 },
-    // Groene beleggingen: extra vrijstelling p.p. en heffingskorting (waarde uit bron, niet geverifieerd)
-    groen: { vrijstelling: 26312, kortingPct: 0.1 },
-    // Tweede set box 3-normen om mee te vergelijken (waarde uit bron, niet geverifieerd)
+    // Groene beleggingen 2026: extra vrijstelling € 26.715 p.p. en heffingskorting 0,1% – bevestigd (Belastingdienst, groene beleggingen)
+    groen: { vrijstelling: 26715, kortingPct: 0.1 },
+    // Tweede set box 3-normen om mee te vergelijken: het oorspronkelijke kabinetsvoorstel Belastingplan 2026 (heffingsvrij € 51.396),
+    // dat bij amendement NIET is ingevoerd (geldend 2026: € 59.357, zie RT.normen.box3) – alleen als vergelijkingsscenario, niet bevestigd
     box3B: { heffingsvrij: 51396, forfaitBank: 1.31, forfaitOverig: 6.17, tarief: 36 },
-    // Aangekondigd stelsel werkelijk rendement: heffingsvrij resultaat p.p. (waarde uit bron, niet geverifieerd)
+    // Aangekondigd stelsel werkelijk rendement (wetsvoorstel 36748): heffingsvrij resultaat p.p. – niet bevestigd
     werkelijk: { heffingsvrijResultaat: 1800 },
-    // Rechtsherstel box 3: gemiddeld forfait van het oude stelsel (waarde uit bron, niet geverifieerd)
+    // Rechtsherstel box 3: gemiddeld forfait van het oude stelsel – aanname, niet bevestigd
     oudForfait: 4.5,
-    // Leegwaarderatio verhuurde woning: [huur per jaar als % van de WOZ tot en met, ratio %] (waarde uit bron, niet geverifieerd)
+    // Leegwaarderatio verhuurde woning 2026: [huur per jaar als % van de WOZ tot en met, ratio %] – bevestigd (Belastingdienst, tabel waarde
+    // verhuurde of verpachte woning 2026)
     leegwaarde: [[1, 73], [2, 79], [3, 84], [4, 90], [5, 95], [Infinity, 100]],
-    // Schenkvrijstelling eigen woning (jubelton, vervallen per 2024) (waarde uit bron, niet geverifieerd)
+    // Schenkvrijstelling eigen woning (jubelton, vervallen per 2024): historische bedragen – niet bevestigd
     woning: { t2022: 106671, t2023: 28947 }
   };
   const BRON = 'waarde uit de bron (peildatum ' + N.peildatum + '), niet geverifieerd';

@@ -10,12 +10,13 @@
   const NR = RT.normen, F = RT.fisc;
 
   /* Jaarlijks wisselende of wettelijke bedragen die (nog) niet in normen.js staan.
-   * Peildatum 2026 – waarde uit bron, niet geverifieerd. */
+   * Peildatum 2026 – gecontroleerd op 2026-10-02. */
   const N = {
     peildatum: '2026',
-    // Vrijstelling rentebestanddeel kapitaalverzekering met overgangsrecht (polis van vóór 15 september 1999) – waarde uit bron, niet geverifieerd
+    // Vrijstelling kapitaalverzekering met overgangsrecht (polis van vóór 15 september 1999): € 123.428 p.p. (€ 246.856 met partner) –
+    // bevestigd (Belastingdienst, niet-vrijgesteld deel kapitaalverzekeringen)
     vrijstellingOudePolis: 123428,
-    // Minimum aantal premiejaren voor de vrijstelling – waarde uit bron, niet geverifieerd
+    // Minimum aantal premiejaren voor de vrijstelling – niet bevestigd
     minPremiejaren: 15
   };
 

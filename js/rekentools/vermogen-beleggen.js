@@ -317,11 +317,12 @@
   {
     const NR = RT.normen, F = RT.fisc, PEIL = RT.normen.peildatum;
     const { irr } = RT.fin;
-    /* Normen die (nog) niet in normen.js staan. Peildatum 2026 – waarde uit bron, niet geverifieerd. */
+    /* Normen die (nog) niet in normen.js staan. Peildatum 2026 – gecontroleerd op 2026-10-02. */
     const N = {
       peildatum: '2026',
-      depositogarantie: 100000,   // gegarandeerd bedrag per persoon per bank – waarde uit bron, niet geverifieerd
-      leegwaarderatio: 100        // waarde verhuurde woning in box 3 als % van de WOZ (standaard in de bron) – waarde uit bron, niet geverifieerd
+      depositogarantie: 100000,   // gegarandeerd bedrag per persoon per bank – bevestigd (DNB, Nederlandse depositogarantie)
+      leegwaarderatio: 100        // standaard: verhuurde woning in box 3 als % van de WOZ. Tabel 2026 (Belastingdienst): huur ≤1% WOZ: 73%,
+                                  // ≤2%: 79%, ≤3%: 84%, ≤4%: 90%, ≤5%: 95%, >5%: 100%. 100% is de bovenste trede (bevestigd), geen gemiddelde.
     };
     const PARTNERS = [['1', 'Nee, één persoon'], ['2', 'Ja, samen']];
     // Box 3-heffing die toe te rekenen is aan een extra bedrag (bank of overig), bovenop ander spaargeld

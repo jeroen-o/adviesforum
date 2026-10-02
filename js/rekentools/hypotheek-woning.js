@@ -454,16 +454,17 @@
     const { JANEE, MOMENT } = RT.keuzes;
     const { eindwaarde, maandUitJaar } = RT.fin;
     /* Normen en aannames die (nog) niet in normen.js staan.
-     * Peildatum 2026 – waarde uit bron, niet geverifieerd. Hulpen die ze gebruiken melden dat in 'Let op'. */
+     * Peildatum 2026 – gecontroleerd op 2026-10-02; status per regel. Hulpen die ze gebruiken melden dat in 'Let op'. */
     const N = {
       peildatum: '2026',
-      toetsrenteKortVast: 5,          // toetsrente bij rentevast korter dan 10 jaar – waarde uit bron, niet geverifieerd
-      financieringslastPct: 28.5,     // voorbeeld-financieringslastpercentage (hangt af van inkomen en rente) – waarde uit bron, niet geverifieerd
-      maxLtv: 100,                    // maximale lening als % van de marktwaarde – waarde uit bron, niet geverifieerd
-      tijdelijkeVerhuurPct: 70,       // belast deel van de opbrengst bij tijdelijke verhuur eigen woning – waarde uit bron, niet geverifieerd
-      renteVooruitMaanden: 6,         // maximaal aantal maanden rente vooruit aftrekbaar – waarde uit bron, niet geverifieerd
-      aflossingseisMaanden: 360,      // aflossingseis: ten minste annuïtair in 360 maanden – waarde uit bron, niet geverifieerd
-      hillenAfbouwPerJaar: 10 / 3     // afbouw aftrek geringe eigenwoningschuld per jaar (procentpunt) – waarde uit bron, niet geverifieerd
+      toetsrenteKortVast: 5,          // toetsrente bij rentevast korter dan 10 jaar, Q1–Q4 2026 – bevestigd (AFM, toetsrente vierde kwartaal 2026 is 5%)
+      financieringslastPct: 28.5,     // voorbeeld-financieringslastpercentage (hangt af van inkomen en rente) – voorbeeldwaarde, niet bevestigd
+      maxLtv: 100,                    // maximale lening als % van de marktwaarde (Tijdelijke regeling hypothecair krediet) – niet bevestigd
+      tijdelijkeVerhuurPct: 70,       // belast deel van de opbrengst bij tijdelijke verhuur eigen woning – bevestigd (Belastingdienst, tijdelijk verhuren)
+      renteVooruitMaanden: 6,         // maximaal aantal maanden rente vooruit aftrekbaar – bevestigd (Belastingdienst, fisin2026 eigen woning)
+      aflossingseisMaanden: 360,      // aflossingseis: ten minste annuïtair in 360 maanden – bevestigd (Belastingdienst, fisin2026 eigen woning)
+      hillenAfbouwPerJaar: 4.8        // afbouw aftrek geringe eigenwoningschuld per jaar (procentpunt): versnelde afbouw 76,667% (2025) → 71,867% (2026),
+                                      // einde in 2041 – afgeleid uit Belastingdienst (Wet Hillen); de stap na 2026 is niet bevestigd
     };
     const INDICATIEF = 'Indicatief: deze berekening gebruikt normen met peildatum ' + N.peildatum + ' die nog niet zijn geverifieerd; controleer de actuele norm.';
     const tarief = t => Math.min(t, NR.aftrekTariefMax);
@@ -674,7 +675,7 @@
           tabel: { titel: 'Afbouw bij gelijke WOZ, schuld en tarief', kop: ['Jaar', 'Aftrek', 'Bijtelling', 'Belasting'], rijen }
         };
       },
-      uitleg: 'Verschil = forfait − rente. Aftrek wegens geringe schuld = verschil × afbouwpercentage (' + fmt.pct(NR.eigenWoning.hillenAfbouwPct, 2) + ' in ' + PEIL + ', elk jaar 3⅓ procentpunt lager). Bijtelling = verschil − aftrek; extra belasting = bijtelling × marginaal tarief.',
+      uitleg: 'Verschil = forfait − rente. Aftrek wegens geringe schuld = verschil × afbouwpercentage (' + fmt.pct(NR.eigenWoning.hillenAfbouwPct, 2) + ' in ' + PEIL + ', elk jaar ' + String(N.hillenAfbouwPerJaar).replace('.', ',') + ' procentpunt lager). Bijtelling = verschil − aftrek; extra belasting = bijtelling × marginaal tarief.',
       letop: 'Indicatief: de jaarlijkse afbouw van 3⅓ procentpunt is een norm uit de bron die nog niet is geverifieerd; controleer de actuele norm. De tabel houdt WOZ, rente en tarief gelijk. Vanaf de AOW-leeftijd is het tarief in de eerste schijf lager. Een kleine schuld aanhouden om de bijtelling te verlagen is zelden rendabel: de rente kost meer dan de besparing.'
     });
 

@@ -13,21 +13,22 @@
   const verschil = x => fmt.plus(fmt.euro0(x));
 
   /* Normen die (nog) niet in normen.js staan. Peildatum 2026.
-   * Waarden uit bron, niet geverifieerd: controleer bij Belastingdienst/Rijksoverheid vóór publicatie
-   * en verplaats ze bij voorkeur naar normen.js (beheerder). */
+   * Gecontroleerd op 2026-10-02 tegen Belastingdienst/Rijksoverheid; status per regel. Bij voorkeur naar normen.js verplaatsen (beheerder). */
   const N = {
     peildatum: '2026',
-    btw: { hoog: 21, laag: 9 },                    // btw-tarieven (waarde uit bron, niet geverifieerd)
-    wkoOpslag: 0.5,                                // opslag Wet kinderopvang op de Aof-premie, % (waarde uit bron, niet geverifieerd)
-    kia: { ondergrens: 2900, grensPct: 70602, startAfbouw: 130744, bovengrens: 392230, pct: 28, max: 19769 }, // KIA-staffel (waarde uit bron, niet geverifieerd)
-    middelingDrempel: 545,                         // drempel middeling, laatste tijdvak 2022-2024 (waarde uit bron, niet geverifieerd)
-    gebruikelijkLoon: 56000,                       // normbedrag gebruikelijk loon dga (waarde uit bron, niet geverifieerd)
-    bijtellingPct: 22,                             // standaardbijtelling auto (waarde uit bron, niet geverifieerd)
-    kmVergoeding: 0.23,                            // onbelaste/aftrekbare vergoeding per zakelijke km (waarde uit bron, niet geverifieerd)
-    welGrens: 500000,                              // grens Wet excessief lenen bij eigen vennootschap (waarde uit bron, niet geverifieerd)
-    odvDuur: 20,                                   // uitkeringsduur oudedagsverplichting in jaren (waarde uit bron, niet geverifieerd)
-    wkr: { grens: 400000, pct1: 2.0, pct2: 1.18, eindheffing: 80 }, // werkkostenregeling (waarde uit bron, niet geverifieerd)
-    korGrens: 20000                                // omzetgrens kleineondernemersregeling (waarde uit bron, niet geverifieerd)
+    btw: { hoog: 21, laag: 9 },                    // btw-tarieven 2026 – bevestigd (Belastingdienst btw-tarieven; logies vanaf 2026 21%)
+    wkoOpslag: 0.5,                                // opslag Wet kinderopvang op de Aof-premie 2026, % – bevestigd (bijlage nieuwsbrief loonheffingen 2026)
+    // KIA 2026 – bevestigd: https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/zakelijk/winst/inkomstenbelasting/veranderingen-inkomstenbelasting-2026/investeringsaftrek-2026/kleinschaligheidsinvesteringsaftrek-2026
+    // (28% van € 2.901 t/m € 71.683; € 20.072 t/m € 132.746; daarna € 20.072 − 7,56% van het meerdere; nul boven € 398.236)
+    kia: { ondergrens: 2900, grensPct: 71683, startAfbouw: 132746, bovengrens: 398236, pct: 28, max: 20072 },
+    middelingDrempel: 545,                         // drempel middeling, laatste tijdvak 2022-2024 (historisch; niet opnieuw bevestigd)
+    gebruikelijkLoon: 58000,                       // normbedrag gebruikelijk loon dga 2026 – bevestigd (Belastingdienst, loon en aanmerkelijk belang)
+    bijtellingPct: 22,                             // standaardbijtelling auto 2026 – bevestigd (Belastingdienst, bijtelling privégebruik auto 2026)
+    kmVergoeding: 0.25,                            // onbelaste/aftrekbare vergoeding per zakelijke km 2026 (verhoogd van € 0,23, terugwerkend tot 1-1-2026) – bevestigd
+    welGrens: 500000,                              // grens Wet excessief lenen bij eigen vennootschap – niet bevestigd (wettelijk vast bedrag sinds 2023)
+    odvDuur: 20,                                   // uitkeringsduur oudedagsverplichting in jaren – niet bevestigd
+    wkr: { grens: 400000, pct1: 2.0, pct2: 1.18, eindheffing: 80 }, // werkkostenregeling 2026 – bevestigd (Belastingdienst WKR)
+    korGrens: 20000                                // omzetgrens kleineondernemersregeling 2026 – bevestigd (Belastingdienst, KOR-voorwaarden)
   };
   const INDICATIEF = 'Indicatief: deze norm staat nog niet in het centrale normenbestand. Controleer de actuele waarde bij de Belastingdienst.';
 

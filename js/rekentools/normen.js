@@ -5,9 +5,9 @@
  * Rekenhulpen die deze normen gebruiken registreren peildatum: RT.normen.peildatum en fiscaal: true
  * (of een lijst met namen van de gebruikte normen); de engine toont dan de badges.
  *
- * LET OP: de waarden hieronder zijn werkwaarden voor 2026 en zijn nog NIET allemaal tegen
- * Belastingdienst/UWV/SVB/Rijksoverheid geverifieerd. Controleer en werk bij vóór publicatie
- * (zie 'gecontroleerd' per blok). Alle percentages staan als percentage (35,82 = 35,82%).
+ * Geverifieerd op 2026-10-02 tegen Belastingdienst/UWV/SVB/Rijksoverheid (zie N._bronnen en N._geverifieerd).
+ * Bedragen die halfjaarlijks wijzigen (minimumloon, AOW, bijstand) staan op de stand per 1 juli 2026.
+ * Alle percentages staan als percentage (35,75 = 35,75%).
  *
  * Dit bestand is eigendom van de basis (fase 1); groepbestanden passen het niet aan.
  * Ontbreekt een norm? Voeg hem toe in een eigen blok onderaan en meld het aan de beheerder.
@@ -17,47 +17,97 @@
 
   const N = RT.normen = {
     peildatum: '2026',
+    // Geverifieerd op 2026-10-02 tegen officiële bronnen (zie _bronnen); niet alles kon worden bevestigd (zie _geverifieerd).
+    // 'gecontroleerd' blijft false zolang er onderdelen 'niet bevestigd' zijn; de hulp 'Gebruikte fiscale normen' toont dan een signaal.
     gecontroleerd: false,
 
-    // Inkomstenbelasting box 1 (schijfgrenzen in euro per jaar)
-    box1: { schijf1Grens: 38883, schijf2Grens: 79137, tarief1: 35.82, tarief1Aow: 17.92, tarief2: 37.48, tarief3: 49.50 },
-    // Algemene heffingskorting: maximum, afbouw vanaf inkomen, afbouwpercentage; idem vanaf AOW-leeftijd
-    ahk: { max: 3115, afbouwVanaf: 28406, afbouwPct: 6.337, maxAow: 1620, afbouwPctAow: 3.292 },
-    // Arbeidskorting: opbouw in drie trajecten tot knik3, daarna afbouw tot nul (eind is indicatief)
-    arbeidskorting: { knik1: 12400, knik2: 26800, knik3: 43900, eind: 131500, pct1: 8.053, pct2: 30.030, pct3: 2.258, afbouwPct: 6.510, factorAow: 0.5 },
-    // Inkomensafhankelijke combinatiekorting
-    iack: { drempel: 6300, pct: 11.45, max: 2986 },
-    // Ouderenkorting en alleenstaande-ouderenkorting
-    ouderenkorting: { max: 2035, afbouwVanaf: 46000, afbouwPct: 15, alleenstaand: 548 },
-    // Maximaal tarief waartegen aftrekposten (o.a. eigen woning) aftrekbaar zijn
+    // Inkomstenbelasting box 1 (schijfgrenzen in euro per jaar). Bevestigd: Belastingdienst, box 1 tarieven 2026.
+    // Tarief 1 = 8,10% IB + 27,65% premies volksverzekeringen; vanaf AOW-leeftijd (geboren vanaf 1-1-1946) 17,85%.
+    box1: { schijf1Grens: 38883, schijf2Grens: 78426, tarief1: 35.75, tarief1Aow: 17.85, tarief2: 37.56, tarief3: 49.50 },
+    // Algemene heffingskorting: maximum, afbouw vanaf inkomen, afbouwpercentage; idem vanaf AOW-leeftijd (heel 2026 AOW). Bevestigd: tabel AHK 2026.
+    ahk: { max: 3115, afbouwVanaf: 29736, afbouwPct: 6.398, maxAow: 1556, afbouwPctAow: 3.195 },
+    // Arbeidskorting: opbouw in drie trajecten tot knik3, daarna afbouw tot nul bij 'eind'. Bevestigd: tabel arbeidskorting 2026
+    // (max € 5.685). AOW-tabel ≈ 0,5 × (4,156% / 15,483% / 0,974% / afbouw 3,250%); factorAow 0,5 is een benadering.
+    arbeidskorting: { knik1: 11965, knik2: 25845, knik3: 45592, eind: 132920, pct1: 8.324, pct2: 31.009, pct3: 1.950, afbouwPct: 6.510, factorAow: 0.5 },
+    // Inkomensafhankelijke combinatiekorting 2026 (max € 3.032; vanaf AOW-leeftijd 5,72% en max € 1.513). Bevestigd: tabel IACK 2026.
+    // LET OP: alleen nog voor ouders met een kind geboren vóór 1 januari 2025 (afbouw IACK); voor jongere kinderen geen recht.
+    iack: { drempel: 6239, pct: 11.45, max: 3032 },
+    // Ouderenkorting en alleenstaande-ouderenkorting 2026. Bevestigd: Belastingdienst heffingskortingen 2026.
+    ouderenkorting: { max: 2067, afbouwVanaf: 46002, afbouwPct: 15, alleenstaand: 540 },
+    // Maximaal tarief waartegen aftrekposten (o.a. eigen woning) aftrekbaar zijn = tarief schijf 2 (37,56%). Bevestigd.
     aftrekTariefMax: 37.56,
     // Tarief bijzondere beloningen (indicatie hoogste)
     bijzondereBeloningMax: 49.50,
 
-    // Eigen woning
-    eigenWoning: { forfaitPct: 0.35, villataksGrens: 1330000, villataksPct: 2.35, hillenAfbouwPct: 73.33, kewVrijstelling: 200000 },
-    // Overdrachtsbelasting
+    // Eigen woning 2026: forfait 0,35% (WOZ € 75.000 – € 1.350.000), daarboven € 4.725 + 2,35%. Hillen-aftrek 71,867% (versnelde afbouw, einde 2041).
+    // kewVrijstelling: vrijstelling kapitaalverzekering/spaarrekening/beleggingsrecht eigen woning 2026 (€ 207.500 p.p.). Alles bevestigd.
+    eigenWoning: { forfaitPct: 0.35, villataksGrens: 1350000, villataksPct: 2.35, hillenAfbouwPct: 71.867, kewVrijstelling: 207500 },
+    // Overdrachtsbelasting 2026: 2% eigen woning, 8% overig; startersvrijstelling tot woningwaarde € 555.000. Bevestigd.
     ovb: { eigenWoning: 2, overig: 8, startersVrijstelling: 0, startersWoningwaardeGrens: 555000 },
 
-    // Box 2 (aanmerkelijk belang)
-    box2: { tarief1: 24.5, tarief2: 31, grens: 68000 },
-    // Box 3 (forfaitair stelsel)
-    box3: { heffingsvrij: 57684, forfaitBank: 1.44, forfaitOverig: 5.88, forfaitSchuld: 2.62, schuldDrempel: 3800, tarief: 36 },
-    // Vennootschapsbelasting
+    // Box 2 (aanmerkelijk belang) 2026: 24,5% tot € 68.843 (p.p.), daarboven 31%. Bevestigd.
+    box2: { tarief1: 24.5, tarief2: 31, grens: 68843 },
+    // Box 3 2026: heffingsvrij € 59.357 p.p.; forfait overige bezittingen 6,00% (definitief), banktegoeden 1,28% en schulden 2,70%
+    // (voorlopig, definitief begin 2027); schuldendrempel € 3.800 p.p.; tarief 36%. Bevestigd.
+    box3: { heffingsvrij: 59357, forfaitBank: 1.28, forfaitOverig: 6.00, forfaitSchuld: 2.70, schuldDrempel: 3800, tarief: 36 },
+    // Vennootschapsbelasting 2026: 19% tot € 200.000, daarboven 25,8%. Bevestigd.
     vpb: { tarief1: 19, tarief2: 25.8, grens: 200000 },
 
-    // Ondernemer (IB)
-    ondernemer: { zelfstandigenaftrek: 1200, startersaftrek: 2123, mkbVrijstellingPct: 12.7, zvwPct: 5.26, zvwMaxInkomen: 75864, urencriterium: 1225 },
+    // Ondernemer (IB) 2026: zelfstandigenaftrek € 1.200, startersaftrek € 2.123, mkb-winstvrijstelling 12,7%, urencriterium 1.225 uur.
+    // Zvw-bijdrage ondernemer 2026: 4,85% over maximaal € 79.409 bijdrage-inkomen. Alles bevestigd.
+    ondernemer: { zelfstandigenaftrek: 1200, startersaftrek: 2123, mkbVrijstellingPct: 12.7, zvwPct: 4.85, zvwMaxInkomen: 79409, urencriterium: 1225 },
 
-    // Werkgeverslasten en sociale verzekeringen
-    werkgever: { awf: 2.74, aof: 6.28, whk: 1.10, zvw: 6.51, maxPremieloon: 79000 },
-    minimumloon: { uur: 14.71 },
-    aow: { nettoAlleenstaandJaar: 17860, nettoSamenPpJaar: 12480 },
-    bijstand: { alleenstaandJaar: 16800, samenPpJaar: 11760 },
+    // Werkgeverslasten en sociale verzekeringen 2026: AWf laag 2,74% (hoog 7,74%), Aof laag 6,27% (incl. 0,5% Wko-opslag; hoog 7,63%),
+    // werkgeversheffing Zvw 6,10%, maximumpremieloon € 79.409. Whk verschilt per werkgever: 1,52% is een gemiddelde (niet bevestigd).
+    werkgever: { awf: 2.74, aof: 6.27, whk: 1.52, zvw: 6.10, maxPremieloon: 79409 },
+    // Wettelijk minimumuurloon 21+ per 1 juli 2026 (1 januari 2026: € 14,71). Bevestigd: Rijksoverheid bedragen minimumloon 2026.
+    minimumloon: { uur: 14.99 },
+    // AOW per 1 juli 2026 per jaar, exclusief vakantiegeld (SVB): bruto alleenstaand € 1.662,16 p/m, samenwonend € 1.139,39 p/m p.p.;
+    // netto met loonheffingskorting € 1.581,55 resp. € 1.084,13 p/m. Vakantiegeld bruto € 104,78 resp. € 74,85 p/m. Bevestigd.
+    aow: { brutoAlleenstaandJaar: 19946, brutoSamenPpJaar: 13673, nettoAlleenstaandJaar: 18979, nettoSamenPpJaar: 13010 },
+    // Bijstand (Participatiewet, 21 jaar tot AOW) per jaar, netto incl. vakantiegeld; alleenstaand € 1.419,46 p/m per 1 juli 2026 (Rijksoverheid);
+    // samen = alleenstaand / 70% en dan per persoon (afgeleid, niet bevestigd).
+    bijstand: { alleenstaandJaar: 17034, samenPpJaar: 12167 },
 
-    // Schenk- en erfbelasting (vrijstelling verschilt per relatie; hier de veelgebruikte)
-    schenkErf: { tarief1: 10, tarief2: 20, schijfGrens: 154500, erfVrijstellingKind: 25900, erfVrijstellingPartner: 818000, schenkVrijstellingKind: 6800 }
+    // Schenk- en erfbelasting 2026 (tarief I: partner/kind): 10% tot € 158.669, daarboven 20%; erfvrijstelling kind € 26.230,
+    // partner € 828.035; jaarlijkse schenkvrijstelling kind € 6.908. Bevestigd.
+    schenkErf: { tarief1: 10, tarief2: 20, schijfGrens: 158669, erfVrijstellingKind: 26230, erfVrijstellingPartner: 828035, schenkVrijstellingKind: 6908 }
   };
+
+  /* Verificatie (2026-10-02). Status per onderdeel: 'bevestigd' = alle waarden in het blok tegen een officiële bron gecontroleerd;
+   * 'deels' = een deel bevestigd, rest staat met commentaar 'niet bevestigd'. Wordt niet door de engine gebruikt. */
+  N._verificatiedatum = '2026-10-02';
+  N._geverifieerd = {
+    box1: 'bevestigd', ahk: 'bevestigd', arbeidskorting: 'bevestigd (factorAow is benadering)', iack: 'bevestigd', ouderenkorting: 'bevestigd',
+    aftrekTariefMax: 'bevestigd', bijzondereBeloningMax: 'bevestigd', eigenWoning: 'bevestigd', ovb: 'bevestigd', box2: 'bevestigd', box3: 'bevestigd',
+    vpb: 'bevestigd', ondernemer: 'bevestigd', werkgever: 'deels (whk niet bevestigd)', minimumloon: 'bevestigd', aow: 'bevestigd',
+    bijstand: 'deels (samenPpJaar afgeleid)', schenkErf: 'bevestigd'
+  };
+  N._bronnen = [
+    'https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/prive/inkomstenbelasting/heffingskortingen_boxen_tarieven/boxen_en_tarieven/box_1/box_1',
+    'https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/prive/inkomstenbelasting/heffingskortingen_boxen_tarieven/heffingskortingen/algemene_heffingskorting/tabel-algemene-heffingskorting-2026',
+    'https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/prive/inkomstenbelasting/heffingskortingen_boxen_tarieven/heffingskortingen/arbeidskorting/tabel-arbeidskorting-2026',
+    'https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/prive/inkomstenbelasting/heffingskortingen_boxen_tarieven/heffingskortingen/inkomensafhankelijke_combikorting/inkomensafhankelijke-combinatiekorting-2026',
+    'https://www.belastingdienst.nl/wps/wcm/connect/fisin/fisin2026/heffingskortingen',
+    'https://www.belastingdienst.nl/wps/wcm/connect/nl/koopwoning/content/hoe-werkt-eigenwoningforfait',
+    'https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/prive/woning/eigenwoningforfait/geen_of_een_kleine_eigenwoningschuld/geen_of_een_kleine_eigenwoningschuld',
+    'https://www.belastingdienst.nl/wps/wcm/connect/fisin/fisin2026/verzekeren_of_sparen_voor_de_aflossing',
+    'https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/prive/woning/overdrachtsbelasting/startersvrijstelling/startersvrijstelling',
+    'https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/prive/inkomstenbelasting/heffingskortingen_boxen_tarieven/boxen_en_tarieven/box_2/box_2',
+    'https://www.belastingdienst.nl/wps/wcm/connect/nl/box-3/content/berekening-box-3-inkomen-2026',
+    'https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/prive/vermogen_en_aanmerkelijk_belang/vermogen/wat_zijn_uw_bezittingen_en_schulden/uw_schulden/drempel',
+    'https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/zakelijk/winst/vennootschapsbelasting/veranderingen-vennootschapsbelasting-2026/veranderingen-vennootschapsbelasting-2026',
+    'https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/zakelijk/winst/inkomstenbelasting/veranderingen-inkomstenbelasting-2026/ondernemersaftrek-2026/zelfstandigenaftrek-2026',
+    'https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/zakelijk/winst/inkomstenbelasting/veranderingen-inkomstenbelasting-2026/mkb-winstvrijstelling-2026',
+    'https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/prive/werk_en_inkomen/zorgverzekeringswet/veranderingen-bijdrage-zvw/percentages-zvw',
+    'https://download.belastingdienst.nl/belastingdienst/docs/bijlage-nieuwsbrief-loonheffingen-2026-lh2091b63fd.pdf',
+    'https://www.rijksoverheid.nl/themas/werk/minimumloon/bedragen-minimumloon/bedragen-minimumloon-2026',
+    'https://www.svb.nl/nl/aow/nieuws/aow-bedragen-vanaf-juli-2026',
+    'https://www.rijksoverheid.nl/actueel/nieuws/2026/06/11/uitkeringsbedragen-per-1-juli-2026',
+    'https://www.belastingdienst.nl/wps/wcm/connect/nl/erfbelasting/content/vrijstelling-erfbelasting',
+    'https://www.belastingdienst.nl/wps/wcm/connect/nl/schenken/content/tarieven-schenkbelasting',
+    'https://www.belastingdienst.nl/wps/wcm/connect/nl/schenken/content/hoeveel-mag-ik-mijn-kind-belastingvrij-schenken'
+  ];
 
   /* Overzicht met namen, voor de hulp "Gebruikte fiscale normen" en voor documentatie. */
   RT.normenOverzicht = [
@@ -163,7 +213,8 @@
     const belastbareWinst = naAftrek - mkb;
     const inkomen = pos(belastbareWinst + (opt.ander || 0) - (opt.aftrek || 0));
     const ib = F.netto(inkomen, { aow: opt.aow, arbeid: belastbareWinst + (opt.anderArbeid || 0), kind: opt.kind });
-    const zvw = Math.min(naAftrek, o.zvwMaxInkomen) * o.zvwPct / 100;
+    // Bijdrage-inkomen Zvw = belastbare winst (na ondernemersaftrek én mkb-winstvrijstelling), gemaximeerd
+    const zvw = Math.min(belastbareWinst, o.zvwMaxInkomen) * o.zvwPct / 100;
     return { winst, ondernemersaftrek, mkbVrijstelling: mkb, belastbareWinst, inkomen, ib, heffing: ib.heffing, zvw,
       netto: winst + (opt.ander || 0) - ib.heffing - zvw, druk: winst > 0 ? (ib.heffing + zvw) / winst * 100 : 0 };
   };

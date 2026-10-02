@@ -109,6 +109,10 @@ ul{margin:0 0 12px;padding-left:20px}
 
 /* Tabs */
 .tabs{background:var(--surface);border-bottom:1px solid var(--border)}
+.sticky-kop{position:sticky;top:0;z-index:60;box-shadow:0 2px 10px -6px rgba(0,0,0,.25)}
+.sticky-kop .top{background:#fff}
+h2[id],h3[id],details[id],.guide [id]{scroll-margin-top:170px}
+@media (max-width:700px){.sticky-kop .top .wrap{padding:8px 14px;gap:8px;flex-wrap:wrap}.sticky-kop .top .search{order:10;flex:1 1 100%}.sticky-kop .top .who{margin-left:auto}.sticky-kop .top .who .btn,.sticky-kop .top>.wrap>.btn{padding:7px 10px;font-size:12px}.sticky-kop .top .search input{padding:8px 12px}.sticky-kop .tabs .wrap{padding:6px 14px}.sticky-kop .tab{padding:6px 12px}.sticky-kop .logo{height:26px;width:auto}.sticky-kop .brand-sep,.sticky-kop .brand-name{display:none}}
 .tabs .wrap{max-width:1240px;margin:0 auto;padding:10px 20px;display:flex;gap:8px;overflow-x:auto}
 .tab{padding:8px 16px;border:1px solid var(--border);border-radius:999px;background:var(--surface);font-weight:600;color:var(--text);cursor:pointer;white-space:nowrap}
 .tab:hover{border-color:var(--text)}
@@ -378,6 +382,7 @@ footer .legal{grid-column:1/-1;border-top:1px solid #2A3238;padding-top:14px;fon
 <body>
 
 <div class="demo"><div class="wrap"><span>Voor en door financieel adviseurs. Nieuwe vragen gaan naar de beheerder en verschijnen na controle; antwoorden en beoordelingen in deze versie blijven alleen in je eigen sessie.</span><span class="util"><a href="aanmelden.html">Aanmelden</a><a href="https://verzekeringhypotheek.blinqx.tech/support" target="_blank" rel="noopener">Support</a><a href="https://verzekeringhypotheek.blinqx.tech/academy" target="_blank" rel="noopener">Academy</a><a href="https://verzekeringhypotheek.blinqx.tech/partners" target="_blank" rel="noopener">Partners</a></span></div></div>
+<div class="sticky-kop">
 <header class="top">
   <div class="wrap">
     <button class="brand" data-act="home" aria-label="Naar het forum">
@@ -391,6 +396,7 @@ footer .legal{grid-column:1/-1;border-top:1px solid #2A3238;padding-top:14px;fon
   </div>
 </header>
 <nav class="tabs" aria-label="Onderdelen"><div class="wrap" id="tabs"></div></nav>
+</div>
 
 <main><div id="hero"></div><div id="app" class="wrap"></div></main>
 
@@ -497,7 +503,7 @@ const HULP=[
  {groep:'Formulieren',tp:'Formulier',titel:'Gespreksverslag',url:'gespreksverslag.html',tekst:'Verslag van een adviesgesprek met controle op kernonderwerpen.',kw:'gespreksverslag adviesgesprek verslag dossier kennismaking'},
  {groep:'Formulieren',tp:'Formulier',titel:'Nazorg-check',url:'nazorg-check.html',tekst:'Periodieke controle van hypotheek en verzekeringen, met signalen zoals einde rentevast; ook als klantlink.',kw:'nazorg periodiek klantcontact rentevast aow onderhoud jaarlijks'},
  {groep:'Formulieren',tp:'Formulier',titel:'Wijziging doorgeven',url:'wijziging-doorgeven.html',tekst:'Klant geeft een levensgebeurtenis door; toont welke producten geraakt kunnen worden.',kw:'wijziging levensgebeurtenis scheiding verhuizing baan geboorte klantformulier'},
- {groep:'Naslag',titel:'Partijenwegwijzer',url:'partijen.html',tekst:'75 banken, geldverstrekkers, verzekeraars, lijfrente- en kredietaanbieders, PPI'\''s en pensioenfondsen: portals, producten, voorwaarden (verhuisregeling, boetevrij aflossen, zzp, duurzaamheid) en statuswijzigingen, met bron.',kw:'partijen geldverstrekker bank verzekeraar pensioenfonds portal intermediair ing abn rabobank obvion asr nn goudse zwitserleven abp munt'},
+ {groep:'Naslag',titel:'Partijenwegwijzer',url:'partijen.html',tekst:'75 banken, geldverstrekkers, verzekeraars, lijfrente- en kredietaanbieders, PPI\'s en pensioenfondsen: portals, producten, voorwaarden (verhuisregeling, boetevrij aflossen, zzp, duurzaamheid) en statuswijzigingen, met bron.',kw:'partijen geldverstrekker bank verzekeraar pensioenfonds portal intermediair ing abn rabobank obvion asr nn goudse zwitserleven abp munt'},
  {groep:'Naslag',titel:'Wet- en regelgeving',url:'wetgeving.html',tekst:'113 wetten, besluiten en bronnen met zoekfunctie: Wft, Bgfo, Trhk, NHG, Wwft, Kifid, BW, fiscaal, pensioen.',kw:'wet wetgeving wetten regelgeving wft bgfo trhk wck wwft kifid burgerlijk wetboek inkomstenbelasting successiewet pensioenwet toeslagen bwbr'},
  {groep:'Naslag',titel:'Werkinstructie financieringsopzet (eBlinqx)',url:'werkinstructie-financieringsopzet.html',tekst:'Alle varianten om de financieringsopzet in eBlinqx Hypotheekadvies aan te passen.',kw:'financieringsopzet eblinqx werkinstructie kosten koper eigen middelen boeterente kostenpost'},
  {groep:'Documenten',tp:'PDF',titel:'NHG: Voorwaarden & Normen 2026',url:'documenten/nhg-voorwaarden-normen-2026.pdf',tekst:'De volledige Voorwaarden & Normen NHG 2026.',kw:'nhg voorwaarden normen 2026 v&n kostengrens borgtochtprovisie'},

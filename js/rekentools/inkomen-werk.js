@@ -10,18 +10,17 @@
   const { dagVerschil, plusMaanden } = RT.kal;
 
   /* Normen die (nog) niet in js/rekentools/normen.js staan. Peildatum 2026.
-   * Alle waarden: waarde uit bron, niet geverifieerd. Controleer bij UWV, Rijksoverheid of de Belastingdienst
-   * en verplaats ze naar normen.js zodra de beheerder ze heeft vastgesteld. */
+   * Gecontroleerd op 2026-10-02 tegen UWV, Rijksoverheid en Belastingdienst; status per regel. */
   const N = {
     peildatum: '2026',
-    transitieMax: 98000,              // wettelijk maximum transitievergoeding (of een hoger jaarsalaris)
-    kmOnbelast: 0.23,                 // onbelaste reiskostenvergoeding per kilometer
-    verlofUitkeringPct: 70,           // UWV-uitkering betaald ouderschapsverlof en aanvullend geboorteverlof, % van het dagloon
-    maxDagloon: 302.75,               // maximumdagloon per dag
-    dagvakken: 261,                   // dagen per jaar voor het dagloon (conventie UWV)
+    transitieMax: 102000,             // wettelijk maximum transitievergoeding 2026 (of een hoger jaarsalaris) – bevestigd (Rijksoverheid/UWV)
+    kmOnbelast: 0.25,                 // onbelaste reiskostenvergoeding per km 2026 (verhoogd van € 0,23, terugwerkend tot 1-1-2026) – bevestigd (Belastingdienst)
+    verlofUitkeringPct: 70,           // UWV-uitkering betaald ouderschapsverlof en aanvullend geboorteverlof, % van het (max.) dagloon – bevestigd (UWV)
+    maxDagloon: 309.91,               // maximumdagloon per dag 2026, incl. vakantiegeld – bevestigd (UWV, maximumdagloon 2026)
+    dagvakken: 261,                   // dagen per jaar voor het dagloon (conventie UWV) – niet bevestigd
     werkdagenPerMaand: 21.75,         // conventie voor dagloon uit maandsalaris
-    jeugdPct: { 21: 100, 20: 80, 19: 60, 18: 50, 17: 39.5, 16: 34.5, 15: 30 }, // minimumjeugdloon in % van het volwassen uurloon
-    sociaalMinimum: { minimumloonMaand: 2320, pct: { samen: 100, alleenouder: 90, alleen: 70, jong: 45 } } // Toeslagenwet
+    jeugdPct: { 21: 100, 20: 80, 19: 60, 18: 50, 17: 39.5, 16: 34.5, 15: 30 }, // minimumjeugdloon in % van het volwassen uurloon – bevestigd (Rijksoverheid, bedragen per 1 juli 2026)
+    sociaalMinimum: { minimumloonMaand: 2320, pct: { samen: 100, alleenouder: 90, alleen: 70, jong: 45 } } // Toeslagenwet – niet bevestigd (sinds 2024 geen vast maandminimumloon)
   };
 
   const PEIL = NR.peildatum;

@@ -11,24 +11,35 @@
   const pos = x => Math.max(0, x);
 
   /* ---------- normen die (nog) niet in normen.js staan ----------
-   * Peildatum 2026. Waarde uit bron, niet geverifieerd: controleer bij Belastingdienst/Dienst Toeslagen
-   * vóór gebruik. Hulpen die deze waarden gebruiken noemen dat in 'Let op' en tonen de fiscale badge. */
+   * Peildatum 2026. Gecontroleerd op 2026-10-02 tegen Belastingdienst/Dienst Toeslagen/Rijksoverheid; per norm staat de status.
+   * Hulpen die deze waarden gebruiken noemen dat in 'Let op' en tonen de fiscale badge. */
   const EIGEN = {
     peildatum: '2026',
-    // Bijtelling auto van de zaak (waarde uit bron, niet geverifieerd)
-    bijtelling: { algemeen: 22, elektrisch: 17, capElektrisch: 30000, youngtimer: 35 },
-    // Bijtelling fiets van de zaak, percentage van de adviesprijs (waarde uit bron, niet geverifieerd)
+    // Bijtelling auto van de zaak 2026: 22%; volledig elektrisch (1e toelating 2026) 18% tot € 30.000 cataloguswaarde;
+    // youngtimer (vanaf 2026 ouder dan 16 jaar) 35% van de waarde in het economisch verkeer. Bevestigd:
+    // https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/zakelijk/winst/inkomstenbelasting/veranderingen-inkomstenbelasting-2026/bijtelling-privegebruik-auto-2026
+    bijtelling: { algemeen: 22, elektrisch: 18, capElektrisch: 30000, youngtimer: 35 },
+    // Bijtelling fiets van de zaak: 7% van de adviesprijs. Bevestigd:
+    // https://www.belastingdienst.nl/wps/wcm/connect/nl/personeel-en-loon/content/mijn-werkgever-heeft-een-fietsplan-hoe-werkt-dat
     fiets: { pct: 7 },
-    // Zorgtoeslag, bedragen per jaar (waarde uit bron, niet geverifieerd)
-    zorgtoeslag: { maxAlleen: 1800, maxPartners: 3450, drempel: 25200, afbouwAlleen: 13.67, afbouwPartners: 13.67, vermogenAlleen: 141896, vermogenPartners: 179429 },
-    // Huurtoeslag, bedragen per maand behalve inkomen en vermogen (waarde uit bron, niet geverifieerd;
-    // vermogenPartners = 2 × alleenstaand, eigen afleiding, niet geverifieerd)
-    huurtoeslag: { eigenBijdrageMin: 242, drempel: 19000, afbouwPct: 24, kwaliteitsgrens: 477, aftop12: 683, aftop3: 732, huurgrens: 900, vermogenAlleen: 37395, vermogenPartners: 74790 },
-    // Kindgebonden budget, bedragen per jaar (waarde uit bron, niet geverifieerd)
-    kgb: { perKind: 1700, toeslag12: 290, toeslag16: 520, alleenstaandeOuderKop: 3480, grensAlleen: 29400, grensPartners: 48600, afbouwPct: 6.75 },
-    // Kinderopvangtoeslag (waarde uit bron, niet geverifieerd); percentages = indicatie, de echte tabel loopt met het inkomen
-    kot: { pctEerste: 72, pctVolgende: 93, maxDag: 10.71, maxBso: 9.12, maxGast: 7.94, maxUren: 140 },
-    // Middeling (regeling vervallen; laatste tijdvak 2022–2024): drempel (waarde uit bron, niet geverifieerd)
+    // Zorgtoeslag 2026, bedragen per jaar. Bevestigd (Belastingdienst): drempelinkomen € 29.736, inkomensgrens € 40.857 (alleen) /
+    // € 51.142 (partners), vermogensgrens € 146.011 / € 184.633. Maxima € 129 resp. € 246 per maand: niet bevestigd (geen officiële
+    // bron gevonden); afbouwpercentages zijn afgeleid zodat de toeslag op de officiële inkomensgrens nul wordt (lineair model).
+    zorgtoeslag: { maxAlleen: 1548, maxPartners: 2952, drempel: 29736, afbouwAlleen: 13.92, afbouwPartners: 13.79, vermogenAlleen: 146011, vermogenPartners: 184633 },
+    // Huurtoeslag 2026, bedragen per maand behalve inkomen en vermogen. Bevestigd (Rijksoverheid, indexering huurtoeslagparameters 2026):
+    // minimale basishuur € 202,52, kwaliteitskortingsgrens € 498,20, aftoppingsgrens € 713,02 (1–2 pers.) / € 764,14 (3+),
+    // maximale huurgrens € 932,93, vermogensgrens € 38.479 / € 76.958. LET OP: sinds 2026 geldt de maximale huur niet meer als
+    // uitsluitingsgrens (huur daarboven telt alleen niet mee); het model telt de huur boven 'huurgrens' niet mee.
+    // drempel en afbouwPct zijn een eigen vereenvoudiging van de normhuurformule: niet bevestigd.
+    huurtoeslag: { eigenBijdrageMin: 202.52, drempel: 19000, afbouwPct: 24, kwaliteitsgrens: 498.20, aftop12: 713.02, aftop3: 764.14, huurgrens: 932.93, vermogenAlleen: 38479, vermogenPartners: 76958 },
+    // Kindgebonden budget 2026, bedragen per jaar. Bevestigd (Belastingdienst/Dienst Toeslagen): € 2.580 per kind, extra € 724 (12–15 jaar)
+    // en € 964 (16–17 jaar), alleenstaande-ouderkop € 3.416, drempelinkomen € 29.736 (alleen) / € 39.141 (partners), afbouw 7,10%.
+    kgb: { perKind: 2580, toeslag12: 724, toeslag16: 964, alleenstaandeOuderKop: 3416, grensAlleen: 29736, grensPartners: 39141, afbouwPct: 7.10 },
+    // Kinderopvangtoeslag 2026. Bevestigd (Rijksoverheid, bedragen kinderopvangtoeslag 2026): maximum uurprijs dagopvang € 11,23,
+    // bso € 9,98, gastouder € 8,49; maximaal 230 uur per kind per maand. Vergoedingspercentages (max 96%, inkomensafhankelijk) zijn
+    // hier een indicatie: niet bevestigd.
+    kot: { pctEerste: 72, pctVolgende: 93, maxDag: 11.23, maxBso: 9.98, maxGast: 8.49, maxUren: 230 },
+    // Middeling (regeling vervallen; laatste tijdvak 2022–2024): drempel € 545 – historisch, niet opnieuw bevestigd
     middeling: { drempel: 545 }
   };
 
@@ -70,7 +81,7 @@
     const d1 = pos(Math.min(huur, h.kwaliteitsgrens) - eigen);
     const d2 = pos(Math.min(huur, aft) - Math.max(eigen, h.kwaliteitsgrens));
     const d3 = pos(Math.min(huur, h.huurgrens) - Math.max(eigen, aft));
-    const geen = huur > h.huurgrens ? 'huur' : verm > vg ? 'vermogen' : '';
+    const geen = verm > vg ? 'vermogen' : ''; // sinds 2026 geen uitsluiting meer bij huur boven de huurgrens; het deel erboven telt niet mee
     const bedrag = geen ? 0 : d1 + d2 * 0.65 + d3 * 0.40;
     return { eigen, d1, d2, d3, aft, vg, geen, bedrag };
   }

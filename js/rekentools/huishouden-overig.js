@@ -8,28 +8,30 @@
   const { fmt, lees } = RT;
 
   /* Jaarlijks wisselende bedragen die (nog) niet in normen.js staan.
-   * Peildatum 2026 – waarde uit bron, niet geverifieerd. Controleer vóór gebruik bij de genoemde instantie
-   * en verplaats ze naar normen.js zodra ze zijn gecontroleerd. */
+   * Peildatum 2026 – gecontroleerd op 2026-10-02; status per regel. Verplaats ze naar normen.js zodra de beheerder dat wil. */
   const N = {
     peildatum: '2026',
-    // Kinderopvangtoeslag dagopvang (Belastingdienst/Dienst Toeslagen) – waarde uit bron, niet geverifieerd
-    kinderopvang: { maxUurtarief: 10.71, vergoedingPct: 72, maxUrenPerMaand: 140 },
-    // Kinderbijslag per kind per kwartaal (SVB; wordt halfjaarlijks aangepast) – waarde uit bron, niet geverifieerd
-    kinderbijslag: { k0tot6: 281, k6tot12: 341, k12tot18: 401 },
-    // Energie – waarde uit bron, niet geverifieerd
-    energie: { verminderingEB: 524, terugleververgoeding: 0.07 },
-    // ISDE-subsidie warmtepomp (indicatie; verschilt per type en vermogen) – waarde uit bron, niet geverifieerd
+    // Kinderopvangtoeslag dagopvang 2026: maximum uurprijs € 11,23 en maximaal 230 uur per kind per maand – bevestigd (Rijksoverheid,
+    // bedragen kinderopvangtoeslag 2026); vergoedingPct 72 is een indicatie (max 96%, inkomensafhankelijk) – niet bevestigd
+    kinderopvang: { maxUurtarief: 11.23, vergoedingPct: 72, maxUrenPerMaand: 230 },
+    // Kinderbijslag per kind per kwartaal vanaf 3e kwartaal 2026 (SVB; 1e/2e kwartaal: 295,07 / 358,30 / 421,53) – bevestigd (SVB, kinderbijslag juli 2026)
+    kinderbijslag: { k0tot6: 298.40, k6tot12: 362.35, k12tot18: 426.29 },
+    // Energie: vermindering energiebelasting 2026 € 519,80 excl. btw (€ 629 incl. btw) per aansluiting – bevestigd (Rijksoverheid, opbouw energierekening);
+    // terugleververgoeding is een marktaanname – niet bevestigd
+    energie: { verminderingEB: 519.80, terugleververgoeding: 0.07 },
+    // ISDE-subsidie warmtepomp (indicatie; verschilt per type en vermogen) – niet bevestigd
     isdeWarmtepomp: 2800,
-    // Alimentatie (rekenregels werkgroep alimentatienormen, vereenvoudigd) – waarde uit bron, niet geverifieerd
+    // Alimentatie (rekenregels werkgroep alimentatienormen, vereenvoudigd) – niet bevestigd (geen officiële overheidsbron)
     alimentatie: {
       behoeftePct: { 1: 17, 2: 26, 3: 33, 4: 40 }, // deel van het netto gezinsinkomen voor alle kinderen samen (grove benadering)
       woonPct: 30, draagkrachtPct: 70, vastBedrag: 1200, // kinderalimentatie: draagkracht = 70% × (NBI − (30% × NBI + vast bedrag))
       hofnormPct: 60, woonPctPartner: 30, draagkrachtPctPartner: 60
     },
-    // Gesubsidieerde rechtsbijstand (Raad voor Rechtsbijstand) – waarde uit bron, niet geverifieerd
-    rechtsbijstand: { grensAlleen: 33000, grensSamen: 46700, bijdrageMin: 242, bijdrageMax: 945 },
-    // Wmo eigen bijdrage (abonnementstarief) en een rekenscenario inkomensafhankelijke bijdrage – waarde uit bron, niet geverifieerd
-    wmo: { abonnement: 21, scenarioDrempel: 24000, scenarioPct: 4, scenarioMax: 200 }
+    // Gesubsidieerde rechtsbijstand 2026 (reguliere toevoeging): inkomensgrens € 35.400 / € 50.000, eigen bijdrage € 257 – € 1.084 –
+    // bevestigd (Raad voor Rechtsbijstand, inkomen, vermogen en eigen bijdrage 2026)
+    rechtsbijstand: { grensAlleen: 35400, grensSamen: 50000, bijdrageMin: 257, bijdrageMax: 1084 },
+    // Wmo abonnementstarief 2026 maximaal € 21,80 per maand – bevestigd (CAK); het rekenscenario inkomensafhankelijke bijdrage is een aanname – niet bevestigd
+    wmo: { abonnement: 21.80, scenarioDrempel: 24000, scenarioPct: 4, scenarioMax: 200 }
   };
 
   /* Technische aannames (geen fiscale normen). Waarde uit bron, niet geverifieerd; in de hulpen aanpasbaar. */

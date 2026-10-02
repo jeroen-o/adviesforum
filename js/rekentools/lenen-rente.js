@@ -212,16 +212,16 @@
    * ===================================================================== */
   const { annHoofdsom, ncw, irr, maandUitJaar } = RT.fin;
 
-  /* Normen die (nog) niet in normen.js staan. Peildatum 2026; waarde uit bron, niet geverifieerd.
+  /* Normen die (nog) niet in normen.js staan. Peildatum 2026; gecontroleerd op 2026-10-02, status per regel.
    * Alleen als standaardwaarde van een invoerveld gebruikt, zodat de gebruiker ze kan aanpassen. */
   const NL = {
     peildatum: '2026',
-    nibudBasis: 1450,        // waarde uit bron, niet geverifieerd – basisbedrag levensonderhoud per maand (hangt af van huishouden)
-    termijnAandeel: 100,     // waarde uit bron, niet geverifieerd – deel van de bestedingsruimte dat als termijn mag dienen
-    duoRente: 2.56,          // waarde uit bron, niet geverifieerd – rente studieschuld
-    duoTermijnJaar: 35,      // waarde uit bron, niet geverifieerd – terugbetaaltermijn (SF35)
-    duoVrijeVoet: 22000,     // waarde uit bron, niet geverifieerd – draagkrachtvrije voet per jaar
-    duoDraagkrachtPct: 4     // waarde uit bron, niet geverifieerd – deel van het inkomen boven de vrije voet
+    nibudBasis: 1450,        // niet bevestigd – basisbedrag levensonderhoud per maand (hangt af van huishouden)
+    termijnAandeel: 100,     // niet bevestigd (aanname) – deel van de bestedingsruimte dat als termijn mag dienen
+    duoRente: 2.33,          // bevestigd (DUO) – rente studieschuld SF35 in 2026 (2025: 2,57%)
+    duoTermijnJaar: 35,      // bevestigd (DUO) – terugbetaaltermijn (SF35)
+    duoVrijeVoet: 26819,     // bevestigd (DUO) – draagkrachtvrije voet SF35 2026 per jaar, alleenstaande zonder kinderen (met partner/kind: € 38.352)
+    duoDraagkrachtPct: 4     // bevestigd (DUO, SF35) – deel van het inkomen boven de vrije voet
   };
 
   // Aantal termijnen t om schuld pv af te lossen bij rente i per periode (Infinity als de termijn de rente niet dekt)

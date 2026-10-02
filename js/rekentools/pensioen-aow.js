@@ -12,29 +12,34 @@
   const F = RT.fisc, NR = RT.normen;
 
   /* Normen die (nog) niet in js/rekentools/normen.js staan. Peildatum 2026.
-   * Alle waarden: waarde uit bron, niet geverifieerd. Controleer bij SVB, UWV, Belastingdienst of het pensioenfonds
-   * en verplaats ze naar normen.js zodra de beheerder ze heeft vastgesteld. */
+   * Gecontroleerd op 2026-10-02 tegen SVB, Rijksoverheid en Belastingdienst; status per regel. */
   const N = {
     peildatum: '2026',
-    // AOW-leeftijd per kalenderjaar waarin die leeftijd wordt bereikt: [jaren, maanden]. Wettelijk vastgesteld t/m 'vastgesteldTot';
-    // daarna is de laatste waarde een aanname (koppeling aan de levensverwachting wordt telkens vijf jaar vooraf bekendgemaakt).
+    // AOW-leeftijd per kalenderjaar waarin die leeftijd wordt bereikt: [jaren, maanden]. Wettelijk vastgesteld t/m 'vastgesteldTot'
+    // (2031: 67 jaar en 3 maanden, Kamerbrief 7 november 2025); daarna is de laatste waarde een aanname.
+    // Bevestigd: https://www.rijksoverheid.nl/themas/belastingen-uitkeringen-en-toeslagen/algemene-ouderdomswet-aow/aow-leeftijd
     aowLeeftijd: {
-      vastgesteldTot: 2030,
+      vastgesteldTot: 2031,
       tabel: { 2013: [65, 1], 2014: [65, 2], 2015: [65, 3], 2016: [65, 6], 2017: [65, 9], 2018: [66, 0], 2019: [66, 4], 2020: [66, 4],
-        2021: [66, 4], 2022: [66, 7], 2023: [66, 10], 2024: [67, 0], 2025: [67, 0], 2026: [67, 0], 2027: [67, 0], 2028: [67, 3], 2029: [67, 3], 2030: [67, 3] }
+        2021: [66, 4], 2022: [66, 7], 2023: [66, 10], 2024: [67, 0], 2025: [67, 0], 2026: [67, 0], 2027: [67, 0], 2028: [67, 3], 2029: [67, 3], 2030: [67, 3], 2031: [67, 3] }
     },
-    // Bruto AOW per jaar exclusief vakantietoeslag bij 50 verzekerde jaren (waarde uit bron, niet geverifieerd)
-    aow: { alleenstaandJaar: 17860, samenPpJaar: 12480, vakantietoeslagPct: 5, opbouwJaren: 50 },
-    // Jaarruimte en reserveringsruimte lijfrente (waarde uit bron, niet geverifieerd)
-    jaarruimte: { franchise: 18475, maxPremieInkomen: 137800, pct: 30, factorA: 6.27, maxReservering: 42108, reserveringJaren: 10 },
-    // Vrijgestelde RVU-uitkering per maand (drempelbedrag; waarde uit bron, niet geverifieerd)
-    rvuDrempelMaand: 2273,
-    // Anw: bruto uitkering per jaar, vrijlating arbeidsinkomen per jaar en kortingspercentage daarboven (waarde uit bron, niet geverifieerd)
-    anw: { jaar: 17000, vrijlatingJaar: 9000, kortingPct: 66.67 },
-    // Overbruggingsregeling AOW (historisch): normen per maand en vermogensgrens (waarde uit bron, niet geverifieerd)
+    // Bruto AOW per jaar exclusief vakantiegeld bij 50 verzekerde jaren, per 1 juli 2026: € 1.662,16 resp. € 1.139,39 per maand.
+    // Vakantiegeld is bij de SVB een vast bedrag (€ 104,78 resp. € 74,85 p/m = 6,30% resp. 6,57%); hier één percentage als benadering.
+    // Bevestigd: https://www.svb.nl/nl/aow/nieuws/aow-bedragen-vanaf-juli-2026
+    aow: { alleenstaandJaar: 19946, samenPpJaar: 13673, vakantietoeslagPct: 6.3, opbouwJaren: 50 },
+    // Jaarruimte en reserveringsruimte lijfrente 2026: AOW-franchise € 19.172, aftoppingsgrens € 137.800 (max. jaarruimte € 35.589),
+    // factor A 6,27, max. reserveringsruimte € 42.753, terugkijkperiode 10 jaar. Bevestigd: Belastingdienst, overzicht cijfers leven 2026
+    // en https://www.belastingdienst.nl/wps/wcm/connect/fisin/fisin2026/uitgaven_voor_inkomensvoorzieningen
+    jaarruimte: { franchise: 19172, maxPremieInkomen: 137800, pct: 30, factorA: 6.27, maxReservering: 42753, reserveringJaren: 10 },
+    // Vrijgestelde RVU-uitkering per maand (drempelbedrag 2026) – bevestigd (Rijksoverheid, RVU-drempelvrijstelling)
+    rvuDrempelMaand: 2357,
+    // Anw: bruto uitkering per jaar (€ 1.698,30 p/m per 1 juli 2026, excl. vakantiegeld – SVB/Rijksoverheid, bevestigd);
+    // vrijlating arbeidsinkomen en kortingspercentage – niet bevestigd
+    anw: { jaar: 20380, vrijlatingJaar: 9000, kortingPct: 66.67 },
+    // Overbruggingsregeling AOW (historisch): normen per maand en vermogensgrens – niet bevestigd
     obr: { alleenstaandMaand: 1400, samenMaand: 1960, vermogensgrens: 7575 },
-    // Middelloonregeling: veelgebruikte franchise en opbouwpercentage (verschilt per fonds; waarde uit bron, niet geverifieerd)
-    middelloon: { franchise: 18475, opbouwPct: 1.875 }
+    // Middelloonregeling: franchise = fiscale minimum-AOW-franchise 2026 (€ 19.172, bevestigd); opbouwpercentage verschilt per fonds – niet bevestigd
+    middelloon: { franchise: 19172, opbouwPct: 1.875 }
   };
   // Sterftemodel μ(x) = A + B·c^x (Gompertz-Makeham). Modelaanname, geen officiële tafel.
   const STERFTE = { m: { A: 0.0002, B: 0.0000125, c: 1.110 }, v: { A: 0.0004, B: 0.000005, c: 1.118 }, basisjaar: 2025 };
