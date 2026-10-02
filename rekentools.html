@@ -123,13 +123,15 @@ button,input,select,textarea{font-family:inherit}
 .ov-sub{font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--grijs);margin:24px 0 10px}
 .ov-tegels{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px}
 .ov-tegel{display:block;text-decoration:none;border:1px solid var(--lijn);border-radius:12px;padding:12px 14px;background:#fff;min-width:0}
-.ov-tegel:hover,.ov-tegel:focus-visible{border-color:var(--zwart);outline:none}
+.ov-tegel:hover,.ov-tegel:focus-visible{border-color:var(--zwart)}
+.ov-tegel:focus-visible{outline:3px solid var(--geel);outline-offset:2px}
 .ov-tegel b{display:block;font-size:14px;line-height:1.3}
 .ov-tegel span{display:block;font-size:12.5px;color:var(--grijs);margin-top:4px;line-height:1.4}
 .ov-pop .ov-tegel{border-left:4px solid var(--geel)}
 .ov-groepen{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px}
 .ov-groep{display:flex;flex-direction:column;align-items:flex-start;text-align:left;border:1px solid var(--lijn);border-radius:12px;padding:12px 14px;background:var(--vlak);cursor:pointer;color:var(--tekst);min-width:0}
-.ov-groep:hover,.ov-groep:focus-visible{border-color:var(--zwart);background:#fff;outline:none}
+.ov-groep:hover,.ov-groep:focus-visible{border-color:var(--zwart);background:#fff}
+.ov-groep:focus-visible{outline:3px solid var(--zwart);outline-offset:2px}
 .ov-groep b{font-size:14px;line-height:1.3}
 .ov-groep span{font-size:12.5px;color:var(--grijs);margin-top:4px}
 .ov-lijstkop{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin:18px 0 10px}
