@@ -147,7 +147,7 @@ button,input,select{font-family:inherit}
     <div class="merk"><span class="zeshoek" aria-hidden="true"></span>Adviesforum &middot; Hulpmiddelen</div>
     <a class="terug" href="index.html#hulpmiddelen">&larr; Terug naar de hulpmiddelen</a>
     <h1>Rekenhulpen voor de adviespraktijk</h1>
-    <p>Twintig compacte rekenhulpen voor de vragen die tussen twee adviesgesprekken door opduiken: wat doet een nieuwe rente met de maandlast, hoeveel moet een klant inleggen voor een doelbedrag, hoeveel werkdagen zitten er tot de passeerdatum?</p>
+    <p>Dertig compacte rekenhulpen voor de vragen die tussen twee adviesgesprekken door opduiken: wat doet een nieuwe rente met de maandlast, hoeveel moet een klant inleggen voor een doelbedrag, hoeveel werkdagen zitten er tot de passeerdatum?</p>
     <span class="stempel">Indicatief &middot; geen advies &middot; controleer altijd de actuele normen</span>
   </div>
 </header>
@@ -959,6 +959,413 @@ button,input,select{font-family:inherit}
     },
     regel: 'Kalenderdagen en weken: optellen of aftrekken. Maanden: zelfde dagnummer, of de laatste dag van de maand als die dag niet bestaat (31 januari + 1 maand = 28 of 29 februari). Werkdagen: dag voor dag verder, weekenden en gekozen feestdagen overslaan.',
     letop: 'Een rekenkundige uitkomst; of een termijn juridisch op deze dag eindigt, hangt af van de afspraken en de wet.'
+  });
+
+  /* ---------- aanvulling: woning, lenen en vermogen ---------- */
+  // Bruto rente over de eerste k maanden van een lening (annuïtair, lineair of aflossingsvrij), plus stand en eerste termijn
+  const verloop = (h, i, n, k, vorm) => {
+    if (vorm === 'ann') { const t = annTermijn(h, i, n), rest = annRest(h, i, n, k); return { termijn: t, rest, rente: t * k - (h - rest) }; }
+    if (vorm === 'lin') { const a = h / n; return { termijn: a + h * i, rest: h - a * k, rente: i * (k * h - a * k * (k - 1) / 2) }; }
+    return { termijn: h * i, rest: h, rente: h * i * k };
+  };
+  const VORM3 = [['ann', 'Annuïtair'], ['lin', 'Lineair'], ['vrij', 'Aflossingsvrij']];
+
+  T.push({
+    id: 'offertes', groep: 0, titel: 'Twee aanbiedingen vergelijken',
+    intro: 'Lagere rente of lagere kosten? Zet twee aanbiedingen voor hetzelfde bedrag naast elkaar over een gekozen periode, bijvoorbeeld de rentevaste periode.',
+    velden: [
+      { k: 'h', l: 'Leenbedrag', s: 'eur', std: 300000 },
+      { k: 'jr', l: 'Looptijd', s: 'num', na: 'jaar', std: 30 },
+      { k: 'vp', l: 'Vergelijken over', s: 'num', na: 'jaar', std: 10, tip: 'Meestal de rentevaste periode.' },
+      { k: 'vorm', l: 'Aflosvorm', s: 'keuze', opties: VORM3, std: 'ann' },
+      { k: 'ra', l: 'Rente aanbieding A', s: 'pct', std: 3.95 },
+      { k: 'ka', l: 'Eenmalige kosten A', s: 'eur', std: 0, opt: true },
+      { k: 'rb', l: 'Rente aanbieding B', s: 'pct', std: 3.8 },
+      { k: 'kb', l: 'Eenmalige kosten B', s: 'eur', std: 2500, opt: true, tip: 'Bijvoorbeeld afsluitprovisie of een hogere taxatie- of adviesvergoeding.' }
+    ],
+    reken(v) {
+      const n = Math.round(v.jr * 12), k = Math.round(v.vp * 12);
+      if (v.h <= 0 || n <= 0 || k <= 0) return { fout: 'Vul een bedrag, looptijd en vergelijkingsperiode groter dan nul in.' };
+      if (k > n) return { fout: 'De vergelijkingsperiode kan niet langer zijn dan de looptijd.' };
+      const ia = v.ra / 1200, ib = v.rb / 1200;
+      const A = verloop(v.h, ia, n, k, v.vorm), B = verloop(v.h, ib, n, k, v.vorm);
+      const totA = A.rente + v.ka, totB = B.rente + v.kb, vers = totA - totB;
+      const goedkoper = Math.abs(vers) < 0.5 ? 'gelijk' : (vers > 0 ? 'B' : 'A');
+      // na hoeveel maanden heeft de lagere rente de hogere kosten ingehaald?
+      let inhaal = NaN;
+      const lageRente = ia < ib ? 'A' : ib < ia ? 'B' : null;
+      if (lageRente) {
+        const kLaag = lageRente === 'A' ? v.ka : v.kb, kHoog = lageRente === 'A' ? v.kb : v.ka;
+        if (kLaag <= kHoog) inhaal = 0;
+        else for (let m = 1; m <= n; m++) {
+          const rl = verloop(v.h, Math.min(ia, ib), n, m, v.vorm).rente, rh = verloop(v.h, Math.max(ia, ib), n, m, v.vorm).rente;
+          if (rh - rl >= kLaag - kHoog) { inhaal = m; break; }
+        }
+      }
+      const sig = [];
+      if (lageRente && inhaal > 0) sig.push('De lagere rente van aanbieding ' + lageRente + ' heeft de extra kosten na ' + fmt.duur(inhaal) + ' terugverdiend' + (inhaal > k ? ', dus pas ná de vergelijkingsperiode.' : '.'));
+      if (v.vorm !== 'vrij' && Math.abs(A.rest - B.rest) >= 1) sig.push('Bij de lagere rente wordt sneller afgelost: de restschuld aan het eind van de periode verschilt ' + fmt.euro0(Math.abs(A.rest - B.rest)) + '.');
+      return {
+        lbl: goedkoper === 'gelijk' ? 'Beide aanbiedingen kosten evenveel' : 'Voordeligst over ' + fmt.duur(k) + ': aanbieding ' + goedkoper,
+        groot: fmt.euro0(Math.abs(vers)), onder: 'verschil in rente plus kosten, bruto',
+        rijen: [
+          ['Eerste maandtermijn A', fmt.euro(A.termijn)],
+          ['Eerste maandtermijn B', fmt.euro(B.termijn)],
+          ['Rente plus kosten A', fmt.euro0(totA)],
+          ['Rente plus kosten B', fmt.euro0(totB)],
+          ['Restschuld A na de periode', fmt.euro0(A.rest)],
+          ['Restschuld B na de periode', fmt.euro0(B.rest), 'som']
+        ],
+        signalen: sig
+      };
+    },
+    regel: 'Per aanbieding: bruto rente over de gekozen periode + eenmalige kosten. Annuïtair: rente = termijn × k − (hoofdsom − restschuld na k maanden); lineair: i × (k × H − aflossing × k × (k − 1) / 2); aflossingsvrij: H × i × k, met i = jaarrente / 12. Het inhaalmoment is de eerste maand waarin het renteverschil de extra kosten overtreft.',
+    letop: 'Een vergelijking op rente en kosten alleen is geen productvergelijking: voorwaarden als boetevrij aflossen, meeneemregeling, verlengen, renteopslag per LTV-klasse en de geldigheid van het aanbod tellen ook mee. Kosten zijn hier niet verdisconteerd en fiscale aftrek is niet meegenomen.'
+  });
+
+  T.push({
+    id: 'bouwdepot', groep: 0, titel: 'Woonlasten tijdens de bouw',
+    intro: 'Bij nieuwbouw of verbouw betaalt de klant rente over de hele lening, terwijl het bouwdepot nog rente opbrengt. Wat is de bruto last per maand totdat het depot leeg is?',
+    velden: [
+      { k: 'h', l: 'Hypotheek inclusief bouwdepot', s: 'eur', std: 360000 },
+      { k: 'd', l: 'Bouwdepot bij de start', s: 'eur', std: 150000 },
+      { k: 'r', l: 'Hypotheekrente', s: 'pct', std: 3.9 },
+      { k: 'rd', l: 'Rentevergoeding over het depot', s: 'pct', std: 3.4, tip: 'Volgt uit de voorwaarden van de geldverstrekker.' },
+      { k: 'jr', l: 'Looptijd', s: 'num', na: 'jaar', std: 30 },
+      { k: 'vorm', l: 'Aflosvorm', s: 'keuze', opties: VORM3, std: 'ann' },
+      { k: 'bt', l: 'Bouwtijd', s: 'num', na: 'mnd', std: 12, tip: 'Het depot wordt in gelijke delen opgenomen, aan het eind van elke maand.' },
+      { k: 'huur', l: 'Huidige woonlast (huur)', s: 'eur', std: 1250, opt: true, tip: 'Optioneel, voor de dubbele lasten.' }
+    ],
+    reken(v) {
+      const n = Math.round(v.jr * 12), bt = Math.round(v.bt), i = v.r / 1200, id = v.rd / 1200;
+      if (v.h <= 0 || n <= 0 || bt <= 0) return { fout: 'Vul een hypotheek, looptijd en bouwtijd groter dan nul in.' };
+      if (v.d > v.h) return { fout: 'Het bouwdepot kan niet groter zijn dan de hypotheek.' };
+      if (bt > n) return { fout: 'De bouwtijd is langer dan de looptijd.' };
+      let totVerg = 0, totLast = 0, eerste = 0, laatste = 0;
+      const rijen = [];
+      for (let m = 1; m <= bt; m++) {
+        const termijn = v.vorm === 'lin' ? v.h / n + (v.h - v.h / n * (m - 1)) * i : verloop(v.h, i, n, 0, v.vorm).termijn;
+        const saldo = v.d * (bt - m + 1) / bt, verg = saldo * id, netto = termijn - verg;
+        totVerg += verg; totLast += netto;
+        if (m === 1) eerste = netto; if (m === bt) laatste = netto;
+        rijen.push([String(m), fmt.euro0(saldo), fmt.euro(termijn), fmt.euro(verg), fmt.euro(netto), fmt.euro(netto + v.huur)]);
+      }
+      const sig = [];
+      if (v.huur > 0) sig.push('Samen met de huidige woonlast betaalt de klant gemiddeld ' + fmt.euro(totLast / bt + v.huur) + ' per maand zolang de bouw duurt.');
+      return {
+        lbl: 'Gemiddelde bruto last tijdens de bouw', groot: fmt.euro(totLast / bt), onder: 'per maand, na aftrek van de depotrente',
+        rijen: [
+          ['Last in de eerste maand', fmt.euro(eerste)],
+          ['Last in de laatste bouwmaand', fmt.euro(laatste)],
+          ['Ontvangen depotrente in de bouwtijd', fmt.euro0(totVerg)],
+          ['Bruto lasten over de hele bouwtijd', fmt.euro0(totLast)],
+          ['Dubbele woonlasten over de bouwtijd', fmt.euro0(totLast + v.huur * bt), 'som']
+        ],
+        tabel: { kop: ['Maand', 'Depot', 'Termijn', 'Depotrente', 'Last', 'Plus huur'], rijen },
+        signalen: sig
+      };
+    },
+    regel: 'Termijn over de volledige hypotheek (annuïtair, lineair of aflossingsvrij, i = rente / 12). Depotsaldo in maand m = depot × (bouwtijd − m + 1) / bouwtijd. Last = termijn − depotsaldo × depotrente / 12. Dubbele lasten = last + huidige woonlast.',
+    letop: 'Werkelijke opnames volgen de termijnen van de aannemer en lopen zelden gelijk op. Grondrente of bouwrente vóór het passeren, de maximale looptijd van het depot en de fiscale behandeling (aftrekbare rente verminderd met de depotvergoeding) zijn hier niet meegenomen. Neem dubbele lasten mee in de betaalbaarheidsbeoordeling.'
+  });
+
+  T.push({
+    id: 'risicoklasse', groep: 0, titel: 'Aflossen naar een lagere risicoklasse',
+    intro: 'Hoeveel moet de klant aflossen om onder de volgende LTV-grens van de geldverstrekker te komen, en wat levert dat per jaar op?',
+    velden: [
+      { k: 'w', l: 'Marktwaarde van de woning', s: 'eur', std: 400000 },
+      { k: 's', l: 'Huidige hypotheekschuld', s: 'eur', std: 332000 },
+      { k: 'g', l: 'Grens van de lagere klasse', s: 'pct', std: 80, tip: 'De LTV-grens uit de rentetabel van de geldverstrekker.' },
+      { k: 'rn', l: 'Huidige rente', s: 'pct', std: 4.05 },
+      { k: 'rl', l: 'Rente in de lagere klasse', s: 'pct', std: 3.9 },
+      { k: 'jr', l: 'Resterende rentevaste periode', s: 'num', na: 'jaar', std: 8 }
+    ],
+    reken(v) {
+      if (v.w <= 0 || v.s <= 0) return { fout: 'Vul een woningwaarde en schuld groter dan nul in.' };
+      const ltv = v.s / v.w * 100, nodig = Math.ceil(v.s - v.g / 100 * v.w);
+      if (nodig <= 0) return { lbl: 'Benodigde aflossing', groot: fmt.euro0(0), onder: 'de schuld ligt al op of onder de grens', rijen: [['Huidige LTV', fmt.pct(ltv, 1)]] };
+      const besparing = v.s * v.rn / 100 - (v.s - nodig) * v.rl / 100;
+      const opslag = (v.s - nodig) * (v.rn - v.rl) / 100;
+      const sig = [];
+      if (v.rl >= v.rn) sig.push('De rente in de lagere klasse is niet lager; alleen de afgeloste rente wordt bespaard.');
+      return {
+        lbl: 'Benodigde extra aflossing', groot: fmt.euro0(nodig), onder: 'van ' + fmt.pct(ltv, 1) + ' naar ' + fmt.pct(v.g, 1) + ' LTV',
+        rijen: [
+          ['Rentebesparing per jaar, totaal', fmt.euro0(besparing)],
+          ['waarvan door minder schuld', fmt.euro0(nodig * v.rn / 100)],
+          ['waarvan door de lagere opslag', fmt.euro0(opslag)],
+          ['Bruto rendement op de aflossing', fmt.pct(besparing / nodig * 100, 2), 'som'],
+          ['Besparing over de rentevaste periode (indicatie)', fmt.euro0(besparing * v.jr)]
+        ],
+        signalen: sig
+      };
+    },
+    regel: 'Benodigde aflossing = schuld − grens × marktwaarde. Besparing per jaar = schuld × huidige rente − (schuld − aflossing) × lagere rente. Rendement = besparing / aflossing. De indicatie over de periode is besparing × jaren, zonder verdere aflossing.',
+    letop: 'Klassen, opslagen en het moment waarop een lagere klasse wordt toegepast verschillen per geldverstrekker; vaak is een nieuwe taxatie (met kosten) nodig. Controleer de boetevrije ruimte. Bedragen zijn bruto: door minder aftrekbare rente is het netto voordeel lager. Houd voldoende vrij beschikbare buffer aan.'
+  });
+
+  T.push({
+    id: 'onderwaarde', groep: 0, titel: 'Tijd tot geen onderwaarde',
+    intro: 'De schuld is hoger dan de woningwaarde. Na hoeveel tijd is dat ingehaald door aflossen en waardeontwikkeling?',
+    velden: [
+      { k: 'w', l: 'Huidige woningwaarde', s: 'eur', std: 310000 },
+      { k: 's', l: 'Huidige hypotheekschuld', s: 'eur', std: 345000 },
+      { k: 'r', l: 'Hypotheekrente', s: 'pct', std: 3.8 },
+      { k: 'jr', l: 'Resterende looptijd', s: 'num', na: 'jaar', std: 26 },
+      { k: 'vorm', l: 'Aflosvorm', s: 'keuze', opties: VORM3, std: 'ann' },
+      { k: 'x', l: 'Extra aflossing per maand', s: 'eur', std: 150, opt: true },
+      { k: 'g', l: 'Waardeverandering per jaar', s: 'pct', std: 1, tip: 'Gebruik een minteken voor daling.' }
+    ],
+    reken(v) {
+      const n = Math.round(v.jr * 12), i = v.r / 1200;
+      if (v.w <= 0 || v.s <= 0 || n <= 0) return { fout: 'Vul waarde, schuld en looptijd groter dan nul in.' };
+      if (v.s <= v.w) return { lbl: 'Tijd tot geen onderwaarde', groot: 'nu al', onder: 'de schuld is niet hoger dan de waarde', rijen: [['Overwaarde', fmt.euro0(v.w - v.s)]] };
+      const t = v.vorm === 'ann' ? annTermijn(v.s, i, n) : 0, afl = v.vorm === 'lin' ? v.s / n : 0;
+      let schuld = v.s, m = 0, waarde = v.w, afgelost = 0;
+      const rijen = [], gm = Math.pow(1 + v.g / 100, 1 / 12);
+      while (schuld > waarde && m < 1200) {
+        m++;
+        const regulier = v.vorm === 'ann' ? t - schuld * i : afl;
+        const af = Math.min(schuld, Math.max(0, regulier) + v.x);
+        schuld -= af; afgelost += af; waarde *= gm;
+        if (m % 12 === 0) rijen.push([String(m / 12), fmt.euro0(waarde), fmt.euro0(schuld), fmt.euro0(waarde - schuld)]);
+      }
+      if (schuld > waarde) return { fout: 'Binnen 100 jaar verdwijnt de onderwaarde niet. Reken met extra aflossing of een andere waardeontwikkeling.' };
+      return {
+        lbl: 'Tijd tot geen onderwaarde', groot: fmt.duur(m), onder: 'bij ' + fmt.pct(v.g, 1) + ' waardeverandering per jaar',
+        rijen: [
+          ['Huidige onderwaarde', fmt.euro0(v.s - v.w)],
+          ['Afgelost tot dat moment', fmt.euro0(afgelost)],
+          ['Waarde op dat moment', fmt.euro0(waarde)],
+          ['Schuld op dat moment', fmt.euro0(schuld), 'som']
+        ],
+        tabel: rijen.length ? { kop: ['Jaar', 'Waarde', 'Schuld', 'Over- of onderwaarde'], rijen } : null
+      };
+    },
+    regel: 'Per maand: reguliere aflossing (annuïtair: termijn − schuld × i; lineair: oorspronkelijke schuld / maanden; aflossingsvrij: 0) plus extra aflossing; waarde × (1 + verandering)<sup>1/12</sup>. Doorgerekend tot de schuld niet meer boven de waarde ligt.',
+    letop: 'De waardeontwikkeling is een aanname. Bij een verhuizing met onderwaarde gelden aparte regels voor financiering van de restschuld en de fiscale behandeling; bespreek ook de risicoklasse en de gevolgen bij gedwongen verkoop. Gebruik de marktwaarde, niet de WOZ-waarde, tenzij de geldverstrekker anders aangeeft.'
+  });
+
+  T.push({
+    id: 'verzilveren', groep: 0, titel: 'Overwaarde verzilveren met bijgeschreven rente',
+    intro: 'Senioren die maandelijks geld opnemen uit de woning, terwijl de rente bij de schuld wordt opgeteld. Hoe groeit de schuld en wanneer is de leengrens bereikt?',
+    velden: [
+      { k: 'w', l: 'Woningwaarde', s: 'eur', std: 620000 },
+      { k: 's', l: 'Bestaande schuld bij de start', s: 'eur', std: 60000, opt: true },
+      { k: 'e', l: 'Eenmalige opname bij de start', s: 'eur', std: 0, opt: true },
+      { k: 'op', l: 'Opname per maand', s: 'eur', std: 750 },
+      { k: 'r', l: 'Rente', s: 'pct', std: 5.4 },
+      { k: 'jr', l: 'Periode', s: 'num', na: 'jaar', std: 15 },
+      { k: 'g', l: 'Waardeverandering per jaar', s: 'pct', std: 1.5 },
+      { k: 'max', l: 'Maximale schuld als deel van de waarde', s: 'pct', std: 50, tip: 'Grens van de geldverstrekker; vaak afhankelijk van de leeftijd.' }
+    ],
+    reken(v) {
+      const n = Math.round(v.jr * 12), i = v.r / 1200, gm = Math.pow(1 + v.g / 100, 1 / 12);
+      if (v.w <= 0 || n <= 0 || n > 600) return { fout: 'Vul een woningwaarde en een periode tussen 1 en 50 jaar in.' };
+      let schuld = v.s + v.e, waarde = v.w, rente = 0, grens = 0;
+      const rijen = [];
+      if (schuld > v.max / 100 * waarde) grens = -1;
+      for (let m = 1; m <= n; m++) {
+        const ri = schuld * i; rente += ri; schuld += ri + v.op; waarde *= gm;
+        if (!grens && schuld > v.max / 100 * waarde) grens = m;
+        if (m % 12 === 0) rijen.push([String(m / 12), fmt.euro0(waarde), fmt.euro0(schuld), fmt.pct(schuld / waarde * 100, 1)]);
+      }
+      const sig = [];
+      if (grens === -1) sig.push('De schuld ligt bij de start al boven de opgegeven grens.');
+      else if (grens) sig.push('De grens van ' + fmt.pct(v.max, 0) + ' van de waarde wordt overschreden na ' + fmt.duur(grens) + '. Daarna stopt de opname meestal, terwijl de rente blijft oplopen.');
+      return {
+        lbl: 'Schuld na ' + fmt.duur(n), groot: fmt.euro0(schuld), onder: 'inclusief bijgeschreven rente',
+        rijen: [
+          ['Totaal opgenomen', fmt.euro0(v.e + v.op * n)],
+          ['Bijgeschreven rente', fmt.euro0(rente)],
+          ['Woningwaarde op dat moment', fmt.euro0(waarde)],
+          ['Schuld als deel van de waarde', fmt.pct(schuld / waarde * 100, 1)],
+          ['Resterende overwaarde', fmt.euro0(waarde - schuld), 'som']
+        ],
+        tabel: { kop: ['Jaar', 'Waarde', 'Schuld', 'Schuld / waarde'], rijen },
+        signalen: sig
+      };
+    },
+    regel: 'Per maand: schuld + schuld × rente / 12 + opname. Waarde per maand × (1 + verandering)<sup>1/12</sup>. De grens is bereikt in de eerste maand waarin schuld > grens × waarde.',
+    letop: 'De rente-op-rente-groei maakt deze vorm gevoelig voor een lange levensduur en waardedaling. Productvoorwaarden (maximale opname per leeftijd, renteberekening, aflossing bij overlijden of verhuizing) verschillen per aanbieder. Bespreek gevolgen voor erfgenamen en toeslagen, en de fiscale behandeling (vaak box 3) apart. Doe een betaalbaarheidstoets: zie <a href="restschuld-pensioen.html">Restschuld bij pensioen</a>.'
+  });
+
+  T.push({
+    id: 'omslagrente', groep: 1, titel: 'Omslagrente bij korter of langer vast',
+    intro: 'Kort vastzetten is goedkoper, lang vastzetten zekerder. Hoe hoog mag de rente na de korte periode worden voordat lang vast de betere keuze was?',
+    velden: [
+      { k: 'h', l: 'Hypotheekbedrag', s: 'eur', std: 300000 },
+      { k: 'jr', l: 'Looptijd', s: 'num', na: 'jaar', std: 30 },
+      { k: 'vorm', l: 'Aflosvorm', s: 'keuze', opties: [['ann', 'Annuïtair'], ['vrij', 'Aflossingsvrij']], std: 'ann' },
+      { k: 'rs', l: 'Rente korte periode', s: 'pct', std: 3.7 },
+      { k: 's', l: 'Korte rentevaste periode', s: 'num', na: 'jaar', std: 10 },
+      { k: 'rl', l: 'Rente lange periode', s: 'pct', std: 4.15 },
+      { k: 'l', l: 'Lange rentevaste periode', s: 'num', na: 'jaar', std: 20 }
+    ],
+    reken(v) {
+      const n = Math.round(v.jr * 12), S = Math.round(v.s * 12), L = Math.round(v.l * 12);
+      if (v.h <= 0 || n <= 0 || S <= 0) return { fout: 'Vul bedrag, looptijd en perioden groter dan nul in.' };
+      if (L <= S || L > n) return { fout: 'De lange periode moet langer zijn dan de korte en past binnen de looptijd.' };
+      const is = v.rs / 1200, il = v.rl / 1200;
+      const lang = verloop(v.h, il, n, L, v.vorm);
+      const kort = verloop(v.h, is, n, S, v.vorm);
+      const renteB = x => kort.rente + verloop(kort.rest, x, n - S, L - S, v.vorm).rente;
+      const doel = lang.rente;
+      if (renteB(0) >= doel) return { lbl: 'Omslagrente', groot: 'onder 0%', onder: 'lang vast is in elk scenario voordeliger', rijen: [] };
+      const x = zoekNul(r => renteB(r) - doel, 0, 0.05);
+      const sig = [];
+      if (x * 1200 < v.rl) sig.push('De omslagrente ligt onder de huidige lange rente.');
+      return {
+        lbl: 'Omslagrente na ' + fmt.getal(v.s, v.s % 1 ? 1 : 0) + ' jaar', groot: fmt.pct(x * 1200, 2),
+        onder: 'voor de resterende ' + fmt.getal((L - S) / 12, (L - S) % 12 ? 1 : 0) + ' jaar van de lange periode',
+        rijen: [
+          ['Bruto rente bij lang vast', fmt.euro0(lang.rente)],
+          ['Bruto rente in de korte periode', fmt.euro0(kort.rente)],
+          ['Schuld bij afloop korte periode', fmt.euro0(kort.rest)],
+          ['Rentevoordeel in de korte periode', fmt.euro0(verloop(v.h, il, n, S, v.vorm).rente - kort.rente), 'som']
+        ],
+        signalen: ['Is de rente na ' + fmt.getal(v.s, 0) + ' jaar hoger dan ' + fmt.pct(x * 1200, 2) + ', dan was lang vastzetten goedkoper; is ze lager, dan was kort vastzetten goedkoper.'].concat(sig)
+      };
+    },
+    regel: 'Gezocht wordt de rente x voor de tweede periode waarbij de totale bruto rente over de lange periode gelijk is: rente korte periode + rente over de restschuld tegen x (in de resterende maanden) = rente bij lang vast. Annuïtair wordt na de korte periode opnieuw berekend over de resterende looptijd.',
+    letop: 'De omslagrente is geen renteverwachting. Lang vast biedt zekerheid over de maandlast; die zekerheid heeft waarde die niet in euro’s is uit te drukken. Kijk ook naar de leennormen (bij korter dan tien jaar vast geldt een toetsrente), verlengmogelijkheden en de risicobereidheid van de klant. Verschillen in restschuld en tijdswaarde zijn niet verdisconteerd.'
+  });
+
+  T.push({
+    id: 'slottermijn', groep: 1, titel: 'Lening met slottermijn',
+    intro: 'Bij financial lease of een autolening blijft aan het eind vaak een slottermijn over. Wat is de maandtermijn en hoeveel staat er na een aantal maanden nog open?',
+    velden: [
+      { k: 'h', l: 'Te financieren bedrag', s: 'eur', std: 32000, tip: 'Aankoopprijs minus aanbetaling of inruil.' },
+      { k: 'r', l: 'Rente per jaar', s: 'pct', std: 7.5 },
+      { k: 'n', l: 'Aantal maandtermijnen', s: 'num', std: 60 },
+      { k: 'b', l: 'Slottermijn', s: 'eur', std: 9000, opt: true },
+      { k: 'k', l: 'Al betaalde termijnen', s: 'num', std: 24 }
+    ],
+    reken(v) {
+      const n = Math.round(v.n), k = Math.round(v.k), i = v.r / 1200;
+      if (v.h <= 0 || n <= 0) return { fout: 'Vul een bedrag en een aantal termijnen groter dan nul in.' };
+      if (v.b >= v.h) return { fout: 'De slottermijn moet lager zijn dan het te financieren bedrag.' };
+      if (k < 0 || k > n) return { fout: 'Het aantal betaalde termijnen ligt tussen 0 en ' + n + '.' };
+      const cwSlot = v.b / Math.pow(1 + i, n);
+      const t = annTermijn(v.h - cwSlot, i, n);
+      const g = Math.pow(1 + i, k), rest = i === 0 ? v.h - t * k : v.h * g - t * (g - 1) / i;
+      const rente = t * n + v.b - v.h;
+      return {
+        lbl: 'Maandtermijn', groot: fmt.euro(t), onder: n + ' termijnen plus een slottermijn van ' + fmt.euro0(v.b),
+        rijen: [
+          ['Openstaand na ' + k + ' termijnen', fmt.euro(rest)],
+          ['Totaal te betalen', fmt.euro(t * n + v.b)],
+          ['Waarvan rente', fmt.euro(rente), 'som'],
+          ['Termijn zonder slottermijn', fmt.euro(annTermijn(v.h, i, n))]
+        ],
+        signalen: ['Voor de leencapaciteit telt meestal het oorspronkelijke kredietbedrag of de registratie bij BKR, niet alleen de maandtermijn. Controleer hoe de geldverstrekker een lopend leasecontract weegt.']
+      };
+    },
+    regel: 'Termijn = (bedrag − slottermijn / (1 + i)<sup>n</sup>) × i / (1 − (1 + i)<sup>−n</sup>), met i = jaarrente / 12. Openstaand na k termijnen = bedrag × (1 + i)<sup>k</sup> − termijn × ((1 + i)<sup>k</sup> − 1) / i; aan het eind is dat de slottermijn.',
+    letop: 'Leasemaatschappijen kunnen de rente anders berekenen of kosten in de termijn verwerken; het wettelijke jaarlijkse kostenpercentage staat in het contract. Bij vervroegd beëindigen gelden de contractvoorwaarden.'
+  });
+
+  T.push({
+    id: 'kosteneffect', groep: 2, titel: 'Effect van kosten op vermogensopbouw',
+    intro: 'Hoeveel vermogen kost een jaarlijks kostenpercentage over een lange periode? Handig bij het bespreken van de kosten van een beleggingsproduct.',
+    velden: [
+      { k: 'st', l: 'Startbedrag', s: 'eur', std: 25000, opt: true },
+      { k: 'in', l: 'Inleg per maand', s: 'eur', std: 200, opt: true },
+      { k: 'r', l: 'Rendement vóór kosten per jaar', s: 'pct', std: 5 },
+      { k: 'k', l: 'Totale kosten per jaar', s: 'pct', std: 1.2, tip: 'Alle doorlopende kosten samen, als percentage van het vermogen.' },
+      { k: 'jr', l: 'Looptijd', s: 'num', na: 'jaar', std: 25 }
+    ],
+    reken(v) {
+      const jaren = Math.round(v.jr);
+      if (jaren <= 0 || jaren > 100) return { fout: 'Kies een looptijd tussen 1 en 100 jaar.' };
+      if (v.st <= 0 && v.in <= 0) return { fout: 'Vul een startbedrag of een maandinleg in.' };
+      const ib = maandUitJaar(v.r), inet = maandUitJaar(v.r - v.k);
+      const rijen = [];
+      let eb = 0, en = 0;
+      for (let j = 1; j <= jaren; j++) {
+        eb = eindwaarde(v.st, v.in, ib, j * 12, true); en = eindwaarde(v.st, v.in, inet, j * 12, true);
+        rijen.push([String(j), fmt.euro0(eb), fmt.euro0(en), fmt.euro0(eb - en)]);
+      }
+      const ingelegd = v.st + v.in * jaren * 12;
+      return {
+        lbl: 'Vermogen dat de kosten kosten', groot: fmt.euro0(eb - en), onder: 'na ' + jaren + ' jaar, ' + fmt.pct((eb - en) / eb * 100, 1) + ' van het vermogen zonder kosten',
+        rijen: [
+          ['Vermogen zonder kosten', fmt.euro0(eb)],
+          ['Vermogen na kosten', fmt.euro0(en)],
+          ['Totaal ingelegd', fmt.euro0(ingelegd)],
+          ['Rendement na kosten per jaar', fmt.pct(v.r - v.k, 2), 'som']
+        ],
+        tabel: { kop: ['Jaar', 'Zonder kosten', 'Na kosten', 'Verschil'], rijen }
+      };
+    },
+    regel: 'Rendement na kosten = rendement − kostenpercentage. Beide reeksen: start × (1 + i)<sup>n</sup> + inleg × ((1 + i)<sup>n</sup> − 1) / i × (1 + i), inleg aan het begin van de maand, i = (1 + jaarrendement)<sup>1/12</sup> − 1. Het verschil omvat ook het gemiste rendement op de betaalde kosten.',
+    letop: 'Rendementen zijn niet gegarandeerd; het kosteneffect is dat wel. Gebruik bij advies de kosten uit de wettelijke kosteninformatie van het product (inclusief transactie- en advieskosten). Belasting in box 3 is niet meegenomen.'
+  });
+
+  T.push({
+    id: 'pensioentekort', groep: 2, titel: 'Inleg voor een pensioentekort',
+    intro: 'De klant komt na pensionering een bedrag per maand tekort. Welk kapitaal is daarvoor nodig, en wat moet er tot de pensioendatum per maand opzij?',
+    velden: [
+      { k: 'tk', l: 'Tekort per maand, in euro’s van nu', s: 'eur', std: 750 },
+      { k: 'jt', l: 'Jaren tot de pensioendatum', s: 'num', na: 'jaar', std: 22 },
+      { k: 'du', l: 'Duur van de aanvulling', s: 'num', na: 'jaar', std: 20 },
+      { k: 'inf', l: 'Inflatie tot de pensioendatum', s: 'pct', std: 2 },
+      { k: 'ro', l: 'Rendement tijdens het opbouwen', s: 'pct', std: 4 },
+      { k: 'ru', l: 'Rendement tijdens het uitkeren', s: 'pct', std: 2.5 },
+      { k: 'st', l: 'Al opgebouwd voor dit doel', s: 'eur', std: 15000, opt: true }
+    ],
+    reken(v) {
+      const nt = Math.round(v.jt * 12), nu = Math.round(v.du * 12);
+      if (nt <= 0 || nu <= 0) return { fout: 'Vul een opbouw- en uitkeringsperiode groter dan nul in.' };
+      const maand = v.tk * Math.pow(1 + v.inf / 100, v.jt);
+      const iu = maandUitJaar(v.ru), io = maandUitJaar(v.ro);
+      const kapitaal = annHoofdsom(maand, iu, nu) * (1 + iu);
+      const g = Math.pow(1 + io, nt), factor = io === 0 ? nt : (g - 1) / io * (1 + io);
+      const inleg = Math.max(0, (kapitaal - v.st * g) / factor);
+      return {
+        lbl: 'Benodigde inleg per maand', groot: fmt.euro(inleg), onder: 'gedurende ' + fmt.duur(nt) + ', vóór belasting en kosten',
+        rijen: [
+          ['Tekort per maand op de pensioendatum', fmt.euro0(maand)],
+          ['Benodigd kapitaal op de pensioendatum', fmt.euro0(kapitaal)],
+          ['Huidig bedrag groeit tot', fmt.euro0(v.st * g)],
+          ['Totaal nog in te leggen', fmt.euro0(inleg * nt), 'som']
+        ],
+        signalen: ['De aanvulling is een vast bedrag: na de pensioendatum daalt de koopkracht ervan door inflatie.']
+      };
+    },
+    regel: 'Tekort op pensioendatum = tekort × (1 + inflatie)<sup>jaren</sup>. Kapitaal = maandbedrag × (1 − (1 + i<sub>u</sub>)<sup>−n</sup>) / i<sub>u</sub> × (1 + i<sub>u</sub>), uitkering aan het begin van de maand. Inleg = (kapitaal − huidig bedrag × (1 + i<sub>o</sub>)<sup>m</sup>) / (((1 + i<sub>o</sub>)<sup>m</sup> − 1) / i<sub>o</sub> × (1 + i<sub>o</sub>)). Maandrendementen afgeleid van de jaarrendementen.',
+    letop: 'Of het tekort bruto of netto is, bepaalt welk kapitaal nodig is: belasting op de uitkering en een eventuele fiscale aftrek van de inleg (jaarruimte, lijfrente) zijn hier niet meegenomen. Controleer de pensioenopbouw via het pensioenoverzicht en de actuele AOW-leeftijd.'
+  });
+
+  T.push({
+    id: 'erfdeel', groep: 2, titel: 'Erfdelen bij de wettelijke verdeling',
+    intro: 'Zonder testament krijgt de langstlevende partner de goederen en de kinderen een geldvordering. Hoe groot is ieders erfdeel?',
+    velden: [
+      { k: 'p', l: 'Is er een langstlevende echtgenoot of geregistreerd partner?', s: 'keuze', opties: [['ja', 'Ja'], ['nee', 'Nee']], std: 'ja', breed: true },
+      { k: 'gem', l: 'Gemeenschappelijk vermogen (netto)', s: 'eur', std: 520000, opt: true, tip: 'Bezittingen min schulden in de gemeenschap; de helft valt in de nalatenschap.' },
+      { k: 'priv', l: 'Privévermogen van de overledene (netto)', s: 'eur', std: 0, opt: true },
+      { k: 'uv', l: 'Uitvaartkosten', s: 'eur', std: 9500, opt: true },
+      { k: 'kn', l: 'Aantal kinderen', s: 'num', std: 2, tip: 'Kinderen van de overledene; een vooroverleden kind wordt vervangen door zijn kinderen.' }
+    ],
+    reken(v) {
+      const kn = Math.round(v.kn), partner = v.p === 'ja';
+      const delers = kn + (partner ? 1 : 0);
+      if (kn < 0) return { fout: 'Het aantal kinderen kan niet negatief zijn.' };
+      if (!delers) return { fout: 'Zonder partner en kinderen erven andere familieleden; die verdeling valt buiten deze rekenhulp.' };
+      const nal = (partner ? v.gem / 2 : v.gem) + v.priv - v.uv;
+      if (nal <= 0) return { lbl: 'Erfdeel per erfgenaam', groot: fmt.euro0(0), onder: 'de nalatenschap is niet positief', rijen: [['Saldo nalatenschap', fmt.euro0(nal)]] };
+      const deel = nal / delers;
+      const rijen = [['Saldo nalatenschap', fmt.euro0(nal)], ['Aantal erfgenamen', fmt.getal(delers)]];
+      if (partner && kn) rijen.push(['Erfdeel partner', fmt.euro0(deel)], ['Geldvordering per kind', fmt.euro0(deel)], ['Totaal vorderingen kinderen', fmt.euro0(deel * kn), 'som']);
+      else rijen.push(['Erfdeel ' + (partner ? 'partner' : 'per kind'), fmt.euro0(deel), 'som']);
+      return {
+        lbl: 'Erfdeel per erfgenaam', groot: fmt.euro0(deel), onder: partner && kn ? 'de kinderen krijgen dit als niet-opeisbare geldvordering' : 'zonder testament',
+        rijen,
+        signalen: partner && kn ? ['De partner krijgt alle goederen en wordt schuldenaar van de kinderen. De vorderingen zijn in de regel pas opeisbaar bij overlijden of faillissement van de partner.'] : []
+      };
+    },
+    regel: 'Nalatenschap = helft van het gemeenschappelijke vermogen (bij een partner) + privévermogen − uitvaartkosten. Erfdeel = nalatenschap / (partner + aantal kinderen). Zonder partner telt hier het volledige ingevulde vermogen.',
+    letop: 'Een testament, huwelijkse voorwaarden of een beperkte gemeenschap kunnen de uitkomst volledig veranderen. Erfbelasting, de rente over de vorderingen en de uitkering uit een overlijdensrisicoverzekering zijn hier niet berekend; zie ook <a href="orv.html">Overlijdensrisico</a>. Laat de verdeling bevestigen door de notaris.'
   });
 
   function isoWeek(d) {
