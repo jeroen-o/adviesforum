@@ -1,11 +1,12 @@
 /* VRAGEN en ANTWOORDEN op het forum. De beheerder publiceert ingezonden vragen hier.
  * Zet hier ALLEEN de naam van de vraagsteller (veld 'naam'), nooit e-mail, telefoon of LinkedIn:
  * die gegevens komen alleen per e-mail bij de beheerder binnen.
+ * voorbeeld:true = fictieve voorbeeldvraag (toont het label Voorbeeld en een datum in plaats van 'x uur geleden'); laat dit weg bij echte vragen.
  * Vraag: {id:'v13', cat, auteur (id uit adviseurs.js) of naam (externe vraagsteller), datum, views, tags:[...], beste:null of antwoord-id, titel, body, antwoorden:[...]}
  * Antwoord: {id:'a20', auteur (id uit adviseurs.js), datum, rA:{}, rAdv:{}, body}
  */
 window.VRAGEN_DATA=[
- {id:'v13',cat:'hyp',auteur:null,naam:'Jeroen Visser',datum:'2026-10-02T07:30:00',views:152,tags:['BKR','doorstromer','overbrugging'],beste:null,
+ {id:'v13',voorbeeld:true,cat:'hyp',auteur:null,naam:'Jeroen Visser',datum:'2026-10-02T07:30:00',views:152,tags:['BKR','doorstromer','overbrugging'],beste:null,
   titel:'Acceptatie overbruggingskrediet bij herstelde A-codering BKR',
   body:`Een doorstromer heeft een herstelde A-codering op een oud postorderkrediet (ruim 2,5 jaar geleden hersteld). De klant wil nu een overbruggingskrediet. De geldverstrekker wijst in eerste instantie af. Heeft iemand ervaring met een succesvol maatwerkverzoek in een vergelijkbare situatie?`,
   antwoorden:[
@@ -16,7 +17,7 @@ window.VRAGEN_DATA=[
 - Lukt het niet, toets dan bij een andere geldverstrekker; het acceptatiebeleid voor herstelde coderingen verschilt flink. Bij NHG gelden eigen normen, check de actuele Voorwaarden & Normen.
 Leg in het dossier vast: BKR-overzicht, verklaring van de klant, het maatwerkverzoek en de reactie van de geldverstrekker. Voor de dubbele lasten kun je overbrugging.html gebruiken.`}
   ]},
- {id:'v14',cat:'pens',auteur:null,naam:'Sander Kok',datum:'2026-10-02T04:30:00',views:45,tags:['DGA','pensioen in eigen beheer','Wtp'],beste:null,
+ {id:'v14',voorbeeld:true,cat:'pens',auteur:null,naam:'Sander Kok',datum:'2026-10-02T04:30:00',views:45,tags:['DGA','pensioen in eigen beheer','Wtp'],beste:null,
   titel:'DGA met pensioen in eigen beheer: omzetten in ODV of afkopen?',
   body:`Een DGA van 58 jaar heeft nog een aanzienlijk pensioen in eigen beheer op de balans. Is omzetten in een oudedagsverplichting nog steeds de beste route, of moeten we een afkoopscenario doorrekenen gezien de huidige rente? Welke afwegingen leggen jullie vast?`,
   antwoorden:[
@@ -27,7 +28,7 @@ Wat je wel moet uitzoeken:
 - Wat betekent het voor de partner (nabestaandenpensioen) en bij verkoop of liquidatie van de BV?
 Leg in het dossier vast: de pensioenbrief, de actuele balanswaardering, de besproken scenario's en de rol van de fiscalist of accountant. Laat dit laatste deel door de fiscalist van de DGA toetsen.`}
   ]},
- {id:'v15',cat:'verz',auteur:null,naam:'Lisa Meijer',datum:'2026-10-01T15:00:00',views:12,tags:['AOV','zzp','Broodfonds'],beste:null,
+ {id:'v15',voorbeeld:true,cat:'verz',auteur:null,naam:'Lisa Meijer',datum:'2026-10-01T15:00:00',views:12,tags:['AOV','zzp','Broodfonds'],beste:null,
   titel:'AOV voor startende zzp\'er in een zwaar beroep: premie onbetaalbaar',
   body:`Ik adviseer een startende zzp'er (timmerman). De AOV-premies voor deze beroepsklasse zijn erg hoog ten opzichte van de verwachte winst. Is een Broodfonds in combinatie met een AOV met lange wachttijd passend advies, of schiet de dekking dan tekort?`,
   antwoorden:[
@@ -38,7 +39,7 @@ Leg in het dossier vast: de pensioenbrief, de actuele balanswaardering, de bespr
 - Volg de status van de verplichte basisverzekering voor zelfstandigen bij rijksoverheid.nl.
 Leg vast welke opties je hebt besproken, welke risico's de klant zelf draagt en waarom hij voor deze combinatie kiest. Zie ook aov-tekort.html voor de berekening van het tekort.`}
   ]},
- {id:'v12',cat:'adv',auteur:'u1',datum:'2026-10-02T08:05:00',views:1,tags:['financieringsopzet','bedragen','eigen middelen'],beste:null,
+ {id:'v12',voorbeeld:true,cat:'adv',auteur:'u1',datum:'2026-10-02T08:05:00',views:1,tags:['financieringsopzet','bedragen','eigen middelen'],beste:null,
   titel:'Hoe kan ik de bedragen in de financieringsopzet aanpassen in eBlinqx Hypotheekadvies?',
   body:`De financieringsopzet toont bedragen die ik wil corrigeren, onder andere de eigen middelen en het hypotheekbedrag. Waar pas ik die aan in eBlinqx Hypotheekadvies?`,
   antwoorden:[
@@ -54,7 +55,7 @@ Let op voor het dossier: zodra je handmatig invoert, vervalt op dat punt de auto
 
 Ik heb alle varianten (overbrugging, verbouwing, nieuwbouw, familiehypotheek, starterslening, draagplicht, box 1/3, niet-sluitende opzet) uitgewerkt in het kennisbankartikel bij deze vraag; dat staat nog op Concept tot compliance het heeft gecontroleerd.`}
   ]},
- {id:'v1',cat:'hyp',auteur:'u1',datum:'2026-09-29T09:12:00',views:142,tags:['overbrugging','verkoop','dubbele lasten'],beste:'a1',
+ {id:'v1',voorbeeld:true,cat:'hyp',auteur:'u1',datum:'2026-09-29T09:12:00',views:142,tags:['overbrugging','verkoop','dubbele lasten'],beste:'a1',
   titel:'Overbrugging bij nog niet verkochte woning: hoe reken je de maximale overbrugging?',
   body:`Klant koopt een nieuwe woning, de huidige staat te koop maar er is nog geen koper. De geldverstrekker vraagt om onderbouwing van het overbruggingskrediet. Hoe rekenen jullie dit uit en welke marge houden jullie aan?`,
   antwoorden:[
@@ -70,7 +71,7 @@ Is de woning al verkocht en zijn de ontbindende voorwaarden verlopen, dan rekene
    {id:'a2',auteur:'u4',datum:'2026-09-29T14:05:00',rA:{u1:4,u5:4},rAdv:{u1:4},
     body:`Aanvulling: leg in het dossier vast hoe de klant de dubbele lasten draagt (spaargeld, inkomen) en hoe lang hij dat volhoudt. Dat is precies waar de geldverstrekker én de AFM naar kijken bij overbrugging.`}
   ]},
- {id:'v2',cat:'adv',auteur:'u4',datum:'2026-09-30T08:30:00',views:88,tags:['leningdelen','scenario','rentevaste periode'],beste:'a3',
+ {id:'v2',voorbeeld:true,cat:'adv',auteur:'u4',datum:'2026-09-30T08:30:00',views:88,tags:['leningdelen','scenario','rentevaste periode'],beste:'a3',
   titel:'Twee leningdelen met verschillende rentevaste periodes: hoe leg je dat vast in het Adviespakket?',
   body:`Klant wil een deel 10 jaar vast en een deel 20 jaar vast. In het scenario kan ik maar één rentevaste periode kiezen, lijkt het. Doe ik iets fout?`,
   antwoorden:[
@@ -79,7 +80,7 @@ Is de woning al verkocht en zijn de ontbindende voorwaarden verlopen, dan rekene
 
 Tip: geef de leningdelen een herkenbare omschrijving, bijvoorbeeld "Annuïtair 10 jaar" en "Annuïtair 20 jaar". Dan is het rapport voor de klant direct leesbaar.`}
   ]},
- {id:'v3',cat:'crm',auteur:'u3',datum:'2026-09-25T13:15:00',views:201,tags:['dubbel dossier','samenvoegen','documenten'],beste:'a4',
+ {id:'v3',voorbeeld:true,cat:'crm',auteur:'u3',datum:'2026-09-25T13:15:00',views:201,tags:['dubbel dossier','samenvoegen','documenten'],beste:'a4',
   titel:'Klantdossier dubbel aangemaakt in het CRM: hoe samenvoegen zonder documenten kwijt te raken?',
   body:`Een collega heeft per ongeluk een tweede dossier voor dezelfde klant aangemaakt. In beide dossiers staan nu documenten en notities. Kan dit samengevoegd worden?`,
   antwoorden:[
@@ -90,7 +91,7 @@ Let op: samenvoegen kan niet ongedaan gemaakt worden. Twijfel je, maak dan eerst
    {id:'a5',auteur:'u1',datum:'2026-09-26T08:20:00',rA:{u3:4},rAdv:{u3:4},
     body:`Wij hebben als kantoorafspraak dat we vóór het aanmaken van een dossier altijd eerst zoeken op geboortedatum en postcode. Scheelt een hoop samenvoegwerk achteraf.`}
   ]},
- {id:'v4',cat:'verz',auteur:'u1',datum:'2026-09-22T10:45:00',views:317,tags:['ORV','NHG','zorgplicht','afwijkend advies'],beste:'a6',
+ {id:'v4',voorbeeld:true,cat:'verz',auteur:'u1',datum:'2026-09-22T10:45:00',views:317,tags:['ORV','NHG','zorgplicht','afwijkend advies'],beste:'a6',
   titel:'ORV bij NHG: klant wil geen overlijdensrisicoverzekering, wat leggen jullie vast?',
   body:`Tweeverdieners; valt één inkomen weg bij overlijden, dan is de hypotheek niet meer betaalbaar. Klant wil geen ORV afsluiten. Verplicht is het niet meer bij NHG, maar hoe gaan jullie hiermee om in het adviesdossier?`,
   antwoorden:[
@@ -106,7 +107,7 @@ Check ook of de geldverstrekker zelf nog een ORV eist boven een bepaald LTV-perc
    {id:'a7',auteur:'u8',datum:'2026-09-22T15:30:00',rA:{u1:5,u3:4},rAdv:{u1:5},
     body:`Vanuit compliance: een verklaring "afwijkend advies" is prima, maar alleen als het advies zelf eerst helder in het rapport staat. Een verklaring zonder onderbouwd advies erboven houdt bij een dossieronderzoek van de AFM geen stand.`}
   ]},
- {id:'v5',cat:'fisc',auteur:'u4',datum:'2026-09-18T09:00:00',views:176,tags:['bijleenregeling','schenking','eigenwoningschuld'],beste:'a8',
+ {id:'v5',voorbeeld:true,cat:'fisc',auteur:'u4',datum:'2026-09-18T09:00:00',views:176,tags:['bijleenregeling','schenking','eigenwoningschuld'],beste:'a8',
   titel:'Schenking van ouders gebruikt voor aflossing: gevolgen voor bijleenregeling en renteaftrek?',
   body:`Klant krijgt een schenking en lost daarmee een deel van de eigenwoningschuld af. Over een paar jaar wil hij verhuizen. Hoe werkt dit door in de eigenwoningreserve?`,
   antwoorden:[
@@ -115,7 +116,7 @@ Check ook of de geldverstrekker zelf nog een ORV eist boven een bepaald LTV-perc
 
 Praktisch: de renteaftrek over het afgeloste deel is weg en komt bij een volgende aankoop niet zomaar terug. Reken dit altijd door in een verhuisscenario voordat de klant aflost, en leg vast dat je dit hebt besproken.`}
   ]},
- {id:'v6',cat:'pens',auteur:'u2',datum:'2026-09-15T14:20:00',views:97,tags:['lijfrente','jaarruimte','banksparen'],beste:null,
+ {id:'v6',voorbeeld:true,cat:'pens',auteur:'u2',datum:'2026-09-15T14:20:00',views:97,tags:['lijfrente','jaarruimte','banksparen'],beste:null,
   titel:'Lijfrente voor een pensioentekort: wanneer banksparen en wanneer een verzekering?',
   body:`Klant heeft jaarruimte en wil die benutten. Fiscaal zijn bank en verzekeraar gelijk, maar waar letten jullie op bij de keuze?`,
   antwoorden:[
@@ -126,7 +127,7 @@ Praktisch: de renteaftrek over het afgeloste deel is weg en komt bij een volgend
 
 In de opbouwfase kies ik meestal voor bank of beleggen; de keuze voor levenslang maak je pas op de ingangsdatum. Leg wel vast dat je het langlevenrisico hebt besproken.`}
   ]},
- {id:'v7',cat:'hyp',auteur:'u5',datum:'2026-10-01T16:40:00',views:23,tags:['verhuisregeling','meeneemregeling'],beste:null,
+ {id:'v7',voorbeeld:true,cat:'hyp',auteur:'u5',datum:'2026-10-01T16:40:00',views:23,tags:['verhuisregeling','meeneemregeling'],beste:null,
   titel:'Verhuisregeling meenemen naar een andere geldverstrekker: kan dat?',
   body:`Klant heeft een lage rente die nog zes jaar vaststaat en wil verhuizen, maar de huidige geldverstrekker financiert het nieuwe object niet. Zijn er constructies om de rente toch mee te nemen?`,
   antwoorden:[
@@ -137,7 +138,7 @@ In de opbouwfase kies ik meestal voor bank of beleggen; de keuze voor levenslang
 - Kijk of een andere geldverstrekker een tijdelijke rentekorting of een rentemiddeling-achtige oplossing biedt; dat is uitzondering, geen regel.
 Leg in het dossier vast dat meenemen niet mogelijk was, welke alternatieven zijn vergeleken en welke keuze de klant maakt.`}
   ]},
- {id:'v8',cat:'comp',auteur:'u1',datum:'2026-09-10T08:50:00',views:264,tags:['bewaartermijn','AVG','Wft'],beste:'a10',
+ {id:'v8',voorbeeld:true,cat:'comp',auteur:'u1',datum:'2026-09-10T08:50:00',views:264,tags:['bewaartermijn','AVG','Wft'],beste:'a10',
   titel:'Hoe lang bewaren jullie adviesdossiers na het einde van de relatie?',
   body:`We ruimen oude dossiers op. Wat is de minimale bewaartermijn en wanneer moet je juist verwijderen vanwege de AVG?`,
   antwoorden:[
@@ -148,7 +149,7 @@ Leg in het dossier vast dat meenemen niet mogelijk was, welke alternatieven zijn
 
 Voor de financiële administratie (facturen, provisie) geldt de fiscale bewaarplicht van zeven jaar. Leg je termijnen vast in het verwerkingsregister en laat het CRM de verwijderdatum berekenen; dan is het geen handwerk meer.`}
   ]},
- {id:'v9',cat:'crm',auteur:'u7',datum:'2026-09-27T11:05:00',views:133,tags:['taken','nazorg','rentevaste periode'],beste:'a11',
+ {id:'v9',voorbeeld:true,cat:'crm',auteur:'u7',datum:'2026-09-27T11:05:00',views:133,tags:['taken','nazorg','rentevaste periode'],beste:'a11',
   titel:'Automatisch een taak op het einde van de rentevaste periode in het CRM?',
   body:`Ik wil zes maanden vóór de renteherziening van een klant automatisch een taak krijgen. Kan dat zonder elke klant handmatig een taak te geven?`,
   antwoorden:[
@@ -159,14 +160,14 @@ Voorwaarde: de einddata moeten wél gevuld zijn. Draai dus eerst een overzicht v
    {id:'a12',auteur:'u6',datum:'2026-09-27T13:10:00',rA:{u7:4},rAdv:{u7:4},
     body:`Klopt wat Tom zegt. Let op dat de regel alleen werkt voor actieve relaties; bij klanten met status "ex-klant" wordt bewust geen taak aangemaakt.`}
   ]},
- {id:'v10',cat:'adv',auteur:'u3',datum:'2026-09-30T15:55:00',views:41,tags:['adviesrapport','logo','export'],beste:null,
+ {id:'v10',voorbeeld:true,cat:'adv',auteur:'u3',datum:'2026-09-30T15:55:00',views:41,tags:['adviesrapport','logo','export'],beste:null,
   titel:'Adviesrapport toont het verkeerde kantoorlogo bij export naar PDF',
   body:`Sinds de fusie zie ik bij de PDF-export nog het oude logo, terwijl in het portaal het nieuwe logo staat.`,
   antwoorden:[
    {id:'a13',auteur:'u6',datum:'2026-09-30T16:20:00',rA:{u3:4},rAdv:{u3:4},
     body:`Het PDF-rapport uit eBlinqx Hypotheekadvies heeft een standaardopmaak: huisstijl, logo en kleuren zijn daar op dit moment niet zelf aan te passen, dus dit los je niet op via het portaalprofiel. Meld de verouderde kantoorgegevens bij support-hypotheekadvies@blinqx.tech (085 018 00 69, toets 1 en 1) met je kantoornummer; zij passen de gegevens in de rapportsjabloon aan. Rapporten die al gegenereerd zijn veranderen niet, nieuwe exports wel.`}
   ]},
- {id:'v11',cat:'verz',auteur:'u4',datum:'2026-09-12T09:35:00',views:158,tags:['woonlastenverzekering','zzp','arbeidsongeschiktheid'],beste:null,
+ {id:'v11',voorbeeld:true,cat:'verz',auteur:'u4',datum:'2026-09-12T09:35:00',views:158,tags:['woonlastenverzekering','zzp','arbeidsongeschiktheid'],beste:null,
   titel:'Woonlastenverzekering voor een zzp\u2019er: welke dekking adviseren jullie standaard?',
   body:`Zzp'er zonder AOV, hypotheek net binnen de norm. Wat is een realistische dekking en waar moet ik op letten in de voorwaarden?`,
   antwoorden:[

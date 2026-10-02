@@ -240,6 +240,10 @@ textarea{min-height:120px;resize:vertical}
 .tbl .who-cell{display:flex;align-items:center;gap:10px}
 .tbl .who-cell button{background:none;border:0;padding:0;text-align:left;cursor:pointer;color:var(--text)}
 .tbl .who-cell b{display:block;font-weight:600}
+.tbl .who-cell span.verif{display:inline-block;font-size:11px;color:#1E6B3A;margin:3px 0 0}
+.tbl .who-cell span.verif.demo-badge{color:#4A515B}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .tbl .who-cell span.verif.demo-badge{color:#D5DDE3}}
+:root[data-theme="dark"] .tbl .who-cell span.verif.demo-badge{color:#D5DDE3}
 .tbl .who-cell span:not(.av){display:block;font-size:12px;color:var(--muted)}
 .tbl .num{text-align:right;font-variant-numeric:tabular-nums}
 .lvl{display:inline-block;font-size:12px;font-weight:700;padding:3px 9px;border-radius:6px;background:var(--yellow-soft);color:var(--text)}
@@ -521,7 +525,7 @@ const HULP=[
  {groep:'Klantscans',tp:'Scan',titel:'Overlijdensrisicoscan',url:'scan-overlijdensrisico.html',tekst:'Past de ORV nog bij gezin en hypotheek? Begunstiging, looptijd en verzekerd bedrag.',kw:'orv overlijdensrisico scan nabestaanden begunstiging'},
  {groep:'Klantscans',tp:'Scan',titel:'Pensioenscan',url:'scan-pensioen.html',tekst:'Wtp-overgang, AOW-gat, partnerpensioen en het gewenste inkomen na pensioen.',kw:'pensioenscan wtp aow partnerpensioen pensioengat'},
  {groep:'Klantscans',tp:'Scan',titel:'Schadeverzekeringsscan',url:'scan-schadeverzekeringen.html',tekst:'AVP, inboedel, opstal, reis en rechtsbijstand naast de actuele situatie van de klant.',kw:'schade scan inboedel opstal avp reis rechtsbijstand'},
- {groep:'Klantscans',tp:'Scan',titel:'Autoverzekeringscan',url:'scan-autoverzekering.html',tekst:'Dekking naast de waarde en het gebruik van de auto, bestuurders en kilometers.',kw:'auto autoverzekering scan allrisk wa casco dagwaarde'},
+ {groep:'Klantscans',tp:'Scan',titel:'Autoverzekeringsscan',url:'scan-autoverzekering.html',tekst:'Dekking naast de waarde en het gebruik van de auto, bestuurders en kilometers.',kw:'auto autoverzekering scan allrisk wa casco dagwaarde'},
  {groep:'Klantscans',tp:'Scan',titel:'Bedrijfsverzekeringsscan',url:'scan-bedrijfsverzekeringen.html',tekst:'Aansprakelijkheid, bedrijfsschade, cyber, AOV en personeel voor ondernemers.',kw:'bedrijf zakelijk scan aansprakelijkheid cyber bedrijfsschade aov dga'},
  {groep:'Klantscans',tp:'Scan',titel:'Uitvaartscan',url:'scan-uitvaart.html',tekst:'Natura of kapitaal, dekking naast de verwachte kosten en vastgelegde wensen.',kw:'uitvaart scan natura kapitaal uitvaartkosten'},
  {groep:'Klantscans',tp:'Scan',titel:'Klanttevredenheidsonderzoek',url:'scan-klanttevredenheid.html',tekst:'Rapportcijfer, aanbeveling en open feedback van de klant.',kw:'klanttevredenheid onderzoek nps feedback beoordeling'},
@@ -1261,7 +1265,7 @@ function viewAdviseurs(){
       <thead><tr><th>#</th><th>Adviseur</th><th>Niveau</th><th class="num">Punten</th><th>Score antwoord</th><th>Score adviseur</th><th class="num">Antwoorden</th><th class="num">Beste</th></tr></thead>
       <tbody>${rows.map(({u,s},i)=>`<tr>
         <td class="num">${i+1}</td>
-        <td><div class="who-cell"><span class="av">${initials(u.naam)}</span><button data-act="open-adviseur" data-id="${u.id}"><b>${esc(u.naam)}</b><span>${esc(u.functie)}, ${esc(u.kantoor)}</span></button>${verif(u)}</div></td>
+        <td><div class="who-cell"><span class="av">${initials(u.naam)}</span><div><button data-act="open-adviseur" data-id="${u.id}"><b>${esc(u.naam)}</b><span>${esc(u.functie)}, ${esc(u.kantoor)}</span></button>${verif(u)?'<div>'+verif(u).replace('class="verif','style="margin-left:0" class="verif')+'</div>':''}</div></div></td>
         <td><span class="lvl">${esc(s.level)}</span></td>
         <td class="num"><b>${fmtInt(s.punten)}</b></td>
         <td>${s.nA?starsStatic(s.gemA)+' <span style="font-size:13px;color:var(--muted)">'+fmtNum(s.gemA)+'</span>':'<span style="font-size:13px;color:var(--muted)">–</span>'}</td>
@@ -1515,7 +1519,7 @@ document.addEventListener('click',e=>{
     case 'messenger':{const v=VRAGEN.find(x=>x.id===el.dataset.vraag);if(window.Intercom){window.Intercom('showNewMessage',v?v.titel+'\n\n'+v.body:'');}else toast('Intercom Messenger is niet geladen');break;}
     case 'kb-export':{const n=exportKbVoorFin();toast(plural(n,'gecontroleerd artikel geëxporteerd','gecontroleerde artikelen geëxporteerd'));break;}
     case 'quick':{const q=el.dataset.q;if(q==='nieuw')go('forum',{tab:'forum',sort:'nieuw',status:'alle'});else if(q==='populair')go('forum',{tab:'forum',sort:'views',status:'alle'});else go('forum',{tab:'forum',sort:'nieuw',status:'open'});break;}
-    case 'open-faq':laadFaq().then(()=>{S.q='';$('#search').value='';S.faqOpen=id;go('faq',{tab:'faq',faqThema:(FAQ.find(f=>f.id===id)||{}).thema||'alle',faqMax:1000});setTimeout(()=>{const d=document.getElementById('faq-'+id);if(d){d.open=true;d.scrollIntoView({block:'start'});}},30);});break;}
+    case 'open-faq':{laadFaq().then(()=>{S.q='';$('#search').value='';S.faqOpen=id;go('faq',{tab:'faq',faqThema:(FAQ.find(f=>f.id===id)||{}).thema||'alle',faqMax:1000});setTimeout(()=>{const d=document.getElementById('faq-'+id);if(d){d.open=true;d.scrollIntoView({block:'start'});}},30);});break;}
     case 'faqthema':go('faq',{tab:'faq',faqThema:el.dataset.thema,faqMax:50});break;
     case 'forummeer':S.forumMax=(S.forumMax||30)+50;render(true);break;
     case 'hulpmeer':{S.hulpOpen=Object.assign({},S.hulpOpen,{[el.dataset.groep]:true});render(true);break;}
