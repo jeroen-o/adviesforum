@@ -397,6 +397,18 @@ footer .legal{grid-column:1/-1;border-top:1px solid #2A3238;padding-top:14px;fon
 
 <script src="data/adviseurs.js"></script>
 <script src="data/vragen.js"></script>
+<script src="data/vragen/hyp-acceptatie.js"></script>
+<script src="data/vragen/hyp-woning.js"></script>
+<script src="data/vragen/hyp-doelgroepen.js"></script>
+<script src="data/vragen/hyp-producten.js"></script>
+<script src="data/vragen/fisc-eigenwoning.js"></script>
+<script src="data/vragen/fisc-vermogen.js"></script>
+<script src="data/vragen/verz-inkomen.js"></script>
+<script src="data/vragen/verz-schade.js"></script>
+<script src="data/vragen/pens.js"></script>
+<script src="data/vragen/kred.js"></script>
+<script src="data/vragen/comp.js"></script>
+<script src="data/vragen/software.js"></script>
 <script src="data/kennisbank.js"></script>
 <script src="data/kennisbank-planning.js"></script>
 <script src="data/begrippen.js"></script>
@@ -704,7 +716,9 @@ const MIN_SCORE=1.5;
 function stem(w){if(w.length>6&&w.endsWith('en'))return w.slice(0,-2);if(w.length>5&&w.endsWith('s'))return w.slice(0,-1);return w;}
 const ABBR=new Set(['nhg','ewr','ews','orv','aov','ltv','lti','ebv','ebb','wft','aow','anw','wia','duo','woz','rvp','bkr','afm','hdn','dga','wtp','peb','odv','zzp','wck','kvk']);
 const SYN={nhg:['borgtocht','garantie'],ewr:['eigenwoningreserve'],ews:['eigenwoningschuld'],eigenwoningreserve:['bijleenregeling'],bijleenregeling:['eigenwoningreserve'],orv:['overlijdensrisicoverzekering'],aov:['arbeidsongeschiktheid'],ebv:['energiebesparende','verduurzaming'],ebb:['energiebespaarbudget','verduurzaming'],trhk:['leennormen'],leennormen:['financieringslast'],woonquote:['financieringslast'],maximale:['leennormen'],overbrugging:['overbruggingskrediet'],duo:['studieschuld'],studieschuld:['studielening'],wft:['wetgeving'],wetgeving:['wetten'],maandlast:['annuiteit'],annuiteit:['maandlasten']};
-function tokens(s){const out=new Set();for(const w0 of String(s).toLowerCase().replace(/[^a-z0-9àâäéèêëïîôöùûüç\- ]+/g,' ').split(/\s+/)){if(ABBR.has(w0)){out.add(w0);(SYN[w0]||[]).forEach(x=>out.add(stem(x)));continue;}if(w0.length<4||STOP.has(w0)||PRODUCT_TOKENS.has(w0))continue;const w=stem(w0);if(w.length<4||STOP.has(w))continue;out.add(w);(SYN[w0]||[]).forEach(x=>out.add(stem(x)));}return [...out];}
+const TOK_CACHE=new Map();
+function tokens(s){s=String(s);const c=TOK_CACHE.get(s);if(c)return c;const r=tokens0(s);if(TOK_CACHE.size<20000)TOK_CACHE.set(s,r);return r;}
+function tokens0(s){const out=new Set();for(const w0 of String(s).toLowerCase().replace(/[^a-z0-9àâäéèêëïîôöùûüç\- ]+/g,' ').split(/\s+/)){if(ABBR.has(w0)){out.add(w0);(SYN[w0]||[]).forEach(x=>out.add(stem(x)));continue;}if(w0.length<4||STOP.has(w0)||PRODUCT_TOKENS.has(w0))continue;const w=stem(w0);if(w.length<4||STOP.has(w))continue;out.add(w);(SYN[w0]||[]).forEach(x=>out.add(stem(x)));}return [...out];}
 function tokHit(t,list,minLen){return list.some(c=>c===t||(t.length>=minLen&&c.length>=minLen&&(c.startsWith(t)||t.startsWith(c))));}
 function scoreMatch(qTok,strongTxt,weakTxt){
   if(!qTok.length)return 0;const st=tokens(strongTxt),wt=tokens(weakTxt);let s=0,hits=0;
@@ -876,6 +890,7 @@ function rail(){
 /* ---------- Vraagdetail ---------- */
 function viewVraag(){
   const v=VRAGEN.find(x=>x.id===S.vraag);if(!v){S.view='forum';return viewForum();}
+  if(!v.antwoorden.length&&!v.auto)autoAnswer(v);
   const u=vrager(v),st=vraagStatus(v),ik=me();
   const isAuteur=v.auteur===ik.id;
   const ans=[...v.antwoorden].sort((a,b)=>(b.id===v.beste)-(a.id===v.beste)||avg(b.rA)-avg(a.rA)||a.datum.localeCompare(b.datum));
@@ -1365,7 +1380,7 @@ document.addEventListener('submit',e=>{
     naarBeheer({_subject:'Nieuwe vraag Adviesforum: '+titel,email,Naam:naam,'E-mailadres':email,Telefoonnummer:tel,LinkedIn:li,Categorie:cat(v.cat).naam,Titel:titel,Vraag:body,Trefwoorden:tags.join(', '),'Ingediend op':new Date().toLocaleString('nl-NL')}).then(ok=>{v.verzonden=ok;rerenderIfOpen(v);});
   }
 });
-VRAGEN.filter(v=>!v.antwoorden.length).forEach(v=>autoAnswer(v));
+/* automatisch antwoord wordt pas berekend als een vraag wordt geopend (snelheid) */
 if(FIN.messengerAppId){window.intercomSettings={app_id:FIN.messengerAppId,api_base:FIN.messengerApiBase};const sc=document.createElement('script');sc.async=true;sc.src='https://widget.intercom.io/widget/'+encodeURIComponent(FIN.messengerAppId);document.head.appendChild(sc);}
 $('#search').addEventListener('input',e=>{
   S.q=e.target.value;
