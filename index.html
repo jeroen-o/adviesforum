@@ -67,7 +67,12 @@ ul{margin:0 0 12px;padding-left:20px}
 .search input{width:100%;padding:10px 14px;border-radius:4px;border:1px solid #C5DBE3;background:#F4F7F9;color:#1D2632}
 .search input::placeholder{color:#4A515B}
 .who{display:flex;align-items:center;gap:8px;color:#4A515B;font-size:13px}
-.who select{padding:8px 10px;border-radius:4px;border:1px solid #C5DBE3;background:#fff;color:#1D2632;max-width:220px}
+.who .btn{white-space:nowrap}
+.who .ikn{font-weight:700;color:#1D2632}
+#login-dlg{border:0;border-radius:10px;padding:0;max-width:420px;width:calc(100% - 32px)}
+#login-dlg::backdrop{background:rgba(0,0,0,.45)}
+#login-dlg .pad{padding:22px}
+#login-dlg input[type=text]{width:100%;padding:10px 12px;border:1px solid #C5DBE3;border-radius:4px;font:inherit;text-transform:uppercase;letter-spacing:.06em}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:4px;border:1px solid transparent;font-weight:600;cursor:pointer;background:var(--surface-2);color:var(--text);text-decoration:none;white-space:nowrap}
 .btn:hover{filter:brightness(.95)}
 .btn:disabled{opacity:.55;cursor:not-allowed}
@@ -331,7 +336,7 @@ footer .legal{grid-column:1/-1;border-top:1px solid #2A3238;padding-top:14px;fon
   .top .wrap{gap:10px;padding:10px 14px}
   .search{order:5;flex-basis:100%;min-width:0}
   .who{margin-left:auto}
-  .who select{max-width:150px}
+  .who .ikn{display:none}
   .top .btn-black{padding:9px 12px;font-size:14px}
   .tabs .wrap{padding:8px 14px}
   .tab{padding:7px 12px;font-size:14px}
@@ -381,7 +386,7 @@ footer .legal{grid-column:1/-1;border-top:1px solid #2A3238;padding-top:14px;fon
       <span class="brand-name">Adviesforum</span>
     </button>
     <div class="search"><input id="search" type="search" placeholder="Zoek in forum, kennisbank en FAQ" aria-label="Zoeken"></div>
-    <div class="who"><label for="user">Antwoorden als</label><select id="user"></select></div>
+    <div class="who" id="who"></div>
     <button class="btn btn-black" data-act="nieuw">Vraag stellen →</button>
   </div>
 </header>
@@ -669,7 +674,7 @@ function exportKbVoorFin(){
 }
 
 /* ---------- State ---------- */
-const S={tab:'forum',view:'forum',prefill:'',cat:'alle',status:'alle',sort:'nieuw',q:'',me:'u1',vraag:null,artikel:null,adviseur:null,kbCat:'alle',kbStatus:'alle'};
+const S={tab:'forum',view:'forum',prefill:'',cat:'alle',status:'alle',sort:'nieuw',q:'',me:null,vraag:null,artikel:null,adviseur:null,kbCat:'alle',kbStatus:'alle'};
 let seq=100;
 const nid=p=>p+(seq++);
 
@@ -681,7 +686,9 @@ const fmtInt=n=>Number(n).toLocaleString('nl-NL');
 const fmtDate=iso=>new Date(iso).toLocaleDateString('nl-NL',{day:'numeric',month:'short',year:'numeric'});
 const user=id=>USERS.find(u=>u.id===id);
 const cat=id=>CATS.find(c=>c.id===id);
-const me=()=>user(S.me);
+const GAST={id:'gast',naam:'Gast',functie:'',kantoor:'',rol:'gast'};
+const me=()=>S.me?user(S.me):GAST;
+const ingelogd=()=>!!S.me;
 const initials=n=>n.split(' ').filter(Boolean).map(w=>w[0]).filter((_,i,a)=>i===0||i===a.length-1).join('').toUpperCase();
 const avg=o=>{const v=Object.values(o||{});return v.length?v.reduce((a,b)=>a+b,0)/v.length:0};
 const cnt=o=>Object.keys(o||{}).length;
@@ -817,8 +824,7 @@ function autoCard(v){
 
 /* ---------- Render: schil ---------- */
 function renderShell(){
-  const sel=$('#user');
-  sel.innerHTML=USERS.map(u=>`<option value="${u.id}" ${u.id===S.me?'selected':''}>${esc(u.naam)}${u.rol==='compliance'?' (compliance)':''}</option>`).join('');
+  $('#who').innerHTML=S.me?`<span class="ikn">${esc(me().naam)}</span>${verif(me())}<button class="btn btn-line btn-sm" data-act="uitloggen">Uitloggen</button>`:`<button class="btn btn-line btn-sm" data-act="inloggen">Inloggen adviseur</button>`;
   const open=VRAGEN.filter(v=>vraagStatus(v)==='open').length;
   $('#tabs').innerHTML=[
     ['forum','Forum',VRAGEN.length],['kennisbank','Kennisbank',ARTIKELEN.length],['faq','FAQ',FAQ.length],['hulpmiddelen','Hulpmiddelen',HULP.length],['begrippen','Begrippen A-Z',BEGRIPPEN.length],['adviseurs','Adviseurs',USERS.length],['handleiding','Handleiding',null],['voorwie','Voor wie',null]
@@ -972,11 +978,11 @@ function viewVraag(){
 
     <div class="card" style="margin-top:22px"><div class="pad form">
       <h2 style="margin-bottom:12px">Jouw antwoord</h2>
-      <form id="f-antwoord">
+      ${ingelogd()?`<form id="f-antwoord">
         <textarea name="body" required placeholder="Deel je ervaring en benoem waar collega's op moeten letten. Gebruik '- ' aan het begin van een regel voor een opsomming."></textarea>
-        <div class="hint">Je antwoordt als ${esc(ik.naam)}. Antwoorden geven kan met een account dat de beheerder heeft toegevoegd. Collega's kunnen je antwoord en jou als adviseur beoordelen.</div>
+        <div class="hint">Je antwoordt als ${esc(ik.naam)}. Na plaatsen opent je mailprogramma met je antwoord aan de beheerder; na controle wordt het gepubliceerd. Collega's kunnen je antwoord en jou als adviseur beoordelen.</div>
         <div class="actions"><button class="btn btn-black" type="submit">Plaats antwoord →</button></div>
-      </form>
+      </form>`:`<p>Antwoorden geven en beoordelen kan als geverifieerde adviseur. Log in met de persoonlijke code die je van de beheerder hebt gekregen.</p><div class="actions"><button class="btn btn-black" data-act="inloggen">Inloggen adviseur →</button><a class="btn btn-line" href="aanmelden.html">Nog niet aangemeld?</a></div>`}
     </div></div>
   </section>`+railVraag(v);
 }
@@ -1211,7 +1217,8 @@ function viewHandleiding(){
       <ol class="steps">
         <li>Meld je aan via <a href="aanmelden.html">het aanmeldformulier</a> met naam, kantoor, functie, telefoon, e-mail en een geldig LinkedIn-profiel. Ook dit gaat via je eigen mailprogramma; er wordt niets op de site opgeslagen.</li>
         <li>De beheerder controleert je aanmelding (onder meer je LinkedIn-profiel).</li>
-        <li>Na akkoord ben je een <b>geverifieerde gebruiker</b>: bij je naam staat <span class="verif">✓ Geverifieerd</span> en je kunt antwoorden geven en beoordelen.</li>
+        <li>Na akkoord ben je een <b>geverifieerde gebruiker</b>: je krijgt van de beheerder een persoonlijke inlogcode en bij je naam staat <span class="verif">✓ Geverifieerd</span>.</li>
+        <li><b>Inloggen</b>: klik op de persoonlijke inloglink in de mail van de beheerder; je bent dan direct ingelogd en de site onthoudt je op dit apparaat. Of klik rechtsboven op "Inloggen adviseur" en vul je code in. Uitloggen kan altijd rechtsboven.</li>
       </ol>
 
       <h2 id="h-auto">3. Het automatische antwoord</h2>
@@ -1281,9 +1288,9 @@ function viewHandleiding(){
       <h2 id="h-faq">11. Veelgestelde vragen</h2>
       <h3>Mijn vraag staat al dagen op Open. Wat nu?</h3><p>Controleer of categorie en trefwoorden kloppen en of de vraag concreet genoeg is; een geanonimiseerd rekenvoorbeeld wordt sneller opgepakt. Gaat het om de software, mail dan ook support: de contactgegevens staan in het automatische antwoord.</p>
       <h3>Waarom staat er een concept in de kennisbank?</h3><p>Concepten komen rechtstreeks uit opgeloste forumvragen en wachten op controle door compliance. Gebruik ze als tip, niet als werkwijze.</p>
-      <h3>Moet ik inloggen?</h3><p>Nee. Voor een vraag heb je een geldig LinkedIn-profiel nodig en meld je je aan. Na goedkeuring ben je geverifieerd en kun je ook antwoorden.</p>
+      <h3>Moet ik inloggen?</h3><p>Voor een vraag niet: je hebt wel een geldig LinkedIn-profiel nodig en meldt je aan. Om te antwoorden en te beoordelen log je in met de persoonlijke code die je na goedkeuring van de beheerder krijgt. Code kwijt? Mail de beheerder voor een nieuwe.</p>
       <h3>Kan ik een vraag of antwoord verwijderen?</h3><p>Mail de beheerder via forumadvies@gmail.com.</p>
-      <h3>Wat gebeurt er met mijn gegevens?</h3><p>Bij een vraag is alleen je naam openbaar; e-mail, telefoon en LinkedIn ziet alleen de beheerder. Bij geverifieerde adviseurs zijn naam, functie en kantoor zichtbaar. Formulieren gaan via je eigen mailprogramma; de site heeft geen accounts, database of cookies. Zie de <a href="privacy.html">privacyverklaring</a>. ${fin?'Bij een vraag aan Fin gaat alleen je adviseur-id naar Intercom (EU-regio), nooit klantgegevens. ':''}</p>
+      <h3>Wat gebeurt er met mijn gegevens?</h3><p>Bij een vraag is alleen je naam openbaar; e-mail, telefoon en LinkedIn ziet alleen de beheerder. Bij geverifieerde adviseurs zijn naam, functie en kantoor zichtbaar. Formulieren gaan via je eigen mailprogramma; de site heeft geen database. Log je in als adviseur, dan onthoudt de site je met een functionele cookie (alleen voor deze sessie, of een jaar als je "Onthoud mij" aanvinkt); er zijn geen tracking- of statistiekcookies. Zie de <a href="privacy.html">privacyverklaring</a>. ${fin?'Bij een vraag aan Fin gaat alleen je adviseur-id naar Intercom (EU-regio), nooit klantgegevens. ':''}</p>
     </div></div>
   </section>
   <aside class="rail">
@@ -1357,7 +1364,7 @@ function route(){const h=decodeURIComponent(location.hash.slice(1));let m;
   if((m=h.match(/^artikel-(.+)$/))&&ARTIKELEN.find(a=>a.id===m[1]))Object.assign(S,{tab:'kennisbank',view:'artikel',artikel:m[1]});
   else if((m=h.match(/^vraag-(.+)$/))&&VRAGEN.find(v=>v.id===m[1]))Object.assign(S,{tab:'forum',view:'vraag',vraag:m[1]});
   else if(ROUTES.includes(h))Object.assign(S,{tab:h,view:h});else return false;return true;}
-window.addEventListener('hashchange',()=>{if(route())render();});
+window.addEventListener('hashchange',()=>{if(/^#login-/.test(location.hash)){loginViaLink();return;}if(route())render();});
 function go(view,extra={}){Object.assign(S,extra,{view});render();zetHash();}
 function openVraag(id){const v=VRAGEN.find(x=>x.id===id);if(!v)return;v.views++;go('vraag',{tab:'forum',vraag:id});}
 function openArtikel(id){const a=ARTIKELEN.find(x=>x.id===id);if(!a)return;a.views++;go('artikel',{tab:'kennisbank',artikel:id});}
@@ -1381,6 +1388,7 @@ document.addEventListener('click',e=>{
     case 'open-adviseur':go('adviseur',{tab:'adviseurs',adviseur:id});break;
     case 'rate':{
       const a=VRAGEN.flatMap(v=>v.antwoorden).find(x=>x.id===id);if(!a)return;
+      if(!ingelogd()){openLogin();return;}
       if(a.auteur===S.me){toast('Je eigen antwoord kun je niet beoordelen');return;}
       const key=el.dataset.kind==='a'?'rA':'rAdv',val=+el.dataset.val;
       a[key][S.me]=val;render(true);toast(el.dataset.kind==='a'?`Antwoord beoordeeld met ${val} ${val===1?'ster':'sterren'}`:`Adviseur beoordeeld met ${val} ${val===1?'ster':'sterren'}`);
@@ -1391,8 +1399,8 @@ document.addEventListener('click',e=>{
       const best=v.antwoorden.find(a=>a.id===v.beste);if(!best)return;
       ARTIKELEN.unshift({id:nid('k'),cat:v.cat,titel:v.titel,auteur:best.auteur,datum:new Date().toISOString(),herzienVoor:new Date(Date.now()+365*864e5).toISOString().slice(0,10),bron:v.id,gecontroleerd:false,views:0,nuttig:{},body:best.body,sessie:true});
       openArtikel(ARTIKELEN[0].id);toast('Concept aangemaakt in deze sessie; kopieer het naar data/kennisbank.js om het te bewaren');break;}
-    case 'nuttig':{const a=ARTIKELEN.find(x=>x.id===id);if(!a)return;if(a.nuttig[S.me])delete a.nuttig[S.me];else a.nuttig[S.me]=1;render(true);break;}
-    case 'auto-fb':{const v=VRAGEN.find(x=>x.id===el.dataset.vraag);if(!v||!v.auto)return;const val=+el.dataset.val;if(v.auto.feedback[S.me]===val)delete v.auto.feedback[S.me];else v.auto.feedback[S.me]=val;render(true);break;}
+    case 'nuttig':{if(!ingelogd()){openLogin();return;}const a=ARTIKELEN.find(x=>x.id===id);if(!a)return;if(a.nuttig[S.me])delete a.nuttig[S.me];else a.nuttig[S.me]=1;render(true);break;}
+    case 'auto-fb':{if(!ingelogd()){openLogin();return;}const v=VRAGEN.find(x=>x.id===el.dataset.vraag);if(!v||!v.auto)return;const val=+el.dataset.val;if(v.auto.feedback[S.me]===val)delete v.auto.feedback[S.me];else v.auto.feedback[S.me]=val;render(true);break;}
     case 'auto-opgelost':{const v=VRAGEN.find(x=>x.id===el.dataset.vraag);if(!v||v.auteur!==S.me)return;v.beste=v.beste==='auto'?null:'auto';render(true);toast(v.beste?'Vraag gemarkeerd als opgelost':'Markering verwijderd');break;}
     case 'auto-opnieuw':{const v=VRAGEN.find(x=>x.id===el.dataset.vraag);if(!v)return;autoAnswer(v,true);render();toast(v.auto.hits.length?plural(v.auto.hits.length,'bron gevonden','bronnen gevonden'):'Geen bronnen gevonden');break;}
     case 'fin-ask':{const v=VRAGEN.find(x=>x.id===el.dataset.vraag);if(!v||!v.auto)return;finAsk(v);break;}
@@ -1407,6 +1415,8 @@ document.addEventListener('click',e=>{
     case 'faqmeer':S.faqMax=(S.faqMax||50)+100;render(true);break;
     case 'deel':{kopieer(location.origin+location.pathname+'#artikel-'+id,'Link naar het artikel gekopieerd');break;}
     case 'kb-kopie':{const a=ARTIKELEN.find(x=>x.id===id);if(!a)return;const o={id:a.id,cat:a.cat,titel:a.titel,auteur:a.auteur,datum:a.datum.slice(0,19),herzienVoor:a.herzienVoor,bron:a.bron,gecontroleerd:false,body:a.body};kopieer(' '+JSON.stringify(o,null,1).replace(/\n\s*/g,'').replace(/"(\w+)":/g,'$1:')+',','Artikel gekopieerd: plak het in data/kennisbank.js');break;}
+    case 'inloggen':openLogin();break;
+    case 'uitloggen':{zetCookie('');S.me=null;render(true);toast('Je bent uitgelogd');break;}
     case 'mail-kopie':{const v=VRAGEN.find(x=>x.id===id);if(v)kopieer(v.mailTxt,'Tekst gekopieerd; plak hem in een e-mail aan '+FORM_MAIL);break;}
     case 'meld-zoek':{const q=S.q;openMail(mailLink('Adviesforum: niets gevonden voor "'+q+'"',mailTekst('Zoekopdracht zonder resultaat op het Adviesforum',[['Zoekopdracht',{Zoekterm:q,Onderdeel:S.tab}]])));toast('Je mailprogramma opent; klik daar op Verzenden');break;}
   }
@@ -1416,7 +1426,6 @@ document.addEventListener('keydown',e=>{
 });
 document.addEventListener('change',e=>{
   const el=e.target;
-  if(el.id==='user'){S.me=el.value;render(true);toast('Je antwoordt als '+user(S.me).naam);return;}
   if(el.dataset.act==='status'){S.status=el.value;render();}
   if(el.dataset.act==='sort'){S.sort=el.value;render();}
   if(el.dataset.act==='kbstatus'){S.kbStatus=el.value;render();}
@@ -1427,7 +1436,9 @@ document.addEventListener('submit',e=>{
   if(f.id==='f-antwoord'){
     const body=f.body.value.trim();if(body.length<10){toast('Schrijf een iets uitgebreider antwoord');return;}
     const v=VRAGEN.find(x=>x.id===S.vraag);if(!v)return;
+    if(!ingelogd()){openLogin();return;}
     v.antwoorden.push({id:nid('a'),auteur:S.me,datum:new Date().toISOString(),rA:{},rAdv:{},body});
+    openMail(mailLink('Antwoord Adviesforum: '+v.titel,mailTekst('Antwoord via het Adviesforum',[['Adviseur',{Naam:me().naam,Id:me().id}],['Vraag',{Id:v.id,Titel:v.titel}],['Antwoord',{Tekst:'\n'+body}]])));
     render();toast('Antwoord geplaatst');
   }
   if(f.id==='f-vraag'){
@@ -1448,6 +1459,24 @@ document.addEventListener('submit',e=>{
 });
 /* automatisch antwoord wordt pas berekend als een vraag wordt geopend (snelheid) */
 if(FIN.messengerAppId){window.intercomSettings={app_id:FIN.messengerAppId,api_base:FIN.messengerApiBase};const sc=document.createElement('script');sc.async=true;sc.src='https://widget.intercom.io/widget/'+encodeURIComponent(FIN.messengerAppId);document.head.appendChild(sc);}
+/* ---------- Inloggen adviseur: persoonlijke code, onthouden per sessie of met een cookie ---------- */
+const COOKIE='af_adviseur';
+async function sha256(t){const b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(t));return [...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('');}
+const normCode=c=>String(c||'').toUpperCase().replace(/[^A-Z0-9]/g,'').replace(/(.{4})(?=.)/g,'$1-');
+function leesCookie(){const m=document.cookie.match(new RegExp('(?:^|; )'+COOKIE+'=([^;]*)'));return m?decodeURIComponent(m[1]):'';}
+function zetCookie(waarde,onthoud){const veilig=location.protocol==='https:'?'; Secure':'';if(!waarde){document.cookie=COOKIE+'=; Max-Age=0; Path=/; SameSite=Lax'+veilig;return;}document.cookie=COOKIE+'='+encodeURIComponent(waarde)+(onthoud?'; Max-Age=31536000':'')+'; Path=/; SameSite=Lax'+veilig;}
+async function loginViaLink(){const m=location.hash.match(/^#login-([A-Za-z0-9-]+)$/);if(!m)return false;history.replaceState(null,'',location.pathname+location.search);const code=normCode(m[1]);const h=await sha256(code);const u=USERS.find(x=>x.geverifieerd&&x.codeHash===h);if(u){S.me=u.id;zetCookie(code,true);S.tab='forum';S.view='forum';render(true);toast('Welkom '+u.naam+', je bent ingelogd');}else toast('Deze inloglink is niet (meer) geldig');return true;}
+async function herstelLogin(){if(await loginViaLink())return;const c=normCode(leesCookie());if(!c)return;const h=await sha256(c);const u=USERS.find(x=>x.geverifieerd&&x.codeHash===h);if(u){S.me=u.id;render(true);}else zetCookie('');}
+function openLogin(){let d=$('#login-dlg');if(!d){d=document.createElement('dialog');d.id='login-dlg';document.body.appendChild(d);}
+  d.innerHTML=`<form method="dialog" class="pad form" id="f-login"><h2 style="margin:0 0 8px">Inloggen adviseur</h2><p style="margin:0 0 12px;font-size:14px">Klik op de inloglink uit de mail van de beheerder, of vul hier je code in. Je hoeft dit maar één keer te doen.</p><label for="lg-code">Persoonlijke code</label><input id="lg-code" name="code" type="text" autocomplete="off" placeholder="XXXX-XXXX-XXXX" required><label style="display:flex;gap:8px;align-items:center;font-weight:400;margin-top:12px"><input type="checkbox" name="onthoud" checked style="width:auto"> Onthoud mij op dit apparaat</label><div style="font-size:12px;color:var(--muted);margin-top:6px">Op een gedeelde computer? Haal het vinkje weg; je blijft dan alleen ingelogd tot je de browser sluit.</div><div class="actions" style="margin-top:14px"><button class="btn btn-black" type="submit">Inloggen →</button><button class="btn btn-line" type="button" data-act="login-sluit">Annuleren</button></div><p style="font-size:13px;margin:12px 0 0">Nog geen code? <a href="aanmelden.html">Meld je aan</a>.</p></form>`;
+  d.showModal();setTimeout(()=>{const i=$('#lg-code');if(i)i.focus();},0);}
+document.addEventListener('submit',async e=>{if(e.target.id!=='f-login')return;e.preventDefault();e.stopImmediatePropagation();
+  const f=e.target,code=normCode(f.code.value);if(code.length<14){toast('Vul je volledige code in');return;}
+  const h=await sha256(code);const u=USERS.find(x=>x.geverifieerd&&x.codeHash===h);
+  if(!u){toast('Deze code is niet bekend');f.code.select();return;}
+  S.me=u.id;zetCookie(code,f.onthoud.checked);$('#login-dlg').close();render(true);toast('Ingelogd als '+u.naam);},true);
+document.addEventListener('click',e=>{if(e.target.closest('[data-act="login-sluit"]')){const d=$('#login-dlg');if(d)d.close();}});
+herstelLogin();
 $('#search').addEventListener('input',e=>{
   S.q=e.target.value;
   S.faqMax=50;S.forumMax=30;

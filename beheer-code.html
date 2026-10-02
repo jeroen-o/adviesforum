@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Inlogcode maken (beheer)</title>
+<style>
+  :root{--geel:#FFD200;--zwart:#141414;--lijn:#E4E4E4}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;color:#1F1F1F;background:#fff;line-height:1.6}
+  .hero{background:var(--geel);padding:28px 16px}
+  .in{max-width:640px;margin:0 auto}
+  main{padding:24px 16px 60px}
+  h1{margin:0;font-size:28px}
+  label{display:block;font-weight:700;margin:14px 0 6px}
+  input,select{width:100%;padding:10px 12px;border:1px solid #C9C9C9;border-radius:6px;font:inherit}
+  button{margin-top:16px;padding:12px 20px;border:0;border-radius:999px;background:var(--zwart);color:#fff;font-weight:700;cursor:pointer}
+  pre{background:#F7F7F5;border:1px solid var(--lijn);border-radius:8px;padding:12px;white-space:pre-wrap;word-break:break-all;font-size:13px}
+  .let{background:#FFF9E0;border:1px solid #F0DC8A;border-radius:8px;padding:12px;font-size:14px}
+</style>
+</head>
+<body>
+<section class="hero"><div class="in"><h1>Inlogcode maken</h1><p style="margin:4px 0 0">Alleen voor de beheerder. Deze pagina is niet gelinkt en verstuurt niets.</p></div></section>
+<main><div class="in">
+  <p>Keur je een aanmelding goed, maak dan hier een persoonlijke code. Stuur de <b>inloglink</b> (of de code) alleen naar de adviseur, bijvoorbeeld per mail. Zet de <b>regel voor adviseurs.js</b> in <code>data/adviseurs.js</code>; daarin staat alleen een hash, nooit de code zelf.</p>
+  <label for="id">Id (uniek, bijv. u9)</label><input id="id" placeholder="u9">
+  <label for="naam">Naam</label><input id="naam" placeholder="Voornaam Achternaam">
+  <label for="functie">Functie</label><input id="functie" placeholder="Hypotheekadviseur">
+  <label for="kantoor">Kantoor en plaats</label><input id="kantoor" placeholder="Kantoornaam, Plaats">
+  <label for="rol">Rol</label><select id="rol"><option value="adviseur">adviseur</option><option value="compliance">compliance</option><option value="beheer">beheer</option></select>
+  <button id="maak" type="button">Maak code</button>
+  <div id="uit" hidden>
+    <label>Code voor de adviseur</label><pre id="code"></pre>
+    <label>Inloglink voor de adviseur (één klik = ingelogd)</label><pre id="link"></pre>
+    <label>Regel voor data/adviseurs.js</label><pre id="regel"></pre>
+    <p class="let">Code kwijt? Maak een nieuwe en vervang de regel; de oude code werkt dan niet meer. Een adviseur blokkeren doe je door de regel te verwijderen of <code>geverifieerd:false</code> te zetten.</p>
+  </div>
+</div></main>
+<script>
+(function(){
+  var A='ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+  function blok(){var r=new Uint32Array(4),s='';crypto.getRandomValues(r);for(var i=0;i<4;i++)s+=A[r[i]%A.length];return s;}
+  function q(t){return String(t).replace(/\\/g,'\\\\').replace(/'/g,"\\'");}
+  document.getElementById('maak').addEventListener('click',function(){
+    var code=blok()+'-'+blok()+'-'+blok();
+    crypto.subtle.digest('SHA-256',new TextEncoder().encode(code)).then(function(b){
+      var h=Array.prototype.map.call(new Uint8Array(b),function(x){return x.toString(16).padStart(2,'0');}).join('');
+      var v=function(id){return document.getElementById(id).value.trim();};
+      document.getElementById('code').textContent=code;
+      document.getElementById('link').textContent='https://jeroen-o.github.io/adviesforum/#login-'+code;
+      document.getElementById('regel').textContent=" {id:'"+q(v('id')||'u9')+"',naam:'"+q(v('naam'))+"',functie:'"+q(v('functie'))+"',kantoor:'"+q(v('kantoor'))+"',rol:'"+v('rol')+"',geverifieerd:true,codeHash:'"+h+"'},";
+      document.getElementById('uit').hidden=false;
+    });
+  });
+})();
+</script>
+</body>
+</html>
