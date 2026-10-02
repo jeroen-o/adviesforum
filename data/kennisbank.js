@@ -461,9 +461,27 @@ Heb je (nog) geen formulieren in je CRM, gebruik dan de formulieren bij Hulpmidd
 Bij klantformulieren verwerk je persoonsgegevens. Vraag alleen wat je nodig hebt, leg vast waarom, en bewaar de gegevens in het klantdossier en niet in losse mailboxen.
 
 Bron: openbare zoekresultaten over de kennisbank van Finly, Faster Forward en de supportpagina van Blinqx V&H op 2 oktober 2026. De pagina's zelf konden bij het opstellen niet worden geopend; controleer de werking in je eigen omgeving.`},
- {id:'k13',cat:'adv',titel:'Adviesbox Online koppelen aan eBlinqx (GUID en HBX-export)',auteur:'u6',datum:'2026-10-02T22:00:00',herzienVoor:'2027-04-02',bron:null,gecontroleerd:false,
-  kw:'adviesbox adviesbox online eblinqx fastlane koppeling guid hbx export naw elements importkoppeling softwarekoppelingen faster forward adviespakket',
+ {id:'k13',cat:'adv',titel:'Adviesbox in de praktijk: handleiding per onderwerp en koppeling met eBlinqx',auteur:'u6',datum:'2026-10-02T22:00:00',herzienVoor:'2027-04-02',bron:null,gecontroleerd:false,
+  kw:'adviesbox adviesbox online eblinqx fastlane koppeling guid hbx export naw elements importkoppeling softwarekoppelingen faster forward adviespakket intersoftware helpcentrum installatie update tweestapsverificatie backupcodes licentie medewerker maximale hypotheek toetsrente woonquote toetsinkomen nhg sneltoets hypotheekvergelijker financieringsopzet overbrugging ebb hdn outdir certificaat nodenummer taxatie nwwi nts rapportage afdrukken uwv verzekeringsbericht aow klasse niet geregistreerd release notes',
   links:[
+   {titel:'Adviesbox helpcentrum (Blinqx, nieuw)',url:'https://support-adviesbox.vh.blinqx.tech/nl/'},
+   {titel:'Adviesbox kennisbank: releasenotes',url:'https://support.adviesbox.nl/portal/nl/kb/intersoftware/releasenotes'},
+   {titel:'Adviesbox: downloaden en installeren',url:'https://support.adviesbox.nl/portal/nl/kb/articles/adviesbox-downloaden-en-installeren-10-2-2025'},
+   {titel:'Adviesbox: update uitvoeren',url:'https://support.adviesbox.nl/portal/nl/kb/articles/adviesbox-update-uitvoeren'},
+   {titel:'Adviesbox: back-up van de gegevens',url:'https://support.adviesbox.nl/portal/nl/kb/articles/hoe-maak-ik-een-back-up-van-de-adviesbox-gegevens'},
+   {titel:'Adviesbox: nieuwe medewerker invoeren',url:'https://support.adviesbox.nl/portal/nl/kb/articles/nieuwe-medewerker-invoeren'},
+   {titel:'Adviesbox: toegang tot klanten per adviseur',url:'https://support.adviesbox.nl/portal/nl/kb/articles/hoe-stel-ik-toegang-tot-klanten-per-adviseur-in'},
+   {titel:'Adviesbox: maximale hypotheek, uitleg met voorbeeld',url:'https://support.adviesbox.nl/portal/nl/kb/articles/maximale-hypotheek-vereenvoudigde-uitleg-berekening-met-voorbeeld'},
+   {titel:'Adviesbox: gewogen gemiddelde toetsrente',url:'https://support.adviesbox.nl/portal/nl/kb/articles/hoe-wordt-de-gewogen-gemiddelde-toetsrente-berekend'},
+   {titel:'Adviesbox: inkomensverklaringen en acceptatie',url:'https://support.adviesbox.nl/portal/nl/kb/articles/hoe-gaat-adviesbox-om-met-de-diverse-inkomensverklaringen'},
+   {titel:'Adviesbox: reden voor hogere of lagere woonquote',url:'https://support.adviesbox.nl/portal/nl/kb/articles/wat-kan-de-reden-zijn-voor-hogere-of-lagere-woonquote'},
+   {titel:'Adviesbox: NHG- en hypotheeknormen 2025',url:'https://support.adviesbox.nl/portal/nl/kb/articles/nhg-en-hypotheeknormen-2025'},
+   {titel:'Adviesbox: inkomensbepaling met het UWV Verzekeringsbericht',url:'https://support.adviesbox.nl/portal/nl/kb/articles/inkomensbepaling-met-het-uwv-verzekeringsbericht'},
+   {titel:'Adviesbox: veelgestelde vragen over HDN',url:'https://support.adviesbox.nl/portal/nl/kb/articles/veelgestelde-vragen-over-hdn'},
+   {titel:'Adviesbox: HDN beheerportaal en certificaten',url:'https://support.adviesbox.nl/portal/nl/kb/articles/hdn-certificaat-instellen-via-hdn-portal'},
+   {titel:'Adviesbox: taxatie-aanvraag naar NTS',url:'https://support.adviesbox.nl/portal/nl/kb/articles/nationale-taxatie-service'},
+   {titel:'Adviesbox: koppeling NWWI voor taxaties',url:'https://support.adviesbox.nl/portal/nl/kb/articles/koppeling-nwwi-voor-taxatieaanvragen'},
+   {titel:'Adviesbox: melding Klasse niet geregistreerd',url:'https://support.adviesbox.nl/portal/nl/kb/articles/klasse-niet-geregistreerd'},
    {titel:'Faster Forward: Adviesbox Online instellen en gebruiken',url:'https://support.fasterforward.nl/kennisbank/adviesbox-online-instellen-en-gebruiken/'},
    {titel:'Faster Forward: Adviespakketten gekoppeld aan eBlinqx',url:'https://support.fasterforward.nl/kennisbank/welke-adviespakketten-koppelt-eblinqx/'},
    {titel:'Faster Forward: Fastlane Advies gebruiken',url:'https://support.fasterforward.nl/kennisbank/fastlane-advies-gebruiken/'},
@@ -472,28 +490,110 @@ Bron: openbare zoekresultaten over de kennisbank van Finly, Faster Forward en de
    {titel:'Blinqx V&H: supportpagina (mail en keuzemenu)',url:'https://verzekeringhypotheek.blinqx.tech/support'},
    {titel:'Blinqx V&H: nieuws over eBlinqx Hypotheekadvies',url:'https://verzekeringhypotheek.blinqx.tech/nieuws/blinqx-verzekering-hypotheek-bundelt-hypotheeksoftware'}
   ],
-  body:`Vanuit eBlinqx exporteer je klantgegevens naar Adviesbox Online om daar het advies verder uit te werken. Let op de naamgeving: eBlinqx Hypotheekadvies is hetzelfde pakket als Fastlane (Fastlane Advies); Adviesbox Online is een ander adviespakket dat je via een koppeling met eBlinqx gebruikt. Blinqx heeft aangekondigd DIAS Advies, Adviesbox Online en Fastlane samen onder de naam eBlinqx Hypotheekadvies te brengen; Adviesbox blijft los beschikbaar voor kantoren die niet in de cloud willen werken. De supportpagina hanteert voor Adviesbox en voor eBlinqx Hypotheekadvies (Fastlane) nog aparte mailadressen.
+  body:`Adviesbox is het hypotheek- en financieel-adviespakket van het voormalige Intersoftware, nu onderdeel van Blinqx Verzekering & Hypotheek. Er zijn twee smaken: de klassieke Windows-versie (lokaal of op een terminalserver, met een eigen database) en Adviesbox Online, die in de browser draait en is opgebouwd uit apps (onder meer Advies, Berekenen, Contract en Instellingen). Menupaden verschillen daardoor per versie; hieronder staat steeds bij welke versie een stap hoort. Blinqx brengt DIAS Advies, Adviesbox Online en Fastlane samen onder de naam eBlinqx Hypotheekadvies; Adviesbox blijft los beschikbaar voor kantoren die niet in de cloud willen werken.
 
-## Eenmalig instellen: de GUID
-De koppeling tussen Adviesbox Online en eBlinqx loopt via een GUID. Die maak je één keer aan in Adviesbox Online en voeg je één keer toe in eBlinqx.
+## Waar vind je de officiële uitleg
+- Blinqx heeft een nieuw helpcentrum voor Adviesbox op support-adviesbox.vh.blinqx.tech. Die pagina kon bij het opstellen van dit artikel niet worden geopend en was nog niet doorzoekbaar; de inhoud hieronder komt daarom uit de oudere kennisbank op support.adviesbox.nl.
+- Releasenotes per versie staan in de kennisbank onder Releasenotes. Versies heten tegenwoordig naar jaar en kwartaal, bijvoorbeeld 2025.Q2.5.
+- Support: support-adviesbox@blinqx.tech of 085 018 00 69, keuze 1 en daarna 1. In Adviesbox kun je ook een melding maken via het vraagteken.
+
+## Installeren en updaten (Windows-versie)
+1. Download de installatie via adviesbox.nl/ondersteuning (knop Download Adviesbox) en start setupAdviesbox.exe.
+2. Bij de eerste start vraagt Adviesbox om je klantcode uit de licentiegegevens.
+3. Updates gaan standaard automatisch: bij het opstarten zoekt Adviesbox naar een nieuwe versie en installeert die.
+4. Handmatig kan via Onderhoud > Update software & rentetarieven, of via Adviesbox Update in de Windows-zoekbalk (als administrator starten).
+5. Een groen vinkje rechtsboven betekent dat de laatste update binnen is. Sla lopende adviezen op voordat je bijwerkt.
+- Regelmatig updaten is nodig omdat rentes, acceptatieregels en normen via updates binnenkomen. Een HDN-probleem in december 2025 werd bijvoorbeeld met een update opgelost.
+
+## Back-up en gegevensopslag (Windows-versie)
+- De Windows-versie bewaart gegevens niet bij Blinqx maar op een plek die je zelf kiest. Jij bent dus verantwoordelijk voor de back-up.
+- Adviesbox heeft geen eigen back-upfunctie. Bij een SQL Server-database regelt de systeembeheerder dagelijkse back-ups; bij een Access-database maak je een back-up van de hele map die bij Databaselocatie staat.
+- De kennisbank noemt als voorbeeld een los back-upprogramma dat zowel SQL-databases als Access-bestanden kan wegschrijven naar een map, server of FTP.
+
+## Inloggen en tweestapsverificatie (Adviesbox Online)
+- Je logt in met e-mailadres, wachtwoord en een code uit een authenticator-app.
+- Ben je die app kwijt, bijvoorbeeld door een nieuwe telefoon, dan stel je met je back-upcodes een nieuwe authenticator in. Bewaar die codes dus op een veilige plek buiten de telefoon.
+- Een wachtwoord heeft minimaal 8 tekens, met een kleine letter, een hoofdletter, een cijfer en een speciaal teken. Nieuwe medewerkers krijgen een registratiemail.
+
+## Gebruikers, licenties en toegang
+- Elke medewerker die met de Windows-versie werkt, heeft een eigen licentie nodig. Vraag die aan via adviesbox.nl/bestellen; je krijgt de gegevens per mail.
+- Voeg de licentie toe via Onderhoud > Beheer licenties, met het groene plusje voor een nieuwe klantcode. Je moet daarvoor met beheerdersrechten zijn ingelogd. Daar zie je ook de kantoorgegevens per licentie.
+- Werken meerdere adviseurs in dezelfde database, dan ziet en wijzigt zonder extra instelling iedereen alle klanten en adviezen. Wil je dat afschermen, stel dan toegang per adviseur in (zie het artikel over toegang per adviseur).
+
+## Maximale hypotheek: hoe Adviesbox rekent
+1. Toetsinkomen: het gemiddelde van de laatste drie kalenderjaren, met het laatste jaar als maximum. Het inkomen van het laatste jaar wordt gebruikt als toekomstig inkomen in de scenario's.
+2. Toetsrente: je kiest of je rekent met de gewenste rentevaste periode of met de toetsrente. Bij een rentevaste periode korter dan 10 jaar geldt de AFM-toetsrente die elk kwartaal wordt vastgesteld, of de offerterente als die hoger is.
+3. Woonquote: de combinatie van toetsinkomen en toetsrente geeft via de financieringslasttabel een woonquote. Hoe hoger de rente, hoe hoger doorgaans de woonquote.
+4. Maximale woonlast is toetsinkomen maal woonquote; de maximale hypotheek is die woonlast gedeeld door de annuïteit per euro (rente plus aflossing).
+- Snel rekenen kan in de Berekenen-app van Adviesbox Online: met inkomen en geboortedatum van een of twee personen zie je de maximale hypotheek per geldverstrekker.
+- Pensioeninkomen schat Adviesbox automatisch op 70 procent van het toetsinkomen, inclusief AOW. Vul bij voorkeur het echte bruto pensioen in.
+
+## Waarom de uitkomst afwijkt
+- Lager dan de NHG-site of de Sneltoets, of uiteindelijk minder dan bij Maximale hypotheek: de gewogen gemiddelde toetsrente bepaalt de woonquote, maar de haalbaarheid toetst Adviesbox per leningdeel met de eigen rente en maandlast. Dat doet de uitgebreide NHG-toets ook. Daardoor kan het uitgewerkte bedrag iets lager uitvallen.
+- Hogere of lagere woonquote: een ontbrekende pensioendatum (Adviesbox neemt dan aan dat het pensioen al loopt), buitenlands inkomen dat niet elke verstrekker accepteert, vrij vermogen op het tabblad Maximale hypotheek, ontvangen partneralimentatie of een starterslening.
+- Rode kruizen bij veel geldverstrekkers: controleer welke inkomensverklaring je gebruikt. Een toetsinkomen uit een UWV-document, perspectiefverklaring, arbeidsmarktscan of accountantsverklaring telt alleen bij verstrekkers die dat accepteren; voor de anderen rekent Adviesbox terug naar het gewone inkomen (werkgeversverklaring of IB-stukken). Via het vraagteken naast het bruto inkomen op het tabblad Acceptatie zie je welke verklaring is gebruikt.
+- AOW wijkt af van het pensioenoverzicht of de SVB-opgave: Adviesbox rekent met het jaarbedrag inclusief vakantiegeld.
+
+## NHG en nieuwe normen
+- Nieuwe normen komen ruim voor de jaarwisseling beschikbaar. Voor 2025 kon je vanaf 7 november 2024 al rekenen met de nieuwe normen.
+- In de Sneltoets en op het tabblad Analyse - Aanleiding kies je of je rekent met de normen van voor of vanaf 1 januari. Kies je de toekomstige normen, dan past Adviesbox die toe op het huidige acceptatiebeleid van de verstrekkers.
+- Bij de normen 2025 hoorden onder meer een NHG-kostengrens van 450.000 euro (477.000 euro met energiebesparende voorzieningen) en een NHG-premie van 0,4 procent. Check voor latere jaren de actuele normen en het normenartikel in de kennisbank.
+
+## Inkomen bepalen
+- Het UWV Verzekeringsbericht kan dienen als alternatief voor de werkgeversverklaring. De klant downloadt het bij UWV; met het SV-loon en de pensioenpremie van de loonstrook bereken je het toetsinkomen en dat vul je in Adviesbox in.
+- In het scherm Inkomen & Fiscus leg je inkomen, AOW, sociale premies en de fiscale verdeling vast. De ingevoerde inkomens worden gebruikt voor netto besteedbaar inkomen, belasting, fiscaal voordeel en de inkomens in de scenario's.
+
+## Financieringsopzet en bijzondere situaties
+- Een overbruggingskrediet open je via het specificatiescherm bij het veld Overbrugging in de financieringsopzet.
+- Het energiebespaarbudget leg je eveneens in de financieringsopzet vast.
+- In de kennisbank staan aparte instructies voor onder meer een verduurzamingslening van SVN, consumptieve opname, een tweede woning, fiscale geruisloze voortzetting en renteaftrekhistorie (eigenwoningschuld uit het verleden).
+
+## Hypotheekvergelijker
+- Met de Hypotheekvergelijker genereer je een samenstelling en kies je voorwaarden uit de opties die de verstrekker accepteert.
+- Bij een nieuwe samenstelling houdt Adviesbox rekening met de periode waarin de klant al renteaftrek had.
+- Op het tabblad Maximale hypotheek staat per aanvrager welke inkomensverklaring per verstrekker is gebruikt.
+
+## HDN: aanvragen, status en certificaat
+- Eenmalig: vul je HDN-nummer in. In de Windows-versie via Onderhoud > Instellingen > (HDN) Koppelingen; in Adviesbox Online via de Contract-app, scherm HDN nodenummer.
+- Hypotheek, AOV en ORV vraag je via HDN aan. In Adviesbox Online stel je de aanvraag samen in de Advies-app onder Aanvraag.
+- Alle verstuurde en ontvangen berichten staan in de tegel HDN op het hoofdscherm, met een kolom Richting.
+- Status In HDN-outdir: Adviesbox heeft het bericht klaargezet, maar de HDN-software heeft het nog niet opgepakt. Die dienst draait op de achtergrond en kijkt ongeveer elke 5 minuten. Blijft het staan, neem dan contact op met de HDN-helpdesk.
+- Status Verzonden: het bericht is bij de ontvanger aangekomen; de verwerking daar is aan de ontvanger.
+- Geldverstrekkers kunnen terugmelden dat een offerteaanvraag is ontvangen, niet te verwerken is of is afgewezen.
+- Foutmelding bij aanmaken: het bericht voldoet dan nog niet aan het HDN-schema; vul de ontbrekende gegevens aan.
+- Krijg je geen berichten binnen, dan ligt het meestal aan je eigen HDN-installatie, die berichten bij de verstrekker ophaalt en lokaal neerzet.
+- Certificaat: in het HDN-beheerportaal zie je je actieve certificaten en maak je een nieuw certificaat aan. Een bevestiging in het portaal verlengt de aansluiting met een jaar. Mis je Client ID of Client Secret, gebruik dan de supportknop voor de HDN-servicedesk.
+
+## Taxatie aanvragen
+- NWWI (Windows-versie): stel in via Onderhoud > Partijen beheren > Taxatiebureaus, kies NWWI en vul je agentnummer in. Vul in het advies onder Aanvraag > Taxatie & validatie de aanvraag in en zet het telefoonnummer van de contactpersoon in de opmerkingen. Verstuur via het tabblad (HDN) Aanvraag, keuze Taxatieaanvraag.
+- NTS (Adviesbox Online, sinds februari 2024): activeer Nationale Taxatie Service in de Instellingen-app, scherm Taxateurs, met je agentnummer. Kies in het advies Aanvraag > Taxatie, selecteer NTS, geef het soort aanvraag op en verstuur. Je komt dan in het NTS-portaal, waar je de aanvraag controleert en definitief indient.
+
+## Rapportage
+- Een volledig rapport maak je via Afdrukken, keuze Volledig financieel plan. Hoofdstukken zet je aan of uit; via Onderhoud sjablonen bewaar je een vaste indeling.
+- In Adviesbox Online bepaal je in de Instellingen-app (Voorkeuren > Documenten) welke kolommen standaard in rapportages staan, bijvoorbeeld in het overzicht netto besteedbaar inkomen.
+
+## Koppelingen
+- In de Windows-versie staan koppelingen onder Onderhoud > Instellingen > (HDN) Koppelingen. De kennisbank beschrijft onder meer koppelingen met Nationale Hypotheekbond, Advieskeuze.nl, BOX Duurzaam, Finly webtool, Elements en NWWI.
+- Blijft de koppeling met Nationale Hypotheekbond op 10 procent hangen met de melding dat de bron niet gevonden is, dan staat TLS op de (terminal)server waarschijnlijk uit. Een systeembeheerder zet TLS 1.0 tot en met 1.2 aan via groepsbeleid.
+
+## Veelvoorkomende foutmeldingen
+- Klasse niet geregistreerd: een update is niet goed geïnstalleerd. Sla je werk op, sluit Adviesbox, zoek in Windows naar Componenten registreren en start dat. Lukt dat niet of werk je op een terminalserver, schakel dan je systeembeheerder in.
+- HDN-bericht blijft in de outdir: zie het onderdeel HDN hierboven.
+
+## Koppeling met eBlinqx: de GUID (eenmalig)
+De koppeling tussen Adviesbox Online en eBlinqx loopt via een GUID. Let op de naamgeving: eBlinqx Hypotheekadvies is hetzelfde pakket als Fastlane; Adviesbox Online is een ander adviespakket dat je via een koppeling met eBlinqx gebruikt.
 1. Adviesbox Online: ga naar Instellingen > Partijen beheren > Softwarekoppelingen.
-2. Klik op de instellingenknop achter "Elements via importkoppeling" en klik op "GUID genereren".
-3. eBlinqx: voeg de GUID toe via Admin > Organisatie & Mensen > het betreffende kantoor > tabblad Instellingen. Hiervoor heb je de juiste rechten nodig.
+2. Klik op de instellingenknop achter Elements via importkoppeling en kies GUID genereren.
+3. eBlinqx: voeg de GUID toe via Admin > Organisatie & Mensen > het kantoor > tabblad Instellingen. Daarvoor heb je de juiste rechten nodig.
 
-## Klant exporteren naar Adviesbox Online
-1. Open in eBlinqx het klantdossier van de prospect of klant.
-2. Ga naar Exporteren > Adviesbox NAW.
-3. Vul de velden in, klik op "HBX genereren" en daarna op "HBX downloaden".
+## Klant exporteren van eBlinqx naar Adviesbox Online
+1. Open in eBlinqx het dossier van de prospect of klant.
+2. Kies Exporteren > Adviesbox NAW.
+3. Vul de velden in, klik op HBX genereren en daarna op HBX downloaden.
 4. Lees het HBX-bestand in Adviesbox Online in.
 
-## Inloggen en HDN in Adviesbox Online
-- Adviesbox Online werkt met tweestapsverificatie: na e-mailadres en wachtwoord vul je een wisselende code in uit een authenticator-app op je telefoon. Beveilig die telefoon goed.
-- Een wachtwoord heeft minimaal 8 tekens, met ten minste een kleine letter, een hoofdletter, een cijfer en een speciaal teken.
-- Nieuwe medewerkers krijgen een registratiemail met een link om een account aan te maken.
-- Wil je voor het eerst via HDN versturen, stel dan eenmalig je HDN-nodenummer in via de Contract-app (scherm HDN nodenummer) en activeer het.
+## Wat hier (nog) niet in staat
+- Over brondata via Ockto, een ANVA-koppeling en de werking van verzekeringsschermen (ORV, AOV, woonlastenverzekering) in Adviesbox gaven de zoekresultaten te weinig bevestigde stappen. Kijk daarvoor in het helpcentrum of vraag het na bij support.
 
-## Hulp nodig
-Voor het inrichten van de koppeling kun je mailen naar support@fasterforward.nl; volgens de huidige supportpagina van Blinqx V&H loopt eBlinqx-support via support-eblinqx@blinqx.tech. Vragen over Adviesbox zelf stuur je naar support-adviesbox@blinqx.tech, of je belt 085 018 00 69 en kiest 1 en daarna 1. In Adviesbox kun je ook een melding doen via het vraagteken.
-
-Bron: de kennisbanken van Faster Forward (support.fasterforward.nl) en Adviesbox (support.adviesbox.nl) en de supportpagina van Blinqx V&H, samengevat uit openbare zoekresultaten op 2 oktober 2026. De pagina zelf kon bij het opstellen niet worden geopend; controleer de stappen in de software voordat je ze als werkinstructie gebruikt.`},
+Bron: de kennisbank van Adviesbox (support.adviesbox.nl), de kennisbank van Faster Forward (support.fasterforward.nl) en de supportpagina van Blinqx V&H, in eigen woorden samengevat uit openbare zoekresultaten op 2 oktober 2026. Het nieuwe helpcentrum (support-adviesbox.vh.blinqx.tech) kon niet worden geopend. Menupaden kunnen per versie verschillen; controleer de stappen in je eigen omgeving voordat je ze als werkinstructie gebruikt.`},
 ];
