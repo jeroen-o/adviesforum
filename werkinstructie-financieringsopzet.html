@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Financieringsopzet aanpassen in eBlinqx Hypotheekadvies</title>
+<style>
+  :root{
+    --primary:#003057;
+    --accent:#E5A138;
+    --bg:#F4F7F9;
+    --text:#333333;
+    --muted:#4A4A4A;
+    --line:#D8E2E8;
+    --white:#fff;
+    --warn-bg:#FDF4E5;
+    --warn-line:#E5A138;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;background:var(--bg);color:var(--text);
+    font-family:"Plus Jakarta Sans","DM Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    font-size:16px;line-height:1.55;
+  }
+  .wrap{max-width:1040px;margin:0 auto;padding:0 20px 64px}
+  header.hero{background:var(--primary);color:#fff;padding:40px 0 34px;margin-bottom:28px}
+  header.hero .wrap{padding-bottom:0}
+  h1{font-size:34px;line-height:1.2;margin:0 0 10px;font-weight:700}
+  .sub{opacity:.85;font-size:16px;margin:0;max-width:72ch}
+  .meta{margin-top:18px;font-size:13px;opacity:.7}
+  .toolbar{
+    display:flex;gap:12px;flex-wrap:wrap;align-items:center;
+    background:var(--white);border:1px solid var(--line);border-radius:10px;
+    padding:14px 16px;margin:0 0 26px;position:sticky;top:0;z-index:5;
+  }
+  #zoek{
+    flex:1 1 260px;min-width:220px;padding:10px 12px;font-size:15px;font-family:inherit;
+    border:1px solid var(--line);border-radius:7px;color:var(--text);background:#fff;
+  }
+  #zoek:focus{outline:2px solid var(--accent);outline-offset:1px}
+  .btn{
+    border:0;border-radius:7px;padding:10px 16px;font-size:14px;font-weight:600;
+    font-family:inherit;cursor:pointer;background:var(--primary);color:#fff;
+  }
+  .btn.sec{background:#fff;color:var(--primary);border:1px solid var(--line)}
+  .count{font-size:13px;color:var(--muted)}
+  section.card{
+    background:var(--white);border:1px solid var(--line);border-radius:10px;
+    padding:22px 24px;margin:0 0 16px;
+  }
+  .tag{
+    display:inline-block;background:#EAF1F5;color:var(--primary);
+    font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+    padding:4px 9px;border-radius:4px;margin-bottom:10px;
+  }
+  h2{font-size:21px;line-height:1.3;margin:0 0 4px;color:var(--primary)}
+  .vraag{font-size:13px;color:var(--muted);font-style:italic;margin:0 0 14px}
+  ol,ul{margin:8px 0 12px;padding-left:22px}
+  li{margin:4px 0}
+  .lead{margin:0 0 10px}
+  .sublabel{font-weight:700;color:var(--primary);margin:14px 0 2px;font-size:15px}
+  .let-op{
+    background:var(--warn-bg);border-left:4px solid var(--warn-line);
+    padding:12px 14px;border-radius:0 6px 6px 0;margin:14px 0 0;font-size:14.5px;
+  }
+  .let-op strong{color:#8A5B00}
+  .compliance{
+    background:#FFF1F1;border-left:4px solid #C0392B;
+    padding:12px 14px;border-radius:0 6px 6px 0;margin:12px 0 0;font-size:14.5px;
+  }
+  .compliance strong{color:#A5281B}
+  .intro-block{
+    background:var(--white);border:1px solid var(--line);border-left:5px solid var(--accent);
+    border-radius:10px;padding:20px 24px;margin:0 0 24px;
+  }
+  footer{
+    margin-top:34px;padding-top:20px;border-top:1px solid var(--line);
+    font-size:13px;color:var(--muted);
+  }
+  footer a{color:var(--primary)}
+  .bronnen li{font-size:13.5px}
+  .leeg{display:none;background:#fff;border:1px dashed var(--line);border-radius:10px;padding:28px;text-align:center;color:var(--muted)}
+  @media (max-width:640px){
+    h1{font-size:26px}
+    section.card{padding:18px 16px}
+    .toolbar{position:static}
+  }
+  @media print{
+    .toolbar{display:none}
+    body{background:#fff}
+    section.card{break-inside:avoid;border:1px solid #ccc}
+    header.hero{background:#fff;color:#000;border-bottom:3px solid var(--primary)}
+    header.hero .sub,.meta{color:#333;opacity:1}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>Financieringsopzet aanpassen in eBlinqx Hypotheekadvies</h1>
+    <p class="sub">Alle varianten op een rij, opgehaald uit AI Fin Support (de supportassistent van eBlinqx Hypotheekadvies / Fastlane) en de kennisbank.</p>
+    <p class="meta">Samengesteld op 2 oktober 2026 &middot; bron: AI Fin Support + support-fastlane.vh.blinqx.tech &middot; interne werkinstructie</p>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="toolbar">
+    <input id="zoek" type="search" placeholder="Zoek op onderwerp, bijv. erfpacht, NHG, overbrugging&hellip;" aria-label="Zoeken in onderwerpen">
+    <button class="btn sec" id="wis" type="button">Wissen</button>
+    <button class="btn" id="print" type="button">Printen / PDF</button>
+    <span class="count" id="teller"></span>
+  </div>
+
+  <div class="intro-block" data-vast="1">
+    <p class="lead"><strong>Kort antwoord: ja.</strong> De financieringsopzet is op drie manieren aan te passen:</p>
+    <ol>
+      <li><strong>Vaste velden invullen of wijzigen</strong> &ndash; boeterente, overbruggingspercentage, eigen middelen, koopsom.</li>
+      <li><strong>Eigen kostenposten toevoegen</strong> via <em>Voeg extra veld toe</em> onder <em>Kosten van de woning</em>.</li>
+      <li><strong>Sturen via de leningdelen</strong> &ndash; splitsen, NHG-keuze, box&nbsp;1/box&nbsp;3-toewijzing, afrondingscorrectie.</li>
+    </ol>
+    <p class="lead">Wat je <strong>niet</strong> handmatig aanpast: NHG/borgtochtprovisie (volgt uit de NHG-keuze per leningdeel) en de opmaak van het rapport.</p>
+    <div class="compliance"><strong>Compliance &ndash; rode draad:</strong> op elk punt waar je handmatig invoert, vervalt de automatische (fiscale) berekening. Handmatige posten tellen wel mee in het totaal, maar niet in de belastingcomponenten. Leg handmatige invoer en de onderbouwing daarvan altijd vast in de motivatie; dit is het punt waarop een dossier bij toetsing op passend advies kwetsbaar is.</div>
+  </div>
+
+  <section class="card">
+    <span class="tag">Eigen posten</span>
+    <h2>1. Eigen of extra kostenpost toevoegen</h2>
+    <p class="vraag">Vraag: hoe voeg ik een eigen/extra kostenpost toe, bijvoorbeeld afkoop erfpacht of een OHA-regel?</p>
+    <p class="lead">Je voegt zo'n kostenpost toe als <strong>extra veld</strong> in de financieringsopzet. Dat werkt voor afkoop erfpacht en andere specifieke kosten.</p>
+    <ol>
+      <li>Open je dossier en ga naar <strong>Financieringsopzet</strong>.</li>
+      <li>Ga naar <strong>Kosten van de woning</strong>.</li>
+      <li>Klik op <strong>Voeg extra veld toe</strong>.</li>
+      <li>Geef de kostenpost een naam, bijvoorbeeld <em>Afkoop erfpacht</em> of <em>OHA-regel</em>.</li>
+      <li>Klik op het gele plusje.</li>
+      <li>Voer het bedrag in.</li>
+    </ol>
+    <div class="let-op"><strong>Let op:</strong> deze posten worden handmatig beheerd en tellen wel mee in het totaaloverzicht, maar worden <em>niet</em> automatisch meegenomen in belastingberekeningen.</div>
+    <div class="compliance"><strong>AFM-aandachtspunt:</strong> fiscale behandeling van de handmatige post zelf onderbouwen en vastleggen &ndash; het systeem doet dit hier niet voor je.</div>
+  </section>
+
+  <section class="card">
+    <span class="tag">Kosten koper</span>
+    <h2>2. Kosten koper aanpassen</h2>
+    <p class="vraag">Vraag: hoe pas ik overdrachtsbelasting, notariskosten, taxatiekosten en advieskosten aan?</p>
+    <p class="lead">Je past de kosten koper per kostenpost apart aan.</p>
+    <p class="sublabel">Overdrachtsbelasting</p>
+    <p>Voer de koopsom of marktwaarde in. eBlinqx berekent de overdrachtsbelasting automatisch op basis van de hoogste van beide waarden.</p>
+    <p class="sublabel">Notariskosten</p>
+    <ol>
+      <li>Ga naar <strong>Instellingen</strong>.</li>
+      <li>Open <strong>eBlinqx Hypotheekadvies &gt; Tarieven</strong>.</li>
+      <li>Kies bijvoorbeeld <em>Hypotheekakte notaris</em> of <em>Leveringsakte notaris</em>.</li>
+      <li>Pas het bedrag aan en sla op.</li>
+    </ol>
+    <p class="sublabel">Taxatiekosten</p>
+    <p>Voeg handmatig toe via <strong>Voeg extra veld toe</strong> in de financieringsopzet.</p>
+    <p class="sublabel">Advieskosten</p>
+    <p>Vul apart in: <strong>Advieskosten</strong> en <strong>Bemiddelingskosten</strong>. Houd beide velden gescheiden &ndash; dat is vereist voor HDN-aanvragen.</p>
+    <div class="let-op"><strong>Kort gezegd:</strong> vaste kosten (zoals notariskosten) stel je centraal in bij Tarieven; andere kosten voeg je handmatig toe in de financieringsopzet.</div>
+  </section>
+
+  <section class="card">
+    <span class="tag">Eigen middelen</span>
+    <h2>3. Eigen geld specificeren (schenking, spaargeld, beleggingen)</h2>
+    <p class="vraag">Vraag: hoe specificeer ik de herkomst van eigen middelen?</p>
+    <ol>
+      <li>Open het klantdossier en ga naar <strong>Financieringsopzet</strong>.</li>
+      <li>Voer het totaalbedrag aan eigen middelen in.</li>
+      <li>Geef per categorie aan waar het bedrag uit bestaat: schenking, spaargeld, beleggingen, overwaarde uit verkoop.</li>
+      <li>Licht de verdeling toe in het opmerkingenveld, bijvoorbeeld: &ldquo;Eigen middelen &euro; 40.000,00, bestaande uit &euro; 25.000,00 schenking ouders, &euro; 10.000,00 spaargeld en &euro; 5.000,00 beleggingen.&rdquo;</li>
+      <li>Voeg documentatie toe aan het dossier: schenkingsakte, bewijs spaarsaldo, overzicht beleggingen of verkoopopbrengst.</li>
+    </ol>
+    <div class="let-op"><strong>Let op:</strong> de beschikbare invoervelden verschillen per dossierconfiguratie en geldverstrekker.</div>
+  </section>
+
+  <section class="card">
+    <span class="tag">Eigen middelen</span>
+    <h2>4. Polis afkoopwaarde en spaarsaldo als eigen geld</h2>
+    <p class="vraag">Vraag: hoe verwerk ik een polis afkoopwaarde en een spaarsaldo?</p>
+    <p class="lead">Beide verwerk je via <strong>Inbreng eigen geld</strong> in de financieringsopzet.</p>
+    <p class="sublabel">Polisafkoopwaarde</p>
+    <ol>
+      <li>Voer het bedrag in bij Inbreng eigen geld.</li>
+      <li>Voeg een toelichting toe waarin je vermeldt dat het (deels) uit polisafkoopwaarde komt.</li>
+      <li>Noteer bij voorkeur het polisnummer voor traceerbaarheid.</li>
+    </ol>
+    <p class="sublabel">Spaarsaldo</p>
+    <ol>
+      <li>Bepaal het spaarsaldo dat vrijkomt.</li>
+      <li>Voeg dit bedrag toe bij Inbreng eigen geld.</li>
+      <li>Vermeld in de toelichting dat het afkomstig is uit spaarsaldo.</li>
+    </ol>
+    <p>Bij een combinatie: specificeer de verdeling in &eacute;&eacute;n toelichting, bijvoorbeeld &ldquo;Eigen middelen &euro; 30.000,00, bestaande uit &euro; 20.000,00 polisafkoopwaarde en &euro; 10.000,00 spaarsaldo&rdquo;. Bewaar het bewijs van de afkoopwaarde in de documentensectie van het dossier.</p>
+  </section>
+
+  <section class="card">
+    <span class="tag">Overbrugging</span>
+    <h2>5. Overbruggingskrediet en overbruggingspercentage aanpassen</h2>
+    <p class="vraag">Vraag: hoe pas ik het overbruggingskrediet aan en hoe werkt het percentage?</p>
+    <ol>
+      <li>Open de financieringsopzet in je dossier.</li>
+      <li>Zoek het veld <strong>Overbruggingspercentage</strong> onder <strong>Eigen geld</strong>.</li>
+      <li>Kies een percentage of selecteer <strong>Anders</strong> om zelf een bedrag in te voeren.</li>
+    </ol>
+    <p class="sublabel">Hoe werkt dat percentage</p>
+    <ul>
+      <li>eBlinqx berekent de overbrugging automatisch op basis van dat percentage.</li>
+      <li>Standaard wordt <strong>90% van de verwachte verkoopprijs minus de resterende hypotheekschuld</strong> gehanteerd.</li>
+      <li>Is de woning <strong>onvoorwaardelijk verkocht</strong>, dan kan in sommige gevallen 100% van de overwaarde meetellen.</li>
+    </ul>
+    <div class="let-op"><strong>Let op:</strong> vul je handmatig een bedrag in, dan vervalt de automatische berekening. Controleer daarna of de totale financiering nog klopt en of het bedrag haalbaar is.</div>
+    <div class="compliance"><strong>Bekende beperking:</strong> een handmatig aangepast overbruggingsbedrag wordt <em>niet</em> doorvertaald naar de draagplichtmodule van de financieringsopzet (bron: kennisbank). Controleer de draagplicht dus apart.</div>
+  </section>
+
+  <section class="card">
+    <span class="tag">Overbrugging</span>
+    <h2>6. Overbruggingshypotheek invoeren</h2>
+    <p class="vraag">Vraag: hoe voer ik een overbruggingshypotheek in?</p>
+    <ol>
+      <li>Ga naar <strong>Financieringsopzet</strong>.</li>
+      <li>Voeg een overbruggingshypotheek toe.</li>
+      <li>Bij een niet-verkochte woning rekent het systeem automatisch met 90% van de woningwaarde.</li>
+      <li>Wil je eigen geld inbrengen? Voeg dit handmatig toe <em>na</em> de berekening.</li>
+    </ol>
+    <p>Gekoppelde berekeningen worden automatisch bijgewerkt.</p>
+  </section>
+
+  <section class="card">
+    <span class="tag">Verkoop woning</span>
+    <h2>7. Restschuld van de verkochte woning meenemen</h2>
+    <p class="vraag">Vraag: hoe neem ik een restschuld mee in de financieringsopzet?</p>
+    <p class="lead">Dat loopt via de overbruggingsberekening.</p>
+    <ol>
+      <li>Voer de <strong>verwachte verkoopprijs</strong> van de huidige woning in.</li>
+      <li>Voer de <strong>resterende hypotheekschuld</strong> in.</li>
+      <li>eBlinqx berekent automatisch de overwaarde (verkoopprijs minus restschuld).</li>
+    </ol>
+    <p>Deze overwaarde vormt de basis voor de overbruggingsfinanciering.</p>
+    <div class="let-op"><strong>Tip van Fin:</strong> controleer de restschuld van de bestaande hypotheek door de oorspronkelijke leningdelen en eventuele aflossingen correct in te voeren. Het systeem berekent dan automatisch de actuele restschuld.</div>
+  </section>
+
+  <section class="card">
+    <span class="tag">Oversluiten</span>
+    <h2>8. Boeterente en oversluitkosten</h2>
+    <p class="vraag">Vraag: hoe verwerk ik boeterente en oversluitkosten bij een oversluiting?</p>
+    <p class="sublabel">Boeterente</p>
+    <ul>
+      <li>Ga naar <strong>Financieringsopzet</strong>.</li>
+      <li>Zoek het veld <strong>Boeterente</strong>.</li>
+      <li>Voer hier de berekende boeterente in.</li>
+    </ul>
+    <p class="sublabel">Oversluitkosten</p>
+    <ul>
+      <li>Voeg deze kosten in via <strong>Voeg extra veld toe</strong>.</li>
+      <li>Geef de kostenpost duidelijk aan (bijvoorbeeld &ldquo;oversluitkosten&rdquo;).</li>
+    </ul>
+    <div class="let-op"><strong>Kort gezegd:</strong> boeterente vul je in via het vaste veld, oversluitkosten voeg je handmatig toe als extra kostenpost.</div>
+  </section>
+
+  <section class="card">
+    <span class="tag">Verbouwing</span>
+    <h2>9. Verbouwing, bouwdepot en energiebesparende voorzieningen</h2>
+    <p class="vraag">Vraag: hoe verwerk ik een verbouwing met bouwdepot, meerwerk en EBV?</p>
+    <p class="lead">Fin kon alleen het Energiebespaarbudget concreet beantwoorden; voor de algemene verwerking van bouwdepot en meerwerk is in de Blinqx-content geen specifieke verwerkingsmethode beschikbaar.</p>
+    <p class="sublabel">Energiebespaarbudget (EBB)</p>
+    <ul>
+      <li>Je kunt tot &euro; 20.000,00 extra lenen (tot maximaal 106% van de marktwaarde) voor verduurzaming.</li>
+      <li>Dit bedrag wordt in een depot gestort en mag alleen gebruikt worden voor energiebesparende maatregelen: isolatie, zonnepanelen, HR++ glas of een warmtepomp.</li>
+      <li>De maatregelen moeten binnen 2 jaar zijn uitgevoerd.</li>
+    </ul>
+    <p class="sublabel">Werkwijze erfpacht / verbouwing (uit de kennisbank)</p>
+    <ol>
+      <li>Kies bij <strong>Doelstelling</strong> voor <em>Mijn woning verbouwen</em> (of <em>Interne oversluiting</em>).</li>
+      <li>Voeg de kostenposten toe via <strong>Voeg extra veld toe</strong> onder Kosten van de woning.</li>
+    </ol>
+    <div class="compliance"><strong>Let op &ndash; hiaat:</strong> Fin heeft geen gedocumenteerde werkinstructie voor bouwdepot, bouwtermijnen en meerwerk. Dit is een gat in de kennisbank; bij veelvoorkomende verbouwingsdossiers is dit het aanvullen waard.</div>
+  </section>
+
+  <section class="card">
+    <span class="tag">Nieuwbouw</span>
+    <h2>10. Nieuwbouw: grondkosten, meerwerk en bouwrente</h2>
+    <p class="vraag">Vraag: hoe verwerk ik nieuwbouw in de financieringsopzet?</p>
+    <p class="lead">Kort gezegd: grondkosten en andere specifieke posten voer je <strong>handmatig</strong> in via extra velden.</p>
+    <ol>
+      <li>Voer de financiering in op basis van de juiste doelstelling (bijvoorbeeld woning kopen).</li>
+      <li>Voeg kostenposten toe via <strong>Voeg extra veld toe</strong>.</li>
+      <li>Voer hier specifieke posten in: grondkosten, overdrachtsbelasting en andere kosten die aan de grondtransactie gerelateerd zijn.</li>
+      <li>Gebruik de vrije tekstvelden om duidelijk te vermelden dat het gaat om grond- of bouwgerelateerde kosten.</li>
+    </ol>
+    <div class="let-op"><strong>Belangrijk:</strong> niet alle kosten worden automatisch meegenomen. Specifieke posten voeg je dus altijd handmatig toe via extra velden.</div>
+    <div class="compliance"><strong>Hiaat:</strong> over bouwtermijnen, meerwerk en bouwrente is in de Blinqx-content geen specifieke verwerkingsmethode gedocumenteerd.</div>
+  </section>
+
+  <section class="card">
+    <span class="tag">NHG</span>
+    <h2>11. NHG en borgtochtprovisie</h2>
+    <p class="vraag">Vraag: hoe wordt NHG verwerkt en kan ik dat handmatig aanpassen?</p>
+    <p class="lead">Je hoeft NHG en de borgtochtprovisie <strong>niet</strong> handmatig in te voeren; dat regelt eBlinqx automatisch.</p>
+    <ol>
+      <li>Geef per leningdeel aan of de financiering <strong>met of zonder NHG</strong> wordt berekend.</li>
+      <li>Zodra je die keuze invult, berekent eBlinqx automatisch de <strong>borgtochtprovisie</strong>.</li>
+      <li>Dit bedrag verschijnt automatisch in het veld <strong>NHG-kosten</strong>.</li>
+    </ol>
+    <p>Handmatig aanpassen is dus <strong>niet mogelijk</strong>. Wil je de provisie veranderen, pas dan de NHG-keuze bij het leningdeel aan.</p>
+    <div class="let-op"><strong>Extra detail:</strong> de berekende provisie wordt automatisch opgeteld bij de inbreng eigen geld. Wijzigt de lening, dan herberekent eBlinqx de provisie en de financiering automatisch.</div>
+  </section>
+
+  <section class="card">
+    <span class="tag">Verplichtingen</span>
+    <h2>12. Kredieten die via de hypotheek worden ingelost</h2>
+    <p class="vraag">Vraag: hoe voer ik in te lossen kredieten in?</p>
+    <ol>
+      <li>Ga in het dossier naar <strong>Huidige situatie &rarr; Verplichtingen</strong>.</li>
+      <li>Voeg per krediet een regel in met maatschappij, rentepercentage, kredietnummer en openstaand bedrag.</li>
+      <li>Zet de <strong>status</strong> op <em>Afgelost tijdens passeren</em>.</li>
+    </ol>
+    <p>eBlinqx telt automatisch alle kredieten met die status op; het totaalbedrag wordt meegenomen in de financieringsopzet als bedrag dat via de hypotheek wordt afgelost.</p>
+    <div class="let-op"><strong>Tip:</strong> controleer in <strong>Advies &rarr; Financieringsopzet</strong> of de bedragen onder <em>Consumptief</em> overeenkomen met de ingevoerde kredieten. Verschijnt een krediet niet, dan staat de status waarschijnlijk niet op &ldquo;Afgelost tijdens passeren&rdquo;.</div>
+  </section>
+
+  <section class="card">
+    <span class="tag">Constructies</span>
+    <h2>13. Familiehypotheek en starterslening</h2>
+    <p class="vraag">Vraag: hoe neem ik een familiehypotheek of starterslening op naast de reguliere hypotheek?</p>
+    <p class="lead">Beide voeg je toe als apart leningdeel in de financieringsopzet.</p>
+    <p class="sublabel">Familiehypotheek</p>
+    <ol>
+      <li>Ga naar <strong>Hypotheken</strong> en kies <em>Hypotheek toevoegen</em>.</li>
+      <li>Selecteer bij Geldverstrekker de optie <strong>Afwijkend</strong>.</li>
+      <li>Kies als Productlijn de optie <strong>Familiebank</strong>.</li>
+      <li>Vul bedrag, rente, looptijd en aflosvorm in.</li>
+    </ol>
+    <p class="sublabel">Starterslening</p>
+    <ol>
+      <li>Voeg een nieuw leningdeel toe.</li>
+      <li>Selecteer bij aflossingsvorm <strong>SVn Starterslening</strong>.</li>
+      <li>Vul looptijd en rentepercentage in.</li>
+    </ol>
+    <p>Beide worden volledig meegenomen in berekeningen en rapportages.</p>
+    <div class="let-op"><strong>Let op:</strong> een familiehypotheek wordt <em>niet</em> via HDN verzonden. Bij combinatie met een reguliere hypotheek van een geldverstrekker kan het nodig zijn twee berekeningen te maken: &eacute;&eacute;n voor toetsing (met familiebedrag als leningdeel) en &eacute;&eacute;n voor de werkelijke aanvraag (met familiebedrag als eigen middelen).</div>
+  </section>
+
+  <section class="card">
+    <span class="tag">Constructies</span>
+    <h2>14. Woningkorting en koopstart-constructie</h2>
+    <p class="vraag">Vraag: hoe verwerk ik een woningkorting of koopstart?</p>
+    <p class="sublabel">Woningkorting &ndash; twee manieren, afhankelijk van de koopakte</p>
+    <ul>
+      <li><strong>Als schenking:</strong> voer de volledige koopsom in en voer de korting in als schenking of bijdrage onder <strong>Eigen middelen</strong>.</li>
+      <li><strong>Als lagere koopprijs:</strong> voer de verlaagde koopsom in (koopsom na korting).</li>
+    </ul>
+    <p class="sublabel">Starterslening (koopstart-constructie)</p>
+    <ol>
+      <li>Voeg in de financieringsopzet een <strong>nieuw leningdeel</strong> toe.</li>
+      <li>Kies bij aflossingsvorm <strong>SVn Starterslening</strong>.</li>
+      <li>Vul looptijd, rente en overige gegevens in.</li>
+    </ol>
+    <p>De starterslening wordt meegenomen in berekeningen, toetsmomenten en rapportages.</p>
+    <div class="compliance"><strong>AFM-aandachtspunt:</strong> de keuze tussen &ldquo;schenking&rdquo; en &ldquo;lagere koopprijs&rdquo; heeft fiscale en overdrachtsbelastinggevolgen. Volg de koopakte en leg de keuze onderbouwd vast.</div>
+  </section>
+
+  <section class="card">
+    <span class="tag">Draagplicht</span>
+    <h2>15. Eigendomsverhouding en draagplicht</h2>
+    <p class="vraag">Vraag: hoe stel ik eigendomsverhouding en draagplicht in?</p>
+    <p class="lead">De eigendomsverhouding leg je vast bij de woninggegevens; draagplicht werkt op drie plekken in de financieringsopzet.</p>
+    <p class="sublabel">Eigendomsverhouding aanpassen</p>
+    <ol>
+      <li>Ga naar de woninggegevens.</li>
+      <li>Pas de eigendomsverdeling aan (bijvoorbeeld 50/50).</li>
+      <li>Controleer of beide personen correct gekoppeld zijn bij de leningdelen.</li>
+    </ol>
+    <p class="sublabel">Draagplicht verwerken</p>
+    <ol>
+      <li><strong>Financieringsbehoefte</strong> &ndash; voer per persoon de eigen inleg in.</li>
+      <li><strong>Hypotheek samenstellen</strong> &ndash; maak per aanvrager een apart leningdeel en geef per deel aan hoeveel toebehoort aan wie.</li>
+      <li><strong>Motiveren</strong> &ndash; leg onder &lsquo;Draagplichtovereenkomst&rsquo; de verdeling en motivatie vast.</li>
+    </ol>
+    <div class="let-op"><strong>Praktische tip bij wijzigingen:</strong> wil je per leningdeel de eigenaar aanpassen? Zet de burgerlijke staat tijdelijk op &lsquo;Samenwonend&rsquo;, vink de partner aan bij de doelstelling, pas het eigendom aan en vink de partner weer uit. De eigendom blijft dan behouden.</div>
+  </section>
+
+  <section class="card">
+    <span class="tag">Fiscaal</span>
+    <h2>16. Box 1 en box 3 verdelen</h2>
+    <p class="vraag">Vraag: hoe wordt bepaald welk deel box 1 (eigenwoningschuld) en welk deel box 3 is?</p>
+    <p class="lead">Je bepaalt die verdeling zelf door leningdelen apart in te voeren. Elk leningdeel valt <strong>volledig</strong> in &eacute;&eacute;n fiscale box.</p>
+    <ol>
+      <li>Maak per fiscale component een apart leningdeel.</li>
+      <li>Wijs &eacute;&eacute;n leningdeel toe aan <strong>box 1</strong> (renteaftrekbaar).</li>
+      <li>Wijs het andere leningdeel toe aan <strong>box 3</strong> (niet aftrekbaar).</li>
+    </ol>
+    <p class="sublabel">Waarom dit belangrijk is</p>
+    <ul>
+      <li>eBlinqx ondersteunt g&eacute;&eacute;n leningdelen die deels box 1 en deels box 3 bevatten.</li>
+      <li>Gemengde leningdelen zorgen voor verkeerde berekeningen en fiscale rapportages.</li>
+    </ul>
+    <div class="compliance"><strong>AFM-aandachtspunt:</strong> een verkeerd toegewezen leningdeel levert direct een onjuiste renteaftrek in het advies op. Controleer de box-toewijzing expliciet bij elk dossier met consumptieve bestedingen, box 3-delen of meegefinancierde kosten.</div>
+  </section>
+
+  <section class="card">
+    <span class="tag">Leningdelen</span>
+    <h2>17. Hoofdsom splitsen in leningdelen</h2>
+    <p class="vraag">Vraag: hoe splits ik de hoofdsom en pas ik bedragen per leningdeel aan?</p>
+    <ol>
+      <li>Voeg in de financieringsopzet extra leningdelen toe.</li>
+      <li>Verdeel de totale hoofdsom over die leningdelen (bijvoorbeeld &euro; 150.000,00 en &euro; 60.000,00).</li>
+      <li>Controleer of de <strong>optelsom van alle leningdelen gelijk is aan de totale hoofdsom</strong>.</li>
+    </ol>
+    <p>Bedragen per leningdeel pas je gewoon in dat leningdeel aan; elk leningdeel heeft zijn eigen hoofdsom, rente en aflossingsvorm.</p>
+    <div class="let-op"><strong>Let op:</strong> is de optelsom niet gelijk aan de totale hoofdsom, dan vraagt eBlinqx automatisch om een extra leningdeel.</div>
+  </section>
+
+  <section class="card">
+    <span class="tag">Controle</span>
+    <h2>18. Financieringsopzet niet sluitend of tekort gemeld</h2>
+    <p class="vraag">Vraag: wat doe ik als de financieringsopzet niet sluitend is?</p>
+    <p class="lead">Controleer in de praktijk twee dingen:</p>
+    <ol>
+      <li><strong>Controleer de totale hoofdsom.</strong> Kijk of de totale hypotheekhoofdsom exact gelijk is aan de som van alle leningdelen. Is de hoofdsom hoger dan de optelsom, dan vraagt eBlinqx automatisch om een extra leningdeel.</li>
+      <li><strong>Controleer de financi&euml;le haalbaarheid.</strong> Ga naar <strong>Acceptatienormen &rarr; Balk samenvatting</strong>. Rode cijfers betekenen dat de lasten op dat moment hoger zijn dan het inkomen.</li>
+    </ol>
+    <p class="sublabel">Veelvoorkomende oorzaken</p>
+    <ul>
+      <li>inkomenswijziging</li>
+      <li>aflopende rentevaste periode</li>
+      <li>wijziging in toetslast</li>
+    </ul>
+    <p>Pas de financiering of leningdelen aan totdat de berekening weer klopt.</p>
+  </section>
+
+  <section class="card">
+    <span class="tag">Controle</span>
+    <h2>19. Afrondingsverschil oplossen</h2>
+    <p class="vraag">Bron: kennisbank eBlinqx Hypotheekadvies</p>
+    <p class="lead">Fastlane rekent intern met meer decimalen dan zichtbaar in de interface. Daardoor kan het totaal op het scherm kloppen terwijl intern een klein verschil blijft staan (bijvoorbeeld een gemeld tekort van &euro; 0,44).</p>
+    <ol>
+      <li>Kies &eacute;&eacute;n hypotheekdeel, bij voorkeur het kleinste.</li>
+      <li>Verhoog de som met het ontbrekende verschil.</li>
+      <li>Sla de wijziging op.</li>
+    </ol>
+    <p>Kies bij voorkeur het deel dat het meest flexibel is qua rentevaste periode of aflosvorm. De correctie is puur technisch en be&iuml;nvloedt het advies inhoudelijk niet.</p>
+  </section>
+
+  <section class="card">
+    <span class="tag">Weergave &amp; rapport</span>
+    <h2>20. Weergave, rapport en PDF</h2>
+    <p class="vraag">Vraag: hoe krijg ik de financieringsopzet in het rapport of als PDF, en welke weergave-opties zijn er?</p>
+    <ol>
+      <li>Open de gewenste berekening in je dossier.</li>
+      <li>Klik rechtsboven op <strong>Berekeningen vergelijken</strong>.</li>
+      <li>Klik op het PDF-icoon om het rapport te genereren en te downloaden.</li>
+    </ol>
+    <p class="sublabel">Weergave-opties</p>
+    <ul>
+      <li>Je kunt schakelen tussen <strong>1-koloms</strong> en <strong>2-koloms</strong> weergave.</li>
+      <li>De toggle staat rechtsboven in het financieringsopzetblok.</li>
+      <li>De aanpassing geldt alleen voor het huidige scherm; het is geen permanente instelling.</li>
+    </ul>
+    <div class="let-op"><strong>Let op:</strong> rapporten worden altijd als PDF gegenereerd. De opmaak is standaard &ndash; huisstijl, logo of kleuren zijn momenteel niet aan te passen.</div>
+  </section>
+
+  <section class="card">
+    <span class="tag">Bekende beperkingen</span>
+    <h2>21. Bekende beperkingen en hiaten</h2>
+    <ul>
+      <li><strong>Draagplicht &amp; overbrugging:</strong> een handmatig aangepast overbruggingsbedrag in Fastlane synchroniseert niet met de draagplichtmodule van de financieringsopzet.</li>
+      <li><strong>Geldverstrekker:</strong> wordt niet getoond in de financieringsopzet en in het maandlastenoverzicht &ndash; de financieringsopzet hoort bij de ori&euml;nterende fase.</li>
+      <li><strong>Spaarhypotheek:</strong> FastLane verwerkt deze alleen binnen de huidige situatie, niet automatisch in de financieringsopzet van de nieuwe woning.</li>
+      <li><strong>Bouwdepot / meerwerk / bouwrente:</strong> geen gedocumenteerde verwerkingsmethode in de kennisbank.</li>
+      <li><strong>Rapportopmaak:</strong> geen eigen huisstijl, logo of kleuren mogelijk.</li>
+      <li><strong>NHG-provisie:</strong> niet handmatig aanpasbaar &ndash; alleen via de NHG-keuze per leningdeel.</li>
+    </ul>
+  </section>
+
+  <div class="leeg" id="leeg">Geen onderwerpen gevonden voor deze zoekterm.</div>
+
+  <footer>
+    <p><strong>Bronnen</strong></p>
+    <ul class="bronnen">
+      <li>AI Fin Support &ndash; supportassistent eBlinqx Hypotheekadvies (chatsessies 2 oktober 2026)</li>
+      <li>Kennisbank eBlinqx Hypotheekadvies: <a href="https://support-fastlane.vh.blinqx.tech/nl/?q=financieringsopzet">support-fastlane.vh.blinqx.tech</a></li>
+      <li>Artikelen: erfpacht afkoop, eigen geld specificeren, 1-/2-kolomsweergave, afrondingsverschil, kredieten inlossen, geldverstrekker in financieringsopzet, spaarsaldo en verkoopopbrengst</li>
+    </ul>
+    <p>Dit overzicht is een samenvatting van supportinformatie en geen formele productdocumentatie. Antwoorden van de AI-assistent kunnen afwijken van de actuele softwareversie &ndash; verifieer kritische stappen in de software of bij support voordat je ze als werkinstructie verspreidt.</p>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  var zoek = document.getElementById('zoek');
+  var wis = document.getElementById('wis');
+  var printBtn = document.getElementById('print');
+  var teller = document.getElementById('teller');
+  var leeg = document.getElementById('leeg');
+  var kaarten = Array.prototype.slice.call(document.querySelectorAll('section.card'));
+
+  function update(){
+    var q = zoek.value.trim().toLowerCase();
+    var zichtbaar = 0;
+    kaarten.forEach(function(k){
+      var hit = q === '' || k.textContent.toLowerCase().indexOf(q) !== -1;
+      k.style.display = hit ? '' : 'none';
+      if (hit) zichtbaar++;
+    });
+    leeg.style.display = zichtbaar === 0 ? 'block' : 'none';
+    teller.textContent = zichtbaar + ' van ' + kaarten.length + ' onderwerpen';
+  }
+
+  zoek.addEventListener('input', update);
+  wis.addEventListener('click', function(){ zoek.value = ''; update(); zoek.focus(); });
+
+  // Print via een eigen venster: window.print() wordt geblokkeerd binnen een iframe (o.a. Google Sites).
+  printBtn.addEventListener('click', function(){
+    try {
+      var w = window.open('', '_blank');
+      if (!w) { window.print(); return; }
+      w.document.open();
+      w.document.write('<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><title>' +
+        document.title + '</title><style>' +
+        document.querySelector('style').textContent +
+        '</style></head><body>' + document.body.innerHTML + '</body></html>');
+      w.document.close();
+      w.focus();
+      setTimeout(function(){ w.print(); }, 350);
+    } catch (e) {
+      window.print();
+    }
+  });
+
+  update();
+})();
+</script>
+</body>
+</html>
