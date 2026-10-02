@@ -1191,22 +1191,30 @@ function viewAdviseur(){
 /* ---------- Handleiding ---------- */
 function viewHandleiding(){
   const fin=FIN.enabled;
-  const toc=[['h-vraag','1. Een vraag stellen'],['h-auto','2. Het automatische antwoord'],['h-antwoord','3. Antwoorden geven'],['h-beoordelen','4. Beoordelen: antwoord en adviseur'],['h-reputatie','5. Reputatie en niveaus'],['h-kennisbank','6. Kennisbank'],['h-rollen','7. Rollen'],['h-spelregels','8. Spelregels'],['h-faq','9. Veelgestelde vragen']];
+  const toc=[['h-vraag','1. Een vraag stellen'],['h-aanmelden','2. Aanmelden en geverifieerd'],['h-auto','3. Het automatische antwoord'],['h-antwoord','4. Antwoorden geven'],['h-beoordelen','5. Beoordelen'],['h-reputatie','6. Reputatie en niveaus'],['h-kennisbank','7. Kennisbank, FAQ en begrippen'],['h-hulp','8. Hulpmiddelen'],['h-rollen','9. Rollen'],['h-spelregels','10. Spelregels'],['h-faq','11. Veelgestelde vragen']];
   return `<section class="guide">
     <div class="card"><div class="pad">
       <h1 style="margin-bottom:10px">Handleiding: zo werkt het <span class="hl">Adviesforum</span></h1>
       <p style="color:var(--muted)">Eén plek waar adviseurs van Blinqx-kantoren elkaar helpen met vakinhoudelijke vragen en met vragen over het Adviespakket en het CRM. Wat vaak gevraagd wordt, groeit door naar de kennisbank.</p>
 
       <h2 id="h-vraag">1. Een vraag stellen</h2>
+      <p>Je hoeft niet in te loggen om een vraag te stellen. Je hebt wel een geldig LinkedIn-profiel nodig en je meldt je aan (zie hoofdstuk 2).</p>
       <ol class="steps">
-        <li><b>Zoek eerst.</b> Typ je onderwerp in de zoekbalk bovenin; die doorzoekt vragen, antwoorden én de kennisbank. Grote kans dat het al eens is behandeld.</li>
-        <li><b>Klik op "Vraag stellen"</b> en kies de categorie: Hypotheken, Verzekeringen, Pensioen & vermogen, Fiscaal, Adviespakket, CRM, Compliance & AFM of Overig.</li>
-        <li><b>Beschrijf de situatie geanonimiseerd.</b> Gebruik rollen en afgeronde bedragen; geen namen, adressen, klantnummers of geboortedata. Vermeld wat je al hebt uitgezocht en waar je precies vastloopt.</li>
-        <li><b>Voeg trefwoorden toe.</b> Die helpen collega's bij het zoeken en sturen het automatische antwoord.</li>
-        <li><b>Plaats de vraag.</b> Je krijgt direct een automatisch antwoord; collega's zien de vraag als "Open" totdat iemand reageert.</li>
+        <li><b>Zoek eerst.</b> De zoekbalk bovenin doorzoekt forum, kennisbank en FAQ. Grote kans dat het al eens is behandeld.</li>
+        <li><b>Klik op "Vraag stellen"</b> en kies de categorie.</li>
+        <li><b>Beschrijf de situatie geanonimiseerd.</b> Gebruik rollen en afgeronde bedragen; geen namen, adressen, klantnummers of geboortedata. Vermeld wat je al hebt uitgezocht.</li>
+        <li><b>Vul je gegevens in:</b> naam, e-mailadres, telefoonnummer en LinkedIn-profiel. Alleen je naam is openbaar; de rest ziet alleen de beheerder.</li>
+        <li><b>Plaats de vraag en verstuur de e-mail.</b> Je mailprogramma opent met een kant-en-klare e-mail aan de beheerder; klik daar op Verzenden. Opent er niets, kopieer dan de tekst. Na controle wordt je vraag op het forum gepubliceerd.</li>
       </ol>
 
-      <h2 id="h-auto">2. Het automatische antwoord</h2>
+      <h2 id="h-aanmelden">2. Aanmelden en geverifieerd worden</h2>
+      <ol class="steps">
+        <li>Meld je aan via <a href="aanmelden.html">het aanmeldformulier</a> met naam, kantoor, functie, telefoon, e-mail en een geldig LinkedIn-profiel. Ook dit gaat via je eigen mailprogramma; er wordt niets op de site opgeslagen.</li>
+        <li>De beheerder controleert je aanmelding (onder meer je LinkedIn-profiel).</li>
+        <li>Na akkoord ben je een <b>geverifieerde gebruiker</b>: bij je naam staat <span class="verif">✓ Geverifieerd</span> en je kunt antwoorden geven en beoordelen.</li>
+      </ol>
+
+      <h2 id="h-auto">3. Het automatische antwoord</h2>
       <p>Direct na het plaatsen zoekt het forum op trefwoorden in drie bronnen en toont de beste treffers met een bronlabel:</p>
       <ul>
         <li><b>Forum</b>: eerdere vragen die al een antwoord hebben, met het beste antwoord als samenvatting.</li>
@@ -1217,10 +1225,10 @@ function viewHandleiding(){
       <p>Herkent het forum om welk product het gaat, dan staat het supportcontact (mail, telefoon, keuzemenu) erbij. Beantwoordt dit je vraag, klik dan op <b>"Dit beantwoordt mijn vraag"</b>: de vraag krijgt de status Opgelost en collega's hoeven er niet meer naar te kijken. Zo niet, laat de vraag open staan. Met <b>Ja/Nee</b> laat je weten of het automatische antwoord nuttig was; daarmee verbeteren we de matching.</p>
       <div class="notice">Het automatische antwoord is een trefwoordmatch${fin?' plus een AI-antwoord':''}, geen inhoudelijke beoordeling. Controleer altijd de bron voordat je iets in een klantdossier overneemt.</div>
 
-      <h2 id="h-antwoord">3. Antwoorden geven</h2>
-      <p>Onder elke vraag staat een antwoordveld. Schrijf vanuit je eigen praktijk: wat doe je, waar let je op, welke voorwaarden of bronnen horen erbij, en sinds wanneer dat zo is. Begin een regel met "- " voor een opsomming. Je eigen antwoord kun je niet beoordelen; dat doen collega's.</p>
+      <h2 id="h-antwoord">4. Antwoorden geven</h2>
+      <p>Antwoorden geven kan als geverifieerde gebruiker. Onder elke vraag staat een antwoordveld. Schrijf vanuit je eigen praktijk: wat doe je, waar let je op, welke voorwaarden of bronnen horen erbij, en sinds wanneer dat zo is. Begin een regel met "- " voor een opsomming. Je eigen antwoord kun je niet beoordelen; dat doen collega's.</p>
 
-      <h2 id="h-beoordelen">4. Beoordelen: antwoord en adviseur</h2>
+      <h2 id="h-beoordelen">5. Beoordelen: antwoord en adviseur</h2>
       <p>Elk antwoord krijgt twee scores van 1 tot 5 sterren:</p>
       <ul>
         <li><b>Antwoord</b>: klopt het, is het volledig en direct bruikbaar?</li>
@@ -1228,10 +1236,10 @@ function viewHandleiding(){
       </ul>
       <p>De vraagsteller markeert één antwoord als <b>Beste antwoord</b>; de vraag krijgt dan de status Opgelost. Antwoorden staan gesorteerd op beste antwoord en daarna op score. Een beoordeling aanpassen kan altijd: klik opnieuw op het gewenste aantal sterren.</p>
 
-      <h2 id="h-reputatie">5. Reputatie en niveaus</h2>
+      <h2 id="h-reputatie">6. Reputatie en niveaus</h2>
       <p>Punten: 10 per antwoord, 25 per beste antwoord, plus elke ontvangen ster (antwoord en adviseur samen). Niveaus: Starter, Kenner (50), Expert (150), Autoriteit (300). Het tabblad Adviseurs toont de ranglijst met gemiddelde scores; klik op een naam voor het profiel met alle antwoorden en gestelde vragen.</p>
 
-      <h2 id="h-kennisbank">6. Kennisbank</h2>
+      <h2 id="h-kennisbank">7. Kennisbank, FAQ en begrippen</h2>
       <ol class="steps">
         <li>Een vraag met een gekozen beste antwoord kan worden omgezet met <b>"Zet om naar kennisbankartikel"</b>, door de vraagsteller, de beantwoorder, applicatiebeheer of compliance.</li>
         <li>Het artikel start als <b>Concept</b>: bruikbaar als collegiale tip, nog geen kantoorwerkwijze.</li>
@@ -1239,7 +1247,21 @@ function viewHandleiding(){
         <li>Met <b>Nuttig</b> geef je aan dat een artikel je heeft geholpen; de meest nuttige artikelen staan bovenaan. Fouten meld je door op de bronvraag te reageren.</li>
       </ol>
 
-      <h2 id="h-rollen">7. Rollen</h2>
+      <p>Naast de kennisbank zijn er de tabbladen <b>FAQ</b> (ruim 3.000 vragen en antwoorden, per thema) en <b>Begrippen</b> (alfabetisch). Artikelen hebben een herzieningsdatum; is die verstreken, dan staat er "Mogelijk verouderd". Bronnen zijn onder meer de NHG Voorwaarden &amp; Normen 2026, de AFM, het Nibud en de supportkennisbanken van Blinqx V&amp;H.</p>
+
+      <h2 id="h-hulp">8. Hulpmiddelen</h2>
+      <p>Het tabblad Hulpmiddelen bundelt alles wat je in de praktijk nodig hebt. Gebruik het zoekveld om snel de juiste tool te vinden.</p>
+      <ul>
+        <li><b>Rekenhulpen</b>: o.a. leennormen 2026, overbrugging, oversluiten, rentemiddeling, LTV, kosten koper, restschuld bij pensioen, NHG-check 2026 en NHG-beheertoets, plus de pagina Rekentools met tientallen snelle berekeningen.</li>
+        <li><b>Verzekeringen</b>: ORV, AOV-tekort, inkomen bij ziekte, werkloosheid en herbouwwaarde.</li>
+        <li><b>Formulieren</b>: inventarisatie, documentenchecklist, afwijkend advies, gespreksverslag, nazorg-check en wijziging doorgeven.</li>
+        <li><b>Klantscans</b>: tien scans (o.a. nazorg, hypotheek, aflossingsvrij, ORV, pensioen, schade, auto, bedrijf, uitvaart en klanttevredenheid) die je als link naar je klant stuurt. De klant mailt het resultaat naar jou; er wordt niets opgeslagen.</li>
+        <li><b>Naslag</b>: Partijenwegwijzer (banken, geldverstrekkers, verzekeraars en pensioenfondsen), wet- en regelgeving en werkinstructies.</li>
+        <li><b>Documenten</b>: o.a. Nibud-normen en NHG-documenten 2026 om te downloaden.</li>
+      </ul>
+      <div class="notice">Alle rekenhulpen zijn indicatief en geen advies. Controleer de actuele normen en de voorwaarden van geldverstrekker of verzekeraar. Print of bewaar een uitkomst via de printknop (opent in een nieuw venster).</div>
+
+      <h2 id="h-rollen">9. Rollen</h2>
       <div class="two-col">
         <div class="rolecard"><h3>Adviseur</h3><ul><li>Vragen stellen en beantwoorden</li><li>Antwoorden en collega's beoordelen</li><li>Beste antwoord kiezen bij eigen vragen</li><li>Opgeloste vragen voorstellen voor de kennisbank</li></ul></div>
         <div class="rolecard"><h3>Applicatiebeheer</h3><ul><li>Alles wat een adviseur kan</li><li>Eerste aanspreekpunt bij vragen over Adviespakket en CRM</li><li>Opgeloste vragen omzetten naar de kennisbank</li><li>Gecontroleerde kennisbank exporteren voor Fin</li></ul></div>
@@ -1247,7 +1269,7 @@ function viewHandleiding(){
         <div class="rolecard"><h3>Kantoormanager</h3><ul><li>Ziet via het tabblad Adviseurs wie veel bijdraagt</li><li>Signaleert terugkerende vragen voor training of werkinstructies</li></ul></div>
       </div>
 
-      <h2 id="h-spelregels">8. Spelregels</h2>
+      <h2 id="h-spelregels">10. Spelregels</h2>
       <ul>
         <li><b>Geen klantgegevens.</b> Het forum is geen klantdossier; vraag altijd geanonimiseerd.</li>
         <li><b>Collegiale uitwisseling is geen klantadvies.</b> Jij blijft verantwoordelijk voor je eigen advies en dossier.</li>
@@ -1256,11 +1278,12 @@ function viewHandleiding(){
         <li><b>Zakelijk en respectvol.</b> Beoordeel de inhoud, niet de persoon.</li>
       </ul>
 
-      <h2 id="h-faq">9. Veelgestelde vragen</h2>
+      <h2 id="h-faq">11. Veelgestelde vragen</h2>
       <h3>Mijn vraag staat al dagen op Open. Wat nu?</h3><p>Controleer of categorie en trefwoorden kloppen en of de vraag concreet genoeg is; een geanonimiseerd rekenvoorbeeld wordt sneller opgepakt. Gaat het om de software, mail dan ook support: de contactgegevens staan in het automatische antwoord.</p>
       <h3>Waarom staat er een concept in de kennisbank?</h3><p>Concepten komen rechtstreeks uit opgeloste forumvragen en wachten op controle door compliance. Gebruik ze als tip, niet als werkwijze.</p>
-      <h3>Kan ik een vraag of antwoord verwijderen?</h3><p>In deze versie niet; vraag applicatiebeheer. In de productieversie kun je eigen bijdragen bewerken zolang er nog geen beoordelingen zijn.</p>
-      <h3>Wat gebeurt er met mijn gegevens?</h3><p>Je naam, functie en kantoor zijn zichtbaar voor collega's. ${fin?'Bij een vraag aan Fin gaat alleen je adviseur-id naar Intercom (EU-regio), nooit klantgegevens. ':''}In deze demoversie wordt niets bewaard na het vernieuwen van de pagina.</p>
+      <h3>Moet ik inloggen?</h3><p>Nee. Voor een vraag heb je een geldig LinkedIn-profiel nodig en meld je je aan. Na goedkeuring ben je geverifieerd en kun je ook antwoorden.</p>
+      <h3>Kan ik een vraag of antwoord verwijderen?</h3><p>Mail de beheerder via forumadvies@gmail.com.</p>
+      <h3>Wat gebeurt er met mijn gegevens?</h3><p>Bij een vraag is alleen je naam openbaar; e-mail, telefoon en LinkedIn ziet alleen de beheerder. Bij geverifieerde adviseurs zijn naam, functie en kantoor zichtbaar. Formulieren gaan via je eigen mailprogramma; de site heeft geen accounts, database of cookies. Zie de <a href="privacy.html">privacyverklaring</a>. ${fin?'Bij een vraag aan Fin gaat alleen je adviseur-id naar Intercom (EU-regio), nooit klantgegevens. ':''}</p>
     </div></div>
   </section>
   <aside class="rail">
