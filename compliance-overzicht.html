@@ -307,8 +307,10 @@ if(!N||!N._geverifieerd){
   var G=N._geverifieerd;var st={bevestigd:0,aangepast:0,niet:0};
   var rijen=Object.keys(G).map(function(k){
     var v=String(G[k]),lv=v.toLowerCase(),s;
-    if(/^niet/.test(lv))s='niet';else if(/^bevestigd/.test(lv)&&!/niet bevestigd/.test(lv.replace(/^bevestigd/,'')))s='bevestigd';else s='aangepast';
-    if(/^bevestigd \(/.test(lv)&&/niet bevestigd/.test(lv))s='aangepast';
+    if(/^niet/.test(lv))s='niet';
+    else if(/deels|aangepast|niet bevestigd|gecorrigeerd/.test(lv))s='aangepast';
+    else if(/^bevestigd/.test(lv))s='bevestigd';
+    else s='aangepast';
     st[s]++;return {k:k,v:v,s:s};
   });
   var lbl={bevestigd:'<span class="lbl ok">Bevestigd</span>',aangepast:'<span class="lbl concept">Deels / aangepast</span>',niet:'<span class="lbl niet">Niet bevestigd</span>'};

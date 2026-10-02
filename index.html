@@ -799,7 +799,7 @@ const ZOEK_SYN=[
 let ZOEK_MAP=null;
 function zoekMap(){if(ZOEK_MAP)return ZOEK_MAP;const m=new Map();const voeg=g=>{const vs=[...new Set(g.map(zoekNorm).filter(x=>x&&x.length>=2))];if(vs.length<2)return;for(const x of vs){const al=m.get(x)||new Set();vs.forEach(y=>al.add(y));m.set(x,al);}};
   ZOEK_SYN.forEach(voeg);
-  for(const b of BEGRIPPEN){const t=b.term.replace(/\s*\(.*\)$/,'');const afk=(b.term.match(/\(([^)]{2,12})\)$/)||[])[1];voeg([t,...(afk?[afk]:[]),...(b.zoek||[])]);}
+  for(const b of BEGRIPPEN)voeg([b.term.replace(/\s*\(.*\)$/,''),...(b.zoek||[])]);
   return ZOEK_MAP=m;}
 const ZOEK_Q=new Map();
 /* Zoekterm -> lijst van groepen; elke groep is een lijst alternatieven; elk alternatief is een lijst woorden (alle woorden moeten voorkomen) */
