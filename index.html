@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Adviesforum – Blinqx Verzekering & Hypotheek</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F4F7F9;--surface:#FFFFFF;--surface-2:#EAF1F4;--border:#C5DBE3;--text:#1D2632;--muted:#4A515B;
+  --accent:#6DA6B9;--accent-deep:#3F7D92;--accent-soft:#E1EEF3;--yellow:#FFCD00;--yellow-soft:#FFF4C2;--ink-on-yellow:#1D2632;
+  --ok:#2F8F5B;--ok-soft:#E3F3EA;--warn:#9A6B00;--warn-soft:#FFF4C2;--danger:#B23A3A;--header:#1D2632;--header-2:#273240;--header-border:#3A4654;
+  --r:10px;--shadow:0 1px 2px rgba(29,38,50,.06);
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#121920;--surface:#1A232C;--surface-2:#222D38;--border:#2F3D4A;--text:#E9EFF3;--muted:#A8B3BD;
+    --accent:#7FB7C9;--accent-deep:#9ACBDA;--accent-soft:#213541;--yellow-soft:#3A3410;--ok-soft:#1D3327;--warn-soft:#3A3410;--warn:#E3C04B;
+    --header:#0D1319;--header-2:#172029;--header-border:#2A3744;--shadow:none;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#121920;--surface:#1A232C;--surface-2:#222D38;--border:#2F3D4A;--text:#E9EFF3;--muted:#A8B3BD;
+  --accent:#7FB7C9;--accent-deep:#9ACBDA;--accent-soft:#213541;--yellow-soft:#3A3410;--ok-soft:#1D3327;--warn-soft:#3A3410;--warn:#E3C04B;
+  --header:#0D1319;--header-2:#172029;--header-border:#2A3744;--shadow:none;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Montserrat,"Segoe UI",system-ui,-apple-system,sans-serif;font-size:15px;line-height:1.55}
+button,input,select,textarea{font:inherit;color:inherit}
+a{color:var(--accent-deep)}
+h1,h2,h3{margin:0;line-height:1.25;letter-spacing:-.01em}
+h1{font-size:24px;font-weight:700}
+h2{font-size:18px;font-weight:700}
+h3{font-size:15px;font-weight:600}
+p{margin:0 0 12px}
+ul{margin:0 0 12px;padding-left:20px}
+:focus-visible{outline:3px solid var(--yellow);outline-offset:2px;border-radius:4px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+/* Kop */
+.top{background:var(--header);color:#fff}
+.top .wrap{max-width:1240px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;cursor:pointer;background:none;border:0;padding:0;color:#fff;text-align:left}
+.brand .mark{width:16px;height:16px;background:var(--yellow);border-radius:4px;flex:none}
+.brand strong{display:block;font-size:19px;font-weight:700;letter-spacing:-.01em;line-height:1.1}
+.brand small{display:block;color:#B8C4CF;font-size:12px;font-weight:500;margin-top:2px}
+.search{flex:1;min-width:220px}
+.search input{width:100%;padding:10px 14px;border-radius:8px;border:1px solid var(--header-border);background:var(--header-2);color:#fff}
+.search input::placeholder{color:#8E9BA8}
+.who{display:flex;align-items:center;gap:8px;color:#B8C4CF;font-size:13px}
+.who select{padding:8px 10px;border-radius:8px;border:1px solid var(--header-border);background:var(--header-2);color:#fff;max-width:220px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:8px;border:1px solid transparent;font-weight:600;cursor:pointer;background:var(--surface-2);color:var(--text);text-decoration:none;white-space:nowrap}
+.btn:hover{filter:brightness(.97)}
+.btn:disabled{opacity:.55;cursor:not-allowed}
+.btn-y{background:var(--yellow);color:var(--ink-on-yellow)}
+.btn-line{background:transparent;border-color:var(--border)}
+.btn-sm{padding:6px 11px;font-size:13px;font-weight:600}
+.btn-ok{background:var(--ok-soft);color:var(--ok);border-color:transparent}
+
+.demo{background:var(--yellow-soft);color:var(--text);font-size:13px;border-bottom:1px solid var(--border)}
+.demo .wrap{max-width:1240px;margin:0 auto;padding:7px 20px}
+
+/* Tabs */
+.tabs{background:var(--surface);border-bottom:1px solid var(--border)}
+.tabs .wrap{max-width:1240px;margin:0 auto;padding:0 12px;display:flex;gap:2px;overflow-x:auto}
+.tab{padding:14px 14px 11px;border:0;border-bottom:3px solid transparent;background:none;font-weight:600;color:var(--muted);cursor:pointer;white-space:nowrap}
+.tab.on{color:var(--text);border-bottom-color:var(--yellow)}
+.tab .n{display:inline-block;margin-left:6px;padding:1px 7px;border-radius:999px;background:var(--surface-2);font-size:12px;color:var(--muted)}
+
+/* Raster */
+main .wrap{max-width:1240px;margin:0 auto;padding:22px 20px 40px;display:grid;grid-template-columns:230px minmax(0,1fr) 290px;gap:22px;align-items:start}
+main .wrap.two{grid-template-columns:minmax(0,1fr) 300px}
+main .wrap.one{grid-template-columns:minmax(0,1fr)}
+@media (max-width:980px){
+  main .wrap,main .wrap.two{grid-template-columns:1fr}
+  .side{position:static}
+  .side .cats{display:flex;gap:6px;overflow-x:auto;padding-bottom:4px}
+  .side .cats button{white-space:nowrap}
+  .side .filters{display:flex;gap:8px;flex-wrap:wrap}
+  .rail{order:3}
+}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);box-shadow:var(--shadow)}
+.card .pad{padding:16px 18px}
+.side{position:sticky;top:12px}
+.side h3{font-size:13px;color:var(--muted);font-weight:600;margin:0 0 8px}
+.cats{display:flex;flex-direction:column;gap:2px;margin-bottom:18px}
+.cats button{display:flex;justify-content:space-between;align-items:center;gap:8px;width:100%;text-align:left;padding:8px 10px;border:0;border-radius:7px;background:none;cursor:pointer;color:var(--text)}
+.cats button.on{background:var(--accent-soft);font-weight:600}
+.cats button .n{color:var(--muted);font-size:12px}
+.filters label{display:block;font-size:13px;color:var(--muted);margin-bottom:10px}
+.filters select{width:100%;margin-top:4px;padding:8px 10px;border-radius:8px;border:1px solid var(--border);background:var(--surface)}
+
+/* Lijst */
+.listhead{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:12px;flex-wrap:wrap}
+.listhead .sub{color:var(--muted);font-size:13px}
+.q{display:grid;grid-template-columns:1fr auto;gap:8px 16px;padding:16px 18px;border-top:1px solid var(--border);cursor:pointer}
+.q:first-child{border-top:0}
+.q:hover{background:var(--surface-2)}
+.q h3{font-size:15px;font-weight:600}
+.q .ex{color:var(--muted);font-size:14px;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.q .meta{grid-column:1 / -1;display:flex;flex-wrap:wrap;gap:6px 18px;font-size:13px;color:var(--muted);align-items:center}
+.q .meta b{color:var(--text);font-weight:600}
+.status{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;padding:3px 9px;border-radius:999px;white-space:nowrap}
+.status::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
+.s-open{background:var(--warn-soft);color:var(--warn)}
+.s-beantwoord{background:var(--accent-soft);color:var(--accent-deep)}
+.s-opgelost{background:var(--ok-soft);color:var(--ok)}
+.chip{display:inline-block;font-size:12px;font-weight:600;padding:3px 9px;border-radius:999px;background:var(--surface-2);color:var(--muted);border:1px solid var(--border)}
+.tag{display:inline-block;font-size:12px;padding:2px 8px;border-radius:6px;background:var(--surface-2);color:var(--muted);margin:0 6px 6px 0}
+.empty{padding:40px 20px;text-align:center;color:var(--muted)}
+.empty b{display:block;color:var(--text);margin-bottom:6px;font-size:16px}
+
+/* Sterren */
+.stars{display:inline-flex;gap:1px;font-size:15px;line-height:1;vertical-align:middle;color:var(--border)}
+.stars i{font-style:normal}
+.stars i.on{color:var(--yellow)}
+.stars i.half{background:linear-gradient(90deg,var(--yellow) 50%,var(--border) 50%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.rate{display:inline-flex;gap:0}
+.rate button{background:none;border:0;padding:2px 1px;cursor:pointer;font-size:22px;line-height:1;color:var(--border)}
+.rate button.on{color:var(--yellow)}
+.rate button:hover,.rate button:hover ~ button{color:var(--border)}
+.rate:hover button{color:var(--yellow)}
+.rate:hover button:hover ~ button{color:var(--border)}
+.rate button:disabled{cursor:default}
+.rating-row{display:flex;gap:22px;flex-wrap:wrap;align-items:flex-start;padding:12px 0 0;border-top:1px dashed var(--border);margin-top:14px}
+.rating-row .lbl{font-size:12px;color:var(--muted);display:block;margin-bottom:2px}
+.rating-row .val{font-size:13px;color:var(--muted);margin-left:6px}
+
+/* Vraagdetail */
+.crumbs{font-size:13px;color:var(--muted);margin-bottom:12px}
+.crumbs button{background:none;border:0;padding:0;color:var(--accent-deep);cursor:pointer;font-weight:600}
+.qhead{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;flex-wrap:wrap;margin-bottom:10px}
+.byline{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted);margin:14px 0 16px}
+.av{width:34px;height:34px;border-radius:50%;background:var(--accent-soft);color:var(--accent-deep);display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;flex:none}
+.av.lg{width:56px;height:56px;font-size:19px}
+.byline .name{color:var(--text);font-weight:600;background:none;border:0;padding:0;cursor:pointer}
+.body{font-size:15px}
+.body p:last-child,.body ul:last-child{margin-bottom:0}
+.answers h2{margin:22px 0 10px}
+.ans{padding:16px 18px;border-top:1px solid var(--border)}
+.ans:first-of-type{border-top:0}
+.ans.best{background:var(--ok-soft);border-left:4px solid var(--ok)}
+.ans .top-row{display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:10px}
+.best-badge{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--ok)}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+textarea,input[type=text]{width:100%;padding:10px 12px;border:1px solid var(--border);border-radius:8px;background:var(--surface)}
+textarea{min-height:120px;resize:vertical}
+.form label{display:block;font-weight:600;font-size:13px;margin:14px 0 6px}
+.form label:first-child{margin-top:0}
+.form .hint{font-size:12px;color:var(--muted);margin-top:4px}
+.form select{width:100%;padding:10px 12px;border:1px solid var(--border);border-radius:8px;background:var(--surface)}
+.notice{padding:12px 14px;border-radius:8px;background:var(--warn-soft);color:var(--text);font-size:13px;border:1px solid var(--border)}
+.notice.ok{background:var(--ok-soft)}
+
+/* Rail */
+.rail .card{margin-bottom:16px}
+.rail h3{font-size:14px;margin-bottom:12px}
+.lead{display:flex;flex-direction:column;gap:12px}
+.lead .row{display:grid;grid-template-columns:28px 1fr auto;gap:10px;align-items:center;background:none;border:0;padding:0;text-align:left;cursor:pointer;color:var(--text)}
+.lead .nm{font-weight:600;font-size:14px}
+.lead .fn{font-size:12px;color:var(--muted)}
+.lead .pts{font-size:13px;font-weight:700;text-align:right}
+.bar{height:6px;background:var(--surface-2);border-radius:4px;overflow:hidden;grid-column:2 / -1}
+.bar i{display:block;height:100%;background:var(--yellow);border-radius:4px}
+.kpis{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.kpi{padding:10px 12px;border-radius:8px;background:var(--surface-2)}
+.kpi b{display:block;font-size:20px;font-weight:700}
+.kpi span{font-size:12px;color:var(--muted)}
+
+/* Kennisbank */
+.art{padding:16px 18px;border-top:1px solid var(--border);cursor:pointer;display:grid;grid-template-columns:1fr auto;gap:6px 14px}
+.art:first-child{border-top:0}
+.art:hover{background:var(--surface-2)}
+.art h3{font-size:15px}
+.art .ex{color:var(--muted);font-size:14px;grid-column:1}
+.art .meta{grid-column:1 / -1;font-size:13px;color:var(--muted);display:flex;gap:18px;flex-wrap:wrap}
+.check{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;padding:3px 9px;border-radius:999px}
+.check.ok{background:var(--ok-soft);color:var(--ok)}
+.check.draft{background:var(--warn-soft);color:var(--warn)}
+.kb-block{margin:14px 0;padding:14px 16px;border-radius:8px;background:var(--surface-2)}
+.kb-block h3{font-size:13px;color:var(--muted);margin-bottom:8px}
+
+/* Adviseurs */
+.tbl{width:100%;border-collapse:collapse;font-size:14px}
+.tbl th{text-align:left;font-size:12px;color:var(--muted);font-weight:600;padding:10px 12px;border-bottom:1px solid var(--border)}
+.tbl td{padding:12px;border-bottom:1px solid var(--border);vertical-align:middle}
+.tbl tr:last-child td{border-bottom:0}
+.tbl .who-cell{display:flex;align-items:center;gap:10px}
+.tbl .who-cell button{background:none;border:0;padding:0;text-align:left;cursor:pointer;color:var(--text)}
+.tbl .who-cell b{display:block;font-weight:600}
+.tbl .who-cell span{display:block;font-size:12px;color:var(--muted)}
+.tbl .num{text-align:right;font-variant-numeric:tabular-nums}
+.lvl{display:inline-block;font-size:12px;font-weight:700;padding:3px 9px;border-radius:6px;background:var(--yellow-soft);color:var(--text)}
+.tblwrap{overflow-x:auto}
+.profile-head{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.profile-head .sub{color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-top:16px}
+
+footer{border-top:1px solid var(--border);color:var(--muted);font-size:12px}
+footer .wrap{max-width:1240px;margin:0 auto;padding:16px 20px}
+#toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translateX(-50%) translateY(20px);background:var(--header);color:#fff;padding:10px 16px;border-radius:8px;font-size:14px;font-weight:600;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;z-index:50}
+#toast.show{opacity:1;transform:translateX(-50%)}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <button class="brand" data-act="home" aria-label="Naar het forum">
+      <span class="mark"></span>
+      <span><strong>Adviesforum</strong><small>Blinqx Verzekering &amp; Hypotheek</small></span>
+    </button>
+    <div class="search"><input id="search" type="search" placeholder="Zoek in vragen, antwoorden en kennisbank" aria-label="Zoeken"></div>
+    <div class="who"><label for="user">Ingelogd als</label><select id="user"></select></div>
+    <button class="btn btn-y" data-act="nieuw">Vraag stellen</button>
+  </div>
+</header>
+<div class="demo"><div class="wrap">Demo met voorbeelddata. Vragen, antwoorden en beoordelingen die je nu toevoegt blijven alleen in deze sessie staan.</div></div>
+<nav class="tabs" aria-label="Onderdelen"><div class="wrap" id="tabs"></div></nav>
+
+<main><div id="app" class="wrap"></div></main>
+
+<footer><div class="wrap">Collegiale kennisuitwisseling tussen adviseurs, geen klantadvies. Controleer altijd de actuele wet- en regelgeving en de voorwaarden van de geldverstrekker of verzekeraar voordat je iets in een klantdossier overneemt. Alleen kennisbankartikelen met het label “Gecontroleerd” zijn beoordeeld door compliance.</div></footer>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script>
+/* ---------- Data ---------- */
+const USERS=[
+ {id:'u1',naam:'Sanne de Vries',functie:'Hypotheekadviseur',kantoor:'Utrecht',rol:'adviseur'},
+ {id:'u2',naam:'Mark Jansen',functie:'Financieel planner',kantoor:'Amsterdam',rol:'adviseur'},
+ {id:'u3',naam:'Fatima El Amrani',functie:'Verzekeringsadviseur',kantoor:'Rotterdam',rol:'adviseur'},
+ {id:'u4',naam:'Tom Bakker',functie:'Hypotheekadviseur',kantoor:'Eindhoven',rol:'adviseur'},
+ {id:'u5',naam:'Lisa van Dijk',functie:'Erkend Hypothecair Planner',kantoor:'Zwolle',rol:'adviseur'},
+ {id:'u6',naam:'Ruben Visser',functie:'Applicatiebeheerder Adviespakket & CRM',kantoor:'Blinqx, Amsterdam',rol:'beheer'},
+ {id:'u7',naam:'Nadia Peters',functie:'Pensioenadviseur',kantoor:'Groningen',rol:'adviseur'},
+ {id:'u8',naam:'Joris Hendriks',functie:'Compliance officer',kantoor:'Blinqx, Amsterdam',rol:'compliance'}
+];
+const CATS=[
+ {id:'hyp',naam:'Hypotheken'},{id:'verz',naam:'Verzekeringen'},{id:'pens',naam:'Pensioen & vermogen'},{id:'fisc',naam:'Fiscaal'},
+ {id:'adv',naam:'Adviespakket (Blinqx)'},{id:'crm',naam:'CRM (Blinqx)'},{id:'comp',naam:'Compliance & AFM'},{id:'ov',naam:'Overig'}
+];
+const LEVELS=[[300,'Autoriteit'],[150,'Expert'],[50,'Kenner'],[0,'Starter']];
+
+const VRAGEN=[
+ {id:'v1',cat:'hyp',auteur:'u1',datum:'2026-09-29T09:12:00',views:142,tags:['overbrugging','verkoop','dubbele lasten'],beste:'a1',
+  titel:'Overbrugging bij nog niet verkochte woning: hoe reken je de maximale overbrugging?',
+  body:`Klant koopt een nieuwe woning, de huidige staat te koop maar er is nog geen koper. De geldverstrekker vraagt om onderbouwing van het overbruggingskrediet. Hoe rekenen jullie dit uit en welke marge houden jullie aan?`,
+  antwoorden:[
+   {id:'a1',auteur:'u5',datum:'2026-09-29T11:40:00',rA:{u1:5,u4:5,u2:4},rAdv:{u1:5,u4:5},
+    body:`Uitgangspunt is de verwachte verkoopopbrengst minus de restschuld van de huidige hypotheek. Zolang de woning niet verkocht is, rekent de geldverstrekker meestal met een percentage van de marktwaarde uit het taxatierapport in plaats van met de vraagprijs. Dat percentage verschilt per geldverstrekker, dus kijk in de acceptatievoorwaarden.
+
+Wat ik altijd meeneem:
+- de dubbele lasten tijdens de overbruggingsperiode in de toets, inclusief het scenario dat de verkoop langer duurt
+- verkoopkosten (makelaar, notaris) in mindering op de opbrengst
+- een eventuele boeterente bij vervroegd aflossen van de oude hypotheek
+
+Is de woning al verkocht en zijn de ontbindende voorwaarden verlopen, dan rekenen de meeste geldverstrekkers met de werkelijke verkoopprijs.`},
+   {id:'a2',auteur:'u4',datum:'2026-09-29T14:05:00',rA:{u1:4,u5:4},rAdv:{u1:4},
+    body:`Aanvulling: leg in het dossier vast hoe de klant de dubbele lasten draagt (spaargeld, inkomen) en hoe lang hij dat volhoudt. Dat is precies waar de geldverstrekker én de AFM naar kijken bij overbrugging.`}
+  ]},
+ {id:'v2',cat:'adv',auteur:'u4',datum:'2026-09-30T08:30:00',views:88,tags:['leningdelen','scenario','rentevaste periode'],beste:'a3',
+  titel:'Twee leningdelen met verschillende rentevaste periodes: hoe leg je dat vast in het Adviespakket?',
+  body:`Klant wil een deel 10 jaar vast en een deel 20 jaar vast. In het scenario kan ik maar één rentevaste periode kiezen, lijkt het. Doe ik iets fout?`,
+  antwoorden:[
+   {id:'a3',auteur:'u6',datum:'2026-09-30T09:02:00',rA:{u4:5,u1:5,u5:4},rAdv:{u4:5,u1:5},
+    body:`De rentevaste periode zit op het leningdeel, niet op het scenario. Voeg binnen hetzelfde scenario een tweede leningdeel toe en kies per deel de aflosvorm, de looptijd en de rentevaste periode. Het adviesrapport toont dan per leningdeel de maandlast en de uitleg over het renterisico.
+
+Tip: geef de leningdelen een herkenbare omschrijving, bijvoorbeeld "Annuïtair 10 jaar" en "Annuïtair 20 jaar". Dan is het rapport voor de klant direct leesbaar.`}
+  ]},
+ {id:'v3',cat:'crm',auteur:'u3',datum:'2026-09-25T13:15:00',views:201,tags:['dubbel dossier','samenvoegen','documenten'],beste:'a4',
+  titel:'Klantdossier dubbel aangemaakt in het CRM: hoe samenvoegen zonder documenten kwijt te raken?',
+  body:`Een collega heeft per ongeluk een tweede dossier voor dezelfde klant aangemaakt. In beide dossiers staan nu documenten en notities. Kan dit samengevoegd worden?`,
+  antwoorden:[
+   {id:'a4',auteur:'u6',datum:'2026-09-25T14:00:00',rA:{u3:5,u1:4,u2:5},rAdv:{u3:5,u2:5},
+    body:`Ja. Controleer eerst in beide dossiers welke documenten, notities en taken erin staan en bepaal welk dossier leidend is (meestal het oudste, met het klantnummer dat de klant kent). Gebruik daarna de samenvoegfunctie voor relaties: documenten en notities van het brondossier worden overgenomen en dubbele NAW-gegevens worden ontdubbeld.
+
+Let op: samenvoegen kan niet ongedaan gemaakt worden. Twijfel je, maak dan eerst een export van het brondossier of zet een ticket uit bij support.`},
+   {id:'a5',auteur:'u1',datum:'2026-09-26T08:20:00',rA:{u3:4},rAdv:{u3:4},
+    body:`Wij hebben als kantoorafspraak dat we vóór het aanmaken van een dossier altijd eerst zoeken op geboortedatum en postcode. Scheelt een hoop samenvoegwerk achteraf.`}
+  ]},
+ {id:'v4',cat:'verz',auteur:'u1',datum:'2026-09-22T10:45:00',views:317,tags:['ORV','NHG','zorgplicht','afwijkend advies'],beste:'a6',
+  titel:'ORV bij NHG: klant wil geen overlijdensrisicoverzekering, wat leggen jullie vast?',
+  body:`Tweeverdieners; valt één inkomen weg bij overlijden, dan is de hypotheek niet meer betaalbaar. Klant wil geen ORV afsluiten. Verplicht is het niet meer bij NHG, maar hoe gaan jullie hiermee om in het adviesdossier?`,
+  antwoorden:[
+   {id:'a6',auteur:'u3',datum:'2026-09-22T12:10:00',rA:{u1:5,u2:5,u5:5,u4:4},rAdv:{u1:5,u2:5,u5:5},
+    body:`Sinds NHG de ORV-eis heeft losgelaten is het een adviesvraag geworden, geen acceptatievraag. Jij moet dus laten zien dat je het risico hebt geïnventariseerd en besproken.
+
+Wat wij vastleggen:
+- de berekening van het tekort bij overlijden van elk van beide partners (woonlasten tegenover resterend inkomen, nabestaandenpensioen, Anw)
+- het advies om het tekort af te dekken, met het verzekerd bedrag
+- de afwijkende keuze van de klant, in zijn eigen woorden en ondertekend
+
+Check ook of de geldverstrekker zelf nog een ORV eist boven een bepaald LTV-percentage; dat verschilt per aanbieder.`},
+   {id:'a7',auteur:'u8',datum:'2026-09-22T15:30:00',rA:{u1:5,u3:4},rAdv:{u1:5},
+    body:`Vanuit compliance: een verklaring "afwijkend advies" is prima, maar alleen als het advies zelf eerst helder in het rapport staat. Een verklaring zonder onderbouwd advies erboven houdt bij een dossieronderzoek van de AFM geen stand.`}
+  ]},
+ {id:'v5',cat:'fisc',auteur:'u4',datum:'2026-09-18T09:00:00',views:176,tags:['bijleenregeling','schenking','eigenwoningschuld'],beste:'a8',
+  titel:'Schenking van ouders gebruikt voor aflossing: gevolgen voor bijleenregeling en renteaftrek?',
+  body:`Klant krijgt een schenking en lost daarmee een deel van de eigenwoningschuld af. Over een paar jaar wil hij verhuizen. Hoe werkt dit door in de eigenwoningreserve?`,
+  antwoorden:[
+   {id:'a8',auteur:'u2',datum:'2026-09-18T11:25:00',rA:{u4:5,u5:5,u1:4},rAdv:{u4:5,u5:5},
+    body:`Aflossen verlaagt de eigenwoningschuld. Bij verkoop is de eigenwoningreserve het verschil tussen de verkoopopbrengst (na verkoopkosten) en de resterende eigenwoningschuld. Doordat de schuld door de aflossing lager is, wordt de reserve groter, en die reserve moet de klant bij de volgende woning eerst inzetten voordat nieuwe schuld als eigenwoningschuld kwalificeert.
+
+Praktisch: de renteaftrek over het afgeloste deel is weg en komt bij een volgende aankoop niet zomaar terug. Reken dit altijd door in een verhuisscenario voordat de klant aflost, en leg vast dat je dit hebt besproken.`}
+  ]},
+ {id:'v6',cat:'pens',auteur:'u2',datum:'2026-09-15T14:20:00',views:97,tags:['lijfrente','jaarruimte','banksparen'],beste:null,
+  titel:'Lijfrente voor een pensioentekort: wanneer banksparen en wanneer een verzekering?',
+  body:`Klant heeft jaarruimte en wil die benutten. Fiscaal zijn bank en verzekeraar gelijk, maar waar letten jullie op bij de keuze?`,
+  antwoorden:[
+   {id:'a9',auteur:'u7',datum:'2026-09-15T16:00:00',rA:{u2:5,u5:4},rAdv:{u2:5,u5:4},
+    body:`Fiscaal inderdaad gelijkwaardig; het verschil zit in de uitkeringsfase en de kosten.
+- Bankspaar- of beleggingslijfrente: uitkering voor een vaste periode, bij overlijden gaat het saldo naar de erfgenamen, meestal lagere kosten.
+- Verzekerde lijfrente: alleen hier is een levenslange uitkering mogelijk, maar bij overlijden valt het kapitaal (deels) toe aan de verzekeraar tenzij je dat meeverzekert.
+
+In de opbouwfase kies ik meestal voor bank of beleggen; de keuze voor levenslang maak je pas op de ingangsdatum. Leg wel vast dat je het langlevenrisico hebt besproken.`}
+  ]},
+ {id:'v7',cat:'hyp',auteur:'u5',datum:'2026-10-01T16:40:00',views:23,tags:['verhuisregeling','meeneemregeling'],beste:null,
+  titel:'Verhuisregeling meenemen naar een andere geldverstrekker: kan dat?',
+  body:`Klant heeft een lage rente die nog zes jaar vaststaat en wil verhuizen, maar de huidige geldverstrekker financiert het nieuwe object niet. Zijn er constructies om de rente toch mee te nemen?`,
+  antwoorden:[]},
+ {id:'v8',cat:'comp',auteur:'u1',datum:'2026-09-10T08:50:00',views:264,tags:['bewaartermijn','AVG','Wft'],beste:'a10',
+  titel:'Hoe lang bewaren jullie adviesdossiers na het einde van de relatie?',
+  body:`We ruimen oude dossiers op. Wat is de minimale bewaartermijn en wanneer moet je juist verwijderen vanwege de AVG?`,
+  antwoorden:[
+   {id:'a10',auteur:'u8',datum:'2026-09-10T10:15:00',rA:{u1:5,u2:5,u3:5,u5:5},rAdv:{u1:5,u2:5,u3:5},
+    body:`Twee regimes die je naast elkaar moet houden:
+- Wft/BGfo: het adviesdossier bewaar je minimaal vijf jaar na het einde van de dienstverlening, zodat je het advies kunt reconstrueren.
+- AVG: niet langer bewaren dan nodig voor het doel. Na de wettelijke termijn heb je dus een verwijderbeleid nodig.
+
+Voor de financiële administratie (facturen, provisie) geldt de fiscale bewaarplicht van zeven jaar. Leg je termijnen vast in het verwerkingsregister en laat het CRM de verwijderdatum berekenen; dan is het geen handwerk meer.`}
+  ]},
+ {id:'v9',cat:'crm',auteur:'u7',datum:'2026-09-27T11:05:00',views:133,tags:['taken','nazorg','rentevaste periode'],beste:'a11',
+  titel:'Automatisch een taak op het einde van de rentevaste periode in het CRM?',
+  body:`Ik wil zes maanden vóór de renteherziening van een klant automatisch een taak krijgen. Kan dat zonder elke klant handmatig een taak te geven?`,
+  antwoorden:[
+   {id:'a11',auteur:'u4',datum:'2026-09-27T12:30:00',rA:{u7:5,u1:5,u3:4},rAdv:{u7:5,u1:4},
+    body:`Ja, via een signalering op de hypotheekgegevens. Als de einddatum van de rentevaste periode op het leningdeel is gevuld, maak je een kantoorbrede regel die een aantal maanden vóór die datum een taak aanmaakt voor de dossierhouder. Wij hebben die op zes maanden staan en koppelen er een standaardmail aan om de klant uit te nodigen.
+
+Voorwaarde: de einddata moeten wél gevuld zijn. Draai dus eerst een overzicht van leningdelen zonder einddatum.`},
+   {id:'a12',auteur:'u6',datum:'2026-09-27T13:10:00',rA:{u7:4},rAdv:{u7:4},
+    body:`Klopt wat Tom zegt. Let op dat de regel alleen werkt voor actieve relaties; bij klanten met status "ex-klant" wordt bewust geen taak aangemaakt.`}
+  ]},
+ {id:'v10',cat:'adv',auteur:'u3',datum:'2026-09-30T15:55:00',views:41,tags:['adviesrapport','logo','export'],beste:null,
+  titel:'Adviesrapport toont het verkeerde kantoorlogo bij export naar PDF',
+  body:`Sinds de fusie zie ik bij de PDF-export nog het oude logo, terwijl in het portaal het nieuwe logo staat.`,
+  antwoorden:[
+   {id:'a13',auteur:'u6',datum:'2026-09-30T16:20:00',rA:{u3:4},rAdv:{u3:4},
+    body:`Het logo in het rapport komt uit de rapportinstellingen van de vestiging, niet uit het portaalprofiel. Vraag je kantoorbeheerder om daar het nieuwe logo te uploaden (PNG, liefst met transparante achtergrond). Rapporten die al gegenereerd zijn veranderen niet; nieuwe exports wel.`}
+  ]},
+ {id:'v11',cat:'verz',auteur:'u4',datum:'2026-09-12T09:35:00',views:158,tags:['woonlastenverzekering','zzp','arbeidsongeschiktheid'],beste:null,
+  titel:'Woonlastenverzekering voor een zzp\u2019er: welke dekking adviseren jullie standaard?',
+  body:`Zzp'er zonder AOV, hypotheek net binnen de norm. Wat is een realistische dekking en waar moet ik op letten in de voorwaarden?`,
+  antwoorden:[
+   {id:'a14',auteur:'u3',datum:'2026-09-12T11:00:00',rA:{u4:5,u1:4,u5:5},rAdv:{u4:5,u5:5},
+    body:`Voor een zzp'er is vooral het arbeidsongeschiktheidsdeel relevant; werkloosheid is voor zelfstandigen doorgaans niet verzekerbaar. Let in de voorwaarden op:
+- het arbeidsongeschiktheidscriterium (beroepsarbeid of gangbare arbeid)
+- de eigenrisicoperiode en de maximale uitkeringsduur
+- of de verzekerde maandlast de volledige woonlast dekt of alleen de hypotheeklast
+
+Bespreek altijd of een echte AOV niet passender is. Een woonlastenverzekering is een pleister, geen inkomensbescherming. Leg die afweging vast.`}
+  ]}
+];
+
+const ARTIKELEN=[
+ {id:'k1',cat:'crm',titel:'Dubbel klantdossier samenvoegen in het CRM',auteur:'u6',datum:'2026-09-26T09:00:00',bron:'v3',gecontroleerd:true,views:188,nuttig:{u1:1,u2:1,u3:1,u4:1,u5:1,u7:1},
+  body:`Controleer eerst in beide dossiers welke documenten, notities en taken erin staan en bepaal welk dossier leidend is: meestal het oudste, met het klantnummer dat de klant kent.
+
+Gebruik daarna de samenvoegfunctie voor relaties. Documenten en notities van het brondossier worden overgenomen; dubbele NAW-gegevens worden ontdubbeld.
+
+- Samenvoegen is niet terug te draaien.
+- Twijfel je, maak dan eerst een export van het brondossier of zet een ticket uit bij support.
+- Voorkomen is beter: zoek vóór het aanmaken van een dossier altijd eerst op geboortedatum en postcode.`},
+ {id:'k2',cat:'verz',titel:'ORV en NHG: wat is verplicht en wat leg je vast',auteur:'u3',datum:'2026-09-23T10:30:00',bron:'v4',gecontroleerd:true,views:402,nuttig:{u1:1,u2:1,u4:1,u5:1,u7:1,u8:1},
+  body:`NHG stelt geen eis meer aan een overlijdensrisicoverzekering. Het afdekken van het overlijdensrisico is daarmee een adviesvraag geworden, geen acceptatievraag. De geldverstrekker kan boven een bepaald LTV-percentage nog wel een ORV eisen; controleer dat per aanbieder.
+
+Vastleggen in het dossier:
+- berekening van het tekort bij overlijden van elk van beide partners (woonlasten tegenover resterend inkomen, nabestaandenpensioen, Anw)
+- het advies om het tekort af te dekken, met het geadviseerde verzekerd bedrag
+- bij afwijken: de keuze van de klant in zijn eigen woorden, ondertekend, onder een volledig uitgewerkt advies
+
+Een verklaring "afwijkend advies" zonder onderbouwd advies erboven is onvoldoende.`},
+ {id:'k3',cat:'comp',titel:'Bewaartermijnen adviesdossier (Wft/BGfo en AVG)',auteur:'u8',datum:'2026-09-11T08:00:00',bron:'v8',gecontroleerd:true,views:356,nuttig:{u1:1,u2:1,u3:1,u4:1,u5:1,u6:1,u7:1},
+  body:`Twee regimes naast elkaar:
+- Wft/BGfo: bewaar het adviesdossier minimaal vijf jaar na het einde van de dienstverlening, zodat het advies reconstrueerbaar blijft.
+- AVG: bewaar niet langer dan nodig voor het doel. Na de wettelijke termijn moet er een verwijderbeleid zijn.
+
+Voor de financiële administratie (facturen, provisie) geldt de fiscale bewaarplicht van zeven jaar.
+
+Leg de termijnen vast in het verwerkingsregister en laat het CRM de verwijderdatum berekenen op basis van de einddatum van de relatie.`},
+ {id:'k4',cat:'adv',titel:'Leningdelen met verschillende rentevaste periodes vastleggen',auteur:'u6',datum:'2026-09-30T10:00:00',bron:'v2',gecontroleerd:false,views:54,nuttig:{u4:1,u1:1},
+  body:`De rentevaste periode hoort bij het leningdeel, niet bij het scenario. Voeg binnen hetzelfde scenario per gewenste rentevaste periode een leningdeel toe en stel per deel de aflosvorm, de looptijd en de rentevaste periode in.
+
+Geef elk leningdeel een herkenbare omschrijving (bijvoorbeeld "Annuïtair 10 jaar"), dan toont het adviesrapport per deel de maandlast en de uitleg over het renterisico op een voor de klant leesbare manier.`},
+ {id:'k5',cat:'hyp',titel:'Checklist eerste gesprek hypotheekadvies',auteur:'u5',datum:'2026-09-05T09:00:00',bron:null,gecontroleerd:true,views:511,nuttig:{u1:1,u2:1,u3:1,u4:1,u6:1,u7:1,u8:1},
+  body:`Inventariseren (klantbeeld):
+- doelstellingen en termijn: kopen, oversluiten, verbouwen, verduurzamen
+- inkomen en bestendigheid, inclusief partner en toekomstige wijzigingen
+- financiële verplichtingen en BKR-registraties
+- risicobereidheid en kennis en ervaring met hypotheken en verzekeringen
+- toekomstplannen: gezin, pensioen, verhuizen, ondernemen
+
+Stukken opvragen:
+- geldig identiteitsbewijs
+- recente loonstroken en jaaropgave, of jaarcijfers bij ondernemers
+- pensioenoverzicht (mijnpensioenoverzicht.nl)
+- overzicht van lopende leningen en verzekeringen
+
+Vastleggen: gespreksnotitie met datum, besproken onderwerpen en afspraken, en de dienstverleningsdocumenten die zijn overhandigd.`},
+ {id:'k6',cat:'fisc',titel:'Bijleenregeling in het kort',auteur:'u2',datum:'2026-09-19T12:00:00',bron:'v5',gecontroleerd:false,views:97,nuttig:{u4:1,u5:1,u1:1},
+  body:`De eigenwoningreserve is het verschil tussen de verkoopopbrengst van de woning (na verkoopkosten) en de resterende eigenwoningschuld. Bij aankoop van een volgende woning moet die reserve eerst worden ingezet; alleen het meerdere kwalificeert als nieuwe eigenwoningschuld met renteaftrek.
+
+Aflossen uit eigen middelen of een schenking verlaagt de eigenwoningschuld en vergroot dus bij verkoop de eigenwoningreserve. De renteaftrek over het afgeloste deel komt bij een volgende aankoop niet zonder meer terug.
+
+Reken een verhuisscenario door voordat de klant extra aflost en leg vast dat dit is besproken.`},
+ {id:'k7',cat:'crm',titel:'Signalering einde rentevaste periode instellen',auteur:'u4',datum:'2026-09-28T09:00:00',bron:'v9',gecontroleerd:false,views:61,nuttig:{u7:1,u1:1},
+  body:`Maak een kantoorbrede regel op de hypotheekgegevens die een aantal maanden vóór de einddatum van de rentevaste periode een taak aanmaakt voor de dossierhouder. Koppel er een standaardmail aan om de klant uit te nodigen voor een gesprek.
+
+Voorwaarden:
+- de einddatum van de rentevaste periode moet per leningdeel gevuld zijn; draai eerst een overzicht van leningdelen zonder einddatum
+- de regel werkt alleen voor actieve relaties, niet voor relaties met status "ex-klant"`},
+ {id:'k8',cat:'comp',titel:'Afwijkend advies: zo leg je het goed vast',auteur:'u8',datum:'2026-09-02T08:30:00',bron:null,gecontroleerd:true,views:289,nuttig:{u1:1,u2:1,u3:1,u4:1,u5:1,u7:1},
+  body:`Een klant mag afwijken van je advies. Jij moet kunnen aantonen dat het advies passend was en dat de klant de gevolgen van zijn keuze begreep.
+
+Volgorde in het dossier:
+- het volledige advies met onderbouwing in het adviesrapport
+- de risico's van afwijken concreet benoemd (bedragen, scenario's)
+- de keuze van de klant in zijn eigen woorden
+- datum en handtekening van de klant
+
+Wat niet volstaat: een losse "afstandsverklaring" zonder uitgewerkt advies, of een standaardzin zonder de concrete risico's voor deze klant.`}
+];
+
+/* ---------- State ---------- */
+const S={tab:'forum',view:'forum',cat:'alle',status:'alle',sort:'nieuw',q:'',me:'u1',vraag:null,artikel:null,adviseur:null,kbCat:'alle',kbStatus:'alle'};
+let seq=100;
+const nid=p=>p+(seq++);
+
+/* ---------- Helpers ---------- */
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const fmtNum=(n,d=1)=>Number(n).toLocaleString('nl-NL',{minimumFractionDigits:d,maximumFractionDigits:d});
+const fmtInt=n=>Number(n).toLocaleString('nl-NL');
+const fmtDate=iso=>new Date(iso).toLocaleDateString('nl-NL',{day:'numeric',month:'short',year:'numeric'});
+const user=id=>USERS.find(u=>u.id===id);
+const cat=id=>CATS.find(c=>c.id===id);
+const me=()=>user(S.me);
+const initials=n=>n.split(' ').filter(Boolean).map(w=>w[0]).filter((_,i,a)=>i===0||i===a.length-1).join('').toUpperCase();
+const avg=o=>{const v=Object.values(o||{});return v.length?v.reduce((a,b)=>a+b,0)/v.length:0};
+const cnt=o=>Object.keys(o||{}).length;
+const vraagStatus=v=>v.beste?'opgelost':(v.antwoorden.length?'beantwoord':'open');
+const statusTxt={open:'Open',beantwoord:'Beantwoord',opgelost:'Opgelost'};
+const plural=(n,e,m)=>n+' '+(n===1?e:m);
+
+function rich(t){
+  const lines=esc(t).split('\n');let out='',inList=false,para=[];
+  const flush=()=>{if(para.length){out+='<p>'+para.join('<br>')+'</p>';para=[];}};
+  for(const l of lines){
+    if(l.startsWith('- ')){flush();if(!inList){out+='<ul>';inList=true;}out+='<li>'+l.slice(2)+'</li>';}
+    else{if(inList){out+='</ul>';inList=false;}if(l.trim()==='')flush();else para.push(l);}
+  }
+  if(inList)out+='</ul>';flush();return out;
+}
+function starsStatic(a){
+  const r=Math.round(a*2)/2;let h='<span class="stars" aria-label="'+fmtNum(a)+' van 5">';
+  for(let i=1;i<=5;i++){h+='<i class="'+(i<=Math.floor(r)?'on':(i-0.5===r?'half':''))+'">★</i>';}
+  return h+'</span>';
+}
+function starsInput(ansId,kind,mine,disabled,label){
+  let h='<span class="rate" role="radiogroup" aria-label="'+esc(label)+'">';
+  for(let i=1;i<=5;i++){
+    h+='<button type="button" role="radio" aria-checked="'+(mine===i)+'" aria-label="'+i+' van 5" data-act="rate" data-id="'+ansId+'" data-kind="'+kind+'" data-val="'+i+'" class="'+(mine&&i<=mine?'on':'')+'"'+(disabled?' disabled':'')+'>★</button>';
+  }
+  return h+'</span>';
+}
+function levelFor(p){return LEVELS.find(l=>p>=l[0])[1];}
+function statsFor(uid){
+  let antwoorden=0,best=0,sumA=0,nA=0,sumAdv=0,nAdv=0,vragen=0;
+  for(const v of VRAGEN){
+    if(v.auteur===uid)vragen++;
+    for(const a of v.antwoorden){
+      if(a.auteur!==uid)continue;antwoorden++;if(v.beste===a.id)best++;
+      for(const s of Object.values(a.rA)){sumA+=s;nA++;}
+      for(const s of Object.values(a.rAdv)){sumAdv+=s;nAdv++;}
+    }
+  }
+  const punten=antwoorden*10+best*25+sumA+sumAdv;
+  return{vragen,antwoorden,best,gemA:nA?sumA/nA:0,nA,gemAdv:nAdv?sumAdv/nAdv:0,nAdv,punten,level:levelFor(punten)};
+}
+function toast(msg){const t=$('#toast');t.textContent=msg;t.classList.add('show');clearTimeout(t._h);t._h=setTimeout(()=>t.classList.remove('show'),2200);}
+function matches(q,...fields){q=q.trim().toLowerCase();if(!q)return true;return fields.join(' ').toLowerCase().includes(q);}
+
+/* ---------- Render: schil ---------- */
+function renderShell(){
+  const sel=$('#user');
+  sel.innerHTML=USERS.map(u=>`<option value="${u.id}" ${u.id===S.me?'selected':''}>${esc(u.naam)}${u.rol==='compliance'?' (compliance)':''}</option>`).join('');
+  const open=VRAGEN.filter(v=>vraagStatus(v)==='open').length;
+  $('#tabs').innerHTML=[
+    ['forum','Forum',VRAGEN.length],['kennisbank','Kennisbank',ARTIKELEN.length],['adviseurs','Adviseurs',USERS.length]
+  ].map(([id,t,n])=>`<button class="tab ${S.tab===id?'on':''}" data-act="tab" data-tab="${id}">${t}<span class="n">${n}</span></button>`).join('')
+  +(open?`<span style="margin-left:auto;align-self:center;font-size:13px;color:var(--muted);padding:0 8px;white-space:nowrap">${plural(open,'onbeantwoorde vraag','onbeantwoorde vragen')}</span>`:'');
+}
+
+function render(){
+  renderShell();
+  const app=$('#app');
+  app.className='wrap';
+  switch(S.view){
+    case 'forum':app.innerHTML=viewForum();break;
+    case 'vraag':app.className='wrap two';app.innerHTML=viewVraag();break;
+    case 'nieuw':app.className='wrap two';app.innerHTML=viewNieuw();break;
+    case 'kennisbank':app.innerHTML=viewKennisbank();break;
+    case 'artikel':app.className='wrap two';app.innerHTML=viewArtikel();break;
+    case 'adviseurs':app.className='wrap one';app.innerHTML=viewAdviseurs();break;
+    case 'adviseur':app.className='wrap two';app.innerHTML=viewAdviseur();break;
+  }
+  window.scrollTo({top:0});
+}
+
+/* ---------- Forum ---------- */
+function sideForum(){
+  const counts={alle:VRAGEN.length};CATS.forEach(c=>counts[c.id]=VRAGEN.filter(v=>v.cat===c.id).length);
+  return `<aside class="side">
+    <h3>Categorieën</h3>
+    <div class="cats">
+      <button class="${S.cat==='alle'?'on':''}" data-act="cat" data-cat="alle">Alles<span class="n">${counts.alle}</span></button>
+      ${CATS.map(c=>`<button class="${S.cat===c.id?'on':''}" data-act="cat" data-cat="${c.id}">${esc(c.naam)}<span class="n">${counts[c.id]}</span></button>`).join('')}
+    </div>
+    <h3>Filter</h3>
+    <div class="filters">
+      <label>Status<select data-act="status"><option value="alle" ${S.status==='alle'?'selected':''}>Alle</option><option value="open" ${S.status==='open'?'selected':''}>Open</option><option value="beantwoord" ${S.status==='beantwoord'?'selected':''}>Beantwoord</option><option value="opgelost" ${S.status==='opgelost'?'selected':''}>Opgelost</option></select></label>
+      <label>Sorteren<select data-act="sort"><option value="nieuw" ${S.sort==='nieuw'?'selected':''}>Nieuwste eerst</option><option value="actief" ${S.sort==='actief'?'selected':''}>Meeste antwoorden</option><option value="rating" ${S.sort==='rating'?'selected':''}>Best beoordeeld</option><option value="views" ${S.sort==='views'?'selected':''}>Meest bekeken</option></select></label>
+    </div>
+  </aside>`;
+}
+function bestRating(v){const r=v.antwoorden.map(a=>avg(a.rA)).filter(x=>x>0);return r.length?Math.max(...r):0;}
+function viewForum(){
+  let list=VRAGEN.filter(v=>(S.cat==='alle'||v.cat===S.cat)&&(S.status==='alle'||vraagStatus(v)===S.status)
+    &&matches(S.q,v.titel,v.body,v.tags.join(' '),...v.antwoorden.map(a=>a.body)));
+  list.sort((a,b)=>{
+    if(S.sort==='actief')return b.antwoorden.length-a.antwoorden.length||b.datum.localeCompare(a.datum);
+    if(S.sort==='rating')return bestRating(b)-bestRating(a)||b.datum.localeCompare(a.datum);
+    if(S.sort==='views')return b.views-a.views;
+    return b.datum.localeCompare(a.datum);
+  });
+  const catNaam=S.cat==='alle'?'Alle vragen':cat(S.cat).naam;
+  const rows=list.length?list.map(v=>{
+    const st=vraagStatus(v),u=user(v.auteur),br=bestRating(v);
+    return `<div class="q" data-act="open-vraag" data-id="${v.id}" role="link" tabindex="0">
+      <h3>${esc(v.titel)}</h3>
+      <span class="status s-${st}">${statusTxt[st]}</span>
+      <div class="ex">${esc(v.body)}</div>
+      <div class="meta"><span class="chip">${esc(cat(v.cat).naam)}</span><span><b>${esc(u.naam)}</b> ${esc(u.kantoor)}</span><span>${fmtDate(v.datum)}</span><span>${plural(v.antwoorden.length,'antwoord','antwoorden')}</span><span>${fmtInt(v.views)} keer bekeken</span>${br?`<span>${starsStatic(br)} ${fmtNum(br)}</span>`:''}</div>
+    </div>`;}).join('')
+  :`<div class="empty"><b>Geen vragen gevonden</b>${S.q?'Probeer een andere zoekterm of ':''}stel zelf de eerste vraag in deze categorie.<div style="margin-top:14px"><button class="btn btn-y" data-act="nieuw">Vraag stellen</button></div></div>`;
+  return sideForum()+`<section>
+    <div class="listhead"><div><h1>${esc(catNaam)}</h1><div class="sub">${plural(list.length,'vraag','vragen')}${S.q?` voor “${esc(S.q)}”`:''}</div></div><button class="btn btn-y" data-act="nieuw">Vraag stellen</button></div>
+    <div class="card">${rows}</div>
+  </section>`+rail();
+}
+function rail(){
+  const ranked=USERS.map(u=>({u,s:statsFor(u.id)})).filter(x=>x.s.antwoorden>0).sort((a,b)=>b.s.punten-a.s.punten).slice(0,5);
+  const max=ranked[0]?ranked[0].s.punten:1;
+  const open=VRAGEN.filter(v=>vraagStatus(v)==='open').length;
+  const gecontroleerd=ARTIKELEN.filter(a=>a.gecontroleerd).length;
+  const ratings=VRAGEN.flatMap(v=>v.antwoorden).reduce((n,a)=>n+cnt(a.rA),0);
+  return `<aside class="rail">
+    <div class="card"><div class="pad"><h3>Meest gewaardeerde adviseurs</h3><div class="lead">
+      ${ranked.map(({u,s},i)=>`<button class="row" data-act="open-adviseur" data-id="${u.id}"><span class="av">${initials(u.naam)}</span><span><span class="nm">${esc(u.naam)}</span><br><span class="fn">${esc(s.level)} ${starsStatic(s.gemAdv)}</span></span><span class="pts">${fmtInt(s.punten)}</span><span class="bar"><i style="width:${Math.round(s.punten/max*100)}%"></i></span></button>`).join('')}
+    </div><div style="margin-top:14px"><button class="btn btn-line btn-sm" data-act="tab" data-tab="adviseurs">Alle adviseurs</button></div></div></div>
+    <div class="card"><div class="pad"><h3>In cijfers</h3><div class="kpis">
+      <div class="kpi"><b>${fmtInt(open)}</b><span>open vragen</span></div>
+      <div class="kpi"><b>${fmtInt(VRAGEN.flatMap(v=>v.antwoorden).length)}</b><span>antwoorden</span></div>
+      <div class="kpi"><b>${fmtInt(ratings)}</b><span>beoordelingen</span></div>
+      <div class="kpi"><b>${fmtInt(gecontroleerd)}/${fmtInt(ARTIKELEN.length)}</b><span>artikelen gecontroleerd</span></div>
+    </div></div></div>
+  </aside>`;
+}
+
+/* ---------- Vraagdetail ---------- */
+function viewVraag(){
+  const v=VRAGEN.find(x=>x.id===S.vraag);if(!v){S.view='forum';return viewForum();}
+  const u=user(v.auteur),st=vraagStatus(v),ik=me();
+  const isAuteur=v.auteur===ik.id;
+  const ans=[...v.antwoorden].sort((a,b)=>(b.id===v.beste)-(a.id===v.beste)||avg(b.rA)-avg(a.rA)||a.datum.localeCompare(b.datum));
+  const kbArt=ARTIKELEN.find(a=>a.bron===v.id);
+  const kanPromoveren=v.beste&&!kbArt&&(isAuteur||ik.rol==='compliance'||ik.rol==='beheer'||VRAGEN.find(x=>x.id===v.id).antwoorden.some(a=>a.id===v.beste&&a.auteur===ik.id));
+  const answersHtml=ans.length?ans.map(a=>{
+    const au=user(a.auteur),eigen=a.auteur===ik.id,best=a.id===v.beste,st2=statsFor(a.auteur);
+    const mineA=a.rA[ik.id]||0,mineAdv=a.rAdv[ik.id]||0;
+    return `<article class="ans ${best?'best':''}" id="${a.id}">
+      <div class="top-row">
+        <div class="byline" style="margin:0"><span class="av">${initials(au.naam)}</span><span><button class="name" data-act="open-adviseur" data-id="${au.id}">${esc(au.naam)}</button><br><span>${esc(au.functie)}, ${esc(au.kantoor)} <span class="lvl">${esc(st2.level)}</span></span></span></div>
+        <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap"><span style="font-size:13px;color:var(--muted)">${fmtDate(a.datum)}</span>${best?'<span class="best-badge">✓ Beste antwoord</span>':''}</div>
+      </div>
+      <div class="body">${rich(a.body)}</div>
+      <div class="rating-row">
+        <div><span class="lbl">Antwoord</span>${starsStatic(avg(a.rA))}<span class="val">${cnt(a.rA)?fmtNum(avg(a.rA))+' ('+cnt(a.rA)+')':'nog niet beoordeeld'}</span>${eigen?'':'<div style="margin-top:4px">'+starsInput(a.id,'a',mineA,false,'Beoordeel dit antwoord')+'<span class="val">'+(mineA?'jouw score':'jouw beoordeling')+'</span></div>'}</div>
+        <div><span class="lbl">Adviseur</span>${starsStatic(avg(a.rAdv))}<span class="val">${cnt(a.rAdv)?fmtNum(avg(a.rAdv))+' ('+cnt(a.rAdv)+')':'nog niet beoordeeld'}</span>${eigen?'':'<div style="margin-top:4px">'+starsInput(a.id,'adv',mineAdv,false,'Beoordeel de adviseur')+'<span class="val">'+(mineAdv?'jouw score':'behulpzaam, duidelijk, onderbouwd')+'</span></div>'}</div>
+        ${eigen?'<div style="font-size:13px;color:var(--muted);align-self:center">Je eigen antwoord kun je niet beoordelen.</div>':''}
+        ${isAuteur?`<div style="margin-left:auto;align-self:center"><button class="btn btn-sm ${best?'btn-ok':'btn-line'}" data-act="beste" data-vraag="${v.id}" data-id="${a.id}">${best?'Beste antwoord ✓':'Markeer als beste antwoord'}</button></div>`:''}
+      </div>
+    </article>`;}).join('')
+  :`<div class="empty"><b>Nog geen antwoorden</b>Weet jij het antwoord? Collega's wachten erop.</div>`;
+
+  return `<section>
+    <div class="crumbs"><button data-act="tab" data-tab="forum">Forum</button> &rsaquo; <button data-act="cat-go" data-cat="${v.cat}">${esc(cat(v.cat).naam)}</button></div>
+    <div class="card"><div class="pad">
+      <div class="qhead"><h1>${esc(v.titel)}</h1><span class="status s-${st}">${statusTxt[st]}</span></div>
+      <div>${v.tags.map(t=>`<span class="tag">${esc(t)}</span>`).join('')}</div>
+      <div class="byline"><span class="av">${initials(u.naam)}</span><span><button class="name" data-act="open-adviseur" data-id="${u.id}">${esc(u.naam)}</button><br>${esc(u.functie)}, ${esc(u.kantoor)}</span><span style="margin-left:auto;text-align:right">${fmtDate(v.datum)}<br>${fmtInt(v.views)} keer bekeken</span></div>
+      <div class="body">${rich(v.body)}</div>
+      ${kbArt?`<div class="notice ok" style="margin-top:14px">Dit onderwerp staat in de kennisbank: <button class="btn btn-sm btn-line" data-act="open-artikel" data-id="${kbArt.id}">${esc(kbArt.titel)}</button></div>`:''}
+      ${kanPromoveren?`<div class="actions"><button class="btn btn-line btn-sm" data-act="naar-kb" data-vraag="${v.id}">Zet om naar kennisbankartikel</button><span style="font-size:13px;color:var(--muted);align-self:center">Vraag en beste antwoord worden als concept opgenomen; compliance controleert daarna.</span></div>`:''}
+    </div></div>
+
+    <div class="answers"><h2>${plural(ans.length,'antwoord','antwoorden')}</h2><div class="card">${answersHtml}</div></div>
+
+    <div class="card" style="margin-top:22px"><div class="pad form">
+      <h2 style="margin-bottom:12px">Jouw antwoord</h2>
+      <form id="f-antwoord">
+        <textarea name="body" required placeholder="Deel je ervaring en benoem waar collega's op moeten letten. Gebruik '- ' aan het begin van een regel voor een opsomming."></textarea>
+        <div class="hint">Je antwoordt als ${esc(ik.naam)}. Collega's kunnen je antwoord en jou als adviseur beoordelen.</div>
+        <div class="actions"><button class="btn btn-y" type="submit">Plaats antwoord</button></div>
+      </form>
+    </div></div>
+  </section>`+railVraag(v);
+}
+function railVraag(v){
+  const related=VRAGEN.filter(x=>x.id!==v.id&&(x.cat===v.cat||x.tags.some(t=>v.tags.includes(t)))).slice(0,5);
+  const arts=ARTIKELEN.filter(a=>a.cat===v.cat).slice(0,4);
+  return `<aside class="rail">
+    <div class="card"><div class="pad"><h3>Zo werkt beoordelen</h3><div style="font-size:13px;color:var(--muted)">
+      <p>Elk antwoord krijgt twee scores: één voor het <b style="color:var(--text)">antwoord</b> (klopt het, is het bruikbaar) en één voor de <b style="color:var(--text)">adviseur</b> (behulpzaam, duidelijk, onderbouwd).</p>
+      <p>De vraagsteller kiest het beste antwoord. Punten: 10 per antwoord, 25 per beste antwoord, plus elke ontvangen ster.</p>
+      <p style="margin:0">Niveaus: Starter, Kenner (50), Expert (150), Autoriteit (300).</p></div></div></div>
+    ${arts.length?`<div class="card"><div class="pad"><h3>Kennisbank over ${esc(cat(v.cat).naam)}</h3>${arts.map(a=>`<div style="margin-bottom:8px"><button class="btn btn-line btn-sm" style="white-space:normal;text-align:left" data-act="open-artikel" data-id="${a.id}">${esc(a.titel)}</button></div>`).join('')}</div></div>`:''}
+    ${related.length?`<div class="card"><div class="pad"><h3>Verwante vragen</h3>${related.map(x=>`<div style="margin-bottom:10px;font-size:14px"><button class="btn btn-line btn-sm" style="white-space:normal;text-align:left" data-act="open-vraag" data-id="${x.id}">${esc(x.titel)}</button></div>`).join('')}</div></div>`:''}
+  </aside>`;
+}
+
+/* ---------- Nieuwe vraag ---------- */
+function viewNieuw(){
+  return `<section>
+    <div class="crumbs"><button data-act="tab" data-tab="forum">Forum</button> &rsaquo; Nieuwe vraag</div>
+    <div class="card"><div class="pad form">
+      <h1 style="margin-bottom:16px">Stel een vraag aan collega's</h1>
+      <form id="f-vraag">
+        <label for="nv-titel">Titel</label>
+        <input id="nv-titel" name="titel" type="text" required minlength="12" placeholder="Formuleer de vraag zoals je hem aan een collega zou stellen">
+        <div class="hint">Concreet en herkenbaar, bijvoorbeeld "Overbrugging bij nog niet verkochte woning: hoe reken je de maximale overbrugging?"</div>
+        <label for="nv-cat">Categorie</label>
+        <select id="nv-cat" name="cat">${CATS.map(c=>`<option value="${c.id}">${esc(c.naam)}</option>`).join('')}</select>
+        <label for="nv-body">Situatie en vraag</label>
+        <textarea id="nv-body" name="body" required minlength="30" placeholder="Beschrijf de klantsituatie geanonimiseerd (geen namen, adressen of klantnummers), wat je al hebt uitgezocht en waar je precies tegenaan loopt."></textarea>
+        <div class="hint">Geen persoonsgegevens van klanten in het forum: gebruik rollen en afgeronde bedragen.</div>
+        <label for="nv-tags">Trefwoorden</label>
+        <input id="nv-tags" name="tags" type="text" placeholder="bijvoorbeeld: overbrugging, verkoop, NHG">
+        <div class="hint">Gescheiden door komma's. Helpt collega's en de zoekfunctie.</div>
+        <div class="actions"><button class="btn btn-y" type="submit">Plaats vraag</button><button class="btn btn-line" type="button" data-act="tab" data-tab="forum">Annuleren</button></div>
+      </form>
+    </div></div>
+  </section>
+  <aside class="rail"><div class="card"><div class="pad"><h3>Eerst even zoeken?</h3><div style="font-size:13px;color:var(--muted)"><p>Veel vragen zijn al eens gesteld. Zoek via de balk bovenin in het forum én de kennisbank voordat je een nieuwe vraag plaatst.</p><p style="margin:0">Vragen met een gekozen beste antwoord kunnen worden omgezet naar een kennisbankartikel.</p></div></div></div></aside>`;
+}
+
+/* ---------- Kennisbank ---------- */
+function viewKennisbank(){
+  const counts={alle:ARTIKELEN.length};CATS.forEach(c=>counts[c.id]=ARTIKELEN.filter(a=>a.cat===c.id).length);
+  let list=ARTIKELEN.filter(a=>(S.kbCat==='alle'||a.cat===S.kbCat)&&(S.kbStatus==='alle'||(S.kbStatus==='ok'?a.gecontroleerd:!a.gecontroleerd))&&matches(S.q,a.titel,a.body));
+  list.sort((a,b)=>(b.gecontroleerd-a.gecontroleerd)||cnt(b.nuttig)-cnt(a.nuttig));
+  const side=`<aside class="side">
+    <h3>Categorieën</h3>
+    <div class="cats"><button class="${S.kbCat==='alle'?'on':''}" data-act="kbcat" data-cat="alle">Alles<span class="n">${counts.alle}</span></button>
+    ${CATS.filter(c=>counts[c.id]).map(c=>`<button class="${S.kbCat===c.id?'on':''}" data-act="kbcat" data-cat="${c.id}">${esc(c.naam)}<span class="n">${counts[c.id]}</span></button>`).join('')}</div>
+    <h3>Filter</h3>
+    <div class="filters"><label>Status<select data-act="kbstatus"><option value="alle" ${S.kbStatus==='alle'?'selected':''}>Alle artikelen</option><option value="ok" ${S.kbStatus==='ok'?'selected':''}>Gecontroleerd door compliance</option><option value="concept" ${S.kbStatus==='concept'?'selected':''}>Concept</option></select></label></div>
+  </aside>`;
+  const rows=list.length?list.map(a=>{const u=user(a.auteur);return `<div class="art" data-act="open-artikel" data-id="${a.id}" role="link" tabindex="0">
+      <h3>${esc(a.titel)}</h3>
+      <span class="check ${a.gecontroleerd?'ok':'draft'}">${a.gecontroleerd?'✓ Gecontroleerd':'Concept'}</span>
+      <div class="ex">${esc(a.body.split('\n')[0])}</div>
+      <div class="meta"><span class="chip">${esc(cat(a.cat).naam)}</span><span>${esc(u.naam)}</span><span>${fmtDate(a.datum)}</span><span>${plural(cnt(a.nuttig),'keer nuttig gevonden','keer nuttig gevonden')}</span>${a.bron?'<span>Uit het forum</span>':''}</div>
+    </div>`;}).join('')
+  :`<div class="empty"><b>Geen artikelen gevonden</b>Pas het filter aan of zet een opgeloste forumvraag om naar een artikel.</div>`;
+  return side+`<section>
+    <div class="listhead"><div><h1>Kennisbank</h1><div class="sub">${plural(list.length,'artikel','artikelen')}${S.q?` voor “${esc(S.q)}”`:''}</div></div></div>
+    <div class="card">${rows}</div>
+  </section>
+  <aside class="rail">
+    <div class="card"><div class="pad"><h3>Hoe komt iets in de kennisbank?</h3><div style="font-size:13px;color:var(--muted)"><p>Een forumvraag met een gekozen beste antwoord kan worden omgezet naar een artikel. Het artikel start als <b style="color:var(--text)">Concept</b>.</p><p style="margin:0">Compliance beoordeelt het concept en zet het op <b style="color:var(--text)">Gecontroleerd</b>. Alleen gecontroleerde artikelen gelden als kantoorwerkwijze.</p></div></div></div>
+    <div class="card"><div class="pad"><h3>Meest nuttig</h3>${[...ARTIKELEN].sort((a,b)=>cnt(b.nuttig)-cnt(a.nuttig)).slice(0,4).map(a=>`<div style="margin-bottom:8px"><button class="btn btn-line btn-sm" style="white-space:normal;text-align:left" data-act="open-artikel" data-id="${a.id}">${esc(a.titel)}</button></div>`).join('')}</div></div>
+  </aside>`;
+}
+function viewArtikel(){
+  const a=ARTIKELEN.find(x=>x.id===S.artikel);if(!a){S.view='kennisbank';return viewKennisbank();}
+  const u=user(a.auteur),ik=me(),bron=a.bron?VRAGEN.find(v=>v.id===a.bron):null,mijn=!!a.nuttig[ik.id];
+  return `<section>
+    <div class="crumbs"><button data-act="tab" data-tab="kennisbank">Kennisbank</button> &rsaquo; <button data-act="kbcat-go" data-cat="${a.cat}">${esc(cat(a.cat).naam)}</button></div>
+    <div class="card"><div class="pad">
+      <div class="qhead"><h1>${esc(a.titel)}</h1><span class="check ${a.gecontroleerd?'ok':'draft'}">${a.gecontroleerd?'✓ Gecontroleerd door compliance':'Concept, nog niet gecontroleerd'}</span></div>
+      <div class="byline"><span class="av">${initials(u.naam)}</span><span><button class="name" data-act="open-adviseur" data-id="${u.id}">${esc(u.naam)}</button><br>${esc(u.functie)}, ${esc(u.kantoor)}</span><span style="margin-left:auto;text-align:right">${fmtDate(a.datum)}<br>${fmtInt(a.views)} keer bekeken</span></div>
+      ${a.gecontroleerd?'':'<div class="notice" style="margin-bottom:14px">Dit artikel is een concept uit het forum. Gebruik het als collegiale tip, niet als kantoorwerkwijze, totdat compliance het heeft gecontroleerd.</div>'}
+      <div class="body">${rich(a.body)}</div>
+      ${bron?`<div class="kb-block"><h3>Bron</h3><div style="font-size:14px">Forumvraag van ${esc(user(bron.auteur).naam)}: <button class="btn btn-line btn-sm" style="white-space:normal;text-align:left" data-act="open-vraag" data-id="${bron.id}">${esc(bron.titel)}</button></div></div>`:''}
+      <div class="rating-row" style="align-items:center">
+        <button class="btn btn-sm ${mijn?'btn-ok':'btn-line'}" data-act="nuttig" data-id="${a.id}">${mijn?'Nuttig ✓':'Nuttig'}</button><span style="font-size:13px;color:var(--muted)">${plural(cnt(a.nuttig),'collega vond dit nuttig','collega\u2019s vonden dit nuttig')}</span>
+        ${ik.rol==='compliance'?`<button class="btn btn-sm ${a.gecontroleerd?'btn-line':'btn-y'}" style="margin-left:auto" data-act="controleer" data-id="${a.id}">${a.gecontroleerd?'Controle intrekken':'Markeer als gecontroleerd'}</button>`:''}
+      </div>
+    </div></div>
+  </section>
+  <aside class="rail">
+    <div class="card"><div class="pad"><h3>Meer over ${esc(cat(a.cat).naam)}</h3>${ARTIKELEN.filter(x=>x.cat===a.cat&&x.id!==a.id).map(x=>`<div style="margin-bottom:8px"><button class="btn btn-line btn-sm" style="white-space:normal;text-align:left" data-act="open-artikel" data-id="${x.id}">${esc(x.titel)}</button></div>`).join('')||'<div style="font-size:13px;color:var(--muted)">Nog geen andere artikelen in deze categorie.</div>'}</div></div>
+    ${ik.rol==='compliance'?'':'<div class="card"><div class="pad"><h3>Fout gezien?</h3><div style="font-size:13px;color:var(--muted);margin:0">Reageer op de bronvraag in het forum of stel een nieuwe vraag met het artikel als verwijzing. Compliance past gecontroleerde artikelen aan.</div></div></div>'}
+  </aside>`;
+}
+
+/* ---------- Adviseurs ---------- */
+function viewAdviseurs(){
+  const rows=USERS.map(u=>({u,s:statsFor(u.id)})).sort((a,b)=>b.s.punten-a.s.punten||b.s.gemAdv-a.s.gemAdv);
+  return `<section>
+    <div class="listhead"><div><h1>Adviseurs</h1><div class="sub">Reputatie op basis van beoordelingen door collega's. Punten: 10 per antwoord, 25 per beste antwoord, plus elke ontvangen ster.</div></div></div>
+    <div class="card"><div class="tblwrap"><table class="tbl">
+      <thead><tr><th>#</th><th>Adviseur</th><th>Niveau</th><th class="num">Punten</th><th>Antwoorden</th><th>Adviseur</th><th class="num">Antwoorden</th><th class="num">Beste</th></tr></thead>
+      <tbody>${rows.map(({u,s},i)=>`<tr>
+        <td class="num">${i+1}</td>
+        <td><div class="who-cell"><span class="av">${initials(u.naam)}</span><button data-act="open-adviseur" data-id="${u.id}"><b>${esc(u.naam)}</b><span>${esc(u.functie)}, ${esc(u.kantoor)}</span></button></div></td>
+        <td><span class="lvl">${esc(s.level)}</span></td>
+        <td class="num"><b>${fmtInt(s.punten)}</b></td>
+        <td>${s.nA?starsStatic(s.gemA)+' <span style="font-size:13px;color:var(--muted)">'+fmtNum(s.gemA)+'</span>':'<span style="font-size:13px;color:var(--muted)">–</span>'}</td>
+        <td>${s.nAdv?starsStatic(s.gemAdv)+' <span style="font-size:13px;color:var(--muted)">'+fmtNum(s.gemAdv)+'</span>':'<span style="font-size:13px;color:var(--muted)">–</span>'}</td>
+        <td class="num">${fmtInt(s.antwoorden)}</td>
+        <td class="num">${fmtInt(s.best)}</td>
+      </tr>`).join('')}</tbody>
+    </table></div></div>
+    <div style="font-size:12px;color:var(--muted);margin-top:10px">Kolom “Antwoorden” met sterren = gemiddelde score van de antwoorden; kolom “Adviseur” = gemiddelde score als adviseur (behulpzaam, duidelijk, onderbouwd).</div>
+  </section>`;
+}
+function viewAdviseur(){
+  const u=user(S.adviseur);if(!u){S.view='adviseurs';return viewAdviseurs();}
+  const s=statsFor(u.id);
+  const mijn=VRAGEN.flatMap(v=>v.antwoorden.filter(a=>a.auteur===u.id).map(a=>({v,a}))).sort((x,y)=>y.a.datum.localeCompare(x.a.datum));
+  const vragen=VRAGEN.filter(v=>v.auteur===u.id);
+  return `<section>
+    <div class="crumbs"><button data-act="tab" data-tab="adviseurs">Adviseurs</button> &rsaquo; ${esc(u.naam)}</div>
+    <div class="card"><div class="pad">
+      <div class="profile-head"><span class="av lg">${initials(u.naam)}</span><div><h1>${esc(u.naam)}</h1><div class="sub">${esc(u.functie)}, ${esc(u.kantoor)}</div></div><span class="lvl" style="margin-left:auto;font-size:14px;padding:6px 12px">${esc(s.level)}</span></div>
+      <div class="stats">
+        <div class="kpi"><b>${fmtInt(s.punten)}</b><span>punten</span></div>
+        <div class="kpi"><b>${s.nA?fmtNum(s.gemA):'–'}</b><span>gem. antwoordscore (${s.nA})</span></div>
+        <div class="kpi"><b>${s.nAdv?fmtNum(s.gemAdv):'–'}</b><span>gem. adviseurscore (${s.nAdv})</span></div>
+        <div class="kpi"><b>${fmtInt(s.antwoorden)}</b><span>antwoorden</span></div>
+        <div class="kpi"><b>${fmtInt(s.best)}</b><span>beste antwoorden</span></div>
+        <div class="kpi"><b>${fmtInt(s.vragen)}</b><span>vragen gesteld</span></div>
+      </div>
+    </div></div>
+    <div class="answers"><h2>Antwoorden van ${esc(u.naam.split(' ')[0])}</h2><div class="card">
+      ${mijn.length?mijn.map(({v,a})=>`<div class="q" data-act="open-vraag" data-id="${v.id}" role="link" tabindex="0"><h3>${esc(v.titel)}</h3>${a.id===v.beste?'<span class="best-badge">✓ Beste antwoord</span>':'<span></span>'}<div class="ex">${esc(a.body)}</div><div class="meta"><span class="chip">${esc(cat(v.cat).naam)}</span><span>${fmtDate(a.datum)}</span><span>${starsStatic(avg(a.rA))} ${cnt(a.rA)?fmtNum(avg(a.rA)):'–'}</span></div></div>`).join('')
+      :'<div class="empty"><b>Nog geen antwoorden</b>Deze collega heeft nog niet gereageerd op vragen.</div>'}
+    </div></div>
+  </section>
+  <aside class="rail">${vragen.length?`<div class="card"><div class="pad"><h3>Gestelde vragen</h3>${vragen.map(v=>`<div style="margin-bottom:8px"><button class="btn btn-line btn-sm" style="white-space:normal;text-align:left" data-act="open-vraag" data-id="${v.id}">${esc(v.titel)}</button></div>`).join('')}</div></div>`:''}</aside>`;
+}
+
+/* ---------- Acties ---------- */
+function go(view,extra={}){Object.assign(S,extra,{view});render();}
+function openVraag(id){const v=VRAGEN.find(x=>x.id===id);if(!v)return;v.views++;go('vraag',{tab:'forum',vraag:id});}
+function openArtikel(id){const a=ARTIKELEN.find(x=>x.id===id);if(!a)return;a.views++;go('artikel',{tab:'kennisbank',artikel:id});}
+
+document.addEventListener('click',e=>{
+  const el=e.target.closest('[data-act]');if(!el)return;
+  if(el.tagName==='SELECT')return;
+  const act=el.dataset.act,id=el.dataset.id;
+  switch(act){
+    case 'home':case 'tab':{const tab=el.dataset.tab||'forum';S.q='';$('#search').value='';go(tab,{tab});break;}
+    case 'cat':go('forum',{tab:'forum',cat:el.dataset.cat});break;
+    case 'cat-go':go('forum',{tab:'forum',cat:el.dataset.cat,status:'alle'});break;
+    case 'kbcat':go('kennisbank',{tab:'kennisbank',kbCat:el.dataset.cat});break;
+    case 'kbcat-go':go('kennisbank',{tab:'kennisbank',kbCat:el.dataset.cat,kbStatus:'alle'});break;
+    case 'nieuw':go('nieuw',{tab:'forum'});break;
+    case 'open-vraag':openVraag(id);break;
+    case 'open-artikel':openArtikel(id);break;
+    case 'open-adviseur':go('adviseur',{tab:'adviseurs',adviseur:id});break;
+    case 'rate':{
+      const a=VRAGEN.flatMap(v=>v.antwoorden).find(x=>x.id===id);if(!a)return;
+      if(a.auteur===S.me){toast('Je eigen antwoord kun je niet beoordelen');return;}
+      const key=el.dataset.kind==='a'?'rA':'rAdv',val=+el.dataset.val;
+      a[key][S.me]=val;render();toast(el.dataset.kind==='a'?`Antwoord beoordeeld met ${val} ${val===1?'ster':'sterren'}`:`Adviseur beoordeeld met ${val} ${val===1?'ster':'sterren'}`);
+      break;}
+    case 'beste':{const v=VRAGEN.find(x=>x.id===el.dataset.vraag);if(!v||v.auteur!==S.me)return;v.beste=v.beste===id?null:id;render();toast(v.beste?'Beste antwoord gekozen':'Markering verwijderd');break;}
+    case 'naar-kb':{
+      const v=VRAGEN.find(x=>x.id===el.dataset.vraag);if(!v||!v.beste||ARTIKELEN.find(a=>a.bron===v.id))return;
+      const best=v.antwoorden.find(a=>a.id===v.beste);
+      ARTIKELEN.unshift({id:nid('k'),cat:v.cat,titel:v.titel,auteur:best.auteur,datum:new Date().toISOString(),bron:v.id,gecontroleerd:false,views:0,nuttig:{},body:best.body});
+      openArtikel(ARTIKELEN[0].id);toast('Artikel aangemaakt als concept');break;}
+    case 'nuttig':{const a=ARTIKELEN.find(x=>x.id===id);if(!a)return;if(a.nuttig[S.me])delete a.nuttig[S.me];else a.nuttig[S.me]=1;render();break;}
+    case 'controleer':{const a=ARTIKELEN.find(x=>x.id===id);if(!a||me().rol!=='compliance')return;a.gecontroleerd=!a.gecontroleerd;render();toast(a.gecontroleerd?'Artikel gemarkeerd als gecontroleerd':'Controle ingetrokken');break;}
+  }
+});
+document.addEventListener('keydown',e=>{
+  if(e.key!=='Enter'&&e.key!==' ')return;const el=e.target.closest('[role="link"][data-act]');if(!el)return;e.preventDefault();el.click();
+});
+document.addEventListener('change',e=>{
+  const el=e.target;
+  if(el.id==='user'){S.me=el.value;render();toast('Ingelogd als '+user(S.me).naam);return;}
+  if(el.dataset.act==='status'){S.status=el.value;render();}
+  if(el.dataset.act==='sort'){S.sort=el.value;render();}
+  if(el.dataset.act==='kbstatus'){S.kbStatus=el.value;render();}
+});
+document.addEventListener('submit',e=>{
+  e.preventDefault();const f=e.target;
+  if(f.id==='f-antwoord'){
+    const body=f.body.value.trim();if(body.length<10){toast('Schrijf een iets uitgebreider antwoord');return;}
+    const v=VRAGEN.find(x=>x.id===S.vraag);if(!v)return;
+    v.antwoorden.push({id:nid('a'),auteur:S.me,datum:new Date().toISOString(),rA:{},rAdv:{},body});
+    render();toast('Antwoord geplaatst');
+  }
+  if(f.id==='f-vraag'){
+    const titel=f.titel.value.trim(),body=f.body.value.trim(),tags=f.tags.value.split(',').map(t=>t.trim()).filter(Boolean).slice(0,6);
+    if(titel.length<12||body.length<30){toast('Vul titel en situatie volledig in');return;}
+    const v={id:nid('v'),cat:f.cat.value,auteur:S.me,datum:new Date().toISOString(),views:0,tags,beste:null,titel,body,antwoorden:[]};
+    VRAGEN.unshift(v);S.cat='alle';S.status='alle';openVraag(v.id);toast('Vraag geplaatst');
+  }
+});
+$('#search').addEventListener('input',e=>{
+  S.q=e.target.value;
+  if(S.tab==='kennisbank')S.view='kennisbank';else{S.tab='forum';S.view='forum';}
+  render();
+});
+render();
+</script>
+</body>
+</html>
