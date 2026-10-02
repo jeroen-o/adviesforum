@@ -398,6 +398,7 @@ footer .legal{grid-column:1/-1;border-top:1px solid #2A3238;padding-top:14px;fon
 <script src="data/adviseurs.js"></script>
 <script src="data/vragen.js"></script>
 <script src="data/kennisbank.js"></script>
+<script src="data/kennisbank-planning.js"></script>
 <script src="data/begrippen.js"></script>
 <script src="data/faq/hypotheek.js"></script>
 <script src="data/faq/fiscaal-producten.js"></script>
@@ -436,6 +437,15 @@ const HULP=[
  {groep:'Rekenhulpen',titel:'Eigenwoningreserve en bijleenregeling',url:'bijleenregeling.html',tekst:'Bereken de eigenwoningreserve, de maximale nieuwe eigenwoningschuld en het deel in box 3.',kw:'bijleenregeling eigenwoningreserve ewr eigenwoningschuld ews box overwaarde verkoop restschuld doorstromer'},
  {groep:'Rekenhulpen',titel:'Overbruggingskrediet',url:'overbrugging.html',tekst:'Maximaal overbruggingskrediet, rentelasten en dubbele woonlasten tijdens de overbrugging.',kw:'overbrugging overbruggingskrediet dubbele lasten verkoop oude woning doorstromer'},
  {groep:'Rekenhulpen',titel:'Bruto maandlasten en aflosschema',url:'maandlasten.html',tekst:'Annuïtair, lineair of aflossingsvrij: maandlast, totale rente en schema per jaar.',kw:'maandlasten maandlast annuiteit annuïteit annuitair lineair aflossingsvrij aflosschema'},
+ {groep:'Rekenhulpen',titel:'Oversluiten: vergoeding en terugverdientijd',url:'oversluiten.html',tekst:'Indicatie van de vergoeding voor vervroegde aflossing, de maandbesparing en de terugverdientijd.',kw:'oversluiten boeterente vergoeding vervroegde aflossing terugverdientijd rente'},
+ {groep:'Rekenhulpen',titel:'Kosten koper en financieringsbehoefte',url:'kosten-koper.html',tekst:'Overdrachtsbelasting, verwervings- en financieringskosten en de benodigde hypotheek.',kw:'kosten koper overdrachtsbelasting startersvrijstelling notaris taxatie financieringsbehoefte'},
+ {groep:'Rekenhulpen',titel:'Loan-to-value (LTV)',url:'ltv.html',tekst:'Verhouding tussen hypotheek en marktwaarde, met ruimte tot de grens van 100%.',kw:'ltv loan to value marktwaarde taxatie opslag'},
+ {groep:'Rekenhulpen',titel:'Restschuld en woonlasten op pensioendatum',url:'restschuld-pensioen.html',tekst:'Restschuld en bruto woonlast na pensionering, afgezet tegen het pensioeninkomen.',kw:'pensioen aow restschuld woonlasten betaalbaarheid senioren'},
+ {groep:'Rekenhulpen',titel:'Extra aflossen',url:'extra-aflossen.html',tekst:'Effect van een extra aflossing op maandlast of looptijd, en de rentebesparing.',kw:'extra aflossen aflossing boetevrij maandlast looptijd rentebesparing'},
+ {groep:'Rekenhulpen',titel:'Rentemiddeling (indicatie)',url:'rentemiddeling.html',tekst:'Indicatieve gemiddelde rente bij rentemiddeling en het effect op de rentelast.',kw:'rentemiddeling rente middelen opslag rentevaste periode'},
+ {groep:'Rekenhulpen',titel:'Erfpacht: canon of afkopen',url:'erfpacht.html',tekst:'Canon per jaar en maand, totale canon en contante waarde tegenover de afkoopsom.',kw:'erfpacht canon afkopen afkoopsom grondwaarde'},
+ {groep:'Rekenhulpen',titel:'Draagplicht en ongelijke inbreng',url:'draagplicht.html',tekst:'Inbreng per partner, verhouding en voorstel eigendomsverhouding.',kw:'draagplicht ongelijke inbreng partners eigendomsverhouding samenwonen'},
+ {groep:'Externe tools',tp:'Extern',titel:'draagplicht.nl',url:'https://www.draagplicht.nl',tekst:'Externe dienst voor het berekenen en vastleggen van draagplicht tussen partners.',kw:'draagplicht draagplichtovereenkomst partners'},
  {groep:'Naslag',titel:'Wet- en regelgeving',url:'wetgeving.html',tekst:'113 wetten, besluiten en bronnen met zoekfunctie: Wft, Bgfo, Trhk, NHG, Wwft, Kifid, BW, fiscaal, pensioen.',kw:'wet wetgeving wetten regelgeving wft bgfo trhk wck wwft kifid burgerlijk wetboek inkomstenbelasting successiewet pensioenwet toeslagen bwbr'},
  {groep:'Naslag',titel:'Werkinstructie financieringsopzet (eBlinqx)',url:'werkinstructie-financieringsopzet.html',tekst:'Alle varianten om de financieringsopzet in eBlinqx Hypotheekadvies aan te passen.',kw:'financieringsopzet eblinqx werkinstructie kosten koper eigen middelen boeterente kostenpost'},
  {groep:'Documenten',tp:'PDF',titel:'Nibud: Advies hypotheeknormen 2026',url:'documenten/Rapport-Advies-hypotheeknormen-2026.pdf',tekst:'Het volledige Nibud-rapport (september 2025).',kw:'nibud hypotheeknormen rapport financieringslast'},
@@ -725,7 +735,7 @@ function autoCard(v){
   const isAuteur=v.auteur===ik.id,opgelost=v.beste==='auto';
   const hits=a.hits.map(h=>{
     const src=h.type==='forum'?'<span class="src forum">Forum</span>':h.type==='kb'?'<span class="src kb">Kennisbank</span>':h.type==='hulp'?'<span class="src kb">Hulpmiddel</span>':h.type==='faq'?'<span class="src kb">FAQ</span>':'<span class="src sup">'+esc(h.bron)+'</span>';
-    const t=h.type==='faq'?`<button data-act="open-faq" data-id="${h.id}">${esc(h.titel)}</button>`:h.type==='hulp'?`<a href="${esc(h.url)}">${esc(h.titel)}</a>`:h.type==='support'?`<a href="${esc(h.url)}" target="_blank" rel="noopener">${esc(h.titel)}</a>`:`<button data-act="${h.type==='forum'?'open-vraag':'open-artikel'}" data-id="${h.id}">${esc(h.titel)}</button>`;
+    const t=h.type==='faq'?`<button data-act="open-faq" data-id="${h.id}">${esc(h.titel)}</button>`:h.type==='hulp'?`<a href="${esc(h.url)}"${/^https?:/.test(h.url)?' target="_blank" rel="noopener"':''}>${esc(h.titel)}</a>`:h.type==='support'?`<a href="${esc(h.url)}" target="_blank" rel="noopener">${esc(h.titel)}</a>`:`<button data-act="${h.type==='forum'?'open-vraag':'open-artikel'}" data-id="${h.id}">${esc(h.titel)}</button>`;
     return `<div class="hit">${src}<div class="t">${t}</div><div class="sn">${esc(h.snippet)}</div></div>`;
   }).join('');
   const p=a.product?PRODUCTS[a.product]:null;
@@ -1015,7 +1025,7 @@ function viewArtikel(){
 function viewHulpmiddelen(){
   const list=HULP.filter(h=>matches(S.q,h.titel,h.tekst,h.kw));
   const groepen=[...new Set(HULP.map(h=>h.groep))];
-  const blok=g=>{const items=list.filter(h=>h.groep===g);return items.length?`<h2 style="margin:6px 0 10px">${esc(g)}</h2><div class="tools">${items.map(h=>`<a class="tool" href="${esc(h.url)}"><span class="tp">${esc(h.tp||g)}</span><h3>${esc(h.titel)}</h3><p>${esc(h.tekst)}</p></a>`).join('')}</div>`:'';};
+  const blok=g=>{const items=list.filter(h=>h.groep===g);return items.length?`<h2 style="margin:6px 0 10px">${esc(g)}</h2><div class="tools">${items.map(h=>`<a class="tool" href="${esc(h.url)}"${/^https?:/.test(h.url)?' target="_blank" rel="noopener"':''}><span class="tp">${esc(h.tp||g)}</span><h3>${esc(h.titel)}</h3><p>${esc(h.tekst)}</p></a>`).join('')}</div>`:'';};
   return `<section>
     <div class="listhead"><div><h1>Hulpmiddelen</h1><div class="sub">Rekenhulpen, naslag en documenten voor de adviespraktijk${S.q?` · zoekterm “${esc(S.q)}”`:''}</div></div></div>
     ${list.length?groepen.map(blok).join(''):`<div class="card"><div class="empty"><b>Geen hulpmiddelen gevonden</b>Probeer een andere zoekterm.${zoekMeld()}</div></div>`}
