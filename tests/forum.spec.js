@@ -72,3 +72,32 @@ test('mobiel: alle tabbladen zonder horizontale scroll en volle formuliervelden'
   expect(smal).toEqual([]);
   expect(fouten).toEqual([]);
 });
+
+test('inloggen adviseur: zonder code geen antwoordformulier, met cookie of code wel', async ({ page, context }) => {
+  const fouten = await volgFouten(page);
+  // testaccount met bekende code, alleen in deze test
+  await page.addInitScript(() => {
+    Object.defineProperty(window, 'ADVISEURS', { configurable: true, set(v) { v.push({ id: 'ut', naam: 'Test Adviseur', functie: 'Hypotheekadviseur', kantoor: 'Test', rol: 'adviseur', geverifieerd: true, codeHash: 'f92f4f7f69213b390959cf2f9c2bacdc83267e2e6538089342664fb2791927f7' }); this._a = v; }, get() { return this._a; } });
+  });
+  await page.goto('/index.html#vraag-v13');
+  await expect(page.locator('#f-antwoord')).toHaveCount(0);
+  await expect(page.locator('#who')).toContainText('Inloggen');
+  await page.click('#who [data-act="inloggen"]');
+  await page.fill('#lg-code', 'AAAA-BBBB-CCCC');
+  await page.click('#f-login button[type="submit"]');
+  await expect(page.locator('#toast')).toContainText('niet bekend');
+  await page.fill('#lg-code', 'test code 1234');
+  await page.check('#f-login input[name="onthoud"]');
+  await page.click('#f-login button[type="submit"]');
+  await expect(page.locator('#who')).toContainText('Test Adviseur');
+  await expect(page.locator('#f-antwoord')).toHaveCount(1);
+  await page.reload();
+  await expect(page.locator('#who')).toContainText('Test Adviseur');
+  await page.click('#who [data-act="uitloggen"]');
+  await expect(page.locator('#f-antwoord')).toHaveCount(0);
+  // inloglink
+  await page.goto('/index.html#login-TEST-CODE-1234');
+  await expect(page.locator('#who')).toContainText('Test Adviseur');
+  expect(page.url()).not.toContain('login-');
+  expect(fouten).toEqual([]);
+});
