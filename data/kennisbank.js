@@ -367,6 +367,64 @@ Bron: AFM, Leidraad Hypotheekadvisering, april 2026. Deze samenvatting vervangt 
 
 ## Let op
 Links naar wetten.overheid.nl openen de tekst die vandaag geldt. Voor een dossier heb je soms de versie nodig die gold op een eerdere datum, bijvoorbeeld bij overgangsrecht of bij een klacht over een oud advies. Die kies je op wetten.overheid.nl met de datumkiezer.`},
+ {id:'k15',cat:'adv',titel:'Blinqx V&H: producten en supportkanalen',auteur:'u6',datum:'2026-10-02T23:45:00',herzienVoor:'2027-04-02',bron:null,gecontroleerd:false,
+  kw:'blinqx eblinqx connect hypotheekadvies fastlane adviesbox volmacht crm finly finconnect findata yes-co fiscaal support helpdesk telefoon keuzemenu kennisbank handleidingen integraties overstapservice academy uwkluis ockto hdn',
+  links:[
+   {titel:'Blinqx V&H: supportpagina (mailadressen en keuzemenu)',url:'https://verzekeringhypotheek.blinqx.tech/support'},
+   {titel:'Blinqx V&H: integraties',url:'https://verzekeringhypotheek.blinqx.tech/integraties'},
+   {titel:'Blinqx V&H: overstapservice',url:'https://verzekeringhypotheek.blinqx.tech/overstapservice'},
+   {titel:'Blinqx V&H: eBlinqx Fiscaal',url:'https://verzekeringhypotheek.blinqx.tech/eblinqx-fiscaal'},
+   {titel:'Blinqx V&H: eBlinqx Volmacht',url:'https://verzekeringhypotheek.blinqx.tech/oplossingen/eblinqx/volmacht'},
+   {titel:'Blinqx V&H: nieuws over eBlinqx Hypotheekadvies',url:'https://verzekeringhypotheek.blinqx.tech/nieuws/blinqx-verzekering-hypotheek-bundelt-hypotheeksoftware'},
+   {titel:'Blinqx V&H: Academy (trainingen en webinars)',url:'https://verzekeringhypotheek.blinqx.tech/academy'},
+   {titel:'Kennisbank eBlinqx (Faster Forward)',url:'https://support.fasterforward.nl/'},
+   {titel:'Release notes eBlinqx en Elements',url:'https://support.fasterforward.nl/releasenotes/'},
+   {titel:'Kennisbank Adviesbox',url:'https://support.adviesbox.nl/portal/nl/kb/adviesbox-online'},
+   {titel:'Kennisbank Finly (eBlinqx CRM)',url:'https://www.getfinly.com/kennisbank'},
+   {titel:'Supportsite Finly (Blinqx V&H)',url:'https://support-finly.vh.blinqx.tech/nl/'},
+   {titel:'FinData',url:'https://www.findata.nl/'},
+   {titel:'Yes-co: contact',url:'https://www.yes-co.nl/contact/'}
+  ],
+  body:`Blinqx Verzekering & Hypotheek (Blinqx V&H) levert software voor financieel adviseurs, volmachten en serviceproviders. Veel pakketten die je misschien onder hun oude naam kent (Faster Forward/Elements, DIAS, Adviesbox, Fastlane, Finly, FinConnect, Intersoftware) vallen nu onder Blinqx en worden samengebracht in het platform eBlinqx. Dit artikel zet per product op een rij wat het is, en waar je terechtkunt als je vastloopt.
+
+## Eén telefoonnummer, keuzemenu per product
+De centrale supportpagina noemt één telefoonnummer: 085 018 00 69, bereikbaar op werkdagen van 08:30 tot 17:00. In het keuzemenu kies je eerst 1 en daarna het nummer van het product. Daarnaast heeft elk product een eigen supportmailadres.
+
+- eBlinqx Connect: support-eblinqx@blinqx.tech (keuze 1, dan 2)
+- Adviesbox: support-adviesbox@blinqx.tech (keuze 1, dan 1)
+- eBlinqx Hypotheekadvies (Fastlane): support-hypotheekadvies@blinqx.tech (keuze 1, dan 1)
+- CRM (Finly): support-crm@blinqx.tech (keuze 1, dan 3)
+- FinConnect: support-finconnect@blinqx.tech (keuze 1, dan 3)
+- Yes-co: info@yes-co.nl (keuze 1, dan 3)
+- Findata: portaal@findata.nl (keuze 1, dan 4)
+- Volmacht: support-volmacht@blinqx.tech (keuze 1, dan 6)
+
+Oudere handleidingen noemen soms nog de telefoonnummers van vóór de overname (bijvoorbeeld van Faster Forward, Intersoftware of Finly). Gebruik bij twijfel het nummer en het mailadres van de centrale supportpagina.
+
+## De producten in het kort
+- eBlinqx (Connect / V&H): het centrale platform voor klantbeheer, dossiers, workflows, HDN-berichten, documenten en het klantportaal (Uwkluis). Opvolger van Elements van Faster Forward. Handleidingen en release notes staan in de kennisbank van Faster Forward (support.fasterforward.nl).
+- eBlinqx Hypotheekadvies (Fastlane): het adviespakket voor hypotheekadvies. Blinqx brengt DIAS Advies, Adviesbox Online en Fastlane onder deze naam samen binnen eBlinqx. Wijzigingen in de leennormen (zoals de Tijdelijke regeling hypothecair krediet) worden in het pakket verwerkt.
+- Adviesbox: adviespakket van het voormalige Intersoftware, online (Adviesbox Online) en als lokale installatie. Adviesbox blijft los beschikbaar voor kantoren die niet in de cloud willen werken. De kennisbank staat op support.adviesbox.nl; in het programma meld je een probleem via het vraagteken. Zie ook het artikel over de koppeling met eBlinqx.
+- CRM (Finly): CRM met dashboard, dossiers, agenda, schermdelen en klantformulieren, met koppelingen naar onder meer ANVA. Handleidingen staan in de kennisbank op getfinly.com en op de supportsite van Finly. Zie ook het artikel over Finly-klantformulieren.
+- FinConnect: verbindt volmachten en verzekeraars en verwerkt grote aantallen formulieren per jaar. De Slimme Formulieren (bijvoorbeeld voor schademelding, aanvragen, nazorg en klantonderzoek) en Naverrekenen zijn nu ook binnen eBlinqx beschikbaar.
+- eBlinqx Volmacht: platform voor volmachten en serviceproviders, van polis- en contractadministratie tot klantportaal, signalen, formulieren en premievergelijking. Het bouwt voort op DIAS Volmacht en is volgens Blinqx nog in ontwikkeling.
+- Findata: productdataplatform waarop aanbieders hypotheekrentes, productkenmerken en acceptatiecriteria vastleggen en digitaal verspreiden, onder meer via het FinData-portaal.
+- Yes-co: software voor makelaars, met hypotheektools die makelaar, hypotheekadviseur en consument verbinden. Yes-co heeft ook eigen support via het systeem, mail en telefoon.
+- eBlinqx Fiscaal: software voor de aangifte inkomstenbelasting, bedoeld voor adviseurs en niet voor fiscalisten. Machtigingen, uitstelregelingen en werkvoorraad staan op één plek; klantgegevens en machtigingen worden bij de overstap via het PKI-certificaat herkend. Er is ook een module voor pensioen- en inkomensscenario's. De supportpagina noemt geen apart supportkanaal voor Fiscaal; vraag dit na bij je accountmanager of via het algemene nummer.
+
+## Koppelingen en integraties
+eBlinqx koppelt met onder meer Ockto (brondata), HDN (aanvragen bij geldverstrekkers), Findesk, Aplaza, Hyarchis, RISK, AWI, iDos en SUIV (productdefinities voor de volmachtbackoffice). Veel koppelingen zet je zelf aan via de instellingen in eBlinqx; voor sommige is een extra licentie nodig. Eind september 2026 maakte Blinqx bekend dat Ockto de enige brondatapartner wordt; bestaande dossiers kunnen dan met nieuwe brondata worden bijgewerkt zonder dat alles wordt overschreven.
+
+## Overstappen naar eBlinqx
+De overstapservice begeleidt kantoren stap voor stap: kennismaking, analyse van de huidige database, inrichting van de nieuwe omgeving, een proefmigratie met controle op volledigheid, de definitieve conversie en daarna ondersteuning via de kennisbank en het supportteam.
+
+## Training
+De Blinqx Academy biedt klassikale trainingen, webinars en e-learnings, onder meer introductie- en basistrainingen voor eBlinqx Hypotheekadvies en Adviesbox. Een deel levert PE-punten op, in samenwerking met externe opleiders.
+
+## Tip
+Zet in je eigen werkinstructie per pakket het juiste mailadres en de keuze in het menu. Vermeld bij een melding altijd je kantoor, het product, het klant- of dossiernummer (zonder onnodige persoonsgegevens) en een schermafbeelding van de foutmelding.
+
+Bron: openbare zoekresultaten van verzekeringhypotheek.blinqx.tech (supportpagina, productpagina's, nieuws), support.fasterforward.nl, support.adviesbox.nl, getfinly.com, findata.nl en yes-co.nl op 2 oktober 2026. De pagina's zelf konden bij het opstellen niet worden geopend. Controleer nummers en mailadressen op de supportpagina voordat je ze doorgeeft.`},
  {id:'k14',cat:'crm',titel:'Finly (eBlinqx CRM): klantformulieren en waar je hulp vindt',auteur:'u6',datum:'2026-10-02T23:30:00',herzienVoor:'2027-04-02',bron:null,gecontroleerd:false,
   kw:'finly eblinqx crm formulieren klantformulieren schademelding opzegging finconnect kennisbank support trainingen nazorg',
   links:[
@@ -375,7 +433,11 @@ Links naar wetten.overheid.nl openen de tekst die vandaag geldt. Voor een dossie
    {titel:'Finly: klantformulieren',url:'https://www.getfinly.com/kennisbank/klant-formulieren'},
    {titel:'Faster Forward: gemakkelijk formulieren toesturen met Finly',url:'https://support.fasterforward.nl/kennisbank/gemakkelijk-formulieren-toesturen-met-finly/'},
    {titel:'Finly: Finconnect FAQ',url:'https://www.getfinly.com/finconnect-faq'},
-   {titel:'Blinqx V&H: supportoverzicht',url:'https://blinqx.tech/sectoren-overzicht/verzekering-hypotheek/support'}
+   {titel:'Blinqx V&H: supportoverzicht',url:'https://blinqx.tech/sectoren-overzicht/verzekering-hypotheek/support'},
+   {titel:'Blinqx V&H: supportpagina (mail en keuzemenu)',url:'https://verzekeringhypotheek.blinqx.tech/support'},
+   {titel:'Finly: customer support (wanneer bellen, wanneer mailen)',url:'https://www.getfinly.com/kennisbank/customer-support'},
+   {titel:'Finly: top 10 veelgestelde vragen over het CRM',url:'https://www.getfinly.com/kennisbank/introductie-veelgestelde-vragen'},
+   {titel:'Finly: statuspagina',url:'https://www.getfinly.com/kennisbank/statuspagina-live'}
   ],
   body:`Finly is het CRM van eBlinqx voor Verzekering & Hypotheek. Met de formulieren in Finly laat je klanten zelf gegevens aanleveren, bijvoorbeeld een schademelding of een opzegging, zonder dat je kantoor alles handmatig hoeft over te nemen.
 
@@ -389,21 +451,28 @@ Heb je (nog) geen formulieren in je CRM, gebruik dan de formulieren bij Hulpmidd
 
 ## Hulp en training
 - De kennisbank van Finly heeft handleidingen voor het CRM, de modules (koppelingen, agenda, formulieren) en trainingen.
-- Voor problemen met eBlinqx CRM kun je terecht bij support-crm@blinqx.tech.
+- Voor problemen met eBlinqx CRM kun je terecht bij support-crm@blinqx.tech. Telefonisch bel je het centrale nummer van Blinqx V&H (085 018 00 69) en kies je 1 en daarna 3. Een oudere pagina in de Finly-kennisbank noemt nog een ander nummer; volg bij twijfel de supportpagina van Blinqx.
+- Kun je niet verder werken (CRM werkt niet, inloggen lukt niet, een foutmelding blokkeert je), bel dan. Een niet-blokkerende vraag kun je mailen. Kijk eerst in de kennisbank of het antwoord daar al staat.
+- Of er een storing of gepland onderhoud is, zie je op de statuspagina van Finly (status.finly.nl). Daar kun je je ook aanmelden voor updates.
+- Een formulier maak je het makkelijkst vanuit het klantdossier (tabblad Formulieren, plusteken): dan is het formulier meteen aan de juiste klant gekoppeld. De klant moet wel eerst in het CRM staan.
+- Werk je met de ANVA-koppeling, dan komen klantgegevens uit ANVA en kun je ze in Finly niet meer zelf wijzigen.
 
 ## Let op
 Bij klantformulieren verwerk je persoonsgegevens. Vraag alleen wat je nodig hebt, leg vast waarom, en bewaar de gegevens in het klantdossier en niet in losse mailboxen.
 
-Bron: openbare zoekresultaten over de kennisbank van Finly en Faster Forward op 2 oktober 2026. De pagina's zelf konden bij het opstellen niet worden geopend; controleer de werking in je eigen omgeving.`},
+Bron: openbare zoekresultaten over de kennisbank van Finly, Faster Forward en de supportpagina van Blinqx V&H op 2 oktober 2026. De pagina's zelf konden bij het opstellen niet worden geopend; controleer de werking in je eigen omgeving.`},
  {id:'k13',cat:'adv',titel:'Adviesbox Online koppelen aan eBlinqx (GUID en HBX-export)',auteur:'u6',datum:'2026-10-02T22:00:00',herzienVoor:'2027-04-02',bron:null,gecontroleerd:false,
   kw:'adviesbox adviesbox online eblinqx fastlane koppeling guid hbx export naw elements importkoppeling softwarekoppelingen faster forward adviespakket',
   links:[
    {titel:'Faster Forward: Adviesbox Online instellen en gebruiken',url:'https://support.fasterforward.nl/kennisbank/adviesbox-online-instellen-en-gebruiken/'},
    {titel:'Faster Forward: Adviespakketten gekoppeld aan eBlinqx',url:'https://support.fasterforward.nl/kennisbank/welke-adviespakketten-koppelt-eblinqx/'},
    {titel:'Faster Forward: Fastlane Advies gebruiken',url:'https://support.fasterforward.nl/kennisbank/fastlane-advies-gebruiken/'},
-   {titel:'Adviesbox Online: aan de slag (support Adviesbox)',url:'https://support.adviesbox.nl/portal/nl/kb/adviesbox-online/algemeen/aan-de-slag-met-adviesbox-online'}
+   {titel:'Adviesbox Online: aan de slag (support Adviesbox)',url:'https://support.adviesbox.nl/portal/nl/kb/adviesbox-online/algemeen/aan-de-slag-met-adviesbox-online'},
+   {titel:'Adviesbox: HDN-verkeer instellen als nieuwe gebruiker',url:'https://support.adviesbox.nl/portal/nl/kb/articles/hoe-zorg-ik-er-als-nieuwe-gebruiker-van-adviesbox-online-voor-dat-mijn-hdn-verkeer-verzonden-kan-worden'},
+   {titel:'Blinqx V&H: supportpagina (mail en keuzemenu)',url:'https://verzekeringhypotheek.blinqx.tech/support'},
+   {titel:'Blinqx V&H: nieuws over eBlinqx Hypotheekadvies',url:'https://verzekeringhypotheek.blinqx.tech/nieuws/blinqx-verzekering-hypotheek-bundelt-hypotheeksoftware'}
   ],
-  body:`Vanuit eBlinqx exporteer je klantgegevens naar Adviesbox Online om daar het advies verder uit te werken. Let op de naamgeving: eBlinqx Hypotheekadvies is hetzelfde pakket als Fastlane (Fastlane Advies); Adviesbox Online is een ander adviespakket dat je via een koppeling met eBlinqx gebruikt.
+  body:`Vanuit eBlinqx exporteer je klantgegevens naar Adviesbox Online om daar het advies verder uit te werken. Let op de naamgeving: eBlinqx Hypotheekadvies is hetzelfde pakket als Fastlane (Fastlane Advies); Adviesbox Online is een ander adviespakket dat je via een koppeling met eBlinqx gebruikt. Blinqx heeft aangekondigd DIAS Advies, Adviesbox Online en Fastlane samen onder de naam eBlinqx Hypotheekadvies te brengen; Adviesbox blijft los beschikbaar voor kantoren die niet in de cloud willen werken. De supportpagina hanteert voor Adviesbox en voor eBlinqx Hypotheekadvies (Fastlane) nog aparte mailadressen.
 
 ## Eenmalig instellen: de GUID
 De koppeling tussen Adviesbox Online en eBlinqx loopt via een GUID. Die maak je één keer aan in Adviesbox Online en voeg je één keer toe in eBlinqx.
@@ -417,8 +486,14 @@ De koppeling tussen Adviesbox Online en eBlinqx loopt via een GUID. Die maak je 
 3. Vul de velden in, klik op "HBX genereren" en daarna op "HBX downloaden".
 4. Lees het HBX-bestand in Adviesbox Online in.
 
-## Hulp nodig
-Voor het inrichten van de koppeling kun je mailen naar support@fasterforward.nl.
+## Inloggen en HDN in Adviesbox Online
+- Adviesbox Online werkt met tweestapsverificatie: na e-mailadres en wachtwoord vul je een wisselende code in uit een authenticator-app op je telefoon. Beveilig die telefoon goed.
+- Een wachtwoord heeft minimaal 8 tekens, met ten minste een kleine letter, een hoofdletter, een cijfer en een speciaal teken.
+- Nieuwe medewerkers krijgen een registratiemail met een link om een account aan te maken.
+- Wil je voor het eerst via HDN versturen, stel dan eenmalig je HDN-nodenummer in via de Contract-app (scherm HDN nodenummer) en activeer het.
 
-Bron: de kennisbank van Faster Forward (support.fasterforward.nl), samengevat uit openbare zoekresultaten op 2 oktober 2026. De pagina zelf kon bij het opstellen niet worden geopend; controleer de stappen in de software voordat je ze als werkinstructie gebruikt.`},
+## Hulp nodig
+Voor het inrichten van de koppeling kun je mailen naar support@fasterforward.nl; volgens de huidige supportpagina van Blinqx V&H loopt eBlinqx-support via support-eblinqx@blinqx.tech. Vragen over Adviesbox zelf stuur je naar support-adviesbox@blinqx.tech, of je belt 085 018 00 69 en kiest 1 en daarna 1. In Adviesbox kun je ook een melding doen via het vraagteken.
+
+Bron: de kennisbanken van Faster Forward (support.fasterforward.nl) en Adviesbox (support.adviesbox.nl) en de supportpagina van Blinqx V&H, samengevat uit openbare zoekresultaten op 2 oktober 2026. De pagina zelf kon bij het opstellen niet worden geopend; controleer de stappen in de software voordat je ze als werkinstructie gebruikt.`},
 ];
