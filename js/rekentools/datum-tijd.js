@@ -275,7 +275,7 @@
       return {
         lbl: 'Werkdagen in de schoolvakanties', groot: fmt.getal(totaal), onder: 'schooljaar ' + j + '–' + (j + 1),
         rijen: [
-          ['Kerstvakantie (landelijk)', fmt.datum(ks) + ' t/m ' + fmt.datum(ke)],
+          ['Kerstvakantie (landelijk)', fmt.datumKort(ks) + ' t/m ' + fmt.datumKort(ke) + ' ' + ke.getFullYear()],
           ['Vrije dagen van de ouder', fmt.getal(v.vd || 0)],
           ['Op te vangen werkdagen (tekort)', fmt.getal(tekort), 'som']
         ],

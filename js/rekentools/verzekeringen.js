@@ -36,9 +36,9 @@
   /* ---------- arbeidsongeschiktheidsverzekering ---------- */
 
   RT.add({
-    id: 'aov-premie-netto', groep: G, naam: 'Netto premie arbeidsongeschiktheidsverzekering',
+    id: 'aov-premie-netto', groep: G, naam: 'Netto premie AOV (arbeidsongeschiktheid)',
     intro: 'Wat kost een AOV een ondernemer netto, nu de premie aftrekbaar is als uitgave voor inkomensvoorziening?',
-    kw: 'aov arbeidsongeschiktheid premie aftrek netto zzp ondernemer inkomensvoorziening',
+    kw: 'aov arbeidsongeschiktheidsverzekering arbeidsongeschiktheid premie aftrek netto zzp ondernemer inkomensvoorziening',
     peildatum: NR.peildatum, fiscaal: ['Tarieven box 1', 'Heffingskortingen', 'Zelfstandigenaftrek', 'Mkb-winstvrijstelling'],
     velden: [
       { k: 'p', l: 'Bruto premie per jaar', s: 'eur', std: 4200 },
