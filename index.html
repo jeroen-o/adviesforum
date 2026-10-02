@@ -200,6 +200,39 @@ textarea{min-height:120px;resize:vertical}
 .profile-head .sub{color:var(--muted);font-size:14px}
 .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-top:16px}
 
+/* Automatisch antwoord */
+.auto{border:1px solid var(--border);border-left:4px solid var(--yellow);background:var(--surface);border-radius:var(--r);margin-top:16px}
+.auto .pad{padding:16px 18px}
+.auto .head{display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:8px}
+.auto .head h2{font-size:15px}
+.auto .intro{font-size:14px;color:var(--muted);margin-bottom:10px}
+.hit{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;padding:10px 0;border-top:1px dashed var(--border)}
+.hit:first-child{border-top:0}
+.hit .src{font-size:11px;font-weight:700;padding:3px 8px;border-radius:6px;background:var(--surface-2);color:var(--muted);white-space:nowrap;align-self:start;margin-top:2px}
+.hit .src.forum{background:var(--accent-soft);color:var(--accent-deep)}
+.hit .src.kb{background:var(--ok-soft);color:var(--ok)}
+.hit .src.sup{background:var(--yellow-soft);color:var(--text)}
+.hit .t{font-weight:600;font-size:14px}
+.hit .t a,.hit .t button{color:var(--accent-deep);background:none;border:0;padding:0;cursor:pointer;text-align:left;font-weight:600;text-decoration:underline;text-underline-offset:2px;font-size:14px}
+.hit .sn{font-size:13px;color:var(--muted);grid-column:2}
+.contact{margin-top:12px;padding:12px 14px;border-radius:8px;background:var(--surface-2);font-size:13px;line-height:1.7}
+.contact b{display:block}
+.fb{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:12px;font-size:13px;color:var(--muted)}
+.auto .small{font-size:12px;color:var(--muted);margin-top:10px}
+.links{margin:0;padding-left:18px;font-size:14px}
+.links li{margin-bottom:4px}
+.chip.auto-chip{background:var(--yellow-soft);border-color:transparent;color:var(--text)}
+.fin{margin:4px 0 12px;padding:12px 14px;border-radius:8px;background:var(--surface-2);border:1px solid var(--border)}
+.fin-head{display:flex;align-items:center;gap:8px;font-size:14px;margin-bottom:6px;flex-wrap:wrap}
+.fin-logo{display:inline-block;font-size:11px;font-weight:700;padding:2px 7px;border-radius:5px;background:var(--header);color:#fff;letter-spacing:.02em}
+.fin-status{font-size:13px;color:var(--muted);margin-bottom:6px}
+.fin-body{font-size:14px;background:var(--surface);padding:10px 12px;border-radius:6px}
+.fin-body img{max-width:100%}
+.fin-body table{border-collapse:collapse;font-size:13px}
+.fin-body td,.fin-body th{border:1px solid var(--border);padding:4px 8px}
+.fin-body pre{overflow-x:auto;background:var(--surface-2);padding:8px;border-radius:6px}
+.fin .actions{margin-top:10px;align-items:center}
+.fin .actions input{padding:7px 10px}
 footer{border-top:1px solid var(--border);color:var(--muted);font-size:12px}
 footer .wrap{max-width:1240px;margin:0 auto;padding:16px 20px}
 #toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translateX(-50%) translateY(20px);background:var(--header);color:#fff;padding:10px 16px;border-radius:8px;font-size:14px;font-weight:600;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;z-index:50}
@@ -219,7 +252,7 @@ footer .wrap{max-width:1240px;margin:0 auto;padding:16px 20px}
     <button class="btn btn-y" data-act="nieuw">Vraag stellen</button>
   </div>
 </header>
-<div class="demo"><div class="wrap">Demo met voorbeelddata. Vragen, antwoorden en beoordelingen die je nu toevoegt blijven alleen in deze sessie staan.</div></div>
+<div class="demo"><div class="wrap">Demo met voorbeelddata. Vragen, antwoorden en beoordelingen die je nu toevoegt blijven alleen in deze sessie staan. Nieuwe vragen krijgen automatisch een antwoord uit forum, kennisbank en de Blinqx-supportsites.</div></div>
 <nav class="tabs" aria-label="Onderdelen"><div class="wrap" id="tabs"></div></nav>
 
 <main><div id="app" class="wrap"></div></main>
@@ -246,6 +279,10 @@ const CATS=[
 const LEVELS=[[300,'Autoriteit'],[150,'Expert'],[50,'Kenner'],[0,'Starter']];
 
 const VRAGEN=[
+ {id:'v12',cat:'adv',auteur:'u1',datum:'2026-10-02T08:05:00',views:1,tags:['financieringsopzet','bedragen','eigen middelen'],beste:null,
+  titel:'Hoe kan ik de bedragen in de financieringsopzet aanpassen in eBlinqx Hypotheekadvies?',
+  body:`De financieringsopzet toont bedragen die ik wil corrigeren, onder andere de eigen middelen en het hypotheekbedrag. Waar pas ik die aan in eBlinqx Hypotheekadvies?`,
+  antwoorden:[]},
  {id:'v1',cat:'hyp',auteur:'u1',datum:'2026-09-29T09:12:00',views:142,tags:['overbrugging','verkoop','dubbele lasten'],beste:'a1',
   titel:'Overbrugging bij nog niet verkochte woning: hoe reken je de maximale overbrugging?',
   body:`Klant koopt een nieuwe woning, de huidige staat te koop maar er is nog geen koper. De geldverstrekker vraagt om onderbouwing van het overbruggingskrediet. Hoe rekenen jullie dit uit en welke marge houden jullie aan?`,
@@ -431,8 +468,181 @@ Volgorde in het dossier:
 - de keuze van de klant in zijn eigen woorden
 - datum en handtekening van de klant
 
-Wat niet volstaat: een losse "afstandsverklaring" zonder uitgewerkt advies, of een standaardzin zonder de concrete risico's voor deze klant.`}
+Wat niet volstaat: een losse "afstandsverklaring" zonder uitgewerkt advies, of een standaardzin zonder de concrete risico's voor deze klant.`},
+ {id:'k9',cat:'adv',titel:'Bedragen aanpassen in de financieringsopzet (eBlinqx Hypotheekadvies)',auteur:'u6',datum:'2026-10-02T09:00:00',bron:null,gecontroleerd:false,views:3,nuttig:{},
+  links:[
+   {titel:'Hoe specificeer ik eigen geld (schenking, spaargeld, beleggingen)?',url:'https://support-fastlane.vh.blinqx.tech/nl/articles/600849-hoe-specificeer-ik-eigen-geld-schenking-spaargeld-beleggingen-in-eblinqx-hypotheekadvies'},
+   {titel:'Hoe los ik een afrondingsverschil in de financieringsopzet op?',url:'https://support-fastlane.vh.blinqx.tech/nl/articles/600694-hoe-los-ik-een-afrondingsverschil-in-het-financieringsopzet-op'},
+   {titel:'Hoe pas ik het overbruggingskrediet aan?',url:'https://support-fastlane.vh.blinqx.tech/nl/articles/600639-hoe-pas-ik-het-overbruggingskrediet-aan-in-eblinqx-hypotheekadvies'},
+   {titel:'Hoe verwerk ik een polis afkoopwaarde in de financieringsopzet?',url:'https://support-fastlane.vh.blinqx.tech/nl/articles/600600-hoe-verwerk-ik-een-polis-afkoopwaarde-in-de-financieringsopzet'},
+   {titel:'Waarom wordt de geldverstrekker niet getoond in de financieringsopzet?',url:'https://support-fastlane.vh.blinqx.tech/nl/articles/600820-waarom-wordt-de-geldverstrekker-niet-getoond-in-de-financieringsopzet'}
+  ],
+  body:`De financieringsopzet wordt opgebouwd uit de invoer in het dossier. Je past bedragen dus aan bij de bron, niet in het overzicht zelf. Samengevat uit de supportartikelen van eBlinqx Hypotheekadvies:
+- Eigen middelen: open het klantdossier, ga naar het onderdeel Financieringsopzet en pas het totaalbedrag aan. Specificeer per categorie waar het uit bestaat (schenking, spaargeld, beleggingen, overwaarde) en licht de verdeling toe in het opmerkingenveld.
+- Afkoopwaarde van een polis: er is geen apart veld. Tel het bedrag op bij "Inbreng eigen geld" en vermeld de herkomst in de toelichting.
+- Hypotheekbedrag: pas de som per hypotheekdeel aan bij het samenstellen van de hypotheek; het totaal in de opzet volgt daaruit.
+- Overbrugging: het (handmatige) overbruggingsbedrag pas je aan in het onderdeel overbrugging.
+- Afrondingsverschil van enkele centen tussen de hypotheekdelen en het totaal: verhoog het kleinste hypotheekdeel met het verschil en sla op. Dit heeft geen inhoudelijke impact op het advies.
+
+Welke velden zichtbaar zijn kan per dossierconfiguratie of geldverstrekker verschillen. Kom je er niet uit: support-hypotheekadvies@blinqx.tech of 085 018 00 69 (toets 1 en 1).`}
 ];
+
+/* Supportindex: artikelen op de supportsites van Blinqx V&H (trefwoorden voor het automatische antwoord) */
+const FL='https://support-fastlane.vh.blinqx.tech/nl/articles/';
+const SUPPORT=[
+ {bron:'Support eBlinqx Hypotheekadvies',titel:'Hoe specificeer ik eigen geld (schenking, spaargeld, beleggingen) in eBlinqx Hypotheekadvies?',url:FL+'600849-hoe-specificeer-ik-eigen-geld-schenking-spaargeld-beleggingen-in-eblinqx-hypotheekadvies',kw:'financieringsopzet eigen geld eigen middelen schenking spaargeld beleggingen bedrag aanpassen invoeren herkomst',sam:'Open het klantdossier, ga naar Financieringsopzet, voer het totaalbedrag eigen middelen in en specificeer per categorie. Licht de verdeling toe in het opmerkingenveld en voeg bewijsstukken toe.'},
+ {bron:'Support eBlinqx Hypotheekadvies',titel:'Hoe los ik een afrondingsverschil in het financieringsopzet op?',url:FL+'600694-hoe-los-ik-een-afrondingsverschil-in-het-financieringsopzet-op',kw:'financieringsopzet afrondingsverschil hypotheekdeel bedrag tekort cent totaal klopt niet aanpassen',sam:'Er wordt intern met meer decimalen gerekend dan zichtbaar, waardoor een tekort van enkele centen kan ontstaan. Verhoog het kleinste hypotheekdeel met het verschil en sla op; geen impact op het advies.'},
+ {bron:'Support eBlinqx Hypotheekadvies',titel:'Hoe verwerk ik een polis afkoopwaarde in de financieringsopzet?',url:FL+'600600-hoe-verwerk-ik-een-polis-afkoopwaarde-in-de-financieringsopzet',kw:'financieringsopzet afkoopwaarde polis eigen geld inbreng bedrag',sam:'Geen apart veld: tel de afkoopwaarde op bij Inbreng eigen geld en vermeld in de toelichting dat (een deel van) de eigen middelen uit de afkoopwaarde komt.'},
+ {bron:'Support eBlinqx Hypotheekadvies',titel:'Hoe wissel ik tussen 1- en 2-kolomsweergave bij de financieringsopzet?',url:FL+'600682-hoe-wissel-ik-tussen-1-en-2-kolomsweergave-bij-de-financieringsopzet',kw:'financieringsopzet weergave kolommen kolom rapport',sam:'Instelling voor de weergave van de financieringsopzet in één of twee kolommen.'},
+ {bron:'Support eBlinqx Hypotheekadvies',titel:'Hoe pas ik het overbruggingskrediet aan in eBlinqx Hypotheekadvies?',url:FL+'600639-hoe-pas-ik-het-overbruggingskrediet-aan-in-eblinqx-hypotheekadvies',kw:'overbrugging overbruggingskrediet overbruggingsbedrag financieringsopzet aanpassen bedrag handmatig',sam:'Aanpassen van het (handmatige) overbruggingsbedrag dat in de financieringsopzet wordt meegenomen.'},
+ {bron:'Support eBlinqx Hypotheekadvies',titel:'Hoe voer ik een overbruggingshypotheek in eBlinqx Hypotheekadvies in?',url:FL+'600640-hoe-voer-ik-een-overbruggingshypotheek-in-eblinqx-hypotheekadvies-in',kw:'overbrugging overbruggingshypotheek invoeren verkoop woning nieuwe woning',sam:'Stappen voor het invoeren van een overbruggingshypotheek bij aankoop van een nieuwe woning terwijl de huidige nog verkocht moet worden.'},
+ {bron:'Support eBlinqx Hypotheekadvies',titel:'Hoe verwerk ik verkoopkosten in de overbruggingsberekening?',url:FL+'600590-hoe-verwerk-ik-verkoopkosten-in-de-overbruggingsberekening',kw:'verkoopkosten overbrugging makelaar berekening verkoopopbrengst',sam:'Hoe verkoopkosten (makelaar, notaris) in mindering komen op de verwachte verkoopopbrengst in de overbruggingsberekening.'},
+ {bron:'Support eBlinqx Hypotheekadvies',titel:'Hoe neem ik dubbele woonlasten mee in een overbruggingsfinanciering?',url:FL+'600601-hoe-neem-ik-dubbele-woonlasten-mee-in-een-overbruggingsfinanciering',kw:'dubbele woonlasten dubbele lasten overbrugging toets',sam:'Vastleggen van dubbele woonlasten tijdens de overbruggingsperiode in de toets.'},
+ {bron:'Support eBlinqx Hypotheekadvies',titel:'Hoe voorkom je dubbeltelling van een lopende hypotheek bij overbruggingslening?',url:FL+'600546-hoe-voorkom-je-dubbeltelling-van-een-lopende-hypotheek-bij-overbruggingslening',kw:'dubbeltelling lopende hypotheek overbrugging restschuld',sam:'Voorkomen dat de lopende hypotheek dubbel wordt meegeteld bij een overbruggingslening.'},
+ {bron:'Support eBlinqx Hypotheekadvies',titel:'Waarom wordt de geldverstrekker niet getoond in de financieringsopzet?',url:FL+'600820-waarom-wordt-de-geldverstrekker-niet-getoond-in-de-financieringsopzet',kw:'geldverstrekker financieringsopzet getoond ontbreekt zichtbaar',sam:'Oorzaken waarom de geldverstrekker niet in de financieringsopzet verschijnt en hoe je dat oplost.'},
+ {bron:'Support eBlinqx Hypotheekadvies',titel:'Hoe verwerk ik erfpacht afkoop in de financieringsopzet?',url:FL+'600641-hoe-verwerk-ik-erfpacht-afkoop-in-de-financieringsopzet',kw:'erfpacht afkoop financieringsopzet canon',sam:'Verwerken van de afkoop van erfpacht als post in de financieringsopzet.'},
+ {bron:'Support eBlinqx Hypotheekadvies',titel:'Hoe verwerk je een woningkorting in eBlinqx Hypotheekadvies?',url:FL+'600708-hoe-verwerk-je-een-woningkorting-in-eblinqx-hypotheekadvies',kw:'woningkorting korting koopsom schenking ouders familie overdrachtsbelasting',sam:'Twee opties: volledige koopsom invoeren met de korting als schenking bij eigen middelen, of de verlaagde koopsom als die in de koopakte staat. De juridische constructie bepaalt de keuze.'},
+ {bron:'Support eBlinqx Hypotheekadvies',titel:'Hoe voorkom en los je dubbele klantregistraties op in eBlinqx Hypotheekadvies?',url:FL+'600752-hoe-voorkom-en-los-je-dubbele-klantregistraties-op-in-eblinqx-hypotheekadvies',kw:'dubbel dossier dubbele klant klantregistratie samenvoegen',sam:'Voorkomen en oplossen van dubbele klantregistraties in de adviessoftware.'},
+ {bron:'Support eBlinqx Hypotheekadvies',titel:'Hoe los ik fouten bij invoer van een bestaand leningdeel op?',url:FL+'600906-hoe-los-ik-fouten-bij-invoer-van-een-bestaand-leningdeel-op',kw:'leningdeel bestaand fout foutmelding invoer rente',sam:'Oplossen van foutmeldingen bij het invoeren van een bestaand leningdeel.'},
+ {bron:'Support eBlinqx Hypotheekadvies',titel:'Hoe voer ik een afgeloste hypotheek op met meeneemregeling in eBlinqx Hypotheekadvies?',url:FL+'600719-hoe-voer-ik-een-afgeloste-hypotheek-op-met-meeneemregeling-in-eblinqx-hypotheekadvies',kw:'meeneemregeling verhuisregeling afgeloste hypotheek rente meenemen geldverstrekker verhuizen',sam:'Invoeren van een afgeloste hypotheek waarvan de rente via de meeneemregeling wordt meegenomen.'},
+ {bron:'Support eBlinqx Hypotheekadvies',titel:'Hoe vergelijk ik meeneemrente en nieuwe rente bij bestaande hypotheeklening?',url:FL+'600746-hoe-vergelijk-ik-meeneemrente-en-nieuwe-rente-bij-bestaande-hypotheeklening',kw:'meeneemrente verhuisregeling rente vergelijken bestaande hypotheek nieuwe rente',sam:'Vergelijking maken tussen de mee te nemen rente en een nieuwe rente bij een bestaande lening.'},
+ {bron:'Support eBlinqx Hypotheekadvies',titel:'Waarom wordt mijn bestaande ORV niet meegenomen in de overlijdensberekening?',url:FL+'600570-waarom-wordt-mijn-bestaande-orv-niet-meegenomen-in-de-overlijdensberekening',kw:'orv overlijdensrisicoverzekering overlijden berekening bestaande polis',sam:'Voorwaarden waaronder een bestaande ORV meetelt in de berekening bij overlijden.'},
+ {bron:'Support eBlinqx Hypotheekadvies',titel:'Hoe verwerk ik een studieschuld in eBlinqx Hypotheekadvies?',url:FL+'600807-hoe-verwerk-ik-een-studieschuld-in-eblinqx-hypotheekadvies',kw:'studieschuld duo studielening verplichting',sam:'Invoeren van een (DUO-)studieschuld als financiële verplichting.'},
+ {bron:'Support eBlinqx Hypotheekadvies',titel:'Hoe voer ik kredieten in die via de hypotheek worden ingelost?',url:FL+'600747-hoe-voer-ik-kredieten-in-die-via-de-hypotheek-worden-ingelost',kw:'krediet inlossen bkr lening aflossen meefinancieren',sam:'Invoeren van kredieten die uit de hypotheek worden ingelost, zodat ze niet als verplichting blijven meetellen.'},
+ {bron:'Support eBlinqx Hypotheekadvies',titel:'Waarom kan ik mijn berekening niet downloaden in eBlinqx Hypotheekadvies?',url:FL+'600618-waarom-kan-ik-mijn-berekening-niet-downloaden-in-eblinqx-hypotheekadvies',kw:'downloaden berekening rapport pdf export adviesrapport',sam:'Oorzaken waarom het downloaden van een berekening of rapport niet lukt.'},
+ {bron:'Support eBlinqx Hypotheekadvies',titel:'Hoe los ik HDN Poortwachter foutcodes op bij TP nummers?',url:FL+'600658-hoe-los-ik-hdn-poortwachter-foutcodes-op-bij-tp-nummers',kw:'hdn poortwachter foutcode aanvraag tp nummer',sam:'Oplossen van HDN Poortwachter-foutcodes bij het versturen van een aanvraag.'},
+ {bron:'Support eBlinqx Hypotheekadvies',titel:'Kan ik mijn aanvraag tussentijds opslaan in eBlinqx Hypotheekadvies?',url:FL+'600854-kan-ik-mijn-aanvraag-tussentijds-opslaan-in-eblinqx-hypotheekadvies',kw:'aanvraag opslaan tussentijds hdn concept',sam:'Tussentijds opslaan van een HDN-aanvraag.'},
+ {bron:'Support eBlinqx Hypotheekadvies',titel:'Hoe wordt het toetsinkomen berekend met de 3-2-1 methode voor ondernemers?',url:FL+'600670-hoe-wordt-het-toetsinkomen-berekend-met-de-3-2-1-methode-voor-ondernemers',kw:'ondernemer toetsinkomen zzp 3-2-1 methode jaarcijfers inkomen',sam:'Uitleg van de 3-2-1-methode voor het toetsinkomen van ondernemers.'},
+ {bron:'Support eBlinqx Hypotheekadvies',titel:'Is klantakkoord op advies altijd verplicht?',url:FL+'600802-is-klantakkoord-op-advies-altijd-verplicht',kw:'klantakkoord advies verplicht akkoord ondertekenen',sam:'Wanneer een klantakkoord op het advies nodig is.'},
+ {bron:'Support eBlinqx Hypotheekadvies',titel:'Advies omzetten naar huidige situatie in Blinqx Verzekering & Hypotheek',url:FL+'600630-advies-omzetten-naar-huidige-situatie-in-blinqx-verzekering-hypotheek',kw:'advies omzetten huidige situatie bestaand dossier nazorg',sam:'Een afgerond advies omzetten naar de huidige situatie voor beheer en nazorg.'},
+ {bron:'Support eBlinqx Hypotheekadvies',titel:'Release eBlinqx Hypotheekadvies – 9 september 2026',url:FL+'822694-release-eblinqx-hypotheekadvies-9-september-2026',kw:'release releasenotes update nieuw functie versie productupdate september',sam:'Releasenotes van de release van 9 september 2026.'},
+ {bron:'Releasenotes Fastlane',titel:'Releasenotes Fastlane / eBlinqx Hypotheekadvies (Hypotheekbond)',url:'https://fastlane.hypotheekbond.nl/hoe-het-werkt/releasenotes/',kw:'release releasenotes update wijziging nieuw versie productupdate roadmap',sam:'Overzicht van releases en wijzigingen in Fastlane / eBlinqx Hypotheekadvies.'},
+ {bron:'Support Elements',titel:'Hypotheekadvies aanmaken en afhandelen in eBlinqx (werkwijze)',url:'https://support.fasterforward.nl/kennisbank/werkwijze/',kw:'dossier aanmaken dienst productkaart workflow hdn inbox stukkenlijst export adviessoftware werkwijze crm elements',sam:'Dossier aanmaken, dienst (productkaart) toevoegen, exporteren naar de adviessoftware, HDN-inbox verwerken en stukken via de stukkenlijst naar de maatschappij sturen.'},
+ {bron:'Support Elements',titel:'Bankgaranties aanvragen bij Nationale Waarborg via HDN',url:'https://support.fasterforward.nl/kennisbank/bankgaranties-aanvragen/',kw:'bankgarantie nationale waarborg hdn garantiebedrag hoofdsom overbruggingsbedrag',sam:'Gegevens komen uit het dossier (hoofdsom productkaart hypotheek, overbruggingsbedrag uit Wonen – Financieringsopzet). Garantiebedrag standaard 10% van de hoofdsom, handmatig aanpasbaar.'},
+ {bron:'Support Elements',titel:'Support Elements: releasenotes, nieuws en kennisbank eBlinqx-platform',url:'https://support.fasterforward.nl/',kw:'elements eblinqx platform release releasenotes nieuws kennisbank',sam:'Startpagina support voor het eBlinqx-platform (Elements): releasenotes, nieuws en kennisbankartikelen.'},
+ {bron:'Blinqx V&H',titel:'Supportoverzicht Blinqx Verzekering & Hypotheek (alle producten en contactgegevens)',url:'https://verzekeringhypotheek.blinqx.tech/support',kw:'support contact helpdesk telefoon mail storing',sam:'Contactgegevens en supportpagina\u2019s per product: eBlinqx Hypotheekadvies, CRM, Adviesbox, Volmacht, Finly, FinConnect, DIAS.'}
+];
+const PRODUCTS={
+ hypotheekadvies:{naam:'eBlinqx Hypotheekadvies (Fastlane)',mail:'support-hypotheekadvies@blinqx.tech',tel:'085 018 00 69 (toets 1 en 1)',url:'https://support-fastlane.vh.blinqx.tech/nl/',urlNaam:'Kennisbank eBlinqx Hypotheekadvies',extra:{titel:'Releasenotes Fastlane',url:'https://fastlane.hypotheekbond.nl/hoe-het-werkt/releasenotes/'}},
+ crm:{naam:'eBlinqx CRM / Elements',mail:'support-crm@blinqx.tech',tel:'085 018 00 69 (toets 1 en 3)',url:'https://support.fasterforward.nl/',urlNaam:'Support Elements (releasenotes, nieuws, kennisbank)',extra:null},
+ adviesbox:{naam:'Adviesbox',mail:'support-adviesbox@blinqx.tech',tel:'085 018 00 69 (toets 1 en 1)',url:'http://support-adviesbox.vh.blinqx.tech',urlNaam:'Support Adviesbox',extra:null},
+ finly:{naam:'Finly (slimme formulieren)',mail:null,tel:'085 018 00 69',url:'http://support-finly.vh.blinqx.tech',urlNaam:'Support Finly',extra:null},
+ volmacht:{naam:'Volmacht',mail:'support-volmacht@blinqx.tech',tel:'085 018 00 69 (toets 1 en 6)',url:'https://verzekeringhypotheek.blinqx.tech/support',urlNaam:'Supportoverzicht Blinqx V&H',extra:null}
+};
+const PRODUCT_WORDS={
+ adviesbox:/adviesbox/g,
+ finly:/finly|slimme formulier|schermdelen/g,
+ volmacht:/volmacht/g,
+ crm:/\bcrm\b|dossier|relatie|taak|taken|workflow|productkaart|stukkenlijst|elements|signalering|herinnering|klantportaal|documenten/g,
+ hypotheekadvies:/financieringsopzet|leningde(e)?l|hypotheekberekening|toetsinkomen|hdn|taxatie|adviesrapport|scenario|ori[eë]ntatie|overbrugging|fastlane|hypotheekadvies|eigen middelen|rentevaste|orv/g
+};
+
+/* ---------- Intercom / Fin koppeling ----------
+   Zet enabled op true en vul proxyUrl zodra de Fin-proxy (fin-proxy.worker.js) draait.
+   De Intercom-sleutel staat NOOIT in dit bestand; de proxy voegt hem server-side toe. */
+const FIN={
+  enabled:false,
+  proxyUrl:'',                 // bijv. 'https://fin-proxy.<account>.workers.dev' (zonder slash aan het eind)
+  mode:'ask',                  // 'ask' = één samenhangend antwoord, geen vervolgvragen/escalatie door Fin zelf; 'start' = Fin voert het gesprek
+  autoAsk:true,                // bij elke nieuwe vraag direct Fin bevragen (elk beantwoord gesprek telt als Fin-resolutie)
+  pollMs:2000,timeoutMs:90000,
+  messengerAppId:'',           // Intercom app_id om de Messenger te laden (knop "Open in Intercom Messenger")
+  messengerApiBase:'https://api-iam.eu.intercom.io'  // EU-workspace
+};
+const FIN_TAGS=new Set(['P','H1','H2','H3','H4','B','STRONG','I','EM','A','OL','UL','LI','PRE','CODE','IMG','TABLE','THEAD','TBODY','TR','TD','TH','DIV','BR','HR','SPAN']);
+function sanitizeFin(html){
+  const doc=new DOMParser().parseFromString('<div>'+String(html||'')+'</div>','text/html');const root=doc.body.firstChild;
+  (function walk(n){[...n.childNodes].forEach(c=>{
+    if(c.nodeType===3)return;
+    if(c.nodeType!==1){c.remove();return;}
+    if(!FIN_TAGS.has(c.tagName)){n.replaceChild(doc.createTextNode(c.textContent),c);return;}
+    [...c.attributes].forEach(a=>{const k=a.name.toLowerCase();const ok=(c.tagName==='A'&&k==='href')||(c.tagName==='IMG'&&['src','alt','width','height'].includes(k))||(['TD','TH'].includes(c.tagName)&&['colspan','rowspan'].includes(k));if(!ok)c.removeAttribute(a.name);});
+    if(c.tagName==='A'){if(!/^https?:/i.test(c.getAttribute('href')||''))c.removeAttribute('href');c.setAttribute('target','_blank');c.setAttribute('rel','noopener');}
+    if(c.tagName==='IMG'&&!/^https:/i.test(c.getAttribute('src')||'')){c.remove();return;}
+    walk(c);
+  });})(root);
+  return root.innerHTML;
+}
+function finUser(){const u=me();return {id:'adviseur-'+u.id,name:u.naam};}
+async function finFetch(path,body){
+  const r=await fetch(FIN.proxyUrl+path,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
+  if(!r.ok)throw new Error('proxy '+r.status);return r.json();
+}
+function finState(v){return v.auto&&v.auto.fin;}
+function finAsk(v){
+  if(!FIN.enabled||!FIN.proxyUrl||!v.auto)return;
+  const f=v.auto.fin={status:'thinking',parts:[],stream:'',sources:[],conversationId:'forum-'+v.id+'-'+Date.now(),csat:null,csatSent:null,error:null,reason:null,msgIds:new Set(),es:null};
+  const body={conversation_id:f.conversationId,message:{author:'user',body:v.titel+'\n\n'+v.body,timestamp:new Date().toISOString()},user:finUser(),conversation_metadata:{attributes:{categorie:cat(v.cat).naam,bron:'adviesforum'}}};
+  finFetch('/fin/'+(FIN.mode==='start'?'start':'ask'),body)
+    .then(res=>{f.status=res.status||'thinking';if(res.sse_subscription_url)finListenSSE(v,res.sse_subscription_url);else finPoll(v);rerenderIfOpen(v);})
+    .catch(e=>{f.status='error';f.error='Fin is niet bereikbaar ('+e.message+').';rerenderIfOpen(v);});
+  rerenderIfOpen(v);
+}
+function finHandleEvent(v,ev){
+  const f=finState(v);if(!f||!ev||(ev.conversation_id&&ev.conversation_id!==f.conversationId))return;
+  switch(ev.event_name){
+    case 'fin_reply_chunk':f.stream=ev.chunk_text||'';f.status='replying';break;
+    case 'fin_replied':{const id=ev.message&&ev.message.id;if(id&&f.msgIds.has(id))return;if(id)f.msgIds.add(id);f.parts.push(sanitizeFin(ev.message.body));f.stream='';if(ev.message.sources)f.sources=ev.message.sources;f.status=ev.status||'replying';break;}
+    case 'fin_status_updated':f.status=ev.status;if(ev.reason)f.reason=ev.reason;break;
+    case 'csat_requested':f.csat=ev.csat;break;
+  }
+  rerenderIfOpen(v);
+}
+const FIN_DONE=['awaiting_user_reply','complete','escalated','resolved'];
+function finListenSSE(v,url){
+  const f=finState(v);let es;
+  try{es=new EventSource(url);}catch(e){finPoll(v);return;}
+  f.es=es;const timer=setTimeout(()=>{es.close();if(!f.parts.length){f.status='timeout';rerenderIfOpen(v);}},FIN.timeoutMs);
+  es.onmessage=e=>{let d;try{d=JSON.parse(e.data);}catch(err){return;}finHandleEvent(v,d);
+    if(d.event_name==='csat_requested'){clearTimeout(timer);es.close();}
+    if(d.event_name==='fin_status_updated'&&(d.status==='awaiting_user_reply'||d.status==='complete')){clearTimeout(timer);setTimeout(()=>es.close(),5000);}};
+  es.onerror=()=>{es.close();clearTimeout(timer);if(!f.parts.length&&!FIN_DONE.includes(f.status))finPoll(v);};
+}
+async function finPoll(v){
+  const f=finState(v),t0=Date.now();let seen=0;
+  while(Date.now()-t0<FIN.timeoutMs){
+    await new Promise(r=>setTimeout(r,FIN.pollMs));
+    try{const r=await fetch(FIN.proxyUrl+'/fin/replies?conversation_id='+encodeURIComponent(f.conversationId));if(!r.ok)continue;
+      const evs=await r.json();for(const ev of evs.slice(seen))finHandleEvent(v,ev);seen=evs.length;
+      if(FIN_DONE.includes(f.status)&&!f.csat)return;}catch(e){}
+  }
+  if(!f.parts.length&&!['error'].includes(f.status)){f.status='timeout';rerenderIfOpen(v);}
+}
+function finReply(v,text){
+  const f=finState(v);if(!f)return;f.status='thinking';f.csat=null;
+  finFetch('/fin/reply',{conversation_id:f.conversationId,message:{author:'user',body:text,timestamp:new Date().toISOString()},user:finUser()})
+    .then(res=>{if(res.sse_subscription_url)finListenSSE(v,res.sse_subscription_url);else finPoll(v);})
+    .catch(e=>{f.status='error';f.error='Vervolgvraag mislukt ('+e.message+').';rerenderIfOpen(v);});
+  rerenderIfOpen(v);
+}
+function finBlock(v){
+  if(!FIN.enabled&&!FIN.messengerAppId)return '';
+  const f=finState(v);let inner='';
+  if(FIN.enabled){
+    if(!f)inner=`<div class="actions"><button class="btn btn-sm btn-y" data-act="fin-ask" data-vraag="${v.id}">Vraag Fin</button><span style="font-size:12px;color:var(--muted)">Fin zoekt in de Blinqx-supportkennisbanken.</span></div>`;
+    else{
+      const st={thinking:'Fin zoekt een antwoord…',replying:'Fin antwoordt…',awaiting_user_reply:'Fin wacht op jouw reactie',resolved:'Fin heeft de vraag als opgelost gemarkeerd',complete:'Fin is klaar',escalated:'Doorgezet naar een medewerker van Blinqx-support',error:f.error||'Er ging iets mis',timeout:'Geen antwoord van Fin binnen de wachttijd'}[f.status]||f.status;
+      const body=f.parts.join('')+(f.stream&&f.status==='replying'?'<p>'+esc(f.stream)+'</p>':'');
+      inner=`<div class="fin-status">${esc(st)}${f.reason?' ('+esc(f.reason)+')':''}</div>
+        ${body?`<div class="body fin-body">${body}</div>`:''}
+        ${f.sources.length?`<div class="small">Bronnen: ${f.sources.map((s,i)=>`<a href="${esc(s.url)}" target="_blank" rel="noopener">[${i+1}] ${esc(s.title)}</a>`).join(' ')}</div>`:''}
+        ${f.csat&&f.csat.options?`<div class="fb">Beoordeel Fin:${f.csat.options.map(o=>`<button class="btn btn-sm ${f.csatSent===o.key?'btn-ok':'btn-line'}" data-act="fin-csat" data-vraag="${v.id}" data-key="${esc(o.key)}" ${f.csatSent?'disabled':''}>${esc(o.emoji||'')} ${esc(o.label||o.key)}</button>`).join('')}</div>`:''}
+        <div class="actions">
+          ${f.status==='awaiting_user_reply'?`<form class="fin-reply" data-vraag="${v.id}" style="display:flex;gap:8px;flex:1;min-width:240px"><input type="text" name="body" placeholder="Vervolgvraag aan Fin" required style="flex:1"><button class="btn btn-sm btn-y" type="submit">Stuur</button></form>`:''}
+          ${['error','timeout'].includes(f.status)?`<button class="btn btn-sm btn-line" data-act="fin-ask" data-vraag="${v.id}">Opnieuw proberen</button>`:''}
+          ${f.parts.length&&f.status!=='escalated'?`<button class="btn btn-sm btn-line" data-act="fin-escalate" data-vraag="${v.id}">Doorzetten naar Blinqx-support</button>`:''}
+        </div>`;
+    }
+  }
+  const messenger=FIN.messengerAppId?`<button class="btn btn-sm btn-line" data-act="messenger" data-vraag="${v.id}">Open in Intercom Messenger</button>`:'';
+  return `<div class="fin"><div class="fin-head"><span class="fin-logo">Fin</span><b>Antwoord van Fin (Intercom)</b>${messenger?'<span style="margin-left:auto">'+messenger+'</span>':''}</div>${inner}</div>`;
+}
+function rerenderIfOpen(v){if(S.view==='vraag'&&S.vraag===v.id)render(true);}
+function exportKbVoorFin(){
+  const rows=ARTIKELEN.filter(a=>a.gecontroleerd).map(a=>({external_id:'adviesforum-'+a.id,title:a.titel,locale:'nl',url:location.origin+location.pathname+'#artikel-'+a.id,html:rich(a.body)+(a.links&&a.links.length?'<h3>Bronnen</h3><ul>'+a.links.map(l=>'<li><a href="'+esc(l.url)+'">'+esc(l.titel)+'</a></li>').join('')+'</ul>':''),updated_at:a.datum,categorie:cat(a.cat).naam}));
+  const blob=new Blob([JSON.stringify(rows,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='kennisbank-fin.json';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),1000);
+  return rows.length;
+}
 
 /* ---------- State ---------- */
 const S={tab:'forum',view:'forum',cat:'alle',status:'alle',sort:'nieuw',q:'',me:'u1',vraag:null,artikel:null,adviseur:null,kbCat:'alle',kbStatus:'alle'};
@@ -493,6 +703,62 @@ function statsFor(uid){
 function toast(msg){const t=$('#toast');t.textContent=msg;t.classList.add('show');clearTimeout(t._h);t._h=setTimeout(()=>t.classList.remove('show'),2200);}
 function matches(q,...fields){q=q.trim().toLowerCase();if(!q)return true;return fields.join(' ').toLowerCase().includes(q);}
 
+/* ---------- Automatisch antwoord (trefwoordmatching) ---------- */
+const STOP=new Set('hoe kan ik de het een in van bij op met en of is zijn wordt worden voor naar te dat dit die niet wat welke als ook je jullie wij we mijn er aan om al nog dan maar meer zelf waar wanneer waarom wel zo moet moeten kun kunnen heb heeft hebben wil willen doe doen gaat gaan staat staan zie zien krijg krijgen deze daar hier door over onder uit tot zonder tegen want dus toch lijkt het andere ander onze eigenlijk even gewoon precies klant klanten twee drie keer voeg voegen samen dezelfde zelfde staat maken gemaakt aangemaakt nieuwe nieuw jaar jaren lage hoge huidige nemen vraag vragen antwoord goed beste graag collega collega’s kantoor'.split(' '));
+const PRODUCT_TOKENS=new Set(['eblinqx','blinqx','hypotheekadvies','fastlane','elements','adviesbox','finly','dias','adviespakket','verzekering','hypotheek']);
+const MIN_SCORE=1.5;
+function stem(w){if(w.length>6&&w.endsWith('en'))return w.slice(0,-2);if(w.length>5&&w.endsWith('s'))return w.slice(0,-1);return w;}
+function tokens(s){return [...new Set(String(s).toLowerCase().replace(/[^a-z0-9àâäéèêëïîôöùûüç\- ]+/g,' ').split(/\s+/).filter(w=>w.length>=4&&!STOP.has(w)&&!PRODUCT_TOKENS.has(w)).map(stem).filter(w=>w.length>=4&&!STOP.has(w)))];}
+function tokHit(t,list,minLen){return list.some(c=>c===t||(t.length>=minLen&&c.length>=minLen&&(c.startsWith(t)||t.startsWith(c))));}
+function scoreMatch(qTok,strongTxt,weakTxt){
+  if(!qTok.length)return 0;const st=tokens(strongTxt),wt=tokens(weakTxt);let s=0,hits=0;
+  let strong=0;for(const t of qTok){if(tokHit(t,st,6)){s+=2;hits++;strong++;}else if(tokHit(t,wt,7)){s+=1;hits++;}}
+  return strong?s/Math.sqrt(qTok.length):0;
+}
+function trunc(t,n=170){const p=String(t).split('\n').map(x=>x.replace(/^- /,'')).filter(x=>x.trim()).join(' ');return p.length>n?p.slice(0,n).replace(/\s+\S*$/,'')+'…':p;}
+function detectProduct(v){
+  const txt=(v.titel+' '+v.body+' '+v.tags.join(' ')).toLowerCase();let best=null,max=0;
+  for(const [k,re] of Object.entries(PRODUCT_WORDS)){const n=(txt.match(re)||[]).length;if(n>max){max=n;best=k;}}
+  if(!best){if(v.cat==='adv')best='hypotheekadvies';else if(v.cat==='crm')best='crm';}
+  return best;
+}
+function autoAnswer(v,force,live){
+  if(v.auto&&!force)return;
+  const q=tokens(v.titel+' '+v.tags.join(' ')+' '+v.body);const hits=[];
+  for(const o of VRAGEN){
+    if(o.id===v.id||!o.antwoorden.length)continue;
+    const s=scoreMatch(q,o.titel+' '+o.tags.join(' '),o.body+' '+o.antwoorden.map(a=>a.body).join(' '));
+    if(s>=MIN_SCORE){const best=o.antwoorden.find(a=>a.id===o.beste)||[...o.antwoorden].sort((a,b)=>avg(b.rA)-avg(a.rA))[0];hits.push({type:'forum',id:o.id,titel:o.titel,snippet:trunc(best.body),score:s+(o.beste?0.3:0)});}
+  }
+  for(const k of ARTIKELEN){const s=scoreMatch(q,k.titel,k.body);if(s>=MIN_SCORE)hits.push({type:'kb',id:k.id,titel:k.titel,snippet:trunc(k.body),score:s+(k.gecontroleerd?0.4:0.1)});}
+  for(const h of SUPPORT){const s=scoreMatch(q,h.titel+' '+h.kw,h.sam);if(s>=MIN_SCORE)hits.push({type:'support',url:h.url,bron:h.bron,titel:h.titel,snippet:h.sam,score:s});}
+  hits.sort((a,b)=>b.score-a.score);
+  v.auto={datum:(v.auto&&v.auto.datum)||v.datum||new Date().toISOString(),product:detectProduct(v),hits:hits.slice(0,5),feedback:(v.auto&&v.auto.feedback)||{},fin:(v.auto&&v.auto.fin)||null};
+  if(live&&FIN.enabled&&FIN.autoAsk&&!v.auto.fin)finAsk(v);
+}
+function autoCard(v){
+  const a=v.auto;if(!a)return '';
+  const ik=me(),fbMine=a.feedback[ik.id]||0,fb=Object.values(a.feedback);const ja=fb.filter(x=>x>0).length,nee=fb.filter(x=>x<0).length;
+  const isAuteur=v.auteur===ik.id,opgelost=v.beste==='auto';
+  const hits=a.hits.map(h=>{
+    const src=h.type==='forum'?'<span class="src forum">Forum</span>':h.type==='kb'?'<span class="src kb">Kennisbank</span>':'<span class="src sup">'+esc(h.bron)+'</span>';
+    const t=h.type==='support'?`<a href="${esc(h.url)}" target="_blank" rel="noopener">${esc(h.titel)}</a>`:`<button data-act="${h.type==='forum'?'open-vraag':'open-artikel'}" data-id="${h.id}">${esc(h.titel)}</button>`;
+    return `<div class="hit">${src}<div class="t">${t}</div><div class="sn">${esc(h.snippet)}</div></div>`;
+  }).join('');
+  const p=a.product?PRODUCTS[a.product]:null;
+  return `<div class="auto" id="auto-${v.id}"><div class="pad">
+    <div class="head"><h2>Automatisch antwoord</h2><span style="display:flex;gap:10px;align-items:center;font-size:13px;color:var(--muted)">${fmtDate(a.datum)}${opgelost?'<span class="best-badge">✓ Vraag hiermee opgelost</span>':''}<button class="btn btn-sm btn-line" data-act="auto-opnieuw" data-vraag="${v.id}">Opnieuw zoeken</button></span></div>
+    ${finBlock(v)}
+    <div class="intro">${a.hits.length?'Eerder behandeld in het forum, de kennisbank of op de supportsites (trefwoordmatch). Controleer de bron; een collega kan daarna altijd nog aanvullen.':'Geen trefwoordmatch in het forum, de kennisbank of op de supportsites. De vraag staat open voor collega\u2019s.'}</div>
+    ${hits?'<div>'+hits+'</div>':''}
+    ${p?`<div class="contact"><b>Kom je er niet uit? Support ${esc(p.naam)}</b>${p.mail?`<a href="mailto:${p.mail}">${p.mail}</a><br>`:''}${esc(p.tel)}<br><a href="${p.url}" target="_blank" rel="noopener">${esc(p.urlNaam)}</a>${p.extra?`<br><a href="${p.extra.url}" target="_blank" rel="noopener">${esc(p.extra.titel)}</a>`:''}</div>`:''}
+    <div class="fb">Was dit automatische antwoord nuttig?<button class="btn btn-sm ${fbMine>0?'btn-ok':'btn-line'}" data-act="auto-fb" data-vraag="${v.id}" data-val="1">Ja${ja?' ('+ja+')':''}</button><button class="btn btn-sm ${fbMine<0?'btn-ok':'btn-line'}" data-act="auto-fb" data-vraag="${v.id}" data-val="-1">Nee${nee?' ('+nee+')':''}</button>
+      ${isAuteur&&a.hits.length?`<button class="btn btn-sm ${opgelost?'btn-ok':'btn-y'}" style="margin-left:auto" data-act="auto-opgelost" data-vraag="${v.id}">${opgelost?'Opgelost ✓':'Dit beantwoordt mijn vraag'}</button>`:''}
+    </div>
+    <div class="small">Automatisch samengesteld op trefwoorden uit het forum, de kennisbank en de supportsites van Blinqx V&amp;H. Geen inhoudelijke beoordeling: controleer de bron voordat je iets overneemt in een klantdossier.</div>
+  </div></div>`;
+}
+
 /* ---------- Render: schil ---------- */
 function renderShell(){
   const sel=$('#user');
@@ -504,7 +770,7 @@ function renderShell(){
   +(open?`<span style="margin-left:auto;align-self:center;font-size:13px;color:var(--muted);padding:0 8px;white-space:nowrap">${plural(open,'onbeantwoorde vraag','onbeantwoorde vragen')}</span>`:'');
 }
 
-function render(){
+function render(keepScroll){
   renderShell();
   const app=$('#app');
   app.className='wrap';
@@ -517,7 +783,7 @@ function render(){
     case 'adviseurs':app.className='wrap one';app.innerHTML=viewAdviseurs();break;
     case 'adviseur':app.className='wrap two';app.innerHTML=viewAdviseur();break;
   }
-  window.scrollTo({top:0});
+  if(!keepScroll)window.scrollTo({top:0});
 }
 
 /* ---------- Forum ---------- */
@@ -553,7 +819,7 @@ function viewForum(){
       <h3>${esc(v.titel)}</h3>
       <span class="status s-${st}">${statusTxt[st]}</span>
       <div class="ex">${esc(v.body)}</div>
-      <div class="meta"><span class="chip">${esc(cat(v.cat).naam)}</span><span><b>${esc(u.naam)}</b> ${esc(u.kantoor)}</span><span>${fmtDate(v.datum)}</span><span>${plural(v.antwoorden.length,'antwoord','antwoorden')}</span><span>${fmtInt(v.views)} keer bekeken</span>${br?`<span>${starsStatic(br)} ${fmtNum(br)}</span>`:''}</div>
+      <div class="meta"><span class="chip">${esc(cat(v.cat).naam)}</span>${v.auto&&v.auto.hits.length?'<span class="chip auto-chip">Auto-antwoord</span>':''}<span><b>${esc(u.naam)}</b> ${esc(u.kantoor)}</span><span>${fmtDate(v.datum)}</span><span>${plural(v.antwoorden.length,'antwoord','antwoorden')}</span><span>${fmtInt(v.views)} keer bekeken</span>${br?`<span>${starsStatic(br)} ${fmtNum(br)}</span>`:''}</div>
     </div>`;}).join('')
   :`<div class="empty"><b>Geen vragen gevonden</b>${S.q?'Probeer een andere zoekterm of ':''}stel zelf de eerste vraag in deze categorie.<div style="margin-top:14px"><button class="btn btn-y" data-act="nieuw">Vraag stellen</button></div></div>`;
   return sideForum()+`<section>
@@ -587,7 +853,7 @@ function viewVraag(){
   const isAuteur=v.auteur===ik.id;
   const ans=[...v.antwoorden].sort((a,b)=>(b.id===v.beste)-(a.id===v.beste)||avg(b.rA)-avg(a.rA)||a.datum.localeCompare(b.datum));
   const kbArt=ARTIKELEN.find(a=>a.bron===v.id);
-  const kanPromoveren=v.beste&&!kbArt&&(isAuteur||ik.rol==='compliance'||ik.rol==='beheer'||VRAGEN.find(x=>x.id===v.id).antwoorden.some(a=>a.id===v.beste&&a.auteur===ik.id));
+  const kanPromoveren=v.beste&&v.beste!=='auto'&&!kbArt&&(isAuteur||ik.rol==='compliance'||ik.rol==='beheer'||v.antwoorden.some(a=>a.id===v.beste&&a.auteur===ik.id));
   const answersHtml=ans.length?ans.map(a=>{
     const au=user(a.auteur),eigen=a.auteur===ik.id,best=a.id===v.beste,st2=statsFor(a.auteur);
     const mineA=a.rA[ik.id]||0,mineAdv=a.rAdv[ik.id]||0;
@@ -617,7 +883,9 @@ function viewVraag(){
       ${kanPromoveren?`<div class="actions"><button class="btn btn-line btn-sm" data-act="naar-kb" data-vraag="${v.id}">Zet om naar kennisbankartikel</button><span style="font-size:13px;color:var(--muted);align-self:center">Vraag en beste antwoord worden als concept opgenomen; compliance controleert daarna.</span></div>`:''}
     </div></div>
 
-    <div class="answers"><h2>${plural(ans.length,'antwoord','antwoorden')}</h2><div class="card">${answersHtml}</div></div>
+    ${autoCard(v)}
+
+    <div class="answers"><h2>${plural(ans.length,'antwoord','antwoorden')}${ans.length?'':' van collega\u2019s'}</h2><div class="card">${answersHtml}</div></div>
 
     <div class="card" style="margin-top:22px"><div class="pad form">
       <h2 style="margin-bottom:12px">Jouw antwoord</h2>
@@ -636,7 +904,9 @@ function railVraag(v){
     <div class="card"><div class="pad"><h3>Zo werkt beoordelen</h3><div style="font-size:13px;color:var(--muted)">
       <p>Elk antwoord krijgt twee scores: één voor het <b style="color:var(--text)">antwoord</b> (klopt het, is het bruikbaar) en één voor de <b style="color:var(--text)">adviseur</b> (behulpzaam, duidelijk, onderbouwd).</p>
       <p>De vraagsteller kiest het beste antwoord. Punten: 10 per antwoord, 25 per beste antwoord, plus elke ontvangen ster.</p>
-      <p style="margin:0">Niveaus: Starter, Kenner (50), Expert (150), Autoriteit (300).</p></div></div></div>
+      <p>Niveaus: Starter, Kenner (50), Expert (150), Autoriteit (300).</p>
+      <p style="margin:0">Nieuwe vragen krijgen direct een automatisch antwoord met eerdere forumantwoorden, kennisbankartikelen en supportpagina\u2019s die op trefwoorden overeenkomen${FIN.enabled?', plus een antwoord van Fin (Intercom) uit de Blinqx-supportkennisbanken':''}.</p></div></div></div>
+    ${v.auto&&v.auto.product?`<div class="card"><div class="pad"><h3>Supportpagina\u2019s</h3><ul class="links"><li><a href="${PRODUCTS[v.auto.product].url}" target="_blank" rel="noopener">${esc(PRODUCTS[v.auto.product].urlNaam)}</a></li>${PRODUCTS[v.auto.product].extra?`<li><a href="${PRODUCTS[v.auto.product].extra.url}" target="_blank" rel="noopener">${esc(PRODUCTS[v.auto.product].extra.titel)}</a></li>`:''}<li><a href="https://verzekeringhypotheek.blinqx.tech/support" target="_blank" rel="noopener">Supportoverzicht Blinqx V&amp;H</a></li></ul></div></div>`:''}
     ${arts.length?`<div class="card"><div class="pad"><h3>Kennisbank over ${esc(cat(v.cat).naam)}</h3>${arts.map(a=>`<div style="margin-bottom:8px"><button class="btn btn-line btn-sm" style="white-space:normal;text-align:left" data-act="open-artikel" data-id="${a.id}">${esc(a.titel)}</button></div>`).join('')}</div></div>`:''}
     ${related.length?`<div class="card"><div class="pad"><h3>Verwante vragen</h3>${related.map(x=>`<div style="margin-bottom:10px;font-size:14px"><button class="btn btn-line btn-sm" style="white-space:normal;text-align:left" data-act="open-vraag" data-id="${x.id}">${esc(x.titel)}</button></div>`).join('')}</div></div>`:''}
   </aside>`;
@@ -687,7 +957,7 @@ function viewKennisbank(){
     </div>`;}).join('')
   :`<div class="empty"><b>Geen artikelen gevonden</b>Pas het filter aan of zet een opgeloste forumvraag om naar een artikel.</div>`;
   return side+`<section>
-    <div class="listhead"><div><h1>Kennisbank</h1><div class="sub">${plural(list.length,'artikel','artikelen')}${S.q?` voor “${esc(S.q)}”`:''}</div></div></div>
+    <div class="listhead"><div><h1>Kennisbank</h1><div class="sub">${plural(list.length,'artikel','artikelen')}${S.q?` voor “${esc(S.q)}”`:''}</div></div>${['compliance','beheer'].includes(me().rol)?`<button class="btn btn-line btn-sm" data-act="kb-export" title="Gecontroleerde artikelen als JSON voor de Fin Content Library (External Pages)">Exporteer gecontroleerd voor Fin</button>`:''}</div>
     <div class="card">${rows}</div>
   </section>
   <aside class="rail">
@@ -705,6 +975,7 @@ function viewArtikel(){
       <div class="byline"><span class="av">${initials(u.naam)}</span><span><button class="name" data-act="open-adviseur" data-id="${u.id}">${esc(u.naam)}</button><br>${esc(u.functie)}, ${esc(u.kantoor)}</span><span style="margin-left:auto;text-align:right">${fmtDate(a.datum)}<br>${fmtInt(a.views)} keer bekeken</span></div>
       ${a.gecontroleerd?'':'<div class="notice" style="margin-bottom:14px">Dit artikel is een concept uit het forum. Gebruik het als collegiale tip, niet als kantoorwerkwijze, totdat compliance het heeft gecontroleerd.</div>'}
       <div class="body">${rich(a.body)}</div>
+      ${a.links&&a.links.length?`<div class="kb-block"><h3>Bronnen op de supportsite</h3><ul class="links">${a.links.map(l=>`<li><a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.titel)}</a></li>`).join('')}</ul></div>`:''}
       ${bron?`<div class="kb-block"><h3>Bron</h3><div style="font-size:14px">Forumvraag van ${esc(user(bron.auteur).naam)}: <button class="btn btn-line btn-sm" style="white-space:normal;text-align:left" data-act="open-vraag" data-id="${bron.id}">${esc(bron.titel)}</button></div></div>`:''}
       <div class="rating-row" style="align-items:center">
         <button class="btn btn-sm ${mijn?'btn-ok':'btn-line'}" data-act="nuttig" data-id="${a.id}">${mijn?'Nuttig ✓':'Nuttig'}</button><span style="font-size:13px;color:var(--muted)">${plural(cnt(a.nuttig),'collega vond dit nuttig','collega\u2019s vonden dit nuttig')}</span>
@@ -788,15 +1059,23 @@ document.addEventListener('click',e=>{
       const a=VRAGEN.flatMap(v=>v.antwoorden).find(x=>x.id===id);if(!a)return;
       if(a.auteur===S.me){toast('Je eigen antwoord kun je niet beoordelen');return;}
       const key=el.dataset.kind==='a'?'rA':'rAdv',val=+el.dataset.val;
-      a[key][S.me]=val;render();toast(el.dataset.kind==='a'?`Antwoord beoordeeld met ${val} ${val===1?'ster':'sterren'}`:`Adviseur beoordeeld met ${val} ${val===1?'ster':'sterren'}`);
+      a[key][S.me]=val;render(true);toast(el.dataset.kind==='a'?`Antwoord beoordeeld met ${val} ${val===1?'ster':'sterren'}`:`Adviseur beoordeeld met ${val} ${val===1?'ster':'sterren'}`);
       break;}
-    case 'beste':{const v=VRAGEN.find(x=>x.id===el.dataset.vraag);if(!v||v.auteur!==S.me)return;v.beste=v.beste===id?null:id;render();toast(v.beste?'Beste antwoord gekozen':'Markering verwijderd');break;}
+    case 'beste':{const v=VRAGEN.find(x=>x.id===el.dataset.vraag);if(!v||v.auteur!==S.me)return;v.beste=v.beste===id?null:id;render(true);toast(v.beste?'Beste antwoord gekozen':'Markering verwijderd');break;}
     case 'naar-kb':{
       const v=VRAGEN.find(x=>x.id===el.dataset.vraag);if(!v||!v.beste||ARTIKELEN.find(a=>a.bron===v.id))return;
-      const best=v.antwoorden.find(a=>a.id===v.beste);
+      const best=v.antwoorden.find(a=>a.id===v.beste);if(!best)return;
       ARTIKELEN.unshift({id:nid('k'),cat:v.cat,titel:v.titel,auteur:best.auteur,datum:new Date().toISOString(),bron:v.id,gecontroleerd:false,views:0,nuttig:{},body:best.body});
       openArtikel(ARTIKELEN[0].id);toast('Artikel aangemaakt als concept');break;}
-    case 'nuttig':{const a=ARTIKELEN.find(x=>x.id===id);if(!a)return;if(a.nuttig[S.me])delete a.nuttig[S.me];else a.nuttig[S.me]=1;render();break;}
+    case 'nuttig':{const a=ARTIKELEN.find(x=>x.id===id);if(!a)return;if(a.nuttig[S.me])delete a.nuttig[S.me];else a.nuttig[S.me]=1;render(true);break;}
+    case 'auto-fb':{const v=VRAGEN.find(x=>x.id===el.dataset.vraag);if(!v||!v.auto)return;const val=+el.dataset.val;if(v.auto.feedback[S.me]===val)delete v.auto.feedback[S.me];else v.auto.feedback[S.me]=val;render(true);break;}
+    case 'auto-opgelost':{const v=VRAGEN.find(x=>x.id===el.dataset.vraag);if(!v||v.auteur!==S.me)return;v.beste=v.beste==='auto'?null:'auto';render(true);toast(v.beste?'Vraag gemarkeerd als opgelost':'Markering verwijderd');break;}
+    case 'auto-opnieuw':{const v=VRAGEN.find(x=>x.id===el.dataset.vraag);if(!v)return;autoAnswer(v,true);render();toast(v.auto.hits.length?plural(v.auto.hits.length,'bron gevonden','bronnen gevonden'):'Geen bronnen gevonden');break;}
+    case 'fin-ask':{const v=VRAGEN.find(x=>x.id===el.dataset.vraag);if(!v||!v.auto)return;finAsk(v);break;}
+    case 'fin-csat':{const v=VRAGEN.find(x=>x.id===el.dataset.vraag);const f=finState(v);if(!f)return;const key=el.dataset.key;finFetch('/fin/csat',{conversation_id:f.conversationId,rating:key}).then(()=>{f.csatSent=key;rerenderIfOpen(v);toast('Beoordeling naar Fin verstuurd');}).catch(()=>toast('Beoordeling versturen mislukt'));break;}
+    case 'fin-escalate':{const v=VRAGEN.find(x=>x.id===el.dataset.vraag);const f=finState(v);if(!f)return;finFetch('/fin/escalate',{conversation_id:f.conversationId,context:'Vraag uit het Adviesforum ('+cat(v.cat).naam+'), gesteld door '+me().naam+'. Fin-antwoord was niet voldoende.'}).then(()=>{f.status='escalated';f.reason='Escalation requested via API';rerenderIfOpen(v);toast('Doorgezet naar Blinqx-support');}).catch(()=>toast('Doorzetten mislukt'));break;}
+    case 'messenger':{const v=VRAGEN.find(x=>x.id===el.dataset.vraag);if(window.Intercom){window.Intercom('showNewMessage',v?v.titel+'\n\n'+v.body:'');}else toast('Intercom Messenger is niet geladen');break;}
+    case 'kb-export':{const n=exportKbVoorFin();toast(plural(n,'gecontroleerd artikel geëxporteerd','gecontroleerde artikelen geëxporteerd'));break;}
     case 'controleer':{const a=ARTIKELEN.find(x=>x.id===id);if(!a||me().rol!=='compliance')return;a.gecontroleerd=!a.gecontroleerd;render();toast(a.gecontroleerd?'Artikel gemarkeerd als gecontroleerd':'Controle ingetrokken');break;}
   }
 });
@@ -812,6 +1091,7 @@ document.addEventListener('change',e=>{
 });
 document.addEventListener('submit',e=>{
   e.preventDefault();const f=e.target;
+  if(f.classList.contains('fin-reply')){const v=VRAGEN.find(x=>x.id===f.dataset.vraag);const text=f.body.value.trim();if(v&&text)finReply(v,text);return;}
   if(f.id==='f-antwoord'){
     const body=f.body.value.trim();if(body.length<10){toast('Schrijf een iets uitgebreider antwoord');return;}
     const v=VRAGEN.find(x=>x.id===S.vraag);if(!v)return;
@@ -822,9 +1102,11 @@ document.addEventListener('submit',e=>{
     const titel=f.titel.value.trim(),body=f.body.value.trim(),tags=f.tags.value.split(',').map(t=>t.trim()).filter(Boolean).slice(0,6);
     if(titel.length<12||body.length<30){toast('Vul titel en situatie volledig in');return;}
     const v={id:nid('v'),cat:f.cat.value,auteur:S.me,datum:new Date().toISOString(),views:0,tags,beste:null,titel,body,antwoorden:[]};
-    VRAGEN.unshift(v);S.cat='alle';S.status='alle';openVraag(v.id);toast('Vraag geplaatst');
+    VRAGEN.unshift(v);autoAnswer(v,false,true);S.cat='alle';S.status='alle';openVraag(v.id);toast(v.auto.hits.length?'Vraag geplaatst, automatisch antwoord toegevoegd':'Vraag geplaatst');
   }
 });
+VRAGEN.filter(v=>!v.antwoorden.length).forEach(v=>autoAnswer(v));
+if(FIN.messengerAppId){window.intercomSettings={app_id:FIN.messengerAppId,api_base:FIN.messengerApiBase};const sc=document.createElement('script');sc.async=true;sc.src='https://widget.intercom.io/widget/'+encodeURIComponent(FIN.messengerAppId);document.head.appendChild(sc);}
 $('#search').addEventListener('input',e=>{
   S.q=e.target.value;
   if(S.tab==='kennisbank')S.view='kennisbank';else{S.tab='forum';S.view='forum';}
