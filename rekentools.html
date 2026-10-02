@@ -147,7 +147,7 @@ button,input,select{font-family:inherit}
     <div class="merk"><span class="zeshoek" aria-hidden="true"></span>Adviesforum &middot; Hulpmiddelen</div>
     <a class="terug" href="index.html#hulpmiddelen">&larr; Terug naar de hulpmiddelen</a>
     <h1>Rekenhulpen voor de adviespraktijk</h1>
-    <p>Dertig compacte rekenhulpen voor de vragen die tussen twee adviesgesprekken door opduiken: wat doet een nieuwe rente met de maandlast, hoeveel moet een klant inleggen voor een doelbedrag, hoeveel werkdagen zitten er tot de passeerdatum?</p>
+    <p>Eenendertig compacte rekenhulpen voor de vragen die tussen twee adviesgesprekken door opduiken: wat doet een nieuwe rente met de maandlast, hoeveel moet een klant inleggen voor een doelbedrag, hoeveel werkdagen zitten er tot de passeerdatum?</p>
     <span class="stempel">Indicatief &middot; geen advies &middot; controleer altijd de actuele normen</span>
   </div>
 </header>
@@ -1300,6 +1300,69 @@ button,input,select{font-family:inherit}
     },
     regel: 'Rendement na kosten = rendement − kostenpercentage. Beide reeksen: start × (1 + i)<sup>n</sup> + inleg × ((1 + i)<sup>n</sup> − 1) / i × (1 + i), inleg aan het begin van de maand, i = (1 + jaarrendement)<sup>1/12</sup> − 1. Het verschil omvat ook het gemiste rendement op de betaalde kosten.',
     letop: 'Rendementen zijn niet gegarandeerd; het kosteneffect is dat wel. Gebruik bij advies de kosten uit de wettelijke kosteninformatie van het product (inclusief transactie- en advieskosten). Belasting in box 3 is niet meegenomen.'
+  });
+
+  // Standaardnormale verdelingsfunctie (benadering Abramowitz en Stegun 7.1.26, fout < 2e-7)
+  const normCdf = x => {
+    const z = Math.abs(x) / Math.SQRT2, t = 1 / (1 + 0.3275911 * z);
+    const e = 1 - (((((1.061405429 * t - 1.453152027) * t) + 1.421413741) * t - 0.284496736) * t + 0.254829592) * t * Math.exp(-z * z);
+    return x >= 0 ? (1 + e) / 2 : (1 - e) / 2;
+  };
+
+  T.push({
+    id: 'scenarios', groep: 2, titel: 'Beleggen: ongunstig, midden en gunstig',
+    intro: 'Een beleggingsdoel bespreken zonder één getal te beloven. Welke eindwaarden horen bij een ongunstig, een middelmatig en een gunstig verloop, gegeven rendement, beweeglijkheid en looptijd?',
+    velden: [
+      { k: 'st', l: 'Startbedrag', s: 'eur', std: 40000, opt: true },
+      { k: 'in', l: 'Inleg per maand', s: 'eur', std: 300, opt: true },
+      { k: 'r', l: 'Verwacht rendement per jaar, vóór kosten', s: 'pct', std: 5.5, tip: 'Samengesteld (meetkundig) gemiddelde per jaar.' },
+      { k: 'sd', l: 'Beweeglijkheid per jaar (standaarddeviatie)', s: 'pct', std: 12, tip: 'Ontleen dit aan de productinformatie of het risicoprofiel van de portefeuille.' },
+      { k: 'k', l: 'Kosten per jaar', s: 'pct', std: 0.6, opt: true },
+      { k: 'jr', l: 'Looptijd', s: 'num', na: 'jaar', std: 15 },
+      { k: 'band', l: 'Breedte van de bandbreedte', s: 'keuze', opties: [['90', '1 op 20 slechter / 1 op 20 beter'], ['80', '1 op 10 slechter / 1 op 10 beter']], std: '90' }
+    ],
+    reken(v) {
+      const jaren = Math.round(v.jr);
+      if (jaren <= 0 || jaren > 60) return { fout: 'Kies een looptijd tussen 1 en 60 jaar.' };
+      if (v.st <= 0 && v.in <= 0) return { fout: 'Vul een startbedrag of een maandinleg in.' };
+      if (v.sd < 0 || v.sd > 60) return { fout: 'Kies een beweeglijkheid tussen 0% en 60% per jaar.' };
+      const netto = v.r - v.k;
+      if (netto <= -100) return { fout: 'Het rendement na kosten moet groter zijn dan −100%.' };
+      const z = v.band === '80' ? 1.2816 : 1.6449, mu = Math.log(1 + netto / 100), s = v.sd / 100;
+      const scen = j => {
+        const sj = s / Math.sqrt(j), n = j * 12;
+        const rente = x => (Math.exp(mu + x * sj) - 1) * 100;
+        const w = x => eindwaarde(v.st, v.in, maandUitJaar(rente(x)), n, true);
+        return { laag: w(-z), mid: w(0), hoog: w(z), rl: rente(-z), rh: rente(z), sj };
+      };
+      const rijen = [];
+      for (let j = 1; j <= jaren; j++) {
+        const sc = scen(j);
+        rijen.push([String(j), fmt.euro0(v.st + v.in * 12 * j), fmt.euro0(sc.laag), fmt.euro0(sc.mid), fmt.euro0(sc.hoog)]);
+      }
+      const e = scen(jaren), ingelegd = v.st + v.in * 12 * jaren;
+      const kansNeg = s === 0 ? (mu < 0 ? 100 : 0) : normCdf(-mu / e.sj) * 100;
+      const kans = v.band === '80' ? '10%' : '5%';
+      const sig = [];
+      if (e.laag < ingelegd) sig.push('In het ongunstige scenario is de eindwaarde lager dan het totaal ingelegde bedrag.');
+      return {
+        lbl: 'Middenscenario na ' + jaren + ' jaar', groot: fmt.euro0(e.mid),
+        onder: 'ongunstig ' + fmt.euro0(e.laag) + ' · gunstig ' + fmt.euro0(e.hoog),
+        rijen: [
+          ['Totaal ingelegd', fmt.euro0(ingelegd)],
+          ['Rendement na kosten (midden)', fmt.pct(netto, 2)],
+          ['Gemiddeld jaarrendement ongunstig', fmt.pct(e.rl, 2)],
+          ['Gemiddeld jaarrendement gunstig', fmt.pct(e.rh, 2)],
+          ['Ongunstig (' + kans + ' kans op slechter)', fmt.euro0(e.laag)],
+          ['Gunstig (' + kans + ' kans op beter)', fmt.euro0(e.hoog)],
+          ['Kans op een negatief gemiddeld jaarrendement', fmt.pct(kansNeg, 1), 'som']
+        ],
+        signalen: sig,
+        tabel: { kop: ['Jaar', 'Ingelegd', 'Ongunstig', 'Midden', 'Gunstig'], rijen }
+      };
+    },
+    regel: 'Rendement na kosten = rendement − kosten. Het model neemt aan dat het samengestelde jaarrendement over n jaar lognormaal verdeeld is: ln(1 + gemiddeld jaarrendement) ~ normaal met verwachting ln(1 + rendement na kosten) en spreiding σ / √n. Ongunstig en gunstig = e<sup>ln(1 + rendement) ∓ z × σ / √n</sup> − 1, met z = 1,645 (5% en 95%) of z = 1,282 (10% en 90%). Met elk scenariorendement: start × (1 + i)<sup>m</sup> + inleg × ((1 + i)<sup>m</sup> − 1) / i × (1 + i), inleg aan het begin van de maand, i = (1 + jaarrendement)<sup>1/12</sup> − 1. Kans op een negatief gemiddeld jaarrendement = Φ(−ln(1 + rendement na kosten) × √n / σ).',
+    letop: 'Dit is een vereenvoudigd statistisch model, geen voorspelling en geen toezegging; werkelijke koersen kennen grotere uitschieters dan de normale verdeling. Eén scenariorendement voor alle inleg is een benadering: latere stortingen staan korter belegd en hebben in werkelijkheid een bredere spreiding. Leg aannames voor rendement en beweeglijkheid vast en sluit aan bij het risicoprofiel van de klant. Gebruik voor productadvies de voorgeschreven scenario’s uit de wettelijke productinformatie (essentiële-informatiedocument). Belasting in box 3 en inflatie zijn niet meegenomen.'
   });
 
   T.push({
