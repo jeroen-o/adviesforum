@@ -54,3 +54,17 @@ test('extra aflossen, rentemiddeling, erfpacht en draagplicht: standaardvoorbeel
   await page.goto('/draagplicht.html');
   await expect(page.locator('a[href^="https://www.draagplicht.nl"]').first()).toBeVisible();
 });
+
+test('verzekeringstools: standaardvoorbeelden', async ({ page }) => {
+  await volgFouten(page);
+  await page.goto('/orv.html');
+  await expect(page.locator('body')).toContainText('115.844');
+  await page.goto('/aov-tekort.html');
+  await expect(page.locator('body')).toContainText('€ 48.000');
+  await page.goto('/inkomen-ziekte-werknemer.html');
+  await expect(page.locator('body')).toContainText('€ 2.916,67');
+  await page.goto('/werkloosheid.html');
+  await expect(page.locator('body')).toContainText('€ 14.000');
+  await page.goto('/herbouwwaarde.html');
+  await expect(page.locator('body')).toContainText('€ 32.000');
+});

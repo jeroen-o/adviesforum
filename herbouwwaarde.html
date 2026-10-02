@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Herbouwwaarde en onderverzekering</title>
+<style>
+  :root{
+    --primary:#003057;--accent:#E5A138;--bg:#F4F7F9;--text:#333333;--muted:#4A4A4A;
+    --line:#D8E2E8;--white:#fff;--soft:#EAF1F5;--warn-bg:#FDF4E5;--warn-line:#E5A138;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:"Plus Jakarta Sans","DM Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    font-size:16px;line-height:1.55}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 20px 64px}
+  header.hero{background:var(--primary);color:#fff;padding:36px 0 30px;margin-bottom:24px}
+  header.hero .wrap{padding-bottom:0}
+  h1{font-size:32px;line-height:1.2;margin:0 0 10px;font-weight:700}
+  .sub{opacity:.88;margin:0;max-width:75ch}
+  .meta{margin-top:14px;font-size:13px;opacity:.75}
+  .tabs{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 18px}
+  .tabs button{border:1px solid var(--line);background:#fff;color:var(--primary);font:inherit;font-weight:600;
+    font-size:14px;padding:9px 14px;border-radius:999px;cursor:pointer}
+  .tabs button.on{background:var(--primary);color:#fff;border-color:var(--primary)}
+  section.card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:22px 24px;margin:0 0 16px}
+  h2{font-size:20px;margin:0 0 12px;color:var(--primary)}
+  h3{font-size:16px;margin:18px 0 8px;color:var(--primary)}
+  .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px}
+  .fields{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px 14px}
+  .fields .full{grid-column:1/-1}
+  label{display:block;font-size:13.5px;font-weight:600;color:var(--primary);margin-bottom:4px}
+  .hint{display:block;font-size:12.5px;font-weight:400;color:var(--muted);margin-top:3px}
+  input[type=text],select{width:100%;padding:10px 12px;font:inherit;font-size:15px;border:1px solid var(--line);
+    border-radius:7px;background:#fff;color:var(--text)}
+  input:focus,select:focus{outline:2px solid var(--accent);outline-offset:1px}
+  .eur{position:relative}
+  .eur span{position:absolute;left:11px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:15px}
+  .eur input{padding-left:26px}
+  .pct{position:relative}
+  .pct span{position:absolute;right:11px;top:50%;transform:translateY(-50%);color:var(--muted)}
+  .pct input{padding-right:28px}
+  .result{background:var(--primary);color:#fff;border-radius:10px;padding:20px 22px}
+  .result .big{font-size:34px;font-weight:700;line-height:1.15;margin:4px 0 2px}
+  .result .lbl{font-size:13px;opacity:.85}
+  .rows{margin:16px 0 0;border-top:1px solid rgba(255,255,255,.25)}
+  .rows div{display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.15);font-size:14.5px}
+  .rows div b{font-weight:600;white-space:nowrap}
+  .let-op{background:var(--warn-bg);border-left:4px solid var(--warn-line);padding:12px 14px;border-radius:0 6px 6px 0;margin:14px 0 0;font-size:14.5px}
+  .let-op strong{color:#8A5B00}
+  .compliance{background:#FFF1F1;border-left:4px solid #C0392B;padding:12px 14px;border-radius:0 6px 6px 0;margin:14px 0 0;font-size:14.5px}
+  .compliance strong{color:#A5281B}
+  .msg{font-size:13.5px;margin-top:10px;color:#FFE3B0}
+  .tblwrap{overflow-x:auto;border:1px solid var(--line);border-radius:8px;max-height:560px;overflow-y:auto}
+  table{border-collapse:collapse;width:100%;font-size:13.5px;font-variant-numeric:tabular-nums}
+  th,td{padding:7px 9px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
+  th{background:var(--soft);color:var(--primary);position:sticky;top:0;z-index:1;font-weight:700}
+  td:first-child,th:first-child{text-align:left;position:sticky;left:0;background:#fff;z-index:2}
+  th:first-child{background:var(--soft);z-index:3}
+  tr.hl td{background:#FFF4DD}
+  tr.hl td:first-child{background:#FFE7B8}
+  td.hl{outline:2px solid var(--accent);outline-offset:-2px;font-weight:700}
+  .simple td,.simple th{text-align:left}
+  .simple td.n,.simple th.n{text-align:right}
+  .toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:flex-end;margin-bottom:12px}
+  .toolbar > div{flex:1 1 200px}
+  .btn{border:0;border-radius:7px;padding:10px 16px;font-size:14px;font-weight:600;font-family:inherit;cursor:pointer;background:var(--primary);color:#fff}
+  .btn.sec{background:#fff;color:var(--primary);border:1px solid var(--line)}
+  .pane{display:none}.pane.on{display:block}
+  footer{margin-top:28px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+  footer a{color:var(--primary)}
+  @media (max-width:820px){
+    .grid{grid-template-columns:minmax(0,1fr)}
+    h1{font-size:26px}
+  }
+  @media (max-width:520px){
+    .wrap{padding:0 16px 48px}
+    .fields{grid-template-columns:minmax(0,1fr)}
+    section.card{padding:18px 16px}
+    .result .big{font-size:28px}
+  }
+  @media print{
+    .tabs,.toolbar .btn,.noprint{display:none!important}
+    body{background:#fff}
+    .pane{display:block!important}
+    .tblwrap{max-height:none;overflow:visible}
+    th{position:static}
+    td:first-child,th:first-child{position:static}
+    header.hero{background:#fff;color:#000;border-bottom:3px solid var(--primary)}
+    .result{background:#fff;color:#000;border:2px solid var(--primary)}
+    .rows div{border-color:#ccc}
+    section.card{break-inside:avoid}
+  }
+  .back{display:inline-block;font-size:13px;margin:0 0 10px;opacity:.9;text-decoration:none}
+  .back:hover{text-decoration:underline}
+  .chk{display:flex;align-items:center;gap:8px;font-size:14.5px;font-weight:600;color:var(--primary);margin:0;cursor:pointer}
+  .chk input{width:18px;height:18px;margin:0;accent-color:var(--primary)}
+  input:disabled{background:var(--soft);color:var(--muted)}
+  .rows div.tot{border-bottom:0;font-size:15.5px}
+  .rows div.tot b{font-weight:700}
+  .warn{color:#A5281B;font-weight:600}
+  @media print{ .back{display:none} }
+
+  /* aanvullingen rekenhulpen verzekeringen */
+  .rows div span{min-width:0}
+  .rows div.sep{border-top:1px solid rgba(255,255,255,.35)}
+  .neg{color:#A5281B;font-weight:600}
+  .pos{color:#1E7B4A;font-weight:600}
+  .result .neg{color:#FFC9C2}
+  .result .pos{color:#BDF0D2}
+  .scen{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+  .formula{font-family:inherit;background:var(--soft);border-radius:6px;padding:8px 10px;margin:6px 0 0;font-size:14px;overflow-wrap:anywhere}
+  .tblwrap{margin-top:10px}
+  table.simple td.fase{font-size:12.5px;color:var(--muted)}
+  .badge{display:inline-block;font-size:12px;font-weight:700;padding:2px 8px;border-radius:999px;background:var(--accent);color:#2B1B00;margin-left:6px;vertical-align:middle}
+  ul.tl{margin:8px 0 0;padding-left:20px;font-size:14.5px}
+  ul.tl li{margin:0 0 4px}
+  @media (max-width:820px){ .scen{grid-template-columns:minmax(0,1fr)} }
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <a class="back noprint" href="index.html#hulpmiddelen" style="color:#fff">&larr; Terug naar het Adviesforum</a>
+    <h1>Herbouwwaarde en onderverzekering (opstal/inboedel)</h1>
+    <p class="sub">Bereken indicatief de herbouwwaarde van de woning en de uitkering bij onderverzekering volgens de evenredigheidsregel, met het eigen tekort voor de klant.</p>
+    <p class="meta">Indicatieve rekenhulp &middot; voorwaarden van de verzekeraar zijn leidend &middot; leg de afweging vast in het dossier</p>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="tabs noprint">
+    <button type="button" id="print" style="margin-left:auto">Printen / PDF</button>
+  </div>
+  <section class="card">
+    <h2>Deel A &middot; Herbouwwaarde opstal</h2>
+    <div class="grid">
+      <div>
+        <div class="fields">
+          <div class="full">
+            <label for="meth">Methode</label>
+            <select id="meth"><option value="inh" selected>Inhoud woning in m&sup3; invullen</option><option value="opp">Oppervlakte &times; hoogte</option></select>
+          </div>
+          <div class="full">
+            <label for="inh">Inhoud woning (m&sup3;)</label>
+            <input type="text" inputmode="numeric" id="inh" value="500">
+            <span class="hint">Bruto inhoud volgens NEN 2580 of de bouwtekening.</span>
+          </div>
+          <div>
+            <label for="opp">Bruto vloeroppervlakte (m&sup2;)</label>
+            <input type="text" inputmode="numeric" id="opp" value="160" disabled>
+          </div>
+          <div>
+            <label for="hoog">Gemiddelde verdiepingshoogte</label>
+            <div class="pct"><input type="text" inputmode="decimal" id="hoog" value="3,0" disabled><span>m</span></div>
+          </div>
+          <div>
+            <label for="kpm">Herbouwkosten per m&sup3;</label>
+            <div class="eur"><span>&euro;</span><input type="text" inputmode="numeric" id="kpm" value="500"></div>
+            <span class="hint">Voorbeeldwaarde: gebruik actuele bouwkostenkengetallen of de waardemeter van de verzekeraar.</span>
+          </div>
+          <div>
+            <label for="bij">Toeslag bijgebouwen (garage, schuur, serre)</label>
+            <div class="eur"><span>&euro;</span><input type="text" inputmode="numeric" id="bij" value="0"></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="result" aria-live="polite">
+          <div class="lbl">Herbouwwaarde (indicatief)</div>
+          <div class="big" id="r-hbw">&ndash;</div>
+          <div class="lbl" id="r-hbasis"></div>
+          <div class="rows">
+            <div><span>Inhoud</span><b id="r-inh"></b></div>
+            <div><span>Herbouwkosten hoofdgebouw</span><b id="r-hoofd"></b></div>
+            <div><span>Toeslag bijgebouwen</span><b id="r-bij"></b></div>
+          </div>
+        </div>
+        <button type="button" class="btn sec noprint" id="neem" style="margin-top:12px">Gebruik als werkelijke waarde in deel B</button>
+      </div>
+    </div>
+    <div class="let-op"><strong>Rekenwijze:</strong>
+      <div class="formula">Herbouwwaarde = inhoud (m&sup3;) &times; herbouwkosten per m&sup3; + toeslag bijgebouwen &nbsp;&middot;&nbsp; inhoud = oppervlakte &times; hoogte (bij die methode)</div>
+      De herbouwwaarde is het bedrag dat nodig is om de woning direct na een schade op dezelfde plaats in dezelfde vorm te herbouwen, inclusief bijkomende kosten. Grondwaarde telt niet mee.</div>
+  </section>
+
+  <section class="card">
+    <h2>Deel B &middot; Onderverzekering en evenredigheidsregel</h2>
+    <div class="grid">
+      <div>
+        <div class="fields">
+          <div class="full">
+            <label for="soort">Soort verzekering</label>
+            <select id="soort"><option value="opstal" selected>Opstal (herbouwwaarde)</option><option value="inboedel">Inboedel (nieuwwaarde inboedel)</option></select>
+          </div>
+          <div>
+            <label for="vs">Verzekerde som</label>
+            <div class="eur"><span>&euro;</span><input type="text" inputmode="numeric" id="vs" value="200.000"></div>
+          </div>
+          <div>
+            <label for="ww">Werkelijke waarde</label>
+            <div class="eur"><span>&euro;</span><input type="text" inputmode="numeric" id="ww" value="250.000"></div>
+            <span class="hint">Opstal: herbouwwaarde. Inboedel: nieuwwaarde van de hele inboedel.</span>
+          </div>
+          <div>
+            <label for="sch">Schadebedrag</label>
+            <div class="eur"><span>&euro;</span><input type="text" inputmode="numeric" id="sch" value="40.000"></div>
+          </div>
+          <div>
+            <label for="er">Eigen risico</label>
+            <div class="eur"><span>&euro;</span><input type="text" inputmode="numeric" id="er" value="0"></div>
+          </div>
+          <div class="full">
+            <label class="chk"><input type="checkbox" id="gar"> Polis heeft garantie tegen onderverzekering</label>
+            <span class="hint">Vaak gekoppeld aan een waardemeter of taxatie en soms begrensd; zie polisvoorwaarden.</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="result" aria-live="polite">
+          <div class="lbl">Uitkering (indicatief)</div>
+          <div class="big" id="r-uit">&ndash;</div>
+          <div class="lbl" id="r-ubasis"></div>
+          <div class="rows">
+            <div><span>Verzekeringsgraad (verzekerd / werkelijk)</span><b id="r-graad"></b></div>
+            <div><span>Onderverzekerd bedrag</span><b id="r-onder"></b></div>
+            <div><span>Schade</span><b id="r-sch"></b></div>
+            <div><span>Vergoeding na evenredigheidsregel</span><b id="r-even"></b></div>
+            <div><span>Af: eigen risico</span><b id="r-er"></b></div>
+            <div class="tot"><span>Eigen tekort klant</span><b id="r-tek"></b></div>
+          </div>
+          <div class="msg" id="r-msg"></div>
+        </div>
+      </div>
+    </div>
+    <div class="let-op"><strong>Rekenwijze:</strong> zonder garantie tegen onderverzekering geldt de evenredigheidsregel (art. 7:959 BW):
+      <div class="formula">Uitkering = schade &times; verzekerde som / werkelijke waarde (maximaal de verzekerde som) &minus; eigen risico<br>Eigen tekort = schade &minus; uitkering</div>
+      Met garantie tegen onderverzekering keren we de schade min het eigen risico uit (in de praktijk soms begrensd). Bij een verzekerde som gelijk aan of hoger dan de werkelijke waarde is er geen onderverzekering. Volgorde eigen risico en polisvoorwaarden kunnen afwijken.</div>
+    <div class="compliance"><strong>Compliance:</strong> Controleer bij elk advies de verzekerde som tegen de actuele herbouw- of inboedelwaarde en wijs de klant op onderverzekering en de gevolgen daarvan. De uitkomst is indicatief; de voorwaarden van de verzekeraar zijn leidend. Leg de uitgangspunten en de afweging vast in het dossier.</div>
+  </section>
+
+  <section class="card">
+    <h2>Toelichting</h2>
+    <div class="let-op"><strong>Garantie tegen onderverzekering en indexering:</strong> bij veel opstal- en inboedelpolissen geldt een garantie tegen onderverzekering, mits de waarde is vastgesteld met de waardemeter van de verzekeraar of een taxatie en periodiek wordt bijgewerkt (bijv. na een verbouwing). Daarnaast worden verzekerde sommen vaak jaarlijks ge&iuml;ndexeerd. Controleer de polisvoorwaarden: de garantie kan vervallen na een verbouwing of uitbreiding die niet is doorgegeven.</div>
+    <div class="let-op"><strong>WOZ-waarde is geen herbouwwaarde:</strong> de WOZ-waarde en de marktwaarde bevatten de grondwaarde en zijn afhankelijk van de locatie en de woningmarkt. De herbouwwaarde gaat alleen over de kosten van herbouw en kan hoger of lager zijn. Gebruik de WOZ- of marktwaarde dus niet als verzekerde som voor de opstal.</div>
+    <div class="let-op"><strong>Inboedel:</strong> bij inboedel is de werkelijke waarde meestal de nieuwwaarde van de gehele inboedel (met dagwaarde voor bepaalde zaken). Let op aparte maxima voor bijvoorbeeld sieraden, audiovisuele apparatuur en kostbaarheden.</div>
+  </section>
+
+  <footer>
+    <p>Indicatieve rekenhulp. Voorwaarden van de verzekeraar zijn leidend; leg de afweging vast in het dossier. Wettelijke bedragen en percentages wijzigen periodiek: controleer de actuele waarden (UWV/SVB/Belastingdienst). Deze pagina slaat niets op.</p>
+  </footer>
+</div>
+<script>
+(function(){
+
+  var $ = function(id){ return document.getElementById(id); };
+  var eur0 = new Intl.NumberFormat('nl-NL',{style:'currency',currency:'EUR',minimumFractionDigits:0,maximumFractionDigits:0});
+  var eur2 = new Intl.NumberFormat('nl-NL',{style:'currency',currency:'EUR',minimumFractionDigits:2,maximumFractionDigits:2});
+  var int0 = new Intl.NumberFormat('nl-NL',{maximumFractionDigits:0});
+  var dec1 = new Intl.NumberFormat('nl-NL',{minimumFractionDigits:0,maximumFractionDigits:1});
+  var dec2 = new Intl.NumberFormat('nl-NL',{minimumFractionDigits:2,maximumFractionDigits:2});
+  function fix(v){ return (Math.abs(v) < 0.005) ? 0 : v; }
+  function fmtE(v){ v = fix(v); return (v < 0 ? '− ' : '') + eur0.format(Math.abs(v)).replace(/ /g,' '); }
+  function fmtE2(v){ v = fix(v); return (v < 0 ? '− ' : '') + eur2.format(Math.abs(v)).replace(/ /g,' '); }
+  function fmtP(v){ return dec1.format(fix(v)) + '%'; }
+  function parseNum(s){
+    s = String(s||'').replace(/[^\d,.-]/g,'');
+    if (s.indexOf(',') > -1) s = s.replace(/\./g,'').replace(',', '.');
+    else s = s.replace(/\./g,'');
+    var v = parseFloat(s); return isNaN(v) ? 0 : v;
+  }
+  function parsePct(s){
+    s = String(s||'').replace(/[^\d,.-]/g,'').replace(',', '.');
+    var v = parseFloat(s); return isNaN(v) ? 0 : v;
+  }
+  // Euro-invoer met duizendtalscheiding tijdens typen
+  function euroInput(el, cb){
+    el.addEventListener('input', function(){
+      var digits = el.value.replace(/\D/g,'');
+      el.value = digits ? int0.format(parseInt(digits,10)) : '';
+      cb && cb();
+    });
+  }
+  // Percentage/decimaal met komma
+  function decInput(el, cb){
+    el.addEventListener('input', function(){
+      var v = el.value.replace(/\./g,',').replace(/[^\d,]/g,'');
+      var i = v.indexOf(',');
+      if (i > -1) v = v.slice(0,i+1) + v.slice(i+1).replace(/,/g,'');
+      if (v !== el.value) el.value = v;
+      cb && cb();
+    });
+  }
+  function intInput(el, cb){
+    el.addEventListener('input', function(){ var v = el.value.replace(/\D/g,''); if (v !== el.value) el.value = v; cb && cb(); });
+  }
+  function bind(ids, kind, cb){ ids.forEach(function(id){ (kind === 'eur' ? euroInput : kind === 'int' ? intInput : decInput)($(id), cb); }); }
+  function setT(id, txt, cls){ var el = $(id); el.textContent = txt; if (cls !== undefined) el.className = cls; }
+  // Contante waarde van een maandelijkse reeks (postnumerando), maandrente = jaarrente / 12
+  function annFactor(jaarPct, maanden){
+    if (maanden <= 0) return 0;
+    var i = jaarPct/100/12;
+    return i === 0 ? maanden : (1 - Math.pow(1+i, -maanden)) / i;
+  }
+  function esc(s){ return String(s).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+
+  function inhoud(){
+    var opp = $('meth').value === 'opp';
+    $('inh').disabled = opp; $('opp').disabled = !opp; $('hoog').disabled = !opp;
+    return opp ? parseNum($('opp').value) * parsePct($('hoog').value) : parseNum($('inh').value);
+  }
+  function reken(){
+    var inh = inhoud(), kpm = parseNum($('kpm').value), bij = parseNum($('bij').value);
+    var hoofd = inh * kpm, hbw = hoofd + bij;
+    setT('r-hbw', fmtE(hbw));
+    setT('r-hbasis', dec1.format(inh) + ' m³ × ' + fmtE(kpm) + ' per m³' + (bij ? ' + bijgebouwen' : ''));
+    setT('r-inh', dec1.format(inh) + ' m³'); setT('r-hoofd', fmtE(hoofd)); setT('r-bij', fmtE(bij));
+    var vs = parseNum($('vs').value), ww = parseNum($('ww').value), sch = parseNum($('sch').value), er = parseNum($('er').value), gar = $('gar').checked, msg = [];
+    var graad = ww > 0 ? Math.min(1, vs/ww) : 1, even;
+    if (gar) even = sch;
+    else even = Math.min(sch * graad, vs);
+    var uit = Math.max(0, even - er), tek = sch - uit;
+    setT('r-uit', fmtE2(uit));
+    setT('r-ubasis', gar ? 'Met garantie tegen onderverzekering' : (graad < 1 ? 'Evenredigheidsregel: ' + fmtP(graad*100) + ' van de schade' : 'Geen onderverzekering'));
+    setT('r-graad', ww > 0 ? fmtP(vs/ww*100) : '–');
+    setT('r-onder', fmtE(Math.max(0, ww - vs)), ww > vs ? 'neg' : '');
+    setT('r-sch', fmtE2(sch)); setT('r-even', fmtE2(even)); setT('r-er', '− ' + fmtE2(Math.min(er, even)));
+    setT('r-tek', fmtE2(tek), tek > 0.005 ? 'neg' : 'pos');
+    if (!gar && vs < ww) msg.push('Onderverzekerd met ' + fmtE(ww - vs) + ': zonder garantie keert de verzekeraar naar verhouding uit.');
+    if (gar && vs < ww) msg.push('Controleer of de garantie tegen onderverzekering geldt en of die is begrensd.');
+    if (sch > ww && ww > 0) msg.push('Het schadebedrag is hoger dan de werkelijke waarde; controleer de invoer.');
+    if ($('soort').value === 'opstal' && hbw > 0 && Math.abs(ww - hbw) > 0.5) msg.push('De werkelijke waarde wijkt af van de herbouwwaarde uit deel A (' + fmtE(hbw) + ').');
+    setT('r-msg', msg.join(' '));
+  }
+  bind(['kpm','bij','vs','ww','sch','er'], 'eur', reken);
+  bind(['inh','opp'], 'int', reken);
+  bind(['hoog'], 'dec', reken);
+  ['meth','soort'].forEach(function(id){ $(id).addEventListener('change', reken); });
+  $('gar').addEventListener('change', reken);
+  $('neem').addEventListener('click', function(){
+    var hbw = Math.round(inhoud() * parseNum($('kpm').value) + parseNum($('bij').value));
+    $('ww').value = int0.format(hbw); reken();
+  });
+
+
+  // Print via eigen venster: window.print() wordt binnen een iframe (o.a. Google Sites) geblokkeerd.
+  $('print').addEventListener('click', function(){
+    try {
+      var w = window.open('', '_blank');
+      if (!w) { window.print(); return; }
+      var body = document.body.cloneNode(true);
+      Array.prototype.forEach.call(body.querySelectorAll('input'), function(i, idx){
+        var orig = document.querySelectorAll('input')[idx];
+        if (orig.type === 'checkbox') { if (orig.checked) i.setAttribute('checked','checked'); else i.removeAttribute('checked'); }
+        else i.setAttribute('value', orig.value);
+      });
+      Array.prototype.forEach.call(body.querySelectorAll('select'), function(s, idx){
+        var orig = document.querySelectorAll('select')[idx];
+        Array.prototype.forEach.call(s.options, function(o, j){ if (j === orig.selectedIndex) o.setAttribute('selected','selected'); else o.removeAttribute('selected'); });
+      });
+      Array.prototype.forEach.call(body.querySelectorAll('script'), function(s){ s.remove(); });
+      w.document.open();
+      w.document.write('<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><title>' + document.title +
+        '</title><style>' + document.querySelector('style').textContent + '</style></head><body>' + body.innerHTML + '</body></html>');
+      w.document.close(); w.focus();
+      setTimeout(function(){ w.print(); }, 350);
+    } catch (e) { window.print(); }
+  });
+
+  reken();
+})();
+</script>
+</body>
+</html>

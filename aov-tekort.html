@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AOV tekort en wachttijd</title>
+<style>
+  :root{
+    --primary:#003057;--accent:#E5A138;--bg:#F4F7F9;--text:#333333;--muted:#4A4A4A;
+    --line:#D8E2E8;--white:#fff;--soft:#EAF1F5;--warn-bg:#FDF4E5;--warn-line:#E5A138;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:"Plus Jakarta Sans","DM Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    font-size:16px;line-height:1.55}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 20px 64px}
+  header.hero{background:var(--primary);color:#fff;padding:36px 0 30px;margin-bottom:24px}
+  header.hero .wrap{padding-bottom:0}
+  h1{font-size:32px;line-height:1.2;margin:0 0 10px;font-weight:700}
+  .sub{opacity:.88;margin:0;max-width:75ch}
+  .meta{margin-top:14px;font-size:13px;opacity:.75}
+  .tabs{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 18px}
+  .tabs button{border:1px solid var(--line);background:#fff;color:var(--primary);font:inherit;font-weight:600;
+    font-size:14px;padding:9px 14px;border-radius:999px;cursor:pointer}
+  .tabs button.on{background:var(--primary);color:#fff;border-color:var(--primary)}
+  section.card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:22px 24px;margin:0 0 16px}
+  h2{font-size:20px;margin:0 0 12px;color:var(--primary)}
+  h3{font-size:16px;margin:18px 0 8px;color:var(--primary)}
+  .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px}
+  .fields{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px 14px}
+  .fields .full{grid-column:1/-1}
+  label{display:block;font-size:13.5px;font-weight:600;color:var(--primary);margin-bottom:4px}
+  .hint{display:block;font-size:12.5px;font-weight:400;color:var(--muted);margin-top:3px}
+  input[type=text],select{width:100%;padding:10px 12px;font:inherit;font-size:15px;border:1px solid var(--line);
+    border-radius:7px;background:#fff;color:var(--text)}
+  input:focus,select:focus{outline:2px solid var(--accent);outline-offset:1px}
+  .eur{position:relative}
+  .eur span{position:absolute;left:11px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:15px}
+  .eur input{padding-left:26px}
+  .pct{position:relative}
+  .pct span{position:absolute;right:11px;top:50%;transform:translateY(-50%);color:var(--muted)}
+  .pct input{padding-right:28px}
+  .result{background:var(--primary);color:#fff;border-radius:10px;padding:20px 22px}
+  .result .big{font-size:34px;font-weight:700;line-height:1.15;margin:4px 0 2px}
+  .result .lbl{font-size:13px;opacity:.85}
+  .rows{margin:16px 0 0;border-top:1px solid rgba(255,255,255,.25)}
+  .rows div{display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.15);font-size:14.5px}
+  .rows div b{font-weight:600;white-space:nowrap}
+  .let-op{background:var(--warn-bg);border-left:4px solid var(--warn-line);padding:12px 14px;border-radius:0 6px 6px 0;margin:14px 0 0;font-size:14.5px}
+  .let-op strong{color:#8A5B00}
+  .compliance{background:#FFF1F1;border-left:4px solid #C0392B;padding:12px 14px;border-radius:0 6px 6px 0;margin:14px 0 0;font-size:14.5px}
+  .compliance strong{color:#A5281B}
+  .msg{font-size:13.5px;margin-top:10px;color:#FFE3B0}
+  .tblwrap{overflow-x:auto;border:1px solid var(--line);border-radius:8px;max-height:560px;overflow-y:auto}
+  table{border-collapse:collapse;width:100%;font-size:13.5px;font-variant-numeric:tabular-nums}
+  th,td{padding:7px 9px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
+  th{background:var(--soft);color:var(--primary);position:sticky;top:0;z-index:1;font-weight:700}
+  td:first-child,th:first-child{text-align:left;position:sticky;left:0;background:#fff;z-index:2}
+  th:first-child{background:var(--soft);z-index:3}
+  tr.hl td{background:#FFF4DD}
+  tr.hl td:first-child{background:#FFE7B8}
+  td.hl{outline:2px solid var(--accent);outline-offset:-2px;font-weight:700}
+  .simple td,.simple th{text-align:left}
+  .simple td.n,.simple th.n{text-align:right}
+  .toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:flex-end;margin-bottom:12px}
+  .toolbar > div{flex:1 1 200px}
+  .btn{border:0;border-radius:7px;padding:10px 16px;font-size:14px;font-weight:600;font-family:inherit;cursor:pointer;background:var(--primary);color:#fff}
+  .btn.sec{background:#fff;color:var(--primary);border:1px solid var(--line)}
+  .pane{display:none}.pane.on{display:block}
+  footer{margin-top:28px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+  footer a{color:var(--primary)}
+  @media (max-width:820px){
+    .grid{grid-template-columns:minmax(0,1fr)}
+    h1{font-size:26px}
+  }
+  @media (max-width:520px){
+    .wrap{padding:0 16px 48px}
+    .fields{grid-template-columns:minmax(0,1fr)}
+    section.card{padding:18px 16px}
+    .result .big{font-size:28px}
+  }
+  @media print{
+    .tabs,.toolbar .btn,.noprint{display:none!important}
+    body{background:#fff}
+    .pane{display:block!important}
+    .tblwrap{max-height:none;overflow:visible}
+    th{position:static}
+    td:first-child,th:first-child{position:static}
+    header.hero{background:#fff;color:#000;border-bottom:3px solid var(--primary)}
+    .result{background:#fff;color:#000;border:2px solid var(--primary)}
+    .rows div{border-color:#ccc}
+    section.card{break-inside:avoid}
+  }
+  .back{display:inline-block;font-size:13px;margin:0 0 10px;opacity:.9;text-decoration:none}
+  .back:hover{text-decoration:underline}
+  .chk{display:flex;align-items:center;gap:8px;font-size:14.5px;font-weight:600;color:var(--primary);margin:0;cursor:pointer}
+  .chk input{width:18px;height:18px;margin:0;accent-color:var(--primary)}
+  input:disabled{background:var(--soft);color:var(--muted)}
+  .rows div.tot{border-bottom:0;font-size:15.5px}
+  .rows div.tot b{font-weight:700}
+  .warn{color:#A5281B;font-weight:600}
+  @media print{ .back{display:none} }
+
+  /* aanvullingen rekenhulpen verzekeringen */
+  .rows div span{min-width:0}
+  .rows div.sep{border-top:1px solid rgba(255,255,255,.35)}
+  .neg{color:#A5281B;font-weight:600}
+  .pos{color:#1E7B4A;font-weight:600}
+  .result .neg{color:#FFC9C2}
+  .result .pos{color:#BDF0D2}
+  .scen{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+  .formula{font-family:inherit;background:var(--soft);border-radius:6px;padding:8px 10px;margin:6px 0 0;font-size:14px;overflow-wrap:anywhere}
+  .tblwrap{margin-top:10px}
+  table.simple td.fase{font-size:12.5px;color:var(--muted)}
+  .badge{display:inline-block;font-size:12px;font-weight:700;padding:2px 8px;border-radius:999px;background:var(--accent);color:#2B1B00;margin-left:6px;vertical-align:middle}
+  ul.tl{margin:8px 0 0;padding-left:20px;font-size:14.5px}
+  ul.tl li{margin:0 0 4px}
+  @media (max-width:820px){ .scen{grid-template-columns:minmax(0,1fr)} }
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <a class="back noprint" href="index.html#hulpmiddelen" style="color:#fff">&larr; Terug naar het Adviesforum</a>
+    <h1>AOV voor ondernemers: tekort en wachttijd</h1>
+    <p class="sub">Bereken het maximaal verzekerbare bedrag, het tekort ten opzichte van de noodzakelijke lasten en of de eigen buffer de wachttijd overbrugt.</p>
+    <p class="meta">Indicatieve rekenhulp &middot; voorwaarden van de verzekeraar zijn leidend &middot; leg de afweging vast in het dossier</p>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="tabs noprint">
+    <button type="button" id="print" style="margin-left:auto">Printen / PDF</button>
+  </div>
+  <section class="card">
+    <div class="grid">
+      <div>
+        <h2>Invoer</h2>
+        <div class="fields">
+          <div class="full">
+            <label for="winst">Bruto winst per jaar</label>
+            <div class="eur"><span>&euro;</span><input type="text" inputmode="numeric" id="winst" value="60.000"></div>
+            <span class="hint">Gemiddelde winst uit onderneming (bijv. laatste drie jaar).</span>
+          </div>
+          <div>
+            <label for="lasten">Vaste priv&eacute;lasten per maand</label>
+            <div class="eur"><span>&euro;</span><input type="text" inputmode="numeric" id="lasten" value="2.000"></div>
+            <span class="hint">Woonlasten, energie, verzekeringen, abonnementen.</span>
+          </div>
+          <div>
+            <label for="overig">Overige noodzakelijke uitgaven per maand</label>
+            <div class="eur"><span>&euro;</span><input type="text" inputmode="numeric" id="overig" value="1.000"></div>
+            <span class="hint">Boodschappen, vervoer, kinderen.</span>
+          </div>
+          <div>
+            <label for="gewenst">Gewenste dekking per jaar</label>
+            <div class="eur"><span>&euro;</span><input type="text" inputmode="numeric" id="gewenst" value="40.000"></div>
+            <span class="hint">Verzekerd jaarbedrag dat de klant wil.</span>
+          </div>
+          <div>
+            <label for="maxpct">Maximaal verzekerbaar % van het inkomen</label>
+            <div class="pct"><input type="text" inputmode="decimal" id="maxpct" value="80"><span>%</span></div>
+            <span class="hint">Verzekeraarafhankelijk; controleer de acceptatievoorwaarden.</span>
+          </div>
+          <div>
+            <label for="wacht">Wachttijd (eigen risicotermijn)</label>
+            <select id="wacht"><option value="14">14 dagen</option><option value="30" selected>30 dagen</option><option value="90">90 dagen</option><option value="365">365 dagen</option></select>
+            <span class="hint">Langere wachttijd = lagere premie, maar een grotere buffer nodig.</span>
+          </div>
+          <div>
+            <label for="buffer">Eigen buffer (vrij beschikbaar spaargeld)</label>
+            <div class="eur"><span>&euro;</span><input type="text" inputmode="numeric" id="buffer" value="5.000"></div>
+          </div>
+          <div class="full">
+            <label for="belast">Geschatte belastingdruk over de uitkering</label>
+            <div class="pct"><input type="text" inputmode="decimal" id="belast" value="0"><span>%</span></div>
+            <span class="hint">Persoonlijke schatting; de AOV-uitkering is belast en de premie is (in box 1) aftrekbaar. 0 = bruto vergelijken.</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="result" aria-live="polite">
+          <div class="lbl">Verzekerde uitkering per maand (indicatief)</div>
+          <div class="big" id="r-dek">&ndash;</div>
+          <div class="lbl" id="r-basis"></div>
+          <div class="rows">
+            <div><span>Maximaal verzekerbaar per jaar</span><b id="r-max"></b></div>
+            <div><span>Maximaal verzekerbaar per maand</span><b id="r-maxm"></b></div>
+            <div><span>Uitkering per maand na belastingschatting</span><b id="r-net"></b></div>
+            <div><span>Noodzakelijke maandlasten</span><b id="r-last"></b></div>
+            <div class="tot"><span>Tekort t.o.v. lasten per maand</span><b id="r-tek"></b></div>
+            <div class="sep"><span id="r-bnlbl">Benodigde buffer voor de wachttijd</span><b id="r-bn"></b></div>
+            <div><span>Eigen buffer</span><b id="r-buf"></b></div>
+            <div class="tot"><span>Buffer volstaat?</span><b id="r-ok"></b></div>
+          </div>
+          <div class="msg" id="r-msg"></div>
+        </div>
+      </div>
+    </div>
+    <div class="let-op"><strong>Rekenwijze:</strong> maximaal verzekerbaar = bruto winst &times; maximaal %. Verzekerde dekking = de laagste van gewenste dekking en maximaal verzekerbaar, per maand = jaarbedrag / 12. Tekort t.o.v. lasten = (vaste priv&eacute;lasten + overige uitgaven) &minus; uitkering per maand na belastingschatting. Benodigde buffer voor de wachttijd:
+      <div class="formula">Buffer = maandlasten &times; wachttijd in dagen / 30</div>
+      Vereenvoudiging: geen inkomen uit de onderneming tijdens de wachttijd en geen gedeeltelijke arbeidsongeschiktheid; bij een tekort na de wachttijd loopt de buffer verder terug.</div>
+    <div class="compliance"><strong>Compliance:</strong> Bespreek de gekozen wachttijd, beroepsdefinitie, eindleeftijd en de hoogte van de dekking in relatie tot de lasten en de buffer. De uitkomst is indicatief; de voorwaarden van de verzekeraar zijn leidend. Leg de uitgangspunten en de afweging vast in het dossier.</div>
+  </section>
+
+  <section class="card">
+    <h2>Toelichting</h2>
+    <div class="let-op"><strong>Beroepsdefinitie:</strong> bij <em>eigen beroep</em> wordt beoordeeld of de klant zijn eigen werkzaamheden niet meer kan doen (ruimste dekking, hoogste premie). Bij <em>passende arbeid</em> wordt gekeken naar werk dat aansluit bij opleiding en ervaring. Bij <em>gangbare arbeid</em> naar alle algemeen geaccepteerde arbeid (smalste dekking, laagste premie). Combinaties komen voor (bijv. eerst eigen beroep, daarna passende arbeid).</div>
+    <div class="let-op"><strong>Eindleeftijd:</strong> kies een eindleeftijd die aansluit op het moment waarop de klant wil stoppen of op de AOW-leeftijd; een lagere eindleeftijd verlaagt de premie maar laat een gat tot de pensioendatum. Let ook op indexatie (klimmende uitkering) en herbeoordeling bij gedeeltelijke arbeidsongeschiktheid.</div>
+    <div class="let-op"><strong>Broodfonds als aanvulling:</strong> een Broodfonds is een schenkkring van ondernemers die bij ziekte maandelijks schenkingen ontvangen voor een beperkte periode. Het kan een lange wachttijd overbruggen of een AOV aanvullen, maar is geen verzekering: er is geen recht op uitkering en de duur is beperkt.</div>
+    <div class="let-op"><strong>Verplichte AOV:</strong> er zijn plannen voor een wettelijke basisverzekering arbeidsongeschiktheid voor zelfstandigen. Controleer de actuele wetgeving en de ingangsdatum voordat je hier in het advies op voortbouwt.</div>
+  </section>
+
+  <footer>
+    <p>Indicatieve rekenhulp. Voorwaarden van de verzekeraar zijn leidend; leg de afweging vast in het dossier. Wettelijke bedragen en percentages wijzigen periodiek: controleer de actuele waarden (UWV/SVB/Belastingdienst). Deze pagina slaat niets op.</p>
+  </footer>
+</div>
+<script>
+(function(){
+
+  var $ = function(id){ return document.getElementById(id); };
+  var eur0 = new Intl.NumberFormat('nl-NL',{style:'currency',currency:'EUR',minimumFractionDigits:0,maximumFractionDigits:0});
+  var eur2 = new Intl.NumberFormat('nl-NL',{style:'currency',currency:'EUR',minimumFractionDigits:2,maximumFractionDigits:2});
+  var int0 = new Intl.NumberFormat('nl-NL',{maximumFractionDigits:0});
+  var dec1 = new Intl.NumberFormat('nl-NL',{minimumFractionDigits:0,maximumFractionDigits:1});
+  var dec2 = new Intl.NumberFormat('nl-NL',{minimumFractionDigits:2,maximumFractionDigits:2});
+  function fix(v){ return (Math.abs(v) < 0.005) ? 0 : v; }
+  function fmtE(v){ v = fix(v); return (v < 0 ? '− ' : '') + eur0.format(Math.abs(v)).replace(/ /g,' '); }
+  function fmtE2(v){ v = fix(v); return (v < 0 ? '− ' : '') + eur2.format(Math.abs(v)).replace(/ /g,' '); }
+  function fmtP(v){ return dec1.format(fix(v)) + '%'; }
+  function parseNum(s){
+    s = String(s||'').replace(/[^\d,.-]/g,'');
+    if (s.indexOf(',') > -1) s = s.replace(/\./g,'').replace(',', '.');
+    else s = s.replace(/\./g,'');
+    var v = parseFloat(s); return isNaN(v) ? 0 : v;
+  }
+  function parsePct(s){
+    s = String(s||'').replace(/[^\d,.-]/g,'').replace(',', '.');
+    var v = parseFloat(s); return isNaN(v) ? 0 : v;
+  }
+  // Euro-invoer met duizendtalscheiding tijdens typen
+  function euroInput(el, cb){
+    el.addEventListener('input', function(){
+      var digits = el.value.replace(/\D/g,'');
+      el.value = digits ? int0.format(parseInt(digits,10)) : '';
+      cb && cb();
+    });
+  }
+  // Percentage/decimaal met komma
+  function decInput(el, cb){
+    el.addEventListener('input', function(){
+      var v = el.value.replace(/\./g,',').replace(/[^\d,]/g,'');
+      var i = v.indexOf(',');
+      if (i > -1) v = v.slice(0,i+1) + v.slice(i+1).replace(/,/g,'');
+      if (v !== el.value) el.value = v;
+      cb && cb();
+    });
+  }
+  function intInput(el, cb){
+    el.addEventListener('input', function(){ var v = el.value.replace(/\D/g,''); if (v !== el.value) el.value = v; cb && cb(); });
+  }
+  function bind(ids, kind, cb){ ids.forEach(function(id){ (kind === 'eur' ? euroInput : kind === 'int' ? intInput : decInput)($(id), cb); }); }
+  function setT(id, txt, cls){ var el = $(id); el.textContent = txt; if (cls !== undefined) el.className = cls; }
+  // Contante waarde van een maandelijkse reeks (postnumerando), maandrente = jaarrente / 12
+  function annFactor(jaarPct, maanden){
+    if (maanden <= 0) return 0;
+    var i = jaarPct/100/12;
+    return i === 0 ? maanden : (1 - Math.pow(1+i, -maanden)) / i;
+  }
+  function esc(s){ return String(s).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+
+  function reken(){
+    var winst = parseNum($('winst').value), lasten = parseNum($('lasten').value) + parseNum($('overig').value);
+    var gewenst = parseNum($('gewenst').value), maxpct = parsePct($('maxpct').value), wacht = parseInt($('wacht').value,10);
+    var buffer = parseNum($('buffer').value), belast = Math.min(100, parsePct($('belast').value)), msg = [];
+    var max = winst * maxpct/100, dek = Math.min(gewenst, max), dekm = dek/12, net = dekm * (1 - belast/100);
+    var tek = lasten - net, nodig = lasten * wacht/30;
+    setT('r-dek', fmtE2(dekm));
+    setT('r-basis', fmtE(dek) + ' per jaar' + (gewenst > max ? ' (begrensd op het maximum)' : ''));
+    setT('r-max', fmtE(max)); setT('r-maxm', fmtE2(max/12));
+    setT('r-net', fmtE2(net)); setT('r-last', fmtE2(lasten));
+    setT('r-tek', tek > 0 ? fmtE2(tek) : 'geen (ruimte ' + fmtE2(-tek) + ')', tek > 0 ? 'neg' : 'pos');
+    setT('r-bnlbl', 'Benodigde buffer voor ' + wacht + ' dagen wachttijd');
+    setT('r-bn', fmtE2(nodig)); setT('r-buf', fmtE2(buffer));
+    var ok = buffer >= nodig;
+    setT('r-ok', ok ? 'ja (over: ' + fmtE2(buffer - nodig) + ')' : 'nee (tekort: ' + fmtE2(nodig - buffer) + ')', ok ? 'pos' : 'neg');
+    if (gewenst > max) msg.push('De gewenste dekking is hoger dan maximaal verzekerbaar (' + fmtE(max) + ' per jaar).');
+    if (tek > 0) msg.push('Ook na de wachttijd is er een tekort van ' + fmtE2(tek) + ' per maand (' + fmtE(tek*12) + ' per jaar).');
+    if (maxpct > 100) msg.push('Een maximaal percentage boven 100% is ongebruikelijk.');
+    setT('r-msg', msg.join(' '));
+  }
+  bind(['winst','lasten','overig','gewenst','buffer'], 'eur', reken);
+  bind(['maxpct','belast'], 'dec', reken);
+  $('wacht').addEventListener('change', reken);
+
+
+  // Print via eigen venster: window.print() wordt binnen een iframe (o.a. Google Sites) geblokkeerd.
+  $('print').addEventListener('click', function(){
+    try {
+      var w = window.open('', '_blank');
+      if (!w) { window.print(); return; }
+      var body = document.body.cloneNode(true);
+      Array.prototype.forEach.call(body.querySelectorAll('input'), function(i, idx){
+        var orig = document.querySelectorAll('input')[idx];
+        if (orig.type === 'checkbox') { if (orig.checked) i.setAttribute('checked','checked'); else i.removeAttribute('checked'); }
+        else i.setAttribute('value', orig.value);
+      });
+      Array.prototype.forEach.call(body.querySelectorAll('select'), function(s, idx){
+        var orig = document.querySelectorAll('select')[idx];
+        Array.prototype.forEach.call(s.options, function(o, j){ if (j === orig.selectedIndex) o.setAttribute('selected','selected'); else o.removeAttribute('selected'); });
+      });
+      Array.prototype.forEach.call(body.querySelectorAll('script'), function(s){ s.remove(); });
+      w.document.open();
+      w.document.write('<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><title>' + document.title +
+        '</title><style>' + document.querySelector('style').textContent + '</style></head><body>' + body.innerHTML + '</body></html>');
+      w.document.close(); w.focus();
+      setTimeout(function(){ w.print(); }, 350);
+    } catch (e) { window.print(); }
+  });
+
+  reken();
+})();
+</script>
+</body>
+</html>

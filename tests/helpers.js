@@ -1,7 +1,7 @@
 // Gedeelde hulpfuncties: JS-fouten verzamelen en externe diensten afvangen.
 const PAGINAS = ['index.html', 'aanmelden.html', 'privacy.html', 'leennormen-2026.html', 'bijleenregeling.html',
   'overbrugging.html', 'maandlasten.html', 'oversluiten.html', 'kosten-koper.html', 'ltv.html',
-  'restschuld-pensioen.html', 'extra-aflossen.html', 'rentemiddeling.html', 'erfpacht.html', 'draagplicht.html', 'wetgeving.html', 'werkinstructie-financieringsopzet.html'];
+  'restschuld-pensioen.html', 'extra-aflossen.html', 'rentemiddeling.html', 'erfpacht.html', 'draagplicht.html', 'orv.html', 'aov-tekort.html', 'inkomen-ziekte-werknemer.html', 'werkloosheid.html', 'herbouwwaarde.html', 'wetgeving.html', 'werkinstructie-financieringsopzet.html'];
 
 async function volgFouten(page) {
   const fouten = [];
