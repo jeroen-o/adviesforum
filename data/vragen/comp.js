@@ -192,7 +192,14 @@ Vermeld de datum van de gebruikte rentes, want die veranderen snel.`},
  {id:'vbk-025',cat:'comp',auteur:null,naam:'',voorbeeld:true,datum:'2025-12-27T11:10:00',views:90,tags:['klachten','Kifid','klachtenregeling'],beste:null,
   titel:'Termijn voor het afhandelen van een interne klacht',
   body:`We kregen een schriftelijke klacht over het advies van vorig jaar. Hoe snel moeten we reageren, en wat moeten we de klant meesturen over de vervolgstappen?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbk-025-a1',auteur:'u8',datum:'2025-12-28T10:15:00',rA:{u1:5,u4:4,u5:4},rAdv:{u1:4,u3:4,u5:5},body:`Stuur direct een ontvangstbevestiging met de naam van de behandelaar en de verwachte termijn. Een consument kan bij Kifid terecht als jullie niet binnen acht weken een definitief standpunt hebben gegeven, of als hij het oneens is met dat standpunt. Richt je eigen proces daarom zo in dat je ruim binnen die acht weken afrondt.
+- Laat de klacht behandelen door iemand die niet zelf het advies gaf.
+- Vraag het dossier op en hoor de adviseur.
+- Geef een schriftelijk, gemotiveerd standpunt.
+- Noem in die brief expliciet dat de klant naar Kifid kan, met de termijn waarbinnen dat moet. Controleer de actuele termijnen in het reglement van Kifid.
+Registreer de klacht in de klachtenregistratie, inclusief datum van binnenkomst, standpunt en eventuele verbetermaatregel.`}
+  ]},
  {id:'vbk-026',cat:'comp',auteur:null,naam:'',voorbeeld:true,datum:'2026-01-05T20:00:00',views:98,tags:['Wwft','UBO','cliëntenonderzoek'],beste:'vbk-026-a1',
   titel:'UBO vaststellen bij een klant met een holding',
   body:`Een DGA wil via zijn holding een hypotheek op een beleggingspand. De structuur heeft twee lagen met een stichting ertussen. Hoe ver moet ik gaan om de uiteindelijk belanghebbende vast te stellen?`,
@@ -321,7 +328,14 @@ Kom je er niet uit, dan is dat op zich al een signaal om het cliëntenonderzoek 
  {id:'vbk-043',cat:'comp',auteur:null,naam:'',voorbeeld:true,datum:'2026-03-05T20:55:00',views:235,tags:['nazorg','zorgplicht','dossier'],beste:null,
   titel:'Is een zorgplichtbrief na het afsluiten nog nodig?',
   body:`Na het passeren sturen wij geen brief meer. Een collega-kantoor stuurt een afsluitende brief met uitleg over rentevaste periodes en wanneer de klant zich moet melden. Is dat verplicht?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbk-043-a1',auteur:'u8',datum:'2026-03-06T09:30:00',rA:{u1:4,u4:4,u5:5},rAdv:{u1:4,u5:4},body:`Er is geen wettelijk voorgeschreven afsluitende brief, maar je zorgplicht eindigt niet bij de passeerdatum. Uit je dienstverleningsdocument en opdrachtbevestiging blijkt welke nazorg je belooft; die moet je dan ook waarmaken. Een afsluitende brief is een eenvoudige manier om dat aan te tonen.
+Wat ik erin zou zetten:
+- Een samenvatting van de afgesloten producten en de einddatum van de rentevaste periodes.
+- Wanneer de klant zich moet melden: bij wijziging van inkomen, relatie, gezinssituatie of verhuizing.
+- Of jullie de klant actief benaderen bij renteherziening, of dat de klant dat zelf moet doen.
+Bewaar een kopie in het dossier. Doen jullie aan abonnementsnazorg, dan is de brief eigenlijk onmisbaar. Zie ook nazorg-check.html.`}
+  ]},
  {id:'vbk-044',cat:'comp',auteur:null,naam:'',voorbeeld:true,datum:'2026-03-08T10:30:00',views:396,tags:['vergunning','Wft','vakbekwaamheid'],beste:'vbk-044-a1',
   titel:'Erkenning voor schadeverzekeringen en hypotheken tegelijk',
   body:`We willen naast hypotheken ook schadeverzekeringen gaan adviseren. Wat moeten we regelen voordat we daarmee starten?`,
@@ -353,7 +367,16 @@ Kom je er niet uit, dan is dat op zich al een signaal om het cliëntenonderzoek 
  {id:'vbk-048',cat:'comp',auteur:null,naam:'',voorbeeld:true,datum:'2026-03-22T08:40:00',views:220,tags:['klachten','registratie','beleid'],beste:null,
   titel:'Interne klachtenregistratie: wat moet erin?',
   body:`We willen een eenvoudige klachtenregistratie opzetten. Welke gegevens leggen jullie per klacht vast?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbk-048-a1',auteur:'u8',datum:'2026-03-23T08:10:00',rA:{u1:4,u5:4,u6:5},rAdv:{u4:4,u6:4},body:`Houd het eenvoudig maar volledig, zodat je trends ziet en bij een AFM- of Kifid-vraag direct kunt laten zien hoe je klachten behandelt. Per klacht registreren wij:
+- Datum ontvangst, kanaal en klantnummer (geen overbodige persoonsgegevens).
+- Product en dienst, betrokken adviseur en onderwerp van de klacht.
+- Behandelaar, datum ontvangstbevestiging en datum definitief standpunt.
+- Uitkomst: gegrond, ongegrond of deels, en eventuele compensatie.
+- Of de klant naar Kifid is gegaan.
+- Oorzaak en verbetermaatregel.
+Bespreek de registratie periodiek met de directie en leg dat vast. Zet de registratie in een systeem met beperkte toegang; denk aan de AVG-bewaartermijnen.`}
+  ]},
  {id:'vbk-049',cat:'comp',auteur:null,naam:'',voorbeeld:true,datum:'2026-03-25T15:10:00',views:521,tags:['overbrugging','dossier','risico'],beste:'vbk-049-a1',
   titel:'Hoe leg ik advies over een overbruggingskrediet vast?',
   body:`Bij een doorstromer adviseer ik een overbruggingskrediet. Welke risico's moet ik minimaal bespreken en vastleggen?`,
@@ -444,7 +467,15 @@ Controleer de voorwaarden van de geldverstrekker voor de maximale looptijd.`},
  {id:'vbk-061',cat:'comp',auteur:null,naam:'',voorbeeld:true,datum:'2026-05-10T20:50:00',views:92,tags:['buitenland','Wwft','identificatie'],beste:null,
   titel:'Adviseren aan een klant die in het buitenland woont',
   body:`Een expat die nog in het buitenland woont wil een woning in Nederland kopen. Wat moet ik extra regelen voor identificatie en het cliëntenonderzoek?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbk-061-a1',auteur:'u8',datum:'2026-05-11T14:20:00',rA:{u1:4,u4:5,u5:4},rAdv:{u1:5,u4:4},body:`Op afstand mag, maar je moet de identiteit net zo betrouwbaar vaststellen als bij een fysiek gesprek.
+- Gebruik een betrouwbare digitale identificatie, of laat een kopie legitimeren via een notaris of ambassade. Combineer dat met een videogesprek waarin de klant zijn document toont.
+- Leg het buitenlandse woonadres vast met een recent bewijsstuk.
+- Check PEP- en sanctielijsten en vraag gericht naar de herkomst van het eigen geld, zeker bij buitenlandse rekeningen.
+- Controleer of de geldverstrekker niet-ingezetenen accepteert en welk inkomen hij dan meetelt.
+- Ga na of je kantoor dienstverlening aan deze klant in zijn woonland mag verlenen; dat verschilt per land.
+Leg vast hoe je identiteit en herkomst van middelen hebt vastgesteld. Verwijs voor de fiscale kant (binnenlands of buitenlands belastingplichtig) naar een fiscalist.`}
+  ]},
  {id:'vbk-062',cat:'comp',auteur:null,naam:'',voorbeeld:true,datum:'2026-05-15T12:45:00',views:137,tags:['adviesfee','opdrachtbevestiging','geschil'],beste:'vbk-062-a1',
   titel:'Klant wil de adviesfee na afloop niet betalen',
   body:`Het traject is afgerond, maar de klant weigert de fee te betalen omdat hij vindt dat het advies te weinig opleverde. Wat kan ik doen?`,
@@ -455,7 +486,15 @@ Controleer de voorwaarden van de geldverstrekker voor de maximale looptijd.`},
  {id:'vbk-063',cat:'comp',auteur:null,naam:'',voorbeeld:true,datum:'2026-05-18T11:40:00',views:354,tags:['bedenktijd','advies','klantbelang'],beste:null,
   titel:'Hoeveel tijd moet een klant krijgen om het advies te overwegen?',
   body:`Een klant wil het advies en de aanvraag in één gesprek afronden omdat hij snel wil kopen. Is dat verantwoord?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbk-063-a1',auteur:'u8',datum:'2026-05-19T09:00:00',rA:{u1:4,u4:4,u5:5},rAdv:{u1:4,u5:5},body:`Er is geen vaste wettelijke bedenktijd tussen advies en aanvraag. Wel moet het advies passend zijn en moet de klant het begrijpen. De bedenktijd na het bindend aanbod van de geldverstrekker blijft bovendien gewoon gelden; de klant kan wel eerder tekenen. Controleer de actuele regels bij afm.nl.
+Snel afronden kan dus, onder voorwaarden:
+- Inventarisatie en analyse moeten volledig zijn, niet ingekort vanwege tijdsdruk.
+- Bespreek de belangrijkste risico's expliciet en laat de klant het advies in eigen woorden samenvatten.
+- Leg vast dat de klant zelf om spoed vroeg en waarom.
+- Bied aan om onduidelijkheden na het gesprek nog te bespreken voordat het aanbod wordt getekend.
+Twijfel je of de klant het overziet, plan dan een kort vervolggesprek. Haast is geen argument bij een klacht.`}
+  ]},
  {id:'vbk-064',cat:'comp',auteur:null,naam:'',voorbeeld:true,datum:'2026-05-22T20:05:00',views:298,tags:['AOV','woonlasten','passend advies'],beste:'vbk-064-a1',
   titel:'Advies over een woonlastenverzekering naast een AOV',
   body:`Een zelfstandige heeft al een AOV. Moet ik in het hypotheekadvies dan nog een woonlastenverzekering bespreken?`,
@@ -520,7 +559,14 @@ Controleer de voorwaarden van de geldverstrekker voor de maximale looptijd.`},
  {id:'vbk-073',cat:'comp',auteur:null,naam:'',voorbeeld:true,datum:'2026-06-24T19:45:00',views:534,tags:['AFM','rapportage','uitvraag'],beste:null,
   titel:'Rapportage aan de AFM: wie is verantwoordelijk?',
   body:`De jaarlijkse uitvraag van de AFM komt eraan. Ons kantoor heeft geen compliance officer. Wie moet die invullen?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbk-073-a1',auteur:'u8',datum:'2026-06-25T10:40:00',rA:{u1:4,u5:4,u6:4},rAdv:{u4:4,u6:5},body:`De vergunninghouder is verantwoordelijk, en daarmee de dagelijks beleidsbepalers. Iemand anders mag de uitvraag voorbereiden, maar een beleidsbepaler moet de antwoorden controleren en indienen. Een compliance officer is voor een klein kantoor niet altijd verplicht.
+- Wijs een vaste persoon aan die de gegevens verzamelt: aantallen klanten, producten, omzet en beloningsvormen, klachten.
+- Laat de beleidsbepaler de antwoorden controleren voordat ze worden ingediend via het AFM-portaal.
+- Bewaar een kopie van de ingediende uitvraag en de bronbestanden.
+- Let op de deadline; te laat of onjuist indienen kan tot handhaving leiden.
+Zet de uitvraag in je compliancekalender, zodat het niet afhangt van één persoon.`}
+  ]},
  {id:'vbk-074',cat:'comp',auteur:null,naam:'',voorbeeld:true,datum:'2026-06-28T09:50:00',views:415,tags:['aflossingsvrij','oversluiten','passend advies'],beste:'vbk-074-a1',
   titel:'Advies over aflossingsvrij bij een leningdeel van voor 2013',
   body:`Een klant heeft een aflossingsvrij leningdeel uit een oude hypotheek. Hij wil verhuizen en dat deel meenemen. Wat moet ik extra bespreken?`,
@@ -605,7 +651,13 @@ Controleer de voorwaarden van de geldverstrekker voor de maximale looptijd.`},
  {id:'vbk-086',cat:'comp',auteur:null,naam:'',voorbeeld:true,datum:'2026-08-11T09:20:00',views:66,tags:['adviesfee','transparantie','adviesrapport'],beste:null,
   titel:'Verplichte vermelding van de adviesfee in het adviesrapport',
   body:`Moet de hoogte van de fee ook in het adviesrapport staan als hij al in de opdrachtbevestiging staat?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbk-086-a1',auteur:'u8',datum:'2026-08-12T08:45:00',rA:{u1:4,u4:4},rAdv:{u1:5,u5:4,u6:4},body:`De wettelijke verplichting draait om informatie vooraf: de klant moet voordat de dienstverlening begint weten wat het advies kost. Dat doe je met het dienstverleningsdocument en de opdrachtbevestiging. Een herhaling in het adviesrapport is niet expliciet voorgeschreven, maar ik raad het wel aan.
+- In het rapport hoort een overzicht van de totale kosten van het advies, inclusief de fee, zodat de klant het advies en de kosten in samenhang ziet.
+- Controleer dat de bedragen in opdrachtbevestiging, rapport en factuur gelijk zijn. Verschillen leveren vragen op bij klachten.
+- Is de fee tussentijds gewijzigd, bijvoorbeeld door extra werk, leg dan vast dat de klant daarmee akkoord ging.
+Bewaar de getekende opdrachtbevestiging bij het rapport in het dossier.`}
+  ]},
  {id:'vbk-087',cat:'comp',auteur:null,naam:'',voorbeeld:true,datum:'2026-08-14T18:50:00',views:480,tags:['partner','geheimhouding','dossier'],beste:'vbk-087-a1',
   titel:'Klant geeft partner geen inzicht in de hypotheek',
   body:`Een klant wil een tweede hypotheek op de woning, maar vraagt mij zijn partner niet te informeren. De partner is mede-eigenaar. Wat nu?`,
@@ -643,7 +695,14 @@ Controleer de voorwaarden van de geldverstrekker voor de maximale looptijd.`},
  {id:'vbk-092',cat:'comp',auteur:null,naam:'',voorbeeld:true,datum:'2026-08-30T09:20:00',views:375,tags:['klachtenregeling','website','informatie'],beste:null,
   titel:'Klachtenregeling op de website verplicht?',
   body:`Moeten we onze klachtenregeling op de website publiceren of is het genoeg om die op verzoek te verstrekken?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbk-092-a1',auteur:'u8',datum:'2026-08-31T09:30:00',rA:{u1:4,u5:4,u6:4},rAdv:{u4:4,u6:5},body:`Je moet de klant in elk geval informeren over je interne klachtenprocedure en over Kifid. Dat doe je meestal via het dienstverleningsdocument. Daarnaast geldt voor ondernemers die bij een geschilleninstantie zijn aangesloten dat ze die instantie ook vermelden op hun website, als ze er een hebben. Controleer de actuele eisen bij Kifid of je compliance officer.
+In de praktijk is publiceren op de website de eenvoudigste weg:
+- Zet de klachtenregeling als pagina of PDF online, met contactgegevens en termijnen.
+- Vermeld duidelijk de aansluiting bij Kifid.
+- Verwijs ernaar in je dienstverleningsdocument en algemene voorwaarden.
+Houd versiebeheer bij, zodat je kunt aantonen welke regeling gold op het moment van een klacht.`}
+  ]},
  {id:'vbk-093',cat:'comp',auteur:null,naam:'',voorbeeld:true,datum:'2026-09-04T12:10:00',views:448,tags:['adviesrapport','bewijs','akkoord'],beste:'vbk-093-a1',
   titel:'Hoe toon ik aan dat de klant het rapport heeft gelezen?',
   body:`Klanten tekenen het rapport vaak zonder het te lezen. Hoe zorg ik dat ik kan aantonen dat de klant de inhoud echt begreep?`,
@@ -686,7 +745,15 @@ Controleer de voorwaarden van de geldverstrekker voor de maximale looptijd.`},
  {id:'vbk-099',cat:'comp',auteur:null,naam:'',voorbeeld:true,datum:'2026-09-23T12:05:00',views:129,tags:['AFM','onderzoek','dossier'],beste:null,
   titel:'Wat doen we als de AFM een dossier opvraagt?',
   body:`We kregen een verzoek van de AFM om een aantal dossiers aan te leveren. Hoe bereiden we ons voor?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbk-099-a1',auteur:'u8',datum:'2026-09-24T08:50:00',rA:{u1:5,u4:4,u5:5},rAdv:{u1:5,u5:4,u6:4},body:`Lever volledig en op tijd aan, en pas niets aan in de dossiers. Achteraf aanvullen of wijzigen is een groot risico; als er iets ontbreekt, benoem dat liever eerlijk.
+- Noteer de deadline en wie contactpersoon is. Vraag bij onduidelijkheid direct na bij de AFM wat precies wordt gevraagd.
+- Exporteer de gevraagde dossiers volledig: inventarisatie, klantprofiel, berekeningen, adviesrapport, correspondentie en offertes.
+- Maak een overzicht per dossier met de inhoud en eventuele toelichting.
+- Laat een tweede persoon controleren of alles compleet en leesbaar is.
+- Stuur alleen wat gevraagd wordt, via het kanaal dat de AFM aangeeft.
+Bewaar een kopie van wat is aangeleverd. Gebruik eventuele bevindingen daarna om je werkwijze te verbeteren en leg die maatregelen vast.`}
+  ]},
  {id:'vbk-100',cat:'comp',auteur:null,naam:'',voorbeeld:true,datum:'2026-09-27T21:50:00',views:300,tags:['communicatie','informatieverstrekking','klantbelang'],beste:'vbk-100-a1',
   titel:'Klant wil geen digitale communicatie',
   body:`Een oudere klant wil alles op papier ontvangen. Ons proces is volledig digitaal. Moeten we daar rekening mee houden?`,

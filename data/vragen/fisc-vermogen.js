@@ -37,7 +37,15 @@ Ik adviseer om de overeenkomst door een notaris te laten opstellen of in ieder g
  {id:'vbf-004',cat:'fisc',auteur:null,naam:'',voorbeeld:true,datum:'2025-10-11T20:30:00',views:509,tags:['familiehypotheek','kwijtschelding','schenking'],beste:null,
   titel:'Rente kwijtschelden aan kind: telt dat als schenking',
   body:`Ouders hebben een lening aan hun zoon verstrekt voor de eigen woning. Ze willen de jaarlijkse rente laten ontvangen en daarna een deel terugschenken. Andere ouders vragen of ze de rente simpelweg niet hoeven te innen. Hoe kijken jullie hiertegen aan?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbf-004-a1',auteur:'u2',datum:'2025-10-12T09:30:00',rA:{u5:4,u1:4,u7:4},rAdv:{u5:5,u1:4},body:`Rente niet innen is in feite kwijtschelden, en dat is een schenking. Het grootste risico zit bij het kind: aftrek is alleen mogelijk voor rente die echt is betaald. Wordt de rente niet betaald, dan is er geen aftrek, en kan de Belastingdienst ook twijfelen of de lening zakelijk is.
+De gangbare route:
+- Leg de lening schriftelijk vast met zakelijke rente en een aflossingsschema dat aan de aflossingseis voldoet.
+- Het kind betaalt de rente en aflossing daadwerkelijk per bank.
+- De ouders kunnen later zelfstandig besluiten een bedrag te schenken. Er mag geen voorafgaande afspraak zijn dat de rente wordt teruggeschonken.
+- Vermeld de lening in de aangifte (ook de ouders in box 3).
+Leg in het dossier vast: de leningsovereenkomst, betalingsbewijs en dat je het verschil tussen kwijtschelden en schenken hebt uitgelegd.`}
+  ]},
  {id:'vbf-005',cat:'fisc',auteur:null,naam:'',voorbeeld:true,datum:'2025-10-15T17:20:00',views:134,tags:['schenking op papier','erfbelasting','notaris'],beste:'vbf-005-a1',
   titel:'Schenking op papier en rentebetaling: valkuilen bij overlijden',
   body:`Een echtpaar wil vermogen aan de kinderen schenken op papier, zodat de waardestijging van de woning buiten de nalatenschap blijft. Ze hebben echter weinig liquide middelen om de rente te betalen. Wat moet ik hen meegeven?`,
@@ -104,7 +112,13 @@ Leg in het dossier het bedrag, de schenkers en het bewijs van ontvangst vast.`},
  {id:'vbf-013',cat:'fisc',auteur:null,naam:'',voorbeeld:true,datum:'2025-11-13T18:20:00',views:495,tags:['contant geld','schenking','Wwft'],beste:null,
   titel:'Contant geld schenken van ouders',
   body:`Een klant wil een schenking van de ouders inbrengen die deels contant is gegeven. De geldverstrekker vraagt kritisch door. Hoe gaan jullie hiermee om?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbf-013-a1',auteur:'u2',datum:'2025-11-14T09:15:00',rA:{u5:4,u1:5,u8:4},rAdv:{u1:4,u8:5},body:`Contant geld is bij geldverstrekkers en notarissen een rode vlag vanwege witwasregels. De klant moet de herkomst aantonen, anders telt het bedrag meestal niet mee.
+- Laat het geld storten op de rekening van de klant en vraag bewijs van herkomst bij de ouders: bankafschriften met de opname, of een spaarrekening.
+- Laat een schenkingsakte of verklaring opstellen en doe aangifte schenkbelasting als dat nodig is.
+- Contant geld dat lang thuis heeft gelegen zonder bewijs, is lastig. Wees daar terughoudend in.
+Adviseer klanten bij voorkeur om schenkingen per bank te doen. Leg in het dossier vast welke bewijsstukken je hebt ontvangen en hoe je de herkomst hebt beoordeeld. Bij twijfel overleg je met je compliance officer.`}
+  ]},
  {id:'vbf-014',cat:'fisc',auteur:null,naam:'',voorbeeld:true,datum:'2025-11-17T20:35:00',views:198,tags:['schoonkind','schenkvrijstelling','schenking'],beste:'vbf-014-a1',
   titel:'Schenking aan schoonkind in plaats van aan eigen kind',
   body:`Ouders willen een schenking doen aan hun dochter en haar partner samen. Ik hoor wisselende verhalen over de vrijstelling voor het schoonkind. Wat is de lijn?`,
@@ -168,7 +182,13 @@ Ik leg vast dat ik deze punten heb besproken en heb doorverwezen.`},
  {id:'vbf-022',cat:'fisc',auteur:null,naam:'',voorbeeld:true,datum:'2025-12-15T09:25:00',views:60,tags:['schenking','ontbindende voorwaarde','aankoop'],beste:null,
   titel:'Schenking terugbetalen bij afwijzing hypotheek',
   body:`Ouders hebben al geschonken voor een woning, maar de financiering gaat niet door. Het kind wil het geld teruggeven. Hoe zit het dan met de schenkbelasting?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbf-022-a1',auteur:'u2',datum:'2025-12-16T09:05:00',rA:{u5:4,u1:4,u7:4},rAdv:{u5:4,u1:4},body:`Dat hangt af van hoe de schenking is gedaan.
+- Schenking onder een ontbindende voorwaarde, bijvoorbeeld dat de woning wordt gekocht: valt de voorwaarde weg, dan wordt de schenking ontbonden en is terugbetalen geen nieuwe schenking. Kijk of dit in de akte of schriftelijke verklaring staat.
+- Onvoorwaardelijke schenking: dan is teruggeven aan de ouders in principe een nieuwe schenking van kind aan ouders, waarover schenkbelasting kan worden geheven boven de vrijstelling.
+- Is er al aangifte gedaan met een beroep op een vrijstelling met voorwaarden, controleer dan of die vrijstelling vervalt.
+Laat de ouders en het kind dit vóór terugbetaling met een notaris of fiscalist bespreken. Leg vast dat je hierop hebt gewezen en welke documenten er zijn.`}
+  ]},
  {id:'vbf-023',cat:'fisc',auteur:null,naam:'',voorbeeld:true,datum:'2025-12-19T18:40:00',views:353,tags:['gelijke behandeling','schenking','testament'],beste:'vbf-023-a1',
   titel:'Gelijke behandeling kinderen bij schenking aan één kind',
   body:`Ouders schenken één kind een groot bedrag voor een woning. De andere kinderen krijgen nu niets. Hoe zorgen ze dat het bij de nalatenschap eerlijk wordt?`,
@@ -282,7 +302,14 @@ Leg vast welke uitgangspunten je hebt gebruikt en verwijs naar de notaris voor d
  {id:'vbf-035',cat:'fisc',auteur:null,naam:'',voorbeeld:true,datum:'2026-02-14T12:10:00',views:408,tags:['executeur','nalatenschap','afwikkeling'],beste:null,
   titel:'Rol van de executeur bij aflossen hypotheek na overlijden',
   body:`De executeur van een nalatenschap belt met de vraag of hij de hypotheek mag aflossen met geld uit de nalatenschap. Wat mag een executeur wel en niet?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbf-035-a1',auteur:'u2',datum:'2026-02-15T10:20:00',rA:{u5:4,u7:4,u1:4},rAdv:{u5:5,u7:4},body:`De executeur beheert de nalatenschap en betaalt de schulden van de nalatenschap. Een hypotheekschuld is zo'n schuld. Of hij die mag aflossen, hangt af van zijn bevoegdheden in het testament en van de vraag of aflossing nodig is.
+- Een gewone executeur heeft voor ingrijpende handelingen vaak toestemming van de erfgenamen nodig. Vraag de verklaring van executele of erfrecht op.
+- Kijk wie de woning en schuld overneemt. Woont de langstlevende er, dan is aflossen niet altijd in zijn belang.
+- Check bij de geldverstrekker of aflossen na overlijden boetevrij is en of er een ORV-uitkering komt.
+- Bekijk de fiscale gevolgen voor het overgangsrecht van een eventuele voortzetting.
+Laat de executeur zijn besluit schriftelijk vastleggen met instemming van de erfgenamen. Leg in je eigen dossier vast wie je opdrachtgever is en welke informatie je hebt gedeeld.`}
+  ]},
  {id:'vbf-036',cat:'fisc',auteur:null,naam:'',voorbeeld:true,datum:'2026-02-16T10:05:00',views:347,tags:['erfenis','renteaftrek','eigen woning'],beste:'vbf-036-a1',
   titel:'Renteaftrek voor erfgenamen als de woning leeg staat',
   body:`De woning van een overleden ouder staat leeg en wordt te koop gezet. Er rust nog een hypotheek op. Kunnen de kinderen de rente aftrekken?`,
@@ -355,7 +382,14 @@ Controleer de voorwaarden van de geldverstrekker voor een overname uit een nalat
  {id:'vbf-044',cat:'fisc',auteur:null,naam:'',voorbeeld:true,datum:'2026-03-06T17:40:00',views:250,tags:['erfbelasting','vrijstelling','kinderen'],beste:null,
   titel:'Erfbelasting bij kinderen onder de 23',
   body:`Een klant met jonge kinderen vraagt of haar kinderen bij haar overlijden meer vrijstelling hebben. Ze wil weten of haar testament moet worden aangepast. Wat weten jullie?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbf-044-a1',auteur:'u2',datum:'2026-03-07T09:40:00',rA:{u5:4,u7:5,u1:4},rAdv:{u7:4,u5:4},body:`Er is geen hogere vrijstelling op basis van leeftijd meer; die oude regeling voor jonge kinderen is lang geleden afgeschaft. Kinderen hebben één vaste vrijstelling. Alleen voor kinderen met een ziekte of beperking die niet in hun eigen onderhoud kunnen voorzien geldt een hogere vrijstelling. Controleer de actuele bedragen bij belastingdienst.nl.
+Bij jonge kinderen gaat het testament vooral over andere zaken:
+- Wie wordt voogd?
+- Wie beheert het vermogen tot een bepaalde leeftijd (bewind)?
+- Moet de wettelijke verdeling blijven of worden aangepast?
+Combineer dit met de vraag of een ORV voldoende dekking geeft, zodat de woonlasten voor de achterblijvers betaalbaar blijven. Leg vast dat je de klant hebt verwezen naar een notaris en welke dekking je hebt besproken.`}
+  ]},
  {id:'vbf-045',cat:'fisc',auteur:null,naam:'',voorbeeld:true,datum:'2026-03-08T20:55:00',views:304,tags:['erfenis','box 3','peildatum'],beste:'vbf-045-a1',
   titel:'Erfenis verkregen in de loop van het jaar en box 3',
   body:`Een klant heeft in de zomer een erfenis ontvangen. Wanneer telt die mee in box 3?`,
@@ -441,7 +475,14 @@ Leg in het dossier vast dat de rente niet aftrekbaar is in box 1.`}
  {id:'vbf-055',cat:'fisc',auteur:null,naam:'',voorbeeld:true,datum:'2026-04-15T17:05:00',views:359,tags:['box 3','groene beleggingen','vrijstelling'],beste:null,
   titel:'Groene beleggingen en box 3',
   body:`Een klant wil weten of groene beleggingen nog fiscaal interessant zijn. Wat zeggen jullie?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbf-055-a1',auteur:'u2',datum:'2026-04-16T09:30:00',rA:{u5:4,u7:4,u1:3},rAdv:{u7:4,u5:4},body:`Het fiscale voordeel verdwijnt. De vrijstelling en heffingskorting voor groene beleggingen in box 3 worden afgebouwd en vervallen volgens de huidige plannen; er is nog discussie over het precieze jaartal. Controleer de actuele stand bij belastingdienst.nl.
+Mijn advies aan klanten:
+- Kies groene beleggingen op basis van rendement, risico en duurzaamheidswens, niet om het belastingvoordeel.
+- Let op de looptijd en verhandelbaarheid van het product.
+- Houd rekening met de geplande overgang naar een box 3-heffing op werkelijk rendement; dat verandert de afweging opnieuw.
+Leg in het dossier vast dat het fiscale voordeel tijdelijk is en dat de klant bewust kiest. Gaat het om beleggingsadvies, check dan of je daarvoor de juiste vergunning hebt.`}
+  ]},
  {id:'vbf-056',cat:'fisc',auteur:null,naam:'',voorbeeld:true,datum:'2026-04-17T09:35:00',views:98,tags:['box 3','kinderen','minderjarig'],beste:null,
   titel:'Box 3 vermogen van minderjarige kinderen',
   body:`Ouders hebben een spaarrekening op naam van hun minderjarige kind. Bij wie telt dat geld mee in box 3?`,
@@ -528,7 +569,15 @@ Bespreek ook de fiscale gevolgen, zoals de eigenwoningschuld per partner.`},
  {id:'vbf-066',cat:'fisc',auteur:null,naam:'',voorbeeld:true,datum:'2026-05-13T07:05:00',views:156,tags:['box 3','beleggingen','hypotheek'],beste:null,
   titel:'Beleggingen aanhouden of aflossen bij renteherziening',
   body:`Bij een renteherziening wil een klant zijn beleggingen in box 3 gebruiken om af te lossen. De beleggingen staan nu op winst. Wat zijn de overwegingen?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbf-066-a1',auteur:'u2',datum:'2026-05-14T09:10:00',rA:{u5:5,u1:4,u7:4},rAdv:{u5:4,u1:4},body:`In het huidige box 3-stelsel wordt de koerswinst niet apart belast bij verkoop; box 3 kijkt naar de waarde op de peildatum. Verkopen om af te lossen is dus niet direct belast. Wel kunnen de plannen voor werkelijk rendement dat in de toekomst anders maken; controleer de actuele stand.
+Overwegingen:
+- Vergelijk de nieuwe hypotheekrente (na aftrek) met het verwachte netto rendement van de beleggingen.
+- Houd een buffer aan; afgeloste hypotheek is niet zomaar terug te lenen.
+- Check de boetevrije aflossingsruimte. Bij renteherziening is aflossen meestal boetevrij, maar controleer de voorwaarden.
+- Bespreek het risicoprofiel van de klant en de spreiding van zijn vermogen.
+Gebruik extra-aflossen.html voor de berekening. Leg vast welke scenario's je hebt vergeleken en waarom de klant kiest.`}
+  ]},
  {id:'vbf-067',cat:'fisc',auteur:null,naam:'',voorbeeld:true,datum:'2026-05-26T11:15:00',views:202,tags:['partners','pensioenverklaring','samenlevingscontract'],beste:'vbf-067-a1',
   titel:'Samenlevingscontract met of zonder notaris',
   body:`Klanten hebben een zelfgeschreven samenlevingscontract. Is dat voldoende voor fiscaal partnerschap en voor de partnervrijstelling?`,
@@ -596,7 +645,14 @@ Controleer de voorwaarden van de geldverstrekker voor het meenemen van pensioeni
  {id:'vbf-075',cat:'fisc',auteur:null,naam:'',voorbeeld:true,datum:'2026-06-26T10:55:00',views:105,tags:['box 3','vruchtgebruik','bloot eigendom'],beste:null,
   titel:'Vruchtgebruik en bloot eigendom in box 3',
   body:`Een klant heeft het vruchtgebruik van een beleggingsportefeuille gekregen uit een nalatenschap; zijn kinderen hebben het bloot eigendom. Bij wie valt het in box 3?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbf-075-a1',auteur:'u2',datum:'2026-06-27T09:45:00',rA:{u5:4,u7:4,u1:4},rAdv:{u5:4,u7:5},body:`Dat hangt af van het soort vruchtgebruik. Bij vruchtgebruik dat voortvloeit uit het erfrecht, zoals een wettelijk vruchtgebruik of een testamentair vruchtgebruik voor de partner, wordt het volledige vermogen voor box 3 bij de vruchtgebruiker meegeteld. De bloot eigenaren geven dan niets aan.
+Bij ander vruchtgebruik geeft de vruchtgebruiker de waarde van het vruchtgebruik aan en de bloot eigenaar de waarde van het bloot eigendom. Die waarden bereken je met de tabellen van de Belastingdienst.
+Praktisch:
+- Vraag het testament of de verklaring van erfrecht op om het soort vruchtgebruik vast te stellen.
+- Stem de aangifte af met de kinderen, zodat het vermogen niet dubbel of helemaal niet wordt aangegeven.
+Leg vast welke bron je hebt gebruikt. Gaat het om een afwijkende constructie, laat het dan door een fiscalist bevestigen.`}
+  ]},
  {id:'vbf-076',cat:'fisc',auteur:null,naam:'',voorbeeld:true,datum:'2026-07-04T13:30:00',views:135,tags:['estate planning','woning','verkoop aan kind'],beste:'vbf-076-a1',
   titel:'Ouders verkopen woning aan kind: waar letten jullie op',
   body:`Ouders willen hun woning aan een van hun kinderen verkopen en zelf kleiner gaan wonen. Het kind financiert met een hypotheek. Welke punten bespreken jullie?`,
@@ -674,7 +730,15 @@ Laat de scenario's doorrekenen en leg vast welke keuze de klant maakt.`}
  {id:'vbf-084',cat:'fisc',auteur:null,naam:'',voorbeeld:true,datum:'2026-07-31T11:20:00',views:368,tags:['erfbelasting','planning','testament'],beste:null,
   titel:'Testament met legaat voor kleinkinderen',
   body:`Een klant wil een legaat aan haar kleinkinderen nalaten om de erfbelasting te spreiden. Is dat gebruikelijk?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbf-084-a1',auteur:'u2',datum:'2026-08-01T09:35:00',rA:{u5:4,u7:4,u1:4},rAdv:{u5:4,u7:4},body:`Ja, dat is gebruikelijk. Door meer verkrijgers te laten erven, benut je extra vrijstellingen en blijft een groter deel in de lagere tariefschijf. Let wel op: voor kleinkinderen gelden een lagere vrijstelling dan voor kinderen en een hoger tarief. Controleer de actuele bedragen bij belastingdienst.nl.
+Bespreek met de klant:
+- Moet het legaat direct opeisbaar zijn, of pas later (bijvoorbeeld op een bepaalde leeftijd)?
+- Bewind of beheer voor minderjarige kleinkinderen, en uitsluiting van ouderlijk vruchtgenot.
+- Een uitsluitingsclausule, zodat het geld niet in een gemeenschap van goederen valt.
+- Of het legaat in geld is en voldoende liquiditeit in de nalatenschap aanwezig is, bijvoorbeeld als de woning het grootste bezit is.
+Het testament wordt door de notaris opgesteld. Leg in je dossier vast dat je de klant hebt verwezen en wat er is besproken.`}
+  ]},
  {id:'vbf-085',cat:'fisc',auteur:null,naam:'',voorbeeld:true,datum:'2026-08-02T09:40:00',views:570,tags:['schenking','woning','lening'],beste:'vbf-085-a1',
   titel:'Hypotheek verlagen met jaarlijkse schenkingen: hoe vastleggen',
   body:`Ouders willen jaarlijks schenken om de hypotheek van hun kind af te lossen. Hoe leggen jullie dat vast?`,
@@ -762,7 +826,14 @@ Leg vast dat de rente daadwerkelijk wordt betaald.`},
  {id:'vbf-096',cat:'fisc',auteur:null,naam:'',voorbeeld:true,datum:'2026-09-17T11:05:00',views:156,tags:['erfbelasting','partner','woning'],beste:null,
   titel:'Erfbelasting op de woning bij ongehuwde partners zonder testament',
   body:`Een ongehuwde partner overlijdt. De woning was samen gekocht. Wat zijn de gevolgen voor de erfbelasting?`,
-  antwoorden:[]},
+  antwoorden:[
+   {id:'vbf-096-a1',auteur:'u2',datum:'2026-09-18T09:25:00',rA:{u5:5,u7:4,u1:4},rAdv:{u5:4,u7:5},body:`Zonder testament erft een ongehuwde partner niets. Het aandeel van de overledene in de woning gaat naar de wettelijke erfgenamen (kinderen, ouders of broers en zussen). De partner blijft wel hoofdelijk aansprakelijk voor de hele hypotheek.
+Erfbelasting:
+- De erfgenamen betalen erfbelasting over hun deel, met hun eigen vrijstelling.
+- Is er een notarieel samenlevingscontract met een verblijvingsbeding, dan kan de partner het aandeel toch krijgen. Dat geldt als verkrijging voor de erfbelasting; de partnervrijstelling hangt af van voorwaarden zoals de duur van het samenwonen. Controleer die bij belastingdienst.nl.
+- Een ORV-uitkering kan ook belast zijn, afhankelijk van wie premie betaalde.
+Advies voor de toekomst: samenlevingscontract en testamenten laten opstellen. Leg in het dossier vast dat je dit risico hebt besproken.`}
+  ]},
  {id:'vbf-097',cat:'fisc',auteur:null,naam:'',voorbeeld:true,datum:'2026-09-19T17:20:00',views:587,tags:['estate planning','box 3','hypotheek'],beste:'vbf-097-a1',
   titel:'Hypotheek gebruiken voor schenking aan kind',
   body:`Ouders willen hun hypotheek verhogen om een bedrag aan hun kind te schenken. Kan de rente fiscaal worden afgetrokken?`,
