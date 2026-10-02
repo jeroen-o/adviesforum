@@ -109,6 +109,10 @@ ul{margin:0 0 12px;padding-left:20px}
 
 /* Tabs */
 .tabs{background:var(--surface);border-bottom:1px solid var(--border)}
+.sticky-kop{position:sticky;top:0;z-index:60;box-shadow:0 2px 10px -6px rgba(0,0,0,.25)}
+.sticky-kop .top{background:#fff}
+h2[id],h3[id],details[id],.guide [id]{scroll-margin-top:170px}
+@media (max-width:700px){.sticky-kop .top .wrap{padding:8px 14px;gap:8px;flex-wrap:wrap}.sticky-kop .top .search{order:10;flex:1 1 100%}.sticky-kop .top .who{margin-left:auto}.sticky-kop .top .who .btn,.sticky-kop .top>.wrap>.btn{padding:7px 10px;font-size:12px}.sticky-kop .top .search input{padding:8px 12px}.sticky-kop .tabs .wrap{padding:6px 14px}.sticky-kop .tab{padding:6px 12px}.sticky-kop .logo{height:26px;width:auto}.sticky-kop .brand-sep,.sticky-kop .brand-name{display:none}}
 .tabs .wrap{max-width:1240px;margin:0 auto;padding:10px 20px;display:flex;gap:8px;overflow-x:auto}
 .tab{padding:8px 16px;border:1px solid var(--border);border-radius:999px;background:var(--surface);font-weight:600;color:var(--text);cursor:pointer;white-space:nowrap}
 .tab:hover{border-color:var(--text)}
@@ -378,6 +382,7 @@ footer .legal{grid-column:1/-1;border-top:1px solid #2A3238;padding-top:14px;fon
 <body>
 
 <div class="demo"><div class="wrap"><span>Voor en door financieel adviseurs. Nieuwe vragen gaan naar de beheerder en verschijnen na controle; antwoorden en beoordelingen in deze versie blijven alleen in je eigen sessie.</span><span class="util"><a href="aanmelden.html">Aanmelden</a><a href="https://verzekeringhypotheek.blinqx.tech/support" target="_blank" rel="noopener">Support</a><a href="https://verzekeringhypotheek.blinqx.tech/academy" target="_blank" rel="noopener">Academy</a><a href="https://verzekeringhypotheek.blinqx.tech/partners" target="_blank" rel="noopener">Partners</a></span></div></div>
+<div class="sticky-kop">
 <header class="top">
   <div class="wrap">
     <button class="brand" data-act="home" aria-label="Naar het forum">
@@ -391,6 +396,7 @@ footer .legal{grid-column:1/-1;border-top:1px solid #2A3238;padding-top:14px;fon
   </div>
 </header>
 <nav class="tabs" aria-label="Onderdelen"><div class="wrap" id="tabs"></div></nav>
+</div>
 
 <main><div id="hero"></div><div id="app" class="wrap"></div></main>
 
@@ -415,6 +421,7 @@ footer .legal{grid-column:1/-1;border-top:1px solid #2A3238;padding-top:14px;fon
 <script src="data/vragen/kred.js"></script>
 <script src="data/vragen/comp.js"></script>
 <script src="data/vragen/software.js"></script>
+<script src="data/rekentools-index.js"></script>
 <script src="data/kennisbank.js"></script>
 <script src="data/kennisbank-planning.js"></script>
 <script src="data/kennisbank-geldverstrekkers.js"></script>
@@ -461,7 +468,7 @@ const FAQ_THEMAS={'hypotheek-normen':'Leennormen en maximale hypotheek','hypothe
 const HULP=[
  {groep:'Rekenhulpen',titel:'NHG-check 2026: past het binnen NHG?',url:'nhg-check.html',tekst:'Kostentoets, leningtoets en LTV volgens de V&N 2026, plus borgtochtprovisie bij aankoop, nieuwbouw, oversluiten en verhogen.',kw:'nhg check grens 470000 498200 borgtochtprovisie kostengrens oversluiten verhogen nieuwbouw ebv'},
  {groep:'Rekenhulpen',titel:'NHG-beheertoets: woonlasten bijlage 5',url:'nhg-beheertoets.html',tekst:'Financieringslastpercentage en maximale woonlast volgens de NHG-beheertabel 2026, met ruimte of tekort.',kw:'nhg beheer beheertoets financieringslast bijlage 5 woningbehoud betalingsproblemen ontslag hoofdelijke aansprakelijkheid'},
- {groep:'Rekenhulpen',titel:'Rekentools: 31 snelle berekeningen',url:'rekentools.html',tekst:'Aanbiedingen vergelijken, bouwdepot, risicoklasse, omslagrente, slottermijn, renteherziening, gewogen rente, partner uitkopen, verduurzaming, vermogensopbouw, contante waarde, werkdagen en meer.',kw:'rekentools renteherziening gewogen rente leningdelen uitkopen partner woningwaarde verduurzaming terugverdientijd aflostijd effectieve rente restschuld vermogen inleg interen contante waarde inflatie jaarinkomen werkdagen termijn datum'},
+ {groep:'Rekenhulpen',titel:'Rekentools: alle 275 berekeningen',url:'rekentools.html',tekst:'Aanbiedingen vergelijken, bouwdepot, risicoklasse, omslagrente, slottermijn, renteherziening, gewogen rente, partner uitkopen, verduurzaming, vermogensopbouw, contante waarde, werkdagen en meer.',kw:'rekentools renteherziening gewogen rente leningdelen uitkopen partner woningwaarde verduurzaming terugverdientijd aflostijd effectieve rente restschuld vermogen inleg interen contante waarde inflatie jaarinkomen werkdagen termijn datum'},
  {groep:'Rekenhulpen',titel:'Leennormen 2026',url:'leennormen-2026.html',tekst:'Maximale hypotheek volgens de Nibud-tabellen 2026, met energielabel, studieschuld, AOW en box 3.',kw:'leennormen maximale hypotheek financieringslast financieringslastpercentage nibud trhk energielabel studieschuld toetsrente woonquote toetsinkomen'},
  {groep:'Rekenhulpen',titel:'Eigenwoningreserve en bijleenregeling',url:'bijleenregeling.html',tekst:'Bereken de eigenwoningreserve, de maximale nieuwe eigenwoningschuld en het deel in box 3.',kw:'bijleenregeling eigenwoningreserve ewr eigenwoningschuld ews box overwaarde verkoop restschuld doorstromer'},
  {groep:'Rekenhulpen',titel:'Overbruggingskrediet',url:'overbrugging.html',tekst:'Maximaal overbruggingskrediet, rentelasten en dubbele woonlasten tijdens de overbrugging.',kw:'overbrugging overbruggingskrediet dubbele lasten verkoop oude woning doorstromer'},
@@ -496,7 +503,7 @@ const HULP=[
  {groep:'Formulieren',tp:'Formulier',titel:'Gespreksverslag',url:'gespreksverslag.html',tekst:'Verslag van een adviesgesprek met controle op kernonderwerpen.',kw:'gespreksverslag adviesgesprek verslag dossier kennismaking'},
  {groep:'Formulieren',tp:'Formulier',titel:'Nazorg-check',url:'nazorg-check.html',tekst:'Periodieke controle van hypotheek en verzekeringen, met signalen zoals einde rentevast; ook als klantlink.',kw:'nazorg periodiek klantcontact rentevast aow onderhoud jaarlijks'},
  {groep:'Formulieren',tp:'Formulier',titel:'Wijziging doorgeven',url:'wijziging-doorgeven.html',tekst:'Klant geeft een levensgebeurtenis door; toont welke producten geraakt kunnen worden.',kw:'wijziging levensgebeurtenis scheiding verhuizing baan geboorte klantformulier'},
- {groep:'Naslag',titel:'Partijenwegwijzer',url:'partijen.html',tekst:'54 banken, geldverstrekkers, verzekeraars en pensioenfondsen: portals, producten, voorwaarden (verhuisregeling, boetevrij aflossen, zzp, duurzaamheid) en statuswijzigingen, met bron.',kw:'partijen geldverstrekker bank verzekeraar pensioenfonds portal intermediair ing abn rabobank obvion asr nn goudse zwitserleven abp munt'},
+ {groep:'Naslag',titel:'Partijenwegwijzer',url:'partijen.html',tekst:'75 banken, geldverstrekkers, verzekeraars, lijfrente- en kredietaanbieders, PPI\'s en pensioenfondsen: portals, producten, voorwaarden (verhuisregeling, boetevrij aflossen, zzp, duurzaamheid) en statuswijzigingen, met bron.',kw:'partijen geldverstrekker bank verzekeraar pensioenfonds portal intermediair ing abn rabobank obvion asr nn goudse zwitserleven abp munt'},
  {groep:'Naslag',titel:'Wet- en regelgeving',url:'wetgeving.html',tekst:'113 wetten, besluiten en bronnen met zoekfunctie: Wft, Bgfo, Trhk, NHG, Wwft, Kifid, BW, fiscaal, pensioen.',kw:'wet wetgeving wetten regelgeving wft bgfo trhk wck wwft kifid burgerlijk wetboek inkomstenbelasting successiewet pensioenwet toeslagen bwbr'},
  {groep:'Naslag',titel:'Werkinstructie financieringsopzet (eBlinqx)',url:'werkinstructie-financieringsopzet.html',tekst:'Alle varianten om de financieringsopzet in eBlinqx Hypotheekadvies aan te passen.',kw:'financieringsopzet eblinqx werkinstructie kosten koper eigen middelen boeterente kostenpost'},
  {groep:'Documenten',tp:'PDF',titel:'NHG: Voorwaarden & Normen 2026',url:'documenten/nhg-voorwaarden-normen-2026.pdf',tekst:'De volledige Voorwaarden & Normen NHG 2026.',kw:'nhg voorwaarden normen 2026 v&n kostengrens borgtochtprovisie'},
@@ -512,6 +519,8 @@ const HULP=[
  {groep:'Forum',titel:'Aanmelden als adviseur',url:'aanmelden.html',tekst:'Wil je vragen beantwoorden? Meld je aan; de beheerder voegt je toe.',kw:'aanmelden account adviseur'},
  {groep:'Forum',titel:'Privacyverklaring',url:'privacy.html',tekst:'Welke gegevens het forum verwerkt en waarom.',kw:'privacy avg persoonsgegevens'}
 ];
+/* Alle losse rekentools uit data/rekentools-index.js (gegenereerd) als hulpmiddel, gegroepeerd per onderwerp */
+(window.REKENTOOLS||[]).forEach(r=>HULP.push({groep:'Rekentools · '+r.groep,tp:'Rekentool',titel:r.naam,url:r.url||('rekentools.html#'+r.id),tekst:r.tekst,kw:(r.kw||'')+' rekentool '+r.groep}));
 const ARTIKELEN=(window.KENNISBANK||[]).map(a=>Object.assign({views:0,nuttig:{}},KB_DEMO[a.id]||{},a));
 
 /* Supportindex: artikelen op de supportsites van Blinqx V&H (trefwoorden voor het automatische antwoord) */
@@ -1099,7 +1108,7 @@ function viewArtikel(){
 function viewHulpmiddelen(){
   const list=HULP.filter(h=>matches(S.q,h.titel,h.tekst,h.kw));
   const groepen=[...new Set(HULP.map(h=>h.groep))];
-  const blok=g=>{const items=list.filter(h=>h.groep===g);return items.length?`<h2 style="margin:6px 0 10px">${esc(g)}</h2><div class="tools">${items.map(h=>`<a class="tool" href="${esc(h.url)}"${/^https?:/.test(h.url)?' target="_blank" rel="noopener"':''}><span class="tp">${esc(h.tp||g)}</span><h3>${esc(h.titel)}</h3><p>${esc(h.tekst)}</p></a>`).join('')}</div>`:'';};
+  const blok=g=>{let items=list.filter(h=>h.groep===g);const rt=g.startsWith('Rekentools · ');const totaal=items.length;if(rt&&!S.q&&!(S.hulpOpen||{})[g])items=items.slice(0,6);const meer=rt&&items.length<totaal?`<div style="margin:-4px 0 18px"><button class="btn btn-line btn-sm" data-act="hulpmeer" data-groep="${esc(g)}">Alle ${totaal} tonen</button></div>`:'';return items.length?`<h2 style="margin:6px 0 10px">${esc(g)}</h2><div class="tools">${items.map(h=>`<a class="tool" href="${esc(h.url)}"${/^https?:/.test(h.url)?' target="_blank" rel="noopener"':''}><span class="tp">${esc(h.tp||g)}</span><h3>${esc(h.titel)}</h3><p>${esc(h.tekst)}</p></a>`).join('')}</div>${meer}`:'';};
   return `<section>
     <div class="listhead"><div><h1>Hulpmiddelen</h1><div class="sub">Rekenhulpen, naslag en documenten voor de adviespraktijk${S.q?` · zoekterm “${esc(S.q)}”`:''}</div></div></div>
     ${list.length?groepen.map(blok).join(''):`<div class="card"><div class="empty"><b>Geen hulpmiddelen gevonden</b>Probeer een andere zoekterm.${zoekMeld()}</div></div>`}
@@ -1412,6 +1421,7 @@ document.addEventListener('click',e=>{
     case 'open-faq':{S.q='';$('#search').value='';S.faqOpen=id;go('faq',{tab:'faq',faqThema:(FAQ.find(f=>f.id===id)||{}).thema||'alle',faqMax:1000});setTimeout(()=>{const d=document.getElementById('faq-'+id);if(d){d.open=true;d.scrollIntoView({block:'start'});}},30);break;}
     case 'faqthema':go('faq',{tab:'faq',faqThema:el.dataset.thema,faqMax:50});break;
     case 'forummeer':S.forumMax=(S.forumMax||30)+50;render(true);break;
+    case 'hulpmeer':{S.hulpOpen=Object.assign({},S.hulpOpen,{[el.dataset.groep]:true});render(true);break;}
     case 'faqmeer':S.faqMax=(S.faqMax||50)+100;render(true);break;
     case 'deel':{kopieer(location.origin+location.pathname+'#artikel-'+id,'Link naar het artikel gekopieerd');break;}
     case 'kb-kopie':{const a=ARTIKELEN.find(x=>x.id===id);if(!a)return;const o={id:a.id,cat:a.cat,titel:a.titel,auteur:a.auteur,datum:a.datum.slice(0,19),herzienVoor:a.herzienVoor,bron:a.bron,gecontroleerd:false,body:a.body};kopieer(' '+JSON.stringify(o,null,1).replace(/\n\s*/g,'').replace(/"(\w+)":/g,'$1:')+',','Artikel gekopieerd: plak het in data/kennisbank.js');break;}

@@ -310,4 +310,346 @@
     uitleg: 'Rendement na kosten = rendement − kosten. Het model neemt aan dat het samengestelde jaarrendement over n jaar lognormaal verdeeld is: ln(1 + gemiddeld jaarrendement) ~ normaal met verwachting ln(1 + rendement na kosten) en spreiding σ / √n. Ongunstig en gunstig = e<sup>ln(1 + rendement) ∓ z × σ / √n</sup> − 1, met z = 1,645 (5% en 95%) of z = 1,282 (10% en 90%). Met elk scenariorendement: start × (1 + i)<sup>m</sup> + inleg × ((1 + i)<sup>m</sup> − 1) / i × (1 + i), inleg aan het begin van de maand, i = (1 + jaarrendement)<sup>1/12</sup> − 1. Kans op een negatief gemiddeld jaarrendement = Φ(−ln(1 + rendement na kosten) × √n / σ).',
     letop: 'Dit is een vereenvoudigd statistisch model, geen voorspelling en geen toezegging; werkelijke koersen kennen grotere uitschieters dan de normale verdeling. Eén scenariorendement voor alle inleg is een benadering: latere stortingen staan korter belegd en hebben in werkelijkheid een bredere spreiding. Leg aannames voor rendement en beweeglijkheid vast en sluit aan bij het risicoprofiel van de klant. Gebruik voor productadvies de voorgeschreven scenario’s uit de wettelijke productinformatie (essentiële-informatiedocument). Belasting in box 3 en inflatie zijn niet meegenomen.'
   });
+
+  /* =====================================================================
+   * Fase 2 – uitbreiding sparen, beleggen en vermogen
+   * ===================================================================== */
+  {
+    const NR = RT.normen, F = RT.fisc, PEIL = RT.normen.peildatum;
+    const { irr } = RT.fin;
+    /* Normen die (nog) niet in normen.js staan. Peildatum 2026 – gecontroleerd op 2026-10-02. */
+    const N = {
+      peildatum: '2026',
+      depositogarantie: 100000,   // gegarandeerd bedrag per persoon per bank – bevestigd (DNB, Nederlandse depositogarantie)
+      leegwaarderatio: 100        // standaard: verhuurde woning in box 3 als % van de WOZ. Tabel 2026 (Belastingdienst): huur ≤1% WOZ: 73%,
+                                  // ≤2%: 79%, ≤3%: 84%, ≤4%: 90%, ≤5%: 95%, >5%: 100%. 100% is de bovenste trede (bevestigd), geen gemiddelde.
+    };
+    const PARTNERS = [['1', 'Nee, één persoon'], ['2', 'Ja, samen']];
+    // Box 3-heffing die toe te rekenen is aan een extra bedrag (bank of overig), bovenop ander spaargeld
+    const box3Extra = (bank, overig, ander, personen) =>
+      F.box3(ander + bank, overig, 0, personen).belasting - F.box3(ander, 0, 0, personen).belasting;
+    // Jaarlijkse opbouw met maandinleg (begin van de maand); box 3 over de stand op 1 januari, betaald aan het eind van het jaar
+    const opbouwMetBox3 = (start, inleg, rendJaar, jaren, soort, ander, personen) => {
+      const i = maandUitJaar(rendJaar);
+      let w = start, heffingTot = 0;
+      const stand = [];
+      for (let j = 1; j <= jaren; j++) {
+        const heffing = Math.max(0, soort === 'bank' ? box3Extra(w, 0, ander, personen) : box3Extra(0, w, ander, personen));
+        w = eindwaarde(w, inleg, i, 12, true) - heffing;
+        heffingTot += heffing;
+        stand.push(w);
+      }
+      return { eind: w, heffing: heffingTot, stand };
+    };
+
+    RT.add({
+      id: 'rendement-met-stortingen', groep: 'vermogen-beleggen', naam: 'Rendement met tussentijdse stortingen',
+      intro: 'Welk rendement per jaar is er werkelijk behaald als er tussendoor geld is bijgestort of opgenomen?',
+      kw: 'geldgewogen rendement irr stortingen opnames money weighted',
+      velden: [
+        { k: 'b', l: 'Beginwaarde', s: 'eur', std: 25000 },
+        { k: 'e', l: 'Eindwaarde', s: 'eur', std: 38500 },
+        { k: 'jr', l: 'Aantal jaren', s: 'num', na: 'jaar', std: 7 },
+        { k: 'wijze', l: 'Stortingen', s: 'keuze', opties: [['vast', 'Elk jaar hetzelfde bedrag'], ['lijst', 'Per jaar een eigen bedrag']], std: 'vast', breed: true },
+        { k: 'st', l: 'Storting per jaar', s: 'bedrag', std: 1000, als: v => v.wijze === 'vast', tip: 'Een opname met een minteken, bijvoorbeeld -500.' },
+        { k: 'lijst', l: 'Stortingen per jaar (jaar 1, 2, …)', s: 'tekst', regels: 3, std: '2500; 2500; 0; 0; -1000; 0; 0', als: v => v.wijze === 'lijst', tip: 'Scheiden met puntkomma of een nieuwe regel; opname met minteken.' }
+      ],
+      bereken(v) {
+        const n = Math.round(v.jr);
+        if (v.b <= 0 || n <= 0 || n > 100) return { fout: 'Vul een beginwaarde groter dan nul en 1 tot 100 jaar in.' };
+        const reeks = v.wijze === 'lijst' ? RT.lees.reeks(v.lijst) : [];
+        const st = j => v.wijze === 'vast' ? v.st : (reeks[j - 1] || 0);
+        const cf = [-v.b];
+        let inleg = 0;
+        for (let j = 1; j <= n; j++) { inleg += st(j); cf.push(j < n ? -st(j) : v.e - st(j)); }
+        const mw = irr(cf), cagr = Math.pow(v.e / v.b, 1 / n) - 1;
+        const sig = [];
+        if (v.wijze === 'lijst' && reeks.length > n) sig.push('Er zijn meer bedragen ingevuld dan jaren; alleen de eerste ' + n + ' tellen mee.');
+        if (!Number.isFinite(mw)) return { fout: 'Met deze bedragen is geen rendement te bepalen.' };
+        return {
+          lbl: 'Geldgewogen rendement per jaar', groot: fmt.pct(mw * 100, 2), onder: 'rekening houdend met stortingen en opnames',
+          rijen: [
+            ['Netto gestort (+) of opgenomen (−)', fmt.euro0(inleg)],
+            ['Waardegroei boven inleg', fmt.euro0(v.e - v.b - inleg), 'som'],
+            ['Ter vergelijking: zonder rekening te houden met stortingen', fmt.pct(cagr * 100, 2)]
+          ],
+          signalen: sig
+        };
+      },
+      uitleg: 'Kasstromen: −beginwaarde op moment 0, −storting aan het eind van elk jaar, en in het laatste jaar eindwaarde − storting. Het geldgewogen rendement is de rente r waarbij de contante waarde van alle kasstromen nul is (interne rente).',
+      letop: 'Het geldgewogen rendement hangt af van het moment van storten; het zegt dus ook iets over de timing van de belegger. Om beheerders of fondsen te vergelijken is het tijdgewogen rendement geschikter. Stortingen zijn verondersteld aan het eind van elk jaar.'
+    });
+
+    RT.add({
+      id: 'reele-spaarrente', groep: 'vermogen-beleggen', naam: 'Spaarrente na box 3 en inflatie',
+      intro: 'Wat blijft er van de spaarrente over na de vermogensrendementsheffing en na inflatie?',
+      kw: 'spaarrente box 3 inflatie reeel effectief',
+      peildatum: PEIL, fiscaal: ['heffingsvrij vermogen', 'forfait banktegoeden', 'tarief box 3'],
+      velden: [
+        { k: 'v', l: 'Spaargeld', s: 'eur', std: 80000 },
+        { k: 'r', l: 'Spaarrente', s: 'pct', std: 1.8 },
+        { k: 'm', l: 'Rente wordt bijgeschreven', s: 'keuze', opties: [['1', 'Per jaar'], ['4', 'Per kwartaal'], ['12', 'Per maand']], std: '1' },
+        { k: 'inf', l: 'Inflatie', s: 'pct', std: 2.5 },
+        { k: 'pers', l: 'Fiscale partners', s: 'keuze', opties: PARTNERS, std: '1' }
+      ],
+      bereken(v) {
+        if (v.v <= 0) return { fout: 'Vul een spaarbedrag groter dan nul in.' };
+        const m = +v.m, eff = Math.pow(1 + v.r / 100 / m, m) - 1;
+        const b3 = F.box3(v.v, 0, 0, +v.pers), opbr = v.v * eff, na = opbr - b3.belasting;
+        const naPct = na / v.v, reeel = (1 + naPct) / (1 + v.inf / 100) - 1;
+        return {
+          lbl: 'Reële rente na belasting en inflatie', groot: fmt.pct(reeel * 100, 2), onder: reeel < 0 ? 'koopkracht daalt' : 'koopkracht stijgt',
+          rijen: [
+            ['Effectieve rente', fmt.pct(eff * 100, 3)],
+            ['Rente-opbrengst per jaar', fmt.euro0(opbr)],
+            ['Box 3-grondslag', fmt.euro0(b3.grondslag)],
+            ['Box 3-heffing', '− ' + fmt.euro0(b3.belasting)],
+            ['Opbrengst na belasting', fmt.euro0(na)],
+            ['Rente na belasting', fmt.pct(naPct * 100, 2), 'som']
+          ]
+        };
+      },
+      uitleg: 'Effectieve rente = (1 + rente / m)<sup>m</sup> − 1. Heffing = (spaargeld − heffingsvrij vermogen) × forfait banktegoeden × tarief box 3. Reëel = (1 + rente na belasting) / (1 + inflatie) − 1.',
+      letop: 'Gerekend alsof dit spaargeld het hele box 3-vermogen is. Heeft de klant ook beleggingen of schulden, dan verschuift de heffing. Het forfaitaire stelsel is een overgangsregime; een stelsel op basis van werkelijk rendement is aangekondigd. Normen wijzigen jaarlijks; controleer de peildatum.'
+    });
+
+    RT.add({
+      id: 'sparen-of-beleggen', groep: 'vermogen-beleggen', naam: 'Sparen of beleggen vergelijken',
+      intro: 'Dezelfde inleg sparen of beleggen: twee eindbedragen naast elkaar, elk met eigen rendement, kosten en box 3-heffing.',
+      kw: 'sparen beleggen vergelijken box 3 kosten eindkapitaal',
+      peildatum: PEIL, fiscaal: ['heffingsvrij vermogen', 'forfait banktegoeden', 'forfait overige bezittingen', 'tarief box 3'],
+      velden: [
+        { k: 's', l: 'Startbedrag', s: 'eur', std: 25000, opt: true },
+        { k: 'i', l: 'Inleg per maand', s: 'eur', std: 250, opt: true },
+        { k: 'jr', l: 'Looptijd', s: 'num', na: 'jaar', std: 20 },
+        { k: 'rs', l: 'Spaarrente', s: 'pct', std: 1.8 },
+        { k: 'rb', l: 'Verwacht beleggingsrendement', s: 'pct', std: 6 },
+        { k: 'kb', l: 'Kosten beleggen per jaar', s: 'pct', std: 0.5, opt: true },
+        { k: 'ov', l: 'Ander spaargeld in box 3', s: 'eur', std: 60000, opt: true, tip: 'Bepaalt of het heffingsvrij vermogen al is benut.' },
+        { k: 'pers', l: 'Fiscale partners', s: 'keuze', opties: PARTNERS, std: '1' }
+      ],
+      bereken(v) {
+        const jaren = Math.round(v.jr), p = +v.pers;
+        if (jaren <= 0 || jaren > 60) return { fout: 'Kies een looptijd van 1 tot 60 jaar.' };
+        if (v.s <= 0 && v.i <= 0) return { fout: 'Vul een startbedrag of een maandinleg in.' };
+        const sp = opbouwMetBox3(v.s, v.i, v.rs, jaren, 'bank', v.ov, p);
+        const be = opbouwMetBox3(v.s, v.i, v.rb - v.kb, jaren, 'overig', v.ov, p);
+        const inleg = v.s + v.i * 12 * jaren;
+        return {
+          lbl: 'Verschil beleggen min sparen', groot: fmt.euro0(be.eind - sp.eind), onder: 'na ' + jaren + ' jaar, na kosten en box 3',
+          rijen: [
+            ['Totaal ingelegd', fmt.euro0(inleg)],
+            ['Eindbedrag sparen', fmt.euro0(sp.eind)],
+            ['Eindbedrag beleggen', fmt.euro0(be.eind), 'som'],
+            ['Box 3-heffing sparen (totaal)', fmt.euro0(sp.heffing)],
+            ['Box 3-heffing beleggen (totaal)', fmt.euro0(be.heffing)]
+          ],
+          tabel: { kop: ['Jaar', 'Ingelegd', 'Sparen', 'Beleggen'], rijen: sp.stand.map((x, k) => [String(k + 1), fmt.euro0(v.s + v.i * 12 * (k + 1)), fmt.euro0(x), fmt.euro0(be.stand[k])]) }
+        };
+      },
+      uitleg: 'Per maand: (stand + inleg) × (1 + i), met i = (1 + jaarrendement)<sup>1/12</sup> − 1 en bij beleggen jaarrendement = rendement − kosten. Per jaar gaat de box 3-heffing af die toe te rekenen is aan dit vermogen: heffing met dit vermogen erbij minus heffing over alleen het andere spaargeld, met het forfait voor banktegoeden of overige bezittingen.',
+      letop: 'Een verwacht beleggingsrendement is geen voorspelling: de uitkomst kan lager uitvallen, ook lager dan bij sparen. Presenteer bij advies een risicotoelichting en scenario’s (zie Beleggen: ongunstig, midden en gunstig). Box 3-normen zijn gelijk gehouden en het forfaitaire stelsel is een overgangsregime. Normen wijzigen jaarlijks; controleer de peildatum.'
+    });
+
+    RT.add({
+      id: 'rendement-verhuurde-woning', groep: 'vermogen-beleggen', naam: 'Rendement op een verhuurde woning',
+      intro: 'Aanvangsrendement, netto kasstroom en rendement op eigen geld van een woning die wordt verhuurd, inclusief box 3.',
+      kw: 'vastgoed verhuur rendement belegger box 3 huur',
+      peildatum: PEIL, fiscaal: ['forfait overige bezittingen', 'forfait schulden', 'tarief box 3', 'leegwaarderatio (bron, niet geverifieerd)'],
+      velden: [
+        { k: 'k', l: 'Aankoopprijs', s: 'eur', std: 300000 },
+        { k: 'kk', l: 'Kosten koper', s: 'eur', std: 28000, opt: true, tip: 'Inclusief overdrachtsbelasting voor beleggers.' },
+        { k: 'hyp', l: 'Lening', s: 'eur', std: 200000, opt: true },
+        { k: 'r', l: 'Rente', s: 'pct', std: 5.2 },
+        { k: 'hu', l: 'Huur per maand', s: 'eur', std: 1400 },
+        { k: 'leeg', l: 'Leegstand', s: 'pct', std: 4, opt: true },
+        { k: 'ko', l: 'Kosten per jaar', s: 'eur', std: 3600, tip: 'Onderhoud, VvE, verzekering, beheer, gemeentelijke lasten.' },
+        { k: 'woz', l: 'WOZ-waarde', s: 'eur', std: 290000 },
+        { k: 'lw', l: 'Waarde in box 3 als % van de WOZ', s: 'pct', std: N.leegwaarderatio, tip: 'Leegwaarderatio volgens de actuele tabel.' },
+        { k: 'wst', l: 'Waardestijging per jaar', s: 'pct', std: 2, opt: true }
+      ],
+      bereken(v) {
+        const inv = v.k + v.kk, eigen = inv - v.hyp;
+        if (inv <= 0) return { fout: 'Vul een aankoopprijs groter dan nul in.' };
+        const b = NR.box3, huur = v.hu * 12 * (1 - v.leeg / 100), rente = v.hyp * v.r / 100;
+        const box3 = Math.max(0, v.woz * v.lw / 100 * b.forfaitOverig / 100 - v.hyp * b.forfaitSchuld / 100) * b.tarief / 100;
+        const netto = huur - v.ko - rente - box3, groei = v.k * v.wst / 100;
+        return {
+          lbl: 'Netto kasstroom per jaar', groot: fmt.euro0(netto), onder: fmt.euro(netto / 12) + ' per maand',
+          rijen: [
+            ['Totale investering', fmt.euro0(inv)],
+            ['Eigen inbreng', fmt.euro0(eigen)],
+            ['Bruto aanvangsrendement', fmt.pct(v.hu * 12 / inv * 100, 2)],
+            ['Huur na leegstand', fmt.euro0(huur)],
+            ['Rente', '− ' + fmt.euro0(rente)],
+            ['Kosten', '− ' + fmt.euro0(v.ko)],
+            ['Box 3-heffing (indicatie)', '− ' + fmt.euro0(box3)],
+            ['Kasstroomrendement op eigen inbreng', eigen > 0 ? fmt.pct(netto / eigen * 100, 2) : '–'],
+            ['Inclusief waardestijging', eigen > 0 ? fmt.pct((netto + groei) / eigen * 100, 2) : '–', 'som']
+          ]
+        };
+      },
+      uitleg: 'Bruto aanvangsrendement = jaarhuur / (prijs + kosten koper). Box 3 ≈ (WOZ × leegwaarderatio × forfait overige bezittingen − lening × forfait schulden) × tarief, als het heffingsvrij vermogen al is benut. Netto = huur na leegstand − kosten − rente − box 3; rendement = netto / eigen inbreng.',
+      letop: 'Indicatief: de leegwaarderatio (standaard ' + fmt.pct(N.leegwaarderatio, 0) + ') is een norm uit de bron die niet is geverifieerd; controleer de actuele tabel. Geen rekening gehouden met de schuldendrempel, verkoopkosten, huurregulering (puntenstelsel) en risico’s van leegstand of achterstallig onderhoud. Verhuurfinanciering valt buiten de leennormen voor consumptief krediet. Normen wijzigen jaarlijks; controleer de peildatum.'
+    });
+
+    RT.add({
+      id: 'gemiddeld-rendement-reeks', groep: 'vermogen-beleggen', naam: 'Gemiddeld rendement over een reeks jaren',
+      intro: 'Van een reeks jaarrendementen naar het werkelijke gemiddelde: meetkundig naast rekenkundig, met de spreiding.',
+      kw: 'meetkundig rekenkundig gemiddelde rendement volatiliteit standaarddeviatie',
+      velden: [
+        { k: 'r', l: 'Rendement per jaar (%)', s: 'tekst', regels: 3, std: '12,4; -8,1; 21,7; 4,2; -2,5; 15,8', breed: true, tip: 'Scheiden met puntkomma of een nieuwe regel.' }
+      ],
+      bereken(v) {
+        const R = RT.lees.reeks(v.r);
+        if (!R.length) return { fout: 'Vul ten minste één jaarrendement in.' };
+        if (R.some(x => x <= -100)) return { fout: 'Een jaarrendement moet groter zijn dan −100%.' };
+        let fac = 1;
+        const rijen = R.map((x, k) => { fac *= 1 + x / 100; return [String(k + 1), fmt.pct(x, 2), fmt.euro0(10000 * fac)]; });
+        const n = R.length, geo = (Math.pow(fac, 1 / n) - 1) * 100, rek = R.reduce((a, b) => a + b, 0) / n;
+        const sd = n > 1 ? Math.sqrt(R.reduce((a, x) => a + (x - rek) * (x - rek), 0) / (n - 1)) : 0;
+        return {
+          lbl: 'Meetkundig gemiddelde per jaar', groot: fmt.pct(geo, 2), onder: n + (n === 1 ? ' jaar' : ' jaren'),
+          rijen: [
+            ['Rekenkundig gemiddelde', fmt.pct(rek, 2)],
+            ['Verschil (effect van beweeglijkheid)', fmt.pct(rek - geo, 2)],
+            ['Totaal rendement over de reeks', fmt.pct((fac - 1) * 100, 2)],
+            ['Standaarddeviatie (steekproef)', fmt.pct(sd, 2), 'som']
+          ],
+          tabel: { titel: 'Verloop van € 10.000', kop: ['Jaar', 'Rendement', 'Waarde'], rijen }
+        };
+      },
+      uitleg: 'Meetkundig = (Π(1 + r<sub>j</sub>))<sup>1/n</sup> − 1: het vaste jaarrendement dat dezelfde eindwaarde geeft. Rekenkundig = som / n. Standaarddeviatie = √(Σ(r<sub>j</sub> − gemiddelde)² / (n − 1)).',
+      letop: 'Het rekenkundige gemiddelde overschat wat een belegger werkelijk overhoudt zodra rendementen schommelen. Rendementen uit het verleden bieden geen garantie voor de toekomst. Stortingen en opnames tellen hier niet mee: zie Rendement met tussentijdse stortingen.'
+    });
+
+    RT.add({
+      id: 'depositogarantie', groep: 'vermogen-beleggen', naam: 'Spaargeld binnen de depositogarantie',
+      intro: 'Hoeveel spaargeld valt binnen het depositogarantiestelsel, en over hoeveel banken moet het worden verdeeld om volledig gedekt te zijn?',
+      kw: 'depositogarantiestelsel dgs spaargeld bank garantie',
+      peildatum: N.peildatum, fiscaal: ['garantiebedrag per persoon per bank (bron, niet geverifieerd)'],
+      velden: [
+        { k: 'v', l: 'Totaal spaargeld', s: 'eur', std: 350000 },
+        { k: 'g', l: 'Garantie per persoon per bank', s: 'eur', std: N.depositogarantie },
+        { k: 'p', l: 'Aantal rekeninghouders', s: 'num', std: 2, tip: 'Bij een gezamenlijke rekening telt de garantie per rekeninghouder.' },
+        { k: 'b', l: 'Aantal banken (vergunningen)', s: 'num', std: 2 }
+      ],
+      bereken(v) {
+        const p = Math.round(v.p), b = Math.round(v.b);
+        if (p <= 0 || b <= 0 || v.g <= 0) return { fout: 'Vul garantie, personen en banken groter dan nul in.' };
+        const perBank = v.g * p, dek = Math.min(v.v, perBank * b), nodig = Math.ceil(v.v / perBank);
+        return {
+          lbl: 'Gedekt spaargeld', groot: fmt.euro0(dek), onder: v.v > dek ? 'niet gedekt: ' + fmt.euro0(v.v - dek) : 'volledig gedekt bij gelijkmatige spreiding',
+          rijen: [
+            ['Dekking per bank', fmt.euro0(perBank)],
+            ['Maximale dekking bij ' + b + (b === 1 ? ' bank' : ' banken'), fmt.euro0(perBank * b)],
+            ['Benodigd aantal banken', String(nodig), 'som'],
+            ['Gemiddeld per bank bij dat aantal', fmt.euro0(v.v / Math.max(1, nodig))]
+          ]
+        };
+      },
+      uitleg: 'Dekking per bank = garantiebedrag × aantal rekeninghouders. Gedekt = laagste van spaargeld en dekking per bank × aantal banken (bij gelijkmatige verdeling). Benodigd aantal banken = spaargeld / dekking per bank, naar boven afgerond.',
+      letop: 'Indicatief: het garantiebedrag is een norm uit de bron die niet is geverifieerd; controleer de actuele norm bij DNB. Merken die onder één bankvergunning vallen tellen als één bank. Tijdelijk hoge saldi (bijvoorbeeld na verkoop van de eigen woning) kunnen onder voorwaarden een hogere dekking hebben; controleer dit. Beleggingen vallen niet onder de depositogarantie maar onder het beleggerscompensatiestelsel.'
+    });
+
+    RT.add({
+      id: 'eerder-beginnen-sparen', groep: 'vermogen-beleggen', naam: 'Wat levert eerder starten met sparen op',
+      intro: 'Dezelfde maandinleg en hetzelfde rendement, maar een aantal jaren eerder beginnen: hoeveel meer is er op de einddatum?',
+      kw: 'eerder sparen rente op rente starten leeftijd',
+      velden: [
+        { k: 'i', l: 'Inleg per maand', s: 'eur', std: 200 },
+        { k: 'r', l: 'Rendement per jaar', s: 'pct', std: 5 },
+        { k: 'nu', l: 'Leeftijd bij laat starten', s: 'num', na: 'jaar', std: 35 },
+        { k: 'eerder', l: 'Zoveel jaren eerder beginnen', s: 'num', na: 'jaar', std: 10 },
+        { k: 'eind', l: 'Leeftijd op de einddatum', s: 'num', na: 'jaar', std: 67 }
+      ],
+      bereken(v) {
+        const nL = Math.round((v.eind - v.nu) * 12), nV = Math.round((v.eind - v.nu + v.eerder) * 12), i = maandUitJaar(v.r);
+        if (nL <= 0 || v.eerder <= 0 || v.nu - v.eerder < 0) return { fout: 'Controleer de leeftijden: de einddatum moet na de start liggen.' };
+        const laat = eindwaarde(0, v.i, i, nL, true), vroeg = eindwaarde(0, v.i, i, nV, true);
+        const extraInleg = v.i * (nV - nL), factor = i === 0 ? nL : (Math.pow(1 + i, nL) - 1) / i * (1 + i);
+        return {
+          lbl: 'Meer op de einddatum', groot: fmt.euro0(vroeg - laat), onder: 'door ' + fmt.getal(v.eerder, 0) + ' jaar eerder te beginnen',
+          rijen: [
+            ['Starten op ' + fmt.getal(v.nu - v.eerder, 0) + ' jaar', fmt.euro0(vroeg)],
+            ['Starten op ' + fmt.getal(v.nu, 0) + ' jaar', fmt.euro0(laat)],
+            ['Extra ingelegd', fmt.euro0(extraInleg)],
+            ['Extra uit rendement', fmt.euro0(vroeg - laat - extraInleg), 'som'],
+            ['Maandinleg bij laat starten voor hetzelfde eindbedrag', fmt.euro(vroeg / factor)]
+          ]
+        };
+      },
+      uitleg: 'Eindbedrag = inleg × ((1 + i)<sup>n</sup> − 1) / i × (1 + i), inleg aan het begin van de maand, i = (1 + rendement)<sup>1/12</sup> − 1. n = maanden tot de einddatum vanaf elk startmoment.',
+      letop: 'Vóór belasting, kosten en inflatie. Het rendement is gelijk verondersteld; bij beleggen kan het werkelijke verloop sterk afwijken.'
+    });
+
+    RT.add({
+      id: 'hogere-rente-sparen', groep: 'vermogen-beleggen', naam: 'Verschil door hogere rente',
+      intro: 'Wat levert een hogere rente op bij hetzelfde startbedrag en dezelfde maandinleg?',
+      kw: 'hogere spaarrente vergelijken verschil eindkapitaal',
+      velden: [
+        { k: 's', l: 'Startbedrag', s: 'eur', std: 25000, opt: true },
+        { k: 'i', l: 'Inleg per maand', s: 'eur', std: 200, opt: true },
+        { k: 'r1', l: 'Huidige rente', s: 'pct', std: 1.5 },
+        { k: 'r2', l: 'Hogere rente', s: 'pct', std: 2.75 },
+        { k: 'jr', l: 'Looptijd', s: 'num', na: 'jaar', std: 10 }
+      ],
+      bereken(v) {
+        const jaren = Math.round(v.jr);
+        if (jaren <= 0 || jaren > 100) return { fout: 'Kies een looptijd van 1 tot 100 jaar.' };
+        const w = (r, j) => eindwaarde(v.s, v.i, maandUitJaar(r), j * 12, true);
+        const a = w(v.r1, jaren), b = w(v.r2, jaren), inleg = v.s + v.i * 12 * jaren;
+        const rijen = [];
+        for (let j = 1; j <= jaren; j++) { const x = w(v.r1, j), y = w(v.r2, j); rijen.push([String(j), fmt.euro0(x), fmt.euro0(y), fmt.euro0(y - x)]); }
+        return {
+          lbl: 'Verschil na ' + jaren + ' jaar', groot: fmt.euro0(b - a), onder: fmt.pct(v.r2, 2) + ' tegenover ' + fmt.pct(v.r1, 2),
+          rijen: [
+            ['Totaal ingelegd', fmt.euro0(inleg)],
+            ['Eindbedrag bij ' + fmt.pct(v.r1, 2), fmt.euro0(a)],
+            ['Eindbedrag bij ' + fmt.pct(v.r2, 2), fmt.euro0(b), 'som'],
+            ['Gemiddeld verschil per jaar', fmt.euro0((b - a) / jaren)]
+          ],
+          tabel: { kop: ['Jaar', fmt.pct(v.r1, 2), fmt.pct(v.r2, 2), 'Verschil'], rijen }
+        };
+      },
+      uitleg: 'Eindbedrag = start × (1 + i)<sup>n</sup> + inleg × ((1 + i)<sup>n</sup> − 1) / i × (1 + i), inleg aan het begin van de maand, i = (1 + rente)<sup>1/12</sup> − 1.',
+      letop: 'Vóór box 3 en inflatie. Spaarrentes zijn meestal variabel; een hogere rente kan voorwaarden hebben (vaste looptijd, opnamebeperking). Let op de depositogarantie per bank.'
+    });
+
+    RT.add({
+      id: 'totale-beleggingskosten', groep: 'vermogen-beleggen', naam: 'Totale kosten van beleggen',
+      intro: 'Alle kosten van beleggen bij elkaar opgeteld, als percentage en in euro’s, en het effect op het eindbedrag.',
+      kw: 'kosten beleggen tco lopende kosten beheerkosten transactiekosten',
+      velden: [
+        { k: 'v', l: 'Belegd vermogen', s: 'eur', std: 250000 },
+        { k: 'beh', l: 'Beheer- of servicekosten', s: 'pct', std: 0.55 },
+        { k: 'fonds', l: 'Lopende kosten fondsen', s: 'pct', std: 0.22 },
+        { k: 'trans', l: 'Transactiekosten', s: 'pct', std: 0.08, opt: true },
+        { k: 'spread', l: 'Spread- en valutakosten', s: 'pct', std: 0.05, opt: true },
+        { k: 'vast', l: 'Vaste kosten per jaar', s: 'eur', std: 0, opt: true },
+        { k: 'r', l: 'Bruto rendement per jaar', s: 'pct', std: 6 },
+        { k: 'jr', l: 'Looptijd', s: 'num', na: 'jaar', std: 20 }
+      ],
+      bereken(v) {
+        const jaren = Math.round(v.jr);
+        if (v.v <= 0 || jaren <= 0) return { fout: 'Vul een vermogen en een looptijd groter dan nul in.' };
+        const pct = v.beh + v.fonds + v.trans + v.spread + v.vast / v.v * 100;
+        const bruto = v.v * Math.pow(1 + v.r / 100, jaren), netto = v.v * Math.pow(1 + (v.r - pct) / 100, jaren);
+        return {
+          lbl: 'Totale kosten per jaar', groot: fmt.pct(pct, 2), onder: fmt.euro0(v.v * pct / 100) + ' in het eerste jaar',
+          rijen: [
+            ['Beheer en fondsen', fmt.pct(v.beh + v.fonds, 2)],
+            ['Transactie, spread en valuta', fmt.pct(v.trans + v.spread, 2)],
+            ['Vaste kosten als percentage', fmt.pct(v.vast / v.v * 100, 2)],
+            ['Rendement na kosten', fmt.pct(v.r - pct, 2)],
+            ['Eindbedrag zonder kosten', fmt.euro0(bruto)],
+            ['Eindbedrag met kosten', fmt.euro0(netto)],
+            ['Verschil over ' + jaren + ' jaar', fmt.euro0(bruto - netto), 'som']
+          ]
+        };
+      },
+      uitleg: 'Totale kosten = beheer + lopende kosten + transactie + spread + vaste kosten / vermogen. Eindbedrag = vermogen × (1 + rendement − kosten)<sup>jaren</sup>. Het verschil omvat ook het gemiste rendement op de betaalde kosten.',
+      letop: 'Gebruik bij advies de kosten uit de wettelijke kosteninformatie van de aanbieder (inclusief transactiekosten en eventuele advies- of distributiekosten). Vaste kosten zijn als percentage van het startvermogen genomen. Vóór box 3 en inflatie; zie ook Effect van kosten op vermogensopbouw.'
+    });
+  }
 })(window.RT);

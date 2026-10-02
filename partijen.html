@@ -44,8 +44,8 @@
     flex:1 1 260px;min-width:0;width:100%;padding:10px 12px;font-size:15px;font-family:inherit;
     border:1px solid var(--line);border-radius:7px;color:var(--text);background:#fff;
   }
-  #zoek:focus,#type:focus,.btn:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
-  #type{
+  #zoek:focus,#type:focus,#cat:focus,.btn:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+  #type,#cat{
     flex:0 1 220px;min-width:0;padding:10px 12px;font-size:15px;font-family:inherit;
     border:1px solid var(--line);border-radius:7px;color:var(--text);background:#fff;
   }
@@ -90,7 +90,7 @@
     h1{font-size:26px}
     header.hero{padding:28px 0 24px}
     .toolbar{position:static;padding:12px}
-    #zoek,#type{flex:1 1 100%}
+    #zoek,#type,#cat{flex:1 1 100%}
     .grid{grid-template-columns:1fr}
     article.card{padding:18px 16px}
   }
@@ -108,7 +108,7 @@
   <div class="wrap">
     <a class="terug" href="index.html#hulpmiddelen">← Terug naar het Adviesforum</a>
     <h1>Partijenwegwijzer</h1>
-    <p class="sub">Wat geldverstrekkers, verzekeraars, pensioenverzekeraars en pensioenfondsen openbaar voor adviseurs publiceren: intermediairsites, acceptatiegidsen, opvallende productkenmerken en wie bij wie hoort. Elk kenmerk heeft een bronlink.</p>
+    <p class="sub">Wat banken, geldverstrekkers, verzekeraars, lijfrenteaanbieders, kredietverstrekkers, PPI's en pensioenfondsen openbaar voor adviseurs publiceren: intermediairsites, acceptatiegidsen, opvallende productkenmerken en wie bij wie hoort. Elk kenmerk heeft een bronlink.</p>
     <p class="meta" id="meta">Peildatum 3 oktober 2026</p>
   </div>
 </header>
@@ -118,6 +118,9 @@
     <input id="zoek" type="search" placeholder="Zoek op partij, product of kenmerk, bijv. verhuisregeling, boetevrij, senioren, status gewijzigd&hellip;" aria-label="Zoeken in partijen">
     <select id="type" aria-label="Filter op type">
       <option value="">Alle typen</option>
+    </select>
+    <select id="cat" aria-label="Filter op productcategorie">
+      <option value="">Alle categorieën</option>
     </select>
     <button class="btn sec" id="wis" type="button">Wissen</button>
     <span class="count" id="teller" aria-live="polite"></span>
@@ -137,10 +140,21 @@
     'verzekeraar':'Verzekeraar',
     'pensioenverzekeraar':'Pensioenverzekeraar',
     'pensioenfonds':'Pensioenfonds',
+    'ppi':'Premiepensioeninstelling (PPI)',
+    'beleggingsinstelling':'Beleggingsinstelling / broker',
     'kredietverstrekker':'Kredietverstrekker'
   };
+  var CATS={
+    'hypotheek':'Hypotheek',
+    'leven':'Leven (ORV, uitvaart)',
+    'schade':'Schade (particulier en zakelijk)',
+    'inkomen':'Inkomen (AOV, WIA, verzuim)',
+    'lijfrente':'Lijfrente en banksparen',
+    'krediet':'Consumptief krediet',
+    'pensioen':'Pensioen (werkgever)'
+  };
   var data=(window.PARTIJEN||[]).slice().sort(function(a,b){return a.naam.localeCompare(b.naam,'nl');});
-  var zoek=document.getElementById('zoek'),typeSel=document.getElementById('type'),
+  var zoek=document.getElementById('zoek'),typeSel=document.getElementById('type'),catSel=document.getElementById('cat'),
       lijst=document.getElementById('lijst'),leeg=document.getElementById('leeg'),
       teller=document.getElementById('teller');
 
@@ -153,6 +167,12 @@
     var n=data.filter(function(p){return p.type===t;}).length;
     if(!n)return;
     var o=el('option',null,TYPES[t]+' ('+n+')');o.value=t;typeSel.appendChild(o);
+  });
+
+  Object.keys(CATS).forEach(function(c){
+    var n=data.filter(function(p){return (p.categorieen||[]).indexOf(c)!==-1;}).length;
+    if(!n)return;
+    var o=el('option',null,CATS[c]+' ('+n+')');o.value=c;catSel.appendChild(o);
   });
 
   var kaarten=data.map(function(p){
@@ -188,18 +208,18 @@
     if(u){var l=el('a',null,'Naar site / adviseursinformatie ↗');l.href=u;l.target='_blank';l.rel='noopener';l.title=u;s.appendChild(l);}
     else s.appendChild(el('span','geen','Geen eigen site of adviseursportaal gevonden'));
     a.appendChild(s);
-    var zoektekst=[p.naam,TYPES[p.type]||'',(p.producten||[]).join(' ')].concat((p.kenmerken||[]).map(function(k){return (k.thema||'')+' '+k.tekst;})).concat(p.status?['status gewijzigd '+p.status]:[]).join(' ').toLowerCase();
+    var zoektekst=[p.naam,TYPES[p.type]||'',(p.producten||[]).join(' '),(p.categorieen||[]).map(function(c){return CATS[c]||c;}).join(' ')].concat((p.kenmerken||[]).map(function(k){return (k.thema||'')+' '+k.tekst;})).concat(p.status?['status gewijzigd '+p.status]:[]).join(' ').toLowerCase();
     lijst.appendChild(a);
-    return {el:a,type:p.type,tekst:zoektekst};
+    return {el:a,type:p.type,cats:p.categorieen||[],tekst:zoektekst};
   });
 
   document.getElementById('meta').textContent=data.length+' partijen · peildatum 3 oktober 2026 · elk kenmerk met bronlink';
 
   function update(){
-    var q=zoek.value.trim().toLowerCase(),t=typeSel.value,zicht=0;
+    var q=zoek.value.trim().toLowerCase(),t=typeSel.value,c=catSel.value,zicht=0;
     var woorden=q?q.split(/\s+/):[];
     kaarten.forEach(function(k){
-      var hit=(!t||k.type===t)&&woorden.every(function(w){return k.tekst.indexOf(w)!==-1;});
+      var hit=(!t||k.type===t)&&(!c||k.cats.indexOf(c)!==-1)&&woorden.every(function(w){return k.tekst.indexOf(w)!==-1;});
       k.el.style.display=hit?'':'none';if(hit)zicht++;
     });
     leeg.style.display=zicht===0?'block':'none';
@@ -207,7 +227,8 @@
   }
   zoek.addEventListener('input',update);
   typeSel.addEventListener('change',update);
-  document.getElementById('wis').addEventListener('click',function(){zoek.value='';typeSel.value='';update();zoek.focus();});
+  catSel.addEventListener('change',update);
+  document.getElementById('wis').addEventListener('click',function(){zoek.value='';typeSel.value='';catSel.value='';update();zoek.focus();});
   update();
 })();
 </script>
