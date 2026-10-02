@@ -217,10 +217,10 @@ textarea{min-height:120px;resize:vertical}
 .kpi span{font-size:12px;color:var(--muted)}
 
 /* Kennisbank */
-.art{padding:16px 18px;border-top:1px solid var(--border);cursor:pointer;display:grid;grid-template-columns:1fr auto;gap:6px 14px}
+.art{padding:16px 18px;border-top:1px solid var(--border);cursor:pointer;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 14px}
 .art:first-child{border-top:0}
 .art:hover{background:var(--surface-2)}
-.art h3{font-size:15px}
+.art h3{font-size:15px;overflow-wrap:anywhere}
 .art .ex{color:var(--muted);font-size:14px;grid-column:1}
 .art .meta{grid-column:1 / -1;font-size:13px;color:var(--muted);display:flex;gap:18px;flex-wrap:wrap}
 .check{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;padding:3px 9px;border-radius:999px}
@@ -428,6 +428,7 @@ footer .legal{grid-column:1/-1;border-top:1px solid #2A3238;padding-top:14px;fon
 <script src="data/kennisbank-eblinqx.js"></script>
 <script src="data/kennisbank-afm.js"></script>
 <script src="data/kennisbank-nhg.js"></script>
+<script src="data/kennisbank-kifid.js"></script>
 <script src="data/begrippen.js"></script>
 <script src="data/faq/hypotheek.js"></script>
 <script src="data/faq/fiscaal-producten.js"></script>
