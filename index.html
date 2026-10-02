@@ -444,25 +444,6 @@ main .wrap>*{min-width:0}
 <script src="data/kennisbank-thema.js"></script>
 <script src="data/kennisbank-kifid.js"></script>
 <script src="data/begrippen.js"></script>
-<script src="data/faq/hypotheek.js"></script>
-<script src="data/faq/fiscaal-producten.js"></script>
-<script src="data/faq/doelgroepen-verzekeringen.js"></script>
-<script src="data/faq/pensioen-compliance.js"></script>
-<script src="data/faq/krediet-praktijk.js"></script>
-<script src="data/faq/extra-hypotheek-normen.js"></script>
-<script src="data/faq/extra-hypotheek-woning.js"></script>
-<script src="data/faq/extra-fiscaal.js"></script>
-<script src="data/faq/extra-producten.js"></script>
-<script src="data/faq/extra-doelgroepen.js"></script>
-<script src="data/faq/extra-verzekeringen.js"></script>
-<script src="data/faq/extra-pensioen.js"></script>
-<script src="data/faq/extra-compliance.js"></script>
-<script src="data/faq/extra-krediet.js"></script>
-<script src="data/faq/extra-praktijk.js"></script>
-<script src="data/faq/software-blinqx.js"></script>
-<script src="data/faq/software-eblinqx.js"></script>
-<script src="data/faq/afm.js"></script>
-<script src="data/faq/nhg-2026.js"></script>
 <script>
 /* ---------- Data ---------- */
 /* Gegevens staan in data/adviseurs.js, data/vragen.js en data/kennisbank.js */
@@ -477,7 +458,38 @@ const VRAGEN=window.VRAGEN_DATA||[];
 /* Demo-statistieken (bekeken/nuttig) los van de kennisbankinhoud */
 const KB_DEMO={k1:{views:188,nuttig:{u1:1,u2:1,u3:1,u4:1,u5:1,u7:1}},k2:{views:402,nuttig:{u1:1,u2:1,u4:1,u5:1,u7:1,u8:1}},k3:{views:356,nuttig:{u1:1,u2:1,u3:1,u4:1,u5:1,u6:1,u7:1}},k4:{views:54,nuttig:{u4:1,u1:1}},k5:{views:511,nuttig:{u1:1,u2:1,u3:1,u4:1,u6:1,u7:1,u8:1}},k6:{views:97,nuttig:{u4:1,u5:1,u1:1}},k7:{views:61,nuttig:{u7:1,u1:1}},k8:{views:289,nuttig:{u1:1,u2:1,u3:1,u4:1,u5:1,u7:1}},k9:{views:7,nuttig:{u1:1}},k10:{views:0,nuttig:{}},k11:{views:0,nuttig:{}},k12:{views:0,nuttig:{}}};
 const BEGRIPPEN=window.BEGRIPPEN||[];
-const FAQ=window.FAQ||[];
+/* FAQ (ruim 1,5 MB) wordt niet render-blokkerend geladen: direct na de eerste weergave op de achtergrond,
+   of eerder zodra iemand zoekt of het tabblad FAQ opent. Volgorde van de bestanden = volgorde in de lijst. */
+const FAQ_BESTANDEN=[
+ 'data/faq/hypotheek.js',
+ 'data/faq/fiscaal-producten.js',
+ 'data/faq/doelgroepen-verzekeringen.js',
+ 'data/faq/pensioen-compliance.js',
+ 'data/faq/krediet-praktijk.js',
+ 'data/faq/extra-hypotheek-normen.js',
+ 'data/faq/extra-hypotheek-woning.js',
+ 'data/faq/extra-fiscaal.js',
+ 'data/faq/extra-producten.js',
+ 'data/faq/extra-doelgroepen.js',
+ 'data/faq/extra-verzekeringen.js',
+ 'data/faq/extra-pensioen.js',
+ 'data/faq/extra-compliance.js',
+ 'data/faq/extra-krediet.js',
+ 'data/faq/extra-praktijk.js',
+ 'data/faq/software-blinqx.js',
+ 'data/faq/software-eblinqx.js',
+ 'data/faq/afm.js',
+ 'data/faq/nhg-2026.js'
+];
+let FAQ=window.FAQ||[];
+let FAQ_GELADEN=FAQ.length>0,FAQ_BELOFTE=null;
+function laadFaq(){
+  if(FAQ_GELADEN)return Promise.resolve();
+  if(FAQ_BELOFTE)return FAQ_BELOFTE;
+  FAQ_BELOFTE=Promise.all(FAQ_BESTANDEN.map(src=>new Promise(ok=>{const sc=document.createElement('script');sc.src=src;sc.async=false;sc.onload=ok;sc.onerror=()=>{console.warn('FAQ-bestand niet geladen: '+src);ok();};document.body.appendChild(sc);})))
+    .then(()=>{FAQ=window.FAQ||[];FAQ_GELADEN=true;naFaqGeladen();});
+  return FAQ_BELOFTE;
+}
 const FAQ_THEMAS={'hypotheek-normen':'Leennormen en maximale hypotheek','hypotheek-nhg-woning':'NHG, woning en verduurzaming','fiscaal-eigen-woning':'Fiscaal: eigen woning','hypotheek-producten':'Hypotheekproducten en rente','doelgroepen':'Doelgroepen','verzekeringen':'Verzekeringen','pensioen':'Pensioen','compliance':'Compliance en Wft','krediet-vermogen':'Krediet en vermogen','praktijk-software':'Praktijk en dossier'};
 /* Hulpmiddelen: losse pagina's en documenten in deze repository */
 const HULP=[
@@ -870,7 +882,7 @@ function autoAnswer(v,force,live){
   for(const h of hits){if(gekozen.length>=(hulp?4:5))break;if(h===hulp)continue;if(h.type==='faq'){if(nFaq>=2)continue;nFaq++;}gekozen.push(h);}
   if(hulp)gekozen.splice(Math.min(1,gekozen.length),0,hulp);
   hits.length=0;hits.push(...gekozen);
-  v.auto={datum:(v.auto&&v.auto.datum)||v.datum||new Date().toISOString(),product:detectProduct(v),hits:hits.slice(0,5),feedback:(v.auto&&v.auto.feedback)||{},fin:(v.auto&&v.auto.fin)||null};
+  v.auto={datum:(v.auto&&v.auto.datum)||v.datum||new Date().toISOString(),product:detectProduct(v),hits:hits.slice(0,5),feedback:(v.auto&&v.auto.feedback)||{},fin:(v.auto&&v.auto.fin)||null,metFaq:FAQ_GELADEN};
   if(live&&FIN.enabled&&FIN.autoAsk&&!v.auto.fin)finAsk(v);
 }
 function autoCard(v){
@@ -901,7 +913,7 @@ function renderShell(){
   $('#who').innerHTML=S.me?`<span class="ikn">${esc(me().naam)}</span>${verif(me())}<button class="btn btn-line btn-sm" data-act="uitloggen">Uitloggen</button>`:`<button class="btn btn-line btn-sm" data-act="inloggen">Inloggen adviseur</button>`;
   const open=VRAGEN.filter(v=>vraagStatus(v)==='open').length;
   $('#tabs').innerHTML=[
-    ['forum','Forum',VRAGEN.length],['kennisbank','Kennisbank',ARTIKELEN.length],['faq','FAQ',FAQ.length],['hulpmiddelen','Hulpmiddelen',HULP.length],['begrippen','Begrippen A-Z',BEGRIPPEN.length],['adviseurs','Adviseurs',USERS.length],['handleiding','Handleiding',null],['voorwie','Voor wie',null]
+    ['forum','Forum',VRAGEN.length],['kennisbank','Kennisbank',ARTIKELEN.length],['faq','FAQ',FAQ_GELADEN?FAQ.length:null],['hulpmiddelen','Hulpmiddelen',HULP.length],['begrippen','Begrippen A-Z',BEGRIPPEN.length],['adviseurs','Adviseurs',USERS.length],['handleiding','Handleiding',null],['voorwie','Voor wie',null]
   ].map(([id,t,n])=>`<button class="tab ${S.tab===id?'on':''}" data-act="tab" data-tab="${id}">${t}${n!=null?`<span class="n">${n}</span>`:''}</button>`).join('')
   +(open?`<span style="margin-left:auto;align-self:center;font-size:13px;color:var(--muted);padding:0 8px;white-space:nowrap">${plural(open,'onbeantwoorde vraag','onbeantwoorde vragen')}</span>`:'');
 }
@@ -1185,6 +1197,7 @@ function viewHulpmiddelen(){
 }
 /* ---------- FAQ ---------- */
 function viewFaq(){
+  if(!FAQ_GELADEN){laadFaq();return `<section>${ookGevonden('faq')}<div class="listhead"><div><h1>Veelgestelde vragen</h1><div class="sub">Vragen worden geladen…</div></div></div><div class="card"><div class="empty" id="faq-laden"><b>FAQ wordt geladen…</b>Een moment geduld.</div></div></section>`;}
   const th=S.faqThema||'alle';
   const list=FAQ.filter(f=>(th==='alle'||f.thema===th)&&zoekt('faq',f));
   const counts={};FAQ.forEach(f=>counts[f.thema]=(counts[f.thema]||0)+1);
@@ -1443,7 +1456,7 @@ function route(){const h=decodeURIComponent(location.hash.slice(1));let m;
   if((m=h.match(/^artikel-(.+)$/))&&ARTIKELEN.find(a=>a.id===m[1]))Object.assign(S,{tab:'kennisbank',view:'artikel',artikel:m[1]});
   else if((m=h.match(/^vraag-(.+)$/))&&VRAGEN.find(v=>v.id===m[1]))Object.assign(S,{tab:'forum',view:'vraag',vraag:m[1]});
   else if(ROUTES.includes(h))Object.assign(S,{tab:h,view:h});else return false;return true;}
-window.addEventListener('hashchange',()=>{if(/^#login-/.test(location.hash)){loginViaLink();return;}if(route())render();});
+window.addEventListener('hashchange',()=>{const d=document.getElementById('login-dlg');if(d&&d.open)d.close();if(/^#login-/.test(location.hash)){loginViaLink();return;}if(route())render();});
 function go(view,extra={}){Object.assign(S,extra,{view});render();zetHash();}
 function openVraag(id){const v=VRAGEN.find(x=>x.id===id);if(!v)return;v.views++;go('vraag',{tab:'forum',vraag:id});}
 function openArtikel(id){const a=ARTIKELEN.find(x=>x.id===id);if(!a)return;a.views++;go('artikel',{tab:'kennisbank',artikel:id});}
@@ -1455,6 +1468,7 @@ document.addEventListener('click',e=>{
   const act=el.dataset.act,id=el.dataset.id;
   switch(act){
     case 'home':case 'tab':{const tab=el.dataset.tab||'forum';S.q='';$('#search').value='';go(tab,{tab});break;}
+    case 'zoek-tab':{const tab=el.dataset.tab;if(tab==='forum')go('forum',{tab,cat:'alle',status:'alle'});else go(tab,{tab});break;}
     case 'cat':go('forum',{tab:'forum',cat:el.dataset.cat});break;
     case 'cat-go':go('forum',{tab:'forum',cat:el.dataset.cat,status:'alle'});break;
     case 'kbcat':go('kennisbank',{tab:'kennisbank',kbCat:el.dataset.cat});break;
@@ -1488,7 +1502,7 @@ document.addEventListener('click',e=>{
     case 'messenger':{const v=VRAGEN.find(x=>x.id===el.dataset.vraag);if(window.Intercom){window.Intercom('showNewMessage',v?v.titel+'\n\n'+v.body:'');}else toast('Intercom Messenger is niet geladen');break;}
     case 'kb-export':{const n=exportKbVoorFin();toast(plural(n,'gecontroleerd artikel geëxporteerd','gecontroleerde artikelen geëxporteerd'));break;}
     case 'quick':{const q=el.dataset.q;if(q==='nieuw')go('forum',{tab:'forum',sort:'nieuw',status:'alle'});else if(q==='populair')go('forum',{tab:'forum',sort:'views',status:'alle'});else go('forum',{tab:'forum',sort:'nieuw',status:'open'});break;}
-    case 'open-faq':{S.q='';$('#search').value='';S.faqOpen=id;go('faq',{tab:'faq',faqThema:(FAQ.find(f=>f.id===id)||{}).thema||'alle',faqMax:1000});setTimeout(()=>{const d=document.getElementById('faq-'+id);if(d){d.open=true;d.scrollIntoView({block:'start'});}},30);break;}
+    case 'open-faq':laadFaq().then(()=>{S.q='';$('#search').value='';S.faqOpen=id;go('faq',{tab:'faq',faqThema:(FAQ.find(f=>f.id===id)||{}).thema||'alle',faqMax:1000});setTimeout(()=>{const d=document.getElementById('faq-'+id);if(d){d.open=true;d.scrollIntoView({block:'start'});}},30);});break;}
     case 'faqthema':go('faq',{tab:'faq',faqThema:el.dataset.thema,faqMax:50});break;
     case 'forummeer':S.forumMax=(S.forumMax||30)+50;render(true);break;
     case 'hulpmeer':{S.hulpOpen=Object.assign({},S.hulpOpen,{[el.dataset.groep]:true});render(true);break;}
@@ -1558,13 +1572,23 @@ document.addEventListener('submit',async e=>{if(e.target.id!=='f-login')return;e
 document.addEventListener('click',e=>{if(e.target.closest('[data-act="login-sluit"]')){const d=$('#login-dlg');if(d)d.close();}});
 herstelLogin();
 $('#search').addEventListener('input',e=>{
-  S.q=e.target.value;
+  S.q=e.target.value;if(S.q.trim())laadFaq();
   S.faqMax=50;S.forumMax=30;
   if(['kennisbank','faq','hulpmiddelen','begrippen'].includes(S.tab))S.view=S.tab;else{S.tab='forum';S.view='forum';}
   render(true);
 });
+/* Na het laden van de FAQ alleen bijwerken wat ervan afhangt (formulieren blijven staan) */
+function naFaqGeladen(){
+  VIND_CACHE.clear();renderShell();
+  if(S.view==='faq'||S.view==='begrippen'){render(true);return;}
+  const o=document.querySelector('#app .ook');if(o)o.outerHTML=ookGevonden(S.view);
+  if(S.view==='vraag'){const v=VRAGEN.find(x=>x.id===S.vraag);const kaart=v&&document.getElementById('auto-'+v.id);
+    if(v&&v.auto&&!v.auto.metFaq&&kaart){autoAnswer(v,true);kaart.outerHTML=autoCard(v);}}
+}
 route();
 render();
+/* FAQ op de achtergrond laden zodra de pagina er staat */
+if(document.readyState==='complete')setTimeout(laadFaq,50);else window.addEventListener('load',()=>setTimeout(laadFaq,50));
 </script>
 </body>
 </html>
