@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nazorgsignalen per klant – Adviesforum</title>
+<meta name="description" content="Zet de belangrijke data van een klant op een tijdlijn: einde rentevaste periode, AOW-datum, 30 jaar renteaftrek, einde verzekeringen. Met adviesactie per signaal, agendabestand (.ics) en printversie.">
+<style>
+@font-face{font-family:Montserrat;font-style:normal;font-weight:400;font-display:swap;src:url(fonts/montserrat-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:500;font-display:swap;src:url(fonts/montserrat-latin-500-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:600;font-display:swap;src:url(fonts/montserrat-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:700;font-display:swap;src:url(fonts/montserrat-latin-700-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:800;font-display:swap;src:url(fonts/montserrat-latin-800-normal.woff2) format('woff2')}
+:root{
+  --geel:#FFD200;--geel-donker:#E6BD00;--geel-zacht:#FFF6C7;
+  --zwart:#141414;--tekst:#1F1F1F;--grijs:#5E5E5E;--lijn:#E4E4E4;--vlak:#F7F7F5;
+  --rood:#C0392B;--rood-zacht:#FFF1F0;--groen:#1E7A4B;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:Montserrat,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;color:var(--tekst);background:#fff;line-height:1.55;font-size:15px;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+button,input,select,textarea{font-family:inherit}
+.balk{background:var(--zwart);color:#fff;font-size:12.5px;padding:8px 24px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.balk a{color:#fff;text-decoration:none;opacity:.88}
+.balk a:hover{opacity:1;text-decoration:underline}
+.kop{background:var(--geel);color:var(--zwart);padding:34px 24px 38px}
+.kop-in{max-width:1180px;margin:0 auto}
+.merk{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.08em;font-size:12px;text-transform:uppercase;margin-bottom:16px}
+.zeshoek{width:22px;height:25px;background:var(--zwart);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);flex:none}
+.terug{display:inline-block;font-size:13.5px;font-weight:700;text-decoration:none;border-bottom:2px solid var(--zwart);margin-bottom:14px}
+.kop h1{margin:0 0 10px;font-size:clamp(27px,4.2vw,40px);line-height:1.12;font-weight:800}
+.kop p{margin:0;max-width:66ch;font-size:15.5px}
+.stempels{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.stempel{display:inline-block;font-size:12px;font-weight:700;background:var(--zwart);color:var(--geel);padding:5px 11px;border-radius:999px}
+.stempel.afm{background:var(--rood);color:#fff}
+.romp{max-width:1180px;margin:0 auto;padding:28px 24px 40px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:start}
+.kaart{border:1px solid var(--lijn);border-radius:14px;padding:18px 20px;margin-bottom:14px;background:#fff;min-width:0}
+.kaart h2{margin:0 0 4px;font-size:17px;font-weight:800}
+.kaart>p.sub{margin:0 0 6px;font-size:13.5px;color:var(--grijs)}
+.raster{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:4px 14px}
+.veld{min-width:0;margin-top:8px}
+.veld.breed{grid-column:1/-1}
+.veld label{display:block;font-weight:600;font-size:13.5px;margin-bottom:5px}
+.veld .tip{display:block;font-size:12px;color:var(--grijs);margin-top:4px}
+.veld input,.veld select{width:100%;padding:10px 12px;border:1px solid #CFCFCF;border-radius:9px;font-size:15px;background:#fff;color:var(--tekst);min-width:0}
+.veld input:focus,.veld select:focus{outline:3px solid rgba(255,210,0,.6);outline-offset:1px;border-color:#9A9A9A}
+.vink{display:flex;gap:9px;align-items:flex-start;margin-top:10px;font-size:14px}
+.vink input{margin-top:3px;width:18px;height:18px;flex:none;accent-color:var(--zwart)}
+.deel{border:1px dashed #CFCFCF;border-radius:12px;padding:6px 14px 14px;margin-top:12px;background:var(--vlak)}
+.deel-kop{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:8px}
+.deel-kop b{font-size:14px}
+.knop{border-radius:999px;padding:10px 18px;font-size:14px;font-weight:700;cursor:pointer;border:1px solid var(--zwart);background:var(--zwart);color:#fff}
+.knop:hover{background:#000}
+.knop.licht{background:#fff;color:var(--zwart);border-color:#CFCFCF}
+.knop.licht:hover{background:var(--vlak)}
+.knop.mini{padding:5px 12px;font-size:12.5px}
+.knoppen{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.uitkolom{min-width:0;position:sticky;top:16px}
+.samenvat{background:var(--zwart);color:#fff;border-radius:14px;padding:18px 20px;margin-bottom:14px}
+.samenvat .lbl{font-size:12.5px;font-weight:600;opacity:.8}
+.samenvat .groot{font-size:26px;font-weight:800;color:var(--geel);line-height:1.2;margin:4px 0 2px;word-break:break-word}
+.samenvat .onder{font-size:13px;opacity:.85}
+.tijdlijn{list-style:none;margin:0;padding:0 0 0 18px;border-left:3px solid var(--geel)}
+.tijdlijn li{position:relative;padding:0 0 14px 14px}
+.tijdlijn li::before{content:"";position:absolute;left:-27px;top:5px;width:14px;height:14px;border-radius:50%;background:var(--zwart);border:3px solid var(--geel)}
+.tijdlijn li.voorbij{opacity:.55}
+.tijdlijn li.voorbij::before{background:#fff;border-color:#BDBDBD}
+.tijdlijn li.binnenkort::before{background:var(--rood)}
+.tl-datum{font-size:12.5px;font-weight:800;letter-spacing:.03em;text-transform:uppercase;color:var(--grijs)}
+.tl-datum .label{display:inline-block;margin-left:6px;font-size:11px;padding:1px 8px;border-radius:999px;background:var(--geel-zacht);color:#7A5A00;border:1px solid var(--geel-donker);text-transform:none;letter-spacing:0}
+.tl-datum .label.rood{background:var(--rood-zacht);color:#A5281B;border-color:var(--rood)}
+.tl-titel{font-weight:800;font-size:15px;margin:2px 0}
+.tl-actie{font-size:13.8px;color:#333}
+.leeg{color:var(--grijs);font-size:14px}
+.blok{border-radius:0 10px 10px 0;padding:12px 16px;font-size:14px;margin:12px 0}
+.blok h4{margin:0 0 4px;font-size:13px;font-weight:800;letter-spacing:.04em;text-transform:uppercase}
+.blok p{margin:0}.blok p+p{margin-top:6px}
+.blok.regel{background:var(--vlak);border-left:4px solid var(--zwart)}
+.blok.let-op{background:var(--geel-zacht);border-left:4px solid var(--geel-donker)}
+.blok.let-op h4{color:#7A5A00}
+.status{font-size:13px;font-weight:600;color:var(--groen);margin-top:8px;min-height:1em}
+.onderaan{max-width:1180px;margin:0 auto;padding:0 24px 16px}
+.onderaan h2{font-size:20px;font-weight:800;margin:0 0 6px}
+.bronnen{font-size:14px;padding-left:20px}
+.bronnen li{margin:4px 0;overflow-wrap:anywhere}
+.compliance{max-width:1132px;margin:10px auto 0;background:var(--rood-zacht);border-left:4px solid var(--rood);border-radius:0 10px 10px 0;padding:14px 18px;font-size:14px}
+.compliance strong{color:#A5281B}
+.voet{max-width:1180px;margin:0 auto;padding:24px 24px 40px;font-size:12.5px;color:var(--grijs)}
+.voet a{color:var(--zwart);font-weight:600}
+@media (max-width:960px){.romp{grid-template-columns:minmax(0,1fr)}.uitkolom{position:static}}
+@media (max-width:560px){
+  .balk,.kop,.romp,.voet,.onderaan{padding-left:16px;padding-right:16px}
+  .compliance{margin-left:16px;margin-right:16px}
+  .raster{grid-template-columns:minmax(0,1fr)}
+  .kaart{padding:16px}
+}
+</style>
+</head>
+<body>
+
+<div class="balk">
+  <span>Adviesforum &middot; hulpmiddelen voor financieel adviseurs</span>
+  <span><a href="index.html">Naar het forum</a></span>
+</div>
+
+<header class="kop">
+  <div class="kop-in">
+    <div class="merk"><span class="zeshoek" aria-hidden="true"></span>Adviesforum &middot; Hulpmiddelen</div>
+    <a class="terug" href="index.html#hulpmiddelen">&larr; Terug naar de hulpmiddelen</a>
+    <h1>Nazorgsignalen per klant</h1>
+    <p>Vul de belangrijke einddata van een klant in en krijg een tijdlijn met actiemomenten: wanneer bel je over de rentevaste periode, wanneer komt de AOW-datum in beeld, wanneer stopt de renteaftrek? Zet de signalen met één klik in je agenda.</p>
+    <div class="stempels">
+      <span class="stempel afm">AFM-relevant &middot; zorgplicht na het passeren</span>
+      <span class="stempel">Indicatief &middot; niets wordt opgeslagen</span>
+    </div>
+  </div>
+</header>
+
+<main class="romp">
+  <div class="invoerkolom">
+    <div class="kaart">
+      <h2>Klant</h2>
+      <div class="raster">
+        <div class="veld"><label for="naam">Klantnaam (optioneel)</label><input id="naam" type="text" autocomplete="off"><span class="tip">Alleen voor de titel van agenda en print; wordt niet opgeslagen.</span></div>
+        <div class="veld"><label for="geb">Geboortedatum</label><input id="geb" type="date"><span class="tip">Voor de AOW-datum volgens de SVB-tabel.</span></div>
+      </div>
+    </div>
+
+    <div class="kaart">
+      <h2>Hypotheek</h2>
+      <p class="sub">Voeg per leningdeel de einddata toe die je kent. Lege velden worden overgeslagen.</p>
+      <div id="delen"></div>
+      <div class="knoppen"><button class="knop licht mini" type="button" id="deel-plus">+ Leningdeel toevoegen</button></div>
+      <div class="blok regel"><h4>30 jaar renteaftrek</h4><p>Hypotheekrente is maximaal 30 jaar aftrekbaar. Voor een eigenwoningschuld die op 31 december 2000 al bestond, begon die termijn op 1 januari 2001 (einde aftrek dus uiterlijk 1 januari 2031). Vul de startdatum van de termijn in; bij latere leningen is dat meestal de ingangsdatum.</p></div>
+    </div>
+
+    <div class="kaart">
+      <h2>Verzekeringen en opbouw</h2>
+      <div class="raster">
+        <div class="veld"><label for="orv">Einde overlijdensrisicoverzekering</label><input id="orv" type="date"></div>
+        <div class="veld"><label for="aov">Einde arbeidsongeschiktheidsverzekering</label><input id="aov" type="date"></div>
+        <div class="veld"><label for="lijf">Einde lijfrente / banksparen (opbouw)</label><input id="lijf" type="date"></div>
+        <div class="veld"><label for="lijf-soort">Soort</label>
+          <select id="lijf-soort"><option value="lijfrente">Lijfrente (verzekering of bank)</option><option value="ew">Spaar- of beleggingsrekening eigen woning</option><option value="kew">Kapitaalverzekering eigen woning</option></select></div>
+      </div>
+    </div>
+
+    <div class="knoppen">
+      <button class="knop" type="button" id="ics">Agendabestand (.ics) downloaden</button>
+      <button class="knop licht" type="button" id="print">Printversie</button>
+      <button class="knop licht" type="button" id="wis">Wissen</button>
+    </div>
+    <div class="status" id="status" aria-live="polite"></div>
+  </div>
+
+  <div class="uitkolom">
+    <div class="samenvat">
+      <div class="lbl">Eerstvolgende actie</div>
+      <div class="groot" id="eerst">Vul gegevens in</div>
+      <div class="onder" id="eerst-onder">De tijdlijn verschijnt hieronder.</div>
+    </div>
+    <div class="kaart">
+      <h2>Tijdlijn</h2>
+      <p class="sub" id="tl-sub">Signalen vanaf vandaag; eerdere momenten staan grijs.</p>
+      <ol class="tijdlijn" id="tijdlijn"></ol>
+      <p class="leeg" id="tl-leeg">Nog geen signalen. Vul een geboortedatum of een einddatum in.</p>
+    </div>
+    <div class="blok let-op"><h4>Zorgplicht na het passeren</h4><p>De zorgplicht stopt niet bij de passeerdatum. Volgens de AFM-leidraad hoort bij hypotheekadvies passende nazorg op basis van de afspraken met de klant, en de AFM noemt het einde van de rentevaste periode en aflossingsvrije delen richting pensioen als momenten om klanten te activeren. Deze tijdlijn maakt die momenten concreet. Leg vast wanneer je contact hebt gezocht en wat je hebt geadviseerd.</p></div>
+  </div>
+</main>
+
+<section class="onderaan">
+  <h2>Bronnen en aannames</h2>
+  <ul class="bronnen">
+    <li>AOW-leeftijd: wettelijk vastgesteld tot en met 2031 (67 jaar in 2024–2027, 67 jaar en 3 maanden in 2028–2031). Voor latere jaren rekent dit hulpmiddel voorlopig met 67 jaar en 3 maanden. Bron: <a href="https://www.svb.nl/nl/aow/aow-leeftijd/uw-aow-leeftijd" rel="noopener">SVB: uw AOW-leeftijd</a> en <a href="https://www.rijksoverheid.nl/themas/belastingen-uitkeringen-en-toeslagen/algemene-ouderdomswet-aow/aow-leeftijd" rel="noopener">Rijksoverheid: AOW-leeftijd</a>, <a href="https://www.rijksoverheid.nl/documenten/kamerstukken/2025/11/07/kamerbrief-vaststelling-aow-leeftijd-2031-en-pensioenrichtleeftijd-2027" rel="noopener">Kamerbrief vaststelling AOW-leeftijd 2031</a>.</li>
+    <li>Renteaftrek eigen woning maximaal 30 jaar; overgangsrecht voor eigenwoningschuld per 31 december 2012 en voor schuld die op 31 december 2000 al bestond: <a href="https://www.belastingdienst.nl/wps/wcm/connect/nl/koopwoning/content/hypotheekrente-aftrekken" rel="noopener">Belastingdienst: mag ik mijn hypotheekrente altijd aftrekken?</a>.</li>
+    <li>Nazorg: <a href="https://www.afm.nl/~/profmedia/files/wet-regelgeving/beleidsuitingen/leidraden/leidraad-hypotheekadvisering-herzien-2026.pdf" rel="noopener">AFM: Leidraad Hypotheekadvisering (herzien 2026)</a>, <a href="https://www.afm.nl/nl-nl/sector/adviseurs-bemiddelaars-en-gevolmachtigde-agenten/nazorg/serviceabonnementen" rel="noopener">AFM: nazorg en serviceabonnementen</a>, <a href="https://www.afm.nl/~/profmedia/files/rapporten/2023/klanten-aflossingsvrij-activeren.pdf" rel="noopener">AFM: klanten met een aflossingsvrije hypotheek activeren (2023)</a>.</li>
+    <li>Agendabestand volgens iCalendar (RFC 5545). De actiemomenten (6 en 3 maanden voor rentevast-einde, enzovoort) zijn praktijkkeuzes van dit hulpmiddel, geen wettelijke termijnen.</li>
+  </ul>
+</section>
+
+<div class="compliance">
+  <strong>Compliance:</strong> dit hulpmiddel geeft een indicatieve signaallijst en is geen advies. Controleer de AOW-datum bij de SVB en de fiscale positie (overgangsrecht, 30-jaarstermijn) in het dossier en bij de Belastingdienst. Leg contactmomenten en adviezen vast in het klantdossier.
+</div>
+
+<footer class="voet">
+  Adviesforum &middot; collegiale kennisdeling voor financieel adviseurs &middot; <a href="index.html#hulpmiddelen">Alle hulpmiddelen</a> &middot; <a href="privacy.html">Privacy</a>. Er wordt niets opgeslagen of verstuurd: alles blijft in je eigen browser. Inhoud gecontroleerd op 2 oktober 2026.
+</footer>
+
+<script>
+(function () {
+  'use strict';
+  function $(id) { return document.getElementById(id); }
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+
+  /* ---------- Datums ---------- */
+  var MAANDEN = ['januari', 'februari', 'maart', 'april', 'mei', 'juni', 'juli', 'augustus', 'september', 'oktober', 'november', 'december'];
+  function parse(v) {
+    var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(v || ''); if (!m) return null;
+    var d = new Date(+m[1], +m[2] - 1, +m[3]); return isNaN(d) ? null : d;
+  }
+  // Maanden optellen; bestaat de dag niet in de doelmaand, dan de laatste dag van die maand
+  function plusMaanden(d, n) {
+    var y = d.getFullYear(), m = d.getMonth() + n, dag = d.getDate();
+    var laatste = new Date(y, m + 1, 0).getDate();
+    return new Date(y, m, Math.min(dag, laatste));
+  }
+  function nl(d) { return d.getDate() + ' ' + MAANDEN[d.getMonth()] + ' ' + d.getFullYear(); }
+  function ymd(d) { return d.getFullYear() + ('0' + (d.getMonth() + 1)).slice(-2) + ('0' + d.getDate()).slice(-2); }
+  function vandaag() { var n = new Date(); return new Date(n.getFullYear(), n.getMonth(), n.getDate()); }
+
+  /* ---------- AOW-leeftijd (SVB / Rijksoverheid, vastgesteld t/m 2031) ----------
+     Per kalenderjaar waarin de AOW-leeftijd wordt bereikt: [jaren, maanden]. Voor 2013: 65 jaar. */
+  var AOW = { vastgesteldTot: 2031, tabel: { 2013: [65, 1], 2014: [65, 2], 2015: [65, 3], 2016: [65, 6], 2017: [65, 9], 2018: [66, 0], 2019: [66, 4], 2020: [66, 4],
+    2021: [66, 4], 2022: [66, 7], 2023: [66, 10], 2024: [67, 0], 2025: [67, 0], 2026: [67, 0], 2027: [67, 0], 2028: [67, 3], 2029: [67, 3], 2030: [67, 3], 2031: [67, 3] } };
+  function aowDatum(gb) {
+    var t = AOW.tabel, laatste = t[AOW.vastgesteldTot];
+    for (var y = gb.getFullYear() + 65; y <= gb.getFullYear() + 72; y++) {
+      var l = y < 2013 ? [65, 0] : (t[y] || laatste);
+      var d = plusMaanden(new Date(gb.getFullYear(), gb.getMonth(), gb.getDate()), l[0] * 12 + l[1]);
+      if (d.getFullYear() === y) return { datum: d, jaren: l[0], maanden: l[1], voorlopig: y > AOW.vastgesteldTot };
+    }
+    var d2 = plusMaanden(gb, laatste[0] * 12 + laatste[1]);
+    return { datum: d2, jaren: laatste[0], maanden: laatste[1], voorlopig: true };
+  }
+  window.__aowDatum = aowDatum; // voor tests
+
+  /* ---------- Leningdelen ---------- */
+  var delenEl = $('delen'), teller = 0;
+  function deelHtml(n) {
+    return '<div class="deel" data-deel="' + n + '">' +
+      '<div class="deel-kop"><b>Leningdeel</b><button class="knop licht mini" type="button" data-weg="' + n + '" aria-label="Leningdeel verwijderen">Verwijderen</button></div>' +
+      '<div class="raster">' +
+      '<div class="veld"><label for="d' + n + '-naam">Naam of nummer</label><input id="d' + n + '-naam" type="text" autocomplete="off" placeholder="bijv. deel 1"></div>' +
+      '<div class="veld"><label for="d' + n + '-vorm">Aflosvorm</label><select id="d' + n + '-vorm"><option value="ann">Annuïtair</option><option value="lin">Lineair</option><option value="af">Aflossingsvrij</option><option value="ov">Spaar/beleggen/overig</option></select></div>' +
+      '<div class="veld"><label for="d' + n + '-rv">Einde rentevaste periode</label><input id="d' + n + '-rv" type="date"></div>' +
+      '<div class="veld"><label for="d' + n + '-eind">Einde looptijd</label><input id="d' + n + '-eind" type="date"></div>' +
+      '<div class="veld"><label for="d' + n + '-ra">Start 30-jaarstermijn renteaftrek</label><input id="d' + n + '-ra" type="date"><span class="tip">Optioneel. Bij schuld van vóór 2001: 1-1-2001.</span></div>' +
+      '<div class="veld"><label class="vink" style="font-weight:600;margin-top:28px"><input id="d' + n + '-og" type="checkbox"> Overgangsrecht (bestaande schuld per 31-12-2012)</label></div>' +
+      '</div></div>';
+  }
+  function voegDeelToe() {
+    teller++;
+    delenEl.insertAdjacentHTML('beforeend', deelHtml(teller));
+    var n = teller;
+    delenEl.querySelector('[data-deel="' + n + '"]').querySelectorAll('input,select').forEach(function (el) { el.addEventListener('input', bereken); el.addEventListener('change', bereken); });
+    delenEl.querySelector('[data-weg="' + n + '"]').addEventListener('click', function () {
+      var el = delenEl.querySelector('[data-deel="' + n + '"]'); if (el) el.remove(); bereken();
+    });
+  }
+  $('deel-plus').addEventListener('click', function () { voegDeelToe(); bereken(); });
+  voegDeelToe();
+
+  ['naam', 'geb', 'orv', 'aov', 'lijf', 'lijf-soort'].forEach(function (id) { $(id).addEventListener('input', bereken); $(id).addEventListener('change', bereken); });
+
+  /* ---------- Signalen ---------- */
+  var signalen = [];
+  function bereken() {
+    var s = [];
+    function voeg(datum, titel, actie, cat) { if (datum && !isNaN(datum)) s.push({ datum: datum, titel: titel, actie: actie, cat: cat }); }
+    var gb = parse($('geb').value), aow = null;
+    if (gb) {
+      aow = aowDatum(gb);
+      var lft = aow.jaren + ' jaar' + (aow.maanden ? ' en ' + aow.maanden + ' maanden' : '');
+      var vl = aow.voorlopig ? ' Let op: deze AOW-leeftijd is nog niet wettelijk vastgesteld (voorlopig).' : '';
+      voeg(plusMaanden(aow.datum, -60), 'Vijf jaar voor de AOW-datum', 'Pensioengesprek: verwacht inkomen na AOW en pensioen (mijnpensioenoverzicht.nl), betaalbaarheid van de woonlasten, aflossen of herstructureren overwegen.', 'aow');
+      voeg(plusMaanden(aow.datum, -12), 'Eén jaar voor de AOW-datum', 'Definitief inkomensbeeld na pensionering, keuzes in pensioen en lijfrente afstemmen, woonlasten toetsen aan het nieuwe inkomen.', 'aow');
+      voeg(aow.datum, 'AOW-datum (' + lft + ')', 'Klant bereikt de AOW-leeftijd. Controleer of inkomen, hypotheek en verzekeringen aansluiten op de nieuwe situatie.' + vl, 'aow');
+    }
+    delenEl.querySelectorAll('.deel').forEach(function (el, i) {
+      var n = el.getAttribute('data-deel');
+      var naam = ($('d' + n + '-naam').value || '').trim() || ('leningdeel ' + (i + 1));
+      var vorm = $('d' + n + '-vorm').value;
+      var rv = parse($('d' + n + '-rv').value), eind = parse($('d' + n + '-eind').value), ra = parse($('d' + n + '-ra').value), og = $('d' + n + '-og').checked;
+      if (rv) {
+        voeg(plusMaanden(rv, -6), 'Rentevast ' + naam + ': nog 6 maanden', 'Klant benaderen: verlengingsvoorstel van de geldverstrekker afwachten of opvragen, situatie actualiseren, alternatieven (rentevaste periode, oversluiten, extra aflossen) verkennen.', 'rente');
+        voeg(plusMaanden(rv, -3), 'Rentevast ' + naam + ': nog 3 maanden', 'Keuze voor de nieuwe rentevaste periode maken en het advies vastleggen. Let op de reactietermijn in het verlengingsvoorstel.', 'rente');
+        voeg(rv, 'Einde rentevaste periode ' + naam, 'Nieuwe rente gaat in. Controleer de nieuwe maandlast en of de gekozen periode is verwerkt.', 'rente');
+      }
+      if (eind) {
+        if (vorm === 'af') {
+          voeg(plusMaanden(eind, -60), 'Aflossingsvrij ' + naam + ': nog 5 jaar', 'Bespreek hoe het deel aan het einde wordt afgelost of verlengd: eigen vermogen, verkoop, verlenging bij de geldverstrekker. Toets de betaalbaarheid na pensionering.', 'aflos');
+          voeg(plusMaanden(eind, -12), 'Aflossingsvrij ' + naam + ': nog 1 jaar', 'Concreet plan voor aflossing of verlenging vastleggen en tijdig aanvragen.', 'aflos');
+        } else {
+          voeg(plusMaanden(eind, -12), 'Einde looptijd ' + naam + ': nog 1 jaar', 'Nagaan of het deel volledig wordt afgelost; bij een spaar- of beleggingsconstructie de verwachte waarde vergelijken met de schuld.', 'aflos');
+        }
+        voeg(eind, 'Einde looptijd ' + naam, 'Leningdeel loopt af. Controleer de aflossing en of gekoppelde verzekeringen nog nodig zijn.', 'aflos');
+        if (aow && eind > aow.datum) voeg(aow.datum, naam + ' loopt door na de AOW-datum', 'Toets of de lasten van dit deel na pensionering betaalbaar blijven (AFM-aandachtspunt).', 'aow');
+      }
+      if (ra) {
+        var r30 = plusMaanden(ra, 360);
+        voeg(plusMaanden(r30, -24), 'Renteaftrek ' + naam + ': nog 2 jaar', 'De 30-jaarstermijn loopt af: bereken de netto maandlast zonder aftrek en bespreek aflossen of herstructureren.', 'fisc');
+        voeg(r30, 'Einde 30 jaar renteaftrek ' + naam, 'Rente is vanaf nu niet meer aftrekbaar voor dit deel. Controleer de aangifte en de voorlopige aanslag.', 'fisc');
+      }
+      if (og) {
+        voeg(rv ? plusMaanden(rv, -6) : null, 'Overgangsrecht ' + naam + ' bewaken', 'Bij verlengen, oversluiten of verhogen: let op behoud van het overgangsrecht (schuld per 31-12-2012). Leg de fiscale historie vast.', 'fisc');
+      }
+    });
+    var orv = parse($('orv').value), aov = parse($('aov').value), lijf = parse($('lijf').value);
+    if (orv) {
+      voeg(plusMaanden(orv, -12), 'Overlijdensrisicoverzekering: nog 1 jaar', 'Is dekking na de einddatum nog nodig? Vergelijk de resterende schuld en de nabestaandenbehoefte met de dekking.', 'verz');
+      voeg(orv, 'Einde overlijdensrisicoverzekering', 'Dekking eindigt. Controleer of dit aansluit op de restschuld en de wensen van de klant.', 'verz');
+    }
+    if (aov) {
+      voeg(plusMaanden(aov, -12), 'AOV: nog 1 jaar', 'Bespreek inkomen bij arbeidsongeschiktheid tot de AOW-datum, verlengingsmogelijkheden en de aansluiting op pensioen.', 'verz');
+      voeg(aov, 'Einde arbeidsongeschiktheidsverzekering', 'Dekking eindigt. Controleer of de einddatum aansluit op de AOW-datum of de geplande stopdatum.', 'verz');
+      if (aow && aov < plusMaanden(aow.datum, -12)) voeg(aov, 'AOV stopt ruim voor de AOW-datum', 'Er ontstaat een periode zonder dekking. Bespreek of dit een bewuste keuze is en leg dat vast.', 'verz');
+    }
+    if (lijf) {
+      var soort = $('lijf-soort').value;
+      var tekst = soort === 'lijfrente' ? 'Keuze uitkeringsfase voorbereiden: ingangsdatum, duur en uitvoerder; fiscale voorwaarden controleren.'
+        : 'Waarde vergelijken met de bijbehorende schuld en aflossing regelen; fiscale vrijstelling en voorwaarden controleren.';
+      voeg(plusMaanden(lijf, -12), (soort === 'lijfrente' ? 'Lijfrente' : 'Eigenwoningproduct') + ': nog 1 jaar', tekst, 'opbouw');
+      voeg(lijf, 'Einde opbouw ' + (soort === 'lijfrente' ? 'lijfrente' : soort === 'ew' ? 'spaar- of beleggingsrekening eigen woning' : 'kapitaalverzekering eigen woning'), 'Einddatum bereikt: uitkering of aflossing afronden en vastleggen.', 'opbouw');
+    }
+    s.sort(function (a, b) { return a.datum - b.datum || a.titel.localeCompare(b.titel); });
+    signalen = s;
+    toon();
+  }
+
+  function toon() {
+    var nu = vandaag(), over90 = new Date(nu.getTime() + 90 * 864e5);
+    var el = $('tijdlijn');
+    el.innerHTML = signalen.map(function (x) {
+      var voorbij = x.datum < nu, kort = !voorbij && x.datum <= over90;
+      return '<li class="' + (voorbij ? 'voorbij' : kort ? 'binnenkort' : '') + '"><div class="tl-datum">' + esc(nl(x.datum)) +
+        (voorbij ? '<span class="label">verstreken</span>' : kort ? '<span class="label rood">binnen 3 maanden</span>' : '') + '</div>' +
+        '<div class="tl-titel">' + esc(x.titel) + '</div><div class="tl-actie">' + esc(x.actie) + '</div></li>';
+    }).join('');
+    $('tl-leeg').style.display = signalen.length ? 'none' : '';
+    var eerst = signalen.filter(function (x) { return x.datum >= nu; })[0];
+    if (eerst) { $('eerst').textContent = nl(eerst.datum); $('eerst-onder').textContent = eerst.titel; }
+    else if (signalen.length) { $('eerst').textContent = 'Geen toekomstige signalen'; $('eerst-onder').textContent = 'Alle momenten liggen in het verleden.'; }
+    else { $('eerst').textContent = 'Vul gegevens in'; $('eerst-onder').textContent = 'De tijdlijn verschijnt hieronder.'; }
+  }
+
+  /* ---------- iCalendar (RFC 5545) ---------- */
+  function icsTekst(s) { return String(s).replace(/\\/g, '\\\\').replace(/;/g, '\\;').replace(/,/g, '\\,').replace(/\r?\n/g, '\\n'); }
+  // Vouwen op octets: max. 75 octets per regel (excl. CRLF); vervolgregel begint met een spatie. Nooit midden in een UTF-8-teken.
+  function vouw(regel) {
+    var enc = new TextEncoder(), uit = [], huidig = '', octets = 0, max = 75;
+    for (var i = 0; i < regel.length; i++) {
+      var cp = regel.codePointAt(i), ch = String.fromCodePoint(cp);
+      if (cp > 0xFFFF) i++;
+      var n = enc.encode(ch).length;
+      if (octets + n > max) { uit.push(huidig); huidig = ' '; octets = 1; }
+      huidig += ch; octets += n;
+    }
+    uit.push(huidig);
+    return uit.join('\r\n');
+  }
+  function maakIcs() {
+    var naam = ($('naam').value || '').trim();
+    var nu = new Date();
+    var stamp = nu.getUTCFullYear() + ('0' + (nu.getUTCMonth() + 1)).slice(-2) + ('0' + nu.getUTCDate()).slice(-2) + 'T' +
+      ('0' + nu.getUTCHours()).slice(-2) + ('0' + nu.getUTCMinutes()).slice(-2) + ('0' + nu.getUTCSeconds()).slice(-2) + 'Z';
+    var basis = Math.random().toString(36).slice(2, 10) + nu.getTime().toString(36);
+    var r = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Adviesforum//Nazorgsignalen//NL', 'CALSCALE:GREGORIAN', 'METHOD:PUBLISH',
+      'X-WR-CALNAME:' + icsTekst('Nazorg' + (naam ? ' ' + naam : ''))];
+    var nuDag = vandaag();
+    signalen.filter(function (x) { return x.datum >= nuDag; }).forEach(function (x, i) {
+      var volgende = new Date(x.datum.getFullYear(), x.datum.getMonth(), x.datum.getDate() + 1);
+      r.push('BEGIN:VEVENT', 'UID:' + basis + '-' + i + '@adviesforum', 'DTSTAMP:' + stamp,
+        'DTSTART;VALUE=DATE:' + ymd(x.datum), 'DTEND;VALUE=DATE:' + ymd(volgende),
+        'SUMMARY:' + icsTekst((naam ? naam + ': ' : 'Nazorg: ') + x.titel),
+        'DESCRIPTION:' + icsTekst(x.actie + '\nIndicatief signaal uit het Adviesforum-hulpmiddel Nazorgsignalen. Leg contact en advies vast in het klantdossier.'),
+        'CATEGORIES:Nazorg', 'TRANSP:TRANSPARENT', 'END:VEVENT');
+    });
+    r.push('END:VCALENDAR');
+    return r.map(vouw).join('\r\n') + '\r\n';
+  }
+  window.__maakIcs = maakIcs; // voor tests
+  $('ics').addEventListener('click', function () {
+    var toekomst = signalen.filter(function (x) { return x.datum >= vandaag(); }).length;
+    if (!toekomst) { $('status').textContent = 'Er zijn geen toekomstige signalen om in de agenda te zetten.'; return; }
+    var blob = new Blob([maakIcs()], { type: 'text/calendar;charset=utf-8' });
+    var a = document.createElement('a');
+    var naam = ($('naam').value || '').trim().replace(/[^A-Za-z0-9_-]+/g, '-').replace(/^-+|-+$/g, '');
+    a.href = URL.createObjectURL(blob); a.download = 'nazorg' + (naam ? '-' + naam : '') + '.ics';
+    document.body.appendChild(a); a.click();
+    setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 1000);
+    $('status').textContent = toekomst + ' afspraken in het agendabestand gezet (hele-dag-items).';
+  });
+
+  /* ---------- Print ---------- */
+  $('print').addEventListener('click', function () {
+    var naam = ($('naam').value || '').trim(), gb = parse($('geb').value), nu = vandaag();
+    var aow = gb ? aowDatum(gb) : null;
+    var rijen = signalen.map(function (x) {
+      return '<tr' + (x.datum < nu ? ' class="vb"' : '') + '><td>' + esc(nl(x.datum)) + '</td><td><b>' + esc(x.titel) + '</b><br>' + esc(x.actie) + '</td><td class="vk">&#9744;</td></tr>';
+    }).join('');
+    var css = 'body{font-family:Montserrat,Arial,sans-serif;color:#141414;margin:28px;font-size:12.5px;line-height:1.45}h1{font-size:20px;margin:0 0 4px}h2{font-size:15px;border-bottom:3px solid #FFD200;padding-bottom:4px;margin:18px 0 8px}' +
+      'table{border-collapse:collapse;width:100%}td,th{border:1px solid #ccc;padding:6px 8px;text-align:left;vertical-align:top}th{background:#FFF6C7}td:first-child{white-space:nowrap}.vk{width:40px;text-align:center;font-size:15px}.vb{color:#888}.klein{font-size:11px;color:#555}@media print{body{margin:12mm}tr{break-inside:avoid}}';
+    var html = '<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><title>Nazorgsignalen' + (naam ? ' ' + esc(naam) : '') + '</title><style>' + css + '</style></head><body>' +
+      '<h1>Nazorgsignalen' + (naam ? ': ' + esc(naam) : '') + '</h1><div class="klein">Afgedrukt op ' + esc(nl(nu)) + '. Indicatief overzicht uit het Adviesforum-hulpmiddel; geen advies.</div>' +
+      (aow ? '<p>AOW-datum: <b>' + esc(nl(aow.datum)) + '</b> (' + aow.jaren + ' jaar' + (aow.maanden ? ' en ' + aow.maanden + ' maanden' : '') + (aow.voorlopig ? ', voorlopig' : '') + '). Controleer bij de SVB.</p>' : '') +
+      '<h2>Tijdlijn</h2>' + (rijen ? '<table><tr><th>Datum</th><th>Signaal en adviesactie</th><th>Gedaan</th></tr>' + rijen + '</table>' : '<p>Geen signalen.</p>') +
+      '<p class="klein">Zorgplicht na het passeren: leg per signaal vast wanneer contact is gezocht en wat is geadviseerd. Bronnen: svb.nl, rijksoverheid.nl, belastingdienst.nl, afm.nl.</p></body></html>';
+    var w = window.open('', '_blank');
+    if (!w) { $('status').textContent = 'Je browser blokkeert het printvenster. Sta pop-ups toe voor deze pagina.'; return; }
+    w.document.open(); w.document.write(html); w.document.close();
+    w.focus(); setTimeout(function () { try { w.print(); } catch (e) {} }, 300);
+  });
+
+  $('wis').addEventListener('click', function () {
+    ['naam', 'geb', 'orv', 'aov', 'lijf'].forEach(function (id) { $(id).value = ''; });
+    $('lijf-soort').value = 'lijfrente';
+    delenEl.innerHTML = ''; voegDeelToe(); $('status').textContent = ''; bereken();
+  });
+
+  bereken();
+})();
+</script>
+</body>
+</html>
