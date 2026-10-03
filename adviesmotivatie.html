@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Adviesmotivatie hypotheek – Adviesforum</title>
+<meta name="description" content="Stel de ruggengraat van een hypotheekadviesrapport samen: klantprofiel, keuze en motivering per adviesonderdeel en een controlelijst op basis van de AFM Leidraad Hypotheekadvisering 2026.">
+<style>
+@font-face{font-family:Montserrat;font-style:normal;font-weight:400;font-display:swap;src:url(fonts/montserrat-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:500;font-display:swap;src:url(fonts/montserrat-latin-500-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:600;font-display:swap;src:url(fonts/montserrat-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:700;font-display:swap;src:url(fonts/montserrat-latin-700-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:800;font-display:swap;src:url(fonts/montserrat-latin-800-normal.woff2) format('woff2')}
+
+:root{
+  --geel:#FFD200;--geel-donker:#E6BD00;--geel-zacht:#FFF6C7;
+  --zwart:#141414;--tekst:#1F1F1F;--grijs:#5E5E5E;--lijn:#E4E4E4;--vlak:#F7F7F5;
+  --rood:#C0392B;--rood-zacht:#FFF1F0;--groen:#1E7A4B;--groen-zacht:#EAF6EF;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:Montserrat,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  color:var(--tekst);background:#fff;line-height:1.55;font-size:15px;-webkit-font-smoothing:antialiased;overflow-wrap:break-word}
+a{color:inherit}
+button,input,select,textarea{font-family:inherit}
+
+.balk{background:var(--zwart);color:#fff;font-size:12.5px;padding:8px 24px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.balk a{color:#fff;text-decoration:none;opacity:.88}
+.balk a:hover{opacity:1;text-decoration:underline}
+
+.kop{background:var(--geel);color:var(--zwart);padding:34px 24px 38px}
+.kop-in{max-width:1180px;margin:0 auto}
+.merk{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.08em;font-size:12px;text-transform:uppercase;margin-bottom:16px}
+.zeshoek{width:22px;height:25px;background:var(--zwart);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);flex:none}
+.terug{display:inline-block;font-size:13.5px;font-weight:700;text-decoration:none;border-bottom:2px solid var(--zwart);margin-bottom:14px}
+.kop h1{margin:0 0 10px;font-size:clamp(27px,4.2vw,40px);line-height:1.12;font-weight:800}
+.kop p{margin:0;max-width:70ch;font-size:15.5px}
+.kop .stempel{display:inline-block;margin-top:16px;font-size:12px;font-weight:700;background:var(--zwart);color:var(--geel);padding:5px 11px;border-radius:999px}
+
+.compliance{max-width:1132px;margin:22px auto 0;background:var(--rood-zacht);border-left:4px solid var(--rood);border-radius:0 10px 10px 0;padding:14px 18px;font-size:14px}
+.compliance strong{color:#A5281B}
+.compliance p{margin:0}.compliance p+p{margin-top:6px}
+
+.romp{max-width:1180px;margin:0 auto;padding:28px 24px 56px;display:grid;grid-template-columns:250px minmax(0,1fr);gap:28px;align-items:start}
+
+.menu{position:sticky;top:16px;border:1px solid var(--lijn);border-radius:14px;padding:12px;background:var(--vlak);max-height:calc(100vh - 32px);overflow-y:auto}
+.menu .mkop{font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--grijs);font-weight:800;margin:4px 6px 6px}
+.menu a{display:flex;align-items:center;gap:8px;text-decoration:none;padding:6px 8px;border-radius:8px;font-size:13.5px;font-weight:600;line-height:1.3}
+.menu a:hover{background:#fff}
+.menu .stip{width:10px;height:10px;border-radius:50%;border:2px solid #BDBDBD;flex:none;background:#fff}
+.menu .stip.half{border-color:var(--geel-donker);background:var(--geel-zacht)}
+.menu .stip.klaar{border-color:var(--groen);background:var(--groen)}
+.menu .teller{margin:10px 6px 2px;font-size:12.5px;color:var(--grijs)}
+
+.inhoud{min-width:0}
+.sectie-kop{border-bottom:3px solid var(--geel);padding-bottom:10px;margin:8px 0 18px}
+.sectie-kop .groep{font-size:11.5px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--grijs)}
+.sectie-kop h2{margin:2px 0 4px;font-size:24px;line-height:1.2;font-weight:800}
+.sectie-kop p{margin:0;max-width:70ch;color:#3A3A3A}
+
+.uitleg{background:var(--vlak);border-radius:14px;padding:16px 18px;margin-bottom:26px;font-size:14px}
+.uitleg ol{margin:6px 0 0;padding-left:20px}
+.uitleg li+li{margin-top:3px}
+.uitleg p{margin:0}
+
+.kaart{border:1px solid var(--lijn);border-radius:14px;padding:18px 20px;margin-bottom:20px;scroll-margin-top:16px}
+.kaart>h3{margin:0 0 2px;font-size:19px;font-weight:800;line-height:1.25;display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.kaart>h3 .nr{display:inline-flex;align-items:center;justify-content:center;min-width:28px;height:28px;padding:0 6px;border-radius:999px;background:var(--zwart);color:var(--geel);font-size:13px}
+.kaart .bron{font-size:12px;font-weight:700;color:#7A5A00;background:var(--geel-zacht);border:1px solid var(--geel-donker);border-radius:999px;padding:1px 9px}
+.kaart .intro{margin:6px 0 14px;color:#3A3A3A;font-size:14px;max-width:75ch}
+
+.raster{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px 16px}
+.veld{min-width:0}
+.veld.breed{grid-column:1/-1}
+.veld.verborgen{display:none}
+.veld>label,.veld>.lbl{display:block;font-weight:600;font-size:13.5px;margin-bottom:5px}
+.veld .tip{display:block;font-size:12px;color:var(--grijs);margin-top:4px}
+.veld input[type=text],.veld select,.veld textarea{width:100%;padding:10px 12px;border:1px solid #CFCFCF;border-radius:9px;font-size:15px;background:#fff;color:var(--tekst)}
+.veld textarea{resize:vertical;line-height:1.45;min-height:84px}
+.veld textarea.groot{min-height:150px}
+input:focus,select:focus,textarea:focus,button:focus-visible,a:focus-visible{outline:3px solid rgba(255,210,0,.75);outline-offset:1px}
+.met{position:relative}
+.met .voor{position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--grijs);font-size:14px;pointer-events:none}
+.met input{padding-left:28px !important}
+
+.vinkjes{display:flex;flex-wrap:wrap;gap:6px}
+.vinkjes label{display:inline-flex;align-items:center;gap:6px;border:1px solid #CFCFCF;border-radius:999px;padding:5px 11px;font-size:13px;font-weight:600;cursor:pointer;background:#fff;max-width:100%}
+.vinkjes input{margin:0;accent-color:var(--zwart)}
+.vinkjes label:has(input:checked){background:var(--zwart);color:#fff;border-color:var(--zwart)}
+
+.zinnen{margin-top:8px}
+.zinnen .zkop{font-size:12px;font-weight:700;color:var(--grijs);margin-bottom:5px}
+.zinnen button{display:block;width:100%;text-align:left;border:1px dashed #BDBDBD;background:#fff;border-radius:9px;padding:7px 10px;font-size:13px;line-height:1.4;cursor:pointer;color:var(--tekst);margin-bottom:5px}
+.zinnen button:hover{border-color:var(--zwart);background:var(--geel-zacht)}
+.zinnen button::before{content:"+ ";font-weight:800}
+
+.check{margin-top:14px;background:var(--vlak);border-radius:12px;padding:12px 14px}
+.check h4{margin:0 0 6px;font-size:12.5px;font-weight:800;letter-spacing:.05em;text-transform:uppercase}
+.check label{display:flex;gap:9px;align-items:flex-start;font-size:13.5px;padding:4px 0;cursor:pointer}
+.check input{margin:3px 0 0;accent-color:var(--zwart);flex:none}
+.check .b{display:inline-block;font-size:11px;font-weight:700;border-radius:999px;padding:0 7px;margin-left:4px;white-space:nowrap}
+.check .b.ld{background:var(--zwart);color:var(--geel)}
+.check .b.pr{background:#fff;border:1px solid #BDBDBD;color:var(--grijs)}
+
+.signalen{margin-top:12px}
+.signaal{background:var(--geel-zacht);border-left:4px solid var(--geel-donker);border-radius:0 9px 9px 0;padding:8px 12px;font-size:13.5px;margin-top:6px}
+.signaal.rood{background:var(--rood-zacht);border-left-color:var(--rood)}
+.kerncijfers{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.kerncijfers span{background:var(--zwart);color:#fff;border-radius:9px;padding:6px 10px;font-size:13px}
+.kerncijfers b{color:var(--geel)}
+
+.links{margin-top:12px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 14px}
+.links a{font-weight:700;text-decoration:none;border-bottom:2px solid var(--geel)}
+.links a:hover{border-color:var(--zwart)}
+
+.uitvoer{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:20px;align-items:start}
+.ontbreekt{border:2px solid var(--zwart);border-radius:14px;padding:16px 18px}
+.ontbreekt h3{margin:0 0 8px;font-size:17px;font-weight:800}
+.ontbreekt ul{margin:0;padding-left:18px;font-size:13.5px}
+.ontbreekt li{margin-bottom:5px}
+.ontbreekt li.zacht{color:var(--grijs)}
+.ontbreekt .ok{color:var(--groen);font-weight:700;margin:0}
+.ontbreekt a{font-weight:700}
+.voorbeeld{border:1px solid var(--lijn);border-radius:14px;padding:16px 18px;background:#fff}
+.voorbeeld pre{white-space:pre-wrap;word-break:break-word;font-family:inherit;font-size:13.5px;margin:0;max-height:560px;overflow:auto;background:var(--vlak);border-radius:10px;padding:12px 14px}
+.knoppen{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.knop{border-radius:999px;padding:9px 16px;font-size:13.5px;font-weight:700;cursor:pointer;border:1px solid var(--zwart);background:var(--zwart);color:#fff}
+.knop:hover{background:#000}
+.knop.licht{background:#fff;color:var(--zwart);border-color:#CFCFCF}
+.knop.licht:hover{background:var(--vlak)}
+.status{font-size:13px;font-weight:600;color:var(--groen);min-height:1.2em;margin:0 0 8px}
+.handmatig{display:none;margin-top:10px}
+.handmatig textarea{width:100%;min-height:160px;font-size:12.5px;padding:10px;border:1px solid #CFCFCF;border-radius:9px}
+
+.voet{max-width:1180px;margin:0 auto;padding:24px 24px 40px;font-size:12.5px;color:var(--grijs)}
+.voet a{color:var(--zwart);font-weight:600}
+
+@media (max-width:1000px){
+  .uitvoer{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:900px){
+  .romp{grid-template-columns:minmax(0,1fr);padding-top:20px}
+  .menu{display:none}
+}
+@media (max-width:560px){
+  .balk,.kop{padding-left:16px;padding-right:16px}
+  .romp,.voet{padding-left:16px;padding-right:16px}
+  .compliance{margin-left:16px;margin-right:16px}
+  .raster{grid-template-columns:minmax(0,1fr)}
+  .kaart{padding:16px 14px}
+  .sectie-kop h2{font-size:21px}
+}
+@media print{
+  .balk,.menu,.compliance,.voet,.knoppen{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="balk">
+  <span>Adviesforum &middot; hulpmiddelen voor financieel adviseurs</span>
+  <span><a href="index.html">Naar het forum</a></span>
+</div>
+
+<header class="kop">
+  <div class="kop-in">
+    <div class="merk"><span class="zeshoek" aria-hidden="true"></span>Adviesforum &middot; Hulpmiddelen</div>
+    <a class="terug" href="index.html#hulpmiddelen">&larr; Terug naar de hulpmiddelen</a>
+    <h1>Adviesmotivatie hypotheek</h1>
+    <p>Bouw de ruggengraat van je adviesrapport: leg het klantprofiel vast, kies per adviesonderdeel en schrijf erbij waarom. Met een controlelijst per onderdeel op basis van de AFM Leidraad Hypotheekadvisering (april 2026) en een overzicht van wat nog ontbreekt.</p>
+    <span class="stempel">Hulpmiddel &middot; geen adviesrapport &middot; er wordt niets opgeslagen</span>
+  </div>
+</header>
+
+<div class="compliance" role="note">
+  <p><strong>Compliance:</strong> dit is een denk- en schrijfhulp, geen vervanging van je eigen adviesrapport, adviessoftware of de procedures en sjablonen van je vergunninghouder. De controlelijsten zijn een eigen samenvatting van de Leidraad Hypotheekadvisering 2026; de Leidraad is geen uitputtende lijst van wettelijke eisen en bevat ook goede praktijken. Punten met het label <em>praktijk</em> komen niet uit de Leidraad.</p>
+  <p>Voorbeeldzinnen zijn startpunten. Maak ze altijd klantspecifiek: vul de [haken] in met de werkelijke cijfers en overwegingen van deze klant en schrap wat niet klopt. Een standaardzin zonder klantspecifieke onderbouwing is geen motivering.</p>
+</div>
+
+<main class="romp">
+  <nav class="menu" aria-label="Onderdelen">
+    <div class="mkop">Onderdelen</div>
+    <div id="menu-lijst"></div>
+    <div class="teller" id="teller"></div>
+  </nav>
+
+  <div class="inhoud">
+    <div class="uitleg">
+      <p><strong>Zo werkt het</strong></p>
+      <ol>
+        <li>Vul het klantprofiel in. Gebruik een dossiernummer in plaats van namen; alles blijft in je browser en verdwijnt als je de pagina sluit.</li>
+        <li>Kies per adviesonderdeel je advies, klik voorbeeldzinnen aan en herschrijf ze in je eigen woorden.</li>
+        <li>Loop de controlelijst na. Wijkt de klant af van je advies? Leg de motivatie van de klant en de besproken gevolgen vast.</li>
+        <li>Kopieer of druk de samengevoegde motivatie af en werk die uit in je eigen adviesrapport. Bekijk eerst de lijst &lsquo;Ontbreekt nog&rsquo;.</li>
+      </ol>
+      <p style="margin-top:8px">Bron: <a href="documenten/Leidraad-Hypotheekadvisering-2026.pdf">AFM Leidraad Hypotheekadvisering, april 2026 (pdf)</a>. Paginanummers verwijzen naar die versie. Zie ook de stappen en dossiereisen in de <a href="adviesroute.html#aankoop">adviesroute hypotheek</a>.</p>
+    </div>
+
+    <!-- ===================== KLANTPROFIEL ===================== -->
+    <div class="sectie-kop">
+      <div class="groep">Deel 1</div>
+      <h2>Klantprofiel</h2>
+      <p>De basis waarop elk onderdeel van je advies rust. Volgens de Leidraad (p. 4, 7 en 10) wint de adviseur informatie in over financiële positie, doelstellingen, risicobereidheid en kennis en ervaring, en vraagt hij door bij tegenstrijdigheden.</p>
+    </div>
+
+    <section class="kaart" id="profiel">
+      <h3><span class="nr">P</span>Klant en situatie <span class="bron">Leidraad p. 4, 7, 10</span></h3>
+      <div class="raster">
+        <div class="veld"><label for="p-ref">Dossiernummer of referentie</label><input type="text" id="p-ref" autocomplete="off"><span class="tip">Liever geen namen of BSN; er wordt niets opgeslagen.</span></div>
+        <div class="veld"><label for="p-situatie">Adviessituatie</label>
+          <select id="p-situatie"><option value="">Kies…</option><option>Aankoop eerste woning (starter)</option><option>Aankoop volgende woning (doorstromer)</option><option>Oversluiten bestaande hypotheek</option><option>Verhogen of verbouwen</option><option>Anders</option></select></div>
+        <div class="veld"><label for="p-huishouden">Huishouden</label>
+          <select id="p-huishouden"><option value="">Kies…</option><option value="alleen">Alleenstaand</option><option value="gehuwd">Gehuwd of geregistreerd partners</option><option value="contract">Samenwonend met samenlevingscontract</option><option value="geen">Samenwonend zonder vastgelegde afspraken</option></select></div>
+        <div class="veld"><label for="p-kinderen">Kinderen of kinderwens</label><input type="text" id="p-kinderen" placeholder="bijv. kinderwens binnen 3 jaar"></div>
+      </div>
+    </section>
+
+    <section class="kaart" id="profiel-doelen">
+      <h3><span class="nr">P</span>Doelstellingen, kennis en risicobereidheid <span class="bron">Leidraad p. 4, 13, 22</span></h3>
+      <div class="raster">
+        <div class="veld breed"><span class="lbl">Doelstellingen</span>
+          <div class="vinkjes" id="p-doelen"></div></div>
+        <div class="veld breed"><label for="p-doelen-tekst">Doelstellingen in eigen woorden</label><textarea id="p-doelen-tekst" placeholder="Wat wil de klant bereiken, en wat vindt de klant het belangrijkst?"></textarea></div>
+        <div class="veld"><label for="p-kennis">Kennis en ervaring</label>
+          <select id="p-kennis"><option value="">Kies…</option><option>Geen ervaring met een hypotheek</option><option>Enige ervaring (eerdere hypotheek, beperkte kennis)</option><option>Ruime kennis en ervaring</option></select></div>
+        <div class="veld"><label for="p-risico">Risicobereidheid</label>
+          <select id="p-risico"><option value="">Kies…</option><option value="laag">Laag: zekerheid over lasten voorop</option><option value="midden">Gemiddeld: beperkte schommelingen acceptabel</option><option value="hoog">Hoog: accepteert schommelingen voor lagere lasten</option></select></div>
+        <div class="veld breed"><label for="p-kennis-tekst">Toelichting kennis, ervaring en risicobereidheid</label><textarea id="p-kennis-tekst" placeholder="Hoe is dit vastgesteld? Welke tegenstrijdigheden zijn besproken (bijv. wil zekerheid maar geen dekking)?"></textarea></div>
+      </div>
+    </section>
+
+    <section class="kaart" id="profiel-fin">
+      <h3><span class="nr">P</span>Financiële positie <span class="bron">Leidraad p. 10-11</span></h3>
+      <div class="raster">
+        <div class="veld"><label for="p-ink1">Bruto jaarinkomen aanvrager</label><div class="met"><span class="voor">€</span><input type="text" inputmode="decimal" class="eur" id="p-ink1"></div></div>
+        <div class="veld"><label for="p-ink2">Bruto jaarinkomen partner</label><div class="met"><span class="voor">€</span><input type="text" inputmode="decimal" class="eur" id="p-ink2"></div></div>
+        <div class="veld breed"><label for="p-inksoort">Soort inkomen en stabiliteit</label><input type="text" id="p-inksoort" placeholder="bijv. vast dienstverband; partner flexibel contract"><span class="tip">Toetsinkomen bepalen? Zie <a href="inkomensbepaling.html">inkomensbepaling</a>.</span></div>
+        <div class="veld"><label for="p-vermogen">Vermogen en eigen middelen</label><div class="met"><span class="voor">€</span><input type="text" inputmode="decimal" class="eur" id="p-vermogen"></div></div>
+        <div class="veld"><label for="p-buffer">Waarvan vrije buffer na aankoop</label><div class="met"><span class="voor">€</span><input type="text" inputmode="decimal" class="eur" id="p-buffer"></div></div>
+        <div class="veld breed"><label for="p-verpl">Financiële verplichtingen</label><input type="text" id="p-verpl" placeholder="kredieten, studieschuld, alimentatie, lease: bedragen per maand"></div>
+        <div class="veld breed"><label for="p-voorz">Bestaande voorzieningen</label><textarea id="p-voorz" placeholder="werkgeverspensioen, nabestaandenpensioen, WIA-excedent, AOV, ORV, overige polissen"></textarea></div>
+      </div>
+    </section>
+
+    <section class="kaart" id="profiel-toekomst">
+      <h3><span class="nr">P</span>Toekomstverwachtingen <span class="bron">Leidraad p. 7, 11</span></h3>
+      <div class="raster">
+        <div class="veld"><label for="p-aow">AOW-datum (jaar) aanvrager / partner</label><input type="text" id="p-aow" placeholder="bijv. 2058 / 2060"><span class="tip">Zie <a href="rekentools.html#aow-datum">AOW-datum</a>.</span></div>
+        <div class="veld"><label for="p-werk">Verwachting werk</label>
+          <select id="p-werk"><option value="">Kies…</option><option>Stabiel, geen wijzigingen verwacht</option><option>Wil minder gaan werken</option><option>Wil ondernemer worden</option><option>Carrièrestap of inkomensgroei verwacht</option><option>Wil eerder stoppen met werken</option><option>Onzeker</option></select></div>
+        <div class="veld breed"><label for="p-toekomst">Pensioen, gezin en werk in eigen woorden</label><textarea id="p-toekomst" placeholder="Verwacht pensioeninkomen, gezinsuitbreiding, sabbatical, verhuisplannen, erfenis…"></textarea></div>
+      </div>
+    </section>
+
+    <!-- ===================== ADVIESONDERDELEN ===================== -->
+    <div class="sectie-kop" style="margin-top:34px">
+      <div class="groep">Deel 2 en 3</div>
+      <h2>Advies en motivering per onderdeel</h2>
+      <p>De Leidraad (p. 8) vraagt om een rapport waaruit blijkt hoe je tot je advies bent gekomen, op welke informatie het rust en welke wensen niet worden gerealiseerd. Het advies is je eigen afweging, niet alleen een vertaling van de klantwens (p. 14, 21).</p>
+    </div>
+    <div id="onderdelen"></div>
+
+    <!-- ===================== UITVOER ===================== -->
+    <div class="sectie-kop" style="margin-top:34px" id="uitvoer-kop">
+      <div class="groep">Deel 4</div>
+      <h2>Samengevoegde adviesmotivatie</h2>
+      <p>Werk de tekst verder uit in je eigen adviesrapport. De lijst hiernaast toont lege of nog niet gemotiveerde onderdelen.</p>
+    </div>
+    <section class="uitvoer" id="uitvoer">
+      <div class="ontbreekt" aria-live="polite">
+        <h3>Ontbreekt nog</h3>
+        <div id="ontbreekt"></div>
+      </div>
+      <div class="voorbeeld">
+        <div class="knoppen">
+          <button type="button" class="knop" id="kopieer">Kopiëren</button>
+          <button type="button" class="knop licht" id="afdrukken">Afdrukken</button>
+          <button type="button" class="knop licht" id="wissen">Alles leegmaken</button>
+        </div>
+        <p class="status" id="status" role="status"></p>
+        <pre id="tekst"></pre>
+        <div class="handmatig" id="handmatig"><label for="handmatig-tekst" style="font-size:12.5px;color:var(--grijs)">Kopiëren lukte niet automatisch. Selecteer de tekst hieronder en kopieer handmatig.</label><textarea id="handmatig-tekst" readonly></textarea></div>
+      </div>
+    </section>
+
+    <div class="links" style="margin-top:22px">
+      <a href="adviesroute.html#aankoop">Adviesroute hypotheek</a>
+      <a href="afwijkend-advies.html">Afwijkend advies vastleggen</a>
+      <a href="inkomensbepaling.html">Inkomensbepaling</a>
+      <a href="rekentools.html">Rekenhulpen</a>
+      <a href="leennormen-2026.html">Leennormen 2026</a>
+    </div>
+  </div>
+</main>
+
+<footer class="voet">
+  Adviesforum &middot; collegiale kennisdeling voor financieel adviseurs &middot; <a href="index.html#hulpmiddelen">Alle hulpmiddelen</a> &middot; <a href="privacy.html">Privacy</a>. Er wordt niets opgeslagen of verstuurd: alles wat je invult blijft in deze browsertab en verdwijnt bij sluiten of herladen.
+</footer>
+
+<script>
+(function(){
+'use strict';
+
+/* ---------- Gegevens ---------- */
+var DOELEN = ['Lage maandlasten nu','Zekerheid over de maandlasten','Schuldvrij of lage schuld bij pensioen','Flexibel extra aflossen','Verhuizen binnen 10 jaar','Verduurzamen','Ruimte voor gezinsuitbreiding','Vermogen aanhouden als buffer'];
+
+var VOLGT = [['','Kies…'],['ja','Ja, de klant volgt het advies'],['nee','Nee, de klant wijkt af'],['open','Nog niet besproken']];
+
+var RISICO_KEUZES = ['Accepteren: klant draagt het risico zelf','Verzekeren','Reduceren (bijv. lagere lening, extra aflossen, buffer)','Combinatie van verzekeren en reduceren'];
+var SCENARIO = ['','Geen tekort','Tekort dat de klant zelf kan opvangen','Tekort dat de klant niet kan opvangen','Nog niet doorgerekend'];
+
+function risicoChecks(extra){
+  var basis = [
+    ['Bestaande voorzieningen klantspecifiek meegenomen (sociaal, werkgever, eigen polissen): duur en bedragen.','p. 22'],
+    ['Scenario doorgerekend en de impact met de klant besproken.','p. 22'],
+    ['Niet alleen vastgesteld welk risico de klant wíl lopen, maar ook beoordeeld of de klant het kán lopen.','p. 22'],
+    ['Nagegaan of de klant realistisch gezien uitgaven kan aanpassen of een wachttijd kan overbruggen.','p. 23'],
+    ['Bij afwijken van het advies: gevolgen duidelijk benoemd en motivatie van de klant in het adviesrapport opgenomen.','p. 23'],
+    ['Bij uitgestelde beslissing of geen advies over verzekeringen: gewezen op de gevolgen, zo nodig doorverwezen en een terugbelmoment gepland (goede praktijk).','p. 23-24']
+  ];
+  return extra.concat(basis);
+}
+
+var ONDERDELEN = [
+{
+  id:'hoogte', titel:'Hoogte van de hypotheek', bron:'Leidraad p. 6, 10-12, 15',
+  intro:'Welk bedrag adviseer je, hoe verhoudt het zich tot de leennorm en waarom zijn de woonlasten passend voor deze klant? Binnen de norm is niet automatisch passend; boven de norm vraagt een geconcretiseerde, doorgerekende onderbouwing.',
+  keuzeLabel:'Advies over de hoogte',
+  keuzes:['Binnen de leennorm, ruim onder het maximum','Binnen de leennorm, (nagenoeg) maximaal','Boven de leennorm (explain)','Lager dan de klant wenste'],
+  velden:[
+    {k:'bedrag',l:'Geadviseerd hypotheekbedrag',t:'eur'},
+    {k:'max',l:'Maximale lening volgens leennorm',t:'eur',tip:'Zie <a href="leennormen-2026.html">leennormen 2026</a>.'},
+    {k:'toets',l:'Toetsinkomen (totaal)',t:'eur',tip:'Bepalen via <a href="inkomensbepaling.html">inkomensbepaling</a>.'},
+    {k:'bronink',l:'Bron toetsinkomen',t:'select',o:['','Werkgeversverklaring','Inkomensbepaling Loondienst (UWV-gegevens)','Inkomensverklaring ondernemer','Pensioen- of uitkeringsspecificatie','Anders']},
+    {k:'waarde',l:'Marktwaarde woning',t:'eur'},
+    {k:'woonlast',l:'Netto woonlasten per maand (incl. energie, belastingen, onderhoud)',t:'eur'}
+  ],
+  zinnen:[
+    'U wilt [bedrag] lenen. Volgens de leennormen 2026 is de maximale financiering op basis van uw toetsinkomen van [bedrag] gelijk aan [bedrag].',
+    'Dat een lening binnen de leennorm valt, betekent nog niet dat die bij u past. Daarom hebben we ook uw werkelijke netto inkomen en uitgaven bekeken: na de woonlasten houdt u ongeveer [bedrag] per maand over voor [levensonderhoud en sparen].',
+    'In de woonlasten van [bedrag] per maand zitten naast rente en aflossing ook energie, gemeentelijke belastingen, onderhoud en de opstalverzekering.',
+    'Wij adviseren [bedrag] te lenen in plaats van het maximum, omdat [reden, bijv. kinderwens, minder gaan werken of de wens om te sparen].',
+    'De lening ligt [bedrag] boven de leennorm. Dat vinden wij verantwoord omdat [concrete omstandigheid]. Doorgerekend betekent dit [uitkomst, bijv. netto besteedbaar inkomen na woonlasten].',
+    'Het toetsinkomen is gebaseerd op [werkgeversverklaring / Inkomensbepaling Loondienst / inkomensverklaring ondernemer] van [datum]. [Toelichting op bijzondere inkomensbestanddelen].',
+    'Het energielabel van de woning is [label]. Dit heeft invloed op uw leenruimte: [toelichting].',
+    'Het maximale leenbedrag is niet hetzelfde als een lening die u comfortabel kunt dragen. Bij [situatie] wordt het krap omdat [reden].'
+  ],
+  checks:[
+    ['Inkomen en de stabiliteit daarvan beoordeeld; verplichtingen (kredieten, studieschuld, alimentatie) meegenomen.','p. 10'],
+    ['Woonlasten breed bepaald: rente en aflossing plus energie, belastingen, onderhoud, opstalverzekering en eventueel erfpacht.','p. 10'],
+    ['Beoordeeld of de lening bij deze klant past, niet alleen of die binnen de leennorm valt.','p. 12'],
+    ['Bij (nagenoeg) maximaal lenen: netto besteedbaar inkomen, uitgavenpatroon en toekomstige uitgaven meegenomen.','p. 11'],
+    ['Boven de leennorm: bijzondere omstandigheid concreet gemaakt en doorgerekend, niet alleen een algemene uitleg.','p. 12'],
+    ['Klant nadrukkelijk gewezen op de risico’s voor de betaalbaarheid en daarover een passage in het rapport.','p. 12'],
+    ['Energielabel en de invloed op de leenruimte besproken.','p. 15'],
+    ['Alternatief bedrag besproken als de wens van de klant niet verantwoord is.','p. 4']
+  ],
+  links:[['Inkomensbepaling','inkomensbepaling.html'],['Leennormen 2026','leennormen-2026.html'],['Past deze woning?','rekentools.html#haalbaarheid-woning'],['Netto maandlast','rekentools.html#netto-maandlast-hypotheek']]
+},
+{
+  id:'aflos', titel:'Aflosvorm', bron:'Leidraad p. 7, 17, 21, 26',
+  intro:'Welke aflosvorm of combinatie past bij doelstellingen, lasten nu en later, de fiscale positie en de schuld op pensioendatum?',
+  keuzeLabel:'Geadviseerde aflosvorm',
+  keuzes:['Volledig annuïtair','Volledig lineair','Combinatie annuïtair en lineair','Gedeeltelijk aflossingsvrij','Bestaand leningdeel met oude voorwaarden meegenomen'],
+  velden:[
+    {k:'afv',l:'Bedrag aflossingsvrij deel (indien van toepassing)',t:'eur'},
+    {k:'schuldaow',l:'Verwachte schuld op AOW-datum',t:'eur'}
+  ],
+  zinnen:[
+    'Wij adviseren een annuïtaire hypotheek. Uw bruto maandlast blijft gelijk zolang de rente vaststaat en na [30] jaar is de lening afgelost. Dat sluit aan bij uw wens [zekerheid / voorspelbare lasten].',
+    'Een lineaire hypotheek kost in totaal minder rente, maar de lasten zijn in de eerste jaren hoger. Die zijn voor u [wel/niet] goed op te brengen omdat [reden].',
+    'Over een nieuw aflossingsvrij deel van [bedrag] is de rente in de regel niet aftrekbaar, tenzij overgangsrecht van toepassing is. Op de einddatum moet dit deel worden afgelost of opnieuw gefinancierd; we hebben besproken dat u dit wilt doen door [vermogen / extra aflossen / verkoop].',
+    'We hebben [aflosvormen] naast elkaar gezet met de bruto en netto lasten en de schuld op de einddatum. [Alternatief] past minder goed bij u omdat [reden].',
+    'Met deze aflosvorm is uw schuld op uw AOW-datum ([jaar]) [afgelost / gedaald tot bedrag].'
+  ],
+  checks:[
+    ['Alternatieve aflosvormen naast elkaar gezet en uitgelegd waarom die minder goed passen.','p. 21'],
+    ['Fiscale gevolgen berekend: eigenwoningschuld, aflossingseis voor renteaftrek, verdeling box 1 en box 3.','p. 17'],
+    ['Schuld op pensioendatum en betaalbaarheid daarna meegenomen.','p. 7'],
+    ['Bij een aflossingsvrij deel: plan voor aflossing of herfinanciering op de einddatum besproken.','p. 26'],
+    ['Bij bestaande leningdelen: gevolgen van meenemen of omzetten (kosten, voorwaarden, fiscaal overgangsrecht) afgewogen.','p. 17, 26'],
+    ['Afwijking van het advies vastgelegd met de motivatie van de klant.','p. 4']
+  ],
+  links:[['Hypotheekvormen vergelijken','rekentools.html#hypotheekvormen-vergelijken'],['Restschuld bij pensioen','restschuld-pensioen.html'],['Aflossingsvrij deel aflossen','rekentools.html#aflossingsvrij-aflossen']]
+},
+{
+  id:'rentevast', titel:'Rentevaste periode', bron:'Leidraad p. 13-14',
+  intro:'De Leidraad verwacht scenario’s met actuele rentes en een rentestijging, afgestemd op risicobereidheid en financiële ruimte. Het advies is je eigen afweging.',
+  keuzeLabel:'Geadviseerde rentevaste periode',
+  keuzes:['Variabel','1 tot en met 5 jaar','6 tot en met 10 jaar','11 tot en met 15 jaar','16 tot en met 20 jaar','Langer dan 20 jaar','Gespreid over meerdere periodes'],
+  velden:[
+    {k:'stijging',l:'Maandlast bij rentestijging in het scenario',t:'eur',tip:'Bijv. na afloop van een korte periode +2 of +3 procentpunt.'}
+  ],
+  zinnen:[
+    'We hebben de maandlasten berekend bij [5, 10 en 20] jaar rentevast met de actuele rentes, en wat er gebeurt als de rente na afloop [2 of 3] procentpunt hoger is.',
+    'U vindt zekerheid over uw maandlasten belangrijk en uw financiële ruimte is [beperkt / ruim]. Daarom adviseren wij [periode].',
+    'Een kortere rentevaste periode geeft nu een lagere maandlast, maar bij een rentestijging stijgt uw maandlast met ongeveer [bedrag]. Dat kunt u [wel/niet] opvangen omdat [reden].',
+    'U verwacht over ongeveer [aantal] jaar te verhuizen. De meeneemregeling van [geldverstrekker] maakt [periode] ook dan bruikbaar.',
+    'Dit advies is onze eigen afweging en niet alleen uw voorkeur: [toelichting, bijv. hoge lening ten opzichte van inkomen].'
+  ],
+  checks:[
+    ['Scenario’s met actuele rentes voor meerdere rentevaste periodes besproken.','p. 13'],
+    ['Gevolgen van een rentestijging na afloop van de periode doorgerekend en besproken.','p. 13-14'],
+    ['Risicobereidheid op rentewijzigingen vastgesteld; tegenstrijdige antwoorden doorgevraagd.','p. 13'],
+    ['Extra aandacht bij een hoge lening ten opzichte van het inkomen in combinatie met een korte rentevaste periode.','p. 13'],
+    ['Advies is een eigen afweging van wat passend is, geen vertaling van de wens.','p. 14'],
+    ['Bij afwijken: expliciet vastgelegd met motieven van de klant en gewezen op de risico’s.','p. 14']
+  ],
+  links:[['Maandlast na renteherziening','rekentools.html#renteherziening'],['Meeneemregeling','rekentools.html#hypotheek-meenemen']]
+},
+{
+  id:'nhg', titel:'Nationale Hypotheek Garantie', bron:'praktijk, niet in de Leidraad',
+  intro:'De Leidraad behandelt NHG niet apart. Motiveer de keuze toch: het raakt de rente, de kosten en het risico op een restschuld bij gedwongen verkoop. Controleer de actuele NHG-voorwaarden en de NHG-grens.',
+  keuzeLabel:'NHG',
+  keuzes:['Ja, met NHG','Nee, NHG is niet mogelijk','Nee, bewust zonder NHG'],
+  velden:[],
+  zinnen:[
+    'Uw lening valt binnen de NHG-grens van [jaar]. Met NHG geldt bij [geldverstrekker] een rentekorting van [x] procentpunt; daar staat eenmalig [bedrag] borgtochtprovisie tegenover.',
+    'NHG is een vangnet als u door bijvoorbeeld werkloosheid, arbeidsongeschiktheid, overlijden of een relatiebreuk de woning met verlies moet verkopen. Een restschuld kan dan onder voorwaarden worden kwijtgescholden; het is geen garantie dat u nooit iets hoeft terug te betalen.',
+    'NHG is voor u niet mogelijk omdat [reden]. We hebben besproken wat dit betekent voor uw rente en het risico op een restschuld.',
+    'U kiest bewust voor een lening zonder NHG omdat [reden]. De gevolgen voor [rente / restschuldrisico] hebben we besproken.'
+  ],
+  checks:[
+    ['Actuele NHG-voorwaarden en NHG-grens gecontroleerd.','praktijk'],
+    ['Rentevoordeel afgezet tegen de eenmalige borgtochtprovisie.','praktijk'],
+    ['Uitgelegd wat NHG doet bij gedwongen verkoop met restschuld en welke voorwaarden daarvoor gelden.','praktijk'],
+    ['Zonder NHG: gevolgen voor rente en restschuldrisico benoemd.','praktijk']
+  ],
+  links:[['NHG-check','nhg-check.html']]
+},
+{
+  id:'ovl', titel:'Risico bij overlijden', bron:'Leidraad p. 10, 22-23', risico:true,
+  intro:'Wat gebeurt er met de woonlasten als een van de partners (of de alleenstaande klant) overlijdt? Neem nabestaandenpensioen en Anw klantspecifiek mee.',
+  zinnen:[
+    'Als [aanvrager/partner] overlijdt, daalt het huishoudinkomen naar ongeveer [bedrag] per jaar, inclusief [nabestaandenpensioen / Anw]. De woonlasten zijn dan [wel/niet] te dragen.',
+    'Wij adviseren een overlijdensrisicoverzekering van [bedrag], [gelijkblijvend / annuïtair dalend], met een looptijd van [jaren], omdat [reden].',
+    'U kiest ervoor dit risico zelf te dragen. Het tekort van ongeveer [bedrag] per maand kunt u opvangen uit [vermogen / extra werken] gedurende [periode].',
+    'Wij hebben u geadviseerd [advies]. U kiest daar bewust niet voor omdat [motivatie klant]. De gevolgen hebben we besproken: [gevolgen].'
+  ],
+  extraChecks:[['Overlijden van elk van de partners afzonderlijk doorgerekend.','p. 22']],
+  links:[['Overlijdensrisico','orv.html'],['Nabestaandenpensioen en Anw','rekentools.html#nabestaandenuitkering']]
+},
+{
+  id:'ao', titel:'Risico bij arbeidsongeschiktheid', bron:'Leidraad p. 10, 22-23', risico:true,
+  intro:'Hoe ontwikkelt het inkomen zich bij langdurige arbeidsongeschiktheid: loondoorbetaling, daarna WIA, of geen wettelijke dekking als ondernemer? Kan de klant een wachttijd overbruggen?',
+  zinnen:[
+    'Bij arbeidsongeschiktheid betaalt uw werkgever de eerste twee jaar [percentage] van uw loon door. Daarna valt u mogelijk onder de WIA; afhankelijk van de mate van arbeidsongeschiktheid en of u nog werkt, daalt uw inkomen tot ongeveer [bedrag] per jaar.',
+    'Als ondernemer hebt u geen wettelijke dekking. Zonder voorziening valt uw inkomen terug tot [bedrag]; de woonlasten zijn dan [niet] te dragen.',
+    'De wachttijd van [aantal] dagen kunt u overbruggen met uw buffer van [bedrag].',
+    'Wij adviseren [een woonlastenverzekering / AOV / WIA-aanvulling] met een uitkering van [bedrag], omdat [reden].',
+    'U vindt een stabiel inkomen bij arbeidsongeschiktheid belangrijk, maar wilt het risico niet afdekken. Dat hebben we besproken: [uitkomst].'
+  ],
+  extraChecks:[['Voor werknemer loondoorbetaling en WIA (inclusief werkgeversregelingen) en voor ondernemer het ontbreken van wettelijke dekking meegenomen.','p. 22-23']],
+  links:[['AOV-tekort','aov-tekort.html'],['Inkomen bij ziekte werknemer','inkomen-ziekte-werknemer.html'],['Netto AOV-uitkering','rekentools.html#aov-uitkering-netto']]
+},
+{
+  id:'ww', titel:'Risico bij werkloosheid', bron:'Leidraad p. 10, 22-23', risico:true,
+  intro:'Hoe lang en hoeveel WW, en wat daarna? Kan de klant de terugval met een buffer opvangen?',
+  zinnen:[
+    'Bij werkloosheid ontvangt u naar verwachting [aantal] maanden WW: de eerste twee maanden 75% en daarna 70% van uw (gemaximeerde) dagloon. Uw inkomen daalt dan tot ongeveer [bedrag] per maand.',
+    'Het tekort van ongeveer [bedrag] per maand kunt u [gedurende periode] opvangen uit uw buffer van [bedrag].',
+    'Na afloop van de WW [heeft u geen recht op een uitkering / is het inkomen afhankelijk van vermogen en partnerinkomen]. Dat hebben we besproken.',
+    'Wij adviseren [een buffer van bedrag aan te houden / een woonlastenverzekering], omdat [reden].'
+  ],
+  extraChecks:[['WW-duur en -hoogte klantspecifiek bepaald (arbeidsverleden, dagloon); voor ondernemers het ontbreken van WW benoemd.','p. 22']],
+  links:[['Werkloosheid','werkloosheid.html']]
+},
+{
+  id:'pensioen', titel:'Risico bij pensionering', bron:'Leidraad p. 7, 10, 12', risico:true,
+  intro:'Zijn de woonlasten na de AOW-datum te dragen, ook als die nog ver weg ligt? Wat is de schuld op dat moment en op de einddatum?',
+  zinnen:[
+    'Op uw AOW-datum ([jaar]) daalt uw inkomen naar ongeveer [bedrag] bruto per jaar (AOW en pensioen). De schuld is dan [bedrag] en de woonlasten zijn [wel/niet] te dragen.',
+    'Ook al duurt het nog meer dan tien jaar tot uw pensioen, we hebben de betaalbaarheid daarna doorgerekend, omdat [reden, bijv. beperkte pensioenopbouw].',
+    'Om het tekort na pensionering te verkleinen adviseren wij [extra aflossen / lineair aflossen / pensioen aanvullen], omdat [reden].',
+    'U wilt eerder stoppen met werken op [leeftijd]. Dat betekent [gevolg voor de woonlasten].'
+  ],
+  extraChecks:[['Betaalbaarheid na pensionering doorgerekend, ook als de klant meer dan tien jaar van pensioen af is.','p. 7'],['Wens om eerder te stoppen of minder te werken meegenomen.','p. 7, 11']],
+  links:[['Restschuld bij pensioen','restschuld-pensioen.html'],['Netto AOW en pensioen','rekentools.html#netto-aow-pensioen'],['AOW-datum','rekentools.html#aow-datum']]
+},
+{
+  id:'relatie', titel:'Risico bij relatiebeëindiging', bron:'Leidraad p. 24', risico:true, nvt:true,
+  intro:'Kan een van beide partners de woning houden? Let vooral op de partner met het laagste inkomen en op de vastgelegde afspraken (relatievorm, eigendom, inbreng).',
+  zinnen:[
+    'U koopt de woning samen. Bij een relatiebreuk kan [partner] met een inkomen van [bedrag] een lening van [bedrag] [wel/niet] alleen dragen. Dat betekent mogelijk [verkoop van de woning / uitkopen].',
+    'U bent [gehuwd / samenwonend met of zonder contract]. Uw eigendomsverhouding is [verdeling]; de inbreng van eigen geld is [gelijk / ongelijk].',
+    'Wij raden u aan om afspraken over eigendom, inbreng en lasten vast te leggen bij de notaris, bijvoorbeeld in een samenlevingscontract of een draagplichtovereenkomst.',
+    'Bij een verkoop na een relatiebreuk kan een restschuld ontstaan van ongeveer [bedrag]. Die verdeelt u volgens [afspraak].'
+  ],
+  extraChecks:[
+    ['Relatievorm, onderlinge afspraken, kinderen of kinderwens, eigendomsverhouding en lastenverdeling geïnventariseerd.','p. 24'],
+    ['Scenario’s in ieder geval in algemene zin en waar relevant klantspecifiek besproken.','p. 24'],
+    ['Nagegaan dat vooral de partner met het laagste inkomen de persoonlijke gevolgen begrijpt.','p. 24'],
+    ['Aangemoedigd om afspraken bij de notaris vast te leggen en het pensioen op orde te brengen (goede praktijk).','p. 24']
+  ],
+  vervangChecks:true,
+  links:[['Draagplicht','draagplicht.html']]
+},
+{
+  id:'product', titel:'Geldverstrekker en product', bron:'Leidraad p. 20-21', tekstKeuze:true,
+  intro:'Het productadvies is het sluitstuk. Vergelijk op relevante voorwaarden, niet alleen op rente, en controleer of het product past bij de eerdere onderdelen van je advies.',
+  keuzeLabel:'Geadviseerde geldverstrekker',
+  velden:[
+    {k:'productnaam',l:'Product of hypotheeklijn',t:'text'},
+    {k:'aantal',l:'Aantal vergeleken aanbieders',t:'select',o:['','1 (toelichting nodig)','2','3','4 of meer']},
+    {k:'criteria',l:'Doorslaggevende voorwaarden',t:'multi',o:['Boetevrij extra aflossen','Verhuis- of meeneemregeling','Rentemiddeling','Rente daalt mee met lagere risicoklasse','Geldigheid offerte en bereidstellingsprovisie','Overbruggingskrediet','Acceptatie van inkomen','Financiering verduurzaming','Hoogte van de rente']}
+  ],
+  zinnen:[
+    'Wij adviseren [product] van [geldverstrekker]. We hebben [aantal] aanbieders vergeleken op rente én voorwaarden.',
+    'Doorslaggevend waren [voorwaarden], omdat u [wens, bijv. een erfenis verwacht en dan wilt aflossen].',
+    '[Andere aanbieder] had een lagere rente, maar [nadeel]. Daarom past die minder goed bij uw wens om [wens].',
+    'Uw wens [wens] zit niet in dit product. [Toelichting en eventueel alternatief].',
+    'We hebben gecontroleerd dat dit product aansluit op ons advies over de rentevaste periode, de aflosvorm en de risico’s.'
+  ],
+  checks:[
+    ['Producten vergeleken op relevante voorwaarden, niet alleen op rente.','p. 20-21'],
+    ['Gemotiveerd welke voorwaarden doorslaggevend zijn en hoe ze aansluiten op de wensen.','p. 21'],
+    ['Gecontroleerd op tegenstrijdigheden met eerdere onderdelen van het advies.','p. 21'],
+    ['Wensen die het product niet invult benoemd.','p. 21'],
+    ['Alternatieven besproken en toegelicht waarom die minder goed passen.','p. 21'],
+    ['Gecontroleerd of de klant het advies begrijpt en het aansluit bij zijn voorkeuren.','p. 21']
+  ],
+  links:[['Boetevrije aflosruimte','rekentools.html#boetevrij-aflossen'],['Vergelijken','vergelijken.html']]
+}
+];
+
+/* ---------- Helpers ---------- */
+function $(id){ return document.getElementById(id); }
+function esc(s){ return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
+function waarde(id){ var e=$(id); return e ? String(e.value||'').trim() : ''; }
+function parseEur(s){
+  s = String(s||'').replace(/[€\s ]/g,'');
+  if (!s) return NaN;
+  if (s.indexOf(',')>=0) s = s.replace(/\./g,'').replace(',','.');
+  else if (/^\d{1,3}(\.\d{3})+$/.test(s)) s = s.replace(/\./g,'');
+  var n = Number(s); return isFinite(n) ? n : NaN;
+}
+var NF0 = new Intl.NumberFormat('nl-NL',{minimumFractionDigits:0,maximumFractionDigits:0});
+var NF2 = new Intl.NumberFormat('nl-NL',{minimumFractionDigits:2,maximumFractionDigits:2});
+function fmtEur(n){ if (!isFinite(n)) return ''; return '€ ' + (Math.round(n)===n ? NF0.format(n) : NF2.format(n)); }
+function fmtPct(n){ return new Intl.NumberFormat('nl-NL',{maximumFractionDigits:0}).format(n) + '%'; }
+function eurTekst(id){ var n=parseEur(waarde(id)); return isFinite(n) ? fmtEur(n) : ''; }
+function heeftHaken(s){ return /\[[^\]]*\]/.test(s); }
+function gekozenVinkjes(container){ var u=[]; container.querySelectorAll('input:checked').forEach(function(i){u.push(i.value);}); return u; }
+
+/* ---------- Opbouw UI ---------- */
+function bouwDoelen(){
+  var h=''; DOELEN.forEach(function(d,i){ h+='<label><input type="checkbox" value="'+esc(d)+'" id="p-doel-'+i+'">'+esc(d)+'</label>'; });
+  $('p-doelen').innerHTML=h;
+}
+
+function veldHtml(o, v){
+  var id='x-'+o.id+'-'+v.k, h='<div class="veld'+(v.t==='multi'?' breed':'')+'">';
+  if (v.t==='multi'){
+    h+='<span class="lbl">'+esc(v.l)+'</span><div class="vinkjes" id="'+id+'">';
+    v.o.forEach(function(x,i){ h+='<label><input type="checkbox" value="'+esc(x)+'">'+esc(x)+'</label>'; });
+    h+='</div>';
+  } else {
+    h+='<label for="'+id+'">'+esc(v.l)+'</label>';
+    if (v.t==='eur') h+='<div class="met"><span class="voor">€</span><input type="text" inputmode="decimal" class="eur" id="'+id+'"></div>';
+    else if (v.t==='select'){ h+='<select id="'+id+'">'; v.o.forEach(function(x){ h+='<option value="'+esc(x)+'">'+(x?esc(x):'Kies…')+'</option>'; }); h+='</select>'; }
+    else h+='<input type="text" id="'+id+'">';
+  }
+  if (v.tip) h+='<span class="tip">'+v.tip+'</span>';
+  return h+'</div>';
+}
+
+function bouwOnderdelen(){
+  var h='';
+  ONDERDELEN.forEach(function(o,idx){
+    if (o.risico){
+      o.keuzeLabel = 'Advies over dit risico';
+      o.keuzes = RISICO_KEUZES.slice();
+      if (o.nvt) o.keuzes.push('Niet van toepassing (alleenstaand)');
+      o.velden = [
+        {k:'scenario',l:'Uitkomst scenarioberekening',t:'select',o:SCENARIO},
+        {k:'tekort',l:'Tekort per maand (indicatief)',t:'eur'}
+      ];
+      o.checks = o.vervangChecks ? o.extraChecks.concat([
+        ['Bij afwijken van het advies: gevolgen benoemd en motivatie van de klant vastgelegd.','p. 4, 24']
+      ]) : risicoChecks(o.extraChecks);
+    }
+    h+='<section class="kaart" id="o-'+o.id+'">';
+    h+='<h3><span class="nr">'+(idx+1)+'</span>'+esc(o.titel)+' <span class="bron">'+esc(o.bron)+'</span></h3>';
+    h+='<p class="intro">'+esc(o.intro)+'</p><div class="raster">';
+    if (o.tekstKeuze) h+='<div class="veld"><label for="k-'+o.id+'">'+esc(o.keuzeLabel)+'</label><input type="text" id="k-'+o.id+'"></div>';
+    else {
+      h+='<div class="veld"><label for="k-'+o.id+'">'+esc(o.keuzeLabel)+'</label><select id="k-'+o.id+'"><option value="">Kies…</option>';
+      o.keuzes.forEach(function(k){ h+='<option>'+esc(k)+'</option>'; });
+      h+='</select></div>';
+    }
+    h+='<div class="veld"><label for="v-'+o.id+'">Volgt de klant dit advies?</label><select id="v-'+o.id+'">';
+    VOLGT.forEach(function(v){ h+='<option value="'+v[0]+'">'+esc(v[1])+'</option>'; });
+    h+='</select></div>';
+    (o.velden||[]).forEach(function(v){ h+=veldHtml(o,v); });
+    h+='<div class="veld breed"><label for="m-'+o.id+'">Motivering in eigen woorden</label><textarea class="groot" id="m-'+o.id+'" placeholder="Waarom past dit advies bij deze klant? Welke alternatieven heb je afgewogen?"></textarea>';
+    h+='<div class="zinnen"><div class="zkop">Voorbeeldzinnen: klik om toe te voegen en maak ze daarna klantspecifiek</div>';
+    o.zinnen.forEach(function(z,i){ h+='<button type="button" data-o="'+o.id+'" data-z="'+i+'">'+esc(z)+'</button>'; });
+    h+='</div></div>';
+    h+='<div class="veld breed verborgen" id="aw-'+o.id+'"><label for="a-'+o.id+'">Afwijking: motivatie van de klant en besproken gevolgen</label><textarea id="a-'+o.id+'" placeholder="Wat adviseerde je, wat kiest de klant, waarom, en welke gevolgen heb je benoemd?"></textarea><span class="tip">Leidraad p. 4, 14 en 23: leg de afwijking vast in dossier en adviesrapport. Zie ook <a href="afwijkend-advies.html">afwijkend advies vastleggen</a>.</span></div>';
+    h+='</div>';
+    h+='<div class="kerncijfers" id="kc-'+o.id+'"></div><div class="signalen" id="sg-'+o.id+'"></div>';
+    h+='<div class="check"><h4>Controlelijst</h4>';
+    o.checks.forEach(function(c,i){
+      var pr = c[1]==='praktijk';
+      h+='<label><input type="checkbox" id="c-'+o.id+'-'+i+'"><span>'+esc(c[0])+' <span class="b '+(pr?'pr':'ld')+'">'+(pr?'praktijk':'Leidraad '+esc(c[1]))+'</span></span></label>';
+    });
+    h+='</div>';
+    if (o.links && o.links.length){
+      h+='<div class="links">'; o.links.forEach(function(l){ h+='<a href="'+esc(l[1])+'">'+esc(l[0])+'</a>'; }); h+='</div>';
+    }
+    h+='</section>';
+  });
+  $('onderdelen').innerHTML=h;
+}
+
+function bouwMenu(){
+  var h='<a href="#profiel"><span class="stip" id="st-profiel"></span>Klantprofiel</a>';
+  ONDERDELEN.forEach(function(o,i){ h+='<a href="#o-'+o.id+'"><span class="stip" id="st-'+o.id+'"></span>'+(i+1)+'. '+esc(o.titel)+'</a>'; });
+  h+='<a href="#uitvoer-kop"><span class="stip" style="border-color:var(--zwart)"></span>Uitvoer en ontbreekt nog</a>';
+  $('menu-lijst').innerHTML=h;
+}
+
+/* ---------- Analyse ---------- */
+function profielStatus(){
+  var mis=[];
+  var doelen = gekozenVinkjes($('p-doelen'));
+  if (!doelen.length && !waarde('p-doelen-tekst')) mis.push('Doelstellingen van de klant');
+  if (!waarde('p-kennis')) mis.push('Kennis en ervaring');
+  if (!waarde('p-risico')) mis.push('Risicobereidheid');
+  if (!isFinite(parseEur(waarde('p-ink1')))) mis.push('Inkomen aanvrager');
+  if (!waarde('p-inksoort')) mis.push('Soort inkomen en stabiliteit');
+  if (!waarde('p-vermogen') && !waarde('p-buffer')) mis.push('Vermogen of buffer');
+  if (!waarde('p-verpl')) mis.push('Financiële verplichtingen (vul ook ‘geen’ in)');
+  if (!waarde('p-voorz')) mis.push('Bestaande voorzieningen');
+  if (!waarde('p-aow') && !waarde('p-toekomst') && !waarde('p-werk')) mis.push('Toekomstverwachtingen (pensioen, gezin, werk)');
+  if (!waarde('p-huishouden')) mis.push('Huishouden en relatievorm');
+  return mis;
+}
+
+function onderdeelAnalyse(o){
+  var r={mis:[],zacht:[],sig:[],kc:[]};
+  var keuze=waarde('k-'+o.id), volgt=waarde('v-'+o.id), mot=waarde('m-'+o.id), afw=waarde('a-'+o.id);
+  var nvt = /Niet van toepassing/.test(keuze);
+  if (!keuze) r.mis.push(o.tekstKeuze ? 'geen geldverstrekker ingevuld' : 'geen keuze gemaakt');
+  if (!mot) r.mis.push(nvt ? 'korte toelichting waarom niet van toepassing' : 'motivering ontbreekt');
+  else if (heeftHaken(mot)) r.mis.push('motivering bevat nog [invulplekken]');
+  else if (!nvt && mot.length < 80) r.zacht.push('motivering is erg kort; is die klantspecifiek?');
+  if (!nvt){
+    if (!volgt) r.mis.push('niet aangegeven of de klant het advies volgt');
+    if (volgt==='open') r.mis.push('advies nog niet met de klant besproken');
+    if (volgt==='nee' && !afw) r.mis.push('afwijking zonder motivatie van de klant en besproken gevolgen');
+    if (volgt==='nee' && afw && heeftHaken(afw)) r.mis.push('afwijkingstekst bevat nog [invulplekken]');
+  }
+  var open=0; o.checks.forEach(function(c,i){ var e=$('c-'+o.id+'-'+i); if (e && !e.checked) open++; });
+  if (open && !nvt) r.zacht.push(open+' controlepunt'+(open>1?'en':'')+' nog niet afgevinkt');
+
+  var risico = waarde('p-risico');
+  if (o.id==='hoogte'){
+    var b=parseEur(waarde('x-hoogte-bedrag')), m=parseEur(waarde('x-hoogte-max')), w=parseEur(waarde('x-hoogte-waarde')), t=parseEur(waarde('x-hoogte-toets'));
+    if (isFinite(b)) r.kc.push(['Hypotheek',fmtEur(b)]);
+    if (isFinite(b)&&isFinite(m)&&m>0) r.kc.push(['Van maximum leennorm',fmtPct(b/m*100)]);
+    if (isFinite(b)&&isFinite(w)&&w>0) r.kc.push(['Lening/marktwaarde',fmtPct(b/w*100)]);
+    if (isFinite(b)&&isFinite(t)&&t>0) r.kc.push(['Lening/toetsinkomen',new Intl.NumberFormat('nl-NL',{maximumFractionDigits:1}).format(b/t)+' ×']);
+    if (isFinite(b)&&isFinite(m)&&b>m && keuze && !/Boven/.test(keuze)) r.sig.push(['rood','Het bedrag ligt boven de maximale lening volgens de leennorm, maar de keuze is niet ‘boven de leennorm’.']);
+    if (/Boven/.test(keuze)){
+      r.sig.push(['','Boven de leennorm: concretiseer de bijzondere omstandigheid en reken die door. Een algemene uitleg zoals ‘goed toekomstperspectief’ of ‘behoorlijk vermogen’ is volgens de Leidraad (p. 12) niet voldoende.']);
+      var ci=$('c-hoogte-4'); if (ci && !ci.checked) r.mis.push('boven de leennorm: doorgerekende onderbouwing nog niet afgevinkt');
+    }
+    if (!isFinite(b)) r.mis.push('hypotheekbedrag niet ingevuld');
+    if (!waarde('x-hoogte-bronink')) r.zacht.push('bron van het toetsinkomen niet vermeld');
+  }
+  if (o.id==='rentevast'){
+    if (risico==='laag' && /^(Variabel|1 tot)/.test(keuze)) r.sig.push(['rood','Lage risicobereidheid in het profiel, maar een variabele of korte rentevaste periode. Vraag door en motiveer (Leidraad p. 13).']);
+    var bh=parseEur(waarde('x-hoogte-bedrag')), ti=parseEur(waarde('x-hoogte-toets'));
+    if (/^(Variabel|1 tot)/.test(keuze) && isFinite(bh)&&isFinite(ti)&&ti>0 && bh/ti>=4.5) r.sig.push(['','Hoge lening ten opzichte van het inkomen met een korte rentevaste periode: de Leidraad (p. 13) vraagt hier extra aandacht.']);
+  }
+  if (o.id==='aflos'){
+    if (/aflossingsvrij/.test(keuze) && !isFinite(parseEur(waarde('x-aflos-afv')))) r.zacht.push('bedrag aflossingsvrij deel niet ingevuld');
+    if (/aflossingsvrij/.test(keuze) && risico==='laag') r.sig.push(['','Aflossingsvrij deel bij een lage risicobereidheid: licht toe hoe het herfinancieringsrisico op de einddatum past.']);
+  }
+  if (o.risico && !nvt){
+    var sc=waarde('x-'+o.id+'-scenario');
+    if (!sc) r.mis.push('uitkomst scenarioberekening niet ingevuld');
+    if (sc==='Nog niet doorgerekend') r.mis.push('scenario nog niet doorgerekend');
+    if (sc==='Tekort dat de klant niet kan opvangen' && /^Accepteren/.test(keuze)) r.sig.push(['rood','Het tekort is volgens het scenario niet op te vangen, maar het advies is ‘accepteren’. De Leidraad (p. 22) vraagt een eigen afweging of de klant het risico kán lopen. Als de klant zelf wil accepteren: leg dit vast als afwijking.']);
+    if (sc==='Tekort dat de klant niet kan opvangen' && volgt==='nee') r.sig.push(['','De klant wijkt af terwijl het tekort niet op te vangen is: wijs duidelijk op de gevolgen, leg vast en plan een terugbelmoment (Leidraad p. 23).']);
+    var tk=parseEur(waarde('x-'+o.id+'-tekort')); if (isFinite(tk)) r.kc.push(['Tekort per maand',fmtEur(tk)]);
+  }
+  if (o.id==='relatie'){
+    var hh=waarde('p-huishouden');
+    if (nvt && hh && hh!=='alleen') r.sig.push(['rood','‘Niet van toepassing’ gekozen, terwijl het profiel een partner vermeldt.']);
+    if (hh==='geen' && !nvt) r.sig.push(['','Samenwonend zonder vastgelegde afspraken: moedig aan om afspraken bij de notaris vast te leggen (goede praktijk, Leidraad p. 24).']);
+  }
+  if (o.id==='product'){
+    var crit=$('x-product-criteria') ? gekozenVinkjes($('x-product-criteria')) : [];
+    if (!crit.length) r.mis.push('doorslaggevende voorwaarden niet aangegeven');
+    if (crit.length===1 && crit[0]==='Hoogte van de rente') r.sig.push(['','Alleen de rente aangevinkt. De Leidraad (p. 21) verwacht een vergelijking op relevante voorwaarden, niet alleen op rente.']);
+    if (/^1 /.test(waarde('x-product-aantal'))) r.zacht.push('één aanbieder vergeleken: licht toe waarom');
+  }
+  return r;
+}
+
+/* ---------- Tekst ---------- */
+function profielTekst(){
+  var L=[], doelen=gekozenVinkjes($('p-doelen'));
+  function regel(lbl,v){ if (v) L.push(lbl+': '+v); }
+  regel('Adviessituatie',waarde('p-situatie'));
+  var hhSel=$('p-huishouden'); regel('Huishouden', hhSel.value ? hhSel.options[hhSel.selectedIndex].text : '');
+  regel('Kinderen of kinderwens',waarde('p-kinderen'));
+  regel('Doelstellingen',doelen.join('; '));
+  if (waarde('p-doelen-tekst')) L.push(waarde('p-doelen-tekst'));
+  regel('Kennis en ervaring',waarde('p-kennis'));
+  var rs=$('p-risico'); regel('Risicobereidheid', rs.value ? rs.options[rs.selectedIndex].text : '');
+  if (waarde('p-kennis-tekst')) L.push(waarde('p-kennis-tekst'));
+  var ink=[]; if (eurTekst('p-ink1')) ink.push('aanvrager '+eurTekst('p-ink1')); if (eurTekst('p-ink2')) ink.push('partner '+eurTekst('p-ink2'));
+  regel('Bruto jaarinkomen',ink.join(', '));
+  regel('Soort inkomen',waarde('p-inksoort'));
+  regel('Vermogen en eigen middelen',eurTekst('p-vermogen'));
+  regel('Vrije buffer na aankoop',eurTekst('p-buffer'));
+  regel('Financiële verplichtingen',waarde('p-verpl'));
+  regel('Bestaande voorzieningen',waarde('p-voorz'));
+  regel('AOW-datum',waarde('p-aow'));
+  regel('Verwachting werk',waarde('p-werk'));
+  if (waarde('p-toekomst')) L.push('Toekomst: '+waarde('p-toekomst'));
+  return L;
+}
+
+function onderdeelTekst(o){
+  var L=[], keuze=waarde('k-'+o.id), volgt=waarde('v-'+o.id);
+  L.push((o.tekstKeuze?'Geadviseerde geldverstrekker: ':'Advies: ')+(keuze||'(nog niet gekozen)'));
+  (o.velden||[]).forEach(function(v){
+    var id='x-'+o.id+'-'+v.k, s='';
+    if (v.t==='multi') s=gekozenVinkjes($(id)).join('; ');
+    else if (v.t==='eur') s=eurTekst(id);
+    else s=waarde(id);
+    if (s) L.push(v.l+': '+s);
+  });
+  var mot=waarde('m-'+o.id);
+  L.push(''); L.push(mot || '(motivering nog in te vullen)');
+  if (volgt==='nee'){ L.push(''); L.push('Afwijking van het advies: '+(waarde('a-'+o.id)||'(motivatie klant en besproken gevolgen nog in te vullen)')); }
+  else if (volgt==='ja') { L.push(''); L.push('De klant volgt dit advies.'); }
+  return L;
+}
+
+function volledigeTekst(){
+  var d=new Date(), dat=d.getDate()+'-'+(d.getMonth()+1)+'-'+d.getFullYear();
+  var T=[], ref=waarde('p-ref');
+  T.push('ADVIESMOTIVATIE HYPOTHEEK'+(ref?' – '+ref:''));
+  T.push('Opgesteld: '+dat+'. Concept voor het adviesrapport; klantspecifiek maken en controleren.');
+  T.push(''); T.push('KLANTPROFIEL');
+  var p=profielTekst(); T.push(p.length?p.join('\n'):'(nog niet ingevuld)');
+  ONDERDELEN.forEach(function(o,i){ T.push(''); T.push((i+1)+'. '+o.titel.toUpperCase()); T.push(onderdeelTekst(o).join('\n')); });
+  return T.join('\n');
+}
+
+/* ---------- Bijwerken ---------- */
+function werkBij(){
+  var lijst=[], klaar=0;
+  var pm=profielStatus();
+  var stP=$('st-profiel'); stP.className='stip'+(pm.length===0?' klaar':(pm.length<10?' half':''));
+  if (pm.length===0) klaar++;
+  if (pm.length) lijst.push({a:'#profiel',t:'Klantprofiel',items:pm.map(function(x){return [x,0];})});
+
+  ONDERDELEN.forEach(function(o,i){
+    var r=onderdeelAnalyse(o);
+    $('aw-'+o.id).classList.toggle('verborgen', waarde('v-'+o.id)!=='nee');
+    $('kc-'+o.id).innerHTML=r.kc.map(function(k){return '<span>'+esc(k[0])+': <b>'+esc(k[1])+'</b></span>';}).join('');
+    $('sg-'+o.id).innerHTML=r.sig.map(function(s){return '<div class="signaal'+(s[0]?' '+s[0]:'')+'">'+esc(s[1])+'</div>';}).join('');
+    var leeg=!waarde('k-'+o.id)&&!waarde('m-'+o.id);
+    $('st-'+o.id).className='stip'+(r.mis.length===0?' klaar':(leeg?'':' half'));
+    if (r.mis.length===0) klaar++;
+    var items=r.mis.map(function(x){return [x,0];}).concat(r.zacht.map(function(x){return [x,1];})).concat(r.sig.filter(function(s){return s[0]==='rood';}).map(function(s){return ['tegenstrijdigheid: '+s[1],0];}));
+    if (items.length) lijst.push({a:'#o-'+o.id,t:(i+1)+'. '+o.titel,items:items});
+  });
+
+  $('teller').textContent=klaar+' van '+(ONDERDELEN.length+1)+' onderdelen compleet';
+  var h='';
+  if (!lijst.length) h='<p class="ok">Alle onderdelen zijn ingevuld en gemotiveerd. Lees de tekst nog kritisch na op klantspecifieke onderbouwing.</p>';
+  else {
+    h='<ul>';
+    lijst.forEach(function(g){
+      h+='<li><a href="'+g.a+'">'+esc(g.t)+'</a><ul>';
+      g.items.forEach(function(it){ h+='<li'+(it[1]?' class="zacht"':'')+'>'+esc(it[0])+'</li>'; });
+      h+='</ul></li>';
+    });
+    h+='</ul><p style="font-size:12px;color:var(--grijs);margin:8px 0 0">Grijs: aandachtspunt, geen harde ontbrekende informatie.</p>';
+  }
+  $('ontbreekt').innerHTML=h;
+  $('tekst').textContent=volledigeTekst();
+}
+
+/* ---------- Acties ---------- */
+function voegZinToe(oid, idx){
+  var o=ONDERDELEN.filter(function(x){return x.id===oid;})[0]; if (!o) return;
+  var ta=$('m-'+oid), z=o.zinnen[idx], v=ta.value;
+  ta.value = v ? (v.replace(/\s+$/,'') + (/[\n]$/.test(v)?'':' ') + z) : z;
+  ta.focus();
+  var p=ta.value.lastIndexOf(z), m=z.indexOf('[');
+  if (m>=0 && ta.setSelectionRange){ var e=z.indexOf(']',m); ta.setSelectionRange(p+m, p+e+1); }
+  werkBij();
+}
+
+function toonStatus(t){ $('status').textContent=t; setTimeout(function(){ if ($('status').textContent===t) $('status').textContent=''; },4000); }
+
+function kopieer(){
+  var t=volledigeTekst();
+  function handmatig(){ $('handmatig').style.display='block'; var ta=$('handmatig-tekst'); ta.value=t; ta.focus(); ta.select(); toonStatus(''); }
+  if (navigator.clipboard && window.isSecureContext){
+    navigator.clipboard.writeText(t).then(function(){ toonStatus('Gekopieerd naar het klembord.'); }, handmatig);
+  } else {
+    try {
+      var ta=document.createElement('textarea'); ta.value=t; ta.setAttribute('readonly',''); ta.style.position='fixed'; ta.style.left='-9999px';
+      document.body.appendChild(ta); ta.select(); var ok=document.execCommand('copy'); document.body.removeChild(ta);
+      if (ok) toonStatus('Gekopieerd naar het klembord.'); else handmatig();
+    } catch(e){ handmatig(); }
+  }
+}
+
+function afdrukken(){
+  var ref=waarde('p-ref');
+  var body='<h1>Adviesmotivatie hypotheek'+(ref?' – '+esc(ref):'')+'</h1><p class="meta">Concept voor het adviesrapport, opgesteld met het hulpmiddel van Adviesforum. Klantspecifiek maken en controleren; geen vervanging van het adviesrapport.</p>';
+  var p=profielTekst();
+  body+='<h2>Klantprofiel</h2>'+(p.length?p.map(function(x){return '<p>'+esc(x)+'</p>';}).join(''):'<p><em>Nog niet ingevuld.</em></p>');
+  ONDERDELEN.forEach(function(o,i){
+    body+='<h2>'+(i+1)+'. '+esc(o.titel)+'</h2>';
+    body+=onderdeelTekst(o).filter(function(x){return x!=='';}).map(function(x){return '<p>'+esc(x).replace(/\n/g,'<br>')+'</p>';}).join('');
+  });
+  var html='<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><title>Adviesmotivatie'+(ref?' '+esc(ref):'')+'</title>'+
+    '<style>body{font-family:Arial,Helvetica,sans-serif;color:#141414;max-width:760px;margin:24px auto;padding:0 16px;font-size:12.5pt;line-height:1.5}h1{font-size:20pt;border-bottom:4px solid #FFD200;padding-bottom:6px}h2{font-size:14pt;margin:22px 0 6px;break-after:avoid}p{margin:0 0 6px}.meta{color:#5E5E5E;font-size:10pt}</style>'+
+    '</head><body>'+body+'</body></html>';
+  var w=null;
+  try { w=window.open('','_blank'); } catch(e){ w=null; }
+  if (!w){ toonStatus('Pop-up geblokkeerd. Sta pop-ups toe of gebruik Kopiëren.'); return; }
+  w.document.open(); w.document.write(html); w.document.close();
+  try { w.focus(); setTimeout(function(){ try{ w.print(); }catch(e){} },250); } catch(e){}
+}
+
+function wissen(){
+  if (!window.confirm('Alle invoer op deze pagina leegmaken?')) return;
+  document.querySelectorAll('.inhoud input[type=text], .inhoud textarea').forEach(function(e){ e.value=''; });
+  document.querySelectorAll('.inhoud select').forEach(function(e){ e.selectedIndex=0; });
+  document.querySelectorAll('.inhoud input[type=checkbox]').forEach(function(e){ e.checked=false; });
+  $('handmatig').style.display='none';
+  werkBij(); toonStatus('Alles is leeggemaakt.');
+}
+
+/* ---------- Start ---------- */
+bouwDoelen(); bouwOnderdelen(); bouwMenu();
+var inhoud=document.querySelector('.inhoud');
+inhoud.addEventListener('input', werkBij);
+inhoud.addEventListener('change', werkBij);
+inhoud.addEventListener('focusout', function(e){
+  var t=e.target; if (t && t.classList && t.classList.contains('eur')){ var n=parseEur(t.value); if (isFinite(n)) { t.value=(Math.round(n)===n?NF0:NF2).format(n); werkBij(); } }
+});
+$('onderdelen').addEventListener('click', function(e){
+  var b=e.target.closest('button[data-o]'); if (b) voegZinToe(b.getAttribute('data-o'), +b.getAttribute('data-z'));
+});
+$('kopieer').addEventListener('click', kopieer);
+$('afdrukken').addEventListener('click', afdrukken);
+$('wissen').addEventListener('click', wissen);
+werkBij();
+})();
+</script>
+</body>
+</html>
