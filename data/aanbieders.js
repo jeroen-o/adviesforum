@@ -14,6 +14,8 @@
  *   telefoon      optioneel: algemeen of intermediair-telefoonnummer (zakelijk, geen persoonlijke nummers)
  *   opgezocht     JJJJ-MM-DD: datum waarop website, telefoon en extranet door de redactie zijn opgezocht (bij voorbeeldprofielen)
  *   contactbronnen  lijst met bron-URL's van die gegevens
+ *   toezicht      optioneel: AFM | DNB en AFM | ECB/DNB en AFM | Buitenlands toezicht en AFM | DNB en AFM (pensioenfonds) | Geen eigen vergunning | Geen Wft-vergunning
+ *   toezichtNoot, toezichtBron  korte toelichting en bron-URL (peildatum 3-10-2026; controleer in het AFM-/DNB-register)
  *   omschrijving  korte zakelijke omschrijving (max. 400 tekens); website: https-url
  *   extranet      {url, naam}  portal of aanvraagomgeving voor adviseurs
  *   contact       [{naam, functie, email, telefoon}]  alleen ZAKELIJKE gegevens, met toestemming van de persoon (AVG)
@@ -291,7 +293,10 @@ window.AANBIEDERS=[
       "https://www.asr.nl/adviseur",
       "https://www.asr.nl/zakelijk/login/adviseurs",
       "https://extranet.uitvaart.asr.nl/File/Cockpitkaart.pdf"
-    ]
+    ],
+    "toezicht": "DNB en AFM",
+    "toezichtNoot": "Nederlandse verzekeraar; ASR-entiteiten staan in de registers van DNB en AFM. Hypotheken lopen via de ASR-groep.",
+    "toezichtBron": "https://acpr.banque-france.fr/en/node/1632299"
   },
   {
     "id": "abn-amro",
@@ -335,7 +340,10 @@ window.AANBIEDERS=[
     "contactbronnen": [
       "https://intermediair.abnamro.nl/over-ons",
       "https://intermediair.abnamro.nl/systeem/inloggen"
-    ]
+    ],
+    "toezicht": "ECB/DNB en AFM",
+    "toezichtNoot": "Significante bank onder direct ECB-toezicht (samen met DNB); gedragstoezicht door de AFM.",
+    "toezichtBron": "https://www.abnamro.com/nl/over-abn-amro/informatie/toezichthouders"
   },
   {
     "id": "acura-assuradeuren",
@@ -377,7 +385,10 @@ window.AANBIEDERS=[
       "https://www.acura.nl/service/contactgegevens-per-afdeling/",
       "https://www.acura.nl/service/inloggen-extranet/",
       "https://www.acura.nl/voor-assurantietussenpersoon/"
-    ]
+    ],
+    "toezicht": "AFM",
+    "toezichtNoot": "Volmachtbedrijf (gevolmachtigd agent). Daarvoor is een AFM-vergunning nodig; staat op de volmachtlijst van Unigarant. Het AFM-nummer is niet gevonden.",
+    "toezichtBron": "https://www-pp.unigarant.nl/wp-content/uploads/2024/09/Volmachten-Unigarant-september-2024.pdf"
   },
   {
     "id": "allianz-global-assistance",
@@ -418,7 +429,10 @@ window.AANBIEDERS=[
     "contactbronnen": [
       "https://www.allianz-assistance.nl/over-ons/zakenpartner.html",
       "https://ap.allianz-assistance.nl/AllianzAssistApplication/Logon"
-    ]
+    ],
+    "toezicht": "Buitenlands toezicht en AFM",
+    "toezichtNoot": "Nederlands bijkantoor van het Franse AWP P&C S.A. Prudentieel toezicht door de ACPR (Frankrijk), gedragstoezicht door de AFM.",
+    "toezichtBron": "https://mini.ie/content/dam/MINI/marketIE/mini_ie/pdf/financial/4097TOB-0219.pdf.asset.1570794608158.pdf"
   },
   {
     "id": "allianz",
@@ -460,7 +474,10 @@ window.AANBIEDERS=[
       "https://www.allianz.nl/particulier/hypotheken.html",
       "https://adviseursportaal.allianz.nl/",
       "https://www.allianz.nl/zakelijk/contact.html"
-    ]
+    ],
+    "toezicht": "Buitenlands toezicht en AFM",
+    "toezichtNoot": "Na de fusie in 2019 werkt Allianz in Nederland via een bijkantoor van het Belgische Allianz Benelux N.V. Prudentieel toezicht door de Nationale Bank van België (NBB), gedragstoezicht door de AFM.",
+    "toezichtBron": "https://www.fma.gv.at/en/merger-of-allianz-nederland-levensverzekering-n-v-into-allianz-benelux-s-a/"
   },
   {
     "id": "anac-backoffice",
@@ -540,7 +557,10 @@ window.AANBIEDERS=[
     "contactbronnen": [
       "https://anker.nl/merken/anker-rechtsbijstand/",
       "https://www.ankerrechtsbijstand.nl/"
-    ]
+    ],
+    "toezicht": "DNB en AFM",
+    "toezichtNoot": "Nederlandse schadeverzekeraar (rechtsbijstand) onder toezicht van DNB; sinds april 2022 onderdeel van De Goudse.",
+    "toezichtBron": "https://www.ctr-csr.be/en/party/anker-insurance-company-nv"
   },
   {
     "id": "arag",
@@ -578,7 +598,10 @@ window.AANBIEDERS=[
       "https://www.arag.nl/intermediair/",
       "https://www.arag.nl/intermediair/afdeling-verkoop/",
       "https://www.arag.nl/contact/"
-    ]
+    ],
+    "toezicht": "Buitenlands toezicht en AFM",
+    "toezichtNoot": "Nederlands bijkantoor van het Duitse ARAG SE (sinds 2012). Prudentieel toezicht door BaFin, gedragstoezicht in Nederland door de AFM.",
+    "toezichtBron": "https://arag.com/company/locations/netherlands"
   },
   {
     "id": "argenta",
@@ -619,7 +642,10 @@ window.AANBIEDERS=[
     "contactbronnen": [
       "https://www.argenta.nl/adviseur/contact/veelgestelde-vragen/adviseurs/contact-adviseurs",
       "https://www.argenta.nl/inloggen"
-    ]
+    ],
+    "toezicht": "Buitenlands toezicht en AFM",
+    "toezichtNoot": "Belgische bank met een Nederlands bijkantoor. Prudentieel toezicht door ECB en NBB; gedragstoezicht in Nederland door de AFM, met beperkt bijkantoortoezicht door DNB.",
+    "toezichtBron": "https://www.argenta.be/content/dam/argenta/documenten/algemeen/arv/Algemeen%20Reglement%20der%20Verrichtingen.pdf"
   },
   {
     "id": "asn-bank",
@@ -656,7 +682,10 @@ window.AANBIEDERS=[
     "contactbronnen": [
       "https://www.asnbank.nl/downloads/asn-hypotheek-onafhankelijk-adviseurs-2024.html",
       "https://www.asnbank.nl/service/hypotheken.html"
-    ]
+    ],
+    "toezicht": "ECB/DNB en AFM",
+    "toezichtNoot": "Bankvergunning van DNB; heet sinds 1 juli 2025 ASN Bank N.V. Als significante bank staat ze onder direct ECB-toezicht; gedragstoezicht door de AFM.",
+    "toezichtBron": "https://asnbank.nl/downloads/asn-bank-dienstenwijzer-2023.html"
   },
   {
     "id": "attens-hypotheken",
@@ -697,7 +726,10 @@ window.AANBIEDERS=[
     "contactbronnen": [
       "https://www.attens.nl/contact",
       "https://www.attens.nl/voor-adviseurs/adviseursportaal"
-    ]
+    ],
+    "toezicht": "Geen eigen vergunning",
+    "toezichtNoot": "Hypotheekmerk van Achmea Bank (voor deelnemers van PFZW). De vergunning ligt bij Achmea Bank N.V., toezicht DNB en AFM.",
+    "toezichtBron": "https://achmeabank.nl/en/"
   },
   {
     "id": "avero-achmea",
@@ -738,7 +770,10 @@ window.AANBIEDERS=[
     "contactbronnen": [
       "https://www.averoachmea.nl/direct-regelen/contact",
       "https://www.averoachmea.nl/direct-regelen/inloggen"
-    ]
+    ],
+    "toezicht": "Geen eigen vergunning",
+    "toezichtNoot": "Handelsnaam van Achmea Schadeverzekeringen N.V., die een vergunning heeft van DNB; toezicht DNB en AFM.",
+    "toezichtBron": "https://www.averoachmea.nl/-/media/files/zakelijk/bap-bedrijfs-actief-polis/brochure-bedrijfactiefpolis-volmacht.pdf"
   },
   {
     "id": "bedrijfshypotheek-nl",
@@ -812,7 +847,10 @@ window.AANBIEDERS=[
     "contactbronnen": [
       "https://bijbouwe.nl/adviseurs/service-contact",
       "https://bijbouwe.nl/adviseurs"
-    ]
+    ],
+    "toezicht": "Geen eigen vergunning",
+    "toezichtNoot": "Hypotheeklabel van Dynamic Credit, sinds 2022 onderdeel van BNP Paribas AM. Staat geregistreerd bij de AFM via Dynamic Credit Hypotheken B.V.; alleen AFM-toezicht, geen bank.",
+    "toezichtBron": "https://www.lawinsider.com/nl/contracts/hhe8weBICXd"
   },
   {
     "id": "blueline-hypotheekdesk",
@@ -895,7 +933,10 @@ window.AANBIEDERS=[
     "contactbronnen": [
       "https://www.bnpparibas.nl/en/get-in-touch-with-our-businesses/",
       "https://www.bnpparibas-pf.nl/lenen/de-persoonlijkste-lening/geselecteerde-financieel-adviseurs"
-    ]
+    ],
+    "toezicht": "AFM",
+    "toezichtNoot": "Nederlandse B.V. (Rotterdam) met AFM-registratie als kredietaanbieder. Het Franse moederbedrijf staat onder toezicht van de ACPR.",
+    "toezichtBron": "https://bnpparibas-pf.nl/hypotheken/voorwaarden-en-downloads/Dienstverleningsdocument%20Hypotheken"
   },
   {
     "id": "bnp-paribas-cardif",
@@ -939,7 +980,10 @@ window.AANBIEDERS=[
     "contactbronnen": [
       "https://www.bnpparibascardif.nl/contact",
       "https://www.bnpparibascardif.nl/nieuws/cardif-vernieuwt-inkomstenvalmeter"
-    ]
+    ],
+    "toezicht": "Buitenlands toezicht en AFM",
+    "toezichtNoot": "Franse verzekeraars met een Nederlands bijkantoor. Prudentieel toezicht door de ACPR, gedragstoezicht door de AFM.",
+    "toezichtBron": "https://acpr.banque-france.fr/en/print/pdf/node/1917467"
   },
   {
     "id": "bovemij",
@@ -980,7 +1024,10 @@ window.AANBIEDERS=[
     "contactbronnen": [
       "https://www.bovemij.nl/tussenpersonen/service-en-contact",
       "https://portaal.bovemij.nl/"
-    ]
+    ],
+    "toezicht": "DNB en AFM",
+    "toezichtNoot": "Nederlandse schadeverzekeraar (Nijmegen) met verzekeraarsvergunning; rapporteert aan DNB (SFCR) en staat in het AFM-register.",
+    "toezichtBron": "https://www.bovemij.nl/content/dienstenwijzerverzekeringen"
   },
   {
     "id": "bsb-volmachten",
@@ -1094,7 +1141,10 @@ window.AANBIEDERS=[
     "contactbronnen": [
       "https://mortgages.bunq.com/contact",
       "https://help.bunq.com/en/articles/bunq-easy-mortgages"
-    ]
+    ],
+    "toezicht": "DNB en AFM",
+    "toezichtNoot": "Nederlandse bank met een DNB-bankvergunning sinds 17-09-2014 (minder significante instelling); gedragstoezicht door de AFM, die bunq ook heeft beboet.",
+    "toezichtBron": "https://www.dnb.nl/media/cr2ajxmx/bestuurlijke-boete-wwft-bunq-b-v.pdf"
   },
   {
     "id": "bureau-dfo",
@@ -1208,7 +1258,10 @@ window.AANBIEDERS=[
     "contactbronnen": [
       "https://www.centraalbeheer.nl/voor-adviseurs/contact/hypotheken",
       "https://www.centraalbeheer.nl/voor-adviseurs/adviseursportaal"
-    ]
+    ],
+    "toezicht": "Geen eigen vergunning",
+    "toezichtNoot": "Merknaam van Achmea-entiteiten. Hypotheken lopen via Achmea Bank N.V.; toezicht DNB en AFM.",
+    "toezichtBron": "https://www.bank.nl/banken/centraal-beheer/"
   },
   {
     "id": "certe-assuradeuren",
@@ -1282,7 +1335,10 @@ window.AANBIEDERS=[
     "contactbronnen": [
       "https://sp.dfobv.nl/serviceprovider/cfsn-kredietendesk/",
       "https://www.cfsn.nl/nieuwe-extranet"
-    ]
+    ],
+    "toezicht": "AFM",
+    "toezichtNoot": "Kredietbemiddelaar uit Hengelo; aangesloten bij Kifid (uitspraak 2025-0980). Consumptief krediet bemiddelen vraagt een AFM-vergunning.",
+    "toezichtBron": "https://www.kifid.nl/media/wo3l1p1p/uitspraak-2025-0980-bindend.pdf"
   },
   {
     "id": "clarian-wonen",
@@ -1362,7 +1418,10 @@ window.AANBIEDERS=[
     "contactbronnen": [
       "https://www.connect-assuradeuren.nl/Contact/contact-informatie",
       "https://www.veldsink.nl/nieuws/branche/connect-assuradeuren-wordt-onderdeel-van-veldsink-groep/"
-    ]
+    ],
+    "toezicht": "AFM",
+    "toezichtNoot": "Volmachtbedrijf, opgericht door voormalige Interpolis-intermediairs. Een gevolmachtigd agent heeft een AFM-vergunning nodig.",
+    "toezichtBron": "https://www.amweb.nl/onderwerp/2002?page=23"
   },
   {
     "id": "corins",
@@ -1398,7 +1457,10 @@ window.AANBIEDERS=[
     "opgezocht": "2026-10-03",
     "contactbronnen": [
       "https://corins.nl/contactproperty.htm"
-    ]
+    ],
+    "toezicht": "AFM",
+    "toezichtNoot": "Underwriting agency uit Amsterdam (opgericht 2003) die schadeverzekeraars vertegenwoordigt als gevolmachtigd agent; daarvoor is een AFM-vergunning nodig. Het nummer is niet gevonden.",
+    "toezichtBron": "https://www.victorinsurance.com/nl/en/about/insurers.html"
   },
   {
     "id": "dak-intermediairscollectief",
@@ -1482,7 +1544,10 @@ window.AANBIEDERS=[
       "https://www.das.nl/adviseur",
       "https://adviseur.das.nl/inloggen?ac=1608111558",
       "https://www.das.nl/ondernemer/service-en-contact"
-    ]
+    ],
+    "toezicht": "DNB en AFM",
+    "toezichtNoot": "Nederlandse rechtsbijstandverzekeraar met een DNB-vergunning (nr. 145445) en registratie bij de AFM.",
+    "toezichtBron": "https://media.aonverzekeringen.nl/-/media/Files/Particulier/Verzekeringen/Rechtsbijstandverzekering/AON-TG-DAS-Rechtsbijstand-2023-01-V1.pdf"
   },
   {
     "id": "de-goudse",
@@ -1524,7 +1589,10 @@ window.AANBIEDERS=[
       "https://www.goudse.nl/algemeen/contact/telefoonnummers",
       "https://www.goudse.nl/adviseur",
       "https://www.goudse.nl/inloggen"
-    ]
+    ],
+    "toezicht": "DNB en AFM",
+    "toezichtNoot": "Nederlandse verzekeraar onder prudentieel toezicht van DNB (SFCR) en gedragstoezicht van de AFM.",
+    "toezichtBron": "https://goudse.nl/-/media/files/goudse/overdegoudse/sfcr-de-goudse-nv-2021.pdf"
   },
   {
     "id": "de-nederlandse",
@@ -1608,7 +1676,10 @@ window.AANBIEDERS=[
       "https://www.dezeeuwse.nl/algemeen/contact",
       "https://www.dezeeuwse.nl/adviseur",
       "https://www.dezeeuwse.nl/inloggen"
-    ]
+    ],
+    "toezicht": "Geen eigen vergunning",
+    "toezichtNoot": "Handelsnaam van Goudse Schadeverzekeringen N.V.; toezicht DNB en AFM.",
+    "toezichtBron": "https://www.dezeeuwse.nl/-/media/de-zeeuwse-documenten/compleetverzekerd-mijn-personeel---voorwaarden/wijzigingsoverzicht2022/uitvoeringsovereenkomst.pdf"
   },
   {
     "id": "defam",
@@ -1652,7 +1723,10 @@ window.AANBIEDERS=[
     "contactbronnen": [
       "https://www.defam.nl/voor-partners/portaal/",
       "https://www.defam.nl/voor-partners/"
-    ]
+    ],
+    "toezicht": "AFM",
+    "toezichtNoot": "Kredietverstrekker voor persoonlijke leningen, alleen via adviseurs; onderdeel van ALFAM/ABN AMRO Consumer Finance. Heeft een AFM-vergunning als kredietaanbieder; is zelf geen bank. De precieze vergunninghouder is niet bevestigd.",
+    "toezichtBron": "https://financer.nl/review/defam/"
   },
   {
     "id": "domivest",
@@ -1688,7 +1762,10 @@ window.AANBIEDERS=[
     "contactbronnen": [
       "https://domivest.com/contact",
       "https://domivest.com/het-product"
-    ]
+    ],
+    "toezicht": "Geen Wft-vergunning",
+    "toezichtNoot": "Verhuurhypotheek voor professionele beleggers. Volgens de voorwaarden is die niet bedoeld voor consumenten in de zin van de Wft; zakelijk krediet zonder Wft-vergunningplicht. Gefinancierd door Londense banken en daarna gesecuritiseerd.",
+    "toezichtBron": "https://lawinsider.com/nl/contracts/e7DoN3R2Sev"
   },
   {
     "id": "dutch-finance",
@@ -1766,7 +1843,10 @@ window.AANBIEDERS=[
     "contactbronnen": [
       "https://www.financieelfit.nl/contact/",
       "https://wiki.financieelfit.nl/portaal/verbinden-met-het-portaal/inloggen-op-het-service-dashboard"
-    ]
+    ],
+    "toezicht": "AFM",
+    "toezichtNoot": "Franchiseketen van hypotheekadviseurs. Financieel Fit Servicecenter B.V. is partij in Kifid-zaken als financieel dienstverlener (adviseren/bemiddelen, AFM-vergunningplichtig). Het nummer is niet gevonden.",
+    "toezichtBron": "https://www.kifid.nl/wp-content/uploads/2024/01/Uitspraak-2024-0038-Bindend.pdf"
   },
   {
     "id": "financieel-zeker",
@@ -1838,7 +1918,10 @@ window.AANBIEDERS=[
     "contactbronnen": [
       "https://www.florius.nl/service-en-contact",
       "https://login.florius.nl/Login/"
-    ]
+    ],
+    "toezicht": "Geen eigen vergunning",
+    "toezichtNoot": "Handelsnaam van ABN AMRO Hypotheken Groep B.V. (AFM-register 12000025), dochter van ABN AMRO Bank; daarop is direct ECB-toezicht (met DNB) van toepassing, en AFM houdt toezicht op het gedrag.",
+    "toezichtBron": "https://www.florius.nl/-/media/florius/files/formulieren/voorwaarden/20240826-profijt-hypotheek.pdf"
   },
   {
     "id": "fondsen-platform",
@@ -1977,7 +2060,10 @@ window.AANBIEDERS=[
     "contactbronnen": [
       "https://www.handelsbanken.nl/nl/particulier/hypotheken",
       "https://www.handelsbanken.nl/nl/vind-uw-kantoor/amsterdam-zuid"
-    ]
+    ],
+    "toezicht": "Buitenlands toezicht en AFM",
+    "toezichtNoot": "Nederlands bijkantoor van een Zweedse bank dat via het Europees paspoort werkt (DNB-register 12000981). Prudentieel toezicht ligt bij Finansinspektionen (Zweden), gedragstoezicht in NL bij AFM.",
+    "toezichtBron": "https://www.handelsbanken.nl/tron/nlpu/info/contents/v1/document/37-271051"
   },
   {
     "id": "hdi",
@@ -2014,7 +2100,10 @@ window.AANBIEDERS=[
     "contactbronnen": [
       "https://www.hdi.global/en-us/about-us/locations-contacts/",
       "https://www.hdi.global/nl-nl/services/volmachten/"
-    ]
+    ],
+    "toezicht": "Buitenlands toezicht en AFM",
+    "toezichtNoot": "Duitse verzekeraar (Talanx) met een bijkantoor in Rotterdam. Toezicht door BaFin (Duitsland), gedragstoezicht in NL bij AFM.",
+    "toezichtBron": "https://www.hdi.global/nl-be/legal/imprint"
   },
   {
     "id": "heinenoord-assuradeuren",
@@ -2051,7 +2140,10 @@ window.AANBIEDERS=[
     "contactbronnen": [
       "https://www.heinenoord.nl/contact",
       "https://www.heinenoord.nl/"
-    ]
+    ],
+    "toezicht": "AFM",
+    "toezichtNoot": "Volmachtbedrijf (gevolmachtigd agent), deelnemer CIS. Alleen AFM-toezicht.",
+    "toezichtBron": "https://stichtingcis.nl/en-us/Members/Participating-authorised-agents"
   },
   {
     "id": "hoeksche-waard-assuradeuren",
@@ -2088,7 +2180,10 @@ window.AANBIEDERS=[
     "contactbronnen": [
       "https://hoekschewaardassuradeuren.nl/contact/",
       "https://hoekschewaardassuradeuren.nl/intermediair/"
-    ]
+    ],
+    "toezicht": "AFM",
+    "toezichtNoot": "Volmachtbedrijf in Puttershoek met volmachten van meerdere verzekeraars (gevolmachtigd agent). Alleen AFM-toezicht.",
+    "toezichtBron": "https://www.lloyds.com/en-nl/lloyds-around-the-world/coverholders"
   },
   {
     "id": "hollandwoont",
@@ -2340,7 +2435,10 @@ window.AANBIEDERS=[
     "contactbronnen": [
       "https://mijn.intermediairs.ing.nl/",
       "https://mijn.intermediairs.ing.nl/content/ingex-live-public/nl_NL/header/help.html"
-    ]
+    ],
+    "toezicht": "ECB/DNB en AFM",
+    "toezichtNoot": "Significante bank onder direct ECB-toezicht (samen met DNB), gedragstoezicht bij AFM.",
+    "toezichtBron": "https://www.bankingsupervision.europa.eu/ecb/pub/pdf/ssm.listofsupervisedentities202608.en.pdf"
   },
   {
     "id": "iqwoon",
@@ -2377,7 +2475,10 @@ window.AANBIEDERS=[
     "contactbronnen": [
       "https://www.iqwoon.nl/service-contact",
       "https://www.iqwoon.nl/adviseur"
-    ]
+    ],
+    "toezicht": "Geen eigen vergunning",
+    "toezichtNoot": "Hypotheeklabel van Blauwtrust Groep, ingevoerd via dochter Hypotrust en nu verdeeld door Conneqt. Wordt gefinancierd door een buitenlandse instelling onder ECB-toezicht. Vergunninghouder vermoedelijk Hypotrust (AFM); het nummer is niet beve",
+    "toezichtBron": "https://www.banken.nl/nieuws/8179/iqwoon-betreedt-nederlandse-hypotheekmarkt"
   },
   {
     "id": "jens",
@@ -2455,7 +2556,10 @@ window.AANBIEDERS=[
     "opgezocht": "2026-10-03",
     "contactbronnen": [
       "https://klap.nl/nijmegen"
-    ]
+    ],
+    "toezicht": "AFM",
+    "toezichtNoot": "Onafhankelijke verzekeringsmakelaar uit Amsterdam (sinds 2023 onderdeel van Ardonagh). Als bemiddelaar alleen onder AFM-toezicht. Het AFM-nummer is niet gevonden.",
+    "toezichtBron": "https://hl.com/about-us/transactions/houlihan-lokey-advises-klap/"
   },
   {
     "id": "knab",
@@ -2490,7 +2594,10 @@ window.AANBIEDERS=[
     "opgezocht": "2026-10-03",
     "contactbronnen": [
       "https://www.knab.nl/particulier/hypotheken/knab-hypotheek/adviseurs"
-    ]
+    ],
+    "toezicht": "Buitenlands toezicht en AFM",
+    "toezichtNoot": "Sinds 2024 overgenomen door BAWAG Group en sinds 28-11-2025 een vestiging van de Oostenrijkse BAWAG. Prudentieel toezicht door ECB/FMA (Oostenrijk), gedrag in NL door AFM. Daarvoor was Knab N.V. een Nederlandse bank (DNB en AFM).",
+    "toezichtBron": "https://www.banken.nl/nieuws/25686/overname-knab-afgerond"
   },
   {
     "id": "landelijk-netwerk-inkoopcombinatie",
@@ -2561,7 +2668,10 @@ window.AANBIEDERS=[
     "contactbronnen": [
       "https://partners.lenderspender.nl/support/contact",
       "https://www.lenderspender.nl/"
-    ]
+    ],
+    "toezicht": "AFM",
+    "toezichtNoot": "AFM-vergunning voor het aanbieden van consumptief krediet (art. 2:60 Wft). Geen bank en niet onder DNB-toezicht.",
+    "toezichtBron": "https://www.lenderspender.nl/pdf/AlgemeneVoorwaarden-versie161114.pdf"
   },
   {
     "id": "lloyds-bank",
@@ -2598,7 +2708,10 @@ window.AANBIEDERS=[
     "contactbronnen": [
       "https://www.lloydsbank.nl/dam/jcr:3a7eae46-003b-4e0d-80dd-ae5239be6b17/Lloyds%20Bank%20Contactsheet%20ISD2.pdf",
       "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs"
-    ]
+    ],
+    "toezicht": "Buitenlands toezicht en AFM",
+    "toezichtNoot": "Duitse bank (Berlijn) met een Nederlands bijkantoor. Prudentieel toezicht door BaFin, in NL ook geregistreerd bij DNB/AFM (12046352).",
+    "toezichtBron": "https://lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/Lloyds%20Bank%20hypotheekgids%20december%202024.pdf"
   },
   {
     "id": "maas-lloyd",
@@ -2634,7 +2747,10 @@ window.AANBIEDERS=[
     "opgezocht": "2026-10-03",
     "contactbronnen": [
       "https://maaslloyd.nl/contact/"
-    ]
+    ],
+    "toezicht": "AFM",
+    "toezichtNoot": "Assuradeur in Rotterdam, actief in het volmachtkanaal (gevolmachtigd agent). Alleen AFM-toezicht. Het AFM-nummer is niet gevonden.",
+    "toezichtBron": "https://www.cbinsights.com/company/maaslloyd"
   },
   {
     "id": "merius",
@@ -2707,7 +2823,10 @@ window.AANBIEDERS=[
     "opgezocht": "2026-10-03",
     "contactbronnen": [
       "https://midglas.nl/contact/"
-    ]
+    ],
+    "toezicht": "DNB en AFM",
+    "toezichtNoot": "Nederlandse glasverzekeraar met DNB-vergunning, staat in het AFM-register (12000553).",
+    "toezichtBron": "https://media.aonverzekeringen.nl/zakelijk/-/media/Aon/Zakelijk/Files/Polisvoorwaarden/Midglas/Midglas-Woonhuis-Uitgebreid---WHU-0820.pdf"
   },
   {
     "id": "mogelijk",
@@ -2743,7 +2862,10 @@ window.AANBIEDERS=[
     "opgezocht": "2026-10-03",
     "contactbronnen": [
       "https://www.mogelijk.nl/contact"
-    ]
+    ],
+    "toezicht": "AFM",
+    "toezichtNoot": "Zakelijke vastgoedfinancier met een ECSP-vergunning (crowdfunding) en een AIFMD-vergunning van de AFM. Geen bank.",
+    "toezichtBron": "https://www.banken.nl/partners/mogelijk/nieuws"
   },
   {
     "id": "ms-amlin",
@@ -2779,7 +2901,10 @@ window.AANBIEDERS=[
     "opgezocht": "2026-10-03",
     "contactbronnen": [
       "https://www.msamlin.com/en/contact.html"
-    ]
+    ],
+    "toezicht": "Buitenlands toezicht en AFM",
+    "toezichtNoot": "Belgische verzekeraar (Brussel) met een Nederlands bijkantoor. Prudentieel toezicht door de Nationale Bank van België (NBB), gedrag in NL door AFM.",
+    "toezichtBron": "https://www.reinsurancene.ws/belgian-regulator-approves-ms-amlins-post-brexit-eu-hub/"
   },
   {
     "id": "munt-hypotheken",
@@ -2820,7 +2945,10 @@ window.AANBIEDERS=[
     "contactbronnen": [
       "https://www.munthypotheken.nl/contact/adviseur/",
       "https://www.munthypotheken.nl/servicepartner/"
-    ]
+    ],
+    "toezicht": "Geen eigen vergunning",
+    "toezichtNoot": "Hypotheeklabel van DMFCO. De vergunning staat op naam van DMF Hypotheek Management B.V. (AFM-toezicht). Investeerders zijn o.a. pensioenfondsen en Achmea Bank.",
+    "toezichtBron": "https://www.achmeabank.nl/en/news/achmea-bank-treedt-toe-tot-platform-dmfco-en-investeert-in-munt-hypotheken"
   },
   {
     "id": "nationale-nederlanden",
@@ -2861,7 +2989,10 @@ window.AANBIEDERS=[
     "contactbronnen": [
       "https://adviseur.nn.nl/",
       "https://adviseur.nn.nl/contact"
-    ]
+    ],
+    "toezicht": "DNB en AFM",
+    "toezichtNoot": "NN Bank heeft een bankvergunning (art. 2:11 Wft) en valt onder toezicht van DNB en AFM. De NN-verzekeraars hebben ook een DNB-vergunning.",
+    "toezichtBron": "https://www.nn.nl/Over-Nationale-Nederlanden/Nationale-Nederlanden-Bank.htm"
   },
   {
     "id": "nationale-waarborg",
@@ -2947,7 +3078,10 @@ window.AANBIEDERS=[
       "https://www.nedasco.nl/adviseurs/contact/",
       "https://www.nedasco.nl/nsn-mijn-nedasco/veelgesteldevragen/inloggen-en-starten/",
       "https://www.nedasco.nl/adviseurs/servicenet/"
-    ]
+    ],
+    "toezicht": "AFM",
+    "toezichtNoot": "Serviceprovider met volmachten van verzekeraars voor schade- en inkomensverzekeringen (gevolmachtigd agent). Alleen AFM-toezicht.",
+    "toezichtBron": "https://nl.indeed.com/cmp/Nedasco"
   },
   {
     "id": "nestr",
@@ -3026,7 +3160,10 @@ window.AANBIEDERS=[
       "https://nibc.nl/intermediair/contact",
       "https://intermediair.nibcdirect.nl/",
       "https://nibc.nl/intermediair/nieuwsberichten/actuele-klantdata-inzichtelijk"
-    ]
+    ],
+    "toezicht": "DNB en AFM",
+    "toezichtNoot": "Nederlandse bank die de ECB als 'high-impact' minder significante instelling aanmerkt. Daardoor direct toezicht door DNB (ECB indirect), gedrag door AFM.",
+    "toezichtBron": "https://nibc.com/about-us/corporate-governance"
   },
   {
     "id": "nnek",
@@ -3067,7 +3204,10 @@ window.AANBIEDERS=[
     "contactbronnen": [
       "https://www.nnek.nl/contact/",
       "https://www.nnek.nl/inloggennnek/"
-    ]
+    ],
+    "toezicht": "AFM",
+    "toezichtNoot": "Vermogensbeheerder/beleggingsonderneming uit Heerenveen. Ondersteunt adviseurs via NNEK KENNIS. Als beleggingsonderneming onder AFM-toezicht; het AFM-nummer is niet gevonden.",
+    "toezichtBron": "https://www.vermogensbeheer.nl/vermogensbeheerders/nnek"
   },
   {
     "id": "obvion",
@@ -3108,7 +3248,10 @@ window.AANBIEDERS=[
     "contactbronnen": [
       "https://dxp.obvion.nl/",
       "https://obvion.nl/service/"
-    ]
+    ],
+    "toezicht": "AFM",
+    "toezichtNoot": "Hypotheekaanbieder (AFM-vergunning 12012721) en dochter van Rabobank. Geen eigen bankvergunning; het moederbedrijf staat onder ECB/DNB-toezicht.",
+    "toezichtBron": "https://obvion.nl/artikel-1/Rentetarieven-Obvion-Woon-Hypotheek-4-mei-2021"
   },
   {
     "id": "orange-credit",
@@ -3222,7 +3365,10 @@ window.AANBIEDERS=[
     "contactbronnen": [
       "https://polaris-assuradeuren.nl/contact/",
       "https://polaris-assuradeuren.nl/inloggen/"
-    ]
+    ],
+    "toezicht": "AFM",
+    "toezichtNoot": "Volmachtbedrijf in Waalwijk dat namens verzekeraars polissen sluit en schades afhandelt; gevolmachtigd agent valt onder AFM-gedragstoezicht. Vergunning niet in register bevestigd.",
+    "toezichtBron": "https://trustoo.nl/noord-brabant/waalwijk/verzekering/polaris-assuradeuren-bv/"
   },
   {
     "id": "qander",
@@ -3262,7 +3408,10 @@ window.AANBIEDERS=[
     "contactbronnen": [
       "https://www.qander.nl/contact/",
       "https://www.qander.nl/onze-tussenpersonen/"
-    ]
+    ],
+    "toezicht": "AFM",
+    "toezichtNoot": "Niet-bancaire consumptief-kredietaanbieder ('s-Hertogenbosch) met AFM-vergunning voor aanbieden van krediet; Directa.nl hoort bij Qander.",
+    "toezichtBron": "https://www.bank.nl/lening/kredietverstrekkers/qander/"
   },
   {
     "id": "qredits",
@@ -3376,7 +3525,10 @@ window.AANBIEDERS=[
     "contactbronnen": [
       "https://www.rabobank.nl/bedrijven/intermediairs/hypotheek/aan-de-slag/rio",
       "https://rio.rabobank.nl/login/faq"
-    ]
+    ],
+    "toezicht": "ECB/DNB en AFM",
+    "toezichtNoot": "Significante Nederlandse bank: prudentieel direct ECB-toezicht (met DNB), gedragstoezicht AFM.",
+    "toezichtBron": "https://www.rabobank.nl/bedrijven/intermediairs/hypotheek"
   },
   {
     "id": "rhion",
@@ -3413,7 +3565,10 @@ window.AANBIEDERS=[
     "contactbronnen": [
       "https://www.rhion.nl/hulp-voor-volmachten",
       "https://www.rhion.nl/volmachten"
-    ]
+    ],
+    "toezicht": "Buitenlands toezicht en AFM",
+    "toezichtNoot": "Duitse schadeverzekeraar (Rheinland Versicherungsgruppe) actief op de Nederlandse volmachtmarkt vanuit Eindhoven via Europees paspoort; prudentieel toezicht BaFin, gedragstoezicht AFM.",
+    "toezichtBron": "https://hightechcampus.com/companies/rhion"
   },
   {
     "id": "risk-verzekeringen",
@@ -3496,7 +3651,10 @@ window.AANBIEDERS=[
     "contactbronnen": [
       "https://www.rnhb.nl/contact",
       "https://intermediair.rnhb.nl/"
-    ]
+    ],
+    "toezicht": "AFM",
+    "toezichtNoot": "Niet-bancaire hypotheekverstrekker in Utrecht (KvK 66858925), financiert met beleggersgeld/RMBS; geen bank, dus alleen AFM-vergunning voor aanbieden krediet. Vergunning niet direct in register gezien.",
+    "toezichtBron": "https://www.kifid.nl/wp-content/uploads/2020/11/Uitspraak-2020-889.pdf"
   },
   {
     "id": "robuust",
@@ -3610,7 +3768,10 @@ window.AANBIEDERS=[
     "opgezocht": "2026-10-03",
     "contactbronnen": [
       "https://www.samenwerkendekredietunies.nl/contact/"
-    ]
+    ],
+    "toezicht": "Geen Wft-vergunning",
+    "toezichtNoot": "Koepel van kredietunies voor ondernemers. Kleine kredietunies (< EUR 10 mln opvorderbare gelden) zijn vrijgesteld van vergunningplicht en vallen niet onder DNB/AFM; grotere hebben een DNB-vergunning nodig.",
+    "toezichtBron": "https://www.dnb.nl/voor-de-sector/open-boek-toezicht/sectoren/banken/vergunningaanvraag-kredietunies/vrijstelling-vergunningplicht-kredietunie"
   },
   {
     "id": "siriuspro",
@@ -3762,7 +3923,10 @@ window.AANBIEDERS=[
       "https://www.surebusiness.nl/contact",
       "https://www.surebusiness.nl/over-ons/vragen-of-klachten",
       "https://surenet.surebusiness.nl/document/push/?voorwaardeid=172"
-    ]
+    ],
+    "toezicht": "AFM",
+    "toezichtNoot": "Gevolmachtigd agent namens schadeverzekeraars voor Nederlandse risico's; voldoet volgens eigen voorwaarden aan Wft-eisen voor gevolmachtigd agent, dus AFM-toezicht.",
+    "toezichtBron": "https://www.adfiz.nl/media/1481/so_bemiddelaars_v210416.pdf"
   },
   {
     "id": "syntrus-achmea",
@@ -3846,7 +4010,10 @@ window.AANBIEDERS=[
     "contactbronnen": [
       "https://www.triodos.nl/intermediairs",
       "https://hypact.advisor.hypotheken.triodos.nl/login"
-    ]
+    ],
+    "toezicht": "DNB en AFM",
+    "toezichtNoot": "Nederlandse bank (niet als significant aangemerkt), dus prudentieel toezicht DNB en gedragstoezicht AFM. Uit eigen kennis; geen aparte bron gevonden.",
+    "toezichtBron": "https://www.triodos.nl/intermediairs"
   },
   {
     "id": "tulp-hypotheken",
@@ -3883,7 +4050,10 @@ window.AANBIEDERS=[
     "contactbronnen": [
       "https://tulphypotheken.nl/adviseurs/",
       "https://tulphypotheken.nl/contact/"
-    ]
+    ],
+    "toezicht": "AFM",
+    "toezichtNoot": "Niet-bancaire hypotheekverstrekker gefinancierd door institutionele beleggers (holding: Tulp Hypotheken Holding B.V.); overname door Bankinter vereiste AFM-goedkeuring. Eigen vergunning niet direct bevestigd.",
+    "toezichtBron": "https://www.banken.nl/nieuws/20884/nieuwe-aanbieder-tulp-hypotheken-opent-deuren"
   },
   {
     "id": "turien-en-co-assuradeuren",
@@ -3925,7 +4095,10 @@ window.AANBIEDERS=[
       "https://www.turien.nl/adviseur",
       "https://turien.nl/adviseur/mijn-turien",
       "https://turien.nl/klantenservice/contact"
-    ]
+    ],
+    "toezicht": "AFM",
+    "toezichtNoot": "Gevolmachtigd agent (o.a. voor Ansvar, Zurich) uit Alkmaar; volmachtbedrijf onder AFM-toezicht.",
+    "toezichtBron": "https://stichtingcis.nl/en-us/Members/Participating-authorised-agents"
   },
   {
     "id": "unigarant",
@@ -3967,7 +4140,10 @@ window.AANBIEDERS=[
       "https://www.unigarant.nl/contact/samenwerken/",
       "https://www.unigarant.nl/samenwerken/meer-over-salesgarant/",
       "https://www.unigarant.nl/samenwerken/inloggen-met-e-herkenning/"
-    ]
+    ],
+    "toezicht": "AFM",
+    "toezichtNoot": "Treedt op als gevolmachtigd agent van UVM Verzekeringsmaatschappij N.V. (risicodrager binnen ANWB-groep, zelf onder DNB en AFM); Unigarant zelf alleen AFM. Het AFM-nummer komt uit een zoeksamenvatting en is niet in het register gecontroleer",
+    "toezichtBron": "https://www.unigarant.nl/globalassets/media/voorwaarden/unigarant/auto_aut_uge.pdf"
   },
   {
     "id": "vcn-hypotheken",
@@ -4004,7 +4180,10 @@ window.AANBIEDERS=[
     "contactbronnen": [
       "https://www.vcn.nl/hypotheken",
       "https://www.vcn.nl/contact-VCNDenBosch"
-    ]
+    ],
+    "toezicht": "AFM",
+    "toezichtNoot": "Onderdeel van VCN (Nuenen), onafhankelijke serviceprovider/volmacht voor intermediairs; heeft o.a. hypotheekvolmacht van ASN Bank. AFM-toezicht; vergunning niet in register bevestigd.",
+    "toezichtBron": "https://www.banken.nl/nieuws/26733/asn-bank-zet-volgende-stap-in-hypotheekgroei-met-vcn-volmacht"
   },
   {
     "id": "vcn-kredieten",
@@ -4041,7 +4220,10 @@ window.AANBIEDERS=[
     "contactbronnen": [
       "https://www.vcn.nl/kredieten",
       "https://www.vcn.nl/contact-VCNDenHaag"
-    ]
+    ],
+    "toezicht": "AFM",
+    "toezichtNoot": "Kredietentak van serviceprovider VCN; bemiddeling/volmacht onder AFM-toezicht. Vergunning niet in register bevestigd.",
+    "toezichtBron": "https://www.adfiz.nl/media/o3jbzti2/voorwaarden-samenwerken-met-vcn_v2026-1.pdf"
   },
   {
     "id": "vcn-verzekeringen",
@@ -4079,7 +4261,10 @@ window.AANBIEDERS=[
       "https://www.vcn.nl/verzekeringen",
       "https://www.vcn.nl/diensten-vcn-verzekeringen",
       "https://www.vcn.nl/contact-VCNNuenen"
-    ]
+    ],
+    "toezicht": "AFM",
+    "toezichtNoot": "Verzekeringstak van VCN; werkt als gevolmachtigd agent of serviceprovider, dus AFM-toezicht.",
+    "toezichtBron": "https://www.adfiz.nl/media/o3jbzti2/voorwaarden-samenwerken-met-vcn_v2026-1.pdf"
   },
   {
     "id": "venn-hypotheken",
@@ -4121,7 +4306,10 @@ window.AANBIEDERS=[
       "https://www.vennhypotheken.nl/voor-adviseurs/",
       "https://www.vennhypotheken.nl/over-venn/contact/",
       "https://nibc.nl/media/0han54sg/actuele-klantdata-inzien-in-e-adviseur.pdf"
-    ]
+    ],
+    "toezicht": "AFM",
+    "toezichtNoot": "Niet-bancaire hypotheekverstrekker met vergunning als geldverstrekker bij de AFM; administratie bij Stater.",
+    "toezichtBron": "https://www.banken.nl/nieuws/8081/ceo-venn-hypotheken-over-samenwerking-met-stater"
   },
   {
     "id": "vista-hypotheken",
@@ -4242,7 +4430,10 @@ window.AANBIEDERS=[
       "https://www.voogd.com/contact/",
       "https://www.voogd.com/adviseur/",
       "https://login.voogd.com/"
-    ]
+    ],
+    "toezicht": "AFM",
+    "toezichtNoot": "Gevolmachtigd agent/volmachtbedrijf (ook Voogd & Voogd Intermediary Services B.V.); AFM-toezicht.",
+    "toezichtBron": "https://stichtingcis.nl/en-us/Members/Participating-authorised-agents"
   },
   {
     "id": "voor-de-groei",
@@ -4315,7 +4506,10 @@ window.AANBIEDERS=[
       "https://adviseurs.woonnu.nl/positief-wonen/",
       "https://adviseurs.woonnu.nl/media/z12iizpm/202408-woonnu-productkaart.pdf",
       "https://adviseurs.woonnu.nl/veelgestelde-vragen/"
-    ]
+    ],
+    "toezicht": "Geen eigen vergunning",
+    "toezichtNoot": "Handelsnaam van NN Bank (toezicht DNB en AFM). NN Bank stopte per april 2026 met nieuwe Woonnu-hypotheken.",
+    "toezichtBron": "https://adviseurs.woonnu.nl/media/xtcghq4l/202405-woonnu_algemene-voorwaarden.pdf"
   },
   {
     "id": "zakelijk-inkomen",
@@ -4430,7 +4624,10 @@ window.AANBIEDERS=[
     "opgezocht": "2026-10-03",
     "contactbronnen": [
       "https://www.directa.nl/klantenservice/contact"
-    ]
+    ],
+    "toezicht": "Geen eigen vergunning",
+    "toezichtNoot": "Onderdeel van Qander; aanvragen lopen via Qander, dat een AFM-vergunning heeft voor aanbieden van krediet.",
+    "toezichtBron": "https://www.bank.nl/lening/kredietverstrekkers/qander/"
   },
   {
     "id": "freo",

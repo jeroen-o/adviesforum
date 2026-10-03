@@ -163,6 +163,8 @@ body.voorbeeldmodus .romp{padding:12px}
 }
 /* Mobiel: tikdoelen en leesbaarheid */
 @media (max-width:760px){input,select,textarea{font-size:16px!important}}
+.badge.toezicht{background:#EAF3EE;color:#1E5C3A}
+@media screen and (prefers-color-scheme:dark){:root:not([data-theme="light"]) .badge.toezicht{background:#173326;color:#9de7c1}}
 </style>
 <style id="donker">
 /* Donkere modus (zelfde aanpak als kalender.html); in een eigen <style> zodat afdrukken licht blijft. */
@@ -250,7 +252,7 @@ function kleur(a){return /^#[0-9a-f]{6}$/i.test(a.kleur||'')?a.kleur:'#141414';}
 function tekstKleur(hex){var r=parseInt(hex.substr(1,2),16),g=parseInt(hex.substr(3,2),16),b=parseInt(hex.substr(5,2),16);return (0.299*r+0.587*g+0.114*b)>150?'#141414':'#ffffff';}
 function initialen(a){var i=String(a.initialen||'').trim();if(!i)i=String(a.naam||'?').split(/\s+/).map(function(w){return w.charAt(0);}).join('');return i.slice(0,3).toUpperCase();}
 function logo(a,groot){if(typeof a.logo==='string'&&/^img\/logos\/[a-z0-9-]+\.png$/.test(a.logo))return '<span class="logo beeld'+(groot?' groot':'')+'"><img src="'+esc(a.logo)+'" alt="Logo '+esc(a.naam)+'" loading="lazy" decoding="async"></span>';var k=kleur(a);return '<span class="logo'+(groot?' groot':'')+'" aria-hidden="true" style="background:'+k+';color:'+tekstKleur(k)+'">'+esc(initialen(a))+'</span>';}
-function typeBadge(a){return '<span class="badge type">'+esc(TYPES[a.type]||'Aanbieder')+'</span>';}
+function typeBadge(a){return '<span class="badge type">'+esc(TYPES[a.type]||'Aanbieder')+'</span>'+(a.toezicht?' <span class="badge toezicht" title="'+esc((a.toezichtNoot?a.toezichtNoot+' ':'')+'Peildatum 3 oktober 2026; controleer in het AFM- of DNB-register.')+'">Toezicht: '+esc(a.toezicht)+'</span>':'');}
 function demoBadge(a){return a.demo?' <span class="badge demo">Voorbeeld, fictief</span>':'';}
 function nieuwsUrl(a,n){return BASIS+'#nieuws-'+a.id+'-'+n.id;}
 function zoek(id){for(var i=0;i<LIJST.length;i++)if(LIJST[i]&&LIJST[i].id===id)return LIJST[i];return null;}
@@ -364,7 +366,7 @@ function overzicht(){
   app.innerHTML=
     '<h2 class="sectie" id="aanbieders-kop">Aanbieders</h2>'+
     '<p class="sub">Kies een aanbieder voor nieuws, documenten, richtlijnen, extranet, contactpersonen en e-learning.</p>'+
-    (LIJST.some(function(a){return a&&a.demo&&a.logo;})?'<p class="demo-band"><strong>Voorbeeldweergave.</strong> Profielen met het label &ldquo;Voorbeeld, fictief&rdquo; zijn niet door de partij aangeleverd: tekst en links zijn verzonnen om de opzet te tonen. Vermelding betekent geen samenwerking of deelname.</p>':'')+
+    (LIJST.some(function(a){return a&&a.demo&&a.logo;})?'<p class="demo-band"><strong>Voorbeeldweergave.</strong> Profielen met het label &ldquo;Voorbeeld, fictief&rdquo; zijn niet door de partij aangeleverd: omschrijving, berichten en documenten zijn verzonnen om de opzet te tonen. Website, telefoonnummer, extranet en toezicht zijn door de redactie opgezocht (peildatum 3 oktober 2026); controleer ze bij de aanbieder en in het AFM- of DNB-register. Vermelding betekent geen samenwerking of deelname.</p>':'')+
     '<div class="filters"><div><label for="zoek">Zoek op naam of onderwerp</label><input type="search" id="zoek" value="'+esc(staat.zoek)+'" placeholder="Bijvoorbeeld acceptatiegids"></div>'+
     '<div><label for="type">Type aanbieder</label><select id="type">'+opties+'</select></div></div>'+
     '<div class="filterrij">'+Object.keys(RUBRIEKEN).map(function(k){return '<label><input type="checkbox" data-rubriekfilter="'+k+'"'+(staat.rubriek===k?' checked':'')+'> <span>Alleen rubriek: '+esc(RUBRIEKEN[k])+'</span></label>';}).join('')+

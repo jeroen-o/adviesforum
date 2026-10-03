@@ -143,6 +143,8 @@
 /* Mobiel: tikdoelen en leesbaarheid */
 @media (max-width:760px){input,select,textarea{font-size:16px!important}}
 a.terug{display:inline-block;padding:8px 0}
+.tag.toezicht{background:#EAF3EE;color:#1E5C3A;border-color:#BFDCCB}
+@media screen and (prefers-color-scheme:dark){:root:not([data-theme="light"]) .tag.toezicht{background:#173326;color:#9de7c1;border-color:#2c5a43}}
 </style>
 <style id="a11y">
 /* Toegankelijkheid en donkere modus (zie docs/toegankelijkheid.md). Staat in een eigen <style>, zodat printvensters licht blijven. */
@@ -313,6 +315,7 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
     var a=el('article','card');a.id='partij-'+p._slug;
     var kop=el('div','kaartkop');
     kop.appendChild(el('span','tag',TYPES[p.type]||p.type));
+    if(p.toezicht){var tz=el('span','tag toezicht','Toezicht: '+p.toezicht);tz.title=(p.toezichtNoot?p.toezichtNoot+' ':'')+'Peildatum 3 oktober 2026; controleer in het AFM- of DNB-register.';kop.appendChild(tz);}
     if(typeof p.logo==='string'&&/^img\/logos\/[a-z0-9-]+\.png$/.test(p.logo)){
       var im=el('img','logo');im.src=p.logo;im.alt='Logo '+p.naam;im.loading='lazy';im.decoding='async';
       im.width=150;im.height=36;
