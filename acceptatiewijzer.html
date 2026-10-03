@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Acceptatiewijzer – Adviesforum</title>
+<meta name="description" content="Acceptatiewijzer voor hypotheekadviseurs: per bijzondere klantsituatie de NHG-regels 2026, de leennormen, aandachtspunten, documenten en wat geldverstrekkers publiceren.">
+<style>
+@font-face{font-family:Montserrat;font-style:normal;font-weight:400;font-display:swap;src:url(fonts/montserrat-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:600;font-display:swap;src:url(fonts/montserrat-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:700;font-display:swap;src:url(fonts/montserrat-latin-700-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:800;font-display:swap;src:url(fonts/montserrat-latin-800-normal.woff2) format('woff2')}
+
+:root{
+  --geel:#FFD200;--geel-donker:#E6BD00;--geel-zacht:#FFF6C7;
+  --zwart:#141414;--tekst:#1F1F1F;--grijs:#5E5E5E;--lijn:#E4E4E4;--vlak:#F7F7F5;
+  --rood:#C0392B;--rood-zacht:#FFF1F0;--groen:#1E7A4B;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:Montserrat,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  color:var(--tekst);background:#fff;line-height:1.55;font-size:15px;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+button,input{font-family:inherit}
+
+.balk{background:var(--zwart);color:#fff;font-size:12.5px;padding:8px 24px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.balk a{color:#fff;text-decoration:none;opacity:.88}
+.balk a:hover{opacity:1;text-decoration:underline}
+
+.kop{background:var(--geel);color:var(--zwart);padding:34px 24px 38px}
+.kop-in{max-width:1180px;margin:0 auto}
+.merk{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.08em;font-size:12px;text-transform:uppercase;margin-bottom:16px}
+.zeshoek{width:22px;height:25px;background:var(--zwart);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);flex:none}
+.terug{display:inline-block;font-size:13.5px;font-weight:700;text-decoration:none;border-bottom:2px solid var(--zwart);margin-bottom:14px}
+.kop h1{margin:0 0 10px;font-size:clamp(27px,4.2vw,40px);line-height:1.12;font-weight:800}
+.kop p{margin:0;max-width:70ch;font-size:15.5px}
+.kop .stempel{display:inline-block;margin-top:16px;font-size:12px;font-weight:700;background:var(--zwart);color:var(--geel);padding:5px 11px;border-radius:999px}
+
+.compliance{max-width:1132px;margin:22px auto 0;background:var(--rood-zacht);border-left:4px solid var(--rood);border-radius:0 10px 10px 0;padding:14px 18px;font-size:14px}
+.compliance strong{color:#A5281B}
+.compliance p{margin:0}.compliance p+p{margin-top:6px}
+
+.romp{max-width:1180px;margin:0 auto;padding:22px 24px 48px}
+.zoekbalk{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-bottom:12px}
+.zoekbalk input{flex:1 1 320px;min-width:0;max-width:560px;padding:11px 14px;border:1px solid #CFCFCF;border-radius:10px;font-size:16px;background:#fff}
+.zoekbalk input:focus{outline:3px solid rgba(255,210,0,.6);outline-offset:1px;border-color:#9A9A9A}
+.teller{font-size:13px;color:var(--grijs);font-weight:600}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.chip{border:1px solid #CFCFCF;background:#fff;color:var(--zwart);border-radius:999px;padding:7px 14px;font-size:13px;font-weight:700;cursor:pointer}
+.chip:hover{border-color:var(--zwart)}
+.chip[aria-pressed="true"]{background:var(--zwart);color:var(--geel);border-color:var(--zwart)}
+.chip:focus-visible,.kaart-kop:focus-visible,.knop:focus-visible{outline:3px solid var(--geel-donker);outline-offset:2px}
+
+.lijst{display:grid;gap:12px}
+.kaart{border:1px solid var(--lijn);border-radius:14px;background:#fff;min-width:0;scroll-margin-top:12px}
+.kaart.doel{box-shadow:0 0 0 3px var(--geel)}
+.kaart-kop{display:flex;width:100%;text-align:left;gap:14px;align-items:flex-start;border:0;background:transparent;padding:16px 18px;cursor:pointer;color:var(--tekst);border-radius:14px}
+.kaart-kop:hover{background:var(--vlak)}
+.kaart-kop .pijl{flex:none;width:26px;height:26px;border-radius:50%;background:var(--geel);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;margin-top:2px;transition:transform .15s}
+.kaart.open .kaart-kop .pijl{transform:rotate(90deg)}
+.kaart-kop .tekst{min-width:0;flex:1}
+.kaart-kop h2{margin:0;font-size:17px;line-height:1.3;font-weight:800}
+.kaart-kop .kort{display:block;font-size:13.5px;color:var(--grijs);margin-top:4px}
+.badges{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.badge{display:inline-block;font-size:11.5px;font-weight:700;border-radius:999px;padding:2px 10px;line-height:1.5;background:var(--vlak);border:1px solid var(--lijn);color:#3A3A3A}
+.badge.cat{background:var(--zwart);color:var(--geel);border-color:var(--zwart)}
+.badge.gv{background:var(--geel-zacht);color:#7A5A00;border-color:var(--geel-donker)}
+
+.kaart-romp{padding:0 18px 18px 58px}
+.kaart-romp[hidden]{display:none}
+.blokken{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px}
+.blok{border-radius:0 10px 10px 0;padding:12px 16px;font-size:14px;min-width:0}
+.blok h3{margin:0 0 6px;font-size:12.5px;font-weight:800;letter-spacing:.05em;text-transform:uppercase}
+.blok ul{margin:0;padding-left:18px}
+.blok li{margin:4px 0;overflow-wrap:anywhere}
+.blok.nhg{background:var(--vlak);border-left:4px solid var(--zwart)}
+.blok.trhk{background:var(--vlak);border-left:4px solid #7A7A7A}
+.blok.let{background:var(--geel-zacht);border-left:4px solid var(--geel-donker)}
+.blok.let h3{color:#7A5A00}
+.blok.docs{background:#fff;border:1px solid var(--lijn);border-left:4px solid var(--groen)}
+.blok.gv{grid-column:1/-1;background:#fff;border:1px solid var(--lijn);border-left:4px solid var(--geel-donker)}
+.blok.gv .uitleg{margin:0 0 8px;font-size:13px;color:var(--grijs)}
+.blok.gv li b{font-weight:800}
+.blok.gv .bron{font-size:12.5px;color:var(--grijs);white-space:nowrap}
+.blok.bronnen{grid-column:1/-1;background:#fff;border:1px solid var(--lijn);border-left:4px solid var(--zwart)}
+.blok a{font-weight:600}
+.ink{grid-column:1/-1;margin:0;font-size:14px;background:var(--vlak);border-radius:10px;padding:10px 14px}
+.ink a{font-weight:700}
+.acties{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:14px}
+.knop{border-radius:999px;padding:8px 14px;font-size:13px;font-weight:700;cursor:pointer;border:1px solid var(--zwart);background:var(--zwart);color:#fff}
+.knop:hover{background:#000}
+.knop.licht{background:#fff;color:var(--zwart);border-color:#CFCFCF}
+.knop.licht:hover{background:var(--vlak)}
+.status{font-size:13px;font-weight:600;color:var(--groen)}
+.leeg{color:var(--grijs);font-size:14px;display:none;padding:16px 0}
+
+.verder{max-width:1180px;margin:0 auto;padding:0 24px 24px}
+.verder h2{font-size:20px;font-weight:800;margin:0 0 6px}
+.verder > p{margin:0 0 14px;color:var(--grijs);font-size:14px}
+.tegels{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
+.tegels a{display:block;text-decoration:none;border:1px solid var(--lijn);border-radius:12px;padding:12px 14px;background:#fff}
+.tegels a:hover{border-color:var(--zwart)}
+.tegels b{display:block;font-size:14px}
+.tegels span{display:block;font-size:12.5px;color:var(--grijs);margin-top:2px}
+.voet{max-width:1180px;margin:0 auto;padding:24px 24px 40px;font-size:12.5px;color:var(--grijs)}
+.voet a{color:var(--zwart);font-weight:600}
+
+@media (max-width:860px){
+  .blokken{grid-template-columns:minmax(0,1fr)}
+  .kaart-romp{padding-left:18px}
+}
+@media (max-width:560px){
+  .balk,.kop{padding-left:16px;padding-right:16px}
+  .romp,.verder,.voet{padding-left:16px;padding-right:16px}
+  .compliance{margin-left:16px;margin-right:16px}
+  .kaart-kop{padding:14px}
+  .kaart-romp{padding:0 14px 14px}
+  .blok{padding:10px 12px}
+  .blok.gv .bron{white-space:normal}
+}
+</style>
+</head>
+<body>
+
+<div class="balk">
+  <span>Adviesforum &middot; hulpmiddelen voor financieel adviseurs</span>
+  <span><a href="index.html">Naar het forum</a></span>
+</div>
+
+<header class="kop">
+  <div class="kop-in">
+    <div class="merk"><span class="zeshoek" aria-hidden="true"></span>Adviesforum &middot; Hulpmiddelen</div>
+    <a class="terug" href="index.html#hulpmiddelen">&larr; Terug naar de hulpmiddelen</a>
+    <h1>Acceptatiewijzer bijzondere situaties</h1>
+    <p>Per klantsituatie de NHG-regel uit de Voorwaarden &amp; Normen 2026, wat de leennormen zeggen, de aandachtspunten en documenten, en wat geldverstrekkers er aantoonbaar over publiceren. Een startpunt voor de voorbereiding van de aanvraag, geen vervanging van de acceptatiegids.</p>
+    <span class="stempel" id="stempel">Peildatum 3 oktober 2026 &middot; geen advies &middot; controleer altijd de actuele gids</span>
+  </div>
+</header>
+
+<div class="compliance" role="note">
+  <p><strong>Let op (zorgplicht):</strong> acceptatiegidsen en productvoorwaarden van geldverstrekkers wijzigen vaak, soms per maand. Controleer altijd de actuele acceptatiegids van de gekozen geldverstrekker en de actuele NHG Voorwaarden &amp; Normen voordat je een aanvraag indient of de klant iets toezegt, en leg vast welke versie je hebt geraadpleegd.</p>
+  <p>Deze wijzer bevat bewust geen rentes, kortingen, premies of acties. Bij "Geldverstrekker-afhankelijk" staan alleen partijen waarvan de Partijenwegwijzer of de kennisbank een bron over de situatie vermeldt; dat iets ontbreekt, betekent niet dat een partij de situatie niet accepteert.</p>
+</div>
+
+<main class="romp">
+  <div class="zoekbalk">
+    <input type="search" id="zoek" placeholder="Zoek op situatie of trefwoord, bijv. erfpacht, BKR, uitzend" aria-label="Zoek een situatie" autocomplete="off">
+    <span class="teller" id="teller" aria-live="polite"></span>
+  </div>
+  <div class="chips" id="chips" role="group" aria-label="Filter op categorie"></div>
+  <div class="lijst" id="lijst"></div>
+  <p class="leeg" id="leeg">Geen situatie gevonden. Probeer een ander woord of kies "Alle".</p>
+</main>
+
+<section class="verder">
+  <h2>Verder rekenen en uitzoeken</h2>
+  <p>Hulpmiddelen die vaak samen met deze wijzer worden gebruikt.</p>
+  <div class="tegels">
+    <a href="inkomensbepaling.html"><b>Inkomensbepaling</b><span>Toetsinkomen per inkomenssoort</span></a>
+    <a href="leennormen-2026.html"><b>Leennormen 2026</b><span>Financieringslast, DUO-weging, energielabel</span></a>
+    <a href="nhg-check.html"><b>NHG-check</b><span>Snelle toets aan de NHG-voorwaarden</span></a>
+    <a href="partijen.html"><b>Partijenwegwijzer</b><span>Voorwaarden per geldverstrekker met bron</span></a>
+    <a href="documentenchecklist.html"><b>Documentenchecklist</b><span>Stukken voor de aanvraag</span></a>
+    <a href="erfpacht.html"><b>Erfpacht</b><span>Canon, afkoop en lasten</span></a>
+  </div>
+</section>
+
+<footer class="voet">
+  Adviesforum &middot; collegiale kennisdeling voor financieel adviseurs &middot; <a href="index.html#hulpmiddelen">Alle hulpmiddelen</a> &middot; <a href="privacy.html">Privacy</a>. Bronnen: NHG Voorwaarden &amp; Normen 2026-1, Tijdelijke regeling hypothecair krediet, Nibud-advies hypotheeknormen 2026, AFM en de kennisbank van het Adviesforum (conceptartikelen). Er wordt niets opgeslagen of verstuurd.
+</footer>
+
+<script src="data/partijen.js"></script>
+<script src="data/acceptatiewijzer.js"></script>
+<script>
+(function(){
+  'use strict';
+  var A = window.ACCEPTATIEWIJZER || {situaties: [], categorieen: {}};
+  var PARTIJEN = window.PARTIJEN || [];
+  var INKOMEN_TABS = {vast: 'Loondienst vast', tijdelijk: 'Tijdelijk en flexibel', ibl: 'IBL', ondernemer: 'Ondernemer / zzp', perspectief: 'Perspectiefverklaring', pensioen: 'Pensioen en AOW', overig: 'Overige inkomsten'};
+
+  function esc(s){ return String(s == null ? '' : s).replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
+  /* Slugfunctie identiek aan partijen.html, zodat partijen.html#partij-<slug> klopt. */
+  function partijSlug(naam){
+    return String(naam||'').normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase()
+      .replace(/&/g,' en ').replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'')||'partij';
+  }
+  var slugs = {};
+  (function(){ var gezien = {}; PARTIJEN.forEach(function(p){ var s = partijSlug(p.naam), b = s, i = 2; while(gezien[s]){ s = b + '-' + (i++); } gezien[s] = 1; slugs[p.naam] = s; }); })();
+
+  /* Zoekt het kenmerk op in window.PARTIJEN; alleen wat daar staat wordt getoond. */
+  function partijKenmerken(s){
+    var uit = [];
+    (s.partijen || []).forEach(function(x){
+      var p = PARTIJEN.filter(function(q){ return q.naam === x.p; })[0];
+      if(!p) return;
+      var k = (p.kenmerken || []).filter(function(k){ return k.tekst.indexOf(x.m) !== -1; })[0];
+      if(k) uit.push({naam: p.naam, slug: slugs[p.naam], tekst: k.tekst, bron: k.bron});
+    });
+    return uit;
+  }
+  function isExtern(u){ return /^https?:/.test(u); }
+  function link(label, u){ return '<a href="' + esc(u) + '"' + (isExtern(u) ? ' target="_blank" rel="noopener"' : '') + '>' + esc(label) + '</a>'; }
+  function lijstHTML(items){ return '<ul>' + items.map(function(t){ return '<li>' + esc(t) + '</li>'; }).join('') + '</ul>'; }
+  function domein(u){ var m = /^https?:\/\/(?:www\.)?([^\/]+)/.exec(u); return m ? m[1] : u; }
+
+  function romp(s, pk){
+    var h = '<div class="blokken">';
+    h += '<div class="blok nhg"><h3>NHG (V&amp;N 2026-1)</h3>' + lijstHTML(s.nhg) + '</div>';
+    h += '<div class="blok trhk"><h3>Leennormen (Trhk 2026)</h3>' + lijstHTML(s.trhk) + '</div>';
+    h += '<div class="blok let"><h3>Aandachtspunten</h3>' + lijstHTML(s.aandacht) + '</div>';
+    h += '<div class="blok docs"><h3>Benodigde documenten</h3>' + lijstHTML(s.docs) + '</div>';
+    if(s.inkomen && INKOMEN_TABS[s.inkomen]){
+      h += '<p class="ink">Toetsinkomen berekenen: <a href="inkomensbepaling.html#' + esc(s.inkomen) + '">Inkomensbepaling &rarr; ' + esc(INKOMEN_TABS[s.inkomen]) + '</a></p>';
+    }
+    h += '<div class="blok gv"><h3>Geldverstrekker-afhankelijk</h3>';
+    if(pk.length){
+      h += '<p class="uitleg">Wat deze partijen volgens de Partijenwegwijzer over deze situatie publiceren. Geen volledige lijst en geen oordeel; controleer de actuele acceptatiegids.</p><ul>';
+      pk.forEach(function(k){
+        h += '<li><b><a href="partijen.html#partij-' + esc(k.slug) + '">' + esc(k.naam) + '</a></b>: ' + esc(k.tekst) + ' <span class="bron">(bron: ' + link(domein(k.bron), k.bron) + ')</span></li>';
+      });
+      h += '</ul>';
+    } else {
+      h += '<p class="uitleg" style="margin:0">' + esc(s.geenPartijen || 'Geen partij-specifieke informatie in de Partijenwegwijzer. Raadpleeg de acceptatiegids van de beoogde geldverstrekker.') + '</p>';
+    }
+    h += '</div>';
+    h += '<div class="blok bronnen"><h3>Bronnen</h3><ul>' + s.bronnen.map(function(b){ return '<li>' + link(b[0], b[1]) + '</li>'; }).join('') + '</ul></div>';
+    h += '</div>';
+    h += '<div class="acties"><button type="button" class="knop" data-print="' + esc(s.id) + '">Afdrukken / bewaar als PDF</button>' +
+         '<button type="button" class="knop licht" data-link="' + esc(s.id) + '">Kopieer link</button><span class="status" aria-live="polite"></span></div>';
+    return h;
+  }
+
+  var lijst = document.getElementById('lijst'), zoek = document.getElementById('zoek'), teller = document.getElementById('teller'),
+      leeg = document.getElementById('leeg'), chipsEl = document.getElementById('chips');
+  var kaarten = [], perId = {}, actieveCat = '';
+
+  A.situaties.forEach(function(s){
+    var pk = partijKenmerken(s);
+    var art = document.createElement('article');
+    art.className = 'kaart'; art.id = 'situatie-' + s.id;
+    var catNaam = A.categorieen[s.cat] || s.cat;
+    art.innerHTML =
+      '<button type="button" class="kaart-kop" aria-expanded="false" aria-controls="romp-' + esc(s.id) + '">' +
+        '<span class="pijl" aria-hidden="true">&#9656;</span><span class="tekst"><h2>' + esc(s.titel) + '</h2>' +
+        '<span class="kort">' + esc(s.kort) + '</span><span class="badges"><span class="badge cat">' + esc(catNaam) + '</span>' +
+        (pk.length ? '<span class="badge gv">' + pk.length + ' geldverstrekker' + (pk.length === 1 ? '' : 's') + ' met bron</span>' : '') +
+        (s.inkomen ? '<span class="badge">Inkomensbepaling</span>' : '') + '</span></span></button>' +
+      '<div class="kaart-romp" id="romp-' + esc(s.id) + '" hidden>' + romp(s, pk) + '</div>';
+    lijst.appendChild(art);
+    var zoektekst = [s.titel, s.kort, s.zoek, catNaam].concat(s.nhg, s.trhk, s.aandacht, s.docs, pk.map(function(k){ return k.naam + ' ' + k.tekst; })).join(' ').toLowerCase();
+    var k = {s: s, el: art, kop: art.querySelector('.kaart-kop'), romp: art.querySelector('.kaart-romp'), tekst: zoektekst, pk: pk};
+    kaarten.push(k); perId[s.id] = k;
+    k.kop.addEventListener('click', function(){ zet(k, k.romp.hidden); if(!k.romp.hidden) schrijfHash(s.id); });
+  });
+
+  function zet(k, open){
+    k.romp.hidden = !open; k.el.classList.toggle('open', open); k.kop.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+  function schrijfHash(id){
+    try{ history.replaceState(null, '', location.pathname + location.search + (id ? '#situatie-' + id : '')); }catch(e){}
+  }
+
+  /* Filterchips */
+  var cats = [['', 'Alle']].concat(Object.keys(A.categorieen).map(function(c){ return [c, A.categorieen[c]]; }));
+  chipsEl.innerHTML = cats.map(function(c){
+    var n = c[0] ? A.situaties.filter(function(s){ return s.cat === c[0]; }).length : A.situaties.length;
+    return '<button type="button" class="chip" data-cat="' + esc(c[0]) + '" aria-pressed="' + (c[0] === '' ? 'true' : 'false') + '">' + esc(c[1]) + ' (' + n + ')</button>';
+  }).join('');
+  chipsEl.addEventListener('click', function(e){
+    var b = e.target.closest('.chip'); if(!b) return;
+    actieveCat = b.getAttribute('data-cat');
+    Array.prototype.forEach.call(chipsEl.querySelectorAll('.chip'), function(c){ c.setAttribute('aria-pressed', c === b ? 'true' : 'false'); });
+    filter();
+  });
+
+  function filter(){
+    var woorden = zoek.value.toLowerCase().trim().split(/\s+/).filter(Boolean), zicht = 0;
+    kaarten.forEach(function(k){
+      var ok = (!actieveCat || k.s.cat === actieveCat) && woorden.every(function(w){ return k.tekst.indexOf(w) !== -1; });
+      k.el.style.display = ok ? '' : 'none'; if(ok) zicht++;
+    });
+    leeg.style.display = zicht ? 'none' : 'block';
+    teller.textContent = zicht + ' van ' + kaarten.length + ' situaties';
+  }
+  zoek.addEventListener('input', filter);
+
+  /* Deeplink #situatie-<id> */
+  var markeer = null;
+  function gaNaar(id){
+    var k = perId[id]; if(!k) return false;
+    if(k.el.style.display === 'none'){
+      zoek.value = ''; actieveCat = '';
+      Array.prototype.forEach.call(chipsEl.querySelectorAll('.chip'), function(c){ c.setAttribute('aria-pressed', c.getAttribute('data-cat') === '' ? 'true' : 'false'); });
+      filter();
+    }
+    zet(k, true);
+    kaarten.forEach(function(x){ x.el.classList.remove('doel'); });
+    k.el.classList.add('doel');
+    k.el.scrollIntoView({block: 'start'});
+    try{ k.kop.focus({preventScroll: true}); }catch(e){}
+    clearTimeout(markeer); markeer = setTimeout(function(){ k.el.classList.remove('doel'); }, 5000);
+    return true;
+  }
+  function leesHash(){
+    var m = /^#situatie-([a-z0-9-]+)$/.exec(location.hash || '');
+    if(m) gaNaar(m[1]);
+  }
+  window.addEventListener('hashchange', leesHash);
+
+  /* Print per kaart via window.open */
+  function printHTML(k){
+    var s = k.s;
+    var basis = location.href.replace(/[#?].*$/, '').replace(/[^\/]*$/, '');
+    var css = 'body{font-family:Montserrat,Arial,sans-serif;color:#1F1F1F;font-size:12.5px;line-height:1.5;margin:24px}' +
+      'h1{font-size:20px;margin:0 0 4px}h2{font-size:13px;text-transform:uppercase;letter-spacing:.05em;margin:16px 0 4px;border-bottom:2px solid #FFD200;padding-bottom:2px}' +
+      'ul{margin:0;padding-left:18px}li{margin:3px 0}a{color:#141414;word-break:break-all}.meta{color:#5E5E5E;font-size:11.5px;margin:0 0 10px}' +
+      '.disc{border-left:4px solid #C0392B;background:#FFF1F0;padding:8px 12px;margin:12px 0}@page{margin:16mm}';
+    function abs(u){ return isExtern(u) ? u : basis + u; }
+    var h = '<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><title>' + esc(s.titel) + ' – Acceptatiewijzer</title><style>' + css + '</style></head><body>';
+    h += '<h1>' + esc(s.titel) + '</h1><p class="meta">Acceptatiewijzer Adviesforum &middot; peildatum ' + esc(A.peildatum) + ' &middot; afgedrukt ' + esc(new Date().toLocaleDateString('nl-NL')) + '</p>';
+    h += '<p>' + esc(s.kort) + '</p>';
+    h += '<div class="disc">Acceptatiegidsen wijzigen vaak. Controleer altijd de actuele gids van de geldverstrekker en de actuele NHG Voorwaarden &amp; Normen. Geen advies; geen rentes, premies of acties.</div>';
+    h += '<h2>NHG (V&amp;N 2026-1)</h2>' + lijstHTML(s.nhg);
+    h += '<h2>Leennormen (Trhk 2026)</h2>' + lijstHTML(s.trhk);
+    h += '<h2>Aandachtspunten</h2>' + lijstHTML(s.aandacht);
+    h += '<h2>Benodigde documenten</h2>' + lijstHTML(s.docs);
+    h += '<h2>Geldverstrekker-afhankelijk</h2>';
+    h += k.pk.length ? '<ul>' + k.pk.map(function(x){ return '<li><b>' + esc(x.naam) + '</b>: ' + esc(x.tekst) + ' (bron: ' + esc(x.bron) + ')</li>'; }).join('') + '</ul>' : '<p>' + esc(s.geenPartijen || '') + '</p>';
+    if(s.inkomen) h += '<p>Toetsinkomen: ' + esc(abs('inkomensbepaling.html#' + s.inkomen)) + '</p>';
+    h += '<h2>Bronnen</h2><ul>' + s.bronnen.map(function(b){ return '<li>' + esc(b[0]) + ': ' + esc(abs(b[1])) + '</li>'; }).join('') + '</ul>';
+    h += '<p class="meta" style="margin-top:14px">Deeplink: ' + esc(basis + 'acceptatiewijzer.html#situatie-' + s.id) + '</p>';
+    h += '</body></html>';
+    return h;
+  }
+  function status(knop, tekst){ var st = knop.parentNode.querySelector('.status'); if(st){ st.textContent = tekst; setTimeout(function(){ st.textContent = ''; }, 4000); } }
+
+  lijst.addEventListener('click', function(e){
+    var pb = e.target.closest('[data-print]'), lb = e.target.closest('[data-link]');
+    if(pb){
+      var k = perId[pb.getAttribute('data-print')], w = null;
+      try{ w = window.open('', '_blank'); }catch(err){ w = null; }
+      if(!w){ status(pb, 'Pop-up geblokkeerd: sta pop-ups toe om af te drukken.'); return; }
+      w.document.open(); w.document.write(printHTML(k)); w.document.close();
+      w.focus(); setTimeout(function(){ try{ w.print(); }catch(err){} }, 250);
+    }
+    if(lb){
+      var id = lb.getAttribute('data-link'), url = location.href.replace(/#.*$/, '') + '#situatie-' + id;
+      schrijfHash(id);
+      var klaar = function(){ status(lb, 'Link gekopieerd'); };
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(url).then(klaar, function(){ status(lb, 'Kopieer de link uit de adresbalk'); });
+      } else { status(lb, 'Kopieer de link uit de adresbalk'); }
+    }
+  });
+
+  if(!PARTIJEN.length){
+    var n = document.createElement('p'); n.className = 'leeg'; n.style.display = 'block';
+    n.textContent = 'De Partijenwegwijzer kon niet worden geladen; de geldverstrekkerinformatie ontbreekt daarom.';
+    lijst.parentNode.insertBefore(n, lijst);
+  }
+  filter();
+  leesHash();
+})();
+</script>
+</body>
+</html>
