@@ -8,6 +8,7 @@ Betrokken bestanden:
 | --- | --- |
 | `aanbieders.html` | Openbare aanbiederspagina met aanvraagblok |
 | `aanbieders-info.html` | Informatiepagina voor aanbieders (werving) |
+| `aanbieder-aanleveren.html` | Aanmeld- en aanleverformulier voor nieuwe aanbieders (checklist, mail, JSON-download, print) |
 | `aanbieders-voorwaarden.html` | Deelnamevoorwaarden (**concept, juridisch laten toetsen**) |
 | `aanbieder-beheer.html` | Inloggen, bewerken en indienen door de aanbieder (met verplicht akkoord op de voorwaarden) |
 | `beheer-code.html` | Persoonlijke inlogcode en `codeHash` maken (niet gelinkt) |
@@ -18,9 +19,18 @@ Betrokken bestanden:
 
 ## 1. Aanvraag ontvangen
 
-Aanvragen komen binnen op forumadvies@gmail.com met onderwerp **Accountaanvraag aanbieder Adviesforum**. Controleer of de mail bevat:
+Aanmeldingen komen meestal binnen via het aanleverformulier `aanbieder-aanleveren.html`, met onderwerp **Aanmelding aanbieder: &lt;naam&gt;**. De mail bevat een samenvatting (KvK-nummer, AFM-vergunningnummer of uitleg, eventueel DNB-registratie, contactpersoon voor het beheer, PE-erkenning bij e-learning) en het JSON-blok, of bij een lange aanmelding de bijlage `aanbieder-<id>.json` en eventueel het logo. Dat JSON is direct te importeren (`demo: false`, zonder `codeHash`); de contactpersoon voor het beheer, KvK en AFM staan alleen in de mailtekst en niet in het JSON:
 
-- [ ] bedrijfsnaam en type aanbieder;
+```bash
+node tools/aanbieder-import.js aanbieder-<id>.json --nieuw --dry-run
+node tools/aanbieder-import.js aanbieder-<id>.json --nieuw
+```
+
+Doe dat pas na de controles hieronder (deze paragraaf en paragraaf 2), en zet daarna de `codeHash` (stap 3). Controleer het voorgestelde `id` (afgeleid van de bedrijfsnaam) en pas het zo nodig aan in het JSON-bestand. Het logo plaatst de site nog niet: het datamodel kent alleen initialen en huiskleur.
+
+Daarnaast kan een korte aanvraag per mail binnenkomen op forumadvies@gmail.com, met onderwerp **Accountaanvraag aanbieder Adviesforum**. Controleer bij beide routes of je beschikt over:
+
+- [ ] bedrijfsnaam, type aanbieder en KvK-nummer;
 - [ ] AFM-vergunningnummer, of een uitleg waarom geen vergunning nodig is;
 - [ ] website;
 - [ ] vaste contactpersoon: naam, functie, **zakelijk** e-mailadres en telefoonnummer;
