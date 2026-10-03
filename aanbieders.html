@@ -246,13 +246,14 @@ function aanvraagBlok(){
   var body='Graag vraag ik een account aan om onze informatie op het Adviesforum bij te houden.\n\n'+
     'Bedrijfsnaam: \nAFM-vergunningnummer: \nType aanbieder (geldverstrekker, verzekeraar, pensioenuitvoerder, kredietverstrekker, serviceprovider): \n'+
     'Website: \nContactpersoon (naam en functie): \nZakelijk e-mailadres: \nZakelijk telefoonnummer: \n\n'+
-    'Ik bevestig dat wij geen rentes, tarieven of acties plaatsen en dat genoemde contactpersonen toestemming geven voor vermelding van hun zakelijke gegevens.';
+    'Ik heb de deelnamevoorwaarden gelezen (https://jeroen-o.github.io/adviesforum/aanbieders-voorwaarden.html). Ik bevestig dat wij geen rentes, tarieven, premies of acties plaatsen en dat genoemde contactpersonen toestemming geven voor vermelding van hun zakelijke gegevens.';
   var href='mailto:'+MAIL+'?subject='+encodeURIComponent('Accountaanvraag aanbieder Adviesforum')+'&body='+encodeURIComponent(body);
   return '<section class="aanvraag" id="account-aanvragen"><h2>Aanbieder? Vraag een account aan</h2>'+
     '<p>Geldverstrekkers, verzekeraars, pensioenuitvoerders, kredietverstrekkers en serviceproviders kunnen hier zelf hun nieuws, voorwaarden, richtlijnen, extranetlink en contactpersonen bijhouden. Je krijgt een persoonlijke inlogcode voor de beheerpagina.</p>'+
     '<p>Vermeld in je aanvraag:</p><ul><li>de bedrijfsnaam;</li><li>het AFM-vergunningnummer (of de reden waarom je geen vergunning nodig hebt);</li><li>een vaste contactpersoon met zakelijk e-mailadres.</li></ul>'+
     '<p>De beheerder controleert de aanvraag in het AFM-register en stuurt daarna de inlogcode. Wijzigingen gaan nooit direct live: de beheerder publiceert ze, meestal binnen één werkdag.</p>'+
     '<div class="acties"><a class="knop geel" href="'+esc(href)+'">Account aanvragen per mail</a><a class="knop licht" href="aanbieder-beheer.html">Ik heb al een code: inloggen</a></div>'+
+    '<p style="margin-top:14px">Meer weten? Lees de <a href="aanbieders-info.html" style="display:inline-block;padding:8px 0">informatie voor aanbieders</a> en de <a href="aanbieders-voorwaarden.html" style="display:inline-block;padding:8px 0">deelnamevoorwaarden</a>.</p>'+
     '<p style="font-size:13px;margin-top:12px;opacity:.85">De aanvraag gaat vanuit je eigen mailprogramma naar <a href="mailto:'+MAIL+'">'+MAIL+'</a>. Zie de <a href="privacy.html">privacyverklaring</a>.</p></section>';
 }
 

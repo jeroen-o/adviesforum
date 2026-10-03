@@ -64,6 +64,10 @@ a.terug{display:inline-block;font-size:13.5px;font-weight:700;text-decoration:no
 .veld [aria-invalid="true"]{border-color:var(--rood);background:#FFFAFA}
 .veld.vink label{display:flex;gap:10px;align-items:center;min-height:40px;font-weight:600;cursor:pointer}
 .veld.vink input{width:22px;height:22px;min-height:0}
+.veld.akkoord{margin:14px 0 0}
+.veld.akkoord label{font-size:14.5px}
+.veld.akkoord input{flex:none;margin:0}
+.veld.akkoord a{color:var(--zwart);font-weight:700}
 .kleurrij{display:flex;gap:8px}
 .kleurrij input[type=color]{width:52px;flex:none;padding:4px}
 .rij2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0 14px}
@@ -134,7 +138,7 @@ a.terug{display:inline-block;font-size:13.5px;font-weight:700;text-decoration:no
       <div class="veld"><label for="lg-code">Persoonlijke code</label><input id="lg-code" name="code" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="XXXX-XXXX-XXXX"><span class="tip">De code staat in de mail van de beheerder. Kwijt? Mail <a href="mailto:forumadvies@gmail.com">forumadvies@gmail.com</a>.</span></div>
       <div class="knoppen"><button class="knop" type="submit">Inloggen</button><span id="lg-fout" role="alert" style="color:#A5281B;font-size:14px;font-weight:600"></span></div>
     </form>
-    <p style="font-size:13px;color:var(--grijs);margin:14px 0 0">Nog geen account? Vraag het aan via <a href="aanbieders.html#account-aanvragen">de aanbiederspagina</a>. Na inloggen onthoudt de site je met een functionele cookie zolang je browser openstaat; er wordt verder niets opgeslagen.</p>
+    <p style="font-size:13px;color:var(--grijs);margin:14px 0 0">Nog geen account? Vraag het aan via <a href="aanbieders.html#account-aanvragen">de aanbiederspagina</a> en lees de <a href="aanbieders-voorwaarden.html">deelnamevoorwaarden</a>. Na inloggen onthoudt de site je met een functionele cookie zolang je browser openstaat; er wordt verder niets opgeslagen.</p>
   </section>
 
   <section id="editor-sectie" hidden>
@@ -154,6 +158,7 @@ a.terug{display:inline-block;font-size:13.5px;font-weight:700;text-decoration:no
       <h2 id="indienen-kop">Wijzigingen indienen</h2>
       <p>De beheerder controleert je wijziging en publiceert die, meestal binnen één werkdag. Je krijgt bericht als er iets niet klopt. Tot die tijd blijft de huidige versie online.</p>
       <div id="validatie" aria-live="polite"></div>
+      <div class="veld vink akkoord"><label for="akkoord"><input type="checkbox" id="akkoord" required aria-describedby="akkoord-tip"><span>Ik ga akkoord met de <a href="aanbieders-voorwaarden.html" target="_blank" rel="noopener">deelnamevoorwaarden</a></span></label><span class="tip" id="akkoord-tip">Verplicht. Zonder akkoord kun je niet indienen.</span></div>
       <div class="knoppen" style="margin-top:12px">
         <button type="button" class="knop geel" id="indienen-mail">Wijzigingen indienen per mail</button>
         <button type="button" class="knop" id="indienen-download">Download als bestand</button>
@@ -334,7 +339,7 @@ function controleer(){
   else h+='<div class="ok-blok">Alles is goed ingevuld. '+(isGewijzigd()?'Je hebt wijzigingen die nog niet zijn ingediend.':'Er zijn nog geen wijzigingen.')+'</div>';
   if(r.waarschuwingen.length)h+='<div class="waarschuw" style="margin:10px 0 0"><strong>Controleer:</strong><ul style="margin:6px 0 0;padding-left:18px">'+r.waarschuwingen.map(function(x){return '<li>'+esc(x.msg)+'</li>';}).join('')+'</ul></div>';
   $('validatie').innerHTML=h;
-  $('indienen-mail').disabled=$('indienen-download').disabled=r.fouten.length>0;
+  $('indienen-mail').disabled=$('indienen-download').disabled=r.fouten.length>0||!$('akkoord').checked;
   $('json').value=JSON.stringify(exporteer(),null,2);
   clearTimeout(timer);timer=setTimeout(stuurVoorbeeld,200);
   return r;
@@ -360,12 +365,13 @@ function download(){
 }
 function samenvatting(o){return VOLGORDE.map(function(k){return LIJSTEN[k].titel+': '+o[k].length;}).join('\n');}
 function meld(html){$('melding-indienen').innerHTML=html;}
+$('akkoord').addEventListener('change',controleer);
 $('indienen-download').addEventListener('click',function(){
-  if(controleer().fouten.length)return;download();
+  if(controleer().fouten.length||!$('akkoord').checked)return;download();
   meld('<div class="ok-blok">Het bestand <b>'+esc(bestandsnaam())+'</b> is gedownload. Stuur het als bijlage naar <a href="mailto:'+MAIL+'">'+MAIL+'</a>. De beheerder publiceert het na controle, meestal binnen één werkdag.</div>');
 });
 $('indienen-mail').addEventListener('click',function(){
-  if(controleer().fouten.length)return;
+  if(controleer().fouten.length||!$('akkoord').checked)return;
   var o=exporteer(),onderwerp='Wijziging aanbieder '+o.id+' ('+o.naam+')';
   var kop='Hierbij dien ik wijzigingen in voor onze aanbiederspagina op het Adviesforum.\n\nAanbieder: '+o.naam+' ('+o.id+')\nDatum: '+o.bijgewerkt+'\n\n'+samenvatting(o)+'\n\n';
   var lang=kop+'--- JSON (niet aanpassen) ---\n'+JSON.stringify(o)+'\n--- einde JSON ---\n';
