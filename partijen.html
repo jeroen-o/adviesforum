@@ -143,6 +143,8 @@
 /* Mobiel: tikdoelen en leesbaarheid */
 @media (max-width:760px){input,select,textarea{font-size:16px!important}}
 a.terug{display:inline-block;padding:8px 0}
+.tag.toezicht{background:#EAF3EE;color:#1E5C3A;border-color:#BFDCCB}
+@media screen and (prefers-color-scheme:dark){:root:not([data-theme="light"]) .tag.toezicht{background:#173326;color:#9de7c1;border-color:#2c5a43}}
 </style>
 <style id="a11y">
 /* Toegankelijkheid en donkere modus (zie docs/toegankelijkheid.md). Staat in een eigen <style>, zodat printvensters licht blijven. */
@@ -213,6 +215,7 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
     <nav class="terugnav" aria-label="Terug"><a class="terug" href="index.html#hulpmiddelen">← Terug naar het Adviesforum</a></nav>
     <h1>Aanbiederwegwijzer</h1>
     <p class="sub">Wat banken, geldverstrekkers, verzekeraars, lijfrenteaanbieders, kredietverstrekkers, PPI's en pensioenfondsen openbaar voor adviseurs publiceren: intermediairsites, acceptatiegidsen, opvallende productkenmerken en wie bij wie hoort. Elk kenmerk heeft een bronlink.</p>
+    <p class="sub" style="margin-top:12px"><a class="back" href="vergelijken.html">Partijen per thema naast elkaar</a> &middot; <a class="back" href="voorwaarden-vergelijker.html">Voorwaarden van geldverstrekkers vergelijken &rarr;</a></p>
     <p class="meta" id="meta">Peildatum 2 oktober 2026</p>
   </div>
 </header>
@@ -292,10 +295,14 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
   function host(u){try{return new URL(u).hostname.replace(/^www\./,'');}catch(e){return u;}}
 
   // Typefilter vullen met aantallen
+  // Bank, geldverstrekker en fonds vormen samen één filtercategorie
+  var GROEP={bank:'geldverstrekker'};
+  function groep(t){return GROEP[t]||t;}
   Object.keys(TYPES).forEach(function(t){
-    var n=data.filter(function(p){return p.type===t;}).length;
+    if(GROEP[t])return;
+    var n=data.filter(function(p){return groep(p.type)===t;}).length;
     if(!n)return;
-    var o=el('option',null,TYPES[t]+' ('+n+')');o.value=t;typeSel.appendChild(o);
+    var o=el('option',null,(t==='geldverstrekker'?'Bank, geldverstrekker of fonds':TYPES[t])+' ('+n+')');o.value=t;typeSel.appendChild(o);
   });
 
   Object.keys(CATS).forEach(function(c){
@@ -308,6 +315,7 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
     var a=el('article','card');a.id='partij-'+p._slug;
     var kop=el('div','kaartkop');
     kop.appendChild(el('span','tag',TYPES[p.type]||p.type));
+    if(p.toezicht){var tz=el('span','tag toezicht','Toezicht: '+p.toezicht);tz.title=(p.toezichtNoot?p.toezichtNoot+' ':'')+'Peildatum 3 oktober 2026; controleer in het AFM- of DNB-register.';kop.appendChild(tz);}
     if(typeof p.logo==='string'&&/^img\/logos\/[a-z0-9-]+\.png$/.test(p.logo)){
       var im=el('img','logo');im.src=p.logo;im.alt='Logo '+p.naam;im.loading='lazy';im.decoding='async';
       im.width=150;im.height=36;
@@ -391,7 +399,7 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
     var q=zoek.value.trim().toLowerCase(),t=typeSel.value,c=catSel.value,zicht=0;
     var woorden=q?q.split(/\s+/):[];
     kaarten.forEach(function(k){
-      var hit=(!t||k.type===t)&&(!c||k.cats.indexOf(c)!==-1)&&woorden.every(function(w){return k.tekst.indexOf(w)!==-1;});
+      var hit=(!t||groep(k.type)===t)&&(!c||k.cats.indexOf(c)!==-1)&&woorden.every(function(w){return k.tekst.indexOf(w)!==-1;});
       k.el.style.display=hit?'':'none';if(hit)zicht++;
     });
     leeg.style.display=zicht===0?'block':'none';
@@ -445,7 +453,7 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
     try{q=new URLSearchParams(location.search).get('q');}catch(e){}
     if(hp.q!=null)q=hp.q;
     zoek.value=q||'';
-    zetSelect(typeSel,hp.type);
+    zetSelect(typeSel,groep(hp.type));
     zetSelect(catSel,hp.categorie||hp.cat);
     update();
   }

@@ -46,7 +46,7 @@ const blok = tekst.match(/--- JSON[^\n]*\n([\s\S]*?)\n--- einde JSON ---/);
 let ruw;
 try { ruw = JSON.parse(blok ? blok[1] : tekst); } catch (e) { stop('geen geldige JSON: ' + e.message); }
 if (!ruw || typeof ruw !== 'object' || Array.isArray(ruw)) stop('verwacht één aanbieder-object');
-const onbekend = Object.keys(ruw).filter(k => !['id', 'naam', 'type', 'logo', 'rubrieken', 'initialen', 'kleur', 'omschrijving', 'website', 'extranet', 'contact', 'documenten', 'richtlijnen', 'nieuws', 'elearning', 'agenda', 'bijgewerkt', 'codeHash', 'demo'].includes(k));
+const onbekend = Object.keys(ruw).filter(k => !['id', 'naam', 'type', 'logo', 'telefoon', 'opgezocht', 'contactbronnen', 'rubrieken', 'initialen', 'kleur', 'omschrijving', 'website', 'extranet', 'contact', 'documenten', 'richtlijnen', 'nieuws', 'elearning', 'agenda', 'bijgewerkt', 'codeHash', 'demo'].includes(k));
 if (onbekend.length) console.warn('Let op: onbekende velden genegeerd: ' + onbekend.join(', '));
 if ('codeHash' in ruw || 'demo' in ruw) console.warn('Let op: codeHash/demo in de invoer worden genegeerd.');
 
@@ -55,6 +55,8 @@ const nieuw = V.normaliseer(ruw);
 const LOGO = /^img\/logos\/[a-z0-9-]+\.png$/;
 if (typeof ruw.logo === 'string' && LOGO.test(ruw.logo)) nieuw.logo = ruw.logo;
 else if (ruw.logo) console.warn('Let op: logo genegeerd (verwacht img/logos/<naam>.png).');
+if (typeof ruw.telefoon === 'string' && /^[0-9 +()-]{9,20}$/.test(ruw.telefoon.trim())) nieuw.telefoon = ruw.telefoon.trim();
+else if (ruw.telefoon) console.warn('Let op: telefoon genegeerd (verwacht bijv. 030 123 45 67).');
 if (!/^\d{4}-\d{2}-\d{2}$/.test(nieuw.bijgewerkt)) nieuw.bijgewerkt = V.vandaag();
 const r = V.valideer(nieuw);
 for (const w of r.waarschuwingen) console.warn('Waarschuwing: ' + w.msg);
@@ -73,7 +75,7 @@ const i = lijst.findIndex(a => a && a.id === nieuw.id);
 let uit;
 if (i >= 0) {
   const oud = lijst[i];
-  uit = Object.assign({ id: nieuw.id }, oud.demo ? { demo: true } : {}, oud.logo && !nieuw.logo ? { logo: oud.logo } : {}, nieuw, oud.codeHash ? { codeHash: oud.codeHash } : {});
+  uit = Object.assign({ id: nieuw.id }, oud.demo ? { demo: true } : {}, oud.logo && !nieuw.logo ? { logo: oud.logo } : {}, oud.telefoon && !nieuw.telefoon ? { telefoon: oud.telefoon } : {}, nieuw, oud.codeHash ? { codeHash: oud.codeHash } : {});
   lijst[i] = uit;
   console.log('Vervangen: ' + nieuw.naam + ' (' + nieuw.id + ')');
 } else {
