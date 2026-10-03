@@ -1,6 +1,7 @@
 /* Sjablonenbibliotheek voor sjablonen.html
    Opbouw van een sjabloon:
-   - id: uniek, cat: categorie-id (zie SJABLOON_CATEGORIEEN), type: 'mail' of 'brief'
+   - id: uniek, cat: categorie-id (zie SJABLOON_CATEGORIEEN), type: 'mail', 'brief' of 'memo' (intern, niet voor de klant)
+   - geenOndertekening: true laat de ondertekening weg (gebruikt bij interne memo's)
    - titel, onderwerp, tekst: {veld} = invulveld; [[...]] = controlepunt voor de adviseur (geel gemarkeerd)
    - controle: lijst met punten die de adviseur moet nalopen voor verzending
    - bronnen: officiële bronnen bij termijnen of verplichte onderdelen
@@ -15,9 +16,11 @@ window.SJABLOON_CATEGORIEEN = [
   { id: 'rente', naam: 'Rentevast en rentemiddeling' },
   { id: 'nazorg', naam: 'Nazorg' },
   { id: 'leven', naam: 'Levensgebeurtenissen' },
+  { id: 'schade', naam: 'Schadeverzekeringen' },
   { id: 'klacht', naam: 'Klachten en Kifid' },
   { id: 'avg', naam: 'AVG en privacy' },
   { id: 'wwft', naam: 'Wwft en identificatie' },
+  { id: 'compliance', naam: 'Compliance intern' },
   { id: 'beeindiging', naam: 'Beëindiging en overdracht' },
   { id: 'review', naam: 'Reviews en klanttevredenheid' },
   { id: 'opvolging', naam: 'Opvolging bij stilte of verzuim' }
@@ -96,7 +99,44 @@ window.SJABLOON_VELDEN = {
   klachtbehandelaar: { label: 'Behandelaar klacht (naam en functie)' },
   onderzoek: { label: 'Wat is onderzocht', type: 'lang', hint: 'Welke stukken en gesprekken je hebt bekeken' },
   contactpersoon: { label: 'Nieuwe contactpersoon' },
-  verwijderdegegevens: { label: 'Welke gegevens zijn verwijderd', type: 'lang', hint: 'Bijv. uit de nieuwsbrief en het klantsysteem' }
+  verwijderdegegevens: { label: 'Welke gegevens zijn verwijderd', type: 'lang', hint: 'Bijv. uit de nieuwsbrief en het klantsysteem' },
+
+  /* Compliance intern */
+  registratienummer: { label: 'Intern registratienummer', hint: 'Bijv. DL-2026-03 of INC-2026-01' },
+  melder: { label: 'Gemeld door (naam en functie)' },
+  compliancefunctionaris: { label: 'Compliance officer of verantwoordelijke', hint: 'Naam en functie' },
+  ontdekkingstijd: { label: 'Tijdstip ontdekking', hint: 'Bijv. 10.15 uur. De 72 uur lopen vanaf dit moment.' },
+  aantalbetrokkenen: { label: 'Aantal betrokkenen (schatting)' },
+  apbesluit: { label: 'Besluit over melding aan de AP en onderbouwing', type: 'lang' },
+  klantbesluit: { label: 'Besluit over informeren van betrokkenen en onderbouwing', type: 'lang' },
+  uiting: { label: 'Reclame-uiting (soort en kanaal)', hint: 'Bijv. Instagram-advertentie over oversluiten' },
+  uitingtekst: { label: 'Tekst van de uiting', type: 'lang', hint: 'Plak de volledige tekst, inclusief kleine letters' },
+  leverancier: { label: 'Leverancier (verwerker)' },
+  softwaredienst: { label: 'Dienst of software', hint: 'Bijv. CRM, adviessoftware of mailingsysteem' },
+  bevindingen: { label: 'Bevindingen en afspraken', type: 'lang' },
+  incidentdatum: { label: 'Datum incident of ontdekking', type: 'datum' },
+  incidentomschrijving: { label: 'Wat is er gebeurd', type: 'lang' },
+  incidentbetrokkenen: { label: 'Wie zijn betrokken (functie, geen namen van klanten)', type: 'lang' },
+  incidentmaatregelen: { label: 'Genomen en geplande maatregelen', type: 'lang' },
+  afmbesluit: { label: 'Besluit over melding aan de AFM en onderbouwing', type: 'lang' },
+
+  /* Schadeverzekeringen */
+  polisnummer: { label: 'Polisnummer' },
+  schadenummer: { label: 'Schadenummer verzekeraar' },
+  schadedatum: { label: 'Datum schade', type: 'datum' },
+  schadeomschrijving: { label: 'Schade in het kort', type: 'lang' },
+  premieoud: { label: 'Huidige premie (per maand of jaar)', type: 'bedrag' },
+  premienieuw: { label: 'Nieuwe premie (zelfde termijn)', type: 'bedrag' },
+  premiereden: { label: 'Reden van de verzekeraar voor de stijging', type: 'lang' },
+  alternatieven: { label: 'Onderzochte alternatieven', type: 'lang', hint: 'Bijv. andere verzekeraars, hoger eigen risico, minder dekking. Eén per regel.' },
+  einddatumpolis: { label: 'Datum einde verzekering', type: 'datum' },
+  gebeurtenis: { label: 'Levensgebeurtenis', hint: 'Bijv. verbouwing, verhuizing of gezinsuitbreiding' },
+  ingangsdatum: { label: 'Ingangsdatum wijziging', type: 'datum' },
+  opzegreden: { label: 'Reden opzegging verzekeraar (zoals ontvangen)', type: 'lang' },
+  scanlink: { label: 'Link naar de schadeverzekeringsscan', type: 'url', hint: 'Bijv. https://jeroen-o.github.io/adviesforum/scan-schadeverzekeringen.html' },
+
+  /* Krediet */
+  kredietverstrekker: { label: 'Kredietverstrekker' }
 };
 
 window.SJABLONEN = [
@@ -573,6 +613,31 @@ U kunt wijzigingen doorgeven via {kantooremail} of {telefoon}.`,
   controle: ['Meldtermijnen in polisvoorwaarden gecontroleerd.', 'Zie het formulier Wijziging doorgeven op het Adviesforum.']
 },
 
+{
+  id: 'nz-krediet-herbeoordeling', cat: 'nazorg', type: 'mail',
+  titel: 'Doorlopend krediet: uitnodiging herbeoordeling',
+  onderwerp: 'Past uw doorlopend krediet nog bij u?',
+  tekst: `Beste {klantnaam},
+
+U heeft een doorlopend krediet bij {kredietverstrekker}. Zo’n krediet loopt vaak lang door. Uw situatie verandert in die tijd wel. Daarom nodig ik u uit om samen te kijken of het krediet nog goed bij u past.
+
+Waar kijken we naar?
+- Lost u echt af, of betaalt u vooral rente? Als de schuld bijna niet daalt, wordt lenen duur.
+- Heeft u de kredietruimte nog nodig? Een lagere limiet kan uw risico kleiner maken.
+- Kunt u de maandtermijn goed blijven betalen, ook als uw inkomen daalt of u met pensioen gaat?
+- Gaat de limiet bij uw krediet op een bepaalde leeftijd omlaag? Bij sommige oudere kredieten stijgt dan uw maandbedrag. [[Controleer in de kredietovereenkomst of er een afbouwregeling of leeftijdsgrens is en noem die concreet.]]
+- Is aflossen in één keer of overstappen naar een lening met een vaste looptijd beter voor u?
+
+Aan deze herbeoordeling zijn voor u geen kosten verbonden. [[Controleer dit: de AFM geeft aan dat voor een herbeoordeling van een doorlopend krediet geen kosten in rekening mogen worden gebracht.]]
+
+Neemt u voor het gesprek een recent overzicht van uw krediet mee? Daarop staan het openstaande bedrag en de maandtermijn. Laat mij weten wanneer het u uitkomt.`,
+  controle: ['Geen kosten rekenen voor de herbeoordeling.', 'Geen nieuw of hoger krediet aanbieden in deze uitnodiging; het doel is toetsen, niet verkopen.', 'Gegevens over inkomen en lasten actueel opvragen; leg de uitkomst vast in het dossier.', 'Bij een advies om over te sluiten: een nieuwe kredietwaardigheidstoets en de kredietwaarschuwing in eventuele reclame.'],
+  bronnen: [
+    { t: 'AFM: los ik af op mijn doorlopend krediet?', u: 'https://www.afm.nl/nl-nl/consumenten/veelgestelde-vragen/lenen/aflossen' },
+    { t: 'AFM: weet of de lening echt wordt afgelost', u: 'https://www.afm.nl/nl-nl/consumenten/themas/lenen/aflossen' }
+  ]
+},
+
 /* ---------- Levensgebeurtenissen ---------- */
 {
   id: 'lv-scheiding', cat: 'leven', type: 'mail',
@@ -648,6 +713,245 @@ Bel mij gerust, dan plannen we snel een gesprek.`,
   bronnen: [
     { t: 'UWV: WW-uitkering', u: 'https://www.uwv.nl/nl/ww' },
     { t: 'NHG: betalingsproblemen', u: 'https://www.nhg.nl/' }
+  ]
+},
+
+{
+  id: 'lv-betalingsproblemen', cat: 'leven', type: 'mail',
+  titel: 'Betalingsproblemen: doorverwijzen naar schuldhulp',
+  onderwerp: 'Hulp bij uw betalingen',
+  tekst: `Beste {klantnaam},
+
+Dank dat u mij vertelde dat het betalen even niet lukt. Dat is niet makkelijk om te zeggen. Het is goed dat u het nu aankaart. Hoe eerder u hulp zoekt, hoe meer er vaak nog mogelijk is.
+
+U staat hier niet alleen in. Veel mensen krijgen een keer te maken met geldzorgen, bijvoorbeeld door ziekte, een scheiding of minder werk.
+
+Wat kunt u nu doen?
+- Neem contact op met {kredietverstrekker} of andere schuldeisers voordat er een achterstand ontstaat of oploopt. Vaak is er meer mogelijk als u dat op tijd doet, zoals een tijdelijke betalingsregeling. [[Pas aan: noem de geldverstrekker of verzekeraar waar het om gaat. Bij een hypotheek met NHG: verwijs ook naar de regels op nhg.nl.]]
+- Vraag gratis hulp bij uw gemeente. Elke gemeente moet inwoners met schulden helpen of doorverwijzen naar de juiste hulp.
+- Wilt u eerst anoniem advies? Bel Geldfit op 0800-8115 of kijk op www.geldfit.nl. Dat is gratis.
+- Krijgt u een brief over afsluiten van gas, water of licht of over uitzetting? Neem dan meteen contact op met de gemeente. In zo’n spoedsituatie moet de gemeente snel helpen.
+
+Wat kan ik voor u doen?
+Ik kijk graag met u naar uw verzekeringen en vaste lasten. Misschien loopt er een verzekering die nu kan uitkeren, of kunnen lasten omlaag. [[Controleer of de klant een woonlasten- of betalingsbeschermer heeft en wat de meldtermijn is. Adviseer niet om verzekeringen zomaar op te zeggen zonder de gevolgen te bespreken.]]
+
+Wilt u dat ik meebel of meedenk? Laat het mij weten. Alles wat u mij vertelt, blijft tussen ons.`,
+  controle: ['Toon: rustig en zonder oordeel. Liever eerst bellen, deze mail als bevestiging.', 'Geen nieuw krediet adviseren om bestaande schulden af te lossen zonder volledige toets.', 'Telefoonnummer en site van Geldfit gecontroleerd op de dag van verzenden.', 'Gesprek en doorverwijzing kort vastleggen in het dossier, zonder meer gevoelige details dan nodig.'],
+  bronnen: [
+    { t: 'Rijksoverheid: hoe kom ik van beginnende geldzorgen of schulden af?', u: 'https://www.rijksoverheid.nl/onderwerpen/schulden/vraag-en-antwoord/hoe-kom-ik-van-mijn-schulden-af' },
+    { t: 'Rijksoverheid: waar moet ik schuldhulpverlening aanvragen?', u: 'https://www.rijksoverheid.nl/onderwerpen/schulden/vraag-en-antwoord/schuldhulpverlening-aanvragen' },
+    { t: 'Nibud: hulp en ondersteuning bij schulden', u: 'https://www.nibud.nl/onderwerpen/geldproblemen/hulp-bij-schulden/' }
+  ]
+},
+
+/* ---------- Schadeverzekeringen ---------- */
+{
+  id: 'sch-melding-begeleiden', cat: 'schade', type: 'mail',
+  titel: 'Schademelding begeleiden: stappen en stukken',
+  onderwerp: 'Uw schade van {schadedatum}: zo gaan we verder',
+  tekst: `Beste {klantnaam},
+
+Vervelend dat u schade heeft. Ik help u graag met de melding bij {verzekeraar}. Hieronder leest u wat u nu kunt doen en wat ik van u nodig heb.
+
+Wat doet u nu?
+- Beperk de schade waar dat veilig kan. Denk aan het afdekken van een lekkend dak of het afsluiten van water. Bewaar bonnen van die kosten.
+- Gooi beschadigde spullen nog niet weg. De verzekeraar wil ze misschien zien.
+- Laat nog geen grote reparaties uitvoeren voordat de verzekeraar akkoord is, tenzij het echt niet kan wachten.
+- Bij diefstal, inbraak of vandalisme: doe aangifte bij de politie.
+
+Wat heb ik van u nodig?
+{documentenlijst}
+[[Pas de lijst aan op de schade. Denk aan: foto’s van de schade, een omschrijving van wat er gebeurd is, aankoopbonnen of bankafschriften, een reparatieofferte, het proces-verbaal of aangiftenummer en bij aansprakelijkheid de gegevens van de tegenpartij.]]
+
+Stuur de stukken bij voorkeur via {uploadkanaal}. Ik zorg dat de melding compleet bij de verzekeraar komt.
+
+Wat gebeurt er daarna?
+De verzekeraar beoordeelt de schade. Soms komt er een schade-expert langs. Ik houd u op de hoogte en kijk mee als de verzekeraar een voorstel doet.
+
+Meld de schade zo snel mogelijk. Wacht niet tot u alle stukken heeft. [[Controleer in de polisvoorwaarden of er een meldtermijn geldt en noem die.]]`,
+  controle: ['Polisnummer en dekking voor deze schade vooraf gecontroleerd; beloof geen vergoeding.', 'Meldtermijn uit de polisvoorwaarden gecontroleerd.', 'Bij twijfel over dekking: zeg dat de verzekeraar beslist, en dat je meekijkt.', 'Schademelding en datum vastleggen in het dossier.']
+},
+{
+  id: 'sch-doorgezet', cat: 'schade', type: 'mail',
+  titel: 'Schade doorgezet naar de verzekeraar',
+  onderwerp: 'Uw schademelding is doorgestuurd naar {verzekeraar}',
+  tekst: `Beste {klantnaam},
+
+Ik heb uw schade van {schadedatum} vandaag doorgegeven aan {verzekeraar}.
+
+Wat hebben we gemeld?
+{schadeomschrijving}
+
+Polisnummer: {polisnummer}
+Schadenummer: {schadenummer}
+Noem dit schadenummer als u zelf contact heeft met de verzekeraar of een expert.
+
+Wat gebeurt er nu?
+- De verzekeraar beoordeelt de melding. [[Noem, als je die weet, de gebruikelijke behandeltijd of de volgende stap, zoals een bezoek van een expert.]]
+- Vraagt de verzekeraar om meer informatie? Dan laat ik het u weten.
+- Krijgt u zelf post of een telefoontje van de verzekeraar of een expert? Laat het mij weten, dan blijf ik goed op de hoogte.
+
+Het besluit over vergoeding ligt bij de verzekeraar. Ik kijk mee of het besluit klopt met uw polis. Bent u het er niet mee eens, dan bespreken we samen wat u kunt doen.`,
+  controle: ['Schadenummer en polisnummer overgenomen uit de bevestiging van de verzekeraar.', 'Omschrijving gelijk aan wat aan de verzekeraar is gemeld.', 'Opvolgmoment in je agenda gezet.']
+},
+{
+  id: 'sch-premiestijging', cat: 'schade', type: 'mail',
+  titel: 'Premiestijging of indexatie toelichten, met alternatieven',
+  onderwerp: 'De premie van uw {product} gaat omhoog',
+  tekst: `Beste {klantnaam},
+
+{verzekeraar} heeft laten weten dat de premie van uw {product} per {ingangsdatum} verandert. U betaalt nu {premieoud}. Daarna wordt dat {premienieuw}.
+
+Waarom stijgt de premie?
+{premiereden}
+[[Gebruik de uitleg van de verzekeraar. Gaat het om indexatie van de verzekerde som (bijv. herbouwwaarde) of om een hogere premie per verzekerd bedrag? Leg uit welk van beide.]]
+
+Wat hebben wij voor u onderzocht?
+{alternatieven}
+[[Bij een forse stijging is alleen de nieuwe premie doorsturen niet genoeg. Vergelijk meerdere verzekeraars of varianten, kijk naar eigen risico en dekking, en leg uit welke keuze bij de klant past en waarom. Leg dit vast in het dossier.]]
+
+Wat kunt u doen?
+- U accepteert de nieuwe premie. U hoeft dan niets te doen.
+- U kiest voor een van de alternatieven hierboven. Ik regel de overstap, zodat u niet onverzekerd bent.
+- U kunt de verzekering op de verlengingsdatum opzeggen. Na het eerste verzekeringsjaar kunt u een schadeverzekering meestal elke dag opzeggen met een opzegtermijn van maximaal een maand. [[Controleer de opzegregels in de polisvoorwaarden.]]
+
+Zeg de verzekering niet op voordat de nieuwe verzekering is geaccepteerd. Anders loopt u het risico dat u een tijd niet verzekerd bent.
+
+Wilt u dat ik een van de alternatieven voor u aanvraag? Of wilt u het eerst bespreken? Laat het mij weten.`,
+  controle: ['Hoogte en ingangsdatum van de nieuwe premie gecontroleerd in de brief van de verzekeraar.', 'Bij een forse stijging: echte alternatieven onderzocht en vastgelegd (meer dan één offerte, ook passendheid van de dekking).', 'Geen overstap adviseren waarbij dekking verloren gaat zonder dat dit uitgelegd is.', 'Let op de mededelingsplicht bij een nieuwe aanvraag.'],
+  bronnen: [
+    { t: 'Kifid: nieuwe verzekeringspolis met (veel) hogere premie', u: 'https://www.kifid.nl/kifid-kennis-en-uitspraken/kifid-kennis/nieuwe-verzekeringspolis-met-veel-hogere-premie/' },
+    { t: 'AFM: wat is de opzegtermijn van mijn schadeverzekering?', u: 'https://www.afm.nl/nl-nl/consumenten/veelgestelde-vragen/verzekeringen/opzegtermijn-schadeverzekering' }
+  ]
+},
+{
+  id: 'sch-opzeggen-klant', cat: 'schade', type: 'mail',
+  titel: 'Polis opzeggen op verzoek van de klant',
+  onderwerp: 'Opzegging van uw {product}',
+  tekst: `Beste {klantnaam},
+
+U heeft gevraagd uw {product} bij {verzekeraar} op te zeggen (polisnummer {polisnummer}). Dat regel ik graag voor u.
+
+Wanneer stopt de verzekering?
+Na het eerste verzekeringsjaar kunt u een schadeverzekering meestal elke dag opzeggen. Er geldt dan een opzegtermijn van maximaal een maand. De verzekering stopt naar verwachting op {einddatumpolis}. [[Controleer de opzegtermijn en de einddatum in de polisvoorwaarden. Valt de opzegging in het eerste jaar of is er een langere contractduur afgesproken, pas de tekst dan aan.]]
+
+Let op: vanaf die datum bent u niet meer verzekerd
+Gebeurt er na {einddatumpolis} iets, dan vergoedt deze verzekering de schade niet meer. [[Is dit een verplichte verzekering (zoals WA voor een motorrijtuig) of een verzekering die de geldverstrekker eist (zoals een opstalverzekering bij een hypotheek)? Wijs daar expliciet op.]]
+
+Heeft u al een nieuwe verzekering? Zorg dat die ingaat op of vóór {einddatumpolis}, zodat er geen periode zonder dekking is.
+
+Te veel betaalde premie krijgt u meestal terug van de verzekeraar. Ik stuur u een bevestiging zodra de verzekeraar de opzegging heeft verwerkt.
+
+Wilt u dat ik de opzegging toch niet doorzet? Laat het mij dan voor {deadline} weten.`,
+  controle: ['Schriftelijk opzegverzoek van de klant in het dossier.', 'Verplichte of door de geldverstrekker geëiste verzekering? Klant gewaarschuwd en gevolgen vastgelegd.', 'Royementsbevestiging van de verzekeraar doorsturen naar de klant.', 'Opzegging om over te stappen? Eerst acceptatie van de nieuwe polis afwachten.'],
+  bronnen: [
+    { t: 'AFM: wat is de opzegtermijn van mijn schadeverzekering?', u: 'https://www.afm.nl/nl-nl/consumenten/veelgestelde-vragen/verzekeringen/opzegtermijn-schadeverzekering' }
+  ]
+},
+{
+  id: 'sch-dekking-levensgebeurtenis', cat: 'schade', type: 'mail',
+  titel: 'Dekking aanpassen na verbouwing, verhuizing of gezinsuitbreiding',
+  onderwerp: 'Uw verzekeringen na uw {gebeurtenis}',
+  tekst: `Beste {klantnaam},
+
+U liet weten dat er iets verandert: {gebeurtenis}. Gefeliciteerd, of veel succes ermee! Zo’n verandering heeft vaak gevolgen voor uw schadeverzekeringen. Daarom zet ik de belangrijkste punten op een rij.
+
+Verbouwing
+- Na een verbouwing is uw woning vaak meer waard om te herbouwen. Dan kan uw opstalverzekering te laag zijn.
+- Tijdens de verbouwing gelden soms andere regels, bijvoorbeeld als de woning leeg staat.
+
+Verhuizing
+- Uw inboedel- en opstalverzekering horen bij uw adres. Geef uw nieuwe adres en de verhuisdatum op tijd door.
+- De premie en dekking kunnen anders worden door de nieuwe woning of de postcode.
+- Kijk of u tijdens de verhuizing zelf verzekerd bent, bijvoorbeeld voor schade bij het transport.
+
+Gezinsuitbreiding of samenwonen
+- Zijn alle gezinsleden meeverzekerd op uw aansprakelijkheidsverzekering? Kies zo nodig een gezinsdekking.
+- Uw inboedel wordt vaak meer waard.
+- Kijk ook naar uw overlijdensrisicoverzekering en andere inkomensverzekeringen.
+[[Laat de onderdelen staan die passen bij de situatie van deze klant en verwijder de rest.]]
+
+Wat heb ik van u nodig?
+De datum waarop de verandering ingaat ({ingangsdatum}) en, bij een verbouwing, wat er precies is veranderd en wat het heeft gekost. [[Controleer in de polisvoorwaarden of er een meldtermijn geldt voor deze wijziging.]]
+
+Ik geef de wijziging door en laat u weten wat het betekent voor uw premie en dekking.`,
+  controle: ['Meldtermijnen uit de polisvoorwaarden gecontroleerd.', 'Herbouwwaarde en inboedelwaarde opnieuw vastgesteld waar nodig (zie sjabloon Onderverzekering signaleren).', 'Wijziging door de verzekeraar bevestigd en doorgestuurd aan de klant.']
+},
+{
+  id: 'sch-jaarlijkse-check', cat: 'schade', type: 'mail',
+  titel: 'Uitnodiging jaarlijkse schadecheck',
+  onderwerp: 'Kloppen uw schadeverzekeringen nog?',
+  tekst: `Beste {klantnaam},
+
+Uw schadeverzekeringen zijn afgestemd op uw situatie op het moment dat u ze afsloot. In de tussentijd kan er veel veranderd zijn. Daarom nodig ik u uit voor een jaarlijkse schadecheck.
+
+We kijken onder meer naar:
+- uw woning: is de herbouwwaarde nog goed verzekerd, ook na een verbouwing?
+- uw inboedel: past het verzekerde bedrag nog bij wat u bezit?
+- dure spullen, zoals sieraden, fietsen of apparatuur;
+- uw aansprakelijkheidsverzekering: zijn alle gezinsleden meeverzekerd?
+- dubbele verzekeringen, waarvoor u onnodig betaalt.
+
+Wilt u zich alvast voorbereiden? Vul dan de schadeverzekeringsscan in:
+{scanlink}
+De scan helpt u om op een rij te zetten wat u heeft en wat er veranderd is. Neem de uitkomst mee naar ons gesprek. [[Controleer of de link werkt en vermeld of de klant de uitkomst moet meesturen of alleen meenemen. Laat de klant gevoelige gegevens niet via gewone e-mail sturen.]]
+
+Het gesprek duurt ongeveer {gespreksduur}. [[Vermeld of de check binnen het nazorgabonnement valt, of wat het kost.]]
+
+Wanneer komt het u uit? Reageer op deze e-mail, dan plannen we een moment.`,
+  controle: ['Actuele polissen van de klant bij de hand.', 'Kosten van de check duidelijk.', 'Uitkomst en eventuele wijzigingen vastleggen in het dossier.']
+},
+{
+  id: 'sch-onderverzekering', cat: 'schade', type: 'mail',
+  titel: 'Onderverzekering signaleren: herbouwwaarde en inboedel',
+  onderwerp: 'Is uw woning of inboedel hoog genoeg verzekerd?',
+  tekst: `Beste {klantnaam},
+
+Bij het nalopen van uw verzekeringen bij {verzekeraar} zag ik iets waar ik u op wil wijzen. Het kan zijn dat uw woning of inboedel te laag verzekerd is.
+
+Waarom is dat belangrijk?
+Is het verzekerde bedrag lager dan de werkelijke waarde, dan heet dat onderverzekering. De verzekeraar kan bij schade dan minder vergoeden, naar verhouding van het te lage bedrag. Dat geldt ook bij een kleine schade. [[Controleer of de polis een garantie tegen onderverzekering heeft (bijv. na een waardemeter of taxatie) en onder welke voorwaarden. Pas de tekst daarop aan.]]
+
+Wat zie ik?
+{bevindingen}
+
+Wat stel ik voor?
+- Herbouwwaarde van de woning opnieuw vaststellen, met een herbouwwaardemeter van de verzekeraar of een taxatie. Let op: herbouwwaarde is wat het kost om de woning opnieuw te bouwen, dat is niet hetzelfde als de WOZ-waarde of de verkoopwaarde.
+- Inboedelwaarde opnieuw bepalen, met een inboedelwaardemeter. Denk ook aan verbouwingen door huurders en aan dure spullen.
+- Daarna de verzekerde bedragen aanpassen.
+
+Wilt u dat ik u daarbij help? Dan plannen we een korte afspraak of ik stuur u de waardemeter toe. Een hoger verzekerd bedrag kan leiden tot een hogere premie. Dat bespreek ik vooraf met u.`,
+  controle: ['Bevindingen concreet: welke waarde, sinds wanneer, welke verandering (bijv. verbouwing of aanbouw).', 'Polisvoorwaarden over onderverzekering en garantie gecontroleerd.', 'Weigert de klant aanpassing? Leg dat schriftelijk vast.']
+},
+{
+  id: 'sch-opzegging-verzekeraar', cat: 'schade', type: 'brief',
+  titel: 'Opzegging door de verzekeraar: gevolgen en alternatieven',
+  onderwerp: '{verzekeraar} zegt uw {product} op',
+  tekst: `Geachte {klantnaam},
+
+{verzekeraar} heeft laten weten dat zij uw {product} (polisnummer {polisnummer}) opzegt. De verzekering stopt op {einddatumpolis}. Ik begrijp dat dit vervelend nieuws is. In deze brief leest u wat dit betekent en wat we kunnen doen.
+
+Waarom zegt de verzekeraar op?
+{opzegreden}
+[[Controleer of de verzekeraar de opzegging mag doen op grond van de polisvoorwaarden (bijv. na schade, wegens premieachterstand of bij de verlengingsdatum) en of de opzegtermijn is aangehouden. Bij twijfel: vraag de verzekeraar om uitleg.]]
+
+Wat betekent dit voor u?
+- Na {einddatumpolis} bent u niet meer verzekerd bij {verzekeraar}. Zonder nieuwe verzekering betaalt niemand meer bij schade.
+- Bij een nieuwe aanvraag stelt een verzekeraar vragen. U moet die eerlijk en volledig beantwoorden. Vaak wordt gevraagd of een verzekeraar u eerder heeft opgezegd of geweigerd. Dan moet u deze opzegging noemen.
+- Vertelt u dit niet terwijl er wel naar is gevraagd? Dan kan de nieuwe verzekeraar later weigeren uit te keren of de verzekering beëindigen.
+[[Controleer de slotvragen van de nieuwe verzekeraar: welke periode en welke soort verzekering worden gevraagd? Leg vast wat de klant heeft geantwoord.]]
+
+Wat hebben wij voor u onderzocht?
+{alternatieven}
+
+Hoe gaan we verder?
+Ik vraag graag een nieuwe verzekering voor u aan, zodat die op tijd ingaat. Bent u het niet eens met de opzegging? Dan kunt u een klacht indienen bij {verzekeraar}. Komt u er samen niet uit, dan kunt u naar het Klachteninstituut Financiële Dienstverlening (Kifid).
+
+Neem contact met mij op, het liefst voor {deadline}. Dan hebben we genoeg tijd om een nieuwe verzekering te regelen.`,
+  controle: ['Opzegbrief van de verzekeraar in het dossier; reden en termijn gecontroleerd.', 'Verplichte verzekering (bijv. WA motorrijtuig) of door de geldverstrekker geëiste opstalverzekering? Extra spoed en dit expliciet melden.', 'Mededelingsplicht besproken; antwoorden op de slotvragen vastgelegd.', 'Opzegging wegens fraude of registratie in een waarschuwingssysteem? Pas de brief aan en laat deze zo nodig juridisch toetsen.'],
+  bronnen: [
+    { t: 'Burgerlijk Wetboek Boek 7, art. 7:928 (mededelingsplicht)', u: 'https://wetten.overheid.nl/jci1.3:c:BWBR0005290&boek=7&titeldeel=17&afdeling=1&paragraaf=2&artikel=928' },
+    { t: 'Kifid: kan Kifid mijn klacht behandelen?', u: 'https://www.kifid.nl/ik-heb-een-klacht/kan-kifid-mijn-klacht-behandelen/' }
   ]
 },
 
@@ -886,6 +1190,200 @@ Wij moeten uw gegevens regelmatig controleren. Dat vraagt de wet van ons. Wilt u
 
 Is er iets veranderd? Laat het ons voor {deadline} weten via {kantooremail}. Is uw identiteitsbewijs verlopen? Dan vragen wij u om een nieuw exemplaar te laten zien. [[Pas aan op de controle-frequentie en het risicoprofiel uit je Wwft-beleid.]]`,
   controle: ['Frequentie en diepgang in lijn met je Wwft-beleid.']
+},
+
+
+/* ---------- Compliance intern ---------- */
+{
+  id: 'comp-datalek-registratie', cat: 'compliance', type: 'memo', geenOndertekening: true,
+  titel: 'Datalek intern melden en registreren',
+  onderwerp: 'Datalekregistratie {registratienummer}',
+  tekst: `INTERNE REGISTRATIE DATALEK (niet voor de klant)
+
+Registratienummer: {registratienummer}
+Ontdekt op: {lekdatum} om {ontdekkingstijd}
+Gemeld door: {melder}
+Behandeld door: {compliancefunctionaris}
+
+1. Wat is er gebeurd?
+{lekomschrijving}
+[[Beschrijf de oorzaak, hoe het is ontdekt en of het lek nog loopt. Ook een vermoeden van een lek registreer je.]]
+
+2. Welke persoonsgegevens en wie zijn betrokken?
+{lekgegevens}
+Aantal betrokkenen (schatting): {aantalbetrokkenen}
+[[Let op bijzondere of gevoelige gegevens: BSN, kopie identiteitsbewijs, gezondheidsgegevens (bijv. bij AOV of ORV), financiële gegevens. Die verhogen het risico.]]
+
+3. Mogelijke gevolgen voor de betrokkenen
+{lekgevolgen}
+
+4. Genomen maatregelen
+{lekmaatregelen}
+
+5. Besluit melding aan de Autoriteit Persoonsgegevens
+{apbesluit}
+[[De melding aan de AP moet binnen 72 uur na ontdekking. Alleen als het lek waarschijnlijk geen risico geeft voor de betrokkenen, hoef je niet te melden. Leg dan vast waarom niet. Te laat? Leg de reden vast en geef die bij de melding.]]
+
+6. Besluit informeren van betrokkenen
+{klantbesluit}
+[[Betrokkenen moet je zonder onnodige vertraging informeren als het lek waarschijnlijk een hoog risico voor hen geeft. Gebruik daarvoor het sjabloon Datalek: melding aan de klant.]]
+
+7. Verwerker betrokken?
+Is het lek ontstaan bij een leverancier? Noteer welke, wanneer die ons informeerde en wat de verwerkersovereenkomst zegt over melden.
+
+8. Afronding
+Datum afgerond: ____________________
+Geleerde lessen en vervolgacties: ____________________
+
+Opgesteld door {adviseur}, {kantoor}, op {vandaag}.`,
+  controle: ['Elk datalek in het datalekregister, ook als je niet meldt bij de AP.', 'Melding AP binnen 72 uur na ontdekking; tijdstip van ontdekking exact noteren.', 'Besluit over melden en over informeren van betrokkenen onderbouwd vastgelegd.', 'Raakt het lek ook de integriteit van het kantoor (bijv. fraude door een medewerker)? Kijk dan ook naar het sjabloon Integriteitsincident registreren.'],
+  bronnen: [
+    { t: 'Autoriteit Persoonsgegevens: meldplicht datalekken', u: 'https://autoriteitpersoonsgegevens.nl/nl/onderwerpen/beveiliging/meldplicht-datalekken' },
+    { t: 'Autoriteit Persoonsgegevens: acties bij datalekken', u: 'https://autoriteitpersoonsgegevens.nl/nl/onderwerpen/beveiliging/acties-bij-datalekken' }
+  ]
+},
+{
+  id: 'comp-reclame-toets', cat: 'compliance', type: 'memo', geenOndertekening: true,
+  titel: 'Reclame-uiting toetsen (checklist)',
+  onderwerp: 'Toetsing reclame-uiting: {uiting}',
+  tekst: `INTERNE TOETSING RECLAME-UITING (niet voor de klant)
+
+Uiting: {uiting}
+Getoetst door: {compliancefunctionaris}
+Datum toetsing: {vandaag}
+
+Tekst van de uiting
+{uitingtekst}
+
+1. Correct, duidelijk en niet misleidend (art. 4:19 Wft)
+[ ] Alle feiten en bedragen kloppen en zijn actueel.
+[ ] De uiting is begrijpelijk voor de doelgroep, zonder vakjargon.
+[ ] Voordelen staan niet groter of opvallender dan nadelen en risico’s.
+[ ] Geen beloften die we niet waar kunnen maken, zoals "altijd de laagste rente" of "gegarandeerd goedgekeurd".
+[ ] De uiting is op zichzelf juist. Een link naar meer informatie maakt een onvolledige uiting niet goed.
+[[Toets elk van de drie eisen apart: een uiting kan correct zijn en toch misleidend.]]
+
+2. Kosten en verdienmodel
+[ ] Noemt de uiting "gratis" of "kosteloos"? Klopt dat met de vergelijkingskaart en het verdienmodel?
+[ ] Klopt wat over onafhankelijkheid wordt gezegd met hoe het kantoor betaald wordt?
+
+3. Krediet
+[ ] Gaat de uiting over consumptief krediet? Dan staat de kredietwaarschuwing erin, in het voorgeschreven formaat: "Let op! Geld lenen kost geld."
+[ ] Dat geldt ook voor kleine uitingen, zoals banners en advertenties op sociale media.
+[[Controleer de actuele vormvereisten van de kredietwaarschuwing en of er andere verplichte informatie nodig is (bijvoorbeeld een representatief voorbeeld bij genoemde rente).]]
+
+4. Toezicht en vergunning
+[ ] Vermelden dat we een AFM-vergunning hebben mag, maar de uiting wekt niet de indruk dat de AFM het kantoor of een product aanbeveelt of heeft goedgekeurd.
+[ ] Geen AFM-logo en geen teksten als "goedgekeurd door de AFM" of "in overleg met de AFM".
+
+5. Overig
+[ ] Rentes, premies of acties: alleen als ze actueel zijn en de voorwaarden erbij staan.
+[ ] Reviews en scores: echt, actueel en niet selectief weergegeven.
+[ ] Privacy: bij gerichte advertenties of nieuwsbrieven is er een grondslag en een afmeldmogelijkheid.
+
+Bevindingen en afspraken
+{bevindingen}
+
+Besluit: [ ] goedgekeurd  [ ] goedgekeurd na aanpassing  [ ] afgekeurd
+
+Opgesteld door {adviseur}, {kantoor}.`,
+  controle: ['Bewaar de getoetste versie en het besluit; de uiting die online staat moet gelijk zijn aan de goedgekeurde versie.', 'Toets opnieuw bij elke wijziging van tekst, kanaal of doelgroep.', 'Twijfel over krediet- of beleggingsreclame? Raadpleeg de AFM-Beleidsregel informatieverstrekking.'],
+  bronnen: [
+    { t: 'AFM: Beleidsregel informatieverstrekking (pdf)', u: 'https://www.afm.nl/~/profmedia/files/wet-regelgeving/beleidsuitingen/beleidsregels/beleidsregel-informatieverstrekking.pdf' },
+    { t: 'AFM: mag een onderneming in een reclame-uiting opnemen dat zij een AFM-vergunning heeft?', u: 'https://www.afm.nl/nl-nl/professionals/veelgestelde-vragen/zorgplicht-algemeen/tekst-reclame-uiting' }
+  ]
+},
+{
+  id: 'comp-verwerkersovereenkomst', cat: 'compliance', type: 'memo', geenOndertekening: true,
+  titel: 'Verwerkersovereenkomst controleren (checklist)',
+  onderwerp: 'Controle verwerkersovereenkomst {leverancier}',
+  tekst: `INTERNE CONTROLE VERWERKERSOVEREENKOMST (niet voor de klant)
+
+Leverancier: {leverancier}
+Dienst: {softwaredienst}
+Gecontroleerd door: {compliancefunctionaris}
+Datum: {vandaag}
+
+Is de leverancier een verwerker?
+[ ] De leverancier verwerkt persoonsgegevens in onze opdracht en voor onze doelen (bijv. hosting, CRM, adviessoftware, mailing).
+[[Bepaalt de leverancier zelf het doel van de verwerking? Dan is het geen verwerker en past een verwerkersovereenkomst niet. Laat dit zo nodig toetsen.]]
+
+Verplichte onderdelen (art. 28 AVG)
+[ ] Schriftelijk vastgelegd (een elektronische vorm mag).
+[ ] Onderwerp, duur, aard en doel van de verwerking.
+[ ] Soorten persoonsgegevens en categorieën betrokkenen (klanten, partners, kinderen, medewerkers).
+[ ] Rechten en plichten van ons kantoor als verwerkingsverantwoordelijke.
+[ ] De verwerker werkt alleen op onze schriftelijke instructies.
+[ ] Geheimhouding voor iedereen die bij de verwerker met de gegevens werkt.
+[ ] Passende technische en organisatorische beveiliging.
+[ ] Subverwerkers alleen met onze toestemming; dezelfde plichten gelden voor hen. De verwerker blijft verantwoordelijk.
+[ ] Hulp bij verzoeken van betrokkenen (inzage, correctie, verwijdering).
+[ ] Hulp bij beveiliging, datalekken en een eventuele DPIA.
+[ ] Na afloop: gegevens teruggeven of verwijderen, naar onze keuze.
+[ ] Wij kunnen controleren of de verwerker zich aan de afspraken houdt (informatie, audits).
+
+Aanvullende punten
+[ ] Meldtermijn datalekken: de verwerker meldt ons snel genoeg om binnen 72 uur bij de AP te kunnen melden.
+[ ] Waar staan de gegevens? Bij doorgifte buiten de EER: is er een geldige grondslag?
+[ ] Bewaartermijnen sluiten aan op ons beleid, inclusief Wwft-bewaarplicht.
+[ ] Bijzondere gegevens (bijv. gezondheid) of BSN: extra beveiliging afgesproken.
+[ ] Exit: we kunnen onze gegevens in een bruikbaar formaat terugkrijgen.
+[[Leg de uitkomst vast in het verwerkingsregister en plan een herbeoordeling, bijvoorbeeld jaarlijks of bij een nieuwe versie van de voorwaarden.]]
+
+Bevindingen en afspraken
+{bevindingen}
+
+Besluit: [ ] akkoord  [ ] akkoord na aanpassing  [ ] niet akkoord
+
+Opgesteld door {adviseur}, {kantoor}.`,
+  controle: ['Getekende of geaccepteerde verwerkersovereenkomst in het archief.', 'Leverancier opgenomen in het verwerkingsregister.', 'Ontbreken verplichte onderdelen? Vraag een aanvulling voordat je klantgegevens deelt.'],
+  bronnen: [
+    { t: 'Autoriteit Persoonsgegevens: verwerkers', u: 'https://autoriteitpersoonsgegevens.nl/nl/onderwerpen/algemene-informatie-avg/verwerkers' },
+    { t: 'Autoriteit Persoonsgegevens: verwerkersovereenkomst', u: 'https://www.autoriteitpersoonsgegevens.nl/en/themes/basic-gdpr/gdpr-basics/processing-agreement' }
+  ]
+},
+{
+  id: 'comp-incident-registratie', cat: 'compliance', type: 'memo', geenOndertekening: true,
+  titel: 'Integriteitsincident registreren (en melden aan de AFM)',
+  onderwerp: 'Incidentregistratie {registratienummer}',
+  tekst: `INTERNE REGISTRATIE INCIDENT (vertrouwelijk, niet voor de klant)
+
+Registratienummer: {registratienummer}
+Datum incident of ontdekking: {incidentdatum}
+Gemeld door: {melder}
+Behandeld door: {compliancefunctionaris}
+
+1. Wat is er gebeurd?
+{incidentomschrijving}
+[[Een incident is een gedraging of gebeurtenis die een ernstig gevaar vormt voor de integere uitoefening van het bedrijf. Denk aan fraude, valse documenten in een aanvraag, belangenverstrengeling of een overtreding door een medewerker. Toets dit tegen je integriteitsbeleid (art. 4:11 Wft).]]
+
+2. Betrokkenen
+{incidentbetrokkenen}
+
+3. Genomen en geplande maatregelen
+{incidentmaatregelen}
+[[Denk aan: toegang intrekken, dossiers nalopen, geldverstrekker of verzekeraar informeren, aangifte, en aanpassing van procedures.]]
+
+4. Besluit melding aan de AFM
+{afmbesluit}
+[[Een incident meld je onverwijld bij de AFM: zo snel mogelijk nadat je ervan weet. Wacht niet tot een intern onderzoek klaar is. Je meldt zelf, ook als een ander het incident al heeft gemeld. Controleer op afm.nl via welk kanaal je meldt.]]
+
+5. Andere meldingen
+[ ] Valt je kantoor onder de Wwft en gaat het (ook) om een ongebruikelijke transactie? Volg dan het Wwft-beleid en meld bij de FIU-Nederland. Informeer de klant daar nooit over.
+[ ] Zijn persoonsgegevens gelekt? Registreer ook een datalek.
+
+6. Afronding
+Datum afgerond: ____________________
+Oorzaak en geleerde lessen: ____________________
+Aanpassing integriteitsbeleid of procedures: ____________________
+
+Opgesteld door {adviseur}, {kantoor}, op {vandaag}.`,
+  controle: ['Elk incident in het incidentenregister, ook als het niet ernstig genoeg is voor een melding.', 'Melding aan de AFM onverwijld; tijdstip en manier van melden vastleggen.', 'Vertrouwelijk bewaren: alleen toegankelijk voor wie het nodig heeft.', 'Een Wwft-melding bij de FIU-Nederland en een incidentmelding bij de AFM zijn verschillende meldingen; houd ze gescheiden.'],
+  bronnen: [
+    { t: 'AFM: wat zijn misstanden en incidenten?', u: 'https://www.afm.nl/nl-nl/professionals/onderwerpen/misstanden-wat' },
+    { t: 'AFM: het registreren en melden van incidenten (brief 23 december 2020, pdf)', u: 'https://www.afm.nl/~/profmedia/files/nieuws/2020/december/brief-incidenten-melden.pdf?la=nl-NL' },
+    { t: 'AFM: doorlopende eisen en bedrijfsvoering voor adviseurs en bemiddelaars', u: 'https://www.afm.nl/nl-nl/sector/adviseurs-bemiddelaars-en-gevolmachtigde-agenten/doorlopende-eisen-en-bedrijfsvoering' }
+  ]
 },
 
 /* ---------- Beëindiging en overdracht ---------- */
