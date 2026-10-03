@@ -172,6 +172,25 @@ fieldset.vraag legend{font-weight:700;font-size:15px;padding:0 4px;max-width:100
   fieldset.vraag{padding:12px 10px}
 }
 @media print{.balk,.voet,.lesnav,.stapnav{display:none}}
+.blinqx{margin:30px 0 8px}
+.bl-balk{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:0 0 12px}
+.bl-balk input{flex:1 1 240px;min-width:0;padding:10px 12px;border:1px solid #CFCFCF;border-radius:10px;font:inherit;font-size:14px;background:#fff;color:inherit}
+.bl-tel{font-size:13px;color:var(--grijs)}
+.bl-lijst{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:8px}
+.bl-item{display:flex;gap:12px;align-items:center;border:1px solid var(--lijn);border-radius:12px;padding:10px 12px;background:#fff;min-width:0}
+.bl-item[hidden]{display:none}
+.bl-nr{flex:none;width:28px;height:28px;border-radius:50%;background:var(--geel);color:#141414;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800}
+.bl-tekst{flex:1;min-width:0}
+.bl-tekst b{display:block;font-size:14.5px;line-height:1.3}
+.bl-extra{display:block;font-size:12.5px;color:var(--grijs);margin-top:2px}
+.bl-knop{flex:none;background:#141414;color:#fff;text-decoration:none;font-weight:700;font-size:13px;padding:9px 14px;border-radius:999px}
+.bl-knop:hover{background:#333}
+@media (max-width:560px){.bl-lijst{grid-template-columns:minmax(0,1fr)}}
+@media screen and (prefers-color-scheme:dark){
+:root:not([data-theme="light"]) .bl-item{background:#1E1E1E;border-color:#333}
+:root:not([data-theme="light"]) .bl-balk input{background:#1E1E1E;border-color:#333}
+:root:not([data-theme="light"]) .bl-knop{background:#FFD200;color:#141414}
+}
 </style>
 <style id="a11y">
 /* Toegankelijkheid en donkere modus (zie docs/toegankelijkheid.md). Staat in een eigen <style>, zodat printvensters licht blijven. */
@@ -285,6 +304,32 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
       <p>Deze modules zijn bedoeld om je kennis bij te houden en te toetsen. Ze zijn niet erkend door het CDFD of een andere instantie en leveren <strong>geen PE-punten</strong> en <strong>geen Wft-certificaat</strong> op. Na een geslaagde eindtoets (70% of meer) kun je een deelnamebewijs afdrukken; dat is alleen een bewijs voor je eigen administratie.</p>
       <p>Je voortgang blijft alleen in dit tabblad bewaard. Er wordt niets opgeslagen of verstuurd; na sluiten of herladen begin je opnieuw.</p>
     </div>
+
+    <section class="blinqx" id="blinqx" aria-labelledby="kop-blinqx">
+      <h2 class="sectie" id="kop-blinqx">E-learning Blinqx</h2>
+      <p class="sub">Korte interactieve rondleidingen door de software van Blinqx Verzekering &amp; Hypotheek: van inloggen en klantbeheer tot e-mail, agenda, schade en eBLINQX hypotheekadvies. Elke module opent in een nieuw tabblad bij Blinqx (Storylane). Software-instructie: geen PE-punten.</p>
+      <div class="bl-balk"><label class="sr-only" for="bl-zoek">Zoek in E-learning Blinqx</label><input type="search" id="bl-zoek" placeholder="Zoek op onderwerp, bijvoorbeeld mailbox"><span class="bl-tel" id="bl-tel" aria-live="polite">17 modules</span></div>
+      <ol class="bl-lijst" id="bl-lijst">
+        <li class="bl-item" data-titel="basis: opstarten, inloggen en instellingen"><span class="bl-nr" aria-hidden="true">1</span><span class="bl-tekst"><b>Basis: opstarten, inloggen en instellingen</b></span><a class="bl-knop" href="https://blinqx.storylane.io/share/npl75yisvkpf" target="_blank" rel="noopener noreferrer">Bekijk<span class="sr-only"> Basis: opstarten, inloggen en instellingen (opent in nieuw tabblad)</span></a></li>
+        <li class="bl-item" data-titel="klant zoeken"><span class="bl-nr" aria-hidden="true">2</span><span class="bl-tekst"><b>Klant zoeken</b></span><a class="bl-knop" href="https://blinqx.storylane.io/share/wj15iy6dfyey" target="_blank" rel="noopener noreferrer">Bekijk<span class="sr-only"> Klant zoeken (opent in nieuw tabblad)</span></a></li>
+        <li class="bl-item" data-titel="klant aanmaken"><span class="bl-nr" aria-hidden="true">3</span><span class="bl-tekst"><b>Klant aanmaken</b></span><a class="bl-knop" href="https://blinqx.storylane.io/share/liudfpy4au2e" target="_blank" rel="noopener noreferrer">Bekijk<span class="sr-only"> Klant aanmaken (opent in nieuw tabblad)</span></a></li>
+        <li class="bl-item" data-titel="e-mail: overige instellingen van de mailbox"><span class="bl-nr" aria-hidden="true">4</span><span class="bl-tekst"><b>E-mail: overige instellingen van de mailbox</b></span><a class="bl-knop" href="https://blinqx.storylane.io/share/os253q6smdac" target="_blank" rel="noopener noreferrer">Bekijk<span class="sr-only"> E-mail: overige instellingen van de mailbox (opent in nieuw tabblad)</span></a></li>
+        <li class="bl-item" data-titel="overige instellingen mailbox"><span class="bl-nr" aria-hidden="true">5</span><span class="bl-tekst"><b>Overige instellingen mailbox</b></span><a class="bl-knop" href="https://blinqx.storylane.io/share/qrqtfxmxl5oj" target="_blank" rel="noopener noreferrer">Bekijk<span class="sr-only"> Overige instellingen mailbox (opent in nieuw tabblad)</span></a></li>
+        <li class="bl-item" data-titel="speciale instellingen van de mailbox"><span class="bl-nr" aria-hidden="true">6</span><span class="bl-tekst"><b>Speciale instellingen van de mailbox</b></span><a class="bl-knop" href="https://blinqx.storylane.io/share/6dq2gjm2kuv3" target="_blank" rel="noopener noreferrer">Bekijk<span class="sr-only"> Speciale instellingen van de mailbox (opent in nieuw tabblad)</span></a></li>
+        <li class="bl-item" data-titel="e-mail koppelen"><span class="bl-nr" aria-hidden="true">7</span><span class="bl-tekst"><b>E-mail koppelen</b></span><a class="bl-knop" href="https://blinqx.storylane.io/share/vsrxj05efzou" target="_blank" rel="noopener noreferrer">Bekijk<span class="sr-only"> E-mail koppelen (opent in nieuw tabblad)</span></a></li>
+        <li class="bl-item" data-titel="kolom- of lijstweergave e-mail"><span class="bl-nr" aria-hidden="true">8</span><span class="bl-tekst"><b>Kolom- of lijstweergave e-mail</b></span><a class="bl-knop" href="https://blinqx.storylane.io/share/yobppl61w56n" target="_blank" rel="noopener noreferrer">Bekijk<span class="sr-only"> Kolom- of lijstweergave e-mail (opent in nieuw tabblad)</span></a></li>
+        <li class="bl-item" data-titel="kalender instellen en afspraak inboeken"><span class="bl-nr" aria-hidden="true">9</span><span class="bl-tekst"><b>Kalender instellen en afspraak inboeken</b></span><a class="bl-knop" href="https://blinqx.storylane.io/share/wm5k4bnda6l4" target="_blank" rel="noopener noreferrer">Bekijk<span class="sr-only"> Kalender instellen en afspraak inboeken (opent in nieuw tabblad)</span></a></li>
+        <li class="bl-item" data-titel="taken"><span class="bl-nr" aria-hidden="true">10</span><span class="bl-tekst"><b>Taken</b></span><a class="bl-knop" href="https://blinqx.storylane.io/share/cc885jxstbfl" target="_blank" rel="noopener noreferrer">Bekijk<span class="sr-only"> Taken (opent in nieuw tabblad)</span></a></li>
+        <li class="bl-item" data-titel="schadeverzekering aanmaken en opvoeren"><span class="bl-nr" aria-hidden="true">11</span><span class="bl-tekst"><b>Schadeverzekering aanmaken en opvoeren</b></span><a class="bl-knop" href="https://blinqx.storylane.io/share/36vmnyv00pq4" target="_blank" rel="noopener noreferrer">Bekijk<span class="sr-only"> Schadeverzekering aanmaken en opvoeren (opent in nieuw tabblad)</span></a></li>
+        <li class="bl-item" data-titel="schademeldingen registreren en verwerken"><span class="bl-nr" aria-hidden="true">12</span><span class="bl-tekst"><b>Schademeldingen registreren en verwerken</b></span><a class="bl-knop" href="https://blinqx.storylane.io/share/xsevzehvopch" target="_blank" rel="noopener noreferrer">Bekijk<span class="sr-only"> Schademeldingen registreren en verwerken (opent in nieuw tabblad)</span></a></li>
+        <li class="bl-item" data-titel="smart"><span class="bl-nr" aria-hidden="true">13</span><span class="bl-tekst"><b>SMART</b></span><a class="bl-knop" href="https://blinqx.storylane.io/share/c2wxibrojoyo" target="_blank" rel="noopener noreferrer">Bekijk<span class="sr-only"> SMART (opent in nieuw tabblad)</span></a></li>
+        <li class="bl-item" data-titel="dossier splitsen of samenvoegen"><span class="bl-nr" aria-hidden="true">14</span><span class="bl-tekst"><b>Dossier splitsen of samenvoegen</b></span><a class="bl-knop" href="https://blinqx.storylane.io/share/k1k8m6ytk6rz" target="_blank" rel="noopener noreferrer">Bekijk<span class="sr-only"> Dossier splitsen of samenvoegen (opent in nieuw tabblad)</span></a></li>
+        <li class="bl-item" data-titel="dienst aanmaken"><span class="bl-nr" aria-hidden="true">15</span><span class="bl-tekst"><b>Dienst aanmaken</b></span><a class="bl-knop" href="https://blinqx.storylane.io/share/qrmyfpldzpu4" target="_blank" rel="noopener noreferrer">Bekijk<span class="sr-only"> Dienst aanmaken (opent in nieuw tabblad)</span></a></li>
+        <li class="bl-item" data-titel="personen toevoegen"><span class="bl-nr" aria-hidden="true">16</span><span class="bl-tekst"><b>Personen toevoegen</b></span><a class="bl-knop" href="https://blinqx.storylane.io/share/jnrylc7q4ias" target="_blank" rel="noopener noreferrer">Bekijk<span class="sr-only"> Personen toevoegen (opent in nieuw tabblad)</span></a></li>
+        <li class="bl-item" data-titel="eblinqx hypotheekadvies"><span class="bl-nr" aria-hidden="true">17</span><span class="bl-tekst"><b>eBLINQX hypotheekadvies</b><span class="bl-extra">Wachtwoord: <code>IkWilLeren</code> (hoofdlettergevoelig)</span></span><a class="bl-knop" href="https://blinqx.storylane.io/share/wqlzatuwfu1x" target="_blank" rel="noopener noreferrer">Bekijk<span class="sr-only"> eBLINQX hypotheekadvies (opent in nieuw tabblad)</span></a></li>
+      </ol>
+      <p class="leeg" id="bl-leeg" hidden>Geen module gevonden voor deze zoekterm.</p>
+    </section>
 
     <h2 class="sectie" id="kop-modules">Modules</h2>
     <p class="sub">Peildatum oktober 2026. De inhoud volgt de kennisbankartikelen; controleer bij gebruik in een klantdossier altijd de actuele regels.</p>
@@ -709,6 +754,16 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
 
   /* alleen voor tests en hulpmiddelen: lees de voortgang (niet opgeslagen) */
   window.ELEARNING_STATUS = () => MODS.map(m => ({ id: m.id, status: status(m) }));
+})();
+</script>
+<script>
+(function(){
+  var z=document.getElementById('bl-zoek');if(!z)return;
+  var items=[].slice.call(document.querySelectorAll('#bl-lijst .bl-item'));
+  z.addEventListener('input',function(){var q=z.value.trim().toLowerCase(),n=0;
+    items.forEach(function(li){var ok=!q||li.getAttribute('data-titel').indexOf(q)>=0;li.hidden=!ok;if(ok)n++;});
+    document.getElementById('bl-tel').textContent=(q?n+' van '+items.length:items.length)+' modules';
+    document.getElementById('bl-leeg').hidden=n>0;});
 })();
 </script>
 </body>
