@@ -61,7 +61,8 @@
   .result .lbl{font-size:13px;opacity:.85}
   .rows{margin:16px 0 0;border-top:1px solid rgba(255,255,255,.25)}
   .rows div{display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.15);font-size:14.5px}
-  .rows div b{font-weight:600;white-space:nowrap}
+  .rows div b{font-weight:600;white-space:normal;text-align:right;overflow-wrap:anywhere;min-width:0}
+  @media (max-width:480px){.rows div{flex-wrap:wrap}.rows div b{margin-left:auto}}
   .let-op{background:var(--warn-bg);border-left:4px solid var(--warn-line);padding:12px 14px;border-radius:0 6px 6px 0;margin:14px 0 0;font-size:14.5px}
   .let-op strong{color:#8A5B00}
   .compliance{background:#FFF1F1;border-left:4px solid #C0392B;padding:12px 14px;border-radius:0 6px 6px 0;margin:14px 0 0;font-size:14.5px}
@@ -128,6 +129,9 @@
   .btn:not(.sec):hover{background:#E6BD00}
   .btn.sec:hover{background:#F7F7F5}
   input:focus,select:focus,textarea:focus{border-color:var(--primary)}
+/* Mobiel: tikdoelen en leesbaarheid */
+@media (max-width:760px){input,select,textarea{font-size:16px!important}}
+a.back{padding:8px 0}
 </style>
 </head>
 <body>
@@ -161,7 +165,7 @@
           </div>
           <div>
             <label for="mnd">Resterende looptijd (maanden)</label>
-            <input type="text" inputmode="numeric" id="mnd" value="300">
+            <input type="text" inputmode="numeric" maxlength="3" id="mnd" value="300">
             <span class="hint">300 maanden = 25 jaar.</span>
           </div>
           <div class="full">
@@ -248,6 +252,7 @@
   function reken(){
     var S = parseNum($('schuld').value), rj = parsePct($('rente').value), n = Math.max(0, Math.round(parseNum($('mnd').value)));
     var X = parseNum($('extra').value), keuze = $('keuze').value, r = rj/100/12, msg = [];
+    if (n > 600) { n = 600; msg.push('Resterende looptijd begrensd op 600 maanden (50 jaar).'); }
     if (X > S) { msg.push('De extra aflossing is hoger dan de restschuld; gerekend is met volledige aflossing.'); X = S; }
     var S2 = S - X;
     var M0 = ann(S, r, n), I0 = M0 * n - S;
@@ -303,7 +308,7 @@
       });
       Array.prototype.forEach.call(body.querySelectorAll('script'), function(s){ s.remove(); });
       w.document.open();
-      w.document.write('<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><title>' + document.title +
+      w.document.write('<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>' + document.title +
         '</title><style>' + document.querySelector('style').textContent + '</style></head><body>' + body.innerHTML + '</body></html>');
       w.document.close(); w.focus();
       setTimeout(function(){ w.print(); }, 350);

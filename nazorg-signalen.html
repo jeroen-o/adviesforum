@@ -105,6 +105,9 @@ button,input,select,textarea{font-family:inherit}
   .raster{grid-template-columns:minmax(0,1fr)}
   .kaart{padding:16px}
 }
+/* Mobiel: tikdoelen en leesbaarheid */
+@media (max-width:760px){input,select,textarea{font-size:16px!important}}
+a.terug{display:inline-block;padding:8px 0}
 </style>
 </head>
 <body>
@@ -406,7 +409,7 @@ button,input,select,textarea{font-family:inherit}
     }).join('');
     var css = 'body{font-family:Montserrat,Arial,sans-serif;color:#141414;margin:28px;font-size:12.5px;line-height:1.45}h1{font-size:20px;margin:0 0 4px}h2{font-size:15px;border-bottom:3px solid #FFD200;padding-bottom:4px;margin:18px 0 8px}' +
       'table{border-collapse:collapse;width:100%}td,th{border:1px solid #ccc;padding:6px 8px;text-align:left;vertical-align:top}th{background:#FFF6C7}td:first-child{white-space:nowrap}.vk{width:40px;text-align:center;font-size:15px}.vb{color:#888}.klein{font-size:11px;color:#555}@media print{body{margin:12mm}tr{break-inside:avoid}}';
-    var html = '<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><title>Nazorgsignalen' + (naam ? ' ' + esc(naam) : '') + '</title><style>' + css + '</style></head><body>' +
+    var html = '<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Nazorgsignalen' + (naam ? ' ' + esc(naam) : '') + '</title><style>' + css + '</style></head><body>' +
       '<h1>Nazorgsignalen' + (naam ? ': ' + esc(naam) : '') + '</h1><div class="klein">Afgedrukt op ' + esc(nl(nu)) + '. Indicatief overzicht uit het Adviesforum-hulpmiddel; geen advies.</div>' +
       (aow ? '<p>AOW-datum: <b>' + esc(nl(aow.datum)) + '</b> (' + aow.jaren + ' jaar' + (aow.maanden ? ' en ' + aow.maanden + ' maanden' : '') + (aow.voorlopig ? ', voorlopig' : '') + '). Controleer bij de SVB.</p>' : '') +
       '<h2>Tijdlijn</h2>' + (rijen ? '<table><tr><th>Datum</th><th>Signaal en adviesactie</th><th>Gedaan</th></tr>' + rijen + '</table>' : '<p>Geen signalen.</p>') +

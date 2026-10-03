@@ -137,6 +137,11 @@ footer{border-top:1px solid var(--lijn);padding:22px 24px;font-size:12.5px;color
   .kop{padding:12px 0;background:#fff}
   .item,.per{break-inside:avoid}
 }
+/* Mobiel: tikdoelen en leesbaarheid */
+@media (max-width:760px){input,select,textarea{font-size:16px!important}}
+a.terug{display:inline-block;padding:8px 0}
+.raster .wd{font-size:12px}
+#vorige,#volgende{min-width:40px;min-height:40px;justify-content:center}
 </style>
 </head>
 <body>
@@ -468,7 +473,7 @@ footer{border-top:1px solid var(--lijn);padding:22px 24px;font-size:12.5px;color
     var per = (K.per2027||[]).map(function(p){
       return '<li><strong>'+esc(p.titel)+'</strong> ('+p.status+'): '+esc(p.tekst)+' <span class="b">'+esc(p.bron.url)+'</span></li>';
     }).join('');
-    var html = '<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><title>'+esc(document.title)+'</title><style>'+
+    var html = '<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+esc(document.title)+'</title><style>'+
       'body{font-family:Montserrat,Arial,sans-serif;color:#141414;margin:24px;font-size:11.5px;line-height:1.45}h1{font-size:20px;margin:0 0 4px}h2{font-size:14px;margin:22px 0 8px;border-bottom:3px solid #FFD200;padding-bottom:4px}'+
       'p.s{color:#555;margin:0 0 12px}table{width:100%;border-collapse:collapse}th,td{text-align:left;vertical-align:top;border-bottom:1px solid #ddd;padding:6px 6px}th{background:#f4f4f2;font-size:10.5px;text-transform:uppercase}'+
       'td:first-child{white-space:nowrap}.b{color:#666;font-size:10px;word-break:break-all}tr{break-inside:avoid}li{margin-bottom:6px}'+

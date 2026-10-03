@@ -124,7 +124,8 @@ ul{margin:0 0 12px;padding-left:20px}
 .tabs{background:var(--surface);border-bottom:1px solid var(--border)}
 .sticky-kop{position:sticky;top:0;z-index:60;box-shadow:0 2px 10px -6px rgba(0,0,0,.25)}
 .sticky-kop .top{background:#fff}
-h2[id],h3[id],details[id],.guide [id]{scroll-margin-top:170px}
+h2[id],h3[id],details[id],.guide [id]{scroll-margin-top:calc(var(--kop-h,170px) + 12px)}
+@media (max-height:500px){.sticky-kop{position:static}h2[id],h3[id],details[id],.guide [id]{scroll-margin-top:12px}}
 @media (max-width:700px){.sticky-kop .top .wrap{padding:8px 14px;gap:8px;flex-wrap:wrap}.sticky-kop .top .search{order:10;flex:1 1 100%}.sticky-kop .top .who{margin-left:auto}.sticky-kop .top .who .btn,.sticky-kop .top>.wrap>.btn{padding:7px 10px;font-size:12px}.sticky-kop .top .search input{padding:8px 12px}.sticky-kop .tabs .wrap{padding:6px 14px}.sticky-kop .tab{padding:6px 12px}.sticky-kop .logo{height:26px;width:auto}.sticky-kop .brand-sep,.sticky-kop .brand-name{display:none}}
 .tabs .wrap{max-width:1240px;margin:0 auto;padding:10px 20px;display:flex;gap:8px;overflow-x:auto}
 .tab{padding:8px 16px;border:1px solid var(--border);border-radius:999px;background:var(--surface);font-weight:600;color:var(--text);cursor:pointer;white-space:nowrap}
@@ -408,6 +409,19 @@ main .wrap>*{min-width:0}
 .term .waar{font-size:13px;color:var(--muted)}
 .term .waar button{background:none;border:0;padding:0;font:inherit;color:var(--text);text-decoration:underline;cursor:pointer;text-align:left}
 .letter{font-size:22px;font-weight:800;margin:22px 0 4px;padding-bottom:4px;border-bottom:3px solid var(--yellow)}
+/* Mobiel: tikdoelen, leesbaarheid en kop */
+@media (max-width:760px){input,select,textarea{font-size:16px!important}}
+.demo a{display:inline-block;padding:8px 0;margin:-8px 0}
+@media (max-width:560px){.demo .wrap>span:first-child{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0;flex:1 1 0}}
+.tabs{position:relative}
+.tabs::after{content:'';position:absolute;top:0;right:0;bottom:0;width:32px;pointer-events:none;background:linear-gradient(to right,rgba(255,255,255,0),var(--surface));opacity:0;transition:opacity .15s}
+.tabs.meer::after{opacity:1}
+@media (max-width:400px){.sticky-kop .top .wrap{padding:8px 12px;gap:6px}.sticky-kop .top .who .btn,.sticky-kop .top>.wrap>.btn{padding:6px 8px}.sticky-kop .brand .logo{height:24px}}
+.rate button{min-width:36px;min-height:36px}
+.crumbs button,.byline .name{padding:8px 0;margin:-8px 0}
+details>summary{min-height:36px}
+.az a,.az span{width:36px;height:36px}
+.tool .tp,.verif,.tbl .who-cell span.verif,.expert,.hex span{font-size:12px}
 </style>
 </head>
 <body>
@@ -1613,7 +1627,7 @@ function zetCookie(waarde,onthoud){const veilig=location.protocol==='https:'?'; 
 async function loginViaLink(){const m=location.hash.match(/^#login-([A-Za-z0-9-]+)$/);if(!m)return false;history.replaceState(null,'',location.pathname+location.search);const code=normCode(m[1]);const h=await sha256(code);const u=USERS.find(x=>x.geverifieerd&&x.codeHash===h);if(u){S.me=u.id;zetCookie(code,true);S.tab='forum';S.view='forum';render(true);toast('Welkom '+u.naam+', je bent ingelogd');}else toast('Deze inloglink is niet (meer) geldig');return true;}
 async function herstelLogin(){if(await loginViaLink())return;const c=normCode(leesCookie());if(!c)return;const h=await sha256(c);const u=USERS.find(x=>x.geverifieerd&&x.codeHash===h);if(u){S.me=u.id;render(true);}else zetCookie('');}
 function openLogin(){let d=$('#login-dlg');if(!d){d=document.createElement('dialog');d.id='login-dlg';document.body.appendChild(d);}
-  d.innerHTML=`<form method="dialog" class="pad form" id="f-login"><h2 style="margin:0 0 8px">Inloggen adviseur</h2><p style="margin:0 0 12px;font-size:14px">Klik op de inloglink uit de mail van de beheerder, of vul hier je code in. Je hoeft dit maar één keer te doen.</p><label for="lg-code">Persoonlijke code</label><input id="lg-code" name="code" type="text" autocomplete="off" placeholder="XXXX-XXXX-XXXX" required><label style="display:flex;gap:8px;align-items:center;font-weight:400;margin-top:12px"><input type="checkbox" name="onthoud" checked style="width:auto"> Onthoud mij op dit apparaat</label><div style="font-size:12px;color:var(--muted);margin-top:6px">Op een gedeelde computer? Haal het vinkje weg; je blijft dan alleen ingelogd tot je de browser sluit.</div><div class="actions" style="margin-top:14px"><button class="btn btn-black" type="submit">Inloggen →</button><button class="btn btn-line" type="button" data-act="login-sluit">Annuleren</button></div><p style="font-size:13px;margin:12px 0 0">Nog geen code? <a href="aanmelden.html">Meld je aan</a>.</p></form>`;
+  d.innerHTML=`<form method="dialog" class="pad form" id="f-login"><h2 style="margin:0 0 8px">Inloggen adviseur</h2><p style="margin:0 0 12px;font-size:14px">Klik op de inloglink uit de mail van de beheerder, of vul hier je code in. Je hoeft dit maar één keer te doen.</p><label for="lg-code">Persoonlijke code</label><input id="lg-code" name="code" type="text" autocomplete="off" autocapitalize="characters" autocorrect="off" spellcheck="false" placeholder="XXXX-XXXX-XXXX" required><label style="display:flex;gap:8px;align-items:center;font-weight:400;margin-top:12px"><input type="checkbox" name="onthoud" checked style="width:auto"> Onthoud mij op dit apparaat</label><div style="font-size:12px;color:var(--muted);margin-top:6px">Op een gedeelde computer? Haal het vinkje weg; je blijft dan alleen ingelogd tot je de browser sluit.</div><div class="actions" style="margin-top:14px"><button class="btn btn-black" type="submit">Inloggen →</button><button class="btn btn-line" type="button" data-act="login-sluit">Annuleren</button></div><p style="font-size:13px;margin:12px 0 0">Nog geen code? <a href="aanmelden.html">Meld je aan</a>.</p></form>`;
   d.showModal();setTimeout(()=>{const i=$('#lg-code');if(i)i.focus();},0);}
 document.addEventListener('submit',async e=>{if(e.target.id!=='f-login')return;e.preventDefault();e.stopImmediatePropagation();
   const f=e.target,code=normCode(f.code.value);if(code.length<14){toast('Vul je volledige code in');return;}
@@ -1640,6 +1654,16 @@ route();
 render();
 /* FAQ op de achtergrond laden zodra de pagina er staat */
 if(document.readyState==='complete')setTimeout(laadFaq,50);else window.addEventListener('load',()=>setTimeout(laadFaq,50));
+/* Hoogte van het vaste menu als --kop-h (voor ankers) en een fade-rand op de tabbalk zolang er meer tabs rechts staan */
+(function(){
+  const kop=document.querySelector('.sticky-kop'),tabs=document.querySelector('.tabs'),rij=document.getElementById('tabs');
+  const zetKop=()=>{if(kop)document.documentElement.style.setProperty('--kop-h',Math.ceil(kop.getBoundingClientRect().height)+'px');};
+  const zetFade=()=>{if(tabs&&rij)tabs.classList.toggle('meer',rij.scrollLeft+rij.clientWidth<rij.scrollWidth-2);};
+  zetKop();zetFade();
+  if('ResizeObserver' in window){const ro=new ResizeObserver(()=>{zetKop();zetFade();});if(kop)ro.observe(kop);if(rij)ro.observe(rij);}
+  else window.addEventListener('resize',()=>{zetKop();zetFade();});
+  if(rij){rij.addEventListener('scroll',zetFade,{passive:true});new MutationObserver(zetFade).observe(rij,{childList:true,subtree:true});}
+})();
 </script>
 </body>
 </html>

@@ -144,6 +144,9 @@ button,input,select{font-family:inherit}
   .score .groot{font-size:38px}
   .navigatie .knop{flex:1 1 auto}
 }
+/* Mobiel: tikdoelen en leesbaarheid */
+@media (max-width:760px){input,select,textarea{font-size:16px!important}}
+a.terug{display:inline-block;padding:8px 0}
 </style>
 </head>
 <body>
@@ -458,7 +461,7 @@ button,input,select{font-family:inherit}
         '<div class="kl">' + esc(v.uitleg) + '</div><div class="kl">Bron: ' + esc(b.titel) + ' – ' + esc(absUrl(b.url)) + '</div></td>' +
         '<td>' + (ok ? 'Juist' : 'Fout') + '</td></tr>';
     }).join('');
-    const html = '<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><title>Oefenresultaat – Adviesforum</title><style>' +
+    const html = '<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Oefenresultaat – Adviesforum</title><style>' +
       'body{font-family:Arial,Helvetica,sans-serif;color:#141414;margin:24px;font-size:12.5px;line-height:1.45}' +
       'h1{font-size:20px;margin:0 0 4px}.meta{color:#555;margin:0 0 14px}.disc{border-left:4px solid #C0392B;background:#FFF1F0;padding:8px 12px;margin:0 0 14px}' +
       '.score{font-size:16px;font-weight:bold;margin:0 0 12px}table{border-collapse:collapse;width:100%}th,td{border-bottom:1px solid #ddd;padding:6px 8px;text-align:left;vertical-align:top}' +

@@ -62,7 +62,8 @@
   .result .lbl{font-size:13px;opacity:.85}
   .rows{margin:16px 0 0;border-top:1px solid rgba(255,255,255,.25)}
   .rows div{display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.15);font-size:14.5px}
-  .rows div b{font-weight:600;white-space:nowrap}
+  .rows div b{font-weight:600;white-space:normal;text-align:right;overflow-wrap:anywhere;min-width:0}
+  @media (max-width:480px){.rows div{flex-wrap:wrap}.rows div b{margin-left:auto}}
   .let-op{background:var(--warn-bg);border-left:4px solid var(--warn-line);padding:12px 14px;border-radius:0 6px 6px 0;margin:14px 0 0;font-size:14.5px}
   .let-op strong{color:#8A5B00}
   .compliance{background:#FFF1F1;border-left:4px solid #C0392B;padding:12px 14px;border-radius:0 6px 6px 0;margin:14px 0 0;font-size:14.5px}
@@ -213,6 +214,12 @@
   .btn:not(.sec):hover{background:#E6BD00}
   .btn.sec:hover{background:#F7F7F5}
   input:focus,select:focus,textarea:focus{border-color:var(--primary)}
+/* Mobiel: tikdoelen en leesbaarheid */
+@media (max-width:760px){input,select,textarea{font-size:16px!important}}
+.opts label,.cl label{min-height:40px;padding-top:9px;padding-bottom:9px}
+.cl li{padding:0}
+span.tag{font-size:12px}
+a.back{padding:8px 0}
 </style>
 </head>
 <body>
@@ -354,7 +361,7 @@
         { id: 'waarde', type: 'eur', label: 'Wat is je woning nu ongeveer waard?', req: true, hint: 'Een schatting is genoeg, bijvoorbeeld de WOZ-waarde.' },
         { id: 'totaal', type: 'eur', label: 'Totale hypotheek nu (alle delen samen)' },
         { id: 'afbedrag', type: 'eur', label: 'Hoe groot is het aflossingsvrije deel?', req: true },
-        { id: 'afrente', type: 'text', label: 'Rente op het aflossingsvrije deel (als je het weet)', ph: 'Bijvoorbeeld 3,8', unit: '%' },
+        { id: 'afrente', type: 'text', im: 'decimal', label: 'Rente op het aflossingsvrije deel (als je het weet)', ph: 'Bijvoorbeeld 3,8', unit: '%' },
         { id: 'afeind', type: 'date', label: 'Einddatum van het aflossingsvrije deel', req: true, hint: 'Vaak 30 jaar na afsluiten. Weet je het niet precies? Vul een schatting in en zet het bij de toelichting.' },
         { id: 'voor2013', type: 'radio', label: 'Wanneer is dit deel afgesloten?', col: true, opts: [['voor','Voor 1 januari 2013'],['na','Vanaf 1 januari 2013'],['weetniet','Weet ik niet']] },
         { id: 'brief', type: 'radio', label: 'Heeft je geldverstrekker je de afgelopen jaren benaderd over het aflossingsvrije deel?', opts: S.JNW }
@@ -423,6 +430,7 @@
 
   function ctrl(f, id, extra){
     extra = extra || '';
+    if (f.im) extra += ' inputmode="' + f.im + '"';
     var ph = f.ph ? ' placeholder="' + esc(f.ph) + '"' : '';
     switch (f.type) {
       case 'eur': return '<div class="eur"><span>&euro;</span><input type="text" inputmode="numeric" class="eurin" id="' + id + '"' + ph + ' ' + extra + ' autocomplete="off"></div>';

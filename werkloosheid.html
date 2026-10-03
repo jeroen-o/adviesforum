@@ -61,7 +61,8 @@
   .result .lbl{font-size:13px;opacity:.85}
   .rows{margin:16px 0 0;border-top:1px solid rgba(255,255,255,.25)}
   .rows div{display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.15);font-size:14.5px}
-  .rows div b{font-weight:600;white-space:nowrap}
+  .rows div b{font-weight:600;white-space:normal;text-align:right;overflow-wrap:anywhere;min-width:0}
+  @media (max-width:480px){.rows div{flex-wrap:wrap}.rows div b{margin-left:auto}}
   .let-op{background:var(--warn-bg);border-left:4px solid var(--warn-line);padding:12px 14px;border-radius:0 6px 6px 0;margin:14px 0 0;font-size:14.5px}
   .let-op strong{color:#8A5B00}
   .compliance{background:#FFF1F1;border-left:4px solid #C0392B;padding:12px 14px;border-radius:0 6px 6px 0;margin:14px 0 0;font-size:14.5px}
@@ -139,6 +140,9 @@
   .btn:not(.sec):hover{background:#E6BD00}
   .btn.sec:hover{background:#F7F7F5}
   input:focus,select:focus,textarea:focus{border-color:var(--primary)}
+/* Mobiel: tikdoelen en leesbaarheid */
+@media (max-width:760px){input,select,textarea{font-size:16px!important}}
+a.back{padding:8px 0}
 </style>
 </head>
 <body>
@@ -181,11 +185,11 @@
           </div>
           <div>
             <label for="m1">Lengte eerste periode (maanden)</label>
-            <input type="text" inputmode="numeric" id="m1" value="2">
+            <input type="text" inputmode="numeric" maxlength="3" id="m1" value="2">
           </div>
           <div>
             <label for="duur">Totale WW-duur (maanden)</label>
-            <input type="text" inputmode="numeric" id="duur" value="12">
+            <input type="text" inputmode="numeric" maxlength="3" id="duur" value="12">
             <span class="hint">Hangt af van het arbeidsverleden; controleer bij het UWV.</span>
           </div>
           <div class="full">
@@ -201,11 +205,11 @@
           </div>
           <div>
             <label for="wlduur">Uitkeringsduur (maanden)</label>
-            <input type="text" inputmode="numeric" id="wlduur" value="12" disabled>
+            <input type="text" inputmode="numeric" maxlength="3" id="wlduur" value="12" disabled>
           </div>
           <div class="full">
             <label for="wlwacht">Wachttijd verzekering (maanden)</label>
-            <input type="text" inputmode="numeric" id="wlwacht" value="0" disabled>
+            <input type="text" inputmode="numeric" maxlength="3" id="wlwacht" value="0" disabled>
             <span class="hint">Eerste maanden zonder uitkering; zie polisvoorwaarden.</span>
           </div>
         </div>
@@ -308,7 +312,9 @@
     var wl = parseNum($('wl').value), wlv = $('wlv').checked;
     ['wlb','wlduur','wlwacht'].forEach(function(id){ $(id).disabled = !wlv; });
     var wlb = wlv ? parseNum($('wlb').value) : 0, wlduur = Math.round(parseNum($('wlduur').value)), wlwacht = Math.round(parseNum($('wlwacht').value));
-    var w1 = p1/100*g, w2 = p2/100*g, msg = [];
+    var w1 = p1/100*g, w2 = p2/100*g, msg = [], MAXM = 120;
+    if (m1 > MAXM || duur > MAXM || wlduur > MAXM || wlwacht > MAXM) msg.push('Maximaal ' + MAXM + ' maanden per veld; hogere waarden zijn begrensd.');
+    m1 = Math.min(m1, MAXM); duur = Math.min(duur, MAXM); wlduur = Math.min(Math.max(0, wlduur || 0), MAXM); wlwacht = Math.min(Math.max(0, wlwacht || 0), MAXM);
     var tot = Math.max(duur, wlv ? wlwacht + wlduur : 0) + 3, rows = '', ttek = 0, m1tot = 0;
     for (var m = 1; m <= tot; m++){
       var ww = m <= Math.min(m1, duur) ? w1 : (m <= duur ? w2 : 0);
@@ -360,7 +366,7 @@
       });
       Array.prototype.forEach.call(body.querySelectorAll('script'), function(s){ s.remove(); });
       w.document.open();
-      w.document.write('<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><title>' + document.title +
+      w.document.write('<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>' + document.title +
         '</title><style>' + document.querySelector('style').textContent + '</style></head><body>' + body.innerHTML + '</body></html>');
       w.document.close(); w.focus();
       setTimeout(function(){ w.print(); }, 350);

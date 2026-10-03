@@ -62,7 +62,8 @@
   .result .lbl{font-size:13px;opacity:.85}
   .rows{margin:16px 0 0;border-top:1px solid rgba(255,255,255,.25)}
   .rows div{display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.15);font-size:14.5px}
-  .rows div b{font-weight:600;white-space:nowrap}
+  .rows div b{font-weight:600;white-space:normal;text-align:right;overflow-wrap:anywhere;min-width:0}
+  @media (max-width:480px){.rows div{flex-wrap:wrap}.rows div b{margin-left:auto}}
   .let-op{background:var(--warn-bg);border-left:4px solid var(--warn-line);padding:12px 14px;border-radius:0 6px 6px 0;margin:14px 0 0;font-size:14.5px}
   .let-op strong{color:#8A5B00}
   .compliance{background:#FFF1F1;border-left:4px solid #C0392B;padding:12px 14px;border-radius:0 6px 6px 0;margin:14px 0 0;font-size:14.5px}
@@ -213,6 +214,12 @@
   .btn:not(.sec):hover{background:#E6BD00}
   .btn.sec:hover{background:#F7F7F5}
   input:focus,select:focus,textarea:focus{border-color:var(--primary)}
+/* Mobiel: tikdoelen en leesbaarheid */
+@media (max-width:760px){input,select,textarea{font-size:16px!important}}
+.opts label,.cl label{min-height:40px;padding-top:9px;padding-bottom:9px}
+.cl li{padding:0}
+span.tag{font-size:12px}
+a.back{padding:8px 0}
 </style>
 </head>
 <body>
