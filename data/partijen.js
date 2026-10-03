@@ -293,7 +293,7 @@ window.PARTIJEN=[
    {thema:'Boetevrij aflossen',tekst:'Uit eigen middelen onbeperkt; anders maximaal 10% per jaar vergoedingsvrij',bron:'https://www.vistahypotheken.nl/kennisbank/extra-aflossen-op-je-hypotheek'},
    {thema:'Offerte',tekst:'Renteaanbod moet binnen 3 weken getekend terug zijn',bron:'https://www.vistahypotheken.nl/veelgestelde-vragen'}
   ],bijgewerkt:'2026-10-02'},
- {naam:'Woonnu',type:'geldverstrekker',categorieen:['hypotheek'],url:'https://adviseurs.woonnu.nl/positief-wonen/',
+ {naam:'Woonnu',logo:'img/logos/woonnu.png',type:'geldverstrekker',categorieen:['hypotheek'],url:'https://adviseurs.woonnu.nl/positief-wonen/',
   status:'Label gestopt: sinds 1 mei 2026 geen nieuwe Woonnu-hypotheken; bestaande klanten houden dezelfde service en NN Bank gaat verder met NN Hypotheken',statusBron:'https://www.nn.nl/nieuws/nationale-nederlanden-bank-stopt-met-nieuwe-woonnu-hypotheken/',
   producten:['hypotheek','verduurzamen'],
   kenmerken:[
@@ -354,7 +354,7 @@ window.PARTIJEN=[
    {thema:'Kosten',tekst:'Extra Pensioen Inkomen kan ook online zonder advies worden afgesloten, tegen vaste afsluitkosten',bron:'https://www.centraalbeheer.nl/lijfrente/extra-pensioen-inkomen'},
    {thema:'Status',tekst:'Polissen van Lifetri gaan in 2027 verder onder het merk Centraal Beheer (Achmea Pension & Life Insurance)',bron:'https://lifetri.nl/lifetri-wordt-centraal-beheer/'}
   ],bijgewerkt:'2026-10-02'},
- {naam:'Avero Achmea',type:'verzekeraar',categorieen:['inkomen','schade'],url:'https://www.averoachmea.nl/arbeidsongeschiktheidsverzekering',
+ {naam:'Avero Achmea',logo:'img/logos/avero-achmea.png',type:'verzekeraar',categorieen:['inkomen','schade'],url:'https://www.averoachmea.nl/arbeidsongeschiktheidsverzekering',
   producten:['AOV','verzuim','WIA','bedrijfsverzekeringen'],
   kenmerken:[
    {tekst:'Werkt uitsluitend via onafhankelijke adviseurs en gevolmachtigden',bron:'https://www.averoachmea.nl/over-ons/waarom-een-adviseur'},
@@ -432,7 +432,7 @@ window.PARTIJEN=[
    {tekst:'AOV via adviseur of zelf aan te vragen',bron:'https://www.movir.nl/arbeidsongeschiktheidsverzekering/aov-zelf-aanvragen'},
    {thema:'Medische acceptatie',tekst:'Gezondheidsverklaring wordt beoordeeld door Team Medisch Advies, dat kan bellen of met toestemming informatie opvragen; Movir streeft naar uitsluitsel binnen 8 weken na een complete aanvraag',bron:'https://www.movir.nl/arbeidsongeschiktheidsverzekering/aanvragen/medische-beoordeling'}
   ],bijgewerkt:'2026-10-02'},
- {naam:'De Goudse',type:'verzekeraar',categorieen:['inkomen','schade','leven'],url:'https://www.goudse.nl/adviseur',
+ {naam:'De Goudse',logo:'img/logos/de-goudse.png',type:'verzekeraar',categorieen:['inkomen','schade','leven'],url:'https://www.goudse.nl/adviseur',
   producten:['AOV','schadeverzekeringen','levensverzekeringen'],
   kenmerken:[
    {tekst:'Adviseursportaal met offerte- en beheersystemen; inloggen kan ook met het Digitaal Paspoort',bron:'https://www.goudse.nl/inloggen'},
@@ -450,7 +450,7 @@ window.PARTIJEN=[
    {tekst:'Cooperatieve verzekeraar',bron:'https://www.nh1816.nl/Files/Files.new/Jaarverslagen/Nh1816-Jaarverslag_2023.pdf'},
    {thema:'Acceptatiecontact',tekst:'Lukt directe acceptatie in het portaal niet, dan kan de afdeling acceptatie na overleg een bypass geven',bron:'https://portal.nh1816.nl/support/faq'}
   ],bijgewerkt:'2026-10-02'},
- {naam:'DEFAM',type:'kredietverstrekker',categorieen:['krediet'],url:'https://www.defam.nl/',
+ {naam:'DEFAM',logo:'img/logos/defam.png',type:'kredietverstrekker',categorieen:['krediet'],url:'https://www.defam.nl/',
   producten:['persoonlijke lening','GreenLoans','Persoonlijke Lening Wonen'],
   kenmerken:[
    {tekst:'Merk van Alfam dat met een landelijk netwerk van intermediairs werkt (assurantieadviseurs, financieel adviseurs, kredietbemiddelaars)',bron:'https://www.alfam.nl/onze-merken/'},
@@ -580,7 +580,7 @@ window.PARTIJEN=[
    {thema:'Intermediairportal',tekst:'Hypotheeklabel binnen de Blauwtrust Groep, alleen zonder NHG; aanvragen via een onafhankelijk adviseur, beheer door Quion',bron:'https://www.clarianwonen.nl/consument/over-clarian-wonen'},
    {thema:'Intermediairportal',tekst:'Distributie via Conneqt',bron:'https://www.conneqt.nl/en/mortgage-labels/'}
   ],bijgewerkt:'2026-10-02'},
- {naam:'Domivest',type:'geldverstrekker',categorieen:['hypotheek'],url:'https://domivest.com/het-product',
+ {naam:'Domivest',logo:'img/logos/domivest.png',type:'geldverstrekker',categorieen:['hypotheek'],url:'https://domivest.com/het-product',
   producten:['verhuurhypotheek','uitpondfinanciering'],
   kenmerken:[
    {thema:'Acceptatie',tekst:'Verhuurhypotheek alleen voor professionele partijen, niet voor consumenten in de zin van de Wft',bron:'https://domivest.com/het-product'},
@@ -743,7 +743,7 @@ window.PARTIJEN=[
    {thema:'Intermediairportal',tekst:'Leningen werden altijd via een intermediair (adviseur of dealer) afgesloten; intermediairs hebben een eigen login',bron:'https://intermediair.interbank.nl/pkmslogin.form?rfr=ip'},
    {tekst:'Informatie voor bestaande klanten bij een andere baan of werkloosheid',bron:'https://www.interbank.nl/wat-als/andere-baan-of-werkloos'}
   ],bijgewerkt:'2026-10-02'},
- {naam:'Lender & Spender',type:'kredietverstrekker',categorieen:['krediet'],url:'https://partners.lenderspender.nl/support',
+ {naam:'Lender & Spender',logo:'img/logos/lender-en-spender.png',type:'kredietverstrekker',categorieen:['krediet'],url:'https://partners.lenderspender.nl/support',
   producten:['persoonlijke lening','aankoopfinanciering','Go Green lening'],
   kenmerken:[
    {tekst:'Peer-to-peer: leningen worden gefinancierd door particuliere en zakelijke beleggers in plaats van een bank',bron:'https://www.lenderspender.nl/pdf/algemene-voorwaarden'},

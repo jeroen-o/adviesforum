@@ -64,6 +64,7 @@ h2.sectie{font-size:22px;font-weight:800;margin:28px 0 6px;padding-bottom:8px;bo
 .tegel .omschr{display:block;font-size:13px;color:var(--grijs);margin-top:4px;line-height:1.4}
 .tegel .meta{display:block;font-size:12px;color:var(--grijs);margin-top:6px}
 .logo{flex:none;width:46px;height:46px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px;letter-spacing:.02em}
+.logo.beeld{background:#fff;border:1px solid var(--lijn,#e2e2e2);width:88px;padding:4px}.logo.beeld.groot{width:132px;height:64px}.logo.beeld img{max-width:100%;max-height:100%;object-fit:contain;display:block}
 .logo.groot{width:64px;height:64px;font-size:20px;border-radius:14px}
 .badge{display:inline-block;font-size:11.5px;font-weight:700;border-radius:999px;padding:2px 9px;line-height:1.5;vertical-align:middle}
 .badge.type{background:var(--vlak);border:1px solid var(--lijn);color:var(--tekst)}
@@ -162,7 +163,8 @@ body.voorbeeldmodus .romp{padding:12px}
   <div id="app" aria-live="polite"></div>
 </main>
 <footer class="voet">
-  Adviesforum &middot; collegiale kennisdeling voor financieel adviseurs &middot; <a href="index.html#hulpmiddelen">Alle hulpmiddelen</a> &middot; <a href="privacy.html">Privacy</a> &middot; <a href="uitnodigen.html">Uitnodigen</a> &middot; <a href="aanbieder-beheer.html">Inloggen voor aanbieders</a>
+  Adviesforum &middot; collegiale kennisdeling voor financieel adviseurs &middot; <a href="index.html#hulpmiddelen">Alle hulpmiddelen</a> &middot; <a href="privacy.html">Privacy</a> &middot; <a href="uitnodigen.html">Uitnodigen</a> &middot; <a href="aanbieder-beheer.html">Inloggen voor aanbieders</a><br>
+  Logo's en merknamen zijn eigendom van de betreffende partijen en worden alleen gebruikt ter herkenning; vermelding betekent geen samenwerking, aanbeveling of deelname aan het Adviesforum.
 </footer>
 <script src="data/aanbieders.js"></script>
 <script>
@@ -188,7 +190,7 @@ function linkExt(u,tekst,cls){return okUrl(u)?'<a'+(cls?' class="'+cls+'"':'')+'
 function kleur(a){return /^#[0-9a-f]{6}$/i.test(a.kleur||'')?a.kleur:'#141414';}
 function tekstKleur(hex){var r=parseInt(hex.substr(1,2),16),g=parseInt(hex.substr(3,2),16),b=parseInt(hex.substr(5,2),16);return (0.299*r+0.587*g+0.114*b)>150?'#141414':'#ffffff';}
 function initialen(a){var i=String(a.initialen||'').trim();if(!i)i=String(a.naam||'?').split(/\s+/).map(function(w){return w.charAt(0);}).join('');return i.slice(0,3).toUpperCase();}
-function logo(a,groot){var k=kleur(a);return '<span class="logo'+(groot?' groot':'')+'" aria-hidden="true" style="background:'+k+';color:'+tekstKleur(k)+'">'+esc(initialen(a))+'</span>';}
+function logo(a,groot){if(typeof a.logo==='string'&&/^img\/logos\/[a-z0-9-]+\.png$/.test(a.logo))return '<span class="logo beeld'+(groot?' groot':'')+'"><img src="'+esc(a.logo)+'" alt="Logo '+esc(a.naam)+'" loading="lazy" decoding="async"></span>';var k=kleur(a);return '<span class="logo'+(groot?' groot':'')+'" aria-hidden="true" style="background:'+k+';color:'+tekstKleur(k)+'">'+esc(initialen(a))+'</span>';}
 function typeBadge(a){return '<span class="badge type">'+esc(TYPES[a.type]||'Aanbieder')+'</span>';}
 function demoBadge(a){return a.demo?' <span class="badge demo">Voorbeeld, fictief</span>':'';}
 function nieuwsUrl(a,n){return BASIS+'#nieuws-'+a.id+'-'+n.id;}
@@ -206,7 +208,7 @@ function bericht(a,n,metAanbieder){
   '</li>';
 }
 function alleNieuws(){
-  var uit=[];LIJST.forEach(function(a){arr(a.nieuws).forEach(function(n){uit.push({a:a,n:n});});});
+  var uit=[];LIJST.forEach(function(a){if(a&&a.demo&&a.logo)return;arr(a.nieuws).forEach(function(n){uit.push({a:a,n:n});});});
   uit.sort(function(x,y){return String(y.n.datum).localeCompare(String(x.n.datum))||String(x.a.naam).localeCompare(String(y.a.naam));});
   return uit;
 }
@@ -219,6 +221,7 @@ function overzicht(){
   app.innerHTML=
     '<h2 class="sectie" id="aanbieders-kop">Aanbieders</h2>'+
     '<p class="sub">Kies een aanbieder voor nieuws, documenten, richtlijnen, extranet, contactpersonen en e-learning.</p>'+
+    (LIJST.some(function(a){return a&&a.demo&&a.logo;})?'<p class="demo-band"><strong>Voorbeeldweergave.</strong> Profielen met het label &ldquo;Voorbeeld, fictief&rdquo; zijn niet door de partij aangeleverd: tekst en links zijn verzonnen om de opzet te tonen. Vermelding betekent geen samenwerking of deelname.</p>':'')+
     '<div class="filters"><div><label for="zoek">Zoek op naam of onderwerp</label><input type="search" id="zoek" value="'+esc(staat.zoek)+'" placeholder="Bijvoorbeeld acceptatiegids"></div>'+
     '<div><label for="type">Type aanbieder</label><select id="type">'+opties+'</select></div></div>'+
     '<p class="telling" id="telling"></p><div class="tegels" id="tegels"></div>'+
@@ -262,10 +265,10 @@ function detail(a,voorbeeld){
   var tellers={nieuws:arr(a.nieuws).length,documenten:arr(a.documenten).length,richtlijnen:arr(a.richtlijnen).length,extranet:a.extranet&&okUrl(a.extranet.url)?1:0,contact:arr(a.contact).length,elearning:arr(a.elearning).length};
   if(!TABS.some(function(t){return t[0]===staat.tab;}))staat.tab='nieuws';
   app.innerHTML=(voorbeeld?'<div class="demo-band"><strong>Voorbeeldweergave.</strong> Zo komt je profiel op aanbieders.html te staan na publicatie door de beheerder. Nog niet gepubliceerd.</div>':'<a class="naar-overzicht" href="#overzicht">&larr; Alle aanbieders</a>')+
-    (a.demo?'<div class="demo-band"><strong>Voorbeeld:</strong> dit is een fictieve aanbieder om de opzet te tonen. De gegevens en links bestaan niet.</div>':'')+
+    (a.demo?'<div class="demo-band"><strong>Voorbeeldprofiel:</strong> '+(a.logo?esc(a.naam)+' heeft deze pagina niet aangeleverd en werkt niet mee aan het Adviesforum. Tekst, berichten en links zijn fictief.':'dit is een fictieve aanbieder om de opzet te tonen. De gegevens en links bestaan niet.')+'</div>':'')+
     '<div class="detailkop">'+logo(a,true)+'<div class="tekst"><h2 id="detail-titel">'+esc(a.naam||'Naam aanbieder')+'</h2>'+typeBadge(a)+demoBadge(a)+
       (a.omschrijving?'<p>'+esc(a.omschrijving)+'</p>':'')+
-      '<p class="meta">'+(okUrl(a.website)?linkExt(a.website,'Website van de aanbieder')+' &middot; ':'')+'Aangeleverd door de aanbieder'+(a.bijgewerkt?', bijgewerkt '+esc(datumNL(a.bijgewerkt)):'')+'</p></div></div>'+
+      '<p class="meta">'+(okUrl(a.website)?linkExt(a.website,'Website van de aanbieder')+' &middot; ':'')+(a.demo?'Fictieve voorbeeldinhoud, niet van de aanbieder':'Aangeleverd door de aanbieder')+(a.bijgewerkt?', bijgewerkt '+esc(datumNL(a.bijgewerkt)):'')+'</p></div></div>'+
     '<div class="tabs" role="tablist" aria-label="Onderdelen">'+TABS.map(function(t){return '<button type="button" role="tab" id="tab-'+t[0]+'" aria-controls="paneel" data-tab="'+t[0]+'" aria-selected="'+(staat.tab===t[0])+'">'+esc(t[1])+'<span class="n">'+tellers[t[0]]+'</span></button>';}).join('')+'</div>'+
     '<section class="paneel" id="paneel" role="tabpanel" aria-labelledby="tab-'+staat.tab+'">'+paneel(a,staat.tab)+'</section>';
 }

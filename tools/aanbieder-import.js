@@ -46,7 +46,7 @@ const blok = tekst.match(/--- JSON[^\n]*\n([\s\S]*?)\n--- einde JSON ---/);
 let ruw;
 try { ruw = JSON.parse(blok ? blok[1] : tekst); } catch (e) { stop('geen geldige JSON: ' + e.message); }
 if (!ruw || typeof ruw !== 'object' || Array.isArray(ruw)) stop('verwacht één aanbieder-object');
-const onbekend = Object.keys(ruw).filter(k => !['id', 'naam', 'type', 'initialen', 'kleur', 'omschrijving', 'website', 'extranet', 'contact', 'documenten', 'richtlijnen', 'nieuws', 'elearning', 'bijgewerkt', 'codeHash', 'demo'].includes(k));
+const onbekend = Object.keys(ruw).filter(k => !['id', 'naam', 'type', 'logo', 'initialen', 'kleur', 'omschrijving', 'website', 'extranet', 'contact', 'documenten', 'richtlijnen', 'nieuws', 'elearning', 'bijgewerkt', 'codeHash', 'demo'].includes(k));
 if (onbekend.length) console.warn('Let op: onbekende velden genegeerd: ' + onbekend.join(', '));
 if ('codeHash' in ruw || 'demo' in ruw) console.warn('Let op: codeHash/demo in de invoer worden genegeerd.');
 
