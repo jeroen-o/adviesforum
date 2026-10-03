@@ -837,7 +837,7 @@ Concept. Bewaartermijnen gecontroleerd op bkr.nl (oktober 2026). Toetsingspercen
 ## Hoe telt de studieschuld mee?
 
 - Uitgangspunt is het werkelijke maandbedrag aan DUO.
-- Omdat de rente op studieschuld niet aftrekbaar is en hypotheekrente wel, wordt het maandbedrag verhoogd met een factor die afhangt van de hypotheekrente. Volgens de rijksoverheid loopt die factor van 1,05 bij een lage rente tot 1,40 bij een rente van 6% of meer.
+- Omdat de rente op studieschuld niet aftrekbaar is en hypotheekrente wel, wordt het maandbedrag verhoogd met een factor die afhangt van de hypotheekrente. Volgens de rijksoverheid loopt die factor van 1,05 bij een lage rente tot 1,40 bij een rente vanaf 6,001%.
 - Het resultaat verlaagt de maximale hypotheek ongeveer zoals een andere maandelijkse verplichting.
 
 ## Bijzondere situaties

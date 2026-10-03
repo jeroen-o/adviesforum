@@ -64,7 +64,7 @@ button,input,select,textarea{font-family:inherit}
 .tijdlijn{list-style:none;margin:0;padding:0 0 0 18px;border-left:3px solid var(--geel)}
 .tijdlijn li{position:relative;padding:0 0 14px 14px}
 .tijdlijn li::before{content:"";position:absolute;left:-27px;top:5px;width:14px;height:14px;border-radius:50%;background:var(--zwart);border:3px solid var(--geel)}
-.tijdlijn li.voorbij{opacity:.55}
+.tijdlijn li.voorbij{color:#5E5E5E}
 .tijdlijn li.voorbij::before{background:#fff;border-color:#BDBDBD}
 .tijdlijn li.binnenkort::before{background:var(--rood)}
 .tl-datum{font-size:12.5px;font-weight:800;letter-spacing:.03em;text-transform:uppercase;color:var(--grijs)}
@@ -173,9 +173,9 @@ button,input,select,textarea{font-family:inherit}
 <section class="onderaan">
   <h2>Bronnen en aannames</h2>
   <ul class="bronnen">
-    <li>AOW-leeftijd: wettelijk vastgesteld tot en met 2031 (67 jaar in 2024–2027, 67 jaar en 3 maanden in 2028–2031). Voor latere jaren rekent dit hulpmiddel voorlopig met 67 jaar en 3 maanden. Bron: <a href="https://www.svb.nl/nl/aow/aow-leeftijd/uw-aow-leeftijd" rel="noopener">SVB: uw AOW-leeftijd</a> en <a href="https://www.rijksoverheid.nl/themas/belastingen-uitkeringen-en-toeslagen/algemene-ouderdomswet-aow/aow-leeftijd" rel="noopener">Rijksoverheid: AOW-leeftijd</a>, <a href="https://www.rijksoverheid.nl/documenten/kamerstukken/2025/11/07/kamerbrief-vaststelling-aow-leeftijd-2031-en-pensioenrichtleeftijd-2027" rel="noopener">Kamerbrief vaststelling AOW-leeftijd 2031</a>.</li>
-    <li>Renteaftrek eigen woning maximaal 30 jaar; overgangsrecht voor eigenwoningschuld per 31 december 2012 en voor schuld die op 31 december 2000 al bestond: <a href="https://www.belastingdienst.nl/wps/wcm/connect/nl/koopwoning/content/hypotheekrente-aftrekken" rel="noopener">Belastingdienst: mag ik mijn hypotheekrente altijd aftrekken?</a>.</li>
-    <li>Nazorg: <a href="https://www.afm.nl/~/profmedia/files/wet-regelgeving/beleidsuitingen/leidraden/leidraad-hypotheekadvisering-herzien-2026.pdf" rel="noopener">AFM: Leidraad Hypotheekadvisering (herzien 2026)</a>, <a href="https://www.afm.nl/nl-nl/sector/adviseurs-bemiddelaars-en-gevolmachtigde-agenten/nazorg/serviceabonnementen" rel="noopener">AFM: nazorg en serviceabonnementen</a>, <a href="https://www.afm.nl/~/profmedia/files/rapporten/2023/klanten-aflossingsvrij-activeren.pdf" rel="noopener">AFM: klanten met een aflossingsvrije hypotheek activeren (2023)</a>.</li>
+    <li>AOW-leeftijd: wettelijk vastgesteld tot en met 2031 (67 jaar in 2024–2027, 67 jaar en 3 maanden in 2028–2031). Voor latere jaren rekent dit hulpmiddel voorlopig met 67 jaar en 3 maanden. Bron: <a href="https://www.svb.nl/nl/aow/aow-leeftijd/uw-aow-leeftijd" target="_blank" rel="noopener">SVB: uw AOW-leeftijd</a> en <a href="https://www.rijksoverheid.nl/themas/belastingen-uitkeringen-en-toeslagen/algemene-ouderdomswet-aow/aow-leeftijd" target="_blank" rel="noopener">Rijksoverheid: AOW-leeftijd</a>, <a href="https://www.rijksoverheid.nl/documenten/kamerstukken/2025/11/07/kamerbrief-vaststelling-aow-leeftijd-2031-en-pensioenrichtleeftijd-2027" target="_blank" rel="noopener">Kamerbrief vaststelling AOW-leeftijd 2031</a>.</li>
+    <li>Renteaftrek eigen woning maximaal 30 jaar; overgangsrecht voor eigenwoningschuld per 31 december 2012 en voor schuld die op 31 december 2000 al bestond: <a href="https://www.belastingdienst.nl/wps/wcm/connect/nl/koopwoning/content/hypotheekrente-aftrekken" target="_blank" rel="noopener">Belastingdienst: mag ik mijn hypotheekrente altijd aftrekken?</a>.</li>
+    <li>Nazorg: <a href="https://www.afm.nl/~/profmedia/files/wet-regelgeving/beleidsuitingen/leidraden/leidraad-hypotheekadvisering-herzien-2026.pdf" target="_blank" rel="noopener">AFM: Leidraad Hypotheekadvisering (herzien 2026)</a>, <a href="https://www.afm.nl/nl-nl/sector/adviseurs-bemiddelaars-en-gevolmachtigde-agenten/nazorg/serviceabonnementen" target="_blank" rel="noopener">AFM: nazorg en serviceabonnementen</a>, <a href="https://www.afm.nl/~/profmedia/files/rapporten/2023/klanten-aflossingsvrij-activeren.pdf" target="_blank" rel="noopener">AFM: klanten met een aflossingsvrije hypotheek activeren (2023)</a>.</li>
     <li>Agendabestand volgens iCalendar (RFC 5545). De actiemomenten (6 en 3 maanden voor rentevast-einde, enzovoort) zijn praktijkkeuzes van dit hulpmiddel, geen wettelijke termijnen.</li>
   </ul>
 </section>
@@ -355,13 +355,17 @@ button,input,select,textarea{font-family:inherit}
     var nu = new Date();
     var stamp = nu.getUTCFullYear() + ('0' + (nu.getUTCMonth() + 1)).slice(-2) + ('0' + nu.getUTCDate()).slice(-2) + 'T' +
       ('0' + nu.getUTCHours()).slice(-2) + ('0' + nu.getUTCMinutes()).slice(-2) + ('0' + nu.getUTCSeconds()).slice(-2) + 'Z';
-    var basis = Math.random().toString(36).slice(2, 10) + nu.getTime().toString(36);
+    // Deterministische UID (FNV-1a over naam, titel en datum): opnieuw importeren werkt bestaande afspraken bij in plaats van ze te dupliceren.
+    function hash(t) { var h = 0x811c9dc5; for (var k = 0; k < t.length; k++) { h ^= t.charCodeAt(k); h = Math.imul(h, 0x01000193) >>> 0; } return ('0000000' + h.toString(16)).slice(-8); }
+    var gezien = {};
     var r = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Adviesforum//Nazorgsignalen//NL', 'CALSCALE:GREGORIAN', 'METHOD:PUBLISH',
       'X-WR-CALNAME:' + icsTekst('Nazorg' + (naam ? ' ' + naam : ''))];
     var nuDag = vandaag();
     signalen.filter(function (x) { return x.datum >= nuDag; }).forEach(function (x, i) {
       var volgende = new Date(x.datum.getFullYear(), x.datum.getMonth(), x.datum.getDate() + 1);
-      r.push('BEGIN:VEVENT', 'UID:' + basis + '-' + i + '@adviesforum', 'DTSTAMP:' + stamp,
+      var uid = 'nazorg-' + ymd(x.datum) + '-' + hash(naam + '|' + x.titel + '|' + ymd(x.datum));
+      gezien[uid] = (gezien[uid] || 0) + 1; if (gezien[uid] > 1) uid += '-' + gezien[uid];
+      r.push('BEGIN:VEVENT', 'UID:' + uid + '@adviesforum', 'DTSTAMP:' + stamp,
         'DTSTART;VALUE=DATE:' + ymd(x.datum), 'DTEND;VALUE=DATE:' + ymd(volgende),
         'SUMMARY:' + icsTekst((naam ? naam + ': ' : 'Nazorg: ') + x.titel),
         'DESCRIPTION:' + icsTekst(x.actie + '\nIndicatief signaal uit het Adviesforum-hulpmiddel Nazorgsignalen. Leg contact en advies vast in het klantdossier.'),
@@ -376,7 +380,7 @@ button,input,select,textarea{font-family:inherit}
     if (!toekomst) { $('status').textContent = 'Er zijn geen toekomstige signalen om in de agenda te zetten.'; return; }
     var blob = new Blob([maakIcs()], { type: 'text/calendar;charset=utf-8' });
     var a = document.createElement('a');
-    var naam = ($('naam').value || '').trim().replace(/[^A-Za-z0-9_-]+/g, '-').replace(/^-+|-+$/g, '');
+    var naam = ($('naam').value || '').trim().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^A-Za-z0-9_-]+/g, '-').replace(/^-+|-+$/g, '');
     a.href = URL.createObjectURL(blob); a.download = 'nazorg' + (naam ? '-' + naam : '') + '.ics';
     document.body.appendChild(a); a.click();
     setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 1000);

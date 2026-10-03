@@ -70,6 +70,7 @@ button,input,select,textarea{font-family:inherit}
 .met .voor{left:12px}.met .na{right:12px}
 .met.v input{padding-left:28px}.met.n input{padding-right:52px}
 .veld input.fout{border-color:var(--rood)}
+.veld .foutmelding{font-size:12.5px;font-weight:600;color:var(--rood)}
 
 .uitkomst{background:var(--zwart);color:#fff;border-radius:14px;padding:20px 22px;min-width:0}
 .uitkomst .lbl{font-size:12.5px;font-weight:600;opacity:.8}
@@ -161,7 +162,7 @@ button,input,select,textarea{font-family:inherit}
   </div>
   <div class="tabs" role="tablist" aria-label="Inkomenssoort" id="tabs"></div>
 
-  <section id="paneel" role="tabpanel" aria-live="polite"></section>
+  <section id="paneel" role="tabpanel"></section>
 
   <section class="dossier" aria-labelledby="dossier-kop">
     <h2 id="dossier-kop">Dossiertekst kopiëren of afdrukken</h2>
@@ -614,6 +615,7 @@ button,input,select,textarea{font-family:inherit}
     });
     kies.value = id;
     document.getElementById('paneel').setAttribute('aria-labelledby', 'tab-' + id);
+    if (location.hash !== '#' + id) { try { history.replaceState(null, '', location.pathname + location.search + '#' + id); } catch (e) {} }
     bouwPaneel();
   }
 
@@ -660,8 +662,18 @@ button,input,select,textarea{font-family:inherit}
     var w = staat[actief];
     if (el.tagName === 'SELECT') { w[el.dataset.id] = el.value; return; }
     var n = parse(el.value);
-    if (isNaN(n)) { el.classList.add('fout'); el.setAttribute('aria-invalid', 'true'); n = 0; }
-    else { el.classList.remove('fout'); el.removeAttribute('aria-invalid'); }
+    var mid = 'fout-' + el.id, melding = document.getElementById(mid);
+    if (isNaN(n)) {
+      el.classList.add('fout'); el.setAttribute('aria-invalid', 'true'); el.setAttribute('aria-describedby', mid); n = 0;
+      if (!melding) {
+        melding = document.createElement('span'); melding.className = 'foutmelding'; melding.id = mid;
+        melding.textContent = 'Vul een getal in, bijvoorbeeld 45.000 of 12,5.';
+        el.parentNode.insertAdjacentElement('afterend', melding);
+      }
+    } else {
+      el.classList.remove('fout'); el.removeAttribute('aria-invalid'); el.removeAttribute('aria-describedby');
+      if (melding) melding.parentNode.removeChild(melding);
+    }
     w[el.dataset.id] = n;
   }
 
@@ -686,8 +698,13 @@ button,input,select,textarea{font-family:inherit}
     var so = soort(actief), w = staat[so.id];
     zichtbaar(so, w);
     var v = waarden(so), r = so.bereken(v);
-    laatste = { soort:so, v:v, r:r };
+    var fout = Array.prototype.some.call(document.querySelectorAll('#invoer input.fout'), function(el){ return !el.closest('.verborgen'); });
+    laatste = { soort:so, v:v, r:r, fout:fout };
     var h = '<div class="lbl">' + esc(r.label) + '</div>';
+    if (fout) {
+      document.getElementById('uitkomst').innerHTML = h + '<div class="groot">Controleer invoer</div><div class="onder">Een of meer velden bevatten geen geldig getal.</div>';
+      dossier(); return;
+    }
     h += '<div class="groot">' + (r.bedrag == null ? 'Niet te bepalen' : geld(r.bedrag)) + '</div>';
     h += '<div class="onder">' + esc(r.onder) + '</div>';
     h += '<dl>' + r.rijen.map(function(x){
@@ -720,8 +737,9 @@ button,input,select,textarea{font-family:inherit}
       else txt = getal(x) + (f.type === 'pct' ? '%' : (f.na ? ' ' + f.na : ''));
       t += '- ' + f.label + ': ' + txt + '\n';
     });
-    t += '\nUITKOMST\n- ' + r.label + ': ' + (r.bedrag == null ? 'niet te bepalen' : geld(r.bedrag)) + '\n';
-    r.rijen.forEach(function(x){ if (!isNaN(x[1])) t += '  ' + x[0] + ': ' + geld(x[1]) + '\n'; });
+    if (laatste.fout) t += '\nUITKOMST\n- Controleer invoer: een of meer velden bevatten geen geldig getal.\n';
+    else t += '\nUITKOMST\n- ' + r.label + ': ' + (r.bedrag == null ? 'niet te bepalen' : geld(r.bedrag)) + '\n';
+    if (!laatste.fout) r.rijen.forEach(function(x){ if (!isNaN(x[1])) t += '  ' + x[0] + ': ' + geld(x[1]) + '\n'; });
     t += '- Methode: ' + r.onder + '\n';
     if (r.signalen.length) { t += '\nSIGNALEN\n'; r.signalen.forEach(function(s){ t += '- ' + s + '\n'; }); }
     t += '\nBENODIGDE DOCUMENTEN\n'; so.docs.forEach(function(d){ t += '- [ ] ' + d + '\n'; });
@@ -769,8 +787,13 @@ button,input,select,textarea{font-family:inherit}
   });
 
   // Start
-  var hash = (location.hash || '').replace('#', '');
-  kiesSoort(SOORTEN.some(function(s){ return s.id === hash; }) ? hash : SOORTEN[0].id);
+  function leesHash(start){
+    var hash = (location.hash || '').replace('#', '');
+    var id = SOORTEN.some(function(s){ return s.id === hash; }) ? hash : SOORTEN[0].id;
+    if (start === true || id !== actief) kiesSoort(id);
+  }
+  window.addEventListener('hashchange', leesHash);
+  leesHash(true);
 })();
 </script>
 </body>

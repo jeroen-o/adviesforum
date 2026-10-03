@@ -218,8 +218,8 @@ input:focus,select:focus,textarea:focus,button:focus-visible,a:focus-visible{out
     <section class="kaart" id="profiel-doelen">
       <h3><span class="nr">P</span>Doelstellingen, kennis en risicobereidheid <span class="bron">Leidraad p. 4, 13, 22</span></h3>
       <div class="raster">
-        <div class="veld breed"><span class="lbl">Doelstellingen</span>
-          <div class="vinkjes" id="p-doelen"></div></div>
+        <div class="veld breed"><span class="lbl" id="p-doelen-lbl">Doelstellingen</span>
+          <div class="vinkjes" id="p-doelen" role="group" aria-labelledby="p-doelen-lbl"></div></div>
         <div class="veld breed"><label for="p-doelen-tekst">Doelstellingen in eigen woorden</label><textarea id="p-doelen-tekst" placeholder="Wat wil de klant bereiken, en wat vindt de klant het belangrijkst?"></textarea></div>
         <div class="veld"><label for="p-kennis">Kennis en ervaring</label>
           <select id="p-kennis"><option value="">Kies…</option><option>Geen ervaring met een hypotheek</option><option>Enige ervaring (eerdere hypotheek, beperkte kennis)</option><option>Ruime kennis en ervaring</option></select></div>
@@ -551,7 +551,7 @@ function bouwDoelen(){
 function veldHtml(o, v){
   var id='x-'+o.id+'-'+v.k, h='<div class="veld'+(v.t==='multi'?' breed':'')+'">';
   if (v.t==='multi'){
-    h+='<span class="lbl">'+esc(v.l)+'</span><div class="vinkjes" id="'+id+'">';
+    h+='<span class="lbl" id="'+id+'-lbl">'+esc(v.l)+'</span><div class="vinkjes" id="'+id+'" role="group" aria-labelledby="'+id+'-lbl">';
     v.o.forEach(function(x,i){ h+='<label><input type="checkbox" value="'+esc(x)+'">'+esc(x)+'</label>'; });
     h+='</div>';
   } else {

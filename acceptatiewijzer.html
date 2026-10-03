@@ -54,13 +54,16 @@ button,input{font-family:inherit}
 .lijst{display:grid;gap:12px}
 .kaart{border:1px solid var(--lijn);border-radius:14px;background:#fff;min-width:0;scroll-margin-top:12px}
 .kaart.doel{box-shadow:0 0 0 3px var(--geel)}
-.kaart-kop{display:flex;width:100%;text-align:left;gap:14px;align-items:flex-start;border:0;background:transparent;padding:16px 18px;cursor:pointer;color:var(--tekst);border-radius:14px}
-.kaart-kop:hover{background:var(--vlak)}
+.kaart-hoofd{position:relative;border-radius:14px;padding:16px 18px}
+.kaart-hoofd:hover{background:var(--vlak)}
+.kaart-titel{margin:0;font-size:17px;line-height:1.3;font-weight:800}
+.kaart-kop{display:flex;width:100%;text-align:left;gap:14px;align-items:flex-start;border:0;background:transparent;padding:0;cursor:pointer;color:var(--tekst);font:inherit;border-radius:6px}
+.kaart-kop::after{content:"";position:absolute;inset:0;border-radius:14px}
+.kaart-kop .titel{min-width:0;flex:1}
+.kaart-sub{padding-left:40px}
 .kaart-kop .pijl{flex:none;width:26px;height:26px;border-radius:50%;background:var(--geel);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;margin-top:2px;transition:transform .15s}
 .kaart.open .kaart-kop .pijl{transform:rotate(90deg)}
-.kaart-kop .tekst{min-width:0;flex:1}
-.kaart-kop h2{margin:0;font-size:17px;line-height:1.3;font-weight:800}
-.kaart-kop .kort{display:block;font-size:13.5px;color:var(--grijs);margin-top:4px}
+.kaart-sub .kort{display:block;font-size:13.5px;color:var(--grijs);margin-top:4px}
 .badges{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
 .badge{display:inline-block;font-size:11.5px;font-weight:700;border-radius:999px;padding:2px 10px;line-height:1.5;background:var(--vlak);border:1px solid var(--lijn);color:#3A3A3A}
 .badge.cat{background:var(--zwart);color:var(--geel);border-color:var(--zwart)}
@@ -113,7 +116,7 @@ button,input{font-family:inherit}
   .balk,.kop{padding-left:16px;padding-right:16px}
   .romp,.verder,.voet{padding-left:16px;padding-right:16px}
   .compliance{margin-left:16px;margin-right:16px}
-  .kaart-kop{padding:14px}
+  .kaart-hoofd{padding:14px}
   .kaart-romp{padding:0 14px 14px}
   .blok{padding:10px 12px}
   .blok.gv .bron{white-space:normal}
@@ -240,11 +243,11 @@ button,input{font-family:inherit}
     art.className = 'kaart'; art.id = 'situatie-' + s.id;
     var catNaam = A.categorieen[s.cat] || s.cat;
     art.innerHTML =
-      '<button type="button" class="kaart-kop" aria-expanded="false" aria-controls="romp-' + esc(s.id) + '">' +
-        '<span class="pijl" aria-hidden="true">&#9656;</span><span class="tekst"><h2>' + esc(s.titel) + '</h2>' +
-        '<span class="kort">' + esc(s.kort) + '</span><span class="badges"><span class="badge cat">' + esc(catNaam) + '</span>' +
+      '<div class="kaart-hoofd"><h2 class="kaart-titel"><button type="button" class="kaart-kop" aria-expanded="false" aria-controls="romp-' + esc(s.id) + '">' +
+        '<span class="pijl" aria-hidden="true">&#9656;</span><span class="titel">' + esc(s.titel) + '</span></button></h2>' +
+        '<div class="kaart-sub"><span class="kort">' + esc(s.kort) + '</span><span class="badges"><span class="badge cat">' + esc(catNaam) + '</span>' +
         (pk.length ? '<span class="badge gv">' + pk.length + ' geldverstrekker' + (pk.length === 1 ? '' : 's') + ' met bron</span>' : '') +
-        (s.inkomen ? '<span class="badge">Inkomensbepaling</span>' : '') + '</span></span></button>' +
+        (s.inkomen ? '<span class="badge">Inkomensbepaling</span>' : '') + '</span></div></div>' +
       '<div class="kaart-romp" id="romp-' + esc(s.id) + '" hidden>' + romp(s, pk) + '</div>';
     lijst.appendChild(art);
     var zoektekst = [s.titel, s.kort, s.zoek, catNaam].concat(s.nhg, s.trhk, s.aandacht, s.docs, pk.map(function(k){ return k.naam + ' ' + k.tekst; })).join(' ').toLowerCase();
