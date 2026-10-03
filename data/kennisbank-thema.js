@@ -555,7 +555,7 @@ Concept. Het stoppen van de herbouwwaardemeter is gecontroleerd op verzekeraars.
 
 ## Extra leenruimte op basis van energielabel (Trhk 2026)
 
-- Bij aankoop van een woning met label A+++ of A++++ mag in 2026 respectievelijk € 25.000 en € 40.000 extra worden geleend (in 2025: € 30.000 en € 50.000).
+- Bij aankoop van een woning met label A+++ of A++++ mag in 2026 respectievelijk € 25.000 en € 30.000 extra worden geleend, en € 40.000 bij A++++ met energieprestatiegarantie (in 2025: € 30.000, € 40.000 en € 50.000).
 - Voor energiebesparende maatregelen mag daarbovenop extra worden geleend: € 20.000 bij label E, F en G; € 15.000 bij C en D; € 10.000 bij A++, A+, A en B. Bij A+++ en A++++ is dat extra bedrag vervallen.
 - De maatregelen moeten aantoonbaar worden uitgevoerd; meestal via een bouwdepot en een offerte of maatwerkadvies.
 - Het extra bedrag is een maximum, geen advies. Toets of de klant de lasten kan dragen.

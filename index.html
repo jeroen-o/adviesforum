@@ -477,6 +477,17 @@ details>summary{min-height:36px}
 <script src="data/kennisbank-thema.js"></script>
 <script src="data/kennisbank-kifid.js"></script>
 <script src="data/kennisbank-wetgeving.js"></script>
+<script src="data/kennisbank-blinqx.js"></script>
+<script src="data/kennisbank-woning.js"></script>
+<script src="data/kennisbank-opleiding.js"></script>
+<script src="data/kennisbank-compliance2.js"></script>
+<script src="data/kennisbank-seh.js"></script>
+<script src="data/kennisbank-seh2.js"></script>
+<script src="data/kennisbank-vakpers.js"></script>
+<script src="data/kennisbank-kifid2.js"></script>
+<script src="data/kennisbank-verzekeraars.js"></script>
+<script src="data/kennisbank-adfiz.js"></script>
+<script src="data/kennisbank-dfosignalen.js"></script>
 <script src="data/begrippen.js"></script>
 <script>
 /* ---------- Data ---------- */
@@ -513,7 +524,17 @@ const FAQ_BESTANDEN=[
  'data/faq/software-blinqx.js',
  'data/faq/software-eblinqx.js',
  'data/faq/afm.js',
- 'data/faq/nhg-2026.js'
+ 'data/faq/nhg-2026.js',
+ 'data/faq/woningdata.js',
+ 'data/faq/opleidingen.js',
+ 'data/faq/compliance2.js',
+ 'data/faq/seh.js',
+ 'data/faq/seh2.js',
+ 'data/faq/vakpers.js',
+ 'data/faq/kifid.js',
+ 'data/faq/verzekeraars.js',
+ 'data/faq/adfiz.js',
+ 'data/faq/dfosignalen.js'
 ];
 let FAQ=window.FAQ||[];
 let FAQ_GELADEN=FAQ.length>0,FAQ_BELOFTE=null;
@@ -527,6 +548,8 @@ function laadFaq(){
 const FAQ_THEMAS={'hypotheek-normen':'Leennormen en maximale hypotheek','hypotheek-nhg-woning':'NHG, woning en verduurzaming','fiscaal-eigen-woning':'Fiscaal: eigen woning','hypotheek-producten':'Hypotheekproducten en rente','doelgroepen':'Doelgroepen','verzekeringen':'Verzekeringen','pensioen':'Pensioen','compliance':'Compliance en Wft','krediet-vermogen':'Krediet en vermogen','praktijk-software':'Praktijk en dossier'};
 /* Hulpmiddelen: losse pagina's en documenten in deze repository */
 const HULP=[
+ {groep:'Naslag',tp:'Wegwijzer',titel:'Partners van Blinqx Verzekering & Hypotheek',url:'partners.html',tekst:'18 partners per categorie (brondata, taxatie, verduurzaming, compliance, KYC, financiering, opleiding) met wat je er als adviseur aan hebt en waar ze in het adviesproces passen.',kw:'partners blinqx ecosysteem ockto findesk hdn taxatheek positief wonen nationale waarborg jens hyarchis kyc m+ compliance dfo expertbox draagplicht dathuis aplaza vcn ratio letselschade huizengids yes-co integraties koppelingen'},
+ {groep:'Naslag',tp:'Bronnen',titel:'Brancheorganisaties en vakbronnen',url:'index.html#kennisbank',tekst:'Kennis uit Adfiz, SEH, het Verbond van Verzekeraars, Kifid, DFO Signalen en de vakpers (VVP, InFinance), samengevat in de kennisbank met bronlinks.',kw:'adfiz seh erkend financieel adviseur verbond van verzekeraars kifid uitspraken dfo signalen vvp infinance vakpers brancheorganisatie nieuws actualiteiten'},
  {groep:'Naslag',tp:'Wegwijzer',titel:'Acceptatiewijzer per klantsituatie',url:'acceptatiewijzer.html',tekst:'19 bijzondere situaties (zzp, flexwerk, expat, BKR, studieschuld, tweede woning, scheiding, erfpacht, woonboot, senioren, hulp van ouders en meer): NHG-regel, leennormen, aandachtspunten, documenten en welke partijen er iets over vermelden.',kw:'acceptatie acceptatiebeleid acceptatiegids bijzondere situatie zzp starter ondernemer flexwerker uitzendkracht tijdelijk contract expat buitenlands inkomen verblijfsvergunning bkr studieschuld duo tweede woning recreatiewoning buy to let verhuur senioren verzilveren overwaarde schenking familiebank ouders scheiding erfpacht woonboot woonwagen verduurzamen ebb nieuwbouw bouwdepot zelfbouw alimentatie samenwonen ongelijke inbreng aow'},
  {groep:'Rekenhulpen',titel:'Inkomensbepaling: toetsinkomen per inkomenssoort',url:'inkomensbepaling.html',tekst:'Loondienst vast en flexibel, IBL, ondernemer, Perspectiefverklaring, AOW binnen 10 jaar en uitkeringen/alimentatie: indicatief toetsinkomen, benodigde documenten en aandachtspunten volgens NHG 2026.',kw:'inkomen toetsinkomen inkomensbepaling ibl inkomensbepaling loondienst uwv verzekeringsbericht flexibel inkomen oproepkracht tijdelijk contract intentieverklaring werkgeversverklaring ondernemer zzp inkomensverklaring rekenexpert ikv perspectiefverklaring arbeidsmarktscan aow pensioen alimentatie wajong wia anw'},
  {groep:'Rekenhulpen',titel:'NHG-check 2026: past het binnen NHG?',url:'nhg-check.html',tekst:'Kostentoets, leningtoets en LTV volgens de V&N 2026, plus borgtochtprovisie bij aankoop, nieuwbouw, oversluiten en verhogen.',kw:'nhg check grens 470000 498200 borgtochtprovisie kostengrens oversluiten verhogen nieuwbouw ebv'},
@@ -1420,7 +1443,7 @@ function viewHandleiding(){
         <li><b>Formulieren</b>: inventarisatie, documentenchecklist, afwijkend advies, gespreksverslag, nazorg-check, wijziging doorgeven, de Wwft/CDD-checklist met risicoscore, de adviesmotivatie volgens de AFM Leidraad en nazorgsignalen met agendabestand.</li>
         <li><b>Dossierpakket</b>: begin hier bij een nieuw dossier. Vul één dossierreferentie in (nooit een BSN) en open van daaruit de onderdelen; de referentie gaat automatisch mee. Het toetsinkomen uit de inkomensbepaling zet je met één klik in de adviesmotivatie. Er wordt niets opgeslagen: druk elk onderdeel af of bewaar het als PDF in je eigen dossier.</li>
         <li><b>Klantscans</b>: tien scans (o.a. nazorg, hypotheek, aflossingsvrij, ORV, pensioen, schade, auto, bedrijf, uitvaart en klanttevredenheid) die je als link naar je klant stuurt. De klant mailt het resultaat naar jou; er wordt niets opgeslagen.</li>
-        <li><b>Naslag</b>: Partijenwegwijzer (banken, geldverstrekkers, verzekeraars en pensioenfondsen), acceptatiewijzer voor bijzondere klantsituaties, wet- en regelgeving (met wat er in 2025–2027 verandert) en werkinstructies.</li>
+        <li><b>Naslag</b>: Partijenwegwijzer (banken, geldverstrekkers, verzekeraars en pensioenfondsen), partners van Blinqx V&amp;H, acceptatiewijzer voor bijzondere klantsituaties, wet- en regelgeving (met wat er in 2025–2027 verandert) en werkinstructies.</li>
         <li><b>Documenten</b>: o.a. Nibud-normen en NHG-documenten 2026 om te downloaden.</li>
       </ul>
       <div class="notice">Alle rekenhulpen zijn indicatief en geen advies. Controleer de actuele normen en de voorwaarden van geldverstrekker of verzekeraar. Print of bewaar een uitkomst via de printknop (opent in een nieuw venster).</div>

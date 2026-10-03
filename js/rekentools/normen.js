@@ -144,6 +144,58 @@
       ['Erfvrijstelling kind', N.schenkErf.erfVrijstellingKind, 'eur'], ['Erfvrijstelling partner', N.schenkErf.erfVrijstellingPartner, 'eur']]]
   ];
 
+  /* ---------- aanvulling 2026-10-03: sociale zekerheid en Wlz (voor js/rekentools/risico-extra.js) ----------
+   * Alleen waarden die bij uwv.nl, svb.nl, hetcak.nl of rijksoverheid.nl zijn bevestigd; afgeleide waarden staan erbij gemarkeerd. */
+  // WIA 2026 (UWV): maximumdagloon € 309,91; maandloon = dagloon × 21,75. Loongerelateerde WGA-uitkering 75% (eerste 2 maanden), daarna 70%,
+  // van (maandloon − inkomsten); duur 3 tot 24 maanden naar arbeidsverleden (als WW). Loonaanvulling 70% × (maandloon − restverdiencapaciteit)
+  // bij ten minste 50% benutting; vanaf 100% benutting 70% × (maandloon − inkomsten). Vervolguitkering % van het minimumloon per klasse
+  // (of van het maandloon als dat lager is). IVA 75% van het maandloon; inkomsten worden voor 70% verrekend. Bevestigd (uwv.nl).
+  N.wia = {
+    maxDagloon: 309.91, maandFactor: 21.75, lguStart: 75, lguNa: 70, lguStartMaanden: 2, loonaanvullingPct: 70, benuttingDrempel: 50,
+    ivaPct: 75, ivaVerrekenPct: 70, ondergrens: 35,
+    vervolg: [[35, 45, 28], [45, 55, 35], [55, 65, 42], [65, 80, 50.75]], vervolg80plus: 70
+  };
+  // WW (UWV/Rijksoverheid): 75% van het maandloon in de eerste 2 maanden, daarna 70%. Duur: eerste 10 jaar arbeidsverleden 1 maand per jaar,
+  // daarna jaren tot en met 2015 1 maand en jaren vanaf 2016 een halve maand per jaar; minimaal 3, maximaal 24 maanden. Bevestigd.
+  N.ww = { pctStart: 75, pctNa: 70, startMaanden: 2, eersteJaren: 10, perJaarOud: 1, perJaarNieuw: 0.5, minMaanden: 3, maxMaanden: 24 };
+  // Anw per 1 juli 2026: bruto € 1.698,30 per maand excl. vakantiegeld (SVB, bevestigd). Inkomen uit arbeid: 50% van het bruto minimumloon plus
+  // een derde van het meerdere blijft buiten de korting (Rijksoverheid, bevestigd). Het minimumloon per maand is afgeleid uit het uurloon
+  // bij 36 uur per week (€ 14,99 × 36 × 52 / 12) – niet bevestigd als maandbedrag.
+  N.anw = { brutoMaand: 1698.30, vrijlatingPctMinimumloon: 50, vrijDeelBoven: 1 / 3 };
+  N.minimumloon.maandAfgeleid = Math.round(N.minimumloon.uur * 36 * 52 / 12 * 100) / 100;
+  // Wlz-eigen bijdrage 2026 (CAK): bijdrage-inkomen = inkomen van 2 jaar eerder + 4% van het box 3-vermogen boven het toetsbedrag
+  // (€ 36.952 alleen, € 73.904 met partner). Lage bijdrage = 10% van het bijdrage-inkomen / 12; thuis (mpt/pgb) min € 30,40 en max € 933,60,
+  // instelling korter dan 4 maanden min € 212,60 en max € 1.115,80. Hoge bijdrage maximaal € 3.061,80 per maand. Bevestigd (hetcak.nl).
+  // Zak- en kleedgeld (aftrek bij de hoge bijdrage) € 449,44 per maand voor een alleenstaande vanaf juli 2026 – niet bevestigd (zoekresultaat CAK).
+  N.wlz = {
+    toetsbedragAlleen: 36952, toetsbedragPartner: 73904, vermogensPct: 4, lagePct: 10,
+    laagThuisMin: 30.40, laagThuisMax: 933.60, laagInstellingMin: 212.60, laagInstellingMax: 1115.80, hoogMax: 3061.80, zakKleedgeld: 449.44
+  };
+  Object.assign(N._geverifieerd, {
+    wia: 'bevestigd (UWV)', ww: 'bevestigd (UWV/Rijksoverheid)', anw: 'bevestigd (minimumloon per maand afgeleid)',
+    wlz: 'deels (zakKleedgeld niet bevestigd)'
+  });
+  N._bronnen.push(
+    'https://www.uwv.nl/nl/premies-bedragen/maximum-dagloon',
+    'https://www.uwv.nl/nl/wia/maandloon',
+    'https://www.uwv.nl/nl/wia/wga/loongerelateerde-uitkering',
+    'https://www.uwv.nl/nl/wia/wga/loonaanvullingsuitkering',
+    'https://www.uwv.nl/nl/wia/wga/vervolguitkering',
+    'https://www.uwv.nl/nl/wia/iva',
+    'https://www.uwv.nl/nl/ww/hoogte-ww',
+    'https://www.uwv.nl/nl/ww/hoelang-ww',
+    'https://www.rijksoverheid.nl/vraag-en-antwoord/ww-uitkering/hoe-lang-heb-ik-recht-op-een-ww-uitkering',
+    'https://www.svb.nl/nl/anw/nieuws/anw-bedragen-vanaf-1-juli-2026',
+    'https://www.rijksoverheid.nl/onderwerpen/algemene-nabestaandenwet-anw/vraag-en-antwoord/hoe-hoog-is-de-anw-uitkering',
+    'https://www.hetcak.nl/zorg-vanuit-de-wlz/wlz-in-2026/',
+    'https://www.hetcak.nl/zorg-vanuit-de-wlz/welke-gegevens-bepaalt-cak-eigen/'
+  );
+  RT.normenOverzicht.push(['Sociale zekerheid en Wlz', [
+    ['Maximumdagloon WIA/WW', N.wia.maxDagloon, 'eur2'], ['Anw bruto per maand (vanaf 1 juli)', N.anw.brutoMaand, 'eur2'],
+    ['Wlz: toetsbedrag vermogen alleenstaand', N.wlz.toetsbedragAlleen, 'eur'], ['Wlz: toetsbedrag vermogen met partner', N.wlz.toetsbedragPartner, 'eur'],
+    ['Wlz: lage bijdrage thuis, minimum per maand', N.wlz.laagThuisMin, 'eur2'], ['Wlz: lage bijdrage thuis, maximum per maand', N.wlz.laagThuisMax, 'eur2'],
+    ['Wlz: hoge bijdrage, maximum per maand', N.wlz.hoogMax, 'eur2']]]);
+
   /* ---------- fiscale rekenkern (box 1, kortingen, box 2, box 3, vpb) ---------- */
   const pos = x => Math.max(0, x);
   const F = RT.fisc = {};
