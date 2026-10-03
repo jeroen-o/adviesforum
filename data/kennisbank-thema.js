@@ -331,7 +331,7 @@ Concept. Partnervrijstelling 2026 gecontroleerd op belastingdienst.nl. Bij twijf
 ## De stand van de BAZ (oktober 2026)
 
 - Het wetsvoorstel Wet basisverzekering arbeidsongeschiktheid zelfstandigen (36912) is in maart 2026 bij de Tweede Kamer ingediend.
-- Volgens de rijksoverheid gaat het om een publieke basisverzekering van ongeveer 70% van het inkomen, maximaal op het niveau van het minimumloon, met een wachttijd van ongeveer een jaar.
+- Volgens de rijksoverheid gaat het om een publieke basisverzekering van ongeveer 70% van het inkomen, maximaal op het niveau van het minimumloon, met een wachttijd van twee jaar (wetsvoorstel 36.912, stand maart 2026; zie k206 en k268 voor premie en maximum).
 - UWV en Belastingdienst noemen 1 januari 2030 als vroegst haalbare uitvoeringsdatum. Tot die tijd, en ook daarna voor het deel boven de basis, blijft eigen voorziening nodig.
 - Adviseer dus niet om te wachten op de BAZ. Benoem wel dat een bestaande AOV later mogelijk moet worden afgestemd.
 

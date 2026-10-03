@@ -33,16 +33,20 @@
 <section class="hero"><div class="in"><h1>Inlogcode maken</h1><p style="margin:4px 0 0">Alleen voor de beheerder. Deze pagina is niet gelinkt en verstuurt niets.</p></div></section>
 <main><div class="in">
   <p>Keur je een aanmelding goed, maak dan hier een persoonlijke code. Stuur de <b>inloglink</b> (of de code) alleen naar de adviseur, bijvoorbeeld per mail. Zet de <b>regel voor adviseurs.js</b> in <code>data/adviseurs.js</code>; daarin staat alleen een hash, nooit de code zelf.</p>
-  <label for="id">Id (uniek, bijv. u9)</label><input id="id" placeholder="u9">
+  <label for="voor">Code voor</label><select id="voor"><option value="adviseur">Adviseur</option><option value="aanbieder">Aanbieder (aanbieder-beheer.html)</option></select>
+  <label for="id">Id (uniek, bijv. u9; bij een aanbieder het id uit data/aanbieders.js)</label><input id="id" placeholder="u9">
+  <div id="adv-velden">
   <label for="naam">Naam</label><input id="naam" placeholder="Voornaam Achternaam">
   <label for="functie">Functie</label><input id="functie" placeholder="Hypotheekadviseur">
   <label for="kantoor">Kantoor en plaats</label><input id="kantoor" placeholder="Kantoornaam, Plaats">
   <label for="rol">Rol</label><select id="rol"><option value="adviseur">adviseur</option><option value="compliance">compliance</option><option value="beheer">beheer</option></select>
+  </div>
   <button id="maak" type="button">Maak code</button>
   <div id="uit" hidden>
     <label>Code voor de adviseur</label><pre id="code"></pre>
-    <label>Inloglink voor de adviseur (één klik = ingelogd)</label><pre id="link"></pre>
-    <label>Regel voor data/adviseurs.js</label><pre id="regel"></pre>
+    <label id="link-label">Inloglink voor de adviseur (één klik = ingelogd)</label><pre id="link"></pre>
+    <label id="regel-label">Regel voor data/adviseurs.js</label><pre id="regel"></pre>
+    <p class="let" id="aanb-uitleg" hidden>Zet codeHash bij de aanbieder in data/aanbieders.js (in het object met dit id, bijvoorbeeld direct na <code>"id"</code>). Stuur de code alleen naar de vaste contactpersoon van de aanbieder; die logt in op aanbieder-beheer.html.</p>
     <p class="let">Code kwijt? Maak een nieuwe en vervang de regel; de oude code werkt dan niet meer. Een adviseur blokkeren doe je door de regel te verwijderen of <code>geverifieerd:false</code> te zetten.</p>
   </div>
 </div></main>
@@ -51,6 +55,7 @@
   var A='ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
   function blok(){var r=new Uint32Array(4),s='';crypto.getRandomValues(r);for(var i=0;i<4;i++)s+=A[r[i]%A.length];return s;}
   function q(t){return String(t).replace(/\\/g,'\\\\').replace(/'/g,"\\'");}
+  document.getElementById('voor').addEventListener('change',function(){document.getElementById('adv-velden').hidden=this.value==='aanbieder';document.getElementById('uit').hidden=true;});
   document.getElementById('maak').addEventListener('click',function(){
     var code=blok()+'-'+blok()+'-'+blok();
     crypto.subtle.digest('SHA-256',new TextEncoder().encode(code)).then(function(b){
@@ -59,6 +64,11 @@
       document.getElementById('code').textContent=code;
       document.getElementById('link').textContent='https://jeroen-o.github.io/adviesforum/#login-'+code;
       document.getElementById('regel').textContent=" {id:'"+q(v('id')||'u9')+"',naam:'"+q(v('naam'))+"',functie:'"+q(v('functie'))+"',kantoor:'"+q(v('kantoor'))+"',rol:'"+v('rol')+"',geverifieerd:true,codeHash:'"+h+"'},";
+      var aanb=document.getElementById('voor').value==='aanbieder';
+      document.getElementById('aanb-uitleg').hidden=!aanb;
+      document.getElementById('link-label').textContent=aanb?'Inlogpagina voor de aanbieder':'Inloglink voor de adviseur (één klik = ingelogd)';
+      document.getElementById('regel-label').textContent=aanb?'Regel voor de aanbieder in data/aanbieders.js':'Regel voor data/adviseurs.js';
+      if(aanb){document.getElementById('link').textContent='https://jeroen-o.github.io/adviesforum/aanbieder-beheer.html';document.getElementById('regel').textContent='    "codeHash": "'+h+'",';}
       document.getElementById('uit').hidden=false;
     });
   });
