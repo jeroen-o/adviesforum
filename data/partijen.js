@@ -727,7 +727,7 @@ window.PARTIJEN=[
    {thema:'Status',tekst:'Santander Consumer Finance en Openbank zijn één juridische entiteit; de Nederlandse vestiging heet nu Open Bank S.A. Branche Nederland',bron:'https://www.santander.nl/veelgestelde-vragen/over-santander/fusie-met-openbank'},
    {tekst:'Bestaande klanten zien hun lening in Mijn Rekening',bron:'https://www.santander.nl/veelgestelde-vragen/persoonlijke-lening'}
   ],bijgewerkt:'2026-10-02'},
- {naam:'Freo (Rabobank)',type:'kredietverstrekker',categorieen:['krediet'],url:'https://www.freo.nl/over-freo/',
+ {naam:'Freo (Rabobank)',logo:'img/logos/freo.png',type:'kredietverstrekker',categorieen:['krediet'],url:'https://www.freo.nl/over-freo/',
   producten:['persoonlijke lening'],
   kenmerken:[
    {tekst:'Sinds 2007 de leenspecialist van Rabobank',bron:'https://www.freo.nl/over-freo/'},

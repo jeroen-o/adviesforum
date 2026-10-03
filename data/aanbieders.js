@@ -9,7 +9,7 @@
  *   naam, type    type: geldverstrekker | verzekeraar | pensioenuitvoerder | kredietverstrekker | serviceprovider
  *   logo          optioneel: img/logos/<id>.png, getoond in plaats van het initialen-blokje
  *   initialen     1-3 tekens voor het logo-blokje; kleur: #RRGGBB
- *   rubrieken     optioneel: lijst met rubrieksleutels op het Adviesforum, bijv. ['bankgarantie']
+ *   rubrieken     optioneel: lijst met rubrieksleutels op het Adviesforum, bijv. ['bankgarantie'] of ['krediet'] (zie RUBRIEKEN in aanbieders.html)
  *                 bekende sleutels: bankgarantie = "Bankgaranties en bieden met zekerheid" (badge en filter op aanbieders.html)
  *   omschrijving  korte zakelijke omschrijving (max. 400 tekens); website: https-url
  *   extranet      {url, naam}  portal of aanvraagomgeving voor adviseurs
@@ -316,7 +316,10 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "rubrieken": [
+      "krediet"
+    ]
   },
   {
     "id": "acura-assuradeuren",
@@ -806,7 +809,10 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "rubrieken": [
+      "krediet"
+    ]
   },
   {
     "id": "bnp-paribas-cardif",
@@ -1474,7 +1480,10 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "rubrieken": [
+      "krediet"
+    ]
   },
   {
     "id": "domivest",
@@ -2139,7 +2148,10 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "rubrieken": [
+      "krediet"
+    ]
   },
   {
     "id": "iqwoon",
@@ -2349,7 +2361,10 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "rubrieken": [
+      "krediet"
+    ]
   },
   {
     "id": "lloyds-bank",
@@ -2982,7 +2997,10 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "rubrieken": [
+      "krediet"
+    ]
   },
   {
     "id": "qredits",
@@ -3960,6 +3978,120 @@ window.AANBIEDERS=[
         "titel": "Formulier (voorbeeld)",
         "url": "https://example.org/zakelijk-inkomen/formulier.pdf",
         "soort": "formulier"
+      }
+    ],
+    "bijgewerkt": "2026-10-03"
+  },
+  {
+    "id": "auxmoney",
+    "demo": true,
+    "naam": "auxmoney",
+    "type": "kredietverstrekker",
+    "logo": "img/logos/auxmoney.png",
+    "rubrieken": [
+      "krediet"
+    ],
+    "omschrijving": "Voorbeeldprofiel met fictieve tekst. auxmoney heeft deze pagina niet aangeleverd. Zodra auxmoney meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over kredieten en financieringen.",
+    "website": "https://example.org/auxmoney/",
+    "extranet": {
+      "url": "https://example.org/auxmoney/adviseursportaal",
+      "naam": "Adviseursportaal auxmoney (fictief)"
+    },
+    "nieuws": [
+      {
+        "id": "n1",
+        "datum": "2026-10-03",
+        "titel": "Voorbeeldbericht van auxmoney",
+        "tekst": "Dit is een fictief voorbeeldbericht. Hier plaatst auxmoney straks zelf nieuws voor adviseurs, zoals wijzigingen in acceptatie of werkwijze.",
+        "url": "https://example.org/auxmoney/nieuws"
+      }
+    ],
+    "documenten": [
+      {
+        "titel": "Voorwaarden (voorbeeld)",
+        "url": "https://example.org/auxmoney/voorwaarden.pdf",
+        "soort": "voorwaarden"
+      },
+      {
+        "titel": "Acceptatiegids (voorbeeld)",
+        "url": "https://example.org/auxmoney/acceptatiegids.pdf",
+        "soort": "acceptatiegids"
+      }
+    ],
+    "bijgewerkt": "2026-10-03"
+  },
+  {
+    "id": "directa",
+    "demo": true,
+    "naam": "Directa.nl",
+    "type": "kredietverstrekker",
+    "logo": "img/logos/directa.png",
+    "rubrieken": [
+      "krediet"
+    ],
+    "omschrijving": "Voorbeeldprofiel met fictieve tekst. Directa.nl heeft deze pagina niet aangeleverd. Zodra Directa.nl meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over kredieten en financieringen.",
+    "website": "https://example.org/directa/",
+    "extranet": {
+      "url": "https://example.org/directa/adviseursportaal",
+      "naam": "Adviseursportaal Directa.nl (fictief)"
+    },
+    "nieuws": [
+      {
+        "id": "n1",
+        "datum": "2026-10-03",
+        "titel": "Voorbeeldbericht van Directa.nl",
+        "tekst": "Dit is een fictief voorbeeldbericht. Hier plaatst Directa.nl straks zelf nieuws voor adviseurs, zoals wijzigingen in acceptatie of werkwijze.",
+        "url": "https://example.org/directa/nieuws"
+      }
+    ],
+    "documenten": [
+      {
+        "titel": "Voorwaarden (voorbeeld)",
+        "url": "https://example.org/directa/voorwaarden.pdf",
+        "soort": "voorwaarden"
+      },
+      {
+        "titel": "Acceptatiegids (voorbeeld)",
+        "url": "https://example.org/directa/acceptatiegids.pdf",
+        "soort": "acceptatiegids"
+      }
+    ],
+    "bijgewerkt": "2026-10-03"
+  },
+  {
+    "id": "freo",
+    "demo": true,
+    "naam": "Freo",
+    "type": "kredietverstrekker",
+    "logo": "img/logos/freo.png",
+    "rubrieken": [
+      "krediet"
+    ],
+    "omschrijving": "Voorbeeldprofiel met fictieve tekst. Freo heeft deze pagina niet aangeleverd. Zodra Freo meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over kredieten en financieringen.",
+    "website": "https://example.org/freo/",
+    "extranet": {
+      "url": "https://example.org/freo/adviseursportaal",
+      "naam": "Adviseursportaal Freo (fictief)"
+    },
+    "nieuws": [
+      {
+        "id": "n1",
+        "datum": "2026-10-03",
+        "titel": "Voorbeeldbericht van Freo",
+        "tekst": "Dit is een fictief voorbeeldbericht. Hier plaatst Freo straks zelf nieuws voor adviseurs, zoals wijzigingen in acceptatie of werkwijze.",
+        "url": "https://example.org/freo/nieuws"
+      }
+    ],
+    "documenten": [
+      {
+        "titel": "Voorwaarden (voorbeeld)",
+        "url": "https://example.org/freo/voorwaarden.pdf",
+        "soort": "voorwaarden"
+      },
+      {
+        "titel": "Acceptatiegids (voorbeeld)",
+        "url": "https://example.org/freo/acceptatiegids.pdf",
+        "soort": "acceptatiegids"
       }
     ],
     "bijgewerkt": "2026-10-03"
