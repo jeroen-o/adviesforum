@@ -146,6 +146,9 @@ button,input,select,textarea{font-family:inherit}
   .paneel-kop h2{font-size:21px}
   .acties .knop{flex:1 1 auto}
 }
+/* Mobiel: tikdoelen en leesbaarheid */
+@media (max-width:760px){input,select,textarea{font-size:16px!important}}
+a.terug{display:inline-block;padding:8px 0}
 </style>
 </head>
 <body>
@@ -462,7 +465,7 @@ button,input,select,textarea{font-family:inherit}
       var aan = waarde('klantemail');
       kop = '<p class="mailkop">' + (aan ? '<b>Aan:</b> ' + esc(aan) + '<br>' : '') + '<b>Onderwerp:</b> ' + ow + '</p>';
     }
-    return '<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><title>' + ow + '</title><style>' +
+    return '<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>' + ow + '</title><style>' +
       '@page{margin:22mm 20mm}body{font-family:Arial,Helvetica,sans-serif;font-size:11pt;line-height:1.5;color:#111;margin:0;padding:24px;max-width:720px}' +
       '.afz{text-align:right;font-size:9.5pt;color:#444;margin-bottom:28px}.adres{margin-bottom:28px}.pd{margin:0 0 6px}.betreft{margin:0 0 24px}' +
       '.mailkop{border-bottom:1px solid #ccc;padding-bottom:10px;margin:0 0 18px;font-size:10pt}' +

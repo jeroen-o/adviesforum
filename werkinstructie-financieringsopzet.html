@@ -116,6 +116,8 @@
   .btn.sec:hover{background:#F7F7F5}
   input:focus,select:focus,textarea:focus{border-color:var(--primary)}
 @media print{.noprint{display:none!important}}
+/* Mobiel: tikdoelen en leesbaarheid */
+@media (max-width:760px){input,select,textarea{font-size:16px!important}}
 </style>
 </head>
 <body>
@@ -545,7 +547,7 @@
       var w = window.open('', '_blank');
       if (!w) { window.print(); return; }
       w.document.open();
-      w.document.write('<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><title>' +
+      w.document.write('<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>' +
         document.title + '</title><style>' +
         document.querySelector('style').textContent +
         '</style></head><body>' + document.body.innerHTML + '</body></html>');

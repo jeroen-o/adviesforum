@@ -29,7 +29,7 @@ header.site{border-bottom:1px solid var(--lijn);padding:14px 20px;display:flex;a
 .hex{width:26px;height:30px;background:var(--zwart);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);flex:none;position:relative}
 .hex::after{content:'';position:absolute;inset:7px 6px;background:var(--geel);clip-path:inherit}
 .merknaam{font-weight:800;letter-spacing:.06em;font-size:16px}
-.merksub{font-size:10px;color:var(--grijs);letter-spacing:.04em}
+.merksub{font-size:12px;color:var(--grijs);letter-spacing:.04em}
 nav.hoofd{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap}
 nav.hoofd a{font-size:13px;text-decoration:none;font-weight:600;border:1px solid var(--lijn);padding:7px 13px;border-radius:999px}
 nav.hoofd a:hover,nav.hoofd a[aria-current]{background:var(--vlak)}
@@ -52,15 +52,16 @@ main{padding:28px 20px 56px}
 .lijst{list-style:none;padding:0!important}.lijst li{border-bottom:1px solid var(--lijn);padding:10px 0;margin:0}
 .lijst a{font-weight:600}.lijst small{display:block;color:var(--grijs)}
 details{border-bottom:1px solid var(--lijn);padding:10px 0}
-summary{cursor:pointer;font-weight:700}summary h3{display:inline;font-size:15.5px;margin:0}
+summary{cursor:pointer;font-weight:700;min-height:36px;padding:6px 0}summary h3{display:inline;font-size:15.5px;margin:0}
 details .antw{margin-top:8px}details .waar,.waar{font-size:12.5px;color:var(--grijs)}
-.az{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 18px}.az a{display:inline-block;min-width:32px;text-align:center;border:1px solid var(--lijn);border-radius:8px;padding:4px 6px;text-decoration:none;font-weight:700}
+.az{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 18px}.az a{display:inline-grid;place-items:center;min-width:36px;min-height:36px;text-align:center;border:1px solid var(--lijn);border-radius:8px;padding:4px 6px;text-decoration:none;font-weight:700}
 dl.begrippen dt{font-weight:700;margin-top:16px}dl.begrippen dd{margin:4px 0 0}
 .disclaimer{font-size:13px;color:var(--grijs);margin-top:32px}
 footer{border-top:1px solid var(--lijn);padding:22px 20px;font-size:13px;color:var(--grijs);text-align:center}
 footer nav{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 16px;margin-bottom:8px}
 footer a{color:var(--tekst)}
 :focus-visible{outline:3px solid rgba(20,20,20,.6);outline-offset:2px}
+@media (max-width:760px){input,select,textarea{font-size:16px}}
 @media print{header.site nav,footer nav,.knop{display:none}.hero{background:none;padding:0}}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Veelgestelde vragen","url":"https://jeroen-o.github.io/adviesforum/faq/","inLanguage":"nl-NL","isPartOf":{"@type":"WebSite","name":"Adviesforum","url":"https://jeroen-o.github.io/adviesforum/"}}</script>

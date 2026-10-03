@@ -142,6 +142,9 @@ button,input,select,textarea{font-family:inherit}
   .uitkomst .groot{font-size:27px}
   .paneel-kop h2{font-size:21px}
 }
+/* Mobiel: tikdoelen en leesbaarheid */
+@media (max-width:760px){input,select,textarea{font-size:16px!important}}
+a.terug{display:inline-block;padding:8px 0}
 </style>
 </head>
 <body>
@@ -786,7 +789,7 @@ button,input,select,textarea{font-family:inherit}
       var regels = b.split('\n'), kop = regels.shift();
       return '<h2>' + esc(kop) + '</h2>' + (regels.length ? '<pre>' + esc(regels.join('\n')) + '</pre>' : '');
     }).join('');
-    var doc = '<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><title>Inkomensbepaling - ' + esc(so.titel) + '</title>' +
+    var doc = '<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Inkomensbepaling - ' + esc(so.titel) + '</title>' +
       '<style>body{font-family:Arial,Helvetica,sans-serif;color:#141414;margin:28px;font-size:12.5px;line-height:1.45}h1{font-size:19px;border-bottom:3px solid #FFD200;padding-bottom:6px}h2{font-size:13px;margin:16px 0 4px;text-transform:uppercase;letter-spacing:.04em}pre{white-space:pre-wrap;font-family:inherit;margin:0}.nb{margin-top:20px;font-size:11px;color:#555;border-top:1px solid #ddd;padding-top:8px}@media print{body{margin:12mm}}</style></head><body>' +
       '<h1>Inkomensbepaling: ' + esc(so.titel) + '</h1>' + blokken +
       '<p class="nb">Adviesforum - indicatief hulpmiddel. Geen advies of kredietbeoordeling; de acceptatiegids van de geldverstrekker is leidend.</p>' +

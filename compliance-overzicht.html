@@ -76,6 +76,7 @@ td.num,th.num{text-align:right;white-space:nowrap}
 .lbl.binnenkort{background:var(--rood-zacht);color:#A5281B;border:1px solid #E7A8A1}
 .lbl.later{background:var(--vlak);color:var(--grijs);border:1px solid var(--lijn)}
 .lbl.niet{background:var(--rood);color:#fff}
+.tabel-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%}
 .leeg{padding:18px;color:var(--grijs);text-align:center}
 .bronnen{font-size:12.5px;padding-left:18px;word-break:break-all}
 .voet{max-width:1180px;margin:0 auto;padding:24px 24px 40px;font-size:12.5px;color:var(--grijs)}
@@ -94,6 +95,9 @@ td.num,th.num{text-align:right;white-space:nowrap}
   .filters{grid-template-columns:minmax(0,1fr)}
   h2.sectie{font-size:20px}
 }
+/* Mobiel: tikdoelen en leesbaarheid */
+@media (max-width:760px){input,select,textarea{font-size:16px!important}}
+a.terug{display:inline-block;padding:8px 0}
 </style>
 </head>
 <body>
@@ -139,17 +143,17 @@ td.num,th.num{text-align:right;white-space:nowrap}
     <a class="knop licht" id="kb-csv" href="#" download="kennisbank-compliance.csv">Exporteer CSV</a>
     <button class="knop" id="kb-print" type="button">Printen</button>
   </div>
-  <table class="kaart" id="kb-tabel">
+  <div class="tabel-scroll"><table class="kaart" id="kb-tabel">
     <thead><tr><th>Id</th><th>Artikel</th><th>Categorie</th><th>Auteur</th><th>Status</th><th>Herzien voor</th><th>Bestand</th></tr></thead>
     <tbody></tbody>
-  </table>
+  </table></div>
 
   <h2 class="sectie">FAQ per thema</h2>
   <p class="sub">Alle FAQ zijn concept: ze zijn niet afzonderlijk door compliance beoordeeld.</p>
-  <table class="kaart" id="faq-tabel">
+  <div class="tabel-scroll"><table class="kaart" id="faq-tabel">
     <thead><tr><th>Thema</th><th class="num">Aantal</th><th class="num">Concept</th><th class="num">Met bronvermelding</th></tr></thead>
     <tbody></tbody>
-  </table>
+  </table></div>
 
   <h2 class="sectie">Forumvragen</h2>
   <div class="tegels" id="vr-tegels"></div>
@@ -285,7 +289,7 @@ $('#kb-print').addEventListener('click',function(){
   var l=gefilterd();
   var w=window.open('','_blank');
   if(!w){alert('Sta pop-ups toe om te kunnen printen.');return;}
-  w.document.write('<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><title>Compliance-overzicht kennisbank</title><style>body{font-family:Arial,sans-serif;font-size:11px;margin:18px;color:#141414}h1{font-size:17px;margin:0 0 4px}p{margin:0 0 10px}table{width:100%;border-collapse:collapse}th,td{border-bottom:1px solid #ccc;padding:4px 6px;text-align:left;vertical-align:top}th{background:#FFD200}</style></head><body>'+
+  w.document.write('<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Compliance-overzicht kennisbank</title><style>body{font-family:Arial,sans-serif;font-size:11px;margin:18px;color:#141414}h1{font-size:17px;margin:0 0 4px}p{margin:0 0 10px}table{width:100%;border-collapse:collapse}th,td{border-bottom:1px solid #ccc;padding:4px 6px;text-align:left;vertical-align:top}th{background:#FFD200}</style></head><body>'+
     '<h1>Compliance-overzicht kennisbank</h1><p>Peildatum '+esc($('#peil').textContent.replace('Peildatum: ',''))+' · '+n(l.length)+' van '+n(KB.length)+' artikelen · Alleen gecontroleerde artikelen gelden als kantoorwerkwijze.</p>'+
     '<table><thead><tr><th>Id</th><th>Titel</th><th>Categorie</th><th>Auteur</th><th>Status</th><th>Herzien voor</th><th>Herziening</th></tr></thead><tbody>'+
     l.map(function(a){return '<tr><td>'+esc(a.id)+'</td><td>'+esc(a.titel)+'</td><td>'+esc(a.catNaam)+'</td><td>'+esc(a.auteurNaam)+'</td><td>'+(a.ok?'Gecontroleerd':'Concept')+'</td><td>'+esc(dtm(a.herzienVoor))+'</td><td>'+esc(a.h.l)+'</td></tr>';}).join('')+
@@ -327,8 +331,8 @@ if(!N||!N._geverifieerd){
   var lbl={bevestigd:'<span class="lbl ok">Bevestigd</span>',aangepast:'<span class="lbl concept">Deels / aangepast</span>',niet:'<span class="lbl niet">Niet bevestigd</span>'};
   el.innerHTML='<p class="sub">Peildatum normen: <b>'+esc(N.peildatum||'onbekend')+'</b> · geverifieerd op <b>'+esc(dtm(N._verificatiedatum)||'onbekend')+'</b> · status normenbestand: '+(N.gecontroleerd?'<span class="lbl ok">Gecontroleerd</span>':'<span class="lbl concept">Nog niet volledig gecontroleerd</span>')+'</p>'+
     '<div class="tegels"><div class="tegel groen"><div class="getal">'+st.bevestigd+'</div><span>onderdelen bevestigd</span></div><div class="tegel geel"><div class="getal">'+st.aangepast+'</div><span>deels bevestigd of aangepast</span></div><div class="tegel '+(st.niet?'rood':'')+'"><div class="getal">'+st.niet+'</div><span>niet bevestigd</span></div></div>'+
-    '<table class="kaart" style="margin-top:12px"><thead><tr><th>Onderdeel</th><th>Status</th><th>Toelichting</th></tr></thead><tbody>'+
-    rijen.map(function(r){return '<tr><td><b>'+esc(r.k)+'</b></td><td data-k="Status">'+lbl[r.s]+'</td><td data-k="Toelichting">'+esc(r.v)+'</td></tr>';}).join('')+'</tbody></table>'+
+    '<div class="tabel-scroll" style="margin-top:12px"><table class="kaart"><thead><tr><th>Onderdeel</th><th>Status</th><th>Toelichting</th></tr></thead><tbody>'+
+    rijen.map(function(r){return '<tr><td><b>'+esc(r.k)+'</b></td><td data-k="Status">'+lbl[r.s]+'</td><td data-k="Toelichting">'+esc(r.v)+'</td></tr>';}).join('')+'</tbody></table></div>'+
     (Array.isArray(N._bronnen)&&N._bronnen.length?'<details style="margin-top:12px"><summary style="cursor:pointer;font-weight:700">Gebruikte bronnen ('+N._bronnen.length+')</summary><ul class="bronnen">'+N._bronnen.map(function(u){return '<li><a href="'+esc(u)+'" target="_blank" rel="noopener">'+esc(u)+'</a></li>';}).join('')+'</ul></details>':'');
 }
 })();

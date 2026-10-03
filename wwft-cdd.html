@@ -113,6 +113,9 @@ button,input,select,textarea{font-family:inherit}
   .kaart{padding:16px}
   .score .groot{font-size:25px}
 }
+/* Mobiel: tikdoelen en leesbaarheid */
+@media (max-width:760px){input,select,textarea{font-size:16px!important}}
+a.terug{display:inline-block;padding:8px 0}
 </style>
 </head>
 <body>
@@ -444,7 +447,7 @@ button,input,select,textarea{font-family:inherit}
       'table{border-collapse:collapse;width:100%}td,th{border:1px solid #ccc;padding:5px 8px;text-align:left;vertical-align:top}th{background:#FFF6C7}.cl{list-style:none;padding:0;margin:0}.cl li{margin:2px 0}.vk{font-size:14px}' +
       '.nt{border:1px solid #ccc;min-height:28px;padding:5px 8px;margin-top:4px;white-space:pre-wrap}.leeg{display:inline-block;min-height:18px}.uit{background:#141414;color:#FFD200;padding:10px 12px;font-weight:700;font-size:15px}.klein{font-size:11px;color:#555}' +
       '.hand td{height:34px}@media print{body{margin:12mm}h2{break-after:avoid}}';
-    var html = '<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><title>Vastlegging cliëntenonderzoek</title><style>' + css + '</style></head><body>' +
+    var html = '<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Vastlegging cliëntenonderzoek</title><style>' + css + '</style></head><body>' +
       '<h1>Vastlegging cliëntenonderzoek (Wwft/CDD)</h1><div class="klein">Opgesteld met het Adviesforum-hulpmiddel. Dit formulier vervangt geen eigen beleid of SIRA.</div>' +
       '<h2>Cliënt</h2><table><tr><th>Cliënt</th><td>' + esc($('k-naam').value) + '</td><th>Soort</th><td>' + (rp ? 'Rechtspersoon / entiteit' : 'Natuurlijk persoon') + '</td></tr>' +
       '<tr><th>Product / dienst</th><td>' + esc($('k-product').value) + '</td><th>Datum</th><td>' + esc(datumNL($('k-datum').value)) + '</td></tr>' +

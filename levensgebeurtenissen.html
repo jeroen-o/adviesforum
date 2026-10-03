@@ -136,6 +136,9 @@ mark{background:var(--geel);color:inherit;padding:0 1px;border-radius:2px}
   .balk,.zoekbalk,.filters,.statusregel,.kaart-acties,.pijl{display:none}
   .kaart-body{display:block}
 }
+/* Mobiel: tikdoelen en leesbaarheid */
+@media (max-width:760px){input,select,textarea{font-size:16px!important}}
+a.terug{display:inline-block;padding:8px 0}
 </style>
 </head>
 <body>
@@ -372,7 +375,7 @@ mark{background:var(--geel);color:inherit;padding:0 1px;border-radius:2px}
       return c && c.checked ? '&#9745;' : '&#9744;';
     }
     var vandaag = new Date().toLocaleDateString('nl-NL', {day: 'numeric', month: 'long', year: 'numeric'});
-    var h = '<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><title>Checklist ' + esc(g.titel) + '</title>';
+    var h = '<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Checklist ' + esc(g.titel) + '</title>';
     h += '<style>body{font-family:Montserrat,Arial,sans-serif;color:#141414;margin:28px;font-size:12.5px;line-height:1.5}';
     h += 'h1{font-size:20px;margin:0 0 2px}h2{font-size:13px;text-transform:uppercase;letter-spacing:.05em;border-bottom:3px solid #FFD200;padding-bottom:3px;margin:18px 0 6px}';
     h += '.sub{color:#5E5E5E;margin:0 0 12px}.velden{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin:10px 0 4px}.velden div{border-bottom:1px solid #999;padding-top:16px;font-size:11px;color:#5E5E5E}';

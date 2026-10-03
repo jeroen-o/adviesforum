@@ -144,6 +144,11 @@ footer.voet a{color:var(--zwart);font-weight:700}
   .tabelvak{max-height:none;overflow:visible}
   .matrix thead th,.matrix tbody th{position:static}
 }
+/* Mobiel: tikdoelen en leesbaarheid */
+@media (max-width:760px){input,select,textarea{font-size:16px!important}}
+a.terug{display:inline-block;padding:8px 0}
+.chip span small{font-size:12px}
+#geen,#alle{padding:8px 10px}
 </style>
 </head>
 <body>
@@ -444,7 +449,7 @@ footer.voet a{color:var(--zwart);font-weight:700}
     var w=window.open('','_blank');
     if(!w){alert('Het afdrukvenster werd geblokkeerd. Sta pop-ups voor deze pagina toe en probeer het opnieuw.');return;}
     var cat=catSel.value?(CATS[catSel.value]||catSel.value):'Alle categorieën';
-    var h='<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><title>Partijen per thema – '+esc(cat)+'</title><style>'+
+    var h='<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Partijen per thema – '+esc(cat)+'</title><style>'+
       'body{font-family:Montserrat,Arial,sans-serif;color:#141414;margin:18px;font-size:10.5px;line-height:1.4}'+
       'h1{font-size:18px;margin:0 0 4px}.sub{margin:0 0 10px;color:#444}'+
       '.disc{border:1.5px solid #141414;border-left:6px solid #FFD200;padding:7px 10px;margin:0 0 12px}'+
