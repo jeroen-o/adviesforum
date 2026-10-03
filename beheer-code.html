@@ -28,10 +28,40 @@
 /* Mobiel: tikdoelen en leesbaarheid */
 @media (max-width:760px){input,select,textarea{font-size:16px!important}}
 </style>
+<style id="a11y">
+/* Toegankelijkheid en donkere modus (zie docs/toegankelijkheid.md). Staat in een eigen <style>, zodat printvensters licht blijven. */
+.skiplink{position:absolute;left:12px;top:-200px;z-index:10000;background:#141414;color:#fff;padding:10px 16px;border-radius:8px;font-weight:700;text-decoration:none;font-family:Montserrat,system-ui,sans-serif}
+.skiplink:focus{top:12px;outline:3px solid #FFD200;outline-offset:2px}
+main[tabindex="-1"]:focus{outline:none}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus,textarea:focus,summary:focus-visible,[tabindex]:not([tabindex="-1"]):focus-visible{outline:3px solid #141414!important;outline-offset:2px!important}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+@media print{.skiplink{display:none}}
+@media screen and (prefers-color-scheme:dark){
+:root:not([data-theme="light"]){color-scheme:dark}
+:root:not([data-theme="light"]){--zwart:#F2F2F2;--lijn:#333333}
+:root:not([data-theme="light"]) body{color:#F2F2F2;background:#141414}
+:root:not([data-theme="light"]) .hero{background:#1E1E1E;color:#F2F2F2;border-bottom:3px solid #FFD200}
+:root:not([data-theme="light"]) input,:root:not([data-theme="light"]) select{border:1px solid #C9C9C9}
+:root:not([data-theme="light"]) button{background:#FFD200;color:#141414}
+:root:not([data-theme="light"]) pre{background:#262626;border:1px solid #333333}
+:root:not([data-theme="light"]) .let{background:#3f3718;border:1px solid #7a6a29}
+:root:not([data-theme="light"]) :focus-visible{outline:3px solid #FFD200}
+:root:not([data-theme="light"]) input:focus-visible,:root:not([data-theme="light"]) select:focus-visible{border-color:#8A8A8A}
+:root:not([data-theme="light"]) a:focus-visible,:root:not([data-theme="light"]) button:focus-visible,:root:not([data-theme="light"]) input:focus,:root:not([data-theme="light"]) input:focus-within,:root:not([data-theme="light"]) select:focus,:root:not([data-theme="light"]) textarea:focus,:root:not([data-theme="light"]) summary:focus-visible,:root:not([data-theme="light"]) [tabindex]:not([tabindex="-1"]):focus-visible{outline-color:#FFD200!important}
+:root:not([data-theme="light"]) .skiplink{background:#FFD200;color:#141414}
+:root:not([data-theme="light"]) [style*="background:#fff"],:root:not([data-theme="light"]) [style*="background:#FFF"]{background:#1E1E1E!important}
+:root:not([data-theme="light"]) [style*="color:#555"]{color:#BDBDBD!important}
+:root:not([data-theme="light"]) [style*="color:#141414"]{color:#F2F2F2!important}
+:root:not([data-theme="light"]) .back-inline{color:#F2F2F2!important;border-bottom-color:#FFD200!important}
+:root:not([data-theme="light"]) .skiplink:focus{outline-color:#F2F2F2}
+}
+</style>
 </head>
 <body>
-<section class="hero"><div class="in"><h1>Inlogcode maken</h1><p style="margin:4px 0 0">Alleen voor de beheerder. Deze pagina is niet gelinkt en verstuurt niets.</p></div></section>
-<main><div class="in">
+<a class="skiplink" href="#inhoud">Naar de inhoud</a>
+<section class="hero" aria-label="Inlogcode maken"><div class="in"><h1>Inlogcode maken</h1><p style="margin:4px 0 0">Alleen voor de beheerder. Deze pagina is niet gelinkt en verstuurt niets.</p></div></section>
+<main id="inhoud" tabindex="-1"><div class="in">
   <p>Keur je een aanmelding goed, maak dan hier een persoonlijke code. Stuur de <b>inloglink</b> (of de code) alleen naar de adviseur, bijvoorbeeld per mail. Zet de <b>regel voor adviseurs.js</b> in <code>data/adviseurs.js</code>; daarin staat alleen een hash, nooit de code zelf.</p>
   <label for="voor">Code voor</label><select id="voor"><option value="adviseur">Adviseur</option><option value="aanbieder">Aanbieder (aanbieder-beheer.html)</option></select>
   <label for="id">Id (uniek, bijv. u9; bij een aanbieder het id uit data/aanbieders.js)</label><input id="id" placeholder="u9">
@@ -42,7 +72,7 @@
   <label for="rol">Rol</label><select id="rol"><option value="adviseur">adviseur</option><option value="compliance">compliance</option><option value="beheer">beheer</option></select>
   </div>
   <button id="maak" type="button">Maak code</button>
-  <div id="uit" hidden>
+  <div id="uit" hidden aria-live="polite">
     <label>Code voor de adviseur</label><pre id="code"></pre>
     <label id="link-label">Inloglink voor de adviseur (één klik = ingelogd)</label><pre id="link"></pre>
     <label id="regel-label">Regel voor data/adviseurs.js</label><pre id="regel"></pre>

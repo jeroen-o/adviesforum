@@ -147,6 +147,7 @@ main .wrap.one{grid-template-columns:minmax(0,1fr)}
 .side{position:sticky;top:12px}
 .side h3{font-size:13px;color:var(--muted);font-weight:600;margin:0 0 8px}
 .cats{display:flex;flex-direction:column;gap:2px;margin-bottom:18px}
+.side-kop{font-size:15px;margin:0 0 8px}
 .cats button{display:flex;justify-content:space-between;align-items:center;gap:8px;width:100%;text-align:left;padding:8px 10px;border:0;border-radius:7px;background:none;cursor:pointer;color:var(--text)}
 .cats button.on{background:var(--yellow);color:var(--black);font-weight:700}
 .cats button .n{color:var(--muted);font-size:12px}
@@ -363,7 +364,7 @@ footer .legal{grid-column:1/-1;border-top:1px solid #2A3238;padding-top:14px;fon
   .side .cats{display:flex;flex-direction:row;flex-wrap:nowrap;gap:6px;overflow-x:auto;padding-bottom:6px;margin-bottom:10px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
   .side .cats::-webkit-scrollbar{display:none}
   .side .cats button{width:auto;white-space:nowrap;border:1px solid var(--border);border-radius:999px;padding:7px 12px;background:var(--surface);flex:none}
-  .side .cats button.on{border-color:var(--yellow)}
+  .side .cats button.on{border-color:var(--yellow);background:var(--yellow);color:var(--black)}
   .side .cats button .n{margin-left:6px}
   .side .filters{display:flex;gap:10px;flex-wrap:wrap}
   .side .filters label{flex:1;min-width:140px;margin-bottom:0}
@@ -443,6 +444,16 @@ main .wrap>*{min-width:0}
 details>summary{min-height:36px}
 .az a,.az span{width:36px;height:36px}
 .tool .tp,.verif,.tbl .who-cell span.verif,.expert,.hex span{font-size:12px}
+
+/* Toegankelijkheid: skiplink, contrast in donkere modus, klikdoelen */
+.skiplink{position:absolute;left:8px;top:-60px;z-index:200;background:#141414;color:#fff;padding:10px 14px;border-radius:6px;font-weight:700;text-decoration:none}
+.skiplink:focus{top:8px}
+#app:focus{outline:none}
+.cats button.on .n{color:#141414}
+p>button[data-act="tab"]{min-height:28px;padding:4px 2px}
+footer a{display:inline-block;padding:4px 0}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .top,:root:not([data-theme="light"]) .sticky-kop .top{background:var(--header);color:var(--text);border-bottom-color:var(--header-border)}:root:not([data-theme="light"]) .skiplink{background:#FFD200;color:#141414}}
+:root[data-theme="dark"] .top,:root[data-theme="dark"] .sticky-kop .top{background:var(--header);color:var(--text);border-bottom-color:var(--header-border)}
 /* Favorieten en volgen (functionele cookie af_favorieten) */
 .fav-knop[aria-pressed="true"],.volg-knop[aria-pressed="true"]{background:var(--yellow-soft);border-color:var(--yellow);color:var(--text)}
 .volg-blok{margin:0 0 16px}
@@ -460,8 +471,9 @@ details>summary{min-height:36px}
 </style>
 </head>
 <body>
+<a class="skiplink" href="#app">Naar de inhoud</a>
 
-<div class="demo"><div class="wrap"><span>Voor en door financieel adviseurs. Nieuwe vragen gaan naar de beheerder en verschijnen na controle; antwoorden en beoordelingen in deze versie blijven alleen in je eigen sessie.</span><span class="util"><a href="aanmelden.html">Aanmelden</a><a href="uitnodigen.html">Uitnodigen</a><a href="https://verzekeringhypotheek.blinqx.tech/support" target="_blank" rel="noopener">Support</a><a href="https://verzekeringhypotheek.blinqx.tech/academy" target="_blank" rel="noopener">Academy</a><a href="https://verzekeringhypotheek.blinqx.tech/partners" target="_blank" rel="noopener">Partners</a><a href="aanbieders.html">Aanbieders</a></span></div></div>
+<aside class="demo" aria-label="Over deze versie"><div class="wrap"><span>Voor en door financieel adviseurs. Nieuwe vragen gaan naar de beheerder en verschijnen na controle; antwoorden en beoordelingen in deze versie blijven alleen in je eigen sessie.</span><span class="util"><a href="aanmelden.html">Aanmelden</a><a href="uitnodigen.html">Uitnodigen</a><a href="https://verzekeringhypotheek.blinqx.tech/support" target="_blank" rel="noopener">Support</a><a href="https://verzekeringhypotheek.blinqx.tech/academy" target="_blank" rel="noopener">Academy</a><a href="https://verzekeringhypotheek.blinqx.tech/partners" target="_blank" rel="noopener">Partners</a><a href="aanbieders.html">Aanbieders</a></span></div></aside>
 <div class="sticky-kop">
 <header class="top">
   <div class="wrap">
@@ -478,7 +490,7 @@ details>summary{min-height:36px}
 <nav class="tabs" aria-label="Onderdelen"><div class="wrap" id="tabs"></div></nav>
 </div>
 
-<main><div id="hero"></div><div id="app" class="wrap"></div></main>
+<main><div id="hero"></div><div id="app" class="wrap" tabindex="-1"></div></main>
 
 <footer><div class="wrap">
   <div><h2>Samen vooruit.</h2><p>Het Adviesforum is een platform voor en door financieel adviseurs die elkaar helpen: collegiale kennisuitwisseling, geen klantadvies. Controleer altijd de actuele wet- en regelgeving en de voorwaarden van geldverstrekker of verzekeraar voordat je iets in een klantdossier overneemt. Alleen kennisbankartikelen met het label “Gecontroleerd” zijn beoordeeld door compliance.</p><p><button data-act="tab" data-tab="handleiding">Handleiding →</button> &nbsp;&nbsp; <button data-act="tab" data-tab="voorwie">Voor wie →</button> &nbsp;&nbsp; <a href="aanmelden.html">Aanmelden →</a> &nbsp;&nbsp; <a href="uitnodigen.html">Uitnodigen →</a> &nbsp;&nbsp; <button data-act="tab" data-tab="hulpmiddelen">Hulpmiddelen →</button> &nbsp;&nbsp; <a href="privacy.html">Privacy →</a> &nbsp;&nbsp; <a href="nieuw.html">Wat is nieuw →</a> &nbsp;&nbsp; <a href="compliance-overzicht.html">Compliance-overzicht →</a></p></div>
@@ -1110,8 +1122,8 @@ function heroHtml(){
 /* ---------- Forum ---------- */
 function sideForum(){
   const counts={alle:VRAGEN.length};CATS.forEach(c=>counts[c.id]=VRAGEN.filter(v=>v.cat===c.id).length);
-  return `<aside class="side">
-    <h3>Categorieën</h3>
+  return `<aside class="side" aria-label="Categorieën">
+    <h2 class="side-kop">Categorieën</h2>
     <div class="cats">
       <button class="${S.cat==='alle'?'on':''}" data-act="cat" data-cat="alle">Alles<span class="n">${counts.alle}</span></button>
       ${CATS.map(c=>`<button class="${S.cat===c.id?'on':''}" data-act="cat" data-cat="${c.id}">${esc(c.naam)}<span class="n">${counts[c.id]}</span></button>`).join('')}
@@ -1300,8 +1312,8 @@ function viewKennisbank(){
   const counts={alle:ARTIKELEN.length};CATS.forEach(c=>counts[c.id]=ARTIKELEN.filter(a=>a.cat===c.id).length);
   let list=ARTIKELEN.filter(a=>(S.kbCat==='alle'||a.cat===S.kbCat)&&(S.kbStatus==='alle'||(S.kbStatus==='ok'?a.gecontroleerd:S.kbStatus==='herzien'?houdbaarheid(a).status!=='ok':!a.gecontroleerd))&&zoekt('kb',a));
   list.sort((a,b)=>(b.gecontroleerd-a.gecontroleerd)||cnt(b.nuttig)-cnt(a.nuttig));
-  const side=`<aside class="side">
-    <h3>Categorieën</h3>
+  const side=`<aside class="side" aria-label="Categorieën">
+    <h2 class="side-kop">Categorieën</h2>
     <div class="cats"><button class="${S.kbCat==='alle'?'on':''}" data-act="kbcat" data-cat="alle">Alles<span class="n">${counts.alle}</span></button>
     ${CATS.filter(c=>counts[c.id]).map(c=>`<button class="${S.kbCat===c.id?'on':''}" data-act="kbcat" data-cat="${c.id}">${esc(c.naam)}<span class="n">${counts[c.id]}</span></button>`).join('')}</div>
     <h3>Filter</h3>
@@ -1665,7 +1677,7 @@ function route(){leesBron();const ruw=location.hash.slice(1);let h=ruw,m;try{h=d
   else if((m=h.match(/^vraag-(.+)$/))&&VRAGEN.find(v=>v.id===m[1]))Object.assign(S,{tab:'forum',view:'vraag',vraag:m[1],reactie:null});
   else if(ROUTES.includes(h))Object.assign(S,{tab:h,view:h});else return false;return true;}
 window.addEventListener('hashchange',()=>{const d=document.getElementById('login-dlg');if(d&&d.open)d.close();if(/^#login-/.test(location.hash)){loginViaLink();return;}if(route())render();});
-function go(view,extra={}){Object.assign(S,extra,{view});render();zetHash();}
+function go(view,extra={}){Object.assign(S,extra,{view});render();zetHash();const a=document.getElementById('app');if(a&&document.activeElement&&!a.contains(document.activeElement))a.focus({preventScroll:true});}
 function openVraag(id){const v=VRAGEN.find(x=>x.id===id);if(!v)return;v.views++;go('vraag',{tab:'forum',vraag:id,reactie:null});}
 function openArtikel(id){const a=ARTIKELEN.find(x=>x.id===id);if(!a)return;a.views++;go('artikel',{tab:'kennisbank',artikel:id});}
 

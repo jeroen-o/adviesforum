@@ -118,11 +118,70 @@
 /* Mobiel: tikdoelen en leesbaarheid */
 @media (max-width:760px){input,select,textarea{font-size:16px!important}}
 </style>
+<style id="a11y">
+/* Toegankelijkheid en donkere modus (zie docs/toegankelijkheid.md). Staat in een eigen <style>, zodat printvensters licht blijven. */
+.skiplink{position:absolute;left:12px;top:-200px;z-index:10000;background:#141414;color:#fff;padding:10px 16px;border-radius:8px;font-weight:700;text-decoration:none;font-family:Montserrat,system-ui,sans-serif}
+.skiplink:focus{top:12px;outline:3px solid #FFD200;outline-offset:2px}
+main[tabindex="-1"]:focus{outline:none}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus,textarea:focus,summary:focus-visible,[tabindex]:not([tabindex="-1"]):focus-visible{outline:3px solid #141414!important;outline-offset:2px!important}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+@media print{.skiplink{display:none}}
+@media screen and (prefers-color-scheme:dark){
+:root:not([data-theme="light"]){color-scheme:dark}
+:root:not([data-theme="light"]){--primary:#F2F2F2;--bg:#141414;--text:#F2F2F2;--muted:#BDBDBD;--line:#333333;--white:#1E1E1E;--soft:#262626;--warn-bg:#3f3918}
+:root:not([data-theme="light"]) body{background:#141414;color:#F2F2F2}
+:root:not([data-theme="light"]) header.hero{background:#1E1E1E;color:#F2F2F2;border-bottom:3px solid #FFD200}
+:root:not([data-theme="light"]) .tabs button{border:1px solid #333333;background:#1E1E1E;color:#F2F2F2}
+:root:not([data-theme="light"]) .tabs button.on{background:#FFD200;color:#141414;border-color:#FFD200}
+:root:not([data-theme="light"]) section.card{background:#1E1E1E;border:1px solid #333333}
+:root:not([data-theme="light"]) h2{color:#F2F2F2}
+:root:not([data-theme="light"]) h3{color:#F2F2F2}
+:root:not([data-theme="light"]) label{color:#F2F2F2}
+:root:not([data-theme="light"]) .hint{color:#BDBDBD}
+:root:not([data-theme="light"]) input[type=text],:root:not([data-theme="light"]) select{border:1px solid #333333;background:#1E1E1E;color:#F2F2F2}
+:root:not([data-theme="light"]) input:focus,:root:not([data-theme="light"]) select:focus{outline:2px solid #FFD200}
+:root:not([data-theme="light"]) .eur span{color:#BDBDBD}
+:root:not([data-theme="light"]) .pct span{color:#BDBDBD}
+:root:not([data-theme="light"]) .result{background:#2A2A2A;color:#fff}
+:root:not([data-theme="light"]) .rows{border-top:1px solid rgba(255,255,255,.25)}
+:root:not([data-theme="light"]) .rows div{border-bottom:1px solid rgba(255,255,255,.15)}
+:root:not([data-theme="light"]) .let-op{background:#3f3918;border-left:4px solid #E6BD00}
+:root:not([data-theme="light"]) .let-op strong{color:#f6d28e}
+:root:not([data-theme="light"]) .compliance{background:#3f1818;border-left:4px solid #C0392B}
+:root:not([data-theme="light"]) .compliance strong{color:#ee9e96}
+:root:not([data-theme="light"]) .msg{color:#FFE3B0}
+:root:not([data-theme="light"]) .tblwrap{border:1px solid #333333}
+:root:not([data-theme="light"]) th,:root:not([data-theme="light"]) td{border-bottom:1px solid #333333}
+:root:not([data-theme="light"]) th{background:#262626;color:#F2F2F2}
+:root:not([data-theme="light"]) td:first-child,:root:not([data-theme="light"]) th:first-child{background:#1E1E1E}
+:root:not([data-theme="light"]) th:first-child{background:#262626}
+:root:not([data-theme="light"]) tr.hl td{background:#3f3918}
+:root:not([data-theme="light"]) tr.hl td:first-child{background:#3f3818}
+:root:not([data-theme="light"]) td.hl{outline:2px solid #FFD200}
+:root:not([data-theme="light"]) .btn{background:#FFD200;color:#141414}
+:root:not([data-theme="light"]) .btn.sec{background:#1E1E1E;color:#F2F2F2;border:1px solid #333333}
+:root:not([data-theme="light"]) footer{border-top:1px solid #333333;color:#BDBDBD}
+:root:not([data-theme="light"]) footer a{color:#F2F2F2}
+:root:not([data-theme="light"]) header.hero .back{color:#F2F2F2!important;border-bottom:2px solid #8A8A8A}
+:root:not([data-theme="light"]) .btn:not(.sec):hover{background:#E6BD00;color:#141414}
+:root:not([data-theme="light"]) .btn.sec:hover{background:#262626}
+:root:not([data-theme="light"]) input:focus,:root:not([data-theme="light"]) select:focus,:root:not([data-theme="light"]) textarea:focus{border-color:#8A8A8A}
+:root:not([data-theme="light"]) a:focus-visible,:root:not([data-theme="light"]) button:focus-visible,:root:not([data-theme="light"]) input:focus,:root:not([data-theme="light"]) input:focus-within,:root:not([data-theme="light"]) select:focus,:root:not([data-theme="light"]) textarea:focus,:root:not([data-theme="light"]) summary:focus-visible,:root:not([data-theme="light"]) [tabindex]:not([tabindex="-1"]):focus-visible{outline-color:#FFD200!important}
+:root:not([data-theme="light"]) .skiplink{background:#FFD200;color:#141414}
+:root:not([data-theme="light"]) [style*="background:#fff"],:root:not([data-theme="light"]) [style*="background:#FFF"]{background:#1E1E1E!important}
+:root:not([data-theme="light"]) [style*="color:#555"]{color:#BDBDBD!important}
+:root:not([data-theme="light"]) [style*="color:#141414"]{color:#F2F2F2!important}
+:root:not([data-theme="light"]) .back-inline{color:#F2F2F2!important;border-bottom-color:#FFD200!important}
+:root:not([data-theme="light"]) .skiplink:focus{outline-color:#F2F2F2}
+}
+</style>
 </head>
 <body>
+<a class="skiplink" href="#inhoud">Naar de inhoud</a>
 <header class="hero">
   <div class="wrap">
-    <a href="index.html#hulpmiddelen" style="color:#141414;font-weight:700;font-size:13px;display:inline-block;margin-bottom:10px;text-decoration:none;border-bottom:2px solid #141414">← Terug naar het Adviesforum</a>
+    <nav class="terugnav" aria-label="Terug"><a class="back-inline" href="index.html#hulpmiddelen" style="color:#141414;font-weight:700;font-size:13px;display:inline-block;margin-bottom:10px;text-decoration:none;border-bottom:2px solid #141414">← Terug naar het Adviesforum</a></nav>
 <h1>Leennormen 2026</h1>
     <p class="sub">Rekenhulp en volledige financieringslasttabellen volgens het Nibud-advies hypotheeknormen 2026 (Tijdelijke regeling hypothecair krediet).</p>
     <p class="meta">Bron: Nibud, Advies hypotheeknormen 2026 (september 2025) en Bijlage financieringslastnormen 2026 (Excel) &middot; interne rekenhulp, indicatief</p>
@@ -130,10 +189,11 @@
 </header>
 
 <div class="wrap">
-  <div class="tabs noprint" role="tablist">
-    <button type="button" class="on" data-pane="reken">Rekenhulp</button>
-    <button type="button" data-pane="tabel">Financieringslasttabellen</button>
-    <button type="button" data-pane="param">Energielabel, studieschuld &amp; overige</button>
+  <main id="inhoud" tabindex="-1">
+  <div class="tabs noprint" role="group" aria-label="Onderdelen">
+    <button type="button" class="on" data-pane="reken" aria-pressed="true">Rekenhulp</button>
+    <button type="button" data-pane="tabel" aria-pressed="false">Financieringslasttabellen</button>
+    <button type="button" data-pane="param" aria-pressed="false">Energielabel, studieschuld &amp; overige</button>
     <button type="button" id="print" style="margin-left:auto">Printen / PDF</button>
   </div>
 
@@ -245,7 +305,7 @@
         </div>
       </div>
       <p class="hint" style="margin:0 0 10px">Bruto jaarinkomen in stappen van &euro; 1.000; een inkomen valt in de rij van het afgeronde bedrag naar beneden. Onder het startinkomen geldt het percentage van het startinkomen; boven het hoogste inkomen in de tabel geldt de laatste rij.</p>
-      <div class="tblwrap"><table id="t-tbl"></table></div>
+      <div class="tblwrap" tabindex="0" role="region" aria-label="Tabel, scrollbaar"><table id="t-tbl"></table></div>
     </section>
   </div>
 
@@ -253,17 +313,17 @@
   <div class="pane" id="pane-param">
     <section class="card">
       <h2>Extra leenruimte per energielabel 2026</h2>
-      <div class="tblwrap" style="max-height:none"><table class="simple" id="p-label"></table></div>
+      <div class="tblwrap" style="max-height:none" tabindex="0" role="region" aria-label="Tabel, scrollbaar"><table class="simple" id="p-label"></table></div>
       <p class="hint">Bij verduurzaming geldt het bedrag voor maatregelen uit de lijst in de Trhk; de lijst zelf is voor 2026 niet gewijzigd. Bij label A+++ en beter vervalt het extra bedrag voor maatregelen, omdat vaak alleen extra zonnepanelen overblijven en die door terugleverkosten en het einde van de salderingsregeling (2027) nauwelijks nog renderen.</p>
     </section>
     <section class="card">
       <h2>Bruteringsfactor studieschuld 2026</h2>
-      <div class="tblwrap" style="max-height:none"><table class="simple" id="p-duo"></table></div>
+      <div class="tblwrap" style="max-height:none" tabindex="0" role="region" aria-label="Tabel, scrollbaar"><table class="simple" id="p-duo"></table></div>
       <p class="hint">Het wettelijk maandbedrag van de DUO-lening wordt bij een box 1-hypotheek vermenigvuldigd met deze factor en in mindering gebracht op de toegestane financieringslast. Bij een volledig box 3-hypotheek geen brutering. Voorbeeld Nibud: &euro; 72,21 &times; 1,20 = &euro; 86 lagere maandruimte; bij 3,75% circa &euro; 18.711 minder hypotheek.</p>
     </section>
     <section class="card">
       <h2>Overige parameters</h2>
-      <div class="tblwrap" style="max-height:none"><table class="simple">
+      <div class="tblwrap" style="max-height:none" tabindex="0" role="region" aria-label="Tabel, scrollbaar"><table class="simple">
         <tr><th>Onderwerp</th><th>2026</th></tr>
         <tr><td>Verhoging alleenstaanden (aantoonbaar niet-kwetsbaar)</td><td>&euro; 17.000,00 (berekend &euro; 17.356, gehandhaafd op &euro; 17.000)</td></tr>
         <tr><td>Tweede inkomen</td><td>telt volledig mee (factor 1 &times; hoogste + 1 &times; laagste inkomen)</td></tr>
@@ -275,11 +335,12 @@
         <tr><td>Gebouwgebonden energie label EFG (flat, basis)</td><td>&euro; 2.192 per jaar</td></tr>
       </table></div>
       <h3>Voorbeelden Nibud: maximale hypotheek standaardtabel</h3>
-      <div class="tblwrap" style="max-height:none"><table id="p-vb"></table></div>
+      <div class="tblwrap" style="max-height:none" tabindex="0" role="region" aria-label="Tabel, scrollbaar"><table id="p-vb"></table></div>
       <p class="hint">Bron: Nibud, tabel 2 en 3. &ldquo;Met loonstijging&rdquo; = inkomen 2025 &times; 1,041.</p>
     </section>
   </div>
 
+  </main>
   <footer>
     <p><strong>Bronnen</strong></p>
     <ul>
@@ -456,7 +517,7 @@
   // ---------- Tabs ----------
   Array.prototype.forEach.call(document.querySelectorAll('.tabs button[data-pane]'), function(b){
     b.addEventListener('click', function(){
-      Array.prototype.forEach.call(document.querySelectorAll('.tabs button[data-pane]'), function(x){ x.classList.toggle('on', x===b); });
+      Array.prototype.forEach.call(document.querySelectorAll('.tabs button[data-pane]'), function(x){ x.classList.toggle('on', x===b); x.setAttribute('aria-pressed', x===b ? 'true' : 'false'); });
       Array.prototype.forEach.call(document.querySelectorAll('.pane'), function(p){ p.classList.toggle('on', p.id === 'pane-'+b.dataset.pane); });
     });
   });

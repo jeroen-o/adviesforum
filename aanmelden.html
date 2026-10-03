@@ -118,13 +118,66 @@
 @media (max-width:760px){input,select,textarea{font-size:16px!important}}
 .merksub{font-size:12px}
 </style>
+<style id="a11y">
+/* Toegankelijkheid en donkere modus (zie docs/toegankelijkheid.md). Staat in een eigen <style>, zodat printvensters licht blijven. */
+.skiplink{position:absolute;left:12px;top:-200px;z-index:10000;background:#141414;color:#fff;padding:10px 16px;border-radius:8px;font-weight:700;text-decoration:none;font-family:Montserrat,system-ui,sans-serif}
+.skiplink:focus{top:12px;outline:3px solid #FFD200;outline-offset:2px}
+main[tabindex="-1"]:focus{outline:none}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus,textarea:focus,summary:focus-visible,[tabindex]:not([tabindex="-1"]):focus-visible{outline:3px solid #141414!important;outline-offset:2px!important}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+@media print{.skiplink{display:none}}
+@media screen and (prefers-color-scheme:dark){
+:root:not([data-theme="light"]){color-scheme:dark}
+:root:not([data-theme="light"]){--zwart:#F2F2F2;--tekst:#F2F2F2;--grijs:#BDBDBD;--lijn:#333333;--vlak:#262626;--rood:#e9a29b;--groen:#9de7c1}
+:root:not([data-theme="light"]) body{color:#F2F2F2;background:#141414}
+:root:not([data-theme="light"]) .topbar{background:#2A2A2A;color:#fff}
+:root:not([data-theme="light"]) .topbar a{color:#fff}
+:root:not([data-theme="light"]) header.site{border-bottom:1px solid #333333}
+:root:not([data-theme="light"]) .hex{background:#FFD200;color:#141414}
+:root:not([data-theme="light"]) .merksub{color:#BDBDBD}
+:root:not([data-theme="light"]) .sectie-naam{border-left:1px solid #333333}
+:root:not([data-theme="light"]) .terug{border:1px solid #333333}
+:root:not([data-theme="light"]) .terug:hover{background:#262626}
+:root:not([data-theme="light"]) .hero{background:#1E1E1E;color:#F2F2F2;border-bottom:3px solid #FFD200}
+:root:not([data-theme="light"]) .kaart{border:1px solid #333333;background:#1E1E1E}
+:root:not([data-theme="light"]) legend{color:#BDBDBD}
+:root:not([data-theme="light"]) .optioneel{color:#BDBDBD}
+:root:not([data-theme="light"]) input[type=text],:root:not([data-theme="light"]) input[type=email],:root:not([data-theme="light"]) input[type=tel],:root:not([data-theme="light"]) input[type=url],:root:not([data-theme="light"]) select{border:1px solid #333333;background:#1E1E1E}
+:root:not([data-theme="light"]) input:focus,:root:not([data-theme="light"]) select:focus{outline:3px solid rgba(255,210,0,.55);border-color:#9a9a9a}
+:root:not([data-theme="light"]) .hint{color:#BDBDBD}
+:root:not([data-theme="light"]) .fout{color:#e9a29b}
+:root:not([data-theme="light"]) .veld.is-fout input,:root:not([data-theme="light"]) .veld.is-fout select{border-color:#C0392B}
+:root:not([data-theme="light"]) .akkoord{background:#262626;border:1px solid #333333}
+:root:not([data-theme="light"]) .knop-primair{background:#FFD200;color:#141414}
+:root:not([data-theme="light"]) .knop-primair:hover{background:#FFE04D;color:#141414}
+:root:not([data-theme="light"]) .knop-tweede{background:#1E1E1E;color:#F2F2F2;border-color:#333333}
+:root:not([data-theme="light"]) .knop-tweede:hover{background:#262626}
+:root:not([data-theme="light"]) .melding.ok{background:#262626;border-color:#346f4b;color:#9de7c1}
+:root:not([data-theme="light"]) .melding.let-op{background:#3f3718;border-color:#7a6a29;color:#f6dc8e}
+:root:not([data-theme="light"]) .zijkant h2{color:#BDBDBD}
+:root:not([data-theme="light"]) .privacy{color:#BDBDBD}
+:root:not([data-theme="light"]) .melding.fout-blok{background:#3f1c18;border-color:#7a3229;color:#e9a29b}
+:root:not([data-theme="light"]) .succes .vink{background:#1E7A4B;color:#fff}
+:root:not([data-theme="light"]) pre.kopie{background:#262626;border:1px solid #333333}
+:root:not([data-theme="light"]) footer{border-top:1px solid #333333;color:#BDBDBD}
+:root:not([data-theme="light"]) a:focus-visible,:root:not([data-theme="light"]) button:focus-visible,:root:not([data-theme="light"]) input:focus,:root:not([data-theme="light"]) input:focus-within,:root:not([data-theme="light"]) select:focus,:root:not([data-theme="light"]) textarea:focus,:root:not([data-theme="light"]) summary:focus-visible,:root:not([data-theme="light"]) [tabindex]:not([tabindex="-1"]):focus-visible{outline-color:#FFD200!important}
+:root:not([data-theme="light"]) .skiplink{background:#FFD200;color:#141414}
+:root:not([data-theme="light"]) [style*="background:#fff"],:root:not([data-theme="light"]) [style*="background:#FFF"]{background:#1E1E1E!important}
+:root:not([data-theme="light"]) [style*="color:#555"]{color:#BDBDBD!important}
+:root:not([data-theme="light"]) [style*="color:#141414"]{color:#F2F2F2!important}
+:root:not([data-theme="light"]) .back-inline{color:#F2F2F2!important;border-bottom-color:#FFD200!important}
+:root:not([data-theme="light"]) .skiplink:focus{outline-color:#F2F2F2}
+}
+</style>
 </head>
 <body>
+<a class="skiplink" href="#inhoud">Naar de inhoud</a>
 
-<div class="topbar">
+<nav class="topbar" aria-label="Forum">
   <span>Aanmelden kost één minuut. Je ontvangt binnen twee werkdagen bericht.</span>
   <span><a href="index.html">Terug naar het forum</a></span>
-</div>
+</nav>
 
 <header class="site">
   <div class="merk">
@@ -138,14 +191,14 @@
   <a class="terug" href="index.html">← Terug</a>
 </header>
 
-<section class="hero">
+<section class="hero" aria-label="Meld je aan als adviseur">
   <div class="hero-in">
     <h1>Meld je aan als adviseur</h1>
     <p>Het Adviesforum is er voor adviseurs die elkaar vooruit helpen. Vul je gegevens in, dan maken wij een profiel voor je aan en krijg je toegang om vragen te stellen, te beantwoorden en collega's te beoordelen.</p>
   </div>
 </section>
 
-<main>
+<main id="inhoud" tabindex="-1">
   <div>
     <form class="kaart" id="aanmeldform" novalidate>
 

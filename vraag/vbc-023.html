@@ -40,7 +40,7 @@ nav.hoofd a:hover,nav.hoofd a[aria-current]{background:var(--vlak)}
 .kruimel{font-size:13px}.kruimel ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:4px}
 .kruimel li+li::before{content:'›';margin-right:4px}.kruimel a{text-decoration:underline}
 .meta{font-size:13px;margin-top:10px}
-main{padding:28px 20px 56px}
+.romp{padding:28px 20px 56px}
 .inhoud h2{font-size:20px;margin:30px 0 8px;line-height:1.3}
 .inhoud h3{font-size:16px;margin:22px 0 6px}
 .inhoud ul,.inhoud ol{padding-left:22px}.inhoud li{margin:4px 0}
@@ -52,7 +52,7 @@ main{padding:28px 20px 56px}
 .lijst{list-style:none;padding:0!important}.lijst li{border-bottom:1px solid var(--lijn);padding:10px 0;margin:0}
 .lijst a{font-weight:600}.lijst small{display:block;color:var(--grijs)}
 details{border-bottom:1px solid var(--lijn);padding:10px 0}
-summary{cursor:pointer;font-weight:700;min-height:36px;padding:6px 0}summary h3{display:inline;font-size:15.5px;margin:0}
+summary{cursor:pointer;font-weight:700;min-height:36px;padding:6px 0}.inhoud summary h2{display:inline;font-size:15.5px;margin:0;line-height:1.6}
 details .antw{margin-top:8px}details .waar,.waar{font-size:12.5px;color:var(--grijs)}
 .az{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 18px}.az a{display:inline-grid;place-items:center;min-width:36px;min-height:36px;text-align:center;border:1px solid var(--lijn);border-radius:8px;padding:4px 6px;text-decoration:none;font-weight:700}
 dl.begrippen dt{font-weight:700;margin-top:16px}dl.begrippen dd{margin:4px 0 0}
@@ -60,9 +60,29 @@ dl.begrippen dt{font-weight:700;margin-top:16px}dl.begrippen dd{margin:4px 0 0}
 footer{border-top:1px solid var(--lijn);padding:22px 20px;font-size:13px;color:var(--grijs);text-align:center}
 footer nav{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 16px;margin-bottom:8px}
 footer a{color:var(--tekst)}
-:focus-visible{outline:3px solid rgba(20,20,20,.6);outline-offset:2px}
+:focus-visible{outline:3px solid #141414;outline-offset:2px}
+.skiplink{position:absolute;left:12px;top:-200px;z-index:100;background:#141414;color:#fff;padding:10px 16px;border-radius:8px;font-weight:700;text-decoration:none}
+.skiplink:focus{top:12px}
+main:focus{outline:none}
 @media (max-width:760px){input,select,textarea{font-size:16px}}
-@media print{header.site nav,footer nav,.knop{display:none}.hero{background:none;padding:0}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+@media print{header.site nav,footer nav,.knop,.skiplink{display:none}.hero{background:none;padding:0}}
+/* Donkere modus (alleen op het scherm; printen blijft licht). Zelfde opzet als index.html: data-theme="light" zet hem uit. */
+@media screen and (prefers-color-scheme:dark){
+:root:not([data-theme="light"]){color-scheme:dark;--zwart:#F2F2F2;--tekst:#F2F2F2;--grijs:#BDBDBD;--lijn:#333333;--vlak:#1E1E1E;--rood:#F08A80}
+:root:not([data-theme="light"]) body{background:#141414}
+:root:not([data-theme="light"]) .hero{background:#1E1E1E;border-bottom:3px solid var(--geel)}
+:root:not([data-theme="light"]) .hex::after{background:#141414}
+:root:not([data-theme="light"]) nav.hoofd a:hover,:root:not([data-theme="light"]) nav.hoofd a[aria-current]{background:#262626}
+:root:not([data-theme="light"]) .melding,:root:not([data-theme="light"]) .slot{background:#2E2810;border-color:var(--geel)}
+:root:not([data-theme="light"]) .knop{background:var(--geel);color:#141414}
+:root:not([data-theme="light"]) .knop:hover{background:#FFE04D}
+:root:not([data-theme="light"]) .knop-licht{background:transparent;color:#F2F2F2;border-color:#F2F2F2}
+:root:not([data-theme="light"]) .knop-licht:hover{background:#262626}
+:root:not([data-theme="light"]) .reacties li:target{background:#2E2810}
+:root:not([data-theme="light"]) :focus-visible{outline-color:var(--geel)}
+:root:not([data-theme="light"]) .skiplink{background:var(--geel);color:#141414}
+}
 .knoppen{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0 0}
 .knop-licht{background:#fff;color:var(--zwart);border:2px solid var(--zwart);padding:9px 16px}.knop-licht:hover{background:var(--vlak)}
 .teaser{border:1px solid var(--lijn);border-left:4px solid var(--geel);border-radius:10px;padding:12px 16px;margin:10px 0 0}
@@ -74,17 +94,19 @@ footer a{color:var(--tekst)}
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Adviesforum","item":"https://jeroen-o.github.io/adviesforum/"},{"@type":"ListItem","position":2,"name":"Doorstromer met eigenwoningreserve uit een eerdere relatie","item":"https://jeroen-o.github.io/adviesforum/vraag/vbc-023.html"}]}</script>
 </head>
 <body>
+<a class="skiplink" href="#inhoud">Naar de inhoud</a>
 <header class="site">
   <a class="merk" href="../index.html"><span class="hex" aria-hidden="true"></span><span><span class="merknaam">ADVIESFORUM</span><br><span class="merksub">Voor en door financieel adviseurs</span></span></a>
   <nav class="hoofd" aria-label="Hoofdnavigatie"><a href="../kennisbank/">Kennisbank</a><a href="../faq/">FAQ</a><a href="../begrippen/">Begrippen</a><a href="../index.html" aria-current="page">Forum</a></nav>
 </header>
+<main id="inhoud" tabindex="-1">
 <div class="hero"><div class="hero-in">
 <nav class="kruimel" aria-label="Kruimelpad"><ol><li><a href="../index.html">Adviesforum</a></li><li aria-current="page">Doorstromer met eigenwoningreserve uit een eerdere relatie</li></ol></nav>
 <h1>Doorstromer met eigenwoningreserve uit een eerdere relatie</h1>
 
 <div class="meta">Hypotheken · Gesteld op 21 december 2025 · Voorbeeldvraag met 1 voorbeeldantwoord</div>
 </div></div>
-<main><div class="inhoud">
+<div class="romp"><div class="inhoud">
 <p class="melding" role="note">Voorbeeldvraag: een fictieve praktijksituatie om te laten zien hoe collega’s elkaar helpen. De antwoorden zijn voorbeeldantwoorden.</p>
 <article>
 <h2>De vraag</h2>
@@ -99,7 +121,8 @@ footer a{color:var(--tekst)}
 </ul>
 
 <p class="disclaimer">Collegiale kennisdeling tussen financieel adviseurs, geen advies aan klanten of consumenten. Controleer altijd de actuele bron voordat je iets in een dossier gebruikt.</p>
-</div></main>
+</div></div>
+</main>
 <footer>
   <nav aria-label="Voettekst">
     <a href="../index.html">Forum</a>

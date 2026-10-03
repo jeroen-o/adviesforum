@@ -106,13 +106,74 @@ footer{border-top:1px solid var(--lijn);padding:22px 24px;font-size:12.5px;color
 @media (max-width:760px){input,select,textarea{font-size:16px!important}}
 a.terug{display:inline-block;padding:8px 0}
 </style>
+<style id="a11y">
+/* Toegankelijkheid en donkere modus (zie docs/toegankelijkheid.md). Staat in een eigen <style>, zodat printvensters licht blijven. */
+.skiplink{position:absolute;left:12px;top:-200px;z-index:10000;background:#141414;color:#fff;padding:10px 16px;border-radius:8px;font-weight:700;text-decoration:none;font-family:Montserrat,system-ui,sans-serif}
+.skiplink:focus{top:12px;outline:3px solid #FFD200;outline-offset:2px}
+main[tabindex="-1"]:focus{outline:none}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus,textarea:focus,summary:focus-visible,[tabindex]:not([tabindex="-1"]):focus-visible{outline:3px solid #141414!important;outline-offset:2px!important}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+@media print{.skiplink{display:none}}
+@media screen and (prefers-color-scheme:dark){
+:root:not([data-theme="light"]){color-scheme:dark}
+:root:not([data-theme="light"]){--geel-zacht:#3f3918;--zwart:#F2F2F2;--tekst:#F2F2F2;--grijs:#BDBDBD;--lijn:#333333;--vlak:#262626;--rood:#e9a29b;--groen:#9de7c1}
+:root:not([data-theme="light"]) body{color:#F2F2F2;background:#141414}
+:root:not([data-theme="light"]) .balk{background:#2A2A2A;color:#fff}
+:root:not([data-theme="light"]) .balk a{color:#fff}
+:root:not([data-theme="light"]) .kop{background:#1E1E1E;color:#F2F2F2;border-bottom:3px solid #FFD200}
+:root:not([data-theme="light"]) .zeshoek{background:#2A2A2A}
+:root:not([data-theme="light"]) .terug{border-bottom:2px solid #8A8A8A}
+:root:not([data-theme="light"]) .stempel{background:#2A2A2A;color:#FFD200}
+:root:not([data-theme="light"]) .menu{border:1px solid #333333;background:#1E1E1E}
+:root:not([data-theme="light"]) .menu input{border:1px solid #333333;background:#1E1E1E}
+:root:not([data-theme="light"]) .menu input:focus,:root:not([data-theme="light"]) .instel input:focus{outline:3px solid rgba(255,210,0,.6)}
+:root:not([data-theme="light"]) .chip{border:1px solid #333333;background:#1E1E1E;color:#F2F2F2}
+:root:not([data-theme="light"]) .chip[aria-pressed="true"]{background:#FFD200;border-color:#FFD200;color:#141414}
+:root:not([data-theme="light"]) .groep{color:#BDBDBD}
+:root:not([data-theme="light"]) .item{color:#F2F2F2}
+:root:not([data-theme="light"]) .item:hover{background:#262626}
+:root:not([data-theme="light"]) .item[aria-current="true"]{background:#3f3918}
+:root:not([data-theme="light"]) .leeg{color:#BDBDBD}
+:root:not([data-theme="light"]) .telling{color:#BDBDBD}
+:root:not([data-theme="light"]) .instel{border:1px solid #333333;background:#262626}
+:root:not([data-theme="light"]) .instel h2{color:#BDBDBD}
+:root:not([data-theme="light"]) .instel p{color:#BDBDBD}
+:root:not([data-theme="light"]) .instel input{border:1px solid #333333;background:#1E1E1E}
+:root:not([data-theme="light"]) .knop{border:1px solid #333333;background:#1E1E1E;color:#F2F2F2}
+:root:not([data-theme="light"]) .knop:hover{background:#262626}
+:root:not([data-theme="light"]) .knop.primair{background:#FFD200;border-color:#FFD200;color:#141414}
+:root:not([data-theme="light"]) .knop.primair:hover{background:#FFE04D;color:#141414}
+:root:not([data-theme="light"]) .melding{color:#9de7c1}
+:root:not([data-theme="light"]) .melding.fout{color:#e9a29b}
+:root:not([data-theme="light"]) .blad{border:1px solid #333333;background:#1E1E1E}
+:root:not([data-theme="light"]) .blad-kop{border-bottom:3px solid #FFD200}
+:root:not([data-theme="light"]) .blad-kop .cat{color:#BDBDBD}
+:root:not([data-theme="light"]) .kort{background:#3f3918;border-left:4px solid #E6BD00}
+:root:not([data-theme="light"]) .vragen{border:1px dashed #BDBDBD}
+:root:not([data-theme="light"]) .bron{color:#BDBDBD;border-top:1px solid #333333}
+:root:not([data-theme="light"]) .bron a{color:#BDBDBD}
+:root:not([data-theme="light"]) .disclaimer{color:#BDBDBD}
+:root:not([data-theme="light"]) .contact{background:#262626}
+:root:not([data-theme="light"]) .uitleg-onder{color:#BDBDBD}
+:root:not([data-theme="light"]) footer{border-top:1px solid #333333;color:#BDBDBD}
+:root:not([data-theme="light"]) a:focus-visible,:root:not([data-theme="light"]) button:focus-visible,:root:not([data-theme="light"]) input:focus,:root:not([data-theme="light"]) input:focus-within,:root:not([data-theme="light"]) select:focus,:root:not([data-theme="light"]) textarea:focus,:root:not([data-theme="light"]) summary:focus-visible,:root:not([data-theme="light"]) [tabindex]:not([tabindex="-1"]):focus-visible{outline-color:#FFD200!important}
+:root:not([data-theme="light"]) .skiplink{background:#FFD200;color:#141414}
+:root:not([data-theme="light"]) [style*="background:#fff"],:root:not([data-theme="light"]) [style*="background:#FFF"]{background:#1E1E1E!important}
+:root:not([data-theme="light"]) [style*="color:#555"]{color:#BDBDBD!important}
+:root:not([data-theme="light"]) [style*="color:#141414"]{color:#F2F2F2!important}
+:root:not([data-theme="light"]) .back-inline{color:#F2F2F2!important;border-bottom-color:#FFD200!important}
+:root:not([data-theme="light"]) .skiplink:focus{outline-color:#F2F2F2}
+}
+</style>
 </head>
 <body>
+<a class="skiplink" href="#inhoud">Naar de inhoud</a>
 
-<div class="balk">
+<nav class="balk" aria-label="Forum">
   <span>Adviesforum &middot; hulpmiddelen voor financieel adviseurs</span>
   <span><a href="index.html">Naar het forum</a></span>
-</div>
+</nav>
 
 <header class="kop">
   <div class="kop-in">
@@ -124,7 +185,7 @@ a.terug{display:inline-block;padding:8px 0}
   </div>
 </header>
 
-<main class="romp">
+<main class="romp" id="inhoud" tabindex="-1">
   <nav class="menu" aria-label="Uitlegbladen">
     <label class="sr" for="zoek">Zoek een uitlegblad</label>
     <input type="search" id="zoek" placeholder="Zoek, bijv. NHG of scheiding" autocomplete="off">

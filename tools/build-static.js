@@ -110,7 +110,7 @@ nav.hoofd a:hover,nav.hoofd a[aria-current]{background:var(--vlak)}
 .kruimel{font-size:13px}.kruimel ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:4px}
 .kruimel li+li::before{content:'›';margin-right:4px}.kruimel a{text-decoration:underline}
 .meta{font-size:13px;margin-top:10px}
-main{padding:28px 20px 56px}
+.romp{padding:28px 20px 56px}
 .inhoud h2{font-size:20px;margin:30px 0 8px;line-height:1.3}
 .inhoud h3{font-size:16px;margin:22px 0 6px}
 .inhoud ul,.inhoud ol{padding-left:22px}.inhoud li{margin:4px 0}
@@ -122,7 +122,7 @@ main{padding:28px 20px 56px}
 .lijst{list-style:none;padding:0!important}.lijst li{border-bottom:1px solid var(--lijn);padding:10px 0;margin:0}
 .lijst a{font-weight:600}.lijst small{display:block;color:var(--grijs)}
 details{border-bottom:1px solid var(--lijn);padding:10px 0}
-summary{cursor:pointer;font-weight:700;min-height:36px;padding:6px 0}summary h3{display:inline;font-size:15.5px;margin:0}
+summary{cursor:pointer;font-weight:700;min-height:36px;padding:6px 0}.inhoud summary h2{display:inline;font-size:15.5px;margin:0;line-height:1.6}
 details .antw{margin-top:8px}details .waar,.waar{font-size:12.5px;color:var(--grijs)}
 .az{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 18px}.az a{display:inline-grid;place-items:center;min-width:36px;min-height:36px;text-align:center;border:1px solid var(--lijn);border-radius:8px;padding:4px 6px;text-decoration:none;font-weight:700}
 dl.begrippen dt{font-weight:700;margin-top:16px}dl.begrippen dd{margin:4px 0 0}
@@ -130,9 +130,29 @@ dl.begrippen dt{font-weight:700;margin-top:16px}dl.begrippen dd{margin:4px 0 0}
 footer{border-top:1px solid var(--lijn);padding:22px 20px;font-size:13px;color:var(--grijs);text-align:center}
 footer nav{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 16px;margin-bottom:8px}
 footer a{color:var(--tekst)}
-:focus-visible{outline:3px solid rgba(20,20,20,.6);outline-offset:2px}
+:focus-visible{outline:3px solid #141414;outline-offset:2px}
+.skiplink{position:absolute;left:12px;top:-200px;z-index:100;background:#141414;color:#fff;padding:10px 16px;border-radius:8px;font-weight:700;text-decoration:none}
+.skiplink:focus{top:12px}
+main:focus{outline:none}
 @media (max-width:760px){input,select,textarea{font-size:16px}}
-@media print{header.site nav,footer nav,.knop{display:none}.hero{background:none;padding:0}}`;
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+@media print{header.site nav,footer nav,.knop,.skiplink{display:none}.hero{background:none;padding:0}}
+/* Donkere modus (alleen op het scherm; printen blijft licht). Zelfde opzet als index.html: data-theme="light" zet hem uit. */
+@media screen and (prefers-color-scheme:dark){
+:root:not([data-theme="light"]){color-scheme:dark;--zwart:#F2F2F2;--tekst:#F2F2F2;--grijs:#BDBDBD;--lijn:#333333;--vlak:#1E1E1E;--rood:#F08A80}
+:root:not([data-theme="light"]) body{background:#141414}
+:root:not([data-theme="light"]) .hero{background:#1E1E1E;border-bottom:3px solid var(--geel)}
+:root:not([data-theme="light"]) .hex::after{background:#141414}
+:root:not([data-theme="light"]) nav.hoofd a:hover,:root:not([data-theme="light"]) nav.hoofd a[aria-current]{background:#262626}
+:root:not([data-theme="light"]) .melding,:root:not([data-theme="light"]) .slot{background:#2E2810;border-color:var(--geel)}
+:root:not([data-theme="light"]) .knop{background:var(--geel);color:#141414}
+:root:not([data-theme="light"]) .knop:hover{background:#FFE04D}
+:root:not([data-theme="light"]) .knop-licht{background:transparent;color:#F2F2F2;border-color:#F2F2F2}
+:root:not([data-theme="light"]) .knop-licht:hover{background:#262626}
+:root:not([data-theme="light"]) .reacties li:target{background:#2E2810}
+:root:not([data-theme="light"]) :focus-visible{outline-color:var(--geel)}
+:root:not([data-theme="light"]) .skiplink{background:var(--geel);color:#141414}
+}`;
 }
 
 function pagina({ pre, pad, titel, ogTitel, beschrijving, type = 'website', h1, intro = '', kruimel = [], meta = '', inhoud, jsonld = [], actief = '', extraCss = '' }) {
@@ -164,19 +184,22 @@ ${css(pre)}${extraCss ? '\n' + extraCss : ''}
 ${[...jsonld.map(ld), ...bc].join('\n')}
 </head>
 <body>
+<a class="skiplink" href="#inhoud">Naar de inhoud</a>
 <header class="site">
   <a class="merk" href="${pre}index.html"><span class="hex" aria-hidden="true"></span><span><span class="merknaam">ADVIESFORUM</span><br><span class="merksub">Voor en door financieel adviseurs</span></span></a>
   <nav class="hoofd" aria-label="Hoofdnavigatie">${nav}</nav>
 </header>
+<main id="inhoud" tabindex="-1">
 <div class="hero"><div class="hero-in">
 ${kr}
 <h1>${esc(h1)}</h1>
 ${intro ? '<p>' + intro + '</p>' : ''}${meta ? '\n<div class="meta">' + meta + '</div>' : ''}
 </div></div>
-<main><div class="inhoud">
+<div class="romp"><div class="inhoud">
 ${inhoud}
 <p class="disclaimer">${esc(DISCLAIMER)}</p>
-</div></main>
+</div></div>
+</main>
 <footer>
   <nav aria-label="Voettekst">
     <a href="${pre}index.html">Forum</a>
@@ -254,14 +277,14 @@ for (const t of themaKeys) {
   delen.forEach((d, i) => {
     const deel = delen.length > 1 ? ' (deel ' + (i + 1) + ' van ' + delen.length + ')' : '';
     const pad = 'faq/' + d.bestand;
-    const navDelen = delen.length > 1 ? `<nav class="az" aria-label="Delen">${delen.map((x, j) => j === i ? `<span class="az-nu" aria-current="page" style="padding:4px 8px;font-weight:800">Deel ${j + 1}</span>` : `<a href="${x.bestand}">Deel ${j + 1}</a>`).join('')}</nav>\n` : '';
+    const navDelen = plek => delen.length > 1 ? `<nav class="az" aria-label="Delen (${plek})">${delen.map((x, j) => j === i ? `<span class="az-nu" aria-current="page" style="padding:4px 8px;font-weight:800">Deel ${j + 1}</span>` : `<a href="${x.bestand}">Deel ${j + 1}</a>`).join('')}</nav>\n` : '';
     uit[pad] = pagina({
       pre: '../', pad, titel: naam + deel + ' – FAQ – ' + SITE, actief: 'faq',
       beschrijving: kort('Veelgestelde vragen voor financieel adviseurs over ' + naam.toLowerCase() + deel + ': ' + d.items.slice(0, 3).map(f => f.vraag).join(' ')),
       h1: naam + deel, intro: esc(d.items.length + ' vragen en antwoorden uit de FAQ van het Adviesforum.'),
       kruimel: [KR_FORUM, KR_FAQ, [naam + deel, '', BASE + pad]],
-      inhoud: navDelen + d.items.map(f => `<details id="faq-${esc(f.id)}"><summary><h3>${esc(f.vraag)}</h3></summary><div class="antw">${rich(f.antwoord, 'h4')}</div><div class="waar">${[f.bron ? 'Bron: ' + esc(f.bron) : '', (f.tags || []).map(esc).join(', ')].filter(Boolean).join(' · ')}</div></details>`).join('\n') +
-        '\n' + navDelen + `<p style="margin-top:22px"><a class="knop" href="../index.html#faq">Zoek in de FAQ van het forum</a></p>`,
+      inhoud: navDelen('boven') + d.items.map(f => `<details id="faq-${esc(f.id)}"><summary><h2>${esc(f.vraag)}</h2></summary><div class="antw">${rich(f.antwoord, 'h3')}</div><div class="waar">${[f.bron ? 'Bron: ' + esc(f.bron) : '', (f.tags || []).map(esc).join(', ')].filter(Boolean).join(' · ')}</div></details>`).join('\n') +
+        '\n' + navDelen('onder') + `<p style="margin-top:22px"><a class="knop" href="../index.html#faq">Zoek in de FAQ van het forum</a></p>`,
       jsonld: [{ '@context': 'https://schema.org', '@type': 'FAQPage', name: naam + deel, url: BASE + pad, inLanguage: 'nl-NL',
         mainEntity: d.items.map(f => ({ '@type': 'Question', name: f.vraag, acceptedAnswer: { '@type': 'Answer', text: plat(f.antwoord) } })) }]
     });
@@ -291,7 +314,7 @@ uit['begrippen/index.html'] = pagina({
   kruimel: [KR_FORUM, ['Begrippen', '', BASE + 'begrippen/']],
   inhoud: `<nav class="az" aria-label="Alfabet">${letters.map(l => `<a href="#letter-${l === '#' ? 'overig' : l}">${l}</a>`).join('')}</nav>\n` +
     letters.map(l => `<section id="letter-${l === '#' ? 'overig' : l}"><h2>${l}</h2><dl class="begrippen">\n` + begSort.filter(b => letter(b) === l).map(b =>
-      `<dt id="${begId.get(b)}">${esc(b.term)}</dt><dd>${rich(b.uitleg, 'h4')}</dd>`).join('\n') + '\n</dl></section>').join('\n'),
+      `<dt id="${begId.get(b)}">${esc(b.term)}</dt><dd>${rich(b.uitleg, 'h3')}</dd>`).join('\n') + '\n</dl></section>').join('\n'),
   jsonld: [{ '@context': 'https://schema.org', '@type': 'DefinedTermSet', '@id': BASE + 'begrippen/', name: 'Begrippenlijst Adviesforum', url: BASE + 'begrippen/', inLanguage: 'nl-NL',
     hasDefinedTerm: begSort.map(b => ({ '@type': 'DefinedTerm', name: b.term, description: plat(b.uitleg), url: BASE + 'begrippen/#' + begId.get(b), inDefinedTermSet: BASE + 'begrippen/' })) }]
 });

@@ -130,7 +130,7 @@ code{background:var(--vlak);border:1px solid var(--lijn);border-radius:5px;paddi
     <strong>Zet nooit een BSN, klantnaam, adres, polisnummer of andere direct herleidbare klantgegevens in een link.</strong> Gebruik als referentie alleen een intern dossiernummer dat buiten jullie eigen systeem niets zegt, bijvoorbeeld <code>DOS-2026-0412</code>.
     <ul>
       <li>Alles na het <code>#</code> verwerkt de browser zelf: het gaat niet naar de server van het forum en staat niet in de serverlogs. Het staat wel in de browsergeschiedenis van de adviseur en gaat mee als iemand de link doorstuurt of opslaat.</li>
-      <li>De pagina's weigeren een referentie die op een BSN lijkt: 8 of 9 cijfers, ook met spaties, punten of streepjes ertussen. Dat is een vangnet, geen vervanging van deze regel. Let op: daardoor wordt ook een dossiernummer als <code>2026-0412</code> geweigerd (8 cijfers); geef zo'n nummer een letter-voorvoegsel, bijvoorbeeld <code>DOS-2026-0412</code>.</li>
+      <li>De pagina's weigeren een referentie die op een BSN lijkt: 8 of 9 cijfers (ook met spaties, punten of streepjes ertussen) die de elfproef van het BSN doorstaan. Een dossiernummer als 2026-0412 wordt dus wel geaccepteerd. Dat is een vangnet, geen vervanging van deze regel. Let op: daardoor wordt ook een dossiernummer als <code>2026-0412</code> geweigerd (8 cijfers); geef zo'n nummer een letter-voorvoegsel, bijvoorbeeld <code>DOS-2026-0412</code>.</li>
       <li>Het forum slaat niets op van wat je via de link meegeeft: de waarden staan alleen in het formulier op het scherm van de adviseur.</li>
       <li>De geboortedatum bij <a href="#nazorg">nazorg-signalen</a> is een persoonsgegeven. Geef die alleen mee als het nodig is, en nooit samen met een naam.</li>
       <li>Genereer nooit links met <code>#login-…</code>: daarin staat de persoonlijke inlogcode van een adviseur.</li>
@@ -351,7 +351,7 @@ code{background:var(--vlak);border:1px solid var(--lijn);border-radius:5px;paddi
   /* Zelfde regel als de dossierhulpmiddelen: 8 of 9 cijfers (na weghalen van spaties, punten en streepjes) lijkt op een BSN */
   function schoneRef(v) {
     v = String(v == null ? '' : v).replace(/[\u0000-\u001F\u007F]/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 80);
-    if (/^\d{8,9}$/.test(v.replace(/[\s.-]/g, ''))) return null;
+    if ((function(d){d=String(d);if(!/^\d{8,9}$/.test(d))return false;d=('0'+d).slice(-9);var s=0;for(var i=0;i<8;i++)s+=(9-i)*(+d[i]);return (s-(+d[8]))%11===0;})(v.replace(/[\s.-]/g, ''))) return null;
     return v;
   }
   function werkBij() {

@@ -140,13 +140,77 @@ mark{background:var(--geel);color:inherit;padding:0 1px;border-radius:2px}
 @media (max-width:760px){input,select,textarea{font-size:16px!important}}
 a.terug{display:inline-block;padding:8px 0}
 </style>
+<style id="a11y">
+/* Toegankelijkheid en donkere modus (zie docs/toegankelijkheid.md). Staat in een eigen <style>, zodat printvensters licht blijven. */
+.skiplink{position:absolute;left:12px;top:-200px;z-index:10000;background:#141414;color:#fff;padding:10px 16px;border-radius:8px;font-weight:700;text-decoration:none;font-family:Montserrat,system-ui,sans-serif}
+.skiplink:focus{top:12px;outline:3px solid #FFD200;outline-offset:2px}
+main[tabindex="-1"]:focus{outline:none}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus,textarea:focus,summary:focus-visible,[tabindex]:not([tabindex="-1"]):focus-visible{outline:3px solid #141414!important;outline-offset:2px!important}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+@media print{.skiplink{display:none}}
+@media screen and (prefers-color-scheme:dark){
+:root:not([data-theme="light"]){color-scheme:dark}
+:root:not([data-theme="light"]){--geel-zacht:#3f3918;--zwart:#F2F2F2;--tekst:#F2F2F2;--grijs:#BDBDBD;--lijn:#333333;--vlak:#262626;--rood:#e9a29b;--rood-zacht:#3f1a18;--groen:#9de7c1}
+:root:not([data-theme="light"]) body{color:#F2F2F2;background:#141414}
+:root:not([data-theme="light"]) .balk{background:#2A2A2A;color:#fff}
+:root:not([data-theme="light"]) .balk a{color:#fff}
+:root:not([data-theme="light"]) .kop{background:#1E1E1E;color:#F2F2F2;border-bottom:3px solid #FFD200}
+:root:not([data-theme="light"]) .zeshoek{background:#2A2A2A}
+:root:not([data-theme="light"]) .terug{border-bottom:2px solid #8A8A8A}
+:root:not([data-theme="light"]) .kop .stempel{background:#2A2A2A;color:#FFD200}
+:root:not([data-theme="light"]) .zoekbalk input{border:1px solid #333333;background:#1E1E1E;color:#F2F2F2}
+:root:not([data-theme="light"]) .zoekbalk input:focus,:root:not([data-theme="light"]) .filters button:focus-visible,:root:not([data-theme="light"]) .knop:focus-visible,:root:not([data-theme="light"]) .kaart-kop:focus-visible{outline:3px solid rgba(255,210,0,.7)}
+:root:not([data-theme="light"]) .filters button{border:1px solid #333333;background:#1E1E1E;color:#F2F2F2}
+:root:not([data-theme="light"]) .filters button[aria-pressed="true"]{background:#FFD200;border-color:#FFD200;color:#141414}
+:root:not([data-theme="light"]) .statusregel{color:#BDBDBD}
+:root:not([data-theme="light"]) .knop{border:1px solid #FFD200;background:#FFD200;color:#141414}
+:root:not([data-theme="light"]) .knop:hover{background:#FFE04D;color:#141414}
+:root:not([data-theme="light"]) .knop.licht{background:#1E1E1E;color:#F2F2F2;border-color:#333333}
+:root:not([data-theme="light"]) .knop.licht:hover{background:#262626}
+:root:not([data-theme="light"]) .kaart{border:1px solid #333333;background:#1E1E1E}
+:root:not([data-theme="light"]) .kaart.open{border-color:#8A8A8A}
+:root:not([data-theme="light"]) .kaart-kop:hover{background:#262626}
+:root:not([data-theme="light"]) .kaart-kop .cat{color:#BDBDBD}
+:root:not([data-theme="light"]) .kaart-kop .kort{color:#F2F2F2}
+:root:not([data-theme="light"]) .tag{background:#3f3918;color:#f6db8e;border:1px solid #E6BD00}
+:root:not([data-theme="light"]) .tag.grijs{background:#262626;color:#BDBDBD;border-color:#333333}
+:root:not([data-theme="light"]) .pijl{background:#FFD200;color:#141414}
+:root:not([data-theme="light"]) .kaart-body{border-top:1px solid #333333}
+:root:not([data-theme="light"]) .sectie > h3{border-bottom:3px solid #FFD200}
+:root:not([data-theme="light"]) .domein{background:#262626;border-left:4px solid #8A8A8A}
+:root:not([data-theme="light"]) .vinklijst li{border-bottom:1px dashed #333333}
+:root:not([data-theme="light"]) .termijn{background:#3f3918;border-left:4px solid #E6BD00}
+:root:not([data-theme="light"]) .termijn .bron{color:#f6db8e}
+:root:not([data-theme="light"]) .termijn .bron a{color:#f6db8e}
+:root:not([data-theme="light"]) .signalen li{background:#3f1a18;border-left:4px solid #C0392B}
+:root:not([data-theme="light"]) .tegels a{border:1px solid #333333;background:#1E1E1E}
+:root:not([data-theme="light"]) .tegels a:hover{border-color:#8A8A8A}
+:root:not([data-theme="light"]) .tegels span{color:#BDBDBD}
+:root:not([data-theme="light"]) .kaart-acties{border-top:1px solid #333333}
+:root:not([data-theme="light"]) .leeg{border:1px dashed #333333;color:#BDBDBD}
+:root:not([data-theme="light"]) mark{background:#FFD200;color:#141414}
+:root:not([data-theme="light"]) .compliance{background:#3f1a18;border-left:4px solid #C0392B}
+:root:not([data-theme="light"]) .compliance strong{color:#ee9e96}
+:root:not([data-theme="light"]) .voet{color:#BDBDBD}
+:root:not([data-theme="light"]) .voet a{color:#F2F2F2}
+:root:not([data-theme="light"]) a:focus-visible,:root:not([data-theme="light"]) button:focus-visible,:root:not([data-theme="light"]) input:focus,:root:not([data-theme="light"]) input:focus-within,:root:not([data-theme="light"]) select:focus,:root:not([data-theme="light"]) textarea:focus,:root:not([data-theme="light"]) summary:focus-visible,:root:not([data-theme="light"]) [tabindex]:not([tabindex="-1"]):focus-visible{outline-color:#FFD200!important}
+:root:not([data-theme="light"]) .skiplink{background:#FFD200;color:#141414}
+:root:not([data-theme="light"]) [style*="background:#fff"],:root:not([data-theme="light"]) [style*="background:#FFF"]{background:#1E1E1E!important}
+:root:not([data-theme="light"]) [style*="color:#555"]{color:#BDBDBD!important}
+:root:not([data-theme="light"]) [style*="color:#141414"]{color:#F2F2F2!important}
+:root:not([data-theme="light"]) .back-inline{color:#F2F2F2!important;border-bottom-color:#FFD200!important}
+:root:not([data-theme="light"]) .skiplink:focus{outline-color:#F2F2F2}
+}
+</style>
 </head>
 <body>
+<a class="skiplink" href="#inhoud">Naar de inhoud</a>
 
-<div class="balk">
+<nav class="balk" aria-label="Forum">
   <span>Adviesforum &middot; hulpmiddelen voor financieel adviseurs</span>
   <span><a href="index.html">Naar het forum</a></span>
-</div>
+</nav>
 
 <header class="kop">
   <div class="kop-in">
@@ -158,7 +222,7 @@ a.terug{display:inline-block;padding:8px 0}
   </div>
 </header>
 
-<main class="romp">
+<main class="romp" id="inhoud" tabindex="-1">
   <div class="zoekbalk">
     <input type="search" id="zoek" placeholder="Zoek op gebeurtenis, onderwerp of term, bijv. WIA, alimentatie, bouwdepot, AOW" aria-label="Zoek in de levensgebeurtenissen">
     <div class="knoppen">
@@ -172,9 +236,9 @@ a.terug{display:inline-block;padding:8px 0}
   <div class="leeg" id="leeg">Geen levensgebeurtenis gevonden voor deze zoekterm of dit filter.</div>
 </main>
 
-<div class="compliance">
+<aside class="compliance" aria-label="Compliance">
   <strong>Compliance:</strong> deze wegwijzer is een hulpmiddel bij de inventarisatie en vervangt geen klantspecifiek advies. Termijnen en bedragen zijn gecontroleerd op de peildatum bij de vermelde officiële bron; regels en voorwaarden van geldverstrekkers, verzekeraars en pensioenuitvoerders kunnen afwijken en wijzigen. Leg in het dossier vast welke risico's je hebt besproken en welke keuzes de klant maakte. Adviseer alleen over producten waarvoor je een Wft-vergunning hebt.
-</div>
+</aside>
 
 <footer class="voet">
   Adviesforum &middot; collegiale kennisdeling voor financieel adviseurs &middot; <a href="index.html#hulpmiddelen">Alle hulpmiddelen</a> &middot; <a href="rekentools.html">Rekenhulpen</a> &middot; <a href="documentenchecklist.html">Documentenchecklist</a> &middot; <a href="privacy.html">Privacy</a> &middot; <a href="uitnodigen.html">Uitnodigen</a>. Er wordt niets opgeslagen of verstuurd: aangevinkte punten blijven alleen in dit venster staan.
