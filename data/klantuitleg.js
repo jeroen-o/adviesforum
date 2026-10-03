@@ -37,6 +37,8 @@
     bdErfVrij: { t: 'Belastingdienst: vrijstellingen erfbelasting', u: 'https://www.belastingdienst.nl/wps/wcm/connect/nl/erfbelasting/content/vrijstelling-erfbelasting' },
     roVerschilRelatie: { t: 'Rijksoverheid: verschil huwelijk, geregistreerd partnerschap en samenlevingscontract', u: 'https://www.rijksoverheid.nl/vraag-en-antwoord/trouwen-samenlevingscontract-en-geregistreerd-partnerschap/wat-is-het-verschil-tussen-een-huwelijk-geregistreerd-partnerschap-en-samenlevingscontract' },
     roScheiden: { t: 'Rijksoverheid: scheiden of uit elkaar, wat moet ik regelen?', u: 'https://www.rijksoverheid.nl/vraag-en-antwoord/scheiden/checklist-bij-scheiden-of-uit-elkaar-gaan' },
+    apKopieId: { t: 'Autoriteit Persoonsgegevens: identiteitsbewijs en kopie', u: 'https://www.autoriteitpersoonsgegevens.nl/nl/onderwerpen/identificatie/identiteitsbewijs' },
+    roKopieId: { t: 'Rijksoverheid: welke organisaties mogen een kopie van mijn identiteitsbewijs maken?', u: 'https://www.rijksoverheid.nl/onderwerpen/identiteitsfraude/vraag-en-antwoord/ben-ik-verplicht-om-een-kopie-van-mijn-identiteitsbewijs-te-geven-aan-een-bedrijf' },
     roOverlijden: { t: 'Rijksoverheid: overlijden, wat moet u regelen?', u: 'https://www.rijksoverheid.nl/onderwerpen/overlijden/vraag-en-antwoord/checklist-bij-overlijden' },
     svbAnw: { t: 'SVB: voorwaarden nabestaandenuitkering (Anw)', u: 'https://www.svb.nl/nl/anw/wat-zijn-de-voorwaarden/wat-zijn-de-voorwaarden-voor-een-nabestaandenuitkering' },
     roAowLeeftijd: { t: 'Rijksoverheid: AOW-leeftijd', u: 'https://www.rijksoverheid.nl/themas/belastingen-uitkeringen-en-toeslagen/algemene-ouderdomswet-aow/aow-leeftijd' },
@@ -150,26 +152,26 @@
       id: 'wwft-identificatie', cat: 'Advies en kosten',
       titel: 'Waarom vragen wij om je identiteitsbewijs?',
       kort: [
-        'De wet (Wwft) verplicht ons om te controleren wie je bent.',
-        'Wij moeten soms ook vragen waar je geld vandaan komt.',
+        'Bemiddelen wij ook in levensverzekeringen (zoals een overlijdensrisicoverzekering), dan verplicht de wet (Wwft) ons om te controleren wie je bent.',
+        'In andere gevallen vragen wij je identiteitsbewijs omdat de geldverstrekker of verzekeraar dat vereist, en om fraude te voorkomen.',
         'Dit doen we bij iedere klant. Het zegt niets over jou persoonlijk.'
       ],
       uitleg: [
-        'Financiële bedrijven moeten helpen om witwassen en het financieren van terrorisme te voorkomen. Dat staat in de Wwft. Daarom moeten wij vaststellen wie onze klant is. Wij vragen een geldig paspoort, identiteitskaart of rijbewijs en controleren of de foto en de gegevens bij jou passen.',
+        'Financiële bedrijven moeten helpen om witwassen en het financieren van terrorisme te voorkomen. Dat staat in de Wwft. Bemiddelen wij ook in levensverzekeringen (zoals een overlijdensrisicoverzekering), dan verplicht de Wwft ons om vast te stellen wie onze klant is. In andere gevallen vragen wij je identiteitsbewijs omdat de geldverstrekker of verzekeraar dat vereist en om fraude te voorkomen. Wij vragen een geldig paspoort, identiteitskaart of rijbewijs en controleren of de foto en de gegevens bij jou passen.',
         'Soms moeten we meer vragen. Bijvoorbeeld waar het eigen geld voor je woning vandaan komt, zoals spaargeld, een schenking of een erfenis. Of wij vragen of jij (of iemand in je directe omgeving) een belangrijke politieke functie hebt. Dat heet een PEP-controle.',
-        'Wij bewaren een kopie van je identiteitsbewijs en de gegevens van het onderzoek. De wet schrijft voor dat wij deze gegevens een aantal jaren bewaren nadat onze relatie is beëindigd. Kunnen wij je identiteit niet vaststellen, dan mogen wij je niet helpen.'
+        'Wij bewaren alleen een kopie van je identiteitsbewijs als de wet ons dat verplicht, bijvoorbeeld de Wwft. Dan moeten wij de kopie en de gegevens van het onderzoek een aantal jaren bewaren nadat onze relatie is beëindigd. Is er geen wettelijke plicht, dan bekijken wij je identiteitsbewijs alleen, of vragen wij een kopie waarop je BSN en pasfoto zijn afgeschermd. Dat kan bijvoorbeeld met de KopieID-app van de overheid. Kunnen wij je identiteit niet vaststellen, dan kunnen wij je niet helpen.'
       ],
       letop: [
         'Zorg dat je identiteitsbewijs geldig is op het moment van de aanvraag én bij de notaris.',
         'Houd bewijs bij de hand van eigen geld, bijvoorbeeld bankafschriften of een schenkingsovereenkomst.',
-        'Wij gebruiken je kopie alleen voor dit doel.'
+        'Wij gebruiken je kopie alleen voor dit doel. Maak je zelf een kopie, scherm dan je BSN en pasfoto af als wij die niet nodig hebben.'
       ],
       vragen: [
         'Welk identiteitsbewijs mag ik gebruiken?',
         'Welke bewijsstukken hebben jullie nodig voor mijn eigen geld?',
         'Hoe bewaren jullie de kopie van mijn identiteitsbewijs?'
       ],
-      bronnen: [B.wwft, B.afmWwft], peildatum: P,
+      bronnen: [B.wwft, B.afmWwft, B.apKopieId, B.roKopieId], peildatum: P,
       kw: 'wwft identificatie legitimatie paspoort id-bewijs witwassen herkomst vermogen pep cliëntenonderzoek'
     },
 

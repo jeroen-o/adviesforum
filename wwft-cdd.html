@@ -73,6 +73,7 @@ button,input,select,textarea{font-family:inherit}
 .score dt{min-width:0;opacity:.9}
 .score dd{margin:0;font-weight:700;white-space:nowrap}
 .knoppen{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.status{font-size:13px;font-weight:600;color:var(--tekst);margin-top:8px;min-height:1em}
 .knop{border-radius:999px;padding:10px 18px;font-size:14px;font-weight:700;cursor:pointer;border:1px solid var(--zwart);background:var(--zwart);color:#fff}
 .knop:hover{background:#000}
 .knop.licht{background:#fff;color:var(--zwart);border-color:#CFCFCF}
@@ -173,7 +174,7 @@ button,input,select,textarea{font-family:inherit}
     <div class="kaart" id="factoren"></div>
     <div class="score" aria-live="polite">
       <div class="lbl">Uitkomst</div>
-      <div class="groot" id="s-uitkomst">Normaal cliëntenonderzoek</div>
+      <div class="groot" id="s-uitkomst">Nog niet beoordeeld</div>
       <div class="onder" id="s-onder"></div>
       <dl id="s-detail"></dl>
       <ul id="s-redenen"></ul>
@@ -190,6 +191,7 @@ button,input,select,textarea{font-family:inherit}
         <button class="knop" type="button" id="print">Vastleggingsformulier afdrukken</button>
         <button class="knop licht" type="button" id="wis">Alles wissen</button>
       </div>
+      <p class="status" id="status" role="status"></p>
     </div>
     <div class="tabelvak" style="margin-top:6px">
       <table>
@@ -226,12 +228,12 @@ button,input,select,textarea{font-family:inherit}
       <ul>
         <li><strong>Rechtstreekse werking.</strong> Een verordening geldt direct in alle lidstaten. Veel regels die nu in de Wwft staan, komen straks uit de AMLR. Nederland past de eigen wetgeving aan via een implementatiewet (in voorbereiding).</li>
         <li><strong>Europese toezichthouder.</strong> De Anti-Money Laundering Authority (AMLA) in Frankfurt stelt technische standaarden op en coördineert het toezicht.</li>
-        <li><strong>Wie valt eronder.</strong> Bemiddelaars in levensverzekeringen blijven meldingsplichtig. De AMLR noemt daarnaast bemiddelaars in hypothecair en consumptief krediet, maar alleen als zij in verband met de kredietovereenkomst gelden onder zich houden, en met een uitzondering voor bemiddeling onder verantwoordelijkheid van een of meer kredietgevers of kredietbemiddelaars. Een kantoor dat geen klantgelden beheert, valt daar naar de tekst van de verordening niet onder. Hoe dat voor Nederlandse kantoren uitpakt, is nog niet definitief: volg de implementatiewet en de communicatie van de AFM.</li>
+        <li><strong>Wie valt eronder.</strong> Bemiddelaars in levensverzekeringen blijven meldingsplichtig. De AMLR (art. 2, lid 6, onder h) noemt daarnaast bemiddelaars in hypothecair en consumptief krediet, maar alleen als zij in verband met de kredietovereenkomst gelden onder zich houden, en met een uitzondering voor bemiddeling onder verantwoordelijkheid van een of meer kredietgevers of kredietbemiddelaars. Een kantoor dat geen klantgelden beheert, valt daar naar de tekst van de verordening niet onder. Hoe dat voor Nederlandse kantoren uitpakt, is nog niet definitief: volg de implementatiewet en de communicatie van de AFM.</li>
         <li><strong>UBO-drempel.</strong> Uiteindelijk belanghebbende wordt in de AMLR iemand met een belang van 25% <em>of meer</em> (nu in Nederland: meer dan 25%).</li>
         <li><strong>Actualiseren cliëntenonderzoek.</strong> De AMLR geeft vaste maximumtermijnen voor het bijwerken van cliëntgegevens, korter bij een hoger risico.</li>
         <li><strong>Kern blijft gelijk:</strong> cliëntenonderzoek vóór de relatie, UBO vaststellen en verifiëren, ongebruikelijke transacties melden, vastleggen wat je deed en waarom.</li>
       </ul>
-      <div class="blok let-op"><h4>Let op</h4><p>De precieze verplichtingen hangen af van de definitieve teksten, de technische standaarden van AMLA en de Nederlandse implementatiewet. Plan in 2027 een herziening van je procedures en deze checklist.</p></div>
+      <div class="blok let-op"><h4>Let op</h4><p>De AMLR is definitief (Publicatieblad 19 juni 2024) en geldt vanaf 10 juli 2027. Hoe de verplichtingen in de praktijk uitpakken, hangt nog af van de technische standaarden van AMLA en de Nederlandse uitvoeringswetgeving (implementatiewet). Plan in 2027 een herziening van je procedures en deze checklist.</p></div>
     </div>
   </section>
 
@@ -239,16 +241,16 @@ button,input,select,textarea{font-family:inherit}
   <section class="sectie" id="bronnen">
     <h2>Bronnen</h2>
     <ul class="bronnen">
-      <li><a href="https://wetten.overheid.nl/BWBR0024281" rel="noopener">Wet ter voorkoming van witwassen en financieren van terrorisme (Wwft), wetten.overheid.nl</a></li>
-      <li><a href="https://wetten.overheid.nl/BWBR0041193" rel="noopener">Uitvoeringsbesluit Wwft 2018, wetten.overheid.nl</a></li>
-      <li><a href="https://www.afm.nl/nl-nl/professionals/veelgestelde-vragen/wwft-algemeen/wie-wwft" rel="noopener">AFM: welke partijen vallen onder de Wwft?</a></li>
-      <li><a href="https://www.afm.nl/~/profmedia/files/wet-regelgeving/beleidsuitingen/leidraden/herziene-leidraad-wwft-2024.pdf" rel="noopener">AFM: Leidraad Wwft en Sanctiewet (2024)</a></li>
-      <li><a href="https://www.afm.nl/en/sector/themas/voorkomen-witwassen-terrorismefinanciering-naleving-sanctiewet/nieuwe-europese-wetgeving" rel="noopener">AFM: nieuwe Europese AML/CFT-wetgeving</a></li>
-      <li><a href="https://www.dnb.nl/media/fjag2ojs/dnb-sira-gp-2025-nl.pdf" rel="noopener">DNB: Good practices SIRA (2025)</a></li>
-      <li><a href="https://www.dnb.nl/en/sector-information/open-book-supervision/laws-and-eu-regulations/european-amlcft-framework/" rel="noopener">DNB: European AML/CFT framework</a></li>
-      <li><a href="https://www.fiu-nederland.nl/" rel="noopener">FIU-Nederland: melden van ongebruikelijke transacties</a></li>
-      <li><a href="https://www.rijksoverheid.nl/documenten/2015/08/27/nationale-terrorismelijst" rel="noopener">Rijksoverheid: nationale sanctielijst terrorisme</a></li>
-      <li><a href="https://eur-lex.europa.eu/eli/reg/2024/1624/oj" rel="noopener">Verordening (EU) 2024/1624 (AMLR), EUR-Lex</a></li>
+      <li><a href="https://wetten.overheid.nl/BWBR0024282" target="_blank" rel="noopener">Wet ter voorkoming van witwassen en financieren van terrorisme (Wwft), wetten.overheid.nl</a></li>
+      <li><a href="https://wetten.overheid.nl/BWBR0041193" target="_blank" rel="noopener">Uitvoeringsbesluit Wwft 2018, wetten.overheid.nl</a></li>
+      <li><a href="https://www.afm.nl/nl-nl/professionals/veelgestelde-vragen/wwft-algemeen/wie-wwft" target="_blank" rel="noopener">AFM: welke partijen vallen onder de Wwft?</a></li>
+      <li><a href="https://www.afm.nl/~/profmedia/files/wet-regelgeving/beleidsuitingen/leidraden/herziene-leidraad-wwft-2024.pdf" target="_blank" rel="noopener">AFM: Leidraad Wwft en Sanctiewet (2024)</a></li>
+      <li><a href="https://www.afm.nl/en/sector/themas/voorkomen-witwassen-terrorismefinanciering-naleving-sanctiewet/nieuwe-europese-wetgeving" target="_blank" rel="noopener">AFM: nieuwe Europese AML/CFT-wetgeving</a></li>
+      <li><a href="https://www.dnb.nl/media/fjag2ojs/dnb-sira-gp-2025-nl.pdf" target="_blank" rel="noopener">DNB: Good practices SIRA (2025)</a></li>
+      <li><a href="https://www.dnb.nl/en/sector-information/open-book-supervision/laws-and-eu-regulations/european-amlcft-framework/" target="_blank" rel="noopener">DNB: European AML/CFT framework</a></li>
+      <li><a href="https://www.fiu-nederland.nl/" target="_blank" rel="noopener">FIU-Nederland: melden van ongebruikelijke transacties</a></li>
+      <li><a href="https://www.rijksoverheid.nl/documenten/2015/08/27/nationale-terrorismelijst" target="_blank" rel="noopener">Rijksoverheid: nationale sanctielijst terrorisme</a></li>
+      <li><a href="https://eur-lex.europa.eu/eli/reg/2024/1624/oj" target="_blank" rel="noopener">Verordening (EU) 2024/1624 (AMLR), EUR-Lex</a></li>
     </ul>
   </section>
 </main>
@@ -357,15 +359,26 @@ button,input,select,textarea{font-family:inherit}
       ['Geen treffer', 0], ['Mogelijke treffer, nog in onderzoek', 0, 'stop'], ['Bevestigde treffer', 0, 'stop']] }
   ];
   $('factoren').innerHTML = '<div class="raster">' + FACTOREN.map(function (f) {
-    return '<div class="veld"><label for="f-' + f.id + '">' + esc(f.titel) + '</label><select id="f-' + f.id + '">' +
+    return '<div class="veld"><label for="f-' + f.id + '">' + esc(f.titel) + '</label><select id="f-' + f.id + '"><option value="">Kies…</option>' +
       f.opties.map(function (o, i) { return '<option value="' + i + '">' + esc(o[0]) + ' (' + o[1] + ')</option>'; }).join('') + '</select></div>';
   }).join('') + '</div>';
 
   var laatste = null;
   function bereken() {
     var totaal = 0, verplicht = [], stop = [], regels = [];
+    var open = FACTOREN.filter(function (f) { return $('f-' + f.id).value === ''; });
+    if (open.length) {
+      var ondertekst = 'Kies bij elke factor een optie (nog ' + open.length + ' van ' + FACTOREN.length + ' open).';
+      $('s-uitkomst').textContent = 'Nog niet beoordeeld';
+      $('s-onder').textContent = ondertekst;
+      $('s-detail').innerHTML = '';
+      $('s-redenen').innerHTML = ''; $('s-redenen').style.display = 'none';
+      laatste = { totaal: '–', uitkomst: 'Nog niet beoordeeld', onder: ondertekst, redenen: [],
+        regels: FACTOREN.map(function (f) { var v = $('f-' + f.id).value; return v === '' ? [f.titel, 'Niet gekozen', '–'] : [f.titel, f.opties[+v][0], f.opties[+v][1]]; }) };
+      return;
+    }
     FACTOREN.forEach(function (f) {
-      var o = f.opties[+$('f-' + f.id).value || 0];
+      var o = f.opties[+$('f-' + f.id).value];
       totaal += o[1];
       regels.push([f.titel, o[0], o[1]]);
       if (o[2] === 'verplicht') verplicht.push(f.titel + ': ' + o[0]);
@@ -438,7 +451,8 @@ button,input,select,textarea{font-family:inherit}
       '<p class="klein">Bewaar dit formulier bij het klantdossier (bewaartermijn Wwft: vijf jaar na einde relatie of transactie). Bronnen: wetten.overheid.nl (Wwft), afm.nl, dnb.nl, fiu-nederland.nl.</p>' +
       '</body></html>';
     var w = window.open('', '_blank');
-    if (!w) { alert('Je browser blokkeert het printvenster. Sta pop-ups toe voor deze pagina.'); return; }
+    if (!w) { $('status').textContent = 'Je browser blokkeert het printvenster. Sta pop-ups toe voor deze pagina.'; return; }
+    $('status').textContent = '';
     w.document.open(); w.document.write(html); w.document.close();
     w.focus(); setTimeout(function () { try { w.print(); } catch (e) {} }, 300);
   });
@@ -447,7 +461,8 @@ button,input,select,textarea{font-family:inherit}
     document.querySelectorAll('main input[type="checkbox"]').forEach(function (c) { c.checked = false; });
     document.querySelectorAll('main textarea, main input[type="text"]').forEach(function (t) { t.value = ''; });
     document.querySelectorAll('main input[type="radio"]').forEach(function (r) { r.checked = false; });
-    FACTOREN.forEach(function (f) { $('f-' + f.id).value = '0'; });
+    FACTOREN.forEach(function (f) { $('f-' + f.id).value = ''; });
+    $('status').textContent = '';
     $('k-soort').value = 'np'; toonRp(); toonPlicht(); bereken();
   });
 })();

@@ -95,7 +95,7 @@ Concept. Dit artikel volgt de richtlijn en het wetsvoorstel zoals bekend op 2 ok
 
  {id:'k122',cat:'comp',titel:'AMLR en Wwft: wat komt eraan',auteur:'u8',datum:'2026-10-02T10:20:00',herzienVoor:'2027-04-02',bron:null,gecontroleerd:false,
   kw:'AMLR anti-witwasverordening 2024/1624 AMLD6 AMLA Wwft witwassen terrorismefinanciering cliëntenonderzoek UBO melding ongebruikelijke transactie 10 juli 2027 implementatiewet integriteit',
-  links:[{titel:'Verordening (EU) 2024/1624 (EUR-Lex)',url:'https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=OJ:L_202401624'},{titel:'AFM: nieuwe Europese AML/CFT-wetgeving',url:'https://www.afm.nl/en/sector/themas/voorkomen-witwassen-terrorismefinanciering-naleving-sanctiewet/nieuwe-europese-wetgeving'},{titel:'DNB: European AML/CFT framework',url:'https://www.dnb.nl/en/sector-information/open-book-supervision/laws-and-eu-regulations/european-amlcft-framework/'},{titel:'Internetconsultatie Nederlandse implementatie',url:'https://www.internetconsultatie.nl/implementatiewettervoorkomingvanwitwassenenterrorismefinanciering/b1'},{titel:'Wwft (wetten.overheid.nl)',url:'https://wetten.overheid.nl/BWBR0024281'}],
+  links:[{titel:'Verordening (EU) 2024/1624 (EUR-Lex)',url:'https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=OJ:L_202401624'},{titel:'AFM: nieuwe Europese AML/CFT-wetgeving',url:'https://www.afm.nl/en/sector/themas/voorkomen-witwassen-terrorismefinanciering-naleving-sanctiewet/nieuwe-europese-wetgeving'},{titel:'DNB: European AML/CFT framework',url:'https://www.dnb.nl/en/sector-information/open-book-supervision/laws-and-eu-regulations/european-amlcft-framework/'},{titel:'Internetconsultatie Nederlandse implementatie',url:'https://www.internetconsultatie.nl/implementatiewettervoorkomingvanwitwassenenterrorismefinanciering/b1'},{titel:'Wwft (wetten.overheid.nl)',url:'https://wetten.overheid.nl/BWBR0024282'}],
   body:`Op 10 juli 2027 gaan nieuwe Europese regels tegen witwassen en terrorismefinanciering gelden: de anti-witwasverordening (AMLR, Verordening (EU) 2024/1624) en de zesde anti-witwasrichtlijn (AMLD6). Tot die datum blijft de huidige Wwft volledig van toepassing.
 
 ## Wat verandert er in de structuur
@@ -103,6 +103,13 @@ Concept. Dit artikel volgt de richtlijn en het wetsvoorstel zoals bekend op 2 ok
 - Een verordening werkt rechtstreeks in alle lidstaten. Veel regels die nu in de Wwft staan, komen daarom straks rechtstreeks uit de AMLR en hoeven niet meer in Nederlandse wetgeving te staan.
 - Wat overblijft voor de Nederlandse wet is vooral de uitvoering van de richtlijn en de inrichting van toezicht en handhaving. Daarvoor is een implementatiewet in voorbereiding (internetconsultatie).
 - Er komt een Europese toezichthouder: de Anti-Money Laundering Authority (AMLA) in Frankfurt.
+- De AMLR is definitief: gepubliceerd in het Publicatieblad op 19 juni 2024. Hij geldt vanaf 10 juli 2027.
+
+## Wat verandert er inhoudelijk
+
+- Bemiddelaars in levensverzekeringen blijven onder de regels vallen.
+- Hypotheek- en kredietbemiddelaars vallen er volgens art. 2(6)(h) AMLR alleen onder als zij in verband met de kredietovereenkomst gelden van klanten onder zich houden. Bemiddeling onder verantwoordelijkheid van een of meer kredietgevers of kredietbemiddelaars is uitgezonderd.
+- Uiteindelijk belanghebbende (UBO) wordt iemand met een belang van 25% of meer. Nu is dat in Nederland: meer dan 25%.
 
 ## Wat blijft hetzelfde in de kern
 
@@ -121,5 +128,5 @@ Concept. Dit artikel volgt de richtlijn en het wetsvoorstel zoals bekend op 2 ok
 
 ## Let op
 
-Concept. De gedetailleerde verplichtingen hangen af van de definitieve verordeningstekst, de technische standaarden van AMLA en de Nederlandse implementatiewet. Raadpleeg de gelinkte bronnen en je compliance officer voordat je procedures aanpast. Dit artikel is geen juridisch advies.`}
+Concept. De tekst van de AMLR staat vast. Hoe de verplichtingen in de praktijk uitpakken, hangt nog af van de technische standaarden van AMLA en de Nederlandse uitvoeringswetgeving (implementatiewet). Raadpleeg de gelinkte bronnen en je compliance officer voordat je procedures aanpast. Dit artikel is geen juridisch advies.`}
 ]);
