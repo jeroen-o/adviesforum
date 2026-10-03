@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>E-learning – Adviesforum</title>
+<link rel="canonical" href="https://jeroen-o.github.io/adviesforum/elearning.html">
+<meta property="og:url" content="https://jeroen-o.github.io/adviesforum/elearning.html">
+<meta property="og:site_name" content="Adviesforum">
+<meta property="og:locale" content="nl_NL">
+<meta property="og:type" content="website">
+<meta property="og:title" content="E-learning – Adviesforum">
+<meta property="og:description" content="Korte e-learnings van 10 tot 20 minuten voor financieel adviseurs: leennormen, NHG, fundering, verduurzaming, Wwft, zorgplicht, AOV, Wtp, compliance en AI. Zelfstudie, geen PE-punten.">
+<meta name="theme-color" content="#FFD200">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="description" content="Korte e-learnings van 10 tot 20 minuten voor financieel adviseurs: leennormen, NHG, fundering, verduurzaming, Wwft, zorgplicht, AOV, Wtp, compliance en AI. Zelfstudie, geen PE-punten.">
+<style>
+@font-face{font-family:Montserrat;font-style:normal;font-weight:400;font-display:swap;src:url(fonts/montserrat-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:600;font-display:swap;src:url(fonts/montserrat-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:700;font-display:swap;src:url(fonts/montserrat-latin-700-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:800;font-display:swap;src:url(fonts/montserrat-latin-800-normal.woff2) format('woff2')}
+
+:root{
+  --geel:#FFD200;--geel-donker:#E6BD00;--geel-zacht:#FFF6C7;
+  --zwart:#141414;--tekst:#1F1F1F;--grijs:#5E5E5E;--lijn:#E4E4E4;--vlak:#F7F7F5;
+  --rood:#C0392B;--rood-zacht:#FFF1F0;--groen:#1E7A4B;--groen-zacht:#EAF6EF;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:Montserrat,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  color:var(--tekst);background:#fff;line-height:1.55;font-size:15px;-webkit-font-smoothing:antialiased;overflow-wrap:break-word}
+a{color:inherit}
+button,input{font-family:inherit}
+:focus-visible{outline:3px solid var(--zwart);outline-offset:2px}
+[hidden]{display:none!important}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+.balk{background:var(--zwart);color:#fff;font-size:12.5px;padding:8px 24px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.balk a{color:#fff;text-decoration:none;opacity:.88}
+.balk a:hover{opacity:1;text-decoration:underline}
+.balk a:focus-visible{outline-color:var(--geel)}
+
+.kop{background:var(--geel);color:var(--zwart);padding:34px 24px 38px}
+.kop-in{max-width:1180px;margin:0 auto}
+.merk{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.08em;font-size:12px;text-transform:uppercase;margin-bottom:16px}
+.zeshoek{width:22px;height:25px;background:var(--zwart);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);flex:none}
+.terug{display:inline-flex;align-items:center;min-height:40px;font-size:13.5px;font-weight:700;text-decoration:none;border-bottom:2px solid var(--zwart);margin-bottom:14px}
+.kop h1{margin:0 0 10px;font-size:clamp(27px,4.2vw,40px);line-height:1.12;font-weight:800}
+.kop p{margin:0;max-width:66ch;font-size:15.5px}
+.kop .stempel{display:inline-block;margin-top:16px;font-size:12px;font-weight:700;background:var(--zwart);color:var(--geel);padding:5px 11px;border-radius:999px}
+
+.romp{max-width:1180px;margin:0 auto;padding:28px 24px 40px}
+h2.sectie{font-size:22px;font-weight:800;margin:0 0 6px}
+.sub{margin:0 0 16px;color:var(--grijs);font-size:14px;max-width:70ch}
+
+.blok{border-radius:0 10px 10px 0;padding:12px 16px;font-size:14px;margin:0 0 24px}
+.blok h2,.blok h3{margin:0 0 4px;font-size:13px;font-weight:800;letter-spacing:.04em;text-transform:uppercase}
+.blok p{margin:0}.blok p+p{margin-top:6px}
+.blok.let-op{background:var(--geel-zacht);border-left:4px solid var(--geel-donker)}
+.blok.let-op h2{color:#7A5A00}
+
+/* modulekaarten */
+.kaarten{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;margin:0;padding:0;list-style:none}
+.kaart{border:1px solid var(--lijn);border-radius:14px;padding:16px 16px 14px;background:#fff;display:flex;flex-direction:column;min-width:0}
+.kaart .nr{font-size:11.5px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--grijs)}
+.kaart h3{margin:4px 0 6px;font-size:16.5px;line-height:1.3;font-weight:800}
+.kaart p{margin:0 0 12px;font-size:13.5px;color:#3A3A3A;flex:1}
+.meta{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.badge{display:inline-block;font-size:11.5px;font-weight:700;border-radius:999px;padding:3px 10px;line-height:1.4;background:var(--vlak);border:1px solid var(--lijn)}
+.badge.status-niet{background:#fff}
+.badge.status-bezig{background:var(--geel-zacht);border-color:var(--geel-donker);color:#5C4400}
+.badge.status-geslaagd{background:var(--groen-zacht);border-color:#9FD3B5;color:#145233}
+.kaart .knop{align-self:flex-start}
+
+.knop{display:inline-flex;align-items:center;justify-content:center;min-height:44px;border-radius:999px;padding:10px 18px;font-size:14px;font-weight:700;cursor:pointer;border:1px solid var(--zwart);background:var(--zwart);color:#fff;text-decoration:none;line-height:1.2}
+.knop:hover{background:#000}
+.knop.licht{background:#fff;color:var(--zwart);border-color:#BDBDBD}
+.knop.licht:hover{background:var(--vlak)}
+.knop.geel{background:var(--geel);color:var(--zwart);border-color:var(--geel-donker)}
+.knop[aria-disabled="true"]{opacity:.45;pointer-events:none}
+
+/* aanbieders */
+.aanbieders{margin-top:34px}
+.aanb-lijst{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;margin:0;padding:0;list-style:none}
+.aanb{border:1px solid var(--lijn);border-radius:12px;padding:12px 14px;background:var(--vlak);min-width:0}
+.aanb h3{margin:0 0 6px;font-size:15px;font-weight:800}
+.aanb ul{margin:0;padding:0;list-style:none}
+.aanb li a{display:block;min-height:40px;padding:8px 0;font-weight:600;font-size:14px}
+.aanb li span{display:block;font-size:12.5px;color:var(--grijs);margin-top:-4px;padding-bottom:6px}
+
+/* moduleweergave */
+.naar-overzicht{display:inline-flex;align-items:center;min-height:40px;font-size:13.5px;font-weight:700;text-decoration:none;border-bottom:2px solid var(--geel);margin-bottom:10px}
+.naar-overzicht:hover{border-color:var(--zwart)}
+.mod-kop{border-bottom:3px solid var(--geel);padding-bottom:14px;margin-bottom:20px}
+.mod-kop .groep{font-size:11.5px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--grijs)}
+.mod-kop h2{margin:2px 0 10px;font-size:25px;line-height:1.2;font-weight:800}
+.voortgang{height:10px;border-radius:999px;background:var(--lijn);overflow:hidden;max-width:520px}
+.voortgang span{display:block;height:100%;background:var(--zwart);border-radius:999px;transition:width .25s}
+.voortgang-tekst{font-size:12.5px;color:var(--grijs);margin-top:6px}
+
+.mod-romp{display:grid;grid-template-columns:240px minmax(0,1fr);gap:28px;align-items:start}
+.lesnav{border:1px solid var(--lijn);border-radius:14px;padding:10px;background:var(--vlak);position:sticky;top:16px}
+.lesnav h3{font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--grijs);margin:4px 6px 6px;font-weight:800}
+.lesnav ol{list-style:none;margin:0;padding:0}
+.lesnav a{display:flex;align-items:center;gap:8px;min-height:40px;padding:8px 10px;border-radius:8px;text-decoration:none;font-size:13.5px;font-weight:600;line-height:1.3}
+.lesnav a:hover{background:#fff}
+.lesnav a[aria-current="step"]{background:var(--zwart);color:#fff}
+.lesnav .vink{flex:none;width:18px;height:18px;border-radius:50%;border:2px solid #BDBDBD;display:inline-flex;align-items:center;justify-content:center;font-size:11px;font-weight:800}
+.lesnav .vink.ok{background:var(--groen);border-color:var(--groen);color:#fff}
+.lesnav a[aria-current="step"] .vink{border-color:#fff}
+
+.stap{min-width:0;max-width:760px}
+.stap h3.titel{font-size:21px;font-weight:800;line-height:1.25;margin:0 0 12px}
+.stap h3.titel:focus{outline:none}
+.stap h3.titel:focus-visible{outline:3px solid var(--geel);outline-offset:4px}
+.stap p{margin:0 0 12px}
+.stap ul.tekst{margin:0 0 12px;padding-left:20px}
+.stap ul.tekst li{margin-bottom:4px}
+.verder-lezen{border:1px solid var(--lijn);border-radius:12px;padding:12px 16px;margin:18px 0;background:#fff}
+.verder-lezen h4{margin:0 0 6px;font-size:13px;font-weight:800;letter-spacing:.04em;text-transform:uppercase}
+.verder-lezen ul{margin:0;padding:0;list-style:none}
+.verder-lezen li a{display:inline-flex;align-items:center;min-height:40px;font-size:14px;font-weight:600}
+
+fieldset.vraag{border:1px solid var(--lijn);border-radius:12px;padding:14px 16px 12px;margin:0 0 16px;background:var(--vlak);min-width:0}
+fieldset.vraag legend{font-weight:700;font-size:15px;padding:0 4px;max-width:100%}
+.vraag .soort{display:block;font-size:11.5px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--grijs)}
+.optie{display:flex;align-items:flex-start;gap:10px;min-height:44px;padding:10px 12px;margin:6px 0;border:1px solid var(--lijn);border-radius:10px;background:#fff;cursor:pointer;font-size:14.5px}
+.optie input{flex:none;width:20px;height:20px;margin:1px 0 0;accent-color:var(--zwart)}
+.optie:hover{border-color:#9A9A9A}
+.optie.goed{border-color:var(--groen);background:var(--groen-zacht)}
+.optie.fout{border-color:var(--rood);background:var(--rood-zacht)}
+.optie input:disabled{cursor:default}
+.terugkoppeling{margin-top:10px;font-size:14px;border-radius:9px;padding:10px 12px;background:#fff;border-left:4px solid var(--grijs)}
+.terugkoppeling.goed{border-left-color:var(--groen)}
+.terugkoppeling.fout{border-left-color:var(--rood)}
+.terugkoppeling strong{display:block}
+.terugkoppeling a{font-weight:600}
+.melding{font-size:14px;font-weight:600;color:var(--rood);margin:8px 0}
+
+.stapnav{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:24px;padding-top:16px;border-top:1px solid var(--lijn)}
+
+.uitslag{border-radius:14px;padding:18px 20px;margin:18px 0;background:var(--zwart);color:#fff}
+.uitslag .groot{font-size:28px;font-weight:800;color:var(--geel);line-height:1.15;margin:2px 0 4px}
+.uitslag p{margin:0 0 8px}
+.uitslag .knop.licht{border-color:#fff}
+.bewijs{background:#fff;color:var(--tekst);border-radius:10px;padding:14px;margin-top:12px}
+.bewijs label{display:block;font-weight:700;font-size:14px;margin-bottom:6px}
+.bewijs input{width:100%;max-width:420px;padding:10px 12px;min-height:44px;border:1px solid #BDBDBD;border-radius:9px;font-size:16px;margin-bottom:10px}
+.bewijs input:focus{outline:3px solid rgba(255,210,0,.8);outline-offset:1px}
+.bewijs .klein{font-size:12.5px;color:var(--grijs);margin:8px 0 0}
+
+.compliance{max-width:1132px;margin:10px auto 0;background:var(--rood-zacht);border-left:4px solid var(--rood);border-radius:0 10px 10px 0;padding:14px 18px;font-size:14px}
+.compliance strong{color:#A5281B}
+.voet{max-width:1180px;margin:0 auto;padding:24px 24px 40px;font-size:12.5px;color:var(--grijs)}
+.voet a{color:var(--zwart);font-weight:600;display:inline-block;padding:10px 0}
+
+@media (max-width:900px){
+  .mod-romp{grid-template-columns:minmax(0,1fr);gap:16px}
+  .lesnav{position:static}
+  .lesnav ol{display:flex;flex-wrap:wrap;gap:6px}
+  .lesnav a{background:#fff;border:1px solid var(--lijn)}
+  .lesnav .lang{display:none}
+}
+@media (max-width:560px){
+  .balk,.kop{padding-left:16px;padding-right:16px}
+  .romp,.voet{padding-left:16px;padding-right:16px}
+  .compliance{margin-left:16px;margin-right:16px}
+  .mod-kop h2{font-size:21px}
+  .stap h3.titel{font-size:19px}
+  .uitslag .groot{font-size:24px}
+  fieldset.vraag{padding:12px 10px}
+}
+@media print{.balk,.voet,.lesnav,.stapnav{display:none}}
+</style>
+</head>
+<body>
+
+<div class="balk">
+  <span>Adviesforum &middot; hulpmiddelen voor financieel adviseurs</span>
+  <span><a href="index.html">Naar het forum</a></span>
+</div>
+
+<header class="kop">
+  <div class="kop-in">
+    <div class="merk"><span class="zeshoek" aria-hidden="true"></span>Adviesforum &middot; Hulpmiddelen</div>
+    <a class="terug" href="index.html#hulpmiddelen">&larr; Terug naar de hulpmiddelen</a>
+    <h1>E-learning voor de adviespraktijk</h1>
+    <p>Korte modules van 10 tot 20 minuten per onderwerp, gemaakt van de kennisbank en de rekenhulpen van het forum. Elke module heeft leerdoelen, een paar korte lessen met een tussenvraag en een eindtoets.</p>
+    <span class="stempel">Zelfstudie &middot; geen PE-punten &middot; geen Wft-certificaat</span>
+  </div>
+</header>
+
+<main class="romp" id="inhoud">
+  <section id="overzicht" aria-labelledby="kop-modules">
+    <div class="blok let-op">
+      <h2>Wat dit wel en niet is</h2>
+      <p>Deze modules zijn bedoeld om je kennis bij te houden en te toetsen. Ze zijn niet erkend door het CDFD of een andere instantie en leveren <strong>geen PE-punten</strong> en <strong>geen Wft-certificaat</strong> op. Na een geslaagde eindtoets (70% of meer) kun je een deelnamebewijs afdrukken; dat is alleen een bewijs voor je eigen administratie.</p>
+      <p>Je voortgang blijft alleen in dit tabblad bewaard. Er wordt niets opgeslagen of verstuurd; na sluiten of herladen begin je opnieuw.</p>
+    </div>
+
+    <h2 class="sectie" id="kop-modules">Modules</h2>
+    <p class="sub">Peildatum oktober 2026. De inhoud volgt de kennisbankartikelen; controleer bij gebruik in een klantdossier altijd de actuele regels.</p>
+    <ul class="kaarten" id="kaarten"></ul>
+
+    <section class="aanbieders" id="aanbieders" aria-labelledby="kop-aanbieders" hidden>
+      <h2 class="sectie" id="kop-aanbieders">E-learning van aanbieders</h2>
+      <p class="sub">E-learnings van partijen uit het forum. Ze staan op de site van de aanbieder; of een module PE-punten oplevert, bepalen de aanbieder en de erkennende instantie, niet het Adviesforum. Controleer dat bij de aanbieder.</p>
+      <ul class="aanb-lijst" id="aanb-lijst"></ul>
+    </section>
+  </section>
+
+  <section id="module" aria-labelledby="mod-titel" hidden>
+    <a class="naar-overzicht" href="#overzicht">&larr; Alle modules</a>
+    <div class="mod-kop">
+      <div class="groep" id="mod-nr"></div>
+      <h2 id="mod-titel"></h2>
+      <div class="voortgang" role="progressbar" aria-labelledby="voortgang-tekst" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="voortgang"><span style="width:0"></span></div>
+      <div class="voortgang-tekst" id="voortgang-tekst"></div>
+    </div>
+    <div class="mod-romp">
+      <nav class="lesnav" aria-label="Onderdelen van deze module">
+        <h3>Onderdelen</h3>
+        <ol id="lesnav"></ol>
+      </nav>
+      <div class="stap" id="stap"></div>
+    </div>
+  </section>
+</main>
+
+<div class="compliance">
+  <strong>Compliance:</strong> deze e-learnings zijn zelfstudie en vatten de kennisbank van het forum samen. Ze zijn geen erkende PE-activiteit, geven geen recht op PE-punten en vervangen geen Wft-diploma of -certificaat. Het deelnamebewijs is niet gecontroleerd door het Adviesforum en kan niet worden geverifieerd. De inhoud is geen juridisch advies; normen en regels wijzigen, dus controleer de actuele bron voordat je iets in een advies of dossier gebruikt.
+</div>
+
+<footer class="voet">
+  Adviesforum &middot; collegiale kennisdeling voor financieel adviseurs &middot; <a href="index.html#hulpmiddelen">Alle hulpmiddelen</a> &middot; <a href="oefenen.html">Oefenvragen</a> &middot; <a href="uitnodigen.html">Uitnodigen</a> &middot; <a href="privacy.html">Privacy</a>. Er wordt niets opgeslagen of verstuurd: je voortgang staat alleen in het geheugen van dit tabblad.
+</footer>
+
+<script src="data/elearning.js"></script>
+<!-- Optioneel: e-learning van aanbieders (data/aanbieders.js). Ontbreekt of faalt het bestand, dan tonen we niets. -->
+<script src="data/aanbieders.js"></script>
+<script>
+(function () {
+  'use strict';
+  const D = window.ELEARNING;
+  const $ = id => document.getElementById(id);
+  const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const pct = x => Math.round(x * 100);
+
+  if (!D || !Array.isArray(D.modules)) {
+    $('kaarten').innerHTML = '<li>De modules konden niet worden geladen.</li>';
+    return;
+  }
+  const MODS = D.modules;
+  const GRENS = typeof D.slagingsgrens === 'number' ? D.slagingsgrens : 0.7;
+  const TITELS = D.artikelTitels || {};
+
+  /* ---- voortgang: alleen in het geheugen ---- */
+  const S = {};
+  MODS.forEach(m => { S[m.id] = { gezien: new Set(), tussen: {}, toets: null }; });
+  function status(m) {
+    const s = S[m.id];
+    if (s.toets && s.toets.geslaagd) return 'geslaagd';
+    if (s.gezien.size || Object.keys(s.tussen).length || s.toets) return 'bezig';
+    return 'niet';
+  }
+  const STATUSTEKST = { niet: 'Niet gestart', bezig: 'Bezig', geslaagd: 'Geslaagd in deze sessie' };
+
+  /* ---- hulpfuncties ---- */
+  function shuffle(a) {
+    const r = a.slice();
+    for (let i = r.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [r[i], r[j]] = [r[j], r[i]]; }
+    return r;
+  }
+  function tekstHtml(arr) {
+    return (arr || []).map(x => Array.isArray(x)
+      ? '<ul class="tekst">' + x.map(li => '<li>' + esc(li) + '</li>').join('') + '</ul>'
+      : '<p>' + esc(x) + '</p>').join('');
+  }
+  function artikelLink(id) {
+    return '<a href="index.html#artikel-' + esc(id) + '">' + esc(TITELS[id] || ('Kennisbankartikel ' + id)) + '</a>';
+  }
+  function stappen(m) { return m.lessen.length + 2; } /* leerdoelen + lessen + toets */
+  function hashVoor(m, stap) {
+    if (stap <= 0) return '#module-' + m.id;
+    if (stap <= m.lessen.length) return '#module-' + m.id + '-les-' + stap;
+    return '#module-' + m.id + '-toets';
+  }
+  function stapNaam(m, stap) {
+    if (stap <= 0) return 'Leerdoelen';
+    if (stap <= m.lessen.length) return 'Les ' + stap;
+    return 'Eindtoets';
+  }
+  function gezienAantal(m) {
+    const s = S[m.id];
+    return s.gezien.size + (s.toets ? 1 : 0);
+  }
+
+  /* ---- overzicht ---- */
+  function renderOverzicht() {
+    $('kaarten').innerHTML = MODS.map((m, i) => {
+      const st = status(m);
+      const knop = st === 'niet' ? 'Start module' : st === 'bezig' ? 'Verder' : 'Bekijk opnieuw';
+      return '<li class="kaart" id="kaart-' + esc(m.id) + '">' +
+        '<span class="nr">Module ' + (i + 1) + '</span>' +
+        '<h3>' + esc(m.titel) + '</h3>' +
+        '<p>' + esc(m.kort) + '</p>' +
+        '<div class="meta">' +
+          '<span class="badge">' + m.duur + ' min</span>' +
+          '<span class="badge">' + m.lessen.length + ' lessen</span>' +
+          '<span class="badge">Toets: ' + m.toets.length + ' vragen</span>' +
+          '<span class="badge status-' + st + '" data-status="' + st + '">' + STATUSTEKST[st] + '</span>' +
+        '</div>' +
+        '<a class="knop" href="#module-' + esc(m.id) + '" aria-label="' + esc(knop + ': ' + m.titel) + '">' + knop + '</a>' +
+        '</li>';
+    }).join('');
+  }
+
+  /* ---- aanbieders ---- */
+  function renderAanbieders() {
+    try {
+      const A = window.AANBIEDERS;
+      if (!Array.isArray(A)) return;
+      const veilig = u => typeof u === 'string' && /^https?:\/\//i.test(u);
+      const blokken = A.map(a => {
+        /* fictieve voorbeeldaanbieders (demo:true) tonen we niet: hun links zijn geen echt aanbod */
+        if (!a || a.demo === true || !Array.isArray(a.elearning)) return '';
+        const items = a.elearning.filter(e => e && e.titel && veilig(e.url));
+        if (!items.length) return '';
+        const naam = a.naam || a.titel || a.id || 'Aanbieder';
+        return '<li class="aanb"><h3>' + esc(naam) + '</h3><ul>' + items.map(e => {
+          const extra = [];
+          if (e.duur) extra.push(esc(e.duur));
+          if (e.pe === true) extra.push('PE-punten volgens de aanbieder');
+          return '<li><a href="' + esc(e.url) + '" target="_blank" rel="noopener noreferrer">' + esc(e.titel) +
+            '<span class="sr-only"> (opent op de site van ' + esc(naam) + ')</span></a>' +
+            (extra.length ? '<span>' + extra.join(' &middot; ') + '</span>' : '') + '</li>';
+        }).join('') + '</ul></li>';
+      }).filter(Boolean);
+      if (!blokken.length) return;
+      $('aanb-lijst').innerHTML = blokken.join('');
+      $('aanbieders').hidden = false;
+    } catch (e) { /* aanbiedersdata is optioneel */ }
+  }
+
+  /* ---- moduleweergave ---- */
+  let huidig = null; /* { m, stap } */
+
+  function renderModule(m, stap, focus) {
+    const s = S[m.id];
+    const n = stappen(m);
+    if (stap >= 1 && stap <= m.lessen.length) s.gezien.add(stap);
+    if (stap === 0) s.gezien.add(0);
+    huidig = { m: m, stap: stap };
+
+    $('overzicht').hidden = true;
+    $('module').hidden = false;
+    $('mod-nr').textContent = 'Module ' + (MODS.indexOf(m) + 1) + ' van ' + MODS.length + ' · ' + m.duur + ' minuten';
+    $('mod-titel').textContent = m.titel;
+    document.title = m.titel + ' – E-learning – Adviesforum';
+    updateVoortgang(m, stap);
+
+    /* lesnavigatie */
+    const items = [];
+    for (let i = 0; i < n; i++) {
+      const klaar = i === n - 1 ? !!(s.toets && s.toets.geslaagd) : s.gezien.has(i);
+      const naam = i === 0 ? 'Leerdoelen' : i === n - 1 ? 'Eindtoets' : 'Les ' + i;
+      const lang = (i > 0 && i < n - 1) ? '<span class="lang">: ' + esc(m.lessen[i - 1].titel) + '</span>' : '';
+      items.push('<li><a href="' + hashVoor(m, i) + '"' + (i === stap ? ' aria-current="step"' : '') + '>' +
+        '<span class="vink' + (klaar ? ' ok' : '') + '" aria-hidden="true">' + (klaar ? '✓' : '') + '</span>' +
+        '<span>' + naam + lang + (klaar ? '<span class="sr-only"> (afgerond)</span>' : '') + '</span></a></li>');
+    }
+    $('lesnav').innerHTML = items.join('');
+
+    /* inhoud */
+    let html;
+    if (stap === 0) {
+      html = '<h3 class="titel" tabindex="-1">Leerdoelen</h3>' +
+        '<p>' + esc(m.kort) + '</p>' +
+        '<p>Na deze module:</p><ul class="tekst">' + m.leerdoelen.map(d => '<li>' + esc(d) + '</li>').join('') + '</ul>' +
+        '<p>De module bestaat uit ' + m.lessen.length + ' korte lessen, elk met een tussenvraag, en een eindtoets van ' + m.toets.length +
+        ' vragen. Je slaagt bij ' + pct(GRENS) + '% of meer goede antwoorden. Peildatum: ' + esc(datumNl(m.peildatum)) + '.</p>';
+    } else if (stap <= m.lessen.length) {
+      const les = m.lessen[stap - 1];
+      html = '<h3 class="titel" tabindex="-1">Les ' + stap + ': ' + esc(les.titel) + '</h3>' + tekstHtml(les.tekst);
+      const links = (les.artikelen || []).map(id => '<li>' + artikelLink(id) + '</li>')
+        .concat((les.tools || []).map(t => '<li><a href="' + esc(t.url) + '">' + esc(t.titel) + '</a></li>'));
+      if (links.length) {
+        html += '<div class="verder-lezen"><h4>Verder lezen en rekenen</h4><ul>' + links.join('') + '</ul></div>';
+      }
+      if (les.vraag) html += vraagHtml(les.vraag, 'tv', 'Tussenvraag');
+    } else {
+      html = '<h3 class="titel" tabindex="-1">Eindtoets</h3><div id="toets"></div>';
+    }
+    html += '<nav class="stapnav" aria-label="Vorige en volgende">' +
+      (stap > 0 ? '<a class="knop licht" href="' + hashVoor(m, stap - 1) + '">&larr; ' + stapNaam(m, stap - 1) + '</a>' : '<a class="knop licht" href="#overzicht">&larr; Alle modules</a>') +
+      (stap < n - 1 ? '<a class="knop" href="' + hashVoor(m, stap + 1) + '">' + (stap === n - 2 ? 'Naar de eindtoets' : stapNaam(m, stap + 1)) + ' &rarr;</a>' : '<a class="knop licht" href="#overzicht">Naar het overzicht</a>') +
+      '</nav>';
+    $('stap').innerHTML = html;
+
+    if (stap >= 1 && stap <= m.lessen.length && m.lessen[stap - 1].vraag) koppelTussenvraag(m, stap);
+    if (stap === n - 1) renderToets(m);
+
+    if (focus) {
+      const h = $('stap').querySelector('h3.titel');
+      try { $('module').scrollIntoView({ block: 'start' }); } catch (e) { window.scrollTo(0, 0); }
+      if (h) h.focus({ preventScroll: true });
+    }
+  }
+
+  function updateVoortgang(m, stap) {
+    const n = stappen(m);
+    const g = Math.min(n, gezienAantal(m));
+    const p = Math.round(g / n * 100);
+    const bar = $('voortgang');
+    bar.setAttribute('aria-valuenow', String(p));
+    bar.firstElementChild.style.width = p + '%';
+    $('voortgang-tekst').textContent = 'Onderdeel ' + (stap + 1) + ' van ' + n + ' · ' + g + ' van ' + n + ' afgerond (' + p + '%)';
+  }
+
+  function vraagHtml(q, prefix, soort, nr) {
+    const volgorde = shuffle(q.opties.map((o, i) => i));
+    const naam = prefix + (nr == null ? '' : '-' + nr);
+    return '<fieldset class="vraag" data-vraag="' + esc(naam) + '">' +
+      '<legend><span class="soort">' + esc(soort) + '</span>' + esc(q.vraag) + '</legend>' +
+      volgorde.map(i => '<label class="optie"><input type="radio" name="' + esc(naam) + '" value="' + i + '"> <span>' + esc(q.opties[i]) + '</span></label>').join('') +
+      (prefix === 'tv' ? '<button type="button" class="knop licht controleer">Controleer antwoord</button>' : '') +
+      '<div class="terugkoppeling-plek" aria-live="polite"></div>' +
+      '</fieldset>';
+  }
+
+  function toonTerugkoppeling(fs, q, gekozen, bron) {
+    const goed = gekozen === q.juist;
+    fs.querySelectorAll('input').forEach(inp => {
+      inp.disabled = true;
+      const lab = inp.closest('.optie');
+      if (+inp.value === q.juist) lab.classList.add('goed');
+      else if (inp.checked) lab.classList.add('fout');
+    });
+    const knop = fs.querySelector('.controleer');
+    if (knop) knop.hidden = true;
+    fs.querySelector('.terugkoppeling-plek').innerHTML =
+      '<div class="terugkoppeling ' + (goed ? 'goed' : 'fout') + '"><strong>' +
+      (goed ? 'Goed.' : 'Niet goed. Het juiste antwoord is: ' + esc(q.opties[q.juist])) + '</strong>' +
+      esc(q.uitleg) + (bron ? ' <span>Bron: ' + artikelLink(bron) + '.</span>' : '') + '</div>';
+    return goed;
+  }
+
+  function koppelTussenvraag(m, stap) {
+    const q = m.lessen[stap - 1].vraag;
+    const fs = $('stap').querySelector('fieldset.vraag');
+    const knop = fs.querySelector('.controleer');
+    knop.addEventListener('click', () => {
+      const k = fs.querySelector('input:checked');
+      const plek = fs.querySelector('.terugkoppeling-plek');
+      if (!k) { plek.innerHTML = '<p class="melding">Kies eerst een antwoord.</p>'; return; }
+      S[m.id].tussen[stap] = toonTerugkoppeling(fs, q, +k.value);
+      updateVoortgang(m, stap);
+    });
+  }
+
+  /* ---- eindtoets ---- */
+  function renderToets(m) {
+    const plek = $('toets');
+    plek.innerHTML = '<p>' + m.toets.length + ' meerkeuzevragen. Je slaagt bij ' + pct(GRENS) + '% of meer. Beantwoord alle vragen en kies dan ‘Toets nakijken’. Na het nakijken zie je bij elke vraag een uitleg.</p>' +
+      '<form id="toets-form" novalidate>' +
+      m.toets.map((q, i) => vraagHtml(q, 'et', 'Vraag ' + (i + 1) + ' van ' + m.toets.length, i)).join('') +
+      '<div id="toets-melding" aria-live="assertive"></div>' +
+      '<button type="submit" class="knop" id="nakijken">Toets nakijken</button>' +
+      '</form><div id="uitslag" aria-live="polite"></div>';
+    $('toets-form').addEventListener('submit', ev => { ev.preventDefault(); nakijken(m); });
+  }
+
+  function nakijken(m) {
+    const sets = Array.from($('toets-form').querySelectorAll('fieldset.vraag'));
+    const leeg = sets.filter(fs => !fs.querySelector('input:checked'));
+    if (leeg.length) {
+      $('toets-melding').innerHTML = '<p class="melding">Nog ' + leeg.length + (leeg.length === 1 ? ' vraag' : ' vragen') + ' zonder antwoord. Beantwoord alle vragen.</p>';
+      const eerste = leeg[0].querySelector('input');
+      if (eerste) eerste.focus();
+      return;
+    }
+    $('toets-melding').innerHTML = '';
+    let goed = 0;
+    sets.forEach((fs, i) => {
+      const q = m.toets[i];
+      if (toonTerugkoppeling(fs, q, +fs.querySelector('input:checked').value, q.bron)) goed++;
+    });
+    $('nakijken').hidden = true;
+    const totaal = m.toets.length;
+    const fractie = goed / totaal;
+    const geslaagd = fractie >= GRENS;
+    const vorige = S[m.id].toets;
+    S[m.id].toets = { goed: goed, totaal: totaal, pct: pct(fractie), geslaagd: geslaagd || !!(vorige && vorige.geslaagd), datum: new Date(),
+      laatste: { goed: goed, totaal: totaal, pct: pct(fractie), geslaagd: geslaagd } };
+    if (vorige && vorige.geslaagd && !geslaagd) {
+      /* eerder geslaagd in deze sessie: bewaar de geslaagde score voor het bewijs */
+      S[m.id].toets.goed = vorige.goed; S[m.id].toets.totaal = vorige.totaal; S[m.id].toets.pct = vorige.pct; S[m.id].toets.datum = vorige.datum;
+    }
+    const u = $('uitslag');
+    u.innerHTML = '<div class="uitslag" id="uitslag-blok" tabindex="-1">' +
+      '<p>Jouw score</p><div class="groot" id="score">' + goed + ' van ' + totaal + ' goed (' + pct(fractie) + '%)</div>' +
+      '<p>' + (geslaagd ? 'Geslaagd. De grens is ' + pct(GRENS) + '%.' : 'Nog niet geslaagd. De grens is ' + pct(GRENS) + '%. Lees de uitleg bij de vragen en de lessen nog eens door, en probeer het opnieuw.') + '</p>' +
+      (geslaagd ? bewijsFormulier(m) : '') +
+      '<p style="margin-top:12px"><button type="button" class="knop licht" id="opnieuw">Toets opnieuw maken</button></p>' +
+      '</div>';
+    $('opnieuw').addEventListener('click', () => { renderToets(m); const f = $('toets-form').querySelector('input'); if (f) f.focus(); });
+    if (geslaagd) $('bewijs-knop').addEventListener('click', () => openBewijs(m));
+    updateVoortgang(m, huidig.stap);
+    renderLesnavVink(m);
+    const blok = $('uitslag-blok');
+    try { blok.scrollIntoView({ block: 'start' }); } catch (e) { /* oude browser */ }
+    blok.focus({ preventScroll: true });
+  }
+
+  function renderLesnavVink(m) {
+    const links = $('lesnav').querySelectorAll('a');
+    const laatste = links[links.length - 1];
+    if (laatste && S[m.id].toets && S[m.id].toets.geslaagd) {
+      const v = laatste.querySelector('.vink'); v.classList.add('ok'); v.textContent = '✓';
+    }
+  }
+
+  function bewijsFormulier(m) {
+    return '<div class="bewijs">' +
+      '<label for="bewijs-naam">Je naam op het deelnamebewijs</label>' +
+      '<input id="bewijs-naam" type="text" autocomplete="name" maxlength="80">' +
+      '<div id="bewijs-melding" aria-live="polite"></div>' +
+      '<button type="button" class="knop geel" id="bewijs-knop">Deelnamebewijs openen</button>' +
+      '<p class="klein">Het bewijs opent in een nieuw venster om af te drukken of als pdf te bewaren. Het levert geen erkende PE-punten op en is geen officieel Wft-certificaat. Je naam wordt nergens opgeslagen.</p>' +
+      '</div>';
+  }
+
+  function datumNl(d) {
+    const x = d instanceof Date ? d : new Date(d + 'T12:00:00');
+    try { return x.toLocaleDateString('nl-NL', { day: 'numeric', month: 'long', year: 'numeric' }); }
+    catch (e) { return x.getDate() + '-' + (x.getMonth() + 1) + '-' + x.getFullYear(); }
+  }
+
+  function openBewijs(m) {
+    const naam = ($('bewijs-naam').value || '').trim();
+    const melding = $('bewijs-melding');
+    if (!naam) {
+      melding.innerHTML = '<p class="melding">Vul je naam in.</p>';
+      $('bewijs-naam').focus();
+      return;
+    }
+    const t = S[m.id].toets;
+    const w = window.open('', '_blank');
+    if (!w) {
+      melding.innerHTML = '<p class="melding">Je browser blokkeerde het nieuwe venster. Sta pop-ups voor deze pagina toe en probeer het opnieuw.</p>';
+      return;
+    }
+    melding.innerHTML = '';
+    const doc = '<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">' +
+      '<title>Deelnamebewijs – ' + esc(m.titel) + '</title><style>' +
+      'body{font-family:Montserrat,Arial,sans-serif;color:#141414;margin:0;padding:32px 20px;background:#fff}' +
+      '.vel{max-width:720px;margin:0 auto;border:3px solid #141414;border-radius:14px;padding:32px 28px}' +
+      '.balk{height:10px;background:#FFD200;border-radius:6px;margin-bottom:24px}' +
+      'h1{font-size:26px;margin:0 0 4px}.sub{color:#5E5E5E;margin:0 0 24px;font-size:14px}' +
+      'dl{display:grid;grid-template-columns:140px 1fr;gap:8px 16px;margin:0 0 24px;font-size:15px}dt{font-weight:700}dd{margin:0}' +
+      '.let{background:#FFF1F0;border-left:4px solid #C0392B;padding:12px 14px;font-size:14px;font-weight:700}' +
+      '.klein{font-size:12px;color:#5E5E5E;margin-top:16px}button{margin-top:20px;font:inherit;font-weight:700;padding:10px 18px;border-radius:999px;border:1px solid #141414;background:#141414;color:#fff;cursor:pointer;min-height:44px}' +
+      '@media print{button{display:none}body{padding:0}}@media (max-width:480px){dl{grid-template-columns:1fr}}' +
+      '</style></head><body><div class="vel"><div class="balk"></div>' +
+      '<h1>Deelnamebewijs</h1><p class="sub">Adviesforum &middot; e-learning voor financieel adviseurs</p>' +
+      '<dl><dt>Naam</dt><dd id="b-naam">' + esc(naam) + '</dd>' +
+      '<dt>Module</dt><dd id="b-module">' + esc(m.titel) + '</dd>' +
+      '<dt>Datum</dt><dd>' + esc(datumNl(t.datum)) + '</dd>' +
+      '<dt>Score eindtoets</dt><dd id="b-score">' + t.goed + ' van ' + t.totaal + ' goed (' + t.pct + '%), slagingsgrens ' + pct(GRENS) + '%</dd>' +
+      '<dt>Peildatum inhoud</dt><dd>' + esc(datumNl(m.peildatum)) + '</dd></dl>' +
+      '<p class="let" id="b-disclaimer">' + esc(D.disclaimer || 'Deelnamebewijs Adviesforum – geen erkende PE-punten en geen officieel Wft-certificaat') + '</p>' +
+      '<p class="klein">Zelfstudie op basis van de kennisbank van het Adviesforum. De naam is ingevuld door de deelnemer; het Adviesforum registreert geen deelname en kan dit bewijs niet verifiëren.</p>' +
+      '<button type="button" onclick="window.print()">Afdrukken of als pdf bewaren</button>' +
+      '</div></body></html>';
+    w.document.open();
+    w.document.write(doc);
+    w.document.close();
+  }
+
+  /* ---- routering via de hash ---- */
+  function leesHash() {
+    const h = decodeURIComponent((location.hash || '').slice(1));
+    let r = /^module-(.+?)-les-(\d+)$/.exec(h);
+    if (r) {
+      const m = MODS.find(x => x.id === r[1]);
+      if (m) return { m: m, stap: Math.min(Math.max(1, +r[2]), m.lessen.length) };
+    }
+    r = /^module-(.+)-toets$/.exec(h);
+    if (r) {
+      const m = MODS.find(x => x.id === r[1]);
+      if (m) return { m: m, stap: m.lessen.length + 1 };
+    }
+    r = /^module-(.+)$/.exec(h);
+    if (r) {
+      const m = MODS.find(x => x.id === r[1]);
+      if (m) return { m: m, stap: 0 };
+    }
+    return null;
+  }
+
+  function route(focus) {
+    const r = leesHash();
+    if (r) { renderModule(r.m, r.stap, focus); return; }
+    const vorige = huidig;
+    huidig = null;
+    document.title = 'E-learning – Adviesforum';
+    $('module').hidden = true;
+    $('overzicht').hidden = false;
+    renderOverzicht();
+    if (focus && vorige) {
+      const k = document.querySelector('#kaart-' + vorige.m.id + ' .knop');
+      if (k) { k.focus({ preventScroll: true }); try { k.closest('.kaart').scrollIntoView({ block: 'center' }); } catch (e) { /* */ } }
+    }
+  }
+
+  window.addEventListener('hashchange', () => route(true));
+  route(false);
+
+  /* aanbieders: het script staat vóór dit blok, dus is al geladen of mislukt */
+  renderAanbieders();
+
+  /* alleen voor tests en hulpmiddelen: lees de voortgang (niet opgeslagen) */
+  window.ELEARNING_STATUS = () => MODS.map(m => ({ id: m.id, status: status(m) }));
+})();
+</script>
+</body>
+</html>
