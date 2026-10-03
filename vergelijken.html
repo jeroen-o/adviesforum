@@ -11,9 +11,9 @@
 <meta name="theme-color" content="#FFD200">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="manifest" href="manifest.webmanifest">
-<meta name="description" content="Zet partijen uit de Partijenwegwijzer per thema naast elkaar: verhuisregeling, boetevrij aflossen, renteafspraken, zzp-inkomen, senioren en meer, elk kenmerk met bronlink. Geen productvergelijking en geen advies.">
+<meta name="description" content="Zet partijen uit de Aanbiederwegwijzer per thema naast elkaar: verhuisregeling, boetevrij aflossen, renteafspraken, zzp-inkomen, senioren en meer, elk kenmerk met bronlink. Geen productvergelijking en geen advies.">
 <meta property="og:title" content="Partijen naast elkaar – Adviesforum">
-<meta property="og:description" content="Kenmerken uit de Partijenwegwijzer per thema naast elkaar, met bronlink. Geen productvergelijking en geen advies.">
+<meta property="og:description" content="Kenmerken uit de Aanbiederwegwijzer per thema naast elkaar, met bronlink. Geen productvergelijking en geen advies.">
 <meta property="og:type" content="website">
 <style>
 @font-face{font-family:Montserrat;font-style:normal;font-weight:400;font-display:swap;src:url(fonts/montserrat-latin-400-normal.woff2) format('woff2')}
@@ -227,11 +227,11 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
   <div class="kop-in">
     <div class="merk"><span class="zeshoek" aria-hidden="true"></span>Adviesforum &middot; Hulpmiddelen</div>
     <div class="terugs">
-      <a class="terug" href="partijen.html">&larr; Terug naar de Partijenwegwijzer</a>
+      <a class="terug" href="partijen.html">&larr; Terug naar de Aanbiederwegwijzer</a>
       <a class="terug" href="index.html#hulpmiddelen">Alle hulpmiddelen</a>
     </div>
     <h1>Partijen naast elkaar per thema</h1>
-    <p>Kies een productcategorie en de thema's die u wilt zien. U krijgt een matrix met per partij wat de Partijenwegwijzer over dat thema vastlegde, steeds met een link naar de bron van de partij zelf. Handig als startpunt voor uw eigen uitzoekwerk; niet als eindpunt.</p>
+    <p>Kies een productcategorie en de thema's die u wilt zien. U krijgt een matrix met per partij wat de Aanbiederwegwijzer over dat thema vastlegde, steeds met een link naar de bron van de partij zelf. Handig als startpunt voor uw eigen uitzoekwerk; niet als eindpunt.</p>
     <span class="stempel" id="stempel">Geen productvergelijking &middot; geen advies &middot; controleer altijd de actuele voorwaarden</span>
   </div>
 </header>
@@ -240,7 +240,7 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
   <section class="disclaimer" role="note" aria-labelledby="disc-kop">
     <h2 id="disc-kop">Lees dit eerst</h2>
     <ul>
-      <li><strong>Geen productvergelijking en geen advies.</strong> Dit overzicht zet openbare kenmerken uit de Partijenwegwijzer naast elkaar. Het rangschikt niets, is niet volledig en is geen vergelijkingsinstrument in de zin van de Wft. Het vervangt uw eigen onderzoek naar de passendheid van een product voor de klant niet.</li>
+      <li><strong>Geen productvergelijking en geen advies.</strong> Dit overzicht zet openbare kenmerken uit de Aanbiederwegwijzer naast elkaar. Het rangschikt niets, is niet volledig en is geen vergelijkingsinstrument in de zin van de Wft. Het vervangt uw eigen onderzoek naar de passendheid van een product voor de klant niet.</li>
       <li><strong>Gegevens kunnen verouderd zijn.</strong> Alles is gebaseerd op openbare bronnen met de peildatum <span id="peil">2 oktober 2026</span>. Voorwaarden, acceptatiebeleid en regelingen veranderen, soms zonder aankondiging.</li>
       <li><strong>Controleer altijd de actuele voorwaarden en de acceptatiegids van de partij</strong> (via het adviseursportaal of de actuele productvoorwaarden) voordat u iets in een advies of offerte gebruikt. Een lege cel betekent alleen dat het thema niet in de wegwijzer staat, niet dat de partij het niet aanbiedt.</li>
     </ul>
@@ -296,7 +296,7 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
 </main>
 
 <footer class="voet">
-  <p>Bron van alle gegevens: de <a href="partijen.html">Partijenwegwijzer</a> van het Adviesforum, samengesteld uit openbare informatie van de partijen zelf en vakpers. Rentes, premies en tijdelijke acties staan er bewust niet in. Dit overzicht is geen advies, geen productvergelijking en niet volledig; de bronpagina kan sinds de peildatum zijn gewijzigd. <span style="white-space:nowrap">&middot; <a href="uitnodigen.html">Uitnodigen</a></span></p>
+  <p>Bron van alle gegevens: de <a href="partijen.html">Aanbiederwegwijzer</a> van het Adviesforum, samengesteld uit openbare informatie van de partijen zelf en vakpers. Rentes, premies en tijdelijke acties staan er bewust niet in. Dit overzicht is geen advies, geen productvergelijking en niet volledig; de bronpagina kan sinds de peildatum zijn gewijzigd. <span style="white-space:nowrap">&middot; <a href="uitnodigen.html">Uitnodigen</a></span></p>
 </footer>
 
 <script src="data/partijen.js"></script>
@@ -432,7 +432,7 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
     wrap.appendChild(el('span','pnaam',p.naam));
     wrap.appendChild(el('span','ptype',TYPES[p.type]||p.type||''));
     var st=statusBlok(p);if(st)wrap.appendChild(st);
-    var l=el('a','plink','In de wegwijzer →');l.href='partijen.html#partij-'+p._slug;l.title='Open '+p.naam+' in de Partijenwegwijzer';wrap.appendChild(l);
+    var l=el('a','plink','In de wegwijzer →');l.href='partijen.html#partij-'+p._slug;l.title='Open '+p.naam+' in de Aanbiederwegwijzer';wrap.appendChild(l);
   }
 
   function teken(){
@@ -508,7 +508,7 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
       regels.push(rij.map(csvVeld).join(';'));
     });
     regels.push('');
-    regels.push(csvVeld('Geen productvergelijking en geen advies. Bron: Partijenwegwijzer Adviesforum, peildatum '+$('peil').textContent+'. Gegevens kunnen verouderd zijn; controleer altijd de actuele voorwaarden en acceptatiegids van de partij.'));
+    regels.push(csvVeld('Geen productvergelijking en geen advies. Bron: Aanbiederwegwijzer Adviesforum, peildatum '+$('peil').textContent+'. Gegevens kunnen verouderd zijn; controleer altijd de actuele voorwaarden en acceptatiegids van de partij.'));
     return '﻿'+regels.join('\r\n');
   }
 
@@ -530,7 +530,7 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
     h+='<h1>Partijen per thema: '+esc(cat)+'</h1>';
     h+='<p class="sub">'+zichtbaar.length+' partijen · thema\'s: '+esc(themas.map(themaLabel).join(', '))+(zoek.value.trim()?' · zoekterm: “'+esc(zoek.value.trim())+'”':'')+
       (verbergGestopt.checked?' · gestopte partijen verborgen':'')+' · peildatum '+esc($('peil').textContent)+'</p>';
-    h+='<div class="disc"><strong>Geen productvergelijking en geen advies.</strong> Openbare kenmerken uit de Partijenwegwijzer van het Adviesforum; niet volledig. Gegevens kunnen verouderd zijn: controleer altijd de actuele voorwaarden en acceptatiegids van de partij. Een lege cel betekent alleen dat het thema niet in de wegwijzer staat.</div>';
+    h+='<div class="disc"><strong>Geen productvergelijking en geen advies.</strong> Openbare kenmerken uit de Aanbiederwegwijzer van het Adviesforum; niet volledig. Gegevens kunnen verouderd zijn: controleer altijd de actuele voorwaarden en acceptatiegids van de partij. Een lege cel betekent alleen dat het thema niet in de wegwijzer staat.</div>';
     h+='<table><thead><tr><th>Partij</th>'+themas.map(function(t){return '<th>'+esc(themaLabel(t))+'</th>';}).join('')+'</tr></thead><tbody>';
     zichtbaar.forEach(function(p){
       h+='<tr><th><strong>'+esc(p.naam)+'</strong><br>'+esc(TYPES[p.type]||p.type||'')+

@@ -3,14 +3,14 @@
  * Vergelijkende artikelen over voorwaarden van geldverstrekkers en pensioenuitvoerders
  * (verhuisregeling, boetevrij aflossen, renteafspraken, zzp/flex, duurzaamheid, Wtp).
  * Gebaseerd op openbare adviseurs- en productinformatie zoals gevonden op 2 oktober 2026;
- * de per-partij details staan met bronlink in data/partijen.js (Partijenwegwijzer).
+ * de per-partij details staan met bronlink in data/partijen.js (Aanbiederwegwijzer).
  * Bewust geen rentes, premies of tijdelijke acties. Zelfde velden als kennisbank.js.
  * Alle artikelen zijn concept (gecontroleerd:false) tot goedkeuring door compliance.
  */
 window.KENNISBANK=(window.KENNISBANK||[]).concat([
  {id:'k40',cat:'hyp',titel:'Verhuisregelingen per geldverstrekker: termijnen en valkuilen',auteur:'u5',datum:'2026-10-02T12:00:00',herzienVoor:'2027-04-02',bron:null,gecontroleerd:false,
   kw:'verhuisregeling meeneemregeling rente meenemen verhuizen doorstromer basisrente restant rentevaste periode termijn 6 maanden 3 maanden 12 maanden melden vooraf dubbele hypotheek energielabel',
-  links:[{titel:'Partijenwegwijzer (intern)',url:'partijen.html'},{titel:'ABN AMRO Intermediair: verhuisregeling',url:'https://intermediair.abnamro.nl/verhuisregeling-hypotheek'},{titel:'Argenta: de verhuisregeling voor adviseurs',url:'https://www.argenta.nl/adviseur/de-argenta-verhuisregeling'},{titel:'Florius: verhuisregeling',url:'https://www.florius.nl/situatie-wijzigt/verhuizen/verhuisregeling'},{titel:'Triodos: hypotheek meenemen',url:'https://www.triodos.nl/hypotheken/verhuisregeling'},{titel:'Woonnu: groene meeneemregeling',url:'https://woonnu.nl/groene-meeneemregeling/'}],
+  links:[{titel:'Aanbiederwegwijzer (intern)',url:'partijen.html'},{titel:'ABN AMRO Intermediair: verhuisregeling',url:'https://intermediair.abnamro.nl/verhuisregeling-hypotheek'},{titel:'Argenta: de verhuisregeling voor adviseurs',url:'https://www.argenta.nl/adviseur/de-argenta-verhuisregeling'},{titel:'Florius: verhuisregeling',url:'https://www.florius.nl/situatie-wijzigt/verhuizen/verhuisregeling'},{titel:'Triodos: hypotheek meenemen',url:'https://www.triodos.nl/hypotheken/verhuisregeling'},{titel:'Woonnu: groene meeneemregeling',url:'https://woonnu.nl/groene-meeneemregeling/'}],
   body:`Bij een doorstromer met een lage contractrente is de verhuisregeling vaak het eerste wat je bekijkt. Bijna elke geldverstrekker heeft er een, maar de uitvoering verschilt sterk. Dit artikel zet de verschillen op een rij die in de praktijk tot problemen leiden.
 
 ## Wat gaat er mee?
@@ -55,7 +55,7 @@ Concept. De termijnen en voorwaarden komen uit openbare adviseurs- en klantinfor
 
  {id:'k41',cat:'hyp',titel:'Boetevrij aflossen en de vergoeding voor renteverlies vergeleken',auteur:'u5',datum:'2026-10-02T12:00:00',herzienVoor:'2027-04-02',bron:null,gecontroleerd:false,
   kw:'boetevrij aflossen vergoedingsvrij aflossen boeterente vergoeding renteverlies 10% 15% 20% 25% eigen middelen herfinanciering oversluiten renteherzieningsdatum verkoop overlijden',
-  links:[{titel:'Partijenwegwijzer (intern)',url:'partijen.html'},{titel:'Besluit Gedragstoezicht financiële ondernemingen (wetten.overheid.nl)',url:'https://wetten.overheid.nl/BWBR0020421'},{titel:'Rabobank: vergoeding vervroegd aflossen',url:'https://www.rabobank.nl/particulieren/hypotheek/service/vergoeding-vervroegd-aflossen/'},{titel:'Florius: vergoedingsrente',url:'https://www.florius.nl/hypotheek/vergoedingsrente'},{titel:'Merius Hypotheekgids',url:'https://meriushypotheken.nl/app/uploads/2024/07/Merius-Hypotheekgids-2024-01.pdf'}],
+  links:[{titel:'Aanbiederwegwijzer (intern)',url:'partijen.html'},{titel:'Besluit Gedragstoezicht financiële ondernemingen (wetten.overheid.nl)',url:'https://wetten.overheid.nl/BWBR0020421'},{titel:'Rabobank: vergoeding vervroegd aflossen',url:'https://www.rabobank.nl/particulieren/hypotheek/service/vergoeding-vervroegd-aflossen/'},{titel:'Florius: vergoedingsrente',url:'https://www.florius.nl/hypotheek/vergoedingsrente'},{titel:'Merius Hypotheekgids',url:'https://meriushypotheken.nl/app/uploads/2024/07/Merius-Hypotheekgids-2024-01.pdf'}],
   body:`Extra aflossen is voor veel klanten een belangrijk onderdeel van het hypotheekplan, en bij oversluiten bepaalt de vergoeding voor renteverlies of het rendabel is. De vrije ruimte verschilt per verstrekker meer dan klanten denken.
 
 ## Drie soorten vrije ruimte
@@ -95,7 +95,7 @@ Concept. Percentages en vrijstellingen komen uit openbare product- en klantinfor
 
  {id:'k42',cat:'hyp',titel:'Rentemiddeling, rentebedenktijd en offerterente: wat kan waar?',auteur:'u5',datum:'2026-10-02T12:00:00',herzienVoor:'2027-04-02',bron:null,gecontroleerd:false,
   kw:'rentemiddeling renteafkoop tussentijds rente aanpassen opslag rentebedenktijd dagrente offerterente dalrente offertegeldigheid renteaanbod acceptatietermijn verlengen bouwdepot',
-  links:[{titel:'Partijenwegwijzer (intern)',url:'partijen.html'},{titel:'ABN AMRO: rentemiddeling',url:'https://www.abnamro.nl/nl/prive/hypotheken/mijn-hypotheek/hypotheekrente-wijzigen/rentemiddeling.html'},{titel:'ING: rente tussentijds aanpassen',url:'https://www.ing.nl/particulier/hypotheek/jouw-hypotheek/tussentijds-aanpassen'},{titel:'Argenta hypotheekgids',url:'https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf'},{titel:'Lloyds Bank: hypotheekaanbod',url:'https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-hypotheekaanbod'}],
+  links:[{titel:'Aanbiederwegwijzer (intern)',url:'partijen.html'},{titel:'ABN AMRO: rentemiddeling',url:'https://www.abnamro.nl/nl/prive/hypotheken/mijn-hypotheek/hypotheekrente-wijzigen/rentemiddeling.html'},{titel:'ING: rente tussentijds aanpassen',url:'https://www.ing.nl/particulier/hypotheek/jouw-hypotheek/tussentijds-aanpassen'},{titel:'Argenta hypotheekgids',url:'https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf'},{titel:'Lloyds Bank: hypotheekaanbod',url:'https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-hypotheekaanbod'}],
   body:`Rentevragen komen in twee situaties terug: een bestaande klant wil van een hoge contractrente af, of een nieuwe klant wil weten hoe lang een renteaanbod vaststaat. In beide gevallen verschillen de mogelijkheden per verstrekker.
 
 ## Rentemiddeling versus afkoop
@@ -138,7 +138,7 @@ Concept. Termijnen en mogelijkheden komen uit openbare informatie (peildatum okt
 
  {id:'k43',cat:'hyp',titel:'Zzp en flexibel inkomen: acceptatie per geldverstrekker',auteur:'u5',datum:'2026-10-02T12:00:00',herzienVoor:'2027-04-02',bron:null,gecontroleerd:false,
   kw:'zzp zelfstandige ondernemer inkomensverklaring rekenexpert Overviewz Pentrax Raadhuys Zakelijk Inkomen arbeidsmarktscan perspectiefverklaring flexwerker tijdelijk contract starter ondernemer halfjaarcijfers',
-  links:[{titel:'Partijenwegwijzer (intern)',url:'partijen.html'},{titel:'ABN AMRO Intermediair: arbeidsmarktscan',url:'https://intermediair.abnamro.nl/arbeidsmarktscan'},{titel:'ING Intermediairs: ondernemers',url:'https://intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/ondernemer.html'},{titel:'Rabobank intermediairs: ondernemer in privé',url:'https://www.rabobank.nl/bedrijven/intermediairs/hypotheek/ondernemer-in-prive'},{titel:'Lloyds Bank hypotheekgids: inkomen',url:'https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-inkomen'},{titel:'NHG',url:'https://www.nhg.nl'}],
+  links:[{titel:'Aanbiederwegwijzer (intern)',url:'partijen.html'},{titel:'ABN AMRO Intermediair: arbeidsmarktscan',url:'https://intermediair.abnamro.nl/arbeidsmarktscan'},{titel:'ING Intermediairs: ondernemers',url:'https://intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/ondernemer.html'},{titel:'Rabobank intermediairs: ondernemer in privé',url:'https://www.rabobank.nl/bedrijven/intermediairs/hypotheek/ondernemer-in-prive'},{titel:'Lloyds Bank hypotheekgids: inkomen',url:'https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-inkomen'},{titel:'NHG',url:'https://www.nhg.nl'}],
   body:`Ondernemers en flexwerkers vormen een groeiende groep klanten. De leennormen zijn voor iedereen gelijk, maar de manier waarop het toetsinkomen wordt vastgesteld en wie welke route accepteert, verschilt.
 
 ## Zelfstandig ondernemers
@@ -172,7 +172,7 @@ Concept. De beschreven routes komen uit openbare adviseurs- en klantinformatie (
 
  {id:'k44',cat:'hyp',titel:'Duurzaamheidskorting en extra lenen voor energiebesparing',auteur:'u5',datum:'2026-10-02T12:00:00',herzienVoor:'2027-04-02',bron:null,gecontroleerd:false,
   kw:'duurzaamheidskorting energielabel labelkorting extra lenen energiebesparende maatregelen verduurzamingshypotheek bouwdepot energiebespaarlening EEMI EEML energielabel registreren rente per label',
-  links:[{titel:'Partijenwegwijzer (intern)',url:'partijen.html'},{titel:'Woonnu: groene meeneemregeling',url:'https://woonnu.nl/groene-meeneemregeling/'},{titel:'a.s.r.: Verduurzamingshypotheek',url:'https://www.asr.nl/hypotheek/verduurzamingshypotheek'},{titel:'NN: extra hypotheek voor verduurzamen',url:'https://www.nn.nl/Particulier/Hypotheken/Verbouwen/Extra-hypotheek-voor-verduurzamen.htm'},{titel:'Impact Hypotheken: een duurzamere woning',url:'https://impacthypotheken.nl/een-duurzamere-woning/'},{titel:'RVO: energielabel woningen',url:'https://www.rvo.nl'}],
+  links:[{titel:'Aanbiederwegwijzer (intern)',url:'partijen.html'},{titel:'Woonnu: groene meeneemregeling',url:'https://woonnu.nl/groene-meeneemregeling/'},{titel:'a.s.r.: Verduurzamingshypotheek',url:'https://www.asr.nl/hypotheek/verduurzamingshypotheek'},{titel:'NN: extra hypotheek voor verduurzamen',url:'https://www.nn.nl/Particulier/Hypotheken/Verbouwen/Extra-hypotheek-voor-verduurzamen.htm'},{titel:'Impact Hypotheken: een duurzamere woning',url:'https://impacthypotheken.nl/een-duurzamere-woning/'},{titel:'RVO: energielabel woningen',url:'https://www.rvo.nl'}],
   body:`Duurzaamheid speelt op twee manieren mee in het hypotheekadvies: via de rente (korting of opslag op basis van het energielabel) en via de leenruimte (extra lenen voor energiebesparende maatregelen). Beide verschillen per verstrekker.
 
 ## Rente afhankelijk van het energielabel
@@ -213,7 +213,7 @@ Concept. Kortingen en opslagen zijn bewust niet in bedragen of percentages opgen
 
  {id:'k45',cat:'pens',titel:'Pensioenfondsen en de Wtp-overgang: wat de adviseur moet weten',auteur:'u5',datum:'2026-10-02T12:00:00',herzienVoor:'2027-04-02',bron:null,gecontroleerd:false,
   kw:'Wtp Wet toekomst pensioenen transitie invaren waardeoverdracht partnerpensioen ABP PFZW PMT PME bpfBOUW Zwitserleven solidaire premieregeling flexibele premieregeling 2026 2027 2028 carve-out',
-  links:[{titel:'Partijenwegwijzer (intern)',url:'partijen.html'},{titel:'ABP: vernieuwd pensioenstelsel',url:'https://www.abp.nl/over-abp/het-vernieuwde-pensioenstelsel'},{titel:'PMT: waardeoverdracht',url:'https://www.pmt.nl/nieuw-pensioenstelsel/waardeoverdracht/'},{titel:'bpfBOUW: waardeoverdracht naar ons',url:'https://www.bpfbouw.nl/uw-situatie-verandert/werk/waardeoverdracht/waardeoverdracht-naar-ons'},{titel:'PFZW: je nieuwe pensioenregeling',url:'https://www.pfzw.nl/over-pfzw/nieuwe-regels/je-nieuwe-pensioenregeling.html'},{titel:'Rijksoverheid: nieuwe pensioenregels',url:'https://www.rijksoverheid.nl/onderwerpen/pensioen'}],
+  links:[{titel:'Aanbiederwegwijzer (intern)',url:'partijen.html'},{titel:'ABP: vernieuwd pensioenstelsel',url:'https://www.abp.nl/over-abp/het-vernieuwde-pensioenstelsel'},{titel:'PMT: waardeoverdracht',url:'https://www.pmt.nl/nieuw-pensioenstelsel/waardeoverdracht/'},{titel:'bpfBOUW: waardeoverdracht naar ons',url:'https://www.bpfbouw.nl/uw-situatie-verandert/werk/waardeoverdracht/waardeoverdracht-naar-ons'},{titel:'PFZW: je nieuwe pensioenregeling',url:'https://www.pfzw.nl/over-pfzw/nieuwe-regels/je-nieuwe-pensioenregeling.html'},{titel:'Rijksoverheid: nieuwe pensioenregels',url:'https://www.rijksoverheid.nl/onderwerpen/pensioen'}],
   body:`De Wet toekomst pensioenen (Wtp) geldt sinds 1 juli 2023; pensioenregelingen moeten uiterlijk op 1 januari 2028 aan de nieuwe regels voldoen. Grote fondsen stappen op verschillende momenten over. Dat heeft gevolgen voor hypotheek- en financieel planningsadvies, vooral rond waardeoverdracht en nabestaandendekking.
 
 ## Wie stapt wanneer over?

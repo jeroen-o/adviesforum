@@ -13,7 +13,7 @@
  *   nhg[], trhk[], aandacht[], docs[], inkomen (tab-id in inkomensbepaling.html, optioneel),
  *   partijen[]: {p: exacte naam in data/partijen.js, m: tekstfragment van het kenmerk}. De pagina zoekt tekst en
  *     bronlink op in window.PARTIJEN; alleen kenmerken die daar staan worden getoond. Geen eigen claims over banken.
- *   geenPartijen: toelichting als de Partijenwegwijzer en kennisbank niets over de situatie vermelden.
+ *   geenPartijen: toelichting als de Aanbiederwegwijzer en kennisbank niets over de situatie vermelden.
  *   bronnen[]: [label, url]. Interne links (index.html#artikel-kNN, *.html) en officiële externe bronnen.
  *
  * Geen rentes, premies, kortingen of acties. Acceptatiegidsen wijzigen vaak: altijd de actuele gids raadplegen.
@@ -188,7 +188,7 @@ window.ACCEPTATIEWIJZER = {
       'Geldig identiteitsbewijs en verblijfsdocument, BSN'
     ],
     partijen: [],
-    geenPartijen: 'De Partijenwegwijzer en de kennisbank noemen geen geldverstrekker met een gepubliceerde regeling voor buitenlands inkomen of expats. Raadpleeg de acceptatiegids van de beoogde verstrekker.',
+    geenPartijen: 'De Aanbiederwegwijzer en de kennisbank noemen geen geldverstrekker met een gepubliceerde regeling voor buitenlands inkomen of expats. Raadpleeg de acceptatiegids van de beoogde verstrekker.',
     bronnen: [
       ['NHG V&N 2026-1, C.3.1, C.3.4 en C.6.4 (pdf)', 'documenten/nhg-voorwaarden-normen-2026.pdf'],
       ['Kennisbank k96: Hypotheek en buitenland', 'index.html#artikel-k96'],
@@ -221,7 +221,7 @@ window.ACCEPTATIEWIJZER = {
       'Bij betalen: hetzelfde, voor de berekening van de verplichting'
     ],
     partijen: [],
-    geenPartijen: 'De Partijenwegwijzer en de kennisbank noemen geen geldverstrekker-specifieke regels voor alimentatie-inkomen.',
+    geenPartijen: 'De Aanbiederwegwijzer en de kennisbank noemen geen geldverstrekker-specifieke regels voor alimentatie-inkomen.',
     bronnen: [
       ['NHG V&N 2026-1, C.7.14 (pdf)', 'documenten/nhg-voorwaarden-normen-2026.pdf'],
       ['Kennisbank k10: Leennormen 2026 (overige verplichtingen)', 'index.html#artikel-k10'],
@@ -256,7 +256,7 @@ window.ACCEPTATIEWIJZER = {
       'Inkomensdocumenten zoals bij de gekozen inkomensroute'
     ],
     partijen: [],
-    geenPartijen: 'De Partijenwegwijzer en de kennisbank vermelden geen geldverstrekker-specifiek beleid voor verblijfsstatus. Raadpleeg de acceptatiegids.',
+    geenPartijen: 'De Aanbiederwegwijzer en de kennisbank vermelden geen geldverstrekker-specifiek beleid voor verblijfsstatus. Raadpleeg de acceptatiegids.',
     bronnen: [
       ['NHG V&N 2026-1, C.3.1 (pdf)', 'documenten/nhg-voorwaarden-normen-2026.pdf'],
       ['Kennisbank k70: NHG 2026 in het kort', 'index.html#artikel-k70'],
@@ -293,7 +293,7 @@ window.ACCEPTATIEWIJZER = {
       'Bij Wsnp: vonnis en verklaring schone lei'
     ],
     partijen: [],
-    geenPartijen: 'De Partijenwegwijzer en de kennisbank noemen geen geldverstrekker-specifiek BKR-beleid. Raadpleeg de acceptatiegids van de beoogde verstrekker.',
+    geenPartijen: 'De Aanbiederwegwijzer en de kennisbank noemen geen geldverstrekker-specifiek BKR-beleid. Raadpleeg de acceptatiegids van de beoogde verstrekker.',
     bronnen: [
       ['NHG V&N 2026-1, C.3.4 en C.7.16 (pdf)', 'documenten/nhg-voorwaarden-normen-2026.pdf'],
       ['Kennisbank k93: BKR en hypotheek', 'index.html#artikel-k93'],
@@ -324,7 +324,7 @@ window.ACCEPTATIEWIJZER = {
       'Bij herberekening: brief van DUO met het nieuwe maandbedrag'
     ],
     partijen: [],
-    geenPartijen: 'De weging is wettelijk (Trhk) en geldt voor alle verstrekkers; de Partijenwegwijzer noemt geen afwijkend beleid.',
+    geenPartijen: 'De weging is wettelijk (Trhk) en geldt voor alle verstrekkers; de Aanbiederwegwijzer noemt geen afwijkend beleid.',
     bronnen: [
       ['Kennisbank k10: Leennormen 2026 (factortabel)', 'index.html#artikel-k10'],
       ['Kennisbank k94: Studieschuld en hypotheek', 'index.html#artikel-k94'],
@@ -361,7 +361,7 @@ window.ACCEPTATIEWIJZER = {
       'Kasstroomoverzicht en fiscale uitgangspunten'
     ],
     partijen: [],
-    geenPartijen: 'De Partijenwegwijzer en de kennisbank noemen geen geldverstrekker met een gepubliceerde regeling voor recreatiewoningen. Gespecialiseerde verstrekkers bestaan, maar daarover staat hier geen bevestigde informatie.',
+    geenPartijen: 'De Aanbiederwegwijzer en de kennisbank noemen geen geldverstrekker met een gepubliceerde regeling voor recreatiewoningen. Gespecialiseerde verstrekkers bestaan, maar daarover staat hier geen bevestigde informatie.',
     bronnen: [
       ['NHG V&N 2026-1, C.3.2 en C.4.2 (pdf)', 'documenten/nhg-voorwaarden-normen-2026.pdf'],
       ['Kennisbank k91: Tweede woning, vakantiewoning en verhuur', 'index.html#artikel-k91'],
@@ -432,7 +432,7 @@ window.ACCEPTATIEWIJZER = {
       'Taxatierapport (waarde met erfpacht) en eventueel aanbod tot overstap of afkoop'
     ],
     partijen: [],
-    geenPartijen: 'De Partijenwegwijzer noemt geen geldverstrekker-specifiek erfpachtbeleid. Kennisbank k90 wijst erop dat sommige verstrekkers eisen stellen aan het resterende tijdvak of tijdelijke erfpacht niet accepteren; controleer de acceptatiegids.',
+    geenPartijen: 'De Aanbiederwegwijzer noemt geen geldverstrekker-specifiek erfpachtbeleid. Kennisbank k90 wijst erop dat sommige verstrekkers eisen stellen aan het resterende tijdvak of tijdelijke erfpacht niet accepteren; controleer de acceptatiegids.',
     bronnen: [
       ['NHG V&N 2026-1, C.4.5, C.5.3.1 en C.7.2 (pdf)', 'documenten/nhg-voorwaarden-normen-2026.pdf'],
       ['Kennisbank k90: Erfpacht en hypotheek', 'index.html#artikel-k90'],
@@ -469,7 +469,7 @@ window.ACCEPTATIEWIJZER = {
       'Opgave liggeld, huur of precario'
     ],
     partijen: [],
-    geenPartijen: 'De Partijenwegwijzer en de kennisbank noemen geen geldverstrekker met gepubliceerd beleid voor woonboten of woonwagens.',
+    geenPartijen: 'De Aanbiederwegwijzer en de kennisbank noemen geen geldverstrekker met gepubliceerd beleid voor woonboten of woonwagens.',
     bronnen: [
       ['NHG V&N 2026-1, C.3.2, C.4.2, C.4.4 en C.7.16 (pdf)', 'documenten/nhg-voorwaarden-normen-2026.pdf'],
       ['Kennisbank k71: Wijzigingen NHG 2025-2026', 'index.html#artikel-k71'],
@@ -763,7 +763,7 @@ window.ACCEPTATIEWIJZER = {
       'Berekening eigenwoningreserve (bij overwaarde uit een vorige woning)'
     ],
     partijen: [],
-    geenPartijen: 'De Partijenwegwijzer en de kennisbank noemen geen geldverstrekker-specifieke regels voor ongelijke inbreng.',
+    geenPartijen: 'De Aanbiederwegwijzer en de kennisbank noemen geen geldverstrekker-specifieke regels voor ongelijke inbreng.',
     bronnen: [
       ['NHG V&N 2026-1, C.3.2 en D.1.2 (pdf)', 'documenten/nhg-voorwaarden-normen-2026.pdf'],
       ['Kennisbank k28: Huwelijksgoederenrecht, samenlevingscontract en scheiding', 'index.html#artikel-k28'],

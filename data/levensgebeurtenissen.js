@@ -775,7 +775,7 @@
     {t:'Rekenhulp: meeneemregeling', url:'rekentools.html#hypotheek-meenemen', d:'Rente meenemen bij verhuizen'},
     {t:'Rekenhulp: benodigd eigen geld', url:'rekentools.html#eigen-geld-nodig', d:'Eigen inbreng bij aankoop'},
     {t:'Rekenhulp: past deze woning?', url:'rekentools.html#haalbaarheid-woning', d:'Snelle haalbaarheid'},
-    {t:'Partijenwegwijzer', url:'partijen.html', d:'Verhuisregelingen per geldverstrekker'}
+    {t:'Aanbiederwegwijzer', url:'partijen.html', d:'Verhuisregelingen per geldverstrekker'}
    ],
    bronnen:['verhuizing','vorigeWoning','nieuweWoningLeeg','tweeWoningen','startersvrijstelling','toeslagKoop','nhgvn','leidraad']
   },
@@ -1210,7 +1210,7 @@
     {t:'Restschuld bij pensioen', url:'restschuld-pensioen.html', d:'Schuld en woonlast'},
     {t:'Uitvaartscan', url:'scan-uitvaart.html', d:'Dekking uitvaart'},
     {t:'Aflossingsvrije hypotheekscan', url:'scan-aflossingsvrij.html', d:'Einddatum en plan'},
-    {t:'Partijenwegwijzer', url:'partijen.html', d:'Partijen met seniorenproducten'},
+    {t:'Aanbiederwegwijzer', url:'partijen.html', d:'Partijen met seniorenproducten'},
     {t:'Periodieke nazorgcheck', url:'nazorg-check.html', d:'Vervolgcontact plannen'}
    ],
    bronnen:['leidraad','aowAanvragen','aowLeeftijd','mpo']

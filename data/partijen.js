@@ -1,4 +1,4 @@
-// Partijenwegwijzer: openbare informatie die geldverstrekkers, verzekeraars en pensioenuitvoerders voor adviseurs publiceren.
+// Aanbiederwegwijzer: openbare informatie die geldverstrekkers, verzekeraars en pensioenuitvoerders voor adviseurs publiceren.
 // Peildatum 3 oktober 2026. Elke bron-URL kwam voor in een zoekresultaat; geen rentes, premies of tijdgebonden acties.
 // Optioneel: status/statusBron (fusie, label gestopt) en per kenmerk een thema (verhuisregeling, boetevrij aflossen, enz.).
 // Types: bank, geldverstrekker, verzekeraar, pensioenverzekeraar, pensioenfonds, ppi, beleggingsinstelling, kredietverstrekker.

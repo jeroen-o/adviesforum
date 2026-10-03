@@ -223,7 +223,7 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
 
 <aside class="compliance" aria-label="Compliance">
   <p><strong>Let op (zorgplicht):</strong> acceptatiegidsen en productvoorwaarden van geldverstrekkers wijzigen vaak, soms per maand. Controleer altijd de actuele acceptatiegids van de gekozen geldverstrekker en de actuele NHG Voorwaarden &amp; Normen voordat je een aanvraag indient of de klant iets toezegt, en leg vast welke versie je hebt geraadpleegd.</p>
-  <p>Deze wijzer bevat bewust geen rentes, kortingen, premies of acties. Bij "Geldverstrekker-afhankelijk" staan alleen partijen waarvan de Partijenwegwijzer of de kennisbank een bron over de situatie vermeldt; dat iets ontbreekt, betekent niet dat een partij de situatie niet accepteert.</p>
+  <p>Deze wijzer bevat bewust geen rentes, kortingen, premies of acties. Bij "Geldverstrekker-afhankelijk" staan alleen partijen waarvan de Aanbiederwegwijzer of de kennisbank een bron over de situatie vermeldt; dat iets ontbreekt, betekent niet dat een partij de situatie niet accepteert.</p>
 </aside>
 
 <main class="romp" id="inhoud" tabindex="-1">
@@ -243,7 +243,7 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
     <a href="inkomensbepaling.html"><b>Inkomensbepaling</b><span>Toetsinkomen per inkomenssoort</span></a>
     <a href="leennormen-2026.html"><b>Leennormen 2026</b><span>Financieringslast, DUO-weging, energielabel</span></a>
     <a href="nhg-check.html"><b>NHG-check</b><span>Snelle toets aan de NHG-voorwaarden</span></a>
-    <a href="partijen.html"><b>Partijenwegwijzer</b><span>Voorwaarden per geldverstrekker met bron</span></a>
+    <a href="partijen.html"><b>Aanbiederwegwijzer</b><span>Voorwaarden per geldverstrekker met bron</span></a>
     <a href="documentenchecklist.html"><b>Documentenchecklist</b><span>Stukken voor de aanvraag</span></a>
     <a href="erfpacht.html"><b>Erfpacht</b><span>Canon, afkoop en lasten</span></a>
   </div>
@@ -298,13 +298,13 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
     }
     h += '<div class="blok gv"><h3>Geldverstrekker-afhankelijk</h3>';
     if(pk.length){
-      h += '<p class="uitleg">Wat deze partijen volgens de Partijenwegwijzer over deze situatie publiceren. Geen volledige lijst en geen oordeel; controleer de actuele acceptatiegids.</p><ul>';
+      h += '<p class="uitleg">Wat deze partijen volgens de Aanbiederwegwijzer over deze situatie publiceren. Geen volledige lijst en geen oordeel; controleer de actuele acceptatiegids.</p><ul>';
       pk.forEach(function(k){
         h += '<li><b><a href="partijen.html#partij-' + esc(k.slug) + '">' + esc(k.naam) + '</a></b>: ' + esc(k.tekst) + ' <span class="bron">(bron: ' + link(domein(k.bron), k.bron) + ')</span></li>';
       });
       h += '</ul>';
     } else {
-      h += '<p class="uitleg" style="margin:0">' + esc(s.geenPartijen || 'Geen partij-specifieke informatie in de Partijenwegwijzer. Raadpleeg de acceptatiegids van de beoogde geldverstrekker.') + '</p>';
+      h += '<p class="uitleg" style="margin:0">' + esc(s.geenPartijen || 'Geen partij-specifieke informatie in de Aanbiederwegwijzer. Raadpleeg de acceptatiegids van de beoogde geldverstrekker.') + '</p>';
     }
     h += '</div>';
     h += '<div class="blok bronnen"><h3>Bronnen</h3><ul>' + s.bronnen.map(function(b){ return '<li>' + link(b[0], b[1]) + '</li>'; }).join('') + '</ul></div>';
@@ -439,7 +439,7 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
 
   if(!PARTIJEN.length){
     var n = document.createElement('p'); n.className = 'leeg'; n.style.display = 'block';
-    n.textContent = 'De Partijenwegwijzer kon niet worden geladen; de geldverstrekkerinformatie ontbreekt daarom.';
+    n.textContent = 'De Aanbiederwegwijzer kon niet worden geladen; de geldverstrekkerinformatie ontbreekt daarom.';
     lijst.parentNode.insertBefore(n, lijst);
   }
   filter();
