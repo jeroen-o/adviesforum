@@ -10,11 +10,11 @@
 <meta property="og:locale" content="nl_NL">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Oefenen voor PE en Wft – Adviesforum">
-<meta property="og:description" content="Eigen oefenvragen voor financieel adviseurs: Wft Basis, hypothecair krediet, inkomen, pensioen, vermogen, consumptief krediet en schade particulier. Geen officiële examenvragen.">
+<meta property="og:description" content="Eigen oefenvragen en een indicatief proefexamen voor financieel adviseurs: Wft Basis, hypothecair krediet, inkomen, pensioen, vermogen, consumptief krediet, schade particulier, schade zakelijk en zorgverzekeringen. Geen officiële CDFD-vragen.">
 <meta name="theme-color" content="#FFD200">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="manifest" href="manifest.webmanifest">
-<meta name="description" content="Eigen oefenvragen voor financieel adviseurs: Wft Basis, hypothecair krediet, inkomen, pensioen, vermogen, consumptief krediet en schade particulier. Geen officiële examenvragen.">
+<meta name="description" content="Eigen oefenvragen en een indicatief proefexamen voor financieel adviseurs: Wft Basis, hypothecair krediet, inkomen, pensioen, vermogen, consumptief krediet, schade particulier, schade zakelijk en zorgverzekeringen. Geen officiële CDFD-vragen.">
 <style>
 @font-face{font-family:Montserrat;font-style:normal;font-weight:400;font-display:swap;src:url(fonts/montserrat-latin-400-normal.woff2) format('woff2')}
 @font-face{font-family:Montserrat;font-style:normal;font-weight:500;font-display:swap;src:url(fonts/montserrat-latin-500-normal.woff2) format('woff2')}
@@ -146,7 +146,26 @@ button,input,select{font-family:inherit}
 }
 /* Mobiel: tikdoelen en leesbaarheid */
 @media (max-width:760px){input,select,textarea{font-size:16px!important}}
-a.terug{display:inline-block;padding:8px 0}
+a.terug{display:inline-block;padding:10px 0}
+.balk a{display:inline-block;padding:12px 0}
+.voet a{display:inline-block;padding:11px 0}
+.balk{padding-top:0;padding-bottom:0;align-items:center}
+.pil{min-height:44px}
+.knop{min-height:44px}
+.keuze{min-height:44px}
+.keuze:has(input:disabled){opacity:.45;cursor:not-allowed}
+.optie{min-height:48px}
+.soort{display:inline-block;font-size:11px;font-weight:700;border:1px solid var(--lijn);border-radius:999px;padding:2px 8px;margin-left:6px;vertical-align:middle;color:var(--grijs);background:#fff;text-transform:none;letter-spacing:0}
+.examen-info{border:1px solid var(--geel-donker);background:var(--geel-zacht);border-radius:12px;padding:12px 16px;font-size:14px;margin-top:10px}
+.examen-info p{margin:0}.examen-info p+p{margin-top:6px}
+.examen-info strong{font-weight:800}
+.timer{font-variant-numeric:tabular-nums;font-weight:800;color:var(--zwart);background:var(--geel);border-radius:999px;padding:3px 10px}
+.timer.krap{background:var(--rood);color:#fff}
+.cesuur{border-radius:0 10px 10px 0;padding:12px 16px;margin-bottom:20px;font-size:14.5px}
+.cesuur.goed{background:var(--groen-zacht);border-left:4px solid var(--groen)}
+.cesuur.fout{background:var(--rood-zacht);border-left:4px solid var(--rood)}
+.cesuur p{margin:0}.cesuur p+p{margin-top:6px}
+.select{font-family:inherit;font-size:16px;min-height:44px;border:1px solid #CFCFCF;border-radius:10px;padding:8px 12px;background:#fff;max-width:100%}
 </style>
 </head>
 <body>
@@ -161,14 +180,14 @@ a.terug{display:inline-block;padding:8px 0}
     <div class="merk"><span class="zeshoek" aria-hidden="true"></span>Adviesforum &middot; Hulpmiddelen</div>
     <a class="terug" href="index.html#hulpmiddelen">&larr; Terug naar de hulpmiddelen</a>
     <h1>Oefenen voor PE en Wft</h1>
-    <p>Houd je kennis scherp met <span id="totaal">eigen</span> meerkeuzevragen over Wft Basis, hypothecair krediet, inkomen, pensioen, vermogen, consumptief krediet en schade particulier. Bij elke vraag lees je waarom het juiste antwoord juist is, met een verwijzing naar de kennisbank of een officiële bron.</p>
-    <span class="stempel">Oefenmateriaal &middot; geen officiële examenvragen &middot; peildatum oktober 2026</span>
+    <p>Houd je kennis scherp met <span id="totaal">eigen</span> meerkeuzevragen over Wft Basis, hypothecair krediet, inkomen, pensioen, vermogen, consumptief krediet, schade particulier, schade zakelijk en zorgverzekeringen. Bij elke vraag lees je waarom het juiste antwoord juist is, met een verwijzing naar de kennisbank of een officiële bron. Of doe een indicatief proefexamen met timer.</p>
+    <span class="stempel">Eigen oefenvragen, geen officiële CDFD-vragen &middot; peildatum oktober 2026</span>
   </div>
 </header>
 
 <main class="romp">
   <div class="disclaimer" role="note">
-    <p><strong>Let op: dit is oefenmateriaal.</strong> Deze vragen zijn door het Adviesforum zelf opgesteld en zijn geen officiële examenvragen van het CDFD of van een andere examenorganisatie. Ze zeggen niets over de inhoud of het niveau van een PE- of Wft-examen.</p>
+    <p><strong>Eigen oefenvragen, geen officiële CDFD-vragen.</strong> Deze vragen zijn door het Adviesforum zelf opgesteld op basis van de onderwerpen in de toetstermen, de kennisbank en officiële bronnen. Ze komen niet van het CDFD of van een examen-instituut en zijn niet overgenomen uit commerciële proefexamens. Ze zeggen niets over de inhoud of het niveau van een PE- of Wft-examen; ook de proefexamenmodus is indicatief.</p>
     <p>Bedragen en regels gelden per oktober 2026 en kunnen wijzigen. Controleer voor je advies altijd de actuele bron. Je antwoorden worden nergens opgeslagen: na het sluiten of verversen van de pagina zijn ze weg.</p>
   </div>
 
@@ -180,6 +199,7 @@ a.terug{display:inline-block;padding:8px 0}
     <div class="sectie" id="lbl-module">Module</div>
     <div class="modules" id="modules" role="radiogroup" aria-labelledby="lbl-module"></div>
 
+    <div id="blok-aantal">
     <div class="sectie" id="lbl-aantal">Aantal vragen</div>
     <div class="rij" role="radiogroup" aria-labelledby="lbl-aantal" id="aantallen">
       <label class="pil"><input type="radio" name="aantal" value="10" checked>10</label>
@@ -187,11 +207,22 @@ a.terug{display:inline-block;padding:8px 0}
       <label class="pil"><input type="radio" name="aantal" value="40">40</label>
     </div>
     <div class="hint" id="aantal-hint"></div>
+    </div>
 
     <div class="sectie" id="lbl-modus">Manier van oefenen</div>
     <div class="modi" role="radiogroup" aria-labelledby="lbl-modus">
       <label class="keuze"><input type="radio" name="modus" value="direct" checked><b>Direct feedback</b><span>Na elke vraag zie je meteen of je antwoord klopt, met uitleg.</span></label>
       <label class="keuze"><input type="radio" name="modus" value="toets"><b>Toetsmodus</b><span>Beantwoord alle vragen eerst; aan het eind zie je je score en de uitleg bij je fouten.</span></label>
+      <label class="keuze"><input type="radio" name="modus" value="examen"><b>Proefexamen</b><span>Willekeurige set uit één module, met timer en cesuur. Indicatief, geen officieel CDFD-examen.</span></label>
+    </div>
+
+    <div id="blok-examen" class="verborgen">
+      <div class="sectie"><label for="examen-formaat">Formaat proefexamen</label></div>
+      <select class="select" id="examen-formaat">
+        <option value="initieel">Initieel examen (aantal vragen en tijd volgens CDFD)</option>
+        <option value="pe">PE-formaat (23 vragen, 60 minuten)</option>
+      </select>
+      <div class="examen-info" id="examen-info" aria-live="polite"></div>
     </div>
 
     <div class="knoppen start">
@@ -201,7 +232,7 @@ a.terug{display:inline-block;padding:8px 0}
 
   <!-- Vraag -->
   <section class="kaart verborgen" id="scherm-vraag" aria-live="polite">
-    <div class="voortgang"><span id="vg-tekst"></span><span id="vg-modus"></span></div>
+    <div class="voortgang"><span id="vg-tekst"></span><span id="vg-modus"></span><span id="vg-timer" class="timer verborgen" role="timer" aria-live="off"></span></div>
     <div class="balkje" aria-hidden="true"><i id="vg-balk"></i></div>
     <span class="label" id="vr-label"></span>
     <p class="vraag" id="vr-tekst"></p>
@@ -222,6 +253,7 @@ a.terug{display:inline-block;padding:8px 0}
   <section class="kaart verborgen" id="scherm-resultaat" aria-labelledby="res-titel">
     <h2 id="res-titel" tabindex="-1">Je resultaat</h2>
     <p class="sub" id="res-sub"></p>
+    <div class="cesuur verborgen" id="res-cesuur"></div>
     <div class="score">
       <div><div class="lbl">Score</div><div class="groot" id="res-score"></div></div>
       <div><p id="res-oordeel"></p><p class="lbl" id="res-detail"></p></div>
@@ -239,7 +271,7 @@ a.terug{display:inline-block;padding:8px 0}
 </main>
 
 <footer class="voet">
-  <p>Oefenvragen opgesteld door het Adviesforum op basis van de kennisbank, de fiscale normen 2026 in de rekenhulpen en officiële bronnen (AFM, Kifid, Belastingdienst, SVB, UWV, DNB, NHG). Geen officiële CDFD-examenvragen. Zie ook de <a href="index.html#kennisbank">kennisbank</a> en de <a href="rekentools.html">rekenhulpen</a>. <span style="white-space:nowrap">&middot; <a href="uitnodigen.html">Uitnodigen</a></span></p>
+  <p>Oefenvragen opgesteld door het Adviesforum op basis van de kennisbank, de fiscale normen 2026 in de rekenhulpen en officiële bronnen (AFM, Kifid, Belastingdienst, SVB, UWV, DNB, NHG, CAK, NZa). Examenopbouw (aantal vragen, tijd en cesuur) volgens de CDFD-kandidatenbrochure initiële examens per 1 april 2026. Eigen oefenvragen, geen officiële CDFD-vragen. Zie ook de <a href="index.html#kennisbank">kennisbank</a> en de <a href="rekentools.html">rekenhulpen</a>. <span style="white-space:nowrap">&middot; <a href="uitnodigen.html">Uitnodigen</a></span></p>
 </footer>
 
 <script src="data/kennisbank.js"></script>
@@ -251,7 +283,20 @@ a.terug{display:inline-block;padding:8px 0}
 <script src="data/kennisbank-wetgeving.js"></script>
 <script src="data/kennisbank-nhg.js"></script>
 <script src="data/kennisbank-thema.js"></script>
+<script src="data/kennisbank-blinqx.js"></script>
+<script src="data/kennisbank-woning.js"></script>
+<script src="data/kennisbank-opleiding.js"></script>
+<script src="data/kennisbank-compliance2.js"></script>
+<script src="data/kennisbank-seh.js"></script>
+<script src="data/kennisbank-seh2.js"></script>
+<script src="data/kennisbank-vakpers.js"></script>
+<script src="data/kennisbank-kifid2.js"></script>
+<script src="data/kennisbank-verzekeraars.js"></script>
+<script src="data/kennisbank-adfiz.js"></script>
+<script src="data/kennisbank-dfosignalen.js"></script>
 <script src="data/oefenvragen.js"></script>
+<script src="data/oefenvragen-extra.js"></script>
+<script src="data/oefenvragen-modules.js"></script>
 <script>
 (function () {
   'use strict';
@@ -273,15 +318,38 @@ a.terug{display:inline-block;padding:8px 0}
   function bronInfo(bron) {
     if (/^k\d+$/.test(bron)) return { url: 'index.html#artikel-' + bron, titel: 'Kennisbank: ' + (KB[bron] || bron) };
     if (/^https?:\/\//.test(bron)) return { url: bron, titel: bron.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, ''), extern: true };
-    return { url: bron, titel: 'Rekenhulp: ' + bron.replace(/\.html$/, '').replace(/-/g, ' ') };
+    const naam = bron.replace(/\.html$/, '').replace(/-/g, ' ');
+    return { url: bron, titel: (/^scan-/.test(bron) ? 'Scan: ' + naam.replace(/^scan /, '') : 'Adviesforum: ' + naam) };
   }
   function bronLink(bron) {
     const b = bronInfo(bron);
     return '<a href="' + esc(b.url) + '"' + (b.extern ? ' target="_blank" rel="noopener"' : '') + '>' + esc(b.titel) + '</a>';
   }
 
+  /* ---------- proefexamen: opbouw volgens CDFD-kandidatenbrochure initiële examens per 1 april 2026 ----------
+   * n = aantal vragen, min = tijdsduur in minuten; cesuur 68% van de punten. PE-examens: 23 vragen in 60 minuten.
+   * Bron: https://cdfd.nl/wp-content/uploads/2026/03/260302-Kandidatenbrochure-initiele-examens-per-1-april-2026-1.0.pdf */
+  const CESUUR = 68;
+  const EXAMENS = {
+    basis: { n: 42, min: 120 }, hypotheek: { n: 37, min: 135 }, inkomen: { n: 44, min: 135 }, pensioen: { n: 48, min: 135 },
+    vermogen: { n: 46, min: 135 }, krediet: { n: 31, min: 90 }, schade: { n: 48, min: 120 }, schadezakelijk: { n: 55, min: 120 },
+    zorg: { n: 33, min: 90 }
+  };
+  const PE_EXAMEN = { n: 23, min: 60 };
+  const MODUS_NAAM = { direct: 'Direct feedback', toets: 'Toetsmodus', examen: 'Proefexamen' };
+  const SOORT_NAAM = { kennis: 'Kennis', toepassing: 'Toepassing', casus: 'Casus met berekening', praktijk: 'Kantoorpraktijk' };
+  const examenPool = mod => VRAGEN.filter(v => v.module === mod && v.soort !== 'praktijk');
+  function examenOpzet(mod, formaat) {
+    const basis = formaat === 'pe' ? PE_EXAMEN : (EXAMENS[mod] || { n: 40, min: 120 });
+    const pool = examenPool(mod).length;
+    const n = Math.min(basis.n, pool);
+    const min = n === basis.n ? basis.min : Math.max(10, Math.round(basis.min * n / basis.n));
+    return { n, min, officieelN: basis.n, officieelMin: basis.min, pool, formaat };
+  }
+  const mmss = sec => { sec = Math.max(0, Math.round(sec)); const m = Math.floor(sec / 60), x = sec % 60; return m + ':' + String(x).padStart(2, '0'); };
+
   /* ---------- staat (alleen in geheugen) ---------- */
-  const S = { module: 'alle', aantal: 10, modus: 'direct', set: [], idx: 0, antwoorden: [], klaar: false, herhaling: false };
+  const S = { module: 'alle', aantal: 10, modus: 'direct', set: [], idx: 0, antwoorden: [], klaar: false, herhaling: false, examen: null, timer: null };
 
   /* ---------- startscherm ---------- */
   $('totaal').textContent = nl(VRAGEN.length);
@@ -301,10 +369,54 @@ a.terug{display:inline-block;padding:8px 0}
     });
     $('aantal-hint').textContent = hint;
   }
-  document.querySelectorAll('input[name=module]').forEach(i => i.addEventListener('change', werkAantalBij));
+  document.querySelectorAll('input[name=module]').forEach(i => i.addEventListener('change', () => { werkAantalBij(); werkExamenBij(); }));
   werkAantalBij();
 
+  function werkExamenBij() {
+    const modus = document.querySelector('input[name=modus]:checked').value;
+    const examen = modus === 'examen';
+    $('blok-aantal').classList.toggle('verborgen', examen);
+    $('blok-examen').classList.toggle('verborgen', !examen);
+    const alle = document.querySelector('input[name=module][value=alle]');
+    alle.disabled = examen;
+    if (examen && alle.checked) {
+      const eerste = document.querySelector('input[name=module][value=basis]') || document.querySelectorAll('input[name=module]')[1];
+      eerste.checked = true; werkAantalBij();
+    }
+    $('btn-start').textContent = examen ? 'Start het proefexamen' : 'Start de oefening';
+    if (!examen) return;
+    const mod = document.querySelector('input[name=module]:checked').value;
+    const o = examenOpzet(mod, $('examen-formaat').value);
+    const verkort = o.n < o.officieelN;
+    $('examen-info').innerHTML =
+      '<p><strong>' + esc(modNaam(mod)) + ':</strong> ' + o.n + ' vragen, ' + o.min + ' minuten, cesuur ' + CESUUR + '%.</p>' +
+      (verkort ? '<p>Het ' + (o.formaat === 'pe' ? 'PE-examen' : 'CDFD-examen') + ' heeft ' + o.officieelN + ' vragen in ' + o.officieelMin + ' minuten. Deze module heeft nu ' + o.pool + ' bruikbare oefenvragen; de tijd is naar verhouding ingekort.</p>' : '') +
+      '<p><strong>Indicatief, geen officieel CDFD-examen.</strong> Eigen oefenvragen, geen officiële CDFD-vragen. Bij het CDFD tellen vragen over vaardigheden en professioneel gedrag dubbel; hier telt elke vraag even zwaar. Vragen over kantoorpraktijk worden overgeslagen.</p>';
+  }
+  document.querySelectorAll('input[name=modus]').forEach(i => i.addEventListener('change', werkExamenBij));
+  $('examen-formaat').addEventListener('change', werkExamenBij);
+  werkExamenBij();
+
+  function stopTimer() { if (S.timer) { clearInterval(S.timer); S.timer = null; } $('vg-timer').classList.add('verborgen'); }
+  function tikTimer() {
+    if (!S.examen) return;
+    const rest = (S.examen.eind - Date.now()) / 1000;
+    const el = $('vg-timer');
+    el.textContent = 'Resterend ' + mmss(rest);
+    el.classList.toggle('krap', rest <= 300);
+    if (rest <= 0) { S.examen.verlopen = true; stopTimer(); resultaat(); }
+  }
+  function startTimer() {
+    stopTimer();
+    S.examen.start = Date.now();
+    S.examen.eind = S.examen.start + S.examen.min * 60000;
+    $('vg-timer').classList.remove('verborgen');
+    tikTimer();
+    S.timer = setInterval(tikTimer, 1000);
+  }
+
   function toon(scherm) {
+    if (scherm !== 'scherm-vraag') stopTimer();
     ['scherm-start', 'scherm-vraag', 'scherm-resultaat'].forEach(id => $(id).classList.toggle('verborgen', id !== scherm));
     const el = $(scherm);
     if (el.getBoundingClientRect().top < 0) el.scrollIntoView({ block: 'start' });
@@ -318,8 +430,17 @@ a.terug{display:inline-block;padding:8px 0}
     S.module = document.querySelector('input[name=module]:checked').value;
     S.aantal = +document.querySelector('input[name=aantal]:checked').value;
     S.modus = document.querySelector('input[name=modus]:checked').value;
-    const pool = S.module === 'alle' ? VRAGEN : VRAGEN.filter(v => v.module === S.module);
     S.herhaling = false;
+    if (S.modus === 'examen') {
+      if (S.module === 'alle') return;
+      const o = examenOpzet(S.module, $('examen-formaat').value);
+      S.examen = { n: o.n, min: o.min, formaat: o.formaat, officieelN: o.officieelN, verlopen: false };
+      begin(maakSet(examenPool(S.module), o.n));
+      startTimer();
+      return;
+    }
+    S.examen = null;
+    const pool = S.module === 'alle' ? VRAGEN : VRAGEN.filter(v => v.module === S.module);
     begin(maakSet(pool, S.aantal));
   });
 
@@ -334,10 +455,10 @@ a.terug{display:inline-block;padding:8px 0}
     const item = S.set[S.idx], v = item.v, gekozen = S.antwoorden[S.idx];
     const toonFeedback = S.modus === 'direct' && gekozen !== null;
     $('vg-tekst').textContent = 'Vraag ' + (S.idx + 1) + ' van ' + S.set.length;
-    $('vg-modus').textContent = (S.herhaling ? 'Herhaling foute vragen · ' : '') + (S.modus === 'direct' ? 'Direct feedback' : 'Toetsmodus');
+    $('vg-modus').textContent = (S.herhaling ? 'Herhaling foute vragen · ' : '') + MODUS_NAAM[S.modus];
     const beantwoord = S.antwoorden.filter(a => a !== null).length;
     $('vg-balk').style.width = (beantwoord / S.set.length * 100) + '%';
-    $('vr-label').textContent = modNaam(v.module) + ' · ' + v.onderwerp;
+    $('vr-label').innerHTML = esc(modNaam(v.module) + ' · ' + v.onderwerp) + (v.soort ? '<span class="soort">' + esc(SOORT_NAAM[v.soort] || v.soort) + '</span>' : '');
     $('vr-tekst').textContent = v.vraag;
     $('vr-opties').innerHTML = item.volgorde.map((oi, pos) => {
       let cls = 'optie';
@@ -381,13 +502,17 @@ a.terug{display:inline-block;padding:8px 0}
   $('btn-volgende').addEventListener('click', () => {
     if (S.idx < S.set.length - 1) { S.idx++; tekenVraag(); return; }
     const open = S.antwoorden.filter(a => a === null).length;
-    if (S.modus === 'toets' && open > 0 &&
+    if (S.modus !== 'direct' && open > 0 &&
         !window.confirm('Je hebt ' + open + (open === 1 ? ' vraag' : ' vragen') + ' nog niet beantwoord. Die tellen als fout. Toch inleveren?')) return;
     resultaat();
   });
   $('btn-stop').addEventListener('click', () => {
     const beantwoord = S.antwoorden.filter(a => a !== null).length;
-    if (beantwoord === 0) { toon('scherm-start'); return; }
+    if (beantwoord === 0) { S.examen = null; toon('scherm-start'); return; }
+    if (S.modus === 'examen') {
+      if (window.confirm('Het proefexamen nu inleveren? Onbeantwoorde vragen tellen als fout.')) resultaat();
+      return;
+    }
     if (window.confirm('Stoppen en het resultaat van de beantwoorde vragen bekijken?')) {
       const keep = [];
       S.set.forEach((it, i) => { if (S.antwoorden[i] !== null) keep.push([it, S.antwoorden[i]]); });
@@ -417,11 +542,24 @@ a.terug{display:inline-block;padding:8px 0}
 
   function resultaat() {
     S.klaar = true;
+    const examen = S.modus === 'examen' && S.examen;
+    if (examen) { S.examen.gebruikt = Math.min(S.examen.min * 60, (Date.now() - S.examen.start) / 1000); }
+    stopTimer();
     const r = analyse();
     S.laatste = r;
     $('res-score').textContent = r.goed + '/' + r.totaal;
     $('res-oordeel').textContent = oordeel(r.pct);
-    $('res-detail').textContent = r.pct + '% juist · ' + (S.modus === 'direct' ? 'direct feedback' : 'toetsmodus') + (S.herhaling ? ' · herhaling foute vragen' : '');
+    $('res-detail').textContent = r.pct + '% juist · ' + MODUS_NAAM[S.modus].toLowerCase() + (S.herhaling ? ' · herhaling foute vragen' : '') +
+      (examen ? ' · tijd ' + mmss(S.examen.gebruikt) + ' van ' + S.examen.min + ':00' : '');
+    const ces = $('res-cesuur');
+    if (examen) {
+      const zak = r.pct >= CESUUR;
+      ces.className = 'cesuur ' + (zak ? 'goed' : 'fout');
+      ces.innerHTML = '<p><strong>' + (S.examen.verlopen ? 'De tijd is om. ' : '') + (zak ? 'Boven de cesuur' : 'Onder de cesuur') + ':</strong> ' + r.pct + '% juist, cesuur ' + CESUUR + '%.</p>' +
+        '<p>Indicatief, geen officieel CDFD-examen. Eigen oefenvragen, geen officiële CDFD-vragen; bij het CDFD wegen vragen over vaardigheden en professioneel gedrag zwaarder.</p>';
+    } else {
+      ces.className = 'cesuur verborgen'; ces.innerHTML = '';
+    }
     $('res-sub').textContent = (S.module === 'alle' ? 'Alle modules' : modNaam(S.module)) + ' · ' + r.totaal + (r.totaal === 1 ? ' vraag' : ' vragen');
     $('res-modules').innerHTML = '<thead><tr><th>Module</th><th class="n">Juist</th><th class="n">Score</th></tr></thead><tbody>' +
       Object.keys(r.perMod).map(m => { const x = r.perMod[m]; return '<tr><td>' + esc(modNaam(m)) + '</td><td class="n">' + x.goed + ' van ' + x.totaal + '</td><td class="n">' + Math.round(x.goed / x.totaal * 100) + '%</td></tr>'; }).join('') + '</tbody>';
@@ -442,9 +580,10 @@ a.terug{display:inline-block;padding:8px 0}
   $('btn-fouten').addEventListener('click', () => {
     const r = S.laatste; if (!r || !r.fout.length) return;
     S.herhaling = true;
+    if (S.modus === 'examen') { S.modus = 'direct'; S.examen = null; }
     begin(shuffle(r.fout.map(f => ({ v: f.item.v, volgorde: shuffle([0, 1, 2, 3]) }))));
   });
-  $('btn-opnieuw').addEventListener('click', () => { S.herhaling = false; toon('scherm-start'); });
+  $('btn-opnieuw').addEventListener('click', () => { S.herhaling = false; S.examen = null; toon('scherm-start'); });
 
   /* ---------- printen via een nieuw venster ---------- */
   $('btn-print').addEventListener('click', () => {
@@ -467,9 +606,10 @@ a.terug{display:inline-block;padding:8px 0}
       '.score{font-size:16px;font-weight:bold;margin:0 0 12px}table{border-collapse:collapse;width:100%}th,td{border-bottom:1px solid #ddd;padding:6px 8px;text-align:left;vertical-align:top}' +
       'th{background:#FFD200}tr.nok td:last-child{color:#C0392B;font-weight:bold}tr.ok td:last-child{color:#1E7A4B;font-weight:bold}.kl{color:#555;margin-top:3px}tr{page-break-inside:avoid}' +
       '</style></head><body><h1>Oefenresultaat: Oefenen voor PE en Wft</h1>' +
-      '<p class="meta">Adviesforum · ' + esc(datum) + ' · ' + esc(S.module === 'alle' ? 'Alle modules' : modNaam(S.module)) + ' · ' + (S.modus === 'direct' ? 'direct feedback' : 'toetsmodus') + (S.herhaling ? ' · herhaling foute vragen' : '') + '</p>' +
-      '<p class="disc"><b>Oefenmateriaal.</b> Eigen vragen van het Adviesforum, geen officiële CDFD-examenvragen. Peildatum oktober 2026; controleer altijd de actuele bron.</p>' +
+      '<p class="meta">Adviesforum · ' + esc(datum) + ' · ' + esc(S.module === 'alle' ? 'Alle modules' : modNaam(S.module)) + ' · ' + MODUS_NAAM[S.modus].toLowerCase() + (S.herhaling ? ' · herhaling foute vragen' : '') + '</p>' +
+      '<p class="disc"><b>Oefenmateriaal.</b> Eigen oefenvragen, geen officiële CDFD-vragen. Peildatum oktober 2026; controleer altijd de actuele bron.</p>' +
       '<p class="score">Score: ' + r.goed + ' van ' + r.totaal + ' juist (' + r.pct + '%)</p>' +
+      (S.modus === 'examen' && S.examen ? '<p class="disc">Proefexamen: ' + (r.pct >= CESUUR ? 'boven' : 'onder') + ' de cesuur van ' + CESUUR + '% · tijd ' + mmss(S.examen.gebruikt || 0) + ' van ' + S.examen.min + ':00 · indicatief, geen officieel CDFD-examen.</p>' : '') +
       '<table><thead><tr><th>#</th><th>Vraag, antwoord en uitleg</th><th>Uitkomst</th></tr></thead><tbody>' + rijen + '</tbody></table>' +
       '<script>window.onload=function(){window.print();}<\/script></body></html>';
     const w = window.open('', '_blank');
