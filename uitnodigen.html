@@ -9,7 +9,7 @@
 <meta name="theme-color" content="#FFD200">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="manifest" href="manifest.webmanifest">
-<meta name="description" content="Nodig een collega-adviseur uit voor het Adviesforum: vragen stellen en beantwoorden, kennisbank, FAQ, rekentools en dossierhulpmiddelen. De uitnodiging gaat vanuit je eigen mailprogramma.">
+<meta name="description" content="Nodig een collega-adviseur uit voor het Adviesforum: vragen stellen en beantwoorden, kennisbank, FAQ, rekentools en dossierhulpmiddelen. De uitnodiging gaat via je eigen mailprogramma, WhatsApp of LinkedIn.">
 <link rel="canonical" href="https://jeroen-o.github.io/adviesforum/uitnodigen.html">
 <meta property="og:title" content="Collega uitnodigen – Adviesforum">
 <meta property="og:description" content="Nodig een collega-adviseur uit voor het Adviesforum, het platform voor en door financieel adviseurs.">
@@ -61,7 +61,7 @@
   .veld{margin-bottom:16px}
   label{display:block;font-weight:600;font-size:14px;margin-bottom:6px}
   .optioneel{font-weight:400;color:var(--grijs)}
-  input[type=text],textarea{
+  input[type=text],input[type=tel],input[type=url],textarea{
     width:100%;padding:11px 13px;border:1px solid #CFCFCF;border-radius:9px;font-size:15px;
     font-family:inherit;color:inherit;background:#fff;
   }
@@ -102,6 +102,27 @@
   .privacy{font-size:12.5px;color:var(--grijs);margin-top:14px}
   .gekopieerd{font-size:13px;color:var(--groen);font-weight:600;min-height:1.3em;margin-top:8px}
 
+  /* Kanaalkeuze (segmented control) */
+  .kanalen{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px;background:var(--vlak);border:1px solid var(--lijn);border-radius:999px;padding:4px;margin:0 0 20px}
+  .kanalen [role=tab]{background:transparent;border:0;border-radius:999px;padding:10px 6px;font-size:14px;font-weight:700;color:var(--grijs);min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .kanalen [role=tab]:hover{color:var(--zwart)}
+  .kanalen [role=tab][aria-selected=true]{background:var(--zwart);color:#fff}
+  .kanalen [role=tab]:focus-visible{outline:3px solid rgba(255,210,0,.75);outline-offset:1px}
+  @media(max-width:420px){.kanalen [role=tab]{font-size:13px;padding:10px 2px}}
+  @media(max-width:340px){.kanalen [role=tab]{font-size:12px}}
+  [role=tabpanel][hidden]{display:none}
+  .paneel-intro{font-size:14px;margin:0 0 14px}
+  .sub{font-size:15px;font-weight:800;margin:22px 0 6px}
+  .sub:first-child{margin-top:0}
+  .uitleg{font-size:13px;background:#FFF9E0;border:1px solid #F0DC8A;color:#5C4500;border-radius:11px;padding:11px 13px;margin:0 0 14px}
+  .scheiding{border:0;border-top:1px solid var(--lijn);margin:24px 0 0}
+  .teller{font-size:12.5px;color:var(--grijs);margin:8px 0 0}
+  .teller.te-lang{color:var(--rood);font-weight:600}
+  .vb-kop{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+  .vb-kop h2{margin:0!important}
+  .vb-label{font-size:13px;font-weight:700;margin:16px 0 6px}
+  .deel-api{margin-top:18px}
+
   footer{border-top:1px solid var(--lijn);padding:22px 24px;font-size:12.5px;color:var(--grijs);text-align:center}
 /* Mobiel: tikdoelen en leesbaarheid */
 @media (max-width:760px){input,select,textarea{font-size:16px!important}}
@@ -130,23 +151,13 @@
 <section class="hero">
   <div class="hero-in">
     <h1>Nodig een collega uit</h1>
-    <p>Ken je een adviseur die ook baat heeft bij het Adviesforum? Stuur een persoonlijke uitnodiging vanuit je eigen mailprogramma, of deel de link via LinkedIn of WhatsApp.</p>
+    <p>Ken je een adviseur die ook baat heeft bij het Adviesforum? Stuur een persoonlijke uitnodiging per e-mail, via WhatsApp of via LinkedIn. Je naam en je boodschap gelden voor alle drie.</p>
   </div>
 </section>
 
 <main>
   <div>
     <form class="kaart" id="uitnodigform" novalidate>
-      <fieldset>
-        <legend>Wie nodig je uit?</legend>
-        <div class="veld" data-veld="adressen">
-          <label for="adressen">E-mailadres(sen) van je collega('s)</label>
-          <textarea id="adressen" name="adressen" rows="3" placeholder="collega@kantoor.nl, tweede.collega@kantoor.nl" autocomplete="off" spellcheck="false"></textarea>
-          <div class="hint">Scheid meerdere adressen met een komma, puntkomma of nieuwe regel. Maximaal 20 adressen; bij meer dan één adres gaan ze in BCC, zodat ontvangers elkaars adres niet zien.</div>
-          <div class="fout" id="fout-adressen">Vul minstens één geldig e-mailadres in.</div>
-        </div>
-      </fieldset>
-
       <fieldset>
         <legend>Je uitnodiging</legend>
         <div class="veld" data-veld="naam">
@@ -158,42 +169,105 @@
         <div class="veld" data-veld="boodschap">
           <label for="boodschap">Persoonlijke boodschap <span class="optioneel">(optioneel)</span></label>
           <textarea id="boodschap" name="boodschap" rows="3" maxlength="500" placeholder="Bijvoorbeeld: ik gebruik het zelf voor vragen over acceptatie en de rekentools."></textarea>
-          <div class="hint">Maximaal 500 tekens.</div>
+          <div class="hint">Maximaal 500 tekens. Voor WhatsApp en LinkedIn houd je hem bij voorkeur kort.</div>
         </div>
       </fieldset>
 
       <div class="akkoord veld" data-veld="akkoord">
         <input type="checkbox" id="akkoord" name="akkoord">
-        <label for="akkoord">Ik nodig alleen collega's uit die ik ken en van wie ik mag aannemen dat ze deze uitnodiging willen ontvangen. Ik gebruik dit formulier niet voor bulk- of koude mailing.</label>
+        <label for="akkoord">Ik nodig alleen collega's uit die ik ken en van wie ik mag aannemen dat ze deze uitnodiging willen ontvangen. Ik gebruik deze pagina niet voor bulk- of koude berichten.</label>
       </div>
       <div class="fout" id="fout-akkoord" style="margin-top:8px">Vink deze verklaring aan om de uitnodiging te versturen.</div>
 
-      <div class="acties">
-        <button type="submit" class="knop-primair" id="verstuur">Uitnodiging versturen →</button>
-        <button type="button" class="knop-tweede" id="kopieer-tekst">Tekst kopiëren</button>
-        <button type="button" class="knop-tweede" id="kopieer-link">Link kopiëren</button>
-      </div>
-      <div class="gekopieerd" id="kopie-status" role="status" aria-live="polite"></div>
+      <fieldset style="margin-top:24px">
+        <legend>Hoe nodig je uit?</legend>
+        <div class="kanalen" role="tablist" aria-label="Kanaal voor de uitnodiging">
+          <button type="button" role="tab" id="tab-email" aria-controls="paneel-email" aria-selected="true" data-kanaal="email">E-mail</button>
+          <button type="button" role="tab" id="tab-whatsapp" aria-controls="paneel-whatsapp" aria-selected="false" tabindex="-1" data-kanaal="whatsapp">WhatsApp</button>
+          <button type="button" role="tab" id="tab-linkedin" aria-controls="paneel-linkedin" aria-selected="false" tabindex="-1" data-kanaal="linkedin">LinkedIn</button>
+        </div>
 
-      <div class="melding" id="melding" role="status" aria-live="polite"></div>
+        <!-- E-mail -->
+        <div role="tabpanel" id="paneel-email" aria-labelledby="tab-email">
+          <div class="veld" data-veld="adressen">
+            <label for="adressen">E-mailadres(sen) van je collega('s)</label>
+            <textarea id="adressen" name="adressen" rows="3" placeholder="collega@kantoor.nl, tweede.collega@kantoor.nl" autocomplete="off" spellcheck="false"></textarea>
+            <div class="hint">Scheid meerdere adressen met een komma, puntkomma of nieuwe regel. Maximaal 20 adressen; bij meer dan één adres gaan ze in BCC, zodat ontvangers elkaars adres niet zien.</div>
+            <div class="fout" id="fout-adressen">Vul minstens één geldig e-mailadres in.</div>
+          </div>
+          <div class="acties">
+            <button type="submit" class="knop-primair" id="verstuur">Uitnodiging versturen →</button>
+            <button type="button" class="knop-tweede" id="kopieer-tekst">Tekst kopiëren</button>
+            <button type="button" class="knop-tweede" id="kopieer-link">Link kopiëren</button>
+          </div>
+          <div class="gekopieerd" id="kopie-status" role="status" aria-live="polite"></div>
+          <div class="melding" id="melding" role="status" aria-live="polite"></div>
+        </div>
+
+        <!-- WhatsApp -->
+        <div role="tabpanel" id="paneel-whatsapp" aria-labelledby="tab-whatsapp" hidden>
+          <p class="paneel-intro">Stuur een kort, persoonlijk WhatsApp-bericht. Met een nummer opent WhatsApp direct het gesprek met je collega; zonder nummer kies je in WhatsApp zelf het contact.</p>
+          <div class="veld" data-veld="mobiel">
+            <label for="mobiel">Mobiel nummer collega <span class="optioneel">(optioneel)</span></label>
+            <input type="tel" id="mobiel" name="mobiel" inputmode="tel" autocomplete="off" maxlength="25" placeholder="06 12345678 of +32 470 12 34 56">
+            <div class="hint">Een Nederlands 06-nummer of een buitenlands nummer met landcode. Het nummer wordt niet opgeslagen.</div>
+            <div class="fout" id="fout-mobiel">Dit is geen geldig mobiel nummer.</div>
+          </div>
+          <div class="acties">
+            <a class="knop knop-primair" id="wa-open" href="https://wa.me/" target="_blank" rel="noopener">Open WhatsApp →</a>
+            <button type="button" class="knop-tweede" id="wa-kopieer">Tekst kopiëren</button>
+          </div>
+          <div class="gekopieerd" id="wa-status" role="status" aria-live="polite"></div>
+        </div>
+
+        <!-- LinkedIn -->
+        <div role="tabpanel" id="paneel-linkedin" aria-labelledby="tab-linkedin" hidden>
+          <h3 class="sub">Persoonlijk bericht</h3>
+          <p class="uitleg">LinkedIn laat geen berichten vooraf invullen. Daarom kopieert de knop de tekst naar je klembord en opent hij LinkedIn; daar plak je de tekst in het bericht aan je collega.</p>
+          <div class="veld" data-veld="profiel">
+            <label for="profiel">LinkedIn-profiel van je collega (URL) <span class="optioneel">(optioneel)</span></label>
+            <input type="url" id="profiel" name="profiel" inputmode="url" autocomplete="off" spellcheck="false" maxlength="200" placeholder="https://www.linkedin.com/in/naam-collega">
+            <div class="hint">Met een profiel opent LinkedIn dat profiel (klik daar op <strong>Bericht</strong>); zonder profiel opent je berichtenoverzicht. Het profiel wordt niet opgeslagen.</div>
+            <div class="fout" id="fout-profiel">Vul een LinkedIn-profiel in dat begint met linkedin.com/in/.</div>
+          </div>
+          <div class="acties">
+            <a class="knop knop-primair" id="li-bericht" href="https://www.linkedin.com/messaging/" target="_blank" rel="noopener">Tekst kopiëren en LinkedIn openen →</a>
+          </div>
+          <div class="gekopieerd" id="li-status" role="status" aria-live="polite"></div>
+
+          <hr class="scheiding">
+          <h3 class="sub" style="margin-top:20px">Delen in je tijdlijn</h3>
+          <p class="paneel-intro">Deel de link naar het Adviesforum met je hele netwerk. Tip: de knop kopieert ook een korte tekst; plak die bij je bericht.</p>
+          <div class="acties" style="margin-top:0">
+            <a class="knop knop-tweede" id="li-delen" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fjeroen-o.github.io%2Fadviesforum%2F" target="_blank" rel="noopener">Delen op LinkedIn</a>
+          </div>
+          <div class="gekopieerd" id="li-deel-status" role="status" aria-live="polite"></div>
+        </div>
+      </fieldset>
+
+      <div class="deel-api" id="deel-api" hidden>
+        <button type="button" class="knop-tweede" id="deel-knop">Delen via…</button>
+        <div class="hint">Kies zelf een app op je telefoon, zoals Signal, Teams of Berichten.</div>
+      </div>
     </form>
 
     <div class="kaart voorbeeld">
-      <h2>Zo ziet je uitnodiging eruit</h2>
-      <p class="onderwerp"><strong>Onderwerp:</strong> <span id="vb-onderwerp"></span></p>
+      <div class="vb-kop">
+        <h2 id="vb-titel">Zo ziet je e-mail eruit</h2>
+        <button type="button" class="knop-tweede knop-klein" id="vb-kopieer">Tekst kopiëren</button>
+      </div>
+      <p class="onderwerp" id="vb-onderwerp-regel"><strong>Onderwerp:</strong> <span id="vb-onderwerp"></span></p>
       <pre class="tekst" id="vb-tekst"></pre>
+      <p class="teller" id="vb-teller" hidden></p>
+      <div id="vb-tijdlijn" hidden>
+        <p class="vb-label">Tekst bij delen in je tijdlijn</p>
+        <pre class="tekst" id="vb-tijdlijn-tekst"></pre>
+      </div>
+      <div class="gekopieerd" id="vb-status" role="status" aria-live="polite"></div>
     </div>
   </div>
 
   <aside class="zijkant">
-    <div class="kaart">
-      <h2>Liever delen?</h2>
-      <p style="margin-top:0">Deel de link naar het Adviesforum in je eigen netwerk.</p>
-      <div class="delen">
-        <a class="knop knop-tweede knop-klein" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fjeroen-o.github.io%2Fadviesforum%2F" target="_blank" rel="noopener">Delen op LinkedIn</a>
-        <a class="knop knop-tweede knop-klein" href="https://wa.me/?text=Ken%20je%20het%20Adviesforum%20al%3F%20Een%20platform%20voor%20en%20door%20financieel%20adviseurs%3A%20vragen%20stellen%20en%20beantwoorden%2C%20kennisbank%2C%20FAQ%2C%20rekentools%20en%20dossierhulpmiddelen.%20https%3A%2F%2Fjeroen-o.github.io%2Fadviesforum%2F" target="_blank" rel="noopener">Delen via WhatsApp</a>
-      </div>
-    </div>
     <div class="kaart">
       <h2>Wat je collega krijgt</h2>
       <ul>
@@ -204,8 +278,8 @@
     </div>
     <div class="kaart">
       <h2>Privacy</h2>
-      <p style="margin-top:0">Er wordt niets opgeslagen en niets naar het forum gestuurd. De uitnodiging gaat vanuit je eigen mailprogramma; het Adviesforum ziet de adressen niet.</p>
-      <p class="privacy">Nodig alleen collega's uit van wie je mag aannemen dat ze dit willen ontvangen (AVG). Gebruik het formulier niet voor bulk- of koude mailing; daarom zijn maximaal 20 adressen per keer toegestaan. Lees ook de <a href="privacy.html">privacyverklaring</a>.</p>
+      <p style="margin-top:0">Er wordt niets opgeslagen en niets naar het forum gestuurd. E-mailadressen, het mobiele nummer en het LinkedIn-profiel van je collega gaan alleen naar je eigen mailprogramma, WhatsApp of LinkedIn op jouw apparaat. Het Adviesforum ziet ze niet.</p>
+      <p class="privacy">Nodig alleen mensen uit die je kent en van wie je mag aannemen dat ze dit willen ontvangen (AVG). Gebruik deze pagina niet voor bulk- of koude berichten; daarom zijn maximaal 20 e-mailadressen per keer toegestaan. Voor berichten via WhatsApp en LinkedIn gelden ook de voorwaarden van die diensten. Lees ook de <a href="privacy.html">privacyverklaring</a>.</p>
     </div>
   </aside>
 </main>
@@ -221,16 +295,25 @@
   var SITE = "https://jeroen-o.github.io/adviesforum/";
   var AANMELDEN = SITE + "aanmelden.html";
   var MAX = 20;
+  var WA_MAX = 600;
+  var KANALEN = ["email", "whatsapp", "linkedin"];
 
-  var form      = document.getElementById("uitnodigform");
-  var adressen  = document.getElementById("adressen");
-  var naam      = document.getElementById("naam");
-  var boodschap = document.getElementById("boodschap");
-  var akkoord   = document.getElementById("akkoord");
-  var foutAdr   = document.getElementById("fout-adressen");
-  var foutAkk   = document.getElementById("fout-akkoord");
-  var melding   = document.getElementById("melding");
-  var status    = document.getElementById("kopie-status");
+  function $(id){ return document.getElementById(id); }
+  var form      = $("uitnodigform");
+  var adressen  = $("adressen");
+  var naam      = $("naam");
+  var boodschap = $("boodschap");
+  var akkoord   = $("akkoord");
+  var mobiel    = $("mobiel");
+  var profiel   = $("profiel");
+  var foutAdr   = $("fout-adressen");
+  var foutAkk   = $("fout-akkoord");
+  var foutMob   = $("fout-mobiel");
+  var melding   = $("melding");
+  var waOpen    = $("wa-open");
+  var liBericht = $("li-bericht");
+  var liDelen   = $("li-delen");
+  var actief    = "email";
 
   function vak(id){ return document.querySelector('[data-veld="'+id+'"]'); }
   function markeer(id, fout){ var el = vak(id); if (el) el.classList.toggle("is-fout", !!fout); }
@@ -241,18 +324,7 @@
     return /^[A-Za-z0-9._%+'-]+@[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?(?:\.[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?)*\.[A-Za-z]{2,}$/.test(e) && e.length <= 254;
   }
 
-  // Splitst de invoer in adressen; dubbele adressen tellen één keer.
-  function leesAdressen(){
-    var ruw = adressen.value.split(/[\s,;]+/).map(function(s){ return s.replace(/^<|>$/g, "").trim(); }).filter(Boolean);
-    var gezien = {}, uniek = [], ongeldig = [];
-    ruw.forEach(function(a){
-      var k = a.toLowerCase();
-      if (gezien[k]) return;
-      gezien[k] = true;
-      if (geldigEmail(a)) uniek.push(a); else ongeldig.push(a);
-    });
-    return { geldig: uniek, ongeldig: ongeldig };
-  }
+  /* ---------- Teksten per kanaal ---------- */
 
   function onderwerp(){
     var n = naam.value.trim();
@@ -283,15 +355,120 @@
     return r.join("\n");
   }
 
-  function mailtoLink(lijst){
-    var q = "subject=" + encodeURIComponent(onderwerp()) + "&body=" + encodeURIComponent(uitnodigingTekst());
-    if (lijst.length === 1) return "mailto:" + encodeURIComponent(lijst[0]).replace(/%40/g, "@") + "?" + q;
-    return "mailto:?bcc=" + lijst.map(function(a){ return encodeURIComponent(a).replace(/%40/g, "@"); }).join(",") + "&" + q;
+  // WhatsApp: kort en persoonlijk, richtlijn maximaal ±600 tekens.
+  function whatsappTekst(){
+    var n = naam.value.trim();
+    var b = boodschap.value.trim();
+    var r = ["Hoi! " + (b || "Ik wil je iets laten zien."), ""];
+    r.push(
+      "Ik gebruik het Adviesforum: voor en door financieel adviseurs. Je stelt er vragen aan collega's en vindt een kennisbank, FAQ, rekentools en dossierhulpmiddelen. Iets voor jou?",
+      "",
+      "Kijk hier: " + SITE,
+      "Aanmelden: " + AANMELDEN,
+      "(Je hebt een LinkedIn-profiel nodig om je aan te melden.)",
+      "",
+      "Groet, " + (n || "[je naam]")
+    );
+    return r.join("\n");
   }
 
-  function werkVoorbeeldBij(){
-    document.getElementById("vb-onderwerp").textContent = onderwerp();
-    document.getElementById("vb-tekst").textContent = uitnodigingTekst();
+  // LinkedIn-bericht: eigen, kortere tekst.
+  function linkedinTekst(){
+    var n = naam.value.trim();
+    var b = boodschap.value.trim();
+    var r = ["Hallo,", ""];
+    if (b){ r.push(b, ""); }
+    r.push(
+      "Ken je het Adviesforum al? Een platform voor en door financieel adviseurs, met een forum, kennisbank, FAQ, rekentools en dossierhulpmiddelen. Aanmelden gaat met je LinkedIn-profiel.",
+      "",
+      "Aanmelden: " + AANMELDEN,
+      "Meer weten: " + SITE,
+      "",
+      "Groet,",
+      n || "[je naam]"
+    );
+    return r.join("\n");
+  }
+
+  // Tekst bij een bericht in de eigen tijdlijn (de link zelf voegt LinkedIn toe).
+  function tijdlijnTekst(){
+    var b = boodschap.value.trim();
+    var r = [];
+    if (b){ r.push(b, ""); }
+    r.push("Financieel adviseur in hypotheken, verzekeringen, pensioen of krediet? Op het Adviesforum helpen adviseurs elkaar met vragen, een kennisbank, FAQ, rekentools en dossierhulpmiddelen. Aanmelden kan met je LinkedIn-profiel.");
+    return r.join("\n");
+  }
+
+  // Korte tekst voor de deelfunctie van het apparaat; de URL gaat apart mee.
+  function deelTekst(){
+    var n = naam.value.trim();
+    return "Ken je het Adviesforum al? Een platform voor en door financieel adviseurs, met forum, kennisbank, FAQ, rekentools en dossierhulpmiddelen. Aanmelden gaat met je LinkedIn-profiel." + (n ? " Groet, " + n : "");
+  }
+
+  function kanaalTekst(k){
+    if (k === "whatsapp") return whatsappTekst();
+    if (k === "linkedin") return linkedinTekst();
+    return onderwerp() + "\n\n" + uitnodigingTekst();
+  }
+
+  /* ---------- Nummer en profiel ---------- */
+
+  // Normaliseert naar internationaal formaat zonder +, bv. 06-12345678 -> 31612345678.
+  function normaliseerNummer(invoer){
+    var s = String(invoer || "").trim();
+    if (!s) return { leeg: true, ok: true, nummer: "" };
+    s = s.replace(/\(0\)/g, "");                 // +31 (0)6 ...
+    if (/[^0-9+\s().\-\/]/.test(s)) return { ok: false, fout: "Gebruik alleen cijfers, spaties, streepjes en eventueel een + voor de landcode." };
+    var plus = /^\s*\+/.test(s);
+    var d = s.replace(/\D/g, "");
+    var nummer;
+    if (plus) nummer = d;
+    else if (/^00/.test(d)) nummer = d.slice(2);
+    else if (/^0/.test(d)) nummer = "31" + d.slice(1);  // Nederlands nationaal nummer
+    else if (/^6\d{8}$/.test(d)) nummer = "31" + d;     // 612345678
+    else nummer = d;
+    if (/^31/.test(nummer)){
+      if (/^316\d{8}$/.test(nummer)) return { ok: true, nummer: nummer };
+      return { ok: false, fout: "Vul een Nederlands mobiel nummer in (06 en 8 cijfers), of een buitenlands nummer met landcode." };
+    }
+    if (/^[1-9]\d{7,14}$/.test(nummer)) return { ok: true, nummer: nummer };
+    return { ok: false, fout: "Dit is geen geldig nummer. Gebruik een 06-nummer of een internationaal nummer met landcode (8 tot 15 cijfers)." };
+  }
+
+  function whatsappUrl(nummer){
+    return "https://wa.me/" + (nummer || "") + "?text=" + encodeURIComponent(whatsappTekst());
+  }
+
+  // Geeft de genormaliseerde profiel-URL terug, "" bij leeg, of null als ongeldig.
+  function leesProfiel(){
+    var s = profiel.value.trim();
+    if (!s) return "";
+    var m = /^(?:https?:\/\/)?(?:[a-z]{2,3}\.)?(?:www\.)?linkedin\.com\/in\/([^\/?#\s]{2,100})\/?(?:[?#]\S*)?$/i.exec(s);
+    if (!m) return null;
+    return "https://www.linkedin.com/in/" + m[1] + "/";
+  }
+
+  /* ---------- Hulpfuncties ---------- */
+
+  function kopieer(tekst, gelukt, statusEl){
+    var klaar = function(ok){
+      statusEl.textContent = ok ? gelukt : "Kopiëren lukt niet in deze browser; selecteer de tekst in het voorbeeld en kopieer hem zelf.";
+    };
+    if (navigator.clipboard && window.isSecureContext){
+      navigator.clipboard.writeText(tekst).then(function(){ klaar(true); }, function(){ klaar(reserveKopie(tekst)); });
+    } else {
+      klaar(reserveKopie(tekst));
+    }
+  }
+  function reserveKopie(tekst){
+    try {
+      var t = document.createElement("textarea");
+      t.value = tekst; t.setAttribute("readonly", ""); t.style.position = "fixed"; t.style.left = "-9999px";
+      document.body.appendChild(t); t.select();
+      var ok = document.execCommand("copy");
+      t.remove();
+      return ok;
+    } catch (e) { return false; }
   }
 
   function toonMelding(type, html){
@@ -299,7 +476,45 @@
     melding.innerHTML = html;
   }
 
-  function controleer(){
+  // Naam en verklaring gelden voor elk kanaal.
+  function controleerAlgemeen(){
+    var ok = true;
+    var naamOk = naam.value.trim().length >= 2;
+    markeer("naam", !naamOk);
+    if (!naamOk) ok = false;
+    var akkOk = akkoord.checked;
+    foutAkk.style.display = akkOk ? "none" : "block";
+    vak("akkoord").classList.toggle("is-fout", !akkOk);
+    if (!akkOk) ok = false;
+    return ok;
+  }
+  function focusEersteFout(){
+    var eerste = form.querySelector(".is-fout input, .is-fout textarea");
+    if (eerste) eerste.focus();
+  }
+
+  /* ---------- E-mail ---------- */
+
+  // Splitst de invoer in adressen; dubbele adressen tellen één keer.
+  function leesAdressen(){
+    var ruw = adressen.value.split(/[\s,;]+/).map(function(s){ return s.replace(/^<|>$/g, "").trim(); }).filter(Boolean);
+    var gezien = {}, uniek = [], ongeldig = [];
+    ruw.forEach(function(a){
+      var k = a.toLowerCase();
+      if (gezien[k]) return;
+      gezien[k] = true;
+      if (geldigEmail(a)) uniek.push(a); else ongeldig.push(a);
+    });
+    return { geldig: uniek, ongeldig: ongeldig };
+  }
+
+  function mailtoLink(lijst){
+    var q = "subject=" + encodeURIComponent(onderwerp()) + "&body=" + encodeURIComponent(uitnodigingTekst());
+    if (lijst.length === 1) return "mailto:" + encodeURIComponent(lijst[0]).replace(/%40/g, "@") + "?" + q;
+    return "mailto:?bcc=" + lijst.map(function(a){ return encodeURIComponent(a).replace(/%40/g, "@"); }).join(",") + "&" + q;
+  }
+
+  function controleerMail(){
     var ok = true;
     var a = leesAdressen();
     var tekst = "";
@@ -313,20 +528,8 @@
     foutAdr.textContent = tekst;
     markeer("adressen", !!tekst);
     if (tekst) ok = false;
-
-    var naamOk = naam.value.trim().length >= 2;
-    markeer("naam", !naamOk);
-    if (!naamOk) ok = false;
-
-    var akkOk = akkoord.checked;
-    foutAkk.style.display = akkOk ? "none" : "block";
-    vak("akkoord").classList.toggle("is-fout", !akkOk);
-    if (!akkOk) ok = false;
-
-    if (!ok){
-      var eerste = form.querySelector(".is-fout input, .is-fout textarea");
-      if (eerste) eerste.focus();
-    }
+    if (!controleerAlgemeen()) ok = false;
+    if (!ok) focusEersteFout();
     return ok ? a.geldig : null;
   }
 
@@ -336,21 +539,9 @@
     document.body.appendChild(l); l.click(); l.remove();
   }
 
-  function kopieer(tekst, gelukt){
-    var klaar = function(ok){
-      status.textContent = ok ? gelukt : "Kopiëren lukt niet in deze browser; selecteer de tekst in het voorbeeld en kopieer hem zelf.";
-    };
-    if (navigator.clipboard && window.isSecureContext){
-      navigator.clipboard.writeText(tekst).then(function(){ klaar(true); }, function(){ klaar(false); });
-    } else {
-      klaar(false);
-    }
-  }
-
-  form.addEventListener("submit", function(e){
-    e.preventDefault();
+  function verstuurMail(){
     melding.className = "melding";
-    var lijst = controleer();
+    var lijst = controleerMail();
     if (!lijst) return;
     var href = mailtoLink(lijst);
     openMail(href);
@@ -360,30 +551,170 @@
       "<div class=\"knoppen\"><a class=\"knop knop-primair knop-klein\" id=\"mail-opnieuw\" href=\"" + esc(href) + "\">Open de e-mail opnieuw</a>" +
       "<button type=\"button\" class=\"knop-tweede knop-klein\" id=\"nogmaals\">Nog iemand uitnodigen</button></div>" +
       "<p style=\"font-size:13px;margin:10px 0 0\">Opent er niets? Kopieer de tekst met <strong>Tekst kopiëren</strong> en plak hem in een nieuwe e-mail.</p>");
-    document.getElementById("nogmaals").addEventListener("click", function(){
+    $("nogmaals").addEventListener("click", function(){
       adressen.value = "";
       melding.className = "melding";
-      status.textContent = "";
+      $("kopie-status").textContent = "";
       adressen.focus();
     });
+  }
+
+  /* ---------- WhatsApp ---------- */
+
+  function controleerMobiel(toonFout){
+    var r = normaliseerNummer(mobiel.value);
+    if (toonFout){
+      foutMob.textContent = r.ok ? "" : r.fout;
+      markeer("mobiel", !r.ok);
+    }
+    return r;
+  }
+
+  waOpen.addEventListener("click", function(e){
+    var r = controleerMobiel(true);
+    var ok = controleerAlgemeen() && r.ok;
+    if (!ok){ e.preventDefault(); focusEersteFout(); return; }
+    waOpen.href = whatsappUrl(r.nummer);
+    $("wa-status").textContent = "WhatsApp wordt geopend in een nieuw tabblad. Controleer het bericht en verstuur het daar.";
   });
 
-  document.getElementById("kopieer-tekst").addEventListener("click", function(){
-    kopieer(onderwerp() + "\n\n" + uitnodigingTekst(), "Uitnodigingstekst gekopieerd ✓");
+  /* ---------- LinkedIn ---------- */
+
+  function controleerProfiel(toonFout){
+    var p = leesProfiel();
+    if (toonFout) markeer("profiel", p === null);
+    return p;
+  }
+
+  liBericht.addEventListener("click", function(e){
+    var p = controleerProfiel(true);
+    var ok = controleerAlgemeen() && p !== null;
+    if (!ok){ e.preventDefault(); focusEersteFout(); return; }
+    liBericht.href = p || "https://www.linkedin.com/messaging/";
+    kopieer(linkedinTekst(), "Tekst gekopieerd – plak hem in je LinkedIn-bericht", $("li-status"));
   });
-  document.getElementById("kopieer-link").addEventListener("click", function(){
-    kopieer(SITE, "Link naar het Adviesforum gekopieerd ✓");
+
+  liDelen.addEventListener("click", function(){
+    kopieer(tijdlijnTekst(), "Tekst gekopieerd – plak hem bij je LinkedIn-bericht", $("li-deel-status"));
+  });
+
+  /* ---------- Delen via het apparaat (Web Share API) ---------- */
+
+  if (typeof navigator.share === "function"){
+    $("deel-api").hidden = false;
+    $("deel-knop").addEventListener("click", function(){
+      navigator.share({ title: "Adviesforum – voor en door financieel adviseurs", text: deelTekst(), url: SITE }).catch(function(){ /* geannuleerd */ });
+    });
+  }
+
+  /* ---------- Tabs en deeplinks ---------- */
+
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.kanalen [role="tab"]'));
+
+  function kiesKanaal(k, focus){
+    if (KANALEN.indexOf(k) < 0) k = "email";
+    actief = k;
+    tabs.forEach(function(t){
+      var aan = t.dataset.kanaal === k;
+      t.setAttribute("aria-selected", aan ? "true" : "false");
+      t.tabIndex = aan ? 0 : -1;
+      $(t.getAttribute("aria-controls")).hidden = !aan;
+      if (aan && focus) t.focus();
+    });
+    werkVoorbeeldBij();
+  }
+
+  function kanaalUitHash(){
+    var h = (location.hash || "").replace(/^#/, "").toLowerCase();
+    if (h === "whatsapp" || h === "wa") return "whatsapp";
+    if (h === "linkedin") return "linkedin";
+    if (h === "email" || h === "e-mail" || h === "mail") return "email";
+    return null;
+  }
+
+  tabs.forEach(function(t, i){
+    t.addEventListener("click", function(){
+      kiesKanaal(t.dataset.kanaal);
+      try { history.replaceState(null, "", "#" + t.dataset.kanaal); } catch (e) {}
+    });
+    t.addEventListener("keydown", function(e){
+      var n = null;
+      if (e.key === "ArrowRight") n = (i + 1) % tabs.length;
+      else if (e.key === "ArrowLeft") n = (i - 1 + tabs.length) % tabs.length;
+      else if (e.key === "Home") n = 0;
+      else if (e.key === "End") n = tabs.length - 1;
+      if (n === null) return;
+      e.preventDefault();
+      kiesKanaal(tabs[n].dataset.kanaal, true);
+      try { history.replaceState(null, "", "#" + tabs[n].dataset.kanaal); } catch (err) {}
+    });
+  });
+  window.addEventListener("hashchange", function(){ var k = kanaalUitHash(); if (k) kiesKanaal(k); });
+
+  /* ---------- Voorbeeld ---------- */
+
+  function werkVoorbeeldBij(){
+    var titels = { email: "Zo ziet je e-mail eruit", whatsapp: "Zo ziet je WhatsApp-bericht eruit", linkedin: "Zo ziet je LinkedIn-bericht eruit" };
+    $("vb-titel").textContent = titels[actief];
+    $("vb-onderwerp-regel").hidden = actief !== "email";
+    $("vb-onderwerp").textContent = onderwerp();
+    $("vb-tekst").textContent = actief === "email" ? uitnodigingTekst() : kanaalTekst(actief);
+    var teller = $("vb-teller");
+    if (actief === "whatsapp"){
+      var lengte = whatsappTekst().length;
+      teller.hidden = false;
+      teller.classList.toggle("te-lang", lengte > WA_MAX);
+      teller.textContent = lengte + " tekens" + (lengte > WA_MAX ? " – vrij lang voor WhatsApp; maak je persoonlijke boodschap korter." : "");
+    } else {
+      teller.hidden = true;
+    }
+    $("vb-tijdlijn").hidden = actief !== "linkedin";
+    $("vb-tijdlijn-tekst").textContent = tijdlijnTekst();
+    // Links actueel houden, zodat ze ook werken zonder klik-afhandeling (bv. middelklik).
+    var r = normaliseerNummer(mobiel.value);
+    waOpen.href = whatsappUrl(r.ok ? r.nummer : "");
+    var p = leesProfiel();
+    liBericht.href = p || "https://www.linkedin.com/messaging/";
+  }
+
+  /* ---------- Gebeurtenissen ---------- */
+
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    if (actief === "email") verstuurMail();
+    else if (actief === "whatsapp") waOpen.click();
+  });
+
+  $("kopieer-tekst").addEventListener("click", function(){
+    kopieer(onderwerp() + "\n\n" + uitnodigingTekst(), "Uitnodigingstekst gekopieerd ✓", $("kopie-status"));
+  });
+  $("kopieer-link").addEventListener("click", function(){
+    kopieer(SITE, "Link naar het Adviesforum gekopieerd ✓", $("kopie-status"));
+  });
+  $("wa-kopieer").addEventListener("click", function(){
+    kopieer(whatsappTekst(), "WhatsApp-tekst gekopieerd ✓", $("wa-status"));
+  });
+  $("vb-kopieer").addEventListener("click", function(){
+    var namen = { email: "E-mailtekst", whatsapp: "WhatsApp-tekst", linkedin: "LinkedIn-tekst" };
+    kopieer(kanaalTekst(actief), namen[actief] + " gekopieerd ✓", $("vb-status"));
   });
 
   adressen.addEventListener("input", function(){ markeer("adressen", false); });
   naam.addEventListener("input", function(){ markeer("naam", false); werkVoorbeeldBij(); });
   boodschap.addEventListener("input", werkVoorbeeldBij);
+  mobiel.addEventListener("input", function(){ markeer("mobiel", false); werkVoorbeeldBij(); });
+  mobiel.addEventListener("blur", function(){ if (mobiel.value.trim()) controleerMobiel(true); });
+  profiel.addEventListener("input", function(){ markeer("profiel", false); werkVoorbeeldBij(); });
+  profiel.addEventListener("blur", function(){ controleerProfiel(true); });
   akkoord.addEventListener("change", function(){
     foutAkk.style.display = "none";
     vak("akkoord").classList.remove("is-fout");
   });
 
-  werkVoorbeeldBij();
+  // Testhaak: zuivere functies, zonder opslag.
+  window.Uitnodigen = { normaliseerNummer: normaliseerNummer, whatsappUrl: whatsappUrl, whatsappTekst: whatsappTekst, linkedinTekst: linkedinTekst };
+
+  kiesKanaal(kanaalUitHash() || "email");
 })();
 </script>
 </body>
