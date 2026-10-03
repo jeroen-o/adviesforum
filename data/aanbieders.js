@@ -11,6 +11,9 @@
  *   initialen     1-3 tekens voor het logo-blokje; kleur: #RRGGBB
  *   rubrieken     optioneel: lijst met rubrieksleutels op het Adviesforum, bijv. ['bankgarantie'] of ['krediet'] (zie RUBRIEKEN in aanbieders.html)
  *                 bekende sleutels: bankgarantie = "Bankgaranties en bieden met zekerheid" (badge en filter op aanbieders.html)
+ *   telefoon      optioneel: algemeen of intermediair-telefoonnummer (zakelijk, geen persoonlijke nummers)
+ *   opgezocht     JJJJ-MM-DD: datum waarop website, telefoon en extranet door de redactie zijn opgezocht (bij voorbeeldprofielen)
+ *   contactbronnen  lijst met bron-URL's van die gegevens
  *   omschrijving  korte zakelijke omschrijving (max. 400 tekens); website: https-url
  *   extranet      {url, naam}  portal of aanvraagomgeving voor adviseurs
  *   contact       [{naam, functie, email, telefoon}]  alleen ZAKELIJKE gegevens, met toestemming van de persoon (AVG)
@@ -255,10 +258,10 @@ window.AANBIEDERS=[
     "type": "verzekeraar",
     "logo": "img/logos/a-s-r.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. a.s.r. heeft deze pagina niet aangeleverd. Zodra a.s.r. meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over verzekeringen.",
-    "website": "https://example.org/a-s-r/",
+    "website": "https://www.asr.nl/adviseurs",
     "extranet": {
-      "url": "https://example.org/a-s-r/adviseursportaal",
-      "naam": "Adviseursportaal a.s.r. (fictief)"
+      "url": "https://www.asr.nl/zakelijk/login/adviseurs",
+      "naam": "a.s.r. Cockpit (adviseurslogin)"
     },
     "nieuws": [
       {
@@ -281,7 +284,14 @@ window.AANBIEDERS=[
         "soort": "productblad"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "030 278 46 00",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://www.asr.nl/adviseur",
+      "https://www.asr.nl/zakelijk/login/adviseurs",
+      "https://extranet.uitvaart.asr.nl/File/Cockpitkaart.pdf"
+    ]
   },
   {
     "id": "abn-amro",
@@ -290,10 +300,10 @@ window.AANBIEDERS=[
     "type": "geldverstrekker",
     "logo": "img/logos/abn-amro.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. ABN AMRO heeft deze pagina niet aangeleverd. Zodra ABN AMRO meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over hypotheken.",
-    "website": "https://example.org/abn-amro/",
+    "website": "https://intermediair.abnamro.nl/",
     "extranet": {
-      "url": "https://example.org/abn-amro/adviseursportaal",
-      "naam": "Adviseursportaal ABN AMRO (fictief)"
+      "url": "https://intermediair.abnamro.nl/systeem/inloggen",
+      "naam": "ABN AMRO Intermediair (inloggen)"
     },
     "nieuws": [
       {
@@ -319,6 +329,12 @@ window.AANBIEDERS=[
     "bijgewerkt": "2026-10-03",
     "rubrieken": [
       "krediet"
+    ],
+    "telefoon": "033 750 46 35",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://intermediair.abnamro.nl/over-ons",
+      "https://intermediair.abnamro.nl/systeem/inloggen"
     ]
   },
   {
@@ -328,10 +344,10 @@ window.AANBIEDERS=[
     "type": "serviceprovider",
     "logo": "img/logos/acura-assuradeuren.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Acura Assuradeuren heeft deze pagina niet aangeleverd. Zodra Acura Assuradeuren meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs. Serviceprovider voor het intermediair (volmacht/assuradeur).",
-    "website": "https://example.org/acura-assuradeuren/",
+    "website": "https://www.acura.nl/voor-assurantietussenpersoon/",
     "extranet": {
-      "url": "https://example.org/acura-assuradeuren/adviseursportaal",
-      "naam": "Adviseursportaal Acura Assuradeuren (fictief)"
+      "url": "https://www.acura.nl/service/inloggen-extranet/",
+      "naam": "Acura Extranet"
     },
     "nieuws": [
       {
@@ -354,7 +370,14 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "088 765 40 00",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://www.acura.nl/service/contactgegevens-per-afdeling/",
+      "https://www.acura.nl/service/inloggen-extranet/",
+      "https://www.acura.nl/voor-assurantietussenpersoon/"
+    ]
   },
   {
     "id": "allianz-global-assistance",
@@ -363,10 +386,10 @@ window.AANBIEDERS=[
     "type": "verzekeraar",
     "logo": "img/logos/allianz-global-assistance.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Allianz Global Assistance heeft deze pagina niet aangeleverd. Zodra Allianz Global Assistance meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over verzekeringen.",
-    "website": "https://example.org/allianz-global-assistance/",
+    "website": "https://www.allianz-assistance.nl/over-ons/zakenpartner.html",
     "extranet": {
-      "url": "https://example.org/allianz-global-assistance/adviseursportaal",
-      "naam": "Adviseursportaal Allianz Global Assistance (fictief)"
+      "url": "https://ap.allianz-assistance.nl/AllianzAssistApplication/Logon",
+      "naam": "Allianz Assist"
     },
     "nieuws": [
       {
@@ -389,7 +412,13 @@ window.AANBIEDERS=[
         "soort": "productblad"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "020 592 98 90",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://www.allianz-assistance.nl/over-ons/zakenpartner.html",
+      "https://ap.allianz-assistance.nl/AllianzAssistApplication/Logon"
+    ]
   },
   {
     "id": "allianz",
@@ -398,10 +427,10 @@ window.AANBIEDERS=[
     "type": "verzekeraar",
     "logo": "img/logos/allianz.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Allianz heeft deze pagina niet aangeleverd. Zodra Allianz meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over verzekeringen.",
-    "website": "https://example.org/allianz/",
+    "website": "https://www.allianz.nl/particulier/hypotheken.html",
     "extranet": {
-      "url": "https://example.org/allianz/adviseursportaal",
-      "naam": "Adviseursportaal Allianz (fictief)"
+      "url": "https://adviseursportaal.allianz.nl/",
+      "naam": "Allianz Adviseursportaal"
     },
     "nieuws": [
       {
@@ -424,7 +453,14 @@ window.AANBIEDERS=[
         "soort": "productblad"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "088 577 39 39",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://www.allianz.nl/particulier/hypotheken.html",
+      "https://adviseursportaal.allianz.nl/",
+      "https://www.allianz.nl/zakelijk/contact.html"
+    ]
   },
   {
     "id": "anac-backoffice",
@@ -433,10 +469,10 @@ window.AANBIEDERS=[
     "type": "serviceprovider",
     "logo": "img/logos/anac-backoffice.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Anac Backoffice heeft deze pagina niet aangeleverd. Zodra Anac Backoffice meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs.",
-    "website": "https://example.org/anac-backoffice/",
+    "website": "https://www.anac.nl/tussenpersonen/",
     "extranet": {
-      "url": "https://example.org/anac-backoffice/adviseursportaal",
-      "naam": "Adviseursportaal Anac Backoffice (fictief)"
+      "url": "https://mijn.anac.nl/",
+      "naam": "Mijn omgeving Anac"
     },
     "nieuws": [
       {
@@ -459,7 +495,15 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "040 264 59 79",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://www.anac.nl/contact/",
+      "https://www.anac.nl/tussenpersonen/",
+      "https://mijn.anac.nl/Account/Login?ReturnUrl=%2F",
+      "https://sp.dfobv.nl/serviceprovider/anac/"
+    ]
   },
   {
     "id": "anker-rechtsbijstand",
@@ -468,11 +512,7 @@ window.AANBIEDERS=[
     "type": "verzekeraar",
     "logo": "img/logos/anker-rechtsbijstand.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Anker Rechtsbijstand heeft deze pagina niet aangeleverd. Zodra Anker Rechtsbijstand meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over verzekeringen.",
-    "website": "https://example.org/anker-rechtsbijstand/",
-    "extranet": {
-      "url": "https://example.org/anker-rechtsbijstand/adviseursportaal",
-      "naam": "Adviseursportaal Anker Rechtsbijstand (fictief)"
-    },
+    "website": "https://www.ankerrechtsbijstand.nl/",
     "nieuws": [
       {
         "id": "n1",
@@ -494,7 +534,13 @@ window.AANBIEDERS=[
         "soort": "productblad"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "050 520 99 99",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://anker.nl/merken/anker-rechtsbijstand/",
+      "https://www.ankerrechtsbijstand.nl/"
+    ]
   },
   {
     "id": "arag",
@@ -503,11 +549,7 @@ window.AANBIEDERS=[
     "type": "verzekeraar",
     "logo": "img/logos/arag.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Arag heeft deze pagina niet aangeleverd. Zodra Arag meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over verzekeringen.",
-    "website": "https://example.org/arag/",
-    "extranet": {
-      "url": "https://example.org/arag/adviseursportaal",
-      "naam": "Adviseursportaal Arag (fictief)"
-    },
+    "website": "https://www.arag.nl/intermediair/",
     "nieuws": [
       {
         "id": "n1",
@@ -529,7 +571,14 @@ window.AANBIEDERS=[
         "soort": "productblad"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "033 434 23 42",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://www.arag.nl/intermediair/",
+      "https://www.arag.nl/intermediair/afdeling-verkoop/",
+      "https://www.arag.nl/contact/"
+    ]
   },
   {
     "id": "argenta",
@@ -538,10 +587,10 @@ window.AANBIEDERS=[
     "type": "geldverstrekker",
     "logo": "img/logos/argenta.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Argenta heeft deze pagina niet aangeleverd. Zodra Argenta meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over hypotheken.",
-    "website": "https://example.org/argenta/",
+    "website": "https://www.argenta.nl/adviseur/helpen-met-fijn-wonen",
     "extranet": {
-      "url": "https://example.org/argenta/adviseursportaal",
-      "naam": "Adviseursportaal Argenta (fictief)"
+      "url": "https://www.argenta.nl/inloggen",
+      "naam": "Inloggen adviseurs (Ik ben adviseur)"
     },
     "nieuws": [
       {
@@ -564,7 +613,13 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "088 205 15 00",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://www.argenta.nl/adviseur/contact/veelgestelde-vragen/adviseurs/contact-adviseurs",
+      "https://www.argenta.nl/inloggen"
+    ]
   },
   {
     "id": "asn-bank",
@@ -573,11 +628,7 @@ window.AANBIEDERS=[
     "type": "geldverstrekker",
     "logo": "img/logos/asn-bank.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. ASN Bank heeft deze pagina niet aangeleverd. Zodra ASN Bank meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over hypotheken.",
-    "website": "https://example.org/asn-bank/",
-    "extranet": {
-      "url": "https://example.org/asn-bank/adviseursportaal",
-      "naam": "Adviseursportaal ASN Bank (fictief)"
-    },
+    "website": "https://www.asnbank.nl/hypotheek/onafhankelijke-adviseurs.html",
     "nieuws": [
       {
         "id": "n1",
@@ -599,7 +650,13 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "030 633 30 22",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://www.asnbank.nl/downloads/asn-hypotheek-onafhankelijk-adviseurs-2024.html",
+      "https://www.asnbank.nl/service/hypotheken.html"
+    ]
   },
   {
     "id": "attens-hypotheken",
@@ -608,10 +665,10 @@ window.AANBIEDERS=[
     "type": "geldverstrekker",
     "logo": "img/logos/attens-hypotheken.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Attens Hypotheken heeft deze pagina niet aangeleverd. Zodra Attens Hypotheken meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over hypotheken.",
-    "website": "https://example.org/attens-hypotheken/",
+    "website": "https://www.attens.nl/voor-adviseurs",
     "extranet": {
-      "url": "https://example.org/attens-hypotheken/adviseursportaal",
-      "naam": "Adviseursportaal Attens Hypotheken (fictief)"
+      "url": "https://www.attens.nl/voor-adviseurs/adviseursportaal",
+      "naam": "Adviseursportaal (Centraal Beheer/Achmea, eHerkenning)"
     },
     "nieuws": [
       {
@@ -634,7 +691,13 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "020 318 96 50",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://www.attens.nl/contact",
+      "https://www.attens.nl/voor-adviseurs/adviseursportaal"
+    ]
   },
   {
     "id": "avero-achmea",
@@ -643,10 +706,10 @@ window.AANBIEDERS=[
     "type": "verzekeraar",
     "logo": "img/logos/avero-achmea.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Avero Achmea heeft deze pagina niet aangeleverd. Zodra Avero Achmea meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over verzekeringen.",
-    "website": "https://example.org/avero-achmea/",
+    "website": "https://www.averoachmea.nl/adviseur/arbeidsongeschiktheidsverzekeringen",
     "extranet": {
-      "url": "https://example.org/avero-achmea/adviseursportaal",
-      "naam": "Adviseursportaal Avero Achmea (fictief)"
+      "url": "https://www.averoachmea.nl/direct-regelen/inloggen",
+      "naam": "Inloggen adviseursdashboard"
     },
     "nieuws": [
       {
@@ -669,7 +732,13 @@ window.AANBIEDERS=[
         "soort": "productblad"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "055 579 21 00",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://www.averoachmea.nl/direct-regelen/contact",
+      "https://www.averoachmea.nl/direct-regelen/inloggen"
+    ]
   },
   {
     "id": "bedrijfshypotheek-nl",
@@ -678,11 +747,7 @@ window.AANBIEDERS=[
     "type": "serviceprovider",
     "logo": "img/logos/bedrijfshypotheek-nl.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Bedrijfshypotheek.nl heeft deze pagina niet aangeleverd. Zodra Bedrijfshypotheek.nl meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs. Serviceprovider voor hypotheken.",
-    "website": "https://example.org/bedrijfshypotheek-nl/",
-    "extranet": {
-      "url": "https://example.org/bedrijfshypotheek-nl/adviseursportaal",
-      "naam": "Adviseursportaal Bedrijfshypotheek.nl (fictief)"
-    },
+    "website": "https://bedrijfshypotheek.nl/",
     "nieuws": [
       {
         "id": "n1",
@@ -704,7 +769,13 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "053 480 24 05",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://bedrijfshypotheek.nl/contact/",
+      "https://bedrijfshypotheek.nl/over-ons/"
+    ]
   },
   {
     "id": "bijbouwe",
@@ -713,11 +784,7 @@ window.AANBIEDERS=[
     "type": "geldverstrekker",
     "logo": "img/logos/bijbouwe.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. bijBouwe heeft deze pagina niet aangeleverd. Zodra bijBouwe meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over hypotheken.",
-    "website": "https://example.org/bijbouwe/",
-    "extranet": {
-      "url": "https://example.org/bijbouwe/adviseursportaal",
-      "naam": "Adviseursportaal bijBouwe (fictief)"
-    },
+    "website": "https://bijbouwe.nl/adviseurs",
     "nieuws": [
       {
         "id": "n1",
@@ -739,7 +806,13 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "024 800 07 87",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://bijbouwe.nl/adviseurs/service-contact",
+      "https://bijbouwe.nl/adviseurs"
+    ]
   },
   {
     "id": "blueline-hypotheekdesk",
@@ -748,10 +821,10 @@ window.AANBIEDERS=[
     "type": "serviceprovider",
     "logo": "img/logos/blueline-hypotheekdesk.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Blueline Hypotheekdesk heeft deze pagina niet aangeleverd. Zodra Blueline Hypotheekdesk meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs. Serviceprovider voor hypotheken.",
-    "website": "https://example.org/blueline-hypotheekdesk/",
+    "website": "https://bluelinehypotheekdesk.nl/",
     "extranet": {
-      "url": "https://example.org/blueline-hypotheekdesk/adviseursportaal",
-      "naam": "Adviseursportaal Blueline Hypotheekdesk (fictief)"
+      "url": "https://extranet.conneqt.nl/inloggen/",
+      "naam": "Conneqt Extranet"
     },
     "nieuws": [
       {
@@ -774,7 +847,15 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "088 766 38 16",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://bluelinehypotheekdesk.nl/",
+      "https://www.clarianwonen.nl/consument/ik-heb-een-vraag-over-een-aanvraag-met-wie-kan-ik-contact-opnemen",
+      "https://extranet.conneqt.nl/inloggen/",
+      "https://www.conneqt.nl/en/"
+    ]
   },
   {
     "id": "bnp-paribas",
@@ -783,11 +864,7 @@ window.AANBIEDERS=[
     "type": "kredietverstrekker",
     "logo": "img/logos/bnp-paribas.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. BNP Paribas heeft deze pagina niet aangeleverd. Zodra BNP Paribas meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over kredieten en financieringen.",
-    "website": "https://example.org/bnp-paribas/",
-    "extranet": {
-      "url": "https://example.org/bnp-paribas/adviseursportaal",
-      "naam": "Adviseursportaal BNP Paribas (fictief)"
-    },
+    "website": "https://www.bnpparibas-pf.nl/",
     "nieuws": [
       {
         "id": "n1",
@@ -812,6 +889,12 @@ window.AANBIEDERS=[
     "bijgewerkt": "2026-10-03",
     "rubrieken": [
       "krediet"
+    ],
+    "telefoon": "088 886 69 00",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://www.bnpparibas.nl/en/get-in-touch-with-our-businesses/",
+      "https://www.bnpparibas-pf.nl/lenen/de-persoonlijkste-lening/geselecteerde-financieel-adviseurs"
     ]
   },
   {
@@ -824,10 +907,10 @@ window.AANBIEDERS=[
       "bankgarantie"
     ],
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. BNP Paribas Cardif heeft deze pagina niet aangeleverd. Zodra BNP Paribas Cardif meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over verzekeringen. Rubriek op het Adviesforum: bankgaranties en bieden met zekerheid.",
-    "website": "https://example.org/bnp-paribas-cardif/",
+    "website": "https://www.bnpparibascardif.nl/",
     "extranet": {
-      "url": "https://example.org/bnp-paribas-cardif/adviseursportaal",
-      "naam": "Adviseursportaal BNP Paribas Cardif (fictief)"
+      "url": "https://www.finagora.nl/",
+      "naam": "Finagora"
     },
     "nieuws": [
       {
@@ -850,7 +933,13 @@ window.AANBIEDERS=[
         "soort": "productblad"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "088 486 10 00",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://www.bnpparibascardif.nl/contact",
+      "https://www.bnpparibascardif.nl/nieuws/cardif-vernieuwt-inkomstenvalmeter"
+    ]
   },
   {
     "id": "bovemij",
@@ -859,10 +948,10 @@ window.AANBIEDERS=[
     "type": "verzekeraar",
     "logo": "img/logos/bovemij.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Bovemij heeft deze pagina niet aangeleverd. Zodra Bovemij meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over verzekeringen.",
-    "website": "https://example.org/bovemij/",
+    "website": "https://www.bovemij.nl/tussenpersonen",
     "extranet": {
-      "url": "https://example.org/bovemij/adviseursportaal",
-      "naam": "Adviseursportaal Bovemij (fictief)"
+      "url": "https://portaal.bovemij.nl/",
+      "naam": "Bovemij Portaal"
     },
     "nieuws": [
       {
@@ -885,7 +974,13 @@ window.AANBIEDERS=[
         "soort": "productblad"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "024 366 67 62",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://www.bovemij.nl/tussenpersonen/service-en-contact",
+      "https://portaal.bovemij.nl/"
+    ]
   },
   {
     "id": "bsb-volmachten",
@@ -894,10 +989,10 @@ window.AANBIEDERS=[
     "type": "serviceprovider",
     "logo": "img/logos/bsb-volmachten.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. BSB Volmachten heeft deze pagina niet aangeleverd. Zodra BSB Volmachten meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs. Serviceprovider voor het intermediair (volmacht/assuradeur).",
-    "website": "https://example.org/bsb-volmachten/",
+    "website": "https://www.bsbvolmachten.nl/",
     "extranet": {
-      "url": "https://example.org/bsb-volmachten/adviseursportaal",
-      "naam": "Adviseursportaal BSB Volmachten (fictief)"
+      "url": "https://www.bsbvolmachten.nl/bsbnet/",
+      "naam": "BSBnet"
     },
     "nieuws": [
       {
@@ -920,7 +1015,13 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "046 423 02 35",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://www.bsbvolmachten.nl/contact/",
+      "https://www.bsbvolmachten.nl/bsbnet/"
+    ]
   },
   {
     "id": "build-finance",
@@ -929,11 +1030,7 @@ window.AANBIEDERS=[
     "type": "geldverstrekker",
     "logo": "img/logos/build-finance.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Build Finance heeft deze pagina niet aangeleverd. Zodra Build Finance meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over hypotheken.",
-    "website": "https://example.org/build-finance/",
-    "extranet": {
-      "url": "https://example.org/build-finance/adviseursportaal",
-      "naam": "Adviseursportaal Build Finance (fictief)"
-    },
+    "website": "https://build-finance.com/voor-adviseurs/",
     "nieuws": [
       {
         "id": "n1",
@@ -955,7 +1052,13 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "085 130 35 40",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://build-finance.com/contact/",
+      "https://build-finance.com/voor-adviseurs/"
+    ]
   },
   {
     "id": "bunq",
@@ -964,11 +1067,7 @@ window.AANBIEDERS=[
     "type": "geldverstrekker",
     "logo": "img/logos/bunq.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. bunq heeft deze pagina niet aangeleverd. Zodra bunq meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over hypotheken.",
-    "website": "https://example.org/bunq/",
-    "extranet": {
-      "url": "https://example.org/bunq/adviseursportaal",
-      "naam": "Adviseursportaal bunq (fictief)"
-    },
+    "website": "https://mortgages.bunq.com/",
     "nieuws": [
       {
         "id": "n1",
@@ -990,7 +1089,12 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://mortgages.bunq.com/contact",
+      "https://help.bunq.com/en/articles/bunq-easy-mortgages"
+    ]
   },
   {
     "id": "bureau-dfo",
@@ -999,11 +1103,7 @@ window.AANBIEDERS=[
     "type": "serviceprovider",
     "logo": "img/logos/bureau-dfo.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Bureau DFO heeft deze pagina niet aangeleverd. Zodra Bureau DFO meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs.",
-    "website": "https://example.org/bureau-dfo/",
-    "extranet": {
-      "url": "https://example.org/bureau-dfo/adviseursportaal",
-      "naam": "Adviseursportaal Bureau DFO (fictief)"
-    },
+    "website": "https://www.dfobv.nl/",
     "nieuws": [
       {
         "id": "n1",
@@ -1025,7 +1125,12 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "033 258 04 60",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://www.dfobv.nl/contact/"
+    ]
   },
   {
     "id": "capsearch",
@@ -1034,11 +1139,7 @@ window.AANBIEDERS=[
     "type": "serviceprovider",
     "logo": "img/logos/capsearch.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Capsearch heeft deze pagina niet aangeleverd. Zodra Capsearch meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs.",
-    "website": "https://example.org/capsearch/",
-    "extranet": {
-      "url": "https://example.org/capsearch/adviseursportaal",
-      "naam": "Adviseursportaal Capsearch (fictief)"
-    },
+    "website": "https://capsearch.com/hypotheekadviseur/",
     "nieuws": [
       {
         "id": "n1",
@@ -1060,7 +1161,13 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "085 065 67 92",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://capsearch.com/contact/",
+      "https://content.capsearch.com/knowledge-base/inloggen-en-dashboard"
+    ]
   },
   {
     "id": "centraal-beheer",
@@ -1069,10 +1176,10 @@ window.AANBIEDERS=[
     "type": "verzekeraar",
     "logo": "img/logos/centraal-beheer.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Centraal Beheer heeft deze pagina niet aangeleverd. Zodra Centraal Beheer meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over verzekeringen.",
-    "website": "https://example.org/centraal-beheer/",
+    "website": "https://www.centraalbeheer.nl/voor-adviseurs/hypotheek",
     "extranet": {
-      "url": "https://example.org/centraal-beheer/adviseursportaal",
-      "naam": "Adviseursportaal Centraal Beheer (fictief)"
+      "url": "https://www.centraalbeheer.nl/voor-adviseurs/adviseursportaal",
+      "naam": "Adviseursportaal (eHerkenning)"
     },
     "nieuws": [
       {
@@ -1095,7 +1202,13 @@ window.AANBIEDERS=[
         "soort": "productblad"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "055 579 85 10",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://www.centraalbeheer.nl/voor-adviseurs/contact/hypotheken",
+      "https://www.centraalbeheer.nl/voor-adviseurs/adviseursportaal"
+    ]
   },
   {
     "id": "certe-assuradeuren",
@@ -1104,11 +1217,7 @@ window.AANBIEDERS=[
     "type": "serviceprovider",
     "logo": "img/logos/certe-assuradeuren.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Certe Assuradeuren heeft deze pagina niet aangeleverd. Zodra Certe Assuradeuren meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs. Serviceprovider voor het intermediair (volmacht/assuradeur).",
-    "website": "https://example.org/certe-assuradeuren/",
-    "extranet": {
-      "url": "https://example.org/certe-assuradeuren/adviseursportaal",
-      "naam": "Adviseursportaal Certe Assuradeuren (fictief)"
-    },
+    "website": "https://certe-assuradeuren.nl/",
     "nieuws": [
       {
         "id": "n1",
@@ -1130,7 +1239,13 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "0524 52 40 25",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://certe-assuradeuren.nl/voor-adviseurs/service-en-contact/",
+      "https://www.amweb.nl/155090/assuradeurengilde-verandert-haar-naam"
+    ]
   },
   {
     "id": "cfsn-kredietendesk",
@@ -1139,11 +1254,7 @@ window.AANBIEDERS=[
     "type": "serviceprovider",
     "logo": "img/logos/cfsn-kredietendesk.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. CFSN Kredietendesk heeft deze pagina niet aangeleverd. Zodra CFSN Kredietendesk meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs. Serviceprovider voor kredieten.",
-    "website": "https://example.org/cfsn-kredietendesk/",
-    "extranet": {
-      "url": "https://example.org/cfsn-kredietendesk/adviseursportaal",
-      "naam": "Adviseursportaal CFSN Kredietendesk (fictief)"
-    },
+    "website": "https://www.cfsn.nl/",
     "nieuws": [
       {
         "id": "n1",
@@ -1165,7 +1276,13 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "088 237 60 60",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://sp.dfobv.nl/serviceprovider/cfsn-kredietendesk/",
+      "https://www.cfsn.nl/nieuwe-extranet"
+    ]
   },
   {
     "id": "clarian-wonen",
@@ -1174,10 +1291,10 @@ window.AANBIEDERS=[
     "type": "geldverstrekker",
     "logo": "img/logos/clarian-wonen.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Clarian Wonen heeft deze pagina niet aangeleverd. Zodra Clarian Wonen meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over hypotheken.",
-    "website": "https://example.org/clarian-wonen/",
+    "website": "https://www.clarianwonen.nl/voor-adviseurs/",
     "extranet": {
-      "url": "https://example.org/clarian-wonen/adviseursportaal",
-      "naam": "Adviseursportaal Clarian Wonen (fictief)"
+      "url": "https://extranet.conneqt.nl/inloggen/",
+      "naam": "Conneqt Extranet"
     },
     "nieuws": [
       {
@@ -1200,7 +1317,15 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "088 766 38 15",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://www.clarianwonen.nl/consument/ik-heb-een-vraag-over-een-aanvraag-met-wie-kan-ik-contact-opnemen",
+      "https://www.clarianwonen.nl/contact/",
+      "https://extranet.conneqt.nl/inloggen/",
+      "https://www.conneqt.nl/blog/conneqt-introduceert-clarian-wonen/"
+    ]
   },
   {
     "id": "connect-assuradeuren",
@@ -1209,11 +1334,7 @@ window.AANBIEDERS=[
     "type": "serviceprovider",
     "logo": "img/logos/connect-assuradeuren.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Connect Assuradeuren heeft deze pagina niet aangeleverd. Zodra Connect Assuradeuren meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs. Serviceprovider voor het intermediair (volmacht/assuradeur).",
-    "website": "https://example.org/connect-assuradeuren/",
-    "extranet": {
-      "url": "https://example.org/connect-assuradeuren/adviseursportaal",
-      "naam": "Adviseursportaal Connect Assuradeuren (fictief)"
-    },
+    "website": "https://connect-assuradeuren.nl/tussenpersoon/wat-kan-connect-voor-u-betekenen",
     "nieuws": [
       {
         "id": "n1",
@@ -1235,7 +1356,13 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "0229 54 75 90",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://www.connect-assuradeuren.nl/Contact/contact-informatie",
+      "https://www.veldsink.nl/nieuws/branche/connect-assuradeuren-wordt-onderdeel-van-veldsink-groep/"
+    ]
   },
   {
     "id": "corins",
@@ -1244,11 +1371,7 @@ window.AANBIEDERS=[
     "type": "verzekeraar",
     "logo": "img/logos/corins.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Corins heeft deze pagina niet aangeleverd. Zodra Corins meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over verzekeringen.",
-    "website": "https://example.org/corins/",
-    "extranet": {
-      "url": "https://example.org/corins/adviseursportaal",
-      "naam": "Adviseursportaal Corins (fictief)"
-    },
+    "website": "https://corins.nl/",
     "nieuws": [
       {
         "id": "n1",
@@ -1270,7 +1393,12 @@ window.AANBIEDERS=[
         "soort": "productblad"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "020 301 77 70",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://corins.nl/contactproperty.htm"
+    ]
   },
   {
     "id": "dak-intermediairscollectief",
@@ -1279,10 +1407,10 @@ window.AANBIEDERS=[
     "type": "serviceprovider",
     "logo": "img/logos/dak-intermediairscollectief.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. DAK intermediairscollectief heeft deze pagina niet aangeleverd. Zodra DAK intermediairscollectief meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs.",
-    "website": "https://example.org/dak-intermediairscollectief/",
+    "website": "https://dak.nl/",
     "extranet": {
-      "url": "https://example.org/dak-intermediairscollectief/adviseursportaal",
-      "naam": "Adviseursportaal DAK intermediairscollectief (fictief)"
+      "url": "https://wijzijndak.nl/",
+      "naam": "WijzijnDAK.nl (ledenomgeving)"
     },
     "nieuws": [
       {
@@ -1305,7 +1433,14 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "030 666 00 00",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://dak.nl/consumenten/contact/klachten/",
+      "https://dak.nl/contact/ledenservice/",
+      "https://dak.nl/novulo/"
+    ]
   },
   {
     "id": "das",
@@ -1314,10 +1449,10 @@ window.AANBIEDERS=[
     "type": "verzekeraar",
     "logo": "img/logos/das.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. DAS heeft deze pagina niet aangeleverd. Zodra DAS meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over verzekeringen.",
-    "website": "https://example.org/das/",
+    "website": "https://www.das.nl/adviseur",
     "extranet": {
-      "url": "https://example.org/das/adviseursportaal",
-      "naam": "Adviseursportaal DAS (fictief)"
+      "url": "https://adviseur.das.nl/inloggen",
+      "naam": "DAS voor Adviseurs"
     },
     "nieuws": [
       {
@@ -1340,7 +1475,14 @@ window.AANBIEDERS=[
         "soort": "productblad"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "020 651 78 11",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://www.das.nl/adviseur",
+      "https://adviseur.das.nl/inloggen?ac=1608111558",
+      "https://www.das.nl/ondernemer/service-en-contact"
+    ]
   },
   {
     "id": "de-goudse",
@@ -1349,10 +1491,10 @@ window.AANBIEDERS=[
     "type": "verzekeraar",
     "logo": "img/logos/de-goudse.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. De Goudse heeft deze pagina niet aangeleverd. Zodra De Goudse meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over verzekeringen.",
-    "website": "https://example.org/de-goudse/",
+    "website": "https://www.goudse.nl/adviseur",
     "extranet": {
-      "url": "https://example.org/de-goudse/adviseursportaal",
-      "naam": "Adviseursportaal De Goudse (fictief)"
+      "url": "https://www.goudse.nl/inloggen",
+      "naam": "Adviseursportaal"
     },
     "nieuws": [
       {
@@ -1375,7 +1517,14 @@ window.AANBIEDERS=[
         "soort": "productblad"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "0182 544 544",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://www.goudse.nl/algemeen/contact/telefoonnummers",
+      "https://www.goudse.nl/adviseur",
+      "https://www.goudse.nl/inloggen"
+    ]
   },
   {
     "id": "de-nederlandse",
@@ -1384,10 +1533,10 @@ window.AANBIEDERS=[
     "type": "geldverstrekker",
     "logo": "img/logos/de-nederlandse.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. De Nederlandse heeft deze pagina niet aangeleverd. Zodra De Nederlandse meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over hypotheken.",
-    "website": "https://example.org/de-nederlandse/",
+    "website": "https://de-nederlandse.nl/adviseurs/",
     "extranet": {
-      "url": "https://example.org/de-nederlandse/adviseursportaal",
-      "naam": "Adviseursportaal De Nederlandse (fictief)"
+      "url": "https://de-nederlandse.nl/login/",
+      "naam": "Mijn De Nederlandse"
     },
     "nieuws": [
       {
@@ -1410,7 +1559,14 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "030 307 05 50",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://de-nederlandse.nl/verhuur-hypotheek/",
+      "https://de-nederlandse.nl/adviseurs/",
+      "https://de-nederlandse.nl/login/"
+    ]
   },
   {
     "id": "de-zeeuwse",
@@ -1419,10 +1575,10 @@ window.AANBIEDERS=[
     "type": "verzekeraar",
     "logo": "img/logos/de-zeeuwse.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. De Zeeuwse heeft deze pagina niet aangeleverd. Zodra De Zeeuwse meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over verzekeringen.",
-    "website": "https://example.org/de-zeeuwse/",
+    "website": "https://www.dezeeuwse.nl/adviseur",
     "extranet": {
-      "url": "https://example.org/de-zeeuwse/adviseursportaal",
-      "naam": "Adviseursportaal De Zeeuwse (fictief)"
+      "url": "https://www.dezeeuwse.nl/inloggen",
+      "naam": "Adviseursportaal"
     },
     "nieuws": [
       {
@@ -1445,7 +1601,14 @@ window.AANBIEDERS=[
         "soort": "productblad"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "0118 683 300",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://www.dezeeuwse.nl/algemeen/contact",
+      "https://www.dezeeuwse.nl/adviseur",
+      "https://www.dezeeuwse.nl/inloggen"
+    ]
   },
   {
     "id": "defam",
@@ -1454,10 +1617,10 @@ window.AANBIEDERS=[
     "type": "kredietverstrekker",
     "logo": "img/logos/defam.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. DEFAM heeft deze pagina niet aangeleverd. Zodra DEFAM meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over kredieten en financieringen.",
-    "website": "https://example.org/defam/",
+    "website": "https://www.defam.nl/voor-partners/",
     "extranet": {
-      "url": "https://example.org/defam/adviseursportaal",
-      "naam": "Adviseursportaal DEFAM (fictief)"
+      "url": "https://www.defam.nl/voor-partners/portaal/",
+      "naam": "DP Portaal"
     },
     "nieuws": [
       {
@@ -1483,6 +1646,12 @@ window.AANBIEDERS=[
     "bijgewerkt": "2026-10-03",
     "rubrieken": [
       "krediet"
+    ],
+    "telefoon": "030 659 66 15",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://www.defam.nl/voor-partners/portaal/",
+      "https://www.defam.nl/voor-partners/"
     ]
   },
   {
@@ -1492,11 +1661,7 @@ window.AANBIEDERS=[
     "type": "geldverstrekker",
     "logo": "img/logos/domivest.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Domivest heeft deze pagina niet aangeleverd. Zodra Domivest meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over hypotheken.",
-    "website": "https://example.org/domivest/",
-    "extranet": {
-      "url": "https://example.org/domivest/adviseursportaal",
-      "naam": "Adviseursportaal Domivest (fictief)"
-    },
+    "website": "https://domivest.com/",
     "nieuws": [
       {
         "id": "n1",
@@ -1518,7 +1683,12 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://domivest.com/contact",
+      "https://domivest.com/het-product"
+    ]
   },
   {
     "id": "dutch-finance",
@@ -1527,11 +1697,7 @@ window.AANBIEDERS=[
     "type": "kredietverstrekker",
     "logo": "img/logos/dutch-finance.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Dutch Finance heeft deze pagina niet aangeleverd. Zodra Dutch Finance meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over kredieten en financieringen.",
-    "website": "https://example.org/dutch-finance/",
-    "extranet": {
-      "url": "https://example.org/dutch-finance/adviseursportaal",
-      "naam": "Adviseursportaal Dutch Finance (fictief)"
-    },
+    "website": "https://www.dutchfinance.nl/",
     "nieuws": [
       {
         "id": "n1",
@@ -1553,7 +1719,13 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "033 479 18 60",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://www.dutchfinance.nl/",
+      "https://www.dutchfinance.nl/over-dutchfinance"
+    ]
   },
   {
     "id": "financieel-fit",
@@ -1562,10 +1734,10 @@ window.AANBIEDERS=[
     "type": "serviceprovider",
     "logo": "img/logos/financieel-fit.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Financieel Fit heeft deze pagina niet aangeleverd. Zodra Financieel Fit meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs.",
-    "website": "https://example.org/financieel-fit/",
+    "website": "https://www.financieelfit.nl/",
     "extranet": {
-      "url": "https://example.org/financieel-fit/adviseursportaal",
-      "naam": "Adviseursportaal Financieel Fit (fictief)"
+      "url": "https://portaal.financieelfit.nl/",
+      "naam": "Financieel Fit Portaal (service dashboard)"
     },
     "nieuws": [
       {
@@ -1588,7 +1760,13 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "0164 607 211",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://www.financieelfit.nl/contact/",
+      "https://wiki.financieelfit.nl/portaal/verbinden-met-het-portaal/inloggen-op-het-service-dashboard"
+    ]
   },
   {
     "id": "financieel-zeker",
@@ -1597,11 +1775,6 @@ window.AANBIEDERS=[
     "type": "serviceprovider",
     "logo": "img/logos/financieel-zeker.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Financieel Zeker heeft deze pagina niet aangeleverd. Zodra Financieel Zeker meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs.",
-    "website": "https://example.org/financieel-zeker/",
-    "extranet": {
-      "url": "https://example.org/financieel-zeker/adviseursportaal",
-      "naam": "Adviseursportaal Financieel Zeker (fictief)"
-    },
     "nieuws": [
       {
         "id": "n1",
@@ -1623,7 +1796,8 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "opgezocht": "2026-10-03"
   },
   {
     "id": "florius",
@@ -1632,10 +1806,10 @@ window.AANBIEDERS=[
     "type": "geldverstrekker",
     "logo": "img/logos/florius.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Florius heeft deze pagina niet aangeleverd. Zodra Florius meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over hypotheken.",
-    "website": "https://example.org/florius/",
+    "website": "https://www.florius.nl/",
     "extranet": {
-      "url": "https://example.org/florius/adviseursportaal",
-      "naam": "Adviseursportaal Florius (fictief)"
+      "url": "https://login.florius.nl/Login/",
+      "naam": "Florius Adviseurs Netwerk (FAN)"
     },
     "nieuws": [
       {
@@ -1658,7 +1832,13 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "033 752 50 00",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://www.florius.nl/service-en-contact",
+      "https://login.florius.nl/Login/"
+    ]
   },
   {
     "id": "fondsen-platform",
@@ -1667,11 +1847,6 @@ window.AANBIEDERS=[
     "type": "serviceprovider",
     "logo": "img/logos/fondsen-platform.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Fondsen Platform heeft deze pagina niet aangeleverd. Zodra Fondsen Platform meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs.",
-    "website": "https://example.org/fondsen-platform/",
-    "extranet": {
-      "url": "https://example.org/fondsen-platform/adviseursportaal",
-      "naam": "Adviseursportaal Fondsen Platform (fictief)"
-    },
     "nieuws": [
       {
         "id": "n1",
@@ -1693,7 +1868,8 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "opgezocht": "2026-10-03"
   },
   {
     "id": "groene-hart-hypotheken",
@@ -1702,11 +1878,7 @@ window.AANBIEDERS=[
     "type": "geldverstrekker",
     "logo": "img/logos/groene-hart-hypotheken.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Groene Hart Hypotheken heeft deze pagina niet aangeleverd. Zodra Groene Hart Hypotheken meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over hypotheken.",
-    "website": "https://example.org/groene-hart-hypotheken/",
-    "extranet": {
-      "url": "https://example.org/groene-hart-hypotheken/adviseursportaal",
-      "naam": "Adviseursportaal Groene Hart Hypotheken (fictief)"
-    },
+    "website": "https://groeneharthypotheken.nl/adviseurs/",
     "nieuws": [
       {
         "id": "n1",
@@ -1728,7 +1900,13 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "030 307 05 25",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://groeneharthypotheken.nl/handig/contact/",
+      "https://groeneharthypotheken.nl/adviseurs/over-ons/dak-intermediairscollectief/"
+    ]
   },
   {
     "id": "guardian-group",
@@ -1737,11 +1915,6 @@ window.AANBIEDERS=[
     "type": "verzekeraar",
     "logo": "img/logos/guardian-group.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Guardian Group heeft deze pagina niet aangeleverd. Zodra Guardian Group meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over verzekeringen.",
-    "website": "https://example.org/guardian-group/",
-    "extranet": {
-      "url": "https://example.org/guardian-group/adviseursportaal",
-      "naam": "Adviseursportaal Guardian Group (fictief)"
-    },
     "nieuws": [
       {
         "id": "n1",
@@ -1763,7 +1936,11 @@ window.AANBIEDERS=[
         "soort": "productblad"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://www.fsma.be/en/party/guardian-group-nederland-nv"
+    ]
   },
   {
     "id": "handelsbanken",
@@ -1772,11 +1949,7 @@ window.AANBIEDERS=[
     "type": "geldverstrekker",
     "logo": "img/logos/handelsbanken.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Handelsbanken heeft deze pagina niet aangeleverd. Zodra Handelsbanken meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over hypotheken.",
-    "website": "https://example.org/handelsbanken/",
-    "extranet": {
-      "url": "https://example.org/handelsbanken/adviseursportaal",
-      "naam": "Adviseursportaal Handelsbanken (fictief)"
-    },
+    "website": "https://www.handelsbanken.nl/nl/particulier/hypotheken",
     "nieuws": [
       {
         "id": "n1",
@@ -1798,7 +1971,13 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "0800 820 00 20",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://www.handelsbanken.nl/nl/particulier/hypotheken",
+      "https://www.handelsbanken.nl/nl/vind-uw-kantoor/amsterdam-zuid"
+    ]
   },
   {
     "id": "hdi",
@@ -1807,11 +1986,7 @@ window.AANBIEDERS=[
     "type": "verzekeraar",
     "logo": "img/logos/hdi.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. HDI heeft deze pagina niet aangeleverd. Zodra HDI meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over verzekeringen.",
-    "website": "https://example.org/hdi/",
-    "extranet": {
-      "url": "https://example.org/hdi/adviseursportaal",
-      "naam": "Adviseursportaal HDI (fictief)"
-    },
+    "website": "https://www.hdi.global/nl-nl/",
     "nieuws": [
       {
         "id": "n1",
@@ -1833,7 +2008,13 @@ window.AANBIEDERS=[
         "soort": "productblad"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "010 403 61 00",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://www.hdi.global/en-us/about-us/locations-contacts/",
+      "https://www.hdi.global/nl-nl/services/volmachten/"
+    ]
   },
   {
     "id": "heinenoord-assuradeuren",
@@ -1842,11 +2023,7 @@ window.AANBIEDERS=[
     "type": "serviceprovider",
     "logo": "img/logos/heinenoord-assuradeuren.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Heinenoord Assuradeuren heeft deze pagina niet aangeleverd. Zodra Heinenoord Assuradeuren meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs. Serviceprovider voor het intermediair (volmacht/assuradeur).",
-    "website": "https://example.org/heinenoord-assuradeuren/",
-    "extranet": {
-      "url": "https://example.org/heinenoord-assuradeuren/adviseursportaal",
-      "naam": "Adviseursportaal Heinenoord Assuradeuren (fictief)"
-    },
+    "website": "https://www.heinenoord.nl/",
     "nieuws": [
       {
         "id": "n1",
@@ -1868,7 +2045,13 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "085 860 09 98",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://www.heinenoord.nl/contact",
+      "https://www.heinenoord.nl/"
+    ]
   },
   {
     "id": "hoeksche-waard-assuradeuren",
@@ -1877,11 +2060,7 @@ window.AANBIEDERS=[
     "type": "serviceprovider",
     "logo": "img/logos/hoeksche-waard-assuradeuren.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Hoeksche Waard Assuradeuren heeft deze pagina niet aangeleverd. Zodra Hoeksche Waard Assuradeuren meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs. Serviceprovider voor het intermediair (volmacht/assuradeur).",
-    "website": "https://example.org/hoeksche-waard-assuradeuren/",
-    "extranet": {
-      "url": "https://example.org/hoeksche-waard-assuradeuren/adviseursportaal",
-      "naam": "Adviseursportaal Hoeksche Waard Assuradeuren (fictief)"
-    },
+    "website": "https://hoekschewaardassuradeuren.nl/intermediair/",
     "nieuws": [
       {
         "id": "n1",
@@ -1903,7 +2082,13 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "078 676 90 00",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://hoekschewaardassuradeuren.nl/contact/",
+      "https://hoekschewaardassuradeuren.nl/intermediair/"
+    ]
   },
   {
     "id": "hollandwoont",
@@ -1912,11 +2097,7 @@ window.AANBIEDERS=[
     "type": "geldverstrekker",
     "logo": "img/logos/hollandwoont.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. HollandWoont heeft deze pagina niet aangeleverd. Zodra HollandWoont meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over hypotheken.",
-    "website": "https://example.org/hollandwoont/",
-    "extranet": {
-      "url": "https://example.org/hollandwoont/adviseursportaal",
-      "naam": "Adviseursportaal HollandWoont (fictief)"
-    },
+    "website": "https://www.hollandwoont.nl/adviseur",
     "nieuws": [
       {
         "id": "n1",
@@ -1938,7 +2119,13 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "010 242 22 91",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://www.hollandwoont.nl/adviseur/service-contact",
+      "https://www.hollandwoont.nl/adviseur"
+    ]
   },
   {
     "id": "home-invest",
@@ -1947,11 +2134,6 @@ window.AANBIEDERS=[
     "type": "serviceprovider",
     "logo": "img/logos/home-invest.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Home Invest heeft deze pagina niet aangeleverd. Zodra Home Invest meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs.",
-    "website": "https://example.org/home-invest/",
-    "extranet": {
-      "url": "https://example.org/home-invest/adviseursportaal",
-      "naam": "Adviseursportaal Home Invest (fictief)"
-    },
     "nieuws": [
       {
         "id": "n1",
@@ -1973,7 +2155,8 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "opgezocht": "2026-10-03"
   },
   {
     "id": "huismerk",
@@ -1982,10 +2165,10 @@ window.AANBIEDERS=[
     "type": "serviceprovider",
     "logo": "img/logos/huismerk.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Huismerk heeft deze pagina niet aangeleverd. Zodra Huismerk meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs.",
-    "website": "https://example.org/huismerk/",
+    "website": "https://www.huismerk.nl/",
     "extranet": {
-      "url": "https://example.org/huismerk/adviseursportaal",
-      "naam": "Adviseursportaal Huismerk (fictief)"
+      "url": "https://huismerk.nl/dashboard/",
+      "naam": "Dashboard Adviseurs"
     },
     "nieuws": [
       {
@@ -2008,7 +2191,13 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "088 766 38 70",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://huismerk.nl/over-huismerk/contact/",
+      "https://huismerk.nl/dashboard/"
+    ]
   },
   {
     "id": "hypotheekgo",
@@ -2017,11 +2206,6 @@ window.AANBIEDERS=[
     "type": "serviceprovider",
     "logo": "img/logos/hypotheekgo.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. HypotheekGo heeft deze pagina niet aangeleverd. Zodra HypotheekGo meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs. Serviceprovider voor hypotheken.",
-    "website": "https://example.org/hypotheekgo/",
-    "extranet": {
-      "url": "https://example.org/hypotheekgo/adviseursportaal",
-      "naam": "Adviseursportaal HypotheekGo (fictief)"
-    },
     "nieuws": [
       {
         "id": "n1",
@@ -2043,7 +2227,8 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "opgezocht": "2026-10-03"
   },
   {
     "id": "impact-hypotheken",
@@ -2052,11 +2237,7 @@ window.AANBIEDERS=[
     "type": "geldverstrekker",
     "logo": "img/logos/impact-hypotheken.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Impact Hypotheken heeft deze pagina niet aangeleverd. Zodra Impact Hypotheken meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over hypotheken.",
-    "website": "https://example.org/impact-hypotheken/",
-    "extranet": {
-      "url": "https://example.org/impact-hypotheken/adviseursportaal",
-      "naam": "Adviseursportaal Impact Hypotheken (fictief)"
-    },
+    "website": "https://impacthypotheken.nl/adviseur",
     "nieuws": [
       {
         "id": "n1",
@@ -2078,7 +2259,13 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "088 205 64 76",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://impacthypotheken.nl/adviseur/contact/",
+      "https://impacthypotheken.nl/adviseur/veelgestelde-vragen/wat-kan-ik-met-de-portal-voor-adviseurs/"
+    ]
   },
   {
     "id": "impact-opleiding-en-training",
@@ -2087,11 +2274,6 @@ window.AANBIEDERS=[
     "type": "serviceprovider",
     "logo": "img/logos/impact-opleiding-en-training.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Impact Opleiding en Training heeft deze pagina niet aangeleverd. Zodra Impact Opleiding en Training meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs.",
-    "website": "https://example.org/impact-opleiding-en-training/",
-    "extranet": {
-      "url": "https://example.org/impact-opleiding-en-training/adviseursportaal",
-      "naam": "Adviseursportaal Impact Opleiding en Training (fictief)"
-    },
     "nieuws": [
       {
         "id": "n1",
@@ -2113,7 +2295,8 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "opgezocht": "2026-10-03"
   },
   {
     "id": "ing",
@@ -2122,10 +2305,10 @@ window.AANBIEDERS=[
     "type": "geldverstrekker",
     "logo": "img/logos/ing.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. ING heeft deze pagina niet aangeleverd. Zodra ING meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over hypotheken.",
-    "website": "https://example.org/ing/",
+    "website": "https://intermediairs.ing.nl/",
     "extranet": {
-      "url": "https://example.org/ing/adviseursportaal",
-      "naam": "Adviseursportaal ING (fictief)"
+      "url": "https://intermediairs.ing.nl/",
+      "naam": "ING Intermediairs portaal"
     },
     "nieuws": [
       {
@@ -2151,6 +2334,12 @@ window.AANBIEDERS=[
     "bijgewerkt": "2026-10-03",
     "rubrieken": [
       "krediet"
+    ],
+    "telefoon": "020 576 47 11",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://mijn.intermediairs.ing.nl/",
+      "https://mijn.intermediairs.ing.nl/content/ingex-live-public/nl_NL/header/help.html"
     ]
   },
   {
@@ -2160,11 +2349,7 @@ window.AANBIEDERS=[
     "type": "geldverstrekker",
     "logo": "img/logos/iqwoon.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. IQWOON heeft deze pagina niet aangeleverd. Zodra IQWOON meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over hypotheken.",
-    "website": "https://example.org/iqwoon/",
-    "extranet": {
-      "url": "https://example.org/iqwoon/adviseursportaal",
-      "naam": "Adviseursportaal IQWOON (fictief)"
-    },
+    "website": "https://www.iqwoon.nl/adviseur",
     "nieuws": [
       {
         "id": "n1",
@@ -2186,7 +2371,13 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "010 266 36 60",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://www.iqwoon.nl/service-contact",
+      "https://www.iqwoon.nl/adviseur"
+    ]
   },
   {
     "id": "jens",
@@ -2195,10 +2386,10 @@ window.AANBIEDERS=[
     "type": "kredietverstrekker",
     "logo": "img/logos/jens.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Jens heeft deze pagina niet aangeleverd. Zodra Jens meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over kredieten en financieringen.",
-    "website": "https://example.org/jens/",
+    "website": "https://jens.nl/partner/",
     "extranet": {
-      "url": "https://example.org/jens/adviseursportaal",
-      "naam": "Adviseursportaal Jens (fictief)"
+      "url": "https://jens.nl/inloggen/",
+      "naam": "Jens Dashboard"
     },
     "nieuws": [
       {
@@ -2221,7 +2412,14 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "088 588 59 99",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://jens.nl/intermediairs/",
+      "https://jens.nl/partner/",
+      "https://jens.nl/inloggen/"
+    ]
   },
   {
     "id": "klap",
@@ -2230,11 +2428,7 @@ window.AANBIEDERS=[
     "type": "serviceprovider",
     "logo": "img/logos/klap.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Klap heeft deze pagina niet aangeleverd. Zodra Klap meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs.",
-    "website": "https://example.org/klap/",
-    "extranet": {
-      "url": "https://example.org/klap/adviseursportaal",
-      "naam": "Adviseursportaal Klap (fictief)"
-    },
+    "website": "https://www.klap.nl",
     "nieuws": [
       {
         "id": "n1",
@@ -2256,7 +2450,12 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "020 592 95 11",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://klap.nl/nijmegen"
+    ]
   },
   {
     "id": "knab",
@@ -2265,11 +2464,7 @@ window.AANBIEDERS=[
     "type": "geldverstrekker",
     "logo": "img/logos/knab.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Knab heeft deze pagina niet aangeleverd. Zodra Knab meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over hypotheken.",
-    "website": "https://example.org/knab/",
-    "extranet": {
-      "url": "https://example.org/knab/adviseursportaal",
-      "naam": "Adviseursportaal Knab (fictief)"
-    },
+    "website": "https://www.knab.nl/particulier/hypotheken/knab-hypotheek/adviseurs",
     "nieuws": [
       {
         "id": "n1",
@@ -2291,7 +2486,11 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://www.knab.nl/particulier/hypotheken/knab-hypotheek/adviseurs"
+    ]
   },
   {
     "id": "landelijk-netwerk-inkoopcombinatie",
@@ -2300,11 +2499,6 @@ window.AANBIEDERS=[
     "type": "serviceprovider",
     "logo": "img/logos/landelijk-netwerk-inkoopcombinatie.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Landelijk Netwerk Inkoopcombinatie heeft deze pagina niet aangeleverd. Zodra Landelijk Netwerk Inkoopcombinatie meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs.",
-    "website": "https://example.org/landelijk-netwerk-inkoopcombinatie/",
-    "extranet": {
-      "url": "https://example.org/landelijk-netwerk-inkoopcombinatie/adviseursportaal",
-      "naam": "Adviseursportaal Landelijk Netwerk Inkoopcombinatie (fictief)"
-    },
     "nieuws": [
       {
         "id": "n1",
@@ -2326,7 +2520,8 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "opgezocht": "2026-10-03"
   },
   {
     "id": "lender-en-spender",
@@ -2335,11 +2530,7 @@ window.AANBIEDERS=[
     "type": "kredietverstrekker",
     "logo": "img/logos/lender-en-spender.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Lender & Spender heeft deze pagina niet aangeleverd. Zodra Lender & Spender meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over kredieten en financieringen.",
-    "website": "https://example.org/lender-en-spender/",
-    "extranet": {
-      "url": "https://example.org/lender-en-spender/adviseursportaal",
-      "naam": "Adviseursportaal Lender & Spender (fictief)"
-    },
+    "website": "https://partners.lenderspender.nl/support",
     "nieuws": [
       {
         "id": "n1",
@@ -2364,6 +2555,12 @@ window.AANBIEDERS=[
     "bijgewerkt": "2026-10-03",
     "rubrieken": [
       "krediet"
+    ],
+    "telefoon": "085 000 39 98",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://partners.lenderspender.nl/support/contact",
+      "https://www.lenderspender.nl/"
     ]
   },
   {
@@ -2373,11 +2570,7 @@ window.AANBIEDERS=[
     "type": "geldverstrekker",
     "logo": "img/logos/lloyds-bank.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Lloyds Bank heeft deze pagina niet aangeleverd. Zodra Lloyds Bank meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over hypotheken.",
-    "website": "https://example.org/lloyds-bank/",
-    "extranet": {
-      "url": "https://example.org/lloyds-bank/adviseursportaal",
-      "naam": "Adviseursportaal Lloyds Bank (fictief)"
-    },
+    "website": "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs",
     "nieuws": [
       {
         "id": "n1",
@@ -2399,7 +2592,13 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "020 305 78 04",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://www.lloydsbank.nl/dam/jcr:3a7eae46-003b-4e0d-80dd-ae5239be6b17/Lloyds%20Bank%20Contactsheet%20ISD2.pdf",
+      "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs"
+    ]
   },
   {
     "id": "maas-lloyd",
@@ -2408,11 +2607,7 @@ window.AANBIEDERS=[
     "type": "verzekeraar",
     "logo": "img/logos/maas-lloyd.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Maas Lloyd heeft deze pagina niet aangeleverd. Zodra Maas Lloyd meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over verzekeringen.",
-    "website": "https://example.org/maas-lloyd/",
-    "extranet": {
-      "url": "https://example.org/maas-lloyd/adviseursportaal",
-      "naam": "Adviseursportaal Maas Lloyd (fictief)"
-    },
+    "website": "https://maaslloyd.nl",
     "nieuws": [
       {
         "id": "n1",
@@ -2434,7 +2629,12 @@ window.AANBIEDERS=[
         "soort": "productblad"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "010 212 10 00",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://maaslloyd.nl/contact/"
+    ]
   },
   {
     "id": "merius",
@@ -2443,11 +2643,7 @@ window.AANBIEDERS=[
     "type": "geldverstrekker",
     "logo": "img/logos/merius.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Merius Hypotheken heeft deze pagina niet aangeleverd. Zodra Merius Hypotheken meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over hypotheken.",
-    "website": "https://example.org/merius/",
-    "extranet": {
-      "url": "https://example.org/merius/adviseursportaal",
-      "naam": "Adviseursportaal Merius Hypotheken (fictief)"
-    },
+    "website": "https://meriushypotheken.nl/adviseur/samenwerken/",
     "nieuws": [
       {
         "id": "n1",
@@ -2469,7 +2665,13 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "088 205 64 66",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://meriushypotheken.nl/adviseur/contact/",
+      "https://meriushypotheken.nl/adviseur/voorbespreken/"
+    ]
   },
   {
     "id": "midglas",
@@ -2478,11 +2680,7 @@ window.AANBIEDERS=[
     "type": "verzekeraar",
     "logo": "img/logos/midglas.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Midglas heeft deze pagina niet aangeleverd. Zodra Midglas meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over verzekeringen.",
-    "website": "https://example.org/midglas/",
-    "extranet": {
-      "url": "https://example.org/midglas/adviseursportaal",
-      "naam": "Adviseursportaal Midglas (fictief)"
-    },
+    "website": "https://www.midglas.nl",
     "nieuws": [
       {
         "id": "n1",
@@ -2504,7 +2702,12 @@ window.AANBIEDERS=[
         "soort": "productblad"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "076 522 44 77",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://midglas.nl/contact/"
+    ]
   },
   {
     "id": "mogelijk",
@@ -2513,11 +2716,7 @@ window.AANBIEDERS=[
     "type": "kredietverstrekker",
     "logo": "img/logos/mogelijk.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Mogelijk heeft deze pagina niet aangeleverd. Zodra Mogelijk meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over kredieten en financieringen.",
-    "website": "https://example.org/mogelijk/",
-    "extranet": {
-      "url": "https://example.org/mogelijk/adviseursportaal",
-      "naam": "Adviseursportaal Mogelijk (fictief)"
-    },
+    "website": "https://www.mogelijk.nl",
     "nieuws": [
       {
         "id": "n1",
@@ -2539,7 +2738,12 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "0346 250 171",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://www.mogelijk.nl/contact"
+    ]
   },
   {
     "id": "ms-amlin",
@@ -2548,11 +2752,7 @@ window.AANBIEDERS=[
     "type": "verzekeraar",
     "logo": "img/logos/ms-amlin.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. MS Amlin heeft deze pagina niet aangeleverd. Zodra MS Amlin meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over verzekeringen.",
-    "website": "https://example.org/ms-amlin/",
-    "extranet": {
-      "url": "https://example.org/ms-amlin/adviseursportaal",
-      "naam": "Adviseursportaal MS Amlin (fictief)"
-    },
+    "website": "https://www.msamlin.com",
     "nieuws": [
       {
         "id": "n1",
@@ -2574,7 +2774,12 @@ window.AANBIEDERS=[
         "soort": "productblad"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "020 503 11 00",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://www.msamlin.com/en/contact.html"
+    ]
   },
   {
     "id": "munt-hypotheken",
@@ -2583,10 +2788,10 @@ window.AANBIEDERS=[
     "type": "geldverstrekker",
     "logo": "img/logos/munt-hypotheken.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. MUNT Hypotheken heeft deze pagina niet aangeleverd. Zodra MUNT Hypotheken meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over hypotheken.",
-    "website": "https://example.org/munt-hypotheken/",
+    "website": "https://www.munthypotheken.nl/contact/adviseur/",
     "extranet": {
-      "url": "https://example.org/munt-hypotheken/adviseursportaal",
-      "naam": "Adviseursportaal MUNT Hypotheken (fictief)"
+      "url": "https://www.munthypotheken.nl/servicepartner/",
+      "naam": "MUNTportal"
     },
     "nieuws": [
       {
@@ -2609,7 +2814,13 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "033 450 97 80",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://www.munthypotheken.nl/contact/adviseur/",
+      "https://www.munthypotheken.nl/servicepartner/"
+    ]
   },
   {
     "id": "nationale-nederlanden",
@@ -2618,10 +2829,10 @@ window.AANBIEDERS=[
     "type": "verzekeraar",
     "logo": "img/logos/nationale-nederlanden.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Nationale-Nederlanden heeft deze pagina niet aangeleverd. Zodra Nationale-Nederlanden meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over verzekeringen.",
-    "website": "https://example.org/nationale-nederlanden/",
+    "website": "https://adviseur.nn.nl/",
     "extranet": {
-      "url": "https://example.org/nationale-nederlanden/adviseursportaal",
-      "naam": "Adviseursportaal Nationale-Nederlanden (fictief)"
+      "url": "https://adviseur.nn.nl/",
+      "naam": "NN Adviseur"
     },
     "nieuws": [
       {
@@ -2644,7 +2855,13 @@ window.AANBIEDERS=[
         "soort": "productblad"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "070 513 08 20",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://adviseur.nn.nl/",
+      "https://adviseur.nn.nl/contact"
+    ]
   },
   {
     "id": "nationale-waarborg",
@@ -2656,10 +2873,10 @@ window.AANBIEDERS=[
       "bankgarantie"
     ],
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Nationale Waarborg heeft deze pagina niet aangeleverd. Zodra Nationale Waarborg meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs. Rubriek op het Adviesforum: bankgaranties en bieden met zekerheid.",
-    "website": "https://example.org/nationale-waarborg/",
+    "website": "https://nationalewaarborg.nl/adviseur/",
     "extranet": {
-      "url": "https://example.org/nationale-waarborg/adviseursportaal",
-      "naam": "Adviseursportaal Nationale Waarborg (fictief)"
+      "url": "https://portaal.nationalewaarborg.nl/",
+      "naam": "NWB Online"
     },
     "nieuws": [
       {
@@ -2682,7 +2899,13 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "030 220 55 46",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://nationalewaarborg.nl/adviseur/contact/",
+      "https://portaal.nationalewaarborg.nl/"
+    ]
   },
   {
     "id": "nedasco",
@@ -2691,10 +2914,10 @@ window.AANBIEDERS=[
     "type": "serviceprovider",
     "logo": "img/logos/nedasco.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Nedasco heeft deze pagina niet aangeleverd. Zodra Nedasco meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs.",
-    "website": "https://example.org/nedasco/",
+    "website": "https://www.nedasco.nl/adviseurs/contact/",
     "extranet": {
-      "url": "https://example.org/nedasco/adviseursportaal",
-      "naam": "Adviseursportaal Nedasco (fictief)"
+      "url": "https://www.nedasco.nl/adviseurs/servicenet/",
+      "naam": "ServiceNet / Mijn Nedasco"
     },
     "nieuws": [
       {
@@ -2717,7 +2940,14 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "033 467 08 00",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://www.nedasco.nl/adviseurs/contact/",
+      "https://www.nedasco.nl/nsn-mijn-nedasco/veelgesteldevragen/inloggen-en-starten/",
+      "https://www.nedasco.nl/adviseurs/servicenet/"
+    ]
   },
   {
     "id": "nestr",
@@ -2726,11 +2956,7 @@ window.AANBIEDERS=[
     "type": "geldverstrekker",
     "logo": "img/logos/nestr.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Nestr heeft deze pagina niet aangeleverd. Zodra Nestr meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over hypotheken.",
-    "website": "https://example.org/nestr/",
-    "extranet": {
-      "url": "https://example.org/nestr/adviseursportaal",
-      "naam": "Adviseursportaal Nestr (fictief)"
-    },
+    "website": "https://www.nestr.nl",
     "nieuws": [
       {
         "id": "n1",
@@ -2752,7 +2978,12 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "085 130 89 50",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://www.nestr.nl/contact"
+    ]
   },
   {
     "id": "nibc",
@@ -2761,10 +2992,10 @@ window.AANBIEDERS=[
     "type": "geldverstrekker",
     "logo": "img/logos/nibc.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. NIBC heeft deze pagina niet aangeleverd. Zodra NIBC meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over hypotheken.",
-    "website": "https://example.org/nibc/",
+    "website": "https://nibc.nl/intermediair",
     "extranet": {
-      "url": "https://example.org/nibc/adviseursportaal",
-      "naam": "Adviseursportaal NIBC (fictief)"
+      "url": "https://intermediair.nibcdirect.nl/",
+      "naam": "E-adviseur (via NIBC intermediairsite)"
     },
     "nieuws": [
       {
@@ -2787,7 +3018,15 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "070 342 50 00",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://nibc.nl/intermediair/hypotheekdesk",
+      "https://nibc.nl/intermediair/contact",
+      "https://intermediair.nibcdirect.nl/",
+      "https://nibc.nl/intermediair/nieuwsberichten/actuele-klantdata-inzichtelijk"
+    ]
   },
   {
     "id": "nnek",
@@ -2796,10 +3035,10 @@ window.AANBIEDERS=[
     "type": "serviceprovider",
     "logo": "img/logos/nnek.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. NNEK heeft deze pagina niet aangeleverd. Zodra NNEK meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs.",
-    "website": "https://example.org/nnek/",
+    "website": "https://www.nnek.nl",
     "extranet": {
-      "url": "https://example.org/nnek/adviseursportaal",
-      "naam": "Adviseursportaal NNEK (fictief)"
+      "url": "https://www.nnek.nl/inloggennnek/",
+      "naam": "Inloggen NNEK (adviseur)"
     },
     "nieuws": [
       {
@@ -2822,7 +3061,13 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "088 551 01 00",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://www.nnek.nl/contact/",
+      "https://www.nnek.nl/inloggennnek/"
+    ]
   },
   {
     "id": "obvion",
@@ -2831,10 +3076,10 @@ window.AANBIEDERS=[
     "type": "geldverstrekker",
     "logo": "img/logos/obvion.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Obvion heeft deze pagina niet aangeleverd. Zodra Obvion meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over hypotheken.",
-    "website": "https://example.org/obvion/",
+    "website": "https://www.obvion.nl/adviseur/Samenwerken-Obvion",
     "extranet": {
-      "url": "https://example.org/obvion/adviseursportaal",
-      "naam": "Adviseursportaal Obvion (fictief)"
+      "url": "https://dxp.obvion.nl/",
+      "naam": "Adviseursportaal"
     },
     "nieuws": [
       {
@@ -2857,7 +3102,13 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "088 147 02 00",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://dxp.obvion.nl/",
+      "https://obvion.nl/service/"
+    ]
   },
   {
     "id": "orange-credit",
@@ -2866,11 +3117,7 @@ window.AANBIEDERS=[
     "type": "kredietverstrekker",
     "logo": "img/logos/orange-credit.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Orange Credit heeft deze pagina niet aangeleverd. Zodra Orange Credit meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over kredieten en financieringen.",
-    "website": "https://example.org/orange-credit/",
-    "extranet": {
-      "url": "https://example.org/orange-credit/adviseursportaal",
-      "naam": "Adviseursportaal Orange Credit (fictief)"
-    },
+    "website": "https://orangecredit.nl/",
     "nieuws": [
       {
         "id": "n1",
@@ -2892,7 +3139,13 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "085 820 00 80",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://orangecredit.nl/",
+      "https://orangecredit.nl/contact-woonboothypotheek/"
+    ]
   },
   {
     "id": "pentrax",
@@ -2901,11 +3154,7 @@ window.AANBIEDERS=[
     "type": "serviceprovider",
     "logo": "img/logos/pentrax.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Pentrax heeft deze pagina niet aangeleverd. Zodra Pentrax meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs. Rekenexpert voor de inkomensverklaring ondernemer (IKV) bij hypotheekaanvragen van zelfstandigen.",
-    "website": "https://example.org/pentrax/",
-    "extranet": {
-      "url": "https://example.org/pentrax/adviseursportaal",
-      "naam": "Adviseursportaal Pentrax (fictief)"
-    },
+    "website": "https://www.pentrax.nl/",
     "nieuws": [
       {
         "id": "n1",
@@ -2927,7 +3176,12 @@ window.AANBIEDERS=[
         "soort": "formulier"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "024 833 00 00",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://www.pentrax.nl/contact"
+    ]
   },
   {
     "id": "polaris-assuradeuren",
@@ -2936,10 +3190,10 @@ window.AANBIEDERS=[
     "type": "serviceprovider",
     "logo": "img/logos/polaris-assuradeuren.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Polaris Assuradeuren heeft deze pagina niet aangeleverd. Zodra Polaris Assuradeuren meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs. Serviceprovider voor het intermediair (volmacht/assuradeur).",
-    "website": "https://example.org/polaris-assuradeuren/",
+    "website": "https://polaris-assuradeuren.nl/",
     "extranet": {
-      "url": "https://example.org/polaris-assuradeuren/adviseursportaal",
-      "naam": "Adviseursportaal Polaris Assuradeuren (fictief)"
+      "url": "https://polaris-assuradeuren.nl/inloggen/",
+      "naam": "Inloggen"
     },
     "nieuws": [
       {
@@ -2962,7 +3216,13 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "0411 745 011",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://polaris-assuradeuren.nl/contact/",
+      "https://polaris-assuradeuren.nl/inloggen/"
+    ]
   },
   {
     "id": "qander",
@@ -2971,11 +3231,7 @@ window.AANBIEDERS=[
     "type": "kredietverstrekker",
     "logo": "img/logos/qander.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Qander heeft deze pagina niet aangeleverd. Zodra Qander meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over kredieten en financieringen.",
-    "website": "https://example.org/qander/",
-    "extranet": {
-      "url": "https://example.org/qander/adviseursportaal",
-      "naam": "Adviseursportaal Qander (fictief)"
-    },
+    "website": "https://www.qander.nl/onze-tussenpersonen/",
     "nieuws": [
       {
         "id": "n1",
@@ -3000,6 +3256,12 @@ window.AANBIEDERS=[
     "bijgewerkt": "2026-10-03",
     "rubrieken": [
       "krediet"
+    ],
+    "telefoon": "073 646 25 30",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://www.qander.nl/contact/",
+      "https://www.qander.nl/onze-tussenpersonen/"
     ]
   },
   {
@@ -3009,11 +3271,7 @@ window.AANBIEDERS=[
     "type": "kredietverstrekker",
     "logo": "img/logos/qredits.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Qredits heeft deze pagina niet aangeleverd. Zodra Qredits meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over kredieten en financieringen.",
-    "website": "https://example.org/qredits/",
-    "extranet": {
-      "url": "https://example.org/qredits/adviseursportaal",
-      "naam": "Adviseursportaal Qredits (fictief)"
-    },
+    "website": "https://www.qredits.nl/initiatieven/intermediairs",
     "nieuws": [
       {
         "id": "n1",
@@ -3035,7 +3293,13 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "0546 53 40 10",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://www.qredits.nl/contact",
+      "https://www.qredits.nl/initiatieven/intermediairs"
+    ]
   },
   {
     "id": "raadhuys",
@@ -3044,11 +3308,7 @@ window.AANBIEDERS=[
     "type": "serviceprovider",
     "logo": "img/logos/raadhuys.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Raadhuys Tax Legal Accounting heeft deze pagina niet aangeleverd. Zodra Raadhuys Tax Legal Accounting meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs. Rekenexpert voor de inkomensverklaring ondernemer (IKV) bij hypotheekaanvragen van zelfstandigen.",
-    "website": "https://example.org/raadhuys/",
-    "extranet": {
-      "url": "https://example.org/raadhuys/adviseursportaal",
-      "naam": "Adviseursportaal Raadhuys Tax Legal Accounting (fictief)"
-    },
+    "website": "https://raadhuys.eu/",
     "nieuws": [
       {
         "id": "n1",
@@ -3070,7 +3330,12 @@ window.AANBIEDERS=[
         "soort": "formulier"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "070 335 13 69",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://raadhuys.eu/contact/"
+    ]
   },
   {
     "id": "rabobank",
@@ -3079,10 +3344,10 @@ window.AANBIEDERS=[
     "type": "geldverstrekker",
     "logo": "img/logos/rabobank.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Rabobank heeft deze pagina niet aangeleverd. Zodra Rabobank meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over hypotheken.",
-    "website": "https://example.org/rabobank/",
+    "website": "https://www.rabobank.nl/bedrijven/intermediairs/hypotheek",
     "extranet": {
-      "url": "https://example.org/rabobank/adviseursportaal",
-      "naam": "Adviseursportaal Rabobank (fictief)"
+      "url": "https://rio.rabobank.nl/",
+      "naam": "RIO (Rabo Intermediair Omgeving)"
     },
     "nieuws": [
       {
@@ -3105,7 +3370,13 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "088 727 11 99",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://www.rabobank.nl/bedrijven/intermediairs/hypotheek/aan-de-slag/rio",
+      "https://rio.rabobank.nl/login/faq"
+    ]
   },
   {
     "id": "rhion",
@@ -3114,11 +3385,7 @@ window.AANBIEDERS=[
     "type": "verzekeraar",
     "logo": "img/logos/rhion.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Rhion heeft deze pagina niet aangeleverd. Zodra Rhion meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over verzekeringen.",
-    "website": "https://example.org/rhion/",
-    "extranet": {
-      "url": "https://example.org/rhion/adviseursportaal",
-      "naam": "Adviseursportaal Rhion (fictief)"
-    },
+    "website": "https://www.rhion.nl/volmachten",
     "nieuws": [
       {
         "id": "n1",
@@ -3140,7 +3407,13 @@ window.AANBIEDERS=[
         "soort": "productblad"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "040 790 01 00",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://www.rhion.nl/hulp-voor-volmachten",
+      "https://www.rhion.nl/volmachten"
+    ]
   },
   {
     "id": "risk-verzekeringen",
@@ -3149,10 +3422,10 @@ window.AANBIEDERS=[
     "type": "serviceprovider",
     "logo": "img/logos/risk-verzekeringen.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. RISK Verzekeringen heeft deze pagina niet aangeleverd. Zodra RISK Verzekeringen meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs. Serviceprovider voor het intermediair (volmacht/assuradeur).",
-    "website": "https://example.org/risk-verzekeringen/",
+    "website": "https://www.risk.nl/adviseurs",
     "extranet": {
-      "url": "https://example.org/risk-verzekeringen/adviseursportaal",
-      "naam": "Adviseursportaal RISK Verzekeringen (fictief)"
+      "url": "https://www.risk.nl/inloggen",
+      "naam": "SureBase / Polisportaal"
     },
     "nieuws": [
       {
@@ -3175,7 +3448,14 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "030 634 40 55",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://www.risk.nl/adviseurs",
+      "https://www.risk.nl/contactsalessupport",
+      "https://www.risk.nl/inloggen"
+    ]
   },
   {
     "id": "rnhb",
@@ -3184,10 +3464,10 @@ window.AANBIEDERS=[
     "type": "geldverstrekker",
     "logo": "img/logos/rnhb.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. RNHB heeft deze pagina niet aangeleverd. Zodra RNHB meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over hypotheken.",
-    "website": "https://example.org/rnhb/",
+    "website": "https://www.rnhb.nl/",
     "extranet": {
-      "url": "https://example.org/rnhb/adviseursportaal",
-      "naam": "Adviseursportaal RNHB (fictief)"
+      "url": "https://intermediair.rnhb.nl/",
+      "naam": "Intermediairsportaal (Mijn Aanvragen)"
     },
     "nieuws": [
       {
@@ -3210,7 +3490,13 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "030 799 66 66",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://www.rnhb.nl/contact",
+      "https://intermediair.rnhb.nl/"
+    ]
   },
   {
     "id": "robuust",
@@ -3219,11 +3505,7 @@ window.AANBIEDERS=[
     "type": "geldverstrekker",
     "logo": "img/logos/robuust.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Robuust Hypotheken heeft deze pagina niet aangeleverd. Zodra Robuust Hypotheken meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over hypotheken.",
-    "website": "https://example.org/robuust/",
-    "extranet": {
-      "url": "https://example.org/robuust/adviseursportaal",
-      "naam": "Adviseursportaal Robuust Hypotheken (fictief)"
-    },
+    "website": "https://www.robuusthypotheken.nl/ik-ben-adviseur",
     "nieuws": [
       {
         "id": "n1",
@@ -3245,7 +3527,13 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "010 242 15 90",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://www.robuusthypotheken.nl/ik-ben-adviseur",
+      "https://www.robuusthypotheken.nl/en/contact"
+    ]
   },
   {
     "id": "saa-verzekeringen",
@@ -3254,10 +3542,10 @@ window.AANBIEDERS=[
     "type": "serviceprovider",
     "logo": "img/logos/saa-verzekeringen.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. SAA Verzekeringen heeft deze pagina niet aangeleverd. Zodra SAA Verzekeringen meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs. Serviceprovider voor het intermediair (volmacht/assuradeur).",
-    "website": "https://example.org/saa-verzekeringen/",
+    "website": "https://saa.nl/adviseur",
     "extranet": {
-      "url": "https://example.org/saa-verzekeringen/adviseursportaal",
-      "naam": "Adviseursportaal SAA Verzekeringen (fictief)"
+      "url": "https://login.saa.nl/",
+      "naam": "SAA Extranet"
     },
     "nieuws": [
       {
@@ -3280,7 +3568,14 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "088 551 42 50",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://saa.nl/adviseur",
+      "https://www.saa.nl/adviseur/saa-extranet",
+      "https://login.saa.nl/"
+    ]
   },
   {
     "id": "samenwerkende-kredietunies",
@@ -3289,11 +3584,7 @@ window.AANBIEDERS=[
     "type": "kredietverstrekker",
     "logo": "img/logos/samenwerkende-kredietunies.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Samenwerkende Kredietunies heeft deze pagina niet aangeleverd. Zodra Samenwerkende Kredietunies meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over kredieten en financieringen.",
-    "website": "https://example.org/samenwerkende-kredietunies/",
-    "extranet": {
-      "url": "https://example.org/samenwerkende-kredietunies/adviseursportaal",
-      "naam": "Adviseursportaal Samenwerkende Kredietunies (fictief)"
-    },
+    "website": "https://www.samenwerkendekredietunies.nl/",
     "nieuws": [
       {
         "id": "n1",
@@ -3315,7 +3606,11 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://www.samenwerkendekredietunies.nl/contact/"
+    ]
   },
   {
     "id": "siriuspro",
@@ -3324,11 +3619,6 @@ window.AANBIEDERS=[
     "type": "serviceprovider",
     "logo": "img/logos/siriuspro.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. SiriusPro heeft deze pagina niet aangeleverd. Zodra SiriusPro meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs.",
-    "website": "https://example.org/siriuspro/",
-    "extranet": {
-      "url": "https://example.org/siriuspro/adviseursportaal",
-      "naam": "Adviseursportaal SiriusPro (fictief)"
-    },
     "nieuws": [
       {
         "id": "n1",
@@ -3350,7 +3640,8 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "opgezocht": "2026-10-03"
   },
   {
     "id": "socio-hypotheek",
@@ -3359,10 +3650,10 @@ window.AANBIEDERS=[
     "type": "geldverstrekker",
     "logo": "img/logos/socio-hypotheek.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. SocioHypotheek heeft deze pagina niet aangeleverd. Zodra SocioHypotheek meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over hypotheken.",
-    "website": "https://example.org/socio-hypotheek/",
+    "website": "https://www.sociohypotheek.nl/",
     "extranet": {
-      "url": "https://example.org/socio-hypotheek/adviseursportaal",
-      "naam": "Adviseursportaal SocioHypotheek (fictief)"
+      "url": "https://www.sociohypotheek.nl/adviseursportaal/",
+      "naam": "Adviseursportaal"
     },
     "nieuws": [
       {
@@ -3385,7 +3676,14 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "085 210 08 11",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://www.sociohypotheek.nl/",
+      "https://www.sociohypotheek.nl/contact/",
+      "https://www.sociohypotheek.nl/adviseursportaal/downloads/"
+    ]
   },
   {
     "id": "solidbriq",
@@ -3394,11 +3692,7 @@ window.AANBIEDERS=[
     "type": "geldverstrekker",
     "logo": "img/logos/solidbriq.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. SolidBriQ heeft deze pagina niet aangeleverd. Zodra SolidBriQ meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over hypotheken.",
-    "website": "https://example.org/solidbriq/",
-    "extranet": {
-      "url": "https://example.org/solidbriq/adviseursportaal",
-      "naam": "Adviseursportaal SolidBriQ (fictief)"
-    },
+    "website": "https://www.solidbriq.nl/hoe-financieren/goed-advies/",
     "nieuws": [
       {
         "id": "n1",
@@ -3420,7 +3714,13 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "085 820 00 00",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://www.solidbriq.nl/hoe-financieren/goed-advies/",
+      "https://www.solidbriq.nl/contact"
+    ]
   },
   {
     "id": "surebusiness",
@@ -3429,10 +3729,10 @@ window.AANBIEDERS=[
     "type": "serviceprovider",
     "logo": "img/logos/surebusiness.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. SUREbusiness heeft deze pagina niet aangeleverd. Zodra SUREbusiness meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs.",
-    "website": "https://example.org/surebusiness/",
+    "website": "https://www.surebusiness.nl/",
     "extranet": {
-      "url": "https://example.org/surebusiness/adviseursportaal",
-      "naam": "Adviseursportaal SUREbusiness (fictief)"
+      "url": "https://surenet.surebusiness.nl/",
+      "naam": "SUREnet"
     },
     "nieuws": [
       {
@@ -3455,7 +3755,14 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "072 303 59 00",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://www.surebusiness.nl/contact",
+      "https://www.surebusiness.nl/over-ons/vragen-of-klachten",
+      "https://surenet.surebusiness.nl/document/push/?voorwaardeid=172"
+    ]
   },
   {
     "id": "syntrus-achmea",
@@ -3464,10 +3771,10 @@ window.AANBIEDERS=[
     "type": "geldverstrekker",
     "logo": "img/logos/syntrus-achmea.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Syntrus Achmea / Achmea Mortgage Funds heeft deze pagina niet aangeleverd. Zodra Syntrus Achmea / Achmea Mortgage Funds meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over hypotheken.",
-    "website": "https://example.org/syntrus-achmea/",
+    "website": "https://www.syntrusachmeahypotheken.nl/",
     "extranet": {
-      "url": "https://example.org/syntrus-achmea/adviseursportaal",
-      "naam": "Adviseursportaal Syntrus Achmea / Achmea Mortgage Funds (fictief)"
+      "url": "https://www.syntrusachmeahypotheken.nl/voor-adviseurs/adviseursportaal-en-mijn-leninginzicht",
+      "naam": "Adviseursportaal (eHerkenning)"
     },
     "nieuws": [
       {
@@ -3490,7 +3797,15 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "020 606 58 58",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://achmeabank.nl/en/news/achmea-splits-mortgage-and-real-estate-activities-of-syntrus-achmea-real-estate-and-finance",
+      "https://www.syntrusachmeahypotheken.nl/service/contact",
+      "https://www.syntrusachmeahypotheken.nl/voor-adviseurs/adviseursportaal-en-mijn-leninginzicht",
+      "https://www.syntrusachmeahypotheken.nl/voor-adviseurs/iets-voorleggen-of-bespreken"
+    ]
   },
   {
     "id": "triodos-bank",
@@ -3499,10 +3814,10 @@ window.AANBIEDERS=[
     "type": "geldverstrekker",
     "logo": "img/logos/triodos-bank.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Triodos Bank heeft deze pagina niet aangeleverd. Zodra Triodos Bank meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over hypotheken.",
-    "website": "https://example.org/triodos-bank/",
+    "website": "https://www.triodos.nl/intermediairs",
     "extranet": {
-      "url": "https://example.org/triodos-bank/adviseursportaal",
-      "naam": "Adviseursportaal Triodos Bank (fictief)"
+      "url": "https://hypact.advisor.hypotheken.triodos.nl/login",
+      "naam": "Hypact Advisor"
     },
     "nieuws": [
       {
@@ -3525,7 +3840,13 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "030 694 20 01",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://www.triodos.nl/intermediairs",
+      "https://hypact.advisor.hypotheken.triodos.nl/login"
+    ]
   },
   {
     "id": "tulp-hypotheken",
@@ -3534,11 +3855,7 @@ window.AANBIEDERS=[
     "type": "geldverstrekker",
     "logo": "img/logos/tulp-hypotheken.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Tulp Hypotheken heeft deze pagina niet aangeleverd. Zodra Tulp Hypotheken meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over hypotheken.",
-    "website": "https://example.org/tulp-hypotheken/",
-    "extranet": {
-      "url": "https://example.org/tulp-hypotheken/adviseursportaal",
-      "naam": "Adviseursportaal Tulp Hypotheken (fictief)"
-    },
+    "website": "https://tulphypotheken.nl/adviseurs/",
     "nieuws": [
       {
         "id": "n1",
@@ -3560,7 +3877,13 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "030 307 05 00",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://tulphypotheken.nl/adviseurs/",
+      "https://tulphypotheken.nl/contact/"
+    ]
   },
   {
     "id": "turien-en-co-assuradeuren",
@@ -3569,10 +3892,10 @@ window.AANBIEDERS=[
     "type": "serviceprovider",
     "logo": "img/logos/turien-en-co-assuradeuren.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Turien & Co Assuradeuren heeft deze pagina niet aangeleverd. Zodra Turien & Co Assuradeuren meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs. Serviceprovider voor het intermediair (volmacht/assuradeur).",
-    "website": "https://example.org/turien-en-co-assuradeuren/",
+    "website": "https://www.turien.nl/adviseur",
     "extranet": {
-      "url": "https://example.org/turien-en-co-assuradeuren/adviseursportaal",
-      "naam": "Adviseursportaal Turien & Co Assuradeuren (fictief)"
+      "url": "https://turien.nl/adviseur/mijn-turien",
+      "naam": "Mijn Turien"
     },
     "nieuws": [
       {
@@ -3595,7 +3918,14 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "072 518 11 81",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://www.turien.nl/adviseur",
+      "https://turien.nl/adviseur/mijn-turien",
+      "https://turien.nl/klantenservice/contact"
+    ]
   },
   {
     "id": "unigarant",
@@ -3604,10 +3934,10 @@ window.AANBIEDERS=[
     "type": "verzekeraar",
     "logo": "img/logos/unigarant.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Unigarant heeft deze pagina niet aangeleverd. Zodra Unigarant meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over verzekeringen.",
-    "website": "https://example.org/unigarant/",
+    "website": "https://www.unigarant.nl/samenwerken/",
     "extranet": {
-      "url": "https://example.org/unigarant/adviseursportaal",
-      "naam": "Adviseursportaal Unigarant (fictief)"
+      "url": "https://www.unigarant.nl/samenwerken/meer-over-salesgarant/",
+      "naam": "SalesGarant"
     },
     "nieuws": [
       {
@@ -3630,7 +3960,14 @@ window.AANBIEDERS=[
         "soort": "productblad"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "088 299 36 62",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://www.unigarant.nl/contact/samenwerken/",
+      "https://www.unigarant.nl/samenwerken/meer-over-salesgarant/",
+      "https://www.unigarant.nl/samenwerken/inloggen-met-e-herkenning/"
+    ]
   },
   {
     "id": "vcn-hypotheken",
@@ -3639,11 +3976,7 @@ window.AANBIEDERS=[
     "type": "serviceprovider",
     "logo": "img/logos/vcn-hypotheken.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. VCN Hypotheken heeft deze pagina niet aangeleverd. Zodra VCN Hypotheken meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs. Serviceprovider voor hypotheken.",
-    "website": "https://example.org/vcn-hypotheken/",
-    "extranet": {
-      "url": "https://example.org/vcn-hypotheken/adviseursportaal",
-      "naam": "Adviseursportaal VCN Hypotheken (fictief)"
-    },
+    "website": "https://www.vcn.nl/hypotheken",
     "nieuws": [
       {
         "id": "n1",
@@ -3665,7 +3998,13 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "085 041 09 20",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://www.vcn.nl/hypotheken",
+      "https://www.vcn.nl/contact-VCNDenBosch"
+    ]
   },
   {
     "id": "vcn-kredieten",
@@ -3674,11 +4013,7 @@ window.AANBIEDERS=[
     "type": "serviceprovider",
     "logo": "img/logos/vcn-kredieten.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. VCN Kredieten heeft deze pagina niet aangeleverd. Zodra VCN Kredieten meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs. Serviceprovider voor kredieten.",
-    "website": "https://example.org/vcn-kredieten/",
-    "extranet": {
-      "url": "https://example.org/vcn-kredieten/adviseursportaal",
-      "naam": "Adviseursportaal VCN Kredieten (fictief)"
-    },
+    "website": "https://www.vcn.nl/kredieten",
     "nieuws": [
       {
         "id": "n1",
@@ -3700,7 +4035,13 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "085 760 89 85",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://www.vcn.nl/kredieten",
+      "https://www.vcn.nl/contact-VCNDenHaag"
+    ]
   },
   {
     "id": "vcn-verzekeringen",
@@ -3709,11 +4050,7 @@ window.AANBIEDERS=[
     "type": "serviceprovider",
     "logo": "img/logos/vcn-verzekeringen.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. VCN Verzekeringen heeft deze pagina niet aangeleverd. Zodra VCN Verzekeringen meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs. Serviceprovider voor het intermediair (volmacht/assuradeur).",
-    "website": "https://example.org/vcn-verzekeringen/",
-    "extranet": {
-      "url": "https://example.org/vcn-verzekeringen/adviseursportaal",
-      "naam": "Adviseursportaal VCN Verzekeringen (fictief)"
-    },
+    "website": "https://www.vcn.nl/verzekeringen",
     "nieuws": [
       {
         "id": "n1",
@@ -3735,7 +4072,14 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "040 290 75 75",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://www.vcn.nl/verzekeringen",
+      "https://www.vcn.nl/diensten-vcn-verzekeringen",
+      "https://www.vcn.nl/contact-VCNNuenen"
+    ]
   },
   {
     "id": "venn-hypotheken",
@@ -3744,10 +4088,10 @@ window.AANBIEDERS=[
     "type": "geldverstrekker",
     "logo": "img/logos/venn-hypotheken.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Venn Hypotheken heeft deze pagina niet aangeleverd. Zodra Venn Hypotheken meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over hypotheken.",
-    "website": "https://example.org/venn-hypotheken/",
+    "website": "https://www.vennhypotheken.nl/voor-adviseurs/",
     "extranet": {
-      "url": "https://example.org/venn-hypotheken/adviseursportaal",
-      "naam": "Adviseursportaal Venn Hypotheken (fictief)"
+      "url": "https://e-adviseur.e-servicing.com/",
+      "naam": "E-adviseur (Stater)"
     },
     "nieuws": [
       {
@@ -3770,7 +4114,14 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "076 303 39 01",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://www.vennhypotheken.nl/voor-adviseurs/",
+      "https://www.vennhypotheken.nl/over-venn/contact/",
+      "https://nibc.nl/media/0han54sg/actuele-klantdata-inzien-in-e-adviseur.pdf"
+    ]
   },
   {
     "id": "vista-hypotheken",
@@ -3779,11 +4130,7 @@ window.AANBIEDERS=[
     "type": "geldverstrekker",
     "logo": "img/logos/vista-hypotheken.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Vista Hypotheken heeft deze pagina niet aangeleverd. Zodra Vista Hypotheken meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over hypotheken.",
-    "website": "https://example.org/vista-hypotheken/",
-    "extranet": {
-      "url": "https://example.org/vista-hypotheken/adviseursportaal",
-      "naam": "Adviseursportaal Vista Hypotheken (fictief)"
-    },
+    "website": "https://www.vistahypotheken.nl/ik-wil-klant-worden",
     "nieuws": [
       {
         "id": "n1",
@@ -3805,7 +4152,14 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "010 242 21 15",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://www.vistahypotheken.nl/ik-wil-klant-worden",
+      "https://www.vistahypotheken.nl/contact",
+      "https://www.vistahypotheken.nl/voor-adviseurs"
+    ]
   },
   {
     "id": "vkg",
@@ -3814,10 +4168,10 @@ window.AANBIEDERS=[
     "type": "serviceprovider",
     "logo": "img/logos/vkg.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. VKG heeft deze pagina niet aangeleverd. Zodra VKG meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs.",
-    "website": "https://example.org/vkg/",
+    "website": "https://vkg.nl/adviseur/contact/",
     "extranet": {
-      "url": "https://example.org/vkg/adviseursportaal",
-      "naam": "Adviseursportaal VKG (fictief)"
+      "url": "https://extranet.vkg.com/",
+      "naam": "VKG Extranet"
     },
     "nieuws": [
       {
@@ -3840,7 +4194,13 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "0229 28 78 88",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://vkg.nl/adviseur/contact/",
+      "https://extranet.vkg.com/"
+    ]
   },
   {
     "id": "voogd-en-voogd",
@@ -3849,10 +4209,10 @@ window.AANBIEDERS=[
     "type": "serviceprovider",
     "logo": "img/logos/voogd-en-voogd.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Voogd & Voogd heeft deze pagina niet aangeleverd. Zodra Voogd & Voogd meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs.",
-    "website": "https://example.org/voogd-en-voogd/",
+    "website": "https://www.voogd.com/adviseur/",
     "extranet": {
-      "url": "https://example.org/voogd-en-voogd/adviseursportaal",
-      "naam": "Adviseursportaal Voogd & Voogd (fictief)"
+      "url": "https://login.voogd.com/",
+      "naam": "Voogd Backoffice (eHerkenning)"
     },
     "nieuws": [
       {
@@ -3875,7 +4235,14 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "088 020 91 00",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://www.voogd.com/contact/",
+      "https://www.voogd.com/adviseur/",
+      "https://login.voogd.com/"
+    ]
   },
   {
     "id": "voor-de-groei",
@@ -3884,11 +4251,6 @@ window.AANBIEDERS=[
     "type": "kredietverstrekker",
     "logo": "img/logos/voor-de-groei.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Voor de Groei heeft deze pagina niet aangeleverd. Zodra Voor de Groei meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over kredieten en financieringen.",
-    "website": "https://example.org/voor-de-groei/",
-    "extranet": {
-      "url": "https://example.org/voor-de-groei/adviseursportaal",
-      "naam": "Adviseursportaal Voor de Groei (fictief)"
-    },
     "nieuws": [
       {
         "id": "n1",
@@ -3910,7 +4272,8 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "opgezocht": "2026-10-03"
   },
   {
     "id": "woonnu",
@@ -3919,10 +4282,10 @@ window.AANBIEDERS=[
     "type": "geldverstrekker",
     "logo": "img/logos/woonnu.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Woonnu heeft deze pagina niet aangeleverd. Zodra Woonnu meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over hypotheken.",
-    "website": "https://example.org/woonnu/",
+    "website": "https://adviseurs.woonnu.nl/positief-wonen/",
     "extranet": {
-      "url": "https://example.org/woonnu/adviseursportaal",
-      "naam": "Adviseursportaal Woonnu (fictief)"
+      "url": "https://woonnu.mijnleninginzicht.nl/",
+      "naam": "Mijn Leninginzicht"
     },
     "nieuws": [
       {
@@ -3945,7 +4308,14 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "010 242 23 70",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://adviseurs.woonnu.nl/positief-wonen/",
+      "https://adviseurs.woonnu.nl/media/z12iizpm/202408-woonnu-productkaart.pdf",
+      "https://adviseurs.woonnu.nl/veelgestelde-vragen/"
+    ]
   },
   {
     "id": "zakelijk-inkomen",
@@ -3954,11 +4324,7 @@ window.AANBIEDERS=[
     "type": "serviceprovider",
     "logo": "img/logos/zakelijk-inkomen.png",
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Zakelijk Inkomen heeft deze pagina niet aangeleverd. Zodra Zakelijk Inkomen meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs. Rekenexpert voor de inkomensverklaring ondernemer (IKV) bij hypotheekaanvragen van zelfstandigen.",
-    "website": "https://example.org/zakelijk-inkomen/",
-    "extranet": {
-      "url": "https://example.org/zakelijk-inkomen/adviseursportaal",
-      "naam": "Adviseursportaal Zakelijk Inkomen (fictief)"
-    },
+    "website": "https://zakelijkinkomen.nl/",
     "nieuws": [
       {
         "id": "n1",
@@ -3980,7 +4346,13 @@ window.AANBIEDERS=[
         "soort": "formulier"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "085 489 05 21",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://zakelijkinkomen.nl/",
+      "https://zakelijkinkomen.nl/contact/"
+    ]
   },
   {
     "id": "auxmoney",
@@ -3992,11 +4364,7 @@ window.AANBIEDERS=[
       "krediet"
     ],
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. auxmoney heeft deze pagina niet aangeleverd. Zodra auxmoney meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over kredieten en financieringen.",
-    "website": "https://example.org/auxmoney/",
-    "extranet": {
-      "url": "https://example.org/auxmoney/adviseursportaal",
-      "naam": "Adviseursportaal auxmoney (fictief)"
-    },
+    "website": "https://auxmoney.nl/",
     "nieuws": [
       {
         "id": "n1",
@@ -4018,7 +4386,12 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://auxmoney.nl/",
+      "https://support.auxmoney.nl/hc/nl"
+    ]
   },
   {
     "id": "directa",
@@ -4030,11 +4403,7 @@ window.AANBIEDERS=[
       "krediet"
     ],
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Directa.nl heeft deze pagina niet aangeleverd. Zodra Directa.nl meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over kredieten en financieringen.",
-    "website": "https://example.org/directa/",
-    "extranet": {
-      "url": "https://example.org/directa/adviseursportaal",
-      "naam": "Adviseursportaal Directa.nl (fictief)"
-    },
+    "website": "https://www.directa.nl/",
     "nieuws": [
       {
         "id": "n1",
@@ -4056,7 +4425,12 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "073 646 25 56",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://www.directa.nl/klantenservice/contact"
+    ]
   },
   {
     "id": "freo",
@@ -4068,11 +4442,7 @@ window.AANBIEDERS=[
       "krediet"
     ],
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. Freo heeft deze pagina niet aangeleverd. Zodra Freo meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over kredieten en financieringen.",
-    "website": "https://example.org/freo/",
-    "extranet": {
-      "url": "https://example.org/freo/adviseursportaal",
-      "naam": "Adviseursportaal Freo (fictief)"
-    },
+    "website": "https://www.freo.nl/over-freo/",
     "nieuws": [
       {
         "id": "n1",
@@ -4094,6 +4464,12 @@ window.AANBIEDERS=[
         "soort": "acceptatiegids"
       }
     ],
-    "bijgewerkt": "2026-10-03"
+    "bijgewerkt": "2026-10-03",
+    "telefoon": "088 321 00 03",
+    "opgezocht": "2026-10-03",
+    "contactbronnen": [
+      "https://www.freo.nl/over-freo/",
+      "https://www.freo.nl/service-en-contact/"
+    ]
   }
 ];

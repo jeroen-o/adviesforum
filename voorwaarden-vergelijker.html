@@ -1,0 +1,1956 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Voorwaardenvergelijker geldverstrekkers – Adviesforum</title>
+<link rel="canonical" href="https://jeroen-o.github.io/adviesforum/voorwaarden-vergelijker.html">
+<meta property="og:url" content="https://jeroen-o.github.io/adviesforum/voorwaarden-vergelijker.html">
+<meta property="og:site_name" content="Adviesforum">
+<meta property="og:locale" content="nl_NL">
+<meta name="theme-color" content="#FFD200">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="description" content="Interne matrix voor adviseurs: hypotheekverstrekkers en hun voorwaarden (acceptatie, product, bouwdepot, nazorg) naast elkaar, met kleurcode; 25 verstrekkers ingevuld, de rest nog in te vullen. Indicatief en niet geverifieerd; geen rentes of tarieven en niet voor consumenten.">
+<meta property="og:title" content="Voorwaardenvergelijker geldverstrekkers – Adviesforum">
+<meta property="og:description" content="Interne, indicatieve matrix van hypotheekvoorwaarden per geldverstrekker. Niet geverifieerd, geen productvergelijking en niet voor consumenten.">
+<meta property="og:type" content="website">
+<style>
+@font-face{font-family:Montserrat;font-style:normal;font-weight:400;font-display:swap;src:url(fonts/montserrat-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:600;font-display:swap;src:url(fonts/montserrat-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:700;font-display:swap;src:url(fonts/montserrat-latin-700-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:800;font-display:swap;src:url(fonts/montserrat-latin-800-normal.woff2) format('woff2')}
+
+:root{
+  --geel:#FFD200;--geel-donker:#E6BD00;--geel-zacht:#FFF6C7;
+  --zwart:#141414;--tekst:#1F1F1F;--grijs:#5E5E5E;--lijn:#E4E4E4;--vlak:#F7F7F5;--wit:#fff;
+  --rood:#C0392B;--rood-zacht:#FFF1F0;--rood-tekst:#7A1F14;--oranje:#9A5B00;--oranje-zacht:#FFF4E0;--blauw:#1F4E79;--blauw-zacht:#EEF4FA;
+  --kopvlak:#141414;--kopvlak-2:#2E2E2E;--koptekst:#fff;--zebra:#FCFCFB;
+  --t-g:#1F7A52;--t-n:#9AA7B6;--t-a:#E59A1A;--t-r:#C0392B;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:Montserrat,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  color:var(--tekst);background:#fff;line-height:1.55;font-size:15px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+button,input,select{font-family:inherit}
+[hidden]{display:none!important}
+
+.balk{background:var(--zwart);color:#fff;font-size:12.5px;padding:8px 24px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.balk a{color:#fff;text-decoration:none;opacity:.88}
+.balk a:hover{opacity:1;text-decoration:underline}
+
+.kop{background:var(--geel);color:var(--zwart);padding:34px 24px 38px}
+.kop-in{max-width:1280px;margin:0 auto}
+.merk{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.08em;font-size:12px;text-transform:uppercase;margin-bottom:16px}
+.zeshoek{width:22px;height:25px;background:var(--zwart);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);flex:none}
+.terugs{display:flex;gap:8px 18px;flex-wrap:wrap;margin-bottom:14px}
+.terug{display:inline-block;font-size:13.5px;font-weight:700;text-decoration:none;border-bottom:2px solid var(--zwart)}
+.kop h1{margin:0 0 10px;font-size:clamp(27px,4.2vw,40px);line-height:1.12;font-weight:800}
+.kop p{margin:0;max-width:72ch;font-size:15.5px}
+.kop .stempel{display:inline-block;margin-top:16px;font-size:12px;font-weight:700;background:var(--zwart);color:var(--geel);padding:5px 11px;border-radius:999px}
+
+.romp{max-width:1480px;margin:0 auto;padding:24px 24px 56px}
+
+/* Compliance: rood kader */
+.compliance{border:2px solid var(--rood);border-left-width:8px;border-radius:0 12px 12px 0;padding:14px 18px;margin:0 0 22px;background:var(--rood-zacht);color:var(--rood-tekst)}
+.compliance h2{margin:0 0 6px;font-size:15px;font-weight:800;letter-spacing:.03em;text-transform:uppercase}
+.compliance ul{margin:0;padding-left:18px;font-size:14px}
+.compliance li{margin:3px 0}
+
+.paneel{border:1px solid var(--lijn);border-radius:14px;background:var(--vlak);padding:14px 16px;margin-bottom:14px}
+.rij{display:flex;flex-wrap:wrap;gap:10px 12px;align-items:center}
+.rij + .rij{margin-top:12px;padding-top:12px;border-top:1px solid var(--lijn)}
+.lbl{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--grijs)}
+.tabs{display:inline-flex;border:1px solid #CFCFCF;border-radius:999px;padding:3px;gap:3px;background:#fff}
+.tabs button{border:0;background:transparent;padding:7px 15px;border-radius:999px;font-size:13.5px;font-weight:700;color:var(--tekst);cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--zwart);color:#fff}
+.paneel input[type=search],.paneel select{font-size:14px;padding:9px 11px;border:1px solid #CFCFCF;border-radius:9px;background:#fff;color:var(--tekst);min-width:0;max-width:100%}
+.paneel input[type=search]{flex:1 1 240px}
+.paneel select{flex:0 1 260px}
+.spacer{flex:1 1 auto}
+.teller{font-size:13px;color:var(--grijs);font-weight:600}
+.teller b{color:var(--tekst)}
+.knop{display:inline-block;text-decoration:none;border-radius:999px;padding:8px 15px;font-size:13.5px;font-weight:700;cursor:pointer;border:1px solid var(--zwart);background:var(--zwart);color:#fff;white-space:nowrap}
+.knop:hover{background:#000}
+.knop.licht{background:#fff;color:var(--zwart);border-color:#CFCFCF}
+.knop.licht:hover{background:var(--vlak)}
+.knop.aan{background:var(--geel);color:#141414;border-color:var(--geel-donker)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-size:13px;font-weight:600;padding:5px 11px;border-radius:999px;border:1px solid #CFCFCF;background:#fff;color:var(--tekst);cursor:pointer;line-height:1.35}
+.chip[aria-pressed="true"]{background:var(--zwart);border-color:var(--zwart);color:#fff}
+.chip .n{font-weight:600;opacity:.7;margin-left:5px}
+
+.beheerbalk{border:1px solid #E8C770;background:var(--oranje-zacht);color:#5E3A00;border-radius:12px;padding:10px 14px;margin:0 0 12px;font-size:13.5px;display:flex;flex-wrap:wrap;gap:8px 10px;align-items:center}
+.melding{min-height:0;margin:0 0 10px;font-size:13.5px;font-weight:600}
+.melding:not(:empty){border-left:4px solid var(--blauw);background:var(--blauw-zacht);color:var(--blauw);padding:8px 12px;border-radius:0 8px 8px 0}
+
+/* Tabel in eigen scrollvak: de pagina zelf scrolt nooit horizontaal */
+.tabelvak{position:relative;border:1px solid var(--lijn);border-radius:12px;overflow:auto;max-height:74vh;background:#fff;max-width:100%}
+.tabelvak table{border-collapse:separate;border-spacing:0;width:100%;font-size:13px}
+.tabelvak th,.tabelvak td{text-align:left;vertical-align:top;padding:9px 11px;border-bottom:1px solid var(--lijn);border-right:1px solid var(--lijn)}
+.tabelvak thead th{position:sticky;top:0;z-index:3;background:var(--kopvlak);color:var(--koptekst);font-size:12px;font-weight:700;line-height:1.35;border-right-color:#3a3a3a}
+.tabelvak thead th .cat{display:block;font-size:9.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#CFCFCF;margin-bottom:2px}
+.tabelvak thead th.vast{left:0;z-index:4}
+.vast{position:sticky;left:0;z-index:2;background:#fff;min-width:200px;max-width:240px;box-shadow:2px 0 0 var(--lijn)}
+.tabelvak tbody tr:nth-child(even) td{background:var(--zebra)}
+.tabelvak tbody tr:nth-child(even) .vast{background:var(--zebra)}
+td.val{min-width:190px;max-width:270px}
+.partij{display:flex;gap:8px;align-items:flex-start}
+.partij .sel{width:16px;height:16px;margin:3px 0 0;flex:none;accent-color:#141414;cursor:pointer}
+.plogo{display:block;height:20px;width:auto;max-width:92px;object-fit:contain;object-position:left center;margin:0 0 4px;border-radius:3px}
+thead .plogo{background:#fff;padding:2px 4px;box-sizing:content-box}
+.vn{display:block;font-weight:800;font-size:13.5px;line-height:1.3;overflow-wrap:anywhere}
+.hint{display:block;font-size:11px;font-weight:700;color:var(--blauw);margin-top:1px}
+thead .hint{color:#FFD200}
+.vt{display:block;font-size:11.5px;color:var(--grijs);margin-top:1px}
+thead .vt{color:#CFCFCF}
+.cel{display:flex;gap:6px;align-items:flex-start}
+.cel .txt{flex:1 1 auto;overflow-wrap:anywhere}
+.leegwaarde{color:#8A8A8A}
+.tint{display:inline-block;width:9px;height:9px;border-radius:50%;margin-top:5px;flex:none}
+.t-g{background:var(--t-g)}.t-n{background:var(--t-n)}.t-a{background:var(--t-a)}.t-r{background:var(--t-r)}
+.tintknop{border:0;background:transparent;padding:2px;margin:-2px;cursor:pointer;line-height:0;flex:none}
+.tintknop .tint{width:11px;height:11px;outline:2px solid transparent}
+.bewerk [contenteditable]{outline:1px dashed #B8B8B8;outline-offset:2px;border-radius:3px;min-height:18px;min-width:30px;display:block}
+.bewerk [contenteditable]:focus{outline:2px solid var(--blauw);background:#fff;color:#141414}
+/* Vergelijkweergave */
+.cmp td.crit,.cmp th.crit{position:sticky;left:0;z-index:2;min-width:190px;max-width:230px;font-weight:700;background:var(--vlak);box-shadow:2px 0 0 var(--lijn)}
+.cmp thead th.crit{z-index:4;background:var(--kopvlak-2)}
+.cmp td.crit .ch{display:block;font-size:9.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--grijs)}
+.cmp td.crit .vt{font-weight:400}
+.cmp tr.grp td{background:var(--kopvlak-2);color:#fff;font-weight:800;font-size:11.5px;letter-spacing:.07em;text-transform:uppercase;padding:7px 11px}
+.cmp tr.grp td span{position:sticky;left:11px}
+.leeg{border:1px dashed #CFCFCF;border-radius:12px;padding:30px 20px;text-align:center;color:var(--grijs);background:#fff}
+.leeg h3{margin:0 0 6px;color:var(--tekst);font-size:16px}
+
+.legenda{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:12.5px;color:var(--grijs);margin:12px 0 0}
+.legenda span{display:inline-flex;align-items:center;gap:6px}
+.legenda .tint{margin:0}
+.vink{display:inline-flex;align-items:center;gap:7px;font-size:13.5px;font-weight:600;cursor:pointer}
+.vink input{width:16px;height:16px;margin:0;accent-color:#141414}
+.ingevuld{display:block;font-weight:600}
+.t-e{background:transparent;box-shadow:inset 0 0 0 1.5px var(--t-n)}
+.nogleeg{color:#767676;font-style:italic}
+td.val.leegcel{background-image:repeating-linear-gradient(135deg,transparent 0 6px,rgba(0,0,0,.025) 6px 12px)}
+tr.groepkop td{background:var(--vlak);padding:0}
+tr.groepkop button{display:flex;align-items:center;gap:8px;width:100%;border:0;background:transparent;color:var(--tekst);font-weight:800;font-size:13px;text-align:left;padding:10px 12px;cursor:pointer;position:sticky;left:0;max-width:calc(100vw - 40px)}
+tr.groepkop .pijl{display:inline-block;transition:transform .15s}
+tr.groepkop button[aria-expanded="true"] .pijl{transform:rotate(90deg)}
+tr.groepkop small{font-weight:600;color:var(--grijs)}
+.uitlegcrit{display:block;font-size:11px;font-weight:400;color:var(--grijs);margin-top:3px}
+.bronnenlijst{margin-top:20px;font-size:13.5px}
+.bronnenlijst h2{font-size:16px;margin:0 0 8px}
+.bronnenlijst ul{margin:0;padding-left:18px}
+.bronnenlijst li{margin:3px 0;overflow-wrap:anywhere}
+.cmpkolommen{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:16px}
+.cmpblok{min-width:0}
+.blokkop{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px;margin-bottom:8px}
+.blokkop h2{margin:0;font-size:15px;font-weight:800}
+.cmpblok input[type=search]{width:100%;margin-bottom:8px}
+.vinklijst{border:1px solid var(--lijn);border-radius:10px;background:#fff;max-height:260px;overflow:auto;padding:6px 10px}
+.vinklijst .vink{display:flex;align-items:flex-start;padding:3px 0;font-weight:500}
+.vinklijst .vink input{margin-top:3px;flex:none}
+.vinklijst .vink small{color:var(--grijs);margin-left:4px}
+.vinklijst .groep{font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--grijs);margin:8px 0 2px}
+.vinklijst .groep:first-child{margin-top:2px}
+#kenmChips{margin-bottom:8px}
+.blokknoppen{display:flex;gap:14px;margin-top:6px}
+.linkknop{border:0;background:none;padding:4px 0;font-size:12.5px;font-weight:700;text-decoration:underline;cursor:pointer;color:var(--zwart)}
+.opties{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:10px}
+.kolomknop{display:inline-block;margin-top:5px;border:1px solid #555;background:transparent;color:#fff;border-radius:999px;font-size:10.5px;font-weight:700;padding:1px 8px;cursor:pointer;white-space:nowrap}
+.kolomknop[aria-pressed="true"]{background:#FFD200;border-color:#FFD200;color:#141414}
+.ranking td.rang{font-weight:800;width:44px;text-align:right}
+.ranking td.naamcel{min-width:180px}
+.ranking td.val{max-width:none}
+.uitleg{font-size:13.5px;color:var(--grijs);margin-top:16px;max-width:110ch}
+.uitleg b{color:var(--tekst)}
+
+footer.voet{max-width:1480px;margin:0 auto;padding:0 24px 40px;font-size:13px;color:var(--grijs)}
+footer.voet p{border-top:1px solid var(--lijn);padding-top:16px;margin:0 0 6px}
+footer.voet p + p{border-top:0;padding-top:0}
+footer.voet a{color:var(--zwart);font-weight:700}
+
+@media (max-width:760px){
+  .balk{padding:8px 16px}
+  .kop{padding:26px 16px 28px}
+  .romp{padding:18px 16px 44px}
+  footer.voet{padding:0 16px 32px}
+  .paneel input[type=search],.paneel select{flex:1 1 100%}
+  .cmpkolommen{grid-template-columns:minmax(0,1fr)}
+  .vast{min-width:136px;max-width:150px}
+  .cmp td.crit,.cmp th.crit{min-width:130px;max-width:150px}
+  td.val{min-width:170px}
+  .tabelvak{max-height:80vh}
+  input,select,textarea{font-size:16px!important}
+}
+@media print{
+  .balk,.paneel,.beheerbalk{display:none}
+  .kop{background:#fff;border-bottom:3px solid #141414}
+  .tabelvak{max-height:none;overflow:visible}
+  .tabelvak thead th,.vast,.cmp td.crit{position:static}
+}
+</style>
+<style id="a11y">
+/* Toegankelijkheid en donkere modus (zie docs/toegankelijkheid.md). Staat in een eigen <style>, zodat printvensters licht blijven. */
+.skiplink{position:absolute;left:12px;top:-200px;z-index:10000;background:#141414;color:#fff;padding:10px 16px;border-radius:8px;font-weight:700;text-decoration:none;font-family:Montserrat,system-ui,sans-serif}
+.skiplink:focus{top:12px;outline:3px solid #FFD200;outline-offset:2px}
+main[tabindex="-1"]:focus{outline:none}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus,textarea:focus,summary:focus-visible,[tabindex]:not([tabindex="-1"]):focus-visible{outline:3px solid #141414!important;outline-offset:2px!important}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+@media print{.skiplink{display:none}}
+@media screen and (prefers-color-scheme:dark){
+:root:not([data-theme="light"]){color-scheme:dark}
+:root:not([data-theme="light"]){--geel-zacht:#3f3918;--zwart:#F2F2F2;--tekst:#F2F2F2;--grijs:#BDBDBD;--lijn:#333333;--vlak:#262626;--wit:#1E1E1E;--rood:#e9a29b;--rood-zacht:#3f1a18;--rood-tekst:#f3c2bd;--oranje:#f6cb8e;--oranje-zacht:#3f3118;--blauw:#9ec3e6;--blauw-zacht:#1f2a36;--kopvlak:#2A2A2A;--kopvlak-2:#333333;--zebra:#222222;--t-n:#8A96A3}
+:root:not([data-theme="light"]) body{color:#F2F2F2;background:#141414}
+:root:not([data-theme="light"]) .balk{background:#2A2A2A;color:#fff}
+:root:not([data-theme="light"]) .balk a{color:#fff}
+:root:not([data-theme="light"]) .kop{background:#1E1E1E;color:#F2F2F2;border-bottom:3px solid #FFD200}
+:root:not([data-theme="light"]) .zeshoek{background:#2A2A2A}
+:root:not([data-theme="light"]) .terug{border-bottom:2px solid #8A8A8A}
+:root:not([data-theme="light"]) .kop .stempel{background:#2A2A2A;color:#FFD200}
+:root:not([data-theme="light"]) .compliance{border-color:#C0392B}
+:root:not([data-theme="light"]) .paneel{border:1px solid #333333;background:#262626}
+:root:not([data-theme="light"]) .paneel input[type=search],:root:not([data-theme="light"]) .paneel select{border:1px solid #444;background:#1E1E1E;color:#F2F2F2}
+:root:not([data-theme="light"]) .tabs{background:#1E1E1E;border-color:#444}
+:root:not([data-theme="light"]) .tabs button{color:#F2F2F2}
+:root:not([data-theme="light"]) .tabs button[aria-selected="true"]{background:#FFD200;color:#141414}
+:root:not([data-theme="light"]) .chip{border:1px solid #444;background:#1E1E1E;color:#F2F2F2}
+:root:not([data-theme="light"]) .chip[aria-pressed="true"]{background:#FFD200;color:#141414;border-color:#FFD200}
+:root:not([data-theme="light"]) .knop{border:1px solid #FFD200;background:#FFD200;color:#141414}
+:root:not([data-theme="light"]) .knop:hover{background:#FFE04D;color:#141414}
+:root:not([data-theme="light"]) .knop.licht{background:#1E1E1E;color:#F2F2F2;border-color:#444}
+:root:not([data-theme="light"]) .knop.licht:hover{background:#262626}
+:root:not([data-theme="light"]) .knop.aan{background:#FFD200;color:#141414;border-color:#FFD200}
+:root:not([data-theme="light"]) .beheerbalk{border-color:#6b5a2a;background:#3f3118;color:#f6cb8e}
+:root:not([data-theme="light"]) .tabelvak{border:1px solid #333333;background:#1E1E1E}
+:root:not([data-theme="light"]) .tabelvak thead th{border-right-color:#444}
+:root:not([data-theme="light"]) .vast{background:#1E1E1E}
+:root:not([data-theme="light"]) .plogo{background:#fff;padding:2px 4px;box-sizing:content-box}
+:root:not([data-theme="light"]) .partij .sel,:root:not([data-theme="light"]) .vink input{accent-color:#FFD200}
+:root:not([data-theme="light"]) .nogleeg{color:#9A9A9A}
+:root:not([data-theme="light"]) td.val.leegcel{background-image:repeating-linear-gradient(135deg,transparent 0 6px,rgba(255,255,255,.035) 6px 12px)}
+:root:not([data-theme="light"]) .bewerk [contenteditable]{outline-color:#6E6E6E}
+:root:not([data-theme="light"]) .vinklijst{background:#1E1E1E;border-color:#444}
+:root:not([data-theme="light"]) .linkknop{color:#F2F2F2}
+:root:not([data-theme="light"]) .leeg{border:1px dashed #444;color:#BDBDBD;background:#1E1E1E}
+:root:not([data-theme="light"]) footer.voet a{color:#F2F2F2}
+:root:not([data-theme="light"]) a:focus-visible,:root:not([data-theme="light"]) button:focus-visible,:root:not([data-theme="light"]) input:focus,:root:not([data-theme="light"]) input:focus-within,:root:not([data-theme="light"]) select:focus,:root:not([data-theme="light"]) textarea:focus,:root:not([data-theme="light"]) summary:focus-visible,:root:not([data-theme="light"]) [tabindex]:not([tabindex="-1"]):focus-visible{outline-color:#FFD200!important}
+:root:not([data-theme="light"]) .skiplink{background:#FFD200;color:#141414}
+:root:not([data-theme="light"]) .skiplink:focus{outline-color:#F2F2F2}
+}
+</style>
+</head>
+<body>
+<a class="skiplink" href="#inhoud">Naar de inhoud</a>
+
+<nav class="balk" aria-label="Forum">
+  <span>Adviesforum &middot; hulpmiddelen voor financieel adviseurs</span>
+  <span><a href="index.html">Home</a> &middot; <a href="aanmelden.html">Aanmelden</a> &middot; <a href="laatste.html">Laatste nieuws</a></span>
+</nav>
+
+<header class="kop">
+  <div class="kop-in">
+    <div class="merk"><span class="zeshoek" aria-hidden="true"></span>Adviesforum &middot; Hulpmiddelen</div>
+    <div class="terugs">
+      <a class="terug" href="vergelijken.html">&larr; Terug naar Partijen naast elkaar</a>
+      <a class="terug" href="partijen.html">Aanbiederwegwijzer</a>
+      <a class="terug" href="index.html#hulpmiddelen">Alle hulpmiddelen</a>
+    </div>
+    <h1>Voorwaardenvergelijker geldverstrekkers</h1>
+    <p>Een interne werkmatrix met 49 hypotheekverstrekkers en 32 voorwaarden over acceptatie en inkomen, product en rente, bouwdepot en verduurzaming en nazorg. Voor 25 verstrekkers zijn de voorwaarden ingevuld; de overige en de aanvullende voorwaarden staan nog op &lsquo;nog in te vullen&rsquo;. Een kleurcode laat in één oogopslag zien waar een partij ruim, marktconform, afwijkend of beperkend is. Zet zoveel partijen naast elkaar als u wilt, op één kenmerk, een selectie of alle kenmerken, en deel de selectie via een link. Houd de dataset zelf bij in de beheermodus.</p>
+    <span class="stempel" id="stempel">Indicatief &middot; niet geverifieerd &middot; peildatum <span id="peil">oktober 2026</span></span>
+  </div>
+</header>
+
+<main class="romp" id="inhoud" tabindex="-1">
+  <section class="compliance" role="note" aria-labelledby="comp-kop">
+    <h2 id="comp-kop">Compliance / AFM: lees dit eerst</h2>
+    <ul>
+      <li><strong>Indicatief en niet geverifieerd.</strong> De waarden zijn niet gecontroleerd tegen de actuele voorwaardenbladen en acceptatiegidsen van de geldverstrekkers.</li>
+      <li><strong>Alleen een intern oriëntatiemiddel.</strong> Verstrek dit overzicht niet aan consumenten en presenteer het niet als een volledige of actuele productvergelijking. Dat raakt de informatie- en zorgplicht (Wft art. 4:19 en 4:20) en kan tot een onjuist adviesdossier leiden.</li>
+      <li><strong>Dossier:</strong> leg altijd de voorwaarde vast zoals de geldverstrekker die op het moment van advies heeft gepubliceerd, niet de waarde uit deze matrix.</li>
+      <li><strong>Bevat geen rentes of tarieven.</strong> Termen als &lsquo;tariefgedreven&rsquo; of &lsquo;depotrente gelijk aan hypotheekrente&rsquo; beschrijven alleen een kenmerk, geen hoogte.</li>
+      <li><strong>Oude merknamen.</strong> SNS, RegioBank, BLG Wonen, Aegon en Woonfonds staan erin zoals in de oorspronkelijke dataset; de huidige naam staat erbij. Zie de <a href="partijen.html">Aanbiederwegwijzer</a> voor de actuele status van elke partij.</li>
+    </ul>
+  </section>
+
+  <section class="paneel" aria-label="Weergave, zoeken en filters">
+    <div class="rij">
+      <div class="tabs" role="tablist" aria-label="Weergave">
+        <button type="button" role="tab" id="tab-matrix" aria-selected="true" aria-controls="out">Matrix</button>
+        <button type="button" role="tab" id="tab-cmp" aria-selected="false" aria-controls="out">Vergelijken</button>
+      </div>
+      <input type="search" id="q" data-matrix placeholder="Zoek geldverstrekker of voorwaarde…" aria-label="Zoek geldverstrekker of voorwaarde" autocomplete="off">
+      <select id="fcrit" data-matrix aria-label="Filter op voorwaarde"><option value="">Filter op voorwaarde…</option></select>
+      <select id="fval" aria-label="Filter op waarde" hidden><option value="">Alle waarden</option></select>
+      <label class="vink" data-matrix><input type="checkbox" id="alleenIngevuld"> <span>Alleen ingevulde verstrekkers tonen</span></label>
+    </div>
+    <div class="rij" data-matrix>
+      <span class="lbl" id="cats-lbl">Categorieën</span>
+      <div class="chips" id="cats" role="group" aria-labelledby="cats-lbl"></div>
+    </div>
+    <div class="rij">
+      <span class="teller"><span id="cnt" aria-live="polite"></span><span id="ingevuld" class="ingevuld"></span></span>
+      <span class="spacer"></span>
+      <button type="button" class="knop licht" id="selAlle" data-matrix>Alles selecteren</button>
+      <button type="button" class="knop licht" id="selGeen">Selectie wissen</button>
+      <button type="button" class="knop licht" id="btnCsv">Exporteer CSV</button>
+      <button type="button" class="knop licht" id="btnEdit" aria-pressed="false">Beheermodus</button>
+      <button type="button" class="knop" id="btnPrint">Printen</button>
+    </div>
+  </section>
+
+  <div class="beheerbalk" id="beheerbalk" hidden>
+    <span><b>Beheermodus actief.</b> Klik in een cel om de tekst aan te passen; klik op het bolletje om de kleurcode te wisselen (groen → grijs → oranje → rood).</span>
+    <span class="spacer"></span>
+    <button type="button" class="knop licht" id="btnAddLender">+ Geldverstrekker</button>
+    <button type="button" class="knop licht" id="btnAddCrit">+ Voorwaarde</button>
+    <button type="button" class="knop licht" id="btnExport">Exporteer JSON</button>
+    <button type="button" class="knop licht" id="btnImport">Importeer JSON</button>
+    <input type="file" id="imp" accept="application/json,.json" hidden>
+    <button type="button" class="knop licht" id="btnReset">Herstel brondata</button>
+  </div>
+
+  <section class="paneel cmppaneel" id="cmpPaneel" aria-label="Vergelijking samenstellen" hidden>
+    <div class="cmpkolommen">
+      <div class="cmpblok">
+        <div class="blokkop"><h2 id="aanb-kop">Aanbieders</h2><span class="teller" id="aanbTeller"></span></div>
+        <input type="search" id="aanbZoek" placeholder="Zoek aanbieder…" aria-label="Zoek aanbieder om te vergelijken" autocomplete="off">
+        <div class="vinklijst" id="aanbLijst" role="group" aria-labelledby="aanb-kop"></div>
+        <div class="blokknoppen">
+          <button type="button" class="linkknop" id="aanbAlleZichtbaar">zichtbare aanvinken</button>
+          <button type="button" class="linkknop" id="aanbWis">alles uit</button>
+        </div>
+      </div>
+      <div class="cmpblok">
+        <div class="blokkop"><h2 id="kenm-kop">Kenmerken</h2><span class="teller" id="kenmTeller"></span></div>
+        <div class="chips" id="kenmChips" role="group" aria-label="Kenmerken per categorie"></div>
+        <div class="vinklijst" id="kenmLijst" role="group" aria-labelledby="kenm-kop"></div>
+        <div class="opties">
+          <label class="vink"><input type="checkbox" id="optVerschil"> <span>Alleen verschillen tonen</span></label>
+          <label class="vink"><input type="checkbox" id="optLeeg"> <span>Lege cellen verbergen</span></label>
+        </div>
+      </div>
+    </div>
+    <div class="rij">
+      <span class="teller">Deelbare link: de selectie staat in het adres van deze pagina.</span>
+      <span class="spacer"></span>
+      <button type="button" class="knop licht" id="btnKopieer">Kopieer link</button>
+      <button type="button" class="knop licht" id="btnExportSel">Exporteer JSON (selectie)</button>
+    </div>
+  </section>
+
+  <div class="melding" id="melding" role="status" aria-live="polite"></div>
+
+  <div id="out"></div>
+
+  <div class="legenda" aria-label="Legenda kleurcode">
+    <span><i class="tint t-g"></i> Ruim / gunstig</span>
+    <span><i class="tint t-n"></i> Marktconform</span>
+    <span><i class="tint t-a"></i> Aandachtspunt</span>
+    <span><i class="tint t-r"></i> Beperkend / niet mogelijk</span>
+    <span><i class="tint t-e"></i> Nog in te vullen</span>
+  </div>
+
+  <div class="uitleg">
+    <p><b>Werkwijze.</b> Vink in de matrix aanbieders aan (of gebruik &lsquo;+ vergelijk&rsquo; in een kolomkop voor kenmerken) en open <b>Vergelijken</b>. Daar kiest u met zoeken en vinkjes de aanbieders en de kenmerken: alles, per categorie of los. Met één kenmerk ziet u een rangorde op kleurcode (ruim → beperkend → nog in te vullen). &lsquo;Alleen verschillen tonen&rsquo; verbergt rijen waarin alle gekozen aanbieders hetzelfde scoren. De selectie staat in het adres van de pagina, zodat u de link kunt delen. Printen en de CSV-export volgen wat u ziet. Met <b>Filter op voorwaarde</b> filtert u de matrix op één criterium en een van de waarden die daarbij voorkomen.</p>
+    <p><b>Data.</b> Correcties voert u door in de beheermodus en bewaart u door de dataset als JSON te exporteren; die JSON kunt u later weer importeren. De pagina bewaart zelf niets in de browser: zonder export zijn wijzigingen na het sluiten weg.</p>
+    <p><b>Nog in te vullen.</b> Behalve de 25 geldverstrekkers uit de oorspronkelijke dataset staan ook de overige hypotheekverstrekkers uit de <a href="partijen.html">Aanbiederwegwijzer</a> en de <a href="aanbieders.html">aanbiederspagina</a> erin. Hun voorwaarden zijn bewust leeg gelaten (grijze cel &lsquo;nog in te vullen&rsquo;): er is niets op basis van aannames ingevuld. Financiers die alleen beleggers of zakelijke klanten bedienen staan apart onder &lsquo;Overige financiers (beleggers/zakelijk)&rsquo;.</p>
+    <p><b>Bron.</b> Vul per verstrekker in de kolom &lsquo;Bron / peildatum&rsquo; de gebruikte bron en datum in, zodat het overzicht controleerbaar blijft.</p>
+  </div>
+
+  <section class="bronnenlijst" id="bronnenlijst" hidden aria-labelledby="bronnen-kop">
+    <h2 id="bronnen-kop">Bronnen bij aanvullende voorwaarden</h2>
+    <p>Selectie op basis van publicaties over Vereniging Eigen Huis en Independer; niet door die partijen opgesteld of goedgekeurd.</p>
+    <ul id="bronnen"></ul>
+  </section>
+</main>
+
+<footer class="voet">
+  <p>Indicatieve, niet-geverifieerde dataset met peildatum oktober 2026, bedoeld als intern hulpmiddel voor adviseurs. Geen rentes, geen tarieven, geen advies en geen productvergelijking; niet bestemd voor consumenten. Voor openbare kenmerken met bronlink: <a href="vergelijken.html">Partijen naast elkaar</a> en de <a href="partijen.html">Aanbiederwegwijzer</a>. <span style="white-space:nowrap">&middot; <a href="uitnodigen.html">Uitnodigen</a></span></p>
+  <p>Logo's en merknamen zijn eigendom van de betreffende partijen en worden alleen gebruikt ter herkenning; vermelding betekent geen samenwerking of aanbeveling.</p>
+</footer>
+
+<script>
+(function(){
+'use strict';
+/* ===========================================================
+   DATA (1-op-1 overgenomen uit de bron-dataset, peildatum oktober 2026)
+   Waarden zijn INDICATIEF (zie compliance-melding).
+   Prefix in de waarde bepaalt de kleurcode:
+     +  ruim/gunstig     ~  marktconform
+     !  aandachtspunt    -  beperkend/niet mogelijk
+   =========================================================== */
+const CATS = [
+  {id:'A', naam:'Acceptatie & inkomen'},
+  {id:'P', naam:'Product & rente'},
+  {id:'V', naam:'Verbouwing & verduurzaming'},
+  {id:'N', naam:'Nazorg & beheer'},
+  {id:'B', naam:'Bron'}
+];
+
+const CRITS = [
+  {id:'zzp',   cat:'A', naam:'Zzp / ondernemer',            kort:'Min. jaren zzp (NHG / niet-NHG)'},
+  {id:'flex',  cat:'A', naam:'Flexwerk & uitzend',          kort:'Toetsing flexibel inkomen'},
+  {id:'persp', cat:'A', naam:'Perspectiefverklaring',       kort:'Geaccepteerd als inkomensbewijs'},
+  {id:'aow',   cat:'A', naam:'Inkomen na AOW',              kort:'Toets vanaf pensioendatum'},
+  {id:'erfp',  cat:'A', naam:'Erfpacht',                    kort:'Particuliere / gemeentelijke erfpacht'},
+  {id:'rvp',   cat:'P', naam:'Rentevastperioden',           kort:'Beschikbare looptijden'},
+  {id:'dag',   cat:'P', naam:'Dagrentegarantie',            kort:'Daling tot aan passeren'},
+  {id:'geld',  cat:'P', naam:'Geldigheidsduur aanbod',      kort:'Inclusief verlenging'},
+  {id:'boete', cat:'P', naam:'Boetevrij aflossen',          kort:'Per kalenderjaar'},
+  {id:'ltv',   cat:'P', naam:'Risicoklassen & LTV-daling',  kort:'Automatische rentedaling'},
+  {id:'bdduur',cat:'V', naam:'Looptijd bouwdepot',          kort:'Nieuwbouw / verbouw'},
+  {id:'bdrnt', cat:'V', naam:'Rentevergoeding depot',       kort:'Creditrente bouwdepot'},
+  {id:'bddecl',cat:'V', naam:'Declaratie & uitbetaling',    kort:'Proces en doorlooptijd'},
+  {id:'ebb',   cat:'V', naam:'Energiebespaarbudget',        kort:'EBB conform NHG / eigen regeling'},
+  {id:'duur',  cat:'V', naam:'Verduurzamingsvoordeel',      kort:'Rentekorting of extra ruimte'},
+  {id:'verh',  cat:'N', naam:'Verhuisregeling',             kort:'Rente meenemen naar nieuwe woning'},
+  {id:'ondh',  cat:'N', naam:'Onderhandse verkoop',         kort:'Bij restschuld / gedwongen verkoop'},
+  {id:'oha',   cat:'N', naam:'Ontslag hoofdelijkheid',      kort:'Proces bij scheiding'},
+  {id:'tweede',cat:'N', naam:'Verhoging / 2e hypotheek',    kort:'Onderhandse verhoging'},
+  {id:'ovbr',  cat:'N', naam:'Overbruggingskrediet',        kort:'Voorwaarden overbrugging'},
+  {id:'bron',  cat:'B', naam:'Bron / peildatum',            kort:'Zelf in te vullen'}
+];
+
+/* Waarden in de vaste volgorde van CRITS hierboven. */
+const SRC = [
+["ABN AMRO","Grootbank",[
+"~ 1 jaar met Inkomensverklaring Ondernemer (NHG); 3 jaar daarbuiten",
+"~ Flexinkomen o.b.v. 3-jaars gemiddelde, max. laatste jaar",
+"+ Perspectiefverklaring geaccepteerd",
+"~ Toets op werkelijke lasten vanaf AOW-datum",
+"! Particuliere erfpacht beperkt; gemeentelijk doorgaans akkoord",
+"+ 1, 5, 10, 15, 20, 30 jaar",
+"+ Dagrentegarantie gedurende geldigheid aanbod",
+"~ 3 maanden, eenmalig verlengen tegen voorwaarden",
+"+ 10% van oorspronkelijke hoofdsom per jaar",
+"+ Risicoklassen met automatische rentedaling bij lagere LTV",
+"~ 24 mnd nieuwbouw / 12 mnd verbouw bestaande bouw",
+"~ Depotrente gelijk aan hypotheekrente (box 1 relevant)",
+"~ Digitaal declareren, uitbetaling ca. 5 werkdagen",
+"+ Energiebespaarbudget conform NHG",
+"! Geen generieke rentekorting op energielabel",
+"+ Verhuisregeling; rente meeneembaar naar nieuwe woning",
+"~ Onderhandse verkoop na schriftelijke toestemming",
+"~ Ontslag hoofdelijkheid mogelijk, volledige nieuwe toets",
+"+ Onderhandse verhoging binnen bestaande inschrijving mogelijk",
+"+ Overbrugging op basis van ondertekende verkoopovereenkomst",
+""]],
+["Rabobank","Grootbank",[
+"~ 1 jaar met IVO binnen NHG; 2–3 jaar daarbuiten",
+"~ Flexinkomen met werkgeversverklaring + 3-jaars historie",
+"+ Perspectiefverklaring geaccepteerd",
+"~ Toets vanaf AOW op pensioeninkomen",
+"~ Erfpacht breed geaccepteerd mits eeuwigdurend of lange resterende duur",
+"+ 1, 5, 10, 12, 15, 20, 30 jaar",
+"+ Dagrentegarantie binnen geldigheidstermijn",
+"~ 3 maanden, verlenging mogelijk",
+"+ 10% per jaar boetevrij; volledig boetevrij bij verkoop",
+"+ Rentedaling bij lagere LTV op verzoek, deels automatisch",
+"~ 24 mnd nieuwbouw / 12 mnd verbouw",
+"~ Depotrente gelijk aan hypotheekrente",
+"~ Declaratie via online bankomgeving",
+"+ Energiebespaarbudget conform NHG",
+"~ Verduurzamingsruimte binnen leennormen; actiematige korting",
+"+ Verhuisregeling beschikbaar",
+"~ Onderhandse verkoop in overleg met bijzonder beheer",
+"~ Ontslag hoofdelijkheid met nieuwe toets",
+"+ Verhoging mogelijk; vaak zonder nieuwe akte",
+"+ Overbrugging ook zonder verkochte woning (beperkt, met voorwaarden)",
+""]],
+["ING","Grootbank",[
+"~ 1 jaar met IVO binnen NHG; 3 jaar daarbuiten",
+"~ Flexinkomen o.b.v. gemiddelde 3 jaar",
+"+ Perspectiefverklaring geaccepteerd",
+"~ Toets op pensioeninkomen vanaf AOW-datum",
+"! Erfpacht met beperkingen; particuliere erfpacht vaak uitgesloten",
+"+ 1, 5, 10, 15, 20, 30 jaar",
+"+ Dagrentegarantie tot passeerdatum",
+"~ 3 maanden, verlenging tegen voorwaarden",
+"+ 10% per jaar boetevrij",
+"+ Automatische rentedaling bij bereiken lagere risicoklasse",
+"~ 24 mnd nieuwbouw / 12 mnd verbouw",
+"~ Depotrente gelijk aan hypotheekrente",
+"~ Declaratie digitaal; uitbetaling binnen enkele werkdagen",
+"+ Energiebespaarbudget conform NHG",
+"! Geen structurele labelkorting",
+"+ Verhuisregeling beschikbaar",
+"~ Onderhandse verkoop na toestemming",
+"~ Ontslag hoofdelijkheid met nieuwe toets",
+"+ Onderhandse verhoging mogelijk",
+"+ Overbruggingskrediet bij verkochte woning",
+""]],
+["SNS","Bank (de Volksbank)",[
+"~ 1 jaar met IVO binnen NHG; 3 jaar daarbuiten",
+"~ Flexinkomen met 3-jaars gemiddelde",
+"+ Perspectiefverklaring geaccepteerd",
+"~ Toets vanaf AOW op pensioeninkomen",
+"~ Erfpacht geaccepteerd onder voorwaarden",
+"~ 1, 5, 10, 15, 20, 30 jaar",
+"+ Dagrentegarantie binnen geldigheid",
+"~ 3 maanden, verlenging mogelijk",
+"+ 10% per jaar boetevrij",
+"~ Risicoklassen; rentedaling op verzoek met waardebepaling",
+"~ 24 mnd nieuwbouw / 12 mnd verbouw",
+"~ Depotrente gelijk aan hypotheekrente",
+"~ Declaratie digitaal",
+"+ Energiebespaarbudget conform NHG",
+"~ Duurzaamheidsaanbod wisselend per actie",
+"+ Verhuisregeling beschikbaar",
+"~ Onderhandse verkoop na toestemming",
+"~ Ontslag hoofdelijkheid met nieuwe toets",
+"+ Verhoging mogelijk",
+"~ Overbrugging bij verkochte woning",
+""]],
+["RegioBank","Bank (de Volksbank)",[
+"~ 1 jaar met IVO binnen NHG; 3 jaar daarbuiten",
+"~ Flexinkomen met 3-jaars gemiddelde",
+"+ Perspectiefverklaring geaccepteerd",
+"~ Toets vanaf AOW op pensioeninkomen",
+"~ Erfpacht onder voorwaarden",
+"~ 1, 5, 10, 15, 20, 30 jaar",
+"+ Dagrentegarantie binnen geldigheid",
+"~ 3 maanden, verlenging mogelijk",
+"+ 10% per jaar boetevrij",
+"~ Rentedaling op verzoek bij lagere LTV",
+"~ 24 mnd nieuwbouw / 12 mnd verbouw",
+"~ Depotrente gelijk aan hypotheekrente",
+"~ Declaratie via adviseur/portaal",
+"+ Energiebespaarbudget conform NHG",
+"~ Duurzaamheidsaanbod wisselend",
+"+ Verhuisregeling (meeneemregeling) beschikbaar",
+"~ Onderhandse verkoop na toestemming",
+"~ Ontslag hoofdelijkheid met nieuwe toets",
+"+ Verhoging mogelijk",
+"~ Overbrugging bij verkochte woning",
+""]],
+["Munt Hypotheken","Regiepartij",[
+"! 3 jaar jaarcijfers; binnen NHG 1 jaar met IVO",
+"! Flexinkomen beperkt; voorkeur vast dienstverband",
+"~ Perspectiefverklaring in beginsel geaccepteerd",
+"~ Toets vanaf AOW op pensioeninkomen",
+"! Erfpacht beperkt geaccepteerd",
+"~ 5, 10, 15, 20, 30 jaar",
+"+ Dagrentegarantie tot passeren",
+"~ 3 maanden + verlenging",
+"+ 10% per jaar boetevrij",
+"+ Automatische rentedaling bij lagere LTV",
+"~ 24 mnd nieuwbouw / 12 mnd verbouw",
+"~ Depotrente gelijk aan hypotheekrente",
+"~ Declaratie via servicer; doorlooptijd 5–10 werkdagen",
+"+ Energiebespaarbudget conform NHG",
+"~ Scherpe tarieven in lage risicoklassen",
+"~ Verhuisregeling beschikbaar",
+"~ Onderhandse verkoop via bijzonder beheer",
+"~ Ontslag hoofdelijkheid met nieuwe toets",
+"~ Verhoging mogelijk; nieuwe aanvraag",
+"! Geen eigen overbruggingskrediet (via derde partij)",
+""]],
+["Obvion","Regiepartij (Rabo)",[
+"~ 1 jaar met IVO binnen NHG; 2–3 jaar daarbuiten",
+"~ Flexinkomen o.b.v. 3-jaars gemiddelde",
+"+ Perspectiefverklaring geaccepteerd",
+"~ Toets vanaf AOW op pensioeninkomen",
+"~ Erfpacht onder voorwaarden",
+"+ 1, 5, 10, 15, 20, 30 jaar",
+"+ Dagrentegarantie binnen geldigheid",
+"~ 3 maanden, verlenging mogelijk",
+"+ 10% per jaar boetevrij",
+"+ Automatische rentedaling bij lagere LTV",
+"~ 24 mnd nieuwbouw / 12 mnd verbouw",
+"~ Depotrente gelijk aan hypotheekrente",
+"~ Declaratie digitaal via adviseursportaal",
+"+ Energiebespaarbudget conform NHG",
+"+ Duurzaam Wonen-budget / verduurzamingsruimte",
+"+ Verhuisregeling beschikbaar",
+"~ Onderhandse verkoop na toestemming",
+"~ Ontslag hoofdelijkheid met nieuwe toets",
+"+ Verhoging mogelijk",
+"~ Overbrugging bij verkochte woning",
+""]],
+["Florius","Regiepartij (ABN)",[
+"~ 1 jaar met IVO binnen NHG; 3 jaar daarbuiten",
+"~ Flexinkomen o.b.v. 3-jaars gemiddelde",
+"+ Perspectiefverklaring geaccepteerd",
+"~ Toets vanaf AOW op pensioeninkomen",
+"! Particuliere erfpacht beperkt",
+"+ 1, 5, 10, 15, 20, 30 jaar",
+"+ Dagrentegarantie binnen geldigheid",
+"~ 3 maanden, verlenging mogelijk",
+"+ 10% per jaar boetevrij",
+"+ Automatische rentedaling bij lagere LTV",
+"~ 24 mnd nieuwbouw / 12 mnd verbouw",
+"~ Depotrente gelijk aan hypotheekrente",
+"~ Declaratie digitaal",
+"+ Energiebespaarbudget conform NHG",
+"! Geen structurele labelkorting",
+"+ Verhuisregeling beschikbaar",
+"~ Onderhandse verkoop na toestemming",
+"~ Ontslag hoofdelijkheid met nieuwe toets",
+"+ Verhoging mogelijk",
+"+ Overbrugging bij verkochte woning",
+""]],
+["Aegon","Verzekeraar/regie",[
+"~ 1 jaar met IVO binnen NHG; 3 jaar daarbuiten",
+"~ Flexinkomen o.b.v. 3-jaars gemiddelde",
+"+ Perspectiefverklaring geaccepteerd",
+"~ Toets vanaf AOW op pensioeninkomen",
+"~ Erfpacht onder voorwaarden",
+"~ 5, 10, 15, 20, 30 jaar",
+"+ Dagrentegarantie binnen geldigheid",
+"~ 3 maanden, verlenging mogelijk",
+"+ 10% per jaar boetevrij",
+"+ Automatische rentedaling bij lagere LTV",
+"~ 24 mnd nieuwbouw / 12 mnd verbouw",
+"~ Depotrente gelijk aan hypotheekrente",
+"~ Declaratie via portaal",
+"+ Energiebespaarbudget conform NHG",
+"~ Verduurzamingsbudget binnen hypotheek",
+"+ Verhuisregeling beschikbaar",
+"~ Onderhandse verkoop na toestemming",
+"~ Ontslag hoofdelijkheid met nieuwe toets",
+"~ Verhoging via nieuwe aanvraag",
+"~ Overbrugging bij verkochte woning",
+""]],
+["Nationale-Nederlanden","Verzekeraar",[
+"~ 1 jaar met IVO binnen NHG; 3 jaar daarbuiten",
+"~ Flexinkomen o.b.v. 3-jaars gemiddelde",
+"+ Perspectiefverklaring geaccepteerd",
+"~ Toets vanaf AOW op pensioeninkomen",
+"~ Erfpacht onder voorwaarden",
+"+ 1, 5, 10, 15, 20, 30 jaar",
+"+ Dagrentegarantie binnen geldigheid",
+"~ 3 maanden, verlenging mogelijk",
+"+ 10% per jaar boetevrij",
+"+ Automatische rentedaling bij lagere LTV",
+"~ 24 mnd nieuwbouw / 12 mnd verbouw",
+"~ Depotrente gelijk aan hypotheekrente",
+"~ Declaratie digitaal",
+"+ Energiebespaarbudget conform NHG",
+"+ Rentekorting bij gunstig energielabel (per propositie)",
+"+ Verhuisregeling beschikbaar",
+"~ Onderhandse verkoop na toestemming",
+"~ Ontslag hoofdelijkheid met nieuwe toets",
+"+ Verhoging mogelijk",
+"~ Overbrugging bij verkochte woning",
+""]],
+["BLG Wonen","Bank (de Volksbank)",[
+"~ 1 jaar met IVO binnen NHG; 3 jaar daarbuiten",
+"+ Ruimere toetsing flexinkomen dan marktgemiddelde",
+"+ Perspectiefverklaring geaccepteerd",
+"~ Toets vanaf AOW op pensioeninkomen",
+"~ Erfpacht onder voorwaarden",
+"~ 1, 5, 10, 15, 20, 30 jaar",
+"+ Dagrentegarantie binnen geldigheid",
+"~ 3 maanden, verlenging mogelijk",
+"+ 10% per jaar boetevrij",
+"~ Rentedaling op verzoek bij lagere LTV",
+"~ 24 mnd nieuwbouw / 12 mnd verbouw",
+"~ Depotrente gelijk aan hypotheekrente",
+"~ Declaratie digitaal",
+"+ Energiebespaarbudget conform NHG",
+"~ Duurzaamheidsaanbod wisselend",
+"+ Verhuisregeling beschikbaar",
+"~ Onderhandse verkoop na toestemming",
+"~ Ontslag hoofdelijkheid met nieuwe toets",
+"+ Verhoging mogelijk",
+"~ Overbrugging bij verkochte woning",
+""]],
+["Tulp Hypotheken","Regiepartij",[
+"! 2–3 jaar jaarcijfers; binnen NHG 1 jaar met IVO",
+"! Flexinkomen beperkt geaccepteerd",
+"~ Perspectiefverklaring in beginsel geaccepteerd",
+"~ Toets vanaf AOW op pensioeninkomen",
+"! Erfpacht beperkt",
+"~ 5, 10, 15, 20, 30 jaar",
+"+ Dagrentegarantie tot passeren",
+"~ 3 maanden + verlenging",
+"+ 10% per jaar boetevrij",
+"+ Automatische rentedaling bij lagere LTV",
+"~ 24 mnd nieuwbouw / 12 mnd verbouw",
+"~ Depotrente gelijk aan hypotheekrente",
+"~ Declaratie via servicer",
+"+ Energiebespaarbudget conform NHG",
+"~ Scherpe tarieven in lage risicoklassen",
+"~ Verhuisregeling beschikbaar",
+"~ Onderhandse verkoop via bijzonder beheer",
+"~ Ontslag hoofdelijkheid met nieuwe toets",
+"! Verhoging alleen via nieuwe aanvraag",
+"- Geen eigen overbruggingskrediet",
+""]],
+["Attens Hypotheken","Regiepartij",[
+"! 3 jaar jaarcijfers; binnen NHG 1 jaar met IVO",
+"! Flexinkomen beperkt",
+"~ Perspectiefverklaring in beginsel geaccepteerd",
+"+ Ruime toetsing senioren / inkomen na AOW",
+"! Erfpacht beperkt",
+"~ 10, 15, 20, 30 jaar",
+"+ Dagrentegarantie tot passeren",
+"~ 3 maanden + verlenging",
+"+ 10% per jaar boetevrij",
+"+ Automatische rentedaling bij lagere LTV",
+"~ 24 mnd nieuwbouw / 12 mnd verbouw",
+"~ Depotrente gelijk aan hypotheekrente",
+"~ Declaratie via servicer",
+"+ Energiebespaarbudget conform NHG",
+"~ Lange rentevastperioden als propositie",
+"~ Verhuisregeling beschikbaar",
+"~ Onderhandse verkoop via bijzonder beheer",
+"~ Ontslag hoofdelijkheid met nieuwe toets",
+"! Verhoging via nieuwe aanvraag",
+"- Geen eigen overbruggingskrediet",
+""]],
+["Lloyds Bank","Buitenlandse bank",[
+"~ 1 jaar met IVO binnen NHG; 3 jaar daarbuiten",
+"~ Flexinkomen o.b.v. 3-jaars gemiddelde",
+"~ Perspectiefverklaring geaccepteerd",
+"~ Toets vanaf AOW op pensioeninkomen",
+"! Erfpacht beperkt",
+"~ 5, 10, 15, 20, 30 jaar",
+"+ Dagrentegarantie binnen geldigheid",
+"~ 3 maanden + verlenging",
+"+ 10% per jaar boetevrij",
+"+ Automatische rentedaling bij lagere LTV",
+"~ 24 mnd nieuwbouw / 12 mnd verbouw",
+"~ Depotrente gelijk aan hypotheekrente",
+"~ Declaratie via portaal",
+"+ Energiebespaarbudget conform NHG",
+"+ Expats en internationaal inkomen als propositie",
+"~ Verhuisregeling beschikbaar",
+"~ Onderhandse verkoop via bijzonder beheer",
+"~ Ontslag hoofdelijkheid met nieuwe toets",
+"~ Verhoging mogelijk",
+"! Overbrugging beperkt",
+""]],
+["Hypotrust","Label/regie",[
+"! Per propositie verschillend; veelal 2–3 jaar",
+"! Flexinkomen per propositie",
+"~ Perspectiefverklaring per propositie",
+"~ Toets vanaf AOW op pensioeninkomen",
+"! Erfpacht per propositie",
+"~ 5, 10, 15, 20, 30 jaar (per propositie)",
+"+ Dagrentegarantie bij meeste proposities",
+"~ 3 maanden + verlenging",
+"+ 10% per jaar boetevrij",
+"+ Automatische rentedaling bij lagere LTV",
+"~ 24 mnd nieuwbouw / 12 mnd verbouw",
+"~ Depotrente gelijk aan hypotheekrente",
+"~ Declaratie via servicer",
+"+ Energiebespaarbudget conform NHG",
+"~ Meerdere proposities met eigen tariefstelling",
+"~ Verhuisregeling per propositie",
+"~ Onderhandse verkoop via bijzonder beheer",
+"~ Ontslag hoofdelijkheid met nieuwe toets",
+"! Verhoging per propositie verschillend",
+"! Overbrugging per propositie",
+""]],
+["Venn Hypotheken","Regiepartij",[
+"! 2–3 jaar jaarcijfers; binnen NHG 1 jaar met IVO",
+"! Flexinkomen beperkt",
+"~ Perspectiefverklaring in beginsel geaccepteerd",
+"~ Toets vanaf AOW op pensioeninkomen",
+"! Erfpacht beperkt",
+"~ 10, 15, 20, 30 jaar",
+"+ Dagrentegarantie tot passeren",
+"~ 3 maanden + verlenging",
+"+ 10% per jaar boetevrij",
+"+ Automatische rentedaling bij lagere LTV",
+"~ 24 mnd nieuwbouw / 12 mnd verbouw",
+"~ Depotrente gelijk aan hypotheekrente",
+"~ Declaratie via servicer",
+"+ Energiebespaarbudget conform NHG",
+"+ Verduurzaming als propositiespeerpunt",
+"~ Verhuisregeling beschikbaar",
+"~ Onderhandse verkoop via bijzonder beheer",
+"~ Ontslag hoofdelijkheid met nieuwe toets",
+"! Verhoging via nieuwe aanvraag",
+"- Geen eigen overbruggingskrediet",
+""]],
+["Vista Hypotheken","Regiepartij",[
+"! 2–3 jaar jaarcijfers; binnen NHG 1 jaar met IVO",
+"! Flexinkomen beperkt",
+"~ Perspectiefverklaring in beginsel geaccepteerd",
+"~ Toets vanaf AOW op pensioeninkomen",
+"! Erfpacht beperkt",
+"~ 10, 15, 20, 30 jaar",
+"+ Dagrentegarantie tot passeren",
+"~ 3 maanden + verlenging",
+"+ 10% per jaar boetevrij",
+"+ Automatische rentedaling bij lagere LTV",
+"~ 24 mnd nieuwbouw / 12 mnd verbouw",
+"~ Depotrente gelijk aan hypotheekrente",
+"~ Declaratie via servicer",
+"+ Energiebespaarbudget conform NHG",
+"~ Tariefgedreven propositie",
+"~ Verhuisregeling beschikbaar",
+"~ Onderhandse verkoop via bijzonder beheer",
+"~ Ontslag hoofdelijkheid met nieuwe toets",
+"! Verhoging via nieuwe aanvraag",
+"- Geen eigen overbruggingskrediet",
+""]],
+["bijBouwe","Regiepartij",[
+"! 3 jaar jaarcijfers; binnen NHG 1 jaar met IVO",
+"! Flexinkomen beperkt",
+"~ Perspectiefverklaring in beginsel geaccepteerd",
+"~ Toets vanaf AOW op pensioeninkomen",
+"! Erfpacht beperkt",
+"~ 5, 10, 15, 20, 30 jaar",
+"+ Dagrentegarantie tot passeren",
+"~ 3 maanden + verlenging",
+"+ 10% per jaar boetevrij",
+"+ Automatische rentedaling bij lagere LTV",
+"~ 24 mnd nieuwbouw / 12 mnd verbouw",
+"~ Depotrente gelijk aan hypotheekrente",
+"+ Snel digitaal declaratieproces",
+"+ Energiebespaarbudget conform NHG",
+"~ Volledig digitale propositie",
+"~ Verhuisregeling beschikbaar",
+"~ Onderhandse verkoop via bijzonder beheer",
+"~ Ontslag hoofdelijkheid met nieuwe toets",
+"! Verhoging via nieuwe aanvraag",
+"- Geen eigen overbruggingskrediet",
+""]],
+["Woonfonds","Label/regie",[
+"~ 1 jaar met IVO binnen NHG; 3 jaar daarbuiten",
+"! Flexinkomen beperkt",
+"~ Perspectiefverklaring in beginsel geaccepteerd",
+"~ Toets vanaf AOW op pensioeninkomen",
+"~ Erfpacht onder voorwaarden",
+"~ 5, 10, 15, 20, 30 jaar",
+"+ Dagrentegarantie binnen geldigheid",
+"~ 3 maanden + verlenging",
+"+ 10% per jaar boetevrij",
+"+ Automatische rentedaling bij lagere LTV",
+"~ 24 mnd nieuwbouw / 12 mnd verbouw",
+"~ Depotrente gelijk aan hypotheekrente",
+"~ Declaratie via servicer",
+"+ Energiebespaarbudget conform NHG",
+"~ Standaardpropositie zonder labelkorting",
+"~ Verhuisregeling beschikbaar",
+"~ Onderhandse verkoop via bijzonder beheer",
+"~ Ontslag hoofdelijkheid met nieuwe toets",
+"~ Verhoging mogelijk",
+"! Overbrugging beperkt",
+""]],
+["Merius Hypotheken","Regiepartij",[
+"! 2–3 jaar jaarcijfers; binnen NHG 1 jaar met IVO",
+"! Flexinkomen beperkt",
+"~ Perspectiefverklaring in beginsel geaccepteerd",
+"~ Toets vanaf AOW op pensioeninkomen",
+"! Erfpacht beperkt",
+"~ 10, 15, 20, 30 jaar",
+"+ Dagrentegarantie tot passeren",
+"~ 3 maanden + verlenging",
+"+ 10% per jaar boetevrij",
+"+ Automatische rentedaling bij lagere LTV",
+"~ 24 mnd nieuwbouw / 12 mnd verbouw",
+"~ Depotrente gelijk aan hypotheekrente",
+"~ Declaratie via servicer",
+"+ Energiebespaarbudget conform NHG",
+"~ Tariefgedreven propositie",
+"~ Verhuisregeling beschikbaar",
+"~ Onderhandse verkoop via bijzonder beheer",
+"~ Ontslag hoofdelijkheid met nieuwe toets",
+"! Verhoging via nieuwe aanvraag",
+"- Geen eigen overbruggingskrediet",
+""]],
+["a.s.r.","Verzekeraar",[
+"~ 1 jaar met IVO binnen NHG; 3 jaar daarbuiten",
+"~ Flexinkomen o.b.v. 3-jaars gemiddelde",
+"+ Perspectiefverklaring geaccepteerd",
+"~ Toets vanaf AOW op pensioeninkomen",
+"~ Erfpacht onder voorwaarden",
+"~ 5, 10, 15, 20, 30 jaar",
+"+ Dagrentegarantie binnen geldigheid",
+"~ 3 maanden + verlenging",
+"+ 10% per jaar boetevrij",
+"+ Automatische rentedaling bij lagere LTV",
+"~ 24 mnd nieuwbouw / 12 mnd verbouw",
+"~ Depotrente gelijk aan hypotheekrente",
+"~ Declaratie digitaal",
+"+ Energiebespaarbudget conform NHG",
+"+ Verduurzamingsbudget / labelvoordeel per propositie",
+"+ Verhuisregeling beschikbaar",
+"~ Onderhandse verkoop na toestemming",
+"~ Ontslag hoofdelijkheid met nieuwe toets",
+"+ Verhoging mogelijk",
+"~ Overbrugging bij verkochte woning",
+""]],
+["Centraal Beheer","Verzekeraar",[
+"~ 1 jaar met IVO binnen NHG; 3 jaar daarbuiten",
+"~ Flexinkomen o.b.v. 3-jaars gemiddelde",
+"+ Perspectiefverklaring geaccepteerd",
+"~ Toets vanaf AOW op pensioeninkomen",
+"~ Erfpacht onder voorwaarden",
+"~ 5, 10, 15, 20, 30 jaar",
+"+ Dagrentegarantie binnen geldigheid",
+"~ 3 maanden + verlenging",
+"+ 10% per jaar boetevrij",
+"+ Automatische rentedaling bij lagere LTV",
+"~ 24 mnd nieuwbouw / 12 mnd verbouw",
+"~ Depotrente gelijk aan hypotheekrente",
+"~ Declaratie digitaal",
+"+ Energiebespaarbudget conform NHG",
+"+ Verduurzamingsvoordeel per propositie",
+"+ Verhuisregeling beschikbaar",
+"~ Onderhandse verkoop na toestemming",
+"~ Ontslag hoofdelijkheid met nieuwe toets",
+"+ Verhoging mogelijk",
+"~ Overbrugging bij verkochte woning",
+""]],
+["Triodos Bank","Bank (duurzaam)",[
+"~ 1 jaar met IVO binnen NHG; 3 jaar daarbuiten",
+"! Flexinkomen beperkt",
+"~ Perspectiefverklaring in beginsel geaccepteerd",
+"~ Toets vanaf AOW op pensioeninkomen",
+"~ Erfpacht onder voorwaarden",
+"~ 5, 10, 15, 20, 30 jaar",
+"+ Dagrentegarantie binnen geldigheid",
+"~ 3 maanden + verlenging",
+"+ 10% per jaar boetevrij",
+"+ Rentekorting gekoppeld aan energielabel",
+"~ 24 mnd nieuwbouw / 12 mnd verbouw",
+"~ Depotrente gelijk aan hypotheekrente",
+"~ Declaratie digitaal",
+"+ Energiebespaarbudget conform NHG",
+"+ Expliciet duurzaamheidsvoordeel in rente",
+"~ Verhuisregeling beschikbaar",
+"~ Onderhandse verkoop na toestemming",
+"~ Ontslag hoofdelijkheid met nieuwe toets",
+"~ Verhoging mogelijk",
+"! Overbrugging beperkt",
+""]],
+["NIBC","Bank",[
+"+ 1 jaar met IVO binnen NHG; ruimere ondernemerspropositie",
+"~ Flexinkomen o.b.v. 3-jaars gemiddelde",
+"~ Perspectiefverklaring geaccepteerd",
+"~ Toets vanaf AOW op pensioeninkomen",
+"~ Erfpacht onder voorwaarden",
+"~ 5, 10, 15, 20, 30 jaar",
+"+ Dagrentegarantie binnen geldigheid",
+"~ 3 maanden + verlenging",
+"+ 10% per jaar boetevrij",
+"+ Automatische rentedaling bij lagere LTV",
+"~ 24 mnd nieuwbouw / 12 mnd verbouw",
+"~ Depotrente gelijk aan hypotheekrente",
+"~ Declaratie via portaal",
+"+ Energiebespaarbudget conform NHG",
+"+ Maatwerk voor ondernemers en bijzondere situaties",
+"~ Verhuisregeling beschikbaar",
+"~ Onderhandse verkoop via bijzonder beheer",
+"~ Ontslag hoofdelijkheid met nieuwe toets",
+"~ Verhoging mogelijk",
+"! Overbrugging beperkt",
+""]],
+["ASN Bank","Bank (de Volksbank)",[
+"~ 1 jaar met IVO binnen NHG; 3 jaar daarbuiten",
+"~ Flexinkomen met 3-jaars gemiddelde",
+"+ Perspectiefverklaring geaccepteerd",
+"~ Toets vanaf AOW op pensioeninkomen",
+"~ Erfpacht onder voorwaarden",
+"~ 1, 5, 10, 15, 20, 30 jaar",
+"+ Dagrentegarantie binnen geldigheid",
+"~ 3 maanden, verlenging mogelijk",
+"+ 10% per jaar boetevrij",
+"~ Rentedaling op verzoek bij lagere LTV",
+"~ 24 mnd nieuwbouw / 12 mnd verbouw",
+"~ Depotrente gelijk aan hypotheekrente",
+"~ Declaratie digitaal",
+"+ Energiebespaarbudget conform NHG",
+"+ Duurzaamheidsprofiel met verduurzamingsruimte",
+"+ Verhuisregeling beschikbaar",
+"~ Onderhandse verkoop na toestemming",
+"~ Ontslag hoofdelijkheid met nieuwe toets",
+"+ Verhoging mogelijk",
+"~ Overbrugging bij verkochte woning",
+""]]
+];
+/* Aanvullende voorwaarden die Vereniging Eigen Huis en Independer belangrijk vinden (selectie op basis van
+   secundaire publicaties). Uitbreidbaar: voeg hier objecten {id,cat,naam,kort,waarom,genoemdDoor,bronnen} toe.
+   Alle verstrekkers krijgen hiervoor een lege waarde (nog in te vullen). */
+/* 'na' = plaats direct na die voorwaarde (anders achteraan in de categorie). */
+const EXTRA_CRITS = [
+  {"id":"avrij","cat":"P","naam":"Aflossingsvrij","kort":"Max. deel aflossingsvrij en beleid","na":"boete","waarom":"Sinds voorjaar 2026 hebben de grootbanken onder druk van DNB en ECB het aflossingsvrije deel voor nieuwe en gewijzigde leningen verlaagd van 50% naar 30% van de woningwaarde, vaak met een bedragsplafond en een hogere renteopslag. Andere (niet-ECB) verstrekkers houden 50% aan. Voor doorstromers en senioren met een groot (oud) aflossingsvrij deel bepaalt dit verschil of zij bij verhuizen of oversluiten hun maandlasten laag kunnen houden."},
+  {"id":"rmid","cat":"P","naam":"Rentemiddeling","kort":"Lagere rente zonder boete in één keer","waarom":"Bij dalende rente kun je overstappen op een nieuwe rente waarbij de boete wordt uitgesmeerd over de nieuwe rentevaste periode. Niet elke geldverstrekker biedt dit aan en de opslag verschilt.","genoemdDoor":["Vereniging Eigen Huis"],"bronnen":["https://www.banken.nl/nieuws/3236/veh-banken-moeten-rentemiddeling-aanbieden","https://www.taxlive.nl/nl/documenten/nieuws/bied-rentemiddeling-aan-om-betalingsproblemen-te-voorkomen/"]},
+  {"id":"rverl","cat":"N","naam":"Rente bij renteverlenging","kort":"Bestaande klant zelfde rente als nieuwe","waarom":"Sommige geldverstrekkers rekenen bestaande klanten bij verlenging een hogere rente dan nieuwe klanten. Een verstrekker die dezelfde tarieven hanteert voorkomt dat je na de eerste periode duurder uit bent.","genoemdDoor":["Vereniging Eigen Huis"],"bronnen":["https://internetconsultatie.nl/regelinghypothecairkrediet2024/reactie/232047/bestand"]},
+  {"id":"rvoor","cat":"N","naam":"Termijn rentevoorstel","kort":"Hoe vroeg je het verlengingsvoorstel krijgt","waarom":"Krijg je ruim vóór het einde van de rentevaste periode een voorstel, dan heb je tijd om te vergelijken, te onderhandelen of over te sluiten in plaats van gedwongen te tekenen.","genoemdDoor":["Vereniging Eigen Huis"],"bronnen":["https://www.maxvandaag.nl/?p=167843"]},
+  {"id":"bbrk","cat":"P","naam":"Berekening boeterente","kort":"Vergelijkingsrente en contante waarde","waarom":"De hoogte van de boete hangt af van welke vergelijkingsrente en rekenmethode de verstrekker gebruikt. Een eerlijke, transparante berekening kan bij vervroegd aflossen of oversluiten veel schelen.","genoemdDoor":["Vereniging Eigen Huis"],"bronnen":["https://nos.nl/artikel/2215588-rechtszaak-tegen-delta-lloyd-om-te-hoge-boeterente","https://nos.nl/artikel/2238535-hypotheekverstrekkers-berekenen-nog-altijd-te-hoge-boeterente"]},
+  {"id":"elbl","cat":"P","naam":"Energielabel in rente","kort":"Korting bij groen label, opslag zonder label","waarom":"Steeds meer verstrekkers koppelen de rente aan het energielabel: korting bij een zuinig huis, maar soms een opslag als er geen geregistreerd label is. Dat beïnvloedt zowel de maandlast als het leenbedrag.","genoemdDoor":["Vereniging Eigen Huis"],"bronnen":["https://www.maxvandaag.nl/?p=167843","https://internetconsultatie.nl/regelinghypothecairkrediet2024/reactie/232047/bestand"]},
+  {"id":"o106","cat":"V","naam":"Geen opslag tot 106%","kort":"Extra lenen voor verduurzaming zonder toeslag","waarom":"Wettelijk mag je tot 106% van de woningwaarde lenen voor energiebesparing, maar een deel van de verstrekkers weigert dit of rekent dan een renteopslag over de hele hypotheek. Dat maakt verduurzamen onnodig duur.","genoemdDoor":["Vereniging Eigen Huis"],"bronnen":["https://nos.nl/artikel/2242843-hypotheekverstrekkers-werken-verduurzaming-koophuis-tegen","https://www.banken.nl/nieuws/21030/helft-hypotheekverstrekkers-terughoudend-met-financiering-voor-verduurzamen-woning"]},
+  {"id":"bprov","cat":"P","naam":"Offerte verlengen","kort":"Bereidstellingsprovisie bij verlenging","waarom":"Duurt de aankoop of bouw langer dan de geldigheid van de offerte, dan rekenen sommige verstrekkers een provisie per maand verlenging en andere niets. Dat bepaalt of je de offerterente goedkoop kunt vasthouden.","genoemdDoor":["Independer (bron niet geverifieerd)"],"bronnen":["https://www.actuelerentestanden.nl/?p=129319"]},
+  {"id":"wkost","cat":"N","naam":"Kosten van wijzigingen","kort":"Administratiekosten bij aanpassing","waarom":"Voor renteverlenging, renteaanpassing of het verlagen van de risico-opslag rekent de ene verstrekker niets en de andere een vast bedrag. Bij meerdere wijzigingen tijdens de looptijd telt dat op.","genoemdDoor":["Vereniging Eigen Huis"],"bronnen":["https://internetconsultatie.nl/regelinghypothecairkrediet2024/reactie/232047/bestand"]},
+  {"id":"avlt","cat":"N","naam":"Einde looptijd aflosvrij","kort":"Verlengen aflossingsvrij deel na 30 jaar","waarom":"Veel oude aflossingsvrije leningen lopen af terwijl de eigenaar al ouder is. Een verstrekker die de looptijd wil verlengen voorkomt dat je moet verkopen of herfinancieren op een lastig moment.","genoemdDoor":["Vereniging Eigen Huis"],"bronnen":["https://nos.nl/l/2294137","https://nos.nl/l/2252623"]},
+  {"id":"bproc","cat":"N","naam":"Hulp bij betalingsproblemen","kort":"Beleid bij (dreigende) achterstand","waarom":"Hoe soepel een verstrekker meedenkt bij geldzorgen, bijvoorbeeld met tijdelijke verlaging, uitstel of rentemiddeling, bepaalt of een tijdelijke tegenvaller uitmondt in een achterstand of gedwongen verkoop.","genoemdDoor":["Vereniging Eigen Huis"],"bronnen":["https://www.banken.nl/nieuws/808/vereniging-eigen-huis-opent-meldpunt-betalingsproblemen","https://www.taxlive.nl/nl/documenten/nieuws/banken-moeten-huiseigenaren-met-betalingsproblemen-helpen/"]}
+];
+
+/* Ingevulde waarden voor aanvullende voorwaarden, per voorwaarde-id en verstrekkersnaam:
+   {waarde:'<prefix>tekst', bron:['https://…'], zekerheid:'hoog'|'middel'|'laag'}. Bij zekerheid 'laag' wordt " (onzeker)" toegevoegd.
+   Notities per voorwaarde (bijv. recent nieuws) in CRIT_NOTITIE: {tekst, datum, bronnen}. */
+/* avrij: onderzoek aflossingsvrij (oktober 2026, op basis van zoekresultaat-samenvattingen; bronpagina's niet geopend).
+   Namen gekoppeld aan de verstrekkers hierboven; percentages van renteopslagen weggelaten (geen tarieven op deze pagina). */
+const CEL_WAARDEN = {
+  avrij: {
+    "ABN AMRO": {"waarde":"!Per 1-6-2026 max 30% WW, plafond 150k/250k/500k naar WW; bestaand bij einde looptijd 50%","bron":["https://www.banken.nl/nieuws/26956/abn-amro-en-florius-beperken-aflossingsvrije-hypotheek-tot-30-procent-van-woningwaarde","https://www.abnamro.com/nl/nieuws/abn-amro-en-florius-passen-beleid-aflossingsvrije-hypotheken-aan","https://www.consumentenbond.nl/geldgids/geldgids-uitgelicht/ing-maakt-aflossingsvrije-hypotheek-veel-duurder"],"zekerheid":"hoog","noot":"Bron: zoekresultaat, pagina zelf niet geopend; controleer bij de geldverstrekker."},
+    "Florius": {"waarde":"!Per 1-6-2026 max 30% WW en altijd max EUR 150.000; bestaand ongewijzigd tot 50%","bron":["https://www.banken.nl/nieuws/26956/abn-amro-en-florius-beperken-aflossingsvrije-hypotheek-tot-30-procent-van-woningwaarde","https://www.homefinance.nl/nieuws-blog/2025/voortaan-mogelijk-lagere-aflossingsvrije-hypotheek-bij-florius/"],"zekerheid":"hoog","noot":"Bron: zoekresultaat, pagina zelf niet geopend; controleer bij de geldverstrekker."},
+    "Rabobank": {"waarde":"!Per 11-5-2026 max 30% WW, max EUR 150.000 ook bij verhuizen/oversluiten; hogere renteopslag","bron":["https://www.rabobank.nl/nieuws/011512344/rabobank-scherpt-beleid-voor-aflossingsvrije-hypotheek-aan-per-11-mei-2026","https://www.banken.nl/nieuws/26774/rabobank-scherpt-beleid-aan-rond-aflossingsvrije-hypotheken","https://www.consumentenbond.nl/geldgids/geldgids-uitgelicht/ing-maakt-aflossingsvrije-hypotheek-veel-duurder"],"zekerheid":"hoog","noot":"Bron: zoekresultaat, pagina zelf niet geopend; controleer bij de geldverstrekker."},
+    "Obvion": {"waarde":"!Volgt Rabobank: per 11-5-2026 max 30% WW en max EUR 150.000; maatwerk bij einde looptijd","bron":["https://www.hypotheker.nl/actueel/nieuwsberichten/2026/rabobank-en-obvion-beperken-aflossingsvrije-hypotheek/","https://www.rabobank.nl/over-ons/pers/persberichten/011512297/rabobank-scherpt-beleid-voor-aflossingsvrije-hypotheek-aan-per-11-mei-2026"],"zekerheid":"hoog","noot":"Bron: zoekresultaat, pagina zelf niet geopend; controleer bij de geldverstrekker."},
+    "ING": {"waarde":"!Per 23-7-2026 max 30% WW, plafond 150k/250k/500k; verlengen tot 50%; hogere renteopslag","bron":["https://www.banken.nl/nieuws/27131/ook-ing-scherpt-beleid-voor-aflossingsvrije-hypotheken-aan","https://www.geld.nl/hypotheek/expert/nieuws/ING-aflossingsvrij-strenger","https://www.consumentenbond.nl/geldgids/geldgids-uitgelicht/ing-maakt-aflossingsvrije-hypotheek-veel-duurder"],"zekerheid":"hoog","noot":"Bron: zoekresultaat, pagina zelf niet geopend; controleer bij de geldverstrekker."},
+    "ASN Bank": {"waarde":"!Per 11-5-2026 max 30% WW (geen bedragsplafond); bestaand blijft bij renteherziening","bron":["https://www.banken.nl/nieuws/26876/ook-asn-bank-scherpt-beleid-voor-aflossingsvrije-hypotheekbeleid-aan","https://newsroom.asnbank.nl/download/f3cf2d60-84b6-40a3-bf75-25eaeddbae9e/persbericht-asnbankbeperktaflossingsvrijehypotheektot30procentwaardewoning.pdf","https://www.hypotheker.nl/actueel/nieuwsberichten/2026/ook-asn-bank-scherpt-aflossingsvrij-aan/"],"zekerheid":"hoog","noot":"Bron: zoekresultaat, pagina zelf niet geopend; controleer bij de geldverstrekker."},
+    "SNS": {"waarde":"!Per 11-5-2026 max 30% WW (geen bedragsplafond); bestaand blijft bij renteherziening","bron":["https://www.banken.nl/nieuws/26876/ook-asn-bank-scherpt-beleid-voor-aflossingsvrije-hypotheekbeleid-aan","https://newsroom.asnbank.nl/download/f3cf2d60-84b6-40a3-bf75-25eaeddbae9e/persbericht-asnbankbeperktaflossingsvrijehypotheektot30procentwaardewoning.pdf","https://www.hypotheker.nl/actueel/nieuwsberichten/2026/ook-asn-bank-scherpt-aflossingsvrij-aan/"],"zekerheid":"hoog","noot":"Bron: zoekresultaat, pagina zelf niet geopend; controleer bij de geldverstrekker."},
+    "RegioBank": {"waarde":"!Per 11-5-2026 max 30% WW (geen bedragsplafond); bestaand blijft bij renteherziening","bron":["https://www.banken.nl/nieuws/26876/ook-asn-bank-scherpt-beleid-voor-aflossingsvrije-hypotheekbeleid-aan","https://newsroom.asnbank.nl/download/f3cf2d60-84b6-40a3-bf75-25eaeddbae9e/persbericht-asnbankbeperktaflossingsvrijehypotheektot30procentwaardewoning.pdf","https://www.hypotheker.nl/actueel/nieuwsberichten/2026/ook-asn-bank-scherpt-aflossingsvrij-aan/"],"zekerheid":"hoog","noot":"Bron: zoekresultaat, pagina zelf niet geopend; controleer bij de geldverstrekker."},
+    "BLG Wonen": {"waarde":"!Per 11-5-2026 max 30% WW (geen bedragsplafond); bestaand blijft bij renteherziening","bron":["https://www.banken.nl/nieuws/26876/ook-asn-bank-scherpt-beleid-voor-aflossingsvrije-hypotheekbeleid-aan","https://newsroom.asnbank.nl/download/f3cf2d60-84b6-40a3-bf75-25eaeddbae9e/persbericht-asnbankbeperktaflossingsvrijehypotheektot30procentwaardewoning.pdf","https://www.hypotheker.nl/actueel/nieuwsberichten/2026/ook-asn-bank-scherpt-aflossingsvrij-aan/"],"zekerheid":"hoog","noot":"Bron: zoekresultaat, pagina zelf niet geopend; controleer bij de geldverstrekker."},
+    "Triodos Bank": {"waarde":"!Per 1-7-2026 max 30% WW (ook verhogen); bestaand 50% blijft; lage renteopslag","bron":["https://www.geld.nl/hypotheek/nieuws/triodos-beperkt-aflossingsvrije-hypotheek-per-1-juli","https://www.welingelichtekringen.nl/economie/ook-triodos-bank-beperkt-mogelijkheden-aflossingsvrije-hypotheken","https://www.consumentenbond.nl/geldgids/geldgids-uitgelicht/ing-maakt-aflossingsvrije-hypotheek-veel-duurder"],"zekerheid":"hoog","noot":"Bron: zoekresultaat, pagina zelf niet geopend; controleer bij de geldverstrekker."},
+    "Munt Hypotheken": {"waarde":"~Max 50% WW zonder renteopslag; oud aflossingsvrij tot 50% mee te nemen bij oversluiten","bron":["https://www.munthypotheken.nl/veelgestelde-vragen/aanvraag-munt-hypotheek/welk-deel-van-mijn-hypotheek-mag-ik-aflossingsvrij-lenen/","https://www.homefinance.nl/hypotheek/aanbieders/munt/aflossingsvrij/","https://seniorenjournaal.nl/wonen/toch-aflossingsvrij-lenen-als-vanouds/"],"zekerheid":"hoog","noot":"Bron: zoekresultaat, pagina zelf niet geopend; controleer bij de geldverstrekker."},
+    "bijBouwe": {"waarde":"~Blijft aflossingsvrij lenen op oude voorwaarden (50%) volgens Hypotheekshop","bron":["https://seniorenjournaal.nl/wonen/toch-aflossingsvrij-lenen-als-vanouds/","https://www.taxlive.nl/nl/documenten/nieuws/andere-aanbieders-blijven-als-vanouds-aflossingsvrij-uitlenen/"],"zekerheid":"middel","noot":"Bron: zoekresultaat, pagina zelf niet geopend; controleer bij de geldverstrekker."},
+    "Nationale-Nederlanden": {"waarde":"~Max 50% WW aflossingsvrij (geen 2026-aanscherping gevonden)","bron":["https://www.nn.nl/Particulier/Hypotheken/Hypotheekvormen/Aflossingsvrije-Hypotheek.htm"],"zekerheid":"middel","noot":"Bron: zoekresultaat, pagina zelf niet geopend; controleer bij de geldverstrekker."},
+    "a.s.r.": {"waarde":"~Max 50% WW, geen renteopslag voor aflossingsvrij (ook Levensrente-hypotheek)","bron":["https://www.asrnederland.nl/-/media/files/asrnederland-nl/nieuws-en-pers/2026/20260430-asr-hypotheekproduct-en-contactkaart.pdf","https://www.asrnederland.nl/-/media/files/asrnederland-nl/nieuws-en-pers/2020/20201028_persbericht-asr-introduceert-aflossingsvrije-hypotheek-met-levenslang-vaste-rente.pdf"],"zekerheid":"middel","noot":"Bron: zoekresultaat, pagina zelf niet geopend; controleer bij de geldverstrekker."},
+    "Centraal Beheer": {"waarde":"~Max 50% WW aflossingsvrij; risico-opslag naar LTV","bron":["https://www.homefinance.nl/hypotheek/rente/risico-opslag-centraal-beheer/","https://www.homefinance.nl/hypotheek/aanbieders/centraal-beheer/review/"],"zekerheid":"laag","noot":"Bron: zoekresultaat, pagina zelf niet geopend; controleer bij de geldverstrekker."},
+    "Syntrus Achmea / Achmea Mortgage Funds": {"waarde":"~Max 50% WW aflossingsvrij (Basis- en Comforthypotheek)","bron":["https://www.homefinance.nl/hypotheek/vorm/aflossingsvrij/syntrus-achmea/"],"zekerheid":"middel","noot":"Bron: zoekresultaat, pagina zelf niet geopend; controleer bij de geldverstrekker."},
+    "Argenta": {"waarde":"~Max 50% marktwaarde aflossingsvrij, looptijd max 30 jaar","bron":["https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekkaart.pdf","https://www.homefinance.nl/hypotheek/vorm/aflossingsvrij/argenta/"],"zekerheid":"middel","noot":"Bron: zoekresultaat, pagina zelf niet geopend; controleer bij de geldverstrekker."},
+    "Allianz": {"waarde":"~Max 50% WW aflossingsvrij","bron":["https://www.homefinance.nl/hypotheek/aanbieders/allianz/voorwaarden/","https://www.actuelerentestanden.nl/hypotheek/aanbieders/allianz"],"zekerheid":"middel","noot":"Bron: zoekresultaat, pagina zelf niet geopend; controleer bij de geldverstrekker."},
+    "Lloyds Bank": {"waarde":"~Max 50% marktwaarde; aflossingsvrij deel altijd consumptief + pensioentoets","bron":["https://www.lloydsbank.nl/dam/jcr:88c9d654-7afe-4c25-ba56-1ad826ad1bf9/productkaart-lloyds-bank-hypotheek.pdf","https://lloydsbank.nl/dam/jcr:c1c62885-fedd-4340-9854-8ab0c18d2c2d/toetsing-betaalbaarheid-aflossingsvrij.pdf"],"zekerheid":"middel","noot":"Bron: zoekresultaat, pagina zelf niet geopend; controleer bij de geldverstrekker."},
+    "Woonnu": {"waarde":"~Max 50% marktwaarde aflossingsvrij (productkaart 2026)","bron":["https://woonnu.nl/media/zdsptaaq/202603-woonnu-productkaart-05.pdf","https://woonnu.nl/media/qlmjci23/20261703-woonnu-productkaart-05.pdf"],"zekerheid":"hoog","noot":"Bron: zoekresultaat, pagina zelf niet geopend; controleer bij de geldverstrekker."},
+    "Vista Hypotheken": {"waarde":"~Max 50% marktwaarde aflossingsvrij","bron":["https://www.actuelerentestanden.nl/hypotheek/aanbieders/vista-hypotheken","https://www.homefinance.nl/hypotheek/hypotheek-aanbieders/vista-hypotheken/overzicht-hypotheken-standaard.asp"],"zekerheid":"middel","noot":"Bron: zoekresultaat, pagina zelf niet geopend; controleer bij de geldverstrekker."},
+    "Merius Hypotheken": {"waarde":"~Max 50% marktwaarde aflossingsvrij","bron":["https://www.homefinance.nl/merius-hypotheek-berekenen-jouw-maximale-hypotheek-snel-inzichtelijk/"],"zekerheid":"laag","noot":"Bron: zoekresultaat, pagina zelf niet geopend; controleer bij de geldverstrekker."},
+    "NIBC": {"waarde":"~Max 50% WW aflossingsvrij; aparte seniorenpropositie","bron":["https://nibc.nl/media/0d2hsk24/senioren-factsheet.pdf","https://nibc.nl/media/vycgdj2u/productkaart-nibc-hypotheken_okt2025.pdf"],"zekerheid":"middel","noot":"Bron: zoekresultaat, pagina zelf niet geopend; controleer bij de geldverstrekker."},
+    "Handelsbanken": {"waarde":"+Geen renteopslag voor aflossingsvrij; meer dan 50% mogelijk bij lage woonlasten","bron":["https://www.handelsbanken.nl/tron/nlpu/info/contents/v1/document/37-273739","https://www.handelsbanken.nl/tron/nlpu/info/contents/v1/document/37-268664"],"zekerheid":"laag","noot":"Bron: zoekresultaat, pagina zelf niet geopend; controleer bij de geldverstrekker."},
+    "Knab": {"waarde":"~Aflossingsvrij tot 50% WW (volgens tarievenblad Knab)","bron":["https://www.knab.nl/assets/35355cb5-f8a5-0105-c237-9bab7d11ff84/849d3064-4d12-46a8-a659-af0fff750fae/De%20Knab%20Helder%20Hypotheek%20Rentetarieven%2028-05.pdf"],"zekerheid":"laag","noot":"Bron: zoekresultaat, pagina zelf niet geopend; controleer bij de geldverstrekker."},
+    "bunq": {"waarde":"~Lage opslag voor aflossingsvrij deel","bron":["https://www.consumentenbond.nl/geldgids/geldgids-uitgelicht/ing-maakt-aflossingsvrije-hypotheek-veel-duurder"],"zekerheid":"laag","noot":"Bron: zoekresultaat, pagina zelf niet geopend; controleer bij de geldverstrekker."}
+  }
+};
+const CRIT_NOTITIE = {
+  avrij: {"tekst":"ABN AMRO en Florius: Vanaf 1 juni 2026 mogen nieuwe hypotheken bij ABN AMRO en Florius nog maar voor 30% van de woningwaarde aflossingsvrij zijn (was 50%), met daarbovenop een absoluut plafond: bij ABN AMRO EUR 150.000 tot een woningwaarde van EUR 1 mln, EUR 250.000 tot EUR 2 mln en EUR 500.000 daarboven; bij Florius altijd maximaal EUR 150.000. Bestaande klanten die niets wijzigen merken niets en kunnen aan het einde van de looptijd tot 50% van de woningwaarde aflossingsvrij herfinancieren. Bij een wezenlijke wijziging, zoals verhuizen (nieuwe financiering) of verhogen, geldt wel het nieuwe 30%-regime. Aflossingsvrij lenen voor consumptieve doelen (auto, boot, reis, studie) is niet mogelijk.","datum":"Aangekondigd ca. 17 maart 2026; ingangsdatum 1 juni 2026","bronnen":["https://www.abnamro.com/nl/nieuws/abn-amro-en-florius-passen-beleid-aflossingsvrije-hypotheken-aan","https://www.banken.nl/nieuws/26956/abn-amro-en-florius-beperken-aflossingsvrije-hypotheek-tot-30-procent-van-woningwaarde","https://www.accountancyvanmorgen.nl/2026/03/17/abn-amro-scherpt-regels-voor-aflossingsvrije-hypotheek-aan/","https://slimmehypotheek.nl/vanaf-1-juni-aflossingsvrij-bij-abn-amro-en-florius-nog-maar-tot-30-van-de-woningwaarde/","https://infinance.nl/hypotheken/ook-abn-amro-beperkt-aflossingsvrije-hypotheek/"]}
+};
+
+/* Overige hypotheekverstrekkers uit data/partijen.js (categorie hypotheek) en data/aanbieders.js
+   (type geldverstrekker), ontdubbeld tegen de 25 hierboven (o.a. MUNT/Munt Hypotheken,
+   Dynamic Credit (bijBouwe)/bijBouwe, ASN Bank (de Volksbank)/ASN Bank, Woonfonds/Aegon/SNS met "(nu …)").
+   Bewust ZONDER waarden: alles staat op "nog in te vullen"; er is niets op basis van aannames ingevuld.
+   Niet opgenomen: Voorbeeld Hypotheken (fictief demoprofiel) en Brand New Day (geen hypotheekcategorie in de wegwijzer).
+   groep 'overig' = financiers voor beleggers/zakelijk of fondsbeheer/servicing, geen consumentenwoninghypotheek. */
+const NIEUW = [
+  ['Allianz','Verzekeraar',''],
+  ['Argenta','Bank',''],
+  ['bunq','Bank',''],
+  ['Clarian Wonen','Geldverstrekker',''],
+  ['Groene Hart Hypotheken','Geldverstrekker',''],
+  ['Handelsbanken','Bank',''],
+  ['HollandWoont','Geldverstrekker',''],
+  ['Impact Hypotheken','Geldverstrekker',''],
+  ['IQWOON','Geldverstrekker',''],
+  ['Knab','Bank',''],
+  ['Lot Hypotheken','Geldverstrekker',''],
+  ['Neo Hypotheken','Geldverstrekker',''],
+  ['Nestr','Geldverstrekker',''],
+  ['Robuust Hypotheken','Geldverstrekker',''],
+  ['SocioHypotheek','Geldverstrekker',''],
+  ['Tellius Hypotheken','Geldverstrekker',''],
+  ['Woonnu','Geldverstrekker',''],
+  ['Build Finance','Belegger / zakelijk','overig'],
+  ['CMIS','Servicer / hypotheekbelegger','overig'],
+  ['De Nederlandse','Belegger / zakelijk','overig'],
+  ['Domivest','Belegger / zakelijk','overig'],
+  ['RNHB','Belegger / zakelijk','overig'],
+  ['SolidBriQ','Belegger / zakelijk','overig'],
+  ['Syntrus Achmea / Achmea Mortgage Funds','Fondsbeheerder','overig']
+];
+const NOG_NIET = 'Nog niet ingevuld';
+
+/* ======================= WEERGAVE-AANVULLINGEN =======================
+   Alleen voor weergave; de data hierboven blijft ongewijzigd.
+   Huidige naam bij verouderde merken (in lijn met data/partijen.js). */
+const HINTS = {
+  'SNS':'nu ASN Bank',
+  'RegioBank':'nu ASN Bank',
+  'BLG Wonen':'nu ASN Bank',
+  'Aegon':'nu a.s.r.',
+  'Woonfonds':'nu Centraal Beheer',
+  'IQWOON':'geen nieuwe aanvragen',
+  'Woonnu':'label gestopt per 1 mei 2026'
+};
+/* Logo's uit img/logos/ (zie data/partijen.js, veld logo). Bewust GEEN logo
+   voor SNS, RegioBank, BLG Wonen, Aegon, Woonfonds en Hypotrust. */
+const LOGOS = {
+  'ABN AMRO':'abn-amro','Rabobank':'rabobank','ING':'ing','Munt Hypotheken':'munt-hypotheken',
+  'Obvion':'obvion','Florius':'florius','Nationale-Nederlanden':'nationale-nederlanden',
+  'Tulp Hypotheken':'tulp-hypotheken','Attens Hypotheken':'attens-hypotheken','Lloyds Bank':'lloyds-bank',
+  'Venn Hypotheken':'venn-hypotheken','Vista Hypotheken':'vista-hypotheken','bijBouwe':'bijbouwe',
+  'Merius Hypotheken':'merius','a.s.r.':'a-s-r','Centraal Beheer':'centraal-beheer',
+  'Triodos Bank':'triodos-bank','NIBC':'nibc','ASN Bank':'asn-bank',
+  'Allianz':'allianz','Argenta':'argenta','bunq':'bunq','Clarian Wonen':'clarian-wonen',
+  'Groene Hart Hypotheken':'groene-hart-hypotheken','Handelsbanken':'handelsbanken','HollandWoont':'hollandwoont',
+  'Impact Hypotheken':'impact-hypotheken','IQWOON':'iqwoon','Knab':'knab','Nestr':'nestr',
+  'Robuust Hypotheken':'robuust','SocioHypotheek':'socio-hypotheek','Woonnu':'woonnu',
+  'Build Finance':'build-finance','De Nederlandse':'de-nederlandse','Domivest':'domivest','RNHB':'rnhb',
+  'SolidBriQ':'solidbriq','Syntrus Achmea / Achmea Mortgage Funds':'syntrus-achmea'
+};
+const LEEG = '__leeg__';
+const OVERIG_LABEL = 'Overige financiers (beleggers/zakelijk)';
+
+/* ======================= STATE ======================= */
+const TINTS = {'+':'g','~':'n','!':'a','-':'r'};
+const TINT_ORDER = ['g','n','a','r'];
+const TINT_NAME = {g:'Ruim / gunstig', n:'Marktconform', a:'Aandachtspunt', r:'Beperkend / niet mogelijk'};
+const TINT_LEEG = 'Nog in te vullen / geen kleurcode';
+const PEIL_BRON = 'oktober 2026';
+
+let crits = [];
+let lenders = [];
+let view = 'matrix';
+let editMode = false;
+let overigOpen = false;
+let activeCats = new Set(CATS.map(c=>c.id));
+const sel = new Set();
+let ksel = new Set();   // gekozen kenmerken (voorwaarde-id's) voor Vergelijken
+
+const $ = id => document.getElementById(id);
+const fmtGetal = n => new Intl.NumberFormat('nl-NL').format(n);
+const catNaam = id => (CATS.find(c=>c.id===id)||{naam:id}).naam;
+
+function parseVal(s){
+  s = String(s==null?'':s).trim();
+  const t = TINTS[s.charAt(0)];
+  if(t) return {t:t, v:s.slice(1).trim()};
+  return {t:'', v:s};
+}
+function buildData(){
+  /* CRITS (bron, 21) + EXTRA_CRITS (uitbreidbaar); bronverstrekkers krijgen voor extra voorwaarden een lege waarde. */
+  crits = CRITS.map(c=>({...c}));
+  EXTRA_CRITS.forEach(x=>{
+    const c = {...x}; const na = c.na; delete c.na;
+    const i = na ? crits.findIndex(k=>k.id===na) : -1;
+    if(i >= 0) crits.splice(i+1, 0, c); else crits.push(c);
+  });
+  const bronIdx = id => CRITS.findIndex(k=>k.id===id);
+  lenders = SRC.map((row,i)=>({
+    id:'L'+i,
+    naam:row[0],
+    type:row[1],
+    groep:'',
+    cel:Object.fromEntries(crits.map(c=>[c.id, parseVal(bronIdx(c.id) >= 0 ? row[2][bronIdx(c.id)] : '')]))
+  })).concat(NIEUW.map((row,i)=>({
+    id:'N'+i,
+    naam:row[0],
+    type:row[1],
+    groep:row[2]==='overig' ? 'overig' : '',
+    cel:Object.fromEntries(crits.map(c=>[c.id, {t:'', v:c.id==='bron' ? NOG_NIET : ''}]))
+  })));
+  pasCelWaardenToe();
+}
+/* Naam tolerant vergelijken: "Munt" = "MUNT Hypotheken", "bijBouwe" = "Dynamic Credit (bijBouwe)". */
+function naamSleutel(n){
+  return String(n||'').toLowerCase().replace(/\(nu [^)]*\)/g,'').replace(/\b(hypotheken|hypotheek|bank|n\.?v\.?)\b/g,'')
+    .replace(/[^a-z0-9]+/g,'');
+}
+function zoekLender(naam){
+  const k = naamSleutel(naam);
+  if(!k) return null;
+  return lenders.find(l=>naamSleutel(l.naam)===k)
+    || lenders.find(l=>{ const m = /\(([^)]+)\)/.exec(l.naam); return m && naamSleutel(m[1])===k; })
+    || lenders.find(l=>{ const m = /\(([^)]+)\)/.exec(naam); return m && naamSleutel(m[1])===naamSleutel(l.naam); })
+    || null;
+}
+function pasCelWaardenToe(){
+  Object.keys(CEL_WAARDEN).forEach(cid=>{
+    if(!crits.some(c=>c.id===cid)) return;
+    const w = CEL_WAARDEN[cid];
+    Object.keys(w).forEach(naam=>{
+      const l = zoekLender(naam), x = w[naam];
+      if(!l || !x) return;
+      const cel = parseVal(x.waarde);
+      if(cel.v && x.zekerheid === 'laag') cel.v += ' (onzeker)';
+      if(Array.isArray(x.bron)) cel.bron = x.bron.filter(u=>typeof u==='string').slice(0,10);
+      if(x.noot) cel.noot = String(x.noot);
+      l.cel[cid] = cel;
+    });
+  });
+}
+
+/* ======================= HELPERS ======================= */
+/* Alle data gaat via textContent/attributen de DOM in, nooit via innerHTML. */
+function el(tag, cls, txt){
+  const e = document.createElement(tag);
+  if(cls) e.className = cls;
+  if(txt != null) e.textContent = String(txt);
+  return e;
+}
+/* Alleen voor het printvenster, dat als HTML-tekst wordt opgebouwd. */
+const esc = s => String(s==null?'':s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+function melding(tekst){ $('melding').textContent = tekst || ''; }
+function celVan(l,cid){ return Object.prototype.hasOwnProperty.call(l.cel,cid) ? l.cel[cid] : null; }
+function hintVan(naam){ return Object.prototype.hasOwnProperty.call(HINTS,naam) ? HINTS[naam] : ''; }
+function logoVan(naam){
+  const f = Object.prototype.hasOwnProperty.call(LOGOS,naam) ? LOGOS[naam] : '';
+  return /^[a-z0-9-]+$/.test(f) ? 'img/logos/'+f+'.png' : '';
+}
+/* Kolomvolgorde: per categorie (volgorde CATS), binnen een categorie de volgorde van crits. */
+function critVolgorde(){
+  const ci = id => CATS.findIndex(c=>c.id===id);
+  return crits.map((c,i)=>({c,i})).sort((a,b)=>ci(a.c.cat)-ci(b.c.cat) || a.i-b.i).map(x=>x.c);
+}
+function visCrits(){ return critVolgorde().filter(c=>activeCats.has(c.cat)); }
+/* Ingevuld = minstens één waarde buiten de bronkolom. */
+function isIngevuld(l){ return crits.some(c=>c.cat!=='B' && ((celVan(l,c.id)||{}).v||'').trim()); }
+function notitie(c){ const n = Object.prototype.hasOwnProperty.call(CRIT_NOTITIE,c.id) ? CRIT_NOTITIE[c.id] : null; return n && n.tekst ? n : null; }
+function genoemdDoor(c){ return Array.isArray(c.genoemdDoor) ? c.genoemdDoor.join(', ') : (c.genoemdDoor ? String(c.genoemdDoor) : ''); }
+function critUitleg(c){
+  const d = genoemdDoor(c);
+  const n = Object.prototype.hasOwnProperty.call(CRIT_NOTITIE,c.id) ? CRIT_NOTITIE[c.id] : null;
+  return [c.waarom ? 'Waarom: ' + c.waarom : '', d ? 'Genoemd door: ' + d : '', n && n.tekst ? 'Nieuws' + (n.datum ? ' (' + n.datum + ')' : '') + ': ' + n.tekst : ''].filter(Boolean).join('\n');
+}
+
+function filtered(){
+  const q = $('q').value.trim().toLowerCase();
+  const fc = $('fcrit').value;
+  const fv = $('fval').value;
+  const alleenIngevuld = $('alleenIngevuld').checked;
+  return lenders.filter(l=>{
+    if(alleenIngevuld && !isIngevuld(l)) return false;
+    if(fc && fv){
+      const cel = celVan(l,fc)||{v:''};
+      if(fv === LEEG ? !!cel.v : cel.v !== fv) return false;
+    }
+    if(!q) return true;
+    if(l.naam.toLowerCase().includes(q) || (l.type||'').toLowerCase().includes(q) || hintVan(l.naam).toLowerCase().includes(q)) return true;
+    return visCrits().some(c=>((celVan(l,c.id)||{}).v||'').toLowerCase().includes(q));
+  });
+}
+
+/* ======================= FILTERS ======================= */
+function initFilters(){
+  const cats = $('cats');
+  cats.textContent = '';
+  CATS.forEach(c=>{
+    const n = crits.filter(x=>x.cat===c.id).length;
+    const b = el('button','chip',c.naam);
+    b.type = 'button';
+    b.setAttribute('aria-pressed', String(activeCats.has(c.id)));
+    b.appendChild(el('span','n',fmtGetal(n)));
+    b.addEventListener('click',()=>toggleCat(c.id));
+    cats.appendChild(b);
+  });
+
+  const fc = $('fcrit');
+  const cur = fc.value;
+  fc.textContent = '';
+  const o0 = el('option',null,'Filter op voorwaarde…'); o0.value=''; fc.appendChild(o0);
+  CATS.forEach(cat=>{
+    const items = crits.filter(c=>c.cat===cat.id);
+    if(!items.length) return;
+    const g = document.createElement('optgroup'); g.label = cat.naam;
+    items.forEach(c=>{ const o = el('option',null,c.naam); o.value = c.id; g.appendChild(o); });
+    fc.appendChild(g);
+  });
+  if(cur && crits.some(c=>c.id===cur)) fc.value = cur;
+  syncValFilter();
+}
+function syncValFilter(){
+  const fc = $('fcrit').value;
+  const fv = $('fval');
+  const cur = fv.value;
+  fv.textContent = '';
+  const o0 = el('option',null,'Alle waarden'); o0.value=''; fv.appendChild(o0);
+  if(!fc){ fv.hidden = true; return; }
+  const vals = [...new Set(lenders.map(l=>(celVan(l,fc)||{}).v||'').filter(Boolean))].sort((a,b)=>a.localeCompare(b,'nl'));
+  fv.hidden = false;
+  vals.forEach(v=>{ const o = el('option',null,v.length>70?v.slice(0,70)+'…':v); o.value = v; o.title = v; fv.appendChild(o); });
+  const heeftLeeg = lenders.some(l=>!((celVan(l,fc)||{}).v||''));
+  if(heeftLeeg){ const o = el('option',null,'Nog in te vullen'); o.value = LEEG; fv.appendChild(o); }
+  if(vals.includes(cur) || (cur===LEEG && heeftLeeg)) fv.value = cur;
+}
+function toggleCat(id){
+  if(activeCats.has(id)){ if(activeCats.size>1) activeCats.delete(id); }
+  else activeCats.add(id);
+  initFilters(); render();
+}
+function setView(v){
+  view = v;
+  $('tab-matrix').setAttribute('aria-selected', String(v==='matrix'));
+  $('tab-cmp').setAttribute('aria-selected', String(v==='cmp'));
+  document.querySelectorAll('[data-matrix]').forEach(n=>{ n.hidden = v!=='matrix'; });
+  $('cmpPaneel').hidden = v!=='cmp';
+  melding('');
+  render();
+}
+function toggleEdit(){
+  editMode = !editMode;
+  $('btnEdit').classList.toggle('aan', editMode);
+  $('btnEdit').setAttribute('aria-pressed', String(editMode));
+  $('beheerbalk').hidden = !editMode;
+  render();
+}
+function toggleSel(id){
+  if(sel.has(id)) sel.delete(id); else sel.add(id);
+  melding('');
+  render();
+}
+function zichtbaar(){ return filtered().filter(l=>l.groep!=='overig' || overigOpen); }
+function selAll(on){
+  sel.clear();
+  if(on) zichtbaar().forEach(l=>sel.add(l.id));
+  melding(on ? fmtGetal(sel.size) + ' zichtbare geldverstrekkers geselecteerd.' : '');
+  render();
+}
+
+/* ======================= BEWERKEN ======================= */
+/* contenteditable alleen als platte tekst: plakken voegt tekst in, lezen gaat via innerText. */
+function maakBewerkbaar(node, opslaan){
+  try{ node.contentEditable = 'plaintext-only'; }catch(e){ node.contentEditable = 'true'; }
+  if(node.contentEditable !== 'plaintext-only') node.contentEditable = 'true';
+  node.spellcheck = false;
+  node.addEventListener('input',()=>opslaan(node.innerText.trim()));
+  node.addEventListener('paste',e=>{
+    e.preventDefault();
+    const t = (e.clipboardData && e.clipboardData.getData('text/plain')) || '';
+    const s = window.getSelection();
+    if(!s || !s.rangeCount) return;
+    const r = s.getRangeAt(0); r.deleteContents();
+    const tn = document.createTextNode(t); r.insertNode(tn);
+    r.setStartAfter(tn); r.collapse(true); s.removeAllRanges(); s.addRange(r);
+    opslaan(node.innerText.trim());
+  });
+  node.addEventListener('drop',e=>e.preventDefault());
+}
+function cycleTint(lid,cid){
+  const l = lenders.find(x=>x.id===lid); if(!l) return;
+  const cel = celVan(l,cid) || (l.cel[cid]={t:'',v:''});
+  const i = TINT_ORDER.indexOf(cel.t);
+  cel.t = TINT_ORDER[(i+1) % TINT_ORDER.length];
+  render();
+  const terug = document.querySelector('[data-tint="'+lid+'|'+cid+'"]');
+  if(terug) terug.focus();
+}
+
+/* ======================= RENDER ======================= */
+function tintNode(l,c,t){
+  const i = el('i','tint '+(t ? 't-'+t : 't-e'));
+  const title = t ? TINT_NAME[t] : TINT_LEEG;
+  if(!editMode){ i.title = title; i.setAttribute('aria-hidden','true'); return i; }
+  const b = el('button','tintknop');
+  b.type = 'button';
+  b.title = title + ' — klik om te wisselen';
+  b.setAttribute('aria-label','Kleurcode ' + l.naam + ', ' + c.naam + ': ' + title + '. Klik om te wisselen.');
+  b.dataset.tint = l.id + '|' + c.id;
+  b.appendChild(i);
+  b.addEventListener('click',()=>cycleTint(l.id,c.id));
+  return b;
+}
+function celNode(l,c){
+  const cel = celVan(l,c.id)||{t:'',v:''};
+  const td = el('td','val' + (cel.v ? '' : ' leegcel'));
+  const tip = [Array.isArray(cel.bron) && cel.bron.length ? 'Bron: ' + cel.bron.join(' · ') : '', cel.noot || ''].filter(Boolean).join('\n');
+  if(tip) td.title = tip;
+  const w = el('div','cel');
+  w.appendChild(tintNode(l,c,cel.t));
+  const s = el('span','txt');
+  if(editMode){
+    s.textContent = cel.v;
+    s.setAttribute('aria-label', l.naam + ', ' + c.naam);
+    maakBewerkbaar(s, v=>{ (l.cel[c.id] = celVan(l,c.id)||{t:'',v:''}).v = v; });
+  } else if(cel.v){
+    s.textContent = cel.v;
+    if(cel.t) s.appendChild(el('span','sr-only',' (' + TINT_NAME[cel.t] + ')'));
+  } else {
+    s.appendChild(el('span','nogleeg','nog in te vullen'));
+  }
+  w.appendChild(s);
+  td.appendChild(w);
+  return td;
+}
+function partijKop(l, doel, inKop){
+  const logo = logoVan(l.naam);
+  if(logo){
+    const im = el('img','plogo');
+    im.src = logo; im.alt = ''; im.loading = 'lazy'; im.decoding = 'async';
+    im.width = 92; im.height = 20;
+    im.addEventListener('error',()=>im.remove());
+    doel.appendChild(im);
+  }
+  const vn = el('span','vn',l.naam);
+  const vt = el('span','vt',l.type||'');
+  if(editMode && !inKop){
+    vn.setAttribute('aria-label','Naam geldverstrekker');
+    vt.setAttribute('aria-label','Type geldverstrekker');
+    maakBewerkbaar(vn, v=>{ l.naam = v; });
+    maakBewerkbaar(vt, v=>{ l.type = v; });
+  }
+  doel.appendChild(vn);
+  const h = hintVan(l.naam);
+  if(h) doel.appendChild(el('span','hint','(' + h + ')'));
+  doel.appendChild(vt);
+}
+
+function render(){
+  const actief = document.activeElement && document.activeElement.dataset ? document.activeElement.dataset.sleutel : '';
+  const oudVak = document.querySelector('#out .tabelvak');
+  const scroll = oudVak ? [oudVak.scrollLeft, oudVak.scrollTop] : null;
+  const list = filtered();
+  const cnt = $('cnt');
+  cnt.textContent = '';
+  const b = t => el('b',null,t);
+  cnt.append(b(fmtGetal(list.length)), ' van ' + fmtGetal(lenders.length) + ' verstrekkers · ',
+    b(fmtGetal(visCrits().length)), ' voorwaarden · ', b(fmtGetal(sel.size)), ' geselecteerd');
+  const ing = $('ingevuld');
+  ing.textContent = '';
+  ing.append(b(fmtGetal(lenders.filter(isIngevuld).length)), ' van ' + fmtGetal(lenders.length) + ' verstrekkers ingevuld');
+  if(view==='cmp') renderCmpPaneel();
+  const out = $('out');
+  out.textContent = '';
+  out.appendChild(view==='matrix' ? matrixNode(list) : cmpNode());
+  const nieuwVak = document.querySelector('#out .tabelvak');
+  if(scroll && nieuwVak){ nieuwVak.scrollLeft = scroll[0]; nieuwVak.scrollTop = scroll[1]; }
+  if(actief){ const n = document.querySelector('[data-sleutel="' + CSS.escape(actief) + '"]'); if(n) n.focus({preventScroll:true}); }
+  schrijfHash();
+}
+
+/* ======================= VERGELIJKEN: SELECTIE ======================= */
+function vinkje(sleutel, aan, label, opWijziging){
+  const lab = el('label','vink');
+  const cb = el('input'); cb.type = 'checkbox'; cb.checked = aan; cb.dataset.sleutel = sleutel;
+  cb.addEventListener('change',()=>opWijziging(cb.checked));
+  lab.append(cb, label);
+  return lab;
+}
+function renderCmpPaneel(){
+  const al = $('aanbLijst'), kl = $('kenmLijst');
+  const sAl = al.scrollTop, sKl = kl.scrollTop;
+  const q = $('aanbZoek').value.trim().toLowerCase();
+  al.textContent = '';
+  [['',''],['overig',OVERIG_LABEL]].forEach(([g,label])=>{
+    const ls = lenders.filter(l=>(l.groep||'')===g && (!q || (l.naam + ' ' + (l.type||'') + ' ' + hintVan(l.naam)).toLowerCase().includes(q)));
+    if(!ls.length) return;
+    if(label) al.appendChild(el('div','groep',label));
+    ls.forEach(l=>{
+      const sp = el('span',null,l.naam);
+      const h = hintVan(l.naam); if(h) sp.appendChild(el('small',null,'(' + h + ')'));
+      al.appendChild(vinkje('a:' + l.id, sel.has(l.id), sp, ()=>toggleSel(l.id)));
+    });
+  });
+  if(!al.children.length) al.appendChild(el('p','teller','Geen aanbieder gevonden.'));
+  $('aanbTeller').textContent = fmtGetal(sel.size) + ' gekozen';
+
+  const chips = $('kenmChips');
+  chips.textContent = '';
+  const alleAan = crits.every(c=>ksel.has(c.id));
+  const alle = el('button','chip','Alle kenmerken'); alle.type = 'button'; alle.dataset.sleutel = 'kc:alle';
+  alle.setAttribute('aria-pressed', String(alleAan));
+  alle.addEventListener('click',()=>{ crits.forEach(c=>ksel.add(c.id)); render(); });
+  chips.appendChild(alle);
+  CATS.forEach(cat=>{
+    const ids = crits.filter(c=>c.cat===cat.id).map(c=>c.id);
+    if(!ids.length) return;
+    const aan = ids.every(id=>ksel.has(id));
+    const bt = el('button','chip',cat.naam); bt.type = 'button'; bt.dataset.sleutel = 'kc:' + cat.id;
+    bt.setAttribute('aria-pressed', String(aan));
+    bt.title = aan ? 'Klik om deze categorie uit de vergelijking te halen' : 'Klik om deze categorie aan de vergelijking toe te voegen';
+    bt.appendChild(el('span','n',fmtGetal(ids.filter(id=>ksel.has(id)).length) + '/' + fmtGetal(ids.length)));
+    bt.addEventListener('click',()=>{ ids.forEach(id=>{ if(aan) ksel.delete(id); else ksel.add(id); }); render(); });
+    chips.appendChild(bt);
+  });
+  kl.textContent = '';
+  CATS.forEach(cat=>{
+    const items = critVolgorde().filter(c=>c.cat===cat.id);
+    if(!items.length) return;
+    kl.appendChild(el('div','groep',cat.naam));
+    items.forEach(c=>{
+      const lab = vinkje('k:' + c.id, ksel.has(c.id), el('span',null,c.naam), aan=>{ if(aan) ksel.add(c.id); else ksel.delete(c.id); render(); });
+      const u = critUitleg(c); if(u) lab.title = u;
+      kl.appendChild(lab);
+    });
+  });
+  $('kenmTeller').textContent = fmtGetal(crits.filter(c=>ksel.has(c.id)).length) + ' van ' + fmtGetal(crits.length) + ' gekozen';
+  al.scrollTop = sAl; kl.scrollTop = sKl;
+}
+/* Rangorde voor één kenmerk: ruim -> marktconform -> aandacht -> beperkend -> zonder code -> nog in te vullen */
+function rang(cel){ return cel && cel.v ? (cel.t ? TINT_ORDER.indexOf(cel.t) : 4) : 5; }
+function cmpModel(){
+  const chosen = lenders.filter(l=>sel.has(l.id));
+  const cs = critVolgorde().filter(c=>ksel.has(c.id));
+  const verschil = $('optVerschil').checked, leegWeg = $('optLeeg').checked;
+  const cel = (l,c) => celVan(l,c.id)||{t:'',v:''};
+  if(cs.length===1){
+    const c = cs[0];
+    let rij = chosen.map(l=>({l, cel:cel(l,c)}));
+    if(leegWeg) rij = rij.filter(x=>x.cel.v);
+    rij.sort((a,b)=>rang(a.cel)-rang(b.cel) || a.l.naam.localeCompare(b.l.naam,'nl'));
+    return {chosen, cs, crit:c, ranking:rij};
+  }
+  let rows = cs;
+  if(verschil && chosen.length > 1) rows = rows.filter(c=>{
+    const k = chosen.map(l=>{ const x = cel(l,c); return (x.v ? x.t : '') + '|' + x.v; });
+    return k.some(v=>v!==k[0]);
+  });
+  if(leegWeg) rows = rows.filter(c=>chosen.some(l=>cel(l,c).v));
+  return {chosen, cs, rows};
+}
+
+/* ======================= DEEPLINK (#vergelijk=…&k=…) ======================= */
+function slug(naam){
+  return String(naam||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase()
+    .replace(/&/g,' en ').replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'') || 'partij';
+}
+function schrijfHash(){
+  const delen = [];
+  if(sel.size) delen.push('vergelijk=' + lenders.filter(l=>sel.has(l.id)).map(l=>slug(l.naam)).join(','));
+  if(!crits.every(c=>ksel.has(c.id))) delen.push('k=' + critVolgorde().filter(c=>ksel.has(c.id)).map(c=>encodeURIComponent(c.id)).join(','));
+  if($('optVerschil').checked) delen.push('verschil=1');
+  if($('optLeeg').checked) delen.push('zonderleeg=1');
+  const h = delen.length ? '#' + delen.join('&') : '';
+  if(h === location.hash) return;
+  if(!h && !/^#(vergelijk|k|verschil|zonderleeg)=/.test(location.hash)) return;
+  try{ history.replaceState(null, '', location.pathname + location.search + h); }catch(e){}
+}
+function leesHash(){
+  const h = location.hash.replace(/^#/,'');
+  if(!/(^|&)(vergelijk|k)=/.test(h)) return false;
+  const p = new URLSearchParams(h);
+  const namen = (p.get('vergelijk')||'').split(',').filter(Boolean);
+  sel.clear();
+  lenders.forEach(l=>{ if(namen.includes(slug(l.naam))) sel.add(l.id); });
+  const k = (p.get('k')||'').split(',').filter(id=>crits.some(c=>c.id===id));
+  ksel = new Set(k.length ? k : crits.map(c=>c.id));
+  $('optVerschil').checked = p.get('verschil')==='1';
+  $('optLeeg').checked = p.get('zonderleeg')==='1';
+  return true;
+}
+function leegNode(kop, tekst){
+  const d = el('div','leeg');
+  d.appendChild(el('h3',null,kop));
+  d.appendChild(el('p',null,tekst));
+  return d;
+}
+function matrixNode(list){
+  const cs = visCrits();
+  if(!list.length) return leegNode('Geen resultaten','Pas de zoekterm of het filter aan.');
+  const vak = el('div','tabelvak' + (editMode?' bewerk':''));
+  vak.tabIndex = 0;
+  vak.setAttribute('role','region');
+  vak.setAttribute('aria-label','Matrix geldverstrekkers en voorwaarden (horizontaal scrollbaar)');
+  const t = el('table'); t.id = 'matrix';
+  const cap = el('caption','sr-only','Voorwaarden per geldverstrekker, indicatief'); t.appendChild(cap);
+  const thead = el('thead'), kr = el('tr');
+  const th0 = el('th','vast','Geldverstrekker'); th0.scope = 'col'; kr.appendChild(th0);
+  cs.forEach(c=>{
+    const th = el('th'); th.scope = 'col';
+    th.appendChild(el('span','cat',c.cat + ' · ' + catNaam(c.cat)));
+    th.appendChild(document.createTextNode(c.naam));
+    const u = critUitleg(c);
+    if(u){ th.title = u; const d = genoemdDoor(c); if(d) th.appendChild(el('span','vt','Genoemd door: ' + d)); }
+    const kb = el('button','kolomknop', ksel.has(c.id) ? '✓ in vergelijking' : '+ vergelijk');
+    kb.type = 'button'; kb.dataset.sleutel = 'mk:' + c.id;
+    kb.setAttribute('aria-pressed', String(ksel.has(c.id)));
+    kb.setAttribute('aria-label', 'Kenmerk ' + c.naam + ' in de vergelijking');
+    kb.addEventListener('click',()=>{ if(ksel.has(c.id)) ksel.delete(c.id); else ksel.add(c.id); render(); });
+    th.appendChild(el('br')); th.appendChild(kb);
+    kr.appendChild(th);
+  });
+  thead.appendChild(kr); t.appendChild(thead);
+  const tb = el('tbody');
+  const hoofd = list.filter(l=>l.groep!=='overig'), overig = list.filter(l=>l.groep==='overig');
+  const rij = l=>{
+    const tr = el('tr'); tr.dataset.id = l.id;
+    const th = el('th','vast'); th.scope = 'row';
+    const p = el('div','partij');
+    const cb = el('input','sel'); cb.type = 'checkbox'; cb.checked = sel.has(l.id);
+    cb.title = 'Selecteer voor vergelijking';
+    cb.setAttribute('aria-label','Selecteer ' + l.naam + ' voor vergelijking');
+    cb.dataset.sleutel = 'm:' + l.id;
+    cb.addEventListener('change',()=>toggleSel(l.id));
+    p.appendChild(cb);
+    const naam = el('span'); naam.style.flex = '1'; naam.style.minWidth = '0';
+    partijKop(l, naam, false);
+    p.appendChild(naam);
+    th.appendChild(p); tr.appendChild(th);
+    cs.forEach(c=>tr.appendChild(celNode(l,c)));
+    tb.appendChild(tr);
+  };
+  hoofd.forEach(rij);
+  if(overig.length){
+    const gr = el('tr','groepkop'), td = el('td'); td.colSpan = cs.length + 1;
+    const knop = el('button'); knop.type = 'button'; knop.id = 'overigKnop';
+    knop.setAttribute('aria-expanded', String(overigOpen));
+    knop.append(el('span','pijl','▸'), OVERIG_LABEL + ' ', el('small',null,'(' + fmtGetal(overig.length) + ')'));
+    knop.addEventListener('click',()=>{ overigOpen = !overigOpen; render(); const k = $('overigKnop'); if(k) k.focus(); });
+    td.appendChild(knop); gr.appendChild(td); tb.appendChild(gr);
+    if(overigOpen) overig.forEach(rij);
+  }
+  t.appendChild(tb); vak.appendChild(t);
+  return vak;
+}
+function critCel(c){
+  const td = el('td','crit');
+  td.appendChild(el('span','ch',c.cat));
+  td.appendChild(document.createTextNode(c.naam));
+  td.appendChild(el('span','vt',c.kort||''));
+  const u = critUitleg(c);
+  if(u){
+    td.title = u;
+    if(c.waarom) td.appendChild(el('span','uitlegcrit',c.waarom));
+    const d = genoemdDoor(c); if(d) td.appendChild(el('span','uitlegcrit','Genoemd door: ' + d));
+    const n = notitie(c); if(n) td.appendChild(el('span','uitlegcrit','Nieuws' + (n.datum ? ' (' + n.datum + ')' : '') + ': ' + n.tekst));
+  }
+  return td;
+}
+function vakNode(extra, label){
+  const vak = el('div','tabelvak cmp' + (extra ? ' ' + extra : '') + (editMode?' bewerk':''));
+  vak.tabIndex = 0;
+  vak.setAttribute('role','region');
+  vak.setAttribute('aria-label', label);
+  return vak;
+}
+function cmpNode(){
+  const m = cmpModel();
+  if(!m.chosen.length) return leegNode('Nog geen aanbieders gekozen','Kies hierboven één of meer aanbieders, of vink ze aan in de matrix.');
+  if(!m.cs.length) return leegNode('Nog geen kenmerken gekozen','Kies hierboven één of meer kenmerken, of klik op Alle kenmerken.');
+  if(m.ranking) return rankingNode(m);
+  if(!m.rows.length) return leegNode('Niets te tonen','Bij de gekozen kenmerken hebben alle gekozen aanbieders dezelfde waarde, of de cellen zijn leeg. Zet een optie uit of kies andere kenmerken.');
+  const vak = vakNode('', 'Vergelijking van gekozen aanbieders (horizontaal scrollbaar)');
+  const t = el('table'); t.id = 'vergelijking';
+  t.appendChild(el('caption','sr-only','Gekozen aanbieders naast elkaar, indicatief'));
+  const thead = el('thead'), kr = el('tr');
+  const th0 = el('th','crit','Kenmerk'); th0.scope = 'col'; kr.appendChild(th0);
+  m.chosen.forEach(l=>{ const th = el('th'); th.scope = 'col'; partijKop(l, th, true); kr.appendChild(th); });
+  thead.appendChild(kr); t.appendChild(thead);
+  const tb = el('tbody');
+  CATS.forEach(cat=>{
+    const items = m.rows.filter(c=>c.cat===cat.id);
+    if(!items.length) return;
+    const gr = el('tr','grp'), gtd = el('td'); gtd.colSpan = m.chosen.length + 1;
+    gtd.appendChild(el('span',null,cat.naam)); gr.appendChild(gtd); tb.appendChild(gr);
+    items.forEach(c=>{
+      const tr = el('tr'); tr.dataset.crit = c.id;
+      tr.appendChild(critCel(c));
+      m.chosen.forEach(l=>tr.appendChild(celNode(l,c)));
+      tb.appendChild(tr);
+    });
+  });
+  t.appendChild(tb); vak.appendChild(t);
+  return vak;
+}
+function rankingNode(m){
+  const c = m.crit;
+  if(!m.ranking.length) return leegNode('Niets te tonen','Bij dit kenmerk zijn alle cellen van de gekozen aanbieders nog leeg.');
+  const vak = vakNode('ranking', 'Rangorde van gekozen aanbieders op ' + c.naam);
+  const t = el('table'); t.id = 'ranking';
+  t.appendChild(el('caption','sr-only','Gekozen aanbieders op ' + c.naam + ', gesorteerd op kleurcode: ruim, marktconform, aandachtspunt, beperkend, nog in te vullen'));
+  const thead = el('thead'), kr = el('tr');
+  const h0 = el('th',null,'#'); h0.scope = 'col';
+  const h1 = el('th','crit','Aanbieder'); h1.scope = 'col';
+  const h2 = el('th'); h2.scope = 'col';
+  h2.appendChild(el('span','cat',c.cat + ' · ' + catNaam(c.cat)));
+  h2.appendChild(document.createTextNode(c.naam));
+  h2.appendChild(el('span','vt','Gesorteerd op kleurcode: ruim → beperkend → nog in te vullen'));
+  const u = critUitleg(c); if(u) h2.title = u;
+  kr.append(h0,h1,h2); thead.appendChild(kr); t.appendChild(thead);
+  const tb = el('tbody');
+  m.ranking.forEach((x,i)=>{
+    const tr = el('tr'); tr.dataset.id = x.l.id;
+    tr.appendChild(el('td','rang',fmtGetal(i+1)));
+    const nt = el('td','crit naamcel'); partijKop(x.l, nt, true); tr.appendChild(nt);
+    tr.appendChild(celNode(x.l,c));
+    tb.appendChild(tr);
+  });
+  t.appendChild(tb); vak.appendChild(t);
+  const n = notitie(c);
+  if(n || c.waarom){
+    const w = el('div');
+    w.appendChild(vak);
+    const p = el('p','uitleg');
+    if(c.waarom) p.appendChild(el('span','uitlegcrit','Waarom: ' + c.waarom));
+    if(n) p.appendChild(el('span','uitlegcrit','Nieuws' + (n.datum ? ' (' + n.datum + ')' : '') + ': ' + n.tekst));
+    w.appendChild(p);
+    return w;
+  }
+  return vak;
+}
+
+/* ======================= BEHEER ======================= */
+function addLender(){
+  const naam = prompt('Naam van de geldverstrekker:');
+  if(!naam || !naam.trim()) return;
+  const type = prompt('Type (bijv. Grootbank, Regiepartij, Verzekeraar):','Regiepartij') || '';
+  lenders.push({id:'L'+Date.now(), naam:naam.trim(), type:type.trim(), groep:'',
+    cel:Object.fromEntries(crits.map(c=>[c.id,{t:'',v:''}]))});
+  syncValFilter(); render();
+  melding('Geldverstrekker toegevoegd: ' + naam.trim() + '.');
+}
+function addCrit(){
+  const naam = prompt('Naam van de voorwaarde:');
+  if(!naam || !naam.trim()) return;
+  const cat = (prompt('Categorie — A = Acceptatie & inkomen, P = Product & rente, V = Verbouwing & verduurzaming, N = Nazorg & beheer:','A')||'A').toUpperCase().charAt(0);
+  if(!CATS.some(c=>c.id===cat)){ melding('Onbekende categorie; de voorwaarde is niet toegevoegd.'); return; }
+  const id = 'c'+Date.now();
+  crits.push({id, cat, naam:naam.trim(), kort:''});
+  lenders.forEach(l=>l.cel[id]={t:'',v:''});
+  activeCats.add(cat); ksel.add(id);
+  initFilters(); render();
+  melding('Voorwaarde toegevoegd: ' + naam.trim() + '.');
+}
+function resetData(){
+  if(!confirm('Alle wijzigingen in deze sessie verwerpen en terug naar de brondata?')) return;
+  buildData(); sel.clear(); overigOpen = false;
+  activeCats = new Set(CATS.map(c=>c.id)); ksel = new Set(crits.map(c=>c.id));
+  $('peil').textContent = PEIL_BRON;
+  initFilters(); render(); renderBronnen();
+  melding('Brondata hersteld.');
+}
+function exportData(selectie){
+  let vw = crits, gv = lenders;
+  if(selectie){
+    const m = cmpModel();
+    vw = m.ranking ? m.cs : m.rows; gv = m.ranking ? m.ranking.map(x=>x.l) : m.chosen;
+  }
+  const ids = new Set(vw.map(c=>c.id));
+  const d = {
+    versie:1,
+    peildatum:$('peil').textContent.trim(),
+    geexporteerd:new Date().toISOString(),
+    categorieen:CATS,
+    voorwaarden:vw,
+    geldverstrekkers:gv.map(l=>({naam:l.naam,type:l.type,groep:l.groep||'',cel:selectie ? Object.fromEntries(Object.entries(l.cel).filter(([k])=>ids.has(k))) : l.cel}))
+  };
+  if(selectie) d.selectie = true;
+  return d;
+}
+function download(inhoud, type, naam){
+  const blob = new Blob([inhoud],{type});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = naam;
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(()=>URL.revokeObjectURL(a.href),2000);
+}
+function exportJsonSelectie(){
+  if(!sel.size){ melding('Kies eerst één of meer aanbieders.'); return; }
+  download(JSON.stringify(exportData(true),null,2), 'application/json', 'voorwaarden-selectie.json');
+}
+/* CSV voor NL Excel: UTF-8 met BOM, scheidingsteken ";". Formules worden onschadelijk gemaakt. */
+function csvVeld(x){
+  let s = String(x==null?'':x);
+  if(/^[=+\-@\t\r]/.test(s)) s = "'" + s;
+  return /[";\r\n]/.test(s) ? '"' + s.replace(/"/g,'""') + '"' : s;
+}
+function csvCel(cel){
+  if(!cel || !cel.v) return 'nog in te vullen';
+  return cel.v + (cel.t ? ' [' + TINT_NAME[cel.t] + ']' : '');
+}
+function naamMetHint(l){ const h = hintVan(l.naam); return l.naam + (h ? ' (' + h + ')' : ''); }
+function exportCsv(){
+  const regels = [];
+  const r = a => regels.push(a.map(csvVeld).join(';'));
+  let naam;
+  if(view==='matrix'){
+    const list = zichtbaar(), cs = visCrits();
+    r(['Geldverstrekker','Type'].concat(cs.map(c=>c.naam)));
+    list.forEach(l=>r([naamMetHint(l), l.type||''].concat(cs.map(c=>csvCel(celVan(l,c.id))))));
+    naam = 'voorwaarden-matrix.csv';
+  } else {
+    const m = cmpModel();
+    if(!m.chosen.length || !m.cs.length){ melding('Er is niets te exporteren: kies aanbieders en kenmerken.'); return; }
+    if(m.ranking){
+      r(['Rang','Aanbieder','Type','Kenmerk','Kleurcode','Waarde']);
+      m.ranking.forEach((x,i)=>r([i+1, naamMetHint(x.l), x.l.type||'', m.crit.naam, x.cel.v ? (x.cel.t ? TINT_NAME[x.cel.t] : '') : 'Nog in te vullen', x.cel.v || 'nog in te vullen']));
+    } else {
+      r(['Kenmerk','Categorie'].concat(m.chosen.map(naamMetHint)));
+      m.rows.forEach(c=>r([c.naam, catNaam(c.cat)].concat(m.chosen.map(l=>csvCel(celVan(l,c.id))))));
+    }
+    naam = 'voorwaarden-vergelijking.csv';
+  }
+  regels.push('');
+  r(['Indicatief, niet geverifieerd, peildatum ' + $('peil').textContent.trim() + '. Alleen voor intern gebruik door adviseurs; niet aan consumenten verstrekken. Geen volledige of actuele productvergelijking (Wft 4:19/4:20). Bevat geen rentes of tarieven. Leg in het dossier de voorwaarde vast zoals de geldverstrekker die op het moment van advies publiceerde.']);
+  download('\uFEFF' + regels.join('\r\n'), 'text/csv;charset=utf-8', naam);
+}
+function exportJson(){
+  download(JSON.stringify(exportData(false),null,2), 'application/json', 'voorwaarden-geldverstrekkers.json');
+}
+/* Import: structuur strikt controleren; alles wordt als platte tekst behandeld. */
+const tekst = (s,max) => String(s==null?'':s).slice(0,max||2000);
+function leesCel(x){
+  if(typeof x === 'string') return parseVal(x);
+  if(x && typeof x === 'object'){
+    const t = TINT_ORDER.includes(x.t) ? x.t : '';
+    const o = {t:t, v:tekst(x.v).trim()};
+    if(Array.isArray(x.bron)) o.bron = x.bron.slice(0,10).map(u=>tekst(u,500));
+    if(x.noot) o.noot = tekst(x.noot,300);
+    return o;
+  }
+  return {t:'',v:''};
+}
+function importeer(d){
+  if(!d || !Array.isArray(d.voorwaarden) || !Array.isArray(d.geldverstrekkers)) throw new Error('structuur');
+  const nc = [], ids = new Set();
+  d.voorwaarden.forEach(c=>{
+    if(!c || typeof c !== 'object') return;
+    const id = String(c.id||'');
+    if(!/^[A-Za-z0-9_-]{1,40}$/.test(id) || ids.has(id)) return;
+    if(!CATS.some(k=>k.id===c.cat)) return;
+    ids.add(id);
+    const o = {id, cat:c.cat, naam:tekst(c.naam,200), kort:tekst(c.kort,200)};
+    if(c.waarom) o.waarom = tekst(c.waarom,1000);
+    if(Array.isArray(c.genoemdDoor)) o.genoemdDoor = c.genoemdDoor.slice(0,10).map(x=>tekst(x,100));
+    else if(c.genoemdDoor) o.genoemdDoor = [tekst(c.genoemdDoor,100)];
+    if(Array.isArray(c.bronnen)) o.bronnen = c.bronnen.slice(0,20).map(x=>tekst(x,500));
+    nc.push(o);
+  });
+  if(!nc.length) throw new Error('geen voorwaarden');
+  const nl = d.geldverstrekkers.filter(l=>l && typeof l === 'object').map((l,i)=>{
+    const bron = (l.cel && typeof l.cel === 'object') ? l.cel : {};
+    const cel = {};
+    nc.forEach(c=>{ cel[c.id] = Object.prototype.hasOwnProperty.call(bron,c.id) ? leesCel(bron[c.id]) : {t:'',v:''}; });
+    return {id:'L'+i, naam:tekst(l.naam,200), type:tekst(l.type,200), groep:l.groep==='overig'?'overig':'', cel};
+  });
+  crits = nc; lenders = nl;
+  if(d.peildatum) $('peil').textContent = tekst(d.peildatum,60);
+  sel.clear(); overigOpen = false; activeCats = new Set(crits.map(c=>c.cat)); ksel = new Set(crits.map(c=>c.id));
+  initFilters(); render(); renderBronnen();
+  melding('Dataset geïmporteerd: ' + fmtGetal(lenders.length) + ' geldverstrekkers, ' + fmtGetal(crits.length) + ' voorwaarden.');
+}
+function importJson(input){
+  const f = input.files && input.files[0]; if(!f) return;
+  const r = new FileReader();
+  r.onload = () => {
+    try{ importeer(JSON.parse(r.result)); }
+    catch(e){ melding('Dit JSON-bestand kon niet worden gelezen. Gebruik een export uit deze tool.'); }
+    input.value = '';
+  };
+  r.readAsText(f);
+}
+
+/* ======================= PRINT =======================
+   Altijd via window.open() met eigen HTML; window.print() alleen in dat venster. */
+const TINT_KLEUR = {g:'#1F7A52',n:'#9AA7B6',a:'#E59A1A',r:'#C0392B'};
+function printCel(l,c){
+  const cel = celVan(l,c.id)||{t:'',v:''};
+  const bol = cel.t ? '<span class="tint" style="background:' + TINT_KLEUR[cel.t] + '"></span>' : '<span class="tint leeg"></span>';
+  return '<td>' + bol + (cel.v ? esc(cel.v) : '<i class="nl">nog in te vullen</i>') + '</td>';
+}
+function printNaam(l){
+  const h = hintVan(l.naam);
+  return '<b>' + esc(l.naam) + '</b>' + (h ? ' <span class="hint">(' + esc(h) + ')</span>' : '') + '<span class="vt">' + esc(l.type||'') + '</span>';
+}
+function doPrint(){
+  let tabel = '';
+  if(view==='matrix'){
+    const list = zichtbaar(), cs = visCrits();
+    if(!list.length){ melding('Er is niets om te printen: pas de zoekterm of het filter aan.'); return; }
+    tabel = '<table><thead><tr><th>Geldverstrekker</th>' + cs.map(c=>'<th><span class="cat">' + esc(c.cat + ' · ' + catNaam(c.cat)) + '</span>' + esc(c.naam) + '</th>').join('') + '</tr></thead><tbody>' +
+      list.map(l=>'<tr><th>' + printNaam(l) + '</th>' + cs.map(c=>printCel(l,c)).join('') + '</tr>').join('') + '</tbody></table>';
+  } else {
+    const m = cmpModel();
+    if(!m.chosen.length || !m.cs.length){ melding('Er is niets te printen: kies eerst aanbieders en kenmerken.'); return; }
+    if(m.ranking){
+      tabel = '<table><thead><tr><th>#</th><th>Aanbieder</th><th>' + esc(m.crit.naam) + '<span class="vt">gesorteerd op kleurcode</span></th></tr></thead><tbody>' +
+        m.ranking.map((x,i)=>'<tr><td>' + (i+1) + '</td><th>' + printNaam(x.l) + '</th>' + printCel(x.l,m.crit) + '</tr>').join('') + '</tbody></table>';
+    } else {
+      tabel = '<table><thead><tr><th>Kenmerk</th>' + m.chosen.map(l=>'<th>' + printNaam(l) + '</th>').join('') + '</tr></thead><tbody>';
+      CATS.forEach(cat=>{
+        const items = m.rows.filter(c=>c.cat===cat.id);
+        if(!items.length) return;
+        tabel += '<tr class="grp"><td colspan="' + (m.chosen.length+1) + '">' + esc(cat.naam) + '</td></tr>';
+        items.forEach(c=>{ tabel += '<tr><th>' + esc(c.naam) + '<span class="vt">' + esc(c.kort||'') + '</span></th>' + m.chosen.map(l=>printCel(l,c)).join('') + '</tr>'; });
+      });
+      tabel += '</tbody></table>';
+    }
+  }
+  const css = 'body{font-family:Montserrat,Arial,sans-serif;font-size:9.5pt;color:#141414;margin:14mm 10mm}' +
+    'h1{font-size:15pt;margin:0 0 2px}.meta{font-size:8pt;color:#444;margin:0 0 10px}' +
+    '.disc{border:1.5px solid #C0392B;border-left:6px solid #C0392B;background:#FFF1F0;color:#7A1F14;padding:7px 9px;font-size:7.8pt;margin:0 0 12px;line-height:1.45}' +
+    'table{border-collapse:collapse;width:100%;font-size:7.8pt}th,td{border:1px solid #bbb;padding:4px 5px;text-align:left;vertical-align:top}' +
+    'thead th{background:#141414;color:#fff;font-size:7.4pt}thead{display:table-header-group}tr{break-inside:avoid}' +
+    '.cat{display:block;font-size:6pt;color:#ccc;text-transform:uppercase;letter-spacing:.5px}' +
+    'tr.grp td{background:#2E2E2E;color:#fff;font-weight:700;text-transform:uppercase;font-size:7pt}' +
+    '.tint{display:inline-block;width:6px;height:6px;border-radius:50%;margin-right:4px;-webkit-print-color-adjust:exact;print-color-adjust:exact}' +
+    '.vt{display:block;font-size:6.8pt;color:#555;font-weight:400}.hint{font-size:6.8pt;color:#1F4E79}thead .hint{color:#FFD200}thead .vt{color:#ccc}' +
+    '.tint.leeg{box-shadow:inset 0 0 0 1px #9AA7B6}.nl{color:#888}' +
+    '.lg{font-size:7.5pt;color:#444;margin-top:8px}@page{size:A4 landscape;margin:10mm}';
+  const cnt = $('cnt').textContent;
+  const datum = new Date().toLocaleDateString('nl-NL',{day:'numeric',month:'long',year:'numeric'});
+  const html = '<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><title>Voorwaardenvergelijker geldverstrekkers – Adviesforum</title><style>' + css + '</style></head><body>' +
+    '<h1>Voorwaardenvergelijker geldverstrekkers</h1>' +
+    '<p class="meta">Indicatief · niet geverifieerd · peildatum dataset: ' + esc($('peil').textContent.trim()) + ' · afgedrukt op ' + esc(datum) + ' · ' + esc(cnt) + '</p>' +
+    '<p class="disc"><b>Compliance / AFM:</b> indicatieve, niet-geverifieerde waarden; uitsluitend voor intern gebruik. Leg in het dossier de voorwaarde vast zoals de geldverstrekker die op het moment van advies heeft gepubliceerd. Niet verstrekken aan consumenten en niet presenteren als volledige of actuele productvergelijking (Wft art. 4:19/4:20). Bevat geen rentes of tarieven.</p>' +
+    tabel +
+    '<p class="lg"><span class="tint" style="background:#1F7A52"></span>Ruim/gunstig &nbsp; <span class="tint" style="background:#9AA7B6"></span>Marktconform &nbsp; <span class="tint" style="background:#E59A1A"></span>Aandachtspunt &nbsp; <span class="tint" style="background:#C0392B"></span>Beperkend/niet mogelijk &nbsp; <span class="tint leeg"></span>Nog in te vullen</p>' +
+    '</body></html>';
+  const w = window.open('', '_blank');
+  if(!w){ melding('Het printvenster werd geblokkeerd. Sta pop-ups voor deze pagina toe en probeer het opnieuw.'); return; }
+  w.document.open(); w.document.write(html); w.document.close();
+  w.focus();
+  setTimeout(()=>{ try{ w.print(); }catch(e){} }, 300);
+}
+
+/* ======================= BRONNEN AANVULLENDE VOORWAARDEN ======================= */
+function veiligeUrl(u){ return typeof u==='string' && /^https:\/\/[^\s"'<>]+$/i.test(u) ? u : ''; }
+function renderBronnen(){
+  const ul = $('bronnen');
+  ul.textContent = '';
+  const bronnenVan = c=>(Array.isArray(c.bronnen) ? c.bronnen : []).concat(notitie(c) && Array.isArray(notitie(c).bronnen) ? notitie(c).bronnen : [])
+    .concat(...lenders.map(l=>{ const x = celVan(l,c.id); return x && Array.isArray(x.bron) ? x.bron : []; }));
+  const metBron = crits.filter(c=>c.cat!=='B' && !CRITS.some(k=>k.id===c.id) && bronnenVan(c).some(veiligeUrl));
+  $('bronnenlijst').hidden = !metBron.length;
+  metBron.forEach(c=>{
+    const li = el('li');
+    li.appendChild(el('strong',null,c.naam));
+    const d = genoemdDoor(c);
+    li.appendChild(document.createTextNode((d ? ' (genoemd door: ' + d + ')' : '') + ': '));
+    [...new Set(bronnenVan(c).map(veiligeUrl).filter(Boolean))].forEach((u,i)=>{
+      if(i) li.appendChild(document.createTextNode(' · '));
+      const a = el('a',null,u.replace(/^https:\/\/(www\.)?/,'').replace(/[/?].*$/,'') ); a.href = u; a.rel = 'noopener'; a.target = '_blank'; a.title = u;
+      li.appendChild(a);
+    });
+    ul.appendChild(li);
+  });
+}
+
+/* ======================= KOPPELINGEN ======================= */
+$('alleenIngevuld').addEventListener('change',render);
+$('aanbZoek').addEventListener('input',renderCmpPaneel);
+$('aanbAlleZichtbaar').addEventListener('click',()=>{
+  const q = $('aanbZoek').value.trim().toLowerCase();
+  lenders.filter(l=>!q || (l.naam + ' ' + (l.type||'') + ' ' + hintVan(l.naam)).toLowerCase().includes(q)).forEach(l=>sel.add(l.id));
+  render();
+});
+$('aanbWis').addEventListener('click',()=>{ sel.clear(); render(); });
+$('optVerschil').addEventListener('change',render);
+$('optLeeg').addEventListener('change',render);
+$('btnCsv').addEventListener('click',exportCsv);
+$('btnExportSel').addEventListener('click',exportJsonSelectie);
+$('btnKopieer').addEventListener('click',()=>{
+  schrijfHash();
+  const url = location.href;
+  const klaar = ()=>melding('Link gekopieerd: ' + url);
+  try{ navigator.clipboard.writeText(url).then(klaar, ()=>melding('Kopiëren lukte niet; kopieer de link uit de adresbalk: ' + url)); }
+  catch(e){ melding('Kopieer de link uit de adresbalk: ' + url); }
+});
+window.addEventListener('hashchange',()=>{ if(leesHash()){ initFilters(); setView('cmp'); } });
+$('tab-matrix').addEventListener('click',()=>setView('matrix'));
+$('tab-cmp').addEventListener('click',()=>setView('cmp'));
+$('q').addEventListener('input',render);
+$('fcrit').addEventListener('change',()=>{ syncValFilter(); render(); });
+$('fval').addEventListener('change',render);
+$('btnEdit').addEventListener('click',toggleEdit);
+$('btnPrint').addEventListener('click',doPrint);
+$('selAlle').addEventListener('click',()=>selAll(true));
+$('selGeen').addEventListener('click',()=>selAll(false));
+$('btnAddLender').addEventListener('click',addLender);
+$('btnAddCrit').addEventListener('click',addCrit);
+$('btnExport').addEventListener('click',exportJson);
+$('btnImport').addEventListener('click',()=>$('imp').click());
+$('imp').addEventListener('change',e=>importJson(e.target));
+$('btnReset').addEventListener('click',resetData);
+
+/* ======================= INIT ======================= */
+buildData();
+ksel = new Set(crits.map(c=>c.id));
+const uitLink = leesHash();
+initFilters();
+setView(uitLink ? 'cmp' : 'matrix');
+renderBronnen();
+})();
+</script>
+</body>
+</html>
