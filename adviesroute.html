@@ -104,6 +104,8 @@ button,input{font-family:inherit}
 
 .afm{border-left:4px solid var(--zwart);background:var(--vlak);border-radius:0 10px 10px 0;padding:12px 14px;font-size:14px;margin-bottom:16px}
 .afm.kb{border-left-color:var(--geel-donker);background:var(--geel-zacht)}
+.afm.wet{border-left-color:var(--zwart);background:#fff;border:1px solid #E2E2E2;border-left:4px solid var(--zwart)}
+.afm .bron a{overflow-wrap:anywhere}
 .afm.geen{border-left-color:#B8B8B8;background:#fff;border:1px dashed #CFCFCF;border-left:4px solid #B8B8B8}
 .afm h4{margin:0 0 4px;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
 .afm p{margin:0}
@@ -177,7 +179,7 @@ a.terug{display:inline-block;padding:8px 0}
     <div class="merk"><span class="zeshoek" aria-hidden="true"></span>Adviesforum &middot; Hulpmiddelen</div>
     <a class="terug" href="index.html#hulpmiddelen">&larr; Terug naar de hulpmiddelen</a>
     <h1>Adviesroute</h1>
-    <p>Een stap-voor-stap procesgids voor het adviestraject. Per stap: het doel, wat de AFM-Leidraad Hypotheekadvisering (april 2026) erover zegt, een afvinkbare checklist, de stukken voor het dossier, valkuilen uit Kifid-uitspraken en de passende hulpmiddelen op deze site.</p>
+    <p>Een stap-voor-stap procesgids voor het adviestraject. Per stap: het doel, wat de AFM-Leidraad Hypotheekadvisering (april 2026) of, bij schade en krediet, de Wft en de AFM erover zeggen, een afvinkbare checklist, de stukken voor het dossier, valkuilen uit Kifid-uitspraken en de passende hulpmiddelen op deze site.</p>
     <span class="stempel">Hulpmiddel &middot; geen norm &middot; afvinken wordt niet bewaard</span>
   </div>
 </header>
@@ -212,7 +214,7 @@ a.terug{display:inline-block;padding:8px 0}
   </section>
 
   <div class="noot">
-    <p><b>Hoe lees je het AFM-blok?</b> Een zwart blok is een samenvatting in eigen woorden van de <a href="documenten/Leidraad-Hypotheekadvisering-2026.pdf">AFM-Leidraad Hypotheekadvisering (april 2026)</a>, met paginaverwijzing. Een geel blok komt uit de kennisbank van dit forum (concept). Een gestippeld blok betekent dat de Leidraad over die stap niets specifieks zegt; dan staat er praktijk of een Kifid-les. De Leidraad heeft volgens de AFM zelf niet de status van wet- en regelgeving, de voorbeelden erin zijn geen vaste richtlijnen, en informatieverstrekking (art. 4:19 en 4:20 Wft) en het bemiddelingstraject vallen erbuiten.</p>
+    <p><b>Hoe lees je het AFM-blok?</b> Een zwart blok is een samenvatting in eigen woorden van de <a href="documenten/Leidraad-Hypotheekadvisering-2026.pdf">AFM-Leidraad Hypotheekadvisering (april 2026)</a>, met paginaverwijzing. Een geel blok komt uit de kennisbank van dit forum (concept). Een wit blok met zwarte rand (routes schade en krediet) is een eigen samenvatting van de Wft, het BGfo, het BW en uitleg van de AFM, met links naar de bronnen; gedragscodes van verzekeraars en de VFN binden de aanbieder en staan er als context bij. Een gestippeld blok betekent dat de Leidraad over die stap niets specifieks zegt; dan staat er praktijk of een Kifid-les. De Leidraad heeft volgens de AFM zelf niet de status van wet- en regelgeving, de voorbeelden erin zijn geen vaste richtlijnen, en informatieverstrekking (art. 4:19 en 4:20 Wft) en het bemiddelingstraject vallen erbuiten.</p>
     <p>De checklists zijn een hulpmiddel en niet uitputtend. Iedere klantsituatie bepaalt wat en hoe diep je inventariseert. Vinkjes staan alleen in deze browsertab en verdwijnen bij herladen. Controleer altijd de actuele wet- en regelgeving en de voorwaarden van de aanbieder.</p>
   </div>
 </main>
@@ -250,13 +252,15 @@ a.terug{display:inline-block;padding:8px 0}
   /* ---------- route ---------- */
   function afmBlok(a){
     if (!a) return '';
-    var cls = a.bron === 'leidraad' ? '' : (a.bron === 'kb' ? ' kb' : ' geen');
-    var kop = a.bron === 'leidraad' ? 'Wat de AFM-Leidraad hierover zegt' : (a.bron === 'kb' ? 'Uit de kennisbank (concept)' : 'Geen specifieke Leidraad-passage');
+    var cls = a.bron === 'leidraad' ? '' : (a.bron === 'kb' ? ' kb' : (a.bron === 'wet' ? ' wet' : ' geen'));
+    var kop = a.bron === 'leidraad' ? 'Wat de AFM-Leidraad hierover zegt' : (a.bron === 'kb' ? 'Uit de kennisbank (concept)' : (a.bron === 'wet' ? 'AFM-eisen en wetgeving' + (a.ref ? ': ' + a.ref : '') : 'Geen specifieke Leidraad-passage'));
     var bron = '';
     if (a.bron === 'leidraad') {
       bron = '<span class="bron">Bron: <a href="' + esc(LEIDRAAD) + '#page=' + esc(a.p) + '" target="_blank" rel="noopener">AFM-Leidraad Hypotheekadvisering 2026, ' + esc(a.ref) + ', p. ' + esc(a.p) + '</a> &middot; parafrase, lees de Leidraad voor de precieze tekst.</span>';
     } else if (a.bron === 'kb') {
       bron = '<span class="bron">Bron: <a href="index.html#artikel-' + esc(a.ref) + '">kennisbank ' + esc(a.ref) + '</a> &middot; nog niet door compliance gecontroleerd.</span>';
+    } else if (a.bron === 'wet') {
+      bron = '<span class="bron">Bronnen: ' + (a.links || []).map(function(l){ return '<a href="' + esc(l[1]) + '" target="_blank" rel="noopener">' + esc(l[0]) + '</a>'; }).join(' &middot; ') + ' &middot; eigen samenvatting (peildatum 3 oktober 2026), lees de bron voor de precieze tekst.</span>';
     }
     return '<div class="afm' + cls + '"><h4>' + kop + '</h4><p>' + esc(a.tekst) + '</p>' + bron + '</div>';
   }
@@ -397,7 +401,7 @@ a.terug{display:inline-block;padding:8px 0}
       '<div class="balk"><span style="width:' + pct + '%"></span></div>' +
       '<h2>Open punten</h2>' + openHtml +
       stappenHtml +
-      '<p class="voet">Gemaakt met de Adviesroute van het Adviesforum. Hulpmiddel, geen norm: de checklist is niet uitputtend en vervangt geen eigen professionele beoordeling. AFM-verwijzingen zijn gebaseerd op de AFM-Leidraad Hypotheekadvisering (april 2026), die volgens de AFM zelf geen wet- of regelgeving is.</p>' +
+      '<p class="voet">Gemaakt met de Adviesroute van het Adviesforum. Hulpmiddel, geen norm: de checklist is niet uitputtend en vervangt geen eigen professionele beoordeling. AFM-verwijzingen zijn gebaseerd op de AFM-Leidraad Hypotheekadvisering (april 2026), die volgens de AFM zelf geen wet- of regelgeving is, en bij schade en krediet op een eigen samenvatting van Wft, BGfo, BW en AFM-uitleg.</p>' +
       '</body></html>';
 
     var w = null;
