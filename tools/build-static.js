@@ -3,12 +3,13 @@
  * index.html is een SPA met hashroutes; crawlers zonder JavaScript zien de kennisbank, FAQ en
  * begrippen daar niet. Deze tool maakt er gewone pagina's van.
  *
- *   node tools/build-static.js             schrijft kennisbank/, faq/, begrippen/, llms.txt en llms-full.txt
+ *   node tools/build-static.js             schrijft kennisbank/, faq/, begrippen/, vraag/, llms.txt en llms-full.txt
  *   node tools/build-static.js --check     controleert alleen of die bestanden actueel zijn (exit 1 als niet)
  *   node tools/build-static.js --sitemap   schrijft daarnaast sitemap.xml (alle .html zonder noindex, met lastmod)
  *
  * Bronnen: de <script src="data/kennisbank*.js">-tags en de lijst FAQ_BESTANDEN in index.html,
- * data/begrippen.js, en CATS / FAQ_THEMAS uit index.html. Geen dependencies.
+ * data/begrippen.js, de <script src="data/vragen*.js">-tags (deelpagina's voor LinkedIn in vraag/),
+ * en CATS / FAQ_THEMAS uit index.html. Geen dependencies.
  * De uitvoer hangt alleen af van de data (niet van de datum van vandaag), zodat --check stabiel is.
  */
 'use strict';
@@ -35,15 +36,18 @@ const FAQ_THEMAS = uitIndex('FAQ_THEMAS');
 const FAQ_BESTANDEN = uitIndex('FAQ_BESTANDEN');
 const KB_BESTANDEN = [...indexHtml.matchAll(/<script\s+src="(data\/kennisbank[^"]*\.js)"/g)].map(m => m[1]);
 if (!KB_BESTANDEN.length) fout('Geen data/kennisbank*.js scripts gevonden in index.html');
+const VRAAG_BESTANDEN = [...indexHtml.matchAll(/<script\s+src="(data\/vragen[^"]*\.js)"/g)].map(m => m[1]);
+if (!VRAAG_BESTANDEN.length) fout('Geen data/vragen*.js scripts gevonden in index.html');
 
 global.window = {};
-for (const b of [...KB_BESTANDEN, ...FAQ_BESTANDEN, 'data/begrippen.js']) require(path.join(ROOT, b));
+for (const b of [...KB_BESTANDEN, ...FAQ_BESTANDEN, 'data/begrippen.js', ...VRAAG_BESTANDEN]) require(path.join(ROOT, b));
 const ARTIKELEN = window.KENNISBANK || [];
 const FAQ = window.FAQ || [];
 const BEGRIPPEN = window.BEGRIPPEN || [];
+const VRAGEN = window.VRAGEN_DATA || [];
 delete global.window;
 if (!ARTIKELEN.length || !FAQ.length || !BEGRIPPEN.length) fout('Kennisbank, FAQ of begrippen is leeg.');
-for (const [lijst, naam] of [[ARTIKELEN, 'kennisbank'], [FAQ, 'FAQ']]) {
+for (const [lijst, naam] of [[ARTIKELEN, 'kennisbank'], [FAQ, 'FAQ'], [VRAGEN, 'vragen']]) {
   const ids = new Set();
   for (const x of lijst) { if (!/^[A-Za-z0-9_-]+$/.test(x.id)) fout('Ongeldig id in ' + naam + ': ' + x.id); if (ids.has(x.id)) fout('Dubbel id in ' + naam + ': ' + x.id); ids.add(x.id); }
 }
@@ -131,7 +135,7 @@ footer a{color:var(--tekst)}
 @media print{header.site nav,footer nav,.knop{display:none}.hero{background:none;padding:0}}`;
 }
 
-function pagina({ pre, pad, titel, beschrijving, type = 'website', h1, intro = '', kruimel = [], meta = '', inhoud, jsonld = [], actief = '' }) {
+function pagina({ pre, pad, titel, ogTitel, beschrijving, type = 'website', h1, intro = '', kruimel = [], meta = '', inhoud, jsonld = [], actief = '', extraCss = '' }) {
   const url = BASE + pad;
   const nav = [['kennisbank/', 'Kennisbank', 'kb'], ['faq/', 'FAQ', 'faq'], ['begrippen/', 'Begrippen', 'beg'], ['index.html', 'Forum', 'forum']]
     .map(([h, n, k]) => `<a href="${pre}${h}"${actief === k ? ' aria-current="page"' : ''}>${n}</a>`).join('');
@@ -145,7 +149,7 @@ function pagina({ pre, pad, titel, beschrijving, type = 'website', h1, intro = '
 <title>${esc(titel)}</title>
 <meta name="description" content="${esc(beschrijving)}">
 <link rel="canonical" href="${esc(url)}">
-<meta property="og:title" content="${esc(titel)}">
+<meta property="og:title" content="${esc(ogTitel || titel)}">
 <meta property="og:description" content="${esc(beschrijving)}">
 <meta property="og:type" content="${type}">
 <meta property="og:url" content="${esc(url)}">
@@ -155,7 +159,7 @@ function pagina({ pre, pad, titel, beschrijving, type = 'website', h1, intro = '
 <link rel="icon" href="${pre}favicon.svg" type="image/svg+xml">
 <link rel="manifest" href="${pre}manifest.webmanifest">
 <style>
-${css(pre)}
+${css(pre)}${extraCss ? '\n' + extraCss : ''}
 </style>
 ${[...jsonld.map(ld), ...bc].join('\n')}
 </head>
@@ -292,6 +296,52 @@ uit['begrippen/index.html'] = pagina({
     hasDefinedTerm: begSort.map(b => ({ '@type': 'DefinedTerm', name: b.term, description: plat(b.uitleg), url: BASE + 'begrippen/#' + begId.get(b), inDefinedTermSet: BASE + 'begrippen/' })) }]
 });
 
+/* ---------- Deelpagina's per forumvraag (vraag/<id>.html) ----------
+ * Voor delen op LinkedIn: LinkedIn leest geen hash-url's (#vraag-…) en voert geen JavaScript uit, dus een
+ * link naar de SPA toont alleen de algemene preview. Deze pagina's hebben per vraag een eigen og:title en
+ * og:description, de vraag, een teaser (±200 tekens) van het beste antwoord en een anker #r<nr> per reactie.
+ * De volledige antwoorden staan hier bewust niet: die leest een bezoeker na inloggen in het forum.
+ * Bewuste keuzes:
+ *  - Eén pagina per vraag met ankers #r<nr>, geen aparte pagina per reactie: LinkedIn negeert het fragment en
+ *    toont voor elke reactie dezelfde vraagpreview; aparte pagina's zouden ruim duizend bijna-dubbele pagina's opleveren.
+ *  - Geen namen van vraagsteller of antwoorders (dataminimalisatie: deze pagina's worden geïndexeerd en gedeeld).
+ *  - Geen og:image: LinkedIn toont geen SVG (favicon.svg) en een eigen PNG-afbeelding ontbreekt.
+ *  - Geen DiscussionForumPosting/QAPage-JSON-LD: QAPage vereist de volledige antwoorden en DiscussionForumPosting
+ *    vereist de auteursnaam; beide botsen met de afscherming en de dataminimalisatie. Alleen de BreadcrumbList.
+ */
+const VRAAG_CSS = `.knoppen{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0 0}
+.knop-licht{background:#fff;color:var(--zwart);border:2px solid var(--zwart);padding:9px 16px}.knop-licht:hover{background:var(--vlak)}
+.teaser{border:1px solid var(--lijn);border-left:4px solid var(--geel);border-radius:10px;padding:12px 16px;margin:10px 0 0}
+.teaser .waar{margin:0 0 4px}.teaser p{margin:0}
+.slot{border:2px solid var(--zwart);background:#FFF6CC;border-radius:12px;padding:16px 18px;margin:22px 0 0}
+.slot p{margin:0}
+.reacties li{scroll-margin-top:12px}.reacties li:target{background:#FFF6CC;outline:2px solid var(--geel);border-radius:6px;padding-left:8px}`;
+const ordeAntw = v => v.antwoorden.slice().sort((a, b) => (b.id === v.beste) - (a.id === v.beste) || gem(b.rA) - gem(a.rA) || String(a.datum).localeCompare(String(b.datum)));
+const gem = o => { const w = Object.values(o || {}); return w.length ? w.reduce((x, y) => x + y, 0) / w.length : 0; };
+const nrVan = v => { const s = v.antwoorden.slice().sort((x, y) => String(x.datum).localeCompare(String(y.datum)) || String(x.id).localeCompare(String(y.id))); return a => s.indexOf(a) + 1; };
+const forumLink = (v, nr) => '../index.html?bron=linkedin#vraag-' + encodeURIComponent(v.id) + (nr ? '-r' + nr : '');
+/* Korte beschrijving, gelijk aan de posttekst die de knop "Deel op LinkedIn" in index.html maakt */
+const antwTekst = v => { const n = v.antwoorden.length; return v.voorbeeld ? 'Voorbeeldvraag met ' + n + (n === 1 ? ' voorbeeldantwoord' : ' voorbeeldantwoorden') : n === 0 ? 'Nog geen antwoorden van collega-adviseurs' : n + (n === 1 ? ' antwoord' : ' antwoorden') + ' van collega-adviseurs'; };
+const vraagBeschr = v => kort(v.body, 200) + ' · ' + antwTekst(v);
+const vraagDatum = {}; // pad -> laatste datum (vraag of reactie), voor de sitemap
+for (const v of VRAGEN) {
+  const pad = 'vraag/' + v.id + '.html', url = BASE + pad;
+  vraagDatum[pad] = [v.datum, ...v.antwoorden.map(a => a.datum)].map(d => String(d).slice(0, 10)).sort().pop();
+  const ans = ordeAntw(v), nr = nrVan(v), top = ans[0];
+  const opNr = v.antwoorden.slice().sort((a, b) => nr(a) - nr(b));
+  const meta = [catNaam(v.cat), 'Gesteld op ' + datumNL(v.datum), antwTekst(v)].map(esc).join(' · ');
+  const inhoud = (v.voorbeeld ? '<p class="melding" role="note">Voorbeeldvraag: een fictieve praktijksituatie om te laten zien hoe collega’s elkaar helpen. De antwoorden zijn voorbeeldantwoorden.</p>\n' : '') +
+    '<article>\n<h2>De vraag</h2>\n' + rich(v.body, 'h3') + '</article>\n' +
+    (top ? `<h2>${top.id === v.beste ? 'Beste antwoord' : gem(top.rA) > 0 ? 'Best beoordeelde antwoord' : 'Eerste antwoord'} (fragment)</h2>\n<div class="teaser"><p class="waar">Reactie #${nr(top)} · ${esc(datumNL(top.datum))}</p><p>${esc(kort(top.body, 200))}</p></div>\n` : '') +
+    `<div class="slot" role="note"><p><b>Lees alle antwoorden op het Adviesforum.</b> Inloggen als geverifieerd adviseur vereist.</p>` +
+    `<p class="knoppen"><a class="knop" href="${esc(forumLink(v))}">Inloggen</a><a class="knop knop-licht" href="../aanmelden.html">Aanmelden</a></p></div>\n` +
+    (opNr.length ? `<h2>Alle reacties (${opNr.length})</h2>\n<ul class="lijst reacties">\n` + opNr.map(a => `<li id="r${nr(a)}"><a href="${esc(forumLink(v, nr(a)))}">Reactie #${nr(a)}</a>${a.id === v.beste ? ' · beste antwoord' : ''}<small>${esc(datumNL(a.datum))} · lezen na inloggen</small></li>`).join('\n') + '\n</ul>\n' : '');
+  uit[pad] = pagina({
+    pre: '../', pad, titel: v.titel + ' – ' + SITE, ogTitel: v.titel, beschrijving: vraagBeschr(v), type: 'article', h1: v.titel, actief: 'forum',
+    kruimel: [KR_FORUM, [v.titel, '', url]], meta, inhoud, extraCss: VRAAG_CSS
+  });
+}
+
 /* ---------- llms.txt en llms-full.txt ---------- */
 const PAGINAS_LLMS = [
   ['Belangrijkste pagina\'s', [
@@ -345,7 +395,7 @@ uit['llms-full.txt'] = '# ' + SITE + ' – kennisbank (volledige tekst)\n\n> ' +
   ].join('\n')).join('\n')).join('\n');
 
 /* ---------- Schrijven of controleren ---------- */
-const GEGENEREERDE_MAPPEN = ['kennisbank', 'faq', 'begrippen'];
+const GEGENEREERDE_MAPPEN = ['kennisbank', 'faq', 'begrippen', 'vraag'];
 function verouderd() { // bestanden in de mappen die niet (meer) gegenereerd worden
   const weg = [];
   for (const m of GEGENEREERDE_MAPPEN) {
@@ -373,7 +423,7 @@ function maakSitemap() {
     const html = fs.readFileSync(path.join(ROOT, f), 'utf8');
     if (/<meta\s+name=["']robots["'][^>]*noindex/i.test(html)) continue;
     const loc = f === 'index.html' ? '' : f.replace(/(^|\/)index\.html$/, '$1');
-    const mod = kbDatum[f] || (f.startsWith('faq/') ? maxDatum(datumVan['faq/']) : f.startsWith('begrippen/') ? maxDatum(datumVan['begrippen/']) : f === 'kennisbank/index.html' ? maxDatum(datumVan['kennisbank/index.html']) : lastmod(f));
+    const mod = kbDatum[f] || vraagDatum[f] || (f.startsWith('faq/') ? maxDatum(datumVan['faq/']) : f.startsWith('begrippen/') ? maxDatum(datumVan['begrippen/']) : f === 'kennisbank/index.html' ? maxDatum(datumVan['kennisbank/index.html']) : lastmod(f));
     urls.push(`  <url><loc>${esc(BASE + loc)}</loc><lastmod>${mod}</lastmod></url>`);
   }
   return '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + urls.join('\n') + '\n</urlset>\n';
@@ -388,13 +438,13 @@ if (process.argv.includes('--check')) {
     if (weg.length) console.error('  Overbodig: ' + weg.join(', '));
     process.exit(1);
   }
-  console.log('Statische pagina\'s zijn actueel (' + aantalHtml + ' HTML-pagina\'s, llms.txt, llms-full.txt).');
+  console.log('Statische pagina\'s zijn actueel (' + aantalHtml + ' HTML-pagina\'s, waarvan ' + VRAGEN.length + ' deelpagina\'s in vraag/, llms.txt, llms-full.txt).');
 } else {
   for (const m of GEGENEREERDE_MAPPEN) fs.mkdirSync(path.join(ROOT, m), { recursive: true });
   for (const f of verouderd()) fs.unlinkSync(path.join(ROOT, f));
   let n = 0;
   for (const [p, inhoud] of Object.entries(uit)) { const f = path.join(ROOT, p); if (!fs.existsSync(f) || fs.readFileSync(f, 'utf8') !== inhoud) { fs.writeFileSync(f, inhoud); n++; } }
-  console.log('Geschreven: ' + aantalHtml + ' HTML-pagina\'s (' + ARTIKELEN.length + ' artikelen + overzicht, ' + (Object.keys(uit).filter(p => p.startsWith('faq/')).length) + ' FAQ-pagina\'s, begrippen), llms.txt en llms-full.txt; ' + n + ' bestand(en) gewijzigd.');
+  console.log('Geschreven: ' + aantalHtml + ' HTML-pagina\'s (' + ARTIKELEN.length + ' artikelen + overzicht, ' + (Object.keys(uit).filter(p => p.startsWith('faq/')).length) + ' FAQ-pagina\'s, begrippen, ' + VRAGEN.length + ' deelpagina\'s in vraag/), llms.txt en llms-full.txt; ' + n + ' bestand(en) gewijzigd.');
   if (process.argv.includes('--sitemap')) {
     const sm = maakSitemap();
     fs.writeFileSync(path.join(ROOT, 'sitemap.xml'), sm);

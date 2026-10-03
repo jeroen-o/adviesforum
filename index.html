@@ -238,6 +238,14 @@ textarea{min-height:120px;resize:vertical}
 .rmeta{display:inline-flex;gap:8px;align-items:center;flex-wrap:wrap;font-size:13px;color:var(--muted)}
 .rnr{font-weight:700;color:var(--text);text-decoration:none;border-bottom:2px solid var(--yellow)}
 .rnr:hover,.rnr:focus-visible{border-bottom-color:var(--text)}
+.btn-li{gap:6px}.btn-li .li-icoon{flex:none}
+.deel-rij{margin-top:12px}
+.slot{position:relative;margin:0;border-top:1px solid var(--border);overflow:hidden}
+.slot-vaag{padding:16px 18px;max-height:120px;filter:blur(3px);opacity:.55}
+.slot-vaag i{display:block;height:11px;margin:0 0 10px;border-radius:4px;background:var(--muted)}
+.slot-vaag i:nth-child(2n){width:86%}.slot-vaag i:nth-child(3n){width:64%}
+.slot-in{position:relative;margin:-60px 12px 14px;padding:16px 18px;background:var(--yellow-soft);border:2px solid var(--text);border-radius:8px}
+.slot-in b{display:block;font-size:16px;margin-bottom:6px}.slot-in p{font-size:14px}
 .rlink{background:none;border:0;padding:8px 4px;margin:-8px 0;font:inherit;font-size:13px;color:var(--muted);text-decoration:underline;cursor:pointer}
 .ans{scroll-margin-top:calc(var(--kop-h,170px) + 12px)}
 .ans.gemarkeerd{box-shadow:inset 4px 0 0 var(--yellow);background:var(--yellow-soft)}
@@ -496,6 +504,18 @@ details>summary{min-height:36px}
 <script src="data/kennisbank-dfosignalen.js"></script>
 <script src="data/begrippen.js"></script>
 <script>
+/* ---------- Delen op LinkedIn en afscherming van antwoorden ----------
+ * ANTWOORDEN_AFSCHERMEN bepaalt wanneer een niet-ingelogde bezoeker bij een vraag alleen de vraag en de eerste
+ * ±200 tekens van het beste (of eerste) antwoord ziet, met daaronder "Log in om alle antwoorden te lezen":
+ *   'linkedin' = alleen als de bezoeker binnenkomt via een gedeelde link met bron=linkedin (de deelpagina's in vraag/)
+ *   'altijd'   = voor elke niet-ingelogde bezoeker
+ *   'uit'      = nooit
+ * LET OP: dit is een drempel, geen beveiliging. Alle vragen en antwoorden staan gewoon in de broncode
+ * (data/vragen*.js), en veel vakinhoud staat ook in de openbare statische FAQ- en kennisbankpagina's.
+ * Wie de bron bekijkt of JavaScript uitzet, leest alles zonder in te loggen. */
+const ANTWOORDEN_AFSCHERMEN='linkedin';
+/* Publieke basis-url: de deelpagina's (vraag/<id>.html, gemaakt door tools/build-static.js) staan hieronder */
+const SITE_URL='https://jeroen-o.github.io/adviesforum/';
 /* ---------- Data ---------- */
 /* Gegevens staan in data/adviseurs.js, data/vragen.js en data/kennisbank.js */
 const USERS=window.ADVISEURS||[];
@@ -789,7 +809,7 @@ function exportKbVoorFin(){
 }
 
 /* ---------- State ---------- */
-const S={tab:'forum',view:'forum',prefill:'',cat:'alle',status:'alle',sort:'nieuw',q:'',me:null,vraag:null,artikel:null,adviseur:null,kbCat:'alle',kbStatus:'alle'};
+const S={tab:'forum',view:'forum',prefill:'',cat:'alle',status:'alle',sort:'nieuw',q:'',me:null,bron:null,vraag:null,artikel:null,adviseur:null,kbCat:'alle',kbStatus:'alle'};
 let seq=100;
 const nid=p=>p+(seq++);
 
@@ -804,6 +824,17 @@ const fmtDatumTijd=iso=>{const d=new Date(iso);return d.toLocaleDateString('nl-N
 const reactieNr=(v,a)=>[...v.antwoorden].sort((x,y)=>String(x.datum).localeCompare(String(y.datum))||String(x.id).localeCompare(String(y.id))).indexOf(a)+1;
 const reactieUrl=(v,n)=>location.origin+location.pathname+'#vraag-'+encodeURIComponent(v.id)+'-r'+n;
 const user=id=>USERS.find(u=>u.id===id);
+/* Delen op LinkedIn: LinkedIn leest geen hash-url's en geen JavaScript, dus de knop deelt de statische deelpagina */
+const deelUrl=(v,nr)=>SITE_URL+'vraag/'+encodeURIComponent(v.id)+'.html'+(nr?'#r'+nr:'');
+const linkedinUrl=u=>'https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(u);
+const kortTekst=(t,max=200)=>{const s=String(t||'').split('\n').map(l=>l.replace(/^## /,'').replace(/^- /,'').replace(/^\d+\. /,'')).join(' ').replace(/\s+/g,' ').trim();if(s.length<=max)return s;const k=s.slice(0,max),sp=k.lastIndexOf(' ');return (sp>80?k.slice(0,sp):k).replace(/[\s,;:.–-]+$/,'')+'…';};
+/* Zelfde korte beschrijving als og:description van de deelpagina (tools/build-static.js) */
+const antwTekst=v=>{const n=v.antwoorden.length;return v.voorbeeld?'Voorbeeldvraag met '+n+(n===1?' voorbeeldantwoord':' voorbeeldantwoorden'):n===0?'Nog geen antwoorden van collega-adviseurs':n+(n===1?' antwoord':' antwoorden')+' van collega-adviseurs';};
+const deelTekst=(v,nr)=>(nr?'Reactie #'+nr+' op: ':'')+v.titel+'\n\n'+kortTekst(v.body)+' · '+antwTekst(v)+'\n\n'+deelUrl(v,nr)+'\n\nLees de antwoorden op het Adviesforum (inloggen vereist).';
+const LI_ICOON='<svg class="li-icoon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><rect width="24" height="24" rx="4" fill="#0A66C2"/><g fill="#fff"><rect x="5" y="9.5" width="3" height="9.5"/><circle cx="6.5" cy="6.2" r="1.8"/><path d="M10.5 9.5h2.9v1.3c.5-.9 1.6-1.6 3.1-1.6 2.6 0 3.5 1.7 3.5 4.3V19h-3v-4.9c0-1.2-.3-2.1-1.5-2.1s-1.9.9-1.9 2.1V19h-3.1z"/></g></svg>';
+/* Alleen vragen uit de data hebben een deelpagina; een vraag die nog alleen in deze sessie bestaat niet */
+const deelKnop=(v,nr)=>v.sessie?'':`<a class="btn btn-line btn-sm btn-li" href="${esc(linkedinUrl(deelUrl(v,nr)))}" target="_blank" rel="noopener" data-act="deel-li" data-vraag="${esc(v.id)}" data-nr="${nr||''}" aria-label="Deel ${nr?'reactie '+nr:'deze vraag'} op LinkedIn (opent in een nieuw venster)">${LI_ICOON}Deel op LinkedIn</a>`;
+const afgeschermd=()=>!S.me&&(ANTWOORDEN_AFSCHERMEN==='altijd'||(ANTWOORDEN_AFSCHERMEN==='linkedin'&&S.bron==='linkedin'));
 const cat=id=>CATS.find(c=>c.id===id);
 const GAST={id:'gast',naam:'Gast',functie:'',kantoor:'',rol:'gast'};
 const me=()=>S.me?user(S.me):GAST;
@@ -1009,6 +1040,7 @@ function zetTitel(){const T={forum:'Forum',nieuw:'Vraag stellen',kennisbank:'Ken
   else if(S.view==='forum'&&S.cat!=='alle'&&cat(S.cat))t=cat(S.cat).naam;
   document.title=t+' – Adviesforum';}
 function render(keepScroll){
+  if(S.me&&S.bron)S.bron=null; // na inloggen blijft de bron-markering niet hangen
   renderShell();
   $('#hero').innerHTML=heroZichtbaar()?heroHtml():'';
   const app=$('#app');
@@ -1122,14 +1154,15 @@ function viewVraag(){
   const ans=[...v.antwoorden].sort((a,b)=>(b.id===v.beste)-(a.id===v.beste)||avg(b.rA)-avg(a.rA)||a.datum.localeCompare(b.datum));
   const kbArt=ARTIKELEN.find(a=>a.bron===v.id);
   const kanPromoveren=v.beste&&v.beste!=='auto'&&!kbArt&&(isAuteur||ik.rol==='compliance'||ik.rol==='beheer'||v.antwoorden.some(a=>a.id===v.beste&&a.auteur===ik.id));
-  const answersHtml=ans.length?ans.map(a=>{
+  const slot=afgeschermd()&&ans.length>0;
+  const answersHtml=slot?slotHtml(v,ans[0]):ans.length?ans.map(a=>{
     const au=user(a.auteur),eigen=a.auteur===ik.id,best=a.id===v.beste,st2=statsFor(a.auteur);
     const mineA=a.rA[ik.id]||0,mineAdv=a.rAdv[ik.id]||0;
     const nr=reactieNr(v,a),rid='r-'+v.id+'-'+nr;
     return `<article class="ans ${best?'best':''}${S.reactie===nr?' gemarkeerd':''}" id="${a.id}" data-nr="${nr}" aria-labelledby="${rid}">
       <div class="top-row">
         <div class="byline" style="margin:0"><span class="av">${initials(au.naam)}</span><span><button class="name" data-act="open-adviseur" data-id="${au.id}">${esc(au.naam)}</button>${verif(au)}${expertise(au.id)?`<span class="expert">${esc(expertise(au.id))}</span>`:''}<br><span>${esc(au.functie)}, ${esc(au.kantoor)} <span class="lvl">${esc(st2.level)}</span></span></span></div>
-        <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap"><span class="rmeta"><a class="rnr" id="${rid}" href="#vraag-${encodeURIComponent(v.id)}-r${nr}" title="Vaste link naar reactie ${nr}">Reactie #${nr}</a> <time datetime="${esc(a.datum)}">${fmtDatumTijd(a.datum)}</time> <button class="rlink" data-act="kopieer-reactie" data-url="${esc(reactieUrl(v,nr))}" aria-label="Kopieer de link naar reactie ${nr}">Link kopiëren</button></span>${best?'<span class="best-badge">✓ Beste antwoord</span>':''}</div>
+        <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap"><span class="rmeta"><a class="rnr" id="${rid}" href="#vraag-${encodeURIComponent(v.id)}-r${nr}" title="Vaste link naar reactie ${nr}">Reactie #${nr}</a> <time datetime="${esc(a.datum)}">${fmtDatumTijd(a.datum)}</time> <button class="rlink" data-act="kopieer-reactie" data-url="${esc(reactieUrl(v,nr))}" aria-label="Kopieer de link naar reactie ${nr}">Link kopiëren</button>${deelKnop(v,nr)}</span>${best?'<span class="best-badge">✓ Beste antwoord</span>':''}</div>
       </div>
       <div class="body">${rich(a.body)}</div>
       <div class="rating-row">
@@ -1150,6 +1183,7 @@ function viewVraag(){
       ${v.voorbeeld?'<div class="notice" style="margin-bottom:14px">Voorbeeldvraag: een realistische praktijksituatie om te laten zien hoe collega\u2019s elkaar helpen. Controleer de antwoorden zoals altijd aan de actuele regels.</div>':''}
       ${v.sessie?`<div class="notice ok" style="margin-bottom:14px"><b>Laatste stap: verstuur de e-mail.</b> Je mailprogramma is geopend met je vraag aan de beheerder (${FORM_MAIL}); klik daar op <b>Verzenden</b>. Na controle wordt je vraag op het forum gepubliceerd; tot die tijd zie alleen jij hem in deze sessie.<div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap"><a class="btn btn-sm" id="mail-opnieuw" href="${esc(v.mailHref)}">Open de e-mail opnieuw</a><button type="button" class="btn btn-line btn-sm" data-act="mail-kopie" data-id="${v.id}">Tekst kopiëren</button></div><div style="margin-top:6px;font-size:13px">Opent er niets? Kopieer de tekst en mail hem naar ${FORM_MAIL}.</div><div style="margin-top:8px;font-size:13px">Ken je een collega die hier ook het antwoord op wil weten? <a href="uitnodigen.html">Nodig een collega uit →</a></div></div>`:''}
       <div class="body">${rich(v.body)}</div>
+      ${v.sessie?'':`<div class="actions deel-rij">${deelKnop(v)}</div>`}
       ${kbArt?`<div class="notice ok" style="margin-top:14px">Dit onderwerp staat in de kennisbank: <button class="btn btn-sm btn-line" style="white-space:normal;text-align:left" data-act="open-artikel" data-id="${kbArt.id}">${esc(kbArt.titel)}</button></div>`:''}
       ${kanPromoveren?`<div class="actions"><button class="btn btn-line btn-sm" data-act="naar-kb" data-vraag="${v.id}">Zet om naar kennisbankartikel</button><span style="font-size:13px;color:var(--muted);align-self:center">Vraag en beste antwoord worden als concept opgenomen; compliance controleert daarna.</span></div>`:''}
     </div></div>
@@ -1167,6 +1201,19 @@ function viewVraag(){
       </form>`:`<p>Antwoorden geven en beoordelen kan als geverifieerde adviseur. Log in met de persoonlijke code die je van de beheerder hebt gekregen.</p><div class="actions"><button class="btn btn-black" data-act="inloggen">Inloggen adviseur →</button><a class="btn btn-line" href="aanmelden.html">Nog niet aangemeld?</a></div>`}
     </div></div>
   </section>`+railVraag(v);
+}
+/* Afgeschermde weergave: alleen het fragment van het beste (of eerste) antwoord en een vervaagd, ingeklapt blok */
+function slotHtml(v,a){
+  const nr=reactieNr(v,a),best=a.id===v.beste;
+  return `<article class="ans${best?' best':''}" id="${a.id}" data-nr="${nr}">
+      <div class="top-row"><span class="rmeta"><b style="color:var(--text)">Reactie #${nr}</b> <time datetime="${esc(a.datum)}">${fmtDatumTijd(a.datum)}</time>${deelKnop(v,nr)}</span>${best?'<span class="best-badge">✓ Beste antwoord</span>':''}</div>
+      <div class="body"><p>${esc(kortTekst(a.body))}</p></div>
+    </article>
+    <div class="slot" id="slot-antwoorden">
+      <div class="slot-vaag" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="slot-in"><b>Log in om alle antwoorden te lezen</b><p>Dit is een fragment. ${v.antwoorden.length>2?'De overige '+fmtInt(v.antwoorden.length-1)+' reacties, het volledige antwoord en':v.antwoorden.length===2?'De andere reactie, het volledige antwoord en':'Het volledige antwoord en'} de beoordelingen lees je als geverifieerd adviseur. Nog geen account? Meld je aan; de beheerder controleert of je financieel adviseur bent.</p>
+        <div class="actions"><button class="btn btn-black" data-act="inloggen">Inloggen</button><a class="btn btn-line" href="aanmelden.html">Aanmelden</a></div></div>
+    </div>`;
 }
 function railVraag(v){
   const related=VRAGEN.filter(x=>x.id!==v.id&&(x.cat===v.cat||x.tags.some(t=>v.tags.includes(t)))).slice(0,5);
@@ -1425,6 +1472,8 @@ function viewHandleiding(){
 
       <h2 id="h-antwoord">4. Antwoorden geven</h2>
       <p>Antwoorden geven kan als geverifieerde gebruiker. Onder elke vraag staat een antwoordveld. Schrijf vanuit je eigen praktijk: wat doe je, waar let je op, welke voorwaarden of bronnen horen erbij, en sinds wanneer dat zo is. Begin een regel met "- " voor een opsomming. Je eigen antwoord kun je niet beoordelen; dat doen collega's.</p>
+      <h3 id="h-delen" style="margin-top:16px">Delen op LinkedIn</h3>
+      <p>Bij elke vraag en elke reactie staat de knop <b>Deel op LinkedIn</b>. Die opent LinkedIn met een link naar een openbare deelpagina van de vraag (titel, korte beschrijving en een fragment van het beste antwoord) en kopieert tegelijk een korte posttekst naar je klembord. LinkedIn vult die tekst niet zelf in: plak hem in je bericht en pas hem eventueel aan. Wie via jouw bericht doorklikt, ziet de vraag en het begin van het antwoord; om alle antwoorden te lezen moet die collega inloggen als geverifieerd adviseur of zich eerst aanmelden. Deel alleen vragen die geanonimiseerd zijn; het delen gebeurt via je eigen LinkedIn-account.</p>
 
       <h2 id="h-beoordelen">5. Beoordelen: antwoord en adviseur</h2>
       <p>Elk antwoord krijgt twee scores van 1 tot 5 sterren:</p>
@@ -1555,7 +1604,17 @@ function viewVoorWie(){
 /* ---------- Acties ---------- */
 const ROUTES=['forum','kennisbank','faq','hulpmiddelen','begrippen','adviseurs','handleiding','voorwie'];
 function zetHash(){const h=S.view==='artikel'?'artikel-'+S.artikel:S.view==='vraag'?'vraag-'+S.vraag+(S.reactie?'-r'+S.reactie:''):ROUTES.includes(S.view)?S.view:'';try{if('#'+h!==location.hash)history.replaceState(null,'',h?'#'+h:location.pathname+location.search);}catch(e){}}
-function route(){const h=decodeURIComponent(location.hash.slice(1));let m;
+/* bron=linkedin mag in de query (?bron=linkedin#vraag-…) of achter de hash (#vraag-…&bron=linkedin) staan.
+ * route() onthoudt de bron in S.bron en haalt hem uit de adresbalk, zodat hij niet wordt doorgedeeld. */
+function leesBron(){
+  const q=new URLSearchParams(location.search),bq=q.get('bron');
+  const hm=location.hash.match(/[&?]bron=([A-Za-z]+)$/);
+  if(!bq&&!hm)return;
+  if(!S.me)S.bron=String(bq||hm[1]).toLowerCase();
+  q.delete('bron');const qs=q.toString();
+  try{history.replaceState(null,'',location.pathname+(qs?'?'+qs:'')+(hm?location.hash.slice(0,hm.index):location.hash));}catch(e){}
+}
+function route(){leesBron();const h=decodeURIComponent(location.hash.slice(1));let m;
   if((m=h.match(/^artikel-(.+)$/))&&ARTIKELEN.find(a=>a.id===m[1]))Object.assign(S,{tab:'kennisbank',view:'artikel',artikel:m[1]});
   else if((m=h.match(/^vraag-(.+)-r(\d+)$/))&&VRAGEN.find(v=>v.id===m[1]))Object.assign(S,{tab:'forum',view:'vraag',vraag:m[1],reactie:+m[2]});
   else if((m=h.match(/^vraag-(.+)$/))&&VRAGEN.find(v=>v.id===m[1]))Object.assign(S,{tab:'forum',view:'vraag',vraag:m[1],reactie:null});
@@ -1615,6 +1674,7 @@ document.addEventListener('click',e=>{
     case 'deel':{kopieer(location.origin+location.pathname+'#artikel-'+id,'Link naar het artikel gekopieerd');break;}
     case 'kb-kopie':{const a=ARTIKELEN.find(x=>x.id===id);if(!a)return;const o={id:a.id,cat:a.cat,titel:a.titel,auteur:a.auteur,datum:a.datum.slice(0,19),herzienVoor:a.herzienVoor,bron:a.bron,gecontroleerd:false,body:a.body};kopieer(' '+JSON.stringify(o,null,1).replace(/\n\s*/g,'').replace(/"(\w+)":/g,'$1:')+',','Artikel gekopieerd: plak het in data/kennisbank.js');break;}
     case 'inloggen':openLogin();break;
+    case 'deel-li':{const v=VRAGEN.find(x=>x.id===el.dataset.vraag);if(v)kopieer(deelTekst(v,+el.dataset.nr||0),'Posttekst gekopieerd, plak hem in je LinkedIn-bericht');break;}
     case 'uitloggen':{zetCookie('');S.me=null;render(true);toast('Je bent uitgelogd');break;}
     case 'mail-kopie':{const v=VRAGEN.find(x=>x.id===id);if(v)kopieer(v.mailTxt,'Tekst gekopieerd; plak hem in een e-mail aan '+FORM_MAIL);break;}
     case 'meld-zoek':{const q=S.q;openMail(mailLink('Adviesforum: niets gevonden voor "'+q+'"',mailTekst('Zoekopdracht zonder resultaat op het Adviesforum',[['Zoekopdracht',{Zoekterm:q,Onderdeel:S.tab}]])));toast('Je mailprogramma opent; klik daar op Verzenden');break;}
