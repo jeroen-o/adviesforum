@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aanbieders voor adviseurs – Adviesforum</title>
+<link rel="canonical" href="https://jeroen-o.github.io/adviesforum/aanbieders.html">
+<meta name="description" content="Nieuws, voorwaarden, acceptatiegidsen, richtlijnen, extranetlinks en contactpersonen van geldverstrekkers, verzekeraars en andere aanbieders, aangeleverd door de aanbieders zelf.">
+<meta property="og:url" content="https://jeroen-o.github.io/adviesforum/aanbieders.html">
+<meta property="og:site_name" content="Adviesforum">
+<meta property="og:locale" content="nl_NL">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Aanbieders voor adviseurs – Adviesforum">
+<meta property="og:description" content="Nieuws, voorwaarden, richtlijnen, extranetlinks en contactpersonen van aanbieders van financiële producten, op één plek voor financieel adviseurs.">
+<meta name="theme-color" content="#FFD200">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="manifest.webmanifest">
+<style>
+@font-face{font-family:Montserrat;font-style:normal;font-weight:400;font-display:swap;src:url(fonts/montserrat-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:600;font-display:swap;src:url(fonts/montserrat-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:700;font-display:swap;src:url(fonts/montserrat-latin-700-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:800;font-display:swap;src:url(fonts/montserrat-latin-800-normal.woff2) format('woff2')}
+:root{
+  --geel:#FFD200;--geel-donker:#E6BD00;--geel-zacht:#FFF6C7;
+  --zwart:#141414;--tekst:#1F1F1F;--grijs:#5E5E5E;--lijn:#E4E4E4;--vlak:#F7F7F5;
+  --rood:#C0392B;--rood-zacht:#FFF1F0;--groen:#1E7A4B;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:Montserrat,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;color:var(--tekst);background:#fff;line-height:1.55;font-size:15px;-webkit-font-smoothing:antialiased;overflow-wrap:anywhere}
+a{color:inherit}
+button,input,select,textarea{font-family:inherit}
+:focus-visible{outline:3px solid var(--zwart);outline-offset:2px}
+
+.balk{background:var(--zwart);color:#fff;font-size:12.5px;padding:8px 24px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.balk a{color:#fff;text-decoration:none;opacity:.88}
+.balk a:hover{opacity:1;text-decoration:underline}
+.kop{background:var(--geel);color:var(--zwart);padding:34px 24px 38px}
+.kop-in{max-width:1180px;margin:0 auto}
+.merk{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.08em;font-size:12px;text-transform:uppercase;margin-bottom:16px}
+.zeshoek{width:22px;height:25px;background:var(--zwart);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);flex:none}
+a.terug{display:inline-block;font-size:13.5px;font-weight:700;text-decoration:none;border-bottom:2px solid var(--zwart);margin-bottom:14px;padding:8px 0 2px}
+.kop h1{margin:0 0 10px;font-size:clamp(27px,4.2vw,40px);line-height:1.12;font-weight:800}
+.kop p{margin:0;max-width:68ch;font-size:15.5px}
+.kop .stempel{display:inline-block;margin-top:16px;font-size:12px;font-weight:700;background:var(--zwart);color:var(--geel);padding:5px 11px;border-radius:999px}
+
+.romp{max-width:1180px;margin:0 auto;padding:24px 24px 40px}
+.melding{background:var(--rood-zacht);border-left:4px solid var(--rood);border-radius:0 10px 10px 0;padding:14px 18px;font-size:14px;margin-bottom:24px}
+.melding strong{color:#A5281B}
+.melding p{margin:0}.melding p+p{margin-top:6px}
+
+h2.sectie{font-size:22px;font-weight:800;margin:28px 0 6px;padding-bottom:8px;border-bottom:3px solid var(--geel)}
+.sub{margin:0 0 14px;color:var(--grijs);font-size:14px}
+.filters{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:12px;margin-bottom:14px;max-width:760px}
+.filters label{display:block;font-weight:700;font-size:13px;margin-bottom:5px}
+.filters input,.filters select{width:100%;min-height:44px;padding:10px 12px;border:1px solid #CFCFCF;border-radius:9px;font-size:15px;background:#fff;color:var(--tekst)}
+.filters input:focus,.filters select:focus{outline:3px solid rgba(255,210,0,.6);outline-offset:1px;border-color:#9A9A9A}
+.telling{font-size:13px;color:var(--grijs);margin:0 0 10px}
+
+.tegels{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.tegel{display:flex;gap:12px;align-items:flex-start;text-decoration:none;border:1px solid var(--lijn);border-radius:12px;padding:14px;background:#fff;min-width:0;min-height:44px}
+.tegel:hover,.tegel:focus-visible{border-color:var(--zwart)}
+.tegel b{display:block;font-size:15px;line-height:1.3}
+.tegel .omschr{display:block;font-size:13px;color:var(--grijs);margin-top:4px;line-height:1.4}
+.tegel .meta{display:block;font-size:12px;color:var(--grijs);margin-top:6px}
+.logo{flex:none;width:46px;height:46px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px;letter-spacing:.02em}
+.logo.groot{width:64px;height:64px;font-size:20px;border-radius:14px}
+.badge{display:inline-block;font-size:11.5px;font-weight:700;border-radius:999px;padding:2px 9px;line-height:1.5;vertical-align:middle}
+.badge.type{background:var(--vlak);border:1px solid var(--lijn);color:var(--tekst)}
+.badge.demo{background:var(--geel-zacht);border:1px solid var(--geel-donker);color:#7A5A00}
+.leeg{color:var(--grijs);font-size:14px;padding:8px 0}
+
+.feed{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.bericht{border:1px solid var(--lijn);border-radius:12px;padding:14px 16px;background:#fff;scroll-margin-top:16px}
+.bericht.uitgelicht{border-color:var(--zwart);box-shadow:0 0 0 3px var(--geel)}
+.bericht .regel1{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;font-size:12.5px;color:var(--grijs)}
+.bericht .regel1 a{color:var(--zwart);font-weight:700}
+.bericht h3{margin:6px 0 6px;font-size:16.5px;line-height:1.3}
+.bericht p{margin:0 0 8px;font-size:14.5px}
+.bron{font-size:12.5px;color:var(--grijs);margin:6px 0 0}
+.bron a{color:var(--zwart);font-weight:600}
+.acties{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:10px}
+.knop{display:inline-flex;align-items:center;justify-content:center;min-height:40px;border-radius:999px;padding:8px 16px;font-size:13.5px;font-weight:700;cursor:pointer;border:1px solid var(--zwart);background:var(--zwart);color:#fff;text-decoration:none}
+.knop:hover{background:#000}
+.knop.licht{background:#fff;color:var(--zwart);border-color:#CFCFCF}
+.knop.licht:hover{background:var(--vlak)}
+.knop.geel{background:var(--geel);color:var(--zwart);border-color:var(--geel-donker)}
+.status{font-size:13px;font-weight:600;color:var(--groen)}
+.handmatig{width:100%;max-width:520px;font-size:13px;padding:8px 10px;border:1px solid #CFCFCF;border-radius:8px;font-family:ui-monospace,Menlo,Consolas,monospace}
+
+.naar-overzicht{display:inline-flex;align-items:center;min-height:40px;font-size:13.5px;font-weight:700;text-decoration:none;border-bottom:2px solid var(--geel)}
+.detailkop{display:flex;gap:16px;align-items:flex-start;flex-wrap:wrap;border-bottom:3px solid var(--geel);padding:14px 0 16px;margin-bottom:16px}
+.detailkop .tekst{flex:1 1 280px;min-width:0}
+.detailkop h2{margin:0 0 6px;font-size:26px;line-height:1.15;font-weight:800}
+.detailkop p{margin:6px 0 0;max-width:70ch}
+.detailkop .meta{font-size:12.5px;color:var(--grijs)}
+.demo-band{background:var(--geel-zacht);border:1px solid var(--geel-donker);border-radius:10px;padding:10px 14px;font-size:14px;margin-bottom:14px}
+
+.tabs{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 16px}
+.tabs button{min-height:40px;border:1px solid #CFCFCF;background:#fff;border-radius:999px;padding:8px 14px;font-size:13.5px;font-weight:700;cursor:pointer;color:var(--tekst)}
+.tabs button[aria-selected="true"]{background:var(--zwart);color:#fff;border-color:var(--zwart)}
+.tabs .n{font-weight:600;opacity:.75;margin-left:4px}
+.paneel{min-width:0}
+.lijst{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.item{border:1px solid var(--lijn);border-radius:12px;padding:12px 14px;background:#fff;min-width:0}
+.item b{display:block}
+.item .klein{font-size:13px;color:var(--grijs)}
+.item a.link{display:inline-flex;align-items:center;min-height:40px;font-weight:700;color:var(--zwart)}
+.docgroep h3{font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--grijs);margin:18px 0 8px}
+.docgroep:first-child h3{margin-top:0}
+.contacten{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:10px}
+.contacten a{display:inline-flex;align-items:center;min-height:40px;color:var(--zwart);font-weight:600}
+.richtlijn h3{margin:0 0 6px;font-size:15.5px}
+.richtlijn p{margin:0 0 8px;font-size:14.5px}
+.notitie{font-size:13px;color:var(--grijs);margin:12px 0 0}
+.extranet{border:1px solid var(--lijn);border-radius:12px;padding:18px;background:var(--vlak)}
+.extranet p{margin:0 0 12px}
+
+.aanvraag{margin-top:32px;background:var(--zwart);color:#fff;border-radius:14px;padding:22px}
+.aanvraag h2{margin:0 0 8px;font-size:21px;color:var(--geel)}
+.aanvraag p{margin:0 0 10px;max-width:72ch}
+.aanvraag ul{margin:0 0 14px;padding-left:20px}
+.aanvraag a:not(.knop){color:var(--geel)}
+
+.voet{max-width:1180px;margin:0 auto;padding:16px 24px 40px;font-size:12.5px;color:var(--grijs)}
+.voet a{color:var(--zwart);font-weight:600;display:inline-block;padding:10px 0}
+
+/* Voorbeeldmodus (iframe in aanbieder-beheer.html) */
+body.voorbeeldmodus .balk,body.voorbeeldmodus .kop,body.voorbeeldmodus .voet,body.voorbeeldmodus #algemeen{display:none}
+body.voorbeeldmodus .romp{padding:12px}
+
+@media (max-width:560px){
+  .balk,.kop{padding-left:16px;padding-right:16px}
+  .romp,.voet{padding-left:16px;padding-right:16px}
+  .filters{grid-template-columns:minmax(0,1fr)}
+  .detailkop h2{font-size:22px}
+  .aanvraag{padding:18px}
+}
+/* Mobiel: tikdoelen en leesbaarheid */
+@media (max-width:760px){input,select,textarea{font-size:16px!important}}
+</style>
+</head>
+<body>
+<div class="balk">
+  <span>Adviesforum &middot; hulpmiddelen voor financieel adviseurs</span>
+  <span><a href="index.html">Naar het forum</a></span>
+</div>
+<header class="kop">
+  <div class="kop-in">
+    <div class="merk"><span class="zeshoek" aria-hidden="true"></span>Adviesforum &middot; Aanbieders</div>
+    <a class="terug" href="index.html#hulpmiddelen">&larr; Terug naar de hulpmiddelen</a>
+    <h1>Aanbieders voor adviseurs</h1>
+    <p>Nieuws, voorwaarden, acceptatiegidsen, richtlijnen, de weg naar het extranet en de juiste contactpersoon: per geldverstrekker, verzekeraar of andere aanbieder op één plek. De aanbieders houden hun eigen informatie bij.</p>
+    <span class="stempel">Aangeleverd door de aanbieder &middot; geen reclame of advies &middot; controleer altijd de bron</span>
+  </div>
+</header>
+<main class="romp">
+  <div class="melding" id="algemeen" role="note">
+    <p><strong>Let op:</strong> de informatie op deze pagina wordt aangeleverd door de aanbieders zelf. Het Adviesforum toetst de inhoud niet en is niet verantwoordelijk voor de juistheid of volledigheid. Het is geen reclame, geen aanbod en geen advies.</p>
+    <p>Rentes, tarieven, premies en acties plaatsen we bewust niet. Elk nieuwsbericht vermeldt de datum en de bron. Controleer de actuele voorwaarden altijd bij de aanbieder zelf (website of extranet) voordat je ze in een advies of klantdossier gebruikt.</p>
+  </div>
+  <div id="app" aria-live="polite"></div>
+</main>
+<footer class="voet">
+  Adviesforum &middot; collegiale kennisdeling voor financieel adviseurs &middot; <a href="index.html#hulpmiddelen">Alle hulpmiddelen</a> &middot; <a href="privacy.html">Privacy</a> &middot; <a href="uitnodigen.html">Uitnodigen</a> &middot; <a href="aanbieder-beheer.html">Inloggen voor aanbieders</a>
+</footer>
+<script src="data/aanbieders.js"></script>
+<script>
+(function(){
+'use strict';
+var BASIS='https://jeroen-o.github.io/adviesforum/aanbieders.html';
+var MAIL='forumadvies@gmail.com';
+var TYPES={geldverstrekker:'Geldverstrekker',verzekeraar:'Verzekeraar',pensioenuitvoerder:'Pensioenuitvoerder',kredietverstrekker:'Kredietverstrekker',serviceprovider:'Serviceprovider'};
+var SOORTEN=[['voorwaarden','Voorwaarden'],['acceptatiegids','Acceptatiegidsen'],['productblad','Productbladen'],['formulier','Formulieren']];
+var TABS=[['nieuws','Nieuws'],['documenten','Voorwaarden & documenten'],['richtlijnen','Richtlijnen'],['extranet','Extranet'],['contact','Contactpersonen'],['elearning','E-learning']];
+var MAANDEN=['januari','februari','maart','april','mei','juni','juli','augustus','september','oktober','november','december'];
+var LIJST=Array.isArray(window.AANBIEDERS)?window.AANBIEDERS:[];
+var app=document.getElementById('app');
+var staat={zoek:'',type:'',tab:'nieuws'};
+
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+function okUrl(u){return typeof u==='string'&&/^https:\/\/[^\s"'<>]+$/i.test(u);}
+function okMail(m){return typeof m==='string'&&/^[^\s@<>"']+@[^\s@<>"']+\.[a-z]{2,}$/i.test(m);}
+function arr(x){return Array.isArray(x)?x:[];}
+function datumNL(d){var m=/^(\d{4})-(\d{2})-(\d{2})$/.exec(d||'');return m?(+m[3])+' '+MAANDEN[+m[2]-1]+' '+m[1]:'datum onbekend';}
+function alineas(t){return String(t||'').split(/\n\s*\n/).map(function(p){return p.trim();}).filter(Boolean).map(function(p){return '<p>'+esc(p).replace(/\n/g,'<br>')+'</p>';}).join('');}
+function linkExt(u,tekst,cls){return okUrl(u)?'<a'+(cls?' class="'+cls+'"':'')+' href="'+esc(u)+'" target="_blank" rel="noopener noreferrer">'+esc(tekst)+'</a>':'';}
+function kleur(a){return /^#[0-9a-f]{6}$/i.test(a.kleur||'')?a.kleur:'#141414';}
+function tekstKleur(hex){var r=parseInt(hex.substr(1,2),16),g=parseInt(hex.substr(3,2),16),b=parseInt(hex.substr(5,2),16);return (0.299*r+0.587*g+0.114*b)>150?'#141414':'#ffffff';}
+function initialen(a){var i=String(a.initialen||'').trim();if(!i)i=String(a.naam||'?').split(/\s+/).map(function(w){return w.charAt(0);}).join('');return i.slice(0,3).toUpperCase();}
+function logo(a,groot){var k=kleur(a);return '<span class="logo'+(groot?' groot':'')+'" aria-hidden="true" style="background:'+k+';color:'+tekstKleur(k)+'">'+esc(initialen(a))+'</span>';}
+function typeBadge(a){return '<span class="badge type">'+esc(TYPES[a.type]||'Aanbieder')+'</span>';}
+function demoBadge(a){return a.demo?' <span class="badge demo">Voorbeeld, fictief</span>':'';}
+function nieuwsUrl(a,n){return BASIS+'#nieuws-'+a.id+'-'+n.id;}
+function zoek(id){for(var i=0;i<LIJST.length;i++)if(LIJST[i]&&LIJST[i].id===id)return LIJST[i];return null;}
+
+/* ---------- Nieuwsbericht (feed en detail) ---------- */
+function bericht(a,n,metAanbieder){
+  var anker='nieuws-'+a.id+'-'+n.id;
+  return '<li class="bericht" id="'+esc(anker)+'">'+
+    '<div class="regel1"><time datetime="'+esc(n.datum)+'">'+esc(datumNL(n.datum))+'</time>'+
+      (metAanbieder?'<span>&middot;</span><a href="#aanbieder-'+esc(a.id)+'">'+esc(a.naam)+'</a>'+demoBadge(a):'')+'</div>'+
+    '<h3>'+esc(n.titel)+'</h3>'+alineas(n.tekst)+
+    '<p class="bron">Bron: '+esc(a.naam)+' (aangeleverd door de aanbieder, '+esc(datumNL(n.datum))+')'+(okUrl(n.url)?' &middot; '+linkExt(n.url,'lees bij de bron'):'')+'</p>'+
+    '<div class="acties"><button type="button" class="knop licht" data-kopieer="'+esc(nieuwsUrl(a,n))+'">Kopieer link</button><span class="status" aria-live="polite"></span></div>'+
+  '</li>';
+}
+function alleNieuws(){
+  var uit=[];LIJST.forEach(function(a){arr(a.nieuws).forEach(function(n){uit.push({a:a,n:n});});});
+  uit.sort(function(x,y){return String(y.n.datum).localeCompare(String(x.n.datum))||String(x.a.naam).localeCompare(String(y.a.naam));});
+  return uit;
+}
+function nieuwsSorteer(lijst){return arr(lijst).slice().sort(function(x,y){return String(y.datum).localeCompare(String(x.datum));});}
+
+/* ---------- Overzicht ---------- */
+function overzicht(){
+  var opties='<option value="">Alle types</option>'+Object.keys(TYPES).map(function(k){return '<option value="'+k+'"'+(staat.type===k?' selected':'')+'>'+TYPES[k]+'</option>';}).join('');
+  var feed=alleNieuws();
+  app.innerHTML=
+    '<h2 class="sectie" id="aanbieders-kop">Aanbieders</h2>'+
+    '<p class="sub">Kies een aanbieder voor nieuws, documenten, richtlijnen, extranet, contactpersonen en e-learning.</p>'+
+    '<div class="filters"><div><label for="zoek">Zoek op naam of onderwerp</label><input type="search" id="zoek" value="'+esc(staat.zoek)+'" placeholder="Bijvoorbeeld acceptatiegids"></div>'+
+    '<div><label for="type">Type aanbieder</label><select id="type">'+opties+'</select></div></div>'+
+    '<p class="telling" id="telling"></p><div class="tegels" id="tegels"></div>'+
+    '<h2 class="sectie" id="nieuws">Nieuws van aanbieders</h2>'+
+    '<p class="sub">Alle berichten, nieuwste eerst. Elk bericht heeft een eigen link om te delen met collega\'s.</p>'+
+    (feed.length?'<ol class="feed">'+feed.map(function(x){return bericht(x.a,x.n,true);}).join('')+'</ol>':'<p class="leeg">Nog geen nieuws.</p>')+
+    aanvraagBlok();
+  document.getElementById('zoek').addEventListener('input',function(e){staat.zoek=e.target.value;tegels();});
+  document.getElementById('type').addEventListener('change',function(e){staat.type=e.target.value;tegels();});
+  tegels();
+}
+function zoektekst(a){return [a.naam,a.omschrijving,TYPES[a.type],a.extranet&&a.extranet.naam].concat(arr(a.nieuws).map(function(n){return n.titel;}),arr(a.documenten).map(function(d){return d.titel;}),arr(a.richtlijnen).map(function(r){return r.titel;})).join(' ').toLowerCase();}
+function tegels(){
+  var q=staat.zoek.trim().toLowerCase();
+  var res=LIJST.filter(function(a){return a&&a.id&&(!staat.type||a.type===staat.type)&&(!q||q.split(/\s+/).every(function(w){return zoektekst(a).indexOf(w)>=0;}));})
+    .sort(function(x,y){return (x.demo?1:0)-(y.demo?1:0)||String(x.naam).localeCompare(String(y.naam),'nl');});
+  document.getElementById('telling').textContent=res.length===1?'1 aanbieder':res.length+' aanbieders';
+  document.getElementById('tegels').innerHTML=res.length?res.map(function(a){
+    return '<a class="tegel" href="#aanbieder-'+esc(a.id)+'">'+logo(a)+'<span style="min-width:0"><b>'+esc(a.naam)+'</b>'+typeBadge(a)+demoBadge(a)+
+      '<span class="omschr">'+esc(String(a.omschrijving||'').slice(0,160))+(String(a.omschrijving||'').length>160?'…':'')+'</span>'+
+      '<span class="meta">'+arr(a.nieuws).length+' nieuws &middot; '+arr(a.documenten).length+' documenten'+(a.bijgewerkt?' &middot; bijgewerkt '+esc(datumNL(a.bijgewerkt)):'')+'</span></span></a>';
+  }).join(''):'<p class="leeg">Geen aanbieders gevonden. Probeer een ander woord of type.</p>';
+}
+function aanvraagBlok(){
+  var body='Graag vraag ik een account aan om onze informatie op het Adviesforum bij te houden.\n\n'+
+    'Bedrijfsnaam: \nAFM-vergunningnummer: \nType aanbieder (geldverstrekker, verzekeraar, pensioenuitvoerder, kredietverstrekker, serviceprovider): \n'+
+    'Website: \nContactpersoon (naam en functie): \nZakelijk e-mailadres: \nZakelijk telefoonnummer: \n\n'+
+    'Ik bevestig dat wij geen rentes, tarieven of acties plaatsen en dat genoemde contactpersonen toestemming geven voor vermelding van hun zakelijke gegevens.';
+  var href='mailto:'+MAIL+'?subject='+encodeURIComponent('Accountaanvraag aanbieder Adviesforum')+'&body='+encodeURIComponent(body);
+  return '<section class="aanvraag" id="account-aanvragen"><h2>Aanbieder? Vraag een account aan</h2>'+
+    '<p>Geldverstrekkers, verzekeraars, pensioenuitvoerders, kredietverstrekkers en serviceproviders kunnen hier zelf hun nieuws, voorwaarden, richtlijnen, extranetlink en contactpersonen bijhouden. Je krijgt een persoonlijke inlogcode voor de beheerpagina.</p>'+
+    '<p>Vermeld in je aanvraag:</p><ul><li>de bedrijfsnaam;</li><li>het AFM-vergunningnummer (of de reden waarom je geen vergunning nodig hebt);</li><li>een vaste contactpersoon met zakelijk e-mailadres.</li></ul>'+
+    '<p>De beheerder controleert de aanvraag in het AFM-register en stuurt daarna de inlogcode. Wijzigingen gaan nooit direct live: de beheerder publiceert ze, meestal binnen één werkdag.</p>'+
+    '<div class="acties"><a class="knop geel" href="'+esc(href)+'">Account aanvragen per mail</a><a class="knop licht" href="aanbieder-beheer.html">Ik heb al een code: inloggen</a></div>'+
+    '<p style="font-size:13px;margin-top:12px;opacity:.85">De aanvraag gaat vanuit je eigen mailprogramma naar <a href="mailto:'+MAIL+'">'+MAIL+'</a>. Zie de <a href="privacy.html">privacyverklaring</a>.</p></section>';
+}
+
+/* ---------- Detail ---------- */
+function detail(a,voorbeeld){
+  var tellers={nieuws:arr(a.nieuws).length,documenten:arr(a.documenten).length,richtlijnen:arr(a.richtlijnen).length,extranet:a.extranet&&okUrl(a.extranet.url)?1:0,contact:arr(a.contact).length,elearning:arr(a.elearning).length};
+  if(!TABS.some(function(t){return t[0]===staat.tab;}))staat.tab='nieuws';
+  app.innerHTML=(voorbeeld?'<div class="demo-band"><strong>Voorbeeldweergave.</strong> Zo komt je profiel op aanbieders.html te staan na publicatie door de beheerder. Nog niet gepubliceerd.</div>':'<a class="naar-overzicht" href="#overzicht">&larr; Alle aanbieders</a>')+
+    (a.demo?'<div class="demo-band"><strong>Voorbeeld:</strong> dit is een fictieve aanbieder om de opzet te tonen. De gegevens en links bestaan niet.</div>':'')+
+    '<div class="detailkop">'+logo(a,true)+'<div class="tekst"><h2 id="detail-titel">'+esc(a.naam||'Naam aanbieder')+'</h2>'+typeBadge(a)+demoBadge(a)+
+      (a.omschrijving?'<p>'+esc(a.omschrijving)+'</p>':'')+
+      '<p class="meta">'+(okUrl(a.website)?linkExt(a.website,'Website van de aanbieder')+' &middot; ':'')+'Aangeleverd door de aanbieder'+(a.bijgewerkt?', bijgewerkt '+esc(datumNL(a.bijgewerkt)):'')+'</p></div></div>'+
+    '<div class="tabs" role="tablist" aria-label="Onderdelen">'+TABS.map(function(t){return '<button type="button" role="tab" id="tab-'+t[0]+'" aria-controls="paneel" data-tab="'+t[0]+'" aria-selected="'+(staat.tab===t[0])+'">'+esc(t[1])+'<span class="n">'+tellers[t[0]]+'</span></button>';}).join('')+'</div>'+
+    '<section class="paneel" id="paneel" role="tabpanel" aria-labelledby="tab-'+staat.tab+'">'+paneel(a,staat.tab)+'</section>';
+}
+function paneel(a,tab){
+  var leeg='<p class="leeg">De aanbieder heeft hier nog niets aangeleverd.</p>';
+  if(tab==='nieuws'){var n=nieuwsSorteer(a.nieuws);return n.length?'<ol class="feed">'+n.map(function(x){return bericht(a,x,false);}).join('')+'</ol>':leeg;}
+  if(tab==='documenten'){
+    var docs=arr(a.documenten);if(!docs.length)return leeg;
+    return SOORTEN.map(function(s){var d=docs.filter(function(x){return x.soort===s[0];});return d.length?'<div class="docgroep"><h3>'+s[1]+'</h3><ul class="lijst">'+d.map(function(x){return '<li class="item"><b>'+esc(x.titel)+'</b>'+linkExt(x.url,'Openen bij de aanbieder','link')+'</li>';}).join('')+'</ul></div>':'';}).join('')+
+      '<p class="notitie">Documenten staan bij de aanbieder zelf; controleer of je de nieuwste versie hebt.</p>';
+  }
+  if(tab==='richtlijnen'){var r=arr(a.richtlijnen);return r.length?'<ul class="lijst">'+r.map(function(x){return '<li class="item richtlijn"><h3>'+esc(x.titel)+'</h3>'+alineas(x.tekst)+'</li>';}).join('')+'</ul><p class="notitie">Richtlijnen zoals aangeleverd door de aanbieder. Bij verschil gaat de acceptatiegids of de voorwaarden van de aanbieder voor.</p>':leeg;}
+  if(tab==='extranet'){var e=a.extranet||{};return okUrl(e.url)?'<div class="extranet"><p>Aanvragen indienen, dossiers volgen en documenten uploaden doe je in de omgeving van de aanbieder zelf. Het Adviesforum heeft daar geen toegang toe en slaat geen inloggegevens op.</p>'+linkExt(e.url,'Naar '+(e.naam||'het extranet'),'knop')+'</div>':leeg;}
+  if(tab==='contact'){var c=arr(a.contact);return c.length?'<div class="contacten">'+c.map(function(x){return '<div class="item"><b>'+esc(x.naam)+'</b>'+(x.functie?'<span class="klein">'+esc(x.functie)+'</span><br>':'')+
+      (okMail(x.email)?'<a href="mailto:'+esc(x.email)+'">'+esc(x.email)+'</a><br>':'')+(x.telefoon?'<a href="tel:'+esc(String(x.telefoon).replace(/[^\d+]/g,''))+'">'+esc(x.telefoon)+'</a>':'')+'</div>';}).join('')+
+      '</div><p class="notitie">Zakelijke contactgegevens, aangeleverd door de aanbieder met toestemming van de contactpersoon. Alleen bedoeld voor zakelijk contact over producten en aanvragen.</p>':leeg;}
+  if(tab==='elearning'){var l=arr(a.elearning);return l.length?'<ul class="lijst">'+l.map(function(x){return '<li class="item"><b>'+esc(x.titel)+'</b><span class="klein">'+(x.duur?esc(x.duur)+' &middot; ':'')+(x.pe?'PE-punten volgens de aanbieder':'geen PE-punten')+'</span><br>'+linkExt(x.url,'Naar de module','link')+'</li>';}).join('')+'</ul>':leeg;}
+  return leeg;
+}
+
+/* ---------- Routering ---------- */
+function route(){
+  var h=decodeURIComponent(location.hash.replace(/^#/,''));
+  var m=/^aanbieder-([a-z0-9-]+)$/.exec(h);
+  if(m){var a=zoek(m[1]);if(a){staat.tab='nieuws';detail(a);document.title=a.naam+' – Aanbieders – Adviesforum';window.scrollTo(0,0);return;}}
+  document.title='Aanbieders voor adviseurs – Adviesforum';
+  overzicht();
+  var n=/^nieuws-([a-z0-9-]+)-([a-z0-9]+)$/.exec(h);
+  var doel=n?document.getElementById(h):(h==='nieuws'?document.getElementById('nieuws'):null);
+  if(m&&!zoek(m[1]))app.insertAdjacentHTML('afterbegin','<p class="demo-band">Deze aanbieder staat (nog) niet in het overzicht.</p>');
+  if(n&&!doel)app.insertAdjacentHTML('afterbegin','<p class="demo-band">Dit nieuwsbericht bestaat niet (meer).</p>');
+  if(doel){if(n)doel.classList.add('uitgelicht');doel.scrollIntoView();}
+  else if(h==='overzicht')document.getElementById('aanbieders-kop').scrollIntoView();
+}
+
+/* ---------- Kopiëren en tabs ---------- */
+app.addEventListener('click',function(e){
+  var k=e.target.closest('[data-kopieer]');
+  if(k){var url=k.getAttribute('data-kopieer'),st=k.parentNode.querySelector('.status');
+    var klaar=function(){st.textContent='Link gekopieerd';};
+    var handmatig=function(){if(k.parentNode.querySelector('.handmatig'))return;var i=document.createElement('input');i.className='handmatig';i.readOnly=true;i.value=url;i.setAttribute('aria-label','Link naar dit bericht');k.parentNode.appendChild(i);i.select();st.textContent='Kopieer de link hieronder';};
+    if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(url).then(klaar,handmatig);else handmatig();
+    return;}
+  var t=e.target.closest('[data-tab]');
+  if(t){staat.tab=t.getAttribute('data-tab');
+    var p=document.getElementById('paneel');var a=huidig();if(!a)return;
+    p.innerHTML=paneel(a,staat.tab);p.setAttribute('aria-labelledby','tab-'+staat.tab);
+    [].forEach.call(document.querySelectorAll('.tabs [data-tab]'),function(b){b.setAttribute('aria-selected',String(b===t));});
+    meldHoogte();}
+});
+app.addEventListener('keydown',function(e){
+  var t=e.target.closest('[role="tab"]');if(!t||(e.key!=='ArrowRight'&&e.key!=='ArrowLeft'))return;
+  var alle=[].slice.call(document.querySelectorAll('[role="tab"]')),i=alle.indexOf(t);
+  var v=alle[(i+(e.key==='ArrowRight'?1:alle.length-1))%alle.length];v.focus();v.click();
+});
+
+/* ---------- Voorbeeldmodus voor aanbieder-beheer.html (zelfde weergave, via postMessage) ---------- */
+var voorbeeldData=null;
+function huidig(){if(voorbeeldData)return voorbeeldData;var m=/^#aanbieder-([a-z0-9-]+)$/.exec(location.hash);return m?zoek(m[1]):null;}
+function meldHoogte(){if(voorbeeldData)window.parent.postMessage({type:'af-voorbeeld-hoogte',hoogte:document.documentElement.scrollHeight},location.origin==='null'?'*':location.origin);}
+var isVoorbeeld=/[?&]voorbeeld=1\b/.test(location.search)&&window.parent!==window;
+if(isVoorbeeld){
+  document.body.classList.add('voorbeeldmodus');
+  var r=document.createElement('meta');r.name='robots';r.content='noindex';document.head.appendChild(r);
+  window.addEventListener('message',function(e){
+    if(e.source!==window.parent||(e.origin!==location.origin&&location.origin!=='null'))return;
+    if(!e.data||e.data.type!=='af-voorbeeld'||!e.data.aanbieder)return;
+    voorbeeldData=e.data.aanbieder;detail(voorbeeldData,true);meldHoogte();
+  });
+  app.innerHTML='<p class="leeg">Voorbeeld laden…</p>';
+  window.parent.postMessage({type:'af-voorbeeld-klaar'},location.origin==='null'?'*':location.origin);
+}else{
+  window.addEventListener('hashchange',route);
+  route();
+}
+})();
+</script>
+</body>
+</html>
