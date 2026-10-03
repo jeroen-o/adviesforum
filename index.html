@@ -235,6 +235,12 @@ textarea{min-height:120px;resize:vertical}
 .art:first-child{border-top:0}
 .art:hover{background:var(--surface-2)}
 .art h3{font-size:15px;overflow-wrap:anywhere}
+.rmeta{display:inline-flex;gap:8px;align-items:center;flex-wrap:wrap;font-size:13px;color:var(--muted)}
+.rnr{font-weight:700;color:var(--text);text-decoration:none;border-bottom:2px solid var(--yellow)}
+.rnr:hover,.rnr:focus-visible{border-bottom-color:var(--text)}
+.rlink{background:none;border:0;padding:8px 4px;margin:-8px 0;font:inherit;font-size:13px;color:var(--muted);text-decoration:underline;cursor:pointer}
+.ans{scroll-margin-top:calc(var(--kop-h,170px) + 12px)}
+.ans.gemarkeerd{box-shadow:inset 4px 0 0 var(--yellow);background:var(--yellow-soft)}
 .qhead h1,.qhead h2,.q h3,.q-titel{overflow-wrap:anywhere;hyphens:auto;min-width:0;max-width:100%}
 .art .ex{color:var(--muted);font-size:14px;grid-column:1}
 .art .meta{grid-column:1 / -1;font-size:13px;color:var(--muted);display:flex;gap:18px;flex-wrap:wrap}
@@ -791,6 +797,10 @@ const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&
 const fmtNum=(n,d=1)=>Number(n).toLocaleString('nl-NL',{minimumFractionDigits:d,maximumFractionDigits:d});
 const fmtInt=n=>Number(n).toLocaleString('nl-NL');
 const fmtDate=iso=>new Date(iso).toLocaleDateString('nl-NL',{day:'numeric',month:'short',year:'numeric'});
+const fmtDatumTijd=iso=>{const d=new Date(iso);return d.toLocaleDateString('nl-NL',{day:'numeric',month:'long',year:'numeric'})+', '+d.toLocaleTimeString('nl-NL',{hour:'2-digit',minute:'2-digit'})+' uur';};
+/* Reactienummer: vast op volgorde van plaatsing (oudste = 1), los van de weergavesortering */
+const reactieNr=(v,a)=>[...v.antwoorden].sort((x,y)=>String(x.datum).localeCompare(String(y.datum))||String(x.id).localeCompare(String(y.id))).indexOf(a)+1;
+const reactieUrl=(v,n)=>location.origin+location.pathname+'#vraag-'+encodeURIComponent(v.id)+'-r'+n;
 const user=id=>USERS.find(u=>u.id===id);
 const cat=id=>CATS.find(c=>c.id===id);
 const GAST={id:'gast',naam:'Gast',functie:'',kantoor:'',rol:'gast'};
@@ -1016,7 +1026,9 @@ function render(keepScroll){
     case 'faq':app.className='wrap one';app.innerHTML=viewFaq();break;
   }
   zetTitel();
-  if(!keepScroll)window.scrollTo({top:0});
+  const doel=S.view==='vraag'&&S.reactie?document.getElementById('r-'+S.vraag+'-'+S.reactie):null;
+  if(doel){const art=doel.closest('.ans');setTimeout(()=>{art.scrollIntoView({block:'start'});},0);}
+  else if(!keepScroll)window.scrollTo({top:0});
 }
 
 /* ---------- Hero ---------- */
@@ -1111,10 +1123,11 @@ function viewVraag(){
   const answersHtml=ans.length?ans.map(a=>{
     const au=user(a.auteur),eigen=a.auteur===ik.id,best=a.id===v.beste,st2=statsFor(a.auteur);
     const mineA=a.rA[ik.id]||0,mineAdv=a.rAdv[ik.id]||0;
-    return `<article class="ans ${best?'best':''}" id="${a.id}">
+    const nr=reactieNr(v,a),rid='r-'+v.id+'-'+nr;
+    return `<article class="ans ${best?'best':''}${S.reactie===nr?' gemarkeerd':''}" id="${a.id}" data-nr="${nr}" aria-labelledby="${rid}">
       <div class="top-row">
         <div class="byline" style="margin:0"><span class="av">${initials(au.naam)}</span><span><button class="name" data-act="open-adviseur" data-id="${au.id}">${esc(au.naam)}</button>${verif(au)}${expertise(au.id)?`<span class="expert">${esc(expertise(au.id))}</span>`:''}<br><span>${esc(au.functie)}, ${esc(au.kantoor)} <span class="lvl">${esc(st2.level)}</span></span></span></div>
-        <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap"><span style="font-size:13px;color:var(--muted)">${fmtDate(a.datum)}</span>${best?'<span class="best-badge">✓ Beste antwoord</span>':''}</div>
+        <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap"><span class="rmeta"><a class="rnr" id="${rid}" href="#vraag-${encodeURIComponent(v.id)}-r${nr}" title="Vaste link naar reactie ${nr}">Reactie #${nr}</a> <time datetime="${esc(a.datum)}">${fmtDatumTijd(a.datum)}</time> <button class="rlink" data-act="kopieer-reactie" data-url="${esc(reactieUrl(v,nr))}" aria-label="Kopieer de link naar reactie ${nr}">Link kopiëren</button></span>${best?'<span class="best-badge">✓ Beste antwoord</span>':''}</div>
       </div>
       <div class="body">${rich(a.body)}</div>
       <div class="rating-row">
@@ -1539,14 +1552,15 @@ function viewVoorWie(){
 
 /* ---------- Acties ---------- */
 const ROUTES=['forum','kennisbank','faq','hulpmiddelen','begrippen','adviseurs','handleiding','voorwie'];
-function zetHash(){const h=S.view==='artikel'?'artikel-'+S.artikel:S.view==='vraag'?'vraag-'+S.vraag:ROUTES.includes(S.view)?S.view:'';try{if('#'+h!==location.hash)history.replaceState(null,'',h?'#'+h:location.pathname+location.search);}catch(e){}}
+function zetHash(){const h=S.view==='artikel'?'artikel-'+S.artikel:S.view==='vraag'?'vraag-'+S.vraag+(S.reactie?'-r'+S.reactie:''):ROUTES.includes(S.view)?S.view:'';try{if('#'+h!==location.hash)history.replaceState(null,'',h?'#'+h:location.pathname+location.search);}catch(e){}}
 function route(){const h=decodeURIComponent(location.hash.slice(1));let m;
   if((m=h.match(/^artikel-(.+)$/))&&ARTIKELEN.find(a=>a.id===m[1]))Object.assign(S,{tab:'kennisbank',view:'artikel',artikel:m[1]});
-  else if((m=h.match(/^vraag-(.+)$/))&&VRAGEN.find(v=>v.id===m[1]))Object.assign(S,{tab:'forum',view:'vraag',vraag:m[1]});
+  else if((m=h.match(/^vraag-(.+)-r(\d+)$/))&&VRAGEN.find(v=>v.id===m[1]))Object.assign(S,{tab:'forum',view:'vraag',vraag:m[1],reactie:+m[2]});
+  else if((m=h.match(/^vraag-(.+)$/))&&VRAGEN.find(v=>v.id===m[1]))Object.assign(S,{tab:'forum',view:'vraag',vraag:m[1],reactie:null});
   else if(ROUTES.includes(h))Object.assign(S,{tab:h,view:h});else return false;return true;}
 window.addEventListener('hashchange',()=>{const d=document.getElementById('login-dlg');if(d&&d.open)d.close();if(/^#login-/.test(location.hash)){loginViaLink();return;}if(route())render();});
 function go(view,extra={}){Object.assign(S,extra,{view});render();zetHash();}
-function openVraag(id){const v=VRAGEN.find(x=>x.id===id);if(!v)return;v.views++;go('vraag',{tab:'forum',vraag:id});}
+function openVraag(id){const v=VRAGEN.find(x=>x.id===id);if(!v)return;v.views++;go('vraag',{tab:'forum',vraag:id,reactie:null});}
 function openArtikel(id){const a=ARTIKELEN.find(x=>x.id===id);if(!a)return;a.views++;go('artikel',{tab:'kennisbank',artikel:id});}
 
 document.addEventListener('click',e=>{
@@ -1557,6 +1571,7 @@ document.addEventListener('click',e=>{
   switch(act){
     case 'home':case 'tab':{const tab=el.dataset.tab||'forum';S.q='';$('#search').value='';go(tab,{tab});break;}
     case 'zoek-tab':{const tab=el.dataset.tab;if(tab==='forum')go('forum',{tab,cat:'alle',status:'alle'});else go(tab,{tab});break;}
+    case 'kopieer-reactie':{const u=el.dataset.url;kopieer(u,'Link naar de reactie gekopieerd');const m=u.match(/#vraag-(.+)-r(\d+)$/);if(m){S.reactie=+m[2];history.replaceState(null,'','#vraag-'+m[1]+'-r'+m[2]);document.querySelectorAll('.ans.gemarkeerd').forEach(x=>x.classList.remove('gemarkeerd'));el.closest('.ans').classList.add('gemarkeerd');}break;}
     case 'cat':go('forum',{tab:'forum',cat:el.dataset.cat});break;
     case 'cat-go':go('forum',{tab:'forum',cat:el.dataset.cat,status:'alle'});break;
     case 'kbcat':go('kennisbank',{tab:'kennisbank',kbCat:el.dataset.cat});break;
