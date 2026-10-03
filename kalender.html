@@ -291,6 +291,7 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
     <ul>
       <li><strong>Bevestigd</strong>: de datum staat vast volgens wet, regeling of een officiële aankondiging van de genoemde bron.</li>
       <li><strong>Verwacht</strong>: de datum volgt uit het gebruikelijke jaarpatroon, een planning of een wetsvoorstel dat nog niet is aangenomen. Datum en inhoud kunnen wijzigen.</li>
+      <li><strong>Activiteiten van aanbieders</strong>: komende webinars, bijeenkomsten en andere activiteiten die aanbieders zelf aanleveren op de <a href="aanbieders.html#agenda">aanbiederspagina</a>. Het Adviesforum toetst ze niet; PE-punten staan vermeld zoals de aanbieder ze opgeeft. Items met het label <em>Voorbeeld</em> zijn fictief.</li>
       <li>Deze kalender is een hulpmiddel en geen advies. Bedragen, normen en percentages staan alleen vermeld als ze officieel zijn gepubliceerd; rentes en premies worden niet getoond.</li>
       <li>Met &lsquo;Naar agenda&rsquo; download je een .ics-bestand (hele-dag-afspraak) dat je in Outlook, Google Agenda of Apple Agenda kunt importeren. Er wordt niets verstuurd of opgeslagen.</li>
     </ul>
@@ -301,6 +302,7 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
   Adviesforum &middot; collegiale kennisdeling voor financieel adviseurs &middot; <a href="index.html#hulpmiddelen">Alle hulpmiddelen</a> &middot; <a href="privacy.html">Privacy</a> &middot; <a href="uitnodigen.html">Uitnodigen</a>. <span id="voet-peil"></span>
 </footer>
 
+<script src="data/aanbieders.js"></script>
 <script src="data/kalender.js"></script>
 <script>
 (function(){
@@ -311,7 +313,7 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
   var WEEKDAGEN = ['ma','di','wo','do','vr','za','zo'];
   var WEEKDAG_LANG = ['zondag','maandag','dinsdag','woensdag','donderdag','vrijdag','zaterdag'];
   var KLEUR = {belasting:'var(--t-belasting)',toeslagen:'var(--t-toeslagen)',vermogen:'var(--t-vermogen)',hypotheek:'var(--t-hypotheek)',
-    pensioen:'var(--t-pensioen)',energie:'var(--t-energie)',inkomen:'var(--t-inkomen)',toezicht:'var(--t-toezicht)',wetgeving:'var(--t-wetgeving)'};
+    pensioen:'var(--t-pensioen)',energie:'var(--t-energie)',inkomen:'var(--t-inkomen)',toezicht:'var(--t-toezicht)',wetgeving:'var(--t-wetgeving)',aanbieders:'#8E6CC9'};
   var BEGIN = {j:2026,m:9}, EINDE = {j:2028,m:0};
 
   function $(id){ return document.getElementById(id); }
@@ -326,7 +328,26 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
   var staat = {zoek:'', themas:{}, status:'', j:BEGIN.j, m:BEGIN.m};
   if (vandaag >= new Date(BEGIN.j,BEGIN.m,1) && vandaag < new Date(EINDE.j,EINDE.m+1,1)) { staat.j=vandaag.getFullYear(); staat.m=vandaag.getMonth(); }
 
-  var items = K.items.slice().sort(function(a,b){ return a.datum<b.datum?-1:a.datum>b.datum?1:(a.datumTekst?1:0)-(b.datumTekst?1:0); });
+  // ---------- Activiteiten van aanbieders (data/aanbieders.js, veld agenda) ----------
+  // Alleen komende items; fictieve voorbeeldaanbieders krijgen het label "Voorbeeld". Profielen met een echt merklogo maar demo:true slaan we over.
+  var SITE = 'https://jeroen-o.github.io/adviesforum/';
+  var AG_SOORT = {webinar:'Webinar',bijeenkomst:'Bijeenkomst','e-learning':'E-learning',beurs:'Beurs',overig:'Overig'};
+  var vandaagIso = vandaag.getFullYear()+'-'+('0'+(vandaag.getMonth()+1)).slice(-2)+'-'+('0'+vandaag.getDate()).slice(-2);
+  var aanbItems = [];
+  (Array.isArray(window.AANBIEDERS)?window.AANBIEDERS:[]).forEach(function(a){
+    if (!a || !a.id || (a.demo && a.logo) || !Array.isArray(a.agenda)) return;
+    a.agenda.forEach(function(x){
+      if (!x || !/^[a-z0-9]{1,20}$/.test(x.id||'') || !/^\d{4}-\d{2}-\d{2}$/.test(x.datum||'') || !x.titel || x.datum < vandaagIso) return;
+      var tijd = /^\d{2}:\d{2}$/.test(x.tijd||'') ? ', '+x.tijd+(/^\d{2}:\d{2}$/.test(x.eind||'')?'–'+x.eind:'')+' uur' : '';
+      aanbItems.push({id:'ab-'+a.id+'-'+x.id, datum:x.datum, thema:'aanbieders', status:'aanbieder', aanbieder:true, demo:!!a.demo,
+        titel:(a.demo?'Voorbeeld: ':'')+x.titel,
+        tekst:a.naam+' · '+(AG_SOORT[x.soort]||'Activiteit')+tijd+' · '+(x.locatie||'locatie volgt')+(x.pe?' · PE-punten volgens de aanbieder':'')+'.'+(x.tekst?' '+x.tekst:'')+(a.demo?' (Fictief voorbeeld, geen echte activiteit.)':''),
+        bron:{label:'Bekijk bij '+a.naam+' op de aanbiederspagina', url:'aanbieders.html#agenda-'+a.id+'-'+x.id}});
+    });
+  });
+  if (aanbItems.length) K.themas.aanbieders = 'Activiteiten van aanbieders';
+
+  var items = K.items.concat(aanbItems).sort(function(a,b){ return a.datum<b.datum?-1:a.datum>b.datum?1:(a.datumTekst?1:0)-(b.datumTekst?1:0)||(a.aanbieder?1:0)-(b.aanbieder?1:0); });
 
   function past(it){
     var actief = Object.keys(staat.themas).filter(function(k){return staat.themas[k];});
@@ -357,7 +378,10 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
   function vevent(it){
     var start = parse(it.datum), eind = new Date(start.getFullYear(),start.getMonth(),start.getDate()+1);
     var titel = (it.status==='verwacht'?'(verwacht) ':'')+it.titel;
-    var oms = it.tekst+(it.datumTekst?'\nDatum nog niet exact: '+it.datumTekst+'.':'')+'\nStatus: '+it.status+'.\nBron: '+it.bron.label+' – '+it.bron.url+'\nAdviesforum adviseurskalender, peildatum '+K.peildatum+'.';
+    var url = it.aanbieder ? SITE+it.bron.url : it.bron.url;
+    var oms = it.aanbieder
+      ? it.tekst+'\nAangeleverd door de aanbieder; het Adviesforum toetst de inhoud niet.\n'+url
+      : it.tekst+(it.datumTekst?'\nDatum nog niet exact: '+it.datumTekst+'.':'')+'\nStatus: '+it.status+'.\nBron: '+it.bron.label+' – '+it.bron.url+'\nAdviesforum adviseurskalender, peildatum '+K.peildatum+'.';
     return ['BEGIN:VEVENT',
       'UID:'+it.id+'-'+it.datum+'@adviesforum-kalender',
       'DTSTAMP:'+ymd(new Date())+'T000000Z',
@@ -365,7 +389,7 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
       'DTEND;VALUE=DATE:'+ymd(eind),
       'SUMMARY:'+icsEsc(titel),
       'DESCRIPTION:'+icsEsc(oms),
-      'URL:'+it.bron.url,
+      'URL:'+url,
       'CATEGORIES:'+icsEsc(K.themas[it.thema]||it.thema),
       'TRANSP:TRANSPARENT',
       'END:VEVENT'].map(vouw).join('\r\n');
@@ -379,7 +403,8 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
   // ---------- Bouwstenen ----------
   function badges(it){
     return '<div class="badges"><span class="badge"><span class="stip" style="background:'+KLEUR[it.thema]+'"></span>'+esc(K.themas[it.thema]||it.thema)+'</span>'+
-      '<span class="badge '+it.status+'">'+(it.status==='bevestigd'?'Bevestigd':'Verwacht')+'</span></div>';
+      (it.aanbieder ? '<span class="badge">Aangeleverd door aanbieder</span>'+(it.demo?'<span class="badge verwacht">Voorbeeld</span>':'')
+        : '<span class="badge '+it.status+'">'+(it.status==='bevestigd'?'Bevestigd':'Verwacht')+'</span>')+'</div>';
   }
   function kaart(it, prefix){
     var x = parse(it.datum);
@@ -389,7 +414,7 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
     return '<article class="item" id="'+prefix+it.id+'" style="border-left-color:'+KLEUR[it.thema]+'">'+
       '<div class="wanneer">'+wanneer+'</div>'+
       '<div>'+badges(it)+'<h4>'+esc(it.titel)+'</h4><p>'+esc(it.tekst)+'</p>'+
-      '<div class="voet"><a class="bron" href="'+esc(it.bron.url)+'" target="_blank" rel="noopener">Bron: '+esc(it.bron.label)+'</a>'+
+      '<div class="voet"><a class="bron" href="'+esc(it.bron.url)+'"'+(it.aanbieder?'':' target="_blank" rel="noopener"')+'>'+(it.aanbieder?'':'Bron: ')+esc(it.bron.label)+'</a>'+
       '<a class="knop licht klein" href="'+icsUrl([it])+'" download="'+it.id+'-'+it.datum+'.ics">+ Naar agenda</a></div></div></article>';
   }
 
@@ -462,8 +487,8 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
       h+=kaart(it,'l-');
     });
     $('lijst').innerHTML = h;
-    var nb = vis.filter(function(i){return i.status==='bevestigd';}).length;
-    $('teller').textContent = vis.length+' van '+items.length+' items · '+nb+' bevestigd, '+(vis.length-nb)+' verwacht';
+    var nb = vis.filter(function(i){return i.status==='bevestigd';}).length, na = vis.filter(function(i){return i.aanbieder;}).length;
+    $('teller').textContent = vis.length+' van '+items.length+' items · '+nb+' bevestigd, '+(vis.length-nb-na)+' verwacht'+(na?', '+na+' van aanbieders':'');
     $('lijst-leeg').style.display = vis.length?'none':'block';
     $('ics-alles').href = icsUrl(vis);
     $('ics-alles').setAttribute('aria-disabled', vis.length?'false':'true');
@@ -537,7 +562,7 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
     if (staat.status) filt.push('status: '+staat.status);
     if (staat.zoek) filt.push('zoekterm: “'+staat.zoek+'”');
     var rijen = vis.map(function(it){
-      return '<tr><td>'+(exact(it)?esc(datumKort(it.datum)):esc(it.datumTekst))+'</td><td>'+esc(K.themas[it.thema])+'</td><td>'+(it.status==='bevestigd'?'Bevestigd':'Verwacht')+'</td>'+
+      return '<tr><td>'+(exact(it)?esc(datumKort(it.datum)):esc(it.datumTekst))+'</td><td>'+esc(K.themas[it.thema])+'</td><td>'+(it.aanbieder?'Aanbieder'+(it.demo?' (voorbeeld)':''):it.status==='bevestigd'?'Bevestigd':'Verwacht')+'</td>'+
         '<td><strong>'+esc(it.titel)+'</strong><br>'+esc(it.tekst)+'<br><span class="b">Bron: '+esc(it.bron.label)+' – '+esc(it.bron.url)+'</span></td></tr>';
     }).join('');
     var per = (K.per2027||[]).map(function(p){

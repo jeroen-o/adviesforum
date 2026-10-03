@@ -126,6 +126,30 @@ h2.sectie{font-size:22px;font-weight:800;margin:28px 0 6px;padding-bottom:8px;bo
 .voet{max-width:1180px;margin:0 auto;padding:16px 24px 40px;font-size:12.5px;color:var(--grijs)}
 .voet a{color:var(--zwart);font-weight:600;display:inline-block;padding:10px 0}
 
+/* Volgen, rubrieken en agenda */
+.badge.rubriek{background:#EEF4FF;border:1px solid #B9CDF0;color:#1E3F7A}
+.tegelvak{position:relative;display:flex;min-width:0}
+.tegelvak .tegel{flex:1;padding-bottom:62px}
+.tegelvak .volg-knop{position:absolute;left:14px;bottom:12px}
+.volg-knop{display:inline-flex;align-items:center;gap:6px;min-height:40px;border-radius:999px;padding:6px 14px;font-size:13px;font-weight:700;cursor:pointer;border:1px solid #CFCFCF;background:#fff;color:var(--zwart)}
+.volg-knop:hover{background:var(--vlak)}
+.volg-knop[aria-pressed="true"]{background:var(--geel);border-color:var(--geel-donker);color:#141414}
+.volg-knop[aria-pressed="true"]::before{content:"\2713"}
+.detailkop .volg-rij{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:10px}
+.filterrij{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center;margin:0 0 12px}
+.filterrij label{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-size:14px;font-weight:600;cursor:pointer}
+.filterrij input{width:20px;height:20px;accent-color:#141414;flex:none}
+.gevolgd-blok{border:2px solid var(--geel);border-radius:14px;padding:4px 16px 16px;margin-top:22px}
+.gevolgd-blok h2.sectie{margin-top:14px}
+.agenda-item .wanneer{font-weight:800;color:var(--tekst)}
+.agenda-item .info{font-size:13.5px;color:var(--grijs);margin:0 0 8px}
+.agenda-item .pe{display:inline-block;font-size:11.5px;font-weight:700;border-radius:999px;padding:1px 8px;background:#E8F5EE;border:1px solid #BBDFC9;color:var(--groen)}
+.agenda-item.verlopen{background:var(--vlak);color:var(--grijs)}
+.agenda-item.verlopen h3{color:var(--grijs)}
+.verlopen-blok{margin-top:16px}
+.verlopen-blok summary{cursor:pointer;font-weight:700;font-size:14px;min-height:44px;display:flex;align-items:center}
+.verlopen-blok .feed{margin-top:8px}
+
 /* Voorbeeldmodus (iframe in aanbieder-beheer.html) */
 body.voorbeeldmodus .balk,body.voorbeeldmodus .kop,body.voorbeeldmodus .voet,body.voorbeeldmodus #algemeen{display:none}
 body.voorbeeldmodus .romp{padding:12px}
@@ -139,6 +163,39 @@ body.voorbeeldmodus .romp{padding:12px}
 }
 /* Mobiel: tikdoelen en leesbaarheid */
 @media (max-width:760px){input,select,textarea{font-size:16px!important}}
+</style>
+<style id="donker">
+/* Donkere modus (zelfde aanpak als kalender.html); in een eigen <style> zodat afdrukken licht blijft. */
+@media screen and (prefers-color-scheme:dark){
+:root:not([data-theme="light"]){color-scheme:dark;--tekst:#F2F2F2;--grijs:#BDBDBD;--lijn:#333333;--vlak:#262626;--geel-zacht:#3f3918;--rood-zacht:#3a2220;--groen:#9de7c1}
+:root:not([data-theme="light"]) body{background:#141414;color:#F2F2F2}
+:root:not([data-theme="light"]) :focus-visible{outline-color:#FFD200}
+:root:not([data-theme="light"]) .balk{background:#2A2A2A}
+:root:not([data-theme="light"]) .kop{background:#1E1E1E;color:#F2F2F2;border-bottom:3px solid #FFD200}
+:root:not([data-theme="light"]) .zeshoek{background:#FFD200}
+:root:not([data-theme="light"]) a.terug{border-bottom-color:#8A8A8A}
+:root:not([data-theme="light"]) .kop .stempel{background:#2A2A2A;color:#FFD200}
+:root:not([data-theme="light"]) .melding strong{color:#e9a29b}
+:root:not([data-theme="light"]) .filters input,:root:not([data-theme="light"]) .filters select,:root:not([data-theme="light"]) .handmatig{background:#1E1E1E;color:#F2F2F2;border-color:#444}
+:root:not([data-theme="light"]) .filterrij input{accent-color:#FFD200}
+:root:not([data-theme="light"]) .tegel,:root:not([data-theme="light"]) .bericht,:root:not([data-theme="light"]) .item{background:#1E1E1E;border-color:#333333}
+:root:not([data-theme="light"]) .tegel:hover,:root:not([data-theme="light"]) .tegel:focus-visible{border-color:#FFD200}
+:root:not([data-theme="light"]) .bericht.uitgelicht{border-color:#FFD200;box-shadow:0 0 0 3px rgba(255,210,0,.45)}
+:root:not([data-theme="light"]) .bericht .regel1 a,:root:not([data-theme="light"]) .bron a,:root:not([data-theme="light"]) .item a.link,:root:not([data-theme="light"]) .contacten a,:root:not([data-theme="light"]) .voet a{color:#F2F2F2}
+:root:not([data-theme="light"]) .badge.type{background:#262626;border-color:#444;color:#F2F2F2}
+:root:not([data-theme="light"]) .badge.demo{background:#3f3318;border-color:#7a6529;color:#f6d28e}
+:root:not([data-theme="light"]) .badge.rubriek{background:#1c2a44;border-color:#3d5687;color:#c9d8f5}
+:root:not([data-theme="light"]) .knop{background:#FFD200;border-color:#FFD200;color:#141414}
+:root:not([data-theme="light"]) .knop:hover{background:#FFE04D}
+:root:not([data-theme="light"]) .knop.licht,:root:not([data-theme="light"]) .volg-knop,:root:not([data-theme="light"]) .tabs button{background:#1E1E1E;color:#F2F2F2;border-color:#444}
+:root:not([data-theme="light"]) .knop.licht:hover,:root:not([data-theme="light"]) .volg-knop:hover{background:#262626}
+:root:not([data-theme="light"]) .volg-knop[aria-pressed="true"],:root:not([data-theme="light"]) .tabs button[aria-selected="true"]{background:#FFD200;color:#141414;border-color:#FFD200}
+:root:not([data-theme="light"]) .naar-overzicht{color:#F2F2F2}
+:root:not([data-theme="light"]) .extranet{background:#262626;border-color:#333333}
+:root:not([data-theme="light"]) .aanvraag{background:#262626;border:1px solid #333333}
+:root:not([data-theme="light"]) .agenda-item .pe{background:#1d3328;border-color:#346f4b;color:#9de7c1}
+:root:not([data-theme="light"]) .agenda-item.verlopen{background:#191919}
+}
 </style>
 </head>
 <body>
@@ -174,11 +231,13 @@ var BASIS='https://jeroen-o.github.io/adviesforum/aanbieders.html';
 var MAIL='forumadvies@gmail.com';
 var TYPES={geldverstrekker:'Geldverstrekker',verzekeraar:'Verzekeraar',pensioenuitvoerder:'Pensioenuitvoerder',kredietverstrekker:'Kredietverstrekker',serviceprovider:'Serviceprovider'};
 var SOORTEN=[['voorwaarden','Voorwaarden'],['acceptatiegids','Acceptatiegidsen'],['productblad','Productbladen'],['formulier','Formulieren']];
-var TABS=[['nieuws','Nieuws'],['documenten','Voorwaarden & documenten'],['richtlijnen','Richtlijnen'],['extranet','Extranet'],['contact','Contactpersonen'],['elearning','E-learning']];
+var TABS=[['nieuws','Nieuws'],['agenda','Agenda'],['documenten','Voorwaarden & documenten'],['richtlijnen','Richtlijnen'],['extranet','Extranet'],['contact','Contactpersonen'],['elearning','E-learning']];
 var MAANDEN=['januari','februari','maart','april','mei','juni','juli','augustus','september','oktober','november','december'];
 var LIJST=Array.isArray(window.AANBIEDERS)?window.AANBIEDERS:[];
 var app=document.getElementById('app');
-var staat={zoek:'',type:'',tab:'nieuws'};
+var RUBRIEKEN={bankgarantie:'Bankgaranties en bieden met zekerheid'};
+var AGENDASOORTEN={webinar:'Webinar',bijeenkomst:'Bijeenkomst','e-learning':'E-learning',beurs:'Beurs',overig:'Overig'};
+var staat={zoek:'',type:'',rubriek:'',alleenVolg:false,tab:'nieuws'};
 
 function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
 function okUrl(u){return typeof u==='string'&&/^https:\/\/[^\s"'<>]+$/i.test(u);}
@@ -195,11 +254,95 @@ function typeBadge(a){return '<span class="badge type">'+esc(TYPES[a.type]||'Aan
 function demoBadge(a){return a.demo?' <span class="badge demo">Voorbeeld, fictief</span>':'';}
 function nieuwsUrl(a,n){return BASIS+'#nieuws-'+a.id+'-'+n.id;}
 function zoek(id){for(var i=0;i<LIJST.length;i++)if(LIJST[i]&&LIJST[i].id===id)return LIJST[i];return null;}
+function rubrieken(a){return arr(a.rubrieken).filter(function(r){return RUBRIEKEN[r];});}
+function rubriekBadges(a){return rubrieken(a).map(function(r){return ' <span class="badge rubriek">'+esc(RUBRIEKEN[r])+'</span>';}).join('');}
+function p2(n){return (n<10?'0':'')+n;}
+function vandaag(){var d=new Date();return d.getFullYear()+'-'+p2(d.getMonth()+1)+'-'+p2(d.getDate());}
+
+/* ---------- Volgen: tokens "b.<aanbieder-id>" in de functionele cookie af_favorieten ----------
+ * Formaat (zie index.html): "1~<favorieten>~<volgen>~<vorig bezoek>~<laatst actief>~<eerste bezoek>".
+ * Gevolgde aanbieders staan als "b.<id>" tussen de favorieten (veld 2, gescheiden door "_").
+ * Deze pagina wijzigt alleen de eigen b-tokens en laat alle andere tokens en velden ongemoeid. */
+var FAV_COOKIE='af_favorieten',VOLG_MAX=60,FAV_MAX_BYTES=3500,B_TOKEN=/^b\.[a-z0-9-]{1,60}$/;
+function favPad(){return location.pathname.replace(/[^/]*$/,'')||'/';}
+function favVelden(){
+  var m=document.cookie.match(new RegExp('(?:^|; )'+FAV_COOKIE+'=([^;]*)')),w='';
+  try{w=m?decodeURIComponent(m[1]):'';}catch(e){w='';}
+  var d=w.split('~');if(d[0]!=='1')d=['1'];
+  while(d.length<6)d.push('');
+  return d;
+}
+function gevolgd(){var uit=[];favVelden()[1].split('_').forEach(function(t){if(B_TOKEN.test(t)&&uit.indexOf(t.slice(2))<0)uit.push(t.slice(2));});return uit;}
+function volgtAanbieder(id){return gevolgd().indexOf(id)>=0;}
+/* Geeft true/false (nieuwe stand) of null als bewaren niet lukt. */
+function zetVolgen(id,aan){
+  var d=favVelden(),tok='b.'+id;if(!B_TOKEN.test(tok))return null;
+  var lijst=d[1].split('_').filter(function(t){return t&&t!==tok;});
+  if(aan){if(lijst.filter(function(t){return B_TOKEN.test(t);}).length>=VOLG_MAX)return null;lijst.unshift(tok);}
+  d[1]=lijst.join('_');
+  var attr='; Path='+favPad()+'; SameSite=Lax'+(location.protocol==='https:'?'; Secure':'');
+  if(!d[1]&&!d[2]){document.cookie=FAV_COOKIE+'=; Max-Age=0'+attr;return aan?null:false;}
+  var w=encodeURIComponent(d.join('~'));
+  if((FAV_COOKIE+'='+w).length>FAV_MAX_BYTES)return null;
+  try{document.cookie=FAV_COOKIE+'='+w+'; Max-Age=31536000'+attr;}catch(e){return null;}
+  return document.cookie.indexOf(FAV_COOKIE+'='+w)>=0?aan:null;
+}
+function volgKnop(a){var aan=volgtAanbieder(a.id);return '<button type="button" class="volg-knop" data-volg="'+esc(a.id)+'" aria-pressed="'+aan+'" title="'+(aan?'Je volgt ':'Volg ')+esc(a.naam)+' (functionele cookie op dit apparaat)">'+(aan?'Volgend':'Volgen')+'</button>';}
+
+/* ---------- Agenda ---------- */
+var TIJD=/^([01]\d|2[0-3]):[0-5]\d$/;
+function agendaLijst(a){return arr(a.agenda).filter(function(x){return x&&/^[a-z0-9]{1,20}$/.test(x.id||'')&&/^\d{4}-\d{2}-\d{2}$/.test(x.datum||'')&&x.titel;});}
+function agendaSleutel(x){return x.datum+'T'+(TIJD.test(x.tijd||'')?x.tijd:'00:00');}
+function komend(x){return x.datum>=vandaag();}
+function tijdTekst(x){return TIJD.test(x.tijd||'')?x.tijd+(TIJD.test(x.eind||'')&&x.eind>x.tijd?'–'+x.eind:'')+' uur':'hele dag';}
+function agendaAnker(a,x){return 'agenda-'+a.id+'-'+x.id;}
+function alleKomendeAgenda(){
+  var uit=[];LIJST.forEach(function(a){if(!a||!a.id||(a.demo&&a.logo))return;agendaLijst(a).forEach(function(x){if(komend(x))uit.push({a:a,x:x});});});
+  return uit.sort(function(p,q){return agendaSleutel(p.x).localeCompare(agendaSleutel(q.x))||String(p.a.naam).localeCompare(String(q.a.naam),'nl');});
+}
+/* .ics (RFC 5545), lokaal opgebouwd als data-URL: niets wordt verstuurd. */
+function icsEsc(t){return String(t==null?'':t).replace(/\\/g,'\\\\').replace(/;/g,'\\;').replace(/,/g,'\\,').replace(/\r?\n/g,'\\n');}
+function icsVouw(regel){var uit=[],h='',n=0;Array.from(regel).forEach(function(ch){var b=unescape(encodeURIComponent(ch)).length;if(n+b>75){uit.push(h);h=' ';n=1;}h+=ch;n+=b;});uit.push(h);return uit.join('\r\n');}
+function icsDag(d){return d.replace(/-/g,'');}
+function icsVolgendeDag(d){var p=d.split('-'),x=new Date(Date.UTC(+p[0],+p[1]-1,+p[2]+1));return x.getUTCFullYear()+p2(x.getUTCMonth()+1)+p2(x.getUTCDate());}
+function icsTekst(a,x){
+  var nu=new Date(),stamp=nu.getUTCFullYear()+p2(nu.getUTCMonth()+1)+p2(nu.getUTCDate())+'T'+p2(nu.getUTCHours())+p2(nu.getUTCMinutes())+p2(nu.getUTCSeconds())+'Z';
+  var regels=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Adviesforum//Agenda van aanbieders//NL','CALSCALE:GREGORIAN','METHOD:PUBLISH'];
+  var metTijd=TIJD.test(x.tijd||'');
+  if(metTijd)regels=regels.concat(['BEGIN:VTIMEZONE','TZID:Europe/Amsterdam','BEGIN:DAYLIGHT','TZOFFSETFROM:+0100','TZOFFSETTO:+0200','TZNAME:CEST','DTSTART:19700329T020000','RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU','END:DAYLIGHT','BEGIN:STANDARD','TZOFFSETFROM:+0200','TZOFFSETTO:+0100','TZNAME:CET','DTSTART:19701025T030000','RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU','END:STANDARD','END:VTIMEZONE']);
+  var start,eind;
+  if(metTijd){
+    var eindTijd=TIJD.test(x.eind||'')&&x.eind>x.tijd?x.eind:p2(Math.min(23,+x.tijd.slice(0,2)+1))+(+x.tijd.slice(0,2)>=23?':59':x.tijd.slice(2));
+    start='DTSTART;TZID=Europe/Amsterdam:'+icsDag(x.datum)+'T'+x.tijd.replace(':','')+'00';
+    eind='DTEND;TZID=Europe/Amsterdam:'+icsDag(x.datum)+'T'+eindTijd.replace(':','')+'00';
+  }else{start='DTSTART;VALUE=DATE:'+icsDag(x.datum);eind='DTEND;VALUE=DATE:'+icsVolgendeDag(x.datum);}
+  var oms=[x.tekst||'',x.pe?'PE-punten volgens de aanbieder.':'',okUrl(x.url)?'Aanmelden of meer informatie: '+x.url:'',
+    (a.demo?'Fictief voorbeeld, geen echte activiteit. ':'')+'Aangeleverd door '+a.naam+'; het Adviesforum toetst de inhoud niet.','Op het Adviesforum: '+BASIS+'#'+agendaAnker(a,x)].filter(Boolean).join('\n');
+  regels=regels.concat(['BEGIN:VEVENT','UID:'+agendaAnker(a,x)+'@adviesforum','DTSTAMP:'+stamp,start,eind,
+    'SUMMARY:'+icsEsc((a.demo?'(Voorbeeld) ':'')+x.titel+' – '+a.naam),
+    'LOCATION:'+icsEsc(x.locatie||''),'DESCRIPTION:'+icsEsc(oms)].concat(okUrl(x.url)?['URL:'+x.url]:[]).concat(['CATEGORIES:'+icsEsc(AGENDASOORTEN[x.soort]||'Overig'),'END:VEVENT','END:VCALENDAR']));
+  return regels.map(icsVouw).join('\r\n')+'\r\n';
+}
+function icsHref(a,x){return 'data:text/calendar;charset=utf-8,'+encodeURIComponent(icsTekst(a,x));}
+function agendaItem(a,x,metAanbieder,metAnker){
+  var anker=agendaAnker(a,x),oud=!komend(x);
+  return '<li class="bericht agenda-item'+(oud?' verlopen':'')+'"'+(metAnker?' id="'+esc(anker)+'"':'')+'>'+
+    '<div class="regel1"><time class="wanneer" datetime="'+esc(x.datum+(TIJD.test(x.tijd||'')?'T'+x.tijd:''))+'">'+esc(datumNL(x.datum))+'</time><span>&middot;</span><span>'+esc(tijdTekst(x))+'</span>'+
+      ' <span class="badge type">'+esc(AGENDASOORTEN[x.soort]||'Overig')+'</span>'+(oud?' <span class="badge type">Verlopen</span>':'')+
+      (metAanbieder?'<span>&middot;</span><a href="#aanbieder-'+esc(a.id)+'">'+esc(a.naam)+'</a>'+demoBadge(a):'')+'</div>'+
+    '<h3>'+(metAanbieder?'<a href="#'+esc(anker)+'" style="color:inherit">'+esc(x.titel)+'</a>':esc(x.titel))+'</h3>'+
+    '<p class="info">'+esc(x.locatie||'Locatie volgt')+(x.pe?' &middot; <span class="pe">PE-punten volgens de aanbieder</span>':'')+'</p>'+
+    (metAanbieder?'':alineas(x.tekst))+
+    '<p class="bron">'+(a.demo?'Fictief voorbeeld':'Aangeleverd door '+esc(a.naam))+(okUrl(x.url)?' &middot; '+linkExt(x.url,'aanmelden of meer informatie bij de aanbieder'):'')+'</p>'+
+    '<div class="acties"><a class="knop licht" data-ics="'+esc(anker)+'" href="'+icsHref(a,x)+'" download="'+esc(anker)+'.ics">Zet in je agenda (.ics)</a>'+
+      (metAanbieder?'':'<button type="button" class="knop licht" data-kopieer="'+esc(BASIS+'#'+anker)+'">Kopieer link</button><span class="status" aria-live="polite"></span>')+'</div>'+
+  '</li>';
+}
 
 /* ---------- Nieuwsbericht (feed en detail) ---------- */
-function bericht(a,n,metAanbieder){
+function bericht(a,n,metAanbieder,zonderAnker){
   var anker='nieuws-'+a.id+'-'+n.id;
-  return '<li class="bericht" id="'+esc(anker)+'">'+
+  return '<li class="bericht"'+(zonderAnker?'':' id="'+esc(anker)+'"')+'>'+
     '<div class="regel1"><time datetime="'+esc(n.datum)+'">'+esc(datumNL(n.datum))+'</time>'+
       (metAanbieder?'<span>&middot;</span><a href="#aanbieder-'+esc(a.id)+'">'+esc(a.naam)+'</a>'+demoBadge(a):'')+'</div>'+
     '<h3>'+esc(n.titel)+'</h3>'+alineas(n.tekst)+
@@ -217,33 +360,54 @@ function nieuwsSorteer(lijst){return arr(lijst).slice().sort(function(x,y){retur
 /* ---------- Overzicht ---------- */
 function overzicht(){
   var opties='<option value="">Alle types</option>'+Object.keys(TYPES).map(function(k){return '<option value="'+k+'"'+(staat.type===k?' selected':'')+'>'+TYPES[k]+'</option>';}).join('');
-  var feed=alleNieuws();
+  var feed=alleNieuws(),agenda=alleKomendeAgenda().slice(0,8);
   app.innerHTML=
     '<h2 class="sectie" id="aanbieders-kop">Aanbieders</h2>'+
     '<p class="sub">Kies een aanbieder voor nieuws, documenten, richtlijnen, extranet, contactpersonen en e-learning.</p>'+
     (LIJST.some(function(a){return a&&a.demo&&a.logo;})?'<p class="demo-band"><strong>Voorbeeldweergave.</strong> Profielen met het label &ldquo;Voorbeeld, fictief&rdquo; zijn niet door de partij aangeleverd: tekst en links zijn verzonnen om de opzet te tonen. Vermelding betekent geen samenwerking of deelname.</p>':'')+
     '<div class="filters"><div><label for="zoek">Zoek op naam of onderwerp</label><input type="search" id="zoek" value="'+esc(staat.zoek)+'" placeholder="Bijvoorbeeld acceptatiegids"></div>'+
     '<div><label for="type">Type aanbieder</label><select id="type">'+opties+'</select></div></div>'+
-    '<p class="telling" id="telling"></p><div class="tegels" id="tegels"></div>'+
+    '<div class="filterrij">'+Object.keys(RUBRIEKEN).map(function(k){return '<label><input type="checkbox" data-rubriekfilter="'+k+'"'+(staat.rubriek===k?' checked':'')+'> <span>Alleen rubriek: '+esc(RUBRIEKEN[k])+'</span></label>';}).join('')+
+      '<label><input type="checkbox" id="alleen-volg"'+(staat.alleenVolg?' checked':'')+'> <span>Alleen aanbieders die ik volg (<span id="n-volg">'+gevolgd().length+'</span>)</span></label></div>'+
+    '<p class="telling" id="telling"></p><p class="status" id="volg-status" role="status" aria-live="polite"></p><div class="tegels" id="tegels"></div>'+
+    '<h2 class="sectie" id="agenda">Komende activiteiten van aanbieders</h2>'+
+    '<p class="sub">Webinars, bijeenkomsten en andere activiteiten die aanbieders zelf aanleveren. De eerstvolgende '+(agenda.length||'')+'; per aanbieder staat de volledige agenda onder het tabblad Agenda. Ook te zien in de <a href="kalender.html">adviseurskalender</a>.</p>'+
+    (agenda.length?'<ol class="feed">'+agenda.map(function(x){return agendaItem(x.a,x.x,true,false);}).join('')+'</ol>':'<p class="leeg">Er staan geen komende activiteiten in de agenda.</p>')+
+    '<div id="gevolgd-nieuws"></div>'+
     '<h2 class="sectie" id="nieuws">Nieuws van aanbieders</h2>'+
     '<p class="sub">Alle berichten, nieuwste eerst. Elk bericht heeft een eigen link om te delen met collega\'s.</p>'+
     (feed.length?'<ol class="feed">'+feed.map(function(x){return bericht(x.a,x.n,true);}).join('')+'</ol>':'<p class="leeg">Nog geen nieuws.</p>')+
     aanvraagBlok();
   document.getElementById('zoek').addEventListener('input',function(e){staat.zoek=e.target.value;tegels();});
   document.getElementById('type').addEventListener('change',function(e){staat.type=e.target.value;tegels();});
-  tegels();
+  document.getElementById('alleen-volg').addEventListener('change',function(e){staat.alleenVolg=e.target.checked;tegels();});
+  [].forEach.call(app.querySelectorAll('[data-rubriekfilter]'),function(c){c.addEventListener('change',function(){staat.rubriek=c.checked?c.getAttribute('data-rubriekfilter'):'';tegels();});});
+  tegels();gevolgdNieuws();
 }
-function zoektekst(a){return [a.naam,a.omschrijving,TYPES[a.type],a.extranet&&a.extranet.naam].concat(arr(a.nieuws).map(function(n){return n.titel;}),arr(a.documenten).map(function(d){return d.titel;}),arr(a.richtlijnen).map(function(r){return r.titel;})).join(' ').toLowerCase();}
+/* Blok "Nieuws van aanbieders die je volgt", alleen als je iemand volgt. Zonder ankers (die staan in de algemene feed). */
+function gevolgdNieuws(){
+  var doel=document.getElementById('gevolgd-nieuws');if(!doel)return;
+  var ids=gevolgd(),uit=[];
+  ids.forEach(function(id){var a=zoek(id);if(a)arr(a.nieuws).forEach(function(n){uit.push({a:a,n:n});});});
+  uit.sort(function(x,y){return String(y.n.datum).localeCompare(String(x.n.datum))||String(x.a.naam).localeCompare(String(y.a.naam),'nl');});
+  if(!ids.length){doel.innerHTML='';return;}
+  doel.innerHTML='<section class="gevolgd-blok" aria-labelledby="gevolgd-kop"><h2 class="sectie" id="gevolgd-kop">Nieuws van aanbieders die je volgt</h2>'+
+    '<p class="sub">Je volgt '+ids.map(function(id){var a=zoek(id);return a?esc(a.naam):'';}).filter(Boolean).join(', ')+'. Volgen bewaar je in de functionele cookie af_favorieten op dit apparaat (zie <a href="privacy.html">privacy</a>); je gevolgde aanbieders staan ook onder <a href="index.html#favorieten">Mijn favorieten</a>.</p>'+
+    (uit.length?'<ol class="feed">'+uit.slice(0,10).map(function(x){return bericht(x.a,x.n,true,true);}).join('')+'</ol>':'<p class="leeg">De aanbieders die je volgt, hebben nog geen nieuws geplaatst.</p>')+'</section>';
+}
+function zoektekst(a){return [a.naam,a.omschrijving,TYPES[a.type],a.extranet&&a.extranet.naam].concat(rubrieken(a).map(function(r){return RUBRIEKEN[r];}),agendaLijst(a).map(function(x){return x.titel;})).concat(arr(a.nieuws).map(function(n){return n.titel;}),arr(a.documenten).map(function(d){return d.titel;}),arr(a.richtlijnen).map(function(r){return r.titel;})).join(' ').toLowerCase();}
 function tegels(){
-  var q=staat.zoek.trim().toLowerCase();
-  var res=LIJST.filter(function(a){return a&&a.id&&(!staat.type||a.type===staat.type)&&(!q||q.split(/\s+/).every(function(w){return zoektekst(a).indexOf(w)>=0;}));})
-    .sort(function(x,y){return (x.demo?1:0)-(y.demo?1:0)||String(x.naam).localeCompare(String(y.naam),'nl');});
-  document.getElementById('telling').textContent=res.length===1?'1 aanbieder':res.length+' aanbieders';
+  var q=staat.zoek.trim().toLowerCase(),volg=gevolgd();
+  var res=LIJST.filter(function(a){return a&&a.id&&(!staat.type||a.type===staat.type)&&(!staat.rubriek||rubrieken(a).indexOf(staat.rubriek)>=0)&&(!staat.alleenVolg||volg.indexOf(a.id)>=0)&&(!q||q.split(/\s+/).every(function(w){return zoektekst(a).indexOf(w)>=0;}));})
+    .sort(function(x,y){return (volg.indexOf(x.id)<0?1:0)-(volg.indexOf(y.id)<0?1:0)||(x.demo?1:0)-(y.demo?1:0)||String(x.naam).localeCompare(String(y.naam),'nl');});
+  document.getElementById('telling').textContent=(res.length===1?'1 aanbieder':res.length+' aanbieders')+(volg.length?' · je volgt er '+volg.length+' (bovenaan)':'');
+  var nv=document.getElementById('n-volg');if(nv)nv.textContent=volg.length;
   document.getElementById('tegels').innerHTML=res.length?res.map(function(a){
-    return '<a class="tegel" href="#aanbieder-'+esc(a.id)+'">'+logo(a)+'<span style="min-width:0"><b>'+esc(a.naam)+'</b>'+typeBadge(a)+demoBadge(a)+
+    var n=agendaLijst(a).filter(komend).length;
+    return '<div class="tegelvak"><a class="tegel" href="#aanbieder-'+esc(a.id)+'">'+logo(a)+'<span style="min-width:0"><b>'+esc(a.naam)+'</b>'+typeBadge(a)+demoBadge(a)+rubriekBadges(a)+
       '<span class="omschr">'+esc(String(a.omschrijving||'').slice(0,160))+(String(a.omschrijving||'').length>160?'…':'')+'</span>'+
-      '<span class="meta">'+arr(a.nieuws).length+' nieuws &middot; '+arr(a.documenten).length+' documenten'+(a.bijgewerkt?' &middot; bijgewerkt '+esc(datumNL(a.bijgewerkt)):'')+'</span></span></a>';
-  }).join(''):'<p class="leeg">Geen aanbieders gevonden. Probeer een ander woord of type.</p>';
+      '<span class="meta">'+arr(a.nieuws).length+' nieuws &middot; '+arr(a.documenten).length+' documenten'+(n?' &middot; '+n+(n===1?' activiteit':' activiteiten'):'')+(a.bijgewerkt?' &middot; bijgewerkt '+esc(datumNL(a.bijgewerkt)):'')+'</span></span></a>'+volgKnop(a)+'</div>';
+  }).join(''):'<p class="leeg">'+(staat.alleenVolg&&!volg.length?'Je volgt nog geen aanbieders. Klik bij een aanbieder op Volgen.':'Geen aanbieders gevonden. Probeer een ander woord, type of filter.')+'</p>';
 }
 function aanvraagBlok(){
   var body='Graag vraag ik een account aan om onze informatie op het Adviesforum bij te houden.\n\n'+
@@ -262,18 +426,26 @@ function aanvraagBlok(){
 
 /* ---------- Detail ---------- */
 function detail(a,voorbeeld){
-  var tellers={nieuws:arr(a.nieuws).length,documenten:arr(a.documenten).length,richtlijnen:arr(a.richtlijnen).length,extranet:a.extranet&&okUrl(a.extranet.url)?1:0,contact:arr(a.contact).length,elearning:arr(a.elearning).length};
+  var tellers={agenda:agendaLijst(a).filter(komend).length,nieuws:arr(a.nieuws).length,documenten:arr(a.documenten).length,richtlijnen:arr(a.richtlijnen).length,extranet:a.extranet&&okUrl(a.extranet.url)?1:0,contact:arr(a.contact).length,elearning:arr(a.elearning).length};
   if(!TABS.some(function(t){return t[0]===staat.tab;}))staat.tab='nieuws';
   app.innerHTML=(voorbeeld?'<div class="demo-band"><strong>Voorbeeldweergave.</strong> Zo komt je profiel op aanbieders.html te staan na publicatie door de beheerder. Nog niet gepubliceerd.</div>':'<a class="naar-overzicht" href="#overzicht">&larr; Alle aanbieders</a>')+
     (a.demo?'<div class="demo-band"><strong>Voorbeeldprofiel:</strong> '+(a.logo?esc(a.naam)+' heeft deze pagina niet aangeleverd en werkt niet mee aan het Adviesforum. Tekst, berichten en links zijn fictief.':'dit is een fictieve aanbieder om de opzet te tonen. De gegevens en links bestaan niet.')+'</div>':'')+
-    '<div class="detailkop">'+logo(a,true)+'<div class="tekst"><h2 id="detail-titel">'+esc(a.naam||'Naam aanbieder')+'</h2>'+typeBadge(a)+demoBadge(a)+
+    '<div class="detailkop">'+logo(a,true)+'<div class="tekst"><h2 id="detail-titel">'+esc(a.naam||'Naam aanbieder')+'</h2>'+typeBadge(a)+demoBadge(a)+rubriekBadges(a)+
       (a.omschrijving?'<p>'+esc(a.omschrijving)+'</p>':'')+
-      '<p class="meta">'+(okUrl(a.website)?linkExt(a.website,'Website van de aanbieder')+' &middot; ':'')+(a.demo?'Fictieve voorbeeldinhoud, niet van de aanbieder':'Aangeleverd door de aanbieder')+(a.bijgewerkt?', bijgewerkt '+esc(datumNL(a.bijgewerkt)):'')+'</p></div></div>'+
+      '<p class="meta">'+(okUrl(a.website)?linkExt(a.website,'Website van de aanbieder')+' &middot; ':'')+(a.demo?'Fictieve voorbeeldinhoud, niet van de aanbieder':'Aangeleverd door de aanbieder')+(a.bijgewerkt?', bijgewerkt '+esc(datumNL(a.bijgewerkt)):'')+'</p>'+
+      (voorbeeld?'':'<div class="volg-rij">'+volgKnop(a)+'<span class="status" id="volg-status" role="status" aria-live="polite"></span></div>')+'</div></div>'+
     '<div class="tabs" role="tablist" aria-label="Onderdelen">'+TABS.map(function(t){return '<button type="button" role="tab" id="tab-'+t[0]+'" aria-controls="paneel" data-tab="'+t[0]+'" aria-selected="'+(staat.tab===t[0])+'">'+esc(t[1])+'<span class="n">'+tellers[t[0]]+'</span></button>';}).join('')+'</div>'+
     '<section class="paneel" id="paneel" role="tabpanel" aria-labelledby="tab-'+staat.tab+'">'+paneel(a,staat.tab)+'</section>';
 }
 function paneel(a,tab){
   var leeg='<p class="leeg">De aanbieder heeft hier nog niets aangeleverd.</p>';
+  if(tab==='agenda'){
+    var ag=agendaLijst(a);if(!ag.length)return leeg;
+    var kom=ag.filter(komend).sort(function(x,y){return agendaSleutel(x).localeCompare(agendaSleutel(y));}),oud=ag.filter(function(x){return !komend(x);}).sort(function(x,y){return agendaSleutel(y).localeCompare(agendaSleutel(x));});
+    return (kom.length?'<ol class="feed">'+kom.map(function(x){return agendaItem(a,x,false,true);}).join('')+'</ol>':'<p class="leeg">Geen komende activiteiten.</p>')+
+      (oud.length?'<details class="verlopen-blok" id="verlopen"><summary>Verlopen activiteiten ('+oud.length+')</summary><ol class="feed">'+oud.map(function(x){return agendaItem(a,x,false,true);}).join('')+'</ol></details>':'')+
+      '<p class="notitie">Aangeleverd door de aanbieder. PE-punten staan vermeld zoals de aanbieder ze opgeeft; controleer de erkenning bij de aanbieder of het PE-register. Met &ldquo;Zet in je agenda&rdquo; download je een .ics-bestand; er wordt niets verstuurd.</p>';
+  }
   if(tab==='nieuws'){var n=nieuwsSorteer(a.nieuws);return n.length?'<ol class="feed">'+n.map(function(x){return bericht(a,x,false);}).join('')+'</ol>':leeg;}
   if(tab==='documenten'){
     var docs=arr(a.documenten);if(!docs.length)return leeg;
@@ -294,10 +466,18 @@ function route(){
   var h=decodeURIComponent(location.hash.replace(/^#/,''));
   var m=/^aanbieder-([a-z0-9-]+)$/.exec(h);
   if(m){var a=zoek(m[1]);if(a){staat.tab='nieuws';detail(a);document.title=a.naam+' – Aanbieders – Adviesforum';window.scrollTo(0,0);return;}}
+  var ag=/^agenda-([a-z0-9-]+)-([a-z0-9]+)$/.exec(h);
+  if(ag&&zoek(ag[1])){
+    var aa=zoek(ag[1]);staat.tab='agenda';detail(aa);document.title=aa.naam+' – Agenda – Aanbieders – Adviesforum';
+    var el=document.getElementById(h);
+    if(el){var d=el.closest('details');if(d)d.open=true;el.classList.add('uitgelicht');el.scrollIntoView();}
+    else{document.getElementById('paneel').insertAdjacentHTML('afterbegin','<p class="demo-band">Deze activiteit bestaat niet (meer).</p>');window.scrollTo(0,0);}
+    return;
+  }
   document.title='Aanbieders voor adviseurs – Adviesforum';
   overzicht();
   var n=/^nieuws-([a-z0-9-]+)-([a-z0-9]+)$/.exec(h);
-  var doel=n?document.getElementById(h):(h==='nieuws'?document.getElementById('nieuws'):null);
+  var doel=n?document.getElementById(h):(h==='nieuws'||h==='agenda'?document.getElementById(h):null);
   if(m&&!zoek(m[1]))app.insertAdjacentHTML('afterbegin','<p class="demo-band">Deze aanbieder staat (nog) niet in het overzicht.</p>');
   if(n&&!doel)app.insertAdjacentHTML('afterbegin','<p class="demo-band">Dit nieuwsbericht bestaat niet (meer).</p>');
   if(doel){if(n)doel.classList.add('uitgelicht');doel.scrollIntoView();}
@@ -306,6 +486,18 @@ function route(){
 
 /* ---------- Kopiëren en tabs ---------- */
 app.addEventListener('click',function(e){
+  var v=e.target.closest('[data-volg]');
+  if(v){
+    var id=v.getAttribute('data-volg'),a=zoek(id),aan=zetVolgen(id,v.getAttribute('aria-pressed')!=='true');
+    var st=document.getElementById('volg-status');
+    if(aan===null){if(st)st.textContent='Bewaren lukt niet: je browser blokkeert cookies of je volgt al '+VOLG_MAX+' aanbieders.';return;}
+    if(document.getElementById('tegels')){tegels();gevolgdNieuws();var nieuw=document.querySelector('#tegels [data-volg="'+id+'"]');if(nieuw)nieuw.focus();}
+    else [].forEach.call(document.querySelectorAll('[data-volg="'+id+'"]'),function(b){b.outerHTML=volgKnop(a);});
+    if(!document.getElementById('tegels')){var nb=document.querySelector('[data-volg="'+id+'"]');if(nb)nb.focus();}
+    st=document.getElementById('volg-status');
+    if(st)st.textContent=aan?'Je volgt nu '+(a?a.naam:id)+'. Dit staat in een functionele cookie op dit apparaat.':'Je volgt '+(a?a.naam:id)+' niet meer.';
+    return;
+  }
   var k=e.target.closest('[data-kopieer]');
   if(k){var url=k.getAttribute('data-kopieer'),st=k.parentNode.querySelector('.status');
     var klaar=function(){st.textContent='Link gekopieerd';};

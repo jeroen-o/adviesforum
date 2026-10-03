@@ -181,6 +181,7 @@ h2.sectie{font-size:22px;font-weight:800;margin:34px 0 10px;padding-bottom:8px;b
         <li>Richtlijnen voor adviseurs: titel en korte tekst</li>
         <li>Eerste nieuwsberichten: datum, titel, tekst en eventueel een link naar de bron</li>
         <li>E-learning: titel, link, duur en of de module PE-punten oplevert, met de instantie die de punten erkent</li>
+        <li>Agenda: webinars, PE-bijeenkomsten en beurzen met datum, eventueel tijd, soort, locatie (of Online), link naar de aanmelding en of je er PE-punten voor opgeeft</li>
       </ul>
     </section>
     <section class="lijst nee" aria-labelledby="kop-niet">
@@ -328,8 +329,15 @@ h2.sectie{font-size:22px;font-weight:800;margin:34px 0 10px;padding-bottom:8px;b
       <button type="button" class="knop licht klein toevoegen">+ toevoegen</button>
     </fieldset>
 
+    <fieldset class="groep" data-lijst="agenda">
+      <legend>10. Agenda <span class="label o">Optioneel</span></legend>
+      <p class="uitleg-kort">Webinars, PE-bijeenkomsten, e-learnings met een vaste datum en beurzen voor adviseurs. Vink PE alleen aan als je er PE-punten voor opgeeft. Geen rentes of acties.</p>
+      <div class="rijen"></div>
+      <button type="button" class="knop licht klein toevoegen">+ toevoegen</button>
+    </fieldset>
+
     <fieldset class="groep">
-      <legend>10. Akkoord <span class="label v">Verplicht</span></legend>
+      <legend>11. Akkoord <span class="label v">Verplicht</span></legend>
       <div class="veld vink"><label><input type="checkbox" id="f-akkoord" required> <span>Ik heb de <a href="aanbieders-voorwaarden.html" target="_blank" rel="noopener">deelnamevoorwaarden</a> gelezen en ga ermee akkoord, namens de organisatie hierboven. Wij plaatsen geen rentes, tarieven, premies, acties of wervende claims. <span class="req" aria-hidden="true">*</span></span></label></div>
       <div class="veld vink"><label><input type="checkbox" id="f-avg" required> <span>Alle contactpersonen die ik opgeef, hebben toestemming gegeven voor het delen en (waar van toepassing) publiceren van hun zakelijke contactgegevens. Zie de <a href="privacy.html" target="_blank" rel="noopener">privacyverklaring</a>. <span class="req" aria-hidden="true">*</span></span></label></div>
     </fieldset>
@@ -359,6 +367,8 @@ var MAIL='forumadvies@gmail.com',MAX_MAILTO=1900;
 /* KOPIE-VALIDATIE: letterlijke kopie van het VALIDATIE-blok uit aanbieder-beheer.html (zelfde regels als tools/aanbieder-import.js). Bij wijziging daar ook hier bijwerken. */
 var TYPES={geldverstrekker:'Geldverstrekker',verzekeraar:'Verzekeraar',pensioenuitvoerder:'Pensioenuitvoerder',kredietverstrekker:'Kredietverstrekker',serviceprovider:'Serviceprovider'};
 var SOORTEN={voorwaarden:'Voorwaarden',acceptatiegids:'Acceptatiegids',productblad:'Productblad',formulier:'Formulier'};
+var RUBRIEKEN={bankgarantie:'Bankgaranties en bieden met zekerheid'};
+var AGENDASOORTEN={webinar:'Webinar',bijeenkomst:'Bijeenkomst','e-learning':'E-learning',beurs:'Beurs',overig:'Overig'};
 /* Lijsten: velden, maximale lengtes en aantallen. */
 var LIJSTEN={
   nieuws:{titel:'Nieuws',enkel:'Nieuwsbericht',max:50,uitleg:'Zakelijk nieuws voor adviseurs: wijzigingen in beleid, voorwaarden, processen of bereikbaarheid. Altijd met datum. Geen rentes of acties.',velden:[
@@ -370,9 +380,14 @@ var LIJSTEN={
   contact:{titel:'Contactpersonen',enkel:'Contactpersoon',max:20,uitleg:'Alleen zakelijke gegevens, en alleen met toestemming van de persoon zelf. Een algemeen teamadres mag ook.',velden:[
     {k:'naam',l:'Naam (of teamnaam)',max:80,req:1},{k:'functie',l:'Functie of regio',max:100},{k:'email',l:'Zakelijk e-mailadres',t:'email',max:120,req:1},{k:'telefoon',l:'Zakelijk telefoonnummer (optioneel)',t:'tel',max:20}]},
   elearning:{titel:'E-learning',enkel:'Module',max:30,uitleg:'Modules of webinars voor adviseurs. Vink PE alleen aan als de module PE-punten oplevert.',velden:[
-    {k:'titel',l:'Titel',max:120,req:1},{k:'url',l:'Link (https)',t:'url',max:300,req:1},{k:'duur',l:'Duur (bijv. 30 minuten)',max:40},{k:'pe',l:'Levert PE-punten op',t:'check'}]}
+    {k:'titel',l:'Titel',max:120,req:1},{k:'url',l:'Link (https)',t:'url',max:300,req:1},{k:'duur',l:'Duur (bijv. 30 minuten)',max:40},{k:'pe',l:'Levert PE-punten op',t:'check'}]},
+  agenda:{titel:'Agenda',enkel:'Agenda-item',max:30,uitleg:'Webinars, PE-bijeenkomsten, e-learnings met een vaste datum en beurzen voor adviseurs. Vink PE alleen aan als je PE-punten opgeeft. Geen rentes of acties.',velden:[
+    {k:'datum',l:'Datum',t:'date',req:1},{k:'tijd',l:'Begintijd (optioneel, uu:mm)',t:'time'},{k:'eind',l:'Eindtijd (optioneel, uu:mm)',t:'time'},{k:'titel',l:'Titel',max:120,req:1},
+    {k:'soort',l:'Soort',t:'select',opties:AGENDASOORTEN,req:1},{k:'locatie',l:'Locatie (plaats of Online)',max:100,req:1},{k:'url',l:'Link naar aanmelding of informatie (https)',t:'url',max:300,req:1},
+    {k:'tekst',l:'Korte omschrijving (optioneel)',t:'textarea',max:1000},{k:'pe',l:'Levert PE-punten op (volgens jullie opgave)',t:'check'}]}
 };
-var VOLGORDE=['nieuws','documenten','richtlijnen','contact','elearning'];
+var VOLGORDE=['nieuws','documenten','richtlijnen','contact','elearning','agenda'];
+var MET_ID={nieuws:1,agenda:1};
 var AFM_RE=/\d\s?%|\brente(?:s|tarie[fv]en|korting)?\b|\bactie(?:s)?\b|\bkorting|\bcashback|\bgratis\b|\bpremies?\b|\btarie[fv]en\b/i;
 function vandaag(){var d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
 /* ---------- Normaliseren en valideren ---------- */
@@ -380,8 +395,8 @@ function str(v){return typeof v==='string'?v.trim():(v==null?'':String(v).trim()
 function normaliseer(a){
   a=a||{};var ex=a.extranet||{};
   var o={id:str(a.id),naam:str(a.naam),type:str(a.type),initialen:str(a.initialen),kleur:str(a.kleur),omschrijving:str(a.omschrijving),website:str(a.website),
-    extranet:{url:str(ex.url),naam:str(ex.naam)}};
-  VOLGORDE.forEach(function(k){o[k]=(Array.isArray(a[k])?a[k]:[]).map(function(it){var r={};if(k==='nieuws')r.id=str(it&&it.id);LIJSTEN[k].velden.forEach(function(v){r[v.k]=v.t==='check'?!!(it&&it[v.k]):str(it&&it[v.k]);});return r;});});
+    extranet:{url:str(ex.url),naam:str(ex.naam)},rubrieken:(Array.isArray(a.rubrieken)?a.rubrieken:[]).map(str)};
+  VOLGORDE.forEach(function(k){o[k]=(Array.isArray(a[k])?a[k]:[]).map(function(it){var r={};if(MET_ID[k])r.id=str(it&&it.id);LIJSTEN[k].velden.forEach(function(v){r[v.k]=v.t==='check'?!!(it&&it[v.k]):str(it&&it[v.k]);});return r;});});
   o.bijgewerkt=str(a.bijgewerkt);
   return o;
 }
@@ -402,12 +417,12 @@ function valideer(o){
   if(o.extranet.url&&(!okUrl(o.extranet.url)||o.extranet.url.length>300))fout('extranet.url','Extranetlink moet een https-link zijn.');
   if(o.extranet.naam&&!o.extranet.url)fout('extranet.url','Vul de link van het extranet in, of maak de naam leeg.');
   tekst('extranet.naam',o.extranet.naam,80,0,'Naam extranet');
-  var nieuwsIds={};
+  o.rubrieken.forEach(function(r,i){if(!Object.prototype.hasOwnProperty.call(RUBRIEKEN,r))fout('rubrieken','Onbekende rubriek: '+r+'.');else if(o.rubrieken.indexOf(r)<i)fout('rubrieken','Rubriek '+r+' staat er dubbel in.');});
   VOLGORDE.forEach(function(k){
-    var cfg=LIJSTEN[k];if(o[k].length>cfg.max)fout(k,cfg.titel+': maximaal '+cfg.max+' items.');
+    var cfg=LIJSTEN[k],ids={};if(o[k].length>cfg.max)fout(k,cfg.titel+': maximaal '+cfg.max+' items.');
     o[k].forEach(function(it,i){
       var p=k+'.'+i+'.',nr=cfg.enkel+' '+(i+1)+': ';
-      if(k==='nieuws'){if(!/^[a-z0-9]{1,20}$/.test(it.id))fout(p+'titel',nr+'technische id ontbreekt of is ongeldig.');else if(nieuwsIds[it.id])fout(p+'titel',nr+'id '+it.id+' komt dubbel voor.');nieuwsIds[it.id]=1;}
+      if(MET_ID[k]){if(!/^[a-z0-9]{1,20}$/.test(it.id))fout(p+'titel',nr+'technische id ontbreekt of is ongeldig.');else if(ids[it.id])fout(p+'titel',nr+'id '+it.id+' komt dubbel voor.');ids[it.id]=1;}
       cfg.velden.forEach(function(v){
         var val=it[v.k],pad=p+v.k;if(v.t==='check')return;
         if(v.req&&!val){fout(pad,nr+v.l.replace(/ \(.*\)$/,'')+' is verplicht.');return;}
@@ -417,10 +432,16 @@ function valideer(o){
         if(v.t==='email'&&!okMail(val))fout(pad,nr+'e-mailadres is ongeldig.');
         if(v.t==='tel'&&!/^[0-9+()\s-]{6,20}$/.test(val))fout(pad,nr+'telefoonnummer is ongeldig.');
         if(v.t==='date'&&!okDatum(val))fout(pad,nr+'datum is ongeldig (JJJJ-MM-DD).');
+        if(v.t==='time'&&!/^([01]\d|2[0-3]):[0-5]\d$/.test(val))fout(pad,nr+'tijd is ongeldig (uu:mm).');
         if(v.t==='select'&&!v.opties[val])fout(pad,nr+'kies een soort.');
         if((v.k==='titel'||v.k==='tekst')&&AFM_RE.test(val))w.push({pad:pad,msg:nr+'lijkt een rente, tarief, premie of actie te noemen. Die plaatsen we niet (AFM); de beheerder kan dit weigeren.'});
       });
       if(k==='nieuws'&&okDatum(it.datum)&&it.datum>vandaag())w.push({pad:p+'datum',msg:nr+'datum ligt in de toekomst.'});
+      if(k==='agenda'){
+        if(it.eind&&!it.tijd)fout(p+'tijd',nr+'vul ook de begintijd in, of maak de eindtijd leeg.');
+        else if(it.eind&&it.tijd&&it.eind<=it.tijd)fout(p+'eind',nr+'eindtijd moet na de begintijd liggen.');
+        if(okDatum(it.datum)&&it.datum<vandaag())w.push({pad:p+'datum',msg:nr+'datum ligt in het verleden; het item wordt als verlopen getoond.'});
+      }
     });
   });
   if(AFM_RE.test(o.omschrijving))w.push({pad:'omschrijving',msg:'Omschrijving lijkt een rente, tarief, premie of actie te noemen. Die plaatsen we niet (AFM).'});
@@ -441,7 +462,8 @@ var REP={
   documenten:{enkel:LIJSTEN.documenten.enkel,max:LIJSTEN.documenten.max,velden:LIJSTEN.documenten.velden},
   richtlijnen:{enkel:LIJSTEN.richtlijnen.enkel,max:LIJSTEN.richtlijnen.max,velden:LIJSTEN.richtlijnen.velden},
   nieuws:{enkel:LIJSTEN.nieuws.enkel,max:LIJSTEN.nieuws.max,velden:LIJSTEN.nieuws.velden},
-  elearning:{enkel:LIJSTEN.elearning.enkel,max:LIJSTEN.elearning.max,velden:LIJSTEN.elearning.velden.concat([{k:'instantie',l:'Erkennende instantie voor PE (bij PE verplicht)',max:100,extra:1}])}
+  elearning:{enkel:LIJSTEN.elearning.enkel,max:LIJSTEN.elearning.max,velden:LIJSTEN.elearning.velden.concat([{k:'instantie',l:'Erkennende instantie voor PE (bij PE verplicht)',max:100,extra:1}])},
+  agenda:{enkel:LIJSTEN.agenda.enkel,max:LIJSTEN.agenda.max,velden:LIJSTEN.agenda.velden}
 };
 var teller=0;
 function veldHtml(id,v){
@@ -450,7 +472,7 @@ function veldHtml(id,v){
   var lab='<label for="'+id+'">'+esc(v.l)+req+'</label>';
   if(v.t==='textarea')return '<div class="veld">'+lab+'<textarea id="'+id+'" data-k="'+v.k+'"'+ml+'></textarea>'+(v.tip?'<span class="tip">'+esc(v.tip)+'</span>':'')+'</div>';
   if(v.t==='select')return '<div class="veld">'+lab+'<select id="'+id+'" data-k="'+v.k+'"><option value="">Kies…</option>'+Object.keys(v.opties).map(function(o){return '<option value="'+o+'">'+esc(v.opties[o])+'</option>';}).join('')+'</select></div>';
-  var type=v.t==='url'?'url" inputmode="url" placeholder="https://':v.t==='email'?'email':v.t==='tel'?'tel':v.t==='date'?'date':'text';
+  var type=v.t==='url'?'url" inputmode="url" placeholder="https://':v.t==='email'?'email':v.t==='tel'?'tel':v.t==='date'?'date':v.t==='time'?'time':'text';
   return '<div class="veld"'+(v.extra?' data-extra="1"':'')+'>'+lab+'<input type="'+type+'" id="'+id+'" data-k="'+v.k+'"'+ml+'></div>';
 }
 function rijen(k){return [].slice.call(document.querySelectorAll('[data-lijst="'+k+'"] .rijkaart'));}
@@ -464,6 +486,7 @@ function voegToe(k,focus){
   else if(k==='am')h+='<div class="rij2">'+vs[0]+vs[1]+'</div><div class="rij2">'+vs[2]+vs[3]+'</div>';
   else if(k==='documenten')h+=vs[0]+'<div class="rij2">'+vs[1]+vs[2]+'</div>';
   else if(k==='elearning')h+=vs[0]+'<div class="rij2">'+vs[1]+vs[2]+'</div>'+vs[3]+vs[4];
+  else if(k==='agenda')h+=vs[3]+'<div class="rij2">'+vs[0]+vs[4]+'</div><div class="rij2">'+vs[1]+vs[2]+'</div><div class="rij2">'+vs[5]+vs[6]+'</div>'+vs[7]+vs[8];
   else h+=vs.join('');
   div.innerHTML=h;
   document.querySelector('[data-lijst="'+k+'"] .rijen').appendChild(div);
@@ -523,7 +546,9 @@ function verzamel(){
   var algIngevuld=!!(alg.naam||alg.email||alg.telefoon||alg.functie);
   if(algIngevuld){contact.push(alg);contactBron.push(null);}
   am.forEach(function(x){contact.push({naam:x.o.naam,functie:x.o.functie,email:x.o.email,telefoon:x.o.telefoon});contactBron.push(x.el);});
-  var lijsten={documenten:lijstData('documenten'),richtlijnen:lijstData('richtlijnen'),nieuws:lijstData('nieuws'),elearning:lijstData('elearning')};
+  var lijsten={documenten:lijstData('documenten'),richtlijnen:lijstData('richtlijnen'),nieuws:lijstData('nieuws'),elearning:lijstData('elearning'),agenda:lijstData('agenda')};
+  /* Agenda: op datum, ids a1..aN. */
+  lijsten.agenda.sort(function(a,b){return (a.o.datum+a.o.tijd)<(b.o.datum+b.o.tijd)?-1:(a.o.datum+a.o.tijd)>(b.o.datum+b.o.tijd)?1:0;});
   /* Nieuws: nieuwste eerst, ids n1..nN (oudste = n1). */
   lijsten.nieuws.sort(function(a,b){return a.o.datum<b.o.datum?1:a.o.datum>b.o.datum?-1:0;});
   var aanbieder={
@@ -535,6 +560,7 @@ function verzamel(){
     richtlijnen:lijsten.richtlijnen.map(function(x){return {titel:x.o.titel,tekst:x.o.tekst};}),
     nieuws:lijsten.nieuws.map(function(x,i,arr){return {id:'n'+(arr.length-i),datum:x.o.datum,titel:x.o.titel,tekst:x.o.tekst,url:x.o.url};}),
     elearning:lijsten.elearning.map(function(x){return {titel:x.o.titel,url:x.o.url,duur:x.o.duur,pe:!!x.o.pe};}),
+    agenda:lijsten.agenda.map(function(x,i){return {id:'a'+(i+1),datum:x.o.datum,tijd:x.o.tijd,eind:x.o.eind,titel:x.o.titel,soort:x.o.soort,locatie:x.o.locatie,pe:!!x.o.pe,url:x.o.url,tekst:x.o.tekst};}),
     bijgewerkt:vandaag()
   };
   var aanmelding={
@@ -543,7 +569,7 @@ function verzamel(){
     logo:$('f-logo').checked,akkoord:$('f-akkoord').checked,avg:$('f-avg').checked,
     pe:lijsten.elearning.filter(function(x){return x.o.pe;}).map(function(x){return {titel:x.o.titel,instantie:x.o.instantie};})
   };
-  return {a:aanbieder,m:aanmelding,bron:{contact:contactBron,documenten:lijsten.documenten,richtlijnen:lijsten.richtlijnen,nieuws:lijsten.nieuws,elearning:lijsten.elearning}};
+  return {a:aanbieder,m:aanmelding,bron:{contact:contactBron,documenten:lijsten.documenten,richtlijnen:lijsten.richtlijnen,nieuws:lijsten.nieuws,elearning:lijsten.elearning,agenda:lijsten.agenda}};
 }
 function exportObject(a){var o=normaliseer(a);var uit={id:o.id,demo:false};Object.keys(o).forEach(function(k){if(k!=='id')uit[k]=o[k];});return uit;}
 
@@ -628,7 +654,7 @@ function samenvatting(d){
     'Register DNB: '+(m.dnb||'niet ingevuld'),'Website: '+a.website,'Voorgestelde id: '+a.id,'',
     'Contactpersoon beheer (krijgt de inlogcode, niet publiceren):','  '+b.naam+', '+b.functie,'  '+b.email+', '+b.telefoon,'',
     'Logo: '+(m.logo?'als bijlage meegestuurd':'geen'),
-    'Onderdelen: extranet '+(a.extranet.url?'ja':'nee')+', contactpersonen '+a.contact.length+', documenten '+a.documenten.length+', richtlijnen '+a.richtlijnen.length+', nieuws '+a.nieuws.length+', e-learning '+a.elearning.length];
+    'Onderdelen: extranet '+(a.extranet.url?'ja':'nee')+', contactpersonen '+a.contact.length+', documenten '+a.documenten.length+', richtlijnen '+a.richtlijnen.length+', nieuws '+a.nieuws.length+', e-learning '+a.elearning.length+', agenda '+a.agenda.length];
   if(m.pe.length)r.push('PE-erkenning: '+m.pe.map(function(x){return x.titel+' ('+x.instantie+')';}).join('; '));
   r.push('','Akkoord deelnamevoorwaarden: ja','Toestemming contactpersonen (AVG): ja');
   return r.join('\n');
@@ -697,7 +723,8 @@ function printHtml(d,leegForm){
   h+=lijst('8. Eerste nieuwsberichten',a.nieuws.map(function(x){return {datum:nlDatum(x.datum),titel:x.titel,tekst:x.tekst,url:x.url};}),[['datum','Datum'],['titel','Titel'],['tekst','Tekst'],['url','Link naar de bron']],2);
   var el=L?[]:d.bron.elearning.map(function(x){return {titel:x.o.titel,url:x.o.url,duur:x.o.duur,pe:!!x.o.pe,instantie:x.o.pe?x.o.instantie:''};});
   h+=lijst('9. E-learning',el,[['titel','Titel'],['url','Link (https)'],['duur','Duur'],['pe','Levert PE-punten op','&#9744; ja &nbsp; &#9744; nee'],['instantie','Erkennende instantie (bij PE)']],2);
-  h+=sec('10. Akkoord',1)+'<table><tr><th>Deelnamevoorwaarden gelezen en akkoord (geen rentes, tarieven, premies, acties of wervende claims)</th><td>'+vink(m.akkoord,L)+'</td></tr><tr><th>Contactpersonen hebben toestemming gegeven voor vermelding van hun zakelijke gegevens (AVG)</th><td>'+vink(m.avg,L)+'</td></tr>'+
+  h+=lijst('10. Agenda',a.agenda.map(function(x){return {datum:nlDatum(x.datum),tijd:x.tijd?x.tijd+(x.eind?' – '+x.eind:''):'',titel:x.titel,soort:AGENDASOORTEN[x.soort]||x.soort,locatie:x.locatie,url:x.url,pe:x.pe};}),[['datum','Datum'],['tijd','Tijd'],['titel','Titel'],['soort','Soort','webinar / bijeenkomst / e-learning / beurs / overig (omcirkel)'],['locatie','Locatie of Online'],['url','Link naar aanmelding (https)'],['pe','PE-punten volgens de aanbieder','&#9744; ja &nbsp; &#9744; nee']],2);
+  h+=sec('11. Akkoord',1)+'<table><tr><th>Deelnamevoorwaarden gelezen en akkoord (geen rentes, tarieven, premies, acties of wervende claims)</th><td>'+vink(m.akkoord,L)+'</td></tr><tr><th>Contactpersonen hebben toestemming gegeven voor vermelding van hun zakelijke gegevens (AVG)</th><td>'+vink(m.avg,L)+'</td></tr>'+
     (L?rij('Naam en handtekening','',true):'')+'</table>';
   h+='<p class="sub" style="margin-top:18px">Deelnamevoorwaarden: https://jeroen-o.github.io/adviesforum/aanbieders-voorwaarden.html &middot; Privacyverklaring: https://jeroen-o.github.io/adviesforum/privacy.html</p>';
   return h+'</body></html>';

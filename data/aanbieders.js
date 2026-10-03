@@ -9,6 +9,8 @@
  *   naam, type    type: geldverstrekker | verzekeraar | pensioenuitvoerder | kredietverstrekker | serviceprovider
  *   logo          optioneel: img/logos/<id>.png, getoond in plaats van het initialen-blokje
  *   initialen     1-3 tekens voor het logo-blokje; kleur: #RRGGBB
+ *   rubrieken     optioneel: lijst met rubrieksleutels op het Adviesforum, bijv. ['bankgarantie']
+ *                 bekende sleutels: bankgarantie = "Bankgaranties en bieden met zekerheid" (badge en filter op aanbieders.html)
  *   omschrijving  korte zakelijke omschrijving (max. 400 tekens); website: https-url
  *   extranet      {url, naam}  portal of aanvraagomgeving voor adviseurs
  *   contact       [{naam, functie, email, telefoon}]  alleen ZAKELIJKE gegevens, met toestemming van de persoon (AVG)
@@ -16,6 +18,14 @@
  *   richtlijnen   [{titel, tekst}]
  *   nieuws        [{id, datum (JJJJ-MM-DD), titel, tekst, url}]  id: kleine letters/cijfers, uniek binnen de aanbieder
  *   elearning     [{titel, url, duur, pe}]  pe: true alleen als de aanbieder PE-punten opgeeft
+ *   agenda        [{id, datum, tijd, eind, titel, soort, locatie, pe, url, tekst}]  webinars, PE-bijeenkomsten en events:
+ *                   id      kleine letters/cijfers, uniek binnen de aanbieder (bijv. 'a1'); anker: aanbieders.html#agenda-<aanbieder>-<id>
+ *                   datum   JJJJ-MM-DD; tijd en eind optioneel 'uu:mm' (eind na tijd); zonder tijd = hele dag
+ *                   soort   webinar | bijeenkomst | e-learning | beurs | overig
+ *                   locatie plaats/adres, of 'Online'
+ *                   pe      true alleen als de aanbieder PE-punten opgeeft (getoond als "PE-punten volgens de aanbieder")
+ *                   url     https-link naar aanmelding of informatie bij de aanbieder; tekst: korte omschrijving (optioneel)
+ *                 Verlopen items blijven staan (ingeklapt op de detailpagina). Agenda van demo-aanbieders komt niet in feeds.
  *   bijgewerkt    JJJJ-MM-DD
  *   codeHash      optioneel: SHA-256 van de persoonlijke inlogcode (maak met beheer-code.html, keuze "Aanbieder")
  *   demo          true = fictief voorbeeld. Verwijder de voorbeelden zodra er echte aanbieders zijn.
@@ -118,7 +128,45 @@ window.AANBIEDERS=[
         "pe": false
       }
     ],
-    "bijgewerkt": "2026-10-01"
+    "bijgewerkt": "2026-10-01",
+    "agenda": [
+      {
+        "id": "a1",
+        "datum": "2026-10-20",
+        "tijd": "10:00",
+        "eind": "11:00",
+        "titel": "Webinar: werken met het vernieuwde adviseursportaal (voorbeeld)",
+        "soort": "webinar",
+        "locatie": "Online",
+        "pe": false,
+        "url": "https://example.org/agenda/webinar-portaal",
+        "tekst": "In een uur laten we zien hoe je een aanvraag indient, documenten uploadt en de status van een dossier volgt in het vernieuwde portaal. Er is ruimte voor vragen."
+      },
+      {
+        "id": "a2",
+        "datum": "2026-11-12",
+        "tijd": "13:30",
+        "eind": "17:00",
+        "titel": "Regiobijeenkomst Zuid: acceptatie bij ondernemers (voorbeeld)",
+        "soort": "bijeenkomst",
+        "locatie": "Voorbeeldlocatie, Eindhoven",
+        "pe": true,
+        "url": "https://example.org/agenda/regiobijeenkomst-zuid",
+        "tekst": "Middagprogramma voor adviseurs over de beoordeling van ondernemersinkomen, met casussen uit de praktijk van de acceptatiedesk."
+      },
+      {
+        "id": "a3",
+        "datum": "2026-12-08",
+        "tijd": "09:30",
+        "eind": "10:15",
+        "titel": "Kennissessie acceptatiegids: wat is er veranderd (voorbeeld)",
+        "soort": "webinar",
+        "locatie": "Online",
+        "pe": false,
+        "url": "https://example.org/agenda/kennissessie-acceptatiegids",
+        "tekst": "Korte toelichting op de redactionele wijzigingen in de acceptatiegids van oktober 2026."
+      }
+    ]
   },
   {
     "id": "voorbeeld-verzekeringen",
@@ -174,7 +222,31 @@ window.AANBIEDERS=[
       }
     ],
     "elearning": [],
-    "bijgewerkt": "2026-09-28"
+    "bijgewerkt": "2026-09-28",
+    "agenda": [
+      {
+        "id": "a1",
+        "datum": "2026-11-05",
+        "tijd": "10:00",
+        "eind": "11:30",
+        "titel": "Webinar vernieuwde polisvoorwaarden overlijdensrisico (voorbeeld)",
+        "soort": "webinar",
+        "locatie": "Online",
+        "pe": true,
+        "url": "https://example.org/agenda/webinar-orv-voorwaarden",
+        "tekst": "Toelichting op de vernieuwde polisvoorwaarden en wat dit betekent voor lopende en nieuwe adviezen."
+      },
+      {
+        "id": "a2",
+        "datum": "2026-12-03",
+        "titel": "Stand op een intermediairbeurs (voorbeeld)",
+        "soort": "beurs",
+        "locatie": "Voorbeeldhal, Utrecht",
+        "pe": false,
+        "url": "https://example.org/agenda/beurs",
+        "tekst": "Kom langs bij onze stand voor vragen over acceptatie van arbeidsongeschiktheidsverzekeringen."
+      }
+    ]
   },
   {
     "id": "a-s-r",
@@ -247,6 +319,41 @@ window.AANBIEDERS=[
     "bijgewerkt": "2026-10-03"
   },
   {
+    "id": "acura-assuradeuren",
+    "demo": true,
+    "naam": "Acura Assuradeuren",
+    "type": "serviceprovider",
+    "logo": "img/logos/acura-assuradeuren.png",
+    "omschrijving": "Voorbeeldprofiel met fictieve tekst. Acura Assuradeuren heeft deze pagina niet aangeleverd. Zodra Acura Assuradeuren meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs. Serviceprovider voor het intermediair (volmacht/assuradeur).",
+    "website": "https://example.org/acura-assuradeuren/",
+    "extranet": {
+      "url": "https://example.org/acura-assuradeuren/adviseursportaal",
+      "naam": "Adviseursportaal Acura Assuradeuren (fictief)"
+    },
+    "nieuws": [
+      {
+        "id": "n1",
+        "datum": "2026-10-03",
+        "titel": "Voorbeeldbericht van Acura Assuradeuren",
+        "tekst": "Dit is een fictief voorbeeldbericht. Hier plaatst Acura Assuradeuren straks zelf nieuws voor adviseurs, zoals wijzigingen in acceptatie of werkwijze.",
+        "url": "https://example.org/acura-assuradeuren/nieuws"
+      }
+    ],
+    "documenten": [
+      {
+        "titel": "Voorwaarden (voorbeeld)",
+        "url": "https://example.org/acura-assuradeuren/voorwaarden.pdf",
+        "soort": "voorwaarden"
+      },
+      {
+        "titel": "Acceptatiegids (voorbeeld)",
+        "url": "https://example.org/acura-assuradeuren/acceptatiegids.pdf",
+        "soort": "acceptatiegids"
+      }
+    ],
+    "bijgewerkt": "2026-10-03"
+  },
+  {
     "id": "allianz-global-assistance",
     "demo": true,
     "naam": "Allianz Global Assistance",
@@ -312,6 +419,41 @@ window.AANBIEDERS=[
         "titel": "Productblad (voorbeeld)",
         "url": "https://example.org/allianz/productblad.pdf",
         "soort": "productblad"
+      }
+    ],
+    "bijgewerkt": "2026-10-03"
+  },
+  {
+    "id": "anac-backoffice",
+    "demo": true,
+    "naam": "Anac Backoffice",
+    "type": "serviceprovider",
+    "logo": "img/logos/anac-backoffice.png",
+    "omschrijving": "Voorbeeldprofiel met fictieve tekst. Anac Backoffice heeft deze pagina niet aangeleverd. Zodra Anac Backoffice meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs.",
+    "website": "https://example.org/anac-backoffice/",
+    "extranet": {
+      "url": "https://example.org/anac-backoffice/adviseursportaal",
+      "naam": "Adviseursportaal Anac Backoffice (fictief)"
+    },
+    "nieuws": [
+      {
+        "id": "n1",
+        "datum": "2026-10-03",
+        "titel": "Voorbeeldbericht van Anac Backoffice",
+        "tekst": "Dit is een fictief voorbeeldbericht. Hier plaatst Anac Backoffice straks zelf nieuws voor adviseurs, zoals wijzigingen in acceptatie of werkwijze.",
+        "url": "https://example.org/anac-backoffice/nieuws"
+      }
+    ],
+    "documenten": [
+      {
+        "titel": "Voorwaarden (voorbeeld)",
+        "url": "https://example.org/anac-backoffice/voorwaarden.pdf",
+        "soort": "voorwaarden"
+      },
+      {
+        "titel": "Acceptatiegids (voorbeeld)",
+        "url": "https://example.org/anac-backoffice/acceptatiegids.pdf",
+        "soort": "acceptatiegids"
       }
     ],
     "bijgewerkt": "2026-10-03"
@@ -527,6 +669,41 @@ window.AANBIEDERS=[
     "bijgewerkt": "2026-10-03"
   },
   {
+    "id": "bedrijfshypotheek-nl",
+    "demo": true,
+    "naam": "Bedrijfshypotheek.nl",
+    "type": "serviceprovider",
+    "logo": "img/logos/bedrijfshypotheek-nl.png",
+    "omschrijving": "Voorbeeldprofiel met fictieve tekst. Bedrijfshypotheek.nl heeft deze pagina niet aangeleverd. Zodra Bedrijfshypotheek.nl meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs. Serviceprovider voor hypotheken.",
+    "website": "https://example.org/bedrijfshypotheek-nl/",
+    "extranet": {
+      "url": "https://example.org/bedrijfshypotheek-nl/adviseursportaal",
+      "naam": "Adviseursportaal Bedrijfshypotheek.nl (fictief)"
+    },
+    "nieuws": [
+      {
+        "id": "n1",
+        "datum": "2026-10-03",
+        "titel": "Voorbeeldbericht van Bedrijfshypotheek.nl",
+        "tekst": "Dit is een fictief voorbeeldbericht. Hier plaatst Bedrijfshypotheek.nl straks zelf nieuws voor adviseurs, zoals wijzigingen in acceptatie of werkwijze.",
+        "url": "https://example.org/bedrijfshypotheek-nl/nieuws"
+      }
+    ],
+    "documenten": [
+      {
+        "titel": "Voorwaarden (voorbeeld)",
+        "url": "https://example.org/bedrijfshypotheek-nl/voorwaarden.pdf",
+        "soort": "voorwaarden"
+      },
+      {
+        "titel": "Acceptatiegids (voorbeeld)",
+        "url": "https://example.org/bedrijfshypotheek-nl/acceptatiegids.pdf",
+        "soort": "acceptatiegids"
+      }
+    ],
+    "bijgewerkt": "2026-10-03"
+  },
+  {
     "id": "bijbouwe",
     "demo": true,
     "naam": "bijBouwe",
@@ -556,6 +733,41 @@ window.AANBIEDERS=[
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/bijbouwe/acceptatiegids.pdf",
+        "soort": "acceptatiegids"
+      }
+    ],
+    "bijgewerkt": "2026-10-03"
+  },
+  {
+    "id": "blueline-hypotheekdesk",
+    "demo": true,
+    "naam": "Blueline Hypotheekdesk",
+    "type": "serviceprovider",
+    "logo": "img/logos/blueline-hypotheekdesk.png",
+    "omschrijving": "Voorbeeldprofiel met fictieve tekst. Blueline Hypotheekdesk heeft deze pagina niet aangeleverd. Zodra Blueline Hypotheekdesk meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs. Serviceprovider voor hypotheken.",
+    "website": "https://example.org/blueline-hypotheekdesk/",
+    "extranet": {
+      "url": "https://example.org/blueline-hypotheekdesk/adviseursportaal",
+      "naam": "Adviseursportaal Blueline Hypotheekdesk (fictief)"
+    },
+    "nieuws": [
+      {
+        "id": "n1",
+        "datum": "2026-10-03",
+        "titel": "Voorbeeldbericht van Blueline Hypotheekdesk",
+        "tekst": "Dit is een fictief voorbeeldbericht. Hier plaatst Blueline Hypotheekdesk straks zelf nieuws voor adviseurs, zoals wijzigingen in acceptatie of werkwijze.",
+        "url": "https://example.org/blueline-hypotheekdesk/nieuws"
+      }
+    ],
+    "documenten": [
+      {
+        "titel": "Voorwaarden (voorbeeld)",
+        "url": "https://example.org/blueline-hypotheekdesk/voorwaarden.pdf",
+        "soort": "voorwaarden"
+      },
+      {
+        "titel": "Acceptatiegids (voorbeeld)",
+        "url": "https://example.org/blueline-hypotheekdesk/acceptatiegids.pdf",
         "soort": "acceptatiegids"
       }
     ],
@@ -597,6 +809,44 @@ window.AANBIEDERS=[
     "bijgewerkt": "2026-10-03"
   },
   {
+    "id": "bnp-paribas-cardif",
+    "demo": true,
+    "naam": "BNP Paribas Cardif",
+    "type": "verzekeraar",
+    "logo": "img/logos/bnp-paribas-cardif.png",
+    "rubrieken": [
+      "bankgarantie"
+    ],
+    "omschrijving": "Voorbeeldprofiel met fictieve tekst. BNP Paribas Cardif heeft deze pagina niet aangeleverd. Zodra BNP Paribas Cardif meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over verzekeringen. Rubriek op het Adviesforum: bankgaranties en bieden met zekerheid.",
+    "website": "https://example.org/bnp-paribas-cardif/",
+    "extranet": {
+      "url": "https://example.org/bnp-paribas-cardif/adviseursportaal",
+      "naam": "Adviseursportaal BNP Paribas Cardif (fictief)"
+    },
+    "nieuws": [
+      {
+        "id": "n1",
+        "datum": "2026-10-03",
+        "titel": "Voorbeeldbericht van BNP Paribas Cardif",
+        "tekst": "Dit is een fictief voorbeeldbericht. Hier plaatst BNP Paribas Cardif straks zelf nieuws voor adviseurs, zoals wijzigingen in acceptatie of werkwijze.",
+        "url": "https://example.org/bnp-paribas-cardif/nieuws"
+      }
+    ],
+    "documenten": [
+      {
+        "titel": "Voorwaarden (voorbeeld)",
+        "url": "https://example.org/bnp-paribas-cardif/voorwaarden.pdf",
+        "soort": "voorwaarden"
+      },
+      {
+        "titel": "Productblad (voorbeeld)",
+        "url": "https://example.org/bnp-paribas-cardif/productblad.pdf",
+        "soort": "productblad"
+      }
+    ],
+    "bijgewerkt": "2026-10-03"
+  },
+  {
     "id": "bovemij",
     "demo": true,
     "naam": "Bovemij",
@@ -627,6 +877,41 @@ window.AANBIEDERS=[
         "titel": "Productblad (voorbeeld)",
         "url": "https://example.org/bovemij/productblad.pdf",
         "soort": "productblad"
+      }
+    ],
+    "bijgewerkt": "2026-10-03"
+  },
+  {
+    "id": "bsb-volmachten",
+    "demo": true,
+    "naam": "BSB Volmachten",
+    "type": "serviceprovider",
+    "logo": "img/logos/bsb-volmachten.png",
+    "omschrijving": "Voorbeeldprofiel met fictieve tekst. BSB Volmachten heeft deze pagina niet aangeleverd. Zodra BSB Volmachten meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs. Serviceprovider voor het intermediair (volmacht/assuradeur).",
+    "website": "https://example.org/bsb-volmachten/",
+    "extranet": {
+      "url": "https://example.org/bsb-volmachten/adviseursportaal",
+      "naam": "Adviseursportaal BSB Volmachten (fictief)"
+    },
+    "nieuws": [
+      {
+        "id": "n1",
+        "datum": "2026-10-03",
+        "titel": "Voorbeeldbericht van BSB Volmachten",
+        "tekst": "Dit is een fictief voorbeeldbericht. Hier plaatst BSB Volmachten straks zelf nieuws voor adviseurs, zoals wijzigingen in acceptatie of werkwijze.",
+        "url": "https://example.org/bsb-volmachten/nieuws"
+      }
+    ],
+    "documenten": [
+      {
+        "titel": "Voorwaarden (voorbeeld)",
+        "url": "https://example.org/bsb-volmachten/voorwaarden.pdf",
+        "soort": "voorwaarden"
+      },
+      {
+        "titel": "Acceptatiegids (voorbeeld)",
+        "url": "https://example.org/bsb-volmachten/acceptatiegids.pdf",
+        "soort": "acceptatiegids"
       }
     ],
     "bijgewerkt": "2026-10-03"
@@ -737,6 +1022,41 @@ window.AANBIEDERS=[
     "bijgewerkt": "2026-10-03"
   },
   {
+    "id": "capsearch",
+    "demo": true,
+    "naam": "Capsearch",
+    "type": "serviceprovider",
+    "logo": "img/logos/capsearch.png",
+    "omschrijving": "Voorbeeldprofiel met fictieve tekst. Capsearch heeft deze pagina niet aangeleverd. Zodra Capsearch meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs.",
+    "website": "https://example.org/capsearch/",
+    "extranet": {
+      "url": "https://example.org/capsearch/adviseursportaal",
+      "naam": "Adviseursportaal Capsearch (fictief)"
+    },
+    "nieuws": [
+      {
+        "id": "n1",
+        "datum": "2026-10-03",
+        "titel": "Voorbeeldbericht van Capsearch",
+        "tekst": "Dit is een fictief voorbeeldbericht. Hier plaatst Capsearch straks zelf nieuws voor adviseurs, zoals wijzigingen in acceptatie of werkwijze.",
+        "url": "https://example.org/capsearch/nieuws"
+      }
+    ],
+    "documenten": [
+      {
+        "titel": "Voorwaarden (voorbeeld)",
+        "url": "https://example.org/capsearch/voorwaarden.pdf",
+        "soort": "voorwaarden"
+      },
+      {
+        "titel": "Acceptatiegids (voorbeeld)",
+        "url": "https://example.org/capsearch/acceptatiegids.pdf",
+        "soort": "acceptatiegids"
+      }
+    ],
+    "bijgewerkt": "2026-10-03"
+  },
+  {
     "id": "centraal-beheer",
     "demo": true,
     "naam": "Centraal Beheer",
@@ -767,6 +1087,76 @@ window.AANBIEDERS=[
         "titel": "Productblad (voorbeeld)",
         "url": "https://example.org/centraal-beheer/productblad.pdf",
         "soort": "productblad"
+      }
+    ],
+    "bijgewerkt": "2026-10-03"
+  },
+  {
+    "id": "certe-assuradeuren",
+    "demo": true,
+    "naam": "Certe Assuradeuren",
+    "type": "serviceprovider",
+    "logo": "img/logos/certe-assuradeuren.png",
+    "omschrijving": "Voorbeeldprofiel met fictieve tekst. Certe Assuradeuren heeft deze pagina niet aangeleverd. Zodra Certe Assuradeuren meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs. Serviceprovider voor het intermediair (volmacht/assuradeur).",
+    "website": "https://example.org/certe-assuradeuren/",
+    "extranet": {
+      "url": "https://example.org/certe-assuradeuren/adviseursportaal",
+      "naam": "Adviseursportaal Certe Assuradeuren (fictief)"
+    },
+    "nieuws": [
+      {
+        "id": "n1",
+        "datum": "2026-10-03",
+        "titel": "Voorbeeldbericht van Certe Assuradeuren",
+        "tekst": "Dit is een fictief voorbeeldbericht. Hier plaatst Certe Assuradeuren straks zelf nieuws voor adviseurs, zoals wijzigingen in acceptatie of werkwijze.",
+        "url": "https://example.org/certe-assuradeuren/nieuws"
+      }
+    ],
+    "documenten": [
+      {
+        "titel": "Voorwaarden (voorbeeld)",
+        "url": "https://example.org/certe-assuradeuren/voorwaarden.pdf",
+        "soort": "voorwaarden"
+      },
+      {
+        "titel": "Acceptatiegids (voorbeeld)",
+        "url": "https://example.org/certe-assuradeuren/acceptatiegids.pdf",
+        "soort": "acceptatiegids"
+      }
+    ],
+    "bijgewerkt": "2026-10-03"
+  },
+  {
+    "id": "cfsn-kredietendesk",
+    "demo": true,
+    "naam": "CFSN Kredietendesk",
+    "type": "serviceprovider",
+    "logo": "img/logos/cfsn-kredietendesk.png",
+    "omschrijving": "Voorbeeldprofiel met fictieve tekst. CFSN Kredietendesk heeft deze pagina niet aangeleverd. Zodra CFSN Kredietendesk meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs. Serviceprovider voor kredieten.",
+    "website": "https://example.org/cfsn-kredietendesk/",
+    "extranet": {
+      "url": "https://example.org/cfsn-kredietendesk/adviseursportaal",
+      "naam": "Adviseursportaal CFSN Kredietendesk (fictief)"
+    },
+    "nieuws": [
+      {
+        "id": "n1",
+        "datum": "2026-10-03",
+        "titel": "Voorbeeldbericht van CFSN Kredietendesk",
+        "tekst": "Dit is een fictief voorbeeldbericht. Hier plaatst CFSN Kredietendesk straks zelf nieuws voor adviseurs, zoals wijzigingen in acceptatie of werkwijze.",
+        "url": "https://example.org/cfsn-kredietendesk/nieuws"
+      }
+    ],
+    "documenten": [
+      {
+        "titel": "Voorwaarden (voorbeeld)",
+        "url": "https://example.org/cfsn-kredietendesk/voorwaarden.pdf",
+        "soort": "voorwaarden"
+      },
+      {
+        "titel": "Acceptatiegids (voorbeeld)",
+        "url": "https://example.org/cfsn-kredietendesk/acceptatiegids.pdf",
+        "soort": "acceptatiegids"
       }
     ],
     "bijgewerkt": "2026-10-03"
@@ -807,6 +1197,41 @@ window.AANBIEDERS=[
     "bijgewerkt": "2026-10-03"
   },
   {
+    "id": "connect-assuradeuren",
+    "demo": true,
+    "naam": "Connect Assuradeuren",
+    "type": "serviceprovider",
+    "logo": "img/logos/connect-assuradeuren.png",
+    "omschrijving": "Voorbeeldprofiel met fictieve tekst. Connect Assuradeuren heeft deze pagina niet aangeleverd. Zodra Connect Assuradeuren meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs. Serviceprovider voor het intermediair (volmacht/assuradeur).",
+    "website": "https://example.org/connect-assuradeuren/",
+    "extranet": {
+      "url": "https://example.org/connect-assuradeuren/adviseursportaal",
+      "naam": "Adviseursportaal Connect Assuradeuren (fictief)"
+    },
+    "nieuws": [
+      {
+        "id": "n1",
+        "datum": "2026-10-03",
+        "titel": "Voorbeeldbericht van Connect Assuradeuren",
+        "tekst": "Dit is een fictief voorbeeldbericht. Hier plaatst Connect Assuradeuren straks zelf nieuws voor adviseurs, zoals wijzigingen in acceptatie of werkwijze.",
+        "url": "https://example.org/connect-assuradeuren/nieuws"
+      }
+    ],
+    "documenten": [
+      {
+        "titel": "Voorwaarden (voorbeeld)",
+        "url": "https://example.org/connect-assuradeuren/voorwaarden.pdf",
+        "soort": "voorwaarden"
+      },
+      {
+        "titel": "Acceptatiegids (voorbeeld)",
+        "url": "https://example.org/connect-assuradeuren/acceptatiegids.pdf",
+        "soort": "acceptatiegids"
+      }
+    ],
+    "bijgewerkt": "2026-10-03"
+  },
+  {
     "id": "corins",
     "demo": true,
     "naam": "Corins",
@@ -837,6 +1262,41 @@ window.AANBIEDERS=[
         "titel": "Productblad (voorbeeld)",
         "url": "https://example.org/corins/productblad.pdf",
         "soort": "productblad"
+      }
+    ],
+    "bijgewerkt": "2026-10-03"
+  },
+  {
+    "id": "dak-intermediairscollectief",
+    "demo": true,
+    "naam": "DAK intermediairscollectief",
+    "type": "serviceprovider",
+    "logo": "img/logos/dak-intermediairscollectief.png",
+    "omschrijving": "Voorbeeldprofiel met fictieve tekst. DAK intermediairscollectief heeft deze pagina niet aangeleverd. Zodra DAK intermediairscollectief meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs.",
+    "website": "https://example.org/dak-intermediairscollectief/",
+    "extranet": {
+      "url": "https://example.org/dak-intermediairscollectief/adviseursportaal",
+      "naam": "Adviseursportaal DAK intermediairscollectief (fictief)"
+    },
+    "nieuws": [
+      {
+        "id": "n1",
+        "datum": "2026-10-03",
+        "titel": "Voorbeeldbericht van DAK intermediairscollectief",
+        "tekst": "Dit is een fictief voorbeeldbericht. Hier plaatst DAK intermediairscollectief straks zelf nieuws voor adviseurs, zoals wijzigingen in acceptatie of werkwijze.",
+        "url": "https://example.org/dak-intermediairscollectief/nieuws"
+      }
+    ],
+    "documenten": [
+      {
+        "titel": "Voorwaarden (voorbeeld)",
+        "url": "https://example.org/dak-intermediairscollectief/voorwaarden.pdf",
+        "soort": "voorwaarden"
+      },
+      {
+        "titel": "Acceptatiegids (voorbeeld)",
+        "url": "https://example.org/dak-intermediairscollectief/acceptatiegids.pdf",
+        "soort": "acceptatiegids"
       }
     ],
     "bijgewerkt": "2026-10-03"
@@ -1087,6 +1547,76 @@ window.AANBIEDERS=[
     "bijgewerkt": "2026-10-03"
   },
   {
+    "id": "financieel-fit",
+    "demo": true,
+    "naam": "Financieel Fit",
+    "type": "serviceprovider",
+    "logo": "img/logos/financieel-fit.png",
+    "omschrijving": "Voorbeeldprofiel met fictieve tekst. Financieel Fit heeft deze pagina niet aangeleverd. Zodra Financieel Fit meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs.",
+    "website": "https://example.org/financieel-fit/",
+    "extranet": {
+      "url": "https://example.org/financieel-fit/adviseursportaal",
+      "naam": "Adviseursportaal Financieel Fit (fictief)"
+    },
+    "nieuws": [
+      {
+        "id": "n1",
+        "datum": "2026-10-03",
+        "titel": "Voorbeeldbericht van Financieel Fit",
+        "tekst": "Dit is een fictief voorbeeldbericht. Hier plaatst Financieel Fit straks zelf nieuws voor adviseurs, zoals wijzigingen in acceptatie of werkwijze.",
+        "url": "https://example.org/financieel-fit/nieuws"
+      }
+    ],
+    "documenten": [
+      {
+        "titel": "Voorwaarden (voorbeeld)",
+        "url": "https://example.org/financieel-fit/voorwaarden.pdf",
+        "soort": "voorwaarden"
+      },
+      {
+        "titel": "Acceptatiegids (voorbeeld)",
+        "url": "https://example.org/financieel-fit/acceptatiegids.pdf",
+        "soort": "acceptatiegids"
+      }
+    ],
+    "bijgewerkt": "2026-10-03"
+  },
+  {
+    "id": "financieel-zeker",
+    "demo": true,
+    "naam": "Financieel Zeker",
+    "type": "serviceprovider",
+    "logo": "img/logos/financieel-zeker.png",
+    "omschrijving": "Voorbeeldprofiel met fictieve tekst. Financieel Zeker heeft deze pagina niet aangeleverd. Zodra Financieel Zeker meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs.",
+    "website": "https://example.org/financieel-zeker/",
+    "extranet": {
+      "url": "https://example.org/financieel-zeker/adviseursportaal",
+      "naam": "Adviseursportaal Financieel Zeker (fictief)"
+    },
+    "nieuws": [
+      {
+        "id": "n1",
+        "datum": "2026-10-03",
+        "titel": "Voorbeeldbericht van Financieel Zeker",
+        "tekst": "Dit is een fictief voorbeeldbericht. Hier plaatst Financieel Zeker straks zelf nieuws voor adviseurs, zoals wijzigingen in acceptatie of werkwijze.",
+        "url": "https://example.org/financieel-zeker/nieuws"
+      }
+    ],
+    "documenten": [
+      {
+        "titel": "Voorwaarden (voorbeeld)",
+        "url": "https://example.org/financieel-zeker/voorwaarden.pdf",
+        "soort": "voorwaarden"
+      },
+      {
+        "titel": "Acceptatiegids (voorbeeld)",
+        "url": "https://example.org/financieel-zeker/acceptatiegids.pdf",
+        "soort": "acceptatiegids"
+      }
+    ],
+    "bijgewerkt": "2026-10-03"
+  },
+  {
     "id": "florius",
     "demo": true,
     "naam": "Florius",
@@ -1116,6 +1646,41 @@ window.AANBIEDERS=[
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/florius/acceptatiegids.pdf",
+        "soort": "acceptatiegids"
+      }
+    ],
+    "bijgewerkt": "2026-10-03"
+  },
+  {
+    "id": "fondsen-platform",
+    "demo": true,
+    "naam": "Fondsen Platform",
+    "type": "serviceprovider",
+    "logo": "img/logos/fondsen-platform.png",
+    "omschrijving": "Voorbeeldprofiel met fictieve tekst. Fondsen Platform heeft deze pagina niet aangeleverd. Zodra Fondsen Platform meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs.",
+    "website": "https://example.org/fondsen-platform/",
+    "extranet": {
+      "url": "https://example.org/fondsen-platform/adviseursportaal",
+      "naam": "Adviseursportaal Fondsen Platform (fictief)"
+    },
+    "nieuws": [
+      {
+        "id": "n1",
+        "datum": "2026-10-03",
+        "titel": "Voorbeeldbericht van Fondsen Platform",
+        "tekst": "Dit is een fictief voorbeeldbericht. Hier plaatst Fondsen Platform straks zelf nieuws voor adviseurs, zoals wijzigingen in acceptatie of werkwijze.",
+        "url": "https://example.org/fondsen-platform/nieuws"
+      }
+    ],
+    "documenten": [
+      {
+        "titel": "Voorwaarden (voorbeeld)",
+        "url": "https://example.org/fondsen-platform/voorwaarden.pdf",
+        "soort": "voorwaarden"
+      },
+      {
+        "titel": "Acceptatiegids (voorbeeld)",
+        "url": "https://example.org/fondsen-platform/acceptatiegids.pdf",
         "soort": "acceptatiegids"
       }
     ],
@@ -1262,6 +1827,76 @@ window.AANBIEDERS=[
     "bijgewerkt": "2026-10-03"
   },
   {
+    "id": "heinenoord-assuradeuren",
+    "demo": true,
+    "naam": "Heinenoord Assuradeuren",
+    "type": "serviceprovider",
+    "logo": "img/logos/heinenoord-assuradeuren.png",
+    "omschrijving": "Voorbeeldprofiel met fictieve tekst. Heinenoord Assuradeuren heeft deze pagina niet aangeleverd. Zodra Heinenoord Assuradeuren meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs. Serviceprovider voor het intermediair (volmacht/assuradeur).",
+    "website": "https://example.org/heinenoord-assuradeuren/",
+    "extranet": {
+      "url": "https://example.org/heinenoord-assuradeuren/adviseursportaal",
+      "naam": "Adviseursportaal Heinenoord Assuradeuren (fictief)"
+    },
+    "nieuws": [
+      {
+        "id": "n1",
+        "datum": "2026-10-03",
+        "titel": "Voorbeeldbericht van Heinenoord Assuradeuren",
+        "tekst": "Dit is een fictief voorbeeldbericht. Hier plaatst Heinenoord Assuradeuren straks zelf nieuws voor adviseurs, zoals wijzigingen in acceptatie of werkwijze.",
+        "url": "https://example.org/heinenoord-assuradeuren/nieuws"
+      }
+    ],
+    "documenten": [
+      {
+        "titel": "Voorwaarden (voorbeeld)",
+        "url": "https://example.org/heinenoord-assuradeuren/voorwaarden.pdf",
+        "soort": "voorwaarden"
+      },
+      {
+        "titel": "Acceptatiegids (voorbeeld)",
+        "url": "https://example.org/heinenoord-assuradeuren/acceptatiegids.pdf",
+        "soort": "acceptatiegids"
+      }
+    ],
+    "bijgewerkt": "2026-10-03"
+  },
+  {
+    "id": "hoeksche-waard-assuradeuren",
+    "demo": true,
+    "naam": "Hoeksche Waard Assuradeuren",
+    "type": "serviceprovider",
+    "logo": "img/logos/hoeksche-waard-assuradeuren.png",
+    "omschrijving": "Voorbeeldprofiel met fictieve tekst. Hoeksche Waard Assuradeuren heeft deze pagina niet aangeleverd. Zodra Hoeksche Waard Assuradeuren meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs. Serviceprovider voor het intermediair (volmacht/assuradeur).",
+    "website": "https://example.org/hoeksche-waard-assuradeuren/",
+    "extranet": {
+      "url": "https://example.org/hoeksche-waard-assuradeuren/adviseursportaal",
+      "naam": "Adviseursportaal Hoeksche Waard Assuradeuren (fictief)"
+    },
+    "nieuws": [
+      {
+        "id": "n1",
+        "datum": "2026-10-03",
+        "titel": "Voorbeeldbericht van Hoeksche Waard Assuradeuren",
+        "tekst": "Dit is een fictief voorbeeldbericht. Hier plaatst Hoeksche Waard Assuradeuren straks zelf nieuws voor adviseurs, zoals wijzigingen in acceptatie of werkwijze.",
+        "url": "https://example.org/hoeksche-waard-assuradeuren/nieuws"
+      }
+    ],
+    "documenten": [
+      {
+        "titel": "Voorwaarden (voorbeeld)",
+        "url": "https://example.org/hoeksche-waard-assuradeuren/voorwaarden.pdf",
+        "soort": "voorwaarden"
+      },
+      {
+        "titel": "Acceptatiegids (voorbeeld)",
+        "url": "https://example.org/hoeksche-waard-assuradeuren/acceptatiegids.pdf",
+        "soort": "acceptatiegids"
+      }
+    ],
+    "bijgewerkt": "2026-10-03"
+  },
+  {
     "id": "hollandwoont",
     "demo": true,
     "naam": "HollandWoont",
@@ -1291,6 +1926,111 @@ window.AANBIEDERS=[
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/hollandwoont/acceptatiegids.pdf",
+        "soort": "acceptatiegids"
+      }
+    ],
+    "bijgewerkt": "2026-10-03"
+  },
+  {
+    "id": "home-invest",
+    "demo": true,
+    "naam": "Home Invest",
+    "type": "serviceprovider",
+    "logo": "img/logos/home-invest.png",
+    "omschrijving": "Voorbeeldprofiel met fictieve tekst. Home Invest heeft deze pagina niet aangeleverd. Zodra Home Invest meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs.",
+    "website": "https://example.org/home-invest/",
+    "extranet": {
+      "url": "https://example.org/home-invest/adviseursportaal",
+      "naam": "Adviseursportaal Home Invest (fictief)"
+    },
+    "nieuws": [
+      {
+        "id": "n1",
+        "datum": "2026-10-03",
+        "titel": "Voorbeeldbericht van Home Invest",
+        "tekst": "Dit is een fictief voorbeeldbericht. Hier plaatst Home Invest straks zelf nieuws voor adviseurs, zoals wijzigingen in acceptatie of werkwijze.",
+        "url": "https://example.org/home-invest/nieuws"
+      }
+    ],
+    "documenten": [
+      {
+        "titel": "Voorwaarden (voorbeeld)",
+        "url": "https://example.org/home-invest/voorwaarden.pdf",
+        "soort": "voorwaarden"
+      },
+      {
+        "titel": "Acceptatiegids (voorbeeld)",
+        "url": "https://example.org/home-invest/acceptatiegids.pdf",
+        "soort": "acceptatiegids"
+      }
+    ],
+    "bijgewerkt": "2026-10-03"
+  },
+  {
+    "id": "huismerk",
+    "demo": true,
+    "naam": "Huismerk",
+    "type": "serviceprovider",
+    "logo": "img/logos/huismerk.png",
+    "omschrijving": "Voorbeeldprofiel met fictieve tekst. Huismerk heeft deze pagina niet aangeleverd. Zodra Huismerk meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs.",
+    "website": "https://example.org/huismerk/",
+    "extranet": {
+      "url": "https://example.org/huismerk/adviseursportaal",
+      "naam": "Adviseursportaal Huismerk (fictief)"
+    },
+    "nieuws": [
+      {
+        "id": "n1",
+        "datum": "2026-10-03",
+        "titel": "Voorbeeldbericht van Huismerk",
+        "tekst": "Dit is een fictief voorbeeldbericht. Hier plaatst Huismerk straks zelf nieuws voor adviseurs, zoals wijzigingen in acceptatie of werkwijze.",
+        "url": "https://example.org/huismerk/nieuws"
+      }
+    ],
+    "documenten": [
+      {
+        "titel": "Voorwaarden (voorbeeld)",
+        "url": "https://example.org/huismerk/voorwaarden.pdf",
+        "soort": "voorwaarden"
+      },
+      {
+        "titel": "Acceptatiegids (voorbeeld)",
+        "url": "https://example.org/huismerk/acceptatiegids.pdf",
+        "soort": "acceptatiegids"
+      }
+    ],
+    "bijgewerkt": "2026-10-03"
+  },
+  {
+    "id": "hypotheekgo",
+    "demo": true,
+    "naam": "HypotheekGo",
+    "type": "serviceprovider",
+    "logo": "img/logos/hypotheekgo.png",
+    "omschrijving": "Voorbeeldprofiel met fictieve tekst. HypotheekGo heeft deze pagina niet aangeleverd. Zodra HypotheekGo meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs. Serviceprovider voor hypotheken.",
+    "website": "https://example.org/hypotheekgo/",
+    "extranet": {
+      "url": "https://example.org/hypotheekgo/adviseursportaal",
+      "naam": "Adviseursportaal HypotheekGo (fictief)"
+    },
+    "nieuws": [
+      {
+        "id": "n1",
+        "datum": "2026-10-03",
+        "titel": "Voorbeeldbericht van HypotheekGo",
+        "tekst": "Dit is een fictief voorbeeldbericht. Hier plaatst HypotheekGo straks zelf nieuws voor adviseurs, zoals wijzigingen in acceptatie of werkwijze.",
+        "url": "https://example.org/hypotheekgo/nieuws"
+      }
+    ],
+    "documenten": [
+      {
+        "titel": "Voorwaarden (voorbeeld)",
+        "url": "https://example.org/hypotheekgo/voorwaarden.pdf",
+        "soort": "voorwaarden"
+      },
+      {
+        "titel": "Acceptatiegids (voorbeeld)",
+        "url": "https://example.org/hypotheekgo/acceptatiegids.pdf",
         "soort": "acceptatiegids"
       }
     ],
@@ -1472,6 +2212,41 @@ window.AANBIEDERS=[
     "bijgewerkt": "2026-10-03"
   },
   {
+    "id": "klap",
+    "demo": true,
+    "naam": "Klap",
+    "type": "serviceprovider",
+    "logo": "img/logos/klap.png",
+    "omschrijving": "Voorbeeldprofiel met fictieve tekst. Klap heeft deze pagina niet aangeleverd. Zodra Klap meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs.",
+    "website": "https://example.org/klap/",
+    "extranet": {
+      "url": "https://example.org/klap/adviseursportaal",
+      "naam": "Adviseursportaal Klap (fictief)"
+    },
+    "nieuws": [
+      {
+        "id": "n1",
+        "datum": "2026-10-03",
+        "titel": "Voorbeeldbericht van Klap",
+        "tekst": "Dit is een fictief voorbeeldbericht. Hier plaatst Klap straks zelf nieuws voor adviseurs, zoals wijzigingen in acceptatie of werkwijze.",
+        "url": "https://example.org/klap/nieuws"
+      }
+    ],
+    "documenten": [
+      {
+        "titel": "Voorwaarden (voorbeeld)",
+        "url": "https://example.org/klap/voorwaarden.pdf",
+        "soort": "voorwaarden"
+      },
+      {
+        "titel": "Acceptatiegids (voorbeeld)",
+        "url": "https://example.org/klap/acceptatiegids.pdf",
+        "soort": "acceptatiegids"
+      }
+    ],
+    "bijgewerkt": "2026-10-03"
+  },
+  {
     "id": "knab",
     "demo": true,
     "naam": "Knab",
@@ -1501,6 +2276,41 @@ window.AANBIEDERS=[
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/knab/acceptatiegids.pdf",
+        "soort": "acceptatiegids"
+      }
+    ],
+    "bijgewerkt": "2026-10-03"
+  },
+  {
+    "id": "landelijk-netwerk-inkoopcombinatie",
+    "demo": true,
+    "naam": "Landelijk Netwerk Inkoopcombinatie",
+    "type": "serviceprovider",
+    "logo": "img/logos/landelijk-netwerk-inkoopcombinatie.png",
+    "omschrijving": "Voorbeeldprofiel met fictieve tekst. Landelijk Netwerk Inkoopcombinatie heeft deze pagina niet aangeleverd. Zodra Landelijk Netwerk Inkoopcombinatie meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs.",
+    "website": "https://example.org/landelijk-netwerk-inkoopcombinatie/",
+    "extranet": {
+      "url": "https://example.org/landelijk-netwerk-inkoopcombinatie/adviseursportaal",
+      "naam": "Adviseursportaal Landelijk Netwerk Inkoopcombinatie (fictief)"
+    },
+    "nieuws": [
+      {
+        "id": "n1",
+        "datum": "2026-10-03",
+        "titel": "Voorbeeldbericht van Landelijk Netwerk Inkoopcombinatie",
+        "tekst": "Dit is een fictief voorbeeldbericht. Hier plaatst Landelijk Netwerk Inkoopcombinatie straks zelf nieuws voor adviseurs, zoals wijzigingen in acceptatie of werkwijze.",
+        "url": "https://example.org/landelijk-netwerk-inkoopcombinatie/nieuws"
+      }
+    ],
+    "documenten": [
+      {
+        "titel": "Voorwaarden (voorbeeld)",
+        "url": "https://example.org/landelijk-netwerk-inkoopcombinatie/voorwaarden.pdf",
+        "soort": "voorwaarden"
+      },
+      {
+        "titel": "Acceptatiegids (voorbeeld)",
+        "url": "https://example.org/landelijk-netwerk-inkoopcombinatie/acceptatiegids.pdf",
         "soort": "acceptatiegids"
       }
     ],
@@ -1827,7 +2637,10 @@ window.AANBIEDERS=[
     "naam": "Nationale Waarborg",
     "type": "serviceprovider",
     "logo": "img/logos/nationale-waarborg.png",
-    "omschrijving": "Voorbeeldprofiel met fictieve tekst. Nationale Waarborg heeft deze pagina niet aangeleverd. Zodra Nationale Waarborg meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs.",
+    "rubrieken": [
+      "bankgarantie"
+    ],
+    "omschrijving": "Voorbeeldprofiel met fictieve tekst. Nationale Waarborg heeft deze pagina niet aangeleverd. Zodra Nationale Waarborg meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs. Rubriek op het Adviesforum: bankgaranties en bieden met zekerheid.",
     "website": "https://example.org/nationale-waarborg/",
     "extranet": {
       "url": "https://example.org/nationale-waarborg/adviseursportaal",
@@ -1851,6 +2664,41 @@ window.AANBIEDERS=[
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/nationale-waarborg/acceptatiegids.pdf",
+        "soort": "acceptatiegids"
+      }
+    ],
+    "bijgewerkt": "2026-10-03"
+  },
+  {
+    "id": "nedasco",
+    "demo": true,
+    "naam": "Nedasco",
+    "type": "serviceprovider",
+    "logo": "img/logos/nedasco.png",
+    "omschrijving": "Voorbeeldprofiel met fictieve tekst. Nedasco heeft deze pagina niet aangeleverd. Zodra Nedasco meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs.",
+    "website": "https://example.org/nedasco/",
+    "extranet": {
+      "url": "https://example.org/nedasco/adviseursportaal",
+      "naam": "Adviseursportaal Nedasco (fictief)"
+    },
+    "nieuws": [
+      {
+        "id": "n1",
+        "datum": "2026-10-03",
+        "titel": "Voorbeeldbericht van Nedasco",
+        "tekst": "Dit is een fictief voorbeeldbericht. Hier plaatst Nedasco straks zelf nieuws voor adviseurs, zoals wijzigingen in acceptatie of werkwijze.",
+        "url": "https://example.org/nedasco/nieuws"
+      }
+    ],
+    "documenten": [
+      {
+        "titel": "Voorwaarden (voorbeeld)",
+        "url": "https://example.org/nedasco/voorwaarden.pdf",
+        "soort": "voorwaarden"
+      },
+      {
+        "titel": "Acceptatiegids (voorbeeld)",
+        "url": "https://example.org/nedasco/acceptatiegids.pdf",
         "soort": "acceptatiegids"
       }
     ],
@@ -1927,6 +2775,41 @@ window.AANBIEDERS=[
     "bijgewerkt": "2026-10-03"
   },
   {
+    "id": "nnek",
+    "demo": true,
+    "naam": "NNEK",
+    "type": "serviceprovider",
+    "logo": "img/logos/nnek.png",
+    "omschrijving": "Voorbeeldprofiel met fictieve tekst. NNEK heeft deze pagina niet aangeleverd. Zodra NNEK meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs.",
+    "website": "https://example.org/nnek/",
+    "extranet": {
+      "url": "https://example.org/nnek/adviseursportaal",
+      "naam": "Adviseursportaal NNEK (fictief)"
+    },
+    "nieuws": [
+      {
+        "id": "n1",
+        "datum": "2026-10-03",
+        "titel": "Voorbeeldbericht van NNEK",
+        "tekst": "Dit is een fictief voorbeeldbericht. Hier plaatst NNEK straks zelf nieuws voor adviseurs, zoals wijzigingen in acceptatie of werkwijze.",
+        "url": "https://example.org/nnek/nieuws"
+      }
+    ],
+    "documenten": [
+      {
+        "titel": "Voorwaarden (voorbeeld)",
+        "url": "https://example.org/nnek/voorwaarden.pdf",
+        "soort": "voorwaarden"
+      },
+      {
+        "titel": "Acceptatiegids (voorbeeld)",
+        "url": "https://example.org/nnek/acceptatiegids.pdf",
+        "soort": "acceptatiegids"
+      }
+    ],
+    "bijgewerkt": "2026-10-03"
+  },
+  {
     "id": "obvion",
     "demo": true,
     "naam": "Obvion",
@@ -1991,6 +2874,76 @@ window.AANBIEDERS=[
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/orange-credit/acceptatiegids.pdf",
+        "soort": "acceptatiegids"
+      }
+    ],
+    "bijgewerkt": "2026-10-03"
+  },
+  {
+    "id": "pentrax",
+    "demo": true,
+    "naam": "Pentrax",
+    "type": "serviceprovider",
+    "logo": "img/logos/pentrax.png",
+    "omschrijving": "Voorbeeldprofiel met fictieve tekst. Pentrax heeft deze pagina niet aangeleverd. Zodra Pentrax meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs. Rekenexpert voor de inkomensverklaring ondernemer (IKV) bij hypotheekaanvragen van zelfstandigen.",
+    "website": "https://example.org/pentrax/",
+    "extranet": {
+      "url": "https://example.org/pentrax/adviseursportaal",
+      "naam": "Adviseursportaal Pentrax (fictief)"
+    },
+    "nieuws": [
+      {
+        "id": "n1",
+        "datum": "2026-10-03",
+        "titel": "Voorbeeldbericht van Pentrax",
+        "tekst": "Dit is een fictief voorbeeldbericht. Hier plaatst Pentrax straks zelf nieuws voor adviseurs, zoals wijzigingen in acceptatie of werkwijze.",
+        "url": "https://example.org/pentrax/nieuws"
+      }
+    ],
+    "documenten": [
+      {
+        "titel": "Voorwaarden (voorbeeld)",
+        "url": "https://example.org/pentrax/voorwaarden.pdf",
+        "soort": "voorwaarden"
+      },
+      {
+        "titel": "Formulier (voorbeeld)",
+        "url": "https://example.org/pentrax/formulier.pdf",
+        "soort": "formulier"
+      }
+    ],
+    "bijgewerkt": "2026-10-03"
+  },
+  {
+    "id": "polaris-assuradeuren",
+    "demo": true,
+    "naam": "Polaris Assuradeuren",
+    "type": "serviceprovider",
+    "logo": "img/logos/polaris-assuradeuren.png",
+    "omschrijving": "Voorbeeldprofiel met fictieve tekst. Polaris Assuradeuren heeft deze pagina niet aangeleverd. Zodra Polaris Assuradeuren meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs. Serviceprovider voor het intermediair (volmacht/assuradeur).",
+    "website": "https://example.org/polaris-assuradeuren/",
+    "extranet": {
+      "url": "https://example.org/polaris-assuradeuren/adviseursportaal",
+      "naam": "Adviseursportaal Polaris Assuradeuren (fictief)"
+    },
+    "nieuws": [
+      {
+        "id": "n1",
+        "datum": "2026-10-03",
+        "titel": "Voorbeeldbericht van Polaris Assuradeuren",
+        "tekst": "Dit is een fictief voorbeeldbericht. Hier plaatst Polaris Assuradeuren straks zelf nieuws voor adviseurs, zoals wijzigingen in acceptatie of werkwijze.",
+        "url": "https://example.org/polaris-assuradeuren/nieuws"
+      }
+    ],
+    "documenten": [
+      {
+        "titel": "Voorwaarden (voorbeeld)",
+        "url": "https://example.org/polaris-assuradeuren/voorwaarden.pdf",
+        "soort": "voorwaarden"
+      },
+      {
+        "titel": "Acceptatiegids (voorbeeld)",
+        "url": "https://example.org/polaris-assuradeuren/acceptatiegids.pdf",
         "soort": "acceptatiegids"
       }
     ],
@@ -2067,6 +3020,41 @@ window.AANBIEDERS=[
     "bijgewerkt": "2026-10-03"
   },
   {
+    "id": "raadhuys",
+    "demo": true,
+    "naam": "Raadhuys Tax Legal Accounting",
+    "type": "serviceprovider",
+    "logo": "img/logos/raadhuys.png",
+    "omschrijving": "Voorbeeldprofiel met fictieve tekst. Raadhuys Tax Legal Accounting heeft deze pagina niet aangeleverd. Zodra Raadhuys Tax Legal Accounting meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs. Rekenexpert voor de inkomensverklaring ondernemer (IKV) bij hypotheekaanvragen van zelfstandigen.",
+    "website": "https://example.org/raadhuys/",
+    "extranet": {
+      "url": "https://example.org/raadhuys/adviseursportaal",
+      "naam": "Adviseursportaal Raadhuys Tax Legal Accounting (fictief)"
+    },
+    "nieuws": [
+      {
+        "id": "n1",
+        "datum": "2026-10-03",
+        "titel": "Voorbeeldbericht van Raadhuys Tax Legal Accounting",
+        "tekst": "Dit is een fictief voorbeeldbericht. Hier plaatst Raadhuys Tax Legal Accounting straks zelf nieuws voor adviseurs, zoals wijzigingen in acceptatie of werkwijze.",
+        "url": "https://example.org/raadhuys/nieuws"
+      }
+    ],
+    "documenten": [
+      {
+        "titel": "Voorwaarden (voorbeeld)",
+        "url": "https://example.org/raadhuys/voorwaarden.pdf",
+        "soort": "voorwaarden"
+      },
+      {
+        "titel": "Formulier (voorbeeld)",
+        "url": "https://example.org/raadhuys/formulier.pdf",
+        "soort": "formulier"
+      }
+    ],
+    "bijgewerkt": "2026-10-03"
+  },
+  {
     "id": "rabobank",
     "demo": true,
     "naam": "Rabobank",
@@ -2132,6 +3120,41 @@ window.AANBIEDERS=[
         "titel": "Productblad (voorbeeld)",
         "url": "https://example.org/rhion/productblad.pdf",
         "soort": "productblad"
+      }
+    ],
+    "bijgewerkt": "2026-10-03"
+  },
+  {
+    "id": "risk-verzekeringen",
+    "demo": true,
+    "naam": "RISK Verzekeringen",
+    "type": "serviceprovider",
+    "logo": "img/logos/risk-verzekeringen.png",
+    "omschrijving": "Voorbeeldprofiel met fictieve tekst. RISK Verzekeringen heeft deze pagina niet aangeleverd. Zodra RISK Verzekeringen meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs. Serviceprovider voor het intermediair (volmacht/assuradeur).",
+    "website": "https://example.org/risk-verzekeringen/",
+    "extranet": {
+      "url": "https://example.org/risk-verzekeringen/adviseursportaal",
+      "naam": "Adviseursportaal RISK Verzekeringen (fictief)"
+    },
+    "nieuws": [
+      {
+        "id": "n1",
+        "datum": "2026-10-03",
+        "titel": "Voorbeeldbericht van RISK Verzekeringen",
+        "tekst": "Dit is een fictief voorbeeldbericht. Hier plaatst RISK Verzekeringen straks zelf nieuws voor adviseurs, zoals wijzigingen in acceptatie of werkwijze.",
+        "url": "https://example.org/risk-verzekeringen/nieuws"
+      }
+    ],
+    "documenten": [
+      {
+        "titel": "Voorwaarden (voorbeeld)",
+        "url": "https://example.org/risk-verzekeringen/voorwaarden.pdf",
+        "soort": "voorwaarden"
+      },
+      {
+        "titel": "Acceptatiegids (voorbeeld)",
+        "url": "https://example.org/risk-verzekeringen/acceptatiegids.pdf",
+        "soort": "acceptatiegids"
       }
     ],
     "bijgewerkt": "2026-10-03"
@@ -2207,6 +3230,41 @@ window.AANBIEDERS=[
     "bijgewerkt": "2026-10-03"
   },
   {
+    "id": "saa-verzekeringen",
+    "demo": true,
+    "naam": "SAA Verzekeringen",
+    "type": "serviceprovider",
+    "logo": "img/logos/saa-verzekeringen.png",
+    "omschrijving": "Voorbeeldprofiel met fictieve tekst. SAA Verzekeringen heeft deze pagina niet aangeleverd. Zodra SAA Verzekeringen meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs. Serviceprovider voor het intermediair (volmacht/assuradeur).",
+    "website": "https://example.org/saa-verzekeringen/",
+    "extranet": {
+      "url": "https://example.org/saa-verzekeringen/adviseursportaal",
+      "naam": "Adviseursportaal SAA Verzekeringen (fictief)"
+    },
+    "nieuws": [
+      {
+        "id": "n1",
+        "datum": "2026-10-03",
+        "titel": "Voorbeeldbericht van SAA Verzekeringen",
+        "tekst": "Dit is een fictief voorbeeldbericht. Hier plaatst SAA Verzekeringen straks zelf nieuws voor adviseurs, zoals wijzigingen in acceptatie of werkwijze.",
+        "url": "https://example.org/saa-verzekeringen/nieuws"
+      }
+    ],
+    "documenten": [
+      {
+        "titel": "Voorwaarden (voorbeeld)",
+        "url": "https://example.org/saa-verzekeringen/voorwaarden.pdf",
+        "soort": "voorwaarden"
+      },
+      {
+        "titel": "Acceptatiegids (voorbeeld)",
+        "url": "https://example.org/saa-verzekeringen/acceptatiegids.pdf",
+        "soort": "acceptatiegids"
+      }
+    ],
+    "bijgewerkt": "2026-10-03"
+  },
+  {
     "id": "samenwerkende-kredietunies",
     "demo": true,
     "naam": "Samenwerkende Kredietunies",
@@ -2236,6 +3294,41 @@ window.AANBIEDERS=[
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/samenwerkende-kredietunies/acceptatiegids.pdf",
+        "soort": "acceptatiegids"
+      }
+    ],
+    "bijgewerkt": "2026-10-03"
+  },
+  {
+    "id": "siriuspro",
+    "demo": true,
+    "naam": "SiriusPro",
+    "type": "serviceprovider",
+    "logo": "img/logos/siriuspro.png",
+    "omschrijving": "Voorbeeldprofiel met fictieve tekst. SiriusPro heeft deze pagina niet aangeleverd. Zodra SiriusPro meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs.",
+    "website": "https://example.org/siriuspro/",
+    "extranet": {
+      "url": "https://example.org/siriuspro/adviseursportaal",
+      "naam": "Adviseursportaal SiriusPro (fictief)"
+    },
+    "nieuws": [
+      {
+        "id": "n1",
+        "datum": "2026-10-03",
+        "titel": "Voorbeeldbericht van SiriusPro",
+        "tekst": "Dit is een fictief voorbeeldbericht. Hier plaatst SiriusPro straks zelf nieuws voor adviseurs, zoals wijzigingen in acceptatie of werkwijze.",
+        "url": "https://example.org/siriuspro/nieuws"
+      }
+    ],
+    "documenten": [
+      {
+        "titel": "Voorwaarden (voorbeeld)",
+        "url": "https://example.org/siriuspro/voorwaarden.pdf",
+        "soort": "voorwaarden"
+      },
+      {
+        "titel": "Acceptatiegids (voorbeeld)",
+        "url": "https://example.org/siriuspro/acceptatiegids.pdf",
         "soort": "acceptatiegids"
       }
     ],
@@ -2306,6 +3399,41 @@ window.AANBIEDERS=[
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/solidbriq/acceptatiegids.pdf",
+        "soort": "acceptatiegids"
+      }
+    ],
+    "bijgewerkt": "2026-10-03"
+  },
+  {
+    "id": "surebusiness",
+    "demo": true,
+    "naam": "SUREbusiness",
+    "type": "serviceprovider",
+    "logo": "img/logos/surebusiness.png",
+    "omschrijving": "Voorbeeldprofiel met fictieve tekst. SUREbusiness heeft deze pagina niet aangeleverd. Zodra SUREbusiness meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs.",
+    "website": "https://example.org/surebusiness/",
+    "extranet": {
+      "url": "https://example.org/surebusiness/adviseursportaal",
+      "naam": "Adviseursportaal SUREbusiness (fictief)"
+    },
+    "nieuws": [
+      {
+        "id": "n1",
+        "datum": "2026-10-03",
+        "titel": "Voorbeeldbericht van SUREbusiness",
+        "tekst": "Dit is een fictief voorbeeldbericht. Hier plaatst SUREbusiness straks zelf nieuws voor adviseurs, zoals wijzigingen in acceptatie of werkwijze.",
+        "url": "https://example.org/surebusiness/nieuws"
+      }
+    ],
+    "documenten": [
+      {
+        "titel": "Voorwaarden (voorbeeld)",
+        "url": "https://example.org/surebusiness/voorwaarden.pdf",
+        "soort": "voorwaarden"
+      },
+      {
+        "titel": "Acceptatiegids (voorbeeld)",
+        "url": "https://example.org/surebusiness/acceptatiegids.pdf",
         "soort": "acceptatiegids"
       }
     ],
@@ -2417,6 +3545,41 @@ window.AANBIEDERS=[
     "bijgewerkt": "2026-10-03"
   },
   {
+    "id": "turien-en-co-assuradeuren",
+    "demo": true,
+    "naam": "Turien & Co Assuradeuren",
+    "type": "serviceprovider",
+    "logo": "img/logos/turien-en-co-assuradeuren.png",
+    "omschrijving": "Voorbeeldprofiel met fictieve tekst. Turien & Co Assuradeuren heeft deze pagina niet aangeleverd. Zodra Turien & Co Assuradeuren meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs. Serviceprovider voor het intermediair (volmacht/assuradeur).",
+    "website": "https://example.org/turien-en-co-assuradeuren/",
+    "extranet": {
+      "url": "https://example.org/turien-en-co-assuradeuren/adviseursportaal",
+      "naam": "Adviseursportaal Turien & Co Assuradeuren (fictief)"
+    },
+    "nieuws": [
+      {
+        "id": "n1",
+        "datum": "2026-10-03",
+        "titel": "Voorbeeldbericht van Turien & Co Assuradeuren",
+        "tekst": "Dit is een fictief voorbeeldbericht. Hier plaatst Turien & Co Assuradeuren straks zelf nieuws voor adviseurs, zoals wijzigingen in acceptatie of werkwijze.",
+        "url": "https://example.org/turien-en-co-assuradeuren/nieuws"
+      }
+    ],
+    "documenten": [
+      {
+        "titel": "Voorwaarden (voorbeeld)",
+        "url": "https://example.org/turien-en-co-assuradeuren/voorwaarden.pdf",
+        "soort": "voorwaarden"
+      },
+      {
+        "titel": "Acceptatiegids (voorbeeld)",
+        "url": "https://example.org/turien-en-co-assuradeuren/acceptatiegids.pdf",
+        "soort": "acceptatiegids"
+      }
+    ],
+    "bijgewerkt": "2026-10-03"
+  },
+  {
     "id": "unigarant",
     "demo": true,
     "naam": "Unigarant",
@@ -2447,6 +3610,111 @@ window.AANBIEDERS=[
         "titel": "Productblad (voorbeeld)",
         "url": "https://example.org/unigarant/productblad.pdf",
         "soort": "productblad"
+      }
+    ],
+    "bijgewerkt": "2026-10-03"
+  },
+  {
+    "id": "vcn-hypotheken",
+    "demo": true,
+    "naam": "VCN Hypotheken",
+    "type": "serviceprovider",
+    "logo": "img/logos/vcn-hypotheken.png",
+    "omschrijving": "Voorbeeldprofiel met fictieve tekst. VCN Hypotheken heeft deze pagina niet aangeleverd. Zodra VCN Hypotheken meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs. Serviceprovider voor hypotheken.",
+    "website": "https://example.org/vcn-hypotheken/",
+    "extranet": {
+      "url": "https://example.org/vcn-hypotheken/adviseursportaal",
+      "naam": "Adviseursportaal VCN Hypotheken (fictief)"
+    },
+    "nieuws": [
+      {
+        "id": "n1",
+        "datum": "2026-10-03",
+        "titel": "Voorbeeldbericht van VCN Hypotheken",
+        "tekst": "Dit is een fictief voorbeeldbericht. Hier plaatst VCN Hypotheken straks zelf nieuws voor adviseurs, zoals wijzigingen in acceptatie of werkwijze.",
+        "url": "https://example.org/vcn-hypotheken/nieuws"
+      }
+    ],
+    "documenten": [
+      {
+        "titel": "Voorwaarden (voorbeeld)",
+        "url": "https://example.org/vcn-hypotheken/voorwaarden.pdf",
+        "soort": "voorwaarden"
+      },
+      {
+        "titel": "Acceptatiegids (voorbeeld)",
+        "url": "https://example.org/vcn-hypotheken/acceptatiegids.pdf",
+        "soort": "acceptatiegids"
+      }
+    ],
+    "bijgewerkt": "2026-10-03"
+  },
+  {
+    "id": "vcn-kredieten",
+    "demo": true,
+    "naam": "VCN Kredieten",
+    "type": "serviceprovider",
+    "logo": "img/logos/vcn-kredieten.png",
+    "omschrijving": "Voorbeeldprofiel met fictieve tekst. VCN Kredieten heeft deze pagina niet aangeleverd. Zodra VCN Kredieten meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs. Serviceprovider voor kredieten.",
+    "website": "https://example.org/vcn-kredieten/",
+    "extranet": {
+      "url": "https://example.org/vcn-kredieten/adviseursportaal",
+      "naam": "Adviseursportaal VCN Kredieten (fictief)"
+    },
+    "nieuws": [
+      {
+        "id": "n1",
+        "datum": "2026-10-03",
+        "titel": "Voorbeeldbericht van VCN Kredieten",
+        "tekst": "Dit is een fictief voorbeeldbericht. Hier plaatst VCN Kredieten straks zelf nieuws voor adviseurs, zoals wijzigingen in acceptatie of werkwijze.",
+        "url": "https://example.org/vcn-kredieten/nieuws"
+      }
+    ],
+    "documenten": [
+      {
+        "titel": "Voorwaarden (voorbeeld)",
+        "url": "https://example.org/vcn-kredieten/voorwaarden.pdf",
+        "soort": "voorwaarden"
+      },
+      {
+        "titel": "Acceptatiegids (voorbeeld)",
+        "url": "https://example.org/vcn-kredieten/acceptatiegids.pdf",
+        "soort": "acceptatiegids"
+      }
+    ],
+    "bijgewerkt": "2026-10-03"
+  },
+  {
+    "id": "vcn-verzekeringen",
+    "demo": true,
+    "naam": "VCN Verzekeringen",
+    "type": "serviceprovider",
+    "logo": "img/logos/vcn-verzekeringen.png",
+    "omschrijving": "Voorbeeldprofiel met fictieve tekst. VCN Verzekeringen heeft deze pagina niet aangeleverd. Zodra VCN Verzekeringen meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs. Serviceprovider voor het intermediair (volmacht/assuradeur).",
+    "website": "https://example.org/vcn-verzekeringen/",
+    "extranet": {
+      "url": "https://example.org/vcn-verzekeringen/adviseursportaal",
+      "naam": "Adviseursportaal VCN Verzekeringen (fictief)"
+    },
+    "nieuws": [
+      {
+        "id": "n1",
+        "datum": "2026-10-03",
+        "titel": "Voorbeeldbericht van VCN Verzekeringen",
+        "tekst": "Dit is een fictief voorbeeldbericht. Hier plaatst VCN Verzekeringen straks zelf nieuws voor adviseurs, zoals wijzigingen in acceptatie of werkwijze.",
+        "url": "https://example.org/vcn-verzekeringen/nieuws"
+      }
+    ],
+    "documenten": [
+      {
+        "titel": "Voorwaarden (voorbeeld)",
+        "url": "https://example.org/vcn-verzekeringen/voorwaarden.pdf",
+        "soort": "voorwaarden"
+      },
+      {
+        "titel": "Acceptatiegids (voorbeeld)",
+        "url": "https://example.org/vcn-verzekeringen/acceptatiegids.pdf",
+        "soort": "acceptatiegids"
       }
     ],
     "bijgewerkt": "2026-10-03"
@@ -2522,6 +3790,76 @@ window.AANBIEDERS=[
     "bijgewerkt": "2026-10-03"
   },
   {
+    "id": "vkg",
+    "demo": true,
+    "naam": "VKG",
+    "type": "serviceprovider",
+    "logo": "img/logos/vkg.png",
+    "omschrijving": "Voorbeeldprofiel met fictieve tekst. VKG heeft deze pagina niet aangeleverd. Zodra VKG meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs.",
+    "website": "https://example.org/vkg/",
+    "extranet": {
+      "url": "https://example.org/vkg/adviseursportaal",
+      "naam": "Adviseursportaal VKG (fictief)"
+    },
+    "nieuws": [
+      {
+        "id": "n1",
+        "datum": "2026-10-03",
+        "titel": "Voorbeeldbericht van VKG",
+        "tekst": "Dit is een fictief voorbeeldbericht. Hier plaatst VKG straks zelf nieuws voor adviseurs, zoals wijzigingen in acceptatie of werkwijze.",
+        "url": "https://example.org/vkg/nieuws"
+      }
+    ],
+    "documenten": [
+      {
+        "titel": "Voorwaarden (voorbeeld)",
+        "url": "https://example.org/vkg/voorwaarden.pdf",
+        "soort": "voorwaarden"
+      },
+      {
+        "titel": "Acceptatiegids (voorbeeld)",
+        "url": "https://example.org/vkg/acceptatiegids.pdf",
+        "soort": "acceptatiegids"
+      }
+    ],
+    "bijgewerkt": "2026-10-03"
+  },
+  {
+    "id": "voogd-en-voogd",
+    "demo": true,
+    "naam": "Voogd & Voogd",
+    "type": "serviceprovider",
+    "logo": "img/logos/voogd-en-voogd.png",
+    "omschrijving": "Voorbeeldprofiel met fictieve tekst. Voogd & Voogd heeft deze pagina niet aangeleverd. Zodra Voogd & Voogd meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs.",
+    "website": "https://example.org/voogd-en-voogd/",
+    "extranet": {
+      "url": "https://example.org/voogd-en-voogd/adviseursportaal",
+      "naam": "Adviseursportaal Voogd & Voogd (fictief)"
+    },
+    "nieuws": [
+      {
+        "id": "n1",
+        "datum": "2026-10-03",
+        "titel": "Voorbeeldbericht van Voogd & Voogd",
+        "tekst": "Dit is een fictief voorbeeldbericht. Hier plaatst Voogd & Voogd straks zelf nieuws voor adviseurs, zoals wijzigingen in acceptatie of werkwijze.",
+        "url": "https://example.org/voogd-en-voogd/nieuws"
+      }
+    ],
+    "documenten": [
+      {
+        "titel": "Voorwaarden (voorbeeld)",
+        "url": "https://example.org/voogd-en-voogd/voorwaarden.pdf",
+        "soort": "voorwaarden"
+      },
+      {
+        "titel": "Acceptatiegids (voorbeeld)",
+        "url": "https://example.org/voogd-en-voogd/acceptatiegids.pdf",
+        "soort": "acceptatiegids"
+      }
+    ],
+    "bijgewerkt": "2026-10-03"
+  },
+  {
     "id": "voor-de-groei",
     "demo": true,
     "naam": "Voor de Groei",
@@ -2587,6 +3925,41 @@ window.AANBIEDERS=[
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/woonnu/acceptatiegids.pdf",
         "soort": "acceptatiegids"
+      }
+    ],
+    "bijgewerkt": "2026-10-03"
+  },
+  {
+    "id": "zakelijk-inkomen",
+    "demo": true,
+    "naam": "Zakelijk Inkomen",
+    "type": "serviceprovider",
+    "logo": "img/logos/zakelijk-inkomen.png",
+    "omschrijving": "Voorbeeldprofiel met fictieve tekst. Zakelijk Inkomen heeft deze pagina niet aangeleverd. Zodra Zakelijk Inkomen meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over diensten voor adviseurs. Rekenexpert voor de inkomensverklaring ondernemer (IKV) bij hypotheekaanvragen van zelfstandigen.",
+    "website": "https://example.org/zakelijk-inkomen/",
+    "extranet": {
+      "url": "https://example.org/zakelijk-inkomen/adviseursportaal",
+      "naam": "Adviseursportaal Zakelijk Inkomen (fictief)"
+    },
+    "nieuws": [
+      {
+        "id": "n1",
+        "datum": "2026-10-03",
+        "titel": "Voorbeeldbericht van Zakelijk Inkomen",
+        "tekst": "Dit is een fictief voorbeeldbericht. Hier plaatst Zakelijk Inkomen straks zelf nieuws voor adviseurs, zoals wijzigingen in acceptatie of werkwijze.",
+        "url": "https://example.org/zakelijk-inkomen/nieuws"
+      }
+    ],
+    "documenten": [
+      {
+        "titel": "Voorwaarden (voorbeeld)",
+        "url": "https://example.org/zakelijk-inkomen/voorwaarden.pdf",
+        "soort": "voorwaarden"
+      },
+      {
+        "titel": "Formulier (voorbeeld)",
+        "url": "https://example.org/zakelijk-inkomen/formulier.pdf",
+        "soort": "formulier"
       }
     ],
     "bijgewerkt": "2026-10-03"

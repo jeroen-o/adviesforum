@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Beheer voor aanbieders – Adviesforum</title>
-<meta name="description" content="Beheerpagina voor aanbieders op het Adviesforum: log in met je persoonlijke code, werk nieuws, documenten, richtlijnen, extranet, contactpersonen en e-learning bij en dien de wijzigingen in.">
+<meta name="description" content="Beheerpagina voor aanbieders op het Adviesforum: log in met je persoonlijke code, werk nieuws, documenten, richtlijnen, extranet, contactpersonen, e-learning en agenda bij en dien de wijzigingen in.">
 <meta name="robots" content="noindex, nofollow">
 <link rel="canonical" href="https://jeroen-o.github.io/adviesforum/aanbieder-beheer.html">
 <meta property="og:url" content="https://jeroen-o.github.io/adviesforum/aanbieder-beheer.html">
@@ -118,7 +118,7 @@ a.terug{display:inline-block;font-size:13.5px;font-weight:700;text-decoration:no
     <div class="merk"><span class="zeshoek" aria-hidden="true"></span>Adviesforum &middot; Aanbieders</div>
     <a class="terug" href="aanbieders.html">&larr; Terug naar de aanbieders</a>
     <h1>Je informatie bijhouden</h1>
-    <p>Voor geldverstrekkers, verzekeraars en andere aanbieders met een account. Werk je nieuws, documenten, richtlijnen, extranetlink, contactpersonen en e-learning bij en dien de wijziging in bij de beheerder.</p>
+    <p>Voor geldverstrekkers, verzekeraars en andere aanbieders met een account. Werk je nieuws, documenten, richtlijnen, extranetlink, contactpersonen, e-learning en agenda bij en dien de wijziging in bij de beheerder.</p>
   </div>
 </header>
 <main class="romp">
@@ -180,6 +180,8 @@ var MAIL='forumadvies@gmail.com',COOKIE='af_aanbieder',MAX_MAILTO=1900;
 /* VALIDATIE-BEGIN: dit blok wordt ook gebruikt door tools/aanbieder-import.js (geen DOM-code hierin). */
 var TYPES={geldverstrekker:'Geldverstrekker',verzekeraar:'Verzekeraar',pensioenuitvoerder:'Pensioenuitvoerder',kredietverstrekker:'Kredietverstrekker',serviceprovider:'Serviceprovider'};
 var SOORTEN={voorwaarden:'Voorwaarden',acceptatiegids:'Acceptatiegids',productblad:'Productblad',formulier:'Formulier'};
+var RUBRIEKEN={bankgarantie:'Bankgaranties en bieden met zekerheid'};
+var AGENDASOORTEN={webinar:'Webinar',bijeenkomst:'Bijeenkomst','e-learning':'E-learning',beurs:'Beurs',overig:'Overig'};
 /* Lijsten: velden, maximale lengtes en aantallen. */
 var LIJSTEN={
   nieuws:{titel:'Nieuws',enkel:'Nieuwsbericht',max:50,uitleg:'Zakelijk nieuws voor adviseurs: wijzigingen in beleid, voorwaarden, processen of bereikbaarheid. Altijd met datum. Geen rentes of acties.',velden:[
@@ -191,9 +193,14 @@ var LIJSTEN={
   contact:{titel:'Contactpersonen',enkel:'Contactpersoon',max:20,uitleg:'Alleen zakelijke gegevens, en alleen met toestemming van de persoon zelf. Een algemeen teamadres mag ook.',velden:[
     {k:'naam',l:'Naam (of teamnaam)',max:80,req:1},{k:'functie',l:'Functie of regio',max:100},{k:'email',l:'Zakelijk e-mailadres',t:'email',max:120,req:1},{k:'telefoon',l:'Zakelijk telefoonnummer (optioneel)',t:'tel',max:20}]},
   elearning:{titel:'E-learning',enkel:'Module',max:30,uitleg:'Modules of webinars voor adviseurs. Vink PE alleen aan als de module PE-punten oplevert.',velden:[
-    {k:'titel',l:'Titel',max:120,req:1},{k:'url',l:'Link (https)',t:'url',max:300,req:1},{k:'duur',l:'Duur (bijv. 30 minuten)',max:40},{k:'pe',l:'Levert PE-punten op',t:'check'}]}
+    {k:'titel',l:'Titel',max:120,req:1},{k:'url',l:'Link (https)',t:'url',max:300,req:1},{k:'duur',l:'Duur (bijv. 30 minuten)',max:40},{k:'pe',l:'Levert PE-punten op',t:'check'}]},
+  agenda:{titel:'Agenda',enkel:'Agenda-item',max:30,uitleg:'Webinars, PE-bijeenkomsten, e-learnings met een vaste datum en beurzen voor adviseurs. Vink PE alleen aan als je PE-punten opgeeft. Geen rentes of acties.',velden:[
+    {k:'datum',l:'Datum',t:'date',req:1},{k:'tijd',l:'Begintijd (optioneel, uu:mm)',t:'time'},{k:'eind',l:'Eindtijd (optioneel, uu:mm)',t:'time'},{k:'titel',l:'Titel',max:120,req:1},
+    {k:'soort',l:'Soort',t:'select',opties:AGENDASOORTEN,req:1},{k:'locatie',l:'Locatie (plaats of Online)',max:100,req:1},{k:'url',l:'Link naar aanmelding of informatie (https)',t:'url',max:300,req:1},
+    {k:'tekst',l:'Korte omschrijving (optioneel)',t:'textarea',max:1000},{k:'pe',l:'Levert PE-punten op (volgens jullie opgave)',t:'check'}]}
 };
-var VOLGORDE=['nieuws','documenten','richtlijnen','contact','elearning'];
+var VOLGORDE=['nieuws','documenten','richtlijnen','contact','elearning','agenda'];
+var MET_ID={nieuws:1,agenda:1};
 var AFM_RE=/\d\s?%|\brente(?:s|tarie[fv]en|korting)?\b|\bactie(?:s)?\b|\bkorting|\bcashback|\bgratis\b|\bpremies?\b|\btarie[fv]en\b/i;
 function vandaag(){var d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
 /* ---------- Normaliseren en valideren ---------- */
@@ -201,8 +208,8 @@ function str(v){return typeof v==='string'?v.trim():(v==null?'':String(v).trim()
 function normaliseer(a){
   a=a||{};var ex=a.extranet||{};
   var o={id:str(a.id),naam:str(a.naam),type:str(a.type),initialen:str(a.initialen),kleur:str(a.kleur),omschrijving:str(a.omschrijving),website:str(a.website),
-    extranet:{url:str(ex.url),naam:str(ex.naam)}};
-  VOLGORDE.forEach(function(k){o[k]=(Array.isArray(a[k])?a[k]:[]).map(function(it){var r={};if(k==='nieuws')r.id=str(it&&it.id);LIJSTEN[k].velden.forEach(function(v){r[v.k]=v.t==='check'?!!(it&&it[v.k]):str(it&&it[v.k]);});return r;});});
+    extranet:{url:str(ex.url),naam:str(ex.naam)},rubrieken:(Array.isArray(a.rubrieken)?a.rubrieken:[]).map(str)};
+  VOLGORDE.forEach(function(k){o[k]=(Array.isArray(a[k])?a[k]:[]).map(function(it){var r={};if(MET_ID[k])r.id=str(it&&it.id);LIJSTEN[k].velden.forEach(function(v){r[v.k]=v.t==='check'?!!(it&&it[v.k]):str(it&&it[v.k]);});return r;});});
   o.bijgewerkt=str(a.bijgewerkt);
   return o;
 }
@@ -223,12 +230,12 @@ function valideer(o){
   if(o.extranet.url&&(!okUrl(o.extranet.url)||o.extranet.url.length>300))fout('extranet.url','Extranetlink moet een https-link zijn.');
   if(o.extranet.naam&&!o.extranet.url)fout('extranet.url','Vul de link van het extranet in, of maak de naam leeg.');
   tekst('extranet.naam',o.extranet.naam,80,0,'Naam extranet');
-  var nieuwsIds={};
+  o.rubrieken.forEach(function(r,i){if(!Object.prototype.hasOwnProperty.call(RUBRIEKEN,r))fout('rubrieken','Onbekende rubriek: '+r+'.');else if(o.rubrieken.indexOf(r)<i)fout('rubrieken','Rubriek '+r+' staat er dubbel in.');});
   VOLGORDE.forEach(function(k){
-    var cfg=LIJSTEN[k];if(o[k].length>cfg.max)fout(k,cfg.titel+': maximaal '+cfg.max+' items.');
+    var cfg=LIJSTEN[k],ids={};if(o[k].length>cfg.max)fout(k,cfg.titel+': maximaal '+cfg.max+' items.');
     o[k].forEach(function(it,i){
       var p=k+'.'+i+'.',nr=cfg.enkel+' '+(i+1)+': ';
-      if(k==='nieuws'){if(!/^[a-z0-9]{1,20}$/.test(it.id))fout(p+'titel',nr+'technische id ontbreekt of is ongeldig.');else if(nieuwsIds[it.id])fout(p+'titel',nr+'id '+it.id+' komt dubbel voor.');nieuwsIds[it.id]=1;}
+      if(MET_ID[k]){if(!/^[a-z0-9]{1,20}$/.test(it.id))fout(p+'titel',nr+'technische id ontbreekt of is ongeldig.');else if(ids[it.id])fout(p+'titel',nr+'id '+it.id+' komt dubbel voor.');ids[it.id]=1;}
       cfg.velden.forEach(function(v){
         var val=it[v.k],pad=p+v.k;if(v.t==='check')return;
         if(v.req&&!val){fout(pad,nr+v.l.replace(/ \(.*\)$/,'')+' is verplicht.');return;}
@@ -238,10 +245,16 @@ function valideer(o){
         if(v.t==='email'&&!okMail(val))fout(pad,nr+'e-mailadres is ongeldig.');
         if(v.t==='tel'&&!/^[0-9+()\s-]{6,20}$/.test(val))fout(pad,nr+'telefoonnummer is ongeldig.');
         if(v.t==='date'&&!okDatum(val))fout(pad,nr+'datum is ongeldig (JJJJ-MM-DD).');
+        if(v.t==='time'&&!/^([01]\d|2[0-3]):[0-5]\d$/.test(val))fout(pad,nr+'tijd is ongeldig (uu:mm).');
         if(v.t==='select'&&!v.opties[val])fout(pad,nr+'kies een soort.');
         if((v.k==='titel'||v.k==='tekst')&&AFM_RE.test(val))w.push({pad:pad,msg:nr+'lijkt een rente, tarief, premie of actie te noemen. Die plaatsen we niet (AFM); de beheerder kan dit weigeren.'});
       });
       if(k==='nieuws'&&okDatum(it.datum)&&it.datum>vandaag())w.push({pad:p+'datum',msg:nr+'datum ligt in de toekomst.'});
+      if(k==='agenda'){
+        if(it.eind&&!it.tijd)fout(p+'tijd',nr+'vul ook de begintijd in, of maak de eindtijd leeg.');
+        else if(it.eind&&it.tijd&&it.eind<=it.tijd)fout(p+'eind',nr+'eindtijd moet na de begintijd liggen.');
+        if(okDatum(it.datum)&&it.datum<vandaag())w.push({pad:p+'datum',msg:nr+'datum ligt in het verleden; het item wordt als verlopen getoond.'});
+      }
     });
   });
   if(AFM_RE.test(o.omschrijving))w.push({pad:'omschrijving',msg:'Omschrijving lijkt een rente, tarief, premie of actie te noemen. Die plaatsen we niet (AFM).'});
@@ -285,7 +298,7 @@ function veldHtml(pad,v,waarde){
   var input;
   if(v.t==='textarea')input='<textarea id="'+id+'" data-pad="'+pad+'"'+ml+req+'>'+esc(waarde)+'</textarea>';
   else if(v.t==='select')input='<select id="'+id+'" data-pad="'+pad+'"'+req+'><option value="">Kies…</option>'+Object.keys(v.opties).map(function(k){return '<option value="'+k+'"'+(waarde===k?' selected':'')+'>'+esc(v.opties[k])+'</option>';}).join('')+'</select>';
-  else input='<input id="'+id+'" data-pad="'+pad+'" type="'+(v.t==='url'?'url':v.t==='email'?'email':v.t==='tel'?'tel':v.t==='date'?'date':'text')+'"'+(v.t==='url'?' placeholder="https://"':'')+' value="'+esc(waarde)+'"'+ml+req+'>';
+  else input='<input id="'+id+'" data-pad="'+pad+'" type="'+(v.t==='url'?'url':v.t==='email'?'email':v.t==='tel'?'tel':v.t==='date'?'date':v.t==='time'?'time':'text')+'"'+(v.t==='url'?' placeholder="https://"':'')+' value="'+esc(waarde)+'"'+ml+req+'>';
   return '<div class="veld"><label for="'+id+'">'+esc(v.l)+'</label>'+input+(v.tip?'<span class="tip">'+esc(v.tip)+'</span>':'')+'</div>';
 }
 function editor(){
@@ -297,6 +310,7 @@ function editor(){
     '<div class="veld"><label for="f-kleur">Kleur logo</label><div class="kleurrij"><input type="color" id="f-kleurkiezer" aria-label="Kies kleur" value="'+(/^#[0-9a-f]{6}$/i.test(o.kleur)?esc(o.kleur):'#141414')+'"><input id="f-kleur" data-pad="kleur" maxlength="7" value="'+esc(o.kleur)+'" placeholder="#141414"></div></div></div>'+
     veldHtml('omschrijving',{l:'Korte omschrijving',t:'textarea',max:400,tip:'Zakelijk en feitelijk: wat bied je aan via het intermediair. Geen wervende teksten of acties.'},o.omschrijving)+
     veldHtml('website',{l:'Website (https)',t:'url',max:300},o.website)+
+    '<div class="veld" id="f-rubrieken" tabindex="-1"><span class="tip" style="font-weight:700">Rubrieken op het Adviesforum (optioneel)</span>'+Object.keys(RUBRIEKEN).map(function(k){return '<div class="veld vink"><label for="f-rubriek-'+k+'"><input type="checkbox" id="f-rubriek-'+k+'" data-rubriek="'+k+'"'+(o.rubrieken.indexOf(k)>=0?' checked':'')+'>'+esc(RUBRIEKEN[k])+'</label></div>';}).join('')+'</div>'+
     '</fieldset>';
   h+='<fieldset class="groep"><legend>Extranet</legend><p class="uitleg-kort">De omgeving waar adviseurs aanvragen indienen of dossiers volgen.</p><div class="rij2">'+
     veldHtml('extranet.naam',{l:'Naam van het extranet',max:80},o.extranet.naam)+veldHtml('extranet.url',{l:'Link (https)',t:'url',max:300},o.extranet.url)+'</div></fieldset>';
@@ -311,7 +325,7 @@ function editor(){
   controleer();
 }
 function zet(pad,waarde){var d=pad.split('.'),o=S;for(var i=0;i<d.length-1;i++)o=o[d[i]];o[d[d.length-1]]=waarde;}
-function leeg(k){var r={};if(k==='nieuws'){var max=0;S.nieuws.forEach(function(n){var m=/^n(\d+)$/.exec(n.id);if(m)max=Math.max(max,+m[1]);});r.id='n'+(max+1);}
+function leeg(k){var r={};if(MET_ID[k]){var pre=k==='agenda'?'a':'n',max=0;S[k].forEach(function(n){var m=new RegExp('^'+pre+'(\\d+)$').exec(n.id);if(m)max=Math.max(max,+m[1]);});r.id=pre+(max+1);}
   LIJSTEN[k].velden.forEach(function(v){r[v.k]=v.t==='check'?false:'';});if(k==='nieuws')r.datum=vandaag();if(k==='documenten')r.soort='';return r;}
 $('editor').addEventListener('input',function(e){
   var el=e.target;
@@ -320,7 +334,7 @@ $('editor').addEventListener('input',function(e){
   else return;
   controleer();
 });
-$('editor').addEventListener('change',function(e){if(e.target.type==='checkbox'||e.target.tagName==='SELECT'){zet(e.target.dataset.pad,e.target.type==='checkbox'?e.target.checked:e.target.value);controleer();}});
+$('editor').addEventListener('change',function(e){if(e.target.dataset.rubriek){var r=e.target.dataset.rubriek;S.rubrieken=(S.rubrieken||[]).filter(function(x){return x!==r;});if(e.target.checked)S.rubrieken.push(r);controleer();return;}if(e.target.type==='checkbox'||e.target.tagName==='SELECT'){zet(e.target.dataset.pad,e.target.type==='checkbox'?e.target.checked:e.target.value);controleer();}});
 $('editor').addEventListener('click',function(e){
   var b=e.target.closest('[data-erbij]');
   if(b){var k=b.dataset.erbij;if(k==='nieuws')S.nieuws.unshift(leeg(k));else S[k].push(leeg(k));editor();
