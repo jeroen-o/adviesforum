@@ -1,5 +1,5 @@
 // Gedeelde hulpfuncties: JS-fouten verzamelen en externe diensten afvangen.
-const PAGINAS = ['index.html', 'aanmelden.html', 'privacy.html', 'leennormen-2026.html', 'bijleenregeling.html',
+const PAGINAS = ['index.html', 'aanmelden.html', 'uitnodigen.html', 'privacy.html', 'leennormen-2026.html', 'bijleenregeling.html',
   'overbrugging.html', 'maandlasten.html', 'oversluiten.html', 'kosten-koper.html', 'ltv.html',
   'restschuld-pensioen.html', 'extra-aflossen.html', 'rentemiddeling.html', 'erfpacht.html', 'draagplicht.html', 'orv.html', 'aov-tekort.html', 'inkomen-ziekte-werknemer.html', 'werkloosheid.html', 'herbouwwaarde.html', 'wetgeving.html', 'werkinstructie-financieringsopzet.html', 'partijen.html', 'rekentools.html', 'sjablonen.html', 'kalender.html', 'levensgebeurtenissen.html', 'nieuw.html', 'compliance-overzicht.html', 'adviesroute.html', 'vergelijken.html', 'klantuitleg.html', 'oefenen.html', 'nhg-check.html', 'nhg-beheertoets.html', 'wwft-cdd.html', 'nazorg-signalen.html', 'inkomensbepaling.html', 'adviesmotivatie.html', 'acceptatiewijzer.html', 'dossierpakket.html',
   'inventarisatie.html', 'documentenchecklist.html', 'afwijkend-advies.html', 'gespreksverslag.html', 'nazorg-check.html', 'wijziging-doorgeven.html',
