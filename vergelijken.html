@@ -93,6 +93,7 @@ table.matrix{border-collapse:separate;border-spacing:0;width:100%;font-size:13.5
 .matrix tbody th{position:sticky;left:0;z-index:1;background:#fff;min-width:200px;width:200px;font-weight:400;box-shadow:2px 0 0 var(--lijn)}
 .matrix tbody tr:nth-child(even) td{background:#FCFCFB}
 .matrix tbody tr.is-gestopt th,.matrix tbody tr.is-gestopt td{background:#FBF6F5}
+.plogo{display:block;box-sizing:content-box;height:24px;width:auto;max-width:110px;object-fit:contain;object-position:left center;margin:0 0 6px;border-radius:4px}
 .pnaam{display:block;font-weight:800;font-size:14px;line-height:1.3;overflow-wrap:anywhere}
 .ptype{display:block;font-size:11.5px;color:var(--grijs);margin-top:2px}
 .plink{display:inline-block;font-size:12px;font-weight:700;margin-top:6px}
@@ -187,6 +188,7 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
 :root:not([data-theme="light"]) .matrix th,:root:not([data-theme="light"]) .matrix td{border-bottom:1px solid #333333;border-right:1px solid #333333}
 :root:not([data-theme="light"]) .matrix thead th{background:#2A2A2A;color:#fff;border-right-color:#8A8A8A}
 :root:not([data-theme="light"]) .matrix tbody th{background:#1E1E1E}
+:root:not([data-theme="light"]) .plogo{background:#fff;padding:3px 6px}
 :root:not([data-theme="light"]) .matrix tbody tr:nth-child(even) td{background:#1E1E1E}
 :root:not([data-theme="light"]) .matrix tbody tr.is-gestopt th,:root:not([data-theme="light"]) .matrix tbody tr.is-gestopt td{background:#262626}
 :root:not([data-theme="light"]) .ptype{color:#BDBDBD}
@@ -422,6 +424,11 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
     return d;
   }
   function partijKop(p,wrap){
+    if(typeof p.logo==='string'&&/^img\/logos\/[a-z0-9-]+\.png$/.test(p.logo)){
+      var im=el('img','plogo');im.src=p.logo;im.alt='Logo '+p.naam;im.loading='lazy';im.decoding='async';
+      im.width=110;im.height=24;im.addEventListener('error',function(){im.remove();});
+      wrap.appendChild(im);
+    }
     wrap.appendChild(el('span','pnaam',p.naam));
     wrap.appendChild(el('span','ptype',TYPES[p.type]||p.type||''));
     var st=statusBlok(p);if(st)wrap.appendChild(st);
@@ -456,8 +463,8 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
       var tr=el('tr',gestopt?'is-gestopt':'');
       var th=el('th');th.scope='row';partijKop(p,th);tr.appendChild(th);
       var kaart=el('article','kaart'+(gestopt?' is-gestopt':''));
-      var kk=el('div');partijKop(p,kk);kk.firstChild.className='pnaam';
-      var h=el('h3',null,p.naam);kk.replaceChild(h,kk.firstChild);kaart.appendChild(kk);
+      var kk=el('div');partijKop(p,kk);
+      var h=el('h3',null,p.naam);kk.replaceChild(h,kk.querySelector('.pnaam'));kaart.appendChild(kk);
       var dl=el('dl');
       themas.forEach(function(t){
         var lijst=kenmerkenVoor(p,t);

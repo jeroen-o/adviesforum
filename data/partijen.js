@@ -4,7 +4,7 @@
 // Types: bank, geldverstrekker, verzekeraar, pensioenverzekeraar, pensioenfonds, ppi, beleggingsinstelling, kredietverstrekker.
 // Categorieen (productdomein, meerdere mogelijk): hypotheek, leven, schade, inkomen, lijfrente, krediet, pensioen.
 window.PARTIJEN=[
- {naam:'ING',type:'bank',categorieen:['hypotheek','lijfrente'],url:'https://intermediairs.ing.nl/content/ingex-live-public/nl_NL/home.html',
+ {naam:'ING',type:'bank',categorieen:['hypotheek','lijfrente'],url:'https://intermediairs.ing.nl/content/ingex-live-public/nl_NL/home.html',logo:'img/logos/ing.png',
   producten:['hypotheek','hypotheek verhogen','ondernemers'],
   kenmerken:[
    {tekst:'Eigen intermediairsite; voor samenwerking zijn KvK-inschrijving en een passende Wft-vergunning nodig',bron:'https://intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/samenwerken-met-ing.html'},
@@ -22,7 +22,7 @@ window.PARTIJEN=[
    {thema:'Lijfrente-uitkering',tekst:'Uitkering start standaard op de AOW-leeftijd; wie eerder start, moet minimaal twintig jaar plus het aantal jaren tot de AOW-leeftijd laten uitkeren',bron:'https://www.ing.nl/particulier/beleggen/beleggen-bij-ing/pensioenbeleggen'},
    {thema:'Lijfrente',tekst:'Pensioenbeleggen is er ook voor ondernemers en zzp\'ers',bron:'https://www.ing.nl/zakelijk/beleggen/pensioenbeleggen'}
   ],bijgewerkt:'2026-10-02'},
- {naam:'ABN AMRO',type:'bank',categorieen:['hypotheek','lijfrente'],url:'https://intermediair.abnamro.nl/',
+ {naam:'ABN AMRO',type:'bank',categorieen:['hypotheek','lijfrente'],url:'https://intermediair.abnamro.nl/',logo:'img/logos/abn-amro.png',
   producten:['hypotheek','ondernemershypotheek','verduurzamen'],
   kenmerken:[
    {tekst:'Intermediair-app voor onafhankelijke adviseurs met onder meer de status van aanvragen',bron:'https://intermediair.abnamro.nl/vraag-antwoord-intermediair-app'},
@@ -42,7 +42,7 @@ window.PARTIJEN=[
    {thema:'Lijfrente-uitkering',tekst:'Uitkeren via Leefrente; de klant kiest de looptijd en een uitkering per maand, kwartaal of halfjaar',bron:'https://www.abnamro.nl/nl/prive/pensioen/pensioen-uitkeren/lijfrente-uitkeren/index.html'},
    {thema:'Status',tekst:'Neobroker BUX is sinds de afgeronde overname een dochter van ABN AMRO en houdt een eigen naam',bron:'https://www.abnamro.com/nl/nieuws/abn-amro-rondt-overname-bux-af-bux-wordt-dochteronderneming'}
   ],bijgewerkt:'2026-10-02'},
- {naam:'Rabobank',type:'bank',categorieen:['hypotheek','lijfrente'],url:'https://www.rabobank.nl/bedrijven/intermediairs/hypotheek',
+ {naam:'Rabobank',type:'bank',categorieen:['hypotheek','lijfrente'],url:'https://www.rabobank.nl/bedrijven/intermediairs/hypotheek',logo:'img/logos/rabobank.png',
   producten:['hypotheek','verduurzamen en verbouwen'],
   kenmerken:[
    {tekst:'Intermediairdesks ondersteunen adviseurs voor de aanvraag en tijdens de looptijd',bron:'https://www.rabobank.nl/bedrijven/intermediairs/hypotheek/samenwerken'},
@@ -60,7 +60,7 @@ window.PARTIJEN=[
    {thema:'Lijfrente-uitkering',tekst:'Ook een vrijkomende lijfrentespaarrekening van een andere bank kan naar de ToekomstUitkering',bron:'https://www.rabobank.nl/particulieren/pensioen/lijfrente-komt-vrij/vrijval-lijfrentespaarrekening-andere-bank'},
    {tekst:'Consumptief krediet loopt via dochter Freo',bron:'https://www.freo.nl/over-freo/'}
   ],bijgewerkt:'2026-10-02'},
- {naam:'Obvion',type:'geldverstrekker',categorieen:['hypotheek'],url:'https://www.obvion.nl/adviseur/Samenwerken-Obvion',
+ {naam:'Obvion',type:'geldverstrekker',categorieen:['hypotheek'],url:'https://www.obvion.nl/adviseur/Samenwerken-Obvion',logo:'img/logos/obvion.png',
   producten:['hypotheek','starters'],
   kenmerken:[
    {tekst:'Werkt uitsluitend via onafhankelijke adviseurs',bron:'https://www.obvion.nl/faq/Waarom-werkt-Obvion-uitsluitend-met-adviseurs-1.htm'},
@@ -75,7 +75,7 @@ window.PARTIJEN=[
    {thema:'Zzp en flexibel inkomen',tekst:'Ook startende zzp\'ers en ondernemers, met of zonder NHG; inkomensverklaring vereist',bron:'https://obvion.nl/hypotheek/zzp/'},
    {thema:'Zzp en flexibel inkomen',tekst:'Arbeidsmarktscan bruikbaar voor flexwerkers bij voldoende score',bron:'https://obvion.nl/situatie/werken/arbeidsmarktscan/'}
   ],bijgewerkt:'2026-10-02'},
- {naam:'Florius',type:'geldverstrekker',categorieen:['hypotheek'],url:'https://www.florius.nl/hypotheek',
+ {naam:'Florius',type:'geldverstrekker',categorieen:['hypotheek'],url:'https://www.florius.nl/hypotheek',logo:'img/logos/florius.png',
   producten:['hypotheek','Verzilver Hypotheek','55-plus'],
   kenmerken:[
    {tekst:'Verzilver Hypotheek alleen via adviseurs met een volledige samenwerking (niet bij alleen een servicesamenwerking)',bron:'https://www.florius.nl/-/media/florius/files/verzilver/verzilver-hypotheek-veelgestelde-vragen-intermediairs.pdf'},
@@ -87,7 +87,7 @@ window.PARTIJEN=[
    {thema:'Renteafspraken',tekst:'Wie na rentemiddeling verhuist, betaalt het resterende deel van de middelingsopslag niet meer',bron:'https://www.florius.nl/adviseurs/rente/renteafkoop-en-rentemiddeling'},
    {thema:'Overbrugging',tekst:'Overbruggingslening loopt maximaal 24 maanden bij bestaande bouw en 36 maanden bij nieuwbouw',bron:'https://www.florius.nl/hypotheek/overbruggingslening'}
   ],bijgewerkt:'2026-10-02'},
- {naam:'ASN Bank (de Volksbank)',type:'bank',categorieen:['hypotheek'],url:'https://www.asnbank.nl/hypotheek/onafhankelijke-adviseurs.html',
+ {naam:'ASN Bank (de Volksbank)',type:'bank',categorieen:['hypotheek'],url:'https://www.asnbank.nl/hypotheek/onafhankelijke-adviseurs.html',logo:'img/logos/asn-bank.png',
   producten:['hypotheek','duurzaam leningdeel','bedrijfshypotheek'],
   kenmerken:[
    {tekst:'De Volksbank gaat verder als ASN Bank; de merken SNS, RegioBank en BLG Wonen gaan op in ASN Bank',bron:'https://www.asnbank.nl/home/de-volksbank-kiest-asn-bank-als-merk-voor-de-toekomst.html'},
@@ -116,7 +116,7 @@ window.PARTIJEN=[
    {tekst:'BLG Wonen is officieel onderdeel van ASN Bank',bron:'https://newsroom.asnbank.nl/download/107e2eb7-e7c9-4e17-b63e-1fa18c1494e6/persbericht-blgwonennuookofficieelasnbank.pdf'},
    {tekst:'Zakelijke bedrijfshypotheek staat op de site van ASN Bank',bron:'https://www.asnbank.nl/blg-wonen/bedrijfshypotheek.html'}
   ],bijgewerkt:'2026-10-02'},
- {naam:'Triodos Bank',type:'bank',categorieen:['hypotheek'],url:'https://www.triodos.nl/intermediairs',
+ {naam:'Triodos Bank',type:'bank',categorieen:['hypotheek'],url:'https://www.triodos.nl/intermediairs',logo:'img/logos/triodos-bank.png',
   producten:['hypotheek','verduurzamen'],
   kenmerken:[
    {tekst:'Werkt naast eigen advies met een geselecteerde groep onafhankelijke adviseurs',bron:'https://www.triodos.nl/intermediairs'},
@@ -130,7 +130,7 @@ window.PARTIJEN=[
    {thema:'Senioren',tekst:'Maatwerk mogelijk voor verhuizende senioren en voor senioren met een tijdelijk tekort door het AOW-gat',bron:'https://www.triodos.nl/downloads/acceptatiebeleid-hypotheken-juli-2026?id=50c63188e554'},
    {thema:'Acceptatie',tekst:'Motivatieformulier voor aanvragen buiten de normen (overrule/explain)',bron:'https://www.triodos.nl/downloads/motivatieformulier-overruleexplain-triodos-bank?id=c3f1340004db'}
   ],bijgewerkt:'2026-10-02'},
- {naam:'Argenta',type:'bank',categorieen:['hypotheek'],url:'https://www.argenta.nl/adviseur/helpen-met-fijn-wonen',
+ {naam:'Argenta',type:'bank',categorieen:['hypotheek'],url:'https://www.argenta.nl/adviseur/helpen-met-fijn-wonen',logo:'img/logos/argenta.png',
   producten:['hypotheek','overbruggingshypotheek'],
   kenmerken:[
    {tekst:'Verkoopt hypotheken in Nederland via onafhankelijke adviseurs',bron:'https://www.argenta.nl/adviseur/over-ons/weet-je-dat/benoeming-bruno-oudega-tot-directeur-wonen-argenta-nederland'},
@@ -144,7 +144,7 @@ window.PARTIJEN=[
    {thema:'Zzp en flexibel inkomen',tekst:'Zelfstandigen zijn welkom; de arbeidsmarktscan wordt niet geaccepteerd',bron:'https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf'},
    {thema:'Senioren',tekst:'Volgt de seniorenregels van NHG (niet bij oversluiten)',bron:'https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf'}
   ],bijgewerkt:'2026-10-02'},
- {naam:'Lloyds Bank',type:'bank',categorieen:['hypotheek'],url:'https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs',
+ {naam:'Lloyds Bank',type:'bank',categorieen:['hypotheek'],url:'https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs',logo:'img/logos/lloyds-bank.png',
   producten:['hypotheek'],
   kenmerken:[
    {tekst:'Intermediair Service Desk (ISD) met vaste dossierbehandelaars',bron:'https://www.lloydsbank.nl/wie-zijn-wij/werken-bij/Hypotheek-Acceptant-ISD'},
@@ -157,7 +157,7 @@ window.PARTIJEN=[
    {thema:'Zzp en flexibel inkomen',tekst:'Inkomensverklaring van een geaccepteerde rekenexpert, niet ouder dan 6 maanden; zonder NHG minimaal 2 jaar zelfstandig',bron:'https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-inkomen'},
    {thema:'Senioren',tekst:'Seniorenpropositie en regeling voor een tijdelijk tekort, met of zonder NHG',bron:'https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf'}
   ],bijgewerkt:'2026-10-02'},
- {naam:'NIBC',type:'bank',categorieen:['hypotheek'],url:'https://nibc.nl/intermediair/hypotheekdesk',
+ {naam:'NIBC',type:'bank',categorieen:['hypotheek'],url:'https://nibc.nl/intermediair/hypotheekdesk',logo:'img/logos/nibc.png',
   producten:['hypotheek','investeringshypotheek','nieuwbouw'],
   kenmerken:[
    {tekst:'Hypotheekdesk als sparringpartner voor adviseurs, ook bij complexe situaties',bron:'https://nibc.nl/intermediair/hypotheekdesk'},
@@ -168,7 +168,7 @@ window.PARTIJEN=[
    {thema:'Boetevrij aflossen',tekst:'Vergoedingsvrij aflossen uit eigen middelen; bij de NIBC Extra Hypotheek daarnaast een jaarlijks vrij percentage',bron:'https://nibc.nl/media/rvammeml/2025-09-17-av-nibc-extra-2025-versie-10.pdf'},
    {thema:'Senioren',tekst:'Extra financieringsmogelijkheden voor 57-plussers met een lange minimale rentevaste periode',bron:'https://nibc.nl/media/0d2hsk24/senioren-factsheet.pdf'}
   ],bijgewerkt:'2026-10-02'},
- {naam:'Handelsbanken',type:'bank',categorieen:['hypotheek'],url:'https://www.handelsbanken.nl/nl/particulier/hypotheken/nieuw-huis-kopen',
+ {naam:'Handelsbanken',type:'bank',categorieen:['hypotheek'],url:'https://www.handelsbanken.nl/nl/particulier/hypotheken/nieuw-huis-kopen',logo:'img/logos/handelsbanken.png',
   producten:['hypotheek','vastgoedfinanciering'],
   kenmerken:[
    {tekst:'Lokale relatiebank met vaste contactpersoon; aanvragen worden lokaal beoordeeld, ook als de situatie minder standaard is',bron:'https://www.handelsbanken.nl/'},
@@ -176,7 +176,7 @@ window.PARTIJEN=[
    {thema:'Verhuisregeling',tekst:'Vaste rente meenemen naar een volgende eigen woning; beslissen kan ook na verkoop, tot 6 maanden na aflossing van de oude lening',bron:'https://www.handelsbanken.nl/nl/particulier/hypotheken/hypotheek-vraag-antwoord'},
    {thema:'Boetevrij aflossen',tekst:'Kosteloos volledig aflossen bij verkoop en aan het einde van de rentevaste periode; daarnaast jaarlijks 10% per oorspronkelijk leningdeel',bron:'https://www.handelsbanken.nl/nl/particulier/hypotheken/hypotheek-vraag-antwoord'}
   ],bijgewerkt:'2026-10-02'},
- {naam:'MUNT Hypotheken',type:'geldverstrekker',categorieen:['hypotheek'],url:'https://www.munthypotheken.nl/contact/adviseur/',
+ {naam:'MUNT Hypotheken',type:'geldverstrekker',categorieen:['hypotheek'],url:'https://www.munthypotheken.nl/contact/adviseur/',logo:'img/logos/munt-hypotheken.png',
   producten:['hypotheek'],
   kenmerken:[
    {tekst:'Alleen via een onafhankelijk adviseur; MUNT geeft zelf geen advies',bron:'https://www.munthypotheken.nl/veelgestelde-vragen/aanvraag-munt-hypotheek/geeft-munt-hypotheken-ook-hypotheekadvies/'},
@@ -186,7 +186,7 @@ window.PARTIJEN=[
    {thema:'Boetevrij aflossen',tekst:'Uit eigen geld onbeperkt vergoedingsvrij; bij oversluiten naar een andere verstrekker of tussentijdse rentewijziging 10% per jaar vrij',bron:'https://www.munthypotheken.nl/veelgestelde-vragen/uw-munt-hypotheek/ik-wil-aflossen-op-mijn-hypotheek-moet-ik-een-boete-betalen/'},
    {thema:'Offerte',tekst:'Renteaanbod 4 maanden geldig; 2 weken bedenktijd om te accepteren',bron:'https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf'}
   ],bijgewerkt:'2026-10-02'},
- {naam:'Tulp Hypotheken',type:'geldverstrekker',categorieen:['hypotheek'],url:'https://tulphypotheken.nl/adviseurs/',
+ {naam:'Tulp Hypotheken',type:'geldverstrekker',categorieen:['hypotheek'],url:'https://tulphypotheken.nl/adviseurs/',logo:'img/logos/tulp-hypotheken.png',
   producten:['hypotheek','Tulp Riant (NHG)','seniorenpropositie'],
   kenmerken:[
    {tekst:'Seniorenpropositie voor klanten die de AOW-leeftijd hebben of binnen 10 jaar bereiken, ook zonder NHG',bron:'https://tulphypotheken.nl/news/tulp-hypotheken-start-met-seniorenpropositie-ook-voor-niet-nhg/'},
@@ -196,7 +196,7 @@ window.PARTIJEN=[
    {thema:'Boetevrij aflossen',tekst:'Tulp Riant: uit eigen middelen volledig vergoedingsvrij; met geleend geld maximaal 10% per jaar',bron:'https://tulphypotheken.nl/wp-content/uploads/2025/01/2025-1-Tulp-riant-hypotheek-productkaart-1.pdf'},
    {thema:'Renteafspraken',tekst:'Rente daalt automatisch als de klant door aflossen in een lagere risicoklasse komt',bron:'https://tulphypotheken.nl/hypotheken/tulp-hypotheek/'}
   ],bijgewerkt:'2026-10-02'},
- {naam:'Venn Hypotheken',type:'geldverstrekker',categorieen:['hypotheek'],url:'https://www.vennhypotheken.nl/voor-adviseurs/',
+ {naam:'Venn Hypotheken',type:'geldverstrekker',categorieen:['hypotheek'],url:'https://www.vennhypotheken.nl/voor-adviseurs/',logo:'img/logos/venn-hypotheken.png',
   producten:['hypotheek','overbrugging','senioren'],
   kenmerken:[
    {tekst:'Eigen overbruggingsregeling als de huidige woning nog niet is verkocht; aanvragen voor senioren tot 80 procent marktwaarde',bron:'https://www.vennhypotheken.nl/voor-adviseurs/pluspunten/'},
@@ -218,7 +218,7 @@ window.PARTIJEN=[
    {thema:'Boetevrij aflossen',tekst:'Afhankelijk van het product 10% of 15% van het hypotheekbedrag per jaar vergoedingsvrij',bron:'https://www.hypotrust.nl/faqs/aflossen'},
    {thema:'Acceptatie',tekst:'Acceptatiekader Elan Plus (versie januari 2026)',bron:'https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2026.pdf'}
   ],bijgewerkt:'2026-10-02'},
- {naam:'IQWOON',type:'geldverstrekker',categorieen:['hypotheek'],url:'https://www.iqwoon.nl/adviseur',
+ {naam:'IQWOON',type:'geldverstrekker',categorieen:['hypotheek'],url:'https://www.iqwoon.nl/adviseur',logo:'img/logos/iqwoon.png',
   status:'Geen nieuwe aanvragen sinds 1 mei 2023; alleen beheer van bestaande hypotheken',statusBron:'https://www.iqwoon.nl/adviseur',
   producten:['bestaande hypotheken','hypotheek verhogen'],
   kenmerken:[
@@ -228,7 +228,7 @@ window.PARTIJEN=[
    {thema:'Verhuisregeling',tekst:'Meeneemregeling voor bestaande klanten: minimaal 30 dagen vooraf melden, nieuwe lening binnen 6 maanden na aflossing; kan ook bij eerst kopen en dan verkopen',bron:'https://www.iqwoon.nl/uploads/iqwoon/files/IQWOON-Beheergids-Januari-2026.pdf'},
    {thema:'Boetevrij aflossen',tekst:'20% van de oorspronkelijke hoofdsom per kalenderjaar vergoedingsvrij; ook bij aflossen op de renteherzieningsdatum of bij verkoop en verhuizing',bron:'https://www.iqwoon.nl/uploads/iqwoon/files/IQWOON-Beheergids-Januari-2026.pdf'}
   ],bijgewerkt:'2026-10-02'},
- {naam:'HollandWoont',type:'geldverstrekker',categorieen:['hypotheek'],url:'https://hollandwoont.nl/onafhankelijk-hypotheekadvies/',
+ {naam:'HollandWoont',type:'geldverstrekker',categorieen:['hypotheek'],url:'https://hollandwoont.nl/onafhankelijk-hypotheekadvies/',logo:'img/logos/hollandwoont.png',
   producten:['hypotheek met NHG','overbrugging'],
   kenmerken:[
    {tekst:'Richt zich op hypotheken met NHG',bron:'https://www.hollandwoont.nl/home-consument'},
@@ -237,7 +237,7 @@ window.PARTIJEN=[
    {thema:'Verhuisregeling',tekst:'Meeneemregeling bij eerst kopen of eerst verkopen; minimaal 30 dagen vooraf melden; de rentevaste periode loopt door, ook in een tussenperiode',bron:'https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Acceptatiegids-Juni-2026.pdf'},
    {thema:'Boetevrij aflossen',tekst:'10% van de oorspronkelijke hoofdsom per jaar en daarnaast onbeperkt uit eigen middelen',bron:'https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Acceptatiegids-Juni-2026.pdf'}
   ],bijgewerkt:'2026-10-02'},
- {naam:'Merius Hypotheken',type:'geldverstrekker',categorieen:['hypotheek'],url:'https://meriushypotheken.nl/adviseur/samenwerken/',
+ {naam:'Merius Hypotheken',type:'geldverstrekker',categorieen:['hypotheek'],url:'https://meriushypotheken.nl/adviseur/samenwerken/',logo:'img/logos/merius.png',
   producten:['hypotheek','55-plus'],
   kenmerken:[
    {tekst:'Alleen via onafhankelijk adviseurs; ruim 3500 kantoren aangesloten via een adviesorganisatie of serviceprovider',bron:'https://meriushypotheken.nl/adviseur/over-ons-adviseur/'},
@@ -246,7 +246,7 @@ window.PARTIJEN=[
    {thema:'Verhuisregeling',tekst:'Maximaal 6 maanden tussen oude en nieuwe lening; aanvraag uiterlijk 1 maand vóór levering van de oude woning, met koopovereenkomst als bewijs',bron:'https://meriushypotheken.nl/app/uploads/2024/07/Merius-Hypotheekgids-2024-01.pdf'},
    {thema:'Boetevrij aflossen',tekst:'Uit eigen middelen 25% per leningdeel per jaar, bij herfinanciering 15%; volledig vrij bij verkoop en verhuizing van alle aanvragers',bron:'https://meriushypotheken.nl/app/uploads/2024/07/Merius-Hypotheekgids-2024-01.pdf'}
   ],bijgewerkt:'2026-10-02'},
- {naam:'Attens Hypotheken',type:'geldverstrekker',categorieen:['hypotheek'],url:'https://www.attens.nl/voor-adviseurs/nieuwsoverzicht',
+ {naam:'Attens Hypotheken',type:'geldverstrekker',categorieen:['hypotheek'],url:'https://www.attens.nl/voor-adviseurs/nieuwsoverzicht',logo:'img/logos/attens-hypotheken.png',
   producten:['hypotheek'],
   kenmerken:[
    {tekst:'Ontwikkeld voor mensen die werken in zorg en welzijn',bron:'https://www.attens.nl/over-attens'},
@@ -265,7 +265,7 @@ window.PARTIJEN=[
    {thema:'Verhuisregeling',tekst:'Meegenomen rentevaste periode moet nog minimaal 1 jaar lopen; nieuwe hypotheek binnen 6 maanden na aflossing; voor een hoger bedrag geldt de actuele rente',bron:'https://www.tellius.nl/voor-klanten/verhuisregeling'},
    {thema:'Boetevrij aflossen',tekst:'Jaarlijks 10% van het oorspronkelijke bedrag vergoedingsvrij',bron:'https://www.tellius.nl/voor-klanten/extra-aflossen'}
   ],bijgewerkt:'2026-10-02'},
- {naam:'Syntrus Achmea / Achmea Mortgage Funds',type:'geldverstrekker',categorieen:['hypotheek'],url:'https://achmeabank.nl/en/news/achmea-splits-mortgage-and-real-estate-activities-of-syntrus-achmea-real-estate-and-finance',
+ {naam:'Syntrus Achmea / Achmea Mortgage Funds',type:'geldverstrekker',categorieen:['hypotheek'],url:'https://achmeabank.nl/en/news/achmea-splits-mortgage-and-real-estate-activities-of-syntrus-achmea-real-estate-and-finance',logo:'img/logos/syntrus-achmea.png',
   producten:['hypotheekfondsen','labels Attens en Tellius'],
   kenmerken:[
    {tekst:'Hypotheek- en vastgoedactiviteiten zijn per 1 oktober 2024 gesplitst',bron:'https://achmeabank.nl/en/news/achmea-splits-mortgage-and-real-estate-activities-of-syntrus-achmea-real-estate-and-finance'},
@@ -283,7 +283,7 @@ window.PARTIJEN=[
    {thema:'Boetevrij aflossen',tekst:'15% per leningdeel per jaar, plus vergoedingsvrij uit eigen middelen en bij verkoop wegens verhuizing',bron:'https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf'},
    {thema:'Senioren',tekst:'Voor 57-plussers: tot de pensioenleeftijd gewone toetsnormen, daarna toetsing op werkelijke lasten',bron:'https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf'}
   ],bijgewerkt:'2026-10-02'},
- {naam:'Vista Hypotheken',type:'geldverstrekker',categorieen:['hypotheek'],url:'https://www.vistahypotheken.nl/ik-wil-klant-worden',
+ {naam:'Vista Hypotheken',type:'geldverstrekker',categorieen:['hypotheek'],url:'https://www.vistahypotheken.nl/ik-wil-klant-worden',logo:'img/logos/vista-hypotheken.png',
   producten:['hypotheek','overbrugging'],
   kenmerken:[
    {tekst:'Alleen af te sluiten met onafhankelijk advies; Vista adviseert zelf niet',bron:'https://www.vistahypotheken.nl/veelgestelde-vragen'},
@@ -308,7 +308,7 @@ window.PARTIJEN=[
    {thema:'Senioren',tekst:'Onder voorwaarden toetsing op werkelijke lasten voor senioren',bron:'https://woonnu.nl/media/rvqnigvm/202601-woonnu-acceptatiegids_final.pdf'},
    {thema:'Bouwdepot',tekst:'Bouwdepot verbouw 12 maanden (was 6), nieuwbouw 24 maanden; onder voorwaarden verlenging',bron:'https://adviseurs.woonnu.nl/nieuwsoverzicht/verlenging-looptijd-bouwdepot-verbouw-van-6-naar-12-maanden/'}
   ],bijgewerkt:'2026-10-02'},
- {naam:'Dynamic Credit (bijBouwe)',type:'geldverstrekker',categorieen:['hypotheek'],url:'https://www.bijbouwe.nl/over-bijbouwe/bijbouwe-hypotheek-nu-ook-via-onafhankelijke-adviseurs.aspx',
+ {naam:'Dynamic Credit (bijBouwe)',type:'geldverstrekker',categorieen:['hypotheek'],url:'https://www.bijbouwe.nl/over-bijbouwe/bijbouwe-hypotheek-nu-ook-via-onafhankelijke-adviseurs.aspx',logo:'img/logos/bijbouwe.png',
   producten:['hypotheek'],
   kenmerken:[
    {tekst:'bijBouwe is een handelsnaam van Dynamic Credit; Dynamic Credit Hypotheken verstrekt het geld',bron:'https://bijbouwe.nl/klantenservice'},
@@ -338,7 +338,7 @@ window.PARTIJEN=[
    {tekst:'Voor adviseurs blijven accountmanager en acceptatieteam hetzelfde',bron:'https://www.woonfonds.nl/voor-adviseurs/woonfonds-wordt-centraal-beheer'},
    {tekst:'Was het intermediairlabel van Achmea Bank',bron:'https://www.achmeabank.nl/-/media/achmeabank/documenten/nieuws/nl/persbericht_achmea_bundelt_krachten_van_haar_hypotheekactiviteiten_defnitief.pdf'}
   ],bijgewerkt:'2026-10-02'},
- {naam:'Centraal Beheer (Achmea)',type:'verzekeraar',categorieen:['hypotheek','lijfrente','schade'],url:'https://www.centraalbeheer.nl/voor-adviseurs/hypotheek',
+ {naam:'Centraal Beheer (Achmea)',type:'verzekeraar',categorieen:['hypotheek','lijfrente','schade'],url:'https://www.centraalbeheer.nl/voor-adviseurs/hypotheek',logo:'img/logos/centraal-beheer.png',
   producten:['hypotheek','De Leef Hypotheek','zelfstandigen'],
   kenmerken:[
    {tekst:'Acceptatiegids voor De Leef Hypotheek',bron:'https://www.centraalbeheer.nl/-/media/files/voor-adviseurs/acceptatiegids-leef-hypotheek.pdf'},
@@ -363,7 +363,7 @@ window.PARTIJEN=[
    {thema:'Medische acceptatie',tekst:'De medische dienst beoordeelt de gezondheidsgegevens en adviseert de acceptatieadviseur, die de voorwaarden vaststelt',bron:'https://www.averoachmea.nl/-/media/files/zakelijk/aov/brochures/medische-acceptatie.pdf'},
    {thema:'AOV-acceptatie',tekst:'Procesinformatie over AOV-dienstverlening voor adviseurs',bron:'https://www.averoachmea.nl/adviseur/arbeidsongeschiktheidsverzekeringen/proces'}
   ],bijgewerkt:'2026-10-02'},
- {naam:'Allianz',type:'verzekeraar',categorieen:['hypotheek','lijfrente','schade'],url:'https://www.allianz.nl/particulier/hypotheken.html',
+ {naam:'Allianz',type:'verzekeraar',categorieen:['hypotheek','lijfrente','schade'],url:'https://www.allianz.nl/particulier/hypotheken.html',logo:'img/logos/allianz.png',
   producten:['hypotheek','overbruggingskrediet','rentemiddeling'],
   kenmerken:[
    {tekst:'Werkt samen met onafhankelijke financieel adviseurs; klant kan een adviseur zoeken via de site',bron:'https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-46.pdf'},
@@ -387,7 +387,7 @@ window.PARTIJEN=[
    {tekst:'Huisscan van homeQgo beschikbaar voor adviseurs',bron:'https://www.aegon.nl/voor-adviseurs/nieuws/hypotheek/homeqgo-is-er-nu-ook-voor-adviseurs%C2%A0'},
    {thema:'Verhuisregeling',tekst:'Verhuisroute voor bestaande Aegon-hypotheekklanten',bron:'https://www.aegon.nl/system/files/2025-09/Verhuisroute_Aegon_Hypotheken.pdf'}
   ],bijgewerkt:'2026-10-02'},
- {naam:'a.s.r.',type:'verzekeraar',categorieen:['hypotheek','leven','inkomen','lijfrente','pensioen'],url:'https://www.asr.nl/adviseurs',
+ {naam:'a.s.r.',type:'verzekeraar',categorieen:['hypotheek','leven','inkomen','lijfrente','pensioen'],url:'https://www.asr.nl/adviseurs',logo:'img/logos/a-s-r.png',
   producten:['hypotheek','levensrente','ORV','AOV','pensioen'],
   kenmerken:[
    {tekst:'Levensrente hypotheek om overwaarde te benutten: voor AOW\'ers, tot 50% van de woningwaarde, zonder aflossing zolang de klant er woont',bron:'https://www.asr.nl/hypotheek/levensrente-hypotheek'},
@@ -407,7 +407,7 @@ window.PARTIJEN=[
    {thema:'Status',tekst:'Rondde in 2021 de overname van Brand New Day PPI af',bron:'https://asrnederland.nl/-/media/files/asrnederland-nl/nieuws-en-pers/2021/20210330persbericht--asr-rondt-overname-brand-new-day-ppi-afnl.pdf'},
    {thema:'Marktpositie',tekst:'Volgens het ACM-besluit over de Aegon-overname de grootste partij in inkomensverzekeringen; NN, Achmea en De Goudse noemt de ACM als concurrenten',bron:'https://acm.nl/system/files/documents/openbare-versie-besluit-asr-aegon.pdf'}
   ],bijgewerkt:'2026-10-02'},
- {naam:'Nationale-Nederlanden',type:'verzekeraar',categorieen:['hypotheek','leven','inkomen','lijfrente','schade','pensioen'],url:'https://www.nn.nl/Particulier/Hypotheken.htm',
+ {naam:'Nationale-Nederlanden',type:'verzekeraar',categorieen:['hypotheek','leven','inkomen','lijfrente','schade','pensioen'],url:'https://www.nn.nl/Particulier/Hypotheken.htm',logo:'img/logos/nationale-nederlanden.png',
   producten:['hypotheek','ondernemershypotheek','AOV','pensioen'],
   kenmerken:[
    {tekst:'Ondernemershypotheek',bron:'https://nn.nl/Particulier/Hypotheken/Een-hypotheek-voor-ondernemers.htm'},
@@ -557,7 +557,7 @@ window.PARTIJEN=[
    {thema:'Waardeoverdracht',tekst:'Waardeoverdracht naar of van een ander fonds kan alleen als dat fonds ook al over is; naar een verzekeraar of PPI blijft mogelijk',bron:'https://www.bpfbouw.nl/uw-situatie-verandert/werk/waardeoverdracht/waardeoverdracht-naar-ons'},
    {thema:'Partnerpensioen',tekst:'Partnerpensioen tot 1 januari 2026 is omgezet in pensioenkapitaal; bij overlijden daarna geen onderscheid meer tussen samenwonende en gehuwde partners',bron:'https://werkgevers.bpfbouw.nl/pensioen-bij-bpfbouw/nieuwe-regels-pensioen/uw-werknemer-bouwde-pensioen-op-voor-2026'}
   ],bijgewerkt:'2026-10-02'},
- {naam:'Robuust Hypotheken',type:'geldverstrekker',categorieen:['hypotheek'],url:'https://www.robuusthypotheken.nl/ik-ben-adviseur',
+ {naam:'Robuust Hypotheken',type:'geldverstrekker',categorieen:['hypotheek'],url:'https://www.robuusthypotheken.nl/ik-ben-adviseur',logo:'img/logos/robuust.png',
   producten:['hypotheek','NHG','starters'],
   kenmerken:[
    {thema:'Acceptatie',tekst:'Acceptatiegids voor adviseurs (versie juni 2026)',bron:'https://www.robuusthypotheken.nl/uploads/robuust/files/Acceptatiegids-Robuust-juni-2026.pdf'},
@@ -565,7 +565,7 @@ window.PARTIJEN=[
    {thema:'Zzp en flexibel inkomen',tekst:'NHG-hypotheek met perspectiefverklaring voor flexwerkers',bron:'https://www.robuusthypotheken.nl/hypotheek-met-perspectiefverklaring'},
    {thema:'Intermediairportal',tekst:'Distributie via Conneqt, net als HollandWoont en Hypotrust',bron:'https://www.conneqt.nl/en/mortgage-labels/'}
   ],bijgewerkt:'2026-10-02'},
- {naam:'Impact Hypotheken',type:'geldverstrekker',categorieen:['hypotheek'],url:'https://impacthypotheken.nl/adviseur/oversluiten/',
+ {naam:'Impact Hypotheken',type:'geldverstrekker',categorieen:['hypotheek'],url:'https://impacthypotheken.nl/adviseur/oversluiten/',logo:'img/logos/impact-hypotheken.png',
   producten:['hypotheek','verduurzamen'],
   kenmerken:[
    {thema:'Duurzaamheid',tekst:'Duurzaamheidskorting na verduurzaming: na een nieuw definitief energielabel levert de klant het bewijs aan',bron:'https://impacthypotheken.nl/een-duurzamere-woning/'},
@@ -573,7 +573,7 @@ window.PARTIJEN=[
    {thema:'Boetevrij aflossen',tekst:'Tot 25% per kalenderjaar vergoedingsvrij; rente daalt automatisch bij extra aflossen',bron:'https://impacthypotheken.nl/onze-voorwaarden/'},
    {thema:'Intermediairportal',tekst:'Hoort bij CMIS Group, net als Merius Hypotheken',bron:'https://www.cmisgroup.com/en/faq/which-brands-belong-to-cmis-group/'}
   ],bijgewerkt:'2026-10-02'},
- {naam:'Clarian Wonen',type:'geldverstrekker',categorieen:['hypotheek'],url:'https://www.clarianwonen.nl/consument/over-clarian-wonen',
+ {naam:'Clarian Wonen',type:'geldverstrekker',categorieen:['hypotheek'],url:'https://www.clarianwonen.nl/consument/over-clarian-wonen',logo:'img/logos/clarian-wonen.png',
   producten:['hypotheek'],
   kenmerken:[
    {thema:'Acceptatie',tekst:'Acceptatiegids voor adviseurs (januari 2026), gepubliceerd op de site van IQWOON',bron:'https://www.iqwoon.nl/uploads/iqwoon/files/Clarian-Wonen-Acceptatiegids-Januari-2026.pdf'},
@@ -650,7 +650,7 @@ window.PARTIJEN=[
    {thema:'Wtp-transitie',tekst:'Stappenplan om een bestaande regeling Wtp-proof te maken; werkgevers moeten vóór 1 januari 2028 over',bron:'https://www.befrank.nl/wp-content/uploads/2025/09/Stappenplan-Overstap-Wtp.pdf'},
    {tekst:'Pensioenconsultants spreken werkgevers en adviseurs telefonisch, online of op locatie',bron:'https://www.befrank.nl/en/advisor/advise-befrank/'}
   ],bijgewerkt:'2026-10-02'},
- {naam:'Centraal Beheer PPI (Achmea)',type:'ppi',categorieen:['pensioen'],url:'https://www.centraalbeheer.nl/ppi/adviseur/pensioenoplossingen',
+ {naam:'Centraal Beheer PPI (Achmea)',type:'ppi',categorieen:['pensioen'],url:'https://www.centraalbeheer.nl/ppi/adviseur/pensioenoplossingen',logo:'img/logos/centraal-beheer.png',
   producten:['premieregeling (PPI)'],
   kenmerken:[
    {thema:'Wtp-transitie',tekst:'Regelingen zijn al premieregelingen; deelnemers beleggen individueel met keuze uit meerdere lifecycles',bron:'https://www.centraalbeheer.nl/ppi/adviseur/wet-toekomst-pensioenen'},
@@ -760,5 +760,29 @@ window.PARTIJEN=[
    {tekst:'Flexibel krediet Riflex en zakelijk krediet Ribusiness',bron:'https://www.ribank.nl/cms/onze_producten/onze_producten.html'},
    {thema:'Acceptatie',tekst:'Bij doorlopend krediet neemt de financieel adviseur periodiek contact op om te toetsen of het krediet nog past',bron:'https://www.ribank.nl/cms/onze_producten/beoordeel_uw_krediet.html'},
    {thema:'Intermediairportal',tekst:'Aparte productinformatie voor partners',bron:'https://www.ribank.nl/partners/onze_producten/financieringen.html'}
-  ],bijgewerkt:'2026-10-02'}
+  ],bijgewerkt:'2026-10-02'},
+ {naam:'bunq',type:'bank',categorieen:['hypotheek'],url:'https://mortgages.bunq.com/',logo:'img/logos/bunq.png',
+  kenmerken:[
+   {thema:'Intermediairportal',tekst:'Easy Mortgage komt tot stand in samenwerking met Tulp Hypotheken; de aanvraag loopt via een hypotheekadviseur',bron:'https://mortgages.bunq.com/our-collaboration'}
+  ],bijgewerkt:'2026-10-03'},
+ {naam:'Groene Hart Hypotheken',type:'geldverstrekker',categorieen:['hypotheek'],url:'https://groeneharthypotheken.nl/adviseurs/',logo:'img/logos/groene-hart-hypotheken.png',
+  kenmerken:[
+   {thema:'Intermediairportal',tekst:'Label van DAK Intermediairscollectief: de hypotheek komt van Tulp Hypotheken, verduurzamingsadvies en uitvoering via De Energiebespaarders',bron:'https://groeneharthypotheken.nl/over-ons/'}
+  ],bijgewerkt:'2026-10-03'},
+ {naam:'De Nederlandse',type:'geldverstrekker',categorieen:['hypotheek'],url:'https://de-nederlandse.nl/',logo:'img/logos/de-nederlandse.png',
+  kenmerken:[
+   {thema:'Acceptatie',tekst:'Hypotheek alleen voor professionele vastgoedbeleggers die minimaal drie panden verhuren of dat op korte termijn gaan doen; zusterlabel van Tulp Hypotheken binnen Tulp Group',bron:'https://tulphypotheken.nl/news/nieuwe-hypotheekverstrekker-voor-professionele-belegger-de-nederlandse/'}
+  ],bijgewerkt:'2026-10-03'},
+ {naam:'SolidBriQ',type:'geldverstrekker',categorieen:['hypotheek'],url:'https://www.solidbriq.nl/hoe-financieren/goed-advies/',logo:'img/logos/solidbriq.png',
+  kenmerken:[
+   {thema:'Intermediairportal',tekst:'Financiert verhuurd vastgoed; aanvragen lopen via adviseurs uit het eigen SolidBriQ-netwerk',bron:'https://www.solidbriq.nl/hoe-financieren/goed-advies/'}
+  ],bijgewerkt:'2026-10-03'},
+ {naam:'Build Finance',type:'geldverstrekker',categorieen:['hypotheek'],url:'https://build-finance.com/voor-adviseurs/',logo:'img/logos/build-finance.png',
+  kenmerken:[
+   {thema:'Acceptatie',tekst:'Vastgoedfinanciering voor professionele beleggers in verhuurde woningen, aangevraagd via gespecialiseerde adviseurs',bron:'https://build-finance.com/'}
+  ],bijgewerkt:'2026-10-03'},
+ {naam:'SocioHypotheek',type:'geldverstrekker',categorieen:['hypotheek'],url:'https://www.sociohypotheek.nl/',logo:'img/logos/socio-hypotheek.png',
+  kenmerken:[
+   {thema:'Senioren',tekst:'Overwaardehypotheek voor 57-plussers; SocioHypotheek geeft zelf geen advies, aanvragen lopen via aangesloten adviseurs',bron:'https://www.sociohypotheek.nl/contact/'}
+  ],bijgewerkt:'2026-10-03'}
 ];
