@@ -78,13 +78,59 @@ h2.sectie{font-size:22px;font-weight:800;margin:28px 0 6px;padding-bottom:10px;b
 a.terug{display:inline-block;padding:8px 0}
 .item .meta .th{font-size:12px}
 </style>
+<style id="a11y">
+/* Toegankelijkheid en donkere modus (zie docs/toegankelijkheid.md). Staat in een eigen <style>, zodat printvensters licht blijven. */
+.skiplink{position:absolute;left:12px;top:-200px;z-index:10000;background:#141414;color:#fff;padding:10px 16px;border-radius:8px;font-weight:700;text-decoration:none;font-family:Montserrat,system-ui,sans-serif}
+.skiplink:focus{top:12px;outline:3px solid #FFD200;outline-offset:2px}
+main[tabindex="-1"]:focus{outline:none}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus,textarea:focus,summary:focus-visible,[tabindex]:not([tabindex="-1"]):focus-visible{outline:3px solid #141414!important;outline-offset:2px!important}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+@media print{.skiplink{display:none}}
+@media screen and (prefers-color-scheme:dark){
+:root:not([data-theme="light"]){color-scheme:dark}
+:root:not([data-theme="light"]){--geel-zacht:#3f3918;--zwart:#F2F2F2;--tekst:#F2F2F2;--grijs:#BDBDBD;--lijn:#333333;--vlak:#262626;--rood:#e9a29b;--rood-zacht:#3f1a18;--groen:#9de7c1}
+:root:not([data-theme="light"]) body{color:#F2F2F2;background:#141414}
+:root:not([data-theme="light"]) .balk{background:#2A2A2A;color:#fff}
+:root:not([data-theme="light"]) .balk a{color:#fff}
+:root:not([data-theme="light"]) .kop{background:#1E1E1E;color:#F2F2F2;border-bottom:3px solid #FFD200}
+:root:not([data-theme="light"]) .zeshoek{background:#2A2A2A}
+:root:not([data-theme="light"]) .terug{border-bottom:2px solid #8A8A8A}
+:root:not([data-theme="light"]) .kop .stempel{background:#2A2A2A;color:#FFD200}
+:root:not([data-theme="light"]) h2.sectie{border-bottom:3px solid #FFD200}
+:root:not([data-theme="light"]) .sub{color:#BDBDBD}
+:root:not([data-theme="light"]) .tegel{border:1px solid #333333;background:#1E1E1E}
+:root:not([data-theme="light"]) .tegel:hover{border-color:#8A8A8A}
+:root:not([data-theme="light"]) .tegel .getal small{color:#BDBDBD}
+:root:not([data-theme="light"]) .tegel span{color:#BDBDBD}
+:root:not([data-theme="light"]) .chip{border:1px solid #333333;background:#1E1E1E;color:#F2F2F2}
+:root:not([data-theme="light"]) .chip[aria-pressed="true"]{background:#FFD200;color:#141414;border-color:#FFD200}
+:root:not([data-theme="light"]) .dag h3 .tel{background:#FFD200;color:#141414}
+:root:not([data-theme="light"]) .item{border-left:4px solid #FFD200;background:#262626}
+:root:not([data-theme="light"]) .item .meta{color:#BDBDBD}
+:root:not([data-theme="light"]) .item .meta .th{color:#f6db8e}
+:root:not([data-theme="light"]) .item p{color:#F2F2F2}
+:root:not([data-theme="light"]) .let{background:#3f1a18;border-left:4px solid #C0392B}
+:root:not([data-theme="light"]) .let strong{color:#ee9e96}
+:root:not([data-theme="light"]) .voet{color:#BDBDBD}
+:root:not([data-theme="light"]) .voet a{color:#F2F2F2}
+:root:not([data-theme="light"]) a:focus-visible,:root:not([data-theme="light"]) button:focus-visible,:root:not([data-theme="light"]) input:focus,:root:not([data-theme="light"]) input:focus-within,:root:not([data-theme="light"]) select:focus,:root:not([data-theme="light"]) textarea:focus,:root:not([data-theme="light"]) summary:focus-visible,:root:not([data-theme="light"]) [tabindex]:not([tabindex="-1"]):focus-visible{outline-color:#FFD200!important}
+:root:not([data-theme="light"]) .skiplink{background:#FFD200;color:#141414}
+:root:not([data-theme="light"]) [style*="background:#fff"],:root:not([data-theme="light"]) [style*="background:#FFF"]{background:#1E1E1E!important}
+:root:not([data-theme="light"]) [style*="color:#555"]{color:#BDBDBD!important}
+:root:not([data-theme="light"]) [style*="color:#141414"]{color:#F2F2F2!important}
+:root:not([data-theme="light"]) .back-inline{color:#F2F2F2!important;border-bottom-color:#FFD200!important}
+:root:not([data-theme="light"]) .skiplink:focus{outline-color:#F2F2F2}
+}
+</style>
 </head>
 <body>
+<a class="skiplink" href="#inhoud">Naar de inhoud</a>
 
-<div class="balk">
+<nav class="balk" aria-label="Forum">
   <span>Adviesforum &middot; voor en door financieel adviseurs</span>
   <span><a href="index.html">Naar het forum</a></span>
-</div>
+</nav>
 
 <header class="kop">
   <div class="kop-in">
@@ -96,7 +142,7 @@ a.terug{display:inline-block;padding:8px 0}
   </div>
 </header>
 
-<main class="romp">
+<main class="romp" id="inhoud" tabindex="-1">
   <h2 class="sectie">Alle onderdelen in één oogopslag</h2>
   <p class="sub">Klik op een onderdeel om er direct naartoe te gaan.</p>
   <div class="tegels" id="tegels"></div>
@@ -153,6 +199,7 @@ a.terug{display:inline-block;padding:8px 0}
 <script src="data/kennisbank-verzekeraars.js"></script><script>__mk('verzekeraars')</script>
 <script src="data/kennisbank-adfiz.js"></script><script>__mk('adfiz')</script>
 <script src="data/kennisbank-dfosignalen.js"></script><script>__mk('dfosignalen')</script>
+<script src="data/kennisbank-aanvulling.js"></script><script>__mk('aanvulling')</script>
 <script src="data/begrippen.js"></script>
 <script src="data/faq/hypotheek.js"></script>
 <script src="data/faq/fiscaal-producten.js"></script>
@@ -183,6 +230,7 @@ a.terug{display:inline-block;padding:8px 0}
 <script src="data/faq/verzekeraars.js"></script>
 <script src="data/faq/adfiz.js"></script>
 <script src="data/faq/dfosignalen.js"></script>
+<script src="data/faq/aanvulling.js"></script>
 <script src="data/partijen.js"></script>
 <script src="data/sjablonen.js"></script>
 <script src="data/kalender.js"></script>
@@ -237,6 +285,10 @@ document.getElementById('tegels').innerHTML=T.map(function(x){
 /* ---------- wijzigingen (uit git-historie en pull requests, in adviseurstaal) ---------- */
 var TH={forum:'Forum en inloggen',kennis:'Kennisbank',faq:'FAQ en begrippen',reken:'Rekentools',scan:'Klantscans en formulieren',naslag:'Naslag en wegwijzers',comp:'Compliance en AFM',nhg:'NHG'};
 var L=[
+ {d:'2026-10-03',pr:50,th:'kennis',t:'Aanvullende kennis en adviesroutes',x:'20 artikelen en 71 FAQ over beleggingsadvies, kwetsbare klanten, senioren en zorg, de DGA en schuldhulp, plus adviesroutes voor schadeverzekeringen en consumptief krediet en 14 nieuwe sjablonen.',u:'adviesroute.html'},
+ {d:'2026-10-03',pr:50,th:'naslag',t:'Aansluiten als aanbieder',x:'Informatiepagina, deelnamevoorwaarden en een aanleverformulier waarmee aanbieders hun gegevens in één keer aanleveren.',u:'aanbieders-info.html'},
+ {d:'2026-10-03',pr:50,th:'forum',t:'Favorieten, volgen en RSS',x:'Bewaar vragen, artikelen en FAQ, volg categorieën en zie wat er nieuw is sinds je laatste bezoek. Volg het forum via RSS.',u:'index.html#favorieten'},
+ {d:'2026-10-03',pr:50,th:'forum',t:'Toegankelijker en donkere modus',x:'Alle pagina’s hebben een skiplink, betere toetsenbordbediening en een donkere modus.',u:'index.html'},
  {d:'2026-10-03',pr:47,th:'naslag',t:'Aanbiederspagina’s',x:'Geldverstrekkers en verzekeraars delen zelf nieuws, voorwaarden, richtlijnen, extranetlinks en accountmanagers, en houden dit bij met een eigen account. Het forum toetst de informatie niet.',u:'aanbieders.html'},
  {d:'2026-10-03',pr:47,th:'kennis',t:'E-learning: 10 korte modules',x:'Lessen, tussenvragen, eindtoets en deelnamebewijs over onder meer leennormen, NHG, fundering, Wwft, zorgplicht, Wtp en AI. Geen PE-punten.',u:'elearning.html'},
  {d:'2026-10-03',pr:46,th:'forum',t:'Reacties met nummer, tijdstip en vaste link',x:'Elke reactie op het forum heeft een nummer, datum en tijd en een eigen link die je kunt delen.',u:'index.html#forum'},

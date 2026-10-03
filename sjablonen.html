@@ -11,9 +11,9 @@
 <meta name="theme-color" content="#FFD200">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="manifest" href="manifest.webmanifest">
-<meta name="description" content="Ruim veertig mail- en briefsjablonen voor adviseurs, van kennismaking tot klacht en nazorg. Vul de velden in en kopieer, mail of print de tekst.">
+<meta name="description" content="Ruim zestig mail- en briefsjablonen en interne memo’s voor adviseurs, van kennismaking tot klacht, schade en compliance. Vul de velden in en kopieer, mail of print de tekst.">
 <meta property="og:title" content="Mail- en briefsjablonen – Adviesforum">
-<meta property="og:description" content="Ruim veertig mail- en briefsjablonen voor adviseurs, van kennismaking tot klacht en nazorg. Vul de velden in en kopieer, mail of print de tekst.">
+<meta property="og:description" content="Ruim zestig mail- en briefsjablonen en interne memo’s voor adviseurs, van kennismaking tot klacht, schade en compliance. Vul de velden in en kopieer, mail of print de tekst.">
 <meta property="og:type" content="website">
 <style>
 @font-face{font-family:Montserrat;font-style:normal;font-weight:400;font-display:swap;src:url(fonts/montserrat-latin-400-normal.woff2) format('woff2')}
@@ -163,7 +163,7 @@ a.terug{display:inline-block;padding:8px 0}
     <div class="merk"><span class="zeshoek" aria-hidden="true"></span>Adviesforum &middot; Hulpmiddelen</div>
     <a class="terug" href="index.html#hulpmiddelen">&larr; Terug naar de hulpmiddelen</a>
     <h1>Mail- en briefsjablonen</h1>
-    <p><span id="aantal">Ruim veertig</span> sjablonen voor de vaste momenten in je dossier: van kennismaking en documenten opvragen tot klachtafhandeling, privacyverzoeken en nazorg. Vul de velden in, bekijk het resultaat direct en kopieer, mail of print de tekst.</p>
+    <p><span id="aantal">Ruim veertig</span> sjablonen voor de vaste momenten in je dossier: van kennismaking en documenten opvragen tot klachtafhandeling, privacyverzoeken, schade, nazorg en interne compliance-memo’s. Vul de velden in, bekijk het resultaat direct en kopieer, mail of print de tekst.</p>
     <span class="stempel">Voorbeeldteksten &middot; geel gemarkeerd = zelf controleren</span>
   </div>
 </header>
@@ -253,7 +253,7 @@ a.terug{display:inline-block;padding:8px 0}
 
   function veldenVan(t){
     var gezien = {}, uit = [];
-    ((t.onderwerp || '') + '\n' + t.tekst + (t.type === 'brief' ? '{klantadres}{klantpostcode}{kantoorplaats}{vandaag}' : '{klantemail}') + ONDERTEKENING)
+    ((t.onderwerp || '') + '\n' + t.tekst + (t.type === 'brief' ? '{klantadres}{klantpostcode}{kantoorplaats}{vandaag}' : t.type === 'memo' ? '' : '{klantemail}') + (t.geenOndertekening ? '' : ONDERTEKENING))
       .replace(/\{(\w+)\}/g, function(_, k){ if (!gezien[k]) { gezien[k] = 1; uit.push(k); } return _; });
     return uit;
   }
@@ -315,7 +315,7 @@ a.terug{display:inline-block;padding:8px 0}
     return LIJST.filter(function(t){
       if (cat && t.cat !== cat) return false;
       if (!q.length) return true;
-      var hooi = norm([t.titel, t.onderwerp, t.tekst, CATNAAM[t.cat], (t.controle || []).join(' '), t.type === 'brief' ? 'brief' : 'mail e-mail'].join(' '));
+      var hooi = norm([t.titel, t.onderwerp, t.tekst, CATNAAM[t.cat], (t.controle || []).join(' '), t.type === 'brief' ? 'brief' : t.type === 'memo' ? 'memo intern' : 'mail e-mail'].join(' '));
       return q.every(function(w){ return hooi.indexOf(w) > -1; });
     });
   }
@@ -326,7 +326,7 @@ a.terug{display:inline-block;padding:8px 0}
       if (!groep.length) return;
       html += '<h3>' + esc(c.naam) + '</h3>';
       groep.forEach(function(t){
-        html += '<button type="button" data-id="' + esc(t.id) + '"' + (t.id === S.id ? ' aria-current="true"' : '') + '><span>' + esc(t.titel) + '</span><span class="soort">' + (t.type === 'brief' ? 'brief' : 'mail') + '</span></button>';
+        html += '<button type="button" data-id="' + esc(t.id) + '"' + (t.id === S.id ? ' aria-current="true"' : '') + '><span>' + esc(t.titel) + '</span><span class="soort">' + (t.type === 'brief' ? 'brief' : t.type === 'memo' ? 'memo' : 'mail') + '</span></button>';
       });
     });
     $('menulijst').innerHTML = html;
@@ -362,12 +362,12 @@ a.terug{display:inline-block;padding:8px 0}
 
     var h = '';
     h += '<div class="paneel-kop"><div style="min-width:0"><div class="groep">' + esc(CATNAAM[t.cat] || '') + '</div><h2>' + esc(t.titel) + '</h2>';
-    h += '<div class="badges"><span class="badge zwart">' + (t.type === 'brief' ? 'Brief' : 'E-mail') + '</span>';
+    h += '<div class="badges"><span class="badge zwart">' + (t.type === 'brief' ? 'Brief' : t.type === 'memo' ? 'Intern memo' : 'E-mail') + '</span>';
     if ((t.bronnen || []).length) h += '<span class="badge geel">Termijnen / bronnen gecontroleerd</span>';
     h += '</div></div></div>';
 
     h += '<div class="werkblad"><div class="invoer">';
-    h += '<h3>Klant</h3><div class="velden">' + klant.map(veldHTML).join('') + '</div>';
+    if (klant.length) h += '<h3>Klant</h3><div class="velden">' + klant.map(veldHTML).join('') + '</div>';
     if (eigen.length) h += '<details open><summary>Gegevens voor dit sjabloon (' + eigen.length + ')</summary><div class="velden">' + eigen.map(veldHTML).join('') + '</div></details>';
     else h += '<p class="geen-velden" style="margin-top:12px">Dit sjabloon heeft geen extra velden.</p>';
     h += '<details' + (kantoorLeeg ? ' open' : '') + '><summary>Jouw gegevens en kantoor</summary><div class="velden">' + kantoor.map(veldHTML).join('') + '</div></details>';
@@ -461,6 +461,8 @@ a.terug{display:inline-block;padding:8px 0}
       var adres = ['klantnaam', 'klantadres', 'klantpostcode'].map(function(k){ return esc(waarde(k) || '[' + veldDef(k).label.toLowerCase() + ']'); }).join('<br>');
       var plaatsDatum = [waarde('kantoorplaats'), waarde('vandaag')].filter(Boolean).map(esc).join(', ');
       kop = '<div class="afz">' + afz + '</div><div class="adres">' + adres + '</div><p class="pd">' + plaatsDatum + '</p><p class="betreft"><b>Betreft:</b> ' + ow + '</p>';
+    } else if (t.type === 'memo') {
+      kop = '<p class="mailkop"><b>Intern memo:</b> ' + ow + '</p>';
     } else {
       var aan = waarde('klantemail');
       kop = '<p class="mailkop">' + (aan ? '<b>Aan:</b> ' + esc(aan) + '<br>' : '') + '<b>Onderwerp:</b> ' + ow + '</p>';
@@ -491,6 +493,7 @@ a.terug{display:inline-block;padding:8px 0}
       var link = mailLink(t), w = waarschuwing(t);
       if (link.length > 1900) w += ' De tekst is lang; sommige mailprogramma’s knippen hem af. Controleer de mail, of plak de gekopieerde tekst.';
       if (t.type === 'brief') w += ' Dit is een brief: overweeg hem als bijlage of per post te sturen.';
+      if (t.type === 'memo') w += ' Dit is een intern memo: niet naar de klant sturen.';
       melding('Je mailprogramma wordt geopend. Er wordt niets automatisch verzonden.' + w, w ? 'let-op' : 'ok');
       window.location.href = link;
     } else if (a === 'print') {

@@ -93,13 +93,64 @@ button,input,select,textarea{font-family:inherit}
 a.terug{display:inline-block;padding:8px 0}
 @media print{.balk,.filters,.chips{display:none}.kaart{break-inside:avoid}}
 </style>
+<style id="a11y">
+/* Toegankelijkheid en donkere modus (zie docs/toegankelijkheid.md). Staat in een eigen <style>, zodat printvensters licht blijven. */
+.skiplink{position:absolute;left:12px;top:-200px;z-index:10000;background:#141414;color:#fff;padding:10px 16px;border-radius:8px;font-weight:700;text-decoration:none;font-family:Montserrat,system-ui,sans-serif}
+.skiplink:focus{top:12px;outline:3px solid #FFD200;outline-offset:2px}
+main[tabindex="-1"]:focus{outline:none}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus,textarea:focus,summary:focus-visible,[tabindex]:not([tabindex="-1"]):focus-visible{outline:3px solid #141414!important;outline-offset:2px!important}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+@media print{.skiplink{display:none}}
+@media screen and (prefers-color-scheme:dark){
+:root:not([data-theme="light"]){color-scheme:dark}
+:root:not([data-theme="light"]){--geel-zacht:#3f3918;--zwart:#F2F2F2;--tekst:#F2F2F2;--grijs:#BDBDBD;--lijn:#333333;--vlak:#262626;--rood:#e9a29b;--rood-zacht:#3f1a18;--groen:#9de7c1}
+:root:not([data-theme="light"]) body{color:#F2F2F2;background:#141414}
+:root:not([data-theme="light"]) .balk{background:#2A2A2A;color:#fff}
+:root:not([data-theme="light"]) .balk a{color:#fff}
+:root:not([data-theme="light"]) .kop{background:#1E1E1E;color:#F2F2F2;border-bottom:3px solid #FFD200}
+:root:not([data-theme="light"]) .zeshoek{background:#2A2A2A}
+:root:not([data-theme="light"]) .terug{border-bottom:2px solid #8A8A8A}
+:root:not([data-theme="light"]) .kop .stempel{background:#2A2A2A;color:#FFD200}
+:root:not([data-theme="light"]) .uitleg{background:#262626;border-left:4px solid #8A8A8A}
+:root:not([data-theme="light"]) .filters input,:root:not([data-theme="light"]) .filters select{border:1px solid #333333;background:#1E1E1E;color:#F2F2F2}
+:root:not([data-theme="light"]) .filters input:focus,:root:not([data-theme="light"]) .filters select:focus{outline:3px solid rgba(255,210,0,.6)}
+:root:not([data-theme="light"]) .chip{border:1px solid #333333;background:#1E1E1E;color:#F2F2F2}
+:root:not([data-theme="light"]) .chip[aria-pressed="true"]{background:#FFD200;color:#141414;border-color:#FFD200}
+:root:not([data-theme="light"]) .teller{color:#BDBDBD}
+:root:not([data-theme="light"]) .kaart{border:1px solid #333333;background:#1E1E1E}
+:root:not([data-theme="light"]) .kaart.doel{border-color:#8A8A8A}
+:root:not([data-theme="light"]) .kaart .cat{color:#BDBDBD}
+:root:not([data-theme="light"]) .kaart .koppel{background:#3f3918}
+:root:not([data-theme="light"]) .kaart .afm{background:#3f1a18;border-left:3px solid #C0392B}
+:root:not([data-theme="light"]) .kaart .afm b{color:#ee9e96}
+:root:not([data-theme="light"]) .soort{background:#262626;border:1px solid #333333}
+:root:not([data-theme="light"]) .intern a{border-bottom:2px solid #FFD200}
+:root:not([data-theme="light"]) .intern a:hover{border-color:#8A8A8A}
+:root:not([data-theme="light"]) .links{color:#BDBDBD;border-top:1px solid #333333}
+:root:not([data-theme="light"]) .links a{color:#F2F2F2}
+:root:not([data-theme="light"]) .leeg{color:#BDBDBD}
+:root:not([data-theme="light"]) .compliance{background:#3f1a18;border-left:4px solid #C0392B}
+:root:not([data-theme="light"]) .compliance strong{color:#ee9e96}
+:root:not([data-theme="light"]) .voet{color:#BDBDBD}
+:root:not([data-theme="light"]) .voet a{color:#F2F2F2}
+:root:not([data-theme="light"]) a:focus-visible,:root:not([data-theme="light"]) button:focus-visible,:root:not([data-theme="light"]) input:focus,:root:not([data-theme="light"]) input:focus-within,:root:not([data-theme="light"]) select:focus,:root:not([data-theme="light"]) textarea:focus,:root:not([data-theme="light"]) summary:focus-visible,:root:not([data-theme="light"]) [tabindex]:not([tabindex="-1"]):focus-visible{outline-color:#FFD200!important}
+:root:not([data-theme="light"]) .skiplink{background:#FFD200;color:#141414}
+:root:not([data-theme="light"]) [style*="background:#fff"],:root:not([data-theme="light"]) [style*="background:#FFF"]{background:#1E1E1E!important}
+:root:not([data-theme="light"]) [style*="color:#555"]{color:#BDBDBD!important}
+:root:not([data-theme="light"]) [style*="color:#141414"]{color:#F2F2F2!important}
+:root:not([data-theme="light"]) .back-inline{color:#F2F2F2!important;border-bottom-color:#FFD200!important}
+:root:not([data-theme="light"]) .skiplink:focus{outline-color:#F2F2F2}
+}
+</style>
 </head>
 <body>
+<a class="skiplink" href="#inhoud">Naar de inhoud</a>
 
-<div class="balk">
+<nav class="balk" aria-label="Forum">
   <span>Adviesforum &middot; hulpmiddelen voor financieel adviseurs</span>
   <span><a href="index.html">Naar het forum</a></span>
-</div>
+</nav>
 
 <header class="kop">
   <div class="kop-in">
@@ -111,7 +162,7 @@ a.terug{display:inline-block;padding:8px 0}
   </div>
 </header>
 
-<main class="romp">
+<main class="romp" id="inhoud" tabindex="-1">
   <div class="uitleg">
     <p><strong>Wat is dit?</strong> Dit zijn partners en integratiepartners van <strong>Blinqx Verzekering &amp; Hypotheek</strong>, de leverancier van onder meer eBlinqx, Adviesbox en Fastlane. Wij hebben ze opgezocht op de partner-, integratie- en nieuwspagina's van Blinqx en op de eigen sites van de partners. Het is <strong>geen aanbeveling van het forum</strong>: een partner kiezen blijft jouw afweging, en de onderlinge afspraken (kosten, voorwaarden, eventuele vergoedingen) staan hier bewust niet in.</p>
     <p>Per kaart zie je of de partner op de <em>partnerpagina</em>, op de <em>integratiepagina</em> of in een <em>nieuwsbericht</em> van Blinqx staat. Controleer actuele informatie altijd bij de partner zelf. Lees meer in de kennisbank (artikelen over Blinqx en het partnerecosysteem).</p>
@@ -127,9 +178,9 @@ a.terug{display:inline-block;padding:8px 0}
   <p class="leeg" id="leeg">Geen partners gevonden. Probeer een ander zoekwoord of kies alle categorieën.</p>
 </main>
 
-<div class="compliance">
+<aside class="compliance" aria-label="Compliance">
   <strong>Compliance:</strong> werk je met een partner, dan blijf jij verantwoordelijk voor je advies, je cliëntenonderzoek (Wwft) en de bescherming van klantgegevens (AVG). Bij uitbesteding van Wft-werkzaamheden leg je afspraken vast en houd je toezicht. Deel klantgegevens alleen met een grondslag en, waar nodig, een verwerkersovereenkomst. Ontvang je een vergoeding voor een doorverwijzing, wees daar dan open over tegenover de klant.
-</div>
+</aside>
 
 <footer class="voet">
   Adviesforum &middot; collegiale kennisdeling voor financieel adviseurs &middot; <a href="index.html#hulpmiddelen">Alle hulpmiddelen</a> &middot; <a href="privacy.html">Privacy</a> &middot; <a href="uitnodigen.html">Uitnodigen</a>. Deze pagina slaat niets op en verstuurt niets.

@@ -146,13 +146,82 @@ button,input,select,textarea{font-family:inherit}
 @media (max-width:760px){input,select,textarea{font-size:16px!important}}
 a.terug{display:inline-block;padding:8px 0}
 </style>
+<style id="a11y">
+/* Toegankelijkheid en donkere modus (zie docs/toegankelijkheid.md). Staat in een eigen <style>, zodat printvensters licht blijven. */
+.skiplink{position:absolute;left:12px;top:-200px;z-index:10000;background:#141414;color:#fff;padding:10px 16px;border-radius:8px;font-weight:700;text-decoration:none;font-family:Montserrat,system-ui,sans-serif}
+.skiplink:focus{top:12px;outline:3px solid #FFD200;outline-offset:2px}
+main[tabindex="-1"]:focus{outline:none}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus,textarea:focus,summary:focus-visible,[tabindex]:not([tabindex="-1"]):focus-visible{outline:3px solid #141414!important;outline-offset:2px!important}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+@media print{.skiplink{display:none}}
+@media screen and (prefers-color-scheme:dark){
+:root:not([data-theme="light"]){color-scheme:dark}
+:root:not([data-theme="light"]){--geel-zacht:#3f3918;--zwart:#F2F2F2;--tekst:#F2F2F2;--grijs:#BDBDBD;--lijn:#333333;--vlak:#262626;--rood:#e9a29b;--rood-zacht:#3f1a18;--groen:#9de7c1}
+:root:not([data-theme="light"]) body{color:#F2F2F2;background:#141414}
+:root:not([data-theme="light"]) :focus-visible{outline:3px solid rgba(255,210,0,.75)}
+:root:not([data-theme="light"]) .balk{background:#2A2A2A;color:#fff}
+:root:not([data-theme="light"]) .balk a{color:#fff}
+:root:not([data-theme="light"]) .kop{background:#1E1E1E;color:#F2F2F2;border-bottom:3px solid #FFD200}
+:root:not([data-theme="light"]) .zeshoek{background:#2A2A2A}
+:root:not([data-theme="light"]) .terug{border-bottom:2px solid #8A8A8A}
+:root:not([data-theme="light"]) .kop .stempel{background:#2A2A2A;color:#FFD200}
+:root:not([data-theme="light"]) .disclaimer{background:#3f1a18;border-left:4px solid #C0392B}
+:root:not([data-theme="light"]) .disclaimer strong{color:#ee9e96}
+:root:not([data-theme="light"]) .tabs button{border:1px solid #333333;background:#1E1E1E;color:#F2F2F2}
+:root:not([data-theme="light"]) .tabs button:hover{background:#262626}
+:root:not([data-theme="light"]) .tabs button[aria-selected="true"]{background:#FFD200;color:#141414;border-color:#FFD200}
+:root:not([data-theme="light"]) .paneel-kop{border-bottom:3px solid #FFD200}
+:root:not([data-theme="light"]) .paneel-kop .groep{color:#BDBDBD}
+:root:not([data-theme="light"]) .paneel-kop p{color:#F2F2F2}
+:root:not([data-theme="light"]) .invoer{border:1px solid #333333}
+:root:not([data-theme="light"]) .veld .tip{color:#BDBDBD}
+:root:not([data-theme="light"]) .veld input,:root:not([data-theme="light"]) .veld select,:root:not([data-theme="light"]) .veld textarea{border:1px solid #333333;background:#1E1E1E;color:#F2F2F2}
+:root:not([data-theme="light"]) .veld input:focus,:root:not([data-theme="light"]) .veld select:focus,:root:not([data-theme="light"]) .veld textarea:focus{outline:3px solid rgba(255,210,0,.6);border-color:#9A9A9A}
+:root:not([data-theme="light"]) .met .voor,:root:not([data-theme="light"]) .met .na{color:#BDBDBD}
+:root:not([data-theme="light"]) .veld input.fout{border-color:#C0392B}
+:root:not([data-theme="light"]) .veld .foutmelding{color:#e9a29b}
+:root:not([data-theme="light"]) .uitkomst{background:#2A2A2A;color:#fff}
+:root:not([data-theme="light"]) .uitkomst .groot{color:#FFD200}
+:root:not([data-theme="light"]) .uitkomst dl{border-top:1px solid rgba(255,255,255,.22)}
+:root:not([data-theme="light"]) .uitkomst dl div{border-bottom:1px solid rgba(255,255,255,.12)}
+:root:not([data-theme="light"]) .uitkomst dl div.som dd{color:#FFD200}
+:root:not([data-theme="light"]) .signaal{background:#3f3918;color:#F2F2F2}
+:root:not([data-theme="light"]) .blok.docs{background:#262626;border-left:4px solid #8A8A8A}
+:root:not([data-theme="light"]) .blok.let-op{background:#3f3918;border-left:4px solid #E6BD00}
+:root:not([data-theme="light"]) .blok.let-op h3{color:#f6db8e}
+:root:not([data-theme="light"]) .blok.bron{background:#1E1E1E;border:1px solid #333333;border-left:4px solid #5E5E5E}
+:root:not([data-theme="light"]) .label-ga{background:#2A2A2A;color:#FFD200}
+:root:not([data-theme="light"]) .dossier{border:1px solid #333333}
+:root:not([data-theme="light"]) .dossier > p{color:#BDBDBD}
+:root:not([data-theme="light"]) .dossier textarea{border:1px solid #333333}
+:root:not([data-theme="light"]) .knop{border:1px solid #FFD200;background:#FFD200;color:#141414}
+:root:not([data-theme="light"]) .knop:hover{background:#FFE04D;color:#141414}
+:root:not([data-theme="light"]) .knop.licht{background:#1E1E1E;color:#F2F2F2;border-color:#333333}
+:root:not([data-theme="light"]) .knop.licht:hover{background:#262626}
+:root:not([data-theme="light"]) .status{color:#9de7c1}
+:root:not([data-theme="light"]) .status.waarschuw{color:#e9a29b}
+:root:not([data-theme="light"]) .compliance{background:#3f1a18;border-left:4px solid #C0392B}
+:root:not([data-theme="light"]) .compliance strong{color:#ee9e96}
+:root:not([data-theme="light"]) .voet{color:#BDBDBD}
+:root:not([data-theme="light"]) .voet a{color:#F2F2F2}
+:root:not([data-theme="light"]) a:focus-visible,:root:not([data-theme="light"]) button:focus-visible,:root:not([data-theme="light"]) input:focus,:root:not([data-theme="light"]) input:focus-within,:root:not([data-theme="light"]) select:focus,:root:not([data-theme="light"]) textarea:focus,:root:not([data-theme="light"]) summary:focus-visible,:root:not([data-theme="light"]) [tabindex]:not([tabindex="-1"]):focus-visible{outline-color:#FFD200!important}
+:root:not([data-theme="light"]) .skiplink{background:#FFD200;color:#141414}
+:root:not([data-theme="light"]) [style*="background:#fff"],:root:not([data-theme="light"]) [style*="background:#FFF"]{background:#1E1E1E!important}
+:root:not([data-theme="light"]) [style*="color:#555"]{color:#BDBDBD!important}
+:root:not([data-theme="light"]) [style*="color:#141414"]{color:#F2F2F2!important}
+:root:not([data-theme="light"]) .back-inline{color:#F2F2F2!important;border-bottom-color:#FFD200!important}
+:root:not([data-theme="light"]) .skiplink:focus{outline-color:#F2F2F2}
+}
+</style>
 </head>
 <body>
+<a class="skiplink" href="#inhoud">Naar de inhoud</a>
 
-<div class="balk">
+<nav class="balk" aria-label="Forum">
   <span>Adviesforum &middot; hulpmiddelen voor financieel adviseurs</span>
   <span><a href="index.html">Naar het forum</a></span>
-</div>
+</nav>
 
 <header class="kop">
   <div class="kop-in">
@@ -164,7 +233,7 @@ a.terug{display:inline-block;padding:8px 0}
   </div>
 </header>
 
-<main class="romp">
+<main class="romp" id="inhoud" tabindex="-1">
   <div class="disclaimer" role="note">
     <p><strong>Indicatief hulpmiddel.</strong> De uitkomsten zijn een rekenkundige benadering op basis van de hoofdregels uit de NHG Voorwaarden &amp; Normen 2026. De acceptatiegids en de beoordeling van de geldverstrekker (en bij NHG de V&amp;N zelf) zijn altijd leidend. Officiële rekentools, zoals de IBL-rekentool en de Inkomensverklaring Ondernemer van een erkende rekenexpert, gaan voor.</p>
     <p><strong>Zorgplicht en passendheid (AFM).</strong> Dat een toetsinkomen past binnen de Trhk-normen of de acceptatieregels, maakt een hypotheek nog niet passend. Je beoordeelt zelf of het inkomen stabiel is, bespreekt verwachte veranderingen (pensioen, minder werken, einde contract of uitkering) en legt je afweging vast in het klantdossier en het adviesrapport.</p>
@@ -195,10 +264,10 @@ a.terug{display:inline-block;padding:8px 0}
   </section>
 </main>
 
-<div class="compliance">
+<aside class="compliance" aria-label="Compliance">
   <p><strong>Compliance:</strong> deze pagina geeft een indicatie en is geen advies, geen kredietbeoordeling en geen offerte. Het toetsinkomen stelt de geldverstrekker vast op grond van artikel 2 Trhk en (bij NHG) de Voorwaarden &amp; Normen 2026. Waar geldverstrekkers onderling verschillen staat dat bij het onderwerp: <span class="label-ga">geldverstrekker-afhankelijk</span> check dan de acceptatiegids.</p>
   <p>Volgens de AFM-Leidraad Hypotheekadvisering (2026) vraagt de adviseur naar het inkomen, beoordeelt hij of de inkomsten stabiel zijn en kijkt hij ook naar de betaalbaarheid na pensionering, ook als de klant nog meer dan tien jaar van zijn pensioen af zit. Leg vast welke informatiebron je gebruikt, welke aannames je maakt en waarom de woonlasten passend zijn.</p>
-</div>
+</aside>
 
 <footer class="voet">
   Adviesforum &middot; collegiale kennisdeling voor financieel adviseurs &middot; <a href="index.html#hulpmiddelen">Alle hulpmiddelen</a> &middot; <a href="rekentools.html">Rekenhulpen</a> &middot; <a href="leennormen-2026.html">Leennormen 2026</a> &middot; <a href="privacy.html">Privacy</a> &middot; <a href="uitnodigen.html">Uitnodigen</a>. Peildatum van de regels: oktober 2026 (NHG V&amp;N 2026-1). Alle berekeningen draaien in je eigen browser.
@@ -804,7 +873,7 @@ a.terug{display:inline-block;padding:8px 0}
   // ---------- Doorgeven naar adviesmotivatie (alleen via de URL-hash, niets wordt opgeslagen) ----------
   function schoneRef(v){
     v = String(v == null ? '' : v).replace(/[\u0000-\u001F\u007F]/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 80);
-    if (/^\d{8,9}$/.test(v.replace(/[\s.-]/g, ''))) return null; // lijkt op een BSN: niet doorgeven
+    if ((function(d){d=String(d);if(!/^\d{8,9}$/.test(d))return false;d=('0'+d).slice(-9);var s=0;for(var i=0;i<8;i++)s+=(9-i)*(+d[i]);return (s-(+d[8]))%11===0;})(v.replace(/[\s.-]/g, ''))) return null; // lijkt op een BSN: niet doorgeven
     return v;
   }
   document.getElementById('naar-advies').addEventListener('click', function(){

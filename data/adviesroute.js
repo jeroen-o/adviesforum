@@ -3,7 +3,7 @@
  * Structuur:
  *   window.ADVIESROUTE = { bronnen: {...}, routes: [ { id, naam, kort, intro, stappen: [ stap ] } ] }
  *   stap = { id, titel, doel,
- *            afm: { bron: 'leidraad' | 'kb' | null, ref, p, tekst },
+ *            afm: { bron: 'leidraad' | 'kb' | 'wet' | null, ref, p, tekst, links },
  *            check: [tekst], dossier: [tekst],
  *            valkuilen: [ { t, kb } ],          kb = kennisbank-id (index.html#artikel-<id>)
  *            links: [ [label, href] ] }
@@ -13,6 +13,9 @@
  *                     documenten/Leidraad-Hypotheekadvisering-2026.pdf, p = paginanummer in de pdf.
  *   bron 'kb'       = samenvatting uit de kennisbank (ref = artikel-id), status concept.
  *   bron null       = geen specifieke passage in de Leidraad; tekst is praktijk/eigen werkwijze.
+ *   bron 'wet'      = eigen samenvatting van wet- en regelgeving (Wft, BGfo, BW) en AFM-uitleg buiten de Leidraad;
+ *                     ref = artikelen, links = [ [label, url] ] naar de bronnen (afm.nl, wetten.overheid.nl, vfn.nl, bkr.nl).
+ *                     Gebruikt in de routes schade en krediet (peildatum 3 oktober 2026).
  * Let op: de Leidraad zelf zegt dat hij geen wet- of regelgeving is, dat voorbeelden geen vaste
  * richtlijnen zijn, en dat informatieverstrekking (art. 4:19/4:20 Wft) en het bemiddelingstraject
  * buiten de reikwijdte vallen (voetnoot 1, p. 3).
@@ -978,6 +981,506 @@ window.ADVIESROUTE = {
             ['Gespreksverslag', 'gespreksverslag.html'],
             ['Periodieke nazorgcheck', 'nazorg-check.html'],
             ['Sjabloon: Pensioen en AOW-gat in beeld', 'sjablonen.html#nz-pensioen-aow']
+          ]
+        }
+      ]
+    },
+
+    /* ======================================================================
+       ROUTE 5: SCHADEVERZEKERINGEN (PARTICULIER EN ZAKELIJK)
+       AFM-blokken met bron 'wet': eigen samenvatting van Wft/BGfo/BW en AFM-pagina's,
+       geverifieerd via zoekresultaten op afm.nl en wetten.overheid.nl (peildatum 3 oktober 2026).
+       De gedragscodes van verzekeraars (k254) binden de verzekeraar, niet de adviseur: alleen context.
+       ====================================================================== */
+    {
+      id: 'schade',
+      naam: 'Schadeverzekeringen (particulier en zakelijk)',
+      kort: 'Schade',
+      intro: 'Advies over en bemiddeling in schadeverzekeringen: wonen, aansprakelijkheid, mobiliteit, reizen, rechtsbijstand en de zakelijke risico\'s van ondernemers. De AFM-Leidraad Hypotheekadvisering gaat hier niet over; de AFM-blokken vatten de Wft, het BGfo, het BW en de AFM-uitleg samen. De gedragscodes van verzekeraars binden de verzekeraar en niet jou; ze staan er alleen als context bij.',
+      stappen: [
+        {
+          id: 'kennismaking',
+          titel: 'Kennismaking, dienstverlening en beloning',
+          doel: 'De klant weet vooraf wat je wel en niet doet (advies, bemiddeling of beide, welke risico\'s), hoe je wordt beloond en wat er na het afsluiten gebeurt.',
+          afm: {
+            bron: 'wet', ref: 'art. 4:20 Wft en BGfo; IDD-transparantie; actieve provisietransparantie per 1 juli 2024',
+            links: [
+              ['AFM: Transparantie (IDD)', 'https://www.afm.nl/nl-nl/sector/themas/belangrijke-europese-wet--en-regelgeving/idd/transparantie---idd'],
+              ['AFM: Duiding actieve provisietransparantie', 'https://www.afm.nl/nl-nl/sector/themas/verplichtingen-voor-ondernemingen/beleidsuitingen/interpretaties/interpretatie-provisietransparantie'],
+              ['AFM: Vergelijkingskaart', 'https://www.afm.nl/nl-nl/sector/themas/dienstverlening-aan-consumenten/klantrelatie/vergelijkingskaart']
+            ],
+            tekst: 'Vóór het sluiten van een schadeverzekering vertel je de klant of hij jou rechtstreeks betaalt (met het bedrag) of dat je provisie van de verzekeraar ontvangt, en of er een eigendomsrelatie met de verzekeraar is. Voor schadeverzekeringen die vanaf 1 juli 2024 zijn gesloten geldt actieve provisietransparantie: je meldt de hoogte van de afsluit- en de doorlopende provisie uit jezelf, vóór het einde van de dienstverlening, ook als de klant er niet om vraagt. De AFM toetst vooral of voor de klant duidelijk is welke dienst hij krijgt en tegen welke prijs, en of daarover een passend gesprek is gevoerd. Het provisieverbod geldt niet voor particuliere schadeverzekeringen zoals opstal en inboedel. De vergelijkingskaart is verplicht bij producten onder het provisieverbod; bij een zuiver schadetraject mag je hem vrijwillig gebruiken. Stuurt de klant ook aan op een AOV of een andere provisieverbod-verzekering, dan geldt de kaart wel.'
+          },
+          check: [
+            'Soort dienstverlening vastgelegd: advies, bemiddeling zonder advies, of beide; en voor welke risico\'s en polissen.',
+            'Particulier of zakelijk vastgesteld (consumentenbescherming in de Wft geldt vooral voor de consument; het IPID geldt ook zakelijk).',
+            'Beloning uitgelegd: provisie, fee of combinatie, met bedragen; bij provisie de hoogte van afsluit- en doorlopende provisie actief gemeld.',
+            'Eventuele eigendomsrelatie met een verzekeraar of volmacht gemeld.',
+            'Dienstverleningsinformatie of (vrijwillig) een vergelijkingskaart verstrekt.',
+            'Afspraken over nazorg, schadebegeleiding en jaarlijkse check gemaakt en wat daarvoor wordt gerekend.',
+            'Klachtenroute (eigen klachtenregeling en Kifid) genoemd.'
+          ],
+          dossier: [
+            'Dienstverleningsinformatie of vergelijkingskaart met datum van verstrekking.',
+            'Vastlegging van de provisie-informatie (afsluit- en doorlopende provisie) per polis, met datum.',
+            'Opdrachtbevestiging met afbakening en nazorgafspraken.'
+          ],
+          valkuilen: [
+            { t: 'Provisie alleen op verzoek noemen: voor polissen vanaf 1 juli 2024 moet je de hoogte actief melden.', kb: 'k240' },
+            { t: 'Onduidelijk laten of je ook schademeldingen begeleidt; de klant verwacht dat je meldt en controleert.', kb: 'k221' }
+          ],
+          links: [
+            ['Sjabloon: Bevestiging kennismakingsgesprek', 'sjablonen.html#km-bevestiging-gesprek'],
+            ['Sjabloon: Opdrachtbevestiging', 'sjablonen.html#km-opdrachtbevestiging'],
+            ['Kennisbank: adviseurskader schadeverzekeringen (k240)', 'index.html#artikel-k240'],
+            ['Kennisbank: gedragscodes verzekeraars, alleen context (k254)', 'index.html#artikel-k254'],
+            ['Kennisbank: provisieverbod en vergelijkingskaart (k61)', 'index.html#artikel-k61'],
+            ['FAQ: provisie en actieve provisietransparantie (o.a. dfs-020, cpx-072)', 'index.html#faq']
+          ]
+        },
+        {
+          id: 'inventarisatie',
+          titel: 'Inventarisatie: risico\'s, polissen en waarden',
+          doel: 'Een volledig beeld van de risico\'s per levensgebied of bedrijfsonderdeel, van de bestaande polissen en van de te verzekeren waarden, met de bron van elke waarde.',
+          afm: {
+            bron: 'wet', ref: 'IDD: wensen en behoeften; art. 4:23 Wft bij advies',
+            links: [
+              ['AFM: Wensen en behoeften inventariseren', 'https://www.afm.nl/nl-nl/professionals/veelgestelde-vragen/idd-bemiddelen-advies/inventarisatie-klantbehoeften'],
+              ['AFM: Bemiddelen en advies (IDD)', 'https://www.afm.nl/nl-nl/sector/themas/belangrijke-europese-wet--en-regelgeving/idd/bemiddelen-en-advies---idd'],
+              ['Wft (wetten.overheid.nl)', 'https://wetten.overheid.nl/BWBR0020368/']
+            ],
+            tekst: 'Bij schadeverzekeringen stel je de wensen en behoeften van de klant vast, zowel bij advies als bij bemiddeling zonder advies. Volgens de AFM mag je daarbij uitgaan van de informatie die de klant zelf geeft, en is dat inventariseren op zichzelf nog geen advies. Adviseer je wel, dan wint je volgens art. 4:23 Wft informatie in over de financiële positie, kennis en ervaring, doelstellingen en risicobereidheid, voor zover redelijkerwijs relevant voor het advies. Hoe het verzekerd bedrag wordt bepaald staat niet in de Wft; Kifid verwacht wel dat je de klant helpt het juiste bedrag te bepalen of op onderverzekering wijst (k108).'
+          },
+          check: [
+            'Per levensgebied of bedrijfsonderdeel geïnventariseerd: wonen, aansprakelijkheid, mobiliteit, reizen, rechtsbijstand; zakelijk ook bedrijfsschade, AVB, beroepsaansprakelijkheid, cyber en verzuim.',
+            'Bestaande polissen verzameld: verzekeraar, dekking, eigen risico, verzekerd bedrag, contractduur en premie.',
+            'Herbouwwaarde bepaald met de methode van de verzekeraar, een taxatie of een eigen berekening; bron en datum vastgelegd.',
+            'Inboedelwaarde bepaald met een lijst of de vragenlijst van de verzekeraar; kostbaarheden apart.',
+            'Benoemd dat de Herbouwwaardemeter en de Inboedelwaarde-index van het Verbond na de editie 2025 niet meer verschijnen; geen oude meteruitkomst hergebruikt zonder controle.',
+            'Bijzonderheden uitgevraagd: rieten dak, leegstand, verhuur, verbouwing, thuisbatterij of laadpaal, bedrijfsactiviteiten aan huis.',
+            'Schadeverleden, eerdere opzeggingen door verzekeraars en relevante strafrechtelijke feiten besproken (aanvraagvragen).'
+          ],
+          dossier: [
+            'Inventarisatie met wensen en behoeften, door de klant gecontroleerd.',
+            'Overzicht bestaande polissen (polisbladen).',
+            'Onderbouwing herbouwwaarde en inboedelwaarde met bron en datum.'
+          ],
+          valkuilen: [
+            { t: 'Het verzekerd bedrag helemaal aan de klant overlaten zonder te waarschuwen voor onderverzekering.', kb: 'k108' },
+            { t: 'Bij een thuiswerkende zzp-er niet vragen naar bedrijfsinventaris en voorraad; die valt vaak buiten de particuliere inboedel.', kb: 'k241' }
+          ],
+          links: [
+            ['Scan schadeverzekeringen', 'scan-schadeverzekeringen.html'],
+            ['Scan bedrijfsverzekeringen', 'scan-bedrijfsverzekeringen.html'],
+            ['Herbouwwaarde en onderverzekering', 'herbouwwaarde.html'],
+            ['Rekenhulp: Inboedelwaarde (puntenmodel)', 'rekentools.html#inboedel-puntenmodel'],
+            ['Inventarisatieformulier', 'inventarisatie.html'],
+            ['Kennisbank: woonhuis en inboedel (k241)', 'index.html#artikel-k241'],
+            ['Kennisbank: zakelijke risico\'s (k248)', 'index.html#artikel-k248'],
+            ['Kennisbank: opstal bij de woning (k88)', 'index.html#artikel-k88']
+          ]
+        },
+        {
+          id: 'risicoanalyse',
+          titel: 'Risicoanalyse en prioriteren',
+          doel: 'Per risico de kans en de financiële impact inschatten, bepalen wat de klant zelf kan dragen en vaststellen wat eerst geregeld moet worden.',
+          afm: {
+            bron: 'wet', ref: 'art. 4:23 Wft (passend advies); art. 4:24a Wft (zorgplicht)',
+            links: [
+              ['AFM: Hoe voldoe ik aan de zorgplicht?', 'https://www.afm.nl/nl-nl/professionals/veelgestelde-vragen/adv-bem-bedrijfsvoering/zorgplicht-voldoen'],
+              ['Wft (wetten.overheid.nl)', 'https://wetten.overheid.nl/BWBR0020368/']
+            ],
+            tekst: 'De Wft schrijft geen vaste risicoanalyse voor schadeverzekeringen voor. Wel moet een advies passen bij de informatie die je hebt ingewonnen (art. 4:23 Wft) en houd je zorgvuldig rekening met de rechtmatige belangen van de klant (art. 4:24a Wft). In de praktijk toets je per risico of de klant de schade zelf kan dragen en waarschuw je voor wat niet verzekerd is of niet verzekerbaar is, zoals overstroming door primaire waterkeringen. Kifid kijkt naar wat een redelijk bekwaam en redelijk handelend adviseur had gedaan.'
+          },
+          check: [
+            'Per risico ingeschat: kans, maximale schade en of de klant die uit eigen middelen kan betalen.',
+            'Aansprakelijkheid en grote vermogensrisico\'s (AVP, AVB, brand) voor kleine risico\'s geprioriteerd.',
+            'Onverzekerbare of meestal uitgesloten risico\'s benoemd: overstroming primaire keringen, funderingsschade, slijtage.',
+            'Dubbele dekkingen en samenloop gesignaleerd (bijv. reis en zorgverzekering, rechtsbijstand via vakbond).',
+            'Zakelijk: continuïteitsrisico\'s besproken (bedrijfsschade, cyber, verzuim, beroepsaansprakelijkheid).',
+            'Prioriteitenlijst met de klant besproken en de keuze van de klant vastgelegd.'
+          ],
+          dossier: [
+            'Risicoanalyse per levensgebied of bedrijfsonderdeel met prioriteit.',
+            'Vastlegging van bewust niet verzekerde risico\'s en de motivatie van de klant.'
+          ],
+          valkuilen: [
+            { t: 'Klimaatrisico\'s niet noemen: de klant gaat ervan uit dat water altijd gedekt is.', kb: 'k251' },
+            { t: 'Bij een ondernemer alleen naar de particuliere polissen kijken en de zakelijke aansprakelijkheid missen.', kb: 'k248' }
+          ],
+          links: [
+            ['Scan schadeverzekeringen', 'scan-schadeverzekeringen.html'],
+            ['Scan bedrijfsverzekeringen', 'scan-bedrijfsverzekeringen.html'],
+            ['Scan autoverzekering', 'scan-autoverzekering.html'],
+            ['Kennisbank: AVP (k242)', 'index.html#artikel-k242'],
+            ['Kennisbank: cyberverzekering mkb (k249)', 'index.html#artikel-k249'],
+            ['Kennisbank: verzuim en WGA-eigenrisicodragerschap (k250)', 'index.html#artikel-k250'],
+            ['Kennisbank: klimaat en natuurrampen (k251)', 'index.html#artikel-k251'],
+            ['Kennisbank: Kifid over waterschade (k220)', 'index.html#artikel-k220']
+          ]
+        },
+        {
+          id: 'productkeuze',
+          titel: 'Advies en productkeuze',
+          doel: 'Een passende dekking per risico: soort dekking, verzekerd bedrag, eigen risico, garantie tegen onderverzekering en de uitsluitingen die voor deze klant tellen; uitgelegd en vastgelegd.',
+          afm: {
+            bron: 'wet', ref: 'art. 4:23 en 4:20 Wft; IPID; art. 7:928 en 7:959 BW',
+            links: [
+              ['AFM: Standaardinformatiedocument IPID', 'https://www.afm.nl/nl-nl/sector/themas/europese-wet--en-regelgeving/idd/standaardinformatiedocument-ipid---idd'],
+              ['AFM: Informatieverstrekking bij verzekeringen', 'https://www.afm.nl/nl-nl/sector/themas/dienstverlening-aan-consumenten/informatieverstrekking/verzekeringen'],
+              ['BW Boek 7 (wetten.overheid.nl)', 'https://wetten.overheid.nl/BWBR0005290/']
+            ],
+            tekst: 'Vóór het sluiten geef je de klant de informatie die redelijkerwijs relevant is om het product te beoordelen (art. 4:20 Wft). Wie direct klantcontact heeft, verstrekt vóór het sluiten kosteloos het IPID, aan particuliere en zakelijke klanten (behalve bij grote risico\'s); daarin staan onder meer de dekking, de belangrijkste uitsluitingen, de verplichtingen en de opzegging. Een advies past bij de ingewonnen informatie (art. 4:23 Wft). Uit het BW komen twee punten die je in het advies uitlegt: de mededelingsplicht vóór het sluiten (art. 7:928 BW, met de gevolgen in art. 7:929 en 7:930) en de evenredigheidsregel bij onderverzekering (art. 7:959 BW), tenzij de polis een garantie tegen onderverzekering heeft.'
+          },
+          check: [
+            'Per risico de geadviseerde dekking onderbouwd: uitgebreid of all-risk, nieuwwaarde of dagwaarde, maxima voor kostbaarheden.',
+            'Eigen risico besproken in verhouding tot de premie en de buffer van de klant.',
+            'Garantie tegen onderverzekering: voorwaarden genoemd (waardemeter of taxatie van de verzekeraar, melden bij verbouwing).',
+            'Relevante uitsluitingen schriftelijk uitgelegd (overstroming, opzet, slijtage, bedrijfsactiviteiten, motorrijtuigen).',
+            'Mededelingsplicht van art. 7:928 BW uitgelegd: welke feiten de klant moet melden en wat de gevolgen zijn als dat niet gebeurt.',
+            'IPID per product verstrekt; bij zakelijke klanten ook de polisvoorwaarden van de belangrijkste dekkingen.',
+            'Contractduur en verlenging besproken (context: Gedragscode geïnformeerde verlenging van verzekeraars, k254).',
+            'Afwijken van het advies vastgelegd en door de klant bevestigd.'
+          ],
+          dossier: [
+            'Adviesrapport of adviesmail met onderbouwing per dekking.',
+            'Verstrekte IPID\'s met datum.',
+            'Vergelijking oude en nieuwe dekking bij overstap.',
+            'Afwijkend-adviesverklaring of bevestiging dat de klant een risico niet verzekert.'
+          ],
+          valkuilen: [
+            { t: 'Overstappen op premie zonder de voorwaarden te vergelijken; een smallere dekking is een tekortkoming in het advies.', kb: 'k240' },
+            { t: 'Klant kiest een lager verzekerd bedrag zonder schriftelijke waarschuwing voor de evenredigheidsregel.', kb: 'k108' },
+            { t: 'Bij aansprakelijkheid, auto of reis de grenzen van de dekking niet benoemen.', kb: 'k223' }
+          ],
+          links: [
+            ['Herbouwwaarde en onderverzekering', 'herbouwwaarde.html'],
+            ['Afwijkend advies', 'afwijkend-advies.html'],
+            ['Sjabloon: Afwijkend advies', 'sjablonen.html#adv-afwijkend'],
+            ['Sjabloon: Klant ziet af van verzekering', 'sjablonen.html#adv-geen-verzekering'],
+            ['Kennisbank: rechtsbijstand (k243)', 'index.html#artikel-k243'],
+            ['Kennisbank: auto en mobiliteit (k244)', 'index.html#artikel-k244'],
+            ['Kennisbank: reisverzekering (k245)', 'index.html#artikel-k245'],
+            ['Kennisbank: uitvaartverzekering (k246)', 'index.html#artikel-k246'],
+            ['Kennisbank: zorgverzekering (k247)', 'index.html#artikel-k247']
+          ]
+        },
+        {
+          id: 'aanvraag',
+          titel: 'Aanvraag en acceptatie',
+          doel: 'Een juist ingevulde aanvraag die de klant zelf beantwoordt, en controle dat de polis aansluit op het advies en de dekking ingaat.',
+          afm: {
+            bron: 'wet', ref: 'art. 7:928-7:930 BW; art. 4:24a Wft',
+            links: [
+              ['BW Boek 7 (wetten.overheid.nl)', 'https://wetten.overheid.nl/BWBR0005290/'],
+              ['AFM: Hoe voldoe ik aan de zorgplicht?', 'https://www.afm.nl/nl-nl/professionals/veelgestelde-vragen/adv-bem-bedrijfsvoering/zorgplicht-voldoen']
+            ],
+            tekst: 'Voor de aanvraag zelf heeft de AFM geen specifieke norm; het kader is het BW. De klant meldt vóór het sluiten de feiten die hij kent of behoort te kennen en waarvan hij weet of moet begrijpen dat ze voor de verzekeraar van belang zijn (art. 7:928 BW). Werkt de verzekeraar met een vragenlijst, dan kan hij zich in beginsel niet beroepen op feiten waarnaar niet is gevraagd, behalve bij opzet tot misleiding. Bij schending kan de verzekeraar de uitkering beperken of weigeren en de verzekering opzeggen (art. 7:929 en 7:930 BW). Jouw rol volgt uit de zorgplicht: laat de klant zelf antwoorden en neem niets weg.'
+          },
+          check: [
+            'Klant beantwoordt de aanvraagvragen zelf; bij samen invullen letterlijk voorgelezen.',
+            'Gewezen op melden van schadeverleden, opzeggingen, strafrechtelijk verleden, leegstand en verhuur, voor zover gevraagd.',
+            'Klant heeft de ingevulde aanvraag gecontroleerd en bevestigd.',
+            'Ingangsdatum en eventuele voorlopige dekking geregeld; geen gat tussen oude en nieuwe polis.',
+            'Bij acceptatie onder voorwaarden (clausule, premieopslag, beveiligingseis) de klant geïnformeerd.',
+            'Polis gecontroleerd tegen het advies: dekking, bedragen, eigen risico, clausules.',
+            'Oude polis tijdig en correct opgezegd.'
+          ],
+          dossier: [
+            'Kopie van de aanvraag met de antwoorden van de klant.',
+            'Acceptatiebericht en polisblad, met controle tegen het advies.',
+            'Bewijs van opzegging oude polis.'
+          ],
+          valkuilen: [
+            { t: 'Antwoorden voor de klant invullen of adviseren iets weg te laten; dat kan de dekking kosten en jou aansprakelijk maken.', kb: 'k109' },
+            { t: 'Eerdere opzegging of fraude-registratie niet uitvragen; de verzekeraar ziet die vaak wel.', kb: 'k222' }
+          ],
+          links: [
+            ['Kennisbank: mededelingsplicht (k109)', 'index.html#artikel-k109'],
+            ['Kennisbank: fraude en incidentenregister (k252)', 'index.html#artikel-k252'],
+            ['Kennisbank: Kifid over fraude en opzegging (k222)', 'index.html#artikel-k222'],
+            ['Kennisbank: medische acceptatie (k255)', 'index.html#artikel-k255'],
+            ['FAQ: mededelingsplicht (doe-069)', 'index.html#faq']
+          ]
+        },
+        {
+          id: 'nazorg',
+          titel: 'Nazorg: jaarlijkse check, indexatie, schade en wijzigingen',
+          doel: 'De dekking blijft passend, verzekerde bedragen blijven actueel, schades worden goed gemeld en begeleid, en wijzigingen worden op tijd doorgegeven.',
+          afm: {
+            bron: 'wet', ref: 'art. 4:24a Wft; AFM over nazorg en serviceabonnementen',
+            links: [
+              ['AFM: Nazorg', 'https://www.afm.nl/nl-nl/sector/adviseurs-bemiddelaars-en-gevolmachtigde-agenten/nazorg'],
+              ['AFM: Hoe voldoe ik aan de zorgplicht?', 'https://www.afm.nl/nl-nl/professionals/veelgestelde-vragen/adv-bem-bedrijfsvoering/zorgplicht-voldoen']
+            ],
+            tekst: 'De zorgplicht van art. 4:24a Wft geldt gedurende de looptijd van het product. De AFM vraagt duidelijke afspraken over wat je in de beheerfase wel en niet doet. Bied je een serviceabonnement aan, dan verwacht de AFM dat de klant weet wat hij wel en niet krijgt en wat het kost, bij voorkeur ook schriftelijk, en is uitdrukkelijke instemming nodig. Een vergoeding voor nazorg, via doorlopende provisie of abonnement, hoort in verhouding te staan tot het werk. Premie-indexatie en verlenging regelt de verzekeraar; de Gedragscode geïnformeerde verlenging (k254) bindt de verzekeraar, niet jou.'
+          },
+          check: [
+            'Jaarlijkse check gepland: gezinssituatie, woning, verbouwing, grote aankopen, auto, bedrijfsactiviteiten.',
+            'Verzekerde bedragen en garantie tegen onderverzekering gecontroleerd na verbouwing of uitbreiding.',
+            'Premie-indexatie en premiewijzigingen beoordeeld; bij grote stijging alternatieven besproken.',
+            'Schademelding: ontvangst vastgelegd, binnen afgesproken termijn doorgemeld, bevestiging van de verzekeraar bewaard.',
+            'Bij schade de melding inhoudelijk gelezen en de klant direct gewezen op dekkingsrisico\'s.',
+            'Wijzigingsverzoeken (winterstop, dekking omlaag) met opties per e-mail bevestigd, inclusief wat niet meer gedekt is.',
+            'Zakelijk: jaarlijks omzet, loonsom, activiteiten en personeel geactualiseerd voor de premiegrondslag.'
+          ],
+          dossier: [
+            'Verslagen van jaarlijkse checks en uitnodigingen.',
+            'Schadedossier: melding, doormelding, correspondentie en afloop.',
+            'Bevestigingen van wijzigingen met de besproken opties.'
+          ],
+          valkuilen: [
+            { t: 'Een schademelding bevestigen en daarna niet doormelden aan de verzekeraar.', kb: 'k221' },
+            { t: 'Nazorg beloven en niet uitvoeren, of niet actief wijzen op betere voorwaarden.', kb: 'k106' },
+            { t: 'Bij letselschade de klant niet wijzen op de rechten uit de Gedragscode Behandeling Letselschade.', kb: 'k253' }
+          ],
+          links: [
+            ['Jaarlijkse nazorgscan', 'scan-nazorg-jaarlijks.html'],
+            ['Periodieke nazorgcheck', 'nazorg-check.html'],
+            ['Wijziging doorgeven (klantformulier)', 'wijziging-doorgeven.html'],
+            ['Sjabloon: Jaarlijkse nazorg', 'sjablonen.html#nz-jaarlijks'],
+            ['Sjabloon: Herinnering wijzigingen doorgeven', 'sjablonen.html#nz-wijziging-doorgeven'],
+            ['Kennisbank: Kifid over schademelding en polisbeheer (k221)', 'index.html#artikel-k221'],
+            ['Kennisbank: klachtbehandeling en Kifid (k62)', 'index.html#artikel-k62'],
+            ['Levensgebeurtenis: Verbouwen', 'levensgebeurtenissen.html#verbouwen'],
+            ['Levensgebeurtenis: Verhuizen', 'levensgebeurtenissen.html#verhuizen']
+          ]
+        }
+      ]
+    },
+
+    /* ======================================================================
+       ROUTE 6: CONSUMPTIEF KREDIET
+       AFM-blokken met bron 'wet': eigen samenvatting van Wft/BGfo/BW, AFM-, VFN- en BKR-pagina's
+       (peildatum 3 oktober 2026). CCD2 geldt vanaf 20 november 2026; de Nederlandse
+       implementatiewet (36.924) was op de peildatum nog niet aangenomen (zie k121).
+       ====================================================================== */
+    {
+      id: 'krediet',
+      naam: 'Consumptief krediet',
+      kort: 'Krediet',
+      intro: 'Bemiddeling in en advies over doorlopend krediet, persoonlijke lening en vergelijkbare vormen. De kredietgever toetst de kredietwaardigheid en beslist; jij zorgt voor juiste informatie, een passende keuze en een eerlijk beeld van de kosten. Vanaf 20 november 2026 gaat de herziene consumentenkredietrichtlijn (CCD2) gelden; de Nederlandse invulling kan nog wijzigen.',
+      stappen: [
+        {
+          id: 'kennismaking',
+          titel: 'Kennismaking, rol en beloning',
+          doel: 'De klant weet of je adviseert of alleen bemiddelt, hoe je wordt beloond en dat de kredietgever beslist; en jij weet waarvoor het krediet nodig is.',
+          afm: {
+            bron: 'wet', ref: 'art. 4:20 Wft; BGfo (beloning kredietbemiddelaar); CCD2',
+            links: [
+              ['AFM: Directe beloning', 'https://www.afm.nl/nl-nl/sector/adviseurs-bemiddelaars-en-gevolmachtigde-agenten/beloning/directe-beloning'],
+              ['AFM: Herziene richtlijn consumentenkrediet (CCDII)', 'https://www.afm.nl/nl-nl/sector/kredietaanbieders/4-herziene-richtlijn-consumentenkrediet-ccdii']
+            ],
+            tekst: 'Bij consumptief krediet mag je de klant geen directe vergoeding rekenen. Je wordt beloond door de kredietgever met een doorlopende provisie per maand, op basis van het uitstaande saldo aan het eind van de maand; bij een betalingsachterstand van meer dan twee maanden vervalt die aanspraak (volgens de AFM art. 155 en 156 BGfo). Vóór de dienstverlening informeer je over je dienstverlening (art. 4:20 Wft). Onder CCD2 (vanaf 20 november 2026) moet een bemiddelaar de klant per transactie uitdrukkelijk laten weten of hij wel of geen advies geeft of kan geven.'
+          },
+          check: [
+            'Rol uitgelegd: jij bemiddelt en/of adviseert, de kredietgever toetst en beslist.',
+            'Per transactie vastgelegd of je adviseert of alleen bemiddelt (CCD2-eis vanaf 20 november 2026).',
+            'Beloning uitgelegd: geen rekening aan de klant, wel provisie van de kredietgever die in de kredietkosten zit.',
+            'Doel van het krediet besproken (auto, verbouwing, oversluiten, aanvulling inkomen) en of lenen hiervoor verstandig is.',
+            'Signalen van betalingsproblemen of een dringende geldbehoefte opgemerkt en besproken.'
+          ],
+          dossier: [
+            'Dienstverleningsinformatie met de vermelding advies of geen advies, en datum.',
+            'Gespreksverslag met kredietdoel en kredietbehoefte.'
+          ],
+          valkuilen: [
+            { t: 'De klant laten denken dat bemiddeling gratis is; de beloning zit in de kredietkosten.', kb: 'k212' },
+            { t: 'Na 20 november 2026 niet per transactie vastleggen of je adviseert.', kb: 'k121' }
+          ],
+          links: [
+            ['Gespreksverslag', 'gespreksverslag.html'],
+            ['Sjabloon: Bevestiging kennismakingsgesprek', 'sjablonen.html#km-bevestiging-gesprek'],
+            ['Kennisbank: CCD2 voor kredietbemiddelaars (k121)', 'index.html#artikel-k121'],
+            ['Kennisbank: CCD2, achteraf betalen en beloning (k212)', 'index.html#artikel-k212'],
+            ['FAQ: krediet en vermogen (o.a. dfs-023 over CCD2)', 'index.html#faq']
+          ]
+        },
+        {
+          id: 'kredietwaardigheid',
+          titel: 'Informatie en kredietwaardigheidstoets',
+          doel: 'Een juist beeld van inkomen, vaste lasten en alle lopende verplichtingen, zodat de kredietgever verantwoord kan toetsen en jij kunt beoordelen of het krediet betaalbaar is.',
+          afm: {
+            bron: 'wet', ref: 'art. 4:32 en 4:34 Wft; art. 114 BGfo; VFN-leennormen; CCD2',
+            links: [
+              ['AFM: Wet- en regelgeving kredietaanbieders', 'https://www.afm.nl/nl-nl/sector/kredietaanbieders/wet--en-regelgeving'],
+              ['VFN: Leennormenmethodiek per 17 november 2025', 'https://www.vfn.nl/wp-content/uploads/2025/11/VFN_20251100_Leennormenmethodiek-CK-per-17-november-2025_Definitief.pdf'],
+              ['AFM: Herziene richtlijn consumentenkrediet (CCDII)', 'https://www.afm.nl/nl-nl/sector/kredietaanbieders/4-herziene-richtlijn-consumentenkrediet-ccdii']
+            ],
+            tekst: 'De kredietgever wint vóór het sluiten informatie in over de financiële positie en beoordeelt of het krediet verantwoord is; is het onverantwoord met het oog op overkreditering, dan sluit hij het niet (art. 4:34 Wft). De kredietgever moet aangesloten zijn bij een stelsel van kredietregistratie (art. 4:32 Wft) en raadpleegt het BKR vóór verstrekking of verhoging (art. 114 BGfo, nu vanaf € 250). De AFM ziet de VFN-leennormen als een minimale invulling van die open norm: op basis van een inkomsten-uitgavenanalyse moet de afloscapaciteit minstens gelijk zijn aan de normmaandlast; de methodiek per 17 november 2025 is de actuele. Met CCD2 (vanaf 20 november 2026) komen aanvullende eisen in art. 4:34a Wft, worden de drempels voor verificatie en BKR-raadpleging aangescherpt en heeft de consument bij een geautomatiseerde beoordeling recht op menselijke tussenkomst.'
+          },
+          check: [
+            'Inkomen geverifieerd (loonstrook, werkgeversverklaring of jaarcijfers) en de duurzaamheid ervan beoordeeld.',
+            'Woonlasten en huishoudsamenstelling vastgesteld (bepalen de leennorm).',
+            'BKR-overzicht met de klant doorgenomen; codering, status en verschillen met de opgave besproken.',
+            'Uitdrukkelijk gevraagd naar recent aangevraagde of afgesloten kredieten, achteraf-betaalschulden, private lease en leningen bij familie.',
+            'Indicatieve leenruimte berekend volgens de actuele VFN-methodiek en vergeleken met wat de klant wil lenen.',
+            'Besproken dat de kredietgever de definitieve toets doet en kan afwijzen.'
+          ],
+          dossier: [
+            'Inkomensbewijzen en overzicht vaste lasten.',
+            'BKR-overzicht (of uitkomst toets) met datum.',
+            'Opgave van de klant over overige verplichtingen, met zijn bevestiging.',
+            'Indicatieve leencapaciteitsberekening met datum en gebruikte normversie.'
+          ],
+          valkuilen: [
+            { t: 'Alleen op de BKR-toets vertrouwen: recent afgesloten leningen en achteraf betalen staan er (nog) niet altijd in.', kb: 'k229' },
+            { t: 'Een negatieve BKR-registratie niet bespreken of verwachten dat die makkelijk verwijderd wordt.', kb: 'k230' }
+          ],
+          links: [
+            ['Rekenhulp: Maximaal consumptief krediet', 'rekentools.html#maximaal-krediet'],
+            ['Inventarisatieformulier', 'inventarisatie.html'],
+            ['Documentenchecklist', 'documentenchecklist.html'],
+            ['Kennisbank: VFN-leennormen november 2025 (k187)', 'index.html#artikel-k187'],
+            ['Kennisbank: Kifid over kredietwaardigheid (k229)', 'index.html#artikel-k229'],
+            ['Kennisbank: BKR-registraties verwijderen (k230)', 'index.html#artikel-k230'],
+            ['Kennisbank: BKR en hypotheek (k93)', 'index.html#artikel-k93'],
+            ['FAQ: BKR en kredietwaardigheidstoets (o.a. kvx-001, cpx-044)', 'index.html#faq']
+          ]
+        },
+        {
+          id: 'productkeuze',
+          titel: 'Productkeuze: doorlopend krediet, persoonlijke lening, achteraf betalen of private lease',
+          doel: 'De kredietvorm die past bij het doel, de looptijd en het gedrag van de klant, met een eerlijk beeld van de totale kosten.',
+          afm: {
+            bron: 'wet', ref: 'art. 4:20 Wft; CCD2 (achteraf betalen); private lease buiten de Wft',
+            links: [
+              ['AFM: Achteraf betalen', 'https://www.afm.nl/nl-nl/consumenten/themas/lenen/achteraf-betalen'],
+              ['AFM: Soorten leningen', 'https://www.afm.nl/nl-nl/consumenten/themas/lenen/soorten'],
+              ['BKR: Nieuwe regelgeving en private autolease', 'https://www.bkr.nl/nl/inzichtelijk/nieuwe-regelgeving-zet-registratie-private-autolease-onder-druk']
+            ],
+            tekst: 'De klant krijgt vóór het sluiten de informatie die relevant is om het product te beoordelen (art. 4:20 Wft), zoals het jaarlijkse kostenpercentage en de totale kosten. Achteraf betalen (buy now, pay later) valt volgens de AFM vanaf 20 november 2026 onder de Wft en het AFM-toezicht. Private lease valt nu buiten de Wft; de sector werkt met een eigen keurmerk en een vrijwillige BKR-registratie. Volgens BKR overweegt het ministerie private lease zonder koopoptie bij de implementatie van CCD2 als krediet aan te merken; dat is op de peildatum niet definitief.'
+          },
+          check: [
+            'Kredietdoel gekoppeld aan de looptijd: een kortlevend goed niet langer financieren dan het meegaat.',
+            'Doorlopend krediet tegenover persoonlijke lening besproken: vaste of variabele rente, opneembaarheid, aflosduur bij een maandtermijn als percentage van de limiet.',
+            'Totale kosten en jaarlijks kostenpercentage van de alternatieven naast elkaar gezet.',
+            'Achteraf betalen en private lease besproken als ook die in beeld zijn, met de gevolgen voor latere leenruimte (bijv. hypotheek).',
+            'Oversluiten: vergoeding bij vervroegd aflossen en de looptijd van het nieuwe krediet vergeleken.',
+            'Gevolgen voor een toekomstige hypotheekaanvraag benoemd.'
+          ],
+          dossier: [
+            'Vergelijking van de besproken kredietvormen met kosten en looptijd.',
+            'Motivatie van de gekozen vorm.'
+          ],
+          valkuilen: [
+            { t: 'Een doorlopend krediet adviseren voor een eenmalige aankoop; de aflosduur en kosten lopen dan vaak op.', kb: 'k229' },
+            { t: 'Achteraf betalen of private lease niet meewegen bij een latere hypotheek.', kb: 'k212' }
+          ],
+          links: [
+            ['Rekenhulp: Totale kosten van een krediet', 'rekentools.html#kosten-krediet'],
+            ['Rekenhulp: Doorlopend krediet doorrekenen', 'rekentools.html#doorlopend-krediet'],
+            ['Rekenhulp: Persoonlijke leningen vergelijken', 'rekentools.html#leningen-vergelijken'],
+            ['Rekenhulp: Maandbedrag bij kostenpercentage', 'rekentools.html#lening-maandbedrag-jkp'],
+            ['Rekenhulp: Welke rente zit in een leasecontract', 'rekentools.html#rente-lease'],
+            ['Rekenhulp: Restschuld financial lease', 'rekentools.html#restschuld-lease'],
+            ['FAQ: private lease en achteraf betalen (o.a. hnx-151, hnx-154, kvx-013)', 'index.html#faq']
+          ]
+        },
+        {
+          id: 'advies',
+          titel: 'Advies of execution only',
+          doel: 'Duidelijk vastleggen of de klant een advies krijgt of zelf kiest, en in beide gevallen een kredietaanvraag die past bij de toets.',
+          afm: {
+            bron: 'wet', ref: 'art. 4:23 Wft; art. 4:24 Wft jo. art. 80e BGfo; CCD2',
+            links: [
+              ['AFM: Wanneer is een kennis- en ervaringstoets verplicht?', 'https://www.afm.nl/nl-nl/professionals/veelgestelde-vragen/kennis-ervaring-toets/wanneer-kennis-ervaringtoets'],
+              ['AFM: Herziene richtlijn consumentenkrediet (CCDII)', 'https://www.afm.nl/nl-nl/sector/kredietaanbieders/4-herziene-richtlijn-consumentenkrediet-ccdii']
+            ],
+            tekst: 'Adviseer je, dan win je informatie in over financiële positie, kennis en ervaring, doelstellingen en risicobereidheid en baseer je het advies daarop (art. 4:23 Wft). De wettelijke kennis- en ervaringstoets bij execution only (art. 4:24 Wft met art. 80e BGfo) geldt volgens de AFM voor hypotheken, individuele AOV, betalingsbeschermers en complexe producten; consumptief krediet staat niet in dat rijtje. Ook zonder advies blijft de kredietgever gebonden aan de kredietwaardigheidstoets. Onder CCD2 maak je per transactie uitdrukkelijk duidelijk of je adviseert.'
+          },
+          check: [
+            'Gekozen dienstverlening vastgelegd: advies of execution only.',
+            'Bij advies: adviesrapport of adviesmail met de onderbouwing van bedrag, vorm en looptijd.',
+            'Bij execution only: vastgelegd dat de klant zelf kiest en dat je niet adviseert, en dat de kredietgever toetst.',
+            'Bij twijfel over betaalbaarheid: de klant gewaarschuwd, ook bij execution only.',
+            'Afwijken van het advies vastgelegd en door de klant bevestigd.'
+          ],
+          dossier: [
+            'Adviesrapport of vastlegging execution only met datum.',
+            'Eventuele waarschuwing en reactie van de klant.'
+          ],
+          valkuilen: [
+            { t: 'Execution only aanbieden zonder heldere schriftelijke afspraak dat je niet adviseert.', kb: 'k110' }
+          ],
+          links: [
+            ['Afwijkend advies', 'afwijkend-advies.html'],
+            ['Sjabloon: Afwijkend advies', 'sjablonen.html#adv-afwijkend'],
+            ['Sjabloon: Adviesrapport toesturen', 'sjablonen.html#adv-rapport'],
+            ['Kennisbank: execution only en afwijken van advies (k110)', 'index.html#artikel-k110'],
+            ['FAQ: passend advies over consumptief krediet (cpx-045, cpx-046)', 'index.html#faq']
+          ]
+        },
+        {
+          id: 'herroeping',
+          titel: 'Aanvraag, aanvaarding en herroeping',
+          doel: 'Een aanvraag die klopt, een aanbod dat de klant bewust aanvaardt, en een klant die weet dat hij binnen veertien dagen kan herroepen.',
+          afm: {
+            bron: 'wet', ref: 'art. 7:66 BW; CCD2 (aanvaarding)',
+            links: [
+              ['BW Boek 7 (wetten.overheid.nl)', 'https://wetten.overheid.nl/BWBR0005290/'],
+              ['AFM: Herziene richtlijn consumentenkrediet (CCDII)', 'https://www.afm.nl/nl-nl/sector/kredietaanbieders/4-herziene-richtlijn-consumentenkrediet-ccdii']
+            ],
+            tekst: 'De consument kan de kredietovereenkomst zonder opgave van redenen herroepen binnen veertien kalenderdagen na het sluiten, of na ontvangst van de contractvoorwaarden en de verplichte informatie als dat later is (art. 7:66 BW). De termijn is gehaald als de herroeping vóór het einde schriftelijk of op een andere duurzame drager is verstuurd. Daarna betaalt hij het opgenomen bedrag met de rente over de opnameperiode terug, uiterlijk binnen dertig kalenderdagen. Onder CCD2 moet een kredietaanbod ondubbelzinnig worden aanvaard; stilzwijgen geldt niet als aanvaarding (k121).'
+          },
+          check: [
+            'Aanvraag met de klant doorgenomen; gegevens kloppen met de bewijsstukken.',
+            'Aanbod uitgelegd: kredietbedrag, looptijd, rente (vast of variabel), jaarlijks kostenpercentage, totale kosten.',
+            'Herroepingsrecht van veertien kalenderdagen en de terugbetaling binnen dertig dagen uitgelegd.',
+            'Klant heeft het aanbod zelf en actief aanvaard.',
+            'Bij oversluiten: aflossing van het oude krediet gecontroleerd en BKR-afmelding nagegaan.'
+          ],
+          dossier: [
+            'Kopie aanvraag, aanbod en getekende overeenkomst met data.',
+            'Vastlegging dat het herroepingsrecht is toegelicht.',
+            'Aflosbevestiging oude krediet bij oversluiten.'
+          ],
+          valkuilen: [
+            { t: 'Een oud krediet bij oversluiten niet laten afmelden, waardoor het dubbel meetelt in latere toetsen.', kb: 'k229' }
+          ],
+          links: [
+            ['FAQ: herroepingsrecht bij consumptief krediet (kvx-022)', 'index.html#faq'],
+            ['Rekenhulp: Extra aflossen op een lening', 'rekentools.html#extra-aflossen-lening'],
+            ['Kennisbank: CCD2 voor kredietbemiddelaars (k121)', 'index.html#artikel-k121']
+          ]
+        },
+        {
+          id: 'nazorg',
+          titel: 'Nazorg: periodieke toets, betalingsproblemen en schuldhulp',
+          doel: 'Tijdens de looptijd blijft het krediet passend; bij betalingsproblemen wordt vroeg gehandeld en de klant zo nodig doorverwezen naar schuldhulp.',
+          afm: {
+            bron: 'wet', ref: 'VFN-gedragscode (doorlopend krediet); BGfo (beloning bij achterstand); AFM over achterstandsbeheer',
+            links: [
+              ['VFN: Gedragscode Consumptief Krediet per 1 mei 2026', 'https://www.vfn.nl/wp-content/uploads/2026/04/VFN_VFN-Gedragscode-Consumptief-Krediet-per-1-mei-2026.pdf'],
+              ['AFM: Omgang met klanten bij betalingsproblemen', 'https://www.afm.nl/nl-nl/sector/actueel/2021/november/onderzoek-achterstandsbeheer-aanbieders-krediet'],
+              ['AFM: Directe beloning', 'https://www.afm.nl/nl-nl/sector/adviseurs-bemiddelaars-en-gevolmachtigde-agenten/beloning/directe-beloning']
+            ],
+            tekst: 'Volgens de VFN-gedragscode toetst de kredietgever tijdens de looptijd van een doorlopend krediet regelmatig of het uitstaande krediet nog past bij de financiële situatie, en zoekt hij zo nodig met de klant naar een oplossing; doorlopende kredieten met een uitstaand saldo vanaf € 10.000 worden ten minste eens per 60 maanden geactualiseerd. De AFM verwacht van kredietaanbieders dat zij bij betalingsproblemen eerst samen met de klant een oplossing zoeken voordat een incassobureau wordt ingeschakeld, en dat medewerkers kunnen doorverwijzen naar budgethulp en schuldhulpverlening. Voor de bemiddelaar vervalt de aanspraak op provisie bij een achterstand van meer dan twee maanden.'
+          },
+          check: [
+            'Nazorgafspraak gemaakt: wanneer kijk je samen naar het krediet (bijv. bij de jaarlijkse check of een levensgebeurtenis).',
+            'Bij doorlopend krediet: besproken of de limiet omlaag kan of het krediet kan worden omgezet of afgelost.',
+            'Oude doorlopende kredieten met variabele rente gesignaleerd voor een mogelijke compensatieregeling.',
+            'Bij betalingsachterstand: klant aangespoord direct contact op te nemen met de kredietgever voor een regeling.',
+            'Bij meerdere schulden of problemen: doorverwezen naar de gemeentelijke schuldhulpverlening en dat vastgelegd.',
+            'Geen nieuw krediet bemiddeld om achterstanden af te lossen zonder volledige toets van de situatie.'
+          ],
+          dossier: [
+            'Verslag van nazorgcontacten.',
+            'Vastlegging van gesignaleerde betalingsproblemen, het advies en een eventuele doorverwijzing.'
+          ],
+          valkuilen: [
+            { t: 'Een klant met achterstanden een extra krediet laten aanvragen in plaats van door te verwijzen.', kb: 'k229' },
+            { t: 'Klant met een oude BKR-codering geen route bieden om verwijdering aan te vragen.', kb: 'k230' }
+          ],
+          links: [
+            ['Periodieke nazorgcheck', 'nazorg-check.html'],
+            ['Rekenhulp: Extra aflossen op een lening', 'rekentools.html#extra-aflossen-lening'],
+            ['Rekenhulp: Doorlopend krediet doorrekenen', 'rekentools.html#doorlopend-krediet'],
+            ['Levensgebeurtenis: Baanverlies', 'levensgebeurtenissen.html#werkloos'],
+            ['Levensgebeurtenis: Scheiding', 'levensgebeurtenissen.html#scheiding'],
+            ['FAQ: schuldhulp en betalingsproblemen (kvx-042, kvx-043, psx-175)', 'index.html#faq'],
+            ['Kennisbank: VFN-leennormen (k187)', 'index.html#artikel-k187']
           ]
         }
       ]
