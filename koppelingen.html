@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Koppelen vanuit je adviessoftware – Adviesforum</title>
+<link rel="canonical" href="https://jeroen-o.github.io/adviesforum/koppelingen.html">
+<meta property="og:url" content="https://jeroen-o.github.io/adviesforum/koppelingen.html">
+<meta property="og:site_name" content="Adviesforum">
+<meta property="og:locale" content="nl_NL">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Koppelen vanuit je adviessoftware – Adviesforum">
+<meta property="og:description" content="Deeplinks en parameters om vanuit een klantdossier in Adviesbox, eBlinqx of het CRM rechtstreeks naar een vraag, artikel, rekentool of dossierhulpmiddel op het Adviesforum te linken. Zonder BSN of klantnaam in de link.">
+<meta name="theme-color" content="#FFD200">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="description" content="Deeplinks en parameters om vanuit een klantdossier in Adviesbox, eBlinqx of het CRM rechtstreeks naar een vraag, artikel, rekentool of dossierhulpmiddel op het Adviesforum te linken. Zonder BSN of klantnaam in de link.">
+<style>
+@font-face{font-family:Montserrat;font-style:normal;font-weight:400;font-display:swap;src:url(fonts/montserrat-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:500;font-display:swap;src:url(fonts/montserrat-latin-500-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:600;font-display:swap;src:url(fonts/montserrat-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:700;font-display:swap;src:url(fonts/montserrat-latin-700-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:800;font-display:swap;src:url(fonts/montserrat-latin-800-normal.woff2) format('woff2')}
+
+:root{
+  --geel:#FFD200;--geel-donker:#E6BD00;--geel-zacht:#FFF6C7;
+  --zwart:#141414;--tekst:#1F1F1F;--grijs:#5E5E5E;--lijn:#E4E4E4;--vlak:#F7F7F5;
+  --rood:#C0392B;--rood-zacht:#FFF1F0;--groen:#1E7A4B;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:Montserrat,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  color:var(--tekst);background:#fff;line-height:1.55;font-size:15px;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+button,input,select,textarea{font-family:inherit}
+:focus-visible{outline:3px solid var(--zwart);outline-offset:2px}
+
+.balk{background:var(--zwart);color:#fff;font-size:12.5px;padding:8px 24px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.balk a{color:#fff;text-decoration:none;opacity:.88}
+.balk a:hover{opacity:1;text-decoration:underline}
+.balk a:focus-visible{outline-color:var(--geel)}
+
+.kop{background:var(--geel);color:var(--zwart);padding:34px 24px 38px}
+.kop-in{max-width:1000px;margin:0 auto}
+.merk{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.08em;font-size:12px;text-transform:uppercase;margin-bottom:16px}
+.zeshoek{width:22px;height:25px;background:var(--zwart);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);flex:none}
+.terug{display:inline-block;font-size:13.5px;font-weight:700;text-decoration:none;border-bottom:2px solid var(--zwart);margin-bottom:14px;padding:8px 0}
+.kop h1{margin:0 0 10px;font-size:clamp(27px,4.2vw,40px);line-height:1.12;font-weight:800}
+.kop p{margin:0;max-width:70ch;font-size:15.5px}
+.kop .stempel{display:inline-block;margin-top:16px;font-size:12px;font-weight:700;background:var(--zwart);color:var(--geel);padding:5px 11px;border-radius:999px}
+
+.romp{max-width:1000px;margin:0 auto;padding:28px 24px 40px}
+.romp h2{font-size:22px;font-weight:800;margin:36px 0 8px;padding-bottom:8px;border-bottom:3px solid var(--geel)}
+.romp h3{font-size:16px;font-weight:800;margin:22px 0 6px}
+.romp p,.romp li{max-width:75ch}
+.inhoud{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13.5px;margin:0;padding:12px 16px;border:1px solid var(--lijn);border-radius:12px;background:var(--vlak);list-style:none}
+.inhoud a{font-weight:600}
+
+code,.url{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px;overflow-wrap:anywhere;word-break:break-word}
+code{background:var(--vlak);border:1px solid var(--lijn);border-radius:5px;padding:1px 5px}
+.url{display:block;background:var(--zwart);color:var(--geel);border-radius:9px;padding:10px 12px;margin:6px 0 10px}
+
+.link{border:1px solid var(--lijn);border-radius:12px;padding:14px 16px;margin:12px 0;min-width:0}
+.link h3{margin:0 0 4px}
+.link dl{margin:8px 0 0;display:grid;grid-template-columns:minmax(0,170px) minmax(0,1fr);gap:6px 14px;font-size:14px}
+.link dt{font-weight:700}
+.link dd{margin:0;min-width:0}
+.link ul{margin:4px 0 0;padding-left:18px}
+
+.compliance{background:var(--rood-zacht);border-left:4px solid var(--rood);border-radius:0 10px 10px 0;padding:14px 18px;font-size:14.5px;margin:18px 0}
+.compliance strong{color:#A5281B}
+.compliance ul{margin:6px 0 0;padding-left:18px}
+.tip{background:var(--geel-zacht);border-left:4px solid var(--geel-donker);border-radius:0 10px 10px 0;padding:12px 16px;font-size:14px;margin:14px 0}
+
+.bouwer{border:1px solid var(--lijn);border-radius:14px;padding:18px;background:var(--vlak)}
+.bouwer .rij{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px 16px}
+.veld{min-width:0}
+.veld label{display:block;font-weight:600;font-size:13.5px;margin-bottom:5px}
+.veld input,.veld select{width:100%;padding:10px 12px;border:1px solid #CFCFCF;border-radius:9px;font-size:15px;background:#fff;color:var(--tekst)}
+.veld .uitleg{display:block;font-size:12px;color:var(--grijs);margin-top:4px}
+.melding{font-size:13.5px;font-weight:600;margin:8px 0 0;min-height:1.2em}
+.melding.fout{color:#A5281B}
+.knop{border-radius:999px;padding:9px 16px;font-size:13.5px;font-weight:700;cursor:pointer;border:1px solid var(--zwart);background:var(--zwart);color:#fff}
+.knop.licht{background:#fff;color:var(--zwart);border-color:#CFCFCF}
+.knoppen{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+
+.voet{max-width:1000px;margin:0 auto;padding:24px 24px 40px;font-size:12.5px;color:var(--grijs);border-top:1px solid var(--lijn)}
+.voet a{color:var(--zwart);font-weight:600}
+
+@media (max-width:640px){
+  .balk,.kop,.romp,.voet{padding-left:16px;padding-right:16px}
+  .link dl{grid-template-columns:minmax(0,1fr)}
+  .link dt{margin-top:6px}
+  .bouwer .rij{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:760px){input,select,textarea{font-size:16px!important}}
+</style>
+</head>
+<body>
+
+<div class="balk">
+  <span>Adviesforum &middot; voor softwareleveranciers en functioneel beheerders</span>
+  <span><a href="index.html">Naar het forum</a></span>
+</div>
+
+<header class="kop">
+  <div class="kop-in">
+    <div class="merk"><span class="zeshoek" aria-hidden="true"></span>Adviesforum &middot; Koppelingen</div>
+    <a class="terug" href="index.html#hulpmiddelen">&larr; Terug naar de hulpmiddelen</a>
+    <h1>Koppelen vanuit je adviessoftware</h1>
+    <p>Met deze links open je vanuit een klantdossier in Adviesbox, eBlinqx of het CRM direct de juiste vraag, het juiste kennisbankartikel, een rekentool of een dossierhulpmiddel op het Adviesforum. Een koppeling is een gewone link: er is geen API, geen account en geen gegevensuitwisseling nodig.</p>
+    <span class="stempel">Nooit een BSN of klantnaam in de link</span>
+  </div>
+</header>
+
+<main class="romp">
+  <ul class="inhoud" aria-label="Inhoud">
+    <li><a href="#privacy">Privacyregel</a></li>
+    <li><a href="#basis">Zo werkt een link</a></li>
+    <li><a href="#forum">Forum, kennisbank en FAQ</a></li>
+    <li><a href="#zoeken">Zoeken</a></li>
+    <li><a href="#rekentools">Rekentools</a></li>
+    <li><a href="#dossier">Dossierhulpmiddelen</a></li>
+    <li><a href="#naslag">Naslag en overige pagina's</a></li>
+    <li><a href="#bouwer">Link samenstellen</a></li>
+  </ul>
+
+  <h2 id="privacy">Privacyregel: geen persoonsgegevens in de link</h2>
+  <div class="compliance">
+    <strong>Zet nooit een BSN, klantnaam, adres, polisnummer of andere direct herleidbare klantgegevens in een link.</strong> Gebruik als referentie alleen een intern dossiernummer dat buiten jullie eigen systeem niets zegt, bijvoorbeeld <code>DOS-2026-0412</code>.
+    <ul>
+      <li>Alles na het <code>#</code> verwerkt de browser zelf: het gaat niet naar de server van het forum en staat niet in de serverlogs. Het staat wel in de browsergeschiedenis van de adviseur en gaat mee als iemand de link doorstuurt of opslaat.</li>
+      <li>De pagina's weigeren een referentie die op een BSN lijkt: 8 of 9 cijfers, ook met spaties, punten of streepjes ertussen. Dat is een vangnet, geen vervanging van deze regel. Let op: daardoor wordt ook een dossiernummer als <code>2026-0412</code> geweigerd (8 cijfers); geef zo'n nummer een letter-voorvoegsel, bijvoorbeeld <code>DOS-2026-0412</code>.</li>
+      <li>Het forum slaat niets op van wat je via de link meegeeft: de waarden staan alleen in het formulier op het scherm van de adviseur.</li>
+      <li>De geboortedatum bij <a href="#nazorg">nazorg-signalen</a> is een persoonsgegeven. Geef die alleen mee als het nodig is, en nooit samen met een naam.</li>
+      <li>Genereer nooit links met <code>#login-…</code>: daarin staat de persoonlijke inlogcode van een adviseur.</li>
+    </ul>
+  </div>
+
+  <h2 id="basis">Zo werkt een link</h2>
+  <p>Alle pagina's staan onder dezelfde basis-url:</p>
+  <code class="url">https://jeroen-o.github.io/adviesforum/</code>
+  <ul>
+    <li>Het deel na <code>#</code> kiest de vraag, het artikel of de tool. Parameters staan als <code>naam=waarde</code> achter elkaar, gescheiden door <code>&amp;</code>.</li>
+    <li>Codeer elke waarde met URL-codering (in JavaScript <code>encodeURIComponent</code>). Een spatie mag ook als <code>+</code> op de pagina's met dossierreferenties en bij <code>#zoek=</code>.</li>
+    <li>Een onbekende vraag, artikel of tool leidt naar de startpagina van dat onderdeel; een ongeldige parameter wordt genegeerd en waar het om invoer gaat, meldt de pagina wat niet is overgenomen.</li>
+    <li>Open de link in een nieuw tabblad (<code>target="_blank" rel="noopener"</code>), zodat het klantdossier open blijft.</li>
+    <li>Referenties zijn maximaal 80 tekens; stuurtekens worden verwijderd.</li>
+  </ul>
+
+  <h2 id="forum">Forum, kennisbank en FAQ (index.html)</h2>
+
+  <div class="link" id="index-onderdelen">
+    <h3>Een onderdeel openen</h3>
+    <code class="url">index.html#forum · #kennisbank · #faq · #hulpmiddelen · #begrippen · #adviseurs · #handleiding · #voorwie · #favorieten</code>
+    <dl><dt>Voorbeeld</dt><dd><a href="index.html#hulpmiddelen"><code>index.html#hulpmiddelen</code></a></dd>
+    <dt>Let op</dt><dd><code>#favorieten</code> toont de favorieten van de adviseur zelf (opgeslagen in een functionele cookie op zijn apparaat).</dd></dl>
+  </div>
+
+  <div class="link" id="index-vraag">
+    <h3>Een forumvraag of een reactie</h3>
+    <code class="url">index.html#vraag-&lt;id&gt; &nbsp; index.html#vraag-&lt;id&gt;-r&lt;nr&gt;</code>
+    <dl>
+      <dt>&lt;id&gt;</dt><dd>id van de vraag, kleine letters, cijfers en streepjes (bijv. <code>v13</code>). Staat in de adresbalk als je de vraag opent.</dd>
+      <dt>&lt;nr&gt;</dt><dd>nummer van de reactie (1 = de eerste reactie in tijd). De pagina scrolt naar die reactie en markeert hem. Elke reactie heeft een knop om deze link te kopiëren.</dd>
+      <dt>Voorbeeld</dt><dd><a href="index.html#vraag-v13"><code>index.html#vraag-v13</code></a>, <a href="index.html#vraag-v13-r1"><code>index.html#vraag-v13-r1</code></a></dd>
+      <dt>Zonder JavaScript</dt><dd>een openbare deelpagina per vraag: <code>vraag/&lt;id&gt;.html</code> (met <code>#r&lt;nr&gt;</code> voor een reactie).</dd>
+    </dl>
+  </div>
+
+  <div class="link" id="index-artikel">
+    <h3>Een kennisbankartikel</h3>
+    <code class="url">index.html#artikel-&lt;id&gt;</code>
+    <dl>
+      <dt>&lt;id&gt;</dt><dd>id van het artikel, bijv. <code>k5</code>.</dd>
+      <dt>Voorbeeld</dt><dd><a href="index.html#artikel-k5"><code>index.html#artikel-k5</code></a></dd>
+      <dt>Zonder JavaScript</dt><dd><code>kennisbank/&lt;id&gt;.html</code>, bijv. <a href="kennisbank/k5.html"><code>kennisbank/k5.html</code></a>.</dd>
+    </dl>
+  </div>
+
+  <div class="link" id="index-faq">
+    <h3>Een FAQ-vraag</h3>
+    <code class="url">index.html#faq-&lt;id&gt;</code>
+    <dl>
+      <dt>&lt;id&gt;</dt><dd>id van de FAQ-vraag, bijv. <code>hyp-001</code>. De FAQ wordt geladen, de vraag opengeklapt en in beeld gebracht.</dd>
+      <dt>Voorbeeld</dt><dd><a href="index.html#faq-hyp-001"><code>index.html#faq-hyp-001</code></a></dd>
+      <dt>Alle FAQ</dt><dd><a href="index.html#faq"><code>index.html#faq</code></a>; de begrippenlijst: <a href="index.html#begrippen"><code>index.html#begrippen</code></a>.</dd>
+    </dl>
+  </div>
+
+  <h2 id="zoeken">Zoeken</h2>
+  <div class="link" id="index-zoek">
+    <h3>Een zoekopdracht meegeven</h3>
+    <code class="url">index.html#zoek=&lt;term&gt;[&amp;in=&lt;onderdeel&gt;]</code>
+    <dl>
+      <dt>zoek</dt><dd>de zoekterm, URL-gecodeerd (maximaal 100 tekens). Het forum zoekt in vragen en toont daarboven hoeveel treffers er in de kennisbank, FAQ, hulpmiddelen en begrippen zijn. Synoniemen en afkortingen (zoals NHG, EWR) worden herkend.</dd>
+      <dt>in (optioneel)</dt><dd><code>forum</code> (standaard), <code>kennisbank</code>, <code>faq</code>, <code>hulpmiddelen</code> of <code>begrippen</code>.</dd>
+      <dt>Voorbeeld</dt><dd><a href="index.html#zoek=overbruggingskrediet"><code>index.html#zoek=overbruggingskrediet</code></a>, <a href="index.html#zoek=nhg%20grens&amp;in=kennisbank"><code>index.html#zoek=nhg%20grens&amp;in=kennisbank</code></a></dd>
+      <dt>Tip</dt><dd>Gebruik als zoekterm een onderwerp uit het dossier (productsoort, situatie), nooit een naam.</dd>
+    </dl>
+  </div>
+
+  <h2 id="rekentools">Rekentools (rekentools.html)</h2>
+  <div class="link" id="rekentools-tool">
+    <h3>Een rekentool openen, eventueel met invoer</h3>
+    <code class="url">rekentools.html#&lt;tool&gt;[?&lt;veld&gt;=&lt;waarde&gt;&amp;…]</code>
+    <dl>
+      <dt>&lt;tool&gt;</dt><dd>id van de rekentool. De volledige lijst (<span id="aantal-tools">282</span> tools) staat in <a href="data/rekentools-index.js"><code>data/rekentools-index.js</code></a>, veld <code>id</code>.</dd>
+      <dt>&lt;veld&gt;=&lt;waarde&gt;</dt><dd>optioneel; let op het <code>?</code> na het tool-id (binnen de hash). Waarden in machinenotatie: punt als decimaalteken, geen duizendtallen, euro's als heel getal, keuzevelden met hun optiecode. Velden die je weglaat, houden hun standaardwaarde; ongeldige waarden worden genegeerd.</dd>
+      <dt>Veldnamen</dt><dd>open de tool, vul iets in en klik op <b>Kopieer link</b>: die link bevat precies de veldnamen en waarden.</dd>
+      <dt>Voorbeeld</dt><dd><a href="rekentools.html#renteherziening"><code>rekentools.html#renteherziening</code></a><br><a href="rekentools.html#renteherziening?h=320000&amp;jr=30&amp;ro=1.9&amp;rn=4.1&amp;vj=10&amp;vorm=ann"><code>rekentools.html#renteherziening?h=320000&amp;jr=30&amp;ro=1.9&amp;rn=4.1&amp;vj=10&amp;vorm=ann</code></a></dd>
+    </dl>
+  </div>
+
+  <h2 id="dossier">Dossierhulpmiddelen met een dossierreferentie</h2>
+  <p>Deze pagina's nemen een referentie (<code>ref</code>) over in het formulier, zodat de uitdraai bij het juiste dossier hoort. Het forum bewaart niets; de adviseur kan alles op het scherm nog aanpassen.</p>
+
+  <div class="link" id="inkomensbepaling">
+    <h3>Inkomensbepaling</h3>
+    <code class="url">inkomensbepaling.html#&lt;soort&gt;[&amp;ref=&lt;referentie&gt;]</code>
+    <dl>
+      <dt>&lt;soort&gt;</dt><dd><code>vast</code> (loondienst vast, standaard), <code>tijdelijk</code> (tijdelijk en flexibel), <code>ibl</code> (Inkomensbepaling Loondienst), <code>ondernemer</code> (ondernemer of zzp), <code>perspectief</code> (perspectiefverklaring), <code>pensioen</code> (pensioen en AOW), <code>overig</code> (overige inkomsten).</dd>
+      <dt>ref</dt><dd>dossierreferentie, maximaal 80 tekens; een waarde die op een BSN lijkt wordt geweigerd met een melding. Mag ook alleen: <code>#ref=DOS-2026-0412</code>.</dd>
+      <dt>Voorbeeld</dt><dd><a href="inkomensbepaling.html#ondernemer&amp;ref=DOS-2026-0412"><code>inkomensbepaling.html#ondernemer&amp;ref=DOS-2026-0412</code></a></dd>
+      <dt>Doorgeven</dt><dd>De knop naar de adviesmotivatie op deze pagina maakt zelf een link met <code>toets</code>, <code>bron</code> en <code>ref</code> (zie hieronder).</dd>
+    </dl>
+  </div>
+
+  <div class="link" id="adviesmotivatie">
+    <h3>Adviesmotivatie</h3>
+    <code class="url">adviesmotivatie.html#toets=&lt;bedrag&gt;&amp;bron=&lt;soort&gt;&amp;ref=&lt;referentie&gt;</code>
+    <dl>
+      <dt>toets</dt><dd>toetsinkomen per jaar in euro's, machinenotatie: alleen cijfers met eventueel een punt en maximaal 2 decimalen (bijv. <code>54250</code> of <code>54250.5</code>), groter dan 0 en hoogstens 10.000.000.</dd>
+      <dt>bron</dt><dd>soort inkomen, dezelfde codes als bij inkomensbepaling: <code>vast</code>, <code>tijdelijk</code>, <code>ibl</code>, <code>ondernemer</code>, <code>perspectief</code>, <code>pensioen</code>, <code>overig</code>. Vult de bron van het toetsinkomen en het inkomenstype in.</dd>
+      <dt>ref</dt><dd>dossierreferentie (BSN-achtige waarden worden geweigerd).</dd>
+      <dt>Alle drie optioneel</dt><dd>De pagina meldt wat is overgenomen en wat niet.</dd>
+      <dt>Voorbeeld</dt><dd><a href="adviesmotivatie.html#toets=54250&amp;bron=vast&amp;ref=DOS-2026-0412"><code>adviesmotivatie.html#toets=54250&amp;bron=vast&amp;ref=DOS-2026-0412</code></a></dd>
+    </dl>
+  </div>
+
+  <div class="link" id="nazorg">
+    <h3>Nazorg-signalen</h3>
+    <code class="url">nazorg-signalen.html#ref=&lt;referentie&gt;&amp;geb=&lt;JJJJ-MM-DD&gt;</code>
+    <dl>
+      <dt>ref</dt><dd>komt in het veld “Klantnaam of dossierreferentie”; gebruik vanuit software altijd een dossierreferentie, nooit een naam. BSN-achtige waarden worden geweigerd.</dd>
+      <dt>geb</dt><dd>geboortedatum als <code>JJJJ-MM-DD</code>, na 1900 en in het verleden; nodig om de signalen (AOW-leeftijd, einde rentevast en dergelijke) te berekenen. Dit is een persoonsgegeven: alleen meegeven als het nodig is, nooit samen met een naam.</dd>
+      <dt>Voorbeeld</dt><dd><a href="nazorg-signalen.html#ref=DOS-2026-0412&amp;geb=1968-05-14"><code>nazorg-signalen.html#ref=DOS-2026-0412&amp;geb=1968-05-14</code></a></dd>
+    </dl>
+  </div>
+
+  <div class="link" id="wwft">
+    <h3>Wwft-cliëntenonderzoek</h3>
+    <code class="url">wwft-cdd.html#ref=&lt;referentie&gt;</code>
+    <dl>
+      <dt>ref</dt><dd>komt in het veld “Cliënt (naam of dossiernummer)”; gebruik een dossiernummer. Een BSN-achtige waarde wordt geweigerd met een melding.</dd>
+      <dt>Voorbeeld</dt><dd><a href="wwft-cdd.html#ref=DOS-2026-0412"><code>wwft-cdd.html#ref=DOS-2026-0412</code></a></dd>
+    </dl>
+  </div>
+
+  <div class="link" id="dossierpakket">
+    <h3>Dossierpakket</h3>
+    <code class="url">dossierpakket.html[#ref=&lt;referentie&gt;]</code>
+    <dl>
+      <dt>ref</dt><dd>optioneel; komt in het veld “Dossierreferentie”. Een BSN-achtige waarde wordt zonder melding genegeerd.</dd>
+      <dt>Voorbeeld</dt><dd><a href="dossierpakket.html"><code>dossierpakket.html</code></a>, <a href="dossierpakket.html#ref=DOS-2026-0412"><code>dossierpakket.html#ref=DOS-2026-0412</code></a></dd>
+    </dl>
+  </div>
+
+  <h2 id="naslag">Naslag en overige pagina's</h2>
+
+  <div class="link" id="acceptatiewijzer">
+    <h3>Acceptatiewijzer</h3>
+    <code class="url">acceptatiewijzer.html#situatie-&lt;id&gt;</code>
+    <dl>
+      <dt>&lt;id&gt;</dt><dd><code>zzp-starter</code>, <code>tijdelijk-contract</code>, <code>flexwerk</code>, <code>buitenlands-inkomen</code>, <code>alimentatie</code>, <code>verblijfsvergunning</code>, <code>bkr</code>, <code>studieschuld</code>, <code>tweede-woning</code>, <code>buy-to-let</code>, <code>erfpacht</code>, <code>woonboot-woonwagen</code>, <code>verduurzamen</code>, <code>nieuwbouw-zelfbouw</code>, <code>verzilveren</code>, <code>aow-leeftijd</code>, <code>hulp-ouders</code>, <code>scheiding</code>, <code>samenwonen-inbreng</code> (bron: <code>data/acceptatiewijzer.js</code>).</dd>
+      <dt>Voorbeeld</dt><dd><a href="acceptatiewijzer.html#situatie-bkr"><code>acceptatiewijzer.html#situatie-bkr</code></a></dd>
+    </dl>
+  </div>
+
+  <div class="link" id="partijen">
+    <h3>Partijen (geldverstrekkers en verzekeraars)</h3>
+    <code class="url">partijen.html#partij-&lt;slug&gt; &nbsp; partijen.html#type=&lt;type&gt;&amp;categorie=&lt;categorie&gt;&amp;q=&lt;zoekterm&gt; &nbsp; partijen.html?q=&lt;zoekterm&gt;</code>
+    <dl>
+      <dt>&lt;slug&gt;</dt><dd>de naam in kleine letters zonder accenten, <code>&amp;</code> wordt “en”, overige tekens worden een streepje. Bijv. ING → <code>ing</code>, ABN AMRO → <code>abn-amro</code>, ASN Bank (de Volksbank) → <code>asn-bank-de-volksbank</code>. Bij een dubbele naam volgt <code>-2</code>, <code>-3</code>.</dd>
+      <dt>type</dt><dd><code>bank</code>, <code>geldverstrekker</code>, <code>verzekeraar</code>, <code>kredietverstrekker</code>, <code>pensioenverzekeraar</code>, <code>pensioenfonds</code>, <code>beleggingsinstelling</code>, <code>ppi</code>.</dd>
+      <dt>categorie</dt><dd><code>hypotheek</code>, <code>lijfrente</code>, <code>schade</code>, <code>inkomen</code>, <code>leven</code>, <code>pensioen</code>, <code>krediet</code>. Alle filters zijn optioneel.</dd>
+      <dt>Voorbeeld</dt><dd><a href="partijen.html#partij-abn-amro"><code>partijen.html#partij-abn-amro</code></a>, <a href="partijen.html#type=geldverstrekker&amp;categorie=hypotheek&amp;q=verhuisregeling"><code>partijen.html#type=geldverstrekker&amp;categorie=hypotheek&amp;q=verhuisregeling</code></a></dd>
+    </dl>
+  </div>
+
+  <div class="link" id="aanbieders">
+    <h3>Aanbieders</h3>
+    <code class="url">aanbieders.html#aanbieder-&lt;id&gt; &nbsp; aanbieders.html#nieuws-&lt;aanbieder-id&gt;-&lt;bericht-id&gt; &nbsp; aanbieders.html#nieuws</code>
+    <dl>
+      <dt>&lt;id&gt;</dt><dd>id van de aanbieder (kleine letters, cijfers en streepjes) uit <code>data/aanbieders.js</code>. De huidige aanbieders zijn fictieve voorbeelden.</dd>
+      <dt>Voorbeeld</dt><dd><a href="aanbieders.html#aanbieder-voorbeeld-hypotheken"><code>aanbieders.html#aanbieder-voorbeeld-hypotheken</code></a></dd>
+    </dl>
+  </div>
+
+  <div class="link" id="elearning">
+    <h3>E-learning</h3>
+    <code class="url">elearning.html#module-&lt;id&gt; &nbsp; #module-&lt;id&gt;-les-&lt;n&gt; &nbsp; #module-&lt;id&gt;-toets</code>
+    <dl>
+      <dt>&lt;id&gt;</dt><dd><code>leennormen</code>, <code>nhg</code>, <code>fundering</code>, <code>duurzaam</code>, <code>wwft</code>, <code>zorgplicht</code>, <code>aov-baz</code>, <code>wtp</code>, <code>compliance</code>, <code>ai</code>.</dd>
+      <dt>&lt;n&gt;</dt><dd>lesnummer vanaf 1; een te hoog nummer opent de laatste les.</dd>
+      <dt>Voorbeeld</dt><dd><a href="elearning.html#module-wwft"><code>elearning.html#module-wwft</code></a>, <a href="elearning.html#module-nhg-les-2"><code>elearning.html#module-nhg-les-2</code></a></dd>
+    </dl>
+  </div>
+
+  <div class="link" id="uitnodigen">
+    <h3>Collega uitnodigen</h3>
+    <code class="url">uitnodigen.html#email · #whatsapp · #linkedin</code>
+    <dl>
+      <dt>Kanaal</dt><dd>opent het tabblad voor dat kanaal; <code>#wa</code>, <code>#mail</code> en <code>#e-mail</code> werken ook.</dd>
+      <dt>Voorbeeld</dt><dd><a href="uitnodigen.html#whatsapp"><code>uitnodigen.html#whatsapp</code></a>, <a href="uitnodigen.html#linkedin"><code>uitnodigen.html#linkedin</code></a></dd>
+    </dl>
+  </div>
+
+  <div class="tip"><b>Nieuw op het forum volgen?</b> Er zijn RSS-feeds: <a href="feed.xml">feed.xml</a> (nieuw en bijgewerkt) en <a href="aanbieders-feed.xml">aanbieders-feed.xml</a> (nieuws van aanbieders). Je kunt ze in je software of intranet tonen.</div>
+
+  <h2 id="bouwer">Link samenstellen</h2>
+  <p>Kies een dossierhulpmiddel en vul een dossierreferentie in. De link wordt hier in je browser gemaakt en nergens opgeslagen.</p>
+  <div class="bouwer">
+    <div class="rij">
+      <div class="veld"><label for="b-pagina">Pagina</label>
+        <select id="b-pagina">
+          <option value="inkomensbepaling.html#vast">Inkomensbepaling (loondienst vast)</option>
+          <option value="inkomensbepaling.html#ondernemer">Inkomensbepaling (ondernemer / zzp)</option>
+          <option value="adviesmotivatie.html#">Adviesmotivatie</option>
+          <option value="nazorg-signalen.html#">Nazorg-signalen</option>
+          <option value="wwft-cdd.html#">Wwft-cliëntenonderzoek</option>
+          <option value="dossierpakket.html#">Dossierpakket</option>
+        </select></div>
+      <div class="veld"><label for="b-ref">Dossierreferentie</label><input id="b-ref" type="text" maxlength="80" autocomplete="off" placeholder="Bijv. DOS-2026-0412"><span class="uitleg">Geen BSN, geen naam.</span></div>
+    </div>
+    <p class="melding" id="b-melding" aria-live="polite"></p>
+    <code class="url" id="b-url">https://jeroen-o.github.io/adviesforum/inkomensbepaling.html#vast</code>
+    <div class="knoppen"><button class="knop" id="b-kopieer" type="button">Kopieer link</button><a class="knop licht" id="b-open" href="inkomensbepaling.html#vast" target="_blank" rel="noopener">Openen</a></div>
+  </div>
+</main>
+
+<footer class="voet">
+  Adviesforum &middot; collegiale kennisdeling voor financieel adviseurs &middot; <a href="index.html">Forum</a> &middot; <a href="index.html#hulpmiddelen">Alle hulpmiddelen</a> &middot; <a href="feed.xml">RSS-feed</a> &middot; <a href="privacy.html">Privacy</a> &middot; <a href="uitnodigen.html">Uitnodigen</a>. Vragen over koppelen? Mail <a href="mailto:forumadvies@gmail.com">forumadvies@gmail.com</a>. Er wordt niets opgeslagen van wat je via een link meegeeft.
+</footer>
+
+<script>
+(function () {
+  'use strict';
+  var BASIS = 'https://jeroen-o.github.io/adviesforum/';
+  var $ = function (id) { return document.getElementById(id); };
+  /* Zelfde regel als de dossierhulpmiddelen: 8 of 9 cijfers (na weghalen van spaties, punten en streepjes) lijkt op een BSN */
+  function schoneRef(v) {
+    v = String(v == null ? '' : v).replace(/[\u0000-\u001F\u007F]/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 80);
+    if (/^\d{8,9}$/.test(v.replace(/[\s.-]/g, ''))) return null;
+    return v;
+  }
+  function werkBij() {
+    var p = $('b-pagina').value, ref = schoneRef($('b-ref').value), m = $('b-melding');
+    var basis = p.replace(/#$/, ''), link;
+    if (ref === null) { m.textContent = 'Dit lijkt op een BSN en komt niet in de link. Gebruik een dossiernummer.'; m.className = 'melding fout'; ref = ''; }
+    else { m.textContent = ''; m.className = 'melding'; }
+    if (ref) link = basis + (basis.indexOf('#') >= 0 ? '&' : '#') + 'ref=' + encodeURIComponent(ref);
+    else link = basis;
+    $('b-url').textContent = BASIS + link;
+    $('b-open').setAttribute('href', link);
+  }
+  function kopieer(t) {
+    var klaar = function () { $('b-melding').textContent = 'Link gekopieerd.'; $('b-melding').className = 'melding'; };
+    if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(t).then(klaar, function () { window.prompt('Kopieer de link:', t); });
+    else window.prompt('Kopieer de link:', t);
+  }
+  $('b-pagina').addEventListener('change', werkBij);
+  $('b-ref').addEventListener('input', werkBij);
+  $('b-kopieer').addEventListener('click', function () { werkBij(); kopieer($('b-url').textContent); });
+  try { if (window.REKENTOOLS && window.REKENTOOLS.length) $('aantal-tools').textContent = window.REKENTOOLS.length; } catch (e) { /* geen catalogus geladen */ }
+  werkBij();
+})();
+</script>
+</body>
+</html>
