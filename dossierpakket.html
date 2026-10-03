@@ -138,7 +138,7 @@ button,input,select,textarea{font-family:inherit}
 
   <section class="kaart" aria-labelledby="kop-dossier">
     <h2 id="kop-dossier">Dossier</h2>
-    <p>De referentie wordt doorgegeven aan de hulpmiddelen die een eigen referentieveld hebben.</p>
+    <p>De referentie wordt doorgegeven aan alle hulpmiddelen hieronder; elk hulpmiddel heeft een eigen referentieveld en neemt haar op in de afdruk.</p>
     <div class="raster">
       <div class="veld">
         <label for="ref">Dossierreferentie</label>
@@ -172,7 +172,7 @@ button,input,select,textarea{font-family:inherit}
         <h3>Elk onderdeel apart afdrukken</h3>
         <p>De hulpmiddelen werken los van elkaar en bewaren niets. Daarom maak je per onderdeel een eigen afdruk:</p>
         <ul>
-          <li>Open het onderdeel via de knop hiernaast; de referentie staat er dan al in (waar een referentieveld is).</li>
+          <li>Open het onderdeel via de knop hiernaast; de referentie staat er dan al in, ook bij afwijkend advies en de documentenchecklist.</li>
           <li>Gebruik in het hulpmiddel de knop voor afdrukken en kies in het printvenster &lsquo;Opslaan als PDF&rsquo;.</li>
           <li>Sla de PDF op in je eigen dossiersysteem en vink het onderdeel hier af.</li>
           <li>Druk tot slot het voorblad af als inhoudsopgave bovenop het pakket.</li>
@@ -209,22 +209,22 @@ button,input,select,textarea{font-family:inherit}
   var ONDERDELEN = [
     { id: 'inkomen', titel: 'Inkomensbepaling', url: 'inkomensbepaling.html', ref: true,
       wat: 'Toetsinkomen per inkomenssoort met invoer, documenten en aandachtspunten.',
-      grond: ['ld', 'Leidraad p. 7-8, 10-11'] },
+      grond: ['ld', 'Leidraad p. 7-8, 10'] },
     { id: 'wwft', titel: 'Wwft-vastlegging (cliëntenonderzoek)', url: 'wwft-cdd.html', ref: true,
       wat: 'Checklist cliëntenonderzoek, risicoscore en motivering, voor zover de Wwft op je dienstverlening van toepassing is.',
       grond: ['wet', 'Wwft, geen Leidraad-eis'] },
     { id: 'motivatie', titel: 'Adviesmotivatie', url: 'adviesmotivatie.html', ref: true,
       wat: 'Klantprofiel en motivering per adviesonderdeel, als basis voor het adviesrapport.',
-      grond: ['ld', 'Leidraad p. 4, 8, 22-23'] },
+      grond: ['ld', 'Leidraad p. 4, 8, 21, 23'] },
     { id: 'nazorg', titel: 'Nazorgsignalen', url: 'nazorg-signalen.html', ref: true,
       wat: 'Tijdlijn met actiemomenten na het passeren, zoals einde rentevaste periode en AOW-datum.',
       grond: ['pr', 'Goede praktijk'] },
-    { id: 'afwijkend', titel: 'Afwijkend advies', url: 'afwijkend-advies.html', ref: false,
+    { id: 'afwijkend', titel: 'Afwijkend advies', url: 'afwijkend-advies.html', ref: true,
       wat: 'Vastlegging als de klant afwijkt van het advies: wat geadviseerd is, wat de klant kiest en welke gevolgen zijn besproken.',
       grond: ['ld', 'Leidraad p. 4, 14, 23-24'] },
-    { id: 'documenten', titel: 'Documentenchecklist', url: 'documentenchecklist.html', ref: false,
+    { id: 'documenten', titel: 'Documentenchecklist', url: 'documentenchecklist.html', ref: true,
       wat: 'Overzicht van de aan te leveren en ontvangen stukken.',
-      grond: ['ld', 'Leidraad p. 8'] }
+      grond: ['ld', 'Leidraad p. 7, 17'] }
   ];
 
   var MAANDEN = ['januari', 'februari', 'maart', 'april', 'mei', 'juni', 'juli', 'augustus', 'september', 'oktober', 'november', 'december'];

@@ -296,6 +296,18 @@
     nhg: ['nhgkost','nhgtax']
   };
   var got = {};
+  // Dossierreferentie: zelfde opschoning als dossierpakket.html. null = lijkt op een BSN (8 of 9 cijfers).
+  function schoneRef(v){
+    v = String(v == null ? '' : v).replace(/[\u0000-\u001F\u007F]/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 80);
+    if (/^\d{8,9}$/.test(v.replace(/[\s.-]/g, ''))) return null;
+    return v;
+  }
+  var HASHREF = '';
+  String(location.hash || '').replace(/^#/, '').split('&').forEach(function(deel){
+    if (deel.slice(0, 4) !== 'ref=') return;
+    var v; try { v = decodeURIComponent(deel.slice(4).replace(/\+/g, ' ')); } catch (e) { return; }
+    var x = schoneRef(v); if (x) HASHREF = x;
+  });
   function build(V){
     var sits = V('sit'); if (!sits.length) return null;
     var why = {}, order = [];
@@ -322,10 +334,13 @@
     metaKlant: 'Indicatieve checklist &middot; je adviseur laat weten wat de geldverstrekker precies vraagt',
     klantIntro: 'Met deze lijst kun je alvast documenten verzamelen. Geldverstrekkers hebben eigen eisen, dus je adviseur kan om meer of andere stukken vragen. Stuur geen documenten via deze pagina: ze verlaat je computer niet.',
     docTitle: 'Documentenchecklist hypotheekaanvraag',
-    mailSubject: function(V){ return 'Documentenchecklist hypotheekaanvraag' + (V('naam') ? ' - ' + V('naam') : ''); },
+    mailSubject: function(V){ var r = schoneRef(V('ref')); return 'Documentenchecklist hypotheekaanvraag' + (r ? ' - ' + r : '') + (V('naam') ? ' - ' + V('naam') : ''); },
     sections: [
       { id: 'aanvr', title: 'Aanvraag', titleKlant: 'Over je aanvraag', fields: [
         { id: 'naam', type: 'text', label: 'Naam aanvrager(s)', labelKlant: 'Je naam', ph: 'Voorletters en achternaam' },
+        { id: 'ref', type: 'text', label: 'Dossierreferentie', labelKlant: 'Dossierreferentie van je adviseur', def: 'ref', ph: 'Bijv. dossiernummer 2026-0412',
+          show: function(V){ return !V.klant || !!HASHREF; },
+          hint: '<strong class="warn">Geen BSN of bijzondere persoonsgegevens.</strong> Gebruik een intern dossiernummer of kenmerk, maximaal 80 tekens.<span class="ok" id="ref-bron" hidden> Overgenomen uit dossierpakket.</span>' },
         { id: 'samen', type: 'radio', label: 'Aanvraag samen met een partner?', labelKlant: 'Vraag je de hypotheek samen met een partner aan?', req: true, opts: [['ja','Ja'],['nee','Nee']] }
       ] },
       { id: 'sits', title: 'Situatie', titleKlant: 'Wat is op jou van toepassing?', intro: 'Meerdere situaties tegelijk kan; dubbele documenten worden samengevoegd.', fields: [
@@ -352,13 +367,23 @@
       });
       return h;
     },
+    validate: function(V){
+      return V('ref') && schoneRef(V('ref')) === null ? [{ id: 'ref', msg: 'Dit lijkt op een BSN. Gebruik een intern dossiernummer.' }] : [];
+    },
     onLive: function(app, update){
+      var inp = document.getElementById('ref');
+      if (inp) {
+        inp.setAttribute('maxlength', '80');
+        if (HASHREF) { inp.value = HASHREF; document.getElementById('ref-bron').hidden = false; }
+        inp.addEventListener('input', function(){ document.getElementById('ref-bron').hidden = true; });
+      }
       app.addEventListener('change', function(e){ var d = e.target.getAttribute && e.target.getAttribute('data-doc'); if (!d) return; got[d] = e.target.checked; update(); });
     },
     live: function(V, U){
-      var groups = build(V); if (!groups) return '';
+      var w = V('ref') && schoneRef(V('ref')) === null ? '<p class="small"><span class="warn">De dossierreferentie lijkt op een BSN.</span> Gebruik een intern dossiernummer.</p>' : '';
+      var groups = build(V); if (!groups) return w;
       var n = 0; groups.forEach(function(g){ n += g.items.length; });
-      return '<h3>Checklist</h3><p class="small">' + n + ' documenten na ontdubbeling, in ' + groups.length + ' groepen.</p>';
+      return w + '<h3>Checklist</h3><p class="small">' + n + ' documenten na ontdubbeling, in ' + groups.length + ' groepen.</p>';
     },
     extras: function(V, U){
       var groups = build(V); if (!groups) return [];
@@ -476,7 +501,7 @@
       '<p>' + (F.klantIntro || '') + '</p><p class="small">Velden met <span class="reqmark">*</span> zijn verplicht. Weet je iets niet zeker? Laat het leeg of zet het bij de toelichting; je adviseur bespreekt het met je.</p></section>';
   } else if (F.klant) {
     html += '<section class="card noprint" id="linkpanel"><h2>Klantlink maken <span class="small" style="font-weight:400">(optioneel)</span></h2>' +
-      '<p class="small" style="margin-top:0">Laat de klant dit formulier vooraf zelf invullen. De link bevat alleen jouw e-mailadres en kantoornaam, nooit klantgegevens. De klant ziet een vriendelijke intro, geen adviseurstoelichting, en kan het resultaat als PDF bewaren en naar jou mailen vanuit het eigen e-mailprogramma.</p>' +
+      '<p class="small" style="margin-top:0">Laat de klant dit formulier vooraf zelf invullen. De link bevat alleen jouw e-mailadres, kantoornaam en, als je die hebt ingevuld, de dossierreferentie; nooit klantgegevens. De klant ziet een vriendelijke intro, geen adviseurstoelichting, en kan het resultaat als PDF bewaren en naar jou mailen vanuit het eigen e-mailprogramma.</p>' +
       '<div class="fields"><div><label for="lk-mail">Jouw e-mailadres</label><input type="email" id="lk-mail" placeholder="naam@kantoor.nl" autocomplete="off"><span class="hint">Zonder e-mailadres ziet de klant alleen &lsquo;Bewaar als PDF&rsquo;.</span></div>' +
       '<div><label for="lk-kantoor">Kantoornaam</label><input type="text" id="lk-kantoor" maxlength="80" autocomplete="off"></div></div>' +
       '<div class="row"><button type="button" class="btn" id="lk-make">Maak klantlink</button></div><div id="lk-msg" class="bad" role="status"></div>' +
@@ -761,7 +786,9 @@
       if (mail && !EMAILRE.test(mail)) { $('lk-msg').textContent = 'Dit e-mailadres lijkt niet geldig. Controleer het of laat het leeg.'; $('lk-mail').focus(); $('lk-out').hidden = true; return; }
       $('lk-msg').textContent = '';
       var base = location.href.split(/[?#]/)[0];
-      var url = base + '?klant=1' + (mail ? '&adviseur=' + encodeURIComponent(mail) : '') + (kantoor ? '&kantoor=' + encodeURIComponent(kantoor) : '');
+      var refv = $('ref') ? $('ref').value : '', refOk = refv.replace(/\s+/g, '') && !/^\d{8,9}$/.test(refv.replace(/[\s.-]/g, ''));
+      var url = base + '?klant=1' + (mail ? '&adviseur=' + encodeURIComponent(mail) : '') + (kantoor ? '&kantoor=' + encodeURIComponent(kantoor) : '') +
+        (refOk ? '#ref=' + encodeURIComponent(refv.replace(/[\u0000-\u001F\u007F]/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 80)) : '');
       $('lk-url').value = url; $('lk-open').setAttribute('href', url); $('lk-out').hidden = false;
       $('lk-copied').textContent = mail ? '' : 'Zonder e-mailadres krijgt de klant alleen de knop ‘Bewaar als PDF’.';
     });
