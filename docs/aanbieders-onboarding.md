@@ -9,7 +9,7 @@ Betrokken bestanden:
 | `aanbieders.html` | Openbare aanbiederspagina met aanvraagblok |
 | `aanbieders-info.html` | Informatiepagina voor aanbieders (werving) |
 | `aanbieder-aanleveren.html` | Aanmeld- en aanleverformulier voor nieuwe aanbieders (checklist, mail, JSON-download, print) |
-| `aanbieders-voorwaarden.html` | Deelnamevoorwaarden (**concept, juridisch laten toetsen**) |
+| `aanbieders-voorwaarden.html` | Deelnamevoorwaarden (**concept, inhoudelijk getoetst op 3 oktober 2026; laat definitief vaststellen door een jurist**, zie "Juridische aandachtspunten") |
 | `aanbieder-beheer.html` | Inloggen, bewerken en indienen door de aanbieder (met verplicht akkoord op de voorwaarden) |
 | `beheer-code.html` | Persoonlijke inlogcode en `codeHash` maken (niet gelinkt) |
 | `data/aanbieders.js` | De gepubliceerde gegevens van alle aanbieders |
@@ -117,7 +117,7 @@ git push -u origin HEAD
 gh pr create --fill
 ```
 
-Na merge staat de wijziging op GitHub Pages. Laat de aanbieder kort weten dat de wijziging online staat (of wat je hebt geweigerd en waarom). Verwijder daarna het lokale `aanbieder-<id>.json`.
+Na merge staat de wijziging op GitHub Pages. Laat de aanbieder kort weten dat de wijziging online staat (of wat je hebt geweigerd of verwijderd en waarom: binnen vijf werkdagen, met een korte motivering; de aanbieder kan binnen veertien dagen reageren, zie artikel 4 van de voorwaarden). Verwijder daarna het lokale `aanbieder-<id>.json`.
 
 ## 8. Periodieke controle (elk kwartaal)
 
@@ -140,11 +140,28 @@ Plan elk kwartaal (bijvoorbeeld de eerste werkdag van januari, april, juli en ok
 
 Bij opzegging door de aanbieder, vervallen vergunning, herhaalde overtreding van de voorwaarden of langdurig niet bijhouden:
 
-1. Mail de contactpersoon (bij beëindiging door het forum: vooraf, met reden, zie artikel 9 van de voorwaarden).
+1. Mail de contactpersoon (bij beëindiging door het forum: met reden; opzegging zonder reden 30 dagen vooraf, directe beëindiging pas na een aanmaning met 14 dagen hersteltermijn, zie artikel 11 van de voorwaarden). Haal de inhoud binnen vijf werkdagen offline.
 2. Verwijder het object van de aanbieder uit `data/aanbieders.js`. Daarmee verdwijnen profiel, nieuws en code tegelijk. Wil je eerst alleen de toegang intrekken, verwijder dan alleen `codeHash`.
 3. Test (`npx playwright test`), commit en PR zoals hierboven.
 4. Bevestig de beëindiging per mail en noteer datum en reden in je administratie.
 5. Bestaande deellinks naar nieuwsberichten tonen daarna de melding dat het bericht niet meer bestaat.
+
+---
+
+## Juridische aandachtspunten
+
+De deelnamevoorwaarden (`aanbieders-voorwaarden.html`, versie 0.2) zijn op 3 oktober 2026 inhoudelijk getoetst, maar niet door een jurist vastgesteld. Geef deze punten door aan de jurist die de tekst definitief maakt:
+
+1. **Exploitant en gegevens (art. 1).** Bevestig dat Blinqx Verzekering & Hypotheek (Harderwijkweg 5b, Gouda) de juiste exploitant is, en vul de statutaire naam, rechtsvorm en het KvK-nummer in uit het Handelsregister. Openbare bronnen geven geen eenduidig beeld: bedrijfsdatabanken (northdata.com, companyinfo.nl) noemen *Blinqx V&H B.V.*, Gouda, KvK 91167426; elders wordt voor Blinqx V&H een adres in Barendrecht met KvK 84045132 genoemd. Daarom staat er nog `[in te vullen]`.
+2. **Aansprakelijkheidsbeperking en vrijwaring (art. 8).** Tussen professionele partijen toetst de rechter een exoneratie vooral aan de redelijkheid en billijkheid (art. 6:248 lid 2 BW). Grotere aanbieders kunnen zich niet op de vernietigingsgronden van art. 6:233 BW beroepen (zie art. 6:235 BW), kleinere mogelijk wel. Kies een maximumbedrag (nu `[in te vullen]`, voorstel € 500 per gebeurtenis, passend bij een kosteloze dienst) en beoordeel of de vrijwaring met procedurevoorwaarden evenwichtig genoeg is.
+3. **AVG-rollen (art. 9).** Uitgangspunt: forum en aanbieder zijn elk zelfstandig verwerkingsverantwoordelijke, zonder verwerkersrelatie. Laat bevestigen dat dit klopt en of de grondslag van het forum zelf voor het publiceren van contactgegevens (toestemming via de aanbieder, of gerechtvaardigd belang) goed aansluit op `privacy.html`.
+4. **Wft en rol van het forum (art. 1 lid 3 en art. 3).** De voorwaarden zeggen dat het forum niet bemiddelt en geen advies geeft, en verwijzen naar de norm 'correct, duidelijk en niet misleidend' van art. 4:19 lid 2 Wft. Laat toetsen of de aanbiederspagina met deze opzet buiten het begrip bemiddelen en adviseren blijft.
+5. **Forumkeuze (art. 13).** Gekozen is de rechtbank Den Haag (Gouda valt onder dat arrondissement). Laat beoordelen hoe deze keuze uitwerkt bij zaken die de kantonrechter behandelt, en of een clausule over eerst onderling overleggen voldoende is.
+6. **Eenzijdig wijzigen en opzeggen (art. 11 en 12).** Aankondiging 30 dagen vooraf, met recht om kosteloos te stoppen; opzegging door het forum met 30 dagen; directe beëindiging alleen na aanmaning met 14 dagen hersteltermijn. Laat beoordelen of deze termijnen redelijk zijn.
+7. **Licentie op naam, logo en teksten (art. 6).** Kosteloze, niet-exclusieve licentie voor de duur van de deelname, inclusief RSS-feed en korte verwijzingen. Controleer of aanbieders voor logogebruik een eigen merkrichtlijn of aparte toestemming willen.
+8. **Totstandkoming (art. 1 lid 1).** Akkoord gaat via een vinkje op de beheerpagina en het aanleverformulier, zonder handtekening. Laat bevestigen dat dit volstaat en dat de terhandstelling van de voorwaarden goed geregeld is (art. 6:233 onder b en 6:234 BW).
+
+Bronnen bij de toetsing: [Telecommunicatiewet art. 11.7a](https://wetten.overheid.nl/BWBR0009950/), [AP over cookies](https://autoriteitpersoonsgegevens.nl/nl/onderwerpen/internet-telefoon-tv-en-post/cookies), [AFM Beleidsregel informatieverstrekking (art. 4:19 Wft)](https://www.afm.nl/~/profmedia/files/wet-regelgeving/beleidsuitingen/beleidsregels/beleidsregel-informatieverstrekking.pdf), [BW Boek 6 art. 233](https://wetten.overheid.nl/BWBR0005289/2020-07-01/0/Boek6/Titeldeel5/Afdeling3/Artikel233/informatie), [Rechtbank Den Haag, rechtsgebied](https://www.rechtspraak.nl/organisatie-en-contact/organisatie/rechtbanken/rechtbank-den-haag/werk-en-rechtsgebied).
 
 ---
 
@@ -167,7 +184,7 @@ Bij opzegging door de aanbieder, vervallen vergunning, herhaalde overtreding van
 >
 > Rentes, tarieven, premies en acties plaatsen we bewust niet: de pagina is informatief en geen reclame. Wijzigingen worden voor publicatie gecontroleerd.
 >
-> [Te bevestigen door de eigenaar: Deelname is in de opstartfase kosteloos; voorwaarden kunnen wijzigen.]
+> Deelname is in de opstartfase kosteloos; voorwaarden kunnen wijzigen.
 >
 > Meer informatie en de deelnamevoorwaarden vindt u op:
 > https://jeroen-o.github.io/adviesforum/aanbieders-info.html

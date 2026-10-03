@@ -81,6 +81,10 @@
     font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
     padding:4px 9px;border-radius:4px;margin-bottom:10px;
   }
+  .kaartkop{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px;min-width:0}
+  .kaartkop .tag{margin-bottom:0}
+  .logo{display:block;flex:none;height:36px;width:auto;max-width:150px;object-fit:contain;object-position:right center;box-sizing:content-box;padding:0;border-radius:6px}
+  .merknoot{font-size:12.5px}
   h2{font-size:20px;line-height:1.3;margin:0 0 10px;color:var(--primary);overflow-wrap:anywhere}
   .producten{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 12px;padding:0;list-style:none}
   .producten li{background:#F7F7F5;border:1px solid var(--line);color:var(--muted);font-size:12.5px;padding:2px 8px;border-radius:999px}
@@ -117,6 +121,7 @@
     #zoek,#type,#cat{flex:1 1 100%}
     .grid{grid-template-columns:1fr}
     article.card{padding:18px 16px;scroll-margin-top:16px}
+    .logo{height:32px;max-width:120px}
   }
   @media print{
     .toolbar,.kopieer{display:none}
@@ -165,6 +170,7 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
 :root:not([data-theme="light"]) .count{color:#BDBDBD}
 :root:not([data-theme="light"]) article.card{background:#1E1E1E;border:1px solid #333333}
 :root:not([data-theme="light"]) .tag{background:#3f3918;color:#F2F2F2}
+:root:not([data-theme="light"]) .logo{background:#fff;padding:4px 8px}
 :root:not([data-theme="light"]) h2{color:#F2F2F2}
 :root:not([data-theme="light"]) .producten li{background:#262626;border:1px solid #333333;color:#BDBDBD}
 :root:not([data-theme="light"]) .sublabel{color:#F2F2F2}
@@ -229,6 +235,7 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
   </main>
   <footer>
     <p>Deze wegwijzer verwijst naar openbare bronnen van de partijen zelf en naar vakpers. Rentes, premies en tijdelijke acties staan er bewust niet in. Dit overzicht is geen advies en geen volledige productvergelijking; de bronpagina kan sinds de peildatum zijn gewijzigd.</p>
+    <p class="merknoot">Logo's en merknamen zijn eigendom van de betreffende partijen en worden alleen gebruikt ter herkenning; vermelding betekent geen samenwerking, aanbeveling of deelname aan het Adviesforum.</p>
     <p class="noprint"><a href="uitnodigen.html">Uitnodigen</a>: nodig een collega-adviseur uit voor het Adviesforum.</p>
   </footer>
 </div>
@@ -299,7 +306,15 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
 
   var kaarten=data.map(function(p){
     var a=el('article','card');a.id='partij-'+p._slug;
-    a.appendChild(el('span','tag',TYPES[p.type]||p.type));
+    var kop=el('div','kaartkop');
+    kop.appendChild(el('span','tag',TYPES[p.type]||p.type));
+    if(typeof p.logo==='string'&&/^img\/logos\/[a-z0-9-]+\.png$/.test(p.logo)){
+      var im=el('img','logo');im.src=p.logo;im.alt='Logo '+p.naam;im.loading='lazy';im.decoding='async';
+      im.width=150;im.height=36;
+      im.addEventListener('error',function(){im.remove();});
+      kop.appendChild(im);
+    }
+    a.appendChild(kop);
     a.appendChild(el('h2',null,p.naam));
     if(p.status){
       var st=el('p','statusmelding');st.appendChild(el('strong',null,'Status gewijzigd: '));
