@@ -4,6 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Aanmelden als adviseur – Adviesforum</title>
+<link rel="canonical" href="https://jeroen-o.github.io/adviesforum/aanmelden.html">
+<meta property="og:url" content="https://jeroen-o.github.io/adviesforum/aanmelden.html">
+<meta property="og:site_name" content="Adviesforum">
+<meta property="og:locale" content="nl_NL">
+<meta name="theme-color" content="#FFD200">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="manifest.webmanifest">
 <meta name="description" content="Meld je als financieel adviseur aan voor het Adviesforum: vragen stellen, collega’s helpen en antwoorden beoordelen, met een persoonlijke inlogcode.">
 <meta property="og:title" content="Aanmelden als adviseur – Adviesforum">
 <meta property="og:description" content="Meld je als financieel adviseur aan voor het Adviesforum: vragen stellen, collega’s helpen en antwoorden beoordelen, met een persoonlijke inlogcode.">
@@ -254,7 +261,7 @@
 </main>
 
 <footer>
-  Adviesforum — Blinqx Verzekering &amp; Hypotheek · Vragen over je aanmelding? Mail <a href="mailto:forumadvies@gmail.com">forumadvies@gmail.com</a>
+  Adviesforum — Blinqx Verzekering &amp; Hypotheek · Vragen over je aanmelding? Mail <a href="mailto:forumadvies@gmail.com">forumadvies@gmail.com</a> · <a href="uitnodigen.html">Uitnodigen</a>
 </footer>
 
 <script>
@@ -395,7 +402,8 @@
       ". Klik daar op <strong>Verzenden</strong>. Daarna ontvang je binnen twee werkdagen bericht op " + esc(v("email")) + "." +
       "<div class=\"knoppen\" style=\"margin-top:12px\"><a class=\"knop-primair\" id=\"mail-opnieuw\" href=\"" + esc(mailtoLink()) + "\">Open de e-mail opnieuw</a>" +
       "<button type=\"button\" class=\"knop-tweede\" id=\"kopieer\">Tekst kopiëren</button></div>" +
-      "<p style=\"font-size:13px;margin:8px 0 0\">Opent er niets? Kopieer de tekst en mail hem naar " + ONTVANGER + ".</p>";
+      "<p style=\"font-size:13px;margin:8px 0 0\">Opent er niets? Kopieer de tekst en mail hem naar " + ONTVANGER + ".</p>" +
+      "<p style=\"font-size:14px;margin:14px 0 0\">Ken je collega's die ook mee willen doen? <a href=\"uitnodigen.html\">Nodig een collega uit →</a></p>";
     document.getElementById("kopieer").addEventListener("click", kopieer);
     succes.style.display = "block";
     succes.scrollIntoView({behavior:"smooth", block:"start"});
