@@ -46,11 +46,15 @@ const blok = tekst.match(/--- JSON[^\n]*\n([\s\S]*?)\n--- einde JSON ---/);
 let ruw;
 try { ruw = JSON.parse(blok ? blok[1] : tekst); } catch (e) { stop('geen geldige JSON: ' + e.message); }
 if (!ruw || typeof ruw !== 'object' || Array.isArray(ruw)) stop('verwacht één aanbieder-object');
-const onbekend = Object.keys(ruw).filter(k => !['id', 'naam', 'type', 'logo', 'initialen', 'kleur', 'omschrijving', 'website', 'extranet', 'contact', 'documenten', 'richtlijnen', 'nieuws', 'elearning', 'bijgewerkt', 'codeHash', 'demo'].includes(k));
+const onbekend = Object.keys(ruw).filter(k => !['id', 'naam', 'type', 'logo', 'rubrieken', 'initialen', 'kleur', 'omschrijving', 'website', 'extranet', 'contact', 'documenten', 'richtlijnen', 'nieuws', 'elearning', 'agenda', 'bijgewerkt', 'codeHash', 'demo'].includes(k));
 if (onbekend.length) console.warn('Let op: onbekende velden genegeerd: ' + onbekend.join(', '));
 if ('codeHash' in ruw || 'demo' in ruw) console.warn('Let op: codeHash/demo in de invoer worden genegeerd.');
 
 const nieuw = V.normaliseer(ruw);
+/* logo zit niet in normaliseer (dat blok is gedeeld met de beheerpagina); neem een geldig pad uit de invoer over. */
+const LOGO = /^img\/logos\/[a-z0-9-]+\.png$/;
+if (typeof ruw.logo === 'string' && LOGO.test(ruw.logo)) nieuw.logo = ruw.logo;
+else if (ruw.logo) console.warn('Let op: logo genegeerd (verwacht img/logos/<naam>.png).');
 if (!/^\d{4}-\d{2}-\d{2}$/.test(nieuw.bijgewerkt)) nieuw.bijgewerkt = V.vandaag();
 const r = V.valideer(nieuw);
 for (const w of r.waarschuwingen) console.warn('Waarschuwing: ' + w.msg);
@@ -69,7 +73,7 @@ const i = lijst.findIndex(a => a && a.id === nieuw.id);
 let uit;
 if (i >= 0) {
   const oud = lijst[i];
-  uit = Object.assign({ id: nieuw.id }, oud.demo ? { demo: true } : {}, nieuw, oud.codeHash ? { codeHash: oud.codeHash } : {});
+  uit = Object.assign({ id: nieuw.id }, oud.demo ? { demo: true } : {}, oud.logo && !nieuw.logo ? { logo: oud.logo } : {}, nieuw, oud.codeHash ? { codeHash: oud.codeHash } : {});
   lijst[i] = uit;
   console.log('Vervangen: ' + nieuw.naam + ' (' + nieuw.id + ')');
 } else {
@@ -78,7 +82,7 @@ if (i >= 0) {
   lijst.push(uit);
   console.log('Toegevoegd: ' + nieuw.naam + ' (' + nieuw.id + '). Zet nog een codeHash via beheer-code.html als de aanbieder moet kunnen inloggen.');
 }
-console.log('  ' + ['nieuws', 'documenten', 'richtlijnen', 'contact', 'elearning'].map(k => k + ' ' + uit[k].length).join(', ') + ', bijgewerkt ' + uit.bijgewerkt);
+console.log('  ' + ['nieuws', 'documenten', 'richtlijnen', 'contact', 'elearning', 'agenda'].map(k => k + ' ' + uit[k].length).join(', ') + ', bijgewerkt ' + uit.bijgewerkt);
 
 if (vlag('--dry-run')) { console.log('Dry-run: niets geschreven.'); process.exit(0); }
 const resultaat = bron.slice(0, pos) + 'window.AANBIEDERS=' + JSON.stringify(lijst, null, 2) + ';\n';

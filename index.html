@@ -416,6 +416,20 @@ footer .legal{grid-column:1/-1;border-top:1px solid #2A3238;padding-top:14px;fon
 .ook button{background:none;border:0;padding:0;font:inherit;color:var(--text);text-decoration:underline;cursor:pointer}
 .ook .nu{font-weight:700;color:var(--text)}
 .ook .nul{opacity:.75}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.zg{margin-bottom:14px;overflow:hidden}
+.zg:focus{outline:2px solid var(--text);outline-offset:2px}
+.zg-kop{padding:12px 18px 10px}
+.zg-kop h2{font-size:17px;font-weight:800;display:flex;align-items:center;gap:8px}
+.zg-kop .n{font-size:12px;font-weight:700;background:var(--surface-2);border:1px solid var(--border);border-radius:999px;padding:1px 8px;color:var(--muted)}
+.zg-lijst{list-style:none;margin:0;padding:0}
+.zg-lijst li{padding:11px 18px;border-top:1px solid var(--border);min-width:0;overflow-wrap:anywhere}
+.zg-lijst li>a,.zg-link{font-weight:600;color:var(--text);text-decoration:underline;text-underline-offset:2px}
+.zg-link{background:none;border:0;padding:0;font:inherit;font-weight:600;cursor:pointer;text-align:left}
+.zg-lijst .chip{margin-left:6px;vertical-align:1px}
+.zg-sub{display:block;font-size:13px;color:var(--muted);margin-top:3px}
+.zg-meer{padding:10px 18px 14px;border-top:1px solid var(--border)}
+.zg-niets{font-size:13px;color:var(--muted);margin:4px 2px 16px}
 /* geen horizontale scroll: grid-kolommen mogen krimpen, lange knoppen breken af */
 main .wrap>*{min-width:0}
 .side .cats{max-width:100%}
@@ -482,7 +496,7 @@ footer a{display:inline-block;padding:4px 0}
       <span class="brand-sep"></span>
       <span class="brand-name">Adviesforum</span>
     </button>
-    <div class="search"><input id="search" type="search" placeholder="Zoek in forum, kennisbank en FAQ" aria-label="Zoeken"></div>
+    <div class="search" role="search"><input id="search" type="search" placeholder="Zoek in forum, kennisbank, FAQ, rekentools en aanbieders" aria-label="Zoek in forum, kennisbank, FAQ, rekentools en aanbieders"><span id="zoek-status" class="sr-only" role="status" aria-live="polite"></span></div>
     <div class="who" id="who"></div>
     <button class="btn btn-black" data-act="nieuw">Vraag stellen →</button>
   </div>
@@ -632,6 +646,7 @@ const HULP=[
  {groep:'Rekenhulpen',titel:'Erfpacht: canon of afkopen',url:'erfpacht.html',tekst:'Canon per jaar en maand, totale canon en contante waarde tegenover de afkoopsom.',kw:'erfpacht canon afkopen afkoopsom grondwaarde'},
  {groep:'Rekenhulpen',titel:'Draagplicht en ongelijke inbreng',url:'draagplicht.html',tekst:'Inbreng per partner, verhouding en voorstel eigendomsverhouding.',kw:'draagplicht ongelijke inbreng partners eigendomsverhouding samenwonen'},
  {groep:'Verzekeringen',titel:'Overlijdensrisico: benodigd verzekerd bedrag',url:'orv.html',tekst:'Tekort per maand na overlijden, benodigd kapitaal en welk deel van de hypotheek afgelost moet worden.',kw:'orv overlijdensrisicoverzekering overlijden nabestaande anw nabestaandenpensioen verzekerd bedrag'},
+ {groep:'Verzekeringen',tp:'Rekentool',titel:'ORV-premie indicatief berekenen',url:'orv-premie.html',tekst:'Indicatieve premie van een overlijdensrisicoverzekering: 1 of 2 verzekerden, vaste of variabele premie, gelijkblijvend/annuïtair/lineair dalend. Geen offerte en geen marktvergelijking.',kw:'orv premie overlijdensrisicoverzekering premieberekening indicatie vaste premie variabele premie annuitair lineair dalend roker'},
  {groep:'Verzekeringen',titel:'AOV voor ondernemers: tekort en wachttijd',url:'aov-tekort.html',tekst:'Maximaal verzekerbaar bedrag, tekort en de buffer die je nodig hebt tijdens de wachttijd.',kw:'aov arbeidsongeschiktheid ondernemer zzp wachttijd broodfonds'},
  {groep:'Verzekeringen',titel:'Inkomen bij ziekte en arbeidsongeschiktheid',url:'inkomen-ziekte-werknemer.html',tekst:'Inkomen per periode (jaar 1, jaar 2, WIA) tegenover de woonlasten van een werknemer.',kw:'ziekte arbeidsongeschiktheid wia wga iva loondoorbetaling werknemer hiaat'},
  {groep:'Verzekeringen',titel:'Inkomen bij werkloosheid en woonlasten',url:'werkloosheid.html',tekst:'WW-inkomen per periode, het tekort en het effect van een woonlastenverzekering.',kw:'werkloosheid ww woonlastenverzekering ontslag'},
@@ -981,12 +996,121 @@ const HAY_F={
  begrip:b=>[b.term,b.uitleg,(b.zoek||[]).join(' ')].join(' ')
 };
 function zoekt(type,o){const z=zoekQuery(S.q);return !z||zoekPast(z,hay(o,HAY_F[type]));}
-function zoekTellers(){return{forum:VRAGEN.filter(v=>zoekt('forum',v)).length,kennisbank:ARTIKELEN.filter(a=>zoekt('kb',a)).length,faq:FAQ_GELADEN?FAQ.filter(f=>zoekt('faq',f)).length:null,begrippen:BEGRIPPEN.filter(b=>zoekt('begrip',b)).length,hulpmiddelen:HULP.filter(h=>zoekt('hulp',h)).length};}
+function zoekTellers(){const r=zoekResultaten(),t={};for(const [g] of ZOEK_GROEPEN)t[g]=r[g]?r[g].length:null;return t;}
+/* ---------- Zoeken over alles heen ----------
+ * Forum, kennisbank, FAQ, begrippen en hulpmiddelen houden hun eigen tabblad met de bestaande ranking.
+ * Rekentools komen uit data/rekentools-index.js (al geladen). Aanbieders (data/aanbieders.js) en de
+ * partijenwegwijzer (data/partijen.js) worden pas bij de eerste zoekopdracht geladen, net als de FAQ.
+ * Die bestanden zetten alleen window.AANBIEDERS / window.PARTIJEN; een script dat al op de pagina staat
+ * wordt niet nog eens toegevoegd. */
+const ZOEK_GROEPEN=[['forum','Forum'],['kennisbank','Kennisbank'],['faq','FAQ'],['begrippen','Begrippen'],['rekentools','Rekentools'],['hulpmiddelen','Hulpmiddelen'],['aanbieders','Aanbieders'],['partijen','Partijen']];
+const ZOEK_TABS=['forum','kennisbank','faq','begrippen'];
+const ZOEK_MAX=5;
+const EXTRA_SCRIPTS={aanbieders:{src:'data/aanbieders.js',glob:'AANBIEDERS'},partijen:{src:'data/partijen.js',glob:'PARTIJEN'}};
+const EXTRA={},EXTRA_BELOFTE={};
+function laadExtra(){return Promise.all(Object.keys(EXTRA_SCRIPTS).map(naam=>{
+  const {src,glob}=EXTRA_SCRIPTS[naam];
+  if(EXTRA[naam])return Promise.resolve();
+  if(Array.isArray(window[glob])){EXTRA[naam]=window[glob];return Promise.resolve();}
+  if(EXTRA_BELOFTE[naam])return EXTRA_BELOFTE[naam];
+  return EXTRA_BELOFTE[naam]=new Promise(ok=>{
+    const klaar=()=>{EXTRA[naam]=Array.isArray(window[glob])?window[glob]:[];ok();};
+    let sc=document.querySelector('script[src="'+src+'"]');
+    if(sc){sc.addEventListener('load',klaar);sc.addEventListener('error',klaar);setTimeout(()=>{if(Array.isArray(window[glob]))klaar();},0);return;}
+    sc=document.createElement('script');sc.src=src;sc.async=true;sc.onload=klaar;sc.onerror=()=>{console.warn('Zoekbron niet geladen: '+src);klaar();};document.body.appendChild(sc);
+  }).then(naExtraGeladen);}));}
+function naExtraGeladen(){if(!S.q.trim())return;if(S.view==='zoeken'){render(true);return;}const o=document.querySelector('#app .ook');if(o)o.outerHTML=ookGevonden(S.view);zoekStatusMelden();}
+/* Zelfde slug als partijen.html (partijSlug + partijSlugsToekennen): dubbele namen krijgen -2, -3, ... */
+let PARTIJ_SLUGS=null;
+function partijSlug(p){if(!PARTIJ_SLUGS){PARTIJ_SLUGS=new Map();const gezien={};
+  for(const x of EXTRA.partijen||[]){let s=String(x.naam||'').normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase().replace(/&/g,' en ').replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'')||'partij';const b=s;let i=2;while(gezien[s])s=b+'-'+(i++);gezien[s]=1;PARTIJ_SLUGS.set(x,s);}}
+  return PARTIJ_SLUGS.get(p)||'';}
+const AANB_TYPE={geldverstrekker:'Geldverstrekker',verzekeraar:'Verzekeraar',pensioenuitvoerder:'Pensioenuitvoerder',kredietverstrekker:'Kredietverstrekker',serviceprovider:'Serviceprovider'};
+const PARTIJ_TYPE={bank:'Bank',geldverstrekker:'Geldverstrekker',verzekeraar:'Verzekeraar',kredietverstrekker:'Kredietverstrekker',pensioenverzekeraar:'Pensioenverzekeraar',pensioenfonds:'Pensioenfonds',beleggingsinstelling:'Beleggingsinstelling',ppi:'PPI'};
+Object.assign(HAY_F,{
+ rekentool:r=>[r.naam,r.tekst,r.kw,r.groep].join(' '),
+ aanbieder:a=>[a.naam,a.type,a.omschrijving,(a.documenten||[]).map(d=>d.titel).join(' '),(a.richtlijnen||[]).map(r=>r.titel).join(' ')].join(' '),
+ aanbNieuws:n=>[n._a.naam,n.titel].join(' '),
+ partij:p=>[p.naam,PARTIJ_TYPE[p.type]||p.type,(p.categorieen||[]).join(' '),(p.producten||[]).join(' '),(p.kenmerken||[]).map(k=>k.tekst).join(' ')].join(' ')
+});
+const kort=(s,n)=>{s=String(s||'').replace(/\s+/g,' ').trim();return s.length>n?s.slice(0,n-1).replace(/\s+\S*$/,'')+'…':s;};
+/* Naam die (vrijwel) gelijk is aan de zoekterm eerst, dan een treffer in de naam, dan de rest (stabiel) */
+function opNaam(lijst,naam,z){const q=zoekNorm(S.q);const sc=o=>{const n=zoekNorm(naam(o));return n===q?0:zoekPast(z,' '+n+' ')?1:2;};return lijst.map((o,i)=>[sc(o),i,o]).sort((a,b)=>a[0]-b[0]||a[1]-b[1]).map(x=>x[2]);}
+let ZOEK_RES=null;
+function zoekResultaten(){
+  const sleutel=[S.q,S.sort,VRAGEN.length,ARTIKELEN.length,FAQ_GELADEN,!!EXTRA.aanbieders,!!EXTRA.partijen].join('|');
+  if(ZOEK_RES&&ZOEK_RES.k===sleutel)return ZOEK_RES.r;
+  const z=zoekQuery(S.q),r={};
+  r.forum=VRAGEN.filter(v=>zoekt('forum',v)).sort((a,b)=>{
+    if(S.sort==='actief')return b.antwoorden.length-a.antwoorden.length||b.datum.localeCompare(a.datum);
+    if(S.sort==='rating')return bestRating(b)-bestRating(a)||b.datum.localeCompare(a.datum);
+    if(S.sort==='views')return b.views-a.views;
+    return b.datum.localeCompare(a.datum);});
+  r.kennisbank=ARTIKELEN.filter(a=>zoekt('kb',a)).sort((a,b)=>(b.gecontroleerd-a.gecontroleerd)||cnt(b.nuttig)-cnt(a.nuttig));
+  r.faq=FAQ_GELADEN?FAQ.filter(f=>zoekt('faq',f)):null;
+  r.begrippen=BEGRIPPEN.filter(b=>zoekt('begrip',b));
+  r.rekentools=z?opNaam((window.REKENTOOLS||[]).filter(t=>zoekt('rekentool',t)),t=>t.naam,z):[];
+  r.hulpmiddelen=HULP.filter(h=>h.tp!=='Rekentool'&&zoekt('hulp',h));
+  if(EXTRA.aanbieders){const uit=[];
+    for(const a of opNaam(EXTRA.aanbieders.filter(a=>zoekt('aanbieder',a)),a=>a.naam,z||[]))uit.push({soort:'a',a});
+    const naamPast=a=>z&&zoekPast(z,' '+zoekNorm(a.naam)+' ');
+    for(const a of EXTRA.aanbieders)if(!naamPast(a))for(const n of a.nieuws||[]){if(!n._a)Object.defineProperty(n,'_a',{value:a});if(zoekt('aanbNieuws',n))uit.push({soort:'n',a,n});}
+    r.aanbieders=uit;}else r.aanbieders=null;
+  r.partijen=EXTRA.partijen?opNaam(EXTRA.partijen.filter(p=>zoekt('partij',p)),p=>p.naam,z||[]):null;
+  ZOEK_RES={k:sleutel,r};return r;}
+/* Eén resultaatregel per bron */
+function zoekItem(g,o){
+  const li=(titel,href,sub,chips='')=>`<li><a href="${esc(href)}">${esc(titel)}</a>${chips}${sub?`<span class="zg-sub">${esc(sub)}</span>`:''}</li>`;
+  const chip=t=>` <span class="chip">${esc(t)}</span>`;
+  switch(g){
+    case 'forum':{const st=vraagStatus(o);return `<div class="q" data-act="open-vraag" data-id="${o.id}" role="link" tabindex="0"><h3>${esc(o.titel)}</h3><span class="status s-${st}">${statusTxt[st]}</span><div class="ex">${o.voorbeeld?'<span class="chip" style="margin-right:6px">Voorbeeld</span>':''}${esc(o.body)}</div></div>`;}
+    case 'kennisbank':return `<div class="art" data-act="open-artikel" data-id="${o.id}" role="link" tabindex="0"><h3>${esc(o.titel)}</h3><span class="check ${o.gecontroleerd?'ok':'draft'}">${o.gecontroleerd?'✓ Gecontroleerd':'Concept'}</span><div class="ex">${esc(kort(o.body.split('\n')[0],180))}</div></div>`;
+    case 'faq':return li(o.vraag,'#faq-'+o.id,kort(o.antwoord,150),chip(FAQ_THEMAS[o.thema]||o.thema));
+    case 'begrippen':return `<li><button type="button" class="zg-link" data-act="zoek-tab" data-tab="begrippen">${esc(o.term)}</button><span class="zg-sub">${esc(kort(o.uitleg,150))}</span></li>`;
+    case 'rekentools':return li(o.naam,o.url||('rekentools.html#'+o.id),kort(o.tekst,150),chip(o.groep));
+    case 'hulpmiddelen':return li(o.titel,o.url,kort(o.tekst,150),chip(o.tp||o.groep));
+    case 'aanbieders':{const a=o.a,demo=a.demo?chip('Voorbeeld'):'';
+      if(o.soort==='n')return li(o.n.titel,'aanbieders.html#nieuws-'+a.id+'-'+o.n.id,a.naam+(o.n.datum?' · '+fmtDate(o.n.datum):''),chip('Nieuws')+demo);
+      const z=zoekQuery(S.q),past=t=>z&&zoekPast(z,' '+zoekNorm(t)+' ');
+      const d=(a.documenten||[]).find(x=>past(x.titel)),rl=(a.richtlijnen||[]).find(x=>past(x.titel));
+      return li(a.naam,'aanbieders.html#aanbieder-'+a.id,d?'Document: '+d.titel:rl?'Richtlijn: '+rl.titel:kort(a.omschrijving,150),chip(AANB_TYPE[a.type]||a.type)+demo);}
+    case 'partijen':return li(o.naam,'partijen.html#partij-'+partijSlug(o),(o.producten||[]).join(', '),chip(PARTIJ_TYPE[o.type]||o.type));
+  }
+  return '';}
+function zoekBlok(g,naam,lijst){
+  const n=lijst.length,open=(S.zoekOpen||{})[g],toon=open?lijst:lijst.slice(0,ZOEK_MAX);
+  const rijen=toon.map(o=>zoekItem(g,o)).join('');
+  const inhoud=g==='forum'||g==='kennisbank'?rijen:`<ul class="zg-lijst">${rijen}</ul>`;
+  const meer=n<=ZOEK_MAX?'':ZOEK_TABS.includes(g)?`<button type="button" class="btn btn-line btn-sm" data-act="zoek-tab" data-tab="${g}">Toon alle ${fmtInt(n)} in ${naam} →</button>`
+    :open?'':`<button type="button" class="btn btn-line btn-sm" data-act="zoek-meer" data-groep="${g}" aria-controls="zg-${g}">Toon alle ${fmtInt(n)}</button>`;
+  return `<section class="card zg" id="zg-${g}" aria-labelledby="zg-${g}-kop" tabindex="-1"><div class="zg-kop"><h2 id="zg-${g}-kop">${naam} <span class="n">${fmtInt(n)}</span></h2></div>${inhoud}${meer?`<div class="zg-meer">${meer}</div>`:''}</section>`;}
+function viewZoeken(){
+  if(!zoekQuery(S.q))return `<section class="zoeken"><div class="listhead"><div><h1>Zoeken</h1><div class="sub">Typ een zoekterm in de balk bovenin.</div></div></div></section>`;
+  laadFaq();laadExtra();
+  const r=zoekResultaten();
+  const bezig=ZOEK_GROEPEN.filter(([g])=>r[g]==null).map(x=>x[1]);
+  const totaal=ZOEK_GROEPEN.reduce((s,[g])=>s+(r[g]?r[g].length:0),0);
+  const met=ZOEK_GROEPEN.filter(([g])=>r[g]&&r[g].length),zonder=ZOEK_GROEPEN.filter(([g])=>r[g]&&!r[g].length).map(x=>x[1]);
+  const lijstTekst=a=>a.length>1?a.slice(0,-1).join(', ')+' en '+a[a.length-1]:a[0]||'';
+  return `<section class="zoeken">
+    ${ookGevonden('zoeken')}
+    <div class="listhead"><div><h1>Zoekresultaten</h1><div class="sub">${plural(totaal,'resultaat','resultaten')} voor “${esc(S.q)}”${bezig.length?` · ${esc(lijstTekst(bezig))} ${bezig.length>1?'worden':'wordt'} nog doorzocht…`:''}</div></div></div>
+    ${met.map(([g,naam])=>zoekBlok(g,naam,r[g])).join('')}
+    ${totaal?'':`<div class="card"><div class="empty"><b>${bezig.length?'Nog niets gevonden':'Niets gevonden'} voor “${esc(S.q)}”</b>${bezig.length?'De overige bronnen worden nog doorzocht.':'Probeer een ander of korter woord, of controleer de spelling.'} Je kunt ook zelf een vraag stellen.<div style="margin-top:14px"><button class="btn btn-black" data-act="nieuw">Vraag stellen →</button></div>${bezig.length?'':zoekMeld()}</div></div>`}
+    ${totaal&&zonder.length?`<p class="zg-niets">Niets gevonden in ${esc(lijstTekst(zonder))}.</p>`:''}
+  </section>`;}
+/* Telling voor schermlezers in een vaste aria-live-regio naast het zoekveld (vertraagd, niet bij elke toets) */
+function zoekStatusMelden(){const el=document.getElementById('zoek-status');if(!el)return;clearTimeout(el._t);
+  el._t=setTimeout(()=>{let t='';if(S.q.trim()&&zoekQuery(S.q)){const r=zoekResultaten();const delen=ZOEK_GROEPEN.filter(([g])=>r[g]&&r[g].length).map(([g,n])=>n+' '+fmtInt(r[g].length));
+    const tot=ZOEK_GROEPEN.reduce((s,[g])=>s+(r[g]?r[g].length:0),0);t=plural(tot,'resultaat','resultaten')+' voor '+S.q.trim()+(delen.length?': '+delen.join(', '):'');}
+    if(el.textContent!==t)el.textContent=t;},600);}
 /* Rij "Ook gevonden in" bovenaan elke weergave met een zoekterm */
 function ookGevonden(huidig){if(!zoekQuery(S.q))return '';const t=zoekTellers();
-  const items=[['forum','Forum'],['kennisbank','Kennisbank'],['faq','FAQ'],['begrippen','Begrippen'],['hulpmiddelen','Hulpmiddelen']].map(([id,naam])=>{const n=t[id];const nTxt=n==null?'…':fmtInt(n);
+  const tot=ZOEK_GROEPEN.reduce((s,[g])=>s+(t[g]||0),0);
+  const items=[['zoeken','Alles']].concat(ZOEK_GROEPEN).map(([id,naam])=>{const n=id==='zoeken'?tot:t[id];const nTxt=n==null?'…':fmtInt(n);
     if(id===huidig)return `<span class="nu" aria-current="true">${naam} (${nTxt})</span>`;
-    return n?`<button data-act="zoek-tab" data-tab="${id}">${naam} (${nTxt})</button>`:`<span class="nul">${naam} (${nTxt})</span>`;});
+    const act=id==='zoeken'||ZOEK_TABS.includes(id)||id==='hulpmiddelen'?`data-act="zoek-tab" data-tab="${id}"`:`data-act="zoek-groep" data-groep="${id}"`;
+    return n?`<button ${act}>${naam} (${nTxt})</button>`:`<span class="nul">${naam} (${nTxt})</span>`;});
   return `<nav class="ook" aria-label="Zoekresultaten in andere onderdelen"><b>Ook gevonden in:</b> ${items.join(' · ')}</nav>`;}
 
 /* ---------- Automatisch antwoord (trefwoordmatching) ---------- */
@@ -1068,7 +1192,7 @@ function renderShell(){
 
 const heroZichtbaar=()=>S.view==='forum'&&S.cat==='alle'&&S.status==='alle'&&!S.q;
 /* Venstertitel per weergave */
-function zetTitel(){const T={forum:'Forum',nieuw:'Vraag stellen',kennisbank:'Kennisbank',faq:'Veelgestelde vragen',hulpmiddelen:'Hulpmiddelen',begrippen:'Begrippen A-Z',adviseurs:'Adviseurs',favorieten:'Mijn favorieten',handleiding:'Handleiding',voorwie:'Voor wie'};
+function zetTitel(){const T={forum:'Forum',nieuw:'Vraag stellen',kennisbank:'Kennisbank',faq:'Veelgestelde vragen',hulpmiddelen:'Hulpmiddelen',begrippen:'Begrippen A-Z',adviseurs:'Adviseurs',favorieten:'Mijn favorieten',handleiding:'Handleiding',voorwie:'Voor wie',zoeken:'Zoekresultaten'};
   let t=T[S.view]||'Forum';
   if(S.view==='vraag'){const v=VRAGEN.find(x=>x.id===S.vraag);if(v)t=v.titel;}
   else if(S.view==='artikel'){const a=ARTIKELEN.find(x=>x.id===S.artikel);if(a)t=a.titel;}
@@ -1095,8 +1219,9 @@ function render(keepScroll){
     case 'begrippen':app.className='wrap one';app.innerHTML=viewBegrippen();break;
     case 'faq':app.className='wrap one';app.innerHTML=viewFaq();break;
     case 'favorieten':app.className='wrap one';app.innerHTML=viewFavorieten();break;
+    case 'zoeken':app.className='wrap one';app.innerHTML=viewZoeken();break;
   }
-  zetTitel();
+  zetTitel();zoekStatusMelden();
   if(S.view==='faq'&&S.faqScroll&&FAQ_GELADEN){const d=document.getElementById('faq-'+S.faqScroll);S.faqScroll=null;if(d){d.open=true;setTimeout(()=>d.scrollIntoView({block:'start'}),0);return;}}
   const doel=S.view==='vraag'&&S.reactie?document.getElementById('r-'+S.vraag+'-'+S.reactie):null;
   if(doel){const art=doel.closest('.ans');setTimeout(()=>{art.scrollIntoView({block:'start'});},0);}
@@ -1481,7 +1606,7 @@ function viewHandleiding(){
       <h2 id="h-vraag">1. Een vraag stellen</h2>
       <p>Je hoeft niet in te loggen om een vraag te stellen. Je hebt wel een geldig LinkedIn-profiel nodig en je meldt je aan (zie hoofdstuk 2).</p>
       <ol class="steps">
-        <li><b>Zoek eerst.</b> De zoekbalk bovenin doorzoekt forum, kennisbank en FAQ. Grote kans dat het al eens is behandeld.</li>
+        <li><b>Zoek eerst.</b> De zoekbalk bovenin doorzoekt forum, kennisbank, FAQ, begrippen, rekentools, hulpmiddelen, aanbieders en de partijenwegwijzer, met de resultaten per bron. Grote kans dat het al eens is behandeld.</li>
         <li><b>Klik op "Vraag stellen"</b> en kies de categorie.</li>
         <li><b>Beschrijf de situatie geanonimiseerd.</b> Gebruik rollen en afgeronde bedragen; geen namen, adressen, klantnummers of geboortedata. Vermeld wat je al hebt uitgezocht.</li>
         <li><b>Vul je gegevens in:</b> naam, e-mailadres, telefoonnummer en LinkedIn-profiel. Alleen je naam is openbaar; de rest ziet alleen de beheerder.</li>
@@ -1657,7 +1782,7 @@ function viewVoorWie(){
 
 /* ---------- Acties ---------- */
 const ROUTES=['forum','kennisbank','faq','hulpmiddelen','begrippen','adviseurs','favorieten','handleiding','voorwie'];
-function zetHash(){const h=S.view==='artikel'?'artikel-'+S.artikel:S.view==='vraag'?'vraag-'+S.vraag+(S.reactie?'-r'+S.reactie:''):ROUTES.includes(S.view)?S.view:'';try{if('#'+h!==location.hash)history.replaceState(null,'',h?'#'+h:location.pathname+location.search);}catch(e){}}
+function zetHash(){const h=S.view==='zoeken'?(S.q.trim()?'zoek='+encodeURIComponent(S.q.trim()).replace(/%20/g,'+'):''):S.view==='artikel'?'artikel-'+S.artikel:S.view==='vraag'?'vraag-'+S.vraag+(S.reactie?'-r'+S.reactie:''):ROUTES.includes(S.view)?S.view:'';try{if('#'+h!==location.hash)history.replaceState(null,'',h?'#'+h:location.pathname+location.search);}catch(e){}}
 /* bron=linkedin mag in de query (?bron=linkedin#vraag-…) of achter de hash (#vraag-…&bron=linkedin) staan.
  * route() onthoudt de bron in S.bron en haalt hem uit de adresbalk, zodat hij niet wordt doorgedeeld. */
 function leesBron(){
@@ -1689,6 +1814,9 @@ document.addEventListener('click',e=>{
   switch(act){
     case 'home':case 'tab':{const tab=el.dataset.tab||'forum';S.q='';$('#search').value='';go(tab,{tab});break;}
     case 'zoek-tab':{const tab=el.dataset.tab;if(tab==='forum')go('forum',{tab,cat:'alle',status:'alle'});else go(tab,{tab});break;}
+    case 'zoek-groep':case 'zoek-meer':{const g=el.dataset.groep;if(act==='zoek-meer')S.zoekOpen=Object.assign({},S.zoekOpen,{[g]:true});
+      if(S.view!=='zoeken')go('zoeken',{tab:'zoeken'});else render(true);
+      const sec=document.getElementById('zg-'+g);if(sec){if(act==='zoek-groep')sec.scrollIntoView({block:'start'});sec.focus({preventScroll:true});}break;}
     case 'kopieer-reactie':{const u=el.dataset.url;kopieer(u,'Link naar de reactie gekopieerd');const m=u.match(/#vraag-(.+)-r(\d+)$/);if(m){S.reactie=+m[2];history.replaceState(null,'','#vraag-'+m[1]+'-r'+m[2]);document.querySelectorAll('.ans.gemarkeerd').forEach(x=>x.classList.remove('gemarkeerd'));el.closest('.ans').classList.add('gemarkeerd');}break;}
     case 'cat':go('forum',{tab:'forum',cat:el.dataset.cat});break;
     case 'cat-go':go('forum',{tab:'forum',cat:el.dataset.cat,status:'alle'});break;
@@ -1735,7 +1863,7 @@ document.addEventListener('click',e=>{
     case 'fav':{favKlik(el);break;}
     case 'volg':{const aan=toggleVolg(el.dataset.soort,el.dataset.cat);if(aan!==null){render(true);toast(aan?'Je volgt nu '+cat(el.dataset.cat).naam+' ('+(el.dataset.soort==='f'?'forum':'kennisbank')+')':'Je volgt '+cat(el.dataset.cat).naam+' niet meer');}break;}
     case 'fav-export':{const u=favExportUrl();const i=$('#fav-export');if(i){i.value=u;i.select();}kopieer(u,'Link met je favorieten gekopieerd');break;}
-    case 'fav-wis':{if(!confirm('Alle favorieten en gevolgde categorieën wissen? De cookie wordt verwijderd.'))break;FAV.fav=[];FAV.volg=[];bewaarFav();render(true);toast('Favorieten gewist en cookie verwijderd');break;}
+    case 'fav-wis':{if(!confirm('Alle favorieten, gevolgde categorieën en gevolgde aanbieders wissen? De cookie wordt verwijderd.'))break;FAV.fav=[];FAV.volg=[];FAV.overig=[];bewaarFav();render(true);toast('Favorieten gewist en cookie verwijderd');break;}
     case 'uitloggen':{zetCookie('');S.me=null;render(true);toast('Je bent uitgelogd');break;}
     case 'mail-kopie':{const v=VRAGEN.find(x=>x.id===id);if(v)kopieer(v.mailTxt,'Tekst gekopieerd; plak hem in een e-mail aan '+FORM_MAIL);break;}
     case 'meld-zoek':{const q=S.q;openMail(mailLink('Adviesforum: niets gevonden voor "'+q+'"',mailTekst('Zoekopdracht zonder resultaat op het Adviesforum',[['Zoekopdracht',{Zoekterm:q,Onderdeel:S.tab}]])));toast('Je mailprogramma opent; klik daar op Verzenden');break;}
@@ -1798,26 +1926,35 @@ document.addEventListener('submit',async e=>{if(e.target.id!=='f-login')return;e
 document.addEventListener('click',e=>{if(e.target.closest('[data-act="login-sluit"]')){const d=$('#login-dlg');if(d)d.close();}});
 herstelLogin();
 $('#search').addEventListener('input',e=>{
-  S.q=e.target.value;if(S.q.trim())laadFaq();
-  S.faqMax=50;S.forumMax=30;
-  if(['kennisbank','faq','hulpmiddelen','begrippen'].includes(S.tab))S.view=S.tab;else{S.tab='forum';S.view='forum';}
+  const was=S.q.trim();
+  S.q=e.target.value;if(S.q.trim()){laadFaq();laadExtra();}
+  S.faqMax=50;S.forumMax=30;S.zoekOpen={};
+  /* In een tabblad met eigen zoekresultaten blijf je daar; anders het overzicht over alle bronnen */
+  if(['kennisbank','faq','hulpmiddelen','begrippen'].includes(S.tab))S.view=S.tab;
+  else if(S.view==='forum'&&S.tab==='forum'&&(was||S.cat!=='alle'||S.status!=='alle'))S.view='forum';
+  else if(zoekQuery(S.q)){S.tab='zoeken';S.view='zoeken';}
+  else{S.tab='forum';S.view='forum';}
   render(true);
+  if(S.view==='zoeken'||(!S.q.trim()&&/^#zoek=/.test(location.hash)))zetHash();
 });
 /* ---------- Favorieten en volgen: één functionele first-party cookie, geen browseropslag ----------
  * af_favorieten = "1~<favorieten>~<volgen>~<vorig bezoek>~<laatst actief>~<eerste bezoek sinds volgen: 1/leeg>"
  *   favorieten: tokens "v.<vraag-id>", "a.<artikel-id>", "f.<faq-id>", gescheiden door "_" (maximaal 60, nieuwste eerst)
+ *               plus "b.<aanbieder-id>" voor aanbieders die je volgt (gezet door aanbieders.html, max. 60). Onbekende tokens
+ *               van de vorm "<letter>.<id>" (zoals b.) blijven bij het herschrijven staan (FAV.overig).
  *   volgen:     tokens "f.<categorie>" (forum) en "k.<categorie>" (kennisbank), gescheiden door "_"
- *   tijden:     Unix-seconden; alleen bewaard zolang je iets volgt. Een nieuw bezoek begint na 30 minuten zonder activiteit.
+ *   tijden:    Unix-seconden; alleen bewaard zolang je iets volgt. Een nieuw bezoek begint na 30 minuten zonder activiteit.
  * De cookie blijft onder FAV_MAX_BYTES; hij bevat geen naam, e-mail of andere persoonsgegevens. */
 const FAV_COOKIE='af_favorieten',FAV_MAX=60,FAV_MAX_BYTES=3500,FAV_SESSIE=30*60,FAV_EERSTE=7*86400;
-const FAV_TOKEN=/^[vaf]\.[a-z0-9-]{1,40}$/,VOLG_TOKEN=/^[fk]\.[a-z]{1,12}$/;
-const FAV={fav:[],volg:[],b:0,t:0,e:0};
+const FAV_TOKEN=/^[vaf]\.[a-z0-9-]{1,40}$/,VOLG_TOKEN=/^[fk]\.[a-z]{1,12}$/,OVERIG_TOKEN=/^[a-z]\.[a-z0-9-]{1,60}$/;
+const FAV={fav:[],volg:[],overig:[],b:0,t:0,e:0};
 const favPad=()=>location.pathname.replace(/[^/]*$/,'')||'/';
 function leesFav(){
   const m=document.cookie.match(new RegExp('(?:^|; )'+FAV_COOKIE+'=([^;]*)'));let w='';
   try{w=m?decodeURIComponent(m[1]):'';}catch(e){w='';}
   const d=w.split('~');if(d[0]!=='1')return;
   FAV.fav=[...new Set((d[1]||'').split('_').filter(x=>FAV_TOKEN.test(x)))].slice(0,FAV_MAX);
+  FAV.overig=[...new Set((d[1]||'').split('_').filter(x=>!FAV_TOKEN.test(x)&&OVERIG_TOKEN.test(x)))].slice(0,FAV_MAX);
   FAV.volg=[...new Set((d[2]||'').split('_').filter(x=>VOLG_TOKEN.test(x)&&cat(x.slice(2))))];
   FAV.b=Math.max(0,parseInt(d[3],10)||0);FAV.t=Math.max(0,parseInt(d[4],10)||0);FAV.e=d[5]==='1'?1:0;
 }
@@ -1825,8 +1962,8 @@ function leesFav(){
 function bewaarFav(){
   const veilig=location.protocol==='https:'?'; Secure':'',attr='; Path='+favPad()+'; SameSite=Lax'+veilig;
   if(!FAV.volg.length){FAV.b=0;FAV.t=0;FAV.e=0;}
-  if(!FAV.fav.length&&!FAV.volg.length){document.cookie=FAV_COOKIE+'=; Max-Age=0'+attr;return true;}
-  const w=encodeURIComponent(['1',FAV.fav.join('_'),FAV.volg.join('_'),FAV.b||'',FAV.t||'',FAV.e?'1':''].join('~'));
+  if(!FAV.fav.length&&!FAV.volg.length&&!FAV.overig.length){document.cookie=FAV_COOKIE+'=; Max-Age=0'+attr;return true;}
+  const w=encodeURIComponent(['1',FAV.fav.concat(FAV.overig).join('_'),FAV.volg.join('_'),FAV.b||'',FAV.t||'',FAV.e?'1':''].join('~'));
   if((FAV_COOKIE+'='+w).length>FAV_MAX_BYTES)return false;
   try{document.cookie=FAV_COOKIE+'='+w+'; Max-Age=31536000'+attr;}catch(e){return false;}
   return document.cookie.indexOf(FAV_COOKIE+'='+w)>=0;
@@ -1900,10 +2037,31 @@ function importeerFavorieten(favRuw,volgRuw){
 function zoekUitHash(termRuw,inTab){
   let q='';try{q=decodeURIComponent(termRuw.replace(/\+/g,' '));}catch(e){q=termRuw;}
   q=q.replace(/[\u0000-\u001F\u007F]/g,' ').replace(/\s+/g,' ').trim().slice(0,100);
-  const tab=['forum','kennisbank','faq','hulpmiddelen','begrippen'].includes(inTab)?inTab:'forum';
-  Object.assign(S,{q,tab,view:tab,cat:'alle',status:'alle',kbCat:'alle',faqMax:50,forumMax:30});
+  const tab=['forum','kennisbank','faq','hulpmiddelen','begrippen','zoeken'].includes(inTab)?inTab:zoekQuery(q)?'zoeken':'forum';
+  Object.assign(S,{q,tab,view:tab,cat:'alle',status:'alle',kbCat:'alle',faqMax:50,forumMax:30,zoekOpen:{}});
   const i=$('#search');if(i)i.value=q;
-  if(q)laadFaq();
+  if(q){laadFaq();laadExtra();}
+}
+/* Gevolgde aanbieders (tokens "b.<id>", gezet op aanbieders.html). Namen komen uit data/aanbieders.js, dat pas hier wordt geladen. */
+let AANB_BELOFTE=null;
+function laadAanbieders(){
+  if(Array.isArray(window.AANBIEDERS))return Promise.resolve();
+  if(AANB_BELOFTE)return AANB_BELOFTE;
+  AANB_BELOFTE=new Promise(ok=>{const sc=document.createElement('script');sc.src='data/aanbieders.js';sc.onload=ok;sc.onerror=()=>{window.AANBIEDERS=[];ok();};document.body.appendChild(sc);})
+    .then(()=>{if(S.view==='favorieten')render(true);});
+  return AANB_BELOFTE;
+}
+function favAanbiedersBlok(){
+  const ids=FAV.overig.filter(x=>x[0]==='b').map(x=>x.slice(2));
+  const lijst=Array.isArray(window.AANBIEDERS)?window.AANBIEDERS:null;
+  if(ids.length&&!lijst)laadAanbieders();
+  const item=id=>{const a=lijst&&lijst.find(x=>x&&x.id===id);
+    return `<li><span><a href="aanbieders.html#aanbieder-${esc(id)}">${esc(a?a.naam:lijst?id:id+' (wordt geladen…)')}</a><span class="wanneer">${a?(a.demo?'Voorbeeldprofiel, fictief':'Aanbieder'):lijst?'Niet meer beschikbaar':''}</span></span></li>`;};
+  return `<div class="card" style="margin-top:16px" id="fav-aanbieders"><div class="pad">
+      <h2 style="font-size:17px;margin:0 0 4px">Aanbieders die je volgt ${ids.length?`<span class="chip">${ids.length}</span>`:''}</h2>
+      <p style="font-size:13px;color:var(--muted);margin:0 0 6px">Volgen of ontvolgen doe je op de pagina <a href="aanbieders.html">Aanbieders</a>. Daar staan gevolgde aanbieders bovenaan, met hun nieuws in een eigen blok.</p>
+      ${ids.length?`<ul class="fav-lijst">${ids.map(item).join('')}</ul>`:'<div class="empty" style="padding:6px 0"><b>Nog geen aanbieders gevolgd</b>Klik op aanbieders.html bij een aanbieder op Volgen.</div>'}
+    </div></div>`;
 }
 function viewFavorieten(){
   const groepen=[['v','Forumvragen'],['a','Kennisbankartikelen'],['f','Veelgestelde vragen']];
@@ -1919,7 +2077,7 @@ function viewFavorieten(){
   const kbCats=CATS.filter(c=>ARTIKELEN.some(a=>a.cat===c.id));
   return `<section>
     <div class="listhead"><div><h1>Mijn favorieten</h1><div class="sub">${plural(FAV.fav.length,'favoriet','favorieten')} van maximaal ${FAV_MAX} · ${plural(FAV.volg.length,'gevolgde categorie','gevolgde categorieën')}</div></div></div>
-    <div class="notice" style="margin-bottom:14px"><b>Functionele cookie.</b> Je favorieten en de categorieën die je volgt staan alleen in de cookie <code>af_favorieten</code> op dit apparaat, met de datum van je vorige bezoek zolang je iets volgt. Er staan alleen nummers van vragen, artikelen en categorieën in, geen naam of andere persoonsgegevens; het Adviesforum ontvangt niets. De cookie blijft een jaar bewaard en verdwijnt als je alles wist of je cookies verwijdert. Zie de <a href="privacy.html">privacyverklaring</a>.</div>
+    <div class="notice" style="margin-bottom:14px"><b>Functionele cookie.</b> Je favorieten en de categorieën die je volgt staan alleen in de cookie <code>af_favorieten</code> op dit apparaat, met de datum van je vorige bezoek zolang je iets volgt. Er staan alleen nummers van vragen, artikelen en categorieën in, en de id's van aanbieders die je volgt op de pagina Aanbieders, geen naam of andere persoonsgegevens; het Adviesforum ontvangt niets. De cookie blijft een jaar bewaard en verdwijnt als je alles wist of je cookies verwijdert. Zie de <a href="privacy.html">privacyverklaring</a>.</div>
     <div class="card"><div class="pad" id="fav-lijst">
       ${FAV.fav.length?groepen.map(blok).join(''):'<div class="empty" style="padding:10px 0"><b>Nog geen favorieten</b>Klik bij een forumvraag, kennisbankartikel of FAQ-vraag op ☆ Bewaar.</div>'}
     </div></div>
@@ -1929,11 +2087,12 @@ function viewFavorieten(){
       <h3 style="font-size:14px;margin:10px 0 0">Forum</h3><div class="volg-rij">${CATS.map(c=>volgKnopNaam('f',c)).join('')}</div>
       <h3 style="font-size:14px;margin:4px 0 0">Kennisbank</h3><div class="volg-rij">${kbCats.map(c=>volgKnopNaam('k',c)).join('')}</div>
     </div></div>
+    ${favAanbiedersBlok()}
     <div class="card" style="margin-top:16px"><div class="pad">
       <h2 style="font-size:17px;margin:0 0 4px">Op een ander apparaat gebruiken</h2>
       <p style="font-size:13px;color:var(--muted);margin:0 0 10px">De link bevat alleen de nummers van je favorieten en gevolgde categorieën. Open hem op je andere apparaat: de favorieten worden daar toegevoegd aan wat er al stond.</p>
       <input class="fav-export" id="fav-export" type="text" readonly aria-label="Link met je favorieten" value="${esc(favExportUrl())}">
-      <div class="actions" style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap"><button type="button" class="btn btn-black btn-sm" data-act="fav-export"${FAV.fav.length||FAV.volg.length?'':' disabled'}>Favorieten exporteren als link</button><button type="button" class="btn btn-line btn-sm" data-act="fav-wis"${FAV.fav.length||FAV.volg.length?'':' disabled'}>Alles wissen en cookie verwijderen</button></div>
+      <div class="actions" style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap"><button type="button" class="btn btn-black btn-sm" data-act="fav-export"${FAV.fav.length||FAV.volg.length?'':' disabled'}>Favorieten exporteren als link</button><button type="button" class="btn btn-line btn-sm" data-act="fav-wis"${FAV.fav.length||FAV.volg.length||FAV.overig.length?'':' disabled'}>Alles wissen en cookie verwijderen</button></div>
     </div></div>
   </section>`;
 }
@@ -1941,8 +2100,8 @@ const volgKnopNaam=(soort,c)=>{const aan=volgt(soort,c.id);return `<button type=
 /* Na het laden van de FAQ alleen bijwerken wat ervan afhangt (formulieren blijven staan) */
 function naFaqGeladen(){
   VIND_CACHE.clear();renderShell();
-  if(S.view==='faq'||S.view==='begrippen'||S.view==='favorieten'){render(true);return;}
-  const o=document.querySelector('#app .ook');if(o)o.outerHTML=ookGevonden(S.view);
+  if(S.view==='faq'||S.view==='begrippen'||S.view==='favorieten'||S.view==='zoeken'){render(true);return;}
+  const o=document.querySelector('#app .ook');if(o)o.outerHTML=ookGevonden(S.view);zoekStatusMelden();
   if(S.view==='vraag'){const v=VRAGEN.find(x=>x.id===S.vraag);const kaart=v&&document.getElementById('auto-'+v.id);
     if(v&&v.auto&&!v.auto.metFaq&&kaart){autoAnswer(v,true);kaart.outerHTML=autoCard(v);}}
 }
