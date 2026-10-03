@@ -221,6 +221,21 @@
     return f || '';
   }
   function words(s){ return (s || '').split(/\s+/).filter(Boolean).length; }
+  // Dossierreferentie: zelfde opschoning als dossierpakket.html. null = lijkt op een BSN (8 of 9 cijfers).
+  function schoneRef(v){
+    v = String(v == null ? '' : v).replace(/[\u0000-\u001F\u007F]/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 80);
+    if (/^\d{8,9}$/.test(v.replace(/[\s.-]/g, ''))) return null;
+    return v;
+  }
+  function refUitHash(){
+    var r = '';
+    String(location.hash || '').replace(/^#/, '').split('&').forEach(function(deel){
+      if (deel.slice(0, 4) !== 'ref=') return;
+      var v; try { v = decodeURIComponent(deel.slice(4).replace(/\+/g, ' ')); } catch (e) { return; }
+      var x = schoneRef(v); if (x) r = x;
+    });
+    return r;
+  }
   window.FORM = {
     id: 'afwijkend-advies', klant: false,
     title: 'Verklaring afwijkend advies',
@@ -234,7 +249,7 @@
         { id: 'partner', type: 'text', label: 'Naam partner', req: true, show: function(V){ return V('tweede') === 'ja'; } },
         { id: 'adviseur', type: 'text', label: 'Naam adviseur', req: true },
         { id: 'kantoor', type: 'text', label: 'Kantoor' },
-        { id: 'dossier', type: 'text', label: 'Dossier- of adviesnummer' }
+        { id: 'dossier', type: 'text', label: 'Dossierreferentie', def: 'ref', ph: 'Bijv. dossiernummer 2026-0412', hint: '<strong class="warn">Geen BSN of bijzondere persoonsgegevens.</strong> Gebruik een intern dossiernummer of kenmerk, maximaal 80 tekens.<span class="ok" id="ref-bron" hidden> Overgenomen uit dossierpakket.</span>' }
       ] },
       { id: 'ond', title: 'Onderwerp', fields: [
         { id: 'onderwerp', type: 'select', label: 'Waarop wijkt de klant af?', req: true, full: true, opts: [['hoogte','Hoogte van de lening of woonlasten'],['vorm','Hypotheekvorm of aflossingsvrij deel'],['rvp','Rentevaste periode'],['orv','Overlijdensrisicodekking'],['ao','Dekking arbeidsongeschiktheid'],['ww','Dekking werkloosheid'],['eigen','Inzet eigen geld'],['nhg','Nationale Hypotheek Garantie'],['duurzaam','Verduurzaming'],['anders','Anders']] },
@@ -263,11 +278,13 @@
       if (V('advies') && words(V('advies')) < 4) e.push({ id: 'advies', msg: 'Beschrijf het advies concreet (minstens een volledige zin).' });
       if (V('keuze') && V('advies') && V('keuze').toLowerCase() === V('advies').toLowerCase()) e.push({ id: 'keuze', msg: 'De keuze van de klant is gelijk aan het advies; dan is er geen afwijking.' });
       if (V('risico') && words(V('risico')) < 4) e.push({ id: 'risico', msg: 'Beschrijf de risico’s concreet (minstens een volledige zin).' });
+      if (V('dossier') && schoneRef(V('dossier')) === null) e.push({ id: 'dossier', msg: 'Dit lijkt op een BSN. Gebruik een intern dossiernummer.' });
       if (V('motivatie') && words(V('motivatie')) < 4) e.push({ id: 'motivatie', msg: 'Leg de motivatie van de klant vast in minstens een volledige zin.' });
       return e;
     },
     live: function(V, U){
       var p = [];
+      if (V('dossier') && schoneRef(V('dossier')) === null) p.push('<span class="warn">De dossierreferentie lijkt op een BSN.</span> Gebruik een intern dossiernummer.');
       var hasNum = /\d/.test(V('risico')) || V('scen').some(function(r){ return r.bedrag; });
       if (V('risico') && !hasNum) p.push('<span class="warn">Geen bedragen gevonden in de risico’s.</span> Maak de gevolgen concreet met bedragen of scenario’s.');
       if (V('motivatie') && words(V('motivatie')) < 10) p.push('De motivatie is kort. Leg de beweegredenen van de klant zo volledig mogelijk vast.');
@@ -289,6 +306,13 @@
       if (V('tweede') === 'ja') s.push({ role: 'Partner', name: V('partner'), date: d, place: pl });
       s.push({ role: 'Adviseur', name: V('adviseur'), date: d, place: pl });
       return s;
+    },
+    onLive: function(app, update){
+      var inp = document.getElementById('dossier'); if (!inp) return;
+      inp.setAttribute('maxlength', '80');
+      var r = refUitHash();
+      if (r) { inp.value = r; var b = document.getElementById('ref-bron'); if (b) b.hidden = false; }
+      inp.addEventListener('input', function(){ var b = document.getElementById('ref-bron'); if (b) b.hidden = true; });
     },
     signTitle: 'Ondertekening',
     signText: 'Door ondertekening bevestigen partijen de inhoud van deze verklaring. De klant ontvangt een kopie.',
