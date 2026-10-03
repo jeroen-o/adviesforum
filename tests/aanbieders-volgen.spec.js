@@ -36,7 +36,8 @@ test('data: agenda alleen bij de fictieve aanbieders, rekenexperts en rubriek ba
   }
   expect(L.find(x => x.id === 'raadhuys').naam).toBe('Raadhuys Tax Legal Accounting');
   expect(L.filter(a => (a.rubrieken || []).includes('bankgarantie')).map(a => a.id).sort()).toEqual(['bnp-paribas-cardif', 'nationale-waarborg']);
-  expect(L.find(x => x.id === 'bnp-paribas').rubrieken).toBeUndefined();
+  expect(L.find(x => x.id === 'bnp-paribas').rubrieken || []).not.toContain('bankgarantie');
+  expect(L.filter(a => (a.rubrieken || []).includes('krediet')).length).toBeGreaterThanOrEqual(9);
 });
 
 test('volgen: cookie, bovenaan, filter, nieuwsblok, na herladen en in Mijn favorieten', async ({ page, context, baseURL }) => {
