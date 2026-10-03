@@ -381,7 +381,7 @@ const PAGINAS_LLMS = [
     ['nhg-check.html', 'NHG-check 2026', 'kostentoets, leningtoets en borgtochtprovisie volgens de NHG-normen 2026'],
     ['acceptatiewijzer.html', 'Acceptatiewijzer', 'aandachtspunten per bijzondere klantsituatie (zzp, flexwerk, expat, scheiding, senioren en meer)'],
     ['wetgeving.html', 'Wet- en regelgeving', 'wetten, besluiten en bronnen voor adviseurs, met wat er verandert in 2026–2027'],
-    ['partijen.html', 'Partijenwegwijzer', 'geldverstrekkers, verzekeraars en pensioenuitvoerders met portals en voorwaarden'],
+    ['partijen.html', 'Aanbiederwegwijzer', 'geldverstrekkers, verzekeraars en pensioenuitvoerders met portals en voorwaarden'],
     ['adviesroute.html', 'Adviesroute', 'het adviesproces stap voor stap met dossierstukken en aandachtspunten'],
     ['vergelijken.html', 'Vergelijken', 'voorwaarden van aanbieders per thema naast elkaar'],
     ['kalender.html', 'Kalender', 'belangrijke data en deadlines voor adviseurs'],
