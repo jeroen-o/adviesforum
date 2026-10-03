@@ -130,6 +130,9 @@ input:focus,select:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 .knop.licht:hover{background:var(--vlak)}
 .status{font-size:13px;font-weight:600;color:var(--groen);min-height:1.2em;margin:0 0 8px}
 .handmatig{display:none;margin-top:10px}
+.overname{margin:0 0 16px;padding:10px 14px;border-radius:10px;font-size:13.5px;background:#EAF6EF;border:1px solid #BFE3CD;color:#14532D}
+.overname.let{background:#FFF1F0;border-color:#F3C1BC;color:#7A1F16}
+.overname[hidden]{display:none}
 .handmatig textarea{width:100%;min-height:160px;font-size:12.5px;padding:10px;border:1px solid #CFCFCF;border-radius:9px}
 
 .voet{max-width:1180px;margin:0 auto;padding:24px 24px 40px;font-size:12.5px;color:var(--grijs)}
@@ -185,6 +188,7 @@ input:focus,select:focus,textarea:focus,button:focus-visible,a:focus-visible{out
   </nav>
 
   <div class="inhoud">
+    <p class="overname" id="overname" role="status" hidden></p>
     <div class="uitleg">
       <p><strong>Zo werkt het</strong></p>
       <ol>
@@ -276,6 +280,7 @@ input:focus,select:focus,textarea:focus,button:focus-visible,a:focus-visible{out
           <button type="button" class="knop" id="kopieer">Kopiëren</button>
           <button type="button" class="knop licht" id="afdrukken">Afdrukken</button>
           <button type="button" class="knop licht" id="wissen">Alles leegmaken</button>
+          <button type="button" class="knop licht" id="naar-nazorg">Naar nazorgsignalen</button>
         </div>
         <p class="status" id="status" role="status"></p>
         <pre id="tekst"></pre>
@@ -858,6 +863,77 @@ $('onderdelen').addEventListener('click', function(e){
 $('kopieer').addEventListener('click', kopieer);
 $('afdrukken').addEventListener('click', afdrukken);
 $('wissen').addEventListener('click', wissen);
+
+/* ---------- Overnemen uit de URL-hash (#toets=..&bron=..&ref=..); niets wordt opgeslagen ---------- */
+var BRON_SOORT = {
+  vast:['Werkgeversverklaring','Loondienst, vast dienstverband'],
+  tijdelijk:['Anders','Loondienst, tijdelijk of flexibel'],
+  ibl:['Inkomensbepaling Loondienst (UWV-gegevens)','Loondienst, IBL-methodiek'],
+  ondernemer:['Inkomensverklaring ondernemer','Ondernemer / zzp'],
+  perspectief:['Anders','Flexwerk met Perspectiefverklaring'],
+  pensioen:['Pensioen- of uitkeringsspecificatie','Pensioen en AOW'],
+  overig:['Anders','Overige inkomsten']
+};
+function schoneRef(v){
+  v = String(v==null?'':v).replace(/[\u0000-\u001F\u007F]/g,' ').replace(/\s+/g,' ').trim().slice(0,80);
+  if (/^\d{8,9}$/.test(v.replace(/[\s.-]/g,''))) return null; // lijkt op een BSN
+  return v;
+}
+function hashParams(){
+  var p={};
+  String(location.hash||'').replace(/^#/,'').split('&').forEach(function(deel){
+    var i=deel.indexOf('='); if (i<1) return;
+    var v=deel.slice(i+1);
+    try { v=decodeURIComponent(v.replace(/\+/g,' ')); } catch(e){ p[deel.slice(0,i)]=null; return; }
+    p[deel.slice(0,i)]=v;
+  });
+  return p;
+}
+function toonOvername(t, waarsch){
+  var el=$('overname'); el.textContent=t; el.className='overname'+(waarsch?' let':''); el.hidden=!t;
+}
+function leesOvername(){
+  var p=hashParams(), heeft=function(k){ return Object.prototype.hasOwnProperty.call(p,k); };
+  if (!heeft('toets') && !heeft('bron') && !heeft('ref')) return;
+  var genomen=[], fout=[];
+  if (heeft('toets')){
+    var t = p.toets!=null && /^\d{1,8}(\.\d{1,2})?$/.test(p.toets) ? Number(p.toets) : NaN;
+    if (isFinite(t) && t>0 && t<=10000000){ $('x-hoogte-toets').value=(Math.round(t)===t?NF0:NF2).format(t); genomen.push('toetsinkomen '+fmtEur(t)); }
+    else fout.push('toetsinkomen');
+  }
+  if (heeft('bron')){
+    var b = p.bron!=null && Object.prototype.hasOwnProperty.call(BRON_SOORT,p.bron) ? BRON_SOORT[p.bron] : null;
+    if (b){
+      $('x-hoogte-bronink').value=b[0];
+      if (!waarde('p-inksoort')) $('p-inksoort').value=b[1];
+      genomen.push('bron ('+b[1]+')');
+    } else fout.push('bron');
+  }
+  if (heeft('ref')){
+    var r=schoneRef(p.ref);
+    if (r){ $('p-ref').value=r; genomen.push('dossierreferentie'); }
+    else if (r===null) fout.push('dossierreferentie (lijkt op een BSN)');
+  }
+  var uitInk = heeft('toets') || heeft('bron');
+  var t1 = genomen.length ? (uitInk ? 'Overgenomen uit inkomensbepaling: ' : 'Overgenomen uit de link: ')+genomen.join(', ')+'. Controleer de waarden.' : '';
+  var t2 = fout.length ? 'Niet overgenomen (ongeldige waarde): '+fout.join(', ')+'.' : '';
+  toonOvername((t1+(t1&&t2?' ':'')+t2), !genomen.length && fout.length);
+}
+leesOvername();
+window.addEventListener('hashchange', function(){ leesOvername(); werkBij(); });
+
+$('naar-nazorg').addEventListener('click', function(){
+  var url='nazorg-signalen.html', delen=[];
+  var r=schoneRef(waarde('p-ref'));
+  if (r) delen.push('ref='+encodeURIComponent(r));
+  // Geboortedatum alleen meegeven als dit hulpmiddel er een veld voor heeft (nu niet).
+  var g=waarde('p-geb');
+  if (/^\d{4}-\d{2}-\d{2}$/.test(g)) delen.push('geb='+g);
+  if (delen.length) url+='#'+delen.join('&');
+  var w=null;
+  try { w=window.open(url,'_blank'); } catch(e){ w=null; }
+  if (!w) location.href=url;
+});
 werkBij();
 })();
 </script>
