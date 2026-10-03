@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dossierpakket – Adviesforum</title>
+<meta name="description" content="Stel een hypotheekdossier samen uit de hulpmiddelen van het Adviesforum: één dossierreferentie, een checklist van onderdelen en een afdrukbaar voorblad met inhoudsopgave. Er wordt niets opgeslagen.">
+<style>
+@font-face{font-family:Montserrat;font-style:normal;font-weight:400;font-display:swap;src:url(fonts/montserrat-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:600;font-display:swap;src:url(fonts/montserrat-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:700;font-display:swap;src:url(fonts/montserrat-latin-700-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:800;font-display:swap;src:url(fonts/montserrat-latin-800-normal.woff2) format('woff2')}
+
+:root{
+  --geel:#FFD200;--geel-donker:#E6BD00;--geel-zacht:#FFF6C7;
+  --zwart:#141414;--tekst:#1F1F1F;--grijs:#5E5E5E;--lijn:#E4E4E4;--vlak:#F7F7F5;
+  --rood:#C0392B;--rood-zacht:#FFF1F0;--groen:#1E7A4B;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:Montserrat,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  color:var(--tekst);background:#fff;line-height:1.55;font-size:15px;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+button,input,select,textarea{font-family:inherit}
+:focus-visible{outline:3px solid rgba(255,210,0,.75);outline-offset:2px}
+
+.balk{background:var(--zwart);color:#fff;font-size:12.5px;padding:8px 24px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.balk a{color:#fff;text-decoration:none;opacity:.88}
+.balk a:hover{opacity:1;text-decoration:underline}
+
+.kop{background:var(--geel);color:var(--zwart);padding:34px 24px 38px}
+.kop-in{max-width:1180px;margin:0 auto}
+.merk{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.08em;font-size:12px;text-transform:uppercase;margin-bottom:16px}
+.zeshoek{width:22px;height:25px;background:var(--zwart);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);flex:none}
+.terug{display:inline-block;font-size:13.5px;font-weight:700;text-decoration:none;border-bottom:2px solid var(--zwart);margin-bottom:14px}
+.kop h1{margin:0 0 10px;font-size:clamp(27px,4.2vw,40px);line-height:1.12;font-weight:800}
+.kop p{margin:0;max-width:66ch;font-size:15.5px}
+.kop .stempel{display:inline-block;margin-top:16px;font-size:12px;font-weight:700;background:var(--zwart);color:var(--geel);padding:5px 11px;border-radius:999px}
+
+.romp{max-width:1180px;margin:0 auto;padding:28px 24px 56px}
+.niets{background:var(--vlak);border-left:4px solid var(--zwart);border-radius:0 10px 10px 0;padding:12px 16px;font-size:14px;margin:0 0 20px}
+.niets p{margin:0}
+
+.kaart{border:1px solid var(--lijn);border-radius:14px;padding:20px;margin-bottom:22px}
+.kaart h2{margin:0 0 6px;font-size:21px;font-weight:800}
+.kaart > p{margin:0 0 14px;color:var(--grijs);font-size:14px;max-width:72ch}
+.raster{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:14px 16px}
+.veld{min-width:0}
+.veld label{display:block;font-weight:600;font-size:13.5px;margin-bottom:5px}
+.veld .tip{display:block;font-size:12px;color:var(--grijs);margin-top:4px}
+.veld .tip.fout{color:var(--rood);font-weight:600}
+.veld input{width:100%;padding:10px 12px;border:1px solid #CFCFCF;border-radius:9px;font-size:15px;background:#fff;color:var(--tekst)}
+.veld input:focus{outline:3px solid rgba(255,210,0,.6);outline-offset:1px;border-color:#9A9A9A}
+.veld input.fout{border-color:var(--rood);background:var(--rood-zacht)}
+.waarschuwing{margin-top:14px;background:var(--rood-zacht);border-left:4px solid var(--rood);border-radius:0 10px 10px 0;padding:10px 14px;font-size:13.5px}
+.waarschuwing strong{color:#A5281B}
+
+.knoppen{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.knop{display:inline-block;text-decoration:none;border-radius:999px;padding:9px 16px;font-size:13.5px;font-weight:700;cursor:pointer;border:1px solid var(--zwart);background:var(--zwart);color:#fff;line-height:1.3;text-align:center}
+.knop:hover{background:#000}
+.knop.licht{background:#fff;color:var(--zwart);border-color:#CFCFCF}
+.knop.licht:hover{background:var(--vlak)}
+.status{font-size:13px;font-weight:600;color:var(--groen);min-height:1em}
+
+.onderdelen{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.onderdeel{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:12px 14px;align-items:start;border:1px solid var(--lijn);border-radius:12px;padding:14px 16px;background:#fff}
+.onderdeel.klaar{background:#F2FAF5;border-color:#BFE3CD}
+.onderdeel input[type=checkbox]{width:20px;height:20px;margin:2px 0 0;accent-color:var(--zwart)}
+.onderdeel .tekst{min-width:0}
+.onderdeel label{font-weight:700;font-size:15px;cursor:pointer}
+.onderdeel .wat{display:block;font-size:13px;color:#3A3A3A;margin-top:3px}
+.onderdeel .grond{display:inline-block;margin-top:6px;font-size:11.5px;font-weight:700;border-radius:999px;padding:2px 9px}
+.grond.ld{background:var(--geel-zacht);color:#7A5A00;border:1px solid var(--geel-donker)}
+.grond.wet{background:var(--zwart);color:var(--geel)}
+.grond.pr{background:var(--vlak);color:var(--grijs);border:1px solid var(--lijn)}
+.onderdeel .noref{display:block;font-size:12px;color:var(--grijs);margin-top:4px}
+.teller{font-size:13.5px;font-weight:700;margin:12px 0 0}
+
+.uitleg{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+.blok{border-radius:0 10px 10px 0;padding:12px 16px;font-size:14px}
+.blok h3{margin:0 0 6px;font-size:13px;font-weight:800;letter-spacing:.04em;text-transform:uppercase}
+.blok p{margin:0 0 6px}
+.blok ul{margin:4px 0 0;padding-left:18px}
+.blok li{margin:2px 0}
+.blok.regel{background:var(--vlak);border-left:4px solid var(--zwart)}
+.blok.let-op{background:var(--geel-zacht);border-left:4px solid var(--geel-donker)}
+.blok.let-op h3{color:#7A5A00}
+
+.compliance{max-width:1132px;margin:0 auto 10px;background:var(--rood-zacht);border-left:4px solid var(--rood);border-radius:0 10px 10px 0;padding:14px 18px;font-size:14px}
+.compliance strong{color:#A5281B}
+.compliance p{margin:0}
+.compliance p+p{margin-top:6px}
+.voet{max-width:1180px;margin:0 auto;padding:24px 24px 40px;font-size:12.5px;color:var(--grijs)}
+.voet a{color:var(--zwart);font-weight:600}
+
+@media (max-width:800px){
+  .uitleg{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:560px){
+  .balk,.kop{padding-left:16px;padding-right:16px}
+  .romp,.voet{padding-left:16px;padding-right:16px}
+  .compliance{margin-left:16px;margin-right:16px}
+  .raster{grid-template-columns:minmax(0,1fr)}
+  .kaart{padding:16px 14px}
+  .onderdeel{grid-template-columns:auto minmax(0,1fr)}
+  .onderdeel .knop{grid-column:1/-1;justify-self:start}
+}
+@media print{
+  .balk,.compliance,.voet,.knoppen,.onderdeel .knop{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="balk">
+  <span>Adviesforum &middot; hulpmiddelen voor financieel adviseurs</span>
+  <span><a href="index.html">Naar het forum</a></span>
+</div>
+
+<header class="kop">
+  <div class="kop-in">
+    <div class="merk"><span class="zeshoek" aria-hidden="true"></span>Adviesforum &middot; Hulpmiddelen</div>
+    <a class="terug" href="index.html#hulpmiddelen">&larr; Terug naar de hulpmiddelen</a>
+    <h1>Dossierpakket hypotheekadvies</h1>
+    <p>Eén startpunt voor het klantdossier: vul één dossierreferentie in, open van hieruit de hulpmiddelen met die referentie al ingevuld, vink af wat klaar is en druk een voorblad met inhoudsopgave af.</p>
+    <span class="stempel">Hulpmiddel &middot; geen dossiersysteem &middot; er wordt niets opgeslagen</span>
+  </div>
+</header>
+
+<div class="compliance" role="note">
+  <p><strong>Compliance:</strong> dit pakket is een ordeningshulp, geen vervanging van het dossiersysteem, de adviessoftware of de procedures van je vergunninghouder. Welke stukken in het dossier horen, bepaalt uiteindelijk je eigen beleid binnen de wet- en regelgeving. De verwijzingen naar de AFM Leidraad Hypotheekadvisering (april 2026) zijn een eigen samenvatting; de Leidraad is geen uitputtende lijst van wettelijke eisen.</p>
+</div>
+
+<main class="romp">
+  <div class="niets" role="note">
+    <p><strong>Er wordt niets bewaard.</strong> De referentie en de vinkjes staan alleen in deze browsertab en zijn weg na sluiten of herladen. De referentie gaat alleen mee in het webadres (na het #-teken) naar de hulpmiddelen; er wordt niets verstuurd.</p>
+  </div>
+
+  <section class="kaart" aria-labelledby="kop-dossier">
+    <h2 id="kop-dossier">Dossier</h2>
+    <p>De referentie wordt doorgegeven aan de hulpmiddelen die een eigen referentieveld hebben.</p>
+    <div class="raster">
+      <div class="veld">
+        <label for="ref">Dossierreferentie</label>
+        <input id="ref" type="text" maxlength="80" autocomplete="off" placeholder="Bijv. dossiernummer 2026-0412">
+        <span class="tip" id="ref-tip" aria-live="polite">Een intern dossiernummer of kenmerk. Maximaal 80 tekens.</span>
+      </div>
+      <div class="veld">
+        <label for="datum">Datum</label>
+        <input id="datum" type="date">
+      </div>
+    </div>
+    <div class="waarschuwing" role="note"><strong>Geen BSN of bijzondere persoonsgegevens.</strong> Gebruik in de referentie geen burgerservicenummer, geen gegevens over gezondheid, strafrechtelijke gegevens of andere bijzondere persoonsgegevens, en liefst ook geen naam. Het webadres met de referentie kan in de browsergeschiedenis terechtkomen.</div>
+  </section>
+
+  <section class="kaart" aria-labelledby="kop-onderdelen">
+    <h2 id="kop-onderdelen">Onderdelen van het dossier</h2>
+    <p>Open per onderdeel het hulpmiddel (in een nieuw tabblad), vul het in en druk het af of bewaar het als PDF. Vink het hier af zodra het in het dossier zit.</p>
+    <ul class="onderdelen" id="onderdelen"></ul>
+    <p class="teller" id="teller" aria-live="polite"></p>
+    <div class="knoppen" style="margin-top:14px">
+      <button type="button" class="knop" id="voorblad">Voorblad afdrukken</button>
+      <button type="button" class="knop licht" id="wis">Vinkjes wissen</button>
+      <span class="status" id="status" role="status"></span>
+    </div>
+  </section>
+
+  <section class="kaart" aria-labelledby="kop-uitleg">
+    <h2 id="kop-uitleg">Zo stel je het dossier samen</h2>
+    <div class="uitleg">
+      <div class="blok regel">
+        <h3>Elk onderdeel apart afdrukken</h3>
+        <p>De hulpmiddelen werken los van elkaar en bewaren niets. Daarom maak je per onderdeel een eigen afdruk:</p>
+        <ul>
+          <li>Open het onderdeel via de knop hiernaast; de referentie staat er dan al in (waar een referentieveld is).</li>
+          <li>Gebruik in het hulpmiddel de knop voor afdrukken en kies in het printvenster &lsquo;Opslaan als PDF&rsquo;.</li>
+          <li>Sla de PDF op in je eigen dossiersysteem en vink het onderdeel hier af.</li>
+          <li>Druk tot slot het voorblad af als inhoudsopgave bovenop het pakket.</li>
+        </ul>
+        <p>Werk je eerst de inkomensbepaling uit, gebruik dan daar &lsquo;Gebruik in adviesmotivatie&rsquo;: het toetsinkomen en de bron gaan dan mee.</p>
+      </div>
+      <div class="blok let-op">
+        <h3>Wat hoort volgens de AFM Leidraad in het dossier?</h3>
+        <p>De Leidraad Hypotheekadvisering (april 2026) noemt onder meer:</p>
+        <ul>
+          <li>De relevante informatie over de klant en de gegevens over het geadviseerde of bemiddelde product, zodat je kunt aantonen hoe het advies tot stand kwam (p. 8).</li>
+          <li>Een onderbouwd adviesrapport waaruit blijkt op welke informatie het advies rust en welke overwegingen een rol speelden (p. 8).</li>
+          <li>Waar nodig de berekeningen achter de scenario&rsquo;s, bijvoorbeeld de betaalbaarheid na pensionering (p. 7).</li>
+          <li>Een afwijking van het advies, met de motieven van de klant en de besproken gevolgen, in dossier en adviesrapport (p. 4, 14, 23-24).</li>
+        </ul>
+        <p>De Wwft-vastlegging volgt niet uit de Leidraad maar uit de Wwft zelf, voor zover je daaronder valt. Nazorgsignalen zijn goede praktijk, geen dossiereis uit de Leidraad.</p>
+        <p>Bron: <a href="documenten/Leidraad-Hypotheekadvisering-2026.pdf">AFM Leidraad Hypotheekadvisering 2026 (pdf)</a>.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="voet">
+  Adviesforum &middot; collegiale kennisdeling voor financieel adviseurs &middot; <a href="index.html#hulpmiddelen">Alle hulpmiddelen</a> &middot; <a href="rekentools.html">Rekenhulpen</a> &middot; <a href="privacy.html">Privacy</a>. Er wordt niets opgeslagen of verstuurd: alles blijft in deze browsertab.
+</footer>
+
+<script>
+(function () {
+  'use strict';
+  function $(id) { return document.getElementById(id); }
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+
+  // grond: [soort, tekst]; soort ld = Leidraad, wet = wettelijke vastleggingsplicht, pr = goede praktijk
+  var ONDERDELEN = [
+    { id: 'inkomen', titel: 'Inkomensbepaling', url: 'inkomensbepaling.html', ref: true,
+      wat: 'Toetsinkomen per inkomenssoort met invoer, documenten en aandachtspunten.',
+      grond: ['ld', 'Leidraad p. 7-8, 10-11'] },
+    { id: 'wwft', titel: 'Wwft-vastlegging (cliëntenonderzoek)', url: 'wwft-cdd.html', ref: true,
+      wat: 'Checklist cliëntenonderzoek, risicoscore en motivering, voor zover de Wwft op je dienstverlening van toepassing is.',
+      grond: ['wet', 'Wwft, geen Leidraad-eis'] },
+    { id: 'motivatie', titel: 'Adviesmotivatie', url: 'adviesmotivatie.html', ref: true,
+      wat: 'Klantprofiel en motivering per adviesonderdeel, als basis voor het adviesrapport.',
+      grond: ['ld', 'Leidraad p. 4, 8, 22-23'] },
+    { id: 'nazorg', titel: 'Nazorgsignalen', url: 'nazorg-signalen.html', ref: true,
+      wat: 'Tijdlijn met actiemomenten na het passeren, zoals einde rentevaste periode en AOW-datum.',
+      grond: ['pr', 'Goede praktijk'] },
+    { id: 'afwijkend', titel: 'Afwijkend advies', url: 'afwijkend-advies.html', ref: false,
+      wat: 'Vastlegging als de klant afwijkt van het advies: wat geadviseerd is, wat de klant kiest en welke gevolgen zijn besproken.',
+      grond: ['ld', 'Leidraad p. 4, 14, 23-24'] },
+    { id: 'documenten', titel: 'Documentenchecklist', url: 'documentenchecklist.html', ref: false,
+      wat: 'Overzicht van de aan te leveren en ontvangen stukken.',
+      grond: ['ld', 'Leidraad p. 8'] }
+  ];
+
+  var MAANDEN = ['januari', 'februari', 'maart', 'april', 'mei', 'juni', 'juli', 'augustus', 'september', 'oktober', 'november', 'december'];
+  function isoVandaag() { var d = new Date(); return d.getFullYear() + '-' + ('0' + (d.getMonth() + 1)).slice(-2) + '-' + ('0' + d.getDate()).slice(-2); }
+  function nlDatum(iso) {
+    var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso || ''); if (!m) return '';
+    var d = new Date(+m[1], +m[2] - 1, +m[3]); if (isNaN(d)) return '';
+    return d.getDate() + ' ' + MAANDEN[d.getMonth()] + ' ' + d.getFullYear();
+  }
+
+  // Referentie opschonen. Geeft null terug als het op een BSN lijkt (8 of 9 cijfers).
+  function schoneRef(v) {
+    v = String(v == null ? '' : v).replace(/[\u0000-\u001F\u007F]/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 80);
+    if (/^\d{8,9}$/.test(v.replace(/[\s.-]/g, ''))) return null;
+    return v;
+  }
+
+  /* ---------- Opbouw ---------- */
+  var lijst = $('onderdelen');
+  lijst.innerHTML = ONDERDELEN.map(function (o) {
+    return '<li class="onderdeel" id="od-' + o.id + '">' +
+      '<input type="checkbox" id="v-' + o.id + '" aria-describedby="w-' + o.id + '">' +
+      '<div class="tekst"><label for="v-' + o.id + '">' + esc(o.titel) + '</label>' +
+      '<span class="wat" id="w-' + o.id + '">' + esc(o.wat) + '</span>' +
+      (o.ref ? '' : '<span class="noref">Dit hulpmiddel heeft geen eigen referentieveld; noteer de referentie zelf op de afdruk.</span>') +
+      '<span class="grond ' + o.grond[0] + '">' + esc(o.grond[1]) + '</span></div>' +
+      '<a class="knop licht" id="open-' + o.id + '" href="' + o.url + '" target="_blank" rel="opener">Open ' + esc(o.titel.split(' (')[0].toLowerCase()) + '</a>' +
+      '</li>';
+  }).join('');
+
+  /* ---------- Bijwerken ---------- */
+  var refEl = $('ref'), tip = $('ref-tip'), TIP = tip.textContent;
+  function huidigeRef() { return schoneRef(refEl.value); }
+  function werkBij() {
+    var r = huidigeRef();
+    if (r === null) {
+      refEl.classList.add('fout'); refEl.setAttribute('aria-invalid', 'true');
+      tip.className = 'tip fout'; tip.textContent = 'Dit lijkt op een BSN. Gebruik een intern dossiernummer; deze referentie wordt niet doorgegeven.';
+    } else {
+      refEl.classList.remove('fout'); refEl.removeAttribute('aria-invalid');
+      tip.className = 'tip'; tip.textContent = TIP;
+    }
+    ONDERDELEN.forEach(function (o) {
+      $('open-' + o.id).setAttribute('href', o.url + (r ? '#ref=' + encodeURIComponent(r) : ''));
+      $('od-' + o.id).classList.toggle('klaar', $('v-' + o.id).checked);
+    });
+    var n = ONDERDELEN.filter(function (o) { return $('v-' + o.id).checked; }).length;
+    $('teller').textContent = n + ' van ' + ONDERDELEN.length + ' onderdelen afgevinkt';
+  }
+  refEl.addEventListener('input', werkBij);
+  lijst.addEventListener('change', werkBij);
+
+  $('wis').addEventListener('click', function () {
+    ONDERDELEN.forEach(function (o) { $('v-' + o.id).checked = false; });
+    $('status').textContent = 'Vinkjes gewist.'; werkBij();
+  });
+
+  /* ---------- Voorblad ---------- */
+  $('voorblad').addEventListener('click', function () {
+    var r = huidigeRef() || '', datum = nlDatum($('datum').value) || nlDatum(isoVandaag());
+    var rijen = ONDERDELEN.map(function (o, i) {
+      var af = $('v-' + o.id).checked;
+      return '<tr><td class="nr">' + (i + 1) + '</td><td><b>' + esc(o.titel) + '</b><br><span class="k">' + esc(o.wat) + '</span><br><span class="k">Grondslag: ' + esc(o.grond[1]) + '</span></td>' +
+        '<td class="vk">' + (af ? '&#9745;' : '&#9744;') + '</td><td class="pg"></td></tr>';
+    }).join('');
+    var css = 'body{font-family:Montserrat,Arial,Helvetica,sans-serif;color:#141414;margin:28px;font-size:12.5px;line-height:1.45}' +
+      'h1{font-size:22px;margin:0 0 4px;border-bottom:4px solid #FFD200;padding-bottom:6px}h2{font-size:14px;margin:20px 0 8px;text-transform:uppercase;letter-spacing:.04em}' +
+      '.meta td{border:0;padding:3px 12px 3px 0}.meta{margin:10px 0 4px}' +
+      'table.inh{border-collapse:collapse;width:100%}table.inh td,table.inh th{border:1px solid #ccc;padding:7px 9px;text-align:left;vertical-align:top}table.inh th{background:#FFF6C7}' +
+      '.nr{width:28px}.vk{width:56px;text-align:center;font-size:17px}.pg{width:90px}.k{color:#555;font-size:11.5px}' +
+      '.hand td{border:1px solid #ccc;padding:14px 9px}.hand{border-collapse:collapse;width:100%;margin-top:6px}.klein{font-size:10.5px;color:#555;margin-top:18px;border-top:1px solid #ddd;padding-top:8px}' +
+      '@media print{body{margin:14mm}tr{break-inside:avoid}}';
+    var html = '<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><title>Dossierpakket' + (r ? ' ' + esc(r) : '') + '</title><style>' + css + '</style></head><body>' +
+      '<h1>Dossierpakket hypotheekadvies</h1>' +
+      '<table class="meta"><tr><td>Dossierreferentie:</td><td><b>' + (r ? esc(r) : '______________________________') + '</b></td></tr>' +
+      '<tr><td>Datum:</td><td><b>' + esc(datum) + '</b></td></tr></table>' +
+      '<h2>Inhoudsopgave</h2>' +
+      '<table class="inh"><tr><th>#</th><th>Onderdeel</th><th>In dossier</th><th>Pagina&rsquo;s</th></tr>' + rijen + '</table>' +
+      '<h2>Controle</h2><table class="hand"><tr><td style="width:40%">Samengesteld door</td><td></td></tr><tr><td>Gecontroleerd door / datum</td><td></td></tr></table>' +
+      '<p class="klein">Voorblad gemaakt met het Adviesforum-hulpmiddel Dossierpakket. Geen BSN of bijzondere persoonsgegevens in de referentie. Dossiereisen: zie de AFM Leidraad Hypotheekadvisering 2026 (o.a. p. 4, 7, 8, 14, 23-24) en, voor zover van toepassing, de Wwft. Er is niets opgeslagen.</p>' +
+      '</body></html>';
+    var w = null;
+    try { w = window.open('', '_blank'); } catch (e) { w = null; }
+    if (!w) { $('status').textContent = 'Je browser blokkeert het printvenster. Sta pop-ups toe voor deze pagina.'; return; }
+    $('status').textContent = '';
+    try { w.document.open(); w.document.write(html); w.document.close(); w.focus(); setTimeout(function () { try { w.print(); } catch (e) {} }, 300); }
+    catch (e) { $('status').textContent = 'Afdrukken lukte niet.'; }
+  });
+
+  /* ---------- Start: datum vandaag, referentie eventueel uit #ref= ---------- */
+  $('datum').value = isoVandaag();
+  String(location.hash || '').replace(/^#/, '').split('&').forEach(function (deel) {
+    if (deel.slice(0, 4) !== 'ref=') return;
+    var v; try { v = decodeURIComponent(deel.slice(4).replace(/\+/g, ' ')); } catch (e) { return; }
+    var r = schoneRef(v); if (r) refEl.value = r;
+  });
+  werkBij();
+})();
+</script>
+</body>
+</html>

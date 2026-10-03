@@ -156,7 +156,7 @@ button,input,select,textarea{font-family:inherit}
 
     <div class="kaart">
       <div class="raster">
-        <div class="veld"><label for="k-naam">Cliënt (naam of dossiernummer)</label><input id="k-naam" type="text" autocomplete="off"></div>
+        <div class="veld"><label for="k-naam">Cliënt (naam of dossiernummer)</label><input id="k-naam" type="text" maxlength="80" autocomplete="off"><span class="tip" id="k-overname" aria-live="polite">Geen BSN invullen.</span></div>
         <div class="veld"><label for="k-soort">Soort cliënt</label>
           <select id="k-soort"><option value="np">Natuurlijk persoon</option><option value="rp">Rechtspersoon of andere entiteit</option></select></div>
         <div class="veld"><label for="k-product">Product / dienst</label><input id="k-product" type="text" autocomplete="off" placeholder="bijv. overlijdensrisicoverzekering"></div>
@@ -465,6 +465,22 @@ button,input,select,textarea{font-family:inherit}
     $('status').textContent = '';
     $('k-soort').value = 'np'; toonRp(); toonPlicht(); bereken();
   });
+
+  /* ---------- Dossierreferentie uit de URL-hash (#ref=..); niets wordt opgeslagen ---------- */
+  function leesHash() {
+    var ruw = null, gevonden = false;
+    String(location.hash || '').replace(/^#/, '').split('&').forEach(function (deel) {
+      if (deel.slice(0, 4) !== 'ref=') return;
+      gevonden = true;
+      try { ruw = decodeURIComponent(deel.slice(4).replace(/\+/g, ' ')); } catch (e) { ruw = null; }
+    });
+    if (!gevonden) return;
+    var r = String(ruw == null ? '' : ruw).replace(/[\u0000-\u001F\u007F]/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 80);
+    if (ruw == null || /^\d{8,9}$/.test(r.replace(/[\s.-]/g, ''))) { $('k-overname').textContent = 'De dossierreferentie in de link is ongeldig of lijkt op een BSN en is niet overgenomen.'; return; }
+    if (r) { $('k-naam').value = r; $('k-overname').textContent = 'Dossierreferentie overgenomen uit de link. Geen BSN invullen.'; }
+  }
+  leesHash();
+  window.addEventListener('hashchange', leesHash);
 })();
 </script>
 </body>

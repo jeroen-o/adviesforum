@@ -107,6 +107,7 @@ button,input,select,textarea{font-family:inherit}
 .knop.licht{background:#fff;color:var(--zwart);border-color:#CFCFCF}
 .knop.licht:hover{background:var(--vlak)}
 .status{font-size:13px;font-weight:600;color:var(--groen)}
+.status.waarschuw{color:var(--rood)}
 
 .compliance{max-width:1132px;margin:10px auto 0;background:var(--rood-zacht);border-left:4px solid var(--rood);border-radius:0 10px 10px 0;padding:14px 18px;font-size:14px}
 .compliance strong{color:#A5281B}
@@ -175,6 +176,7 @@ button,input,select,textarea{font-family:inherit}
     <div class="knoppen">
       <button type="button" class="knop" id="kopieer">Dossiertekst kopiëren</button>
       <button type="button" class="knop licht" id="afdrukken">Afdrukken / bewaar als PDF</button>
+      <button type="button" class="knop licht" id="naar-advies">Gebruik in adviesmotivatie</button>
       <span class="status" id="status" aria-live="polite"></span>
     </div>
   </section>
@@ -754,7 +756,7 @@ button,input,select,textarea{font-family:inherit}
   document.getElementById('aanvrager').addEventListener('change', dossier);
 
   var status = document.getElementById('status');
-  function meld(s){ status.textContent = s; setTimeout(function(){ if (status.textContent === s) status.textContent = ''; }, 4000); }
+  function meld(s, fout){ status.classList.toggle('waarschuw', !!fout); status.textContent = s; setTimeout(function(){ if (status.textContent === s) status.textContent = ''; }, 4000); }
 
   document.getElementById('kopieer').addEventListener('click', function(){
     var ta = document.getElementById('dossiertekst'), txt = ta.value;
@@ -786,11 +788,47 @@ button,input,select,textarea{font-family:inherit}
     catch (e) { try { w.close(); } catch (x) {} meld('Afdrukken lukte niet. Gebruik Kopiëren.'); }
   });
 
-  // Start
+  // ---------- Doorgeven naar adviesmotivatie (alleen via de URL-hash, niets wordt opgeslagen) ----------
+  function schoneRef(v){
+    v = String(v == null ? '' : v).replace(/[\u0000-\u001F\u007F]/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 80);
+    if (/^\d{8,9}$/.test(v.replace(/[\s.-]/g, ''))) return null; // lijkt op een BSN: niet doorgeven
+    return v;
+  }
+  document.getElementById('naar-advies').addEventListener('click', function(){
+    if (!laatste || laatste.fout || laatste.r.bedrag == null || !isFinite(laatste.r.bedrag) || laatste.r.bedrag <= 0) {
+      meld('Nog geen geldig toetsinkomen om over te nemen. Controleer de invoer.', true); return;
+    }
+    var ref = schoneRef(document.getElementById('ref').value);
+    if (ref === null) { meld('De dossierreferentie lijkt op een BSN en wordt niet doorgegeven.', true); ref = ''; }
+    var bedrag = Math.round(laatste.r.bedrag * 100) / 100;
+    var url = 'adviesmotivatie.html#toets=' + encodeURIComponent(String(bedrag)) + '&bron=' + encodeURIComponent(laatste.soort.id) + (ref ? '&ref=' + encodeURIComponent(ref) : '');
+    var w = null;
+    try { w = window.open(url, '_blank'); } catch (e) { w = null; }
+    if (!w) location.href = url;
+  });
+
+  // Start. Hash: '#vast', '#ref=ABC' of '#vast&ref=ABC'
+  function hashDelen(){
+    var ruw = (location.hash || '').replace(/^#/, ''), uit = { tab: '', p: {} };
+    ruw.split('&').forEach(function(deel){
+      if (!deel) return;
+      var i = deel.indexOf('=');
+      if (i < 0) { if (!uit.tab) uit.tab = deel; return; }
+      var k = deel.slice(0, i), v = deel.slice(i + 1);
+      try { v = decodeURIComponent(v.replace(/\+/g, ' ')); } catch (e) { return; }
+      uit.p[k] = v;
+    });
+    return uit;
+  }
   function leesHash(start){
-    var hash = (location.hash || '').replace('#', '');
-    var id = SOORTEN.some(function(s){ return s.id === hash; }) ? hash : SOORTEN[0].id;
-    if (start === true || id !== actief) kiesSoort(id);
+    var h = hashDelen(), hash = h.tab;
+    if (Object.prototype.hasOwnProperty.call(h.p, 'ref')) {
+      var ref = schoneRef(h.p.ref);
+      if (ref) { document.getElementById('ref').value = ref; }
+      else if (ref === null) meld('De dossierreferentie in de link lijkt op een BSN en is niet overgenomen.', true);
+    }
+    var id = SOORTEN.some(function(s){ return s.id === hash; }) ? hash : (start === true ? SOORTEN[0].id : actief);
+    if (start === true || id !== actief) kiesSoort(id); else dossier();
   }
   window.addEventListener('hashchange', leesHash);
   leesHash(true);

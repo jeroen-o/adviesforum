@@ -122,7 +122,7 @@ button,input,select,textarea{font-family:inherit}
     <div class="kaart">
       <h2>Klant</h2>
       <div class="raster">
-        <div class="veld"><label for="naam">Klantnaam (optioneel)</label><input id="naam" type="text" autocomplete="off"><span class="tip">Alleen voor de titel van agenda en print; wordt niet opgeslagen.</span></div>
+        <div class="veld"><label for="naam">Klantnaam of dossierreferentie (optioneel)</label><input id="naam" type="text" maxlength="80" autocomplete="off"><span class="tip">Alleen voor de titel van agenda en print; wordt niet opgeslagen. Geen BSN.</span></div>
         <div class="veld"><label for="geb">Geboortedatum</label><input id="geb" type="date"><span class="tip">Voor de AOW-datum volgens de SVB-tabel.</span></div>
       </div>
     </div>
@@ -412,6 +412,34 @@ button,input,select,textarea{font-family:inherit}
     $('lijf-soort').value = 'lijfrente';
     delenEl.innerHTML = ''; voegDeelToe(); $('status').textContent = ''; bereken();
   });
+
+  /* ---------- Overnemen uit de URL-hash (#ref=..&geb=JJJJ-MM-DD); niets wordt opgeslagen ---------- */
+  function leesHash() {
+    var p = {};
+    String(location.hash || '').replace(/^#/, '').split('&').forEach(function (deel) {
+      var i = deel.indexOf('='); if (i < 1) return;
+      var v = deel.slice(i + 1);
+      try { v = decodeURIComponent(v.replace(/\+/g, ' ')); } catch (e) { v = null; }
+      p[deel.slice(0, i)] = v;
+    });
+    var genomen = [], fout = [];
+    if ('ref' in p) {
+      var r = String(p.ref == null ? '' : p.ref).replace(/[\u0000-\u001F\u007F]/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 80);
+      if (p.ref == null || /^\d{8,9}$/.test(r.replace(/[\s.-]/g, ''))) fout.push('dossierreferentie');
+      else if (r) { $('naam').value = r; genomen.push('dossierreferentie'); }
+    }
+    if ('geb' in p) {
+      var g = parse(p.geb), nu = vandaag();
+      if (g && g < nu && g.getFullYear() > 1900 && ymd(g) === String(p.geb).replace(/-/g, '')) { $('geb').value = p.geb; genomen.push('geboortedatum'); }
+      else fout.push('geboortedatum');
+    }
+    if (genomen.length || fout.length) {
+      $('status').textContent = (genomen.length ? 'Overgenomen uit de link: ' + genomen.join(' en ') + '.' : '') +
+        (fout.length ? (genomen.length ? ' ' : '') + 'Niet overgenomen (ongeldig): ' + fout.join(' en ') + '.' : '');
+    }
+  }
+  leesHash();
+  window.addEventListener('hashchange', function () { leesHash(); bereken(); });
 
   bereken();
 })();
