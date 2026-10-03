@@ -130,7 +130,7 @@ button,input,select,textarea{font-family:inherit}
   <!-- 0. Reikwijdte -->
   <section class="sectie" id="reikwijdte">
     <h2>Eerst: valt jouw kantoor onder de Wwft?</h2>
-    <p class="intro">Niet elke financieel adviseur of bemiddelaar is een Wwft-instelling. De wet (artikel 1a, derde lid) noemt onder meer banken, levensverzekeraars, beleggingsondernemingen en de financiëledienstverlener <em>voor zover die bemiddelt in levensverzekeringen</em>. De AFM houdt toezicht op die bemiddelaars.</p>
+    <p class="intro">Niet elke financieel adviseur of bemiddelaar is een Wwft-instelling. De wet (artikel 1a) noemt onder meer banken (tweede lid) en, als andere financiële ondernemingen (derde lid), levensverzekeraars, beleggingsondernemingen en de financiëledienstverlener <em>voor zover die bemiddelt in levensverzekeringen</em>. De AFM houdt toezicht op die bemiddelaars.</p>
     <div class="kaart">
       <h3>Bemiddel je in levensverzekeringen?</h3>
       <p style="font-size:14px;color:var(--grijs)">Volgens de AFM vallen daar ook overlijdensrisicoverzekeringen en uitvaartverzekeringen onder. Alleen adviseren zonder te bemiddelen valt niet onder deze categorie.</p>
@@ -211,7 +211,7 @@ button,input,select,textarea{font-family:inherit}
       <ul>
         <li>Melden gaat via het meldportaal van FIU-Nederland; registratie vooraf is nodig.</li>
         <li>Vertel de cliënt niet dat je meldt of overweegt te melden (geheimhoudingsplicht, art. 23 Wwft).</li>
-        <li>Kun je het cliëntenonderzoek niet afronden, dan ga je de relatie niet aan of beëindig je die, en beoordeel je of een melding nodig is (art. 5 Wwft).</li>
+        <li>Kun je het cliëntenonderzoek niet afronden, dan ga je de relatie niet aan of beëindig je die, en beoordeel je of een melding nodig is (art. 5 en art. 16, vierde lid, Wwft).</li>
         <li>Bewaar de gegevens van het onderzoek en de melding vijf jaar (art. 33 en 34 Wwft).</li>
         <li>Een treffer op een sanctielijst is iets anders dan een FIU-melding: voer niets uit, bevries waar dat voorgeschreven is en volg de sanctieregels. Overleg direct met je compliance officer.</li>
       </ul>
@@ -226,7 +226,7 @@ button,input,select,textarea{font-family:inherit}
       <ul>
         <li><strong>Rechtstreekse werking.</strong> Een verordening geldt direct in alle lidstaten. Veel regels die nu in de Wwft staan, komen straks uit de AMLR. Nederland past de eigen wetgeving aan via een implementatiewet (in voorbereiding).</li>
         <li><strong>Europese toezichthouder.</strong> De Anti-Money Laundering Authority (AMLA) in Frankfurt stelt technische standaarden op en coördineert het toezicht.</li>
-        <li><strong>Wie valt eronder.</strong> Bemiddelaars in levensverzekeringen blijven meldingsplichtig. De AMLR noemt daarnaast bemiddelaars in hypothecair en consumptief krediet, met een uitzondering voor bemiddeling namens en onder verantwoordelijkheid van de kredietgever. Hoe dat voor Nederlandse kantoren uitpakt, is nog niet definitief: volg de implementatiewet en de communicatie van de AFM.</li>
+        <li><strong>Wie valt eronder.</strong> Bemiddelaars in levensverzekeringen blijven meldingsplichtig. De AMLR noemt daarnaast bemiddelaars in hypothecair en consumptief krediet, maar alleen als zij in verband met de kredietovereenkomst gelden onder zich houden, en met een uitzondering voor bemiddeling onder verantwoordelijkheid van een of meer kredietgevers of kredietbemiddelaars. Een kantoor dat geen klantgelden beheert, valt daar naar de tekst van de verordening niet onder. Hoe dat voor Nederlandse kantoren uitpakt, is nog niet definitief: volg de implementatiewet en de communicatie van de AFM.</li>
         <li><strong>UBO-drempel.</strong> Uiteindelijk belanghebbende wordt in de AMLR iemand met een belang van 25% <em>of meer</em> (nu in Nederland: meer dan 25%).</li>
         <li><strong>Actualiseren cliëntenonderzoek.</strong> De AMLR geeft vaste maximumtermijnen voor het bijwerken van cliëntgegevens, korter bij een hoger risico.</li>
         <li><strong>Kern blijft gelijk:</strong> cliëntenonderzoek vóór de relatie, UBO vaststellen en verifiëren, ongebruikelijke transacties melden, vastleggen wat je deed en waarom.</li>
@@ -277,7 +277,7 @@ button,input,select,textarea{font-family:inherit}
       plichtUit.innerHTML = '<p><strong>Waarschijnlijk Wwft-plichtig voor die bemiddeling.</strong> Voor de bemiddeling in levensverzekeringen geldt de Wwft volledig: cliëntenonderzoek, melden van ongebruikelijke transacties, vastleggen, opleiding van medewerkers en een eigen risicoanalyse. Voor je overige activiteiten (hypotheken, schade) geldt de Wwft in de huidige wet niet als zodanig, maar wel de Sanctiewet en de integriteitseisen.</p>';
     } else {
       plichtUit.className = 'uitslag nee';
-      plichtUit.innerHTML = '<p><strong>De Wwft is dan waarschijnlijk niet op je kantoor van toepassing.</strong> De checklist blijft bruikbaar als goede praktijk voor je integriteitsbeleid. Een sanctiecheck en het kennen van je klant blijven nodig, en een melding bij de FIU kan dan vrijwillig of via de geldverstrekker. Let op: vanaf juli 2027 kan dit voor kredietbemiddelaars veranderen (zie AMLR hieronder).</p>';
+      plichtUit.innerHTML = '<p><strong>De Wwft is dan waarschijnlijk niet op je kantoor van toepassing.</strong> De checklist blijft bruikbaar als goede praktijk voor je integriteitsbeleid. Een sanctiecheck en het kennen van je klant blijven nodig, en een melding bij de FIU kan dan vrijwillig of via de geldverstrekker. Let op: vanaf juli 2027 kan dit veranderen voor kredietbemiddelaars die gelden van klanten onder zich houden (zie AMLR hieronder).</p>';
     }
   }
   document.querySelectorAll('input[name="plicht"]').forEach(function (r) { r.addEventListener('change', function () { toonPlicht(); }); });
