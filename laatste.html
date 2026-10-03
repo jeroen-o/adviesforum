@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Laatste nieuws en vragen – Adviesforum</title>
+<link rel="canonical" href="https://jeroen-o.github.io/adviesforum/laatste.html">
+<meta property="og:url" content="https://jeroen-o.github.io/adviesforum/laatste.html">
+<meta property="og:site_name" content="Adviesforum">
+<meta property="og:locale" content="nl_NL">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Laatste nieuws en vragen – Adviesforum">
+<meta property="og:description" content="Het laatste van het Adviesforum op één pagina: nieuwe vragen, recente reacties, nieuwe kennisbankartikelen, nieuws van het forum en nieuws van aanbieders.">
+<meta name="theme-color" content="#FFD200">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="description" content="Het laatste van het Adviesforum op één pagina: nieuwe vragen, recente reacties, nieuwe kennisbankartikelen, nieuws van het forum en nieuws van aanbieders.">
+<style>
+@font-face{font-family:Montserrat;font-style:normal;font-weight:400;font-display:swap;src:url(fonts/montserrat-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:600;font-display:swap;src:url(fonts/montserrat-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:700;font-display:swap;src:url(fonts/montserrat-latin-700-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:800;font-display:swap;src:url(fonts/montserrat-latin-800-normal.woff2) format('woff2')}
+:root{
+  --geel:#FFD200;--geel-donker:#E6BD00;--geel-zacht:#FFF6C7;
+  --zwart:#141414;--tekst:#1F1F1F;--grijs:#5E5E5E;--lijn:#E4E4E4;--vlak:#F7F7F5;
+  --rood:#C0392B;--rood-zacht:#FFF1F0;--groen:#1E7A4B;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:Montserrat,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;color:var(--tekst);background:#fff;line-height:1.55;font-size:15px;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+button{font-family:inherit}
+.balk{background:var(--zwart);color:#fff;font-size:12.5px;padding:8px 24px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.balk a{color:#fff;text-decoration:none;opacity:.88}
+.balk a:hover{opacity:1;text-decoration:underline}
+.kop{background:var(--geel);color:var(--zwart);padding:34px 24px 38px}
+.kop-in{max-width:1180px;margin:0 auto}
+.merk{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.08em;font-size:12px;text-transform:uppercase;margin-bottom:16px}
+.zeshoek{width:22px;height:25px;background:var(--zwart);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);flex:none}
+.terug{display:inline-block;font-size:13.5px;font-weight:700;text-decoration:none;border-bottom:2px solid var(--zwart);margin-bottom:14px}
+.kop h1{margin:0 0 10px;font-size:clamp(27px,4.2vw,40px);line-height:1.12;font-weight:800}
+.kop p{margin:0;max-width:66ch;font-size:15.5px}
+.kop .stempel{display:inline-block;margin-top:16px;font-size:12px;font-weight:700;background:var(--zwart);color:var(--geel);padding:5px 11px;border-radius:999px}
+.romp{max-width:1180px;margin:0 auto;padding:28px 24px 40px}
+h2.sectie{font-size:22px;font-weight:800;margin:28px 0 6px;padding-bottom:10px;border-bottom:3px solid var(--geel)}
+.sub{color:var(--grijs);margin:0 0 18px;max-width:70ch}
+.tegels{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.tegel{display:flex;flex-direction:column;border:1px solid var(--lijn);border-radius:14px;padding:16px 18px;text-decoration:none;background:#fff;min-width:0}
+.tegel:hover{border-color:var(--zwart)}
+.tegel .getal{font-size:30px;font-weight:800;line-height:1.1}
+.tegel .getal small{font-size:13px;font-weight:700;color:var(--grijs);margin-left:4px}
+.tegel b{display:block;font-size:15px;margin-top:4px}
+.tegel span{display:block;font-size:13px;color:var(--grijs);margin-top:4px}
+.tegel .pijl{margin-top:auto;padding-top:10px;font-size:13px;font-weight:700}
+.knoppen{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 16px}
+.chip{border-radius:999px;padding:7px 14px;font-size:13px;font-weight:700;cursor:pointer;border:1px solid #CFCFCF;background:#fff;color:var(--zwart)}
+.chip[aria-pressed="true"]{background:var(--zwart);color:#fff;border-color:var(--zwart)}
+.dag{margin:0 0 26px}
+.dag h3{font-size:16px;font-weight:800;margin:0 0 10px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.dag h3 .tel{font-size:12px;font-weight:700;background:var(--geel);padding:2px 9px;border-radius:999px}
+.item{border-left:4px solid var(--geel);background:var(--vlak);border-radius:0 12px 12px 0;padding:12px 16px;margin:0 0 10px}
+.item .meta{font-size:11.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--grijs);display:flex;gap:8px;flex-wrap:wrap}
+.item .meta .th{color:#7A5A00}
+.item h4{margin:3px 0 4px;font-size:15.5px;font-weight:700}
+.item p{margin:0;font-size:14px;color:#333}
+.item a.lees{font-size:13px;font-weight:700}
+.let{background:var(--rood-zacht);border-left:4px solid var(--rood);border-radius:0 10px 10px 0;padding:14px 18px;font-size:14px;margin:24px 0 0}
+.let strong{color:#A5281B}
+.voet{max-width:1180px;margin:0 auto;padding:24px 24px 40px;font-size:12.5px;color:var(--grijs)}
+.voet a{color:var(--zwart);font-weight:600}
+@media (max-width:560px){
+  .balk,.kop,.romp,.voet{padding-left:16px;padding-right:16px}
+  .tegels{grid-template-columns:minmax(0,1fr)}
+  h2.sectie{font-size:20px}
+}
+@media print{.balk,.knoppen,.terug{display:none}.kop{padding:12px 0}.item{break-inside:avoid}}
+/* Mobiel: tikdoelen en leesbaarheid */
+a.terug{display:inline-block;padding:8px 0}
+.item .meta .th{font-size:12px}
+</style>
+<style id="a11y">
+/* Toegankelijkheid en donkere modus (zie docs/toegankelijkheid.md). Staat in een eigen <style>, zodat printvensters licht blijven. */
+.skiplink{position:absolute;left:12px;top:-200px;z-index:10000;background:#141414;color:#fff;padding:10px 16px;border-radius:8px;font-weight:700;text-decoration:none;font-family:Montserrat,system-ui,sans-serif}
+.skiplink:focus{top:12px;outline:3px solid #FFD200;outline-offset:2px}
+main[tabindex="-1"]:focus{outline:none}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus,textarea:focus,summary:focus-visible,[tabindex]:not([tabindex="-1"]):focus-visible{outline:3px solid #141414!important;outline-offset:2px!important}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+@media print{.skiplink{display:none}}
+@media screen and (prefers-color-scheme:dark){
+:root:not([data-theme="light"]){color-scheme:dark}
+:root:not([data-theme="light"]){--geel-zacht:#3f3918;--zwart:#F2F2F2;--tekst:#F2F2F2;--grijs:#BDBDBD;--lijn:#333333;--vlak:#262626;--rood:#e9a29b;--rood-zacht:#3f1a18;--groen:#9de7c1}
+:root:not([data-theme="light"]) body{color:#F2F2F2;background:#141414}
+:root:not([data-theme="light"]) .balk{background:#2A2A2A;color:#fff}
+:root:not([data-theme="light"]) .balk a{color:#fff}
+:root:not([data-theme="light"]) .kop{background:#1E1E1E;color:#F2F2F2;border-bottom:3px solid #FFD200}
+:root:not([data-theme="light"]) .zeshoek{background:#2A2A2A}
+:root:not([data-theme="light"]) .terug{border-bottom:2px solid #8A8A8A}
+:root:not([data-theme="light"]) .kop .stempel{background:#2A2A2A;color:#FFD200}
+:root:not([data-theme="light"]) h2.sectie{border-bottom:3px solid #FFD200}
+:root:not([data-theme="light"]) .sub{color:#BDBDBD}
+:root:not([data-theme="light"]) .tegel{border:1px solid #333333;background:#1E1E1E}
+:root:not([data-theme="light"]) .tegel:hover{border-color:#8A8A8A}
+:root:not([data-theme="light"]) .tegel .getal small{color:#BDBDBD}
+:root:not([data-theme="light"]) .tegel span{color:#BDBDBD}
+:root:not([data-theme="light"]) .chip{border:1px solid #333333;background:#1E1E1E;color:#F2F2F2}
+:root:not([data-theme="light"]) .chip[aria-pressed="true"]{background:#FFD200;color:#141414;border-color:#FFD200}
+:root:not([data-theme="light"]) .dag h3 .tel{background:#FFD200;color:#141414}
+:root:not([data-theme="light"]) .item{border-left:4px solid #FFD200;background:#262626}
+:root:not([data-theme="light"]) .item .meta{color:#BDBDBD}
+:root:not([data-theme="light"]) .item .meta .th{color:#f6db8e}
+:root:not([data-theme="light"]) .item p{color:#F2F2F2}
+:root:not([data-theme="light"]) .let{background:#3f1a18;border-left:4px solid #C0392B}
+:root:not([data-theme="light"]) .let strong{color:#ee9e96}
+:root:not([data-theme="light"]) .voet{color:#BDBDBD}
+:root:not([data-theme="light"]) .voet a{color:#F2F2F2}
+:root:not([data-theme="light"]) a:focus-visible,:root:not([data-theme="light"]) button:focus-visible,:root:not([data-theme="light"]) input:focus,:root:not([data-theme="light"]) input:focus-within,:root:not([data-theme="light"]) select:focus,:root:not([data-theme="light"]) textarea:focus,:root:not([data-theme="light"]) summary:focus-visible,:root:not([data-theme="light"]) [tabindex]:not([tabindex="-1"]):focus-visible{outline-color:#FFD200!important}
+:root:not([data-theme="light"]) .skiplink{background:#FFD200;color:#141414}
+:root:not([data-theme="light"]) [style*="background:#fff"],:root:not([data-theme="light"]) [style*="background:#FFF"]{background:#1E1E1E!important}
+:root:not([data-theme="light"]) [style*="color:#555"]{color:#BDBDBD!important}
+:root:not([data-theme="light"]) [style*="color:#141414"]{color:#F2F2F2!important}
+:root:not([data-theme="light"]) .back-inline{color:#F2F2F2!important;border-bottom-color:#FFD200!important}
+:root:not([data-theme="light"]) .skiplink:focus{outline-color:#F2F2F2}
+}
+</style>
+<link rel="alternate" type="application/rss+xml" title="Adviesforum – nieuw en bijgewerkt" href="feed.xml">
+<style>
+.snel{display:flex;gap:8px;flex-wrap:wrap;margin:4px 0 6px}
+.snel a{border-radius:999px;padding:8px 14px;font-size:13px;font-weight:700;border:1px solid #CFCFCF;text-decoration:none;background:#fff}
+.snel a:hover{border-color:var(--zwart)}
+.lijst2{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:10px}
+.lijst2 li{min-width:0}
+.lijst2 a.kaart{display:block;height:100%;border-left:4px solid var(--geel);background:var(--vlak);border-radius:0 12px 12px 0;padding:12px 16px;text-decoration:none}
+.lijst2 a.kaart:hover{background:var(--geel-zacht)}
+.kaart .meta{font-size:11.5px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--grijs);display:flex;gap:8px;flex-wrap:wrap}
+.kaart b{display:block;font-size:15px;margin:3px 0 4px;line-height:1.35}
+.kaart span.t{display:block;font-size:13.5px;color:#333;overflow:hidden;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical}
+.lbl{background:var(--geel);color:#141414;border-radius:999px;padding:0 8px;letter-spacing:0;text-transform:none}
+.meer{display:inline-block;margin:12px 0 0;font-weight:700;font-size:14px;padding:8px 0}
+.leeg{color:var(--grijs);font-style:italic}
+@media (max-width:560px){.lijst2{grid-template-columns:minmax(0,1fr)}}
+@media screen and (prefers-color-scheme:dark){
+:root:not([data-theme="light"]) .snel a{background:#1E1E1E;border-color:#333}
+:root:not([data-theme="light"]) .lijst2 a.kaart{background:#262626;border-left-color:#FFD200}
+:root:not([data-theme="light"]) .lijst2 a.kaart:hover{background:#3f3918}
+:root:not([data-theme="light"]) .kaart span.t{color:#F2F2F2}
+:root:not([data-theme="light"]) .kaart .meta{color:#BDBDBD}
+}
+</style>
+</head>
+<body>
+<a class="skiplink" href="#inhoud">Naar de inhoud</a>
+
+<nav class="balk" aria-label="Forum">
+  <span>Adviesforum &middot; voor en door financieel adviseurs</span>
+  <span><a href="index.html">Home</a> &middot; <a href="aanmelden.html">Aanmelden</a></span>
+</nav>
+
+<header class="kop">
+  <div class="kop-in">
+    <div class="merk"><span class="zeshoek" aria-hidden="true"></span>Adviesforum &middot; Laatste nieuws</div>
+    <a class="terug" href="index.html">&larr; Terug naar het forum</a>
+    <h1>Laatste nieuws en vragen</h1>
+    <p>Alles wat er recent op het Adviesforum is gebeurd op één pagina: nieuwe vragen, de laatste reacties, nieuwe kennisbankartikelen, nieuws van het forum en nieuws van aanbieders.</p>
+    <span class="stempel" id="stempel">Live samengesteld uit de inhoud van het forum</span>
+  </div>
+</header>
+
+<main class="romp" id="inhoud" tabindex="-1">
+  <nav class="snel" aria-label="Spring naar">
+    <a href="#vragen">Laatste vragen</a><a href="#reacties">Laatste reacties</a><a href="#kennisbank">Kennisbank</a><a href="#forumnieuws">Nieuw op het forum</a><a href="#aanbiedersnieuws">Nieuws van aanbieders</a>
+  </nav>
+
+  <h2 class="sectie" id="vragen">Laatste vragen</h2>
+  <p class="sub">De nieuwste vragen van collega's. Weet jij het antwoord? Reageer op het forum.</p>
+  <ul class="lijst2" id="l-vragen"></ul>
+  <a class="meer" href="index.html#forum">Alle vragen op het forum &rarr;</a>
+
+  <h2 class="sectie" id="reacties">Laatste reacties</h2>
+  <p class="sub">De meest recente antwoorden, met een directe link naar de reactie.</p>
+  <ul class="lijst2" id="l-reacties"></ul>
+
+  <h2 class="sectie" id="kennisbank">Nieuw in de kennisbank</h2>
+  <p class="sub">Recent toegevoegde of bijgewerkte artikelen. Artikelen met het label Concept zijn nog niet gecontroleerd door compliance.</p>
+  <ul class="lijst2" id="l-kennis"></ul>
+  <a class="meer" href="index.html#kennisbank">Naar de kennisbank &rarr;</a>
+
+  <h2 class="sectie" id="forumnieuws">Nieuw op het forum</h2>
+  <p class="sub">Nieuwe rekentools, hulpmiddelen en verbeteringen.</p>
+  <ul class="lijst2" id="l-forum"></ul>
+  <a class="meer" href="nieuw.html">Volledig overzicht: wat is nieuw &rarr;</a>
+
+  <h2 class="sectie" id="aanbiedersnieuws">Nieuws van aanbieders</h2>
+  <p class="sub">Berichten die geldverstrekkers, verzekeraars en andere aanbieders zelf plaatsen. Het forum toetst de inhoud niet.</p>
+  <ul class="lijst2" id="l-aanbieders"></ul>
+  <a class="meer" href="aanbieders.html">Naar alle aanbieders &rarr;</a>
+
+  <p class="sub" style="margin-top:28px">Volg het nieuws in je feedreader: <a href="feed.xml">RSS nieuw en bijgewerkt</a> &middot; <a href="aanbieders-feed.xml">RSS nieuws van aanbieders</a>.</p>
+</main>
+
+<footer class="voet">
+  Adviesforum &middot; collegiale kennisdeling voor financieel adviseurs &middot; <a href="index.html">Home</a> &middot; <a href="aanmelden.html">Aanmelden</a> &middot; <a href="privacy.html">Privacy</a> &middot; <a href="uitnodigen.html">Uitnodigen</a>
+</footer>
+
+<script src="data/vragen.js"></script>
+<script src="data/vragen/hyp-acceptatie.js"></script>
+<script src="data/vragen/hyp-woning.js"></script>
+<script src="data/vragen/hyp-doelgroepen.js"></script>
+<script src="data/vragen/hyp-producten.js"></script>
+<script src="data/vragen/fisc-eigenwoning.js"></script>
+<script src="data/vragen/fisc-vermogen.js"></script>
+<script src="data/vragen/verz-inkomen.js"></script>
+<script src="data/vragen/verz-schade.js"></script>
+<script src="data/vragen/pens.js"></script>
+<script src="data/vragen/kred.js"></script>
+<script src="data/vragen/comp.js"></script>
+<script src="data/vragen/software.js"></script>
+<script src="data/kennisbank.js"></script>
+<script src="data/kennisbank-planning.js"></script>
+<script src="data/kennisbank-geldverstrekkers.js"></script>
+<script src="data/kennisbank-eblinqx.js"></script>
+<script src="data/kennisbank-afm.js"></script>
+<script src="data/kennisbank-nhg.js"></script>
+<script src="data/kennisbank-thema.js"></script>
+<script src="data/kennisbank-kifid.js"></script>
+<script src="data/kennisbank-wetgeving.js"></script>
+<script src="data/kennisbank-blinqx.js"></script>
+<script src="data/kennisbank-woning.js"></script>
+<script src="data/kennisbank-opleiding.js"></script>
+<script src="data/kennisbank-compliance2.js"></script>
+<script src="data/kennisbank-seh.js"></script>
+<script src="data/kennisbank-seh2.js"></script>
+<script src="data/kennisbank-vakpers.js"></script>
+<script src="data/kennisbank-kifid2.js"></script>
+<script src="data/kennisbank-verzekeraars.js"></script>
+<script src="data/kennisbank-adfiz.js"></script>
+<script src="data/kennisbank-dfosignalen.js"></script>
+<script src="data/kennisbank-aanvulling.js"></script>
+<script src="data/aanbieders.js"></script>
+<script>
+(function(){
+'use strict';
+var CATS={hyp:'Hypotheken',verz:'Verzekeringen',pens:'Pensioen & vermogen',fisc:'Fiscaal',kred:'Kredieten',adv:'Adviespakket (Blinqx)',crm:'CRM (Blinqx)',comp:'Compliance & AFM',ov:'Overig'};
+var MAANDEN=['januari','februari','maart','april','mei','juni','juli','augustus','september','oktober','november','december'];
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+function datum(d){var m=/^(\d{4})-(\d{2})-(\d{2})(?:T(\d{2}):(\d{2}))?/.exec(d||'');if(!m)return '';return (+m[3])+' '+MAANDEN[+m[2]-1]+' '+m[1]+(m[4]?', '+m[4]+':'+m[5]:'');}
+function kort(t,n){t=String(t||'').replace(/[*_#>`]/g,'').replace(/\s+/g,' ').trim();return t.length>n?t.slice(0,n).replace(/\s+\S*$/,'')+'…':t;}
+function kaart(href,meta,titel,tekst){return '<li><a class="kaart" href="'+esc(href)+'"><span class="meta">'+meta+'</span><b>'+esc(titel)+'</b>'+(tekst?'<span class="t">'+esc(tekst)+'</span>':'')+'</a></li>';}
+function vul(id,html,leeg){document.getElementById(id).innerHTML=html||'<li class="leeg">'+esc(leeg)+'</li>';}
+var V=(window.VRAGEN_DATA||[]).filter(function(v){return v&&v.id&&v.titel;});
+var nieuwste=V.slice().sort(function(a,b){return String(b.datum).localeCompare(String(a.datum));}).slice(0,12);
+vul('l-vragen',nieuwste.map(function(v){var n=(v.antwoorden||[]).length;
+  return kaart('index.html#vraag-'+encodeURIComponent(v.id),esc(CATS[v.cat]||'Forum')+' <span>'+esc(datum(v.datum))+'</span>'+(v.voorbeeld?' <span class="lbl">Voorbeeld</span>':''),v.titel,n+(n===1?' reactie':' reacties')+' · '+kort(v.body,140));}).join(''),'Nog geen vragen.');
+var R=[];V.forEach(function(v){(v.antwoorden||[]).slice().sort(function(a,b){return String(a.datum).localeCompare(String(b.datum));}).forEach(function(a,i){R.push({v:v,a:a,nr:i+1});});});
+R.sort(function(x,y){return String(y.a.datum).localeCompare(String(x.a.datum));});
+vul('l-reacties',R.slice(0,8).map(function(r){return kaart('index.html#vraag-'+encodeURIComponent(r.v.id)+'-r'+r.nr,'Reactie #'+r.nr+' <span>'+esc(datum(r.a.datum))+'</span>'+(r.v.voorbeeld?' <span class="lbl">Voorbeeld</span>':''),'Op: '+r.v.titel,kort(r.a.body,150));}).join(''),'Nog geen reacties.');
+var K=(window.KENNISBANK||[]).filter(function(a){return a&&a.id&&a.titel;}).sort(function(a,b){return String(b.bijgewerkt||b.datum).localeCompare(String(a.bijgewerkt||a.datum));}).slice(0,10);
+vul('l-kennis',K.map(function(a){return kaart('index.html#artikel-'+encodeURIComponent(a.id),esc(CATS[a.cat]||'Kennisbank')+' <span>'+esc(datum(a.bijgewerkt||a.datum))+'</span>'+(a.gecontroleerd?'':' <span class="lbl">Concept</span>'),a.titel,kort(a.body,140));}).join(''),'Nog geen artikelen.');
+var N=[];(window.AANBIEDERS||[]).forEach(function(a){if(!a||a.demo)return;(a.nieuws||[]).forEach(function(n){N.push({a:a,n:n});});});
+N.sort(function(x,y){return String(y.n.datum).localeCompare(String(x.n.datum));});
+vul('l-aanbieders',N.slice(0,8).map(function(x){return kaart('aanbieders.html#nieuws-'+x.a.id+'-'+x.n.id,esc(x.a.naam)+' <span>'+esc(datum(x.n.datum))+'</span>',x.n.titel,kort(x.n.tekst,140));}).join(''),'Nog geen nieuws van aanbieders. Zodra aanbieders zelf berichten plaatsen, staan ze hier.');
+var lf=document.getElementById('l-forum');lf.innerHTML='<li class="leeg">Laden…</li>';
+function forumFout(){lf.innerHTML='<li class="leeg">Het overzicht kon niet worden geladen. Bekijk <a href="nieuw.html">wat is nieuw</a>.</li>';}
+try{fetch('feed.xml').then(function(r){if(!r.ok)throw 0;return r.text();}).then(function(t){
+  var x=new DOMParser().parseFromString(t,'application/xml');var it=[].slice.call(x.getElementsByTagName('item')).filter(function(i){return !/\/kennisbank\//.test(tekst(i,'link'));}).slice(0,8);
+  function tekst(el,tag){var e=el.getElementsByTagName(tag)[0];return e?e.textContent:'';}
+  if(!it.length)return forumFout();
+  lf.innerHTML=it.map(function(i){var d=new Date(tekst(i,'pubDate'));var ds=isNaN(d)?'':d.getDate()+' '+MAANDEN[d.getMonth()]+' '+d.getFullYear();
+    var link=tekst(i,'link').replace(/^https:\/\/jeroen-o\.github\.io\/adviesforum\//,'');return kaart(link||'nieuw.html',esc(tekst(i,'category')||'Nieuw')+' <span>'+esc(ds)+'</span>',tekst(i,'title'),kort(tekst(i,'description'),140));}).join('');
+}).catch(forumFout);}catch(e){forumFout();}
+var laatst=[nieuwste[0]&&nieuwste[0].datum,K[0]&&(K[0].bijgewerkt||K[0].datum)].filter(Boolean).sort().pop();
+if(laatst)document.getElementById('stempel').textContent='Laatste activiteit: '+datum(laatst);
+})();
+</script>
+</body>
+</html>
