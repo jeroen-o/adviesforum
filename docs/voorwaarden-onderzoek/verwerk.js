@@ -29,7 +29,7 @@ for (const f of files) {
   }
 }
 let s = fs.readFileSync(pagina, 'utf8');
-const blok = '/* CONTROLE:start (gegenereerd door docs/voorwaarden-onderzoek/verwerk.js; niet met de hand wijzigen) */\nconst CONTROLE = ' + JSON.stringify(C) + ';\n/* CONTROLE:eind */';
+const blok = '/* CONTROLE:start (gegenereerd door docs/voorwaarden-onderzoek/verwerk.js; niet met de hand wijzigen) */\nconst CONTROLE = ' + JSON.stringify(C) + ';\nconst EIGEN_DOMEINEN = ' + JSON.stringify(DOM) + ';\n/* CONTROLE:eind */';
 if (/\/\* CONTROLE:start[\s\S]*?CONTROLE:eind \*\//.test(s)) s = s.replace(/\/\* CONTROLE:start[\s\S]*?CONTROLE:eind \*\//, blok);
 else s = s.replace('const CRIT_NOTITIE = {', blok + '\nconst CRIT_NOTITIE = {');
 fs.writeFileSync(pagina, s);

@@ -49,3 +49,9 @@ test('consistentie: elke pagina in de paginatests staat in de sitemap of is noin
   });
   expect(fout).toEqual([]);
 });
+
+test('consistentie: node tools/wegwijzer-voorwaarden.js --check (gecontroleerde voorwaarden in de Aanbiederwegwijzer zijn actueel)', () => {
+  const { execFileSync } = require('child_process');
+  const uit = execFileSync(process.execPath, [path.join(ROOT, 'tools', 'wegwijzer-voorwaarden.js'), '--check'], { cwd: ROOT, encoding: 'utf8' });
+  expect(uit).toContain('actueel');
+});
