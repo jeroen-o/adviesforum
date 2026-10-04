@@ -19,7 +19,13 @@
  *   omschrijving  korte zakelijke omschrijving (max. 400 tekens); website: https-url
  *   extranet      {url, naam}  portal of aanvraagomgeving voor adviseurs
  *   contact       [{naam, functie, email, telefoon}]  alleen ZAKELIJKE gegevens, met toestemming van de persoon (AVG)
- *   documenten    [{titel, url, soort}]  soort: voorwaarden | acceptatiegids | productblad | formulier
+ *   documenten    [{titel, url, soort, bijgewerkt, geldigVanaf}]  soort: voorwaarden | acceptatiegids | productblad | renteblad | formulier
+ *                   bijgewerkt   tijdstempel van de laatste wijziging: 'JJJJ-MM-DDTuu:mm' of 'JJJJ-MM-DD' (getoond als
+ *                                "bijgewerkt 4 oktober 2026, 07:12"); binnen een soort staat het nieuwste document bovenaan.
+ *                                Ontbreekt hij bij import, dan zet tools/aanbieder-import.js de importdatum.
+ *                   geldigVanaf  optioneel, alleen bij renteblad: JJJJ-MM-DD (getoond als "geldig vanaf ...")
+ *                   renteblad    alleen een https-LINK naar het eigen renteblad van de aanbieder (pdf of pagina op de eigen
+ *                                site of het extranet). Het Adviesforum toont zelf geen rentes, tarieven, premies of acties.
  *   richtlijnen   [{titel, tekst}]
  *   nieuws        [{id, datum (JJJJ-MM-DD), titel, tekst, url}]  id: kleine letters/cijfers, uniek binnen de aanbieder
  *   elearning     [{titel, url, duur, pe}]  pe: true alleen als de aanbieder PE-punten opgeeft
@@ -34,7 +40,8 @@
  *   bijgewerkt    JJJJ-MM-DD
  *   codeHash      optioneel: SHA-256 van de persoonlijke inlogcode (maak met beheer-code.html, keuze "Aanbieder")
  *   demo          true = fictief voorbeeld. Verwijder de voorbeelden zodra er echte aanbieders zijn.
- * Niet plaatsen: rentes, tarieven, premies of acties (AFM). Tekst is platte tekst; een lege regel = nieuwe alinea.
+ * Niet plaatsen: rentes, tarieven, premies of acties (AFM). Het Adviesforum toont zelf geen rentes, tarieven, premies of acties;
+ * aanbieders kunnen wel verwijzen naar hun eigen renteblad (documentsoort renteblad); de actuele rente staat altijd bij de aanbieder. Tekst is platte tekst; een lege regel = nieuwe alinea.
  */
 window.AANBIEDERS=[
   {
@@ -77,22 +84,33 @@ window.AANBIEDERS=[
       {
         "titel": "Algemene voorwaarden hypotheken (voorbeeld)",
         "url": "https://example.org/documenten/algemene-voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-01"
       },
       {
         "titel": "Acceptatiegids oktober 2026 (voorbeeld)",
         "url": "https://example.org/documenten/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-01"
       },
       {
         "titel": "Productblad annuïteitenhypotheek (voorbeeld)",
         "url": "https://example.org/documenten/productblad-annuiteit.pdf",
-        "soort": "productblad"
+        "soort": "productblad",
+        "bijgewerkt": "2026-10-01"
       },
       {
         "titel": "Formulier wijziging lopende hypotheek (voorbeeld)",
         "url": "https://example.org/documenten/wijzigingsformulier.pdf",
-        "soort": "formulier"
+        "soort": "formulier",
+        "bijgewerkt": "2026-10-01"
+      },
+      {
+        "titel": "Renteblad (voorbeeld)",
+        "url": "https://example.org/documenten/renteblad.pdf",
+        "soort": "renteblad",
+        "bijgewerkt": "2026-10-04T08:00",
+        "geldigVanaf": "2026-10-01"
       }
     ],
     "richtlijnen": [
@@ -199,17 +217,27 @@ window.AANBIEDERS=[
       {
         "titel": "Polisvoorwaarden overlijdensrisicoverzekering (voorbeeld)",
         "url": "https://example.com/documenten/voorwaarden-orv.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-09-28"
       },
       {
         "titel": "Acceptatierichtlijnen medische keuring (voorbeeld)",
         "url": "https://example.com/documenten/medische-acceptatie.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-09-28"
       },
       {
         "titel": "Aanvraagformulier AOV (voorbeeld)",
         "url": "https://example.com/documenten/aanvraag-aov.pdf",
-        "soort": "formulier"
+        "soort": "formulier",
+        "bijgewerkt": "2026-09-28"
+      },
+      {
+        "titel": "Renteblad (voorbeeld)",
+        "url": "https://example.org/documenten/renteblad-verzekeringen.pdf",
+        "soort": "renteblad",
+        "bijgewerkt": "2026-10-04T08:00",
+        "geldigVanaf": "2026-10-01"
       }
     ],
     "richtlijnen": [
@@ -278,12 +306,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/a-s-r/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Productblad (voorbeeld)",
         "url": "https://example.org/a-s-r/productblad.pdf",
-        "soort": "productblad"
+        "soort": "productblad",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -323,12 +353,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/abn-amro/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/abn-amro/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -370,12 +402,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/acura-assuradeuren/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/acura-assuradeuren/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -415,12 +449,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/allianz-global-assistance/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Productblad (voorbeeld)",
         "url": "https://example.org/allianz-global-assistance/productblad.pdf",
-        "soort": "productblad"
+        "soort": "productblad",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -459,12 +495,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/allianz/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Productblad (voorbeeld)",
         "url": "https://example.org/allianz/productblad.pdf",
-        "soort": "productblad"
+        "soort": "productblad",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -504,12 +542,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/anac-backoffice/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/anac-backoffice/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -543,12 +583,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/anker-rechtsbijstand/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Productblad (voorbeeld)",
         "url": "https://example.org/anker-rechtsbijstand/productblad.pdf",
-        "soort": "productblad"
+        "soort": "productblad",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -583,12 +625,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/arag/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Productblad (voorbeeld)",
         "url": "https://example.org/arag/productblad.pdf",
-        "soort": "productblad"
+        "soort": "productblad",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -628,12 +672,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/argenta/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/argenta/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -668,12 +714,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/asn-bank/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/asn-bank/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -712,12 +760,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/attens-hypotheken/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/attens-hypotheken/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -756,12 +806,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/avero-achmea/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Productblad (voorbeeld)",
         "url": "https://example.org/avero-achmea/productblad.pdf",
-        "soort": "productblad"
+        "soort": "productblad",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -796,12 +848,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/bedrijfshypotheek-nl/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/bedrijfshypotheek-nl/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -833,12 +887,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/bijbouwe/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/bijbouwe/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -877,12 +933,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/blueline-hypotheekdesk/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/blueline-hypotheekdesk/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -916,12 +974,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/bnp-paribas/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/bnp-paribas/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -966,12 +1026,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/bnp-paribas-cardif/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Productblad (voorbeeld)",
         "url": "https://example.org/bnp-paribas-cardif/productblad.pdf",
-        "soort": "productblad"
+        "soort": "productblad",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -1010,12 +1072,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/bovemij/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Productblad (voorbeeld)",
         "url": "https://example.org/bovemij/productblad.pdf",
-        "soort": "productblad"
+        "soort": "productblad",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -1054,12 +1118,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/bsb-volmachten/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/bsb-volmachten/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -1091,12 +1157,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/build-finance/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/build-finance/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -1128,12 +1196,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/bunq/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/bunq/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -1167,12 +1237,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/bureau-dfo/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/bureau-dfo/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -1203,12 +1275,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/capsearch/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/capsearch/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -1244,12 +1318,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/centraal-beheer/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Productblad (voorbeeld)",
         "url": "https://example.org/centraal-beheer/productblad.pdf",
-        "soort": "productblad"
+        "soort": "productblad",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -1284,12 +1360,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/certe-assuradeuren/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/certe-assuradeuren/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -1321,12 +1399,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/cfsn-kredietendesk/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/cfsn-kredietendesk/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -1365,12 +1445,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/clarian-wonen/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/clarian-wonen/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -1404,12 +1486,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/connect-assuradeuren/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/connect-assuradeuren/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -1444,12 +1528,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/corins/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Productblad (voorbeeld)",
         "url": "https://example.org/corins/productblad.pdf",
-        "soort": "productblad"
+        "soort": "productblad",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -1487,12 +1573,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/dak-intermediairscollectief/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/dak-intermediairscollectief/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -1529,12 +1617,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/das/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Productblad (voorbeeld)",
         "url": "https://example.org/das/productblad.pdf",
-        "soort": "productblad"
+        "soort": "productblad",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -1574,12 +1664,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/de-goudse/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Productblad (voorbeeld)",
         "url": "https://example.org/de-goudse/productblad.pdf",
-        "soort": "productblad"
+        "soort": "productblad",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -1619,12 +1711,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/de-nederlandse/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/de-nederlandse/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -1661,12 +1755,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/de-zeeuwse/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Productblad (voorbeeld)",
         "url": "https://example.org/de-zeeuwse/productblad.pdf",
-        "soort": "productblad"
+        "soort": "productblad",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -1706,12 +1802,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/defam/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/defam/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -1749,12 +1847,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/domivest/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/domivest/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -1788,12 +1888,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/dutch-finance/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/dutch-finance/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -1829,12 +1931,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/financieel-fit/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/financieel-fit/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -1868,12 +1972,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/financieel-zeker/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/financieel-zeker/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -1904,12 +2010,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/florius/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/florius/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -1943,12 +2051,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/fondsen-platform/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/fondsen-platform/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -1975,12 +2085,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/groene-hart-hypotheken/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/groene-hart-hypotheken/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -2011,12 +2123,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/guardian-group/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Productblad (voorbeeld)",
         "url": "https://example.org/guardian-group/productblad.pdf",
-        "soort": "productblad"
+        "soort": "productblad",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -2046,12 +2160,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/handelsbanken/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/handelsbanken/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -2086,12 +2202,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/hdi/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Productblad (voorbeeld)",
         "url": "https://example.org/hdi/productblad.pdf",
-        "soort": "productblad"
+        "soort": "productblad",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -2126,12 +2244,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/heinenoord-assuradeuren/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/heinenoord-assuradeuren/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -2166,12 +2286,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/hoeksche-waard-assuradeuren/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/hoeksche-waard-assuradeuren/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -2206,12 +2328,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/hollandwoont/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/hollandwoont/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -2242,12 +2366,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/home-invest/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/home-invest/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -2278,12 +2404,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/huismerk/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/huismerk/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -2314,12 +2442,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/hypotheekgo/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/hypotheekgo/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -2346,12 +2476,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/impact-hypotheken/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/impact-hypotheken/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -2382,12 +2514,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/impact-opleiding-en-training/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/impact-opleiding-en-training/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -2418,12 +2552,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/ing/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/ing/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -2461,12 +2597,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/iqwoon/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/iqwoon/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -2505,12 +2643,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/jens/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/jens/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -2543,12 +2683,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/klap/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/klap/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -2582,12 +2724,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/knab/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/knab/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -2619,12 +2763,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/landelijk-netwerk-inkoopcombinatie/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/landelijk-netwerk-inkoopcombinatie/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -2651,12 +2797,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/lender-en-spender/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/lender-en-spender/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -2694,12 +2842,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/lloyds-bank/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/lloyds-bank/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -2734,12 +2884,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/maas-lloyd/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Productblad (voorbeeld)",
         "url": "https://example.org/maas-lloyd/productblad.pdf",
-        "soort": "productblad"
+        "soort": "productblad",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -2773,12 +2925,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/merius/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/merius/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -2810,12 +2964,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/midglas/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Productblad (voorbeeld)",
         "url": "https://example.org/midglas/productblad.pdf",
-        "soort": "productblad"
+        "soort": "productblad",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -2849,12 +3005,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/mogelijk/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/mogelijk/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -2888,12 +3046,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/ms-amlin/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Productblad (voorbeeld)",
         "url": "https://example.org/ms-amlin/productblad.pdf",
-        "soort": "productblad"
+        "soort": "productblad",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -2931,12 +3091,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/munt-hypotheken/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/munt-hypotheken/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -2975,12 +3137,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/nationale-nederlanden/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Productblad (voorbeeld)",
         "url": "https://example.org/nationale-nederlanden/productblad.pdf",
-        "soort": "productblad"
+        "soort": "productblad",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -3022,12 +3186,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/nationale-waarborg/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/nationale-waarborg/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -3063,12 +3229,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/nedasco/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/nedasco/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -3104,12 +3272,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/nestr/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/nestr/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -3144,12 +3314,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/nibc/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/nibc/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -3190,12 +3362,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/nnek/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/nnek/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -3234,12 +3408,20 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/obvion/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/obvion/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
+      },
+      {
+        "titel": "Hypotheekrente en rentehistorie Obvion",
+        "url": "https://obvion.nl/hypotheekrente/historie/",
+        "soort": "renteblad",
+        "bijgewerkt": "2026-10-04"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -3274,12 +3456,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/orange-credit/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/orange-credit/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -3311,12 +3495,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/pentrax/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Formulier (voorbeeld)",
         "url": "https://example.org/pentrax/formulier.pdf",
-        "soort": "formulier"
+        "soort": "formulier",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -3351,12 +3537,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/polaris-assuradeuren/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/polaris-assuradeuren/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -3391,12 +3579,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/qander/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/qander/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -3434,12 +3624,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/qredits/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/qredits/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -3471,12 +3663,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/raadhuys/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Formulier (voorbeeld)",
         "url": "https://example.org/raadhuys/formulier.pdf",
-        "soort": "formulier"
+        "soort": "formulier",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -3511,12 +3705,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/rabobank/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/rabobank/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -3551,12 +3747,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/rhion/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Productblad (voorbeeld)",
         "url": "https://example.org/rhion/productblad.pdf",
-        "soort": "productblad"
+        "soort": "productblad",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -3595,12 +3793,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/risk-verzekeringen/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/risk-verzekeringen/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -3637,12 +3837,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/rnhb/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/rnhb/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -3677,12 +3879,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/robuust/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/robuust/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -3718,12 +3922,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/saa-verzekeringen/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/saa-verzekeringen/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -3756,12 +3962,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/samenwerkende-kredietunies/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/samenwerkende-kredietunies/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -3793,12 +4001,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/siriuspro/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/siriuspro/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -3829,12 +4039,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/socio-hypotheek/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/socio-hypotheek/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -3867,12 +4079,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/solidbriq/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/solidbriq/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -3908,12 +4122,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/surebusiness/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/surebusiness/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -3953,12 +4169,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/syntrus-achmea/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/syntrus-achmea/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -3996,12 +4214,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/triodos-bank/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/triodos-bank/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -4036,12 +4256,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/tulp-hypotheken/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/tulp-hypotheken/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -4080,12 +4302,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/turien-en-co-assuradeuren/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/turien-en-co-assuradeuren/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -4125,12 +4349,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/unigarant/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Productblad (voorbeeld)",
         "url": "https://example.org/unigarant/productblad.pdf",
-        "soort": "productblad"
+        "soort": "productblad",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -4166,12 +4392,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/vcn-hypotheken/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/vcn-hypotheken/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -4206,12 +4434,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/vcn-kredieten/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/vcn-kredieten/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -4246,12 +4476,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/vcn-verzekeringen/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/vcn-verzekeringen/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -4291,12 +4523,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/venn-hypotheken/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/venn-hypotheken/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -4332,12 +4566,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/vista-hypotheken/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/vista-hypotheken/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -4374,12 +4610,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/vkg/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/vkg/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -4415,12 +4653,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/voogd-en-voogd/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/voogd-en-voogd/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -4455,12 +4695,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/voor-de-groei/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/voor-de-groei/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -4478,22 +4720,26 @@ window.AANBIEDERS=[
       {
         "titel": "Algemene voorwaarden Vrij Leven Hypotheek (september 2023)",
         "url": "https://www.vrijlevenhypotheek.nl/assets/uploads/2024/05/Algemene_Voorwaarden_Hypotrust_Vrij_Leven_Hypotheek_September-2023.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-04"
       },
       {
         "titel": "Algemene voorwaarden Vrij Leven Hypotheek (september 2019)",
         "url": "https://www.vrijlevenhypotheek.nl/assets/uploads/2024/05/AV-Hypotrust-Vrij-Leven-Hypotheek.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-04"
       },
       {
         "titel": "Acceptatievoorwaarden Vrij Leven (januari 2026)",
         "url": "https://www.vrijlevenhypotheek.nl/assets/uploads/2026/01/Acceptatiegids-Vrij-Leven-Januari-2026-definitief-1.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-04"
       },
       {
         "titel": "Handleiding hypotheek wijzigen (juli 2022)",
         "url": "https://www.vrijlevenhypotheek.nl/assets/uploads/2024/04/Handleiding-Hypotheek-Wijzigen-Vrij-Leven-Hypotheek-jul-2022.pdf",
-        "soort": "formulier"
+        "soort": "formulier",
+        "bijgewerkt": "2026-10-04"
       }
     ],
     "bijgewerkt": "2026-10-04",
@@ -4531,12 +4777,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/woonnu/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/woonnu/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -4572,12 +4820,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/zakelijk-inkomen/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Formulier (voorbeeld)",
         "url": "https://example.org/zakelijk-inkomen/formulier.pdf",
-        "soort": "formulier"
+        "soort": "formulier",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -4612,12 +4862,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/auxmoney/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/auxmoney/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -4651,12 +4903,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/directa/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/directa/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",
@@ -4693,12 +4947,14 @@ window.AANBIEDERS=[
       {
         "titel": "Voorwaarden (voorbeeld)",
         "url": "https://example.org/freo/voorwaarden.pdf",
-        "soort": "voorwaarden"
+        "soort": "voorwaarden",
+        "bijgewerkt": "2026-10-03"
       },
       {
         "titel": "Acceptatiegids (voorbeeld)",
         "url": "https://example.org/freo/acceptatiegids.pdf",
-        "soort": "acceptatiegids"
+        "soort": "acceptatiegids",
+        "bijgewerkt": "2026-10-03"
       }
     ],
     "bijgewerkt": "2026-10-03",

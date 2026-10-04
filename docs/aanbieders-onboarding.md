@@ -34,7 +34,7 @@ Daarnaast kan een korte aanvraag per mail binnenkomen op forumadvies@gmail.com, 
 - [ ] AFM-vergunningnummer, of een uitleg waarom geen vergunning nodig is;
 - [ ] website;
 - [ ] vaste contactpersoon: naam, functie, **zakelijk** e-mailadres en telefoonnummer;
-- [ ] de bevestiging dat de voorwaarden zijn gelezen en dat er geen rentes, tarieven, premies of acties worden geplaatst.
+- [ ] de bevestiging dat de voorwaarden zijn gelezen en dat er geen rentes, tarieven, premies of acties op het forum worden geplaatst (een renteblad alleen als link naar de eigen site of het eigen extranet).
 
 Komt de mail van een privé-adres (gmail, hotmail en dergelijke) of van een domein dat niet bij de website past? Vraag dan om een aanvraag vanaf het zakelijke domein, of bel het algemene nummer van de aanbieder (van de eigen website, niet uit de mail) om de aanvraag te verifiëren.
 
@@ -89,7 +89,7 @@ De aanbieder dient in via `aanbieder-beheer.html`, na een verplicht akkoord op d
    ```
 
 4. Fouten: stuur de aanbieder een korte uitleg terug. Waarschuwingen (bijvoorbeeld een tekst die op een rente, premie of actie lijkt): beoordeel ze inhoudelijk. Bij twijfel niet publiceren en navragen.
-5. Lees de inhoud zelf ook na op de inhoudsregels uit de voorwaarden: geen rentes, tarieven, premies, acties of wervende claims; correct, duidelijk en niet misleidend; contactpersonen alleen met zakelijke gegevens.
+5. Lees de inhoud zelf ook na op de inhoudsregels uit de voorwaarden: geen rentes, tarieven, premies, acties of wervende claims; een renteblad alleen als https-link naar de eigen bron van de aanbieder, met tijdstempel (`bijgewerkt`) en zonder actiecommunicatie; correct, duidelijk en niet misleidend; contactpersonen alleen met zakelijke gegevens.
 6. Verwerken:
 
    ```bash
@@ -134,7 +134,8 @@ Plan elk kwartaal (bijvoorbeeld de eerste werkdag van januari, april, juli en ok
 
 - [ ] **Vergunning**: steekproef in het AFM-register of de vergunningen nog actief zijn.
 - [ ] **Contactpersonen**: vraag de aanbieder eens per jaar te bevestigen dat de vermelde personen er nog werken en akkoord zijn.
-- [ ] **Inhoudsregels**: zoek in `data/aanbieders.js` op `%`, `rente`, `premie`, `actie`, `korting`, `gratis`.
+- [ ] **Inhoudsregels**: zoek in `data/aanbieders.js` op `%`, `rente`, `premie`, `actie`, `korting`, `gratis`. Treffers op `rente` in documenten met `soort: 'renteblad'` zijn toegestaan zolang het alleen een link naar de eigen bron is.
+- [ ] **Tijdstempels**: elk document heeft `bijgewerkt`; controleer bij rentebladen of de datum recent is en de link nog werkt.
 
 ## 9. Beëindigen
 
@@ -182,7 +183,7 @@ Bronnen bij de toetsing: [Telecommunicatiewet art. 11.7a](https://wetten.overhei
 > - zakelijke contactgegevens van accountmanagers;
 > - e-learning en webinars.
 >
-> Rentes, tarieven, premies en acties plaatsen we bewust niet: de pagina is informatief en geen reclame. Wijzigingen worden voor publicatie gecontroleerd.
+> Het Adviesforum toont zelf geen rentes, tarieven, premies of acties. Aanbieders kunnen wel verwijzen naar hun eigen renteblad; de actuele rente staat altijd bij de aanbieder. De pagina is informatief en geen reclame. Wijzigingen worden voor publicatie gecontroleerd.
 >
 > Deelname is in de opstartfase kosteloos; voorwaarden kunnen wijzigen.
 >
@@ -219,7 +220,7 @@ Bronnen bij de toetsing: [Telecommunicatiewet art. 11.7a](https://wetten.overhei
 > Goed om te weten:
 >
 > - Wijzigingen staan alleen in uw browsertabblad tot u indient. Verversen of sluiten betekent dat niet-ingediende wijzigingen verloren gaan.
-> - Plaats geen rentes, tarieven, premies of acties.
+> - Plaats geen rentes, tarieven, premies of acties. Een renteblad voegt u alleen toe als link naar uw eigen renteblad, met datum.
 > - Vermeld contactpersonen alleen met zakelijke gegevens en met hun toestemming.
 > - Houd de code geheim en deel hem alleen binnen uw organisatie. Code kwijt of uitgelekt? Mail ons, dan maken we een nieuwe en vervalt de oude.
 >

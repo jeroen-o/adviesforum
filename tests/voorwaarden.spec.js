@@ -270,3 +270,260 @@ test('online gecontroleerde waarden: vinkje, tooltip met bron en controledatum',
   expect(tip).toMatch(/gecontroleerd/);
   await expect(page.locator('#peil')).toContainText('gecontroleerd');
 });
+
+test.describe('voorwaardenvergelijker: uitgebreid zoeken en filteren', () => {
+  let fouten;
+  const namen = page => page.locator('#matrix tbody tr[data-id] .vn').allTextContents();
+  const openPaneel = async page => {
+    await page.locator('#btnUitgebreid').click();
+    await expect(page.locator('#btnUitgebreid')).toHaveAttribute('aria-expanded', 'true');
+    await expect(page.locator('#uitgebreid')).toBeVisible();
+  };
+  const regel = async (page, i, crit, op, waarde) => {
+    await page.locator('#ufRegelPlus').click();
+    const r = page.locator('#ufRegels .regel').nth(i);
+    await r.locator('select.rc').selectOption(crit);
+    await r.locator('select.ro').selectOption(op);
+    if (op === 'is') await r.locator('select.rw').selectOption(waarde);
+    else await r.locator('input.rw').fill(waarde);
+  };
+  test.beforeEach(async ({ page }) => {
+    fouten = await volgFouten(page);
+    page.on('dialog', d => { fouten.push('onverwachte dialog: ' + d.message()); d.dismiss(); });
+  });
+  test.afterEach(() => { expect(fouten).toEqual([]); });
+
+  test('paneel standaard dicht; meerdere regels met EN en OF, verwijderen en teller', async ({ page }) => {
+    await page.goto(PAGINA);
+    await expect(page.locator('#uitgebreid')).toBeHidden();
+    await expect(page.locator('#btnUitgebreid')).toHaveAttribute('aria-expanded', 'false');
+    await openPaneel(page);
+    await expect(page.locator('#ufResultaat')).toHaveAttribute('aria-live', 'polite');
+    await expect(page.locator('#ufResultaat')).toHaveText(`${TOTAAL} van ${TOTAAL} verstrekkers voldoen`);
+    await regel(page, 0, 'ovbr', 'is', 'r');
+    await regel(page, 1, 'dag', 'bevat', 'passeren');
+    // EN: beperkend overbruggingskrediet én dagrente "passeren"
+    await expect(rijen(page)).toHaveCount(6);
+    await expect(page.locator('#ufResultaat')).toHaveText(`6 van ${TOTAAL} verstrekkers voldoen`);
+    await expect(page.locator('#ufTeller')).toHaveText('2');
+    await expect(page.locator('#btnUitgebreid')).toHaveAttribute('aria-label', /2 actieve filters/);
+    await expect(naamCel(page, 'Munt Hypotheken')).toHaveCount(0);
+    // OF: Munt Hypotheken komt erbij via de tweede regel
+    await page.locator('#ufLogica').selectOption('of');
+    await expect(rijen(page)).toHaveCount(7);
+    await expect(naamCel(page, 'Munt Hypotheken')).toHaveCount(1);
+    await expect(page.locator('#ufRegels .regel').nth(1).locator('.rvoeg')).toHaveText('OF');
+    // kleurcode-regel "Verhuisregeling = ruim" EN "Boetevrij aflossen bevat verkoop"
+    await page.locator('#ufRegels .regel').nth(1).getByRole('button', { name: 'Regel 2 verwijderen' }).click();
+    await page.locator('#ufRegels .regel').nth(0).getByRole('button', { name: 'Regel 1 verwijderen' }).click();
+    await expect(page.locator('#ufRegels .regel')).toHaveCount(0);
+    await expect(page.locator('#ufTeller')).toBeHidden();
+    await page.locator('#ufLogica').selectOption('en');
+    await regel(page, 0, 'verh', 'is', 'g');
+    await expect(rijen(page)).toHaveCount(13);
+    const kolV = (await page.locator('#matrix thead th').allTextContents()).findIndex(t => t.includes('Verhuisregeling'));
+    const tints = await page.locator('#matrix tbody tr[data-id]').evaluateAll((rs, k) => rs.map(r => r.children[k].querySelector('.tint').className), kolV);
+    for (const t of tints) expect(t).toContain('t-g');
+    await regel(page, 1, 'boete', 'bevat', 'verkoop');
+    expect(await namen(page)).toEqual(['Rabobank']);
+    // bevat niet en "nog in te vullen"
+    await page.locator('#ufRegels .regel').nth(1).locator('select.ro').selectOption('niet');
+    await page.locator('#ufRegels .regel').nth(1).locator('input.rw').fill('verkoop');
+    await expect(rijen(page)).toHaveCount(12);
+    await expect(naamCel(page, 'Rabobank')).toHaveCount(0);
+  });
+
+  test('zoeken: exacte woordgroep, uitsluiten met -woord, EN/OF, zoek in namen en markering', async ({ page }) => {
+    await page.goto(PAGINA);
+    await openPaneel(page);
+    await page.locator('#q').fill('10% per jaar');
+    await expect(rijen(page)).toHaveCount(25);
+    await page.locator('#q').fill('"10% per jaar"');
+    await expect(rijen(page)).toHaveCount(24);
+    await expect(naamCel(page, 'ABN AMRO')).toHaveCount(0);
+    const mark = page.locator('#matrix td.val mark').first();
+    await expect(mark).toHaveText('10% per jaar');
+    // uitsluiten
+    await page.locator('#q').fill('Hypotheken -Regiepartij');
+    expect(await namen(page)).toEqual(['Groene Hart Hypotheken', 'Impact Hypotheken', 'Lot Hypotheken', 'Neo Hypotheken', 'Robuust Hypotheken', 'Tellius Hypotheken']);
+    await page.locator('#q').fill('"Overbrugging" -Geen');
+    await expect(rijen(page)).toHaveCount(9);
+    await expect(naamCel(page, 'Tulp Hypotheken')).toHaveCount(0);
+    // OF tussen woorden
+    await page.locator('#q').fill('Triodos Knab');
+    await expect(rijen(page)).toHaveCount(0);
+    await expect(page.locator('#geenResultaat')).toContainText('Geen verstrekkers gevonden');
+    await page.locator('#ufModus').selectOption('of');
+    expect(await namen(page)).toEqual(['Triodos Bank', 'Knab']);
+    await expect(page.locator('#matrix .vn mark')).toHaveCount(2);
+    // alleen in namen: waarde-treffers tellen niet
+    await page.locator('#ufModus').selectOption('en');
+    await page.locator('#q').fill('Expats');
+    await expect(rijen(page)).toHaveCount(1);
+    await page.locator('#ufIn').selectOption('n');
+    await expect(rijen(page)).toHaveCount(0);
+    // lege uitkomst met wis-knop
+    await page.locator('#leegWis').click();
+    await expect(rijen(page)).toHaveCount(HOOFD);
+    await expect(page.locator('#q')).toHaveValue('');
+    await expect(page.locator('#ufIn')).toHaveValue('nw');
+    // geen HTML via de zoekterm
+    await page.locator('#q').fill('<img src=x onerror=alert(1)>');
+    await expect(page.locator('#out img:not(.plogo)')).toHaveCount(0);
+  });
+
+  test('snelfilters: type, nieuwe klanten verbergen en overige financiers', async ({ page }) => {
+    await page.goto(PAGINA);
+    await openPaneel(page);
+    await page.locator('#ufTypes [data-type="verz"]').click();
+    expect(await namen(page)).toEqual(['Aegon', 'Nationale-Nederlanden', 'a.s.r.', 'Centraal Beheer', 'Allianz']);
+    await page.locator('#ufTypes [data-type="label"]').click();
+    await expect(page.locator('#ufTypes [data-type="label"]')).toHaveAttribute('aria-pressed', 'true');
+    await expect(rijen(page)).toHaveCount(7);
+    await page.locator('#ufWis').click();
+    await expect(rijen(page)).toHaveCount(HOOFD);
+    await page.locator('#ufGeenNieuw').check();
+    await expect(rijen(page)).toHaveCount(HOOFD - 4);
+    for (const n of ['Neo Hypotheken', 'Woonnu', 'Tellius Hypotheken', 'IQWOON']) await expect(naamCel(page, n)).toHaveCount(0);
+    await page.locator('#ufOverig').check();
+    await expect(page.locator('#overigKnop')).toHaveAttribute('aria-expanded', 'true');
+    await expect(rijen(page)).toHaveCount(TOTAAL - 4);
+  });
+
+  test('sorteren: naam, meeste ruim en minste beperkingen', async ({ page }) => {
+    await page.goto(PAGINA);
+    await openPaneel(page);
+    await page.locator('#ufSort').selectOption('naam');
+    const n = await namen(page);
+    expect(n).toEqual([...n].sort((a, b) => a.localeCompare(b, 'nl')));
+    const tel = cls => page.locator('#matrix tbody tr[data-id]').evaluateAll((rs, c) => rs.map(r => r.querySelectorAll('td.val .tint.' + c).length), cls);
+    await page.locator('#ufSort').selectOption('ruim');
+    const g = await tel('t-g');
+    expect(g).toEqual([...g].sort((a, b) => b - a));
+    expect(g[0]).toBeGreaterThan(0);
+    await page.locator('#ufSort').selectOption('beperk');
+    const r = await tel('t-r');
+    expect(r).toEqual([...r].sort((a, b) => a - b));
+    // op de voorwaarden uit de regels: dan telt alleen die kolom
+    await regel(page, 0, 'ovbr', 'bevat', 'o');
+    await page.locator('#ufSort').selectOption('ruim');
+    const kol = 1 + (await page.locator('#matrix thead th').allTextContents()).findIndex(t => t.includes('Overbruggingskrediet'));
+    const ruim = await page.locator('#matrix tbody tr[data-id]').evaluateAll((rs, k) => rs.map(x => x.children[k].querySelector('.tint').classList.contains('t-g') ? 1 : 0), kol);
+    expect(ruim).toEqual([...ruim].sort((a, b) => b - a));
+  });
+
+  test('deeplink: filters in de hash en herstellen bij laden', async ({ page }) => {
+    await page.goto(PAGINA);
+    await openPaneel(page);
+    await page.locator('#q').fill('Hypotheken');
+    await page.locator('#ufIn').selectOption('n');
+    await page.locator('#ufTypes [data-type="regie"]').click();
+    await page.locator('#ufGeenNieuw').check();
+    await page.locator('#ufSort').selectOption('naam');
+    await regel(page, 0, 'rmid', 'bevat', 'mogelijk, ook; "x"/y');
+    await page.locator('#ufRegels .regel').nth(0).locator('select.ro').selectOption('niet');
+    await page.locator('#ufRegels .regel').nth(0).locator('input.rw').fill('mogelijk, ook; "x"/y');
+    const verwacht = await namen(page);
+    expect(verwacht.length).toBe(10);
+    const url = page.url();
+    expect(url).toContain('#f=q:Hypotheken;in:n;r:rmid,niet,');
+    expect(url).toContain(';t:regie;x:1;s:naam');
+    await page.goto('about:blank');
+    await page.goto(url);
+    await expect(page.locator('#uitgebreid')).toBeHidden();
+    await expect(page.locator('#ufTeller')).toHaveText('4');
+    expect(await namen(page)).toEqual(verwacht);
+    await expect(page.locator('#q')).toHaveValue('Hypotheken');
+    await expect(page.locator('#ufSort')).toHaveValue('naam');
+    await expect(page.locator('#ufIn')).toHaveValue('n');
+    await expect(page.locator('#ufGeenNieuw')).toBeChecked();
+    await expect(page.locator('#ufTypes [data-type="regie"]')).toHaveAttribute('aria-pressed', 'true');
+    await expect(page.locator('#ufRegels input.rw')).toHaveValue('mogelijk, ook; "x"/y');
+    await expect(page.locator('#ufRegels select.ro')).toHaveValue('niet');
+    // samen met een vergelijking, en onzin in de hash breekt niets
+    await page.goto('about:blank');
+    await page.goto(PAGINA + '#vergelijk=abn-amro&f=q:Rabo;r:bestaatniet,is,g/verh,xx,1/verh,is,zz;n:abc;s:raar;t:bank.nep');
+    await expect(page.locator('#tab-cmp')).toHaveAttribute('aria-selected', 'true');
+    await page.locator('#tab-matrix').click();
+    await expect(page.locator('#ufRegels .regel')).toHaveCount(1);
+    await expect(page.locator('#ufRegels .regel select.rw')).toHaveValue('g');
+    expect(await namen(page)).toEqual(['Rabobank']);
+  });
+
+  test('vergelijk deze resultaten en CSV volgt het filter', async ({ page }) => {
+    await page.goto(PAGINA);
+    await openPaneel(page);
+    await regel(page, 0, 'ovbr', 'is', 'r');
+    await page.locator('#ufSort').selectOption('naam');
+    const [dl] = await Promise.all([page.waitForEvent('download'), page.locator('#btnCsv').click()]);
+    const csv = fs.readFileSync(await dl.path(), 'utf8').slice(1).split('\r\n');
+    expect(csv.slice(1, 7).map(r => r.split(';')[0])).toEqual(['Attens Hypotheken', 'bijBouwe', 'Merius Hypotheken', 'Tulp Hypotheken', 'Venn Hypotheken', 'Vista Hypotheken']);
+    expect(csv.some(r => r.startsWith('Gefilterd: regels: Overbruggingskrediet is kleurcode beperkend'))).toBe(true);
+    await page.locator('#ufVergelijk').click();
+    await expect(page.locator('#tab-cmp')).toHaveAttribute('aria-selected', 'true');
+    await expect(page.locator('#vergelijking thead th')).toHaveCount(7);
+    await expect(page.locator('#aanbTeller')).toHaveText('6 gekozen');
+    await expect(page.locator('#melding')).toContainText('6 gefilterde verstrekkers');
+    expect(page.url()).toContain('#vergelijk=tulp-hypotheken,attens-hypotheken,venn-hypotheken,vista-hypotheken,bijbouwe,merius-hypotheken');
+    expect(page.url()).toContain('&f=r:ovbr,is,r');
+  });
+
+  test('390 px: paneel met regels zonder horizontale paginascroll', async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 844 });
+    await page.goto(PAGINA);
+    await openPaneel(page);
+    await regel(page, 0, 'rmid', 'bevat', 'mogelijk');
+    await regel(page, 1, 'verh', 'is', 'g');
+    await page.locator('#ufTypes [data-type="bank"]').click();
+    const breed = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
+    expect(breed).toBeLessThanOrEqual(0);
+    await page.emulateMedia({ colorScheme: 'dark' });
+    const bg = await page.evaluate(() => getComputedStyle(document.querySelector('.ufblok')).backgroundColor);
+    expect(bg).toBe('rgb(30, 30, 30)');
+  });
+});
+
+test.describe('voorwaardenvergelijker: filters op geverifieerde waarden', () => {
+  let fouten;
+  test.beforeEach(async ({ page }) => {
+    fouten = await volgFouten(page);
+    await page.goto('/voorwaarden-vergelijker.html');
+    await page.locator('#btnUitgebreid').click();
+  });
+  test.afterEach(() => { expect(fouten).toEqual([]); });
+
+  test('alleen geverifieerde waarden dimt de rest; minimum aantal geverifieerd', async ({ page }) => {
+    await page.locator('#ufAlleenGev').check();
+    const gedimd = page.locator('#matrix td.val.gedimd');
+    expect(await gedimd.count()).toBeGreaterThan(0);
+    await expect(page.locator('#matrix td.val.gedimd.gec')).toHaveCount(0);
+    expect(await page.locator('#matrix td.val.gec').count()).toBeGreaterThan(0);
+    await page.locator('#ufAlleenGev').uncheck();
+    await expect(gedimd).toHaveCount(0);
+    await page.locator('#ufMinGev').fill('15');
+    const n = await page.locator('#matrix tbody tr[data-id]').count();
+    expect(n).toBeGreaterThan(0);
+    expect(n).toBeLessThan(43);
+    const per = await page.locator('#matrix tbody tr[data-id]').evaluateAll(rs => rs.map(r => r.querySelectorAll('td.val.gec').length));
+    for (const x of per) expect(x).toBeGreaterThanOrEqual(15);
+    expect(page.url()).toContain('f=n:15');
+    // sorteren op meeste geverifieerde waarden
+    await page.locator('#ufMinGev').fill('0');
+    await page.locator('#ufSort').selectOption('gev');
+    const gev = await page.locator('#matrix tbody tr[data-id]').evaluateAll(rs => rs.map(r => r.querySelectorAll('td.val.gec').length));
+    expect(gev).toEqual([...gev].sort((a, b) => b - a));
+  });
+
+  test("'nog niet geverifieerd' verbergen", async ({ page }) => {
+    const nv = page.locator('#matrix td.val.nv');
+    const aantal = await nv.count();
+    expect(aantal).toBeGreaterThan(0);
+    await page.locator('#ufNvTonen').uncheck();
+    await expect(nv).toHaveCount(0);
+    await expect(page.locator('#matrix .verborgen')).toHaveCount(aantal);
+    await expect(page.locator('#matrix td.val', { hasText: '(nog niet geverifieerd)' }).filter({ hasNot: page.locator('.verborgen') })).toHaveCount(0);
+    expect(page.url()).toContain('nv:0');
+    await page.locator('#ufWis').click();
+    await expect(nv).toHaveCount(aantal);
+  });
+});

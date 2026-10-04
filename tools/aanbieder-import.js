@@ -11,6 +11,8 @@
  * mail in een bestand. Het script:
  *   1. valideert met exact dezelfde regels als de beheerpagina (het VALIDATIE-blok uit aanbieder-beheer.html);
  *   2. weigert bij fouten (exit 1) en toont waarschuwingen, bijvoorbeeld voor rentes of acties (AFM);
+ *   2b. neemt per document het tijdstempel `bijgewerkt` (JJJJ-MM-DD of JJJJ-MM-DDTuu:mm) en bij een renteblad
+ *      `geldigVanaf` mee; ontbreekt `bijgewerkt` bij een document, dan zet het de importdatum;
  *   3. vervangt de aanbieder met hetzelfde id, en neemt daarbij codeHash en demo over uit de bestaande versie
  *      (een aanbieder kan die dus nooit zelf wijzigen). Een onbekend id voegt het alleen toe met --nieuw;
  *      zet daarna een codeHash met beheer-code.html (keuze "Aanbieder");
@@ -58,6 +60,10 @@ else if (ruw.logo) console.warn('Let op: logo genegeerd (verwacht img/logos/<naa
 if (typeof ruw.telefoon === 'string' && /^[0-9 +()-]{9,20}$/.test(ruw.telefoon.trim())) nieuw.telefoon = ruw.telefoon.trim();
 else if (ruw.telefoon) console.warn('Let op: telefoon genegeerd (verwacht bijv. 030 123 45 67).');
 if (!/^\d{4}-\d{2}-\d{2}$/.test(nieuw.bijgewerkt)) nieuw.bijgewerkt = V.vandaag();
+/* Documenten zonder tijdstempel krijgen de importdatum (de weergave sorteert per soort op nieuwste eerst). */
+let zonderDatum = 0;
+for (const d of nieuw.documenten) if (!d.bijgewerkt) { d.bijgewerkt = V.vandaag(); zonderDatum++; }
+if (zonderDatum) console.warn('Let op: ' + zonderDatum + ' document(en) zonder tijdstempel; importdatum ' + V.vandaag() + ' gezet.');
 const r = V.valideer(nieuw);
 for (const w of r.waarschuwingen) console.warn('Waarschuwing: ' + w.msg);
 if (r.fouten.length) { for (const f of r.fouten) console.error('  - ' + f.msg); stop(r.fouten.length + ' validatiefout(en); niets gewijzigd.'); }

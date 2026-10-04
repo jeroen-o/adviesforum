@@ -114,6 +114,8 @@ h2.sectie{font-size:22px;font-weight:800;margin:28px 0 6px;padding-bottom:8px;bo
 .richtlijn h3{margin:0 0 6px;font-size:15.5px}
 .richtlijn p{margin:0 0 8px;font-size:14.5px}
 .notitie{font-size:13px;color:var(--grijs);margin:12px 0 0}
+.rentemelding{margin:0 0 10px}
+.item .stempel-doc{display:block;font-size:13px;color:var(--grijs);margin-top:2px}
 .extranet{border:1px solid var(--lijn);border-radius:12px;padding:18px;background:var(--vlak)}
 .extranet p{margin:0 0 12px}
 
@@ -217,7 +219,7 @@ body.voorbeeldmodus .romp{padding:12px}
 <main class="romp">
   <div class="melding" id="algemeen" role="note">
     <p><strong>Let op:</strong> de informatie op deze pagina wordt aangeleverd door de aanbieders zelf. Het Adviesforum toetst de inhoud niet en is niet verantwoordelijk voor de juistheid of volledigheid. Het is geen reclame, geen aanbod en geen advies.</p>
-    <p>Rentes, tarieven, premies en acties plaatsen we bewust niet. Elk nieuwsbericht vermeldt de datum en de bron. Controleer de actuele voorwaarden altijd bij de aanbieder zelf (website of extranet) voordat je ze in een advies of klantdossier gebruikt.</p>
+    <p>Het Adviesforum toont zelf geen rentes, tarieven, premies of acties. Aanbieders kunnen wel verwijzen naar hun eigen renteblad; de actuele rente staat altijd bij de aanbieder. Elk document heeft een tijdstempel van de laatste wijziging en elk nieuwsbericht vermeldt de datum en de bron. Controleer de actuele voorwaarden altijd bij de aanbieder zelf (website of extranet) voordat je ze in een advies of klantdossier gebruikt.</p>
   </div>
   <div id="app" aria-live="polite"></div>
 </main>
@@ -232,7 +234,8 @@ body.voorbeeldmodus .romp{padding:12px}
 var BASIS='https://jeroen-o.github.io/adviesforum/aanbieders.html';
 var MAIL='forumadvies@gmail.com';
 var TYPES={geldverstrekker:'Geldverstrekker',verzekeraar:'Verzekeraar',pensioenuitvoerder:'Pensioenuitvoerder',kredietverstrekker:'Kredietverstrekker',serviceprovider:'Serviceprovider'};
-var SOORTEN=[['voorwaarden','Voorwaarden'],['acceptatiegids','Acceptatiegidsen'],['productblad','Productbladen'],['formulier','Formulieren']];
+var SOORTEN=[['voorwaarden','Voorwaarden'],['acceptatiegids','Acceptatiegidsen'],['productblad','Productbladen'],['renteblad','Rentebladen'],['formulier','Formulieren']];
+var RENTEMELDING='Rentes wijzigen vaak. Controleer de datum en gebruik altijd het actuele renteblad van de aanbieder; dit is geen aanbod en geen advies.';
 var TABS=[['nieuws','Nieuws'],['agenda','Agenda'],['documenten','Voorwaarden & documenten'],['richtlijnen','Richtlijnen'],['extranet','Extranet'],['contact','Contactpersonen'],['elearning','E-learning']];
 var MAANDEN=['januari','februari','maart','april','mei','juni','juli','augustus','september','oktober','november','december'];
 var LIJST=Array.isArray(window.AANBIEDERS)?window.AANBIEDERS:[];
@@ -246,6 +249,18 @@ function okUrl(u){return typeof u==='string'&&/^https:\/\/[^\s"'<>]+$/i.test(u);
 function okMail(m){return typeof m==='string'&&/^[^\s@<>"']+@[^\s@<>"']+\.[a-z]{2,}$/i.test(m);}
 function arr(x){return Array.isArray(x)?x:[];}
 function datumNL(d){var m=/^(\d{4})-(\d{2})-(\d{2})$/.exec(d||'');return m?(+m[3])+' '+MAANDEN[+m[2]-1]+' '+m[1]:'datum onbekend';}
+/* Tijdstempel JJJJ-MM-DD of JJJJ-MM-DDTuu:mm -> "4 oktober 2026, 07:12" (zonder tijd alleen de datum). */
+var MOMENT=/^(\d{4}-\d{2}-\d{2})(?:T(\d{2}:\d{2}))?$/;
+function momentNL(d){var m=MOMENT.exec(d||'');return m?datumNL(m[1])+(m[2]?', '+m[2]:''):'datum onbekend';}
+function docsSorteer(lijst){return arr(lijst).slice().sort(function(x,y){var a=MOMENT.test(x.bijgewerkt||'')?x.bijgewerkt:'',b=MOMENT.test(y.bijgewerkt||'')?y.bijgewerkt:'';return b.localeCompare(a);});}
+function laatsteDoc(a){var d=docsSorteer(a.documenten)[0];return d&&MOMENT.test(d.bijgewerkt||'')?d.bijgewerkt:'';}
+function isVoorbeeldLink(u){return /^https:\/\/example\.(org|com)\//i.test(u||'');}
+function docItem(a,x){
+  var t=MOMENT.test(x.bijgewerkt||'')?'<time datetime="'+esc(x.bijgewerkt)+'">bijgewerkt '+esc(momentNL(x.bijgewerkt))+'</time>':'bijgewerkt: datum onbekend';
+  if(x.soort==='renteblad'&&/^\d{4}-\d{2}-\d{2}$/.test(x.geldigVanaf||''))t+=' &middot; <time datetime="'+esc(x.geldigVanaf)+'">geldig vanaf '+esc(datumNL(x.geldigVanaf))+'</time>';
+  if(a.demo&&a.logo&&!isVoorbeeldLink(x.url))t+=' &middot; link naar de eigen site van '+esc(a.naam)+', door de redactie toegevoegd';
+  return '<li class="item"><b>'+esc(x.titel)+'</b><span class="stempel-doc">'+t+'</span>'+linkExt(x.url,x.soort==='renteblad'?'Renteblad openen bij de aanbieder':'Openen bij de aanbieder','link')+'</li>';
+}
 function alineas(t){return String(t||'').split(/\n\s*\n/).map(function(p){return p.trim();}).filter(Boolean).map(function(p){return '<p>'+esc(p).replace(/\n/g,'<br>')+'</p>';}).join('');}
 function linkExt(u,tekst,cls){return okUrl(u)?'<a'+(cls?' class="'+cls+'"':'')+' href="'+esc(u)+'" target="_blank" rel="noopener noreferrer">'+esc(tekst)+'</a>':'';}
 function kleur(a){return /^#[0-9a-f]{6}$/i.test(a.kleur||'')?a.kleur:'#141414';}
@@ -366,7 +381,7 @@ function overzicht(){
   app.innerHTML=
     '<h2 class="sectie" id="aanbieders-kop">Aanbieders</h2>'+
     '<p class="sub">Kies een aanbieder voor nieuws, documenten, richtlijnen, extranet, contactpersonen en e-learning.</p>'+
-    (LIJST.some(function(a){return a&&a.demo&&a.logo;})?'<p class="demo-band"><strong>Voorbeeldweergave.</strong> Profielen met het label &ldquo;Voorbeeld, fictief&rdquo; zijn niet door de partij aangeleverd: omschrijving, berichten en documenten zijn verzonnen om de opzet te tonen. Website, telefoonnummer, extranet en toezicht zijn door de redactie opgezocht (peildatum 3 oktober 2026); controleer ze bij de aanbieder en in het AFM- of DNB-register. Vermelding betekent geen samenwerking of deelname.</p>':'')+
+    (LIJST.some(function(a){return a&&a.demo&&a.logo;})?'<p class="demo-band"><strong>Voorbeeldweergave.</strong> Profielen met het label &ldquo;Voorbeeld, fictief&rdquo; zijn niet door de partij aangeleverd: omschrijving, berichten en voorbeelddocumenten zijn verzonnen om de opzet te tonen; een enkel document met een link naar de eigen site van de partij is door de redactie toegevoegd. Website, telefoonnummer, extranet en toezicht zijn door de redactie opgezocht (peildatum 3 oktober 2026); controleer ze bij de aanbieder en in het AFM- of DNB-register. Vermelding betekent geen samenwerking of deelname.</p>':'')+
     '<div class="filters"><div><label for="zoek">Zoek op naam of onderwerp</label><input type="search" id="zoek" value="'+esc(staat.zoek)+'" placeholder="Bijvoorbeeld acceptatiegids"></div>'+
     '<div><label for="type">Type aanbieder</label><select id="type">'+opties+'</select></div></div>'+
     '<div class="filterrij">'+Object.keys(RUBRIEKEN).map(function(k){return '<label><input type="checkbox" data-rubriekfilter="'+k+'"'+(staat.rubriek===k?' checked':'')+'> <span>Alleen rubriek: '+esc(RUBRIEKEN[k])+'</span></label>';}).join('')+
@@ -415,7 +430,7 @@ function aanvraagBlok(){
   var body='Graag vraag ik een account aan om onze informatie op het Adviesforum bij te houden.\n\n'+
     'Bedrijfsnaam: \nAFM-vergunningnummer: \nType aanbieder (geldverstrekker, verzekeraar, pensioenuitvoerder, kredietverstrekker, serviceprovider): \n'+
     'Website: \nContactpersoon (naam en functie): \nZakelijk e-mailadres: \nZakelijk telefoonnummer: \n\n'+
-    'Ik heb de deelnamevoorwaarden gelezen (https://jeroen-o.github.io/adviesforum/aanbieders-voorwaarden.html). Ik bevestig dat wij geen rentes, tarieven, premies of acties plaatsen en dat genoemde contactpersonen toestemming geven voor vermelding van hun zakelijke gegevens.';
+    'Ik heb de deelnamevoorwaarden gelezen (https://jeroen-o.github.io/adviesforum/aanbieders-voorwaarden.html). Ik bevestig dat wij op het forum geen rentes, tarieven, premies of acties plaatsen (naar ons renteblad verwijzen we alleen met een link naar onze eigen site) en dat genoemde contactpersonen toestemming geven voor vermelding van hun zakelijke gegevens.';
   var href='mailto:'+MAIL+'?subject='+encodeURIComponent('Accountaanvraag aanbieder Adviesforum')+'&body='+encodeURIComponent(body);
   return '<section class="aanvraag" id="account-aanvragen"><h2>Aanbieder? Vraag een account aan</h2>'+
     '<p>Geldverstrekkers, verzekeraars, pensioenuitvoerders, kredietverstrekkers en serviceproviders kunnen hier zelf hun nieuws, voorwaarden, richtlijnen, extranetlink en contactpersonen bijhouden. Je krijgt een persoonlijke inlogcode voor de beheerpagina.</p>'+
@@ -431,10 +446,11 @@ function detail(a,voorbeeld){
   var tellers={agenda:agendaLijst(a).filter(komend).length,nieuws:arr(a.nieuws).length,documenten:arr(a.documenten).length,richtlijnen:arr(a.richtlijnen).length,extranet:a.extranet&&okUrl(a.extranet.url)?1:0,contact:arr(a.contact).length,elearning:arr(a.elearning).length};
   if(!TABS.some(function(t){return t[0]===staat.tab;}))staat.tab='nieuws';
   app.innerHTML=(voorbeeld?'<div class="demo-band"><strong>Voorbeeldweergave.</strong> Zo komt je profiel op aanbieders.html te staan na publicatie door de beheerder. Nog niet gepubliceerd.</div>':'<a class="naar-overzicht" href="#overzicht">&larr; Alle aanbieders</a>')+
-    (a.demo?'<div class="demo-band"><strong>Voorbeeldprofiel:</strong> '+(a.logo?esc(a.naam)+' heeft deze pagina niet aangeleverd en werkt niet mee aan het Adviesforum. '+(a.opgezocht?'Omschrijving, berichten en documenten zijn fictief. Website, telefoonnummer en extranet zijn door de redactie opgezocht op '+esc(datumNL(a.opgezocht))+'; controleer ze bij de aanbieder.':'Tekst, berichten en links zijn fictief.'):'dit is een fictieve aanbieder om de opzet te tonen. De gegevens en links bestaan niet.')+'</div>':'')+
+    (a.demo?'<div class="demo-band"><strong>Voorbeeldprofiel:</strong> '+(a.logo?esc(a.naam)+' heeft deze pagina niet aangeleverd en werkt niet mee aan het Adviesforum. '+(a.opgezocht?(arr(a.documenten).some(function(d){return !isVoorbeeldLink(d.url);})?'Omschrijving, berichten en voorbeelddocumenten zijn fictief. Website, telefoonnummer en extranet zijn door de redactie opgezocht op '+esc(datumNL(a.opgezocht))+'; documenten met een link naar de eigen site van de aanbieder zijn door de redactie toegevoegd (zie de datum bij het document). Controleer ze bij de aanbieder.':'Omschrijving, berichten en documenten zijn fictief. Website, telefoonnummer en extranet zijn door de redactie opgezocht op '+esc(datumNL(a.opgezocht))+'; controleer ze bij de aanbieder.'):'Tekst, berichten en links zijn fictief.'):'dit is een fictieve aanbieder om de opzet te tonen. De gegevens en links bestaan niet.')+'</div>':'')+
     '<div class="detailkop">'+logo(a,true)+'<div class="tekst"><h2 id="detail-titel">'+esc(a.naam||'Naam aanbieder')+'</h2>'+typeBadge(a)+demoBadge(a)+rubriekBadges(a)+
       (a.omschrijving?'<p>'+esc(a.omschrijving)+'</p>':'')+
       '<p class="meta">'+(okUrl(a.website)?linkExt(a.website,'Website van de aanbieder')+' &middot; ':'')+(a.telefoon?'Telefoon <a href="tel:'+esc(String(a.telefoon).replace(/[^\d+]/g,''))+'">'+esc(a.telefoon)+'</a> &middot; ':'')+(a.demo?'Fictieve voorbeeldinhoud, niet van de aanbieder':'Aangeleverd door de aanbieder')+(a.bijgewerkt?', bijgewerkt '+esc(datumNL(a.bijgewerkt)):'')+'</p>'+
+      (laatsteDoc(a)?'<p class="meta" id="laatste-doc">Laatste documentwijziging: <time datetime="'+esc(laatsteDoc(a))+'">'+esc(momentNL(laatsteDoc(a)))+'</time></p>':'')+
       (voorbeeld?'':'<div class="volg-rij">'+volgKnop(a)+'<span class="status" id="volg-status" role="status" aria-live="polite"></span></div>')+'</div></div>'+
     '<div class="tabs" role="tablist" aria-label="Onderdelen">'+TABS.map(function(t){return '<button type="button" role="tab" id="tab-'+t[0]+'" aria-controls="paneel" data-tab="'+t[0]+'" aria-selected="'+(staat.tab===t[0])+'">'+esc(t[1])+'<span class="n">'+tellers[t[0]]+'</span></button>';}).join('')+'</div>'+
     '<section class="paneel" id="paneel" role="tabpanel" aria-labelledby="tab-'+staat.tab+'">'+paneel(a,staat.tab)+'</section>';
@@ -450,9 +466,11 @@ function paneel(a,tab){
   }
   if(tab==='nieuws'){var n=nieuwsSorteer(a.nieuws);return n.length?'<ol class="feed">'+n.map(function(x){return bericht(a,x,false);}).join('')+'</ol>':leeg;}
   if(tab==='documenten'){
-    var docs=arr(a.documenten);if(!docs.length)return leeg;
-    return SOORTEN.map(function(s){var d=docs.filter(function(x){return x.soort===s[0];});return d.length?'<div class="docgroep"><h3>'+s[1]+'</h3><ul class="lijst">'+d.map(function(x){return '<li class="item"><b>'+esc(x.titel)+'</b>'+linkExt(x.url,'Openen bij de aanbieder','link')+'</li>';}).join('')+'</ul></div>':'';}).join('')+
-      '<p class="notitie">Documenten staan bij de aanbieder zelf; controleer of je de nieuwste versie hebt.</p>';
+    var docs=docsSorteer(a.documenten);if(!docs.length)return leeg;
+    return SOORTEN.map(function(s){var d=docs.filter(function(x){return x.soort===s[0];});return d.length?'<div class="docgroep" data-soort="'+s[0]+'"><h3>'+s[1]+'</h3>'+
+      (s[0]==='renteblad'?'<p class="demo-band rentemelding" role="note">'+esc(RENTEMELDING)+'</p>':'')+
+      '<ul class="lijst">'+d.map(function(x){return docItem(a,x);}).join('')+'</ul></div>':'';}).join('')+
+      '<p class="notitie">Documenten staan bij de aanbieder zelf; controleer of je de nieuwste versie hebt. Het tijdstempel is de laatste wijziging zoals aangeleverd; per soort staat het nieuwste document bovenaan. Het Adviesforum toont zelf geen rentes, tarieven, premies of acties.</p>';
   }
   if(tab==='richtlijnen'){var r=arr(a.richtlijnen);return r.length?'<ul class="lijst">'+r.map(function(x){return '<li class="item richtlijn"><h3>'+esc(x.titel)+'</h3>'+alineas(x.tekst)+'</li>';}).join('')+'</ul><p class="notitie">Richtlijnen zoals aangeleverd door de aanbieder. Bij verschil gaat de acceptatiegids of de voorwaarden van de aanbieder voor.</p>':leeg;}
   if(tab==='extranet'){var e=a.extranet||{};return okUrl(e.url)?'<div class="extranet"><p>Aanvragen indienen, dossiers volgen en documenten uploaden doe je in de omgeving van de aanbieder zelf. Het Adviesforum heeft daar geen toegang toe en slaat geen inloggegevens op.</p>'+linkExt(e.url,'Naar '+(e.naam||'het extranet'),'knop')+'</div>':leeg;}
