@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /*
- * Overzicht van gecontroleerde voorwaarden met een bron ouder dan 6 maanden (blok CONTROLE in voorwaarden-vergelijker.html).
+ * Overzicht van gecontroleerde voorwaarden met een bron ouder dan 6 maanden (blok CONTROLE in data/voorwaarden-controle.js).
  *
  *   node tools/voorwaarden-verouderd.js            overzicht per geldverstrekker (nieuwste controle eerst nodig)
  *   node tools/voorwaarden-verouderd.js --json     zelfde overzicht als JSON (voor de maandelijkse controle)
@@ -13,7 +13,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const html = fs.readFileSync(path.join(__dirname, '..', 'voorwaarden-vergelijker.html'), 'utf8');
+const html = fs.readFileSync(path.join(__dirname, '..', 'data', 'voorwaarden-controle.js'), 'utf8');
 const m = /const CONTROLE = (\{[\s\S]*?\});\s*const EIGEN_DOMEINEN/.exec(html);
 if (!m) { console.error('voorwaarden-verouderd: CONTROLE niet gevonden'); process.exit(1); }
 const CONTROLE = JSON.parse(m[1]);

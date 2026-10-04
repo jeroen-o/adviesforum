@@ -21,7 +21,7 @@ const UIT = path.join(ROOT, 'data', 'productvoorwaarden-wijzigingen.js');
 const NULMETING = '11edf5f'; /* 4 oktober 2026: eerste publicatie ORV, AOV en krediet */
 const CHECK = process.argv.includes('--check');
 
-function git(args) { return execFileSync('git', args, { cwd: ROOT, encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 }); }
+function git(args) { return execFileSync('git', args, { cwd: ROOT, encoding: 'utf8', maxBuffer: 64 * 1024 * 1024, stdio: ['ignore', 'pipe', 'pipe'] }); }
 function lees(js) {
   try { const sb = { window: {} }; vm.createContext(sb); vm.runInContext(js, sb, { timeout: 5000 }); return sb.window.PRODUCTVOORWAARDEN || null; } catch (e) { return null; }
 }
