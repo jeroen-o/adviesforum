@@ -40,7 +40,8 @@ const VRAAG_BESTANDEN = [...indexHtml.matchAll(/<script\s+src="(data\/vragen[^"]
 if (!VRAAG_BESTANDEN.length) fout('Geen data/vragen*.js scripts gevonden in index.html');
 
 global.window = {};
-for (const b of [...KB_BESTANDEN, ...FAQ_BESTANDEN, 'data/begrippen.js', ...VRAAG_BESTANDEN]) require(path.join(ROOT, b));
+for (const b of [...KB_BESTANDEN, ...FAQ_BESTANDEN, 'data/begrippen.js', ...VRAAG_BESTANDEN, 'data/voorwaarden-onderwerpen.js']) require(path.join(ROOT, b));
+const VW_ONDERWERPEN = window.VOORWAARDEN_ONDERWERPEN;
 const ARTIKELEN = window.KENNISBANK || [];
 const FAQ = window.FAQ || [];
 const BEGRIPPEN = window.BEGRIPPEN || [];
@@ -225,6 +226,11 @@ const uit = {}; // relatief pad -> inhoud
 const kbSort = ARTIKELEN.slice().sort((a, b) => String(b.datum).localeCompare(String(a.datum)) || a.id.localeCompare(b.id));
 const kbCats = CATS.filter(c => ARTIKELEN.some(a => a.cat === c.id));
 const KR_FORUM = ['Adviesforum', '../index.html', BASE];
+/* Links naar de voorwaarden-vergelijker bij hypotheekonderwerpen (data/voorwaarden-onderwerpen.js) */
+const vwKader = (tekst, c) => {
+  const l = VW_ONDERWERPEN && VW_ONDERWERPEN.zoek ? VW_ONDERWERPEN.zoek(tekst, c, '../') : [];
+  return l.length ? `<div class="kader"><h2>Vergelijk de voorwaarden per geldverstrekker</h2><ul class="lijst">${l.map(x => `<li><a href="${esc(x.href)}">${esc(x.naam[0].toUpperCase() + x.naam.slice(1))}</a></li>`).join('')}</ul><p style="font-size:13px;margin:6px 0 0">Gecontroleerde voorwaarden met bron; geen rentes en geen advies.</p></div>\n` : '';
+};
 const KR_KB = ['Kennisbank', './', BASE + 'kennisbank/'];
 
 for (const a of ARTIKELEN) {
@@ -238,6 +244,7 @@ for (const a of ARTIKELEN) {
     (a.links && a.links.length ? '<h2>Bronnen en links</h2>\n<ul>\n' + a.links.map(l => `<li><a href="${esc(linkUrl(l.url, '../'))}"${/^https?:/i.test(l.url) ? ' rel="noopener"' : ''}>${esc(l.titel)}</a></li>`).join('\n') + '\n</ul>\n' : '') +
     '</article>\n' +
     `<p style="margin-top:26px"><a class="knop" href="../index.html#artikel-${esc(a.id)}">Open in het forum</a></p>\n` +
+    vwKader(a.titel + ' ' + a.body, a.cat) +
     (verwant.length ? `<div class="kader"><h2>Meer over ${esc(catNaam(a.cat))}</h2><ul class="lijst">${verwant.map(x => `<li><a href="${esc(x.id)}.html">${esc(x.titel)}</a></li>`).join('')}</ul></div>` : '');
   uit['kennisbank/' + a.id + '.html'] = pagina({
     pre: '../', pad: 'kennisbank/' + a.id + '.html', titel: a.titel + ' – ' + SITE, beschrijving: beschr, type: 'article', h1: a.titel, actief: 'kb',
@@ -355,6 +362,7 @@ for (const v of VRAGEN) {
   const meta = [catNaam(v.cat), 'Gesteld op ' + datumNL(v.datum), antwTekst(v)].map(esc).join(' · ');
   const inhoud = (v.voorbeeld ? '<p class="melding" role="note">Voorbeeldvraag: een fictieve praktijksituatie om te laten zien hoe collega’s elkaar helpen. De antwoorden zijn voorbeeldantwoorden.</p>\n' : '') +
     '<article>\n<h2>De vraag</h2>\n' + rich(v.body, 'h3') + '</article>\n' +
+    vwKader(v.titel + ' ' + v.body + ' ' + (v.tags || []).join(' '), v.cat) +
     (top ? `<h2>${top.id === v.beste ? 'Beste antwoord' : gem(top.rA) > 0 ? 'Best beoordeelde antwoord' : 'Eerste antwoord'} (fragment)</h2>\n<div class="teaser"><p class="waar">Reactie #${nr(top)} · ${esc(datumNL(top.datum))}</p><p>${esc(kort(top.body, 200))}</p></div>\n` : '') +
     `<div class="slot" role="note"><p><b>Lees alle antwoorden op het Adviesforum.</b> Inloggen als geverifieerd adviseur vereist.</p>` +
     `<p class="knoppen"><a class="knop" href="${esc(forumLink(v))}">Inloggen</a><a class="knop knop-licht" href="../aanmelden.html">Aanmelden</a></p></div>\n` +

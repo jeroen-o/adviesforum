@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Situatiecheck hypotheekvoorwaarden – Adviesforum</title>
+<link rel="canonical" href="https://jeroen-o.github.io/adviesforum/situatiecheck.html">
+<meta property="og:url" content="https://jeroen-o.github.io/adviesforum/situatiecheck.html">
+<meta property="og:site_name" content="Adviesforum">
+<meta property="og:locale" content="nl_NL">
+<meta name="theme-color" content="#FFD200">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="description" content="Vink de situatie van de klant aan en zie per geldverstrekker of dat volgens de gecontroleerde hypotheekvoorwaarden kan, met bron. Alfabetisch, zonder rangorde en zonder advies.">
+<meta property="og:title" content="Situatiecheck hypotheekvoorwaarden – Adviesforum">
+<meta property="og:description" content="Per geldverstrekker: kan deze klantsituatie volgens de gecontroleerde voorwaarden? Met bron, zonder rangorde of advies.">
+<meta property="og:type" content="website">
+<style>
+@font-face{font-family:Montserrat;font-style:normal;font-weight:400;font-display:swap;src:url(fonts/montserrat-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:700;font-display:swap;src:url(fonts/montserrat-latin-700-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:800;font-display:swap;src:url(fonts/montserrat-latin-800-normal.woff2) format('woff2')}
+:root{
+  --geel-donker:#E6BD00;--geel-zacht:#FFF6C7;--tekst:#1F1F1F;--grijs:#5E5E5E;--lijn:#E4E4E4;--vlak:#F7F7F5;--wit:#fff;
+  --rood:#C0392B;--rood-zacht:#FFF1F0;--rood-tekst:#7A1F14;--oranje:#9A5B00;--oranje-zacht:#FFF4E0;--groen:#1F7A52;--groen-zacht:#E8F5EE;--blauw:#1F4E79;
+  --kop:#FFD200;--kop-tekst:#141414;--body:#fff;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --geel-zacht:#3f3918;--tekst:#F2F2F2;--grijs:#BDBDBD;--lijn:#333;--vlak:#262626;--wit:#1E1E1E;--rood-zacht:#3f1a18;--rood-tekst:#f3c2bd;
+  --oranje:#f6cb8e;--oranje-zacht:#3f3118;--groen:#9de7c1;--groen-zacht:#1b3328;--blauw:#9ec3e6;--kop:#1E1E1E;--kop-tekst:#F2F2F2;--body:#141414;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --geel-zacht:#3f3918;--tekst:#F2F2F2;--grijs:#BDBDBD;--lijn:#333;--vlak:#262626;--wit:#1E1E1E;--rood-zacht:#3f1a18;--rood-tekst:#f3c2bd;
+  --oranje:#f6cb8e;--oranje-zacht:#3f3118;--groen:#9de7c1;--groen-zacht:#1b3328;--blauw:#9ec3e6;--kop:#1E1E1E;--kop-tekst:#F2F2F2;--body:#141414;color-scheme:dark}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:Montserrat,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;color:var(--tekst);background:var(--body);line-height:1.55;font-size:15px;overflow-x:hidden}
+a{color:inherit}
+button,input{font-family:inherit}
+[hidden]{display:none!important}
+.skiplink{position:absolute;left:-9999px}.skiplink:focus{left:12px;top:12px;background:#FFD200;color:#141414;padding:8px 12px;z-index:9}
+.balk{background:#141414;color:#fff;font-size:12.5px;padding:8px 16px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.balk a{color:#fff;text-decoration:none;opacity:.88}.balk a:hover{opacity:1;text-decoration:underline}
+.kop{background:var(--kop);color:var(--kop-tekst);padding:30px 16px 34px;border-bottom:3px solid #FFD200}
+.kop-in,.romp{max-width:1100px;margin:0 auto}
+.merk{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.08em;font-size:12px;text-transform:uppercase;margin-bottom:14px}
+.zeshoek{width:22px;height:25px;background:currentColor;clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);flex:none}
+.terugs{display:flex;gap:8px 18px;flex-wrap:wrap;margin-bottom:12px}
+.terug{font-size:13.5px;font-weight:700;text-decoration:none;border-bottom:2px solid currentColor}
+.kop h1{margin:0 0 10px;font-size:clamp(26px,4.2vw,38px);line-height:1.12;font-weight:800}
+.kop p{margin:0;max-width:72ch}
+.romp{padding:22px 16px 56px}
+.compliance{border:2px solid var(--rood);border-left-width:8px;border-radius:0 12px 12px 0;padding:12px 16px;margin:0 0 18px;background:var(--rood-zacht);color:var(--rood-tekst);font-size:14px}
+.compliance h2{margin:0 0 4px;font-size:14px;font-weight:800;text-transform:uppercase;letter-spacing:.03em}
+.compliance ul{margin:0;padding-left:18px}
+fieldset{border:1px solid var(--lijn);border-radius:14px;padding:12px 14px 14px;margin:0 0 14px;background:var(--vlak)}
+legend{font-weight:800;font-size:15px;padding:0 6px}
+.sits{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:8px}
+.sit{display:flex;gap:10px;align-items:flex-start;background:var(--wit);border:1px solid var(--lijn);border-radius:10px;padding:9px 11px;cursor:pointer}
+.sit input{margin-top:3px;width:18px;height:18px;accent-color:#E6BD00;flex:none}
+.sit b{display:block;font-size:14px}
+.sit span{font-size:12.5px;color:var(--grijs)}
+.opties{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:14px;margin-top:10px}
+.opties label{display:inline-flex;gap:6px;align-items:center}
+.knop{border:1px solid var(--geel-donker);background:#FFD200;color:#141414;border-radius:999px;padding:7px 14px;font-weight:700;font-size:14px;cursor:pointer;min-height:38px}
+.knop.licht{background:var(--wit);color:var(--tekst);border-color:var(--lijn)}
+.samen{font-size:14.5px;margin:6px 0 12px}
+.gv{border:1px solid var(--lijn);border-radius:12px;padding:12px 14px;margin:0 0 10px;background:var(--wit)}
+.gv h3{margin:0 0 6px;font-size:16px;display:flex;flex-wrap:wrap;gap:6px 12px;align-items:baseline}
+.gv h3 a{font-size:12.5px;font-weight:600}
+.gv h3 .let{font-size:11.5px;font-weight:800;background:var(--oranje-zacht);color:var(--oranje);border-radius:6px;padding:1px 7px}
+.gv ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.gv li{display:grid;grid-template-columns:118px 1fr;gap:10px;font-size:13.5px;align-items:start}
+.lab{display:inline-block;text-align:center;border-radius:8px;padding:2px 6px;font-weight:800;font-size:12px}
+.lab.ja{background:var(--groen-zacht);color:var(--groen)}
+.lab.voorwaarden{background:var(--oranje-zacht);color:var(--oranje)}
+.lab.nee{background:var(--rood-zacht);color:var(--rood-tekst)}
+.lab.onbekend{background:var(--vlak);color:var(--grijs);border:1px solid var(--lijn)}
+.gv .sn{font-weight:700}
+.gv .tk{display:block;color:var(--tekst)}
+.gv .bron{display:block;font-size:12px;color:var(--blauw);overflow-wrap:anywhere}
+.gv .nv{font-style:italic;color:var(--grijs);font-size:12px}
+.leeg{color:var(--grijs);font-style:italic}
+.voet{max-width:1100px;margin:0 auto;padding:0 16px 40px;font-size:12.5px;color:var(--grijs)}
+@media (max-width:560px){.gv li{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<a class="skiplink" href="#inhoud">Naar de inhoud</a>
+<nav class="balk" aria-label="Forum">
+  <span>Adviesforum &middot; voor en door financieel adviseurs</span>
+  <span><a href="index.html">Home</a> &middot; <a href="aanmelden.html">Aanmelden</a></span>
+</nav>
+<header class="kop">
+  <div class="kop-in">
+    <div class="merk"><span class="zeshoek" aria-hidden="true"></span>Adviesforum &middot; Hulpmiddelen</div>
+    <div class="terugs">
+      <a class="terug" href="voorwaarden-vergelijker.html">Voorwaarden-vergelijker</a>
+      <a class="terug" href="productvoorwaarden.html">ORV, AOV en krediet</a>
+      <a class="terug" href="index.html#hulpmiddelen">Alle hulpmiddelen</a>
+    </div>
+    <h1>Situatiecheck hypotheekvoorwaarden</h1>
+    <p>Vink de situatie van de klant aan. Je ziet per geldverstrekker of dat volgens de gecontroleerde voorwaarden kan, met de onderbouwing en de bron. Geldverstrekkers staan op alfabet.</p>
+  </div>
+</header>
+
+<main class="romp" id="inhoud" tabindex="-1">
+  <section class="compliance" role="note" aria-labelledby="comp-kop">
+    <h2 id="comp-kop">Compliance / AFM: filter, geen advies</h2>
+    <ul>
+      <li>Dit is een filter op gepubliceerde voorwaarden: geen rangorde, geen voorkeur en geen advies. Rente en kosten tellen niet mee.</li>
+      <li>De indeling (ja, onder voorwaarden, nee, onbekend) is afgeleid uit de tekst van de gecontroleerde voorwaarden en kan een nuance missen. Lees altijd de onderbouwing en controleer de actuele acceptatiegids voordat je een aanvraag indient.</li>
+      <li>&lsquo;Onbekend&rsquo; betekent dat de gecontroleerde voorwaarden er niets over zeggen, niet dat het niet kan.</li>
+    </ul>
+  </section>
+
+  <fieldset>
+    <legend>Situatie van de klant</legend>
+    <div class="sits" id="sits"></div>
+    <div class="opties">
+      <label><input type="checkbox" id="optNee"> Verberg geldverstrekkers waar een gekozen situatie &lsquo;nee&rsquo; is</label>
+      <label><input type="checkbox" id="optOnb"> Verberg geldverstrekkers met &lsquo;onbekend&rsquo;</label>
+      <label><input type="checkbox" id="optNieuw" checked> Verberg geldverstrekkers die geen nieuwe klanten aannemen</label>
+      <button type="button" class="knop licht" id="btnWis">Wis keuze</button>
+    </div>
+  </fieldset>
+
+  <p class="samen" id="samen" role="status" aria-live="polite"></p>
+  <div id="lijst"></div>
+</main>
+
+<footer class="voet">
+  <p>Bron: de online gecontroleerde voorwaarden in de <a href="voorwaarden-vergelijker.html">voorwaarden-vergelijker</a>. Een vinkje &#10003; betekent dat de onderliggende voorwaarde op de site van de geldverstrekker is gecontroleerd. Geen rentes, geen tarieven, niet bedoeld voor consumenten.</p>
+</footer>
+
+<script src="data/situatiecheck.js"></script>
+<script>
+(function(){
+'use strict';
+var D = window.SITUATIECHECK || {situaties:[], geldverstrekkers:[]};
+var $ = function(id){ return document.getElementById(id); };
+function el(tag, cls, txt){ var e = document.createElement(tag); if(cls) e.className = cls; if(txt != null) e.textContent = txt; return e; }
+function veilig(u){ return typeof u==='string' && /^https:\/\/[^\s"'<>]+$/i.test(u) ? u : ''; }
+function host(u){ try{ return new URL(u).hostname.replace(/^www\./,''); }catch(e){ return u; } }
+var LABEL = {ja:'Ja', voorwaarden:'Onder voorwaarden', nee:'Nee', onbekend:'Onbekend'};
+var gekozen = new Set();
+
+function leesHash(){
+  var m = /(?:^#|&)s=([a-z0-9,]*)/.exec(location.hash);
+  gekozen = new Set(m ? m[1].split(',').filter(function(id){ return D.situaties.some(function(s){ return s.id===id; }); }) : []);
+}
+function schrijfHash(){
+  var h = gekozen.size ? '#s=' + D.situaties.filter(function(s){ return gekozen.has(s.id); }).map(function(s){ return s.id; }).join(',') : '';
+  try{ history.replaceState(null, '', location.pathname + location.search + h); }catch(e){}
+}
+function bouwKeuze(){
+  var box = $('sits'); box.textContent = '';
+  D.situaties.forEach(function(s){
+    var l = el('label','sit'), i = el('input'); i.type = 'checkbox'; i.value = s.id; i.checked = gekozen.has(s.id);
+    i.addEventListener('change', function(){ if(i.checked) gekozen.add(s.id); else gekozen.delete(s.id); render(); });
+    var t = el('div'); t.appendChild(el('b', null, s.naam)); if(s.vraag) t.appendChild(el('span', null, s.vraag));
+    l.appendChild(i); l.appendChild(t); box.appendChild(l);
+  });
+}
+function render(){
+  schrijfHash();
+  var sits = D.situaties.filter(function(s){ return gekozen.has(s.id); });
+  var lijst = $('lijst'); lijst.textContent = '';
+  if(!sits.length){ $('samen').textContent = 'Kies een of meer situaties om de geldverstrekkers te zien.'; return; }
+  var gv = D.geldverstrekkers.filter(function(g){
+    if($('optNieuw').checked && g.geenNieuw) return false;
+    var o = sits.map(function(s){ return (g.s[s.id]||{o:'onbekend'}).o; });
+    if($('optNee').checked && o.indexOf('nee') >= 0) return false;
+    if($('optOnb').checked && o.indexOf('onbekend') >= 0) return false;
+    return true;
+  });
+  var allesKan = gv.filter(function(g){ return sits.every(function(s){ var o = (g.s[s.id]||{}).o; return o==='ja' || o==='voorwaarden'; }); }).length;
+  $('samen').textContent = gv.length + ' geldverstrekkers getoond; bij ' + allesKan + ' kan elke gekozen situatie volgens de gecontroleerde voorwaarden (ja of onder voorwaarden).';
+  if(!gv.length){ lijst.appendChild(el('p','leeg','Geen geldverstrekkers met deze filters.')); return; }
+  gv.forEach(function(g){
+    var d = el('article','gv'), h = el('h3');
+    h.appendChild(el('span', null, g.naam));
+    if(g.geenNieuw) h.appendChild(el('span','let','geen nieuwe klanten'));
+    var a = el('a', null, 'Bekijk in de vergelijker'); a.href = 'voorwaarden-vergelijker.html#vergelijk=' + g.slug + '&k=' + Array.from(new Set(sits.map(function(s){ return (g.s[s.id]||{}).c; }).filter(Boolean))).join(',');
+    h.appendChild(a); d.appendChild(h);
+    var ul = el('ul');
+    sits.forEach(function(s){
+      var x = g.s[s.id] || {o:'onbekend', t:''};
+      var li = el('li'); li.appendChild(el('span','lab ' + x.o, LABEL[x.o]));
+      var r = el('div'); r.appendChild(el('span','sn', s.naam));
+      r.appendChild(el('span','tk', x.t || (x.o==='onbekend' ? 'De gecontroleerde voorwaarden zeggen hier niets over.' : '')));
+      if(x.o !== 'onbekend'){
+        if(x.g){ var b = el('span','bron','✓ gecontroleerd'); var v = veilig(x.b); if(v){ b.appendChild(document.createTextNode(' · bron: ')); var l = el('a', null, host(v)); l.href = v; l.target = '_blank'; l.rel = 'noopener'; b.appendChild(l); } r.appendChild(b); }
+        else r.appendChild(el('span','nv','onderliggende voorwaarde nog niet geverifieerd'));
+      }
+      li.appendChild(r); ul.appendChild(li);
+    });
+    d.appendChild(ul); lijst.appendChild(d);
+  });
+}
+['optNee','optOnb','optNieuw'].forEach(function(id){ $(id).addEventListener('change', render); });
+$('btnWis').addEventListener('click', function(){ gekozen.clear(); bouwKeuze(); render(); });
+window.addEventListener('hashchange', function(){ leesHash(); bouwKeuze(); render(); });
+leesHash(); bouwKeuze(); render();
+})();
+</script>
+</body>
+</html>

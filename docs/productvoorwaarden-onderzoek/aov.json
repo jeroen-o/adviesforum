@@ -1,0 +1,1417 @@
+{
+ "product": "aov",
+ "titel": "Arbeidsongeschiktheidsverzekering (zelfstandigen)",
+ "gecontroleerd": "2026-10-04",
+ "criteria": [
+  {
+   "id": "dekking",
+   "naam": "Arbeidsongeschiktheidsbegrip",
+   "kort": "Beroeps-, passende of gangbare arbeid",
+   "waarom": "Bepaalt wanneer je recht hebt op uitkering: hoe ruimer het begrip (eigen beroep), hoe eerder je uitkering krijgt."
+  },
+  {
+   "id": "wachttijd",
+   "naam": "Eigenrisicotermijn",
+   "kort": "Beschikbare wachttijden",
+   "waarom": "De periode zonder uitkering moet aansluiten op je buffer."
+  },
+  {
+   "id": "eindleeftijd",
+   "naam": "Eindleeftijd",
+   "kort": "Maximale eind- en uitkeringsleeftijd",
+   "waarom": "Een eindleeftijd onder de AOW-leeftijd laat een inkomensgat."
+  },
+  {
+   "id": "maxbedrag",
+   "naam": "Maximaal verzekerd bedrag",
+   "kort": "Max. bedrag en % van inkomen",
+   "waarom": "Bepaalt hoeveel van je inkomen je kunt beschermen."
+  },
+  {
+   "id": "beroepsklasse",
+   "naam": "Beroepsklassen",
+   "kort": "Indeling en beroepenlijst",
+   "waarom": "De beroepsindeling bepaalt de acceptatie en de beschikbare keuzes."
+  },
+  {
+   "id": "psychisch",
+   "naam": "Psychische en rugklachten",
+   "kort": "Beperkingen of uitsluitingen",
+   "waarom": "Psychische klachten en rugklachten zijn de meest voorkomende oorzaken van arbeidsongeschiktheid."
+  },
+  {
+   "id": "starter",
+   "naam": "Startersregeling",
+   "kort": "Verzekeren met beperkt inkomensbewijs",
+   "waarom": "Starters hebben nog geen inkomenshistorie; een regeling voorkomt onderverzekering."
+  },
+  {
+   "id": "indexatie",
+   "naam": "Indexatie",
+   "kort": "Vóór en tijdens uitkering",
+   "waarom": "Zonder indexatie neemt de koopkracht van de uitkering af."
+  },
+  {
+   "id": "zwanger",
+   "naam": "Zwangerschap en bevalling",
+   "kort": "Dekking bij zwangerschap",
+   "waarom": "Belangrijk voor zelfstandigen met kinderwens; de ZEZ-regeling van UWV is beperkt."
+  },
+  {
+   "id": "ontheffing",
+   "naam": "Premievrijstelling",
+   "kort": "Premieontheffing tijdens uitkering",
+   "waarom": "Voorkomt dat je premie moet blijven betalen terwijl je arbeidsongeschikt bent."
+  },
+  {
+   "id": "aanpassen",
+   "naam": "Meegroeien",
+   "kort": "Verhogen zonder medische waarborgen",
+   "waarom": "Met een groeiend inkomen wil je zonder nieuwe medische keuring kunnen bijverzekeren."
+  },
+  {
+   "id": "reintegratie",
+   "naam": "Re-integratie en preventie",
+   "kort": "Ondersteuning en coaching",
+   "waarom": "Hulp bij voorkomen van uitval en terugkeer naar werk."
+  },
+  {
+   "id": "varianten",
+   "naam": "Varianten",
+   "kort": "Basis-, ongevallen-, korte-duurvarianten",
+   "waarom": "Goedkopere of beperktere varianten maken een AOV toegankelijk, maar dekken minder."
+  }
+ ],
+ "aanbieders": [
+  {
+   "naam": "Movir",
+   "url": "https://www.movir.nl/arbeidsongeschiktheidsverzekering/momentum-aov",
+   "domeinen": [
+    "movir.nl"
+   ],
+   "documenten": [
+    {
+     "titel": "Keuzes bij je aov (Momentum AOV)",
+     "url": "https://www.movir.nl/arbeidsongeschiktheidsverzekering/momentum-aov/keuzes-bij-je-aov",
+     "versie": "webpagina 2026"
+    },
+    {
+     "titel": "Nieuwe keuze: AOW-volgende eindleeftijd vanaf 25 maart 2026",
+     "url": "https://www.movir.nl/voor-adviseurs/nieuws/nieuwe-keuze-aow-volgende-eindleeftijd",
+     "versie": "2026-03"
+    }
+   ],
+   "criteria": {
+    "dekking": {
+     "waarde": "+ Eigen (verzekerd) beroep; geen verplichting tot ander werk",
+     "bron": [
+      "https://www.movir.nl/arbeidsongeschiktheidsverzekering"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Movir gaat uit van het verzekerde beroep zoals de klant dat uitoefent (zoekfragment productpagina)."
+    },
+    "wachttijd": {
+     "waarde": "~ 30, 60, 90, 180 dagen, 1 of 2 jaar",
+     "bron": [
+      "https://www.movir.nl/arbeidsongeschiktheidsverzekering/momentum-aov/keuzes-bij-je-aov"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Momentum AOV; kortste eigenrisicotermijn 30 dagen."
+    },
+    "eindleeftijd": {
+     "waarde": "+ Vast 55, 60, 62, 65, 67 of 68 jaar, of AOW-volgend tot max. 70 jaar",
+     "bron": [
+      "https://www.movir.nl/voor-adviseurs/nieuws/nieuwe-keuze-aow-volgende-eindleeftijd"
+     ],
+     "brondatum": "2026-03",
+     "zekerheid": "hoog",
+     "toelichting": "AOW-volgende eindleeftijd voor nieuwe Momentum-aanvragen vanaf 25 maart 2026; jaarlijkse toets op AOW-leeftijd. Beschikbaarheid hangt af van beroep; minimaal 2 jaar looptijd."
+    },
+    "maxbedrag": {
+     "waarde": "~ Max. 80% van gemiddeld inkomen over 3 jaar, max. € 275.000 per jaar (min. € 9.000)",
+     "bron": [
+      "https://www.movir.nl/arbeidsongeschiktheidsverzekering/momentum-aov/keuzes-bij-je-aov"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "indexatie": {
+     "waarde": "+ Keuze: geen, 2% of CBS-index; jaarlijks of alleen tijdens uitkering",
+     "bron": [
+      "https://www.movir.nl/arbeidsongeschiktheidsverzekering/momentum-aov/keuzes-bij-je-aov"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Niet voor de WIA Vaste Lasten AOV (werknemers)."
+    },
+    "zwanger": {
+     "waarde": "~ Zwangerschapsuitkering 16 weken als bevallingsdatum ≥ 1 jaar na ingang ligt",
+     "bron": [
+      "https://www.movir.nl/arbeidsongeschiktheidsverzekering/momentum-aov/keuzes-bij-je-aov"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Voorwaarde: minimaal 20 weken zwanger (geweest)."
+    },
+    "ontheffing": {
+     "waarde": "~ Optioneel, alleen bij Momentum Sommen AOV met eigenrisicotermijn < 365 dagen",
+     "bron": [
+      "https://www.movir.nl/arbeidsongeschiktheidsverzekering/momentum-aov/keuzes-bij-je-aov"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Premievrijstelling gaat in na afloop van de eigenrisicotermijn."
+    },
+    "aanpassen": {
+     "waarde": "+ Jaarlijks max. 10% verhogen zonder gezondheidsverklaring; terugkeerregeling binnen 3 jaar",
+     "bron": [
+      "https://www.movir.nl/service-contact/mijn-verzekering-en-wijzigen-dekking"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Binnen max. 80% van bruto jaarinkomen."
+    },
+    "reintegratie": {
+     "waarde": "+ Team Preventie vanaf dag één; tot 6 uur coaching per jaar (MentaVitalis) zonder extra kosten",
+     "bron": [
+      "https://www.movir.nl/preventie",
+      "https://www.movir.nl/preventie/coaching"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Vertrouwelijk; inzetbaarheidsscan VAR-2."
+    },
+    "varianten": {
+     "waarde": "~ Momentum Sommen AOV en Momentum Schade AOV; Extra Kostenverzekering als aanvulling",
+     "bron": [
+      "https://www.movir.nl/voor-adviseurs/nieuws/nieuwe-keuze-aow-volgende-eindleeftijd",
+      "https://www.movir.nl/arbeidsongeschiktheidsverzekering/momentum-aov/extra-kostenverzekering"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Ook Momentum voor werknemers (WIA-aanvulling)."
+    },
+    "starter": {
+     "waarde": "~ Gestart in de afgelopen 3 jaar: alleen winst/inkomen uit volledige jaren als zelfstandige opgeven; minimaal bruto jaarinkomen > € 11.250",
+     "bron": [
+      "https://movir.nl/zakelijk/arbeidsongeschiktheidsverzekering/momentum-aov/ondernemers"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "middel",
+     "toelichting": "Geen specifieke startersvariant voor Momentum gevonden; eerdere Soepel&Zeker 'Kort'-startersvariant is van vóór Momentum."
+    }
+   }
+  },
+  {
+   "naam": "De Amersfoortse",
+   "url": "https://www.amersfoortse.nl/ondernemer/arbeidsongeschiktheidsverzekering",
+   "domeinen": [
+    "amersfoortse.nl",
+    "asr.nl"
+   ],
+   "documenten": [
+    {
+     "titel": "Hoe werkt een AOV? Deze keuzes heb je",
+     "url": "https://www.amersfoortse.nl/ondernemer/alles-over-de-aov/hoe-werkt-een-aov",
+     "versie": "webpagina"
+    },
+    {
+     "titel": "Arbeidsongeschiktheidscriterium",
+     "url": "https://www.amersfoortse.nl/ondernemer/arbeidsongeschiktheidsverzekering/arbeidsongeschiktheidscriterium",
+     "versie": "webpagina"
+    }
+   ],
+   "criteria": {
+    "dekking": {
+     "waarde": "+ Standaard beroepsarbeidsongeschiktheid; keuze voor passende arbeid",
+     "bron": [
+      "https://www.amersfoortse.nl/ondernemer/arbeidsongeschiktheidsverzekering/arbeidsongeschiktheidscriterium",
+      "https://amersfoortse.nl/ondernemer/alles-over-de-aov/beroepsarbeidsongeschikt-of-passende-arbeid"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Passende arbeid: werk dat past bij ervaring en opleiding, tegen lagere premie."
+    },
+    "wachttijd": {
+     "waarde": "+ 14, 30, 60, 90, 180, 365 of 730 dagen",
+     "bron": [
+      "https://www.amersfoortse.nl/ondernemer/arbeidsongeschiktheidsverzekering/eigen-risico"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "eindleeftijd": {
+     "waarde": "+ Lager te kiezen (bijv. 55 of 60) tot max. 68 jaar",
+     "bron": [
+      "https://www.amersfoortse.nl/ondernemer/alles-over-de-aov/eindleeftijd"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "maxbedrag": {
+     "waarde": "~ Max. 90% van gemiddeld inkomen over laatste 3 jaar",
+     "bron": [
+      "https://www.amersfoortse.nl/ondernemer/alles-over-de-aov/hoogte-aov-uitkering"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "beroepsklasse": {
+     "waarde": "~ Beroepsrisico beoordeeld op beroepsomschrijving, werkzaamheden en type bedrijf",
+     "bron": [
+      "https://www.amersfoortse.nl/ondernemer/alles-over-de-aov/aanvraagprocedure-aov"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "indexatie": {
+     "waarde": "+ Indexatie van verzekerd bedrag en/of uitkering; inflatie of vast percentage",
+     "bron": [
+      "https://www.amersfoortse.nl/ondernemer/alles-over-de-aov/indexering"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Drie keuzes voor indexering."
+    },
+    "ontheffing": {
+     "waarde": "+ Premievrijstelling na eigenrisicotermijn (AOV 2.5)",
+     "bron": [
+      "https://www.amersfoortse.nl/ondernemer/arbeidsongeschiktheidsverzekering/aov25"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Voor overige varianten niet in bron gevonden."
+    },
+    "aanpassen": {
+     "waarde": "+ Bij inkomensstijging tot 2x 20% verhogen zonder gezondheidsvragen (max. 90% inkomen); Flexibele AOV: jaarlijks 10%",
+     "bron": [
+      "https://www.amersfoortse.nl/ondernemer/veelgestelde-vragen-aov",
+      "https://www.amersfoortse.nl/ondernemer/arbeidsongeschiktheidsverzekering/flexibele-aov"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Voorwaarde: minimaal 3 maanden niet arbeidsongeschikt."
+    },
+    "reintegratie": {
+     "waarde": "+ Eigen specialisten (arbeidsdeskundigen, medische dienst) voor preventie en re-integratie",
+     "bron": [
+      "https://www.amersfoortse.nl/"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Doorgaanverzekering voegt Doorgaanmodule toe (o.a. gezinshulp, kinderopvang)."
+    },
+    "varianten": {
+     "waarde": "~ AOV (volledig), Flexibele AOV (vast bedrag, geen inkomensupdates), AOV 2.5 (uitkeringsduur 2 of 5 jaar), Doorgaanverzekering (AOV + zorgverzekering)",
+     "bron": [
+      "https://www.amersfoortse.nl/ondernemer/arbeidsongeschiktheidsverzekering/aov25",
+      "https://www.amersfoortse.nl/ondernemer/arbeidsongeschiktheidsverzekering/flexibele-aov",
+      "https://www.amersfoortse.nl/ondernemer/doorgaanverzekering"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "AOV 2.5 wordt gepositioneerd voor starters met inkomen tot circa € 50.000."
+    },
+    "starter": {
+     "waarde": "+ Korter dan 1 jaar zelfstandig: geschat inkomen of gemiddeld loon uit dienstverband (3 jaar) als basis, max. 90%",
+     "bron": [
+      "https://www.amersfoortse.nl/ondernemer/alles-over-de-aov/jaarinkomen-berekenen"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "hoog",
+     "toelichting": "AOV 2.5 gepositioneerd voor starters."
+    }
+   }
+  },
+  {
+   "naam": "Allianz",
+   "url": "https://www.allianz.nl/zakelijk/verzekeringen/aov.html",
+   "domeinen": [
+    "allianz.nl"
+   ],
+   "documenten": [
+    {
+     "titel": "Verzekeringsvoorwaarden AAOV21 Allianz Absoluut Arbeidsongeschiktheidsverzekering",
+     "url": "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/13/1300162-153.pdf",
+     "versie": "AAOV21"
+    },
+    {
+     "titel": "Verzekeringsvoorwaarden SAOV21 Allianz Summum Arbeidsongeschiktheidsverzekering",
+     "url": "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/13/1300162-159.pdf",
+     "versie": "SAOV21"
+    },
+    {
+     "titel": "Allianz Absoluut AOV / Allianz Summum AOV: voor wie geschikt?",
+     "url": "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/13/1300162-160.pdf",
+     "versie": "onbekend"
+    }
+   ],
+   "criteria": {
+    "dekking": {
+     "waarde": "+ Beroepsarbeidsongeschiktheid (alleen eigen beroep), sommenverzekering",
+     "bron": [
+      "https://www.allianz.nl/zakelijk/verzekeringen/aov/absoluut.html",
+      "https://www.allianz.nl/zakelijk/verzekeringen/aov/summum.html"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "hoog",
+     "toelichting": "Geldt voor Absoluut en Summum."
+    },
+    "wachttijd": {
+     "waarde": "~ 30, 60, 90, 180 dagen, 1 of 2 jaar",
+     "bron": [
+      "https://www.allianz.nl/zakelijk/verzekeringen/aov/absoluut.html",
+      "https://www.allianz.nl/zakelijk/verzekeringen/aov/summum.html"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "eindleeftijd": {
+     "waarde": "+ 55 t/m 68 jaar of AOW-leeftijd (Summum: max. 70)",
+     "bron": [
+      "https://www.allianz.nl/zakelijk/verzekeringen/aov/absoluut.html",
+      "https://www.allianz.nl/zakelijk/verzekeringen/aov/summum.html"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "hoog",
+     "toelichting": "Voor de meeste beroepen."
+    },
+    "maxbedrag": {
+     "waarde": "~ Absoluut: 80% van inkomen, max. € 175.000; Summum: eerste jaar 90%, daarna 80%, max. € 250.000",
+     "bron": [
+      "https://www.allianz.nl/zakelijk/verzekeringen/aov/absoluut.html",
+      "https://www.allianz.nl/zakelijk/verzekeringen/aov/summum.html"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "hoog",
+     "toelichting": "Boven € 60.000 verzekerd bedrag jaarstukken en aangiften over 3 jaar vereist."
+    },
+    "beroepsklasse": {
+     "waarde": "~ Absoluut voor lichte en zware beroepen; Summum alleen zakelijke dienstverlening en medische beroepen",
+     "bron": [
+      "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/13/1300162-160.pdf"
+     ],
+     "brondatum": "onbekend",
+     "zekerheid": "middel",
+     "toelichting": "Beroep bepaalt premie en beschikbaarheid eindleeftijden."
+    },
+    "indexatie": {
+     "waarde": "+ Uitkering jaarlijks 1%, 2%, 3% of CBS-index (max. 4%)",
+     "bron": [
+      "https://www.allianz.nl/zakelijk/verzekeringen/aov/absoluut.html"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "middel",
+     "toelichting": "Fragment noemt indexatie van de uitkering."
+    },
+    "zwanger": {
+     "waarde": "+ Tijdelijke uitkering bij zwangerschap en adoptie",
+     "bron": [
+      "https://www.allianz.nl/zakelijk/verzekeringen/aov/absoluut.html"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "middel",
+     "toelichting": "Duur en voorwaarden niet in fragment."
+    },
+    "ontheffing": {
+     "waarde": "~ Premievrijstelling na 1 jaar arbeidsongeschiktheid",
+     "bron": [
+      "https://www.allianz.nl/zakelijk/verzekeringen/aov/absoluut.html"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "aanpassen": {
+     "waarde": "+ Jaarlijks max. 15% verhogen zonder gezondheidsverklaring, tot en met 62e jaar",
+     "bron": [
+      "https://www.allianz.nl/zakelijk/blog/hoe-kun-je-je-arbeidsongeschiktheidsverzekering-wijzigen.html"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "reintegratie": {
+     "waarde": "+ Hulp bij re-integratie (medisch advies, coaching, begeleiding); kosten vaak geheel of deels vergoed",
+     "bron": [
+      "https://www.allianz.nl/zakelijk/verzekeringen/aov.html"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "varianten": {
+     "waarde": "~ Allianz Absoluut AOV en Allianz Summum AOV (hogere bedragen, aanvullende kostendekking)",
+     "bron": [
+      "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/13/1300162-160.pdf"
+     ],
+     "brondatum": "onbekend",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "psychisch": {
+     "waarde": "~ Bij bestaande (psychische) klachten acceptatie met uitsluiting van die aandoening mogelijk; beoordeling op ernst, herstel en klachtenvrije periode",
+     "bron": [
+      "https://www.allianz.nl/zakelijk/blog/een-aov-afsluiten-met-bestaande-klachten.html"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "middel",
+     "toelichting": "Individuele medische acceptatie; geen standaarduitsluiting in de productvoorwaarden gevonden."
+    }
+   }
+  },
+  {
+   "naam": "Avéro Achmea",
+   "url": "https://www.averoachmea.nl/adviseur/arbeidsongeschiktheidsverzekeringen",
+   "domeinen": [
+    "averoachmea.nl",
+    "centraalbeheer.nl"
+   ],
+   "documenten": [
+    {
+     "titel": "Voorwaarden Arbeidsongeschiktheidsverzekering",
+     "url": "https://www.averoachmea.nl/arbeidsongeschiktheidsverzekering/voorwaarden",
+     "versie": "vanaf 1 juli 2024"
+    },
+    {
+     "titel": "Nieuwe AOV voorwaarden vanaf 1 juli 2024",
+     "url": "https://www.averoachmea.nl/kennis/arbeidsongeschiktheid/nieuwe-aov-voorwaarden-vanaf-1-juli-2024",
+     "versie": "2024-07"
+    },
+    {
+     "titel": "Toelichting medische acceptatie",
+     "url": "https://www.averoachmea.nl/-/media/files/zakelijk/aov/brochures/medische-acceptatie.pdf",
+     "versie": "onbekend"
+    }
+   ],
+   "criteria": {
+    "dekking": {
+     "waarde": "+ Beroepsarbeidsongeschiktheid: uitkering als eigen beroep niet uitgeoefend kan worden, ook als ander werk mogelijk is",
+     "bron": [
+      "https://www.averoachmea.nl/arbeidsongeschiktheidsverzekering/continu"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "hoog",
+     "toelichting": "AOV Continu; Centraal Beheer hanteert eveneens beroepsarbeidsongeschiktheid."
+    },
+    "wachttijd": {
+     "waarde": "~ 1, 2, 3, 6, 12 of 24 maanden",
+     "bron": [
+      "https://www.averoachmea.nl/arbeidsongeschiktheidsverzekering/continu",
+      "https://www.centraalbeheer.nl/zakelijk/inkomensverzekeringen/arbeidsongeschiktheidsverzekering"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "hoog",
+     "toelichting": "Kort & Krachtig (Centraal Beheer): 1, 2 of 3 maanden."
+    },
+    "eindleeftijd": {
+     "waarde": "~ 55 t/m 68 jaar; AOV Basis 68 jaar of lager afhankelijk van beroep",
+     "bron": [
+      "https://www.averoachmea.nl/arbeidsongeschiktheidsverzekering/continu",
+      "https://www.centraalbeheer.nl/zakelijk/inkomensverzekeringen/arbeidsongeschiktheidsverzekering/basis"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "maxbedrag": {
+     "waarde": "~ Max. 90% van inkomen, max. € 250.000 per jaar; AOV Basis max. € 30.000",
+     "bron": [
+      "https://www.averoachmea.nl/arbeidsongeschiktheidsverzekering/continu",
+      "https://www.averoachmea.nl/arbeidsongeschiktheidsverzekering/aov-basis"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "psychisch": {
+     "waarde": "~ Bij (eerdere) psychische klachten, coaching of psycholoogbezoek kans op uitsluiting psychische aandoeningen",
+     "bron": [
+      "https://www.averoachmea.nl/-/media/files/zakelijk/aov/brochures/medische-acceptatie.pdf"
+     ],
+     "brondatum": "onbekend",
+     "zekerheid": "middel",
+     "toelichting": "Medische acceptatie; verkorte gezondheidsverklaring bij verzekerd bedrag < € 20.000 of bij oversluiten (5 vragen)."
+    },
+    "starter": {
+     "waarde": "+ Starters: in eerste 3 jaar verhogingsrecht tot totaal € 20.000 zonder medische waarborgen",
+     "bron": [
+      "https://www.averoachmea.nl/kennis/arbeidsongeschiktheid/nieuwe-aov-voorwaarden-vanaf-1-juli-2024"
+     ],
+     "brondatum": "2024-07",
+     "zekerheid": "middel",
+     "toelichting": "Daarna 15% per jaar."
+    },
+    "indexatie": {
+     "waarde": "+ Keuze geen, 2%, 3% of prijsindex; AOV Basis indexeert uitkering met CBS-prijsindex",
+     "bron": [
+      "https://www.averoachmea.nl/arbeidsongeschiktheidsverzekering/continu",
+      "https://www.centraalbeheer.nl/zakelijk/inkomensverzekeringen/arbeidsongeschiktheidsverzekering/basis"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "zwanger": {
+     "waarde": "+ Zwangerschaps- en bevallingsverlof gedekt na 1 jaar verzekering; ook adoptie, pleegzorg en orgaandonatie",
+     "bron": [
+      "https://www.averoachmea.nl/arbeidsongeschiktheidsverzekering/continu"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "aanpassen": {
+     "waarde": "+ Jaarlijks verhogingsrecht tot 15% zonder nieuwe medische waarborgen (was 10%)",
+     "bron": [
+      "https://www.averoachmea.nl/kennis/arbeidsongeschiktheid/nieuwe-aov-voorwaarden-vanaf-1-juli-2024"
+     ],
+     "brondatum": "2024-07",
+     "zekerheid": "middel",
+     "toelichting": "Ook voor AOV Basis via optierecht."
+    },
+    "reintegratie": {
+     "waarde": "+ Arbeidsdeskundigen met directe bevoegdheid voor re-integratieactiviteiten en interventies",
+     "bron": [
+      "https://www.averoachmea.nl/adviseur/arbeidsongeschiktheidsverzekeringen/proces"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "varianten": {
+     "waarde": "~ AOV Continu (volledig), AOV Basis (max. € 30.000, snelle acceptatie); via Centraal Beheer ook Compleet en Kort & Krachtig (uitkeringsduur 2-5 jaar)",
+     "bron": [
+      "https://www.averoachmea.nl/arbeidsongeschiktheidsverzekering/aov-basis",
+      "https://www.averoachmea.nl/kennis/aov-basis-beschikbaar-via-podium",
+      "https://www.centraalbeheer.nl/zakelijk/inkomensverzekeringen/arbeidsongeschiktheidsverzekering/aov-kort-krachtig"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "hoog",
+     "toelichting": "Avéro Achmea is het adviseurslabel; Centraal Beheer (ook Achmea) verkoopt direct."
+    }
+   }
+  },
+  {
+   "naam": "TAF",
+   "url": "https://www.taf.nl/verzekeringen/arbeidsongeschiktheidsverzekering-zzp",
+   "domeinen": [
+    "taf.nl"
+   ],
+   "documenten": [
+    {
+     "titel": "TAF InkomenZeker AOV: een flexibele AOV op maat (consumentenbrochure)",
+     "url": "https://www.taf.nl/sites/default/files/files/OAOV/InkomenZeker/TAF-CB-IZ-AOV-20240111-a.pdf",
+     "versie": "2024-01-11"
+    },
+    {
+     "titel": "Informatie voor het intermediair TAF GoedGezekerd AOV",
+     "url": "https://www.taf.nl/sites/default/files/files/OAOV/TAF-PK-GG-AOV-20200707-a.pdf",
+     "versie": "2020-07-07"
+    },
+    {
+     "titel": "Informatie voor het intermediair TAF BasisGezekerd AOV",
+     "url": "https://www.taf.nl/sites/default/files/2020-06/TAF-PK-BGAOV-20200630-a.pdf",
+     "versie": "2020-06-30"
+    }
+   ],
+   "criteria": {
+    "dekking": {
+     "waarde": "~ Eerste jaar beroepsarbeidsongeschiktheid; daarna keuze eigen beroep of passende arbeid (zware/creatieve beroepen alleen passende arbeid)",
+     "bron": [
+      "https://www.taf.nl/verzekeringen/arbeidsongeschiktheidsverzekering-zzp"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "middel",
+     "toelichting": "GoedGezekerd: keuze eigen beroep of passende arbeid; uitkeringsdrempel vanaf 25%."
+    },
+    "wachttijd": {
+     "waarde": "~ 30 dagen tot 2 jaar",
+     "bron": [
+      "https://www.taf.nl/verzekeringen/arbeidsongeschiktheidsverzekering-zzp",
+      "https://www.taf.nl/verzekeringen/goedgezekerd-aov"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "eindleeftijd": {
+     "waarde": "~ Max. AOW-leeftijd; lager voor sommige beroepen. Instapleeftijd 18-62 jaar (zware/creatieve beroepen max. 57)",
+     "bron": [
+      "https://www.taf.nl/verzekeringen/inkomenzeker-aov",
+      "https://www.taf.nl/verzekeringen/arbeidsongeschiktheidsverzekering-zzp"
+     ],
+     "brondatum": "2024",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "maxbedrag": {
+     "waarde": "~ InkomenZeker: max. 85% van gemiddeld inkomen laatste 3 jaar, max. € 12.500 per maand (min. € 1.000)",
+     "bron": [
+      "https://www.taf.nl/sites/default/files/files/OAOV/InkomenZeker/TAF-CB-IZ-AOV-20240111-a.pdf"
+     ],
+     "brondatum": "2024-01",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "beroepsklasse": {
+     "waarde": "~ Fysiek zware en creatieve beroepen: na 1 jaar alleen passende arbeid en lagere maximale instapleeftijd",
+     "bron": [
+      "https://www.taf.nl/verzekeringen/arbeidsongeschiktheidsverzekering-zzp"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "psychisch": {
+     "waarde": "~ GoedGezekerd: psychische klachten optioneel meeverzekerd; BasisGezekerd dekt alleen ongevallen (en evt. ernstige ziekten)",
+     "bron": [
+      "https://www.taf.nl/verzekeringen/goedgezekerd-aov",
+      "https://www.taf.nl/verzekeringen/basisgezekerd-aov"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "indexatie": {
+     "waarde": "+ InkomenZeker: indexatie max. 3% per jaar",
+     "bron": [
+      "https://www.taf.nl/sites/default/files/files/OAOV/InkomenZeker/TAF-CB-IZ-AOV-20240111-a.pdf"
+     ],
+     "brondatum": "2024-01",
+     "zekerheid": "hoog",
+     "toelichting": "Begrensd tot verzekerd bedrag € 12.500 per maand."
+    },
+    "zwanger": {
+     "waarde": "~ InkomenZeker: zwangerschapsuitkering 16 weken vanaf 2 jaar na ingang; bij adoptie 2x maandbedrag",
+     "bron": [
+      "https://www.taf.nl/sites/default/files/files/OAOV/InkomenZeker/TAF-CB-IZ-AOV-20240111-a.pdf"
+     ],
+     "brondatum": "2024-01",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "ontheffing": {
+     "waarde": "~ InkomenZeker: premievrij vanaf 366e dag arbeidsongeschiktheid, naar rato uitkeringspercentage",
+     "bron": [
+      "https://www.taf.nl/sites/default/files/files/OAOV/InkomenZeker/TAF-CB-IZ-AOV-20240111-a.pdf"
+     ],
+     "brondatum": "2024-01",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "varianten": {
+     "waarde": "+ InkomenZeker (volledig), GoedGezekerd (modulair; uitkeringsduur 2 jaar tot AOW), BasisGezekerd (ongevallen, of ongevallen + ernstige ziekten, voor wie medisch elders niet terechtkan)",
+     "bron": [
+      "https://www.taf.nl/verzekeringen/inkomenzeker-aov",
+      "https://www.taf.nl/verzekeringen/goedgezekerd-aov",
+      "https://www.taf.nl/verzekeringen/basisgezekerd-aov"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "hoog",
+     "toelichting": "BasisGezekerd: eenmalige uitkering 3x maandbedrag bij diagnose ernstige ziekte. Ook Maandlastbeschermer Zelfstandige."
+    }
+   }
+  },
+  {
+   "naam": "De Goudse",
+   "url": "https://www.goudse.nl/ondernemer/ikzelf/arbeidsongeschiktheid/ondernemers-aov",
+   "domeinen": [
+    "goudse.nl"
+   ],
+   "documenten": [
+    {
+     "titel": "AOV - Veelgestelde vragen",
+     "url": "https://www.goudse.nl/ondernemer/ikzelf/arbeidsongeschiktheid/ondernemers-aov/veelgestelde-vragen-aov",
+     "versie": "webpagina"
+    }
+   ],
+   "criteria": {
+    "dekking": {
+     "waarde": "+ Uitkering als je je eigen werk niet meer kunt doen; ook gedeeltelijke arbeidsongeschiktheid",
+     "bron": [
+      "https://www.goudse.nl/ondernemer/ikzelf/arbeidsongeschiktheid/ondernemers-aov/verplichte-aov"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "middel",
+     "toelichting": "Afgeleid uit vergelijking Ondernemers-AOV met verplichte AOV; exacte criteriumkeuzes niet in fragment."
+    },
+    "wachttijd": {
+     "waarde": "~ 30, 60, 90, 180, 365 of 730 dagen",
+     "bron": [
+      "https://www.goudse.nl/ondernemer/ikzelf/arbeidsongeschiktheid/ondernemers-aov"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "eindleeftijd": {
+     "waarde": "~ 55 t/m 68 jaar; voor sommige beroepen max. 55 of 60",
+     "bron": [
+      "https://www.goudse.nl/ondernemer/ikzelf/arbeidsongeschiktheid/ondernemers-aov"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "maxbedrag": {
+     "waarde": "~ Max. 80% van bruto jaarinkomen",
+     "bron": [
+      "https://www.goudse.nl/ondernemer/ikzelf/arbeidsongeschiktheid/ondernemers-aov"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "beroepsklasse": {
+     "waarde": "~ Beroep en werkzaamheden bepalen beschikbare eindleeftijd; aparte beroepsgerichte AOV-pagina's (o.a. huisartsen, bouw, agrariërs, schilders)",
+     "bron": [
+      "https://www.goudse.nl/ondernemer/ikzelf/arbeidsongeschiktheid/ondernemers-aov"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "starter": {
+     "waarde": "~ Gestart < 6 maanden vóór ingang: max. € 25.000 verzekerd bij aanvang",
+     "bron": [
+      "https://www.goudse.nl/ondernemer/ikzelf/arbeidsongeschiktheid/ondernemers-aov/veelgestelde-vragen-aov"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "zwanger": {
+     "waarde": "~ Uitkering 112 dagen minus eigenrisicotermijn, als je op de uitgerekende datum ≥ 1 jaar verzekerd bent",
+     "bron": [
+      "https://www.goudse.nl/ondernemer/ikzelf/arbeidsongeschiktheid/ondernemers-aov/veelgestelde-vragen-aov"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "ontheffing": {
+     "waarde": "+ Direct ingaande premievrijstelling vanaf start uitkering, naar rato uitkeringspercentage",
+     "bron": [
+      "https://www.goudse.nl/ondernemer/ikzelf/arbeidsongeschiktheid/ondernemers-aov/veelgestelde-vragen-aov",
+      "https://www.goudse.nl/ondernemer/gezond-bedrijf/direct-ingaande-premievrijstelling-bij-arbeidsongeschiktheid"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "aanpassen": {
+     "waarde": "~ Optierecht: jaarlijks max. 10% verhogen zonder medische informatie",
+     "bron": [
+      "https://www.goudse.nl/ondernemer/ikzelf/arbeidsongeschiktheid/ondernemers-aov"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "reintegratie": {
+     "waarde": "+ Preventieve diensten en persoonlijke begeleiding bij re-integratie",
+     "bron": [
+      "https://www.goudse.nl/ondernemer/ikzelf/arbeidsongeschiktheid/ondernemers-aov-bouw"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "varianten": {
+     "waarde": "~ Dekking Optimaal (één bedrag tot eindleeftijd) of Op Maat (max. 3 perioden met verschillend bedrag); optionele bedrijfskostendekking",
+     "bron": [
+      "https://www.goudse.nl/ondernemer/ikzelf/arbeidsongeschiktheid/ondernemers-aov-voor-ict-ondernemers"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "hoog",
+     "toelichting": "Bedrijfskostendekking: vaste bedrijfslasten en/of vervangingskosten."
+    }
+   }
+  },
+  {
+   "naam": "Bovemij",
+   "url": "https://www.bovemij.nl/zorg-en-ongevallen/arbeidsongeschiktheidsverzekering",
+   "domeinen": [
+    "bovemij.nl"
+   ],
+   "documenten": [
+    {
+     "titel": "Voorwaarden Arbeidsongeschiktheidsverzekering (AOV-O)",
+     "url": "https://www.bovemij.nl/hubfs/AOV-O_25.01%20DEF.pdf",
+     "versie": "AOV-O 25.01 (1 januari 2025)"
+    },
+    {
+     "titel": "Voorwaarden Arbeidsongeschiktheidsverzekering (AOV-W)",
+     "url": "https://www.bovemij.nl/hubfs/AOV-W_25.01%20DEF.pdf",
+     "versie": "AOV-W 25.01 (1 januari 2025)"
+    },
+    {
+     "titel": "Algemene voorwaarden Inkomen",
+     "url": "https://www.bovemij.nl/hubfs/Bovemij%20Verzekeringen%20-%20website%20assets/Zakelijk%20-%20Polisvoorwaarden/Polisvoorwaarden%202025/Inkomen%20algemeen/Algemene%20voorwaarden%20Inkomen_25.01-A%20DEF%20(1).pdf",
+     "versie": "25.01-A (1 januari 2025)"
+    }
+   ],
+   "criteria": {
+    "dekking": {
+     "waarde": "~ AOV-O: beroepsarbeidsongeschiktheid incl. taakaanpassing/taakverschuiving binnen eigen bedrijf; AOV-W: gebaseerd op WAZ-bepalingen (per 31-7-2004)",
+     "bron": [
+      "https://www.bovemij.nl/hubfs/AOV-O_25.01%20DEF.pdf",
+      "https://www.bovemij.nl/hubfs/AOV-W_25.01%20DEF.pdf"
+     ],
+     "brondatum": "2025-01",
+     "zekerheid": "hoog",
+     "toelichting": "Minimaal 25% arbeidsongeschikt, objectief medisch vast te stellen."
+    },
+    "wachttijd": {
+     "waarde": "~ Zelf te kiezen eigenrisicotermijn; niet opnieuw bij toename arbeidsongeschiktheid",
+     "bron": [
+      "https://www.bovemij.nl/hubfs/AOV-O_25.01%20DEF.pdf"
+     ],
+     "brondatum": "2025-01",
+     "zekerheid": "middel",
+     "toelichting": "Beschikbare termijnen niet in bron gevonden."
+    },
+    "maxbedrag": {
+     "waarde": "~ Standaard 80% van jaarinkomen; zelf te bepalen deel",
+     "bron": [
+      "https://www.bovemij.nl/zorg-en-ongevallen/arbeidsongeschiktheidsverzekering"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "indexatie": {
+     "waarde": "+ Verzekerd bedrag en uitkering jaarlijks per 1 januari geïndexeerd met percentage op polis",
+     "bron": [
+      "https://www.bovemij.nl/hubfs/AOV-O_25.01%20DEF.pdf"
+     ],
+     "brondatum": "2025-01",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "zwanger": {
+     "waarde": "+ Uitkering bij zwangerschap en bevalling: 16 weken minus gekozen eigenrisicotermijn",
+     "bron": [
+      "https://www.bovemij.nl/zorg-en-ongevallen/arbeidsongeschiktheidsverzekering"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "ontheffing": {
+     "waarde": "+ Premievrijstelling vanaf recht op uitkering, gelijk aan uitkeringspercentage",
+     "bron": [
+      "https://www.bovemij.nl/hubfs/AOV-O_25.01%20DEF.pdf"
+     ],
+     "brondatum": "2025-01",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "reintegratie": {
+     "waarde": "+ Ondersteuning bij re-integratie",
+     "bron": [
+      "https://www.bovemij.nl/zorg-en-ongevallen/arbeidsongeschiktheidsverzekering"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "varianten": {
+     "waarde": "~ AOV-O (beroeps) en AOV-W (WAZ-criterium); gericht op ondernemers in de mobiliteitsbranche",
+     "bron": [
+      "https://www.bovemij.nl/zorg-en-ongevallen/arbeidsongeschiktheidsverzekering",
+      "https://www.bovemij.nl/hubfs/AOV-W_25.01%20DEF.pdf"
+     ],
+     "brondatum": "2025-01",
+     "zekerheid": "middel",
+     "toelichting": "Niche-aanbieder voor mobiliteitsbranche."
+    }
+   }
+  },
+  {
+   "naam": "Klaverblad",
+   "url": "https://www.klaverblad.nl/arbeidsongeschiktheidsverzekering",
+   "domeinen": [
+    "klaverblad.nl"
+   ],
+   "documenten": [
+    {
+     "titel": "Klaverblad Royaal Premium AOV Polisvoorwaarden RP 25",
+     "url": "https://www.klaverblad.nl/voorwaarden-royaal-premium-aov.pdf",
+     "versie": "AVWRP/2510"
+    },
+    {
+     "titel": "Arbeidsongeschiktheidsverzekering Polisvoorwaarden AO 18 (Royaal Plus / Royaal)",
+     "url": "https://www.klaverblad.nl/voorwaarden-aov.pdf",
+     "versie": "AVWAO18/2403"
+    },
+    {
+     "titel": "Klaverblad AOV Flex Polisvoorwaarden KF 19",
+     "url": "https://www.klaverblad.nl/particulier/polisvoorwaarden-klaverblad-aov-flex.htm",
+     "versie": "AVWKF19/1903"
+    }
+   ],
+   "criteria": {
+    "dekking": {
+     "waarde": "~ Royaal Plus en AOV Flex: eigen beroep; Royaal Premium: eigen beroep gedurende eerste 3 jaar",
+     "bron": [
+      "https://www.klaverblad.nl/arbeidsongeschiktheidsverzekeringen/aov-vergelijken"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "hoog",
+     "toelichting": "Criterium Royaal Premium na 3 jaar niet in fragment; zie polisvoorwaarden RP 25. Uitkering vanaf 25% arbeidsongeschiktheid."
+    },
+    "wachttijd": {
+     "waarde": "+ 14, 30, 60, 90, 180, 365 of 730 dagen (sommige beroepen min. 30 dagen)",
+     "bron": [
+      "https://www.klaverblad.nl/arbeidsongeschiktheidsverzekering"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "eindleeftijd": {
+     "waarde": "+ Royaal Premium: 58-68 jaar of AOW-leeftijd; Royaal Plus: 58-68 jaar; AOV Flex: 68 (lager bij zware beroepen)",
+     "bron": [
+      "https://www.klaverblad.nl/arbeidsongeschiktheidsverzekering"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "hoog",
+     "toelichting": "Voor sommige beroepen lagere maximale eindleeftijd."
+    },
+    "maxbedrag": {
+     "waarde": "~ Min. € 2.500 en max. € 85.000 per jaar",
+     "bron": [
+      "https://www.klaverblad.nl/arbeidsongeschiktheidsverzekeringen/royaal-premium-aov"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "middel",
+     "toelichting": "Fragment van Royaal Premium-pagina; onduidelijk of dit voor alle producten geldt."
+    },
+    "indexatie": {
+     "waarde": "~ Optioneel: uitkering stijgt jaarlijks met 2%",
+     "bron": [
+      "https://www.klaverblad.nl/arbeidsongeschiktheidsverzekeringen/royaal-premium-aov"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "zwanger": {
+     "waarde": "- Bevallingsuitkering 1 maand op basis van 100%, als uitgerekende datum ≥ 1 jaar na ingang",
+     "bron": [
+      "https://www.klaverblad.nl/arbeidsongeschiktheidsverzekeringen/royaal-premium-aov"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "ontheffing": {
+     "waarde": "~ Premiekorting naar AO-percentage na 1 jaar uitkering; meeverzekerbaar vanaf einde eigenrisicotermijn (Royaal Premium)",
+     "bron": [
+      "https://www.klaverblad.nl/arbeidsongeschiktheidsverzekeringen/royaal-premium-aov"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "aanpassen": {
+     "waarde": "~ Optierecht standaard: meestal jaarlijks max. 10% zonder gezondheidsverklaring",
+     "bron": [
+      "https://www.klaverblad.nl/blog/meer-blogs/belangrijke-aov-begrippen-en-extra-uitleg"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "reintegratie": {
+     "waarde": "+ Persoonlijke coach bij re-integratie; AOV Flex: re-integratiekosten tot 6 maanden na einde uitkeringsduur",
+     "bron": [
+      "https://www.klaverblad.nl/blog/meer-blogs/re-integratie-bij-arbeidsongeschiktheid",
+      "https://www.klaverblad.nl/particulier/polisvoorwaarden-klaverblad-aov-flex.htm"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "middel",
+     "toelichting": "Voorwaarde AOV Flex: nog ≥ 25% arbeidsongeschikt."
+    },
+    "varianten": {
+     "waarde": "~ Royaal Premium (exclusief via adviseur), Royaal Plus, AOV Flex (uitkeringsduur 1-5 jaar)",
+     "bron": [
+      "https://www.klaverblad.nl/arbeidsongeschiktheidsverzekeringen/aov-vergelijken",
+      "https://www.klaverblad.nl/nieuws/nieuwsartikel/nieuwe-aov-exclusief-via-u-als-adviseur-de-royaal-premium-aov"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    }
+   }
+  },
+  {
+   "naam": "Interpolis",
+   "url": "https://www.interpolis.nl/zakelijk/verzekeren/arbeidsongeschiktheidsverzekering",
+   "domeinen": [
+    "interpolis.nl"
+   ],
+   "documenten": [
+    {
+     "titel": "Vernieuwde AOV",
+     "url": "https://www.interpolis.nl/zakelijk/verzekeren/arbeidsongeschiktheidsverzekering/vernieuwde-aov",
+     "versie": "webpagina"
+    },
+    {
+     "titel": "Algemene voorwaarden AOV",
+     "url": "https://www.interpolis.nl/-/media/files/42705-algemene-voorwaarden-arbeidsongeschiktheid.pdf",
+     "versie": "0171 062016 (oud)"
+    }
+   ],
+   "criteria": {
+    "dekking": {
+     "waarde": "~ Beroepsarbeidsongeschiktheid of (lagere premie) passende arbeid op vergelijkbaar niveau",
+     "bron": [
+      "https://www.interpolis.nl/zakelijk/verzekeren/arbeidsongeschiktheidsverzekering/dekking",
+      "https://www.interpolis.nl/zakelijk/verzekeren/arbeidsongeschiktheidsverzekering/vernieuwde-aov"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "hoog",
+     "toelichting": "Medisch adviseur bepaalt beperkingen, arbeidsdeskundige de taken van het beroep."
+    },
+    "wachttijd": {
+     "waarde": "~ 1, 2, 3, 6, 12 of 24 maanden",
+     "bron": [
+      "https://www.interpolis.nl/zakelijk/verzekeren/arbeidsongeschiktheidsverzekering"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "eindleeftijd": {
+     "waarde": "~ 55 t/m 68 jaar; zware beroepen eindigen op 63 of 58 jaar",
+     "bron": [
+      "https://www.interpolis.nl/zakelijk/verzekeren/arbeidsongeschiktheidsverzekering",
+      "https://www.interpolis.nl/zakelijk/verzekeren/arbeidsongeschiktheidsverzekering/zware-beroepen"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "maxbedrag": {
+     "waarde": "~ Verzekerd bedrag € 4.000 tot € 250.000",
+     "bron": [
+      "https://www.interpolis.nl/zakelijk/verzekeren/arbeidsongeschiktheidsverzekering"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "hoog",
+     "toelichting": "Percentage van inkomen niet in fragment."
+    },
+    "beroepsklasse": {
+     "waarde": "~ Aparte regeling voor zware beroepen (lagere eindleeftijd 58/63)",
+     "bron": [
+      "https://www.interpolis.nl/zakelijk/verzekeren/arbeidsongeschiktheidsverzekering/zware-beroepen"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "indexatie": {
+     "waarde": "+ Uitkering geïndexeerd met prijsindex, max. 4% per jaar",
+     "bron": [
+      "https://www.interpolis.nl/-/media/files/42705-algemene-voorwaarden-arbeidsongeschiktheid.pdf"
+     ],
+     "brondatum": "2016",
+     "zekerheid": "middel",
+     "toelichting": "Bron: oudere voorwaarden."
+    },
+    "zwanger": {
+     "waarde": "+ Zwangerschapsuitkering 16 weken minus eigenrisicotermijn",
+     "bron": [
+      "https://www.interpolis.nl/zakelijk/verzekeren/arbeidsongeschiktheidsverzekering/zwangerschap"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "middel",
+     "toelichting": "Dagbedrag = verzekerd inkomen / 365."
+    },
+    "aanpassen": {
+     "waarde": "~ Verhogen tot 10% zonder gezondheidsvragen, max. gemiddeld inkomen 3 jaar of € 150.000",
+     "bron": [
+      "https://www.interpolis.nl/-/media/files/42705-algemene-voorwaarden-arbeidsongeschiktheid.pdf"
+     ],
+     "brondatum": "2016",
+     "zekerheid": "middel",
+     "toelichting": "Bron: oudere voorwaarden."
+    },
+    "reintegratie": {
+     "waarde": "+ Re-integratiebegeleiding door arbeidsdeskundigen",
+     "bron": [
+      "https://www.interpolis.nl/zakelijk/arbeidsongeschiktheid/oplossingen-bij-arbeidsongeschiktheid"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "varianten": {
+     "waarde": "~ Uitkering tot eindleeftijd of max. 1, 2, 3, 4 of 5 jaar",
+     "bron": [
+      "https://www.interpolis.nl/zakelijk/verzekeren/arbeidsongeschiktheidsverzekering/vernieuwde-aov"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "hoog",
+     "toelichting": "Interpolis (Achmea) wordt vooral via Rabobank verkocht."
+    }
+   }
+  },
+  {
+   "naam": "Univé",
+   "url": "https://www.unive.nl/zakelijk/arbeidsongeschiktheidsverzekering",
+   "domeinen": [
+    "unive.nl"
+   ],
+   "documenten": [
+    {
+     "titel": "Voorwaarden Arbeidsongeschiktheidsverzekering versie 2",
+     "url": "https://www.unive.nl/binaries/br/content/assets/zakelijk-sales/arbeidsongeschiktheidsverzekering/voorwaarden-unive-arbeidsongeschiktheidsverzekering",
+     "versie": "2233.09-24"
+    },
+    {
+     "titel": "Begrippenlijst AOV",
+     "url": "https://www.unive.nl/binaries/br/content/assets/zakelijk-sales/arbeidsongeschiktheidsverzekering/begrippenlijst-aov.pdf",
+     "versie": "onbekend"
+    }
+   ],
+   "criteria": {
+    "dekking": {
+     "waarde": "+ Beroepsarbeidsongeschiktheid (kan het eigen beroep nog worden uitgeoefend?); uitkering vanaf 25%",
+     "bron": [
+      "https://www.unive.nl/zakelijk/arbeidsongeschiktheidsverzekering/hoe-werkt-een-aov",
+      "https://www.unive.nl/zakelijk/arbeidsongeschiktheidsverzekering/aov-zzp"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "wachttijd": {
+     "waarde": "~ 30, 90 of 180 dagen, 1 of 2 jaar",
+     "bron": [
+      "https://www.unive.nl/zakelijk/arbeidsongeschiktheidsverzekering/alles-over-de-aov/eigen-risicotermijn"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "eindleeftijd": {
+     "waarde": "~ Zelf te kiezen; max. afhankelijk van beroep: meestal 60, 62 of AOW-leeftijd",
+     "bron": [
+      "https://www.unive.nl/zakelijk/arbeidsongeschiktheidsverzekering/alles-over-de-aov/eindleeftijd"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "maxbedrag": {
+     "waarde": "~ Max. 90% van gemiddeld bruto inkomen over 3 kalenderjaren, max. € 100.000 per jaar",
+     "bron": [
+      "https://www.unive.nl/zakelijk/arbeidsongeschiktheidsverzekering/aov-compleet"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "indexatie": {
+     "waarde": "~ Optioneel: verzekerd inkomen en/of uitkering jaarlijks verhoogd",
+     "bron": [
+      "https://www.unive.nl/binaries/br/content/assets/zakelijk-sales/arbeidsongeschiktheidsverzekering/begrippenlijst-aov.pdf"
+     ],
+     "brondatum": "onbekend",
+     "zekerheid": "middel",
+     "toelichting": "Percentage niet in fragment."
+    },
+    "zwanger": {
+     "waarde": "+ Uitkering 8 weken vóór tot 8 weken na bevalling, max. 18 weken",
+     "bron": [
+      "https://www.unive.nl/binaries/br/content/assets/zakelijk-sales/arbeidsongeschiktheidsverzekering/voorwaarden-unive-arbeidsongeschiktheidsverzekering"
+     ],
+     "brondatum": "2024-09",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "ontheffing": {
+     "waarde": "~ Premievrijstelling als aanvullende verzekering bij (gedeeltelijke) arbeidsongeschiktheid",
+     "bron": [
+      "https://www.unive.nl/zakelijk/arbeidsongeschiktheidsverzekering/aov-compleet"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "middel",
+     "toelichting": "Fragment koppelt dit aan doorlopende pensioenopbouw; mogelijk betreft het een aparte dekking."
+    },
+    "aanpassen": {
+     "waarde": "+ Eens per jaar max. 15% verhogen zonder medische informatie",
+     "bron": [
+      "https://www.unive.nl/zakelijk/arbeidsongeschiktheidsverzekering/aov-compleet"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "reintegratie": {
+     "waarde": "+ Hulp bij preventie, herstel en re-integratie (AOV Compleet)",
+     "bron": [
+      "https://www.unive.nl/zakelijk/arbeidsongeschiktheidsverzekering/aov-compleet",
+      "https://www.unive.nl/zakelijk/arbeidsongeschiktheidsverzekering/preventie/zo-voorkom-jij-arbeidsongeschiktheid"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "varianten": {
+     "waarde": "~ AOV Compleet (uitkering tot eindleeftijd) en AOV Kort (uitkeringsduur 2 of 5 jaar)",
+     "bron": [
+      "https://www.unive.nl/zakelijk/arbeidsongeschiktheidsverzekering/aov-kort",
+      "https://www.unive.nl/zakelijk/arbeidsongeschiktheidsverzekering/aov-compleet"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "hoog",
+     "toelichting": "Verkoop via eigen Univé-adviseurs en online."
+    }
+   }
+  },
+  {
+   "naam": "elipsLife",
+   "url": "https://www.elipslife.com/nl/nld",
+   "domeinen": [
+    "elipslife.com"
+   ],
+   "documenten": [
+    {
+     "titel": "elipsLife IDD AOV individueel 2025",
+     "url": "https://www.elipslife.com/nld/scmedia/Public/Downloads/Documents/Legal/nl/IDD-2025/IDD2025ned/elipsLife-IDD-AOV-individueel-2025-DEF.pdf?sc_lang=nl&hash=865669D18738685041AF4694E864B548",
+     "versie": "2025"
+    },
+    {
+     "titel": "IPID AOV Affinity arbeidsongeschiktheidsverzekering",
+     "url": "https://www.elipslife.com/che/scmedia/Public/Downloads/Documents/Legal/nl/IPID/IPID_AOV-Affinity_arbeidsongeschikheidsverzekering.pdf",
+     "versie": "onbekend"
+    }
+   ],
+   "criteria": {
+    "dekking": {
+     "waarde": "+ Beroepsarbeidsongeschiktheid; uitkering hangt af van verzekerd bedrag, mate van AO en inkomensverlies",
+     "bron": [
+      "https://www.elipslife.com/che/scmedia/Public/Downloads/Documents/Legal/nl/IPID/IPID_AOV-Affinity_arbeidsongeschikheidsverzekering.pdf"
+     ],
+     "brondatum": "onbekend",
+     "zekerheid": "middel",
+     "toelichting": "IPID van de AOV Affinity (via collectiviteiten/beroepsverenigingen)."
+    },
+    "eindleeftijd": {
+     "waarde": "~ Gekozen eindleeftijd, meestal pensioenleeftijd",
+     "bron": [
+      "https://www.elipslife.com/nld/scmedia/Public/Downloads/Documents/Legal/nl/IDD-2025/IDD2025ned/elipsLife-IDD-AOV-individueel-2025-DEF.pdf?sc_lang=nl&hash=865669D18738685041AF4694E864B548"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "wachttijd": {
+     "waarde": "~ Verschillende wachttijden te kiezen",
+     "bron": [
+      "https://elipslife.com/bel/scmedia/Public/Downloads/Documents/Legal/nl/01_elipsLife-IDD-Affinity-AOV-2024.pdf"
+     ],
+     "brondatum": "2024",
+     "zekerheid": "middel",
+     "toelichting": "Concrete termijnen niet in bron gevonden."
+    },
+    "indexatie": {
+     "waarde": "~ Indexatie-opties te kiezen",
+     "bron": [
+      "https://elipslife.com/bel/scmedia/Public/Downloads/Documents/Legal/nl/01_elipsLife-IDD-Affinity-AOV-2024.pdf"
+     ],
+     "brondatum": "2024",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "ontheffing": {
+     "waarde": "+ Geen of verlaagde premie zolang beroepsarbeidsongeschiktheid duurt",
+     "bron": [
+      "https://elipslife.com/bel/scmedia/Public/Downloads/Documents/Legal/nl/01_elipsLife-IDD-Affinity-AOV-2024.pdf"
+     ],
+     "brondatum": "2024",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "aanpassen": {
+     "waarde": "~ Verzekerd bedrag tijdens looptijd te verhogen of verlagen",
+     "bron": [
+      "https://elipslife.com/bel/scmedia/Public/Downloads/Documents/Legal/nl/01_elipsLife-IDD-Affinity-AOV-2024.pdf"
+     ],
+     "brondatum": "2024",
+     "zekerheid": "middel",
+     "toelichting": "Of verhoging zonder medische waarborgen kan, is niet vermeld."
+    }
+   }
+  },
+  {
+   "naam": "Felison Assuradeuren",
+   "url": "https://agrarisch.felison.nl/producten/agro-aov/",
+   "domeinen": [
+    "felison.nl"
+   ],
+   "documenten": [],
+   "criteria": {
+    "dekking": {
+     "waarde": "+ Bij vaststelling AO-mate wordt het verzekerde (agrarische) beroep meegewogen",
+     "bron": [
+      "https://agrarisch.felison.nl/producten/agro-aov/"
+     ],
+     "brondatum": "onbekend",
+     "zekerheid": "middel",
+     "toelichting": "Agro-AOV, volmachtproduct speciaal voor agrarisch ondernemers."
+    },
+    "eindleeftijd": {
+     "waarde": "+ Verzekeren tot 67 jaar mogelijk (i.p.v. 60)",
+     "bron": [
+      "https://agrarisch.felison.nl/producten/agro-aov/"
+     ],
+     "brondatum": "onbekend",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "starter": {
+     "waarde": "+ Geen inkomenstoets bij schade als inkomensgegevens periodiek worden aangeleverd; tot € 30.000 geen uitgebreide inkomenstoets",
+     "bron": [
+      "https://agrarisch.felison.nl/producten/agro-aov/"
+     ],
+     "brondatum": "onbekend",
+     "zekerheid": "middel",
+     "toelichting": "Geen aparte startersregeling; betreft inkomensbewijs."
+    },
+    "reintegratie": {
+     "waarde": "+ Gratis preventieve arbodienstverlening en re-integratieondersteuning met kennis van agrarische sector",
+     "bron": [
+      "https://agrarisch.felison.nl/producten/agro-aov/"
+     ],
+     "brondatum": "onbekend",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "varianten": {
+     "waarde": "~ Agro-AOV alleen voor agrariërs en tuinders; ook Inkomenspakket",
+     "bron": [
+      "https://agrarisch.felison.nl/producten/agro-aov/",
+      "https://agrarisch.felison.nl/producten/het-inkomenspakket/"
+     ],
+     "brondatum": "onbekend",
+     "zekerheid": "middel",
+     "toelichting": "Nicheaanbieder (volmacht)."
+    }
+   }
+  }
+ ]
+}

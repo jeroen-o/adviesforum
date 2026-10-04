@@ -8,6 +8,8 @@
  *                     kennisbankartikelen (data/kennisbank*.js, in de volgorde van de scripttags in index.html),
  *                     samen gesorteerd op datum.
  * aanbieders-feed.xml alle nieuwsberichten uit data/aanbieders.js van aanbieders met demo:false.
+ * voorwaarden-feed.xml wijzigingen in de gecontroleerde voorwaarden (data/voorwaarden-wijzigingen.js), één item per
+ *                     geldverstrekker per dag.
  *                     Zijn die er niet, dan is het een geldige lege feed met uitleg in de beschrijving.
  *
  * De lijst L blijft in nieuw.html staan (daar wordt hij beheerd); dit script leest hem uit door het
@@ -160,8 +162,35 @@ const aanbFeed = feedXml({
     : 'Nieuwsberichten die aanbieders zelf op het Adviesforum plaatsen. Er staan nog geen berichten van echte aanbieders in: de huidige aanbiederspagina’s zijn fictieve voorbeelden en komen niet in deze feed. Zodra een aanbieder nieuws publiceert, verschijnt het hier.',
 }, nieuws);
 
+/* ---------- voorwaarden-feed.xml ---------- */
+const WZ = (laadData(['data/voorwaarden-wijzigingen.js']).VOORWAARDEN_WIJZIGINGEN || { items: [] }).items || [];
+const SOORT = { gewijzigd: 'gewijzigd', nieuw: 'nieuw ingevuld', geverifieerd: 'geverifieerd', vervallen: 'vervallen', eerste: 'eerste controle' };
+const slugNL = n => String(n || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/&/g, ' en ').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '') || 'partij';
+const vvHtml = lees('voorwaarden-vergelijker.html');
+const CRIT_NAAM = {};
+for (const m of vvHtml.matchAll(/\{\s*"?id"?\s*:\s*['"]([a-z0-9]+)['"]\s*,\s*"?cat"?\s*:\s*['"][A-Z]['"]\s*,\s*"?naam"?\s*:\s*['"]([^'"]+)['"]/g)) CRIT_NAAM[m[1]] = m[2];
+const wGroepen = [];
+WZ.forEach(i => {
+  let g = wGroepen.find(x => x.d === i.d && x.naam === i.naam);
+  if (!g) { g = { d: i.d, naam: i.naam, items: [] }; wGroepen.push(g); }
+  g.items.push(i);
+});
+const wItems = wGroepen.filter(g => rfc822(g.d)).map(g => {
+  const link = BASE + 'voorwaarden-vergelijker.html#vergelijk=' + slugNL(g.naam);
+  const regels = g.items.map(i => i.soort === 'eerste' ? 'Eerste controle: ' + i.aantal + ' voorwaarden.' : ((CRIT_NAAM[i.crit] || i.crit) + ' (' + SOORT[i.soort] + '): ' + String(i.soort === 'vervallen' ? i.oud : i.nieuw).replace(/^[+~!-]\s*/, '')));
+  return {
+    titel: 'Voorwaarden ' + g.naam + ': ' + g.items.length + (g.items.length === 1 ? ' wijziging' : ' wijzigingen'),
+    link, guid: link + '&d=' + g.d, permalink: false, pubDate: rfc822(g.d), sleutel: sorteerSleutel(g.d), volg: 0, categorie: g.naam,
+    beschrijving: kort(regels.join(' · '), 900) + ' (Gecontroleerde voorwaarden; geen advies, controleer altijd de actuele gids van de geldverstrekker.)',
+  };
+}).sort((a, b) => b.sleutel.localeCompare(a.sleutel) || a.titel.localeCompare(b.titel, 'nl')).slice(0, MAX_ITEMS);
+const wFeed = feedXml({
+  titel: 'Adviesforum – wijzigingen in voorwaarden geldverstrekkers', link: BASE + 'voorwaarden-vergelijker.html', self: BASE + 'voorwaarden-feed.xml',
+  beschrijving: 'Wijzigingen in de online gecontroleerde hypotheekvoorwaarden per geldverstrekker. Geen rentes, geen advies.',
+}, wItems);
+
 /* ---------- Schrijven of controleren ---------- */
-const uit = { 'feed.xml': feed, 'aanbieders-feed.xml': aanbFeed };
+const uit = { 'feed.xml': feed, 'aanbieders-feed.xml': aanbFeed, 'voorwaarden-feed.xml': wFeed };
 const samenvatting = 'feed.xml: ' + alles.length + ' items (' + alles.filter(x => x.volg < L.length).length + ' uit nieuw.html, ' + alles.filter(x => x.volg >= L.length).length + ' kennisbank); aanbieders-feed.xml: ' + nieuws.length + ' items';
 if (process.argv.includes('--check')) {
   const afwijkend = Object.keys(uit).filter(p => { const f = path.join(ROOT, p); return !fs.existsSync(f) || fs.readFileSync(f, 'utf8') !== uit[p]; });

@@ -1,0 +1,496 @@
+{
+ "product": "krediet",
+ "titel": "Consumptief krediet",
+ "gecontroleerd": "2026-10-04",
+ "criteria": [
+  {
+   "id": "producten",
+   "naam": "Productsoorten",
+   "kort": "Welke kredietvormen worden aangeboden",
+   "waarom": "Bepaalt of de aanbieder past bij de financieringsbehoefte (eenmalige uitgave, flexibele opname, auto, verbouwing, oversluiten)."
+  },
+  {
+   "id": "bedrag",
+   "naam": "Kredietbedrag",
+   "kort": "Minimum en maximum kredietbedrag",
+   "waarom": "Kleine of juist grote kredieten vallen bij sommige aanbieders buiten het product."
+  },
+  {
+   "id": "looptijd",
+   "naam": "Looptijd",
+   "kort": "Minimale en maximale looptijd",
+   "waarom": "Looptijd bepaalt maandlast en totale kosten en of het krediet aansluit bij de levensduur van het doel."
+  },
+  {
+   "id": "leeftijd",
+   "naam": "Leeftijdsgrenzen",
+   "kort": "Minimum- en maximumleeftijd aanvrager, eindleeftijd",
+   "waarom": "Jongeren en oudere aanvragers vallen bij sommige aanbieders buiten de acceptatie of krijgen een kortere looptijd."
+  },
+  {
+   "id": "inkomen",
+   "naam": "Inkomenseisen",
+   "kort": "Vast/tijdelijk dienstverband, zzp, uitkering, pensioen",
+   "waarom": "Niet elke inkomensvorm wordt door elke aanbieder geaccepteerd."
+  },
+  {
+   "id": "bkr",
+   "naam": "BKR-beleid",
+   "kort": "Omgang met BKR-coderingen en lopende kredieten",
+   "waarom": "Een (herstelde) achterstandscodering is vaak bepalend voor acceptatie."
+  },
+  {
+   "id": "toets",
+   "naam": "Leennormen",
+   "kort": "VFN-normen, woonlasten, partnerinkomen",
+   "waarom": "De rekenmethodiek bepaalt hoeveel een klant verantwoord kan lenen."
+  },
+  {
+   "id": "aflossen",
+   "naam": "Vervroegd aflossen",
+   "kort": "Extra of volledig aflossen en eventuele vergoeding",
+   "waarom": "Flexibiliteit bij aflossen is van belang bij verwachte extra middelen of oversluiten."
+  },
+  {
+   "id": "hypotheek",
+   "naam": "Wonen en verduurzaming",
+   "kort": "Leningen voor huiseigenaren, verbouwing, verduurzaming",
+   "waarom": "Voor huiseigenaren kan een woon- of groene lening een alternatief zijn voor een hypotheekverhoging."
+  },
+  {
+   "id": "kanaal",
+   "naam": "Distributiekanaal",
+   "kort": "Alleen via intermediair of ook direct; aanvraagportaal",
+   "waarom": "Bepaalt of en hoe een adviseur de aanvraag kan indienen."
+  }
+ ],
+ "aanbieders": [
+  {
+   "naam": "DEFAM",
+   "url": "https://www.defam.nl/",
+   "domeinen": [
+    "defam.nl",
+    "alfam.nl"
+   ],
+   "documenten": [
+    {
+     "titel": "Methodiek (leencapaciteit) voor partners",
+     "url": "https://www.defam.nl/voor-partners/methodiek/",
+     "versie": "onbekend"
+    }
+   ],
+   "criteria": {
+    "producten": {
+     "waarde": "~ Persoonlijke Lening, Persoonlijke Lening GreenLoans en Persoonlijke Lening Wonen; geen doorlopend krediet of Flexibele Lening meer",
+     "bron": [
+      "https://www.defam.nl/leningen/persoonlijke-lening/",
+      "https://www.defam.nl/leningen/greenloans/",
+      "https://www.defam.nl/leningen/woonlening/",
+      "https://www.defam.nl/leningen/doorlopend-krediet/",
+      "https://www.defam.nl/leningen/flexibele-lening/"
+     ],
+     "brondatum": "2026-10",
+     "zekerheid": "hoog",
+     "toelichting": "Doorlopend Krediet (ook Flex&Zeker) wordt niet meer aangeboden; Flexibele Lening sinds 2022 niet meer af te sluiten."
+    },
+    "bedrag": {
+     "waarde": "~ Persoonlijke Lening vanaf EUR 5.000; maximum volgens derden EUR 75.000",
+     "bron": [
+      "https://www.defam.nl/leningen/persoonlijke-lening/",
+      "https://www.homefinance.nl/defam-uw-partner-voor-persoonlijke-leningen-en-klantzaken/"
+     ],
+     "brondatum": "2026-10",
+     "zekerheid": "laag",
+     "toelichting": "Minimum uit zoekfragment eigen site; maximum alleen bij derde partij gevonden. GreenLoans-voorbeelden starten lager (vanaf EUR 2.500)."
+    },
+    "looptijd": {
+     "waarde": "+ Persoonlijke Lening 12-120 maanden; Persoonlijke Lening Wonen 121-180 maanden; GreenLoans 60-180 maanden",
+     "bron": [
+      "https://www.defam.nl/leningen/persoonlijke-lening/",
+      "https://www.defam.nl/leningen/woonlening/",
+      "https://www.defam.nl/leningen/greenloans/"
+     ],
+     "brondatum": "2026-10",
+     "zekerheid": "middel",
+     "toelichting": "Uit zoekfragmenten van productpagina's; site niet direct op te halen."
+    },
+    "leeftijd": {
+     "waarde": "~ Circa 21 tot 68/69 jaar; lening afgelost voor 75 jaar",
+     "bron": [
+      "https://www.homefinance.nl/defam-uw-partner-voor-persoonlijke-leningen-en-klantzaken/"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "laag",
+     "toelichting": "Derde partij; bronnen noemen afwijkende maximumleeftijd (68 of 69)."
+    },
+    "bkr": {
+     "waarde": "~ Toetst bij BKR; lenen met een bestaande registratie hangt af van de situatie en loopt via de intermediair",
+     "bron": [
+      "https://www.defam.nl/veelgestelde-vragen/"
+     ],
+     "brondatum": "2026-10",
+     "zekerheid": "middel",
+     "toelichting": "Lening wordt bij BKR geregistreerd en na volledige aflossing afgemeld."
+    },
+    "toets": {
+     "waarde": "~ Eigen methodiek met 8 huishoudtypen en basisnormen, inkomensafhankelijke opslag (begrensd op 1,5x modaal), woonlasten en opslagen voor auto/private lease, eigen woning en kinderopvang; maandlast via 2%-regel of werkelijke annuiteit (max. 96 mnd)",
+     "bron": [
+      "https://www.defam.nl/voor-partners/methodiek/"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Netto besteedbaar inkomen incl. uitkering en pensioen; correcties voor pensioenpremie en leaseauto."
+    },
+    "aflossen": {
+     "waarde": "+ Altijd kosteloos volledig of extra aflossen",
+     "bron": [
+      "https://www.defam.nl/leningen/persoonlijke-lening/"
+     ],
+     "brondatum": "2026-10",
+     "zekerheid": "middel",
+     "toelichting": "14 dagen bedenktijd na uitbetaling."
+    },
+    "hypotheek": {
+     "waarde": "+ Persoonlijke Lening Wonen voor huiseigenaren (verbouwen, lange looptijd) en GreenLoans voor verduurzaming woning of volledig elektrische auto",
+     "bron": [
+      "https://www.defam.nl/leningen/woonlening/",
+      "https://www.defam.nl/leningen/greenloans/"
+     ],
+     "brondatum": "2026-10",
+     "zekerheid": "middel",
+     "toelichting": "Geen hypothecaire zekerheid; het blijft een persoonlijke lening."
+    },
+    "kanaal": {
+     "waarde": "~ Alleen via intermediairs met AFM-vergunning; DP Portaal voor partners (status aanvragen, provisieoverzichten, BKR-rechten)",
+     "bron": [
+      "https://www.defam.nl/voor-partners/portaal/",
+      "https://www.defam.nl/voor-partners/partner-worden/",
+      "https://defam.nl/vragen-contact/veelgestelde-vragen"
+     ],
+     "brondatum": "2026-10",
+     "zekerheid": "hoog",
+     "toelichting": "Merk van Alfam; Rabobank nam Alfam over en gaat met Freo verder als Sprankr, merk DEFAM blijft bestaan."
+    }
+   }
+  },
+  {
+   "naam": "Freo (Rabobank)",
+   "url": "https://www.freo.nl/",
+   "domeinen": [
+    "freo.nl"
+   ],
+   "documenten": [
+    {
+     "titel": "Algemene voorwaarden",
+     "url": "https://www.freo.nl/algemene-voorwaarden/",
+     "versie": "onbekend"
+    }
+   ],
+   "criteria": {
+    "producten": {
+     "waarde": "~ Alleen Persoonlijke Lening (ook voor oversluiten van andere leningen); geen doorlopend krediet",
+     "bron": [
+      "https://www.freo.nl/geld-lenen/persoonlijke-lening/",
+      "https://www.freo.nl/service-en-contact/betalen-en-aflossen/aflossen/"
+     ],
+     "brondatum": "2026-10",
+     "zekerheid": "hoog",
+     "toelichting": "Bestedingsdoelen zoals verbouwing, auto, boot en caravan vallen onder dezelfde persoonlijke lening."
+    },
+    "bedrag": {
+     "waarde": "~ EUR 5.000 tot EUR 75.000",
+     "bron": [
+      "https://www.freo.nl/geld-lenen/persoonlijke-lening/"
+     ],
+     "brondatum": "2026-10",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "looptijd": {
+     "waarde": "+ 6 tot 120 maanden",
+     "bron": [
+      "https://www.freo.nl/geld-lenen/persoonlijke-lening/"
+     ],
+     "brondatum": "2026-10",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "leeftijd": {
+     "waarde": "~ 18 tot en met 69 jaar bij afsluiten; lening afgelost voor 75 jaar",
+     "bron": [
+      "https://www.freo.nl/service-en-contact/geld-lenen/lening-aanvragen/tot-welke-leeftijd-kan-ik-een-lening-afsluiten/"
+     ],
+     "brondatum": "2026-10",
+     "zekerheid": "hoog",
+     "toelichting": "Woonachtig in Nederland en geldig identiteitsbewijs vereist."
+    },
+    "inkomen": {
+     "waarde": "~ Vast inkomen (loon, pensioen); tijdelijk contract mogelijk (soms intentieverklaring nodig); alleen zzp-inkomen niet, wel als aanvrager deels in loondienst is of partner in loondienst; uitkering afhankelijk van soort (WIA/IVA, Wajong wel, WW niet); studiefinanciering telt niet",
+     "bron": [
+      "https://www.freo.nl/service-en-contact/geld-lenen/werk-en-inkomen/kan-ik-als-ondernemer-zzper-of-freelancer-bij-freo-lenen/",
+      "https://www.freo.nl/service-en-contact/geld-lenen/werk-en-inkomen/kan-ik-zonder-vast-contract-bij-freo-lenen/",
+      "https://www.freo.nl/service-en-contact/geld-lenen/werk-en-inkomen/"
+     ],
+     "brondatum": "2026-10",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "bkr": {
+     "waarde": "- Met een negatieve BKR-registratie (achterstandscodering) geen lening; positieve registraties (lopende kredieten) geen bezwaar mits passend",
+     "bron": [
+      "https://www.freo.nl/geld-lenen/"
+     ],
+     "brondatum": "2026-10",
+     "zekerheid": "hoog",
+     "toelichting": "Herstelcodering niet apart genoemd."
+    },
+    "aflossen": {
+     "waarde": "+ Altijd boetevrij extra of volledig aflossen, zo vaak als gewenst",
+     "bron": [
+      "https://www.freo.nl/service-en-contact/betalen-en-aflossen/aflossen/moet-ik-kosten-betalen-als-ik-extra-aflos/"
+     ],
+     "brondatum": "2026-10",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "kanaal": {
+     "waarde": "- Rechtstreeks online bij Freo; geen intermediaire distributie gevonden",
+     "bron": [
+      "https://www.freo.nl/geld-lenen/lening-aanvragen/",
+      "https://www.freo.nl/over-freo/"
+     ],
+     "brondatum": "2026-10",
+     "zekerheid": "middel",
+     "toelichting": "Leenspecialist van Rabobank; gaat met Alfam (DEFAM) verder als Sprankr, merk Freo blijft. Voor adviseurs is DEFAM het intermediaire merk binnen dezelfde groep."
+    }
+   }
+  },
+  {
+   "naam": "Lender & Spender",
+   "url": "https://www.lenderspender.nl/",
+   "domeinen": [
+    "lenderspender.nl",
+    "partners.lenderspender.nl",
+    "support.lenderspender.nl"
+   ],
+   "documenten": [
+    {
+     "titel": "Acceptatiecriteria (partnerportaal)",
+     "url": "https://partners.lenderspender.nl/support/wanneer-komt-iemand-in-aanmerking-voor-een-lening",
+     "versie": "onbekend"
+    },
+    {
+     "titel": "Redenen voor afwijzing (partnerportaal)",
+     "url": "https://partners.lenderspender.nl/support/redenen-voor-afwijzing",
+     "versie": "onbekend"
+    },
+    {
+     "titel": "Vaststelling maximaal leenbedrag (partnerportaal)",
+     "url": "https://partners.lenderspender.nl/support/vaststelling-maximaal-leenbedrag",
+     "versie": "onbekend"
+    }
+   ],
+   "criteria": {
+    "producten": {
+     "waarde": "~ Persoonlijke lening (ook voor oversluiten), Go Green lening voor verduurzaming en aankoopfinanciering via partners; geen doorlopend krediet",
+     "bron": [
+      "https://partners.lenderspender.nl/support/persoonlijke-lening",
+      "https://partners.lenderspender.nl/support/go-green-lening",
+      "https://www.lenderspender.nl/geld-lenen/oversluiten",
+      "https://www.lenderspender.nl/partners"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Peer-to-peer: leningen worden gefinancierd door beleggers. Doorlopend krediet niet als eigen product gevonden."
+    },
+    "bedrag": {
+     "waarde": "~ EUR 2.500 tot EUR 75.000; bij looptijd langer dan 120 maanden minimaal EUR 10.000 (Go Green: EUR 5.000)",
+     "bron": [
+      "https://partners.lenderspender.nl/support/persoonlijke-lening",
+      "https://partners.lenderspender.nl/support/go-green-lening"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Uit zoekfragmenten partnerportaal."
+    },
+    "looptijd": {
+     "waarde": "~ 12 tot maximaal 180 maanden; maximale looptijd afhankelijk van leendoel",
+     "bron": [
+      "https://partners.lenderspender.nl/support/persoonlijke-lening",
+      "https://partners.lenderspender.nl/support/aansluiting-leendoel-met-looptijd"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "leeftijd": {
+     "waarde": "~ Hoofdaanvrager minimaal 21 jaar; lening afgelost voor 76e levensjaar",
+     "bron": [
+      "https://partners.lenderspender.nl/support/wanneer-komt-iemand-in-aanmerking-voor-een-lening"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Daarnaast: Nederlandse/EU/EER/Zwitserse nationaliteit of verblijfsvergunning onbepaalde tijd, minimaal 2 jaar onafgebroken in Nederland wonen en werken."
+    },
+    "inkomen": {
+     "waarde": "+ Vast en tijdelijk dienstverband (geen uitzendfase A/1/2), zelfstandig ondernemer (eenmanszaak, VOF, maatschap, BV), zzp sinds nov. 2021 (100% gemiddelde fiscale winst 2 jaar), uitkeringen WAO/WIA/ANW/Wajong, WSW en pensioen",
+     "bron": [
+      "https://partners.lenderspender.nl/support/wanneer-komt-iemand-in-aanmerking-voor-een-lening",
+      "https://partners.lenderspender.nl/support/per-1-november-leningen-voor-zzp-ers",
+      "https://partners.lenderspender.nl/support/acceptatie-inkomen-uit-uitkeringen"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Afwijzing mogelijk als pas 1-2 maanden salaris is ontvangen zonder eerdere inkomsten."
+    },
+    "bkr": {
+     "waarde": "- Geen lening bij negatieve BKR-codering, curatele/bewind, of betalingsproblemen in de afgelopen 3 maanden (schuldhulp, achterstanden, loonbeslag, >2 incassodossiers, 3+ storneringen)",
+     "bron": [
+      "https://partners.lenderspender.nl/support/redenen-voor-afwijzing",
+      "https://support.lenderspender.nl/hc/nl/articles/360000713497-Kom-ik-met-een-negatieve-BKR-registratie-in-aanmerking-voor-een-lening"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Alle aanvragen worden bij BKR getoetst."
+    },
+    "toets": {
+     "waarde": "~ VFN-gedragscode en leennormen (Nibud-basis); partnerinkomen telbaar onder voorwaarden (nationaliteit/verblijf, gehuwd of samen eigenaar woning); verruimde maandlastnorm bij Go Green-verduurzaming",
+     "bron": [
+      "https://partners.lenderspender.nl/support/vaststelling-maximaal-leenbedrag",
+      "https://partners.lenderspender.nl/support/wanneer-komt-iemand-in-aanmerking-voor-een-lening",
+      "https://partners.lenderspender.nl/support/go-green-lening"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "aflossen": {
+     "waarde": "+ Boetevrij extra aflossen vanaf EUR 50; looptijd blijft gelijk, maandbedrag daalt",
+     "bron": [
+      "https://www.lenderspender.nl/nieuws/kan-ik-mijn-lening-boetevrij-aflossen",
+      "https://support.lenderspender.nl/hc/nl/articles/360000713377-Kan-ik-zonder-kosten-extra-aflossen-"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "hypotheek": {
+     "waarde": "+ Go Green lening voor verduurzamingsmaatregelen, uitsluitend via intermediairs, met verruimde leennorm",
+     "bron": [
+      "https://partners.lenderspender.nl/support/go-green-lening",
+      "https://partners.lenderspender.nl/support/lender-spender-introduceert-go-green-lening"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "kanaal": {
+     "waarde": "+ Direct online en via intermediairs (partnerportaal; aanvragen ook via Maex); aankoopfinanciering via partnerlink/QR-code",
+     "bron": [
+      "https://partners.lenderspender.nl/support/aanvraagproces-persoonlijke-lening-via-maex",
+      "https://www.lenderspender.nl/partners"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": ""
+    }
+   }
+  },
+  {
+   "naam": "Qander Consumer Finance",
+   "url": "https://www.qander.nl/",
+   "domeinen": [
+    "qander.nl"
+   ],
+   "documenten": [
+    {
+     "titel": "Leningen via tussenpersonen (zakelijk)",
+     "url": "https://www.qander.nl/zakelijk/producten/",
+     "versie": "onbekend"
+    },
+    {
+     "titel": "Algemene voorwaarden",
+     "url": "https://www.qander.nl/?pdf=algemene_voorwaarden",
+     "versie": "onbekend"
+    }
+   ],
+   "criteria": {
+    "producten": {
+     "waarde": "~ Persoonlijke lening, Persoonlijke lening voor Senioren, Persoonlijke lening voor Ondernemer en Flex en Zeker lening (limiet met vaste rente); doorlopend krediet gestopt per 1 maart 2022",
+     "bron": [
+      "https://www.qander.nl/onze-leenoplossingen/",
+      "https://www.qander.nl/vraag-antwoord/detail?category=geld-lenen"
+     ],
+     "brondatum": "onbekend",
+     "zekerheid": "middel",
+     "toelichting": "Uit zoekfragmenten eigen site; site niet direct op te halen."
+    },
+    "bedrag": {
+     "waarde": "~ Persoonlijke lening en Flex en Zeker EUR 5.000 tot EUR 75.000; Senioren en Ondernemer EUR 5.000 tot EUR 50.000",
+     "bron": [
+      "https://www.qander.nl/onze-leenoplossingen/"
+     ],
+     "brondatum": "onbekend",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "looptijd": {
+     "waarde": "+ Persoonlijke lening en Ondernemer 12-180 maanden; Senioren 12-120 maanden; Flex en Zeker maximaal 120 maanden",
+     "bron": [
+      "https://www.qander.nl/onze-leenoplossingen/"
+     ],
+     "brondatum": "onbekend",
+     "zekerheid": "middel",
+     "toelichting": "Flex en Zeker: maandtermijn minimaal 1,5% van de limiet."
+    },
+    "leeftijd": {
+     "waarde": "+ Seniorenlening voor 59 tot 80 jaar (afgelost voor 85); Ondernemerslening 21 tot 64 jaar (afgelost voor 67)",
+     "bron": [
+      "https://www.qander.nl/onze-leenoplossingen/"
+     ],
+     "brondatum": "onbekend",
+     "zekerheid": "middel",
+     "toelichting": "Leeftijdsgrenzen voor de reguliere persoonlijke lening niet gevonden."
+    },
+    "inkomen": {
+     "waarde": "+ Aparte Persoonlijke lening voor Ondernemer (zzp/ondernemers); toets op inkomen, vaste lasten en persoonlijke omstandigheden",
+     "bron": [
+      "https://www.qander.nl/onze-leenoplossingen/",
+      "https://www.qander.nl/vraag-antwoord/detail?category=geld-lenen"
+     ],
+     "brondatum": "onbekend",
+     "zekerheid": "middel",
+     "toelichting": "Specifieke eisen per inkomensvorm niet gevonden."
+    },
+    "bkr": {
+     "waarde": "~ Toetst bij BKR als deelnemer; acceptatiebeleid bij coderingen niet openbaar gevonden",
+     "bron": [
+      "https://www.qander.nl/vraag-antwoord/detail?category=geld-lenen"
+     ],
+     "brondatum": "onbekend",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "aflossen": {
+     "waarde": "+ Altijd boetevrij extra aflossen op alle leningvormen",
+     "bron": [
+      "https://www.qander.nl/vraag-antwoord/detail?category=betalen-1"
+     ],
+     "brondatum": "onbekend",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "kanaal": {
+     "waarde": "~ Alle leenoplossingen uitsluitend via een tussenpersoon (kredietbemiddelaar)",
+     "bron": [
+      "https://www.qander.nl/onze-leenoplossingen/",
+      "https://www.qander.nl/onze-tussenpersonen/"
+     ],
+     "brondatum": "onbekend",
+     "zekerheid": "middel",
+     "toelichting": "Directa.nl is een label van Qander. Volgens Geldshop onderdeel van Chenavari Investment Managers (laag)."
+    }
+   }
+  }
+ ]
+}

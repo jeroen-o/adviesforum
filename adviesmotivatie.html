@@ -987,7 +987,7 @@ function toonOvername(t, waarsch){
 }
 function leesOvername(){
   var p=hashParams(), heeft=function(k){ return Object.prototype.hasOwnProperty.call(p,k); };
-  if (!heeft('toets') && !heeft('bron') && !heeft('ref')) return;
+  if (!heeft('toets') && !heeft('bron') && !heeft('ref') && !heeft('vgl')) return;
   var genomen=[], fout=[];
   if (heeft('toets')){
     var t = p.toets!=null && /^\d{1,8}(\.\d{1,2})?$/.test(p.toets) ? Number(p.toets) : NaN;
@@ -1006,6 +1006,14 @@ function leesOvername(){
     var r=schoneRef(p.ref);
     if (r){ $('p-ref').value=r; genomen.push('dossierreferentie'); }
     else if (r===null) fout.push('dossierreferentie (lijkt op een BSN)');
+  }
+  if (heeft('vgl')){
+    var namen = String(p.vgl||'').split(',').map(function(n){ return n.replace(/[\u0000-\u001F\u007F<>]/g,'').trim().slice(0,60); }).filter(Boolean).slice(0,20);
+    var sel=$('x-product-aantal');
+    if (namen.length && sel){
+      sel.value = namen.length===1 ? '1 (toelichting nodig)' : namen.length>=4 ? '4 of meer' : String(namen.length);
+      genomen.push('vergeleken aanbieders uit de voorwaarden-vergelijker ('+namen.join(', ')+'); vul de geadviseerde geldverstrekker en de doorslaggevende voorwaarden zelf in');
+    } else fout.push('vergeleken aanbieders');
   }
   var uitInk = heeft('toets') || heeft('bron');
   var t1 = genomen.length ? (uitInk ? 'Overgenomen uit inkomensbepaling: ' : 'Overgenomen uit de link: ')+genomen.join(', ')+'. Controleer de waarden.' : '';
