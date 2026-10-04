@@ -1,0 +1,293 @@
+[
+ {
+  "naam": "Tellius Hypotheken",
+  "gecontroleerd": "2026-10-04",
+  "criteria": {
+   "boete": {
+    "waarde": "~ 10% van oorspronkelijke hoofdsom per kalenderjaar boetevrij",
+    "bron": [
+     "https://www.tellius.nl/voor-klanten/extra-aflossen"
+    ],
+    "brondatum": "2026-10",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Webpagina Extra aflossen (geraadpleegd okt 2026): per jaar 10% van oorspronkelijk hypotheekbedrag boetevrij; daarboven mogelijk vergoeding."
+   },
+   "ltv": {
+    "waarde": "+ Automatisch lagere risicoklasse bij aflossing; waardestijging via WOZ of taxatie op aanvraag",
+    "bron": [
+     "https://www.tellius.nl/voor-klanten/extra-aflossen",
+     "https://www.tellius.nl/hypotheken/rentetarieven"
+    ],
+    "brondatum": "2026-10",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bij extra aflossing beoordeelt Tellius automatisch of lagere risicoklasse geldt; rentevaste periode blijft gelijk (webpagina's okt 2026). Waardestijging-deel niet opnieuw gezien."
+   },
+   "bdduur": {
+    "waarde": "~ Bouwdepot max. 2 jaar; verlenging max. 6 mnd (zonder rentevergoeding)",
+    "bron": [
+     "https://www.tellius.nl/voor-klanten/bouwdepot"
+    ],
+    "brondatum": "2026-10",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Webpagina Bouwdepot: standaard 2 jaar, verlenging max. 6 mnd zonder rentevergoeding."
+   },
+   "verh": {
+    "waarde": "~ Rente meenemen bij RVP nog >= 1 jaar; passeren binnen 6 mnd; aangepast aan nieuwe risicoklasse",
+    "bron": [
+     "https://www.tellius.nl/voor-klanten/verhuisregeling"
+    ],
+    "brondatum": "2026-10",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Webpagina Verhuisregeling: rente meenemen voor zelfde of kleiner bedrag; rentevaste periode moet nog min. 1 jaar lopen. Termijn 6 mnd niet opnieuw in fragment gezien."
+   },
+   "ovbr": {
+    "waarde": "~ Max. 24 mnd; alleen met nieuwe Tellius-hypotheek; inschrijving op beide woningen",
+    "bron": [
+     "https://www.tellius.nl/uw-woonsituatie/u-verkoopt-een-huis"
+    ],
+    "brondatum": "2026-10",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Webpagina: overbruggingshypotheek tijdelijke lening tussen verkoop en nieuwe woning, max. 24 mnd. Overige voorwaarden (inschrijving beide woningen) niet in fragment."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Acceptatiegids Tellius 1 juli 2026 (vermeld op Voor Adviseurs-pagina; PDF-URL niet gevonden)",
+    "url": "https://www.tellius.nl/voor-adviseurs",
+    "versie": "1 juli 2026"
+   },
+   {
+    "titel": "Algemene Voorwaarden Tellius Hypotheken",
+    "url": "https://www.tellius.nl/-/media/tellius/documenten/voor-adviseurs/2026/algemene-voorwaarden-tellius-hypotheken-van-1-februari-2026.pdf",
+    "versie": "1 februari 2026"
+   }
+  ]
+ },
+ {
+  "naam": "Lot Hypotheken",
+  "gecontroleerd": "2026-10-04",
+  "criteria": {
+   "boete": {
+    "waarde": "+ 15% van oorspronkelijke hoofdsom per leningdeel per kalenderjaar boetevrij",
+    "bron": [
+     "https://www.lothypotheken.nl/consument/hypotheekcheck"
+    ],
+    "brondatum": "2026-10",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Consumentenpagina (geraadpleegd okt 2026): jaarlijks 15% van oorspronkelijk hypotheekbedrag boetevrij uit eigen middelen. Geen nieuwere hypotheekgids dan januari 2026 gevonden."
+   },
+   "bdduur": {
+    "waarde": "~ Bouwdepot max. 24 mnd (nieuwbouw en verbouw); verlenging niet mogelijk",
+    "bron": [
+     "https://www.lothypotheken.nl/consument/blog/wat-is-een-bouwdepot"
+    ],
+    "brondatum": "2026-10",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Blog Wat is een bouwdepot (actuele webpagina, ongedateerd): 24 mnd om werkzaamheden uit te voeren en kosten te betalen. Verlenging niet in fragment."
+   },
+   "verh": {
+    "waarde": "~ Meeneemregeling: rente en voorwaarden voor resterende looptijd mee; tot 6 mnd na aflossing",
+    "bron": [
+     "https://www.lothypotheken.nl/consument/bestaande-klanten/hypotheek-meenemen"
+    ],
+    "brondatum": "2026-10",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Pagina Hypotheek meenemen: tot 6 mnd na aflossing; rente, maandlast en voorwaarden voor resterend bedrag mee; bouwdepot gaat niet mee."
+   },
+   "geld": {
+    "waarde": "! Renteaanbod 4 mnd (120 dagen) geldig; ID binnen 21 dagen; verlengen niet mogelijk",
+    "bron": [
+     "https://www.lothypotheken.nl/consument/blog/hoe-werkt-een-renteaannbod"
+    ],
+    "brondatum": "2026-10",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Blog Hoe werkt een renteaanbod (actuele webpagina): rente 4 mnd gegarandeerd, ID binnen 21 dagen, verlengen niet mogelijk."
+   },
+   "bprov": {
+    "waarde": "- Renteaanbod is niet te verlengen",
+    "bron": [
+     "https://www.lothypotheken.nl/consument/blog/hoe-werkt-een-renteaannbod"
+    ],
+    "brondatum": "2026-10",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Blog Hoe werkt een renteaanbod: geldigheid renteaanbod niet te verlengen."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Hypotheekgids Lot Hypotheken (nieuwste gevonden; geen nieuwere 2026-versie gevonden)",
+    "url": "https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf",
+    "versie": "januari 2026"
+   }
+  ]
+ },
+ {
+  "naam": "Impact Hypotheken",
+  "gecontroleerd": "2026-10-04",
+  "criteria": {
+   "zzp": {
+    "waarde": "~ Min. 2 volledige kalenderjaren zelfstandig; inkomensverklaring van erkende rekenaar (NHG-normen)",
+    "bron": [
+     "https://impacthypotheken.nl/veelgestelde-vragen/",
+     "https://impacthypotheken.nl/adviseur/zelfstandigen/"
+    ],
+    "brondatum": "2026-10",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Veelgestelde vragen/zelfstandigen-pagina (geraadpleegd okt 2026): min. twee volledige kalenderjaren zelfstandig; inkomensverklaring van door Impact erkende externe partij. Geen hypotheekgids nieuwer dan 2024-01 gevonden."
+   },
+   "avrij": {
+    "waarde": "~ Aflossingsvrij max. 50% van marktwaarde (niet bij NHG)",
+    "bron": [
+     "https://impacthypotheken.nl/veelgestelde-vragen/"
+    ],
+    "brondatum": "2026-10",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Veelgestelde vragen: aflossingsvrij deel max. 50% van getaxeerde marktwaarde; aan einde looptijd volledig aflossen. NHG-uitsluiting niet in fragment."
+   },
+   "tweede": {
+    "waarde": "! Verhoging vanaf EUR 10.000 bij Impact; nieuwe taxatie; woning moet dan label A hebben",
+    "bron": [
+     "https://impacthypotheken.nl/onze-voorwaarden/"
+    ],
+    "brondatum": "2026-10",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Pagina Onze goede voorwaarden: verhoging/2e hypotheek alleen als 1e hypotheek bij Impact; woning moet op moment van aanvraag label A hebben. Minimumbedrag niet in fragment."
+   },
+   "ltv": {
+    "waarde": "+ Automatische rentedaling bij lagere risicoklasse door aflossing; waardestijging alleen op verzoek",
+    "bron": [
+     "https://impacthypotheken.nl/adviseur/automatische-rentedaling/"
+    ],
+    "brondatum": "2026-10",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Pagina Automatische rentedaling: bij (extra) aflossing automatisch lagere risicoklasse per 1e van volgende maand."
+   },
+   "rvoor": {
+    "waarde": "~ Verlengingsvoorstel 3 maanden vóór einde rentevaste periode",
+    "bron": [
+     "https://impacthypotheken.nl/veelgestelde-vragen/"
+    ],
+    "brondatum": "2026-10",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Veelgestelde vragen: 'een paar maanden' voor einde rentevaste periode renteherzieningsbrief met nieuw voorstel; 3 mnd niet letterlijk in fragment."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Hypotheekgids Impact (nieuwste gevonden; geen 2026-versie gevonden)",
+    "url": "https://impacthypotheken.nl/app/uploads/2024/07/Hypotheekgids-Impact-2024-01.pdf",
+    "versie": "2024-01"
+   }
+  ]
+ },
+ {
+  "naam": "Tulp Hypotheken",
+  "gecontroleerd": "2026-10-04",
+  "criteria": {
+   "verh": {
+    "waarde": "~ Verhuisregeling: melden ≥1 mnd voor aflossing, nieuw renteaanbod binnen 3 mnd",
+    "bron": [
+     "https://tulphypotheken.nl/advies/hypotheek-verhuizen/"
+    ],
+    "brondatum": "2026-10",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Pagina Verhuisregeling (geraadpleegd okt 2026): uiterlijk 1 mnd voor aflossing melden; Tulp reserveert de rente; binnen max. 3 mnd na aflossing nieuw renteaanbod aanvragen (geldig max. 6 mnd). Geen acceptatiegids nieuwer dan maart 2025 gevonden."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Acceptatiegids Tulp Hypotheek (nieuwste gevonden; geen 2026-versie gevonden)",
+    "url": "https://tulphypotheken.nl/wp-content/uploads/2025/03/acceptatiegids-Tulp-Hypotheek_maart-2025.pdf",
+    "versie": "maart 2025"
+   },
+   {
+    "titel": "Productkaart Tulp",
+    "url": "https://tulphypotheken.nl/wp-content/uploads/2026/01/Productkaart-Tulp.pdf",
+    "versie": "januari 2026"
+   }
+  ]
+ },
+ {
+  "naam": "Woonnu",
+  "gecontroleerd": "2026-10-04",
+  "criteria": {
+   "boete": {
+    "waarde": "~ 10% van oorspronkelijke hoofdsom per kalenderjaar boetevrij; ook op renteherzieningsdatum",
+    "bron": [
+     "https://woonnu.nl/over-woonnu/veelgestelde-vragen/"
+    ],
+    "brondatum": "2026-10",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Veelgestelde vragen (geraadpleegd okt 2026): per kalenderjaar 10% van oorspronkelijke hoofdsom zonder vergoeding; daarboven mogelijk vergoeding. Extra terugbetalen via Mijn Woonnu (iDeal). Woonnu verstrekt sinds 1-5-2026 geen nieuwe hypotheken; laatste acceptatiegids maart 2026."
+   },
+   "ltv": {
+    "waarde": "+ Automatisch lagere risicoklasse bij aflossing; waardestijging (WOZ/taxatie) zelf melden via Mijn Woonnu",
+    "bron": [
+     "https://woonnu.nl/over-woonnu/veelgestelde-vragen/"
+    ],
+    "brondatum": "2026-10",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Veelgestelde vragen: bij aflossing automatisch lagere risicoklasse; hogere woningwaarde of beter energielabel zelf melden via Mijn Woonnu."
+   },
+   "rvoor": {
+    "waarde": "~ Rentevoorstel min. 3 mnd voor einde RVP met min. 3 opties; geen keuze = zelfde periode",
+    "bron": [
+     "https://woonnu.nl/over-woonnu/veelgestelde-vragen/"
+    ],
+    "brondatum": "2026-10",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Veelgestelde vragen: min. 3 mnd voor einde rentevaste periode rentevoorstel in Mijn Woonnu met min. 3 opties. 'Geen keuze = zelfde periode' niet opnieuw in fragment."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Woonnu Acceptatiegids (laatste versie; Woonnu stopt per 1-5-2026 met nieuwe hypotheken)",
+    "url": "https://woonnu.nl/media/cwcevjcx/20262603-woonnu-acceptatiegids_final.pdf",
+    "versie": "maart 2026"
+   },
+   {
+    "titel": "Woonnu Productkaart",
+    "url": "https://woonnu.nl/media/mnojflza/202512-woonnu-productkaart-04.pdf",
+    "versie": "december 2025"
+   }
+  ]
+ }
+]

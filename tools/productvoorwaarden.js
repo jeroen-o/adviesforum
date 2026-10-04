@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 /*
  * Bouwt data/productvoorwaarden.js voor productvoorwaarden.html uit het onderzoek in docs/productvoorwaarden-onderzoek/
- * (orv.json, aov.json, krediet.json; een ontbrekend bestand wordt overgeslagen).
+ * (<product>.json plus aanvullingen <product>-2.json, -3.json …; een ontbrekend product wordt overgeslagen).
+ * Een aanvulling voegt aanbieders toe of overschrijft per aanbieder losse criteria (zelfde naam).
  *
  *   node tools/productvoorwaarden.js          schrijft data/productvoorwaarden.js
  *   node tools/productvoorwaarden.js --check  faalt als het bestand niet actueel is
@@ -18,7 +19,7 @@ const path = require('path');
 const ROOT = path.join(__dirname, '..');
 const DIR = path.join(ROOT, 'docs', 'productvoorwaarden-onderzoek');
 const UIT = path.join(ROOT, 'data', 'productvoorwaarden.js');
-const VOLGORDE = ['orv', 'aov', 'krediet'];
+const VOLGORDE = ['orv', 'aov', 'uitvaart', 'lijfrente', 'krediet'];
 const VERBODEN = /premie[^.;]{0,25}€|€[^.;]{0,20}premie|premie(?:s)?\s+(?:van|vanaf)\s+\d|\brente\s*(?:van|vanaf)?\s*\d|\bjkp\b|\d\s?%\s*(?:rente|korting|jkp)|\bkorting\b|\bactie\b|cashback/i;
 
 function fout(m) { console.error('productvoorwaarden: ' + m); process.exit(1); }
@@ -34,6 +35,19 @@ for (const id of VOLGORDE) {
   let d;
   try { d = JSON.parse(fs.readFileSync(f, 'utf8')); } catch (e) { fout(id + '.json is geen geldige JSON: ' + e.message); }
   if (!Array.isArray(d.criteria) || !Array.isArray(d.aanbieders)) fout(id + '.json mist criteria of aanbieders');
+  const extra = fs.readdirSync(DIR).filter(n => new RegExp('^' + id + '-\\d+\\.json$').test(n)).sort((a, b) => parseInt(a.split('-')[1], 10) - parseInt(b.split('-')[1], 10));
+  for (const n of extra) {
+    let x;
+    try { x = JSON.parse(fs.readFileSync(path.join(DIR, n), 'utf8')); } catch (e) { fout(n + ' is geen geldige JSON: ' + e.message); }
+    for (const a of x.aanbieders || []) {
+      const bestaand = d.aanbieders.find(b => b.naam === a.naam);
+      if (!bestaand) { d.aanbieders.push(a); continue; }
+      bestaand.criteria = Object.assign({}, bestaand.criteria, a.criteria || {});
+      bestaand.domeinen = [...new Set([...(bestaand.domeinen || []), ...(a.domeinen || [])])];
+      bestaand.documenten = [...(bestaand.documenten || []), ...(a.documenten || [])];
+      if (a.url && !bestaand.url) bestaand.url = a.url;
+    }
+  }
   const critIds = new Set(d.criteria.map(c => c.id));
   const aanbieders = d.aanbieders.map(a => {
     const doms = (a.domeinen || []).map(x => String(x).replace(/^www\./, '').toLowerCase());

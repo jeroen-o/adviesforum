@@ -1,0 +1,290 @@
+{
+  "product": "aov",
+  "aanbieders": [
+    {
+      "naam": "Movir",
+      "url": "https://www.movir.nl/arbeidsongeschiktheidsverzekering/momentum-aov",
+      "domeinen": [
+        "movir.nl"
+      ],
+      "criteria": {
+        "psychisch": {
+          "waarde": "~ Bij aanvraag vragen over psychische klachten (overspannenheid, burn-out, depressie, slaapstoornissen) en nek-, schouder- en rugklachten; bestaande of eerdere klachten kunnen leiden tot hogere premie of uitsluiting",
+          "bron": [
+            "https://www.movir.nl/arbeidsongeschiktheidsverzekering/aanvragen/medische-beoordeling"
+          ],
+          "brondatum": "2025",
+          "zekerheid": "middel",
+          "toelichting": "Individuele medische acceptatie door Team Medisch Advies; geen standaarduitsluiting in de voorwaarden gevonden. Bij uitsluiting geen uitkering voor die aandoening. Datum pagina niet zichtbaar via zoekresultaat."
+        },
+        "beroepsklasse": {
+          "waarde": "~ Verzekerbare beroepen volgens SIVI-beroepenlijst; Momentum uitgebreid van medische en zakelijke beroepen naar o.a. schilders, winkeliers en kappers; beroepenlijst toont welke beroepen AOW-volgende eindleeftijd kunnen kiezen",
+          "bron": [
+            "https://www.movir.nl/nieuws/movir-breidt-movir-momentum-aov-uit-voor-ondernemers",
+            "https://www.movir.nl/voor-adviseurs/nieuws/nieuwe-keuze-aow-volgende-eindleeftijd"
+          ],
+          "brondatum": "2025",
+          "zekerheid": "middel",
+          "toelichting": "Geen klassenindeling (1-4) gepubliceerd; beroep bepaalt acceptatie en keuzes. Exacte datum nieuwsbericht niet vastgesteld."
+        }
+      }
+    },
+    {
+      "naam": "De Amersfoortse",
+      "url": "https://www.amersfoortse.nl/ondernemer/arbeidsongeschiktheidsverzekering",
+      "domeinen": [
+        "amersfoortse.nl",
+        "asr.nl"
+      ],
+      "criteria": {
+        "psychisch": {
+          "waarde": "~ Psychische klachten standaard gedekt (burn-out, depressie); daarnaast AOV-variant met uitsluiting psychische klachten. Op basis van medische historie individuele uitsluiting mogelijk (bijv. rugaandoeningen)",
+          "bron": [
+            "https://www.asr.nl/zakelijk/verzekeringen/arbeidsongeschiktheidsverzekeringen/overzicht-voorwaarden-en-vergoedingen",
+            "https://www.amersfoortse.nl/ondernemer/arbeidsongeschiktheidsverzekering/wanneer-ben-je-arbeidsongeschikt",
+            "https://www.asr.nl/zakelijk/verzekeringen/arbeidsongeschiktheidsverzekeringen/medische-acceptatie"
+          ],
+          "brondatum": "2025",
+          "zekerheid": "middel",
+          "toelichting": "Voorwaardenoverzicht a.s.r. noemt aparte modellen 'AOV met uitsluiting psychische klachten' naast volledige AOV; inhoud PDF niet ingezien (WebFetch geblokkeerd)."
+        },
+        "zwanger": {
+          "waarde": "+ Zwangerschaps- en bevallingsuitkering 16 weken op 100% rond uitgerekende datum, minus eigenrisicotermijn; alleen als zwangerschap na ingangsdatum is ontstaan",
+          "bron": [
+            "https://www.asr.nl/zakelijk/verzekeringen/arbeidsongeschiktheidsverzekeringen/aov-zwangerschap",
+            "https://www.amersfoortse.nl/ondernemer/alles-over-de-aov/wat-is-verzekerd"
+          ],
+          "brondatum": "2025",
+          "zekerheid": "middel",
+          "toelichting": "Uitkering in één keer. Bij 90 dagen eigenrisicotermijn resteert 22 dagen uitkering."
+        }
+      }
+    },
+    {
+      "naam": "Allianz",
+      "url": "https://www.allianz.nl/zakelijk/verzekeringen/aov.html",
+      "domeinen": [
+        "allianz.nl"
+      ],
+      "criteria": {
+        "beroepsklasse": {
+          "waarde": "~ Beroepsklassen 1 t/m 5; Absoluut AOV voor alle beroepsklassen, Summum AOV alleen beroepsklasse 1 (zakelijke dienstverlening en medische beroepen); beroepsklasse bepaalt premieopslag",
+          "bron": [
+            "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/13/1300162-160.pdf",
+            "https://www.allianz.nl/zakelijk/verzekeringen/aov/proces-bij-afsluiten.html"
+          ],
+          "brondatum": "onbekend",
+          "zekerheid": "middel",
+          "toelichting": "Productblad Absoluut/Summum 'Voor wie geschikt?'; publicatiedatum PDF niet vastgesteld. Gecorrigeerd/aangevuld t.o.v. aov.json."
+        }
+      }
+    },
+    {
+      "naam": "Avéro Achmea",
+      "url": "https://www.averoachmea.nl/adviseur/arbeidsongeschiktheidsverzekeringen",
+      "domeinen": [
+        "averoachmea.nl",
+        "centraalbeheer.nl"
+      ],
+      "criteria": {
+        "ontheffing": {
+          "waarde": "~ Premievrijstelling bij arbeidsongeschiktheid; na 1 jaar arbeidsongeschiktheid premiekorting gelijk aan arbeidsongeschiktheidspercentage",
+          "bron": [
+            "https://www.averoachmea.nl/arbeidsongeschiktheidsverzekering",
+            "https://www.averoachmea.nl/-/media/files/zakelijk/aov/voorwaarden-2024/algemene-voorwaarden-aov-continu---iao-pv-21-241.pdf"
+          ],
+          "brondatum": "2024-05",
+          "zekerheid": "middel",
+          "toelichting": "Voorbeeld op productpagina: bij 60% AO 50% premie, bij volledige AO geen premie. Precieze regeling uit voorwaarden niet ingezien (WebFetch geblokkeerd)."
+        }
+      }
+    },
+    {
+      "naam": "TAF",
+      "url": "https://www.taf.nl/verzekeringen/arbeidsongeschiktheidsverzekering-zzp",
+      "domeinen": [
+        "taf.nl"
+      ],
+      "criteria": {
+        "starter": {
+          "waarde": "+ Korter dan 1 jaar zelfstandig: inkomen uit eerdere jaren in loondienst telt mee bij vergelijkbare werkzaamheden; GoedGezekerd verzekert vaste lasten (+ € 750) zonder inkomenshistorie",
+          "bron": [
+            "https://www.taf.nl/verzekeringen/inkomenzeker-aov",
+            "https://www.taf.nl/verzekeringen/goedgezekerd-aov"
+          ],
+          "brondatum": "2025",
+          "zekerheid": "middel",
+          "toelichting": "InkomenZeker geschikt voor beginnende ondernemers; GoedGezekerd max. € 5.000 per maand op basis van vaste lasten."
+        },
+        "aanpassen": {
+          "waarde": "~ InkomenZeker: jaarlijks op contractvervaldatum max. 10% verhogen zonder medische waarborgen (tot max. € 12.500 per maand)",
+          "bron": [
+            "https://www.taf.nl/verzekeringen/inkomenzeker-aov",
+            "https://www.taf.nl/sites/default/files/files/OAOV/InkomenZeker/TAF-CB-IZ-AOV-20240111-a.pdf"
+          ],
+          "brondatum": "2024-01",
+          "zekerheid": "middel",
+          "toelichting": "Brochure InkomenZeker januari 2024."
+        },
+        "reintegratie": {
+          "waarde": "+ Begeleiding vanaf ziekmelding: hulpmiddelen, advies over aanpassing werkplek en taken, deskundige begeleiding naar herstel",
+          "bron": [
+            "https://www.taf.nl/verzekeringen/inkomenzeker-aov"
+          ],
+          "brondatum": "2025",
+          "zekerheid": "middel",
+          "toelichting": "Onderdeel van InkomenZeker AOV."
+        }
+      }
+    },
+    {
+      "naam": "De Goudse",
+      "url": "https://www.goudse.nl/ondernemer/ikzelf/arbeidsongeschiktheid/ondernemers-aov",
+      "domeinen": [
+        "goudse.nl"
+      ],
+      "criteria": {
+        "psychisch": {
+          "waarde": "~ Psychische ziekte standaard gedekt; bij verhoogd risico acceptatie met beperkende voorwaarden (bijv. uitsluiting psychische klachten of clausule voor knie/rug) of hogere premie",
+          "bron": [
+            "https://www.goudse.nl/ondernemer/gezond-bedrijf/medische-acceptatie-aov",
+            "https://www.goudse.nl/ondernemer/ikzelf/arbeidsongeschiktheid/ondernemers-aov-voor-zzp-ers"
+          ],
+          "brondatum": "2025",
+          "zekerheid": "middel",
+          "toelichting": "Individuele medische acceptatie door medisch adviseur; geen standaarduitsluiting. Uitgesloten: opzet, roekeloosheid, drugs-/alcoholmisbruik."
+        },
+        "indexatie": {
+          "waarde": "~ Optioneel: uitkering stijgt jaarlijks met 2%",
+          "bron": [
+            "https://www.goudse.nl/-/media/files/goudse/brochure-ondernemers-aov-771129.pdf"
+          ],
+          "brondatum": "onbekend",
+          "zekerheid": "middel",
+          "toelichting": "Uit brochure Ondernemers-AOV; datum brochure niet vastgesteld."
+        }
+      }
+    },
+    {
+      "naam": "Klaverblad",
+      "url": "https://www.klaverblad.nl/arbeidsongeschiktheidsverzekering",
+      "domeinen": [
+        "klaverblad.nl"
+      ],
+      "criteria": {
+        "psychisch": {
+          "waarde": "~ Psychische klachten gedekt als stoornis objectief is vastgesteld door door Klaverblad aangewezen arts, medisch-wetenschappelijk erkend is en functioneren beperkt; bij verhoogd risico uitsluiting, hogere premie, lagere eindleeftijd of langere eigenrisicotermijn mogelijk",
+          "bron": [
+            "https://www.klaverblad.nl/voorwaarden-royaal-premium-aov.pdf",
+            "https://www.klaverblad.nl/arbeidsongeschiktheidsverzekeringen/medische-acceptatie.htm"
+          ],
+          "brondatum": "2025-10",
+          "zekerheid": "middel",
+          "toelichting": "Royaal Premium voorwaarden RP 25 (AVWRP/2510); tekst via zoekresultaat, PDF niet volledig ingezien."
+        },
+        "beroepsklasse": {
+          "waarde": "~ Indeling in beroepsklassen (o.a. 2 t/m 5) op basis van zwaarte beroep; hogere klasse = hoger risico; Royaal Premium richt zich mede op klasse 4 en 5",
+          "bron": [
+            "https://www.klaverblad.nl/nieuws/nieuwsartikel/nieuwe-aov-exclusief-via-u-als-adviseur-de-royaal-premium-aov",
+            "https://www.klaverblad.nl/arbeidsongeschiktheidsverzekering"
+          ],
+          "brondatum": "2025",
+          "zekerheid": "middel",
+          "toelichting": "Beroepenlijst zelf niet gevonden; klasse bepaalt premie. Sommige beroepen min. 30 dagen eigenrisicotermijn (zie wachttijd)."
+        },
+        "starter": {
+          "waarde": "~ Geen aparte startersregeling gevonden; Klaverblad introduceerde Royaal Opstap AOV (max. 5 jaar uitkering) voor o.a. starters, binnen 3 jaar zonder medische waarborgen om te zetten naar langere uitkeringsduur",
+          "bron": [
+            "https://www.klaverblad.nl/nieuws/nieuwsartikel/klaverblad-introduceert-nieuwe-arbeidsongeschiktheidsverzekering"
+          ],
+          "brondatum": "onbekend",
+          "zekerheid": "middel",
+          "toelichting": "Nieuwsbericht ongedateerd in zoekresultaat; Royaal Opstap staat niet meer in huidig productoverzicht (Royaal Premium, Royaal Plus, AOV Flex) en is mogelijk opgevolgd door AOV Flex. Controleren."
+        }
+      }
+    },
+    {
+      "naam": "Interpolis",
+      "url": "https://www.interpolis.nl/zakelijk/verzekeren/arbeidsongeschiktheidsverzekering",
+      "domeinen": [
+        "interpolis.nl"
+      ],
+      "criteria": {
+        "psychisch": {
+          "waarde": "~ Psychische klachten en rugklachten (bijv. depressie, hernia) gedekt; bij eerdere klachten (o.a. rug) individuele uitsluiting van die aandoening mogelijk",
+          "bron": [
+            "https://www.interpolis.nl/zakelijk/verzekeren/arbeidsongeschiktheidsverzekering/medische-acceptatie",
+            "https://www.interpolis.nl/zakelijk/verzekeren/arbeidsongeschiktheidsverzekering/dekking"
+          ],
+          "brondatum": "2025",
+          "zekerheid": "middel",
+          "toelichting": "Medische acceptatie via gezondheidsverklaring; bij uitsluiting wel uitkering bij andere oorzaken."
+        },
+        "starter": {
+          "waarde": "+ Groei-optie voor starters: in eerste 3 jaar verzekerd inkomen met totaal € 20.000 verhogen",
+          "bron": [
+            "https://www.interpolis.nl/zakelijk/verzekeren/arbeidsongeschiktheidsverzekering"
+          ],
+          "brondatum": "2025",
+          "zekerheid": "middel",
+          "toelichting": "Zelfde opzet als Avéro Achmea (Achmea-groep). Startkorting op premie bestaat, maar is bewust niet opgenomen."
+        },
+        "ontheffing": {
+          "waarde": "~ Geen premieverlaging in eerste jaar AO; daarna premiekorting gelijk aan arbeidsongeschiktheidspercentage (100% AO = geen premie)",
+          "bron": [
+            "https://www.interpolis.nl/zakelijk/veelgestelde-vragen/verzekeringen/arbeidsongeschiktheidsverzekering"
+          ],
+          "brondatum": "2025",
+          "zekerheid": "middel",
+          "toelichting": "Uit veelgestelde vragen Interpolis."
+        }
+      }
+    },
+    {
+      "naam": "Univé",
+      "url": "https://www.unive.nl/zakelijk/arbeidsongeschiktheidsverzekering",
+      "domeinen": [
+        "unive.nl"
+      ],
+      "criteria": {
+        "psychisch": {
+          "waarde": "~ Psychische klachten (bijv. burn-out) gedekt; bij eerdere klachten na herstel vaak normaal verzekerbaar, soms met (tijdelijke) uitsluiting of hogere premie",
+          "bron": [
+            "https://www.unive.nl/zakelijk/blog/hoe-vul-je-een-gezondheidsverklaring-in",
+            "https://www.unive.nl/zakelijk/arbeidsongeschiktheidsverzekering/wat-is-een-aov"
+          ],
+          "brondatum": "2025",
+          "zekerheid": "middel",
+          "toelichting": "Beoordeling door (onafhankelijk) medisch adviseur op basis van gezondheidsverklaring. Rugklachten niet apart genoemd."
+        }
+      }
+    },
+    {
+      "naam": "Bovemij",
+      "url": "https://www.bovemij.nl/zorg-en-ongevallen/arbeidsongeschiktheidsverzekering",
+      "domeinen": [
+        "bovemij.nl"
+      ],
+      "criteria": {
+        "eindleeftijd": {
+          "waarde": "~ Zelf gekozen einddatum op polis; vanaf 1 jaar vóór einddatum (bij eigenrisicotermijn 2 jaar: 2 jaar) geen premie meer",
+          "bron": [
+            "https://www.bovemij.nl/hubfs/AOV-O_25.01%20DEF.pdf"
+          ],
+          "brondatum": "2025-01",
+          "zekerheid": "hoog",
+          "toelichting": "Voorwaarden AOV-O 25.01 (1 januari 2025), via zoekresultaat. Maximale eindleeftijd niet gevonden."
+        },
+        "beroepsklasse": {
+          "waarde": "~ Beroepsklasse is een van de factoren voor het premiepercentage; indeling/beroepenlijst niet gepubliceerd",
+          "bron": [
+            "https://www.bovemij.nl/hubfs/AOV-O_25.01%20DEF.pdf"
+          ],
+          "brondatum": "2025-01",
+          "zekerheid": "middel",
+          "toelichting": "Bovemij richt zich op ondernemers in de mobiliteitsbranche; geen klassenindeling gevonden."
+        }
+      }
+    }
+  ]
+}

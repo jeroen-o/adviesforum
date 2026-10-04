@@ -79,6 +79,7 @@ legend{font-weight:800;font-size:15px;padding:0 6px}
 .gv .bron{display:block;font-size:12px;color:var(--blauw);overflow-wrap:anywhere}
 .gv .nv{font-style:italic;color:var(--grijs);font-size:12px}
 .leeg{color:var(--grijs);font-style:italic}
+.gv .tw{display:inline-block;font-size:11.5px;font-weight:800;background:var(--oranje-zacht);color:var(--oranje);border-radius:6px;padding:0 6px;margin-top:2px}
 .voet{max-width:1100px;margin:0 auto;padding:0 16px 40px;font-size:12.5px;color:var(--grijs)}
 @media (max-width:560px){.gv li{grid-template-columns:1fr}}
 </style>
@@ -108,6 +109,7 @@ legend{font-weight:800;font-size:15px;padding:0 6px}
     <ul>
       <li>Dit is een filter op gepubliceerde voorwaarden: geen rangorde, geen voorkeur en geen advies. Rente en kosten tellen niet mee.</li>
       <li>De indeling (ja, onder voorwaarden, nee, onbekend) is afgeleid uit de tekst van de gecontroleerde voorwaarden en kan een nuance missen. Lees altijd de onderbouwing en controleer de actuele acceptatiegids voordat je een aanvraag indient.</li>
+      <li>&lsquo;Twijfelgeval&rsquo; betekent dat de indeling niet eenduidig uit de tekst volgt; controleer die extra.</li>
       <li>&lsquo;Onbekend&rsquo; betekent dat de gecontroleerde voorwaarden er niets over zeggen, niet dat het niet kan.</li>
     </ul>
   </section>
@@ -187,6 +189,7 @@ function render(){
       var li = el('li'); li.appendChild(el('span','lab ' + x.o, LABEL[x.o]));
       var r = el('div'); r.appendChild(el('span','sn', s.naam));
       r.appendChild(el('span','tk', x.t || (x.o==='onbekend' ? 'De gecontroleerde voorwaarden zeggen hier niets over.' : '')));
+      if(x.tw){ var tw = el('span','tw','Twijfelgeval: controleer in de gids'); tw.title = 'De indeling is niet eenduidig uit de tekst van de voorwaarde af te leiden.'; r.appendChild(tw); }
       if(x.o !== 'onbekend'){
         if(x.g){ var b = el('span','bron','✓ gecontroleerd'); var v = veilig(x.b); if(v){ b.appendChild(document.createTextNode(' · bron: ')); var l = el('a', null, host(v)); l.href = v; l.target = '_blank'; l.rel = 'noopener'; b.appendChild(l); } r.appendChild(b); }
         else r.appendChild(el('span','nv','onderliggende voorwaarde nog niet geverifieerd'));

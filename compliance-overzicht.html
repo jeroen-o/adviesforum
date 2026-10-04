@@ -191,6 +191,7 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
     <div class="zoek"><label for="f-q">Zoeken</label><input id="f-q" type="search" placeholder="Titel, id of trefwoord"></div>
     <div><label for="f-status">Status</label><select id="f-status"><option value="">Alle</option><option value="ok">Gecontroleerd</option><option value="concept">Concept</option></select></div>
     <div><label for="f-herz">Herziening</label><select id="f-herz"><option value="">Alle</option><option value="verlopen">Verlopen</option><option value="binnenkort">Binnen 60 dagen</option><option value="aandacht">Verlopen of binnen 60 dagen</option><option value="later">Later</option><option value="geen">Geen datum</option></select></div>
+    <div><label for="f-prio">Prioriteit</label><select id="f-prio"><option value="">Alle</option><option value="hoog">Hoog</option><option value="middel">Middel</option><option value="laag">Laag</option></select></div>
     <div><label for="f-cat">Categorie</label><select id="f-cat"><option value="">Alle</option></select></div>
     <div><label for="f-auteur">Auteur</label><select id="f-auteur"><option value="">Alle</option></select></div>
   </div>
@@ -201,7 +202,7 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
     <button class="knop" id="kb-print" type="button">Printen</button>
   </div>
   <div class="tabel-scroll"><table class="kaart" id="kb-tabel">
-    <thead><tr><th>Id</th><th>Artikel</th><th>Categorie</th><th>Auteur</th><th>Status</th><th>Herzien voor</th><th>Bestand</th></tr></thead>
+    <thead><tr><th>Id</th><th>Artikel</th><th>Categorie</th><th>Auteur</th><th>Status</th><th>Prioriteit</th><th>Herzien voor</th><th>Bestand</th></tr></thead>
     <tbody></tbody>
   </table></div>
 
@@ -317,10 +318,22 @@ function herz(s){
 }
 
 /* ---------- kennisbank ---------- */
+/* Prioriteit voor de beoordeling door compliance: categorie met meer AFM-/fiscaal risico, concrete normen (bedragen,
+   percentages, wetsartikelen) en een verlopen herziening wegen zwaarder. Gecontroleerde artikelen: alleen herziening telt. */
+function prio(a,h){
+  var p=0,r=[];
+  if(a.cat==='comp'||a.cat==='fisc'){p+=2;r.push('compliance/fiscaal');}else if(['hyp','pens','verz','kred'].indexOf(a.cat)>=0){p+=1;r.push('productinhoud');}
+  var b=String(a.body||'');
+  if(/€\s?\d|\d\s?%|\bprocent\b/.test(b)){p+=1;r.push('bedragen of percentages');}
+  if(/\bartikel\s+\d|\bart\.\s?\d|\bWft\b|\bBgfo\b|\bTRHK\b|\bWet\s/i.test(b)){p+=1;r.push('wet- en regelgeving');}
+  if(h.k==='verlopen'){p+=2;r.push('herziening verlopen');}else if(h.k==='binnenkort'){p+=1;r.push('herziening binnenkort');}
+  if(a.gecontroleerd&&h.k!=='verlopen'&&h.k!=='binnenkort')p=0;
+  return {k:p>=3?'hoog':p===2?'middel':'laag',p:p,r:r.join(', ')};
+}
 var KB=(window.KENNISBANK||[]).map(function(a){
-  var h=herz(a.herzienVoor);
+  var h=herz(a.herzienVoor),pr=prio(a,h);
   return {id:a.id,titel:a.titel,cat:a.cat,catNaam:CATS[a.cat]||a.cat||'',auteur:a.auteur,auteurNaam:auteur(a.auteur),ok:!!a.gecontroleerd,gecontroleerdOp:a.gecontroleerdOp||'',
-    herzienVoor:a.herzienVoor||'',h:h,datum:a.datum||'',bijgewerkt:a.bijgewerkt||'',bestand:window.__KBF[a.id]||'',zoek:(a.id+' '+a.titel+' '+(a.kw||'')).toLowerCase()};
+    herzienVoor:a.herzienVoor||'',h:h,pr:pr,datum:a.datum||'',bijgewerkt:a.bijgewerkt||'',bestand:window.__KBF[a.id]||'',zoek:(a.id+' '+a.titel+' '+(a.kw||'')).toLowerCase()};
 });
 var tel={tot:KB.length,ok:0,concept:0,verlopen:0,binnenkort:0,geen:0};
 KB.forEach(function(a){tel[a.ok?'ok':'concept']++;if(a.h.k==='verlopen')tel.verlopen++;if(a.h.k==='binnenkort')tel.binnenkort++;if(a.h.k==='geen')tel.geen++;});
@@ -336,43 +349,45 @@ var auIds=[];KB.forEach(function(a){if(auIds.indexOf(a.auteur)<0)auIds.push(a.au
 opties('#f-auteur',auIds.map(function(k){return [k||'',auteur(k)+' ('+KB.filter(function(a){return a.auteur===k;}).length+')'];}).sort(function(x,y){return x[1].localeCompare(y[1],'nl');}));
 
 function gefilterd(){
-  var q=$('#f-q').value.trim().toLowerCase(),st=$('#f-status').value,hz=$('#f-herz').value,ct=$('#f-cat').value,au=$('#f-auteur').value;
+  var q=$('#f-q').value.trim().toLowerCase(),pz=$('#f-prio').value,st=$('#f-status').value,hz=$('#f-herz').value,ct=$('#f-cat').value,au=$('#f-auteur').value;
   return KB.filter(function(a){
     if(q&&q.split(/\s+/).some(function(w){return a.zoek.indexOf(w)<0;}))return false;
     if(st==='ok'&&!a.ok)return false;if(st==='concept'&&a.ok)return false;
     if(hz==='aandacht'){if(a.h.k!=='verlopen'&&a.h.k!=='binnenkort')return false;}else if(hz&&a.h.k!==hz)return false;
+    if(pz&&a.pr.k!==pz)return false;
     if(ct&&a.cat!==ct)return false;if(au&&a.auteur!==au)return false;
     return true;
-  }).sort(function(x,y){var dx=x.h.d==null?1e9:x.h.d,dy=y.h.d==null?1e9:y.h.d;return dx-dy||x.id.localeCompare(y.id,'nl',{numeric:true});});
+  }).sort(function(x,y){var dx=x.h.d==null?1e9:x.h.d,dy=y.h.d==null?1e9:y.h.d;return (y.pr.p-x.pr.p)||dx-dy||x.id.localeCompare(y.id,'nl',{numeric:true});});
 }
 function rij(a){
   return '<tr><td data-k="Id">'+esc(a.id)+'</td><td class="titel"><a href="index.html#artikel-'+encodeURIComponent(a.id)+'">'+esc(a.titel)+'</a>'+(a.bijgewerkt?'<small>Bijgewerkt '+dtm(a.bijgewerkt)+'</small>':'')+'</td>'+
     '<td data-k="Categorie">'+esc(a.catNaam)+'</td><td data-k="Auteur">'+esc(a.auteurNaam)+'</td>'+
     '<td data-k="Status">'+(a.ok?'<span class="lbl ok">Gecontroleerd</span>'+(a.gecontroleerdOp?' <small>'+dtm(a.gecontroleerdOp)+'</small>':''):'<span class="lbl concept">Concept</span>')+'</td>'+
+    '<td data-k="Prioriteit"><span class="lbl '+(a.pr.k==='hoog'?'verlopen':a.pr.k==='middel'?'binnenkort':'later')+'">'+esc(a.pr.k[0].toUpperCase()+a.pr.k.slice(1))+'</span>'+(a.pr.r?'<small>'+esc(a.pr.r)+'</small>':'')+'</td>'+
     '<td data-k="Herzien voor">'+(a.herzienVoor?dtm(a.herzienVoor)+' ':'')+'<span class="lbl '+a.h.k+'">'+esc(a.h.l)+'</span></td><td data-k="Bestand">'+esc(a.bestand)+'</td></tr>';
 }
 function csvVeld(v){v=String(v==null?'':v);return /[";\n]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v;}
 function render(){
   var l=gefilterd();
-  $('#kb-tabel tbody').innerHTML=l.length?l.map(rij).join(''):'<tr><td colspan="7" class="leeg">Geen artikelen gevonden met deze filters.</td></tr>';
+  $('#kb-tabel tbody').innerHTML=l.length?l.map(rij).join(''):'<tr><td colspan="8" class="leeg">Geen artikelen gevonden met deze filters.</td></tr>';
   $('#kb-tel').textContent=n(l.length)+' van '+n(KB.length)+' artikelen';
-  var regels=[['id','titel','categorie','auteur','status','gecontroleerd op','herzien voor','herziening','dagen tot herziening','datum','bijgewerkt','bestand']].concat(l.map(function(a){
-    return [a.id,a.titel,a.catNaam,a.auteurNaam,a.ok?'gecontroleerd':'concept',a.gecontroleerdOp.slice(0,10),a.herzienVoor,a.h.k,a.h.d==null?'':a.h.d,a.datum.slice(0,10),a.bijgewerkt.slice(0,10),a.bestand];
+  var regels=[['id','titel','categorie','auteur','status','prioriteit','reden prioriteit','gecontroleerd op','herzien voor','herziening','dagen tot herziening','datum','bijgewerkt','bestand']].concat(l.map(function(a){
+    return [a.id,a.titel,a.catNaam,a.auteurNaam,a.ok?'gecontroleerd':'concept',a.pr.k,a.pr.r,a.gecontroleerdOp.slice(0,10),a.herzienVoor,a.h.k,a.h.d==null?'':a.h.d,a.datum.slice(0,10),a.bijgewerkt.slice(0,10),a.bestand];
   }));
   var csv='﻿'+regels.map(function(r){return r.map(csvVeld).join(';');}).join('\r\n');
   var link=$('#kb-csv');link.href='data:text/csv;charset=utf-8,'+encodeURIComponent(csv);
   link.setAttribute('download','kennisbank-compliance-'+vandaag.getFullYear()+'-'+String(vandaag.getMonth()+1).padStart(2,'0')+'-'+String(vandaag.getDate()).padStart(2,'0')+'.csv');
 }
-['#f-q','#f-status','#f-herz','#f-cat','#f-auteur'].forEach(function(s){$(s).addEventListener(s==='#f-q'?'input':'change',render);});
-$('#kb-reset').addEventListener('click',function(){['#f-q','#f-status','#f-herz','#f-cat','#f-auteur'].forEach(function(s){$(s).value='';});render();});
+['#f-q','#f-prio','#f-status','#f-herz','#f-cat','#f-auteur'].forEach(function(s){$(s).addEventListener(s==='#f-q'?'input':'change',render);});
+$('#kb-reset').addEventListener('click',function(){['#f-q','#f-prio','#f-status','#f-herz','#f-cat','#f-auteur'].forEach(function(s){$(s).value='';});render();});
 $('#kb-print').addEventListener('click',function(){
   var l=gefilterd();
   var w=window.open('','_blank');
   if(!w){alert('Sta pop-ups toe om te kunnen printen.');return;}
   w.document.write('<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Compliance-overzicht kennisbank</title><style>body{font-family:Arial,sans-serif;font-size:11px;margin:18px;color:#141414}h1{font-size:17px;margin:0 0 4px}p{margin:0 0 10px}table{width:100%;border-collapse:collapse}th,td{border-bottom:1px solid #ccc;padding:4px 6px;text-align:left;vertical-align:top}th{background:#FFD200}</style></head><body>'+
     '<h1>Compliance-overzicht kennisbank</h1><p>Peildatum '+esc($('#peil').textContent.replace('Peildatum: ',''))+' · '+n(l.length)+' van '+n(KB.length)+' artikelen · Alleen gecontroleerde artikelen gelden als kantoorwerkwijze.</p>'+
-    '<table><thead><tr><th>Id</th><th>Titel</th><th>Categorie</th><th>Auteur</th><th>Status</th><th>Herzien voor</th><th>Herziening</th></tr></thead><tbody>'+
-    l.map(function(a){return '<tr><td>'+esc(a.id)+'</td><td>'+esc(a.titel)+'</td><td>'+esc(a.catNaam)+'</td><td>'+esc(a.auteurNaam)+'</td><td>'+(a.ok?'Gecontroleerd':'Concept')+'</td><td>'+esc(dtm(a.herzienVoor))+'</td><td>'+esc(a.h.l)+'</td></tr>';}).join('')+
+    '<table><thead><tr><th>Id</th><th>Titel</th><th>Categorie</th><th>Auteur</th><th>Status</th><th>Prioriteit</th><th>Herzien voor</th><th>Herziening</th></tr></thead><tbody>'+
+    l.map(function(a){return '<tr><td>'+esc(a.id)+'</td><td>'+esc(a.titel)+'</td><td>'+esc(a.catNaam)+'</td><td>'+esc(a.auteurNaam)+'</td><td>'+(a.ok?'Gecontroleerd':'Concept')+'</td><td>'+esc(a.pr.k)+'</td><td>'+esc(dtm(a.herzienVoor))+'</td><td>'+esc(a.h.l)+'</td></tr>';}).join('')+
     '</tbody></table></body></html>');
   w.document.close();w.focus();w.print();
 });

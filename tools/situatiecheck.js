@@ -39,6 +39,7 @@ for (const naam of Object.keys(IND.indeling || {}).sort((a, b) => a.localeCompar
     if (!ids.has(sid) || !x || !OORDELEN.includes(x.o)) continue;
     const w = x.c && c.criteria[x.c];
     const r = { o: x.o, t: String(x.t || '').slice(0, 200) };
+    if (x.tw) r.tw = 1; /* twijfelgeval: indeling niet eenduidig uit de tekst af te leiden */
     if (w && x.o !== 'onbekend') { r.c = x.c; r.g = w.geverifieerd ? 1 : 0; if (w.geverifieerd && Array.isArray(w.bron) && w.bron[0]) r.b = w.bron[0]; }
     o[sid] = r;
   }

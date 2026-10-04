@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Productvoorwaarden ORV, AOV en krediet – Adviesforum</title>
+<title>Productvoorwaarden verzekeringen, lijfrente en krediet – Adviesforum</title>
 <link rel="canonical" href="https://jeroen-o.github.io/adviesforum/productvoorwaarden.html">
 <meta property="og:url" content="https://jeroen-o.github.io/adviesforum/productvoorwaarden.html">
 <meta property="og:site_name" content="Adviesforum">
@@ -12,7 +12,7 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="description" content="Voorwaarden van overlijdensrisicoverzekeringen, arbeidsongeschiktheidsverzekeringen voor zelfstandigen en consumptief krediet per aanbieder naast elkaar, met bron en controledatum. Geen premies, rentes of advies.">
-<meta property="og:title" content="Productvoorwaarden ORV, AOV en krediet – Adviesforum">
+<meta property="og:title" content="Productvoorwaarden verzekeringen, lijfrente en krediet – Adviesforum">
 <meta property="og:description" content="Acceptatie- en productvoorwaarden per aanbieder naast elkaar, met bron. Geen premies, rentes of advies.">
 <meta property="og:type" content="website">
 <style>
@@ -87,6 +87,16 @@ td .bron{display:block;font-size:11.5px;color:var(--blauw);margin-top:3px}
 .docs h2{font-size:16px;margin:0 0 6px}
 .docs ul{margin:0;padding-left:18px}
 .docs li{margin:3px 0;overflow-wrap:anywhere}
+.volg{border:1px solid #FFD200;background:transparent;color:#FFD200;border-radius:999px;font-size:11.5px;font-weight:700;padding:1px 8px;margin-left:6px;cursor:pointer;min-height:24px}
+.volg[aria-pressed="true"]{background:#FFD200;color:#141414}
+.wijz{margin-top:22px;border:1px solid var(--lijn);border-radius:14px;padding:12px 14px;background:var(--wit)}
+.wijz h2{font-size:16px;margin:0 0 4px}
+.wijz .sub{font-size:13px;color:var(--grijs);margin:0 0 8px}
+.wgroep{border-top:1px solid var(--lijn);padding:8px 0 4px;font-size:13.5px}
+.wgroep h3{font-size:14px;margin:0 0 4px}
+.wgroep ul{margin:0;padding-left:18px}
+.wsoort{display:inline-block;font-size:11px;font-weight:800;text-transform:uppercase;border-radius:6px;padding:0 6px;margin-right:4px;background:var(--vlak);border:1px solid var(--lijn)}
+.woud{color:var(--grijs);text-decoration:line-through}
 .voet{max-width:1280px;margin:0 auto;padding:0 16px 40px;font-size:12.5px;color:var(--grijs)}
 .melding{min-height:1.2em;font-size:13px;color:var(--grijs);margin-top:6px}
 @media (max-width:640px){.kop{padding:24px 16px 26px}th,td{padding:8px}}
@@ -106,8 +116,8 @@ td .bron{display:block;font-size:11.5px;color:var(--blauw);margin-top:3px}
       <a class="terug" href="partijen.html">Aanbiederwegwijzer</a>
       <a class="terug" href="index.html#hulpmiddelen">Alle hulpmiddelen</a>
     </div>
-    <h1>Productvoorwaarden ORV, AOV en krediet</h1>
-    <p>Acceptatie- en productvoorwaarden per aanbieder naast elkaar: overlijdensrisicoverzekering, arbeidsongeschiktheidsverzekering voor zelfstandigen en consumptief krediet. Elke waarde met &#10003; is gecontroleerd op de site van de aanbieder; de bron staat erbij.</p>
+    <h1>Productvoorwaarden verzekeringen, lijfrente en krediet</h1>
+    <p>Acceptatie- en productvoorwaarden per aanbieder naast elkaar: overlijdensrisicoverzekering, arbeidsongeschiktheidsverzekering voor zelfstandigen, uitvaartverzekering, lijfrente en consumptief krediet. Elke waarde met &#10003; is gecontroleerd op de site van de aanbieder; de bron staat erbij.</p>
   </div>
 </header>
 
@@ -118,6 +128,7 @@ td .bron{display:block;font-size:11.5px;color:var(--blauw);margin-top:3px}
       <li>Neutrale informatie voor adviseurs: geen premies, rentes, tarieven of acties, geen rangorde en geen advies.</li>
       <li>Leg in het dossier de voorwaarden vast zoals de aanbieder die op het moment van advies publiceert; controleer bij twijfel de actuele polisvoorwaarden of acceptatiegids.</li>
       <li>Waarden zonder &#10003; zijn gevonden bij derden en <b>nog niet geverifieerd</b>; daarbij staat bewust geen bron.</li>
+      <li id="lijfrenteMelding" hidden>Lijfrente: geen rendementen, rentes of kosten; fiscale ruimte (jaar- en reserveringsruimte) bepaal je zelf met de actuele regels van de Belastingdienst.</li>
       <li id="kredietMelding" hidden><span class="waarschuwing">Let op! Geld lenen kost geld.</span> Het forum bemiddelt niet in krediet en vergelijkt geen kredietkosten.</li>
     </ul>
   </section>
@@ -147,6 +158,14 @@ td .bron{display:block;font-size:11.5px;color:var(--blauw);margin-top:3px}
     <span>&#9203; Bron ouder dan 6 maanden</span>
   </div>
 
+  <section class="wijz" id="wijzigingen" aria-labelledby="wijz-kop">
+    <h2 id="wijz-kop">Wijzigingen in de voorwaarden</h2>
+    <p class="sub" id="wijzSub"></p>
+    <label class="sub"><input type="checkbox" id="wijzAlleenVolg"> Alleen aanbieders die ik volg</label>
+    <div id="wijzLijst"></div>
+    <p class="sub" style="margin-top:8px">Volg een aanbieder met de knop &lsquo;Volg&rsquo; in de kop van de tabel (functionele cookie, geen account). Wijzigingen van gevolgde aanbieders zie je ook op <a href="laatste.html#voorwaarden">Laatste nieuws</a> en in de <a href="voorwaarden-feed.xml">RSS-feed voorwaarden</a>.</p>
+  </section>
+
   <section class="docs" id="docs" aria-labelledby="docs-kop">
     <h2 id="docs-kop">Documenten van de aanbieders</h2>
     <ul id="docLijst"></ul>
@@ -158,6 +177,7 @@ td .bron{display:block;font-size:11.5px;color:var(--blauw);margin-top:3px}
 </footer>
 
 <script src="data/productvoorwaarden.js"></script>
+<script src="data/productvoorwaarden-wijzigingen.js"></script>
 <script>
 (function(){
 'use strict';
@@ -223,11 +243,59 @@ function cel(a, c){
   if(verouderd(w.bd)) td.title = 'Bron ouder dan 6 maanden (' + w.bd + '): controleer of er een nieuwere versie is.';
   return td;
 }
+/* Volgen: tokens "p.<product>-<slug>" in de functionele cookie af_favorieten (formaat: zie index.html).
+ * Deze pagina wijzigt alleen de eigen p-tokens en laat alle andere tokens ongemoeid. */
+var FAV_COOKIE = 'af_favorieten', P_TOKEN = /^p\.[a-z0-9-]{1,60}$/;
+function favVelden(){
+  var m = document.cookie.match(new RegExp('(?:^|; )' + FAV_COOKIE + '=([^;]*)')), w = '';
+  try{ w = m ? decodeURIComponent(m[1]) : ''; }catch(e){ w = ''; }
+  var d = w.split('~'); if(d[0] !== '1') d = ['1']; while(d.length < 6) d.push(''); return d;
+}
+function volgToken(p, naam){ return ('p.' + p + '-' + slug(naam)).slice(0, 62); }
+function volgt(tok){ return favVelden()[1].split('_').indexOf(tok) >= 0; }
+function zetVolg(tok, aan){
+  if(!P_TOKEN.test(tok)) return null;
+  var d = favVelden(), lijst = d[1].split('_').filter(function(t){ return t && t !== tok; });
+  if(aan){ if(lijst.filter(function(t){ return P_TOKEN.test(t); }).length >= 60) return null; lijst.unshift(tok); }
+  d[1] = lijst.join('_');
+  var attr = '; Path=' + (location.pathname.replace(/[^/]*$/,'') || '/') + '; SameSite=Lax' + (location.protocol==='https:' ? '; Secure' : '');
+  if(!d[1] && !d[2]){ document.cookie = FAV_COOKIE + '=; Max-Age=0' + attr; return aan ? null : false; }
+  var w = encodeURIComponent(d.join('~')); if((FAV_COOKIE + '=' + w).length > 3500) return null;
+  try{ document.cookie = FAV_COOKIE + '=' + w + '; Max-Age=31536000' + attr; }catch(e){ return null; }
+  return document.cookie.indexOf(FAV_COOKIE + '=' + w) >= 0 ? aan : null;
+}
+var SOORT = {gewijzigd:'gewijzigd', nieuw:'nieuw', geverifieerd:'geverifieerd', vervallen:'vervallen', eerste:'eerste controle'};
+function renderWijz(){
+  var pr = product(), W = window.PRODUCTVOORWAARDEN_WIJZIGINGEN || {items:[]};
+  var items = (W.items||[]).filter(function(i){ return i.p === pr.id; });
+  if($('wijzAlleenVolg').checked) items = items.filter(function(i){ return volgt(volgToken(i.p, i.naam)); });
+  var crNaam = {}; pr.criteria.forEach(function(c){ crNaam[c.id] = c.naam; });
+  $('wijzSub').textContent = W.nulmeting ? 'Wat er per aanbieder is veranderd sinds de eerste publicatie op ' + datumNL(W.nulmeting) + '. Nieuwste eerst.' : '';
+  var box = $('wijzLijst'); box.textContent = '';
+  if(!items.length){ box.appendChild(el('p','sub', $('wijzAlleenVolg').checked ? 'Geen wijzigingen bij aanbieders die je volgt.' : 'Nog geen wijzigingen sinds de eerste publicatie.')); return; }
+  var groepen = [];
+  items.forEach(function(i){ var k = i.d + '|' + i.naam, g = groepen.filter(function(x){ return x.k===k; })[0]; if(!g){ g = {k:k, d:i.d, naam:i.naam, items:[]}; groepen.push(g); } g.items.push(i); });
+  groepen.slice(0, 10).forEach(function(g){
+    var d = el('div','wgroep'); d.appendChild(el('h3', null, g.naam + ' · ' + datumNL(g.d)));
+    var ul = el('ul');
+    g.items.slice(0, 12).forEach(function(i){
+      var li = el('li'); li.appendChild(el('span','wsoort', SOORT[i.soort] || i.soort));
+      if(i.soort==='eerste'){ li.appendChild(document.createTextNode('Opgenomen met ' + i.aantal + ' kenmerken.')); ul.appendChild(li); return; }
+      li.appendChild(el('b', null, (crNaam[i.crit] || i.crit) + ': '));
+      if(i.soort==='gewijzigd' && i.oud){ li.appendChild(el('span','woud', i.oud.replace(/^[+~!-]\s*/,''))); li.appendChild(document.createTextNode(' → ')); }
+      li.appendChild(document.createTextNode(String(i.soort==='vervallen' ? i.oud : i.nieuw).replace(/^[+~!-]\s*/,'')));
+      ul.appendChild(li);
+    });
+    d.appendChild(ul); box.appendChild(d);
+  });
+}
 function render(){
   var pr = product(); if(!pr){ $('tabel').textContent = 'Nog geen gegevens.'; return; }
   var tabs = $('tabs'); tabs.textContent = '';
   P.forEach(function(x){ var b = el('button', null, x.titel); b.type = 'button'; b.setAttribute('role','tab'); b.setAttribute('aria-selected', x.id===pr.id ? 'true' : 'false'); b.addEventListener('click', function(){ kiesProduct(x.id); }); tabs.appendChild(b); });
   $('kredietMelding').hidden = pr.id !== 'krediet';
+  $('lijfrenteMelding').hidden = pr.id !== 'lijfrente';
+  renderWijz();
   var gv = 0, tot = 0; pr.aanbieders.forEach(function(a){ gv += a.gv; tot += a.gv + a.nv; });
   $('intro').textContent = pr.aanbieders.length + ' aanbieders en ' + pr.criteria.length + ' kenmerken; ' + gv + ' van ' + tot + ' waarden gecontroleerd op de site van de aanbieder. Peildatum ' + datumNL(pr.gecontroleerd) + '. Aanbieders staan op alfabet.';
   var ac = $('aanbChips'); ac.textContent = '';
@@ -239,7 +307,10 @@ function render(){
   if(!as.length || !cs.length){ var r0 = t.insertRow(); var c0 = r0.insertCell(); c0.textContent = 'Kies minstens één aanbieder en één kenmerk.'; schrijfHash(); return; }
   var th = t.createTHead().insertRow();
   th.appendChild(el('th', null, 'Kenmerk'));
-  as.forEach(function(a){ var h = el('th'); if(veilig(a.url)){ var l = el('a', null, a.naam); l.href = a.url; l.target = '_blank'; l.rel = 'noopener'; h.appendChild(l); } else h.textContent = a.naam; th.appendChild(h); });
+  as.forEach(function(a){ var h = el('th'); if(veilig(a.url)){ var l = el('a', null, a.naam); l.href = a.url; l.target = '_blank'; l.rel = 'noopener'; h.appendChild(l); } else h.textContent = a.naam;
+    var tok = volgToken(pr.id, a.naam), aan = volgt(tok), vb = el('button','volg', aan ? '✓ Volg' : 'Volg'); vb.type = 'button'; vb.setAttribute('aria-pressed', aan ? 'true' : 'false'); vb.title = (aan ? 'Je volgt ' : 'Volg ') + a.naam;
+    vb.addEventListener('click', function(){ var r = zetVolg(tok, !volgt(tok)); if(r===null) $('melding').textContent = 'Volgen lukte niet: cookies staan mogelijk uit.'; render(); });
+    h.appendChild(vb); th.appendChild(h); });
   var tb = t.createTBody();
   cs.forEach(function(c){
     var r = tb.insertRow(), h = el('th', null, c.naam); h.scope = 'row';
@@ -279,6 +350,7 @@ function dossier(){
   w.document.open(); w.document.write(html); w.document.close(); w.focus();
 }
 $('btnDossier').addEventListener('click', dossier);
+$('wijzAlleenVolg').addEventListener('change', renderWijz);
 $('btnLink').addEventListener('click', function(){
   schrijfHash(); var u = location.href;
   try{ navigator.clipboard.writeText(u).then(function(){ $('melding').textContent = 'Link gekopieerd.'; }, function(){ $('melding').textContent = 'Kopieer de link uit de adresbalk.'; }); }
