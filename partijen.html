@@ -259,6 +259,7 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
   </footer>
 </div>
 <script src="data/partijen.js"></script>
+<script src="data/voorwaarden-wijzigingen.js"></script>
 <script>
 (function(){
   var TYPES={
@@ -301,6 +302,7 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
     if(!/^\d{4}-\d{2}-\d{2}$/.test(s||''))return '';
     var d=s.split('-');return (+d[2])+' '+NL_MAAND[+d[1]-1]+' '+d[0];
   }
+  function slugW(n){return String(n||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/&/g,' en ').replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'')||'partij';}
   var VOORWAARDEN=window.PARTIJ_VOORWAARDEN&&typeof window.PARTIJ_VOORWAARDEN==='object'?window.PARTIJ_VOORWAARDEN:{};
   var data=(window.PARTIJEN||[]).slice().sort(function(a,b){return a.naam.localeCompare(b.naam,'nl');});
   var zoek=document.getElementById('zoek'),typeSel=document.getElementById('type'),catSel=document.getElementById('cat'),
@@ -387,6 +389,12 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
         vu.appendChild(li);
       });
       dt.appendChild(vu);
+      var wz=(window.VOORWAARDEN_WIJZIGINGEN&&window.VOORWAARDEN_WIJZIGINGEN.items||[]).filter(function(i){return typeof vw.vergelijk==='string'&&slugW(i.naam)===vw.vergelijk;});
+      if(wz.length){
+        var wp=el('p','vglink'),wd=wz.map(function(i){return i.d;}).sort().pop(),wn=wz.filter(function(i){return i.d===wd;}).length;
+        wp.appendChild(document.createTextNode('Laatste wijziging: '+datumNL(wd)+' ('+wn+(wn===1?' voorwaarde':' voorwaarden')+') · '));
+        var wa=el('a',null,'bekijk wat er veranderde');wa.href='voorwaarden-vergelijker.html#wijzigingen';wp.appendChild(wa);dt.appendChild(wp);
+      }
       if(typeof vw.vergelijk==='string'&&/^[a-z0-9-]+$/.test(vw.vergelijk)){
         var vp=el('p','vglink'),va=el('a',null,'Vergelijk in de voorwaardenvergelijker →');
         va.href='voorwaarden-vergelijker.html#vergelijk='+vw.vergelijk;vp.appendChild(va);dt.appendChild(vp);

@@ -1,0 +1,2274 @@
+{
+ "gegenereerd": "2026-10-04",
+ "situaties": [
+  {
+   "id": "zzp1",
+   "naam": "Zzp'er met 1 jaar ondernemerschap",
+   "vraag": "Kan een zzp'er/ondernemer met pas 1 jaar (12 maanden) ondernemerschap een hypotheek krijgen?",
+   "crit": [
+    "zzp"
+   ]
+  },
+  {
+   "id": "persp",
+   "naam": "Perspectiefverklaring",
+   "vraag": "Wordt flexibel inkomen geaccepteerd op basis van een perspectiefverklaring?",
+   "crit": [
+    "persp",
+    "flex"
+   ]
+  },
+  {
+   "id": "flex",
+   "naam": "Flexinkomen zonder perspectiefverklaring",
+   "vraag": "Telt flexibel inkomen of een tijdelijk contract zonder intentieverklaring mee op basis van het gemiddelde inkomen van eerdere jaren?",
+   "crit": [
+    "flex"
+   ]
+  },
+  {
+   "id": "perfp",
+   "naam": "Particuliere erfpacht",
+   "vraag": "Is een woning met particuliere (niet-overheids)erfpacht financierbaar?",
+   "crit": [
+    "erfp"
+   ]
+  },
+  {
+   "id": "avrij50",
+   "naam": "Meer dan 50% aflossingsvrij",
+   "vraag": "Kan meer dan 50% van de marktwaarde aflossingsvrij worden gefinancierd?",
+   "crit": [
+    "avrij"
+   ]
+  },
+  {
+   "id": "ovbr12",
+   "naam": "Overbrugging langer dan 12 maanden",
+   "vraag": "Is een overbruggingskrediet met een looptijd van meer dan 12 maanden mogelijk?",
+   "crit": [
+    "ovbr"
+   ]
+  },
+  {
+   "id": "rmid",
+   "naam": "Rentemiddeling",
+   "vraag": "Is rentemiddeling mogelijk bij een lopende hypotheek?",
+   "crit": [
+    "rmid"
+   ]
+  },
+  {
+   "id": "ebb",
+   "naam": "Lenen boven 100% voor verduurzaming",
+   "vraag": "Is een energiebespaarbudget of extra lenen boven 100% van de woningwaarde voor verduurzaming mogelijk?",
+   "crit": [
+    "ebb",
+    "o106",
+    "duur"
+   ]
+  },
+  {
+   "id": "dag",
+   "naam": "Dagrente tot passeren",
+   "vraag": "Daalt de rente mee tot de passeerdatum (dagrente)?",
+   "crit": [
+    "dag"
+   ]
+  },
+  {
+   "id": "senior",
+   "naam": "Seniorenregeling / verruiming rond AOW",
+   "vraag": "Is er bij AOW binnen 10 jaar of na pensionering een verruiming of seniorenregeling, zoals toetsen op werkelijke lasten?",
+   "crit": [
+    "aow"
+   ]
+  }
+ ],
+ "indeling": {
+  "ABN AMRO": {
+   "zzp1": {
+    "o": "voorwaarden",
+    "t": "Vanaf 1 jaar o.b.v. jaarcijfers; volledig gemiddelde pas vanaf 3 jaar",
+    "c": "zzp"
+   },
+   "persp": {
+    "o": "ja",
+    "t": "Perspectiefverklaring geaccepteerd",
+    "c": "persp"
+   },
+   "flex": {
+    "o": "voorwaarden",
+    "t": "3-jaarsgemiddelde, max. huidig inkomen; buiten NHG 90% daarvan",
+    "c": "flex"
+   },
+   "perfp": {
+    "o": "onbekend",
+    "t": "Erfpacht financierbaar; particuliere erfpacht niet apart genoemd",
+    "c": "erfp"
+   },
+   "avrij50": {
+    "o": "nee",
+    "t": "Nieuw max. 30% woningwaarde; bestaand max. 50%",
+    "c": "avrij"
+   },
+   "ovbr12": {
+    "o": "ja",
+    "t": "Overbrugging 24 mnd, nieuwbouw 36 mnd",
+    "c": "ovbr"
+   },
+   "rmid": {
+    "o": "ja",
+    "t": "Rentemiddeling mogelijk",
+    "c": "rmid"
+   },
+   "ebb": {
+    "o": "ja",
+    "t": "Energiebespaarbudget tot 106% woningwaarde",
+    "c": "ebb"
+   },
+   "dag": {
+    "o": "voorwaarden",
+    "t": "Laagste rente bij passeren alleen bij Woning Hypotheek",
+    "c": "dag"
+   },
+   "senior": {
+    "o": "ja",
+    "t": "Toets op werkelijke woonlasten vanaf pensioeninkomen",
+    "c": "aow"
+   }
+  },
+  "Rabobank": {
+   "zzp1": {
+    "o": "ja",
+    "t": "Vanaf 1 jaar ondernemerschap met inkomensverklaring",
+    "c": "zzp"
+   },
+   "persp": {
+    "o": "voorwaarden",
+    "t": "Geaccepteerd na min. 1 jaar bij uitzendbureau",
+    "c": "persp"
+   },
+   "flex": {
+    "o": "ja",
+    "t": "Werkhistorie: gemiddelde 3 kalenderjaren (UWV-data)",
+    "c": "flex"
+   },
+   "perfp": {
+    "o": "onbekend",
+    "t": "Erfpacht alleen na Rabobank Erfpachttoets; particulier niet apart genoemd",
+    "c": "erfp"
+   },
+   "avrij50": {
+    "o": "nee",
+    "t": "Max. 30% van woningwaarde, max. €150.000",
+    "c": "avrij"
+   },
+   "ovbr12": {
+    "o": "onbekend",
+    "t": "OverbruggingsHypotheek mogelijk; looptijd niet genoemd",
+    "c": "ovbr"
+   },
+   "rmid": {
+    "o": "ja",
+    "t": "Rente aanpassen via vergoeding ineens of rentemiddeling",
+    "c": "rmid"
+   },
+   "ebb": {
+    "o": "ja",
+    "t": "Extra hypotheekdeel voor energiebesparing, max. per label",
+    "c": "ebb"
+   },
+   "dag": {
+    "o": "voorwaarden",
+    "t": "Alleen bij Plusvoorwaarden, passeren binnen 3 mnd",
+    "c": "dag"
+   },
+   "senior": {
+    "o": "onbekend",
+    "t": "Pensioeninkomen telt vanaf 10 jaar vóór pensioen; geen verruiming genoemd",
+    "c": "aow"
+   }
+  },
+  "Woonfonds": {
+   "zzp1": {
+    "o": "voorwaarden",
+    "t": "1 jaar alleen met NHG (IKV); zonder NHG min. 3 jaar",
+    "c": "zzp"
+   },
+   "persp": {
+    "o": "ja",
+    "t": "Geaccepteerd (uitzend na 26 weken bij zelfde bureau)",
+    "c": "persp"
+   },
+   "flex": {
+    "o": "ja",
+    "t": "Gemiddelde laatste 3 kalenderjaren, max. laatste jaar",
+    "c": "flex"
+   },
+   "perfp": {
+    "o": "voorwaarden",
+    "t": "Particuliere erfpacht alleen bij groen notarisoordeel",
+    "c": "erfp"
+   },
+   "avrij50": {
+    "o": "voorwaarden",
+    "t": "Nieuw max. 50%; bestaand hoger aflossingsvrij deel mag blijven",
+    "c": "avrij"
+   },
+   "ovbr12": {
+    "o": "voorwaarden",
+    "t": "Bestaande bouw max. 12 mnd; alleen nieuwbouw tot 24 mnd",
+    "c": "ovbr"
+   },
+   "rmid": {
+    "o": "ja",
+    "t": "Rentemiddeling mogelijk, max. 1x per rentevaste periode",
+    "c": "rmid"
+   },
+   "ebb": {
+    "o": "ja",
+    "t": "Energiebespaarbudget, tot 106% marktwaarde",
+    "c": "ebb"
+   },
+   "dag": {
+    "o": "nee",
+    "t": "Daling tot passeren wordt niet doorgegeven",
+    "c": "dag"
+   },
+   "senior": {
+    "o": "ja",
+    "t": "Seniorenregeling bij AOW binnen 10 jaar",
+    "c": "aow"
+   }
+  },
+  "Merius Hypotheken": {
+   "zzp1": {
+    "o": "nee",
+    "t": "Min. 2 volledige boekjaren vereist",
+    "c": "zzp"
+   },
+   "persp": {
+    "o": "onbekend",
+    "t": "Perspectiefverklaring niet expliciet genoemd (waarde niet geverifieerd)",
+    "c": "persp"
+   },
+   "flex": {
+    "o": "ja",
+    "t": "Gemiddelde 3 jaar; tijdelijk zonder intentie geaccepteerd",
+    "c": "flex"
+   },
+   "perfp": {
+    "o": "nee",
+    "t": "Alleen overheidserfpacht; particuliere erfpacht niet",
+    "c": "erfp"
+   },
+   "avrij50": {
+    "o": "nee",
+    "t": "Max. 50% van marktwaarde aflossingsvrij",
+    "c": "avrij"
+   },
+   "ovbr12": {
+    "o": "ja",
+    "t": "Max. 24 mnd",
+    "c": "ovbr"
+   },
+   "rmid": {
+    "o": "voorwaarden",
+    "t": "Mogelijk, maar niet bij 1 jaar rentevast",
+    "c": "rmid"
+   },
+   "ebb": {
+    "o": "ja",
+    "t": "Energiebespaarbudget mogelijk volgens NHG-normen",
+    "c": "ebb"
+   },
+   "dag": {
+    "o": "ja",
+    "t": "Actuele rente bij passeren als die lager is",
+    "c": "dag"
+   },
+   "senior": {
+    "o": "onbekend",
+    "t": "Pensioeninkomen aantonen; tekort vóór AOW aflossen; geen verruiming",
+    "c": "aow"
+   }
+  },
+  "a.s.r.": {
+   "zzp1": {
+    "o": "ja",
+    "t": "Ondernemer vanaf 1 jaar welkom; via Inkomensverklaring Ondernemer",
+    "c": "zzp"
+   },
+   "persp": {
+    "o": "ja",
+    "t": "Geaccepteerd (min. 26 weken zelfde uitzendbureau, max. 6 mnd oud)",
+    "c": "persp"
+   },
+   "flex": {
+    "o": "voorwaarden",
+    "t": "Flexinkomen via IBL-tool, anders Arbeidsmarktscan of perspectiefverklaring",
+    "c": "flex"
+   },
+   "perfp": {
+    "o": "onbekend",
+    "t": "Erfpacht mogelijk; particuliere erfpacht niet apart genoemd",
+    "c": "erfp"
+   },
+   "avrij50": {
+    "o": "nee",
+    "t": "Max. 50% van marktwaarde aflossingsvrij",
+    "c": "avrij"
+   },
+   "ovbr12": {
+    "o": "voorwaarden",
+    "t": "Bestaande bouw max. 12 mnd; alleen nieuwbouw tot 24 mnd",
+    "c": "ovbr"
+   },
+   "rmid": {
+    "o": "onbekend",
+    "t": "Tussentijds aanpassen tegen vergoeding; rentemiddeling niet gevonden",
+    "c": "rmid"
+   },
+   "ebb": {
+    "o": "ja",
+    "t": "Tot 106% voor verduurzaming",
+    "c": "o106"
+   },
+   "dag": {
+    "o": "onbekend",
+    "t": "Waarde niet geverifieerd (alleen volgens vergelijker)",
+    "c": "dag"
+   },
+   "senior": {
+    "o": "voorwaarden",
+    "t": "Toets op werkelijke lasten alleen bij Levensrentevariant",
+    "c": "aow"
+   }
+  },
+  "Centraal Beheer": {
+   "zzp1": {
+    "o": "voorwaarden",
+    "t": "1 jaar alleen met NHG (IVO); zonder NHG min. 3 jaar",
+    "c": "zzp"
+   },
+   "persp": {
+    "o": "ja",
+    "t": "Geaccepteerd na 26 weken bij zelfde uitzendbureau",
+    "c": "persp"
+   },
+   "flex": {
+    "o": "ja",
+    "t": "Gemiddelde laatste 3 jaar, max. laatste/lopend jaar",
+    "c": "flex"
+   },
+   "perfp": {
+    "o": "voorwaarden",
+    "t": "Niet-overheidserfpacht alleen bij groene notarisopinie en recht vanaf 2013",
+    "c": "erfp"
+   },
+   "avrij50": {
+    "o": "nee",
+    "t": "Max. 50% van marktwaarde aflossingsvrij",
+    "c": "avrij"
+   },
+   "ovbr12": {
+    "o": "voorwaarden",
+    "t": "Bestaande bouw max. 1 jaar; alleen nieuwbouw tot 2 jaar",
+    "c": "ovbr"
+   },
+   "rmid": {
+    "o": "ja",
+    "t": "Rentemiddeling mogelijk, max. 1x per rentevaste periode",
+    "c": "rmid"
+   },
+   "ebb": {
+    "o": "ja",
+    "t": "EBB/EBV tot 106%; binnen 2 jaar besteden",
+    "c": "ebb"
+   },
+   "dag": {
+    "o": "nee",
+    "t": "Daling wordt niet doorgegeven",
+    "c": "dag"
+   },
+   "senior": {
+    "o": "voorwaarden",
+    "t": "Toets op pensioeninkomen; afwijken van LTI mogelijk",
+    "c": "aow"
+   }
+  },
+  "Triodos Bank": {
+   "zzp1": {
+    "o": "voorwaarden",
+    "t": "Min. 12 mnd, mits vergelijkbare werkervaring; IVO vereist",
+    "c": "zzp"
+   },
+   "persp": {
+    "o": "ja",
+    "t": "Geaccepteerd, met en zonder NHG",
+    "c": "persp"
+   },
+   "flex": {
+    "o": "ja",
+    "t": "Gemiddelde 3 kalenderjaren",
+    "c": "flex"
+   },
+   "perfp": {
+    "o": "voorwaarden",
+    "t": "Particuliere erfpacht alleen als eeuwigdurend",
+    "c": "erfp"
+   },
+   "avrij50": {
+    "o": "nee",
+    "t": "Max. 30%; bestaand tot 50% blijft",
+    "c": "avrij"
+   },
+   "ovbr12": {
+    "o": "ja",
+    "t": "Max. 2 jaar",
+    "c": "ovbr"
+   },
+   "rmid": {
+    "o": "nee",
+    "t": "Geen rentemiddeling",
+    "c": "rmid"
+   },
+   "ebb": {
+    "o": "ja",
+    "t": "Tot 106% marktwaarde voor energiebesparende maatregelen",
+    "c": "ebb"
+   },
+   "dag": {
+    "o": "nee",
+    "t": "Offerterente vast t/m passeren",
+    "c": "dag"
+   },
+   "senior": {
+    "o": "onbekend",
+    "t": "Toekomstig pensioeninkomen meegewogen; geen verruiming genoemd",
+    "c": "aow"
+   }
+  },
+  "NIBC": {
+   "zzp1": {
+    "o": "voorwaarden",
+    "t": "Vanaf 1 jaar met IKV; <3 jaar zonder NHG 90% van inkomen en renteopslag",
+    "c": "zzp"
+   },
+   "persp": {
+    "o": "voorwaarden",
+    "t": "Geaccepteerd bij min. 52 weken uitzendwerk",
+    "c": "persp"
+   },
+   "flex": {
+    "o": "ja",
+    "t": "3-jaarsgemiddelde, max. laatste jaar/huidig",
+    "c": "flex"
+   },
+   "perfp": {
+    "o": "nee",
+    "t": "Alleen publiekrechtelijke erfpacht",
+    "c": "erfp"
+   },
+   "avrij50": {
+    "o": "nee",
+    "t": "Max. 50% van marktwaarde aflossingsvrij",
+    "c": "avrij"
+   },
+   "ovbr12": {
+    "o": "ja",
+    "t": "Max. 24 mnd (nieuwbouw 36)",
+    "c": "ovbr"
+   },
+   "rmid": {
+    "o": "nee",
+    "t": "Geen rentemiddeling sinds 1-6-2019",
+    "c": "rmid"
+   },
+   "ebb": {
+    "o": "ja",
+    "t": "Tot 106% marktwaarde, max. €25.000",
+    "c": "ebb"
+   },
+   "dag": {
+    "o": "nee",
+    "t": "Rente in renteaanbod is passeerrente",
+    "c": "dag"
+   },
+   "senior": {
+    "o": "ja",
+    "t": "Aparte seniorenpropositie",
+    "c": "aow"
+   }
+  },
+  "ASN Bank": {
+   "zzp1": {
+    "o": "voorwaarden",
+    "t": "Vanaf 1 boekjaar, maar bij 1-2 jaar telt 75% van vastgesteld inkomen",
+    "c": "zzp"
+   },
+   "persp": {
+    "o": "ja",
+    "t": "Geaccepteerd (max. 6 mnd oud); geldt als vast contract",
+    "c": "persp"
+   },
+   "flex": {
+    "o": "ja",
+    "t": "Gemiddelde laatste 3 jaar, max. laatste jaar",
+    "c": "flex"
+   },
+   "perfp": {
+    "o": "onbekend",
+    "t": "Erfpacht geaccepteerd; particuliere erfpacht niet apart genoemd",
+    "c": "erfp"
+   },
+   "avrij50": {
+    "o": "nee",
+    "t": "Max. 30% van woningwaarde aflossingsvrij",
+    "c": "avrij"
+   },
+   "ovbr12": {
+    "o": "ja",
+    "t": "Max. 18 mnd, nieuwbouw 30 mnd",
+    "c": "ovbr"
+   },
+   "rmid": {
+    "o": "voorwaarden",
+    "t": "Alleen bij vaste rente, nieuwe periode min. 5 jr langer; niet bij spaarhypotheek",
+    "c": "rmid"
+   },
+   "ebb": {
+    "o": "ja",
+    "t": "Extra lenen tot 106% conform labeltabel",
+    "c": "ebb"
+   },
+   "dag": {
+    "o": "nee",
+    "t": "Geen dagrente; offerterente vast",
+    "c": "dag"
+   },
+   "senior": {
+    "o": "onbekend",
+    "t": "Toets op pensioeninkomen; vermogen/lijfrente meegewogen; geen regeling genoemd",
+    "c": "aow"
+   }
+  },
+  "Allianz": {
+   "zzp1": {
+    "o": "onbekend",
+    "t": "Altijd inkomensverklaring, 3 jaar cijfers gevraagd; minimumduur niet genoemd",
+    "c": "zzp"
+   },
+   "persp": {
+    "o": "onbekend",
+    "t": "Geen waarde; flex-waarde noemt perspectiefverklaring niet",
+    "c": "flex"
+   },
+   "flex": {
+    "o": "ja",
+    "t": "Gemiddelde laatste 3 kalenderjaren; Arbeidsmarktscan niet geaccepteerd",
+    "c": "flex"
+   },
+   "perfp": {
+    "o": "nee",
+    "t": "Alleen (semi-)overheidserfpacht, geen particuliere",
+    "c": "erfp"
+   },
+   "avrij50": {
+    "o": "nee",
+    "t": "Max. 50% van marktwaarde aflossingsvrij",
+    "c": "avrij"
+   },
+   "ovbr12": {
+    "o": "voorwaarden",
+    "t": "Looptijd 2 jaar, volgens bron alleen bij verkochte woning",
+    "c": "ovbr"
+   },
+   "rmid": {
+    "o": "ja",
+    "t": "Rentemiddeling mogelijk; boete in nieuwe rente",
+    "c": "rmid"
+   },
+   "ebb": {
+    "o": "ja",
+    "t": "Tot 106% via Groen Leningdeel",
+    "c": "ebb"
+   },
+   "dag": {
+    "o": "ja",
+    "t": "Laagste van offerte- en passeerrente",
+    "c": "dag"
+   },
+   "senior": {
+    "o": "onbekend",
+    "t": "Toets op pensioeninkomen; geen verruiming genoemd",
+    "c": "aow"
+   }
+  },
+  "Argenta": {
+   "zzp1": {
+    "o": "voorwaarden",
+    "t": "1-3 jaar ondernemer alleen met NHG + IKV",
+    "c": "zzp"
+   },
+   "persp": {
+    "o": "voorwaarden",
+    "t": "Mogelijk; zonder NHG alleen met 2e aanvrager met hoogste, vast inkomen",
+    "c": "persp"
+   },
+   "flex": {
+    "o": "ja",
+    "t": "Uitzend, oproep en tijdelijk zonder intentie: gemiddelde 3 kalenderjaren",
+    "c": "flex"
+   },
+   "perfp": {
+    "o": "voorwaarden",
+    "t": "Particuliere erfpacht per situatie, vaak met erfpachtopinie notaris",
+    "c": "erfp"
+   },
+   "avrij50": {
+    "o": "nee",
+    "t": "Max. 30% marktwaarde en max. €150.000",
+    "c": "avrij"
+   },
+   "ovbr12": {
+    "o": "ja",
+    "t": "Max. 24 mnd (nieuwbouw 36); alleen met Argenta-hypotheek",
+    "c": "ovbr"
+   },
+   "rmid": {
+    "o": "nee",
+    "t": "Geen rentemiddeling; wel renteafkoop",
+    "c": "rmid"
+   },
+   "ebb": {
+    "o": "voorwaarden",
+    "t": "Tot 106% alleen met NHG; zonder NHG 100%",
+    "c": "ebb"
+   },
+   "dag": {
+    "o": "ja",
+    "t": "Laagste van offerterente en dagrente bij passeren",
+    "c": "dag"
+   },
+   "senior": {
+    "o": "onbekend",
+    "t": "Toekomstig pensioen telt mee; geen verruiming genoemd",
+    "c": "aow"
+   }
+  },
+  "bunq": {
+   "zzp1": {
+    "o": "ja",
+    "t": "Vanaf 12 maanden ondernemerschap; toetsinkomen via inkomenscertificaat",
+    "c": "zzp"
+   },
+   "persp": {
+    "o": "onbekend",
+    "t": "Niet opgenomen in de acceptatiegids",
+    "c": "persp"
+   },
+   "flex": {
+    "o": "voorwaarden",
+    "t": "Gemiddelde 3 jaar, maar huidig dienstverband vereist",
+    "c": "flex"
+   },
+   "perfp": {
+    "o": "nee",
+    "t": "Geen particuliere erfpacht",
+    "c": "erfp"
+   },
+   "avrij50": {
+    "o": "nee",
+    "t": "Max. 50% van de marktwaarde",
+    "c": "avrij"
+   },
+   "ovbr12": {
+    "o": "nee",
+    "t": "Max. 12 maanden",
+    "c": "ovbr"
+   },
+   "rmid": {
+    "o": "nee",
+    "t": "Geen rentemiddeling",
+    "c": "rmid"
+   },
+   "ebb": {
+    "o": "ja",
+    "t": "Energiebespaarbudget tot 6% van de marktwaarde",
+    "c": "ebb"
+   },
+   "dag": {
+    "o": "ja",
+    "t": "Laagste van aanbodrente en rente op passeerdatum",
+    "c": "dag"
+   },
+   "senior": {
+    "o": "voorwaarden",
+    "t": "Seniorenpropositie bij aankoop en oversluiten: AOW binnen 10 jaar, lasten niet hoger dan nu, min. 20 jaar rentevast",
+    "c": "aow"
+   }
+  },
+  "Clarian Wonen": {
+   "zzp1": {
+    "o": "voorwaarden",
+    "t": "Min. 1 jaar; bij <2 jaar telt 80% van inkomen",
+    "c": "zzp"
+   },
+   "persp": {
+    "o": "nee",
+    "t": "Perspectiefverklaring niet mogelijk",
+    "c": "persp"
+   },
+   "flex": {
+    "o": "ja",
+    "t": "Gemiddelde 3 kalenderjaren, max. laatste jaar; werkgeversverklaring nodig",
+    "c": "flex"
+   },
+   "perfp": {
+    "o": "nee",
+    "t": "Particuliere erfpacht niet mogelijk",
+    "c": "erfp"
+   },
+   "avrij50": {
+    "o": "voorwaarden",
+    "t": "Max. 50%; oversluiters met AOW binnen 10 jaar tot 75%",
+    "c": "avrij"
+   },
+   "ovbr12": {
+    "o": "ja",
+    "t": "Max. 24 mnd, verlenging na akkoord",
+    "c": "ovbr"
+   },
+   "rmid": {
+    "o": "ja",
+    "t": "Rentemiddeling via boetesmeren; daarna 12 mnd wachten",
+    "c": "rmid"
+   },
+   "ebb": {
+    "o": "ja",
+    "t": "Tot 106% met EBB/EBV",
+    "c": "ebb"
+   },
+   "dag": {
+    "o": "nee",
+    "t": "Geen dagrente tot passeren; alleen binnen acceptatietermijn",
+    "c": "dag"
+   },
+   "senior": {
+    "o": "ja",
+    "t": "Senioren: toetsing op werkelijke last bij aankoop en oversluiten",
+    "c": "aow"
+   }
+  },
+  "Groene Hart Hypotheken": {
+   "zzp1": {
+    "o": "ja",
+    "t": "Min. 12 mnd ondernemer; inkomen via erkend instituut",
+    "c": "zzp"
+   },
+   "persp": {
+    "o": "onbekend",
+    "t": "Geen waarde; flex-waarde noemt perspectiefverklaring niet",
+    "c": "flex"
+   },
+   "flex": {
+    "o": "voorwaarden",
+    "t": "Gemiddelde 3 jaar incl. WW, mits actueel dienstverband",
+    "c": "flex"
+   },
+   "perfp": {
+    "o": "nee",
+    "t": "Particuliere erfpacht niet",
+    "c": "erfp"
+   },
+   "avrij50": {
+    "o": "voorwaarden",
+    "t": "Standaard max. 50%; in bepaalde situaties tot 75%",
+    "c": "avrij"
+   },
+   "ovbr12": {
+    "o": "nee",
+    "t": "Max. 12 mnd",
+    "c": "ovbr"
+   },
+   "rmid": {
+    "o": "onbekend",
+    "t": "Omzetten tegen vergoeding; rentemiddeling niet gevonden",
+    "c": "rmid"
+   },
+   "ebb": {
+    "o": "ja",
+    "t": "EBB tot 6% (bij NHG); verduurzamen tot 106%",
+    "c": "ebb"
+   },
+   "dag": {
+    "o": "ja",
+    "t": "Laagste van offerterente en actuele rente",
+    "c": "dag"
+   },
+   "senior": {
+    "o": "ja",
+    "t": "Seniorenpropositie: toetsing op werkelijke last",
+    "c": "aow"
+   }
+  },
+  "Handelsbanken": {
+   "zzp1": {
+    "o": "voorwaarden",
+    "t": "Geen NHG; bij 1-2 jaar telt deel van laatste boekjaar",
+    "c": "zzp"
+   },
+   "persp": {
+    "o": "onbekend",
+    "t": "Geen waarde; flex-waarde noemt perspectiefverklaring niet",
+    "c": "flex"
+   },
+   "flex": {
+    "o": "ja",
+    "t": "Flex: gemiddelde 3 jaar; tijdelijk zonder intentie: huidig inkomen",
+    "c": "flex"
+   },
+   "perfp": {
+    "o": "ja",
+    "t": "Particuliere erfpacht valt binnen beleid",
+    "c": "erfp"
+   },
+   "avrij50": {
+    "o": "voorwaarden",
+    "t": "Max. 50%; meer mogelijk bij lage feitelijke woonlasten",
+    "c": "avrij"
+   },
+   "ovbr12": {
+    "o": "ja",
+    "t": "Max. 2 jaar (verlengbaar)",
+    "c": "ovbr"
+   },
+   "rmid": {
+    "o": "onbekend",
+    "t": "Rente tussentijds aanpassen; verwerking vergoeding onbekend",
+    "c": "rmid"
+   },
+   "ebb": {
+    "o": "voorwaarden",
+    "t": "Hoger bedrag bij concrete verduurzamingsplannen; labelafhankelijk",
+    "c": "ebb"
+   },
+   "dag": {
+    "o": "onbekend",
+    "t": "Laagste rente binnen 14 dagen acceptatie; daling tot passeren niet gevonden",
+    "c": "dag"
+   },
+   "senior": {
+    "o": "voorwaarden",
+    "t": "Tekort na pensioen max. 4 jaar op te vangen met vrij vermogen",
+    "c": "aow"
+   }
+  },
+  "HollandWoont": {
+   "zzp1": {
+    "o": "voorwaarden",
+    "t": "Alleen met NHG: min. 12 mnd KvK-inschrijving + IVO",
+    "c": "zzp"
+   },
+   "persp": {
+    "o": "voorwaarden",
+    "t": "Geaccepteerd bij flexibel dienstverband (NHG)",
+    "c": "persp"
+   },
+   "flex": {
+    "o": "ja",
+    "t": "Flex en tijdelijk zonder intentie: gemiddelde 3 kalenderjaren",
+    "c": "flex"
+   },
+   "perfp": {
+    "o": "nee",
+    "t": "Particuliere erfpacht niet mogelijk",
+    "c": "erfp"
+   },
+   "avrij50": {
+    "o": "nee",
+    "t": "Max. 50% van marktwaarde aflossingsvrij",
+    "c": "avrij"
+   },
+   "ovbr12": {
+    "o": "ja",
+    "t": "Looptijd 24 mnd (verlengbaar)",
+    "c": "ovbr"
+   },
+   "rmid": {
+    "o": "ja",
+    "t": "Rentemiddeling mogelijk, vergoeding in nieuwe rente",
+    "c": "rmid"
+   },
+   "ebb": {
+    "o": "ja",
+    "t": "EBV en EBB conform NHG, tot 106%",
+    "c": "ebb"
+   },
+   "dag": {
+    "o": "onbekend",
+    "t": "Dalrentegarantie alleen tijdens 3 weken acceptatie; passeren niet genoemd",
+    "c": "dag"
+   },
+   "senior": {
+    "o": "voorwaarden",
+    "t": "Seniorenregeling op werkelijke lasten (NHG)",
+    "c": "aow"
+   }
+  },
+  "Impact Hypotheken": {
+   "zzp1": {
+    "o": "nee",
+    "t": "Min. 2 volledige kalenderjaren zelfstandig vereist",
+    "c": "zzp"
+   },
+   "persp": {
+    "o": "nee",
+    "t": "Financiering op basis van perspectiefverklaring niet mogelijk",
+    "c": "persp"
+   },
+   "flex": {
+    "o": "ja",
+    "t": "Flex incl. tijdelijk zonder intentie: gemiddelde 3 jaar",
+    "c": "flex"
+   },
+   "perfp": {
+    "o": "nee",
+    "t": "Particuliere erfpacht niet",
+    "c": "erfp"
+   },
+   "avrij50": {
+    "o": "nee",
+    "t": "Max. 50% van marktwaarde aflossingsvrij",
+    "c": "avrij"
+   },
+   "ovbr12": {
+    "o": "ja",
+    "t": "Overbrugging 24 mnd (nieuwbouw 36)",
+    "c": "ovbr"
+   },
+   "rmid": {
+    "o": "onbekend",
+    "t": "Geen rentemiddeling gevonden; wel wijzigen tegen vergoeding",
+    "c": "rmid"
+   },
+   "ebb": {
+    "o": "ja",
+    "t": "Energiebespaarbudget tot 106% van marktwaarde",
+    "c": "ebb"
+   },
+   "dag": {
+    "o": "voorwaarden",
+    "t": "Laagste rente bij passeren binnen 2 mnd",
+    "c": "dag"
+   },
+   "senior": {
+    "o": "onbekend",
+    "t": "Pensioeninkomen aantonen; tekort vóór pensioen aflossen",
+    "c": "aow"
+   }
+  },
+  "IQWOON": {
+   "zzp1": {
+    "o": "nee",
+    "t": "Min. 3 jaar zelfstandig vereist",
+    "c": "zzp"
+   },
+   "persp": {
+    "o": "nee",
+    "t": "Perspectiefverklaring niet toegestaan",
+    "c": "persp"
+   },
+   "flex": {
+    "o": "ja",
+    "t": "Gemiddelde laatste 3 kalenderjaren, max. laatste jaar",
+    "c": "flex"
+   },
+   "perfp": {
+    "o": "onbekend",
+    "t": "Erfpacht mogelijk; particuliere erfpacht niet apart genoemd",
+    "c": "erfp"
+   },
+   "avrij50": {
+    "o": "nee",
+    "t": "Max. 50% van marktwaarde aflossingsvrij",
+    "c": "avrij"
+   },
+   "ovbr12": {
+    "o": "ja",
+    "t": "Max. 2 jaar (+6 mnd op aanvraag)",
+    "c": "ovbr"
+   },
+   "rmid": {
+    "o": "nee",
+    "t": "Rentemiddeling niet mogelijk",
+    "c": "rmid"
+   },
+   "ebb": {
+    "o": "ja",
+    "t": "Energiebespaarbudget tot 106% van woningwaarde",
+    "c": "ebb"
+   },
+   "dag": {
+    "o": "ja",
+    "t": "Laagste van offerterente en rente op passeerdatum",
+    "c": "dag"
+   },
+   "senior": {
+    "o": "onbekend",
+    "t": "Inkomensdaling meegetoetst; geen verruiming genoemd",
+    "c": "aow"
+   }
+  },
+  "Knab": {
+   "zzp1": {
+    "o": "voorwaarden",
+    "t": "Starter <36 mnd via 1-1-1-methode met inkomensverklaring",
+    "c": "zzp"
+   },
+   "persp": {
+    "o": "nee",
+    "t": "Accepteert geen perspectiefverklaring",
+    "c": "persp"
+   },
+   "flex": {
+    "o": "ja",
+    "t": "Flex/uitzend zonder intentie: gemiddelde 3 kalenderjaren",
+    "c": "flex"
+   },
+   "perfp": {
+    "o": "nee",
+    "t": "Alleen erfpacht uitgegeven door overheid",
+    "c": "erfp"
+   },
+   "avrij50": {
+    "o": "nee",
+    "t": "Max. 50% marktwaarde, alleen met box 1-overgangsrecht",
+    "c": "avrij"
+   },
+   "ovbr12": {
+    "o": "voorwaarden",
+    "t": "Max. 24 mnd, maar Knab Helder max. 12 mnd",
+    "c": "ovbr"
+   },
+   "rmid": {
+    "o": "nee",
+    "t": "Geen rentemiddeling",
+    "c": "rmid"
+   },
+   "ebb": {
+    "o": "voorwaarden",
+    "t": "EBB alleen als bestaande marktwaarde voldoende ruimte biedt",
+    "c": "ebb"
+   },
+   "dag": {
+    "o": "nee",
+    "t": "Geen dagrente",
+    "c": "dag"
+   },
+   "senior": {
+    "o": "onbekend",
+    "t": "AOW en pensioen volledig meegeteld; geen verruiming genoemd",
+    "c": "aow"
+   }
+  },
+  "Lot Hypotheken": {
+   "zzp1": {
+    "o": "voorwaarden",
+    "t": "1 jaar alleen met NHG; zonder NHG 3 jaar",
+    "c": "zzp"
+   },
+   "persp": {
+    "o": "ja",
+    "t": "Geaccepteerd, met en zonder NHG",
+    "c": "persp"
+   },
+   "flex": {
+    "o": "ja",
+    "t": "Gemiddelde 3 jaar; lager huidig inkomen is leidend",
+    "c": "flex"
+   },
+   "perfp": {
+    "o": "voorwaarden",
+    "t": "Met NHG niet; zonder NHG met erfpachtopinie notaris/NivE",
+    "c": "erfp"
+   },
+   "avrij50": {
+    "o": "nee",
+    "t": "Max. 50% van marktwaarde aflossingsvrij",
+    "c": "avrij"
+   },
+   "ovbr12": {
+    "o": "ja",
+    "t": "Max. 24 mnd",
+    "c": "ovbr"
+   },
+   "rmid": {
+    "o": "onbekend",
+    "t": "Nieuwe periode tegen vergoeding; rentemiddeling niet gevonden",
+    "c": "rmid"
+   },
+   "ebb": {
+    "o": "ja",
+    "t": "Energiebespaarbudget mogelijk (duurzaamheidsdepot)",
+    "c": "ebb"
+   },
+   "dag": {
+    "o": "nee",
+    "t": "Geen dagrente",
+    "c": "dag"
+   },
+   "senior": {
+    "o": "ja",
+    "t": "Na AOW-leeftijd toets op werkelijke lasten",
+    "c": "aow"
+   }
+  },
+  "Neo Hypotheken": {
+   "zzp1": {
+    "o": "voorwaarden",
+    "t": ">12 mnd met NHG; zonder NHG >24 mnd",
+    "c": "zzp"
+   },
+   "persp": {
+    "o": "nee",
+    "t": "Niet geaccepteerd; alternatief IBL of Arbeidsmarktscan",
+    "c": "persp"
+   },
+   "flex": {
+    "o": "ja",
+    "t": "Gemiddelde laatste 3 kalenderjaren, max. laatste jaar",
+    "c": "flex"
+   },
+   "perfp": {
+    "o": "nee",
+    "t": "Particuliere erfpacht uitgesloten",
+    "c": "erfp"
+   },
+   "avrij50": {
+    "o": "nee",
+    "t": "Max. 50% van marktwaarde aflossingsvrij",
+    "c": "avrij"
+   },
+   "ovbr12": {
+    "o": "ja",
+    "t": "Max. 30 mnd",
+    "c": "ovbr"
+   },
+   "rmid": {
+    "o": "ja",
+    "t": "Rentemiddeling mogelijk (opslag over nieuwe periode)",
+    "c": "rmid"
+   },
+   "ebb": {
+    "o": "ja",
+    "t": "EBB mogelijk zonder vooraf specificatie",
+    "c": "ebb"
+   },
+   "dag": {
+    "o": "ja",
+    "t": "Laagste rente van offerte of passeerdatum",
+    "c": "dag"
+   },
+   "senior": {
+    "o": "onbekend",
+    "t": "Pensioeninkomen aantonen; tekort vóór pensioen aflossen",
+    "c": "aow"
+   }
+  },
+  "ING": {
+   "zzp1": {
+    "o": "voorwaarden",
+    "t": "Starter (<3 jaar) via NHG-kader; IVO geaccepteerd",
+    "c": "zzp"
+   },
+   "persp": {
+    "o": "ja",
+    "t": "Geaccepteerd (uitzendbureau in register, max. 6 mnd oud)",
+    "c": "persp"
+   },
+   "flex": {
+    "o": "ja",
+    "t": "Gemiddelde 3 kalenderjaren, max. laatste jaar",
+    "c": "flex"
+   },
+   "perfp": {
+    "o": "onbekend",
+    "t": "Waarde niet geverifieerd (noemt particulier onder voorwaarden)",
+    "c": "erfp"
+   },
+   "avrij50": {
+    "o": "nee",
+    "t": "Max. 30% woningwaarde; bestaand tot 50% houden",
+    "c": "avrij"
+   },
+   "ovbr12": {
+    "o": "onbekend",
+    "t": "Overbruggingshypotheek mogelijk; looptijd niet genoemd",
+    "c": "ovbr"
+   },
+   "rmid": {
+    "o": "ja",
+    "t": "Rentemiddeling of afkopen mogelijk",
+    "c": "rmid"
+   },
+   "ebb": {
+    "o": "ja",
+    "t": "Tot 106% MW; deel >100% voor erkende maatregelen",
+    "c": "ebb"
+   },
+   "dag": {
+    "o": "ja",
+    "t": "Laagste van geoffreerde rente en rente op passeerdatum",
+    "c": "dag"
+   },
+   "senior": {
+    "o": "voorwaarden",
+    "t": "Toets op pensioeninkomen; eventueel op werkelijke lasten",
+    "c": "aow"
+   }
+  },
+  "Robuust Hypotheken": {
+   "zzp1": {
+    "o": "voorwaarden",
+    "t": "Vanaf 12 mnd (met/zonder NHG); bij 1-2 jaar max. 80% marktwaarde",
+    "c": "zzp"
+   },
+   "persp": {
+    "o": "nee",
+    "t": "Perspectiefverklaring niet toegestaan",
+    "c": "persp"
+   },
+   "flex": {
+    "o": "ja",
+    "t": "Gemiddelde 3 kalenderjaren + werkgeversverklaring",
+    "c": "flex"
+   },
+   "perfp": {
+    "o": "nee",
+    "t": "Particuliere erfpacht niet toegestaan",
+    "c": "erfp"
+   },
+   "avrij50": {
+    "o": "nee",
+    "t": "Max. 50%, ook voor senioren niet meer",
+    "c": "avrij"
+   },
+   "ovbr12": {
+    "o": "ja",
+    "t": "Max. 24 mnd",
+    "c": "ovbr"
+   },
+   "rmid": {
+    "o": "ja",
+    "t": "Rentemiddeling mogelijk via Mijn Robuust",
+    "c": "rmid"
+   },
+   "ebb": {
+    "o": "ja",
+    "t": "EBB mogelijk, tot 106% MW",
+    "c": "ebb"
+   },
+   "dag": {
+    "o": "onbekend",
+    "t": "Daling alleen tijdens 3 weken acceptatie; tot passeren niet gevonden",
+    "c": "dag"
+   },
+   "senior": {
+    "o": "onbekend",
+    "t": "Inkomensdaling meegetoetst; geen verruiming genoemd",
+    "c": "aow"
+   }
+  },
+  "SocioHypotheek": {
+   "zzp1": {
+    "o": "onbekend",
+    "t": "Geen waarde voor zzp/ondernemers",
+    "c": "zzp"
+   },
+   "persp": {
+    "o": "onbekend",
+    "t": "Geen waarde",
+    "c": "persp"
+   },
+   "flex": {
+    "o": "onbekend",
+    "t": "Geen waarde",
+    "c": "flex"
+   },
+   "perfp": {
+    "o": "onbekend",
+    "t": "Geen waarde",
+    "c": "erfp"
+   },
+   "avrij50": {
+    "o": "voorwaarden",
+    "t": "Geheel zonder aflossing (rente bijgeschreven); max. bedrag naar leeftijd en woningwaarde",
+    "c": "avrij"
+   },
+   "ovbr12": {
+    "o": "onbekend",
+    "t": "Geen waarde",
+    "c": "ovbr"
+   },
+   "rmid": {
+    "o": "onbekend",
+    "t": "Geen waarde",
+    "c": "rmid"
+   },
+   "ebb": {
+    "o": "onbekend",
+    "t": "Geen waarde voor EBB/lenen boven 100%",
+    "c": "ebb"
+   },
+   "dag": {
+    "o": "onbekend",
+    "t": "Geen waarde",
+    "c": "dag"
+   },
+   "senior": {
+    "o": "onbekend",
+    "t": "Waarde niet geverifieerd; inkomenstoets na AOW niet gevonden",
+    "c": "aow"
+   }
+  },
+  "Tellius Hypotheken": {
+   "zzp1": {
+    "o": "nee",
+    "t": "Ondernemer >36 mnd vereist",
+    "c": "zzp"
+   },
+   "persp": {
+    "o": "onbekend",
+    "t": "Geen waarde; flex-waarde noemt perspectiefverklaring niet",
+    "c": "flex"
+   },
+   "flex": {
+    "o": "voorwaarden",
+    "t": "Flexibel inkomen telt alleen mee met NHG",
+    "c": "flex"
+   },
+   "perfp": {
+    "o": "voorwaarden",
+    "t": "Particuliere erfpacht alleen met groen notarisoordeel",
+    "c": "erfp"
+   },
+   "avrij50": {
+    "o": "nee",
+    "t": "Max. 50% van marktwaarde aflossingsvrij",
+    "c": "avrij"
+   },
+   "ovbr12": {
+    "o": "ja",
+    "t": "Max. 24 mnd; alleen met nieuwe Tellius-hypotheek",
+    "c": "ovbr"
+   },
+   "rmid": {
+    "o": "nee",
+    "t": "Rentemiddeling niet mogelijk",
+    "c": "rmid"
+   },
+   "ebb": {
+    "o": "ja",
+    "t": "EBB/EBV tot 106%; deel boven 100% voor energiebesparing",
+    "c": "ebb"
+   },
+   "dag": {
+    "o": "nee",
+    "t": "Geen dagrentegarantie",
+    "c": "dag"
+   },
+   "senior": {
+    "o": "onbekend",
+    "t": "Bewijs inkomen na pensioen vereist; geen verruiming genoemd",
+    "c": "aow"
+   }
+  },
+  "Woonnu": {
+   "zzp1": {
+    "o": "ja",
+    "t": "Min. 1 jaar ondernemer; bij 12-36 mnd inkomensverklaring verplicht",
+    "c": "zzp"
+   },
+   "persp": {
+    "o": "ja",
+    "t": "Opgenomen als inkomensbewijs in acceptatiegids",
+    "c": "persp"
+   },
+   "flex": {
+    "o": "onbekend",
+    "t": "Uitzend/payroll getoetst als tijdelijk zonder intentie; berekening niet genoemd",
+    "c": "flex"
+   },
+   "perfp": {
+    "o": "onbekend",
+    "t": "Hypotheek op erfpacht mogelijk; particulier niet apart genoemd",
+    "c": "erfp"
+   },
+   "avrij50": {
+    "o": "nee",
+    "t": "Max. 50% van marktwaarde aflossingsvrij",
+    "c": "avrij"
+   },
+   "ovbr12": {
+    "o": "ja",
+    "t": "Max. 24 mnd; alleen met Woonnu-hypotheek",
+    "c": "ovbr"
+   },
+   "rmid": {
+    "o": "onbekend",
+    "t": "Rente aanpassen tegen vergoeding; rentemiddeling niet bevestigd",
+    "c": "rmid"
+   },
+   "ebb": {
+    "o": "ja",
+    "t": "EBB en EBV tot 106% marktwaarde",
+    "c": "ebb"
+   },
+   "dag": {
+    "o": "nee",
+    "t": "Aangeboden rente is passeerrente",
+    "c": "dag"
+   },
+   "senior": {
+    "o": "voorwaarden",
+    "t": "Senioren onder voorwaarden op werkelijke last",
+    "c": "aow"
+   }
+  },
+  "RegioBank": {
+   "zzp1": {
+    "o": "ja",
+    "t": "Vanaf 1 jaar zelfstandig met jaarcijfers + prognose",
+    "c": "zzp"
+   },
+   "persp": {
+    "o": "voorwaarden",
+    "t": "Geaccepteerd na min. 12 mnd bij uitzendbureau",
+    "c": "persp"
+   },
+   "flex": {
+    "o": "ja",
+    "t": "Gemiddelde 3 jaar/36 mnd, max. laatste jaar",
+    "c": "flex"
+   },
+   "perfp": {
+    "o": "onbekend",
+    "t": "Alleen erfpacht voor onbepaalde tijd conform NVB; particulier niet genoemd",
+    "c": "erfp"
+   },
+   "avrij50": {
+    "o": "nee",
+    "t": "Max. 30% van woningwaarde",
+    "c": "avrij"
+   },
+   "ovbr12": {
+    "o": "ja",
+    "t": "Max. 18 mnd (bestaand) / 30 mnd (nieuwbouw)",
+    "c": "ovbr"
+   },
+   "rmid": {
+    "o": "voorwaarden",
+    "t": "Alleen bij vaste rente, nieuwe periode min. 5 jr langer; niet bij spaarhypotheek",
+    "c": "rmid"
+   },
+   "ebb": {
+    "o": "ja",
+    "t": "Tot 106% bij verduurzaming",
+    "c": "ebb"
+   },
+   "dag": {
+    "o": "nee",
+    "t": "Geen dagrente",
+    "c": "dag"
+   },
+   "senior": {
+    "o": "onbekend",
+    "t": "Max. hypotheek mede o.b.v. inkomen na pensioen; geen verruiming genoemd",
+    "c": "aow"
+   }
+  },
+  "Obvion": {
+   "zzp1": {
+    "o": "ja",
+    "t": "Na 1 jaar zzp mogelijk, ook met NHG; IVO vereist",
+    "c": "zzp"
+   },
+   "persp": {
+    "o": "voorwaarden",
+    "t": "Geaccepteerd na min. 1 jaar bij gecertificeerd bureau",
+    "c": "persp"
+   },
+   "flex": {
+    "o": "onbekend",
+    "t": "Alleen Arbeidsmarktscan en perspectiefverklaring genoemd, geen gemiddelde",
+    "c": "flex"
+   },
+   "perfp": {
+    "o": "onbekend",
+    "t": "Alleen erfpacht in gemeenten met goedgekeurde voorwaarden; particulier niet genoemd",
+    "c": "erfp"
+   },
+   "avrij50": {
+    "o": "nee",
+    "t": "Max. 30% van woningwaarde en max. €150.000",
+    "c": "avrij"
+   },
+   "ovbr12": {
+    "o": "ja",
+    "t": "Max. 2 jaar (nieuwbouw 3)",
+    "c": "ovbr"
+   },
+   "rmid": {
+    "o": "voorwaarden",
+    "t": "Niet bij Woon Hypotheek; alleen bij oude Obvion Hypotheek",
+    "c": "rmid"
+   },
+   "ebb": {
+    "o": "ja",
+    "t": "Extra voor verduurzaming, totaal max. 106%",
+    "c": "ebb"
+   },
+   "dag": {
+    "o": "onbekend",
+    "t": "Laagste rente tot voorlopige offerte; tot passeren niet bevestigd",
+    "c": "dag"
+   },
+   "senior": {
+    "o": "voorwaarden",
+    "t": "Seniorenregeling alleen bij verhuizen: toets op werkelijke nieuwe last",
+    "c": "aow"
+   }
+  },
+  "Aegon": {
+   "zzp1": {
+    "o": "onbekend",
+    "t": "Jaarcijfers 3 jaar of IVO; start na 1 jaar alleen volgens een vergelijker",
+    "c": "zzp"
+   },
+   "persp": {
+    "o": "ja",
+    "t": "Geaccepteerd; WGV-inkomen geldt als toetsinkomen",
+    "c": "persp"
+   },
+   "flex": {
+    "o": "onbekend",
+    "t": "Flex via perspectiefverklaring of Arbeidsmarktscan; gemiddelde niet genoemd",
+    "c": "flex"
+   },
+   "perfp": {
+    "o": "nee",
+    "t": "Particuliere erfpacht niet geaccepteerd",
+    "c": "erfp"
+   },
+   "avrij50": {
+    "o": "nee",
+    "t": "Nieuw aflossingsvrij max. 50% van marktwaarde",
+    "c": "avrij"
+   },
+   "ovbr12": {
+    "o": "onbekend",
+    "t": "Waarde niet geverifieerd (noemt 1 jaar bestaand, verlengbaar)",
+    "c": "ovbr"
+   },
+   "rmid": {
+    "o": "nee",
+    "t": "Geen rentemiddeling sinds 1 september 2019",
+    "c": "rmid"
+   },
+   "ebb": {
+    "o": "ja",
+    "t": "Tot 106% na verbouwing, met en zonder NHG",
+    "c": "ebb"
+   },
+   "dag": {
+    "o": "voorwaarden",
+    "t": "Alleen als optie met meerprijs",
+    "c": "dag"
+   },
+   "senior": {
+    "o": "voorwaarden",
+    "t": "Seniorenregeling bij verhuizen; nieuwe maandlast gelijk of lager",
+    "c": "aow"
+   }
+  },
+  "BLG Wonen": {
+   "zzp1": {
+    "o": "onbekend",
+    "t": "Inkomen o.b.v. fiscale winst over 3 jaar; minimumduur niet genoemd",
+    "c": "zzp"
+   },
+   "persp": {
+    "o": "ja",
+    "t": "Geaccepteerd (gecertificeerd uitzendbureau in register)",
+    "c": "persp"
+   },
+   "flex": {
+    "o": "ja",
+    "t": "Flexinkomen o.b.v. inkomenshistorie mogelijk",
+    "c": "flex"
+   },
+   "perfp": {
+    "o": "onbekend",
+    "t": "Erfpacht financierbaar; particuliere erfpacht niet apart genoemd",
+    "c": "erfp"
+   },
+   "avrij50": {
+    "o": "nee",
+    "t": "Max. 30% van woningwaarde aflossingsvrij",
+    "c": "avrij"
+   },
+   "ovbr12": {
+    "o": "ja",
+    "t": "Max. 18 mnd (bestaand) / 30 mnd (nieuwbouw)",
+    "c": "ovbr"
+   },
+   "rmid": {
+    "o": "voorwaarden",
+    "t": "Alleen bij vaste rente, nieuwe periode min. 5 jr langer; niet bij spaarhypotheek",
+    "c": "rmid"
+   },
+   "ebb": {
+    "o": "ja",
+    "t": "Extra lenen naar label, binnen 106%",
+    "c": "ebb"
+   },
+   "dag": {
+    "o": "nee",
+    "t": "Geen dagrentegarantie",
+    "c": "dag"
+   },
+   "senior": {
+    "o": "onbekend",
+    "t": "Max. hypotheek o.b.v. verwacht pensioeninkomen; geen verruiming genoemd",
+    "c": "aow"
+   }
+  },
+  "Attens Hypotheken": {
+   "zzp1": {
+    "o": "voorwaarden",
+    "t": "12 mnd alleen met NHG (IKV); buiten NHG 36 mnd",
+    "c": "zzp"
+   },
+   "persp": {
+    "o": "onbekend",
+    "t": "Geen waarde; flex-waarde noemt perspectiefverklaring niet",
+    "c": "flex"
+   },
+   "flex": {
+    "o": "ja",
+    "t": "Gemiddelde 3 kalenderjaren; flexibel inkomen telt volledig mee",
+    "c": "flex"
+   },
+   "perfp": {
+    "o": "voorwaarden",
+    "t": "Particuliere erfpacht alleen met groene notarisopinie",
+    "c": "erfp"
+   },
+   "avrij50": {
+    "o": "nee",
+    "t": "Max. 50% van marktwaarde",
+    "c": "avrij"
+   },
+   "ovbr12": {
+    "o": "ja",
+    "t": "Max. 24 mnd, i.c.m. nieuwe hypotheek",
+    "c": "ovbr"
+   },
+   "rmid": {
+    "o": "nee",
+    "t": "Rentemiddeling niet mogelijk",
+    "c": "rmid"
+   },
+   "ebb": {
+    "o": "ja",
+    "t": "EBV/EBB tot 106% van marktwaarde",
+    "c": "ebb"
+   },
+   "dag": {
+    "o": "nee",
+    "t": "Geen dagrente: offerterente = passeerrente",
+    "c": "dag"
+   },
+   "senior": {
+    "o": "ja",
+    "t": "Seniorenregeling: afwijken van max. LTI bij AOW binnen 10 jaar",
+    "c": "aow"
+   }
+  },
+  "Hypotrust": {
+   "zzp1": {
+    "o": "nee",
+    "t": "Elan Plus: min. 36 mnd zelfstandig",
+    "c": "zzp"
+   },
+   "persp": {
+    "o": "nee",
+    "t": "Niet toegestaan bij Elan Plus",
+    "c": "persp"
+   },
+   "flex": {
+    "o": "ja",
+    "t": "Gemiddelde 3 kalenderjaren; werkgeversverklaring vereist",
+    "c": "flex"
+   },
+   "perfp": {
+    "o": "voorwaarden",
+    "t": "Particuliere erfpacht beperkt/per propositie",
+    "c": "erfp"
+   },
+   "avrij50": {
+    "o": "nee",
+    "t": "Max. 50% van marktwaarde aflossingsvrij",
+    "c": "avrij"
+   },
+   "ovbr12": {
+    "o": "onbekend",
+    "t": "Elan Plus: overbrugging mogelijk; looptijd niet genoemd",
+    "c": "ovbr"
+   },
+   "rmid": {
+    "o": "voorwaarden",
+    "t": "Rentemiddeling alleen bij Quion 9-hypotheken",
+    "c": "rmid"
+   },
+   "ebb": {
+    "o": "ja",
+    "t": "Geen EBB conform NHG, wel tot 106% voor energiebesparing",
+    "c": "ebb"
+   },
+   "dag": {
+    "o": "nee",
+    "t": "Elan (Plus): geen dagrente",
+    "c": "dag"
+   },
+   "senior": {
+    "o": "onbekend",
+    "t": "Inkomensdaling meegenomen; geen verruiming genoemd",
+    "c": "aow"
+   }
+  },
+  "Venn Hypotheken": {
+   "zzp1": {
+    "o": "onbekend",
+    "t": "Gewogen gemiddelde 3 jaar met IKV; minimumduur niet genoemd",
+    "c": "zzp"
+   },
+   "persp": {
+    "o": "onbekend",
+    "t": "Perspectiefverklaring niet expliciet genoemd",
+    "c": "persp"
+   },
+   "flex": {
+    "o": "ja",
+    "t": "Flexinkomen 100% meegeteld (gewogen 3-jaarsgemiddelde)",
+    "c": "flex"
+   },
+   "perfp": {
+    "o": "nee",
+    "t": "Particuliere erfpacht niet geaccepteerd",
+    "c": "erfp"
+   },
+   "avrij50": {
+    "o": "nee",
+    "t": "Max. 50% van marktwaarde aflossingsvrij",
+    "c": "avrij"
+   },
+   "ovbr12": {
+    "o": "ja",
+    "t": "Max. 24 mnd, ook bij onverkochte woning",
+    "c": "ovbr"
+   },
+   "rmid": {
+    "o": "nee",
+    "t": "Geen rentemiddeling; verzoeken worden afgewezen",
+    "c": "rmid"
+   },
+   "ebb": {
+    "o": "ja",
+    "t": "EBB bij aankoop via bouwdepot; tot 106%",
+    "c": "ebb"
+   },
+   "dag": {
+    "o": "nee",
+    "t": "Offerterente, geen dagrente",
+    "c": "dag"
+   },
+   "senior": {
+    "o": "ja",
+    "t": "Senioren 57+ toets op werkelijke lasten",
+    "c": "aow"
+   }
+  },
+  "Vista Hypotheken": {
+   "zzp1": {
+    "o": "nee",
+    "t": "Min. 36 mnd onderneming vereist",
+    "c": "zzp"
+   },
+   "persp": {
+    "o": "ja",
+    "t": "Geaccepteerd: min. 26 wkn zelfde bureau, 12 van 14 mnd gewerkt",
+    "c": "persp"
+   },
+   "flex": {
+    "o": "ja",
+    "t": "Gemiddelde 3 kalenderjaren, max. laatste jaar of huidig",
+    "c": "flex"
+   },
+   "perfp": {
+    "o": "nee",
+    "t": "Particuliere erfpacht niet toegestaan",
+    "c": "erfp"
+   },
+   "avrij50": {
+    "o": "nee",
+    "t": "Max. 50% van marktwaarde aflossingsvrij",
+    "c": "avrij"
+   },
+   "ovbr12": {
+    "o": "ja",
+    "t": "Max. 24 mnd",
+    "c": "ovbr"
+   },
+   "rmid": {
+    "o": "nee",
+    "t": "Rentemiddeling niet mogelijk",
+    "c": "rmid"
+   },
+   "ebb": {
+    "o": "ja",
+    "t": "Tot 106% marktwaarde voor energiebesparing",
+    "c": "ebb"
+   },
+   "dag": {
+    "o": "voorwaarden",
+    "t": "Laagste rente bij passeren binnen 3 mnd",
+    "c": "dag"
+   },
+   "senior": {
+    "o": "onbekend",
+    "t": "Toets op verwacht inkomen na pensioen; geen verruiming genoemd",
+    "c": "aow"
+   }
+  },
+  "bijBouwe": {
+   "zzp1": {
+    "o": "nee",
+    "t": "Min. 36 mnd ondernemer vereist",
+    "c": "zzp"
+   },
+   "persp": {
+    "o": "nee",
+    "t": "Niet geaccepteerd; inkomen behandeld als flexibel inkomen",
+    "c": "persp"
+   },
+   "flex": {
+    "o": "ja",
+    "t": "Gemiddelde 3 kalenderjaren; lager huidig inkomen is leidend",
+    "c": "flex"
+   },
+   "perfp": {
+    "o": "voorwaarden",
+    "t": "Particuliere erfpacht van vóór 2013 alleen met groen erfpachtoordeel",
+    "c": "erfp"
+   },
+   "avrij50": {
+    "o": "nee",
+    "t": "Max. 50% van woningwaarde aflossingsvrij",
+    "c": "avrij"
+   },
+   "ovbr12": {
+    "o": "onbekend",
+    "t": "Overbrugging onder voorwaarden; looptijd niet genoemd",
+    "c": "ovbr"
+   },
+   "rmid": {
+    "o": "onbekend",
+    "t": "Wijzigen alleen tegen vergoeding (ineens of meefinancieren); rentemiddeling niet genoemd",
+    "c": "rmid"
+   },
+   "ebb": {
+    "o": "ja",
+    "t": "Tot 106% via verduurzamingsdepot",
+    "c": "ebb"
+   },
+   "dag": {
+    "o": "onbekend",
+    "t": "Waarde niet geverifieerd (noemt geen dagrentegarantie)",
+    "c": "dag"
+   },
+   "senior": {
+    "o": "onbekend",
+    "t": "Toekomstig pensioeninkomen leidend; geen verruiming genoemd",
+    "c": "aow"
+   }
+  },
+  "SNS": {
+   "zzp1": {
+    "o": "voorwaarden",
+    "t": "Vanaf 1 boekjaar, maar bij 1-2 jaar telt 75% van vastgesteld inkomen",
+    "c": "zzp"
+   },
+   "persp": {
+    "o": "ja",
+    "t": "Geaccepteerd (max. 6 mnd oud); geldt als vast contract",
+    "c": "persp"
+   },
+   "flex": {
+    "o": "ja",
+    "t": "Gemiddelde laatste 3 jaar, max. laatste jaar",
+    "c": "flex"
+   },
+   "perfp": {
+    "o": "onbekend",
+    "t": "Erfpacht geaccepteerd; particuliere erfpacht niet apart genoemd",
+    "c": "erfp"
+   },
+   "avrij50": {
+    "o": "nee",
+    "t": "Max. 30% van woningwaarde aflossingsvrij",
+    "c": "avrij"
+   },
+   "ovbr12": {
+    "o": "ja",
+    "t": "Max. 18 mnd, nieuwbouw 30 mnd",
+    "c": "ovbr"
+   },
+   "rmid": {
+    "o": "voorwaarden",
+    "t": "Alleen bij vaste rente, nieuwe periode min. 5 jr langer; niet bij spaarhypotheek",
+    "c": "rmid"
+   },
+   "ebb": {
+    "o": "ja",
+    "t": "Extra lenen tot 106% conform labeltabel",
+    "c": "ebb"
+   },
+   "dag": {
+    "o": "nee",
+    "t": "Geen dagrente; offerterente vast",
+    "c": "dag"
+   },
+   "senior": {
+    "o": "onbekend",
+    "t": "Toets op pensioeninkomen; vermogen/lijfrente meegewogen; geen regeling genoemd",
+    "c": "aow"
+   }
+  },
+  "Munt Hypotheken": {
+   "zzp1": {
+    "o": "voorwaarden",
+    "t": "12 mnd alleen met NHG; zonder NHG 36 mnd",
+    "c": "zzp"
+   },
+   "persp": {
+    "o": "ja",
+    "t": "Geaccepteerd; huidig inkomen meestal volledig",
+    "c": "persp"
+   },
+   "flex": {
+    "o": "onbekend",
+    "t": "Flex via Arbeidsmarktscan; gemiddelde niet genoemd",
+    "c": "flex"
+   },
+   "perfp": {
+    "o": "nee",
+    "t": "Alleen erfpacht met (semi)overheid als erfverpachter",
+    "c": "erfp"
+   },
+   "avrij50": {
+    "o": "nee",
+    "t": "Max. 50% van marktwaarde aflossingsvrij",
+    "c": "avrij"
+   },
+   "ovbr12": {
+    "o": "ja",
+    "t": "Max. 30 mnd",
+    "c": "ovbr"
+   },
+   "rmid": {
+    "o": "onbekend",
+    "t": "Vergoeding ineens; rentemiddeling niet gevonden",
+    "c": "rmid"
+   },
+   "ebb": {
+    "o": "ja",
+    "t": "Energiebespaarbudget naar label, 2 jaar",
+    "c": "ebb"
+   },
+   "dag": {
+    "o": "voorwaarden",
+    "t": "Dagrente als keuze tegen hogere rente",
+    "c": "dag"
+   },
+   "senior": {
+    "o": "ja",
+    "t": "Seniorenregeling: toets op werkelijke lasten vanaf AOW",
+    "c": "aow"
+   }
+  },
+  "Florius": {
+   "zzp1": {
+    "o": "ja",
+    "t": "Vanaf 1 jaar, met en zonder NHG; jaarcijfers + prognose",
+    "c": "zzp"
+   },
+   "persp": {
+    "o": "ja",
+    "t": "Geaccepteerd (26 wkn zelfde bureau, 12 v.d. laatste 14 mnd)",
+    "c": "persp"
+   },
+   "flex": {
+    "o": "onbekend",
+    "t": "Flex via perspectiefverklaring of Arbeidsmarktscan; gemiddelde niet genoemd",
+    "c": "flex"
+   },
+   "perfp": {
+    "o": "onbekend",
+    "t": "Erfpacht mogelijk; particuliere erfpacht niet apart genoemd",
+    "c": "erfp"
+   },
+   "avrij50": {
+    "o": "nee",
+    "t": "Max. 30% van woningwaarde en max. €150.000",
+    "c": "avrij"
+   },
+   "ovbr12": {
+    "o": "ja",
+    "t": "Max. 24 mnd (bestaand) / 36 mnd (nieuwbouw)",
+    "c": "ovbr"
+   },
+   "rmid": {
+    "o": "ja",
+    "t": "Rentemiddeling mogelijk naast renteafkoop",
+    "c": "rmid"
+   },
+   "ebb": {
+    "o": "ja",
+    "t": "EBB en EBV tot 106%, met en zonder NHG",
+    "c": "ebb"
+   },
+   "dag": {
+    "o": "voorwaarden",
+    "t": "Alleen Profijt twaalf (meedaal-optie, hogere rente)",
+    "c": "dag"
+   },
+   "senior": {
+    "o": "voorwaarden",
+    "t": "Maatwerk o.b.v. werkelijke woonlasten",
+    "c": "aow"
+   }
+  },
+  "Nationale-Nederlanden": {
+   "zzp1": {
+    "o": "ja",
+    "t": "Vanaf 1 jaar met inkomensverklaring, met of zonder NHG",
+    "c": "zzp"
+   },
+   "persp": {
+    "o": "ja",
+    "t": "Geaccepteerd, ook met NHG",
+    "c": "persp"
+   },
+   "flex": {
+    "o": "onbekend",
+    "t": "Noemt alleen tijdelijk mét intentieverklaring en perspectiefverklaring",
+    "c": "flex"
+   },
+   "perfp": {
+    "o": "onbekend",
+    "t": "Erfpacht mogelijk met aanvullende eisen; particulier niet genoemd",
+    "c": "erfp"
+   },
+   "avrij50": {
+    "o": "nee",
+    "t": "Max. 50% van woningwaarde aflossingsvrij",
+    "c": "avrij"
+   },
+   "ovbr12": {
+    "o": "voorwaarden",
+    "t": "1 jaar bestaand / 2 jaar nieuwbouw, 1 jaar verlengbaar",
+    "c": "ovbr"
+   },
+   "rmid": {
+    "o": "ja",
+    "t": "Rentemiddeling mogelijk",
+    "c": "rmid"
+   },
+   "ebb": {
+    "o": "ja",
+    "t": "EBB en EBV; tot 106% voor energiebesparing",
+    "c": "ebb"
+   },
+   "dag": {
+    "o": "onbekend",
+    "t": "Waarde niet geverifieerd (standaard offerterente)",
+    "c": "dag"
+   },
+   "senior": {
+    "o": "voorwaarden",
+    "t": "Senioren Verhuisregeling op werkelijke lasten bij gelijke/lagere lasten",
+    "c": "aow"
+   }
+  },
+  "Tulp Hypotheken": {
+   "zzp1": {
+    "o": "ja",
+    "t": "Vanaf 1 jaar, ook zonder NHG; inkomen via erkend instituut",
+    "c": "zzp"
+   },
+   "persp": {
+    "o": "nee",
+    "t": "Geen financiering op basis van perspectiefverklaring",
+    "c": "persp"
+   },
+   "flex": {
+    "o": "voorwaarden",
+    "t": "Gemiddelde 3 jaar, mits lopend contract",
+    "c": "flex"
+   },
+   "perfp": {
+    "o": "nee",
+    "t": "Geen particuliere erfpacht",
+    "c": "erfp"
+   },
+   "avrij50": {
+    "o": "voorwaarden",
+    "t": "Max. 50%; onder voorwaarden 75%",
+    "c": "avrij"
+   },
+   "ovbr12": {
+    "o": "nee",
+    "t": "Max. 12 mnd",
+    "c": "ovbr"
+   },
+   "rmid": {
+    "o": "onbekend",
+    "t": "Omzetten met vergoeding vooraf; rentemiddeling niet genoemd",
+    "c": "rmid"
+   },
+   "ebb": {
+    "o": "ja",
+    "t": "EBB tot 6% van marktwaarde",
+    "c": "ebb"
+   },
+   "dag": {
+    "o": "ja",
+    "t": "Laagste van rente bindende overeenkomst en bij passeren",
+    "c": "dag"
+   },
+   "senior": {
+    "o": "onbekend",
+    "t": "Toets op pensioeninkomen; tekort vóór AOW aflossen",
+    "c": "aow"
+   }
+  },
+  "Lloyds Bank": {
+   "zzp1": {
+    "o": "voorwaarden",
+    "t": "Vanaf 1 jaar alleen met NHG; inkomensverklaring verplicht",
+    "c": "zzp"
+   },
+   "persp": {
+    "o": "nee",
+    "t": "Perspectiefverklaring wordt niet geaccepteerd",
+    "c": "persp"
+   },
+   "flex": {
+    "o": "ja",
+    "t": "Gemiddelde 3 kalenderjaren of 36 mnd (IBL)",
+    "c": "flex"
+   },
+   "perfp": {
+    "o": "onbekend",
+    "t": "Erfpacht geaccepteerd; particuliere erfpacht niet apart genoemd",
+    "c": "erfp"
+   },
+   "avrij50": {
+    "o": "nee",
+    "t": "Max. 50% marktwaarde",
+    "c": "avrij"
+   },
+   "ovbr12": {
+    "o": "onbekend",
+    "t": "Overbrugging mogelijk; looptijd niet genoemd",
+    "c": "ovbr"
+   },
+   "rmid": {
+    "o": "nee",
+    "t": "Rentemiddeling niet mogelijk",
+    "c": "rmid"
+   },
+   "ebb": {
+    "o": "voorwaarden",
+    "t": "Tot 106% alleen met NHG; zonder NHG 100%",
+    "c": "ebb"
+   },
+   "dag": {
+    "o": "ja",
+    "t": "Lagere rente op passeerdatum geldt",
+    "c": "dag"
+   },
+   "senior": {
+    "o": "onbekend",
+    "t": "Pensioengat-proces versoepeld; inhoud niet gespecificeerd",
+    "c": "aow"
+   }
+  },
+  "Vrij Leven (Hypotrust)": {
+   "zzp1": {
+    "o": "voorwaarden",
+    "t": "12 mnd alleen met NHG; zonder NHG vanaf 36 mnd",
+    "c": "zzp"
+   },
+   "persp": {
+    "o": "nee",
+    "t": "Perspectiefverklaring niet toegestaan",
+    "c": "persp"
+   },
+   "flex": {
+    "o": "voorwaarden",
+    "t": "Gemiddelde 3 jaar, mits actueel dienstverband",
+    "c": "flex"
+   },
+   "perfp": {
+    "o": "nee",
+    "t": "Particuliere erfpacht niet mogelijk",
+    "c": "erfp"
+   },
+   "avrij50": {
+    "o": "nee",
+    "t": "Max. 50% marktwaarde, alleen met oud recht (box 1)",
+    "c": "avrij"
+   },
+   "ovbr12": {
+    "o": "ja",
+    "t": "Overbrugging 24 mnd",
+    "c": "ovbr"
+   },
+   "rmid": {
+    "o": "ja",
+    "t": "Rentemiddeling mogelijk, met administratiekosten",
+    "c": "rmid"
+   },
+   "ebb": {
+    "o": "ja",
+    "t": "Energiebespaarbudget tot 106% MW",
+    "c": "ebb"
+   },
+   "dag": {
+    "o": "onbekend",
+    "t": "Dalrentegarantie alleen tijdens 3 weken acceptatie; passeren niet genoemd",
+    "c": "dag"
+   },
+   "senior": {
+    "o": "voorwaarden",
+    "t": "Senioren zonder NHG tot 60% MW op werkelijke last",
+    "c": "aow"
+   }
+  }
+ }
+}

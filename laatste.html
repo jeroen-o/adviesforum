@@ -161,14 +161,14 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
     <div class="merk"><span class="zeshoek" aria-hidden="true"></span>Adviesforum &middot; Laatste nieuws</div>
     <a class="terug" href="index.html">&larr; Terug naar het forum</a>
     <h1>Laatste nieuws en vragen</h1>
-    <p>Alles wat er recent op het Adviesforum is gebeurd op één pagina: nieuwe vragen, de laatste reacties, nieuwe kennisbankartikelen, nieuws van het forum en nieuws van aanbieders.</p>
+    <p>Alles wat er recent op het Adviesforum is gebeurd op één pagina: nieuwe vragen, de laatste reacties, nieuwe kennisbankartikelen, nieuws van het forum, nieuws van aanbieders en wijzigingen in de voorwaarden van geldverstrekkers.</p>
     <span class="stempel" id="stempel">Live samengesteld uit de inhoud van het forum</span>
   </div>
 </header>
 
 <main class="romp" id="inhoud" tabindex="-1">
   <nav class="snel" aria-label="Spring naar">
-    <a href="#vragen">Laatste vragen</a><a href="#reacties">Laatste reacties</a><a href="#kennisbank">Kennisbank</a><a href="#forumnieuws">Nieuw op het forum</a><a href="#aanbiedersnieuws">Nieuws van aanbieders</a>
+    <a href="#vragen">Laatste vragen</a><a href="#reacties">Laatste reacties</a><a href="#kennisbank">Kennisbank</a><a href="#forumnieuws">Nieuw op het forum</a><a href="#aanbiedersnieuws">Nieuws van aanbieders</a><a href="#voorwaarden">Wijzigingen voorwaarden</a>
   </nav>
 
   <h2 class="sectie" id="vragen">Laatste vragen</h2>
@@ -195,7 +195,12 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
   <ul class="lijst2" id="l-aanbieders"></ul>
   <a class="meer" href="aanbieders.html">Naar alle aanbieders &rarr;</a>
 
-  <p class="sub" style="margin-top:28px">Volg het nieuws in je feedreader: <a href="feed.xml">RSS nieuw en bijgewerkt</a> &middot; <a href="aanbieders-feed.xml">RSS nieuws van aanbieders</a>.</p>
+  <h2 class="sectie" id="voorwaarden">Wijzigingen in voorwaarden van geldverstrekkers</h2>
+  <p class="sub" id="voorwaarden-sub">Wat er is veranderd in de gecontroleerde hypotheekvoorwaarden. Volg geldverstrekkers in de voorwaarden-vergelijker om hun wijzigingen hier bovenaan te zien.</p>
+  <ul class="lijst2" id="l-voorwaarden"></ul>
+  <a class="meer" href="voorwaarden-vergelijker.html#wijzigingen">Alle wijzigingen in de voorwaarden-vergelijker &rarr;</a>
+
+  <p class="sub" style="margin-top:28px">Volg het nieuws in je feedreader: <a href="feed.xml">RSS nieuw en bijgewerkt</a> &middot; <a href="aanbieders-feed.xml">RSS nieuws van aanbieders</a> &middot; <a href="voorwaarden-feed.xml">RSS wijzigingen voorwaarden</a>.</p>
 </main>
 
 <footer class="voet">
@@ -237,6 +242,7 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
 <script src="data/kennisbank-dfosignalen.js"></script>
 <script src="data/kennisbank-aanvulling.js"></script>
 <script src="data/aanbieders.js"></script>
+<script src="data/voorwaarden-wijzigingen.js"></script>
 <script>
 (function(){
 'use strict';
@@ -259,6 +265,16 @@ vul('l-kennis',K.map(function(a){return kaart('index.html#artikel-'+encodeURICom
 var N=[];(window.AANBIEDERS||[]).forEach(function(a){if(!a||a.demo)return;(a.nieuws||[]).forEach(function(n){N.push({a:a,n:n});});});
 N.sort(function(x,y){return String(y.n.datum).localeCompare(String(x.n.datum));});
 vul('l-aanbieders',N.slice(0,8).map(function(x){return kaart('aanbieders.html#nieuws-'+x.a.id+'-'+x.n.id,esc(x.a.naam)+' <span>'+esc(datum(x.n.datum))+'</span>',x.n.titel,kort(x.n.tekst,140));}).join(''),'Nog geen nieuws van aanbieders. Zodra aanbieders zelf berichten plaatsen, staan ze hier.');
+var WZ=(window.VOORWAARDEN_WIJZIGINGEN&&window.VOORWAARDEN_WIJZIGINGEN.items)||[];
+function slugNL(n){return String(n||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/&/g,' en ').replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'')||'partij';}
+var GV=(function(){var m=document.cookie.match(/(?:^|; )af_favorieten=([^;]*)/),w='';try{w=m?decodeURIComponent(m[1]):'';}catch(e){w='';}var d=w.split('~');if(d[0]!=='1')return [];return (d[1]||'').split('_').filter(function(t){return /^g\.[a-z0-9-]{1,60}$/.test(t);}).map(function(t){return t.slice(2);});})();
+var WG=[];WZ.forEach(function(i){var k=i.d+'|'+i.naam,g=WG.filter(function(x){return x.k===k;})[0];if(!g){g={k:k,d:i.d,naam:i.naam,items:[],volg:GV.indexOf(slugNL(i.naam))>=0};WG.push(g);}g.items.push(i);});
+WG.sort(function(a,b){return (b.volg-a.volg)||b.d.localeCompare(a.d)||a.naam.localeCompare(b.naam,'nl');});
+if(GV.length)document.getElementById('voorwaarden-sub').textContent='Wat er is veranderd in de gecontroleerde hypotheekvoorwaarden. Geldverstrekkers die je volgt ('+GV.length+') staan bovenaan.';
+var SRT={gewijzigd:'gewijzigd',nieuw:'nieuw ingevuld',geverifieerd:'geverifieerd',vervallen:'vervallen',eerste:'eerste controle'};
+vul('l-voorwaarden',WG.slice(0,8).map(function(g){var tel={};g.items.forEach(function(i){tel[i.soort]=(tel[i.soort]||0)+1;});
+  var samen=Object.keys(tel).map(function(s){return tel[s]+' '+SRT[s];}).join(', ');
+  return kaart('voorwaarden-vergelijker.html#vergelijk='+slugNL(g.naam),(g.volg?'<span class="lbl">Je volgt</span> ':'')+esc(g.naam)+' <span>'+esc(datum(g.d))+'</span>','Voorwaarden '+g.naam+': '+g.items.length+(g.items.length===1?' wijziging':' wijzigingen'),samen);}).join(''),'Nog geen wijzigingen in de gecontroleerde voorwaarden.');
 var lf=document.getElementById('l-forum');lf.innerHTML='<li class="leeg">Laden…</li>';
 function forumFout(){lf.innerHTML='<li class="leeg">Het overzicht kon niet worden geladen. Bekijk <a href="nieuw.html">wat is nieuw</a>.</li>';}
 try{fetch('feed.xml').then(function(r){if(!r.ok)throw 0;return r.text();}).then(function(t){

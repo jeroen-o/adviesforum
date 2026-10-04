@@ -1,0 +1,1374 @@
+{
+ "product": "orv",
+ "titel": "Overlijdensrisicoverzekering",
+ "gecontroleerd": "2026-10-04",
+ "criteria": [
+  {
+   "id": "vormen",
+   "naam": "Dekkingsvormen",
+   "kort": "Gelijkblijvend, annuïtair of lineair dalend, en dekking op één of twee levens.",
+   "waarom": "Bepaalt of de dekking aansluit op het aflosschema van de hypotheek en op de situatie van partners."
+  },
+  {
+   "id": "looptijd",
+   "naam": "Looptijd en eindleeftijd",
+   "kort": "Minimale en maximale looptijd en de hoogste leeftijd waarop de dekking mag eindigen.",
+   "waarom": "Belangrijk bij lange hypotheeklooptijden en oudere klanten; de dekking moet de hele lening kunnen afdekken."
+  },
+  {
+   "id": "instap",
+   "naam": "Instapleeftijd",
+   "kort": "Minimale en maximale leeftijd van de verzekerde bij aanvang.",
+   "waarom": "Bepaalt of een (oudere) klant nog bij deze verzekeraar terechtkan."
+  },
+  {
+   "id": "medisch",
+   "naam": "Medische acceptatie",
+   "kort": "Tot welk verzekerd bedrag en welke leeftijd een gezondheidsverklaring volstaat en wanneer een keuring of bloedonderzoek nodig is.",
+   "waarom": "Beïnvloedt doorlooptijd van de aanvraag en de kans op tijdige acceptatie vóór het passeren."
+  },
+  {
+   "id": "roken",
+   "naam": "Rookbeleid",
+   "kort": "Definitie niet-roker, vereiste rookvrije periode, behandeling van e-sigaret en controle.",
+   "waarom": "Rookstatus weegt zwaar in de acceptatie; een onjuiste opgave kan de uitkering in gevaar brengen."
+  },
+  {
+   "id": "bmi",
+   "naam": "BMI-/gewichtsbeleid",
+   "kort": "Gepubliceerde grenzen voor lengte/gewicht of BMI.",
+   "waarom": "Geeft vooraf inzicht in de acceptatiekans bij over- of ondergewicht."
+  },
+  {
+   "id": "terminaal",
+   "naam": "Terminale ziekte",
+   "kort": "Of de verzekeraar een voorschot of (gedeeltelijke) uitkering doet bij een terminale diagnose.",
+   "waarom": "Kan de klant en het gezin financiële ruimte geven in de laatste levensfase."
+  },
+  {
+   "id": "verhogen",
+   "naam": "Verhogen zonder nieuwe gezondheidswaarborgen",
+   "kort": "Mogelijkheid het verzekerd bedrag te verhogen zonder nieuwe medische vragen, bijvoorbeeld bij verhuizing, geboorte of huwelijk.",
+   "waarom": "Voorkomt dat een klant met verslechterde gezondheid later niet meer kan bijverzekeren."
+  },
+  {
+   "id": "uitsluit",
+   "naam": "Uitsluitingen",
+   "kort": "Uitsluitingen zoals oorlog/molest, terrorisme, risicosporten, verblijf in het buitenland en zelfdoding in de eerste jaren.",
+   "waarom": "Bepaalt in welke situaties nabestaanden geen uitkering krijgen."
+  },
+  {
+   "id": "beeindig",
+   "naam": "Tussentijds beëindigen",
+   "kort": "Mogelijkheid om tussentijds te stoppen, afkoopwaarde en eventuele premierestitutie.",
+   "waarom": "Relevant bij oversluiten, verkoop van de woning of het overstappen naar een andere verzekeraar."
+  },
+  {
+   "id": "verpand",
+   "naam": "Verpanding en begunstiging",
+   "kort": "Of de polis verpand kan worden aan een geldverstrekker en hoe de begunstiging geregeld kan worden.",
+   "waarom": "Veel geldverstrekkers eisen een verpande ORV; de begunstiging beïnvloedt ook de erfbelasting."
+  },
+  {
+   "id": "premieduur",
+   "naam": "Premiebetaling",
+   "kort": "Mogelijke betaalvormen: periodiek, verkorte premieduur, koopsom (zonder bedragen).",
+   "waarom": "Bepaalt de flexibiliteit voor de klant en de aansluiting op de hypotheek."
+  }
+ ],
+ "aanbieders": [
+  {
+   "naam": "Nationale-Nederlanden",
+   "url": "https://adviseur.nn.nl/va/Particulier/Levensverzekeringen/Overlijdensrisicoverzekering-ORV.htm",
+   "domeinen": [
+    "nn.nl",
+    "adviseur.nn.nl"
+   ],
+   "documenten": [
+    {
+     "titel": "Voorwaarden Overlijdensrisicoverzekering nummer 2426",
+     "url": "https://www.nn.nl/Download/Voorwaarden-Overlijdensrisicoverzekering-2426-3293-40.2504.htm",
+     "versie": "3293-40.2504 (april 2025)"
+    },
+    {
+     "titel": "Voorwaarden Voorlopige dekking overlijdensrisicoverzekering",
+     "url": "https://www.nn.nl/Download/Voorwaarden-Overlijdensrisicoverzekering-ORV-voorlopige-dekking.htm",
+     "versie": "onbekend"
+    },
+    {
+     "titel": "Brochure Overlijdensrisicoverzekering",
+     "url": "https://www.nn.nl/Download/Brochure-Overlijdensrisicoverzekering.htm",
+     "versie": "onbekend"
+    }
+   ],
+   "criteria": {
+    "vormen": {
+     "waarde": "+ Gelijkblijvend, lineair dalend en annuïtair dalend (0,01-20%); op één of twee levens",
+     "bron": [
+      "https://adviseur.nn.nl/va/Particulier/Levensverzekeringen/Overlijdensrisicoverzekering-ORV.htm",
+      "https://www.nn.nl/Particulier/Verzekeren/Overlijdensrisicoverzekering/Annuitair-dalende-overlijdensrisicoverzekering.htm"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Bij twee levens moet het verzekerd kapitaal voor beiden gelijk zijn; uitkering bij eerste overlijden, daarna eindigt de verzekering. Lineair dalend: minimaal verzekerd kapitaal € 18.500."
+    },
+    "looptijd": {
+     "waarde": "~ Looptijd 5 tot 57 jaar; eindleeftijd (oudste verzekerde) max. 75 jaar",
+     "bron": [
+      "https://adviseur.nn.nl/va/Particulier/Levensverzekeringen/Overlijdensrisicoverzekering-ORV.htm",
+      "https://www.nn.nl/Particulier/Verzekeren/Overlijdensrisicoverzekering.htm"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Acceptatiekenmerken op de adviseurspagina."
+    },
+    "instap": {
+     "waarde": "~ Instapleeftijd 18 tot en met 65 jaar",
+     "bron": [
+      "https://adviseur.nn.nl/va/Particulier/Levensverzekeringen/Overlijdensrisicoverzekering-ORV.htm"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "medisch": {
+     "waarde": "+ Online gezondheidsverklaring tot € 1.000.000 (18-50 jr) en tot € 500.000 (51-65 jr); daarboven medisch onderzoek",
+     "bron": [
+      "https://www.nn.nl/Particulier/Verzekeren/Overlijdensrisicoverzekering/Medische-acceptatie.htm"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Medisch onderzoek omvat vragenlijst, lichamelijk onderzoek, urineonderzoek, hartfilmpje en soms longfoto; niet door eigen huisarts. NN noemt een acceptatiegraad van ruim 99%. Rechtstreeks (zonder adviseur) online max. € 750.000 en onder 26 jaar max. € 500.000."
+    },
+    "roken": {
+     "waarde": "~ Niet-roker: nooit of minimaal 2 jaar niet gerookt; e-sigaret en vapen (ook zonder nicotine) gelden als roken",
+     "bron": [
+      "https://www.nn.nl/Particulier/Verzekeren/Overlijdensrisicoverzekering/Overlijdensrisicoverzekering-korting-niet-roken.htm"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Roken omvat o.a. pijp, sigaar, (e-)sigaret, nicotinepleisters en joints. Weer (af en toe) gaan roken moet direct gemeld worden."
+    },
+    "verhogen": {
+     "waarde": "~ Jaarlijks verhogen zonder medische waarborgen tot € 1.000.000 totaal, als verzekerde < 60 jaar en vorige verhoging ≥ 5 jaar geleden",
+     "bron": [
+      "https://www.nn.nl/Particulier/Verzekeren/Levensverzekering/Levensverzekering-wijzigen/Risicodekking-verzekeren-of-aanpassen.htm"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Niet mogelijk als de verzekering eerder met een verhoogd sterfterisico is geaccepteerd. Niet gekoppeld aan specifieke gebeurtenissen; fragment lijkt over levensverzekeringen in het algemeen te gaan."
+    },
+    "uitsluit": {
+     "waarde": "~ Geen uitkering bij zelfdoding binnen 2 jaar na ingang (of na verhoging voor het verhoogde deel), bij molest en bij oorlogshandelingen in niet-Nederlandse krijgsdienst",
+     "bron": [
+      "https://www.nn.nl/Download/Voorwaarden-Overlijdensrisicoverzekering-2426-3293-40.2504.htm"
+     ],
+     "brondatum": "2025-04",
+     "zekerheid": "hoog",
+     "toelichting": "Euthanasie volgens Nederlandse wet- en regelgeving is gedekt. Geen en-bloc-clausule."
+    },
+    "beeindig": {
+     "waarde": "~ Altijd schriftelijk of per e-mail te stoppen; geen afkoopwaarde",
+     "bron": [
+      "https://www.nn.nl/Download/Voorwaarden-Overlijdensrisicoverzekering-2426-3293-40.2504.htm"
+     ],
+     "brondatum": "2025-04",
+     "zekerheid": "hoog",
+     "toelichting": "De ORV bouwt geen waarde op. Bij verpanding is toestemming van de geldverstrekker nodig."
+    },
+    "verpand": {
+     "waarde": "+ Verpanding aan geldverstrekker mogelijk; begunstiging aan te passen",
+     "bron": [
+      "https://www.nn.nl/Particulier/Verzekeren/Overlijdensrisicoverzekering/Overlijdensrisicoverzekering-aanpassen.htm",
+      "https://www.nn.nl/Particulier/Verzekeren/Overlijdensrisicoverzekering/Overlijdensrisicoverzekering-hypotheek.htm"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Bij verpanding ontvangt de geldverstrekker de uitkering en is voor wijzigen of stoppen diens toestemming nodig."
+    },
+    "premieduur": {
+     "waarde": "~ Maandpremie; bij dalende dekking vervalt de premie in de laatste 4 jaar (looptijd ≤ 12 jr) of 5 jaar (≥ 13 jr)",
+     "bron": [
+      "https://adviseur.nn.nl/va/Particulier/Levensverzekeringen/Overlijdensrisicoverzekering-ORV.htm",
+      "https://www.nn.nl/Particulier/Verzekeren/Overlijdensrisicoverzekering/Lineair-dalende-overlijdensrisicoverzekering.htm"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "De dekking loopt in die laatste jaren door."
+    }
+   }
+  },
+  {
+   "naam": "a.s.r.",
+   "url": "https://www.asr.nl/verzekeringen/levensverzekeringen/overlijdensrisicoverzekering",
+   "domeinen": [
+    "asr.nl"
+   ],
+   "documenten": [],
+   "criteria": {
+    "vormen": {
+     "waarde": "+ Gelijkblijvend, annuïtair dalend en lineair dalend; op één of twee levens, kruislings mogelijk",
+     "bron": [
+      "https://www.asr.nl/verzekeringen/levensverzekeringen/overlijdensrisicoverzekering",
+      "https://www.asr.nl/verzekeringen/levensverzekeringen/overlijdensrisicoverzekering/begunstiging"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Dalende vormen dalen maandelijks. Bij twee levens uitkering bij eerste overlijden, daarna stopt de verzekering. Kruislings = twee aparte polissen met de partner als verzekeringnemer en begunstigde."
+    },
+    "looptijd": {
+     "waarde": "~ Eindleeftijd maximaal 75 jaar",
+     "bron": [
+      "https://www.asr.nl/verzekeringen/medische-beoordeling-bij-levensverzekering",
+      "https://www-a.asr.nl/verzekeringen/levensverzekeringen/overlijdensrisicoverzekering-van-asr"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Minimale/maximale looptijd niet gevonden."
+    },
+    "instap": {
+     "waarde": "+ Instapleeftijd 18 tot 70 jaar",
+     "bron": [
+      "https://www.asr.nl/verzekeringen/medische-beoordeling-bij-levensverzekering",
+      "https://www-a.asr.nl/verzekeringen/levensverzekeringen/overlijdensrisicoverzekering-van-asr"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Uit zoekfragment; pagina zelf niet leesbaar."
+    },
+    "medisch": {
+     "waarde": "~ Altijd digitale gezondheidsverklaring; keuring door arts boven € 328.131 (of steekproef), door internist vanaf € 1.000.000",
+     "bron": [
+      "https://www.asr.nl/verzekeringen/medische-beoordeling-bij-levensverzekering"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "De grens van € 328.131 lijkt gekoppeld aan de vragengrens van het Protocol Verzekeringskeuringen en kan jaarlijks wijzigen; controleer de actuele waarde. Uitkomsten: normaal, met extra voorwaarden, verhoogde premie, tijdelijk niet of afwijzing."
+    },
+    "roken": {
+     "waarde": "~ Lagere premie voor niet-rokers; definitie en rookvrije periode niet gepubliceerd",
+     "bron": [
+      "https://www.asr.nl/verzekeringen/levensverzekeringen/overlijdensrisicoverzekering"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Geen openbare definitie (e-sigaret, periode) gevonden."
+    },
+    "verhogen": {
+     "waarde": "- Verhogen altijd met nieuwe gezondheidsverklaring",
+     "bron": [
+      "https://www.asr.nl/verzekeringen/levensverzekeringen/wijzigen"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Pagina gaat over levensverzekeringen algemeen; geen uitzonderingen voor levensgebeurtenissen gevonden."
+    },
+    "uitsluit": {
+     "waarde": "~ Zelfdoding binnen 1 jaar: alleen premierestitutie, binnen 2 jaar beperkte/geen uitkering; bijzondere regels voor oorlog, militaire inzet en terrorisme (NHT)",
+     "bron": [
+      "https://www.asr.nl/verzekeringen/levensverzekeringen/overlijdensrisicoverzekering"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Bij oorlog in Nederland wordt volgens fragment het verzekerd bedrag op 90% gesteld; bij terrorisme geldt het Clausuleblad terrorismedekking van de NHT."
+    },
+    "beeindig": {
+     "waarde": "~ Per premievervaldag te stoppen (maandelijks of jaarlijks); zonder afkoopwaarde geen uitkering, geen premierestitutie",
+     "bron": [
+      "https://www.asr.nl/verzekeringen/levensverzekeringen/overlijdensrisicoverzekering/je-overlijdensrisicoverzekering-stopzetten"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Bij (oudere) polissen met afkoopwaarde wordt de opgebouwde waarde minus € 100 uitgekeerd. Stoppen via adviseur of Mijn a.s.r."
+    },
+    "verpand": {
+     "waarde": "+ Verpanding aan geldverstrekker mogelijk; standaard of eigen begunstiging",
+     "bron": [
+      "https://www.asr.nl/verzekeringen/levensverzekeringen/verpanding",
+      "https://www.asr.nl/verzekeringen/levensverzekeringen/overlijdensrisicoverzekering/begunstiging"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Standaardvolgorde: partner, kinderen, erfgenamen. Bij verpanding is voor stoppen toestemming van de geldverstrekker nodig."
+    },
+    "premieduur": {
+     "waarde": "~ Vaste premie per maand (of jaar)",
+     "bron": [
+      "https://www.asr.nl/verzekeringen/levensverzekeringen/overlijdensrisicoverzekering",
+      "https://www.asr.nl/verzekeringen/levensverzekeringen/overlijdensrisicoverzekering/je-overlijdensrisicoverzekering-stopzetten"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Verkorte premieduur of koopsom niet bevestigd voor het huidige product."
+    }
+   }
+  },
+  {
+   "naam": "Centraal Beheer",
+   "url": "https://www.centraalbeheer.nl/voor-adviseurs/overlijdensrisicoverzekering",
+   "domeinen": [
+    "centraalbeheer.nl"
+   ],
+   "documenten": [
+    {
+     "titel": "Productvoorwaarden Overlijdensrisicoverzekering (vaste premie) ORV25 CB",
+     "url": "https://www.centraalbeheer.nl/-/media/files/prive/verzekeringen/orv/productvoorwaarden-overlijdensrisicoverzekering-vaste-premie.pdf",
+     "versie": "ORV25"
+    },
+    {
+     "titel": "Uitleg over medische beoordeling ORV",
+     "url": "https://www.centraalbeheer.nl/-/media/files/prive/verzekeringen/orv/uitleg-over-medische-beoordeling.pdf",
+     "versie": "onbekend"
+    },
+    {
+     "titel": "De vragen van onze gezondheidsverklaring",
+     "url": "https://www.centraalbeheer.nl/-/media/files/prive/verzekeringen/orv/de-vragen-van-onze-gezondheidsverklaring.pdf",
+     "versie": "onbekend"
+    }
+   ],
+   "criteria": {
+    "vormen": {
+     "waarde": "+ Gelijkblijvend, lineair dalend en annuïtair dalend (eigen percentage); één of twee verzekerden of kruislings",
+     "bron": [
+      "https://www.centraalbeheer.nl/verzekeringen/overlijdensrisicoverzekering/uitkeringsvormen",
+      "https://www.centraalbeheer.nl/verzekeringen/overlijdensrisicoverzekering/kies-de-juiste-overlijdensrisicoverzekering"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Bij een gezamenlijke polis heeft iedere verzekerde een eigen verzekerd kapitaal. Verzekerd bedrag € 10.000 tot € 2.000.000. Sinds oktober (jaar n.b.) ook via adviseurs, aan te vragen via HDN of het adviseursportaal; ook variant met twee verzekeringnemers."
+    },
+    "looptijd": {
+     "waarde": "~ Eindleeftijd uiterlijk 75 jaar; maximale looptijd afhankelijk van leeftijd",
+     "bron": [
+      "https://www.centraalbeheer.nl/verzekeringen/overlijdensrisicoverzekering/looptijd-overlijdensrisicoverzekering"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Bij verlenging kan een nieuwe medische beoordeling nodig zijn."
+    },
+    "instap": {
+     "waarde": "~ Verzekerde maximaal 68 jaar bij aanvang; verzekeringnemer minimaal 18 jaar",
+     "bron": [
+      "https://www.centraalbeheer.nl/verzekeringen/overlijdensrisicoverzekering/looptijd-overlijdensrisicoverzekering",
+      "https://www.centraalbeheer.nl/verzekeringen/overlijdensrisicoverzekering"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Zoekfragment noemt een minimumleeftijd van de verzekerde van 15 jaar; niet zelf in de bron gelezen."
+    },
+    "medisch": {
+     "waarde": "+ Online gezondheidsverklaring; < 50 jr keuring pas vanaf € 750.001, ≥ 50 jr standaardkeuring € 352.201-750.000",
+     "bron": [
+      "https://www.centraalbeheer.nl/voor-adviseurs/actueel/versoepelingorv",
+      "https://www.centraalbeheer.nl/voor-adviseurs/overlijdensrisicoverzekering/ruime-acceptatie"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "middel",
+     "toelichting": "Keuringsgrenzen verruimd per 22 december (jaar niet zichtbaar in fragment). Boven € 750.000 uitgebreide keuring. 96% geaccepteerd tegen normale premie; ook bij gevaarlijk beroep vrijwel altijd mogelijk. Regeling ex-kankerpatiënten wordt toegepast."
+    },
+    "roken": {
+     "waarde": "~ Niet-roker: nooit of minimaal 2 jaar gestopt; e-sigaret, vapen en shisha-pen gelden als roken",
+     "bron": [
+      "https://www.centraalbeheer.nl/-/media/files/prive/verzekeringen/orv/productvoorwaarden-overlijdensrisicoverzekering-vaste-premie.pdf"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "hoog",
+     "toelichting": "Wie als niet-roker verzekerd is en niet meldt dat hij is gaan roken, krijgt bij overlijden 50% van het verzekerd bedrag."
+    },
+    "verhogen": {
+     "waarde": "- Verhogen kan tot 68 jaar, altijd met nieuwe medische beoordeling",
+     "bron": [
+      "https://www.centraalbeheer.nl/verzekeringen/overlijdensrisicoverzekering/aanpassen"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "uitsluit": {
+     "waarde": "~ Geen uitkering bij zelfdoding binnen 2 jaar na ingang; uitsluitingen voor oorlog/militaire acties en terrorisme en fraude",
+     "bron": [
+      "https://www.centraalbeheer.nl/-/media/files/prive/verzekeringen/orv/productvoorwaarden-overlijdensrisicoverzekering-vaste-premie.pdf"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "middel",
+     "toelichting": "Samenvatting van het zoekfragment; de precieze reikwijdte van de terrorisme-uitsluiting (NHT-clausule?) niet zelf gelezen."
+    },
+    "beeindig": {
+     "waarde": "+ Op elke dag van de maand op te zeggen; teveel betaalde premie deels terug",
+     "bron": [
+      "https://www.centraalbeheer.nl/verzekeringen/overlijdensrisicoverzekering/opzeggen"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Bij verpanding alleen met schriftelijke toestemming van de pandhouder."
+    },
+    "verpand": {
+     "waarde": "+ Verpanding aan geldverstrekker mogelijk",
+     "bron": [
+      "https://www.centraalbeheer.nl/verzekeringen/overlijdensrisicoverzekering/opzeggen",
+      "https://www.centraalbeheer.nl/verzekeringen/overlijdensrisicoverzekering/aanpassen"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Wijzigen of stoppen van een verpande polis alleen met toestemming van de pandhouder."
+    },
+    "premieduur": {
+     "waarde": "+ Keuze vaste premie of variabele (leeftijdsafhankelijke) premie, maandelijks",
+     "bron": [
+      "https://www.centraalbeheer.nl/verzekeringen/overlijdensrisicoverzekering/variabele-premie",
+      "https://www.centraalbeheer.nl/voor-adviseurs/overlijdensrisicoverzekering/leeftijdsafhankelijke-premie"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Variabele premie start lager en loopt op met de leeftijd."
+    }
+   }
+  },
+  {
+   "naam": "Allianz",
+   "url": "https://www.allianz.nl/particulier/producten/overlijdensrisicoverzekering.html",
+   "domeinen": [
+    "allianz.nl",
+    "orv.allianz.nl"
+   ],
+   "documenten": [
+    {
+     "titel": "Handleiding gezondheidsverklaring Allianz Overlijdensrisicoverzekering",
+     "url": "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/3/300158-11.pdf",
+     "versie": "onbekend"
+    },
+    {
+     "titel": "Brochure Financiële bescherming voor de mensen van wie je houdt",
+     "url": "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/l/L3764.pdf",
+     "versie": "onbekend"
+    },
+    {
+     "titel": "Procesbeschrijving offerte en aanvraag",
+     "url": "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/3/300008-218.pdf",
+     "versie": "onbekend"
+    }
+   ],
+   "criteria": {
+    "vormen": {
+     "waarde": "+ Gelijkblijvend, lineair dalend en annuïtair dalend; twee verzekerden standaard kruislings",
+     "bron": [
+      "https://www.allianz.nl/particulier/producten/overlijdensrisicoverzekering.html",
+      "https://www.allianz.nl/particulier/contact/leven/veelgestelde-vragen.html"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Bij twee verzekeringnemers moeten beiden ook verzekerde zijn (en omgekeerd); de polis wordt dan standaard kruislings opgemaakt."
+    },
+    "looptijd": {
+     "waarde": "~ Looptijd 5 tot 57 jaar; eindleeftijd max. 75 jaar (bij hypotheek via adviseur max. 40 jaar looptijd)",
+     "bron": [
+      "https://www.allianz.nl/particulier/producten/overlijdensrisicoverzekering.html",
+      "https://www.allianz.nl/particulier/producten/overlijdensrisicoverzekering/overlijdensrisicoverzekering-bij-hypotheek.html"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Fragment noemt bij hypotheek max. 30 jaar rechtstreeks en 40 jaar via adviseur; dit wijkt af van de algemene 57 jaar, controleer in de voorwaarden."
+    },
+    "instap": {
+     "waarde": "~ Instapleeftijd 18 tot 65/66 jaar",
+     "bron": [
+      "https://www.allianz.nl/particulier/producten/overlijdensrisicoverzekering.html"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Bronnen noemen zowel 'tot 66 jaar' als '18 tot 65 jaar'."
+    },
+    "medisch": {
+     "waarde": "~ Gezondheidsverklaring tot € 750.000 onder 50 jaar; vanaf 50 jaar of hogere bedragen aanvullend onderzoek",
+     "bron": [
+      "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/3/300158-11.pdf",
+      "https://www.allianz.nl/particulier/contact/leven/veelgestelde-vragen.html"
+     ],
+     "brondatum": null,
+     "zekerheid": "middel",
+     "toelichting": "Soms gericht onderzoek (bloed, urine, bloeddruk); bij hogere bedragen bloedonderzoek/hiv-test mogelijk. Ex-kankerpatiënten: schone-lei-beleid onder de vragengrens (fragment noemt € 278.004, oud bedrag). Datum handleiding onbekend."
+    },
+    "roken": {
+     "waarde": "~ Niet-roker: 2 jaar niet gerookt; e-sigaret/vapen geldt als roken",
+     "bron": [
+      "https://www.allianz.nl/particulier/producten/overlijdensrisicoverzekering.html"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Gaat de verzekerde roken en wordt dit niet gemeld, dan wordt bij overlijden 50% van het verzekerd bedrag uitgekeerd."
+    },
+    "terminaal": {
+     "waarde": "+ Standaard uitkering van 50% van het verzekerd kapitaal (max. € 100.000) bij levensverwachting ≤ 1 jaar",
+     "bron": [
+      "https://www.allianz.nl/adviseur/nieuwsberichten/standaard-dekking-bij-terminale-ziekte-met-onze-orv.html"
+     ],
+     "brondatum": "2020-12",
+     "zekerheid": "middel",
+     "toelichting": "Voorwaarden: wachttijd 2 jaar na ingang, polis loopt nog minimaal 1 jaar, verzekerde niet ouder dan 64. Geldt voor polissen aangevraagd vanaf 4 december 2020, zonder extra kosten. Bron is een nieuwsbericht uit 2020."
+    },
+    "verhogen": {
+     "waarde": "- Verhogen altijd met nieuwe gezondheidsverklaring",
+     "bron": [
+      "https://www.allianz.nl/particulier/producten/overlijdensrisicoverzekering.html"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "uitsluit": {
+     "waarde": "~ Geen uitkering bij zelfdoding binnen 2 jaar en bij deelname aan oorlog waar Nederland niet aan deelneemt of aan gewapende opstand",
+     "bron": [
+      "https://www.allianz.nl/particulier/producten/overlijdensrisicoverzekering.html",
+      "https://www.allianz.nl/particulier/contact/leven/veelgestelde-vragen.html"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "beeindig": {
+     "waarde": "+ Altijd kosteloos te stoppen",
+     "bron": [
+      "https://www.allianz.nl/particulier/contact/leven/veelgestelde-vragen.html"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "verpand": {
+     "waarde": "+ Verpanding aan hypotheekverstrekker mogelijk; afwijkende begunstiging mogelijk",
+     "bron": [
+      "https://www.allianz.nl/particulier/producten/overlijdensrisicoverzekering/overlijdensrisicoverzekering-bij-hypotheek.html",
+      "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/4/400082-91.pdf"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "premieduur": {
+     "waarde": "+ Keuze uit vaste of variabele premie",
+     "bron": [
+      "https://www.allianz.nl/particulier/producten/overlijdensrisicoverzekering/overlijdensrisicoverzekering-variable-of-gelijkblijvende-premie.html"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    }
+   }
+  },
+  {
+   "naam": "Scildon",
+   "url": "https://www.scildon.nl/overlijdensrisicoverzekering/lifestyle-orv",
+   "domeinen": [
+    "scildon.nl"
+   ],
+   "documenten": [
+    {
+     "titel": "Toelichting bij de gezondheidsverklaring voor een levensverzekering",
+     "url": "https://www.scildon.nl/download/gezondheidsverklaring-zonder-ao",
+     "versie": "onbekend"
+    }
+   ],
+   "criteria": {
+    "vormen": {
+     "waarde": "+ Gelijkblijvend, annuïtair en lineair dalend; partner meeverzekeren mogelijk; variant Stoppen met Roken ORV",
+     "bron": [
+      "https://www.scildon.nl/overlijdensrisicoverzekering/lifestyle-orv",
+      "https://www.scildon.nl/overlijdensrisicoverzekering/gelijkblijvende-overlijdensrisicoverzekering"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Bij een gezamenlijke verzekering ontvangt de langstlevende het bedrag bij overlijden van de ander. Verzekerd bedrag volgens fragment € 50.000 tot € 5.000.000."
+    },
+    "looptijd": {
+     "waarde": "+ Eindleeftijd t/m 80 jaar (niet-roker) of 75 jaar (roker); looptijd 2 tot 35 jaar",
+     "bron": [
+      "https://www.scildon.nl/veelgestelde-vragen/orv",
+      "https://www.scildon.nl/overlijdensrisicoverzekering/lifestyle-orv"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Looptijdgrenzen uit een FAQ-fragment; niet in de voorwaarden zelf bevestigd."
+    },
+    "instap": {
+     "waarde": "+ Vanaf 15 jaar; max. 70 jaar (niet-roker) of 65 jaar (roker)",
+     "bron": [
+      "https://www.scildon.nl/veelgestelde-vragen/orv"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "medisch": {
+     "waarde": "~ 16-49 jr: basis-GV tot € 500.000, uitgebreide GV tot € 750.000, daarboven keuring; vanaf 50 jr keuring vanaf € 500.001",
+     "bron": [
+      "https://www.scildon.nl/simpel-regelen/medische-beoordeling/gezondheidsverklaring-of-medische-keuring"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Gelden voor risicokapitaal zonder premievrijstelling bij arbeidsongeschiktheid; tot € 10 mln met volledige keuring. ORV's bij Scildon in de afgelopen 3 jaar tellen mee. Schone-lei-regeling na 10 jaar kankervrij. Bij een ongunstige digitale GV volgt een keuring."
+    },
+    "roken": {
+     "waarde": "+ Niet-roker: 24 maanden geen nicotine (incl. vape, pleisters, kauwgom); Stoppen met Roken ORV: niet-rokerstarief bij stoppen binnen 9 maanden",
+     "bron": [
+      "https://www.scildon.nl/overlijdensrisicoverzekering/lifestyle-orv/stoppen-met-roken",
+      "https://www.scildon.nl/artikelen/7-vragen-over-de-stoppen-met-rokenregeling"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Onjuiste rookopgave kan gevolgen hebben voor de uitkering."
+    },
+    "terminaal": {
+     "waarde": "+ Deel van de uitkering bij leven bij terminale ziekte",
+     "bron": [
+      "https://www.scildon.nl/overlijdensrisicoverzekering/lifestyle-orv"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Hoogte, levensverwachtingsgrens en maximum niet in fragment gevonden."
+    },
+    "verhogen": {
+     "waarde": "+ Verhogen zonder medische waarborgen: 1-15% per keer, eerste keer ≥ 1 jaar na ingang, daarna 12-60 maanden na vorige, verzekerden < 60 jaar",
+     "bron": [
+      "https://www.scildon.nl/veelgestelde-vragen"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Niet gekoppeld aan levensgebeurtenissen; voorwaarden lijken cumulatief, controleer de polisvoorwaarden."
+    },
+    "beeindig": {
+     "waarde": "~ Opzeggen via Mijn Scildon of e-mail; bij verpanding toestemming pandhouder nodig",
+     "bron": [
+      "https://www.scildon.nl/simpel-regelen/opzeggen"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Premierestitutie niet gevonden."
+    },
+    "verpand": {
+     "waarde": "+ Verpanding aan hypotheekverstrekker mogelijk; ORV mee te nemen naar nieuwe hypotheek",
+     "bron": [
+      "https://www.scildon.nl/simpel-regelen/opzeggen",
+      "https://www.scildon.nl/overlijdensrisicoverzekering/overlijdensrisicoverzekering-meenemen-naar-nieuwe-hypotheek"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Pandhouder heeft eerste recht op de uitkering."
+    },
+    "premieduur": {
+     "waarde": "~ Premie per maand of per jaar",
+     "bron": [
+      "https://www.scildon.nl/overlijdensrisicoverzekering"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": ""
+    }
+   }
+  },
+  {
+   "naam": "Dazure (GoedIdee)",
+   "url": "https://www.dazure.nl/goedidee-overlijdensrisicoverzekering",
+   "domeinen": [
+    "dazure.nl"
+   ],
+   "documenten": [
+    {
+     "titel": "Voorwaarden GoedIdee Overlijdensrisicoverzekering",
+     "url": "https://www.dazure.nl/sites/dazure/files/Downloads/Voorwaarden%20GoedIdee%20Overlijdensrisicoverzekering.pdf",
+     "versie": "202410"
+    },
+    {
+     "titel": "Verzekeringskaart GoedIdee Overlijdensrisicoverzekering",
+     "url": "https://www.dazure.nl/sites/dazure/files/Downloads/Verzekeringskaart%20GoedIdee%20Overlijdensrisicoverzekering.pdf",
+     "versie": "onbekend"
+    },
+    {
+     "titel": "Productkaart GoedIdee Light Overlijdensrisicoverzekering",
+     "url": "https://www.dazure.nl/assets/files/Productkaart-GoedIdee-light-Overlijdensrisicoverzekering.pdf",
+     "versie": "onbekend"
+    },
+    {
+     "titel": "Voorwaarden GoedIdee Eenjarig Overlijdensrisicoverzekering",
+     "url": "https://www.dazure.nl/assets/files/Voorwaardenset-GoedIdee-Eenjarig-Overlijdensrisicoverzekering-GIES-042025.pdf",
+     "versie": "GIES 04-2025"
+    },
+    {
+     "titel": "Medische acceptatie & beslisboom",
+     "url": "https://www.dazure.nl/sites/dazure/files/Medische%20acceptatie%20document_0.pdf",
+     "versie": "onbekend"
+    }
+   ],
+   "criteria": {
+    "vormen": {
+     "waarde": "+ Gelijkblijvend, lineair dalend en annuïtair dalend (1-12%); combinatie dalend + gelijkblijvend op één polis",
+     "bron": [
+      "https://www.dazure.nl/goedidee-overlijdensrisicoverzekering",
+      "https://www.dazure.nl/sites/dazure/files/Downloads/Voorwaarden%20GoedIdee%20Overlijdensrisicoverzekering.pdf"
+     ],
+     "brondatum": "2024-10",
+     "zekerheid": "hoog",
+     "toelichting": "Dalende dekking kan dalen tot € 0 of tot een restbedrag (min. € 10.000), waardoor een combinatie ontstaat. Ook varianten GoedIdee Light (€ 10.000-2.500.000), GoedIdee Eenjarig en GewoonIdee Hypotheek ORV (risicodrager De Goudse of Allianz). Dazure is volmacht; GoedIdee is het adviseurslabel."
+    },
+    "looptijd": {
+     "waarde": "+ Looptijd 1 tot 50 jaar; eindleeftijd max. 80 jaar",
+     "bron": [
+      "https://www.dazure.nl/goedidee-overlijdensrisicoverzekering",
+      "https://www.dazure.nl/assets/files/Productkaart-GoedIdee-light-Overlijdensrisicoverzekering.pdf"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "instap": {
+     "waarde": "~ Instapleeftijd 18 tot 65 jaar",
+     "bron": [
+      "https://www.dazure.nl/goedidee-overlijdensrisicoverzekering"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "medisch": {
+     "waarde": "~ Digitale gezondheidsverklaring; keuring afhankelijk van bedrag en leeftijd (Eenjarig: > € 750.000 tot 55 jr)",
+     "bron": [
+      "https://www.dazure.nl/assets/files/Productkaart-GoedIdee-ORV-eenjarig.pdf",
+      "https://www.dazure.nl/sites/dazure/files/Medische%20acceptatie%20document_0.pdf"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "middel",
+     "toelichting": "Keuringsgrens voor de reguliere GoedIdee ORV niet gevonden; de genoemde grens geldt de Eenjarig-variant. Bij een schone gezondheidsverklaring max. 2 werkdagen doorlooptijd; algoritmische medische acceptatie. Geen financiële acceptatie tot € 750.000 totaal."
+    },
+    "roken": {
+     "waarde": "~ Niet-roker: minimaal 24 maanden niet gerookt; bij onjuiste opgave 50% uitkering",
+     "bron": [
+      "https://www.dazure.nl/goedidee-overlijdensrisicoverzekering",
+      "https://www.dazure.nl/sites/dazure/files/Downloads/Voorwaarden%20GoedIdee%20Overlijdensrisicoverzekering.pdf"
+     ],
+     "brondatum": "2024-10",
+     "zekerheid": "hoog",
+     "toelichting": "Behandeling e-sigaret niet in fragment gevonden."
+    },
+    "terminaal": {
+     "waarde": "+ Voorschot van 50% van het verzekerd bedrag (max. € 50.000) bij levensverwachting ≤ 3 maanden, tot 65 jaar",
+     "bron": [
+      "https://www.dazure.nl/goedidee-orv",
+      "https://www.dazure.nl/sites/dazure/files/Downloads/Voorwaarden%20GoedIdee%20Overlijdensrisicoverzekering.pdf"
+     ],
+     "brondatum": "2024-10",
+     "zekerheid": "hoog",
+     "toelichting": "Aan te vragen door de begunstigde."
+    },
+    "verhogen": {
+     "waarde": "+ Optierecht: na het eerste verzekeringsjaar jaarlijks verhogen zonder gezondheidsvragen, tot 55 jaar",
+     "bron": [
+      "https://www.dazure.nl/goedidee-orv"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "hoog",
+     "toelichting": "Niet gekoppeld aan levensgebeurtenissen; maximale verhoging per jaar niet in fragment."
+    },
+    "uitsluit": {
+     "waarde": "~ Geen uitkering bij zelfdoding binnen 2 jaar en bij oorlogshandelingen in niet-Nederlandse krijgsdienst; wereldwijde dekking",
+     "bron": [
+      "https://www.dazure.nl/sites/dazure/files/Downloads/Voorwaarden%20GoedIdee%20Overlijdensrisicoverzekering.pdf"
+     ],
+     "brondatum": "2024-10",
+     "zekerheid": "middel",
+     "toelichting": "Bij oorlog in Nederland wordt de uitkering met 10% verlaagd (Noodwet Financieel Verkeer). Wereldwijde dekking zolang de verzekerde in Nederland woont. Fragment kan deels uit de GewoonIdee-voorwaarden komen."
+    },
+    "beeindig": {
+     "waarde": "~ Bedenktijd 30 dagen met premierestitutie; tussentijds stoppen mogelijk, bij verpanding met toestemming pandhouder",
+     "bron": [
+      "https://www.dazure.nl/sites/dazure/files/Downloads/Voorwaarden%20GoedIdee%20Overlijdensrisicoverzekering.pdf"
+     ],
+     "brondatum": "2024-10",
+     "zekerheid": "middel",
+     "toelichting": "Fragment noemt teruggave van een opgebouwd premiedepot bij tussentijds stoppen; mogelijk alleen bij varianten met premiedepot/verkorte premieduur."
+    },
+    "verpand": {
+     "waarde": "+ Verpanding aan hypotheekverstrekker mogelijk (verpandingsclausule op polisblad)",
+     "bron": [
+      "https://www.dazure.nl/sites/dazure/files/Downloads/Voorwaarden%20GoedIdee%20Overlijdensrisicoverzekering.pdf"
+     ],
+     "brondatum": "2024-10",
+     "zekerheid": "hoog",
+     "toelichting": "Uitkering gaat naar de pandhouder."
+    },
+    "premieduur": {
+     "waarde": "+ Vaste premie per maand, kwartaal, halfjaar of jaar; positieve en-bloc-clausule",
+     "bron": [
+      "https://www.dazure.nl/assets/files/Productkaart-GoedIdee-ORV-eenjarig.pdf",
+      "https://www.dazure.nl/goedidee-orv"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "middel",
+     "toelichting": "Betaaltermijnen uit de productkaart van de Eenjarig-variant. Premie wordt tijdens de looptijd nooit verhoogd; positieve en-bloc-clausule kan premie verlagen."
+    }
+   }
+  },
+  {
+   "naam": "Credit Life (voorheen Callas)",
+   "url": "https://www.creditlife.nl/overlijdensrisicoverzekering/",
+   "domeinen": [
+    "creditlife.nl"
+   ],
+   "documenten": [
+    {
+     "titel": "Credit Life Overlijdensrisicoverzekering Voorwaarden",
+     "url": "https://www.creditlife.nl/wp-content/uploads/2023/12/CL_ORV_Voorwaarden-1.pdf",
+     "versie": "2023-12 (uploaddatum)"
+    },
+    {
+     "titel": "Credit Life Overlijdensrisicoverzekering – Informatie voor het intermediair",
+     "url": "https://www.creditlife.nl/wp-content/uploads/2023/03/CL-ORV_Informatieblad_v3.0_20220401.pdf",
+     "versie": "v3.0, 1 april 2022"
+    }
+   ],
+   "criteria": {
+    "vormen": {
+     "waarde": "+ Gelijkblijvend, lineair dalend en annuïtair dalend",
+     "bron": [
+      "https://www.creditlife.nl/wp-content/uploads/2023/03/CL-ORV_Informatieblad_v3.0_20220401.pdf"
+     ],
+     "brondatum": "2022-04",
+     "zekerheid": "middel",
+     "toelichting": "Callas-verzekeringen vallen onder Credit Life International. Aanvragen via adviseur (MyCreditLife of HDN)."
+    },
+    "looptijd": {
+     "waarde": "+ Looptijd tot 50 jaar; eindleeftijd max. 85 jaar",
+     "bron": [
+      "https://www.creditlife.nl/wp-content/uploads/2023/03/CL-ORV_Informatieblad_v3.0_20220401.pdf"
+     ],
+     "brondatum": "2022-04",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "instap": {
+     "waarde": "~ Minimale instapleeftijd 18 jaar",
+     "bron": [
+      "https://www.creditlife.nl/wp-content/uploads/2023/03/CL-ORV_Informatieblad_v3.0_20220401.pdf"
+     ],
+     "brondatum": "2022-04",
+     "zekerheid": "middel",
+     "toelichting": "Maximale instapleeftijd niet gevonden."
+    },
+    "medisch": {
+     "waarde": "~ Gezondheidsverklaring tot € 600.000 (tot 50 jr) of € 350.000 (vanaf 50 jr); daarboven ook medisch onderzoek",
+     "bron": [
+      "https://www.creditlife.nl/wp-content/uploads/2023/03/CL-ORV_Informatieblad_v3.0_20220401.pdf",
+      "https://www.creditlife.nl/medische-acceptatie/"
+     ],
+     "brondatum": "2022-04",
+     "zekerheid": "middel",
+     "toelichting": "Tot afronding van de medische acceptatie alleen dekking bij overlijden door een ongeval."
+    },
+    "roken": {
+     "waarde": "~ Niet-roker: 2 jaar geen nicotinehoudende producten",
+     "bron": [
+      "https://www.creditlife.nl/wp-content/uploads/2023/12/CL_ORV_Voorwaarden-1.pdf",
+      "https://www.creditlife.nl/faq/ik-ben-opnieuw-gaan-roken-wat-nu/"
+     ],
+     "brondatum": "2023",
+     "zekerheid": "middel",
+     "toelichting": "Weer gaan roken: niet-rokerskorting vervalt."
+    },
+    "uitsluit": {
+     "waarde": "~ Geen uitkering bij zelfdoding (of poging) binnen 2 jaar na ingang",
+     "bron": [
+      "https://www.creditlife.nl/wp-content/uploads/2023/12/CL_ORV_Voorwaarden-1.pdf"
+     ],
+     "brondatum": "2023",
+     "zekerheid": "middel",
+     "toelichting": "Euthanasie volgens de wet is gedekt."
+    },
+    "beeindig": {
+     "waarde": "~ Maandelijks opzegbaar; geen afkoopwaarde",
+     "bron": [
+      "https://www.creditlife.nl/wp-content/uploads/2023/12/CL_ORV_Voorwaarden-1.pdf",
+      "https://www.creditlife.nl/faq/hoe-kan-mijn-verzekering-bij-credit-life-opzeggen/"
+     ],
+     "brondatum": "2023",
+     "zekerheid": "middel",
+     "toelichting": "Bedenktijd 30 dagen na ingang."
+    },
+    "verpand": {
+     "waarde": "+ Verpanding mogelijk; wijzigen/stoppen met toestemming pandhouder",
+     "bron": [
+      "https://www.creditlife.nl/wp-content/uploads/2023/12/CL_ORV_Voorwaarden-1.pdf"
+     ],
+     "brondatum": "2023",
+     "zekerheid": "middel",
+     "toelichting": ""
+    }
+   }
+  },
+  {
+   "naam": "TAF",
+   "url": "https://www.taf.nl/verzekeringen/overlijdensrisico",
+   "domeinen": [
+    "taf.nl",
+    "orv.taf.nl"
+   ],
+   "documenten": [
+    {
+     "titel": "Het blauwe boekje – Alles wat je wilt weten over overlijdensrisico",
+     "url": "https://www.taf.nl/sites/default/files/files/TAF_blauwBoekje_juli%202022%20ORV.pdf",
+     "versie": "juli 2022"
+    },
+    {
+     "titel": "TAF Overlijdensrisicoverzekering – Consumentenbrochure",
+     "url": "https://www.taf.nl/sites/default/files/files/ORV/Consumentenbrochure%20ORV.pdf",
+     "versie": "onbekend"
+    },
+    {
+     "titel": "Polisvoorwaarden TAF Special Overlijdensrisicoverzekering (BNP Paribas Cardif)",
+     "url": "https://www.taf.nl/sites/default/files/files/ORV/BNP%20Paribas%20Cardif/TAF-PVW-2203-ORV-BNPS-20220209-a.pdf",
+     "versie": "2203 (9 februari 2022)"
+    },
+    {
+     "titel": "Algemene verzekeringsvoorwaarden TAF Personal Overlijdensrisicoverzekering (Chubb)",
+     "url": "https://www.taf.nl/sites/default/files/files/ORV/Chubb/TAF-PVW-0909-ORV-ACE-20210224-a.pdf",
+     "versie": "24 februari 2021"
+    },
+    {
+     "titel": "Welke ORV kies jij voor je klant? (vergelijking)",
+     "url": "https://www.taf.nl/sites/default/files/files/vergelijking_ORV.pdf",
+     "versie": "onbekend"
+    }
+   ],
+   "criteria": {
+    "vormen": {
+     "waarde": "+ Gelijkblijvend, lineair en annuïtair dalend; combinatie dalend + gelijkblijvend op één polis",
+     "bron": [
+      "https://www.taf.nl/sites/default/files/files/TAF_blauwBoekje_juli%202022%20ORV.pdf",
+      "https://www.taf.nl/verzekeringen/overlijdensrisico"
+     ],
+     "brondatum": "2022-07",
+     "zekerheid": "middel",
+     "toelichting": "TAF is gevolmachtigde; risicodragers o.a. iptiQ, Quantum Leben, BNP Paribas Cardif en Chubb Life (productlijnen Special, Personal, Maatwerk). Alleen via adviseurs."
+    },
+    "looptijd": {
+     "waarde": "+ Looptijd 1 tot 50 jaar",
+     "bron": [
+      "https://www.taf.nl/sites/default/files/files/TAF_blauwBoekje_juli%202022%20ORV.pdf"
+     ],
+     "brondatum": "2022-07",
+     "zekerheid": "middel",
+     "toelichting": "Maximale eindleeftijd niet expliciet gevonden; keuringstabel loopt tot 75 jaar."
+    },
+    "instap": {
+     "waarde": "+ Af te sluiten van 18 tot 75 jaar",
+     "bron": [
+      "https://www.taf.nl/verzekeringen/overlijdensrisico"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Kan per risicodrager verschillen."
+    },
+    "medisch": {
+     "waarde": "+ Online gezondheidsverklaring tot € 750.000 (18-50 jr); 50-75 jr tot € 500.000 (iptiQ/Quantum) of € 352.200 (BNP Paribas Cardif/Chubb)",
+     "bron": [
+      "https://www.taf.nl/over-taf/taf-nieuws/grenzen-medische-keuring-taf-overlijdensrisicoverzekering-verhoogd"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "middel",
+     "toelichting": "Datum nieuwsbericht niet zichtbaar. Acceptatiegraad 99,92% met herverzekeraar De Hoop voor complexe aandoeningen; slimme gezondheidsverklaring met automatische beoordeling."
+    },
+    "roken": {
+     "waarde": "~ Niet-roker: minimaal 2 jaar aaneengesloten geen tabak of nicotineproducten",
+     "bron": [
+      "https://www.taf.nl/stoppen-met-roken-niet-alleen-voordelig-voor-je-gezondheid-maar-ook-voor-de-premie-van-je"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Omvat sigaretten, sigaren, pijp en nicotinevervangers; e-sigaret niet apart genoemd in fragment."
+    },
+    "terminaal": {
+     "waarde": "+ Standaard vooruitkering 50% van het verzekerd bedrag (max. € 100.000) bij levensverwachting < 12 maanden, tot 65 jaar",
+     "bron": [
+      "https://www.taf.nl/algemeen/nieuwsbrief/standaard-inbegrepen-vooruitkering-bij-terminale-ziekte",
+      "https://www.taf.nl/over-taf/taf-nieuws/taf-orv-verbeterde-voorwaarden"
+     ],
+     "brondatum": "2017-12",
+     "zekerheid": "middel",
+     "toelichting": "Vast te stellen door onafhankelijke arts; standaard in voorwaarden vanaf 12 december 2017."
+    },
+    "verhogen": {
+     "waarde": "+ Optierecht: jaarlijks max. 15% verhogen zonder medische waarborgen",
+     "bron": [
+      "https://www.taf.nl/service-en-contact/veelgestelde-vragen",
+      "https://www.taf.nl/sites/default/files/files/vergelijking_ORV.pdf"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Andere TAF-documenten noemen 20%; percentage verschilt mogelijk per productlijn. Niet gekoppeld aan levensgebeurtenissen."
+    },
+    "uitsluit": {
+     "waarde": "~ Zelfdoding binnen 2 jaar na ingang niet gedekt; bijzondere regeling bij oorlog",
+     "bron": [
+      "https://www.taf.nl/sites/default/files/files/ORV/Chubb/TAF-PVW-0909-ORV-ACE-20210224-a.pdf"
+     ],
+     "brondatum": "2021-02",
+     "zekerheid": "middel",
+     "toelichting": "Uitsluitingen verschillen per risicodrager; controleer de polisvoorwaarden van de gekozen lijn."
+    },
+    "beeindig": {
+     "waarde": "+ Opzeggen via MijnTAF; vooruitbetaalde premie wordt terugbetaald",
+     "bron": [
+      "https://www.taf.nl/algemeen/opzeggen-overlijdensrisicoverzekering"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Geen restitutie bij beëindiging wegens wanbetaling."
+    },
+    "verpand": {
+     "waarde": "+ (Gedeeltelijke) verpanding mogelijk, alleen voor het verplichte hypotheekdeel",
+     "bron": [
+      "https://www.taf.nl/sites/default/files/files/TAF_blauwBoekje_juli%202022%20ORV.pdf"
+     ],
+     "brondatum": "2022-07",
+     "zekerheid": "middel",
+     "toelichting": "Bij verpanding toestemming geldverstrekker nodig voor wijzigingen."
+    },
+    "premieduur": {
+     "waarde": "+ Per maand, per jaar of koopsom; bij dalende dekking kortere premieduur",
+     "bron": [
+      "https://www.taf.nl/sites/default/files/files/TAF_blauwBoekje_juli%202022%20ORV.pdf"
+     ],
+     "brondatum": "2022-07",
+     "zekerheid": "middel",
+     "toelichting": ""
+    }
+   }
+  },
+  {
+   "naam": "Reaal",
+   "url": "https://www.reaal.nl/verzekering/overlijdensrisicoverzekering/medische-beoordeling/",
+   "domeinen": [
+    "reaal.nl"
+   ],
+   "documenten": [
+    {
+     "titel": "Voorwaarden ORV Start",
+     "url": "https://www.reaal.nl/49a27c/siteassets/documents/overlijdensrisicoverzekering/voorwaarden-orv-start.pdf",
+     "versie": "onbekend"
+    },
+    {
+     "titel": "Voorwaarden ORV Senior",
+     "url": "https://www.reaal.nl/49a27c/siteassets/documents/overlijdensrisicoverzekering/voorwaarden-orv-senior.pdf",
+     "versie": "onbekend"
+    }
+   ],
+   "criteria": {
+    "vormen": {
+     "waarde": "~ Gelijkblijvend of dalend verzekerd bedrag; varianten ORV Start en ORV Senior",
+     "bron": [
+      "https://www.reaal.nl/klantenservice/antwoord/overlijdensrisicoverzekering/",
+      "https://www.reaal.nl/verzekering/overlijdensrisicoverzekering/orv-start/automatische-beoordeling/"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Reaal noemt 3 uitkeringsvormen; welke precies niet in fragment. Productdetails (leeftijden, looptijden) niet openbaar gevonden; distributie via adviseur niet eenduidig bevestigd."
+    },
+    "medisch": {
+     "waarde": "~ Vaak volstaat een gezondheidsverklaring; zonder adviseur max. € 500.000 met verkorte gezondheidsverklaring",
+     "bron": [
+      "https://www.reaal.nl/verzekering/overlijdensrisicoverzekering/medische-beoordeling/"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "ORV Start heeft een automatische beoordeling van de aanvraag. Keuringsgrenzen via adviseur niet gevonden."
+    }
+   }
+  },
+  {
+   "naam": "Interpolis",
+   "url": "https://www.interpolis.nl/verzekeren/overlijdensrisicoverzekering",
+   "domeinen": [
+    "interpolis.nl"
+   ],
+   "documenten": [
+    {
+     "titel": "Productvoorwaarden Interpolis Overlijdensrisicoverzekering Vaste premie (IRV20Z)",
+     "url": "https://www.interpolis.nl/-/media/Files/19120063%20PLIP%20-%20ORV%20Productvoorwaarden%20IRV20Z%20Vaste%20premie",
+     "versie": "1685 03-2020"
+    },
+    {
+     "titel": "Productvoorwaarden Interpolis Overlijdensrisicoverzekering Variabele premie (IRV20L)",
+     "url": "https://www.interpolis.nl/-/media/Files/19120065%20PLIP%20-%20ORV%20Productvoorwaarden%20IRV20L%20Variabele%20premie",
+     "versie": "1686 03-2020"
+    }
+   ],
+   "criteria": {
+    "vormen": {
+     "waarde": "~ Gelijkblijvend of dalend verzekerd bedrag; keuze vaste of variabele premie",
+     "bron": [
+      "https://www.interpolis.nl/verzekeren/overlijdensrisicoverzekering/voorwaarden",
+      "https://www.interpolis.nl/verzekeren/overlijdensrisicoverzekering"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Verzekerd bedrag € 10.000 tot € 2.000.000. Verkoop via Rabobank (Achmea-product), niet via onafhankelijke adviseurs."
+    },
+    "looptijd": {
+     "waarde": "~ Eindleeftijd max. 75 jaar",
+     "bron": [
+      "https://www.interpolis.nl/verzekeren/overlijdensrisicoverzekering/voorwaarden"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "instap": {
+     "waarde": "+ Verzekerde 15 tot 67 jaar bij aanvang",
+     "bron": [
+      "https://www.interpolis.nl/verzekeren/overlijdensrisicoverzekering/voorwaarden"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "medisch": {
+     "waarde": "~ Online gezondheidsverklaring; keuring boven € 750.000, of vanaf 50 jaar vanaf € 352.201",
+     "bron": [
+      "https://www.interpolis.nl/service/leven/gezondheidsverklaring/keuring-of-onderzoek",
+      "https://www.interpolis.nl/service/leven/gezondheidsverklaring"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Voorlopige dekking max. 6 maanden, tot € 300.000."
+    },
+    "roken": {
+     "waarde": "~ Roken omvat alle nicotineproducten incl. e-sigaret, kauwgom en pleisters; bij onjuiste opgave 50% uitkering",
+     "bron": [
+      "https://www.interpolis.nl/-/media/Files/19120063%20PLIP%20-%20ORV%20Productvoorwaarden%20IRV20Z%20Vaste%20premie",
+      "https://www.interpolis.nl/service/leven/moet-ik-mijn-rookgedrag-melden-op-de-overlijdensrisicoverzekering"
+     ],
+     "brondatum": "2020-03",
+     "zekerheid": "middel",
+     "toelichting": "Rookvrije periode niet in fragment."
+    },
+    "verhogen": {
+     "waarde": "- Verhogen tot 68 jaar, altijd met nieuwe gezondheidsverklaring",
+     "bron": [
+      "https://www.interpolis.nl/-/media/Files/19120063%20PLIP%20-%20ORV%20Productvoorwaarden%20IRV20Z%20Vaste%20premie"
+     ],
+     "brondatum": "2020-03",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "uitsluit": {
+     "waarde": "~ Geen uitkering bij zelfdoding binnen 2 jaar en bij overlijden door oorlog/gevechtshandelingen",
+     "bron": [
+      "https://www.interpolis.nl/-/media/Files/19120063%20PLIP%20-%20ORV%20Productvoorwaarden%20IRV20Z%20Vaste%20premie"
+     ],
+     "brondatum": "2020-03",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "beeindig": {
+     "waarde": "~ Bedenktijd 30 dagen met premierestitutie; bij verpanding stoppen alleen met toestemming pandhouder",
+     "bron": [
+      "https://www.interpolis.nl/verzekeren/overlijdensrisicoverzekering/voorwaarden",
+      "https://www.interpolis.nl/veelgestelde-vragen/verzekeringen/overlijdensrisicoverzekering"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "verpand": {
+     "waarde": "+ Verpanding aan bank of geldverstrekker mogelijk",
+     "bron": [
+      "https://www.interpolis.nl/veelgestelde-vragen/verzekeringen/overlijdensrisicoverzekering"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "premieduur": {
+     "waarde": "+ Keuze vaste of variabele premie",
+     "bron": [
+      "https://www.interpolis.nl/verzekeren/overlijdensrisicoverzekering"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Eerste premie moet binnen 60 dagen na ingang betaald zijn."
+    }
+   }
+  },
+  {
+   "naam": "DELA",
+   "url": "https://www.dela.nl/verzekeringen/overlijdensrisicoverzekering",
+   "domeinen": [
+    "dela.nl"
+   ],
+   "documenten": [
+    {
+     "titel": "Productkaart DELA LeefdoorPlan (intermediair)",
+     "url": "https://www.dela.nl/-/media/files/intermediair/dlp/d446_w1223_productkaart_dlp.pdf",
+     "versie": "d446 w1223 (december 2023)"
+    },
+    {
+     "titel": "Algemene voorwaarden DELA LeefdoorPlan model 3.1",
+     "url": "https://www.dela.nl/-/media/files/verzekeringen/dlp/d517_w1222_algemene_voorwaarden_dlp_31.pdf",
+     "versie": "model 3.1, geldig vanaf 1 juni 2022"
+    },
+    {
+     "titel": "Toelichting gezondheidsverklaring levensverzekering",
+     "url": "https://www.dela.nl/-/media/files/verzekeringen/d646_nl_w06-25_rgb_folder_toelichting-gezondheidsverklaring.pdf",
+     "versie": "w06-25"
+    }
+   ],
+   "criteria": {
+    "vormen": {
+     "waarde": "+ Gelijkblijvend, lineair en annuïtair dalend; op 1 of 2 levens (uitkering bij eerste overlijden), premiesplitsing mogelijk",
+     "bron": [
+      "https://www.dela.nl/-/media/files/intermediair/dlp/d446_w1223_productkaart_dlp.pdf",
+      "https://www.dela.nl/verzekeringen/overlijdensrisicoverzekering/verzekeringsvorm"
+     ],
+     "brondatum": "2023-12",
+     "zekerheid": "hoog",
+     "toelichting": "Productnaam DELA LeefdoorPlan. Verzekerd bedrag € 10.000 tot € 1.000.000. Premiesplitsing: partners betalen elkaars premie (kruislings effect op één polis)."
+    },
+    "looptijd": {
+     "waarde": "~ Minimaal 10 jaar; eindleeftijd uiterlijk 75 jaar",
+     "bron": [
+      "https://www.dela.nl/verzekeringen/overlijdensrisicoverzekering/bedrag-en-looptijd"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "instap": {
+     "waarde": "~ Verzekerde 16 tot en met 64 jaar; verzekeringnemer vanaf 18 jaar",
+     "bron": [
+      "https://www.dela.nl/verzekeringen/overlijdensrisicoverzekering/bedrag-en-looptijd",
+      "https://www.dela.nl/verzekeringen/overlijdensrisicoverzekering"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "medisch": {
+     "waarde": "~ Gezondheidsverklaring; keuring < 50 jr vanaf € 500.001, ≥ 50 jr boven € 360.000",
+     "bron": [
+      "https://www.dela.nl/verzekeringen/overlijdensrisicoverzekering/gezondheid"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "roken": {
+     "waarde": "~ Niet-rokerstarief na minimaal 24 maanden niet roken, ook tijdens de looptijd aan te vragen",
+     "bron": [
+      "https://www.dela.nl/verzekeringen/overlijdensrisicoverzekering/veelgestelde-vragen"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Behandeling e-sigaret niet gevonden."
+    },
+    "terminaal": {
+     "waarde": "~ Vooruitkering aan begunstigde bij levensverwachting ≤ 3 maanden",
+     "bron": [
+      "https://www.dela.nl/-/media/files/verzekeringen/dlp/d517_w1222_algemene_voorwaarden_dlp_31.pdf"
+     ],
+     "brondatum": "2022-06",
+     "zekerheid": "hoog",
+     "toelichting": "Op verzoek van de verzekeringnemer; verklaring van in Nederland behandelend arts nodig. Hoogte/maximum niet in fragment."
+    },
+    "verhogen": {
+     "waarde": "- Verhogen alleen met nieuwe gezondheidsvragen",
+     "bron": [
+      "https://www.dela.nl/service-en-contact/veelgestelde-vragen/dela-leefdoorplan"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "uitsluit": {
+     "waarde": "~ Geen uitkering bij zelfdoding, tenzij dekking en volledige premiebetaling 2 jaar onafgebroken liepen",
+     "bron": [
+      "https://www.dela.nl/-/media/files/verzekeringen/dlp/d517_w1222_algemene_voorwaarden_dlp_31.pdf"
+     ],
+     "brondatum": "2022-06",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "beeindig": {
+     "waarde": "~ Opzeggen per bericht; geen afkoopwaarde",
+     "bron": [
+      "https://www.dela.nl/verzekeringen/overlijdensrisicoverzekering/opzeggen"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "verpand": {
+     "waarde": "+ Verpanding aan geldverstrekker mogelijk; uitkering direct aan pandhouder",
+     "bron": [
+      "https://www.dela.nl/service-en-contact/veelgestelde-vragen/dela-leefdoorplan"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "premieduur": {
+     "waarde": "+ Per maand, kwartaal, halfjaar of jaar; bij dalende vormen premie tot 5 jaar voor einddatum",
+     "bron": [
+      "https://www.dela.nl/-/media/files/intermediair/dlp/d446_w1223_productkaart_dlp.pdf"
+     ],
+     "brondatum": "2023-12",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    }
+   }
+  },
+  {
+   "naam": "Univé",
+   "url": "https://www.unive.nl/dichtbij/lokaal-advies/financiele-dienstverlening/overlijdensrisicoverzekering",
+   "domeinen": [
+    "unive.nl"
+   ],
+   "documenten": [],
+   "criteria": {
+    "vormen": {
+     "waarde": "~ Gelijkblijvend of (lineair) dalend; partner mee te verzekeren",
+     "bron": [
+      "https://www.unive.nl/hypotheek/overlijdensrisicoverzekering-en-hypotheek",
+      "https://www.unive.nl/dichtbij/marketing/veelgestelde-vragen/overlijdensrisicoverzekering/wat-kost-een-orv"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Verkoop via eigen Univé-adviseurs (Univé Dichtbij), niet via onafhankelijke adviseurs. Risicodrager en productvoorwaarden niet openbaar gevonden."
+    },
+    "medisch": {
+     "waarde": "~ Altijd gezondheidsverklaring (o.a. lengte/gewicht, roken, alcohol); soms medische keuring",
+     "bron": [
+      "https://www.unive.nl/dichtbij/marketing/veelgestelde-vragen/overlijdensrisicoverzekering/is-een-gezondheidsverklaring-altijd-nodig"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Bedrag- of leeftijdsgrenzen niet gepubliceerd."
+    },
+    "roken": {
+     "waarde": "~ Korting voor niet-rokers",
+     "bron": [
+      "https://www.unive.nl/dichtbij/lokaal-advies/financiele-dienstverlening/overlijdensrisicoverzekering"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Definitie en rookvrije periode niet gevonden."
+    },
+    "beeindig": {
+     "waarde": "~ Opzeggen via Mijn Univé op gekozen datum",
+     "bron": [
+      "https://www.unive.nl/klantenservice/opzeggen-of-herroepen"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Algemene opzegpagina, niet ORV-specifiek."
+    }
+   }
+  }
+ ]
+}
