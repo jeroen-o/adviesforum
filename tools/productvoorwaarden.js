@@ -19,7 +19,7 @@ const path = require('path');
 const ROOT = path.join(__dirname, '..');
 const DIR = path.join(ROOT, 'docs', 'productvoorwaarden-onderzoek');
 const UIT = path.join(ROOT, 'data', 'productvoorwaarden.js');
-const VOLGORDE = ['orv', 'aov', 'uitvaart', 'lijfrente', 'krediet'];
+const VOLGORDE = ['orv', 'aov', 'woonlasten', 'uitvaart', 'lijfrente', 'woonverzekering', 'bankgarantie', 'krediet'];
 const VERBODEN = /premie[^.;]{0,25}€|€[^.;]{0,20}premie|premie(?:s)?\s+(?:van|vanaf)\s+\d|\brente\s*(?:van|vanaf)?\s*\d|\bjkp\b|\d\s?%\s*(?:rente|korting|jkp)|\bkorting\b|\bactie\b|cashback/i;
 
 function fout(m) { console.error('productvoorwaarden: ' + m); process.exit(1); }

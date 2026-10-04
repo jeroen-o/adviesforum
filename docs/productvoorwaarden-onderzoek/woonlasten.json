@@ -1,0 +1,481 @@
+{
+ "product": "woonlasten",
+ "titel": "Woonlastenverzekering",
+ "gecontroleerd": "2026-10-04",
+ "criteria": [
+  {
+   "id": "dekking",
+   "naam": "Gedekte risico's",
+   "kort": "Welke risico's gedekt zijn: arbeidsongeschiktheid, werkloosheid of een combinatie, en voor werknemers en/of zelfstandigen.",
+   "waarom": "Bepaalt of de verzekering past bij de arbeidssituatie van de klant en de risico's die de woonlasten bedreigen."
+  },
+  {
+   "id": "wachttijd",
+   "naam": "Eigenrisicoperiode",
+   "kort": "De periode van arbeidsongeschiktheid of werkloosheid voordat de uitkering start.",
+   "waarom": "Moet aansluiten op loondoorbetaling, WW-uitkering en eigen buffer van de klant."
+  },
+  {
+   "id": "duur",
+   "naam": "Uitkeringsduur",
+   "kort": "Maximale uitkeringsduur per claim en in totaal, apart voor arbeidsongeschiktheid en werkloosheid.",
+   "waarom": "Een korte uitkeringsduur dekt vooral de overbruggingsperiode; een lange duur beschermt tegen blijvend inkomensverlies."
+  },
+  {
+   "id": "bedrag",
+   "naam": "Maximaal verzekerd bedrag",
+   "kort": "Maximaal verzekerd maandbedrag en/of maximaal percentage van de bruto woonlasten.",
+   "waarom": "Bepaalt of de volledige woonlasten verzekerd kunnen worden."
+  },
+  {
+   "id": "acceptatie",
+   "naam": "Acceptatie",
+   "kort": "Acceptatievoorwaarden zoals vast dienstverband, minimaal aantal uren, instapleeftijd en gezondheidsverklaring.",
+   "waarom": "Bepaalt of de klant de dekking kan krijgen, bijvoorbeeld bij een tijdelijk contract of op latere leeftijd."
+  },
+  {
+   "id": "carens",
+   "naam": "Carenztijd na ingang",
+   "kort": "Eerste periode na ingang van de verzekering waarin (met name) werkloosheid niet gedekt is.",
+   "waarom": "Voorkomt dat een klant die al ontslag verwacht direct kan claimen; relevant bij timing van afsluiten."
+  },
+  {
+   "id": "eindleeftijd",
+   "naam": "Einde dekking",
+   "kort": "Leeftijd of moment waarop de dekking eindigt.",
+   "waarom": "Moet aansluiten op AOW-leeftijd en de looptijd van de hypotheek."
+  },
+  {
+   "id": "uitsluit",
+   "naam": "Uitsluitingen",
+   "kort": "Uitsluitingen zoals bekende aandoeningen, verwijtbare werkloosheid, einde tijdelijk contract en proeftijd.",
+   "waarom": "Bepaalt in welke situaties ondanks inkomensverlies geen uitkering volgt."
+  },
+  {
+   "id": "beeindig",
+   "naam": "Looptijd en opzegbaarheid",
+   "kort": "Looptijd van de verzekering en mogelijkheid om tussentijds op te zeggen.",
+   "waarom": "Relevant bij oversluiten, verkoop van de woning of gewijzigde arbeidssituatie."
+  }
+ ],
+ "aanbieders": [
+  {
+   "naam": "Credit Life",
+   "url": "https://www.creditlife.nl/woonlastenverzekering/",
+   "domeinen": [
+    "creditlife.nl"
+   ],
+   "documenten": [
+    {
+     "titel": "Credit Life Woonlastenverzekering - Voorwaarden",
+     "url": "https://www.creditlife.nl/wp-content/uploads/2024/05/CL_WLV_Voorwaarden.pdf",
+     "versie": "2024-05 (uploaddatum)"
+    },
+    {
+     "titel": "Credit Life Woonlastenverzekering - Informatie voor het intermediair",
+     "url": "https://www.creditlife.nl/wp-content/uploads/2024/05/CL_WLV_Informatieblad.pdf",
+     "versie": "2024-05 (uploaddatum)"
+    }
+   ],
+   "criteria": {
+    "dekking": {
+     "waarde": "~ AO (Basis: alleen ongeval; Compleet: ziekte en ongeval); Compleet Plus voegt onvrijwillige werkloosheid toe; alleen werknemers",
+     "bron": [
+      "https://www.creditlife.nl/woonlastenverzekering/",
+      "https://www.creditlife.nl/wp-content/uploads/2024/05/CL_WLV_Informatieblad.pdf",
+      "https://www.creditlife.nl/wp-content/uploads/2024/05/CL_WLV_Voorwaarden.pdf"
+     ],
+     "brondatum": "2024",
+     "zekerheid": "middel",
+     "toelichting": "WW-dekking is alleen mogelijk in combinatie met Compleet-AO. De verzekering eindigt zodra de verzekerde als zelfstandige gaat werken. AO vanaf 35% beperking in het eigen beroep (eerste twee jaar beroepsgeschiktheid; vanaf jaar 3 keuze). Bij volledige en blijvende AO eenmalig € 3.000 extra. Credit Life wordt ook door a.s.r. (Advies van a.s.r.) aangeboden."
+    },
+    "wachttijd": {
+     "waarde": "~ AO: eigen risicoperiode 365 of 730 dagen",
+     "bron": [
+      "https://www.creditlife.nl/wp-content/uploads/2024/05/CL_WLV_Informatieblad.pdf"
+     ],
+     "brondatum": "2024",
+     "zekerheid": "middel",
+     "toelichting": "WW-uitkering loopt in principe parallel aan de WW-uitkering van het UWV."
+    },
+    "duur": {
+     "waarde": "~ AO: tot einde verzekering, of keuze max. 12 of 24 maanden per claim; WW: max. 12 tot 24 maanden per periode van werkloosheid",
+     "bron": [
+      "https://www.creditlife.nl/wp-content/uploads/2024/05/CL_WLV_Informatieblad.pdf",
+      "https://www.creditlife.nl/wp-content/uploads/2024/05/CL_WLV_Voorwaarden.pdf"
+     ],
+     "brondatum": "2024",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "bedrag": {
+     "waarde": "~ € 125 tot € 2.500 per maand",
+     "bron": [
+      "https://www.creditlife.nl/wp-content/uploads/2024/05/CL_WLV_Informatieblad.pdf"
+     ],
+     "brondatum": "2024",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "acceptatie": {
+     "waarde": "~ Instapleeftijd 18 t/m 61 jaar; medische acceptatie; voor WW min. 6 maanden aaneengesloten gewerkt",
+     "bron": [
+      "https://www.creditlife.nl/wp-content/uploads/2024/05/CL_WLV_Informatieblad.pdf",
+      "https://www.creditlife.nl/wp-content/uploads/2024/05/CL_WLV_Voorwaarden.pdf",
+      "https://www.creditlife.nl/medische-acceptatie/"
+     ],
+     "brondatum": "2024",
+     "zekerheid": "middel",
+     "toelichting": "Werkloosheid moet minimaal 16 uur per week betreffen. Bij psychische klachten langere doorlooptijd en mogelijk aangepast aanbod of afwijzing. Product is ook beschikbaar voor huurders."
+    },
+    "carens": {
+     "waarde": "~ Werkloosheid binnen 6 maanden na ingangsdatum niet gedekt",
+     "bron": [
+      "https://www.creditlife.nl/wp-content/uploads/2024/05/CL_WLV_Voorwaarden.pdf",
+      "https://www.creditlife.nl/wp-content/uploads/2024/05/CL_WLV_Informatieblad.pdf"
+     ],
+     "brondatum": "2024",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "eindleeftijd": {
+     "waarde": "~ Maximale eindleeftijd 70 jaar",
+     "bron": [
+      "https://www.creditlife.nl/wp-content/uploads/2024/05/CL_WLV_Informatieblad.pdf"
+     ],
+     "brondatum": "2024",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "uitsluit": {
+     "waarde": "- Bestaande aandoeningen kunnen worden uitgesloten; geen WW-dekking bij einde tijdelijk/projectcontract, ontslag in proeftijd of verwijtbare werkloosheid",
+     "bron": [
+      "https://www.creditlife.nl/wp-content/uploads/2024/05/CL_WLV_Voorwaarden.pdf",
+      "https://www.creditlife.nl/faq/waarom-heb-ik-een-uitsluitingsclausule-in-mijn-verzekering/",
+      "https://www.creditlife.nl/faq/wanneer-keert-de-verzekering-niet-uit-als-ik-mijn-baan-kwijtraak/"
+     ],
+     "brondatum": "2024",
+     "zekerheid": "middel",
+     "toelichting": "Bij een bekende aandoening sluit Credit Life die aandoening uit en verzekert het overige."
+    },
+    "beeindig": {
+     "waarde": "+ Verzekering eindigt op de dag dat de klant opzegt",
+     "bron": [
+      "https://www.creditlife.nl/wp-content/uploads/2024/05/CL_WLV_Voorwaarden.pdf",
+      "https://www.creditlife.nl/faq/hoe-kan-mijn-verzekering-bij-credit-life-opzeggen/"
+     ],
+     "brondatum": "2024",
+     "zekerheid": "middel",
+     "toelichting": ""
+    }
+   }
+  },
+  {
+   "naam": "TAF",
+   "url": "https://taf.nl/verzekeringen/werknemers-aov/maandlastbeschermer",
+   "domeinen": [
+    "taf.nl"
+   ],
+   "documenten": [
+    {
+     "titel": "Informatie voor het intermediair TAF Maandlastbeschermer",
+     "url": "https://www.taf.nl/sites/default/files/Downloads/WAOV/TAF-PK-MLB-20211123-a.pdf",
+     "versie": "20211123"
+    },
+    {
+     "titel": "Algemene verzekeringsvoorwaarden TAF Maandlastbeschermer (Quantum Leben)",
+     "url": "https://www.taf.nl/sites/default/files/Downloads/WAOV/TAF-PVW-2111-MLB-QL-20211115-a.pdf",
+     "versie": "TAF-PVW-2111-MLB-QL-20211115"
+    },
+    {
+     "titel": "Informatie voor het intermediair TAF Maandlastbeschermer Zelfstandige",
+     "url": "https://www.taf.nl/sites/default/files/files/OAOV/MLBZ/TAF-PK-MLBZ-20220127-a.pdf",
+     "versie": "20220127"
+    }
+   ],
+   "criteria": {
+    "dekking": {
+     "waarde": "+ Werknemers: AO, optioneel aangevuld met WW (Maandlastbeschermer); zelfstandigen: AO (Maandlastbeschermer Zelfstandige)",
+     "bron": [
+      "https://taf.nl/verzekeringen/werknemers-aov/maandlastbeschermer",
+      "https://www.taf.nl/woonlastenverzekering-zelfstandige",
+      "https://www.taf.nl/adviseur/verzekeringen/maandlastbeschermer-zelfstandige",
+      "https://www.taf.nl/over-taf/taf-nieuws/taf-introduceert-woonlastenverzekering-met-ondersteuning-voor-de-beste-medische"
+     ],
+     "brondatum": "2021-2022",
+     "zekerheid": "middel",
+     "toelichting": "Risicodrager werknemersvariant: Quantum Leben. Inclusief ondersteuning bij medische zorg (Royal Doctors) en vergoeding verplicht eigen risico zorgverzekering (max. € 500) tijdens AO. TAF biedt daarnaast de Hypotheekbeschermer (BNP Paribas Cardif) met een kapitaaluitkering tot € 200.000 (max. 50% van de hypotheek)."
+    },
+    "wachttijd": {
+     "waarde": "~ Werknemers AO o.a. 12 maanden; zelfstandigen keuze 90, 180, 365 of 730 dagen",
+     "bron": [
+      "https://taf.nl/verzekeringen/werknemers-aov/maandlastbeschermer",
+      "https://www.taf.nl/sites/default/files/Downloads/WAOV/TAF-PK-MLB-20211123-a.pdf",
+      "https://www.taf.nl/adviseur/verzekeringen/maandlastbeschermer-zelfstandige",
+      "https://www.taf.nl/sites/default/files/files/OAOV/MLBZ/TAF-PK-MLBZ-20220127-a.pdf"
+     ],
+     "brondatum": "2021-2022",
+     "zekerheid": "middel",
+     "toelichting": "WW-uitkering start samen met de WW-uitkering van het UWV."
+    },
+    "duur": {
+     "waarde": "~ AO: 2, 5 of 10 jaar of tot einddatum (minus eigen risicoperiode); WW: 12 of 24 maanden",
+     "bron": [
+      "https://www.taf.nl/sites/default/files/Downloads/WAOV/TAF-PK-MLB-20211123-a.pdf",
+      "https://www.taf.nl/sites/default/files/files/OAOV/MLBZ/TAF-PK-MLBZ-20220127-a.pdf",
+      "https://taf.nl/verzekeringen/werknemers-aov/maandlastbeschermer"
+     ],
+     "brondatum": "2021-2022",
+     "zekerheid": "middel",
+     "toelichting": "De eerste 12 maanden WW wordt uitgekeerd zolang de verzekerde werkloos is, ook als het WW-recht korter is."
+    },
+    "bedrag": {
+     "waarde": "~ Max. € 2.500 per maand en max. 125% van de bruto woonlasten",
+     "bron": [
+      "https://taf.nl/verzekeringen/werknemers-aov/maandlastbeschermer",
+      "https://www.taf.nl/sites/default/files/Downloads/WAOV/TAF-PK-MLB-20211123-a.pdf",
+      "https://www.taf.nl/sites/default/files/files/OAOV/MLBZ/TAF-PK-MLBZ-20220127-a.pdf",
+      "https://www.taf.nl/over-taf/taf-nieuws/taf-introduceert-woonlastenverzekering-met-ondersteuning-voor-de-beste-medische"
+     ],
+     "brondatum": "2021-2022",
+     "zekerheid": "middel",
+     "toelichting": "Woonlasten: hypotheekrente en -aflossing, premies levensverzekering en opstal/inboedel, gas, water, licht en servicekosten."
+    },
+    "acceptatie": {
+     "waarde": "~ Online gezondheidsverklaring; zelfstandigen 18-62 jaar en min. 16 uur per week; WW alleen bij min. 6 maanden dienstverband van min. 16 uur per week",
+     "bron": [
+      "https://www.taf.nl/sites/default/files/Downloads/WAOV/TAF-PK-MLB-20211123-a.pdf",
+      "https://www.taf.nl/sites/default/files/files/OAOV/MLBZ/TAF-PK-MLBZ-20220127-a.pdf",
+      "https://www.taf.nl/betalingsbeschermers"
+     ],
+     "brondatum": "2021-2022",
+     "zekerheid": "middel",
+     "toelichting": "Voorlopige dekking (alleen AO door ongeval) maximaal drie maanden."
+    },
+    "carens": {
+     "waarde": "~ WW: geen dekking tot 180 dagen na ingangsdatum",
+     "bron": [
+      "https://www.taf.nl/betalingsbeschermers",
+      "https://www.taf.nl/sites/default/files/Downloads/WAOV/TAF-PVW-2111-MLB-QL-20211115-a.pdf"
+     ],
+     "brondatum": "2021",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "eindleeftijd": {
+     "waarde": "+ AOW-leeftijd, meestijgend tot max. 70 jaar",
+     "bron": [
+      "https://taf.nl/verzekeringen/werknemers-aov/maandlastbeschermer",
+      "https://www.taf.nl/sites/default/files/Downloads/WAOV/TAF-PK-MLB-20211123-a.pdf",
+      "https://www.taf.nl/sites/default/files/files/OAOV/MLBZ/TAF-PK-MLBZ-20220127-a.pdf",
+      "https://www.taf.nl/over-taf/taf-nieuws/taf-introduceert-woonlastenverzekering-met-ondersteuning-voor-de-beste-medische"
+     ],
+     "brondatum": "2021-2022",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "uitsluit": {
+     "waarde": "- WW: geen uitkering bij werkloosheid bekend vóór aanvraag, einde tijdelijk contract of vrijwillig ontslag",
+     "bron": [
+      "https://www.taf.nl/betalingsbeschermers",
+      "https://www.taf.nl/sites/default/files/Downloads/WAOV/TAF-PVW-2111-MLB-QL-20211115-a.pdf"
+     ],
+     "brondatum": "2021",
+     "zekerheid": "middel",
+     "toelichting": "Werkloosheid moet het directe gevolg zijn van onvrijwillige beëindiging van het dienstverband."
+    }
+   }
+  },
+  {
+   "naam": "Interpolis",
+   "url": "https://www.interpolis.nl/verzekeren/hypotheekbescherming",
+   "domeinen": [
+    "interpolis.nl",
+    "rabobank.nl"
+   ],
+   "documenten": [
+    {
+     "titel": "Interpolis Hypotheekbescherming Verzekeringsvoorwaarden",
+     "url": "https://www.interpolis.nl/~/media/files/voorwaarden-hypotheekbescherming.pdf",
+     "versie": "HPC-PV-11-241"
+    }
+   ],
+   "criteria": {
+    "dekking": {
+     "waarde": "+ AO en WW voor werknemers; zelfstandigen alleen AO",
+     "bron": [
+      "https://www.interpolis.nl/verzekeren/hypotheekbescherming",
+      "https://www.rabobank.nl/particulieren/verzekering/hypotheekbescherming",
+      "https://www.interpolis.nl/~/media/files/voorwaarden-hypotheekbescherming.pdf"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Product heet Hypotheekbescherming; verkoop via Rabobank. AO vanaf 35% geeft recht op de volledige uitkering; medisch objectiveerbare stoornis vereist. Zelfstandigen beoordeeld op passende arbeid."
+    },
+    "wachttijd": {
+     "waarde": "~ AO: 1 of 2 jaar; WW: geen eigenrisicoperiode (uitkering vanaf eerste WW-dag UWV)",
+     "bron": [
+      "https://www.interpolis.nl/verzekeren/hypotheekbescherming",
+      "https://www.interpolis.nl/~/media/files/voorwaarden-hypotheekbescherming.pdf"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "duur": {
+     "waarde": "~ AO: duur volgens verzekeringsbewijs; WW: max. 12 maanden (tijdelijk contract 3-12 maanden); totaal max. € 600.000 per persoon",
+     "bron": [
+      "https://www.interpolis.nl/verzekeren/hypotheekbescherming",
+      "https://www.interpolis.nl/~/media/files/voorwaarden-hypotheekbescherming.pdf"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Na in totaal € 600.000 uitkering (AO en WW opgeteld) stopt de dekking."
+    },
+    "bedrag": {
+     "waarde": "+ Tot 120% van de hypotheeklasten",
+     "bron": [
+      "https://www.interpolis.nl/~/media/files/voorwaarden-hypotheekbescherming.pdf",
+      "https://www.interpolis.nl/verzekeren/hypotheekbescherming"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "acceptatie": {
+     "waarde": "~ Wonen in Nederland, min. 16 uur per week werken, hypotheek; online gezondheidsverklaring; WW: vooraf min. 26 weken aaneengesloten gewerkt",
+     "bron": [
+      "https://www.rabobank.nl/particulieren/verzekering/hypotheekbescherming",
+      "https://www.interpolis.nl/~/media/files/voorwaarden-hypotheekbescherming.pdf"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "carens": {
+     "waarde": "~ Geen WW-uitkering bij werkloosheid binnen 3 maanden na ingang (of voorlopige dekking)",
+     "bron": [
+      "https://www.interpolis.nl/~/media/files/voorwaarden-hypotheekbescherming.pdf"
+     ],
+     "brondatum": "onbekend",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "eindleeftijd": {
+     "waarde": "~ Eindigt op 67 jaar",
+     "bron": [
+      "https://www.interpolis.nl/~/media/files/voorwaarden-hypotheekbescherming.pdf"
+     ],
+     "brondatum": "onbekend",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "beeindig": {
+     "waarde": "~ Minimaal 1 jaar; daarna dagelijks opzegbaar met 1 maand opzegtermijn",
+     "bron": [
+      "https://www.interpolis.nl/~/media/files/voorwaarden-hypotheekbescherming.pdf"
+     ],
+     "brondatum": "onbekend",
+     "zekerheid": "middel",
+     "toelichting": ""
+    }
+   }
+  },
+  {
+   "naam": "Movir",
+   "url": "https://www.movir.nl/arbeidsongeschiktheidsverzekering/momentum-voor-werknemers",
+   "domeinen": [
+    "movir.nl"
+   ],
+   "documenten": [],
+   "criteria": {
+    "dekking": {
+     "waarde": "~ Alleen AO; Momentum Vaste Lasten AOV voor werknemers",
+     "bron": [
+      "https://www.movir.nl/arbeidsongeschiktheidsverzekering/momentum-voor-werknemers"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Geen werkloosheidsdekking. Geen pure woonlastenverzekering maar een AOV voor vaste lasten (hypotheek of huur, energie, verzekeringen e.d.). De Verzekerd Inkomen Polis voor woonlasten kent alleen nog een onderhoudsregeling."
+    },
+    "wachttijd": {
+     "waarde": "~ 1 of 2 jaar",
+     "bron": [
+      "https://www.movir.nl/arbeidsongeschiktheidsverzekering/momentum-voor-werknemers",
+      "https://www.movir.nl/arbeidsongeschiktheidsverzekering/momentum-voor-werknemers/keuzemogelijkheden"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "duur": {
+     "waarde": "+ Zolang de AO duurt, tot de eindleeftijd",
+     "bron": [
+      "https://www.movir.nl/arbeidsongeschiktheidsverzekering/momentum-voor-werknemers"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "bedrag": {
+     "waarde": "~ Max. 20% van het salaris; € 9.000 tot € 77.000 per jaar",
+     "bron": [
+      "https://www.movir.nl/arbeidsongeschiktheidsverzekering/momentum-voor-werknemers"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "acceptatie": {
+     "waarde": "~ Salaris minimaal € 45.000 per jaar",
+     "bron": [
+      "https://www.movir.nl/arbeidsongeschiktheidsverzekering/momentum-voor-werknemers"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "eindleeftijd": {
+     "waarde": "+ Keuze 55, 60, 62, 65, 67 of 68 jaar, of AOW-volgend tot max. 70",
+     "bron": [
+      "https://www.movir.nl/arbeidsongeschiktheidsverzekering/momentum-voor-werknemers",
+      "https://www.movir.nl/voor-adviseurs/nieuws/nieuwe-keuze-aow-volgende-eindleeftijd"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    }
+   }
+  },
+  {
+   "naam": "Univé",
+   "url": "https://www.unive.nl/hypotheek/arbeidsongeschiktheidsverzekering-bij-hypotheek",
+   "domeinen": [
+    "unive.nl"
+   ],
+   "documenten": [],
+   "criteria": {
+    "dekking": {
+     "waarde": "~ AO bij hypotheek (woonlastenbeschermer); voor werknemers en zelfstandigen",
+     "bron": [
+      "https://www.unive.nl/hypotheek/arbeidsongeschiktheidsverzekering-bij-hypotheek",
+      "https://www.unive.nl/inspiratie-en-voordeel/blog/woonlastenbeschermer-wenda-en-martine"
+     ],
+     "brondatum": "onbekend",
+     "zekerheid": "middel",
+     "toelichting": "Ook voor huurders. Risicodrager en productvoorwaarden niet gevonden op unive.nl; Univé adviseert vooral via eigen adviseurs."
+    },
+    "bedrag": {
+     "waarde": "~ Max. € 2.500 per maand",
+     "bron": [
+      "https://www.unive.nl/hypotheek/arbeidsongeschiktheidsverzekering-bij-hypotheek",
+      "https://www.unive.nl/inspiratie-en-voordeel/blog/woonlastenbeschermer-wenda-en-martine"
+     ],
+     "brondatum": "onbekend",
+     "zekerheid": "middel",
+     "toelichting": ""
+    }
+   }
+  }
+ ]
+}

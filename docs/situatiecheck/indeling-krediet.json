@@ -1,0 +1,216 @@
+{
+ "gegenereerd": "2026-10-04",
+ "situaties": [
+  {
+   "id": "bkr",
+   "naam": "Lenen met BKR-codering",
+   "vraag": "Kan een klant met een (afgeloste of herstelde) BKR-codering lenen?",
+   "crit": [
+    "bkr"
+   ]
+  },
+  {
+   "id": "zzp",
+   "naam": "Zzp'er of ondernemer",
+   "vraag": "Kan een zzp'er of ondernemer een lening krijgen?",
+   "crit": [
+    "inkomen"
+   ]
+  },
+  {
+   "id": "uitkering",
+   "naam": "Inkomen uit uitkering of pensioen",
+   "vraag": "Telt inkomen uit een uitkering of pensioen mee voor de lening?",
+   "crit": [
+    "inkomen"
+   ]
+  },
+  {
+   "id": "groen",
+   "naam": "Verduurzaming of verbouwing",
+   "vraag": "Is er een lening voor verduurzaming of verbouwing van de woning?",
+   "crit": [
+    "hypotheek"
+   ]
+  },
+  {
+   "id": "extra",
+   "naam": "Boetevrij extra aflossen",
+   "vraag": "Kan boetevrij extra worden afgelost?",
+   "crit": [
+    "aflossen"
+   ]
+  },
+  {
+   "id": "adviseur",
+   "naam": "Via adviseur",
+   "vraag": "Kan de lening via een adviseur of kredietbemiddelaar worden aangevraagd?",
+   "crit": [
+    "kanaal"
+   ]
+  },
+  {
+   "id": "oud",
+   "naam": "Aanvrager 70+",
+   "vraag": "Kan een aanvrager van 70 jaar of ouder nog lenen?",
+   "crit": [
+    "leeftijd"
+   ]
+  }
+ ],
+ "indeling": {
+  "DEFAM": {
+   "bkr": {
+    "o": "voorwaarden",
+    "t": "Lenen met bestaande registratie hangt af van de situatie en loopt via de intermediair",
+    "c": "bkr"
+   },
+   "zzp": {
+    "o": "onbekend",
+    "t": "Inkomenseisen niet geverifieerd; zzp-eisen niet openbaar gevonden",
+    "c": "inkomen"
+   },
+   "uitkering": {
+    "o": "onbekend",
+    "t": "Inkomenseisen niet geverifieerd",
+    "c": "inkomen"
+   },
+   "groen": {
+    "o": "ja",
+    "t": "GreenLoans voor verduurzaming woning; Persoonlijke Lening Wonen voor verbouwen (lange looptijd)",
+    "c": "hypotheek"
+   },
+   "extra": {
+    "o": "ja",
+    "t": "Altijd kosteloos volledig of extra aflossen",
+    "c": "aflossen"
+   },
+   "adviseur": {
+    "o": "ja",
+    "t": "Alleen via intermediairs met AFM-vergunning",
+    "c": "kanaal"
+   },
+   "oud": {
+    "o": "onbekend",
+    "t": "Leeftijdsgrenzen niet geverifieerd",
+    "c": "leeftijd"
+   }
+  },
+  "Freo (Rabobank)": {
+   "bkr": {
+    "o": "nee",
+    "t": "Met negatieve BKR-registratie (achterstandscodering) geen lening; afgeloste/herstelde codering niet apart vermeld",
+    "c": "bkr",
+    "tw": 1
+   },
+   "zzp": {
+    "o": "voorwaarden",
+    "t": "Alleen zzp-inkomen niet; wel als aanvrager deels of partner in loondienst is",
+    "c": "inkomen"
+   },
+   "uitkering": {
+    "o": "voorwaarden",
+    "t": "Pensioen telt mee; uitkering afhankelijk van soort (WIA/IVA, Wajong wel, WW niet)",
+    "c": "inkomen"
+   },
+   "groen": {
+    "o": "voorwaarden",
+    "t": "Geen aparte groene/woonlening; Persoonlijke Lening (max. 120 mnd) inzetbaar voor verbouwing/verduurzaming",
+    "c": "hypotheek",
+    "tw": 1
+   },
+   "extra": {
+    "o": "ja",
+    "t": "Altijd boetevrij extra of volledig aflossen, zo vaak als gewenst",
+    "c": "aflossen"
+   },
+   "adviseur": {
+    "o": "nee",
+    "t": "Rechtstreeks online bij Freo; geen intermediaire distributie gevonden",
+    "c": "kanaal"
+   },
+   "oud": {
+    "o": "nee",
+    "t": "18 tot en met 69 jaar bij afsluiten; afgelost voor 75 jaar",
+    "c": "leeftijd"
+   }
+  },
+  "Lender & Spender": {
+   "bkr": {
+    "o": "nee",
+    "t": "Geen lening bij negatieve BKR-codering; afgeloste/herstelde codering niet apart vermeld",
+    "c": "bkr",
+    "tw": 1
+   },
+   "zzp": {
+    "o": "voorwaarden",
+    "t": "Zelfstandigen geaccepteerd; zzp op 100% gemiddelde fiscale winst over 2 jaar",
+    "c": "inkomen"
+   },
+   "uitkering": {
+    "o": "ja",
+    "t": "Uitkeringen WAO/WIA/ANW/Wajong, WSW en pensioen tellen mee",
+    "c": "inkomen"
+   },
+   "groen": {
+    "o": "ja",
+    "t": "Go Green lening voor verduurzaming (via intermediairs, verruimde leennorm)",
+    "c": "hypotheek"
+   },
+   "extra": {
+    "o": "ja",
+    "t": "Boetevrij extra aflossen vanaf EUR 50; maandbedrag daalt",
+    "c": "aflossen"
+   },
+   "adviseur": {
+    "o": "ja",
+    "t": "Direct online en via intermediairs (partnerportaal, ook via Maex)",
+    "c": "kanaal"
+   },
+   "oud": {
+    "o": "voorwaarden",
+    "t": "Min. 21 jaar; lening afgelost voor 76e levensjaar, dus korte looptijd op 70+",
+    "c": "leeftijd"
+   }
+  },
+  "Qander Consumer Finance": {
+   "bkr": {
+    "o": "onbekend",
+    "t": "Toetst bij BKR; acceptatiebeleid bij coderingen niet openbaar gevonden",
+    "c": "bkr"
+   },
+   "zzp": {
+    "o": "ja",
+    "t": "Aparte Persoonlijke lening voor Ondernemer (zzp/ondernemers)",
+    "c": "inkomen"
+   },
+   "uitkering": {
+    "o": "onbekend",
+    "t": "Inkomensbronnen (uitkering/pensioen) niet apart vermeld",
+    "c": "inkomen",
+    "tw": 1
+   },
+   "groen": {
+    "o": "voorwaarden",
+    "t": "Geen aparte groene/woonlening; Persoonlijke lening (tot 180 mnd) inzetbaar voor verbetering eigen woning",
+    "c": "hypotheek",
+    "tw": 1
+   },
+   "extra": {
+    "o": "ja",
+    "t": "Altijd boetevrij extra aflossen op alle leningvormen",
+    "c": "aflossen"
+   },
+   "adviseur": {
+    "o": "ja",
+    "t": "Alle leenoplossingen uitsluitend via een tussenpersoon (kredietbemiddelaar)",
+    "c": "kanaal"
+   },
+   "oud": {
+    "o": "ja",
+    "t": "Seniorenlening voor 59 tot 80 jaar (afgelost voor 85); max. EUR 50.000 en 120 mnd",
+    "c": "leeftijd"
+   }
+  }
+ }
+}

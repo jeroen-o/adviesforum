@@ -79,6 +79,8 @@ td.nv .w{font-style:italic}
 td.nv .w::after{content:" (nog niet geverifieerd)";color:var(--grijs);font-size:12px}
 td.oud{box-shadow:inset 3px 0 0 #E59A1A}
 td.oud .w::before{content:"\23F3 ";font-size:11px}
+td .meld{display:inline-block;margin-top:4px;font-size:11.5px;color:var(--grijs)}
+@media print{td .meld{display:none}}
 td .bron{display:block;font-size:11.5px;color:var(--blauw);margin-top:3px}
 .leeg{color:var(--grijs);font-style:italic}
 .dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px;vertical-align:1px}
@@ -117,7 +119,7 @@ td .bron{display:block;font-size:11.5px;color:var(--blauw);margin-top:3px}
       <a class="terug" href="index.html#hulpmiddelen">Alle hulpmiddelen</a>
     </div>
     <h1>Productvoorwaarden verzekeringen, lijfrente en krediet</h1>
-    <p>Acceptatie- en productvoorwaarden per aanbieder naast elkaar: overlijdensrisicoverzekering, arbeidsongeschiktheidsverzekering voor zelfstandigen, uitvaartverzekering, lijfrente en consumptief krediet. Elke waarde met &#10003; is gecontroleerd op de site van de aanbieder; de bron staat erbij.</p>
+    <p>Acceptatie- en productvoorwaarden per aanbieder naast elkaar: overlijdensrisicoverzekering, AOV voor zelfstandigen, woonlastenverzekering, uitvaartverzekering, lijfrente, opstal- en inboedelverzekering, bankgarantie en consumptief krediet. Elke waarde met &#10003; is gecontroleerd op de site van de aanbieder; de bron staat erbij.</p>
   </div>
 </header>
 
@@ -156,6 +158,7 @@ td .bron{display:block;font-size:11.5px;color:var(--blauw);margin-top:3px}
     <span><b style="color:var(--groen)">&#10003;</b> Gecontroleerd op de site van de aanbieder, bron eronder</span>
     <span><i>(nog niet geverifieerd)</i> Gevonden bij derden, controleer bij de aanbieder</span>
     <span>&#9203; Bron ouder dan 6 maanden</span>
+    <span>Fout gezien? Klik bij de waarde op &lsquo;Klopt dit niet?&rsquo;</span>
   </div>
 
   <section class="wijz" id="wijzigingen" aria-labelledby="wijz-kop">
@@ -227,6 +230,12 @@ function chip(tekst, aan, klik, titel){
   var b = el('button', 'chip', tekst); b.type = 'button'; b.setAttribute('aria-pressed', aan ? 'true' : 'false'); if(titel) b.title = titel;
   b.addEventListener('click', klik); return b;
 }
+/* Wayback Machine: dichtstbijzijnde kopie bij de peildatum van de controle. */
+function archief(u){ var d = (product() && product().gecontroleerd || '').replace(/-/g,''); return 'https://web.archive.org/web/' + (d || '2026') + '/' + u; }
+function meldHref(naam, kenmerk, waarde, bronnen){
+  var tekst = 'Aanbieder: ' + naam + '\nKenmerk: ' + kenmerk + '\nHuidige waarde: ' + waarde + '\n' + (bronnen.length ? 'Huidige bron: ' + bronnen.join(' ') + '\n' : '') + 'Pagina: ' + location.href + '\n\nWat klopt er niet en wat is de juiste waarde?\n\n\nBron van de juiste waarde (link naar de site of voorwaarden van de aanbieder, met datum of versie):\n\n';
+  return 'mailto:forumadvies@gmail.com?subject=' + encodeURIComponent('Correctie voorwaarde: ' + naam + ' \u2013 ' + kenmerk) + '&body=' + encodeURIComponent(tekst);
+}
 function cel(a, c){
   var w = a.crit[c.id], td = el('td');
   if(!w){ td.appendChild(el('span','leeg','niet gevonden')); return td; }
@@ -236,11 +245,16 @@ function cel(a, c){
   td.insertBefore(el('span','dot'), td.firstChild).style.background = kleur;
   if(w.g && w.b && w.b.length){
     var s = el('span','bron','Bron: ');
-    w.b.forEach(function(u, i){ var v = veilig(u); if(!v) return; if(i) s.appendChild(document.createTextNode(' · ')); var l = el('a', null, host(v)); l.href = v; l.target = '_blank'; l.rel = 'noopener'; l.title = v; s.appendChild(l); });
+    w.b.forEach(function(u, i){ var v = veilig(u); if(!v) return; if(i) s.appendChild(document.createTextNode(' · ')); var l = el('a', null, host(v)); l.href = v; l.target = '_blank'; l.rel = 'noopener'; l.title = v; s.appendChild(l);
+      var ar = el('a', null, 'archief'); ar.href = archief(v); ar.target = '_blank'; ar.rel = 'noopener'; ar.title = 'Kopie in het Internet Archive (Wayback Machine), voor als de bron verdwijnt'; s.appendChild(document.createTextNode(' (')); s.appendChild(ar); s.appendChild(document.createTextNode(')')); });
     if(w.bd) s.appendChild(document.createTextNode(' (' + w.bd + ')'));
     td.appendChild(s);
   }
   if(verouderd(w.bd)) td.title = 'Bron ouder dan 6 maanden (' + w.bd + '): controleer of er een nieuwere versie is.';
+  var m = el('a','meld','Klopt dit niet?');
+  m.href = meldHref(a.naam, product().titel + ' \u2013 ' + c.naam, w.w, w.b || []);
+  m.title = 'Meld een correctie voor ' + a.naam + ' (opent je mailprogramma)';
+  td.appendChild(m);
   return td;
 }
 /* Volgen: tokens "p.<product>-<slug>" in de functionele cookie af_favorieten (formaat: zie index.html).
@@ -330,7 +344,7 @@ function dossier(){
   var nu = new Date(), stempel = nu.toLocaleDateString('nl-NL',{day:'numeric',month:'long',year:'numeric'}) + ' om ' + nu.toLocaleTimeString('nl-NL',{hour:'2-digit',minute:'2-digit'});
   var rijen = cs.map(function(c){ return '<tr><th>' + esc(c.naam) + '</th>' + as.map(function(a){ var w = a.crit[c.id]; if(!w) return '<td class="nl">niet gevonden</td>';
     return '<td>' + esc(w.w.replace(/^[+~!-]\s*/,'')) + '<span class="st ' + (w.g ? 'ok">✓ gecontroleerd op de site van de aanbieder' : 'nv">nog niet geverifieerd') + '</span>' + (verouderd(w.bd) ? '<span class="st nv">bron ouder dan 6 maanden</span>' : '') +
-      (w.g && w.b ? '<span class="br">Bron: ' + w.b.map(function(u){ var v = veilig(u); return v ? esc(v) : ''; }).filter(Boolean).join('<br>') + (w.bd ? ' (' + esc(w.bd) + ')' : '') + '</span>' : '') + '</td>'; }).join('') + '</tr>'; }).join('');
+      (w.g && w.b ? '<span class="br">Bron: ' + w.b.map(function(u){ var v = veilig(u); return v ? esc(v) + ' (archief: ' + esc(archief(v)) + ')' : ''; }).filter(Boolean).join('<br>') + (w.bd ? ' (' + esc(w.bd) + ')' : '') + '</span>' : '') + '</td>'; }).join('') + '</tr>'; }).join('');
   var css = 'body{font-family:Montserrat,Arial,sans-serif;font-size:9.5pt;color:#141414;background:#fff;margin:14mm 10mm}h1{font-size:15pt;margin:0 0 2px}h2{font-size:11pt;margin:14px 0 4px}.meta{font-size:8pt;color:#444;margin:0 0 8px}' +
     '.disc{border:1.5px solid #C0392B;border-left:6px solid #C0392B;background:#FFF1F0;color:#7A1F14;padding:7px 9px;font-size:7.8pt;margin:0 0 12px}' +
     'table{border-collapse:collapse;width:100%;font-size:7.8pt}th,td{border:1px solid #bbb;padding:4px 5px;text-align:left;vertical-align:top}thead th{background:#141414;color:#fff}tr{break-inside:avoid}.nl{color:#888}' +

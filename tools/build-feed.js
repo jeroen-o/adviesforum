@@ -178,7 +178,7 @@ WZ.forEach(i => {
 /* Productvoorwaarden (ORV, AOV, uitvaart, lijfrente, krediet): zelfde opzet, één item per product, aanbieder en dag. */
 const PW = (laadData(['data/productvoorwaarden-wijzigingen.js']).PRODUCTVOORWAARDEN_WIJZIGINGEN || { items: [] }).items || [];
 const PVD = laadData(['data/productvoorwaarden.js']).PRODUCTVOORWAARDEN || [];
-const PT = { orv: 'ORV', aov: 'AOV', uitvaart: 'Uitvaartverzekering', lijfrente: 'Lijfrente', krediet: 'Krediet' };
+const PT = { orv: 'ORV', aov: 'AOV', woonlasten: 'Woonlastenverzekering', uitvaart: 'Uitvaartverzekering', lijfrente: 'Lijfrente', woonverzekering: 'Opstal en inboedel', bankgarantie: 'Bankgarantie', krediet: 'Krediet' };
 const PCRIT = {}; PVD.forEach(p => p.criteria.forEach(c => { PCRIT[p.id + '.' + c.id] = c.naam; }));
 const pGroepen = [];
 PW.forEach(i => {

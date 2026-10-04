@@ -12,3 +12,19 @@ jobs:
         with:
           args: --no-progress --exclude-mail --max-retries 2 --accept 200,206,403,429 './*.html' './data/**/*.js'
           fail: true
+  bronnen:
+    # Bronlinks achter de voorwaarden (docs/bronnen-urls.txt, gegenereerd door tools/bronnen-lijst.js).
+    # Faalt niet: veel sites van aanbieders weren robots. Het rapport staat in de samenvatting van de run en als artefact.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: lycheeverse/lychee-action@v2
+        with:
+          args: --no-progress --max-retries 2 --max-concurrency 8 --accept 200,206,403,429 './docs/bronnen-urls.txt'
+          output: ./lychee/bronnen.md
+          jobSummary: true
+          fail: false
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rapport-bronlinks
+          path: ./lychee/bronnen.md
