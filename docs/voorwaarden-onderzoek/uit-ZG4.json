@@ -1,0 +1,698 @@
+[
+ {
+  "naam": "Venn Hypotheken",
+  "gecontroleerd": "2026-10-04",
+  "criteria": {
+   "persp": {
+    "waarde": "~ Intentieverklaring vast dienstverband: huidig inkomen 100% meegeteld; perspectiefverklaring niet expliciet genoemd",
+    "bron": [
+     "https://www.vennhypotheken.nl/hypotheken/",
+     "https://www.vennhypotheken.nl/veelgestelde-hypotheekvragen/"
+    ],
+    "brondatum": "2025-2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Venn-site (flexwerkers): zonder intentieverklaring 100% van toetsinkomen (gemiddelde 3 jaar); met intentieverklaring tot vast dienstverband telt huidig inkomen volledig. Geen expliciete vermelding van de Perspectiefverklaring gevonden."
+   },
+   "erfp": {
+    "waarde": "! Alleen erfpacht uitgegeven door (semi-)overheid; particuliere erfpacht niet geaccepteerd",
+    "bron": [
+     "https://www.vennhypotheken.nl/wp-content/uploads/Bijlage-2.pdf",
+     "https://www.vennhypotheken.nl/wp-content/uploads/Algemene-Voorwaarden-2022-2.0-Venn-Hypotheken-B.V.-.pdf"
+    ],
+    "brondatum": "2022",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Kredietgids (Bijlage 2 op vennhypotheken.nl) noemt als afwijking op NHG-normen dat Venn alleen erfpacht van overheid/semi-overheid accepteert. Algemene Voorwaarden 2022 2.0 regelen canonbetaling en toestemming bij wijziging erfpacht. Datum kredietgids onzeker."
+   },
+   "avlt": {
+    "waarde": "! Op einddatum moet uitstaand bedrag zijn afgelost, tenzij looptijd wordt verlengd; geen gepubliceerd verlengingsbeleid",
+    "bron": [
+     "https://www.vennhypotheken.nl/wp-content/uploads/Algemene-Voorwaarden-2022-2.0-Venn-Hypotheken-B.V.-.pdf",
+     "https://www.vennhypotheken.nl/mijnhypotheekonline/aflossingsblij/"
+    ],
+    "brondatum": "2022-2025",
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Algemene Voorwaarden: \"behoudens verlenging van de looptijd\" moet het uitstaande bedrag op de einddatum zijn afgelost (max. looptijd 30 jaar). Pagina Aflossingsblij adviseert tijdig sparen/omzetten. Voorwaarden voor verlenging niet gevonden."
+   },
+   "boete": {
+    "waarde": "+ 15% van oorspronkelijke hoofdsom per kalenderjaar; boetevrij bij verkoop en verhuizing",
+    "bron": [
+     "https://www.vennhypotheken.nl/mijnhypotheekonline/extra-aflossen/",
+     "https://www.vennhypotheken.nl/veelgestelde-hypotheekvragen/"
+    ],
+    "brondatum": "2025-2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Steekproef: 15% boetevrij per kalenderjaar bevestigd op eigen site.",
+    "dubbel": "bevestigd"
+   },
+   "rmid": {
+    "waarde": "- Geen rentemiddeling; verzoeken worden afgewezen",
+    "bron": [
+     "https://www.vennhypotheken.nl/veelgestelde-hypotheekvragen/"
+    ],
+    "brondatum": "2025-2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Steekproef: Venn biedt geen rentemiddeling.",
+    "dubbel": "bevestigd"
+   },
+   "ovbr": {
+    "waarde": "+ Overbrugging max 24 mnd, ook bij onverkochte woning (te koop); geen kosten behalve rente",
+    "bron": [
+     "https://www.vennhypotheken.nl/veelgestelde-hypotheekvragen/"
+    ],
+    "brondatum": "2025-2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Steekproef: max. 24 mnd vanaf 1e van de maand na passeren; aflossing bij levering zonder boete.",
+    "dubbel": "bevestigd"
+   },
+   "bdduur": {
+    "waarde": "~ Nieuwbouw 18 mnd / verbouw 12 mnd, elk +6 mnd verlenging zonder rentevergoeding",
+    "bron": [
+     "https://www.vennhypotheken.nl/kennisplein/bouwdepot-bij-nieuwbouw/",
+     "https://www.vennhypotheken.nl/hypotheek-kennisplein/verbouwen/"
+    ],
+    "brondatum": "2025-2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Steekproef bevestigd. Depotvergoeding = (gemiddelde) hypotheekrente minus vaste korting (zie bdrnt).",
+    "dubbel": "bevestigd"
+   },
+   "verh": {
+    "waarde": "~ Rente mee voor resterende rentevast; melden 30 dgn vooraf, aanbod binnen 6 mnd, max €1 mln",
+    "bron": [
+     "https://www.vennhypotheken.nl/mijnhypotheekonline/verhuisregeling/",
+     "https://www.vennhypotheken.nl/voor-adviseurs/verhuisregeling/"
+    ],
+    "brondatum": "2025-2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Steekproef: verhuisregeling niet mogelijk als nieuwe Venn-hypotheek > €1.000.000; oude woning moet eerst verkocht/afgelost zijn.",
+    "dubbel": "bevestigd"
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Algemene Voorwaarden Venn Hypotheken versie 2022 2.0",
+    "url": "https://www.vennhypotheken.nl/wp-content/uploads/Algemene-Voorwaarden-2022-2.0-Venn-Hypotheken-B.V.-.pdf",
+    "versie": "2022 2.0"
+   },
+   {
+    "titel": "Kredietgids (Bijlage 2)",
+    "url": "https://www.vennhypotheken.nl/wp-content/uploads/Bijlage-2.pdf",
+    "versie": "onbekend"
+   }
+  ]
+ },
+ {
+  "naam": "Vista Hypotheken",
+  "gecontroleerd": "2026-10-04",
+  "criteria": {
+   "rverl": {
+    "waarde": "+ Bestaande klant kan bij verlenging altijd gewenste rentevaste periode kiezen, ook als die tijdelijk uitverkocht is; laagste van aanbod- en dagrente",
+    "bron": [
+     "https://www.vistahypotheken.nl/veelgestelde-vragen",
+     "https://www.vistahypotheken.nl/kennisbank/je-rentevastperiode-loopt-af",
+     "https://www.vistahypotheken.nl/10-redenen-om-voor-een-vista-hypotheek-te-kiezen"
+    ],
+    "brondatum": "2025-2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Vista-site: bestaande klanten ondervinden geen beperkingen bij tijdelijk niet-beschikbare rentes (nieuwe lening, verlengen, omzetten). Bij verlenging wordt aanbodrente vergeleken met dagrente op ingangsdatum; laagste geldt. Niet expliciet vermeld dat verlengingsrente gelijk is aan nieuwe-klantrente."
+   },
+   "avlt": {
+    "waarde": "! Aflossingsvrij deel moet op einddatum (max. 30 jaar) in één keer worden terugbetaald; geen verlengingsbeleid gepubliceerd",
+    "bron": [
+     "https://files.vistahypotheken.nl/1751270576-klantbrochure-vista-hypotheken_toegankelijkheid_2025.pdf",
+     "https://www.vistahypotheken.nl/veelgestelde-vragen"
+    ],
+    "brondatum": "2025",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Klantbrochure 2025: aan het einde van de looptijd moet de aflossingsvrije lening in één keer terug; klant moet zelf iets regelen (bijv. tijdig omzetten naar andere leningvorm). Geen regeling voor verlenging na 30 jaar gevonden."
+   },
+   "o106": {
+    "waarde": "! Lenen boven 100% valt in tariefklasse >95%; geen vrijstelling gevonden",
+    "bron": [
+     "https://files.vistahypotheken.nl/1767082949-hypothekengids-januari-2026.pdf",
+     "https://www.vistahypotheken.nl/kennisbank/renteopslag-verlagen"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Hypothekengids jan 2026: EBV en EBB met en zonder NHG tot max. 106% LTV; tariefklassen NHG, ≤60, ≤80, ≤90, ≤95, >95%. Geen uitzondering voor het verduurzamingsdeel boven 100% vermeld; nu met eigen bron (afwezigheid vrijstelling blijft afleiding)."
+   },
+   "boete": {
+    "waarde": "+ Onbeperkt boetevrij uit eigen middelen; anders 10% per jaar",
+    "bron": [
+     "https://www.vistahypotheken.nl/kennisbank/extra-aflossen-op-je-hypotheek",
+     "https://www.vistahypotheken.nl/veelgestelde-vragen"
+    ],
+    "brondatum": "2025-2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Steekproef bevestigd.",
+    "dubbel": "bevestigd"
+   },
+   "rmid": {
+    "waarde": "- Rentemiddeling niet mogelijk",
+    "bron": [
+     "https://www.vistahypotheken.nl/veelgestelde-vragen"
+    ],
+    "brondatum": "2025-2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Steekproef bevestigd.",
+    "dubbel": "bevestigd"
+   },
+   "avrij": {
+    "waarde": "~ Max. 50% van marktwaarde aflossingsvrij",
+    "bron": [
+     "https://files.vistahypotheken.nl/1767082949-hypothekengids-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Steekproef bevestigd in Hypothekengids jan 2026.",
+    "dubbel": "bevestigd"
+   },
+   "verh": {
+    "waarde": "+ Rente en resterende rentevaste periode mee, binnen 6 mnd na verkoop/aflossing",
+    "bron": [
+     "https://www.vistahypotheken.nl/kennisbank/je-rentecontract-meenemen"
+    ],
+    "brondatum": "2025-2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Steekproef bevestigd; geldt ook bij eerst kopen en daarna verkopen.",
+    "dubbel": "bevestigd"
+   },
+   "geld": {
+    "waarde": "~ Renteaanbod 3 mnd; eenmalig verlengen +3 mnd bestaande bouw / +9 mnd nieuwbouw",
+    "bron": [
+     "https://www.vistahypotheken.nl/veelgestelde-vragen"
+    ],
+    "brondatum": "2025-2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Steekproef bevestigd; verlenging kosteloos.",
+    "dubbel": "bevestigd"
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Vista Hypothekengids januari 2026",
+    "url": "https://files.vistahypotheken.nl/1767082949-hypothekengids-januari-2026.pdf",
+    "versie": "jan 2026"
+   },
+   {
+    "titel": "Hypothekengids Vista Hypotheken versie september 2024",
+    "url": "https://files.vistahypotheken.nl/1727868389-hypothekengids-vista-hypotheken-versie-september-2024-1.pdf",
+    "versie": "sep 2024"
+   },
+   {
+    "titel": "Vista in Vogelvlucht – productkaart Acceptatie",
+    "url": "https://files.vistahypotheken.nl/1736755903-250110_vista_productkaart_acceptatie.pdf",
+    "versie": "10-01-2025"
+   },
+   {
+    "titel": "Vista in Vogelvlucht – productkaart Beheer",
+    "url": "https://files.vistahypotheken.nl/1736755968-250110_vista_productkaart_beheer.pdf",
+    "versie": "10-01-2025"
+   },
+   {
+    "titel": "Klantbrochure Vista Hypotheken 2026",
+    "url": "https://files.vistahypotheken.nl/1777367052-vistahypotheken-klantbrochure-2026.pdf",
+    "versie": "2026"
+   },
+   {
+    "titel": "Algemene voorwaarden Vista 2025",
+    "url": "https://files.vistahypotheken.nl/1751270459-algemene-voorwaarden-vista-2025.pdf",
+    "versie": "2025"
+   }
+  ]
+ },
+ {
+  "naam": "bijBouwe",
+  "gecontroleerd": "2026-10-04",
+  "criteria": {
+   "persp": {
+    "waarde": "+ Perspectiefverklaring geaccepteerd; inkomen uit bijbehorende werkgeversverklaring geldt voor hele looptijd",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/03/bijbouwe-vooruit-acceptatiehandleiding-012026-.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Acceptatiehandleiding bijBouwe Vooruit Hypotheek (01-2026), via hypotheekcompany.nl; niet op eigen site teruggevonden."
+   },
+   "erfp": {
+    "waarde": "! Erfpacht van Staat, provincie, gemeente of waterschap; particuliere erfpacht vóór 2013 alleen met groen erfpachtoordeel, vanaf 2013 altijd afgewezen",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/03/bijbouwe-vooruit-acceptatiehandleiding-012026-.pdf",
+     "https://hypotheekcompany.nl/wp-content/uploads/2025/03/bijBouwe_Acceptatiehandleiding_Maart_2025.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Acceptatiehandleiding (via hypotheekcompany.nl). Oudere versie noemde alleen Staat/provincie/gemeente; recentere voegt waterschappen toe. Erfpachtoordeel: groen = ok, oranje/rood = afwijzing."
+   },
+   "dag": {
+    "waarde": "- Geen dagrentegarantie: rente op dag van ontvangst aanvraag blijft gelijk, ook als rente bij passeren lager is",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/03/bijbouwe-vooruit-acceptatiehandleiding-012026-.pdf",
+     "https://bijbouwe.nl/adviseurs"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Acceptatiehandleiding (via hypotheekcompany.nl): recht op rente die geldt op dag van ontvangst aanvraag; blijft gelijk ongeacht hogere of lagere rente bij passeren. Garantieverklaring 3 weken acceptatietermijn; na die termijn alleen accepteren als rente niet gewijzigd is (eigen site)."
+   },
+   "o106": {
+    "waarde": "! Lenen boven 100% (EBV tot max. 106%) valt in hoogste risicoklasse; geen vrijstelling gevonden",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/03/bijbouwe-vooruit-acceptatiehandleiding-012026-.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Acceptatiehandleiding (via hypotheekcompany.nl): max. lening met EBV = laagste van 100% marktwaarde + kosten EBV en 106% marktwaarde na verbouwing. Samenvatting gaf aan dat boven 100% het tarief van de hoogste risicoklasse geldt; niet letterlijk geverifieerd."
+   },
+   "ondh": {
+    "waarde": "~ Preventief en bijzonder beheer; verkoop/executie als oplossingen falen",
+    "bron": [
+     "https://bijbouwe.nl/je-bijbouwe-hypotheek/betalingsproblemen",
+     "https://bijbouwe.nl/blog/huis-onder-water-je-restschuld-is-niet-het-einde-van-de-wereld-dit-is-waarom"
+    ],
+    "brondatum": "2025-2026",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Eigen site: oplossingen gericht op blijven wonen (betalingsbelofte, betalingsregeling, tijdelijke verlaging); werkt klant niet mee dan huisbezoek, loonbeslag of executieverkoop. Blog over restschuld bij verkoop onder water. Specifiek beleid voor onderhandse verkoop met restschuld niet gevonden."
+   },
+   "rvoor": {
+    "waarde": "~ Renteaanbod ca. 3 mnd voor einde rentevaste periode",
+    "bron": [
+     "https://bijbouwe.nl/blog/dit-kun-jij-doen-om-te-besparen-na-het-aflopen-van-je-rentevast-periode",
+     "https://bijbouwe.nl/je-bijbouwe-hypotheek/wijzigen-rentevaste-periode"
+    ],
+    "brondatum": "2024-2026",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Eigen site: bijBouwe stuurt normaal drie maanden voor afloop een nieuw renteaanbod."
+   },
+   "bprov": {
+    "waarde": "! Garantieverklaring +2 mnd te verlengen (max. 6 mnd); annuleren tijdens verlengingsperiode kost een vergoeding",
+    "bron": [
+     "https://bijbouwe.nl/adviseurs",
+     "https://bijbouwe.nl/klantenservice"
+    ],
+    "brondatum": "2025-2026",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Eigen site: geen annuleringskosten, behalve na verlenging van de geldigheid; annuleringskosten in verlengingsperiode 1% van het hypotheekbedrag, niet bij afwijzing door bijBouwe in die periode. Verlenging aanvragen binnen oorspronkelijke 4 mnd. Eerdere waarde \"geen kosten vermeld\" gecorrigeerd.",
+    "dubbel": "gecorrigeerd"
+   },
+   "geld": {
+    "waarde": "~ Garantieverklaring 4 mnd geldig; eenmalig +2 mnd verlengen (max. 6 mnd)",
+    "bron": [
+     "https://bijbouwe.nl/adviseurs"
+    ],
+    "brondatum": "2025-2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Steekproef bevestigd; acceptatietermijn getekende garantieverklaring 3 weken.",
+    "dubbel": "bevestigd"
+   },
+   "bdduur": {
+    "waarde": "+ Nieuwbouw 24 mnd / bestaande bouw 12 mnd; 2x verlengen met 6 mnd",
+    "bron": [
+     "https://bijbouwe.nl/je-bijbouwe-hypotheek/je-bouwdepot"
+    ],
+    "brondatum": "2025-2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Steekproef: nieuwbouw 24 mnd, max. 2x 6 mnd verlenging zonder rentevergoeding bevestigd.",
+    "dubbel": "bevestigd"
+   },
+   "tweede": {
+    "waarde": "~ Verhogen €5.000–€175.000; onderhands bij ruimte in inschrijving, anders notaris",
+    "bron": [
+     "https://bijbouwe.nl/je-bijbouwe-hypotheek/hypotheek-verhogen",
+     "https://bijbouwe.nl/blog/waarom-grenzen-hypotheken-verhogingen"
+    ],
+    "brondatum": "2025-2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Steekproef: verhoging min. €5.000, max. €175.000 bevestigd.",
+    "dubbel": "bevestigd"
+   },
+   "ltv": {
+    "waarde": "+ Automatisch lagere risicoklasse bij aflossing; bij waardestijging via taxatierapport",
+    "bron": [
+     "https://bijbouwe.nl/je-bijbouwe-hypotheek/je-hypotheek-in-een-lagere-risicoklasse"
+    ],
+    "brondatum": "2025-2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Steekproef: Vooruit automatisch bij aflossen; aanpassing per 1e van de volgende maand na goedkeuring.",
+    "dubbel": "bevestigd"
+   },
+   "bproc": {
+    "waarde": "+ Preventief beheer: betaalpauze, renteafkoop, budget-/jobcoach, betalingsregeling",
+    "bron": [
+     "https://bijbouwe.nl/je-bijbouwe-hypotheek/betalingsproblemen"
+    ],
+    "brondatum": "2025-2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Steekproef: betalingsbelofte, betalingsregeling en tijdelijke verlaging maandlasten bevestigd.",
+    "dubbel": "bevestigd"
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Acceptatiehandleiding bijBouwe Vooruit Hypotheek",
+    "url": "https://hypotheekcompany.nl/wp-content/uploads/2026/03/bijbouwe-vooruit-acceptatiehandleiding-012026-.pdf",
+    "versie": "01-2026"
+   },
+   {
+    "titel": "bijBouwe Acceptatiehandleiding (basis) – via Belangrijke documenten",
+    "url": "https://bijbouwe.nl/belangrijke-documenten",
+    "versie": "genoemd: sep 2026 (niet geverifieerd)"
+   },
+   {
+    "titel": "bijBouwe Acceptatiehandleiding maart 2025",
+    "url": "https://hypotheekcompany.nl/wp-content/uploads/2025/03/bijBouwe_Acceptatiehandleiding_Maart_2025.pdf",
+    "versie": "mrt 2025"
+   }
+  ]
+ },
+ {
+  "naam": "Woonfonds",
+  "gecontroleerd": "2026-10-04",
+  "criteria": {
+   "dag": {
+    "waarde": "- Rente na uitbrengen voorstel vast; daling tot passeren wordt niet doorgegeven (Leef Hypotheek)",
+    "bron": [
+     "https://www.centraalbeheer.nl/-/media/files/voor-adviseurs/acceptatiegids-leef-hypotheek.pdf",
+     "https://www.centraalbeheer.nl/hypotheek/klant/rente-wijzigen",
+     "https://www.woonfonds.nl/voor-adviseurs/vraag-en-antwoord"
+    ],
+    "brondatum": "jul 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Woonfonds wordt Centraal Beheer; nieuwe aanvragen lopen via de Leef Hypotheek. Centraal Beheer wijzigt de rente niet meer nadat het voorstel is uitgebracht, ook niet bij rentedaling. Acceptatiegids Leef 1 juli 2026: voorstel 4 mnd geldig. Geen Woonfonds-specifieke dagrenteregeling gevonden."
+   },
+   "verh": {
+    "waarde": "~ Rente mee bij rvp nog ≥1 jaar; passeren binnen 6 mnd; max. €1 mln",
+    "bron": [
+     "https://www.woonfonds.nl/klantenservice/hypotheek-meenemen"
+    ],
+    "brondatum": "2025-2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Steekproef: rvp nog min. 1 jaar, nieuwe aanvraag binnen 6 mnd na aflossing oude hypotheek, max. €1.000.000, risico-opslag aangepast bij andere risicoklasse.",
+    "dubbel": "bevestigd"
+   },
+   "duur": {
+    "waarde": "+ Groen leningdeel: rentekorting tot €25.000 voor verduurzamen, looptijd max. 30 jaar",
+    "bron": [
+     "https://www.woonfonds.nl/voor-adviseurs/nieuwsarchief/groen-leningdeel",
+     "https://www.woonfonds.nl/voor-adviseurs/verduurzamen"
+    ],
+    "brondatum": "2024-2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Steekproef bevestigd: max. €25.000, annuïtair/lineair, max. 30 jaar, korting tijdens rentevaste periode.",
+    "dubbel": "bevestigd"
+   },
+   "ltv": {
+    "waarde": "+ Maandelijks automatisch lagere risicoklasse bij lagere LTV; Leef kent 7 risicoklassen",
+    "bron": [
+     "https://www.woonfonds.nl/voor-adviseurs/nieuwsarchief/automatische-aanpassing-risicoklasse",
+     "https://www.woonfonds.nl/klantenservice/risicoklasse-wijzigen"
+    ],
+    "brondatum": "2022-2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Steekproef: sinds april 2022 maandelijkse automatische toets op lagere risicoklasse.",
+    "dubbel": "bevestigd"
+   },
+   "rmid": {
+    "waarde": "~ Rentemiddeling mogelijk, max. 1x per rentevaste periode; vaste administratiekosten",
+    "bron": [
+     "https://www.woonfonds.nl/klantenservice/rente-wijzigen",
+     "https://www.woonfonds.nl/klantenservice/rente-wijzigen/vergoeding"
+    ],
+    "brondatum": "2025-2026",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Steekproef: voorstel voor afkoop of rentemiddeling via Mijn Leninginzicht bevestigd; max. 1x per rvp niet opnieuw gezien.",
+    "dubbel": "bevestigd"
+   },
+   "geld": {
+    "waarde": "~ Offerte 4 mnd; verlenging nieuwbouw +8 mnd kosteloos, bestaande bouw +2 mnd",
+    "bron": [
+     "https://www.centraalbeheer.nl/-/media/files/voor-adviseurs/acceptatiegids-leef-hypotheek.pdf"
+    ],
+    "brondatum": "jul 2026",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Steekproef: voorstel 4 mnd geldig (Leef acceptatiegids jul 2026); verlengingstermijnen niet opnieuw gezien.",
+    "dubbel": "bevestigd"
+   }
+  },
+  "documenten": [
+   {
+    "titel": "De Leef Hypotheek Acceptatiegids",
+    "url": "https://www.centraalbeheer.nl/-/media/files/voor-adviseurs/acceptatiegids-leef-hypotheek.pdf",
+    "versie": "1 jul 2026"
+   },
+   {
+    "titel": "Voorwaarden Leef Hypotheek januari 2021",
+    "url": "https://www.centraalbeheer.nl/-/media/files/prive/hypotheek/voorwaarden/voorwaarden-leef-hypotheek-2021-versie-1.pdf",
+    "versie": "jan 2021"
+   }
+  ]
+ },
+ {
+  "naam": "Centraal Beheer",
+  "gecontroleerd": "2026-10-04",
+  "criteria": {
+   "rverl": {
+    "waarde": "~ Bij renteherziening geldt de actuele rente op dag van ontvangst keuzeformulier; gelijkstelling met nieuwe klanten niet expliciet",
+    "bron": [
+     "https://www.centraalbeheer.nl/hypotheek/klant/rente-vast-periode",
+     "https://www.centraalbeheer.nl/hypotheek/klant/historische-rente-en-voorwaarden"
+    ],
+    "brondatum": "2025-2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Eigen site: melding 6 mnd vooraf, rentevoorstel ~3 mnd vooraf met combinaties rvp/rente; bij vastzetten geldt de rente op de dag dat de aanvraag binnenkomt. Kosteloos overstappen naar andere aanbieder of kwartaalvariabel mogelijk. Niet gevonden dat bestaande klanten exact de nieuwe-klantrente krijgen; oudere producten hebben eigen historische tarieven."
+   },
+   "geld": {
+    "waarde": "~ Voorstel 4 mnd geldig; 1x verlengen: nieuwbouw +8 mnd, bestaande bouw +2 mnd",
+    "bron": [
+     "https://www.centraalbeheer.nl/-/media/files/voor-adviseurs/acceptatiegids-leef-hypotheek.pdf"
+    ],
+    "brondatum": "jul 2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Steekproef: voorstel 4 mnd geldig, binnen 3 weken tekenen (acceptatiegids 1 jul 2026); bij hogere rente bij passeren na verlenging worden kosten per maand berekend.",
+    "dubbel": "bevestigd"
+   },
+   "ltv": {
+    "waarde": "+ 7 risicoklassen; rente daalt automatisch bij lagere klasse door aflossen",
+    "bron": [
+     "https://www.centraalbeheer.nl/hypotheek/kennis/automatisch-lagere-rente",
+     "https://www.centraalbeheer.nl/-/media/files/voor-adviseurs/acceptatiegids-leef-hypotheek.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Steekproef bevestigd.",
+    "dubbel": "bevestigd"
+   },
+   "rvoor": {
+    "waarde": "~ Melding 6 mnd vooraf; rentevoorstel met keuzeformulier ~3 mnd voor einde",
+    "bron": [
+     "https://www.centraalbeheer.nl/hypotheek/klant/rente-vast-periode"
+    ],
+    "brondatum": "2025-2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Steekproef bevestigd.",
+    "dubbel": "bevestigd"
+   },
+   "verh": {
+    "waarde": "+ Rente meenemen voor restschuld t/m einde oude rentevaste periode; aflossen binnen 6 mnd",
+    "bron": [
+     "https://www.centraalbeheer.nl/voor-adviseurs/hypotheek/verhuisregeling-voor-hypotheekadviseurs",
+     "https://www.centraalbeheer.nl/hypotheek/klant/verhuisregeling"
+    ],
+    "brondatum": "2025-2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Steekproef: per leningdeel rente mee voor gelijk of lager bedrag dan restschuld; meerdere tegen actuele rente.",
+    "dubbel": "bevestigd"
+   },
+   "rmid": {
+    "waarde": "+ Rentemiddeling of afkoop mogelijk, max. 1x per rentevaste periode",
+    "bron": [
+     "https://www.centraalbeheer.nl/hypotheek/klant/rente-wijzigen"
+    ],
+    "brondatum": "2025-2026",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Steekproef: rente opnieuw vastzetten via middeling/afkoop bevestigd; max. 1x per rvp niet opnieuw gezien.",
+    "dubbel": "bevestigd"
+   }
+  },
+  "documenten": [
+   {
+    "titel": "De Leef Hypotheek Acceptatiegids",
+    "url": "https://www.centraalbeheer.nl/-/media/files/voor-adviseurs/acceptatiegids-leef-hypotheek.pdf",
+    "versie": "1 jul 2026"
+   },
+   {
+    "titel": "Voorwaarden Leef Hypotheek januari 2021",
+    "url": "https://www.centraalbeheer.nl/-/media/files/prive/hypotheek/voorwaarden/voorwaarden-leef-hypotheek-2021-versie-1.pdf",
+    "versie": "jan 2021"
+   }
+  ]
+ },
+ {
+  "naam": "Merius Hypotheken",
+  "gecontroleerd": "2026-10-04",
+  "criteria": {
+   "ondh": {
+    "waarde": "! Bij niet nakomen kan Merius de woning verkopen (o.a. veiling); restschuld uit eigen middelen, met NHG mogelijk kwijtschelding",
+    "bron": [
+     "https://meriushypotheken.nl/app/uploads/2022/09/Merius-Hypotheken-Algemene-Voorwaarden-versie-2022-01.pdf",
+     "https://meriushypotheken.nl/nhg/",
+     "https://meriushypotheken.nl/veelgestelde-vragen/"
+    ],
+    "brondatum": "2022-2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Algemene Voorwaarden 2022_01: Merius kan bij niet nakomen woning en andere zekerheden verkopen (ook via veiling); klant moet meewerken aan verkoop (bezichtigingen, verkoopbord). Restschuld blijft verschuldigd; bij NHG kan restschuld na gedwongen verkoop worden kwijtgescholden. Geen specifiek beleid voor onderhandse verkoop met restschuld of restschuldfinanciering gevonden."
+   },
+   "rverl": {
+    "waarde": "~ Renteherzieningsvoorstel met actuele rentes voor alle rentevaste perioden; gelijkstelling met nieuwe klanten niet expliciet",
+    "bron": [
+     "https://meriushypotheken.nl/veelgestelde-vragen/",
+     "https://meriushypotheken.nl/rentearchief/"
+    ],
+    "brondatum": "2025-2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Eigen site: enkele maanden voor afloop brief met renteherzieningsvoorstel; rente hangt af van de (markt)rente op dat moment; keuze uit alle rentevaste perioden die binnen resterende looptijd passen. Niet expliciet dat bestaande klanten de nieuwe-klantrente krijgen."
+   },
+   "elbl": {
+    "waarde": "- Rente niet afhankelijk van energielabel; tarief alleen naar NHG/risicoklasse en rentevaste periode",
+    "bron": [
+     "https://meriushypotheken.nl/onze-actuele-hypotheekrente/",
+     "https://meriushypotheken.nl/rentearchief/",
+     "https://meriushypotheken.nl/app/uploads/2024/07/Merius-Hypotheekgids-2024-01.pdf"
+    ],
+    "brondatum": "2024-2026",
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Rentetabellen op eigen site kennen alleen NHG en risicoklassen (≤60, ≤80, ≤90, >90% MW) per rentevaste periode; nergens een energielabelkorting of opslag zonder label gevonden. Afleiding uit afwezigheid, daarom zekerheid laag."
+   },
+   "o106": {
+    "waarde": "! Tot 106% voor energiebesparende voorzieningen; deel boven 90% LTV in hoogste risicoklasse",
+    "bron": [
+     "https://meriushypotheken.nl/app/uploads/2024/07/Merius-Hypotheekgids-2024-01.pdf"
+    ],
+    "brondatum": "2024_01",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Hypotheekgids 2024_01 (eigen site): LTV tot 106% alleen voor bedrag aan energiebesparende voorzieningen, bedrag boven 100% in bouwdepot; risicoklassen ≤60, ≤80, ≤90, >90% MW; geen uitzondering voor EBV-deel vermeld. Nu met eigen bron."
+   },
+   "boete": {
+    "waarde": "+ 25% van oorspronkelijke hoofdsom per jaar boetevrij uit eigen middelen (15% bij geleend geld)",
+    "bron": [
+     "https://meriushypotheken.nl/productvoorwaarden/",
+     "https://meriushypotheken.nl/ik-wil-extra-aflossen/"
+    ],
+    "brondatum": "2025-2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Steekproef: 25% per leningdeel per kalenderjaar uit eigen middelen bevestigd (min. bedrag per aflossing in toelichting site).",
+    "dubbel": "bevestigd"
+   },
+   "ovbr": {
+    "waarde": "+ Max. 24 mnd; verkocht 98% verkoopprijs, onverkocht 90% marktwaarde (ook met NHG)",
+    "bron": [
+     "https://meriushypotheken.nl/productvoorwaarden/"
+    ],
+    "brondatum": "2025-2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Steekproef: max. 24 mnd, ook bij onverkochte woning bevestigd.",
+    "dubbel": "bevestigd"
+   },
+   "tweede": {
+    "waarde": "+ Onderhands verhogen vanaf €10.000 al na 2 mnd; 2e en 3e hypotheek mogelijk",
+    "bron": [
+     "https://meriushypotheken.nl/productvoorwaarden/"
+    ],
+    "brondatum": "2025-2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Steekproef bevestigd.",
+    "dubbel": "bevestigd"
+   },
+   "rvp": {
+    "waarde": "~ 1, 5, 10, 15, 20, 25, 30 jaar",
+    "bron": [
+     "https://meriushypotheken.nl/rentearchief/",
+     "https://meriushypotheken.nl/onze-actuele-hypotheekrente/"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Steekproef bevestigd.",
+    "dubbel": "bevestigd"
+   },
+   "erfp": {
+    "waarde": "- Alleen erfpacht van overheden (gemeente, provincie, waterschap); particuliere erfpacht niet",
+    "bron": [
+     "https://meriushypotheken.nl/app/uploads/2024/07/Merius-Hypotheekgids-2024-01.pdf"
+    ],
+    "brondatum": "2024_01",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Steekproef bevestigd in Hypotheekgids 2024_01.",
+    "dubbel": "bevestigd"
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Hypotheekgids Merius Hypotheken",
+    "url": "https://meriushypotheken.nl/app/uploads/2024/07/Merius-Hypotheekgids-2024-01.pdf",
+    "versie": "2024_01"
+   },
+   {
+    "titel": "Productkaart Merius Hypotheken",
+    "url": "https://meriushypotheken.nl/app/uploads/2024/07/Merius-Productkaart-2024-01.pdf",
+    "versie": "2024_01 (titel noemt 2022_01)"
+   },
+   {
+    "titel": "Algemene Voorwaarden Merius Hypotheken",
+    "url": "https://meriushypotheken.nl/app/uploads/2022/09/Merius-Hypotheken-Algemene-Voorwaarden-versie-2022-01.pdf",
+    "versie": "2022_01"
+   },
+   {
+    "titel": "Productvoorwaarden (webpagina)",
+    "url": "https://meriushypotheken.nl/productvoorwaarden/",
+    "versie": "2026"
+   }
+  ]
+ }
+]

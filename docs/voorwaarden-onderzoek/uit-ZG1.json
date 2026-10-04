@@ -1,0 +1,1051 @@
+[
+ {
+  "naam": "ABN AMRO",
+  "criteria": {
+   "erfp": {
+    "waarde": "~ Erfpacht financierbaar (ook afkoop canon meefinancieren); overstap eeuwigdurend (A'dam/Utrecht) met 'positieve verklaring'; alle NHG-erfpachtconstructies geaccepteerd",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/actueel/erfpacht.html",
+     "https://intermediair.abnamro.nl/starters",
+     "https://www.abnamro.nl/nl/prive/hypotheken/wonen/wat-is-erfpacht.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Geen volledige acceptatiegids openbaar; erfpachtpagina ABN AMRO + intermediairsite (starters: 'accepteert alle erfpacht- en kortingsconstructies die NHG accepteert'). Eisen aan resterende looptijd tijdelijke erfpacht niet gevonden."
+   },
+   "geld": {
+    "waarde": "~ Renteaanbod 12 mnd geldig vanaf uitgifte; passeren binnen die termijn, niet verlengbaar",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-afsluiten/hypotheekvormen/budget-woning-hypotheek/index.html",
+     "https://intermediair.abnamro.nl/budget-hypotheek"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Na 12 mnd zonder passeren eindigt de overeenkomst en is een nieuwe aanvraag nodig. Geldt voor Budget en Woning Hypotheek."
+   },
+   "bprov": {
+    "waarde": "+ Geen bereidstellingsprovisie: offerte automatisch 12 mnd geldig (Budget Hypotheek)",
+    "bron": [
+     "https://intermediair.abnamro.nl/budget-hypotheek",
+     "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-afsluiten/hypotheekvormen/budget-woning-hypotheek/index.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Budget Hypotheek: geen annuleringskosten tot 90 dagen, daarna annuleringskosten (1% volgens intermediairsite). Annuleringsregeling Woning Hypotheek niet in zoekresultaten gevonden."
+   },
+   "rvp": {
+    "waarde": "+ 1 t/m 30 jaar vast; rentebedenktijd bij 2, 3, 7, 12 en 17 jaar",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/mijn-hypotheek/hypotheekrente-wijzigen/einde-rentevaste-periode/rentebedenktijd.html",
+     "https://www.abnamro.nl/nl/prive/hypotheken/actuele-hypotheekrente/index.html"
+    ],
+    "brondatum": "2026-10",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Bereik 1-30 jaar bevestigd op eigen site; exacte lijst periodes uit huidige waarde niet stuk voor stuk in zoekresultaat."
+   },
+   "boete": {
+    "waarde": "+ 10% van oorspronkelijke hoofdsom per jaar; boetevrij bij verkoop, variabele rente, einde rvp",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/mijn-hypotheek/extra-aflossen/index.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Ook geen vergoeding als marktrente hoger is dan contractrente."
+   },
+   "dag": {
+    "waarde": "! Laagste rente bij passeren alleen bij Woning Hypotheek; Budget Hypotheek niet",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-afsluiten/hypotheekvormen/budget-woning-hypotheek/index.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Woning Hypotheek: lagere rente op ingangsdatum wordt toegepast, hogere niet."
+   },
+   "bdduur": {
+    "waarde": "~ Nieuwbouw 24 mnd (+12 verlenging) / verbouw 18 mnd (+6 verlenging)",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-afsluiten/bouwdepot/voorwaarden-bouwdepot.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Eenmalige verlenging via formulier 'verlengen/beëindigen bouwdepot'."
+   },
+   "bdrnt": {
+    "waarde": "~ Gelijk aan hypotheekrente; geen vergoeding in verlengingsperiode",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-afsluiten/bouwdepot/voorwaarden-bouwdepot.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bij verlenging geen rente over het depot in de laatste periode."
+   },
+   "rvoor": {
+    "waarde": "~ Voorstel minimaal 3 mnd vooraf; rentebedenktijd mogelijk",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/mijn-hypotheek/hypotheekrente-wijzigen/einde-rentevaste-periode/index.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Automatisch rentevoorstel minstens 3 mnd vóór einde rvp."
+   },
+   "avrij": {
+    "waarde": "! Per 1-6-2026 max 30% WW, plafond 150k/250k/500k naar WW; bestaand bij einde looptijd 50%",
+    "bron": [
+     "https://www.banken.nl/nieuws/amp/26956/abn-amro-en-florius-beperken-aflossingsvrije-hypotheek-tot-30-procent-van-woningwaarde"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "laag",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Derde-partijbron (banken.nl) bevestigt huidige waarde; geldt alleen bij materiële wijziging voor bestaande klanten."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Voorwaarden Woning Hypotheek",
+    "url": "https://assets.abnamro.com/api/public/content/voorwaarden-woning-hypotheek.pdf",
+    "versie": "juni 2025"
+   },
+   {
+    "titel": "Voorwaarden hypotheek (intermediair download-document 645, 'Bestaande uit:')",
+    "url": "https://intermediair.abnamro.nl/download-document/645",
+    "versie": "onbekend (PDF geblokkeerd)"
+   },
+   {
+    "titel": "Productvoorwaarden ABN AMRO (overzicht incl. Budget/Woning Hypotheek)",
+    "url": "https://www.abnamro.nl/nl/prive/abnamro/productvoorwaarden.html",
+    "versie": "actueel"
+   }
+  ],
+  "gecontroleerd": "2026-10-04"
+ },
+ {
+  "naam": "Rabobank",
+  "criteria": {
+   "erfp": {
+    "waarde": "! Erfpacht/opstal alleen na verplichte Rabobank Erfpachttoets (centraal Erfpachtloket); looptijd max. resterende duur recht; altijd volledig taxatierapport",
+    "bron": [
+     "https://www.rabobank.nl/bedrijven/intermediairs/hypotheek/aan-de-slag/rabobank-intermediair-gids",
+     "https://www.rabobank.nl/particulieren/hypotheek/taxatierapport-calcasa"
+    ],
+    "brondatum": "2026-09",
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "Uitzonderingen: sommige gemeentelijke erfpachtvoorwaarden vrijgesteld; KoopGarant/KoopStart vooraf goedgekeurd. Geen desktoptaxatie bij erfpacht (ook niet bij afkoop). Formulering looptijd mede uit acceptatie- en beheerregels 2023.",
+    "dubbel": "bevestigd"
+   },
+   "rverl": {
+    "waarde": "~ Bij renteverlenging nieuwe rente = actuele adviesrente van gekozen rvp; risicoklasse/opslag opnieuw bepaald",
+    "bron": [
+     "https://www.rabobank.nl/particulieren/hypotheek/mijn-hypotheek-of-woning-aanpassen/rente-verlengen",
+     "https://media.rabobank.com/m/3a5c86e0fa68ddcb/original/Tarievenbeleid-Hypotheken-via-Intermediair-april-2023.pdf"
+    ],
+    "brondatum": "2023-04",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Tarievenbeleid (apr 2023): rente wordt gelijkgesteld aan adviesrente van gekozen periode (= tarief nieuwe klanten in zelfde klasse). Geen advies-/afsluitkosten bij verlengen; verlengen niet eerder dan 3 mnd vóór einde rvp. Betaalpakketkorting bij Rabo-betaalrekening."
+   },
+   "o106": {
+    "waarde": "~ Tot 106% van woningwaarde na verbouwing lenen voor energiebesparing; tarievenbeleid kent aparte LTV-band boven 100%",
+    "bron": [
+     "https://www.rabobank.nl/particulieren/hypotheek/duurzaam-wonen/financiering/verbouwing",
+     "https://media.rabobank.com/m/3a5c86e0fa68ddcb/original/Tarievenbeleid-Hypotheken-via-Intermediair-april-2023.pdf"
+    ],
+    "brondatum": "2023-04",
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Of het deel 100-106% zonder extra opslag is, is niet eenduidig uit de bronnen op te maken (tarievenbeleid 2023 toont band 90-100% en tot 106%). Extra leenruimte per label (tot €40.000 bij A++++ met EPG)."
+   },
+   "rvoor": {
+    "waarde": "~ Aankondiging ca. 3 mnd vóór einde rvp; rentevoorstel per brief/Rabo App",
+    "bron": [
+     "https://www.rabobank.nl/particulieren/hypotheek/mijn-hypotheek-of-woning-aanpassen/rente-verlengen"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Zonder keuze verlengt Rabobank met een vooraf bepaalde rvp (vaak dezelfde)."
+   },
+   "avrij": {
+    "waarde": "! Per 11-5-2026 max 30% van woningwaarde, max €150.000; ook bij verhuizen, oversluiten, verhogen",
+    "bron": [
+     "https://www.rabobank.nl/nieuws/011512344/rabobank-scherpt-beleid-voor-aflossingsvrije-hypotheek-aan-per-11-mei-2026",
+     "https://www.rabobank.nl/bedrijven/intermediairs/hypotheek/aan-de-slag/rabobank-intermediair-gids/laatste-wijzigingen"
+    ],
+    "brondatum": "2026-05",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": ""
+   },
+   "geld": {
+    "waarde": "+ Plus: 18 mnd om lening te laten ingaan; Basis: 12 mnd na renteaanbod",
+    "bron": [
+     "https://www.rabobank.nl/particulieren/hypotheek/hypotheekvormen-en-voorwaarden/plusvoorwaarden"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "18 mnd Plus bevestigd; Basis-termijn niet opnieuw gezien."
+   },
+   "verh": {
+    "waarde": "+ Rente + rest-rvp mee tot huidig bedrag; Plus binnen 6 mnd, Basis 3 mnd; ook vóór aankoop nieuwe woning",
+    "bron": [
+     "https://www.rabobank.nl/particulieren/hypotheek/hypotheekvormen-en-voorwaarden/plusvoorwaarden"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Plus: nieuwe lening binnen 6 mnd na volledige aflossing oude lening bevestigd."
+   },
+   "ovbr": {
+    "waarde": "+ OverbruggingsHypotheek, ook zonder verkochte woning en als grond/woning al in bezit; norm 90% marktwaarde (was 81%)",
+    "bron": [
+     "https://www.rabobank.nl/bedrijven/intermediairs/hypotheek/aan-de-slag/rabobank-intermediair-gids/laatste-wijzigingen"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "dubbel": "gecorrigeerd",
+    "toelichting": "Wijziging acceptatiebeleid (per 30 juni): doelgroep verruimd, verstrekkingsnorm 90% MW / 95% taxatiewaarde reguliere woning. Looptijd 1 of 2 jaar uit huidige waarde niet opnieuw gezien."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Rabobank Intermediair Gids: Acceptatiebeleid Rabobank en Beheerbeleid Rabobank",
+    "url": "https://www.rabobank.nl/bedrijven/intermediairs/hypotheek/aan-de-slag/rabobank-intermediair-gids",
+    "versie": "september 2026 (10-09-2026)"
+   },
+   {
+    "titel": "Laatste wijzigingen Rabobank als Hypotheekverstrekker",
+    "url": "https://www.rabobank.nl/bedrijven/intermediairs/hypotheek/aan-de-slag/rabobank-intermediair-gids/laatste-wijzigingen",
+    "versie": "2026"
+   },
+   {
+    "titel": "Rabobank als Hypotheekverstrekker - Acceptatie- en beheerregels wonen",
+    "url": "https://media.rabobank.com/m/4e33ec563c784cda/original/Rabobank-als-Hypotheekverstrekker-acceptatie-en-beheerregels-vanaf-2-januari-2023.pdf",
+    "versie": "vanaf 2 jan 2023"
+   },
+   {
+    "titel": "Tarievenbeleid Hypotheken via Intermediair",
+    "url": "https://media.rabobank.com/m/3a5c86e0fa68ddcb/original/Tarievenbeleid-Hypotheken-via-Intermediair-april-2023.pdf",
+    "versie": "april 2023"
+   },
+   {
+    "titel": "Klantinformatie hypotheekrente wijzigen (Plusvoorwaarden)",
+    "url": "https://media.rabobank.com/m/7b2c705381193139/original/Klantinformatie-hypotheekrente-wijzigen-Plusvoorwaarden.pdf",
+    "versie": "november 2025"
+   },
+   {
+    "titel": "Algemene voorwaarden lening woning (Plusvoorwaarden)",
+    "url": "https://media.rabobank.com/m/4ec34b6795353b07/original/algemene-voorwaarden-lening-woning-plus-rabobank_29690965-pdf.pdf",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "Algemene Basisvoorwaarden (Leningen 2024)",
+    "url": "https://media.rabobank.com/m/5d9a6a92d69749ba/original/Bekijk-de-Basisvoorwaarden.pdf",
+    "versie": "2024"
+   },
+   {
+    "titel": "Vergelijkingskaart Hypotheek 2026",
+    "url": "https://media.rabobank.com/asset/e4cfe25a-1cac-4c6d-a4d1-83ae41494de8/Vergelijkingskaart-Hypotheek-2026.pdf",
+    "versie": "2026"
+   }
+  ],
+  "gecontroleerd": "2026-10-04"
+ },
+ {
+  "naam": "ING",
+  "criteria": {
+   "rvp": {
+    "waarde": "~ Variabel en vast 1, 2, 5, 7, 10, 15, 20 en 30 jaar; bij rentemiddeling max 12 jr",
+    "bron": [
+     "https://assets.ing.com/m/192e1ffba227517b/original/Acceptatiebeleid-ING-Hypotheken-versie-2025_1jan2025.pdf",
+     "https://www.ing.nl/particulier/hypotheek/actuele-hypotheekrente/voorwaarden-vaste-hypotheekrente",
+     "https://www.ing.nl/particulier/hypotheek/jouw-hypotheek/tussentijds-aanpassen"
+    ],
+    "brondatum": "2025-01",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Acceptatiebeleid ING 2025-1 (assets.ing.com) noemt 1,2,5,7,10,15,20,30 jr. Particuliere site spreekt bij tussentijds aanpassen over max. 12 jaar en elders over 'tot max. 20 jaar' (context aanpassen); 30 jr voor nieuwe leningen niet op actuele particuliere pagina teruggezien."
+   },
+   "bdduur": {
+    "waarde": "~ Bouwdepot 2 jaar (nieuwbouw en verbouw); eenmalig 1 jaar verlengbaar",
+    "bron": [
+     "https://www.ing.nl/particulier/hypotheek/jouw-hypotheek/bouwdepot"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Verlengen via Mijn ING vanaf 4 mnd vóór einddatum, met reden en evt. bouwplanning."
+   },
+   "rvoor": {
+    "waarde": "~ Rentevoorstel 3 mnd voor einde rentevaste periode, via Mijn ING",
+    "bron": [
+     "https://www.ing.nl/particulier/hypotheek/jouw-hypotheek/rentevaste-periode-loopt-af"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": ""
+   },
+   "rverl": {
+    "waarde": "+ Zelfde prijsmodel (rente per energielabel, schuld-marktwaardeklasse) voor nieuwe klanten en bij nieuwe rentevaste periode",
+    "bron": [
+     "https://www.ing.nl/particulier/hypotheek/jouw-hypotheek/rentevaste-periode-loopt-af",
+     "https://nieuws.ing.nl/nl-NL/248949-lagere-hypotheekrente-bij-verduurzamen-woning/"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "ING: nieuw prijsmodel geldt voor iedereen die nieuwe hypotheek afsluit én voor klanten die een nieuwe rentevaste periode ingaan. Expliciete zin 'zelfde tarief als nieuwe klanten' niet gevonden."
+   },
+   "avrij": {
+    "waarde": "! Sinds 23-7-2026 max 30% WW, plafond €150k/€250k/€500k (WW tot 1/2 mln/hoger); bestaand tot 50% houden",
+    "bron": [
+     "https://nieuws.ing.nl/nl-NL/266100-ing-past-acceptatiebeleid-aflossingsvrije-hypotheken-aan/",
+     "https://www.ing.nl/particulier/hypotheek/nieuwe-regels-voor-aflossingsvrije-hypotheken"
+    ],
+    "brondatum": "2026-07",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Geldt ook voor verhogingen, omzettingen en tweede hypotheken."
+   },
+   "elbl": {
+    "waarde": "! Rente per label G t/m A++++; zonder geregistreerd label 'geen label'-tarief (hoger); omlaag bij beter label",
+    "bron": [
+     "https://www.ing.nl/particulier/hypotheek/actuele-hypotheekrente/voorwaarden-vaste-hypotheekrente",
+     "https://nieuws.ing.nl/nl-NL/248949-lagere-hypotheekrente-bij-verduurzamen-woning/"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bij registratie/verbetering label tijdens rvp past ING de rente automatisch aan."
+   },
+   "ltv": {
+    "waarde": "+ Rente automatisch omlaag bij lagere schuld-marktwaardeklasse door aflossing (11 klassen; niet bij NHG)",
+    "bron": [
+     "https://www.ing.nl/particulier/hypotheek/jouw-hypotheek/schuld-marktwaardeopslag-of-korting",
+     "https://www.ing.nl/particulier/hypotheek/jouw-hypotheek/mogelijk-lagere-rente"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Ook op verzoek aanpasbaar bij hogere woningwaarde."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Acceptatiebeleid ING Hypotheken",
+    "url": "https://assets.ing.com/m/192e1ffba227517b/original/Acceptatiebeleid-ING-Hypotheken-versie-2025_1jan2025.pdf",
+    "versie": "2025-1 (1 jan 2025)"
+   },
+   {
+    "titel": "Voorwaarden van de vaste hypotheekrente (webpagina)",
+    "url": "https://www.ing.nl/particulier/hypotheek/actuele-hypotheekrente/voorwaarden-vaste-hypotheekrente",
+    "versie": "actueel"
+   }
+  ],
+  "gecontroleerd": "2026-10-04"
+ },
+ {
+  "naam": "SNS",
+  "criteria": {
+   "boete": {
+    "waarde": "+ 10% van oorspr. bedrag per leningdeel per kalenderjaar; daarnaast onbeperkt boetevrij aflossen met eigen geld",
+    "bron": [
+     "https://www.snsbank.nl/particulier/hypotheken/hypotheek-aflossen/hypotheek-aflossen-met-eigen-geld.html",
+     "https://www.snsbank.nl/particulier/hypotheken/hypotheek-aflossen/hypotheek-extra-aflossen.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "dubbel": "gecorrigeerd",
+    "toelichting": "In de SNS-hypotheekvoorwaarden staat nu dat aflossen met eigen geld (spaargeld, verkoopopbrengst, schenking, erfenis e.d., geen geleend geld) altijd zonder vergoeding kan; bewijs eigen geld vereist. Zelfde regeling bij ASN Bank en RegioBank."
+   },
+   "bdduur": {
+    "waarde": "~ Max. 24 mnd (1 jr, automatisch verlengd); daarna verlenging max. 12 mnd onder voorwaarden",
+    "bron": [
+     "https://www.snsbank.nl/particulier/hypotheken/bouwdepot-hypotheek.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Verlenging aanvragen via bouwdepot@asnbank.nl."
+   },
+   "bdrnt": {
+    "waarde": "~ Depotrente gelijk aan hypotheekrente",
+    "bron": [
+     "https://www.snsbank.nl/particulier/hypotheken/bouwdepot-hypotheek.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Rente vastgesteld bij passeren en niet aangepast tijdens looptijd depot; vergoeding over niet-opgenomen bedrag."
+   },
+   "rvoor": {
+    "waarde": "~ Rentevoorstel 3 mnd voor einde rentevaste periode",
+    "bron": [
+     "https://www.snsbank.nl/particulier/hypotheken/hypotheek-oversluiten/hypotheekrente-verlengen.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Reageren via Mijn SNS."
+   },
+   "verh": {
+    "waarde": "+ Rente meenemen bij aanvraag binnen 3 mnd, max. oude bedrag, resterende rentevaste periode",
+    "bron": [
+     "https://www.snsbank.nl/particulier/hypotheken/ander-huis-kopen/hypotheek-meenemen-bij-een-verhuizing.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Alleen bij volledige verkoop oude woning; nieuwe tariefgroep o.b.v. LTV kan meegenomen rente aanpassen."
+   },
+   "avrij": {
+    "waarde": "! Per 11-5-2026 max. 30% van woningwaarde aflossingsvrij; bestaand blijft bij renteherziening",
+    "bron": [
+     "https://newsroom.asnbank.nl/download/f3cf2d60-84b6-40a3-bf75-25eaeddbae9e/persbericht-asnbankbeperktaflossingsvrijehypotheektot30procentwaardewoning.pdf"
+    ],
+    "brondatum": "2026-05",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Persbericht ASN Bank (moeder; newsroom-domein) geldt ook voor SNS, RegioBank en BLG Wonen. Bij verhogen/verhuizen geldt 30% ook voor bestaande klanten."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Algemene voorwaarden SNS Hypotheken",
+    "url": "https://www.snsbank.nl/particulier/support/download-tonen-op-pagina/algemene-voorwaarden-sns-hypotheken-27-juni-2023.html",
+    "versie": "27-06-2023"
+   },
+   {
+    "titel": "Informatiewijzer SNS Hypotheken",
+    "url": "https://www.snsbank.nl/particulier/support/download-tonen-op-pagina/informatiewijzer-sns-hypotheken.html",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "Informatiewijzer Bespaarhypotheek",
+    "url": "https://www.snsbank.nl/particulier/support/download-tonen-op-pagina/informatiewijzer-bespaarhypotheek.html",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "Hypotheekvoorwaarden SNS (overzichtspagina)",
+    "url": "https://www.snsbank.nl/particulier/hypotheken/hypotheekvoorwaarden.html",
+    "versie": "actueel"
+   },
+   {
+    "titel": "ASN (voorheen SNS) hypotheektarieven",
+    "url": "https://www.snsbank.nl/particulier/support/download-tonen-op-pagina/asn-voorheen-sns-bank-hypotheektarieven-18-juli-2026.html",
+    "versie": "18 juli 2026"
+   }
+  ],
+  "gecontroleerd": "2026-10-04"
+ },
+ {
+  "naam": "RegioBank",
+  "criteria": {
+   "zzp": {
+    "waarde": "~ Vanaf 1 jaar zelfstandig; 1-3 jaar met jaarcijfers + prognose (administratiekantoor/RA); inkomen = gem. 3 jaar, max laatste jaar",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/hypotheek-zonder-vast-contract-kan-dit/zzper-of-ondernemer.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Documenten: IKV ondernemers, jaarrekeningen en aangiften 3 jaar, prognose, KvK-uittreksel."
+   },
+   "flex": {
+    "waarde": "~ Gemiddelde 3 jaar/36 mnd, max. laatste jaar; ook intentieverklaring of Arbeidsmarktscan",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/hypotheek-zonder-vast-contract-kan-dit/tijdelijk-contract.html",
+     "https://www.regiobank.nl/hypotheken/hypotheek-zonder-vast-contract-kan-dit/tijdelijk-contract/arbeidsmarktscan.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Arbeidsmarktscan = berekening kansen op arbeidsmarkt komende 5 jaar."
+   },
+   "persp": {
+    "waarde": "+ Perspectiefverklaring uitzendbureau geaccepteerd (min. 12 mnd bij uitzendbureau)",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/hypotheek-voor-zzpers-en-flexwerkers.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Voorwaarden verklaring (max. ouderdom, gecertificeerd bureau) niet in zoekresultaat."
+   },
+   "aow": {
+    "waarde": "~ Pensioen binnen 10 jaar: max. hypotheek mede o.b.v. inkomen na pensionering",
+    "bron": [
+     "https://www.regiobank.nl/downloads/regiobank-uitgangspunten-voor-de-berekening-van-de-maximale-hypotheek.html",
+     "https://www.regiobank.nl/hypotheken/veelgestelde-vragen-over-hypotheken.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Zoeksamenvatting noemt aanname pensioeninkomen 70% van huidig inkomen bij oriënterende berekening; niet bevestigd als acceptatienorm."
+   },
+   "erfp": {
+    "waarde": "~ Alleen erfpacht voor onbepaalde tijd (vanaf 2013) conform NVB-criteria; geen verplichte afkoop; canon telt mee als last",
+    "bron": [
+     "https://www.regiobank.nl/downloads/informatiewijzer-hypotheken.html",
+     "https://www.regiobank.nl/downloads/informatiewijzer-verhuurhypotheek.html",
+     "https://www.regiobank.nl/nieuws/hypotheken/artikel/een-huis-kopen-met-erfpacht-wel-of-niet-doen.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "NVB-criterium uit informatiewijzer Verhuurhypotheek; voor woonhypotheek in informatiewijzer Hypotheken 'vanaf 2013 alleen onbepaalde tijd'. Versiedatum informatiewijzer onbekend."
+   },
+   "dag": {
+    "waarde": "- Geen dagrente: rente in offerte geldt ook als rente daarna daalt",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/hypotheekofferte.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Zelfde regeling als SNS (zelfde moeder ASN Bank)."
+   },
+   "geld": {
+    "waarde": "~ Max. 6 mnd bestaande bouw, 12 mnd nieuwbouw (vanaf aanvraagdatum)",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/hypotheekofferte.html",
+     "https://www.regiobank.nl/hypotheken/hypotheek-voor-een-nieuwbouwwoning.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Offerte standaard 3 mnd geldig en automatisch verlengd tot max. 9 extra mnd (verlengkosten mogelijk, zie kostenoverzicht); passeren binnen 6/12 mnd."
+   },
+   "bprov": {
+    "waarde": "~ Verlengen offerte tegen kosten; annuleren gratis binnen 3 mnd na aanvraag, daarna annuleringskosten",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/annuleringskosten-hypotheekofferte.html",
+     "https://www.regiobank.nl/downloads/kostenoverzicht-hypotheken.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Annuleringskosten €750 na 3 mnd of bij verlopen offerte; vrijgesteld bij ontbinding koopovereenkomst door verkoper, overlijden, scheiding, arbeidsongeschiktheid/werkloosheid."
+   },
+   "bdrnt": {
+    "waarde": "~ Depotrente gelijk aan hypotheekrente (verrekend met te betalen rente)",
+    "bron": [
+     "https://www.regiobank.nl/service/hypotheken/betalen-uit-uw-bouwdepot.html",
+     "https://www.regiobank.nl/hypotheken/bouwdepot.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "bddecl": {
+    "waarde": "+ Declareren via Mijn RegioBank of app; uitbetaling op IBAN van factuur of na zelf betalen",
+    "bron": [
+     "https://www.regiobank.nl/service/hypotheken/betalen-uit-uw-bouwdepot.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Alleen arbeid en aard- en nagelvaste materialen. Doorlooptijd niet gevonden."
+   },
+   "oha": {
+    "waarde": "~ Ontslag hoofdelijkheid als achterblijver lasten alleen kan dragen; ook met nieuwe partner mogelijk",
+    "bron": [
+     "https://www.regiobank.nl/uw-situatie/scheiden/hypotheek-overnemen-scheiding.html",
+     "https://www.regiobank.nl/uw-situatie/scheiden/scheiden-en-hypotheek.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Kosten €195 voor ontslag hoofdelijke aansprakelijkheid."
+   },
+   "ovbr": {
+    "waarde": "+ Overbruggingskrediet max. 18 mnd (bestaande bouw) / 30 mnd (nieuwbouw); aflossingsvrij",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/overbruggingskrediet.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Alleen in combinatie met RegioBank-hypotheek op nieuwe woning."
+   },
+   "rmid": {
+    "waarde": "~ Rentemiddeling bij vaste rente; nieuwe periode min. 5 jr langer, keuze 6/7/10/12 jr, niet voorbij looptijd",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/rentemiddeling.html",
+     "https://www.regiobank.nl/service/hypotheken/hypotheekrente-eerder-aanpassen.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "rvoor": {
+    "waarde": "~ Rentevoorstel minstens 3 mnd vóór einde rvp (Mijn RegioBank + post)",
+    "bron": [
+     "https://www.regiobank.nl/service/hypotheken/hypotheekrente-verlengen.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "bbrk": {
+    "waarde": "~ Contante waarde; vergelijkingsrente = hoogste van naastliggende kortere/langere rvp",
+    "bron": [
+     "https://www.regiobank.nl/downloads/informatiewijzer-hypotheken.html",
+     "https://www.regiobank.nl/zakelijk/zakelijk-lenen/bedrijfshypotheek/berekening-vergoeding-renteverlies.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Methode expliciet beschreven op zakelijke pagina; informatiewijzer hypotheken bevat contante-waardeberekening. Geen vergoeding als vergelijkingsrente >= contractrente."
+   },
+   "wkost": {
+    "waarde": "~ Administratiekosten per wijziging, gemaximeerd per keer (meerdere wijzigingen)",
+    "bron": [
+     "https://www.regiobank.nl/downloads/kostenoverzicht-hypotheken.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "€195 per wijziging (o.a. aflosvorm, ontslag hoofdelijkheid, voortijdig verlengen >18 mnd voor einddatum), max. €390 totaal."
+   },
+   "avlt": {
+    "waarde": "~ Brief 1 jaar vóór einddatum; nieuwe hypotheek aanvragen voor aflopend deel",
+    "bron": [
+     "https://www.regiobank.nl/service/hypotheken/uw-hypotheek-loopt-af.html",
+     "https://www.regiobank.nl/downloads/productwijzer-aflossingsvrije-hypotheek.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Andere later aflopende aflossingsvrije delen kunnen mee in één aanvraag. Of aflossingsvrij deel voortgezet kan worden: nieuwe toets (30%-regel voor nieuwe financiering)."
+   },
+   "bproc": {
+    "waarde": "+ Bijzonder Beheer helpt gratis; geen incassobureaus en geen loonbeslag",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/betalingsproblemen.html",
+     "https://www.regiobank.nl/service/algemeen/wat-moet-ik-doen-bij-betalingsachterstanden.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "tweede": {
+    "waarde": "~ Verhoging of tweede hypotheek mogelijk na betaalbaarheidstoets",
+    "bron": [
+     "https://www.regiobank.nl/uw-situatie/scheiden/hypotheek-overnemen-scheiding.html",
+     "https://www.regiobank.nl/hypotheken/extra-hypotheek-voor-verbouwing.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Onderhands verhogen zonder notaris niet expliciet bevestigd; tweede hypotheek achter andere verstrekker niet bevestigd."
+   },
+   "boete": {
+    "waarde": "+ 10% per leningdeel per jaar; daarnaast onbeperkt boetevrij aflossen met eigen geld",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/hypotheek-onbeperkt-aflossen.html",
+     "https://www.regiobank.nl/hypotheken/uw-hypotheek-aflossen/hypotheek-extra-aflossen.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Eigen geld: spaargeld, verkoopopbrengst, schenking, erfenis e.d.; bewijs vereist.",
+    "dubbel": "gecorrigeerd"
+   },
+   "verh": {
+    "waarde": "+ Rente meenemen bij verhuizing (meeneemregeling)",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/meeneemregeling.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Termijn/max bedrag niet opnieuw in zoekresultaat gezien.",
+    "dubbel": "bevestigd"
+   },
+   "avrij": {
+    "waarde": "! Per 11-5-2026 max. 30% WW; bestaand blijft bij renteherziening",
+    "bron": [
+     "https://newsroom.asnbank.nl/download/f3cf2d60-84b6-40a3-bf75-25eaeddbae9e/persbericht-asnbankbeperktaflossingsvrijehypotheektot30procentwaardewoning.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Persbericht ASN Bank geldt ook voor RegioBank.",
+    "dubbel": "bevestigd"
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Algemene Voorwaarden RegioBank Hypotheken",
+    "url": "https://www.regiobank.nl/hypotheken/voorwaarden.html",
+    "versie": "27-06-2023"
+   },
+   {
+    "titel": "Informatiewijzer Hypotheken",
+    "url": "https://www.regiobank.nl/downloads/informatiewijzer-hypotheken.html",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "Informatiewijzer Bespaarhypotheek",
+    "url": "https://www.regiobank.nl/downloads/informatiewijzer-bespaarhypotheek.html",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "Kostenoverzicht hypotheken",
+    "url": "https://www.regiobank.nl/downloads/kostenoverzicht-hypotheken.html",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "Uitgangspunten voor de berekening van de maximale hypotheek",
+    "url": "https://www.regiobank.nl/downloads/regiobank-uitgangspunten-voor-de-berekening-van-de-maximale-hypotheek.html",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "Productwijzer Aflossingsvrije hypotheek",
+    "url": "https://www.regiobank.nl/downloads/productwijzer-aflossingsvrije-hypotheek.html",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "Rentetarieven RegioBank hypotheek",
+    "url": "https://www.regiobank.nl/downloads/rentetarieven-regiobank-hypotheek-per-10-september-2026.html",
+    "versie": "10 sep 2026"
+   }
+  ],
+  "gecontroleerd": "2026-10-04"
+ },
+ {
+  "naam": "BLG Wonen",
+  "criteria": {
+   "zzp": {
+    "waarde": "~ Inkomen o.b.v. saldo fiscale winstberekening (sfwb) over 3 jaar",
+    "bron": [
+     "https://www.blgwonen.nl/jouw-situatie/hypotheek-zzp-of-ondernemer/hypotheek-berekenen.html",
+     "https://www.blgwonen.nl/jouw-situatie/hypotheek-zzp-of-ondernemer.html",
+     "https://www.blgwonen.nl/download/blg-wonen-uitgangspunten-maximale-hypotheek-berekening.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Minimale duur ondernemerschap (1 jr met IVO binnen NHG / 3 jr daarbuiten) niet opnieuw bevestigd op eigen site."
+   },
+   "flex": {
+    "waarde": "+ Flexinkomen o.b.v. inkomenshistorie of perspectiefverklaring (uitzend) / hypotheek zonder vast contract mogelijk",
+    "bron": [
+     "https://www.blgwonen.nl/jouw-situatie/hypotheek-zonder-vast-contract.html",
+     "https://www.blgwonen.nl/jouw-situatie/uitzendcontract.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Claim 'ruimer dan marktgemiddelde' niet op eigen site te bevestigen."
+   },
+   "persp": {
+    "waarde": "+ Perspectiefverklaring geaccepteerd (uitzendbureau gecertificeerd en in register Stichting Perspectiefverklaring)",
+    "bron": [
+     "https://www.blgwonen.nl/jouw-situatie/uitzendcontract.html",
+     "https://www.blgwonen.nl/download/blg-wonen-uitgangspunten-maximale-hypotheek-berekening.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": ""
+   },
+   "aow": {
+    "waarde": "~ Pensioen binnen 10 jaar: max. hypotheek o.b.v. verwacht pensioeninkomen",
+    "bron": [
+     "https://www.blgwonen.nl/jouw-situatie/hypotheek-pensioen.html",
+     "https://www.blgwonen.nl/download/blg-wonen-uitgangspunten-maximale-hypotheek-berekening.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Bij oriënterende berekening aanname pensioeninkomen 70% van huidig inkomen."
+   },
+   "erfp": {
+    "waarde": "~ Erfpacht financierbaar; canon telt mee als financiële last bij max. hypotheek",
+    "bron": [
+     "https://www.blgwonen.nl/download/blg-wonen-uitgangspunten-maximale-hypotheek-berekening.html",
+     "https://www.blgwonen.nl/download/informatiewijzer-hypotheken.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Specifieke eisen (onbepaalde tijd/NVB-criteria) niet voor BLG zelf gevonden; bij zustermerk RegioBank wel."
+   },
+   "boete": {
+    "waarde": "+ 10% per leningdeel per jaar met geleend geld; onbeperkt boetevrij met eigen geld",
+    "bron": [
+     "https://www.blgwonen.nl/voor-klanten/hypotheeklasten-verlagen/extra-aflossen/onbeperkt-vergoedingsvrij-aflossen.html",
+     "https://www.blgwonen.nl/voor-klanten/mijn-hypotheek/hypotheeklasten-verlagen/extra-aflossen.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Eigen geld: spaargeld, verkoopopbrengst, schenking/erfenis, loterij, ontslagvergoeding, vakantiegeld, 13e maand, verzekeringsuitkering.",
+    "dubbel": "gecorrigeerd"
+   },
+   "geld": {
+    "waarde": "~ Max. 6 mnd bestaande bouw / 12 mnd nieuwbouw vanaf aanvraagdatum",
+    "bron": [
+     "https://www.blgwonen.nl/download/informatiewijzer-bespaarhypotheek.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Informatiewijzer Bespaarhypotheek (versie onbekend)."
+   },
+   "bprov": {
+    "waarde": "~ Annuleren kosteloos tot 3 mnd na aanvraag; daarna of bij verlopen offerte annuleringskosten",
+    "bron": [
+     "https://www.blgwonen.nl/download/informatiewijzer-bespaarhypotheek.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Annuleringskosten €750."
+   },
+   "ltv": {
+    "waarde": "+ Rente daalt automatisch bij lagere tariefklasse door aflossen",
+    "bron": [
+     "https://www.asnbank.nl/blg-wonen/bespaarhypotheek.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Bespaarhypotheek."
+   },
+   "bdduur": {
+    "waarde": "~ Bouwdepot max. 2 jaar vanaf passeerdatum",
+    "bron": [
+     "https://www.blgwonen.nl/download/informatiewijzer-bespaarhypotheek.html",
+     "https://www.blgwonen.nl/hypotheken/zo-werkt-een-bouwdepot.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Verlengmogelijkheid niet gevonden."
+   },
+   "bdrnt": {
+    "waarde": "~ Depotrente gelijk aan hypotheekrente over niet-opgenomen bedrag",
+    "bron": [
+     "https://www.blgwonen.nl/download/informatiewijzer-bespaarhypotheek.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "bddecl": {
+    "waarde": "+ Declareren via BLG Wonen app, Mijn BLG of formulier; verwerking binnen 2-3 werkdagen",
+    "bron": [
+     "https://www.blgwonen.nl/voor-klanten/mijn-hypotheek/declaratie-bouwdepot-indienen/spelregels-bouwdepot.html",
+     "https://www.asnbank.nl/downloads/bouwdepotdeclaratie.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Online 2 werkdagen, formulier 3 werkdagen; uitbetaling naar bekend rekeningnr of IBAN op factuur; alleen aard- en nagelvaste zaken."
+   },
+   "ebb": {
+    "waarde": "~ Extra lenen voor energiebesparing afhankelijk van label, binnen 106% van woningwaarde",
+    "bron": [
+     "https://www.blgwonen.nl/hypotheken/leningdeel-duurzaam-wonen.html",
+     "https://www.blgwonen.nl/download/blg-wonen-uitgangspunten-maximale-hypotheek-berekening.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Bedrag per label tot €20.000 volgens zoeksamenvatting."
+   },
+   "duur": {
+    "waarde": "+ Bespaarhypotheek: lagere rente bij beter energielabel; leningdeel Duurzaam Wonen niet combineerbaar met Bespaarhypotheek",
+    "bron": [
+     "https://www.asnbank.nl/blg-wonen/bespaarhypotheek.html",
+     "https://www.blgwonen.nl/hypotheken/leningdeel-duurzaam-wonen/hoe-werkt-het-leningdeel-duurzaam-wonen.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "o106": {
+    "waarde": "~ Tot 106% van woningwaarde lenen voor verduurzaming",
+    "bron": [
+     "https://www.asnbank.nl/blg-wonen/bespaarhypotheek.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Of deel 100-106% zonder extra opslag is, niet gevonden."
+   },
+   "oha": {
+    "waarde": "~ Ontslag hoofdelijkheid alleen via adviseur, na toets achterblijver",
+    "bron": [
+     "https://www.blgwonen.nl/voor-klanten/hoofdelijk-ontslag.html",
+     "https://www.blgwonen.nl/jouw-situatie/scheiden/hypotheek-scheiden.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Administratiekosten €195 per hypotheek (max €390) + advies- en notariskosten."
+   },
+   "tweede": {
+    "waarde": "+ Onderhands verhogen binnen inschrijving of tweede hypotheek; ook zelf online verhogen",
+    "bron": [
+     "https://www.asnbank.nl/web/file?uuid=98bf31e4-9fef-4628-b5ba-3ee3784015df&owner=6916ad14-918d-4ea8-80ac-f71f0ff1928e&contentid=2742",
+     "https://www.blgwonen.nl/voor-klanten/online-hypotheek-verhogen.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "'Regels voor het wijzigen van een hypotheek' (ASN Bank, versie onbekend)."
+   },
+   "ovbr": {
+    "waarde": "+ Overbruggingskrediet max. 18 mnd (bestaand) / 30 mnd (nieuwbouw)",
+    "bron": [
+     "https://www.blgwonen.nl/jouw-situatie/overbruggingskrediet.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Vakbron: niet-verkochte woning tot 95% marktwaarde min schuld, verkocht 99% verkoopprijs min schuld (verruimd per 1-12-2024; niet op eigen site gezien)."
+   },
+   "rmid": {
+    "waarde": "~ Rentemiddeling alleen bij vaste rente; nieuwe rvp 6/7/10/12 jr en min. 5 jr langer dan resterende",
+    "bron": [
+     "https://www.blgwonen.nl/voor-klanten/hypotheeklasten-verlagen/rentemiddeling.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Alternatief: rente eerder aanpassen met vergoeding ineens."
+   },
+   "rvoor": {
+    "waarde": "~ Rentevoorstel minstens 3 mnd vóór einde rvp; 3 mnd reactietijd",
+    "bron": [
+     "https://www.blgwonen.nl/voor-klanten/rentevastperiode.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "bbrk": {
+    "waarde": "~ Vergelijkingsrente = actuele rente zelfde rvp en hypotheekvorm; over deel boven 10%",
+    "bron": [
+     "https://www.blgwonen.nl/hypotheken/het-aflossen-van-je-hypotheek/vergoeding-renteverlies.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "wkost": {
+    "waarde": "~ Administratiekosten per wijziging, gemaximeerd",
+    "bron": [
+     "https://www.blgwonen.nl/voor-klanten/hoofdelijk-ontslag.html",
+     "https://www.asnbank.nl/downloads/kostenoverzicht-wijzigen-hypotheek.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "€195 per wijziging, max €390 (ASN-kostenoverzicht)."
+   },
+   "bproc": {
+    "waarde": "+ Financieel coach en Bijzonder Beheer; vast contactpersoon en passende betalingsregeling",
+    "bron": [
+     "https://www.blgwonen.nl/voor-klanten/betalingsproblemen.html",
+     "https://www.asnbank.nl/blg-wonen/betalingsproblemen.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "verh": {
+    "waarde": "+ Rente meeneemregeling: rente mee naar nieuwe Bespaarhypotheek",
+    "bron": [
+     "https://www.blgwonen.nl/voor-klanten/rente-meeneemregeling.html",
+     "https://www.blgwonen.nl/download/factsheet-rente-meeneemregeling.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Alleen als aan normen nieuwe Bespaarhypotheek wordt voldaan; vakbron: max 18 mnd tussen levering oud en nieuw, aanvraag binnen 6 mnd na aflossing.",
+    "dubbel": "bevestigd"
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Informatiewijzer Bespaarhypotheek (BLG)",
+    "url": "https://www.blgwonen.nl/download/informatiewijzer-bespaarhypotheek.html",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "Uitgangspunten voor de berekening van de maximale hypotheek (BLG Wonen)",
+    "url": "https://www.blgwonen.nl/download/blg-wonen-uitgangspunten-maximale-hypotheek-berekening.html",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "Regels voor het wijzigen van een hypotheek (ASN Bank)",
+    "url": "https://www.asnbank.nl/web/file?uuid=98bf31e4-9fef-4628-b5ba-3ee3784015df&owner=6916ad14-918d-4ea8-80ac-f71f0ff1928e&contentid=2742",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "Algemene voorwaarden hypotheken BLG Wonen",
+    "url": "https://www.blgwonen.nl/download/algemene-voorwaarden-hypotheken-versie-27-06-2023.html",
+    "versie": "27-06-2023"
+   },
+   {
+    "titel": "Factsheet BLG Wonen Rente Meeneemregeling",
+    "url": "https://www.blgwonen.nl/download/factsheet-rente-meeneemregeling.html",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "Kostenoverzicht ASN Hypotheek (wijzigen)",
+    "url": "https://www.asnbank.nl/downloads/kostenoverzicht-wijzigen-hypotheek.html",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "Rentetarieven ASN Bank voorheen BLG hypotheek",
+    "url": "https://www.asnbank.nl/downloads/rentetarieven-asn-bank-voorheen-blg-hypotheek-per-01-09-2026.html",
+    "versie": "1 sep 2026"
+   }
+  ],
+  "gecontroleerd": "2026-10-04"
+ }
+]

@@ -1,0 +1,632 @@
+[
+ {
+  "naam": "Triodos Bank",
+  "gecontroleerd": "2026-10-04",
+  "criteria": {
+   "rverl": {
+    "waarde": "+ Laagste van rente op voorsteldatum en op ingangsdatum nieuwe rentevaste periode",
+    "bron": [
+     "https://app.triodos.nl/downloads/algemene-voorwaarden-basisinformatie-voor-woninghypotheken?id=4ed5acec9074"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Basisinformatie AV: aanbod min. 3 mnd voor einde rvp; rente op datum aanbod en op ingangsdatum nieuwe periode vergeleken, laagste geldt. Of bestaande klanten exact de nieuwe-klantrente krijgen staat er niet expliciet; document niet zelf geopend (alleen zoeksamenvatting)."
+   },
+   "bprov": {
+    "waarde": "+ Automatische verlenging 300 dagen zonder bereidstellingsprovisie; wel annuleringskosten sinds 1-7-2025",
+    "bron": [
+     "https://www.triodos.nl/hypotheken/hypotheekrente-kosten-hypotheek",
+     "https://www.actuelerentestanden.nl/hypotheek/aanbieders/triodos"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Eigen site: renteaanbod 4 mnd, bij acceptatie binnen 120 dagen automatisch 300 dagen verlengd; annuleringskosten 1% van hoofdsom als getekende offerte niet tot hypotheek leidt (uitzonderingen o.a. ontbinding koop, overlijden, scheiding, werkloosheid). 'Geen bereidstellingsprovisie' alleen expliciet bij vergelijker actuelerentestanden.nl."
+   },
+   "boete": {
+    "waarde": "+ Eigen middelen onbeperkt boetevrij; daarnaast 15% oorspronkelijke hoofdsom per kalenderjaar per leningdeel",
+    "bron": [
+     "https://www.triodos.nl/veelgestelde-vragen/kan-ik-bij-triodos-bank-extra-aflossen-op-mijn-hypotheek?id=37fa05268055"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "dubbel": "gecorrigeerd",
+    "toelichting": "FAQ: met eigen spaargeld of overwaarde verkoop vorige woning altijd vergoedingsvrij, geen maximum (geleend geld van familie telt niet als eigen middelen); 15% per kalenderjaar per leningdeel vergoedingsvrij."
+   },
+   "rmid": {
+    "waarde": "- Geen rentemiddeling",
+    "bron": [
+     "https://www.triodos.nl/veelgestelde-vragen/biedt-triodos-bank-rentemiddeling-aan-bij-een-triodos-hypotheek?id=82b122c75062"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "FAQ: Triodos biedt geen rentemiddeling aan."
+   },
+   "avrij": {
+    "waarde": "! Per 1-7-2026 max 30% WW (ook verhogen); starters niet; bestaand tot 50% blijft bij rentevaste-periode-verlenging",
+    "bron": [
+     "https://www.triodos.nl/persberichten/2026/260611-triodos-past-beleid-voor-aflossingsvrije-hypotheek-aan-per-1-juli-2026",
+     "https://www.triodos.nl/downloads/acceptatiebeleid-hypotheken-juli-2026?id=50c63188e554"
+    ],
+    "brondatum": "2026-07",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Persbericht 11-6-2026 en Acceptatiebeleid v3.56 juli 2026. Plafond €750.000 niet opnieuw in deze ronde gezien."
+   },
+   "rvoor": {
+    "waarde": "~ Voorstel min. 3 mnd voor einde rvp",
+    "bron": [
+     "https://app.triodos.nl/downloads/algemene-voorwaarden-basisinformatie-voor-woninghypotheken?id=4ed5acec9074"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd: aanbod minimaal drie maanden voor afloop rentevaste periode."
+   },
+   "geld": {
+    "waarde": "+ Rente 4 mnd geldig; bij acceptatie binnen 120 dagen automatisch 300 dagen verlenging (~14 mnd)",
+    "bron": [
+     "https://www.triodos.nl/hypotheken/hypotheekrente-kosten-hypotheek"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd op eigen site."
+   },
+   "bdduur": {
+    "waarde": "~ Nieuwbouw 36 mnd; standaard geen verlenging, bij niet-afgeronde bouw contact voor verzoek",
+    "bron": [
+     "https://www.triodos.nl/hypotheken/bouwdepot"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bouwdepotpagina: looptijd nieuwbouw 36 mnd, 'verlenging niet mogelijk', maar bij einde depot voor oplevering kun je contact opnemen voor verlenging. Verbouw 24 mnd niet opnieuw gezien."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Acceptatiebeleid Hypotheken en Acceptatiebeleid Beheer Hypotheken",
+    "url": "https://www.triodos.nl/downloads/acceptatiebeleid-hypotheken-juli-2026?id=50c63188e554",
+    "versie": "v3.56 juli 2026"
+   },
+   {
+    "titel": "Acceptatiebeleid Hypotheken (januari 2026)",
+    "url": "https://www.triodos.nl/downloads/acceptatiebeleid-hypotheken-januari-2026?id=76259f3a29aa",
+    "versie": "jan 2026"
+   },
+   {
+    "titel": "Algemene voorwaarden / basisinformatie woninghypotheken",
+    "url": "https://app.triodos.nl/downloads/algemene-voorwaarden-basisinformatie-voor-woninghypotheken?id=4ed5acec9074",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "Documentenlijst en vormvereisten",
+    "url": "https://www.triodos.nl/binaries/content/assets/tbnl/hypotheken/triodos-bank---documentenlijst-en-vormvereisten.pdf",
+    "versie": "v1.01 aug 2022"
+   }
+  ]
+ },
+ {
+  "naam": "NIBC",
+  "gecontroleerd": "2026-10-04",
+  "criteria": {
+   "rverl": {
+    "waarde": "~ Renteherzieningsvoorstel met actuele NIBC-rentes; tariefklasse op herzieningsdatum opnieuw bepaald",
+    "bron": [
+     "https://nibc.nl/media/seolj05l/2025-11-14-av-nibc-december-2025.pdf",
+     "https://nibc.nl/media/kkkgt52q/algemene_voorwaarden_nibc-hypotheek_2023.pdf",
+     "https://nibc.nl/particulieren/hypotheken/hypotheekrentes"
+    ],
+    "brondatum": "2025-12",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "AV: uiterlijk 3 mnd voor einde rvp voorstel met actuele rentes voor alle rentevaste perioden; tariefklasse wordt op renteherzieningsdatum altijd opnieuw bepaald; zonder keuze zelfde rvp tegen voorgestelde rente. Geen 'laagste van twee'-regeling en geen expliciete garantie 'zelfde rente als nieuwe klant' gevonden. Duurzaamheidskorting ook voor bestaande klanten bij nieuwe rvp (leningdelen met rentevaststelling vanaf 3-2-2025). Documenten niet zelf geopend (nibc.nl geblokkeerd), o.b.v. zoeksamenvattingen."
+   },
+   "avrij": {
+    "waarde": "~ Max 50% marktwaarde aflossingsvrij (gids 2026); geen 30%-aanscherping gevonden",
+    "bron": [
+     "https://nibc.nl/media/zzqnjuq1/hypotheekgids-2026.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Acceptatiegids 2026 v1.0: aflossingsvrij deel niet groter dan 50% marktwaarde, NIBC en NIBC Extra. Latere versie 2026 niet gevonden."
+   },
+   "boete": {
+    "waarde": "+ 15% (Extra: 20%) van oorspronkelijke hoofdsom per jaar boetevrij",
+    "bron": [
+     "https://nibc.nl/media/zzqnjuq1/hypotheekgids-2026.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Gids 2026: 15% (NIBC Hypotheek) / 20% (NIBC Extra); oversluiten van deel uitsluitend uit boetevrije ruimte naar nieuw leningdeel niet geaccepteerd."
+   },
+   "bdduur": {
+    "waarde": "~ Nieuwbouw 24 mnd / verbouw 12 mnd; eenmalig +6 mnd verlenging",
+    "bron": [
+     "https://nibc.nl/particulieren/hypotheken/bouwdepot"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bouwdepotpagina: standaard 12 mnd, nieuwbouw 24 mnd; eenmalig 6 mnd verlengen; daarna wordt restant depot afgelost."
+   },
+   "bdrnt": {
+    "waarde": "~ Depotrente gelijk aan hypotheekrente; geen vergoeding na verlenging",
+    "bron": [
+     "https://nibc.nl/particulieren/hypotheken/bouwdepot"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Rentevergoeding meestal gelijk aan hypotheekrente; na verlenging geen rentevergoeding meer."
+   },
+   "rvoor": {
+    "waarde": "~ Uiterlijk 3 mnd voor einde rvp voorstel; standaard zelfde rentevaste periode",
+    "bron": [
+     "https://nibc.nl/media/kkkgt52q/algemene_voorwaarden_nibc-hypotheek_2023.pdf"
+    ],
+    "brondatum": "2023",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Keuze uiterlijk 14 dagen voor einde rvp doorgeven via portal; anders zelfde rvp tegen voorgestelde rente."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "NIBC Acceptatiegids (Hypotheekgids) 2026",
+    "url": "https://nibc.nl/media/zzqnjuq1/hypotheekgids-2026.pdf",
+    "versie": "2026 v1.0"
+   },
+   {
+    "titel": "NIBC Acceptatiegids 2025",
+    "url": "https://nibc.nl/media/kszfdfok/nibc-hypotheekgids-2025-versie-13.pdf",
+    "versie": "2025 v1.3"
+   },
+   {
+    "titel": "Algemene Voorwaarden NIBC Hypotheek",
+    "url": "https://nibc.nl/media/seolj05l/2025-11-14-av-nibc-december-2025.pdf",
+    "versie": "dec 2025"
+   },
+   {
+    "titel": "Algemene Voorwaarden NIBC Extra Hypotheek",
+    "url": "https://nibc.nl/media/rvammeml/2025-09-17-av-nibc-extra-2025-versie-10.pdf",
+    "versie": "okt 2025"
+   },
+   {
+    "titel": "Productkaart NIBC Extra Hypotheken",
+    "url": "https://nibc.nl/media/jfwb4bnb/productkaart-nibc-extra-hypotheken-okt2025.pdf",
+    "versie": "okt 2025"
+   },
+   {
+    "titel": "Werkinstructie toetsinkomen ondernemers",
+    "url": "https://nibc.nl/media/pidhezud/werkinstructie_toetsinkomen_ondernemers-202601.pdf",
+    "versie": "jan 2026"
+   },
+   {
+    "titel": "Hypotheekgids downloads (overzichtspagina)",
+    "url": "https://nibc.nl/intermediair/hypotheekgids-downloads",
+    "versie": "-"
+   }
+  ]
+ },
+ {
+  "naam": "Allianz",
+  "gecontroleerd": "2026-10-04",
+  "criteria": {
+   "rverl": {
+    "waarde": "~ Nieuwe rente = op dat moment geldende Allianz-rente voor gekozen rentevaste periode",
+    "bron": [
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-46.pdf",
+     "https://www.allianz.nl/particulier/hypotheken/afsluiten/rente.html"
+    ],
+    "brondatum": "2025-06",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "AV 2025-06: aanbod 90 dagen voor einde rvp; bij akkoord betaal je de rente die Allianz op dat moment voor de nieuwe rvp hanteert; keuze uiterlijk 14 dagen voor einde rvp schriftelijk doorgeven; voorstel toont ook rentes andere perioden. Geen dagrente-/laagste-van-twee-regeling bij verlenging gevonden. Of dit exact het nieuwe-klanttarief is, staat er niet letterlijk."
+   },
+   "ondh": {
+    "waarde": "~ Verkoop van onderpand alleen met toestemming Allianz; bij verzuim mag Allianz executeren",
+    "bron": [
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-46.pdf"
+    ],
+    "brondatum": "2025-06",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "AV Allianz Hypotheek 2025-06: verpande/verhypothekeerde zaken alleen met toestemming verkopen; bij niet tijdig betalen/aflossen mag Allianz woning zonder toestemming verkopen (zo nodig met rechterlijke toestemming ontruimen). Geen specifiek restschuldbeleid gevonden."
+   },
+   "bproc": {
+    "waarde": "~ Zo snel mogelijk contact via servicer Quion; verwijzing naar o.a. Geldfit, Nibud en gemeentelijke schuldhulp",
+    "bron": [
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/algemene-informatie-allianz-hypotheek.pdf",
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-46.pdf"
+    ],
+    "brondatum": "2025",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Beheer door Quion Servicing; bij betalingsproblemen contact opnemen om samen oplossing te zoeken; verwijzing naar Geldfit, Wijzer in geldzaken, Nibud, NVVK, schuldhulp gemeente. Bij te late betaling wettelijke rente."
+   },
+   "flex": {
+    "waarde": "~ Uitzend fase A/B = flex; gemiddelde inkomen laatste 3 kalenderjaren; Arbeidsmarktscan niet geaccepteerd",
+    "bron": [
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-47.pdf"
+    ],
+    "brondatum": "2026-04",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Hypotheekwijzer 2026-04: flexwerker = dienstverband zonder intentie (seizoen, uitzend, oproep, tijdelijk); fase A/B flex, fase C vast; Allianz accepteert de Arbeidsmarktscan niet. Perspectiefverklaring niet genoemd in gevonden passages (persp blijft open)."
+   },
+   "avrij": {
+    "waarde": "~ Max. 50% van marktwaarde aflossingsvrij; geen verlaging naar 30% gevonden",
+    "bron": [
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-47.pdf"
+    ],
+    "brondatum": "2026-04",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Hypotheekwijzer 2026-04: aflossingsvrij leningdeel max. 50% van marktwaarde."
+   },
+   "elbl": {
+    "waarde": "! Geen labelkorting gevonden; label D of slechter alleen met verbeterplan naar min. C",
+    "bron": [
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-47.pdf"
+    ],
+    "brondatum": "2026-04",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Hypotheekwijzer 2026-04 bevestigt eis verbeterplan bij label D of slechter."
+   },
+   "geld": {
+    "waarde": "~ 3 mnd bestaande bouw / 6 mnd nieuwbouw; na tekenen automatisch verlengd met 6 resp. 3 mnd",
+    "bron": [
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-47.pdf",
+     "https://www.allianz.nl/particulier/hypotheken/afsluiten/aanvragen.html"
+    ],
+    "brondatum": "2026-04",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd."
+   },
+   "bprov": {
+    "waarde": "! Na automatische verlenging bereidstellingsprovisie per maand bij gestegen rente (nieuw geld)",
+    "bron": [
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-47.pdf"
+    ],
+    "brondatum": "2026-04",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Als rente bij passeren hoger is dan in aanbod: provisie 0,2% per maand over leenbedrag, naar rato over extra dagen; alleen over nieuw geld, niet over meegenomen bedrag."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Hypotheekwijzer Allianz Hypotheek",
+    "url": "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-47.pdf",
+    "versie": "2026-04"
+   },
+   {
+    "titel": "Algemene Voorwaarden Allianz Hypotheek",
+    "url": "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-46.pdf",
+    "versie": "2025-06"
+   },
+   {
+    "titel": "Algemene informatie Allianz Hypotheek",
+    "url": "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/algemene-informatie-allianz-hypotheek.pdf",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "Bouwdepot-informatie 'Je gaat (ver)bouwen'",
+    "url": "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-51.pdf",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "OHA-aanvraagformulier",
+    "url": "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/OHA-aanvraagformulier.pdf",
+    "versie": "onbekend"
+   }
+  ]
+ },
+ {
+  "naam": "Argenta",
+  "gecontroleerd": "2026-10-04",
+  "criteria": {
+   "avrij": {
+    "waarde": "! Vanaf 17-8-2026 max. 30% marktwaarde én max. €150.000; looptijd max. 30 jaar; niet voor starters",
+    "bron": [
+     "https://www.argenta.nl/onze-nieuwe-regels-voor-aflossingsvrij-lenen",
+     "https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf"
+    ],
+    "brondatum": "2026-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd in Hypotheekgids augustus 2026 en nieuwsbericht; daarvoor max. 50%."
+   },
+   "boete": {
+    "waarde": "+ Eigen geld onbeperkt boetevrij; daarnaast 15% van oorspronkelijke hoofdsom per kalenderjaar",
+    "bron": [
+     "https://www.argenta.nl/wonen/veelgestelde-vragen/extra-aflossen",
+     "https://www.argenta.nl/hypotheek-argenta/kenmerken"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "dubbel": "gecorrigeerd",
+    "toelichting": "Aflossen met eigen geld (schenking, erfenis, uitkering verzekering, spaar-/beleggingsgeld) onbeperkt zonder vergoeding; verder 15% per kalenderjaar."
+   },
+   "rmid": {
+    "waarde": "- Geen rentemiddeling; wel renteafkoop tegen eenmalige vergoeding",
+    "bron": [
+     "https://www.argenta.nl/hypotheek-argenta/kenmerken"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Rentemiddeling en rentebedenktijd niet mogelijk; rentewijziging via Mijn Leninginzicht met rente-afkoopvoorstel."
+   },
+   "bprov": {
+    "waarde": "+ Verlengen met 9 maanden zonder bereidstellingsprovisie; wel annuleringskosten na verlenging",
+    "bron": [
+     "https://www.argenta.nl/contact/veelgestelde-vragen/hypotheek/hoe-lang-is-mijn-renteaanbod-geldig"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Renteaanbod 3 mnd; verlengen met 9 mnd, Argenta rekent hiervoor geen kosten. Annuleringskosten in deze ronde niet opnieuw gezien."
+   },
+   "bdduur": {
+    "waarde": "~ Bouwdepot max. 24 maanden (ook nieuwbouw)",
+    "bron": [
+     "https://www.argenta.nl/adviseur/over-ons/weet-je-dat/voordelen-argenta-hypotheek-bij-nieuwbouwhuis",
+     "https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "dubbel": "gecorrigeerd",
+    "toelichting": "Adviseurspagina nieuwbouw: bouwdepot 24 maanden geldig, rentevergoeding gelijk aan hypotheekrente max. 24 mnd. De 36 maanden voor nieuwbouw in de huidige waarde lijkt de overbruggingshypotheek te betreffen (in maart 2026 verruimd van 24 naar 36 mnd). Controle in gids aanbevolen."
+   },
+   "ovbr": {
+    "waarde": "~ Alleen met Argenta-hypotheek; max. 24 mnd (nieuwbouw 36 sinds maart 2026); onverkocht 90-95% waarde",
+    "bron": [
+     "https://www.argenta.nl/adviseur/veelgestelde-vragen/overbruggingshypotheek",
+     "https://argenta.nl/wijzigingen-argenta-hypotheekgids-maart-2026"
+    ],
+    "brondatum": "2026-03",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Nieuwbouw max. looptijd overbrugging verhoogd van 24 naar 36 mnd (wijzigingen hypotheekgids maart 2026)."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "De Argenta hypotheekgids",
+    "url": "https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf",
+    "versie": "augustus 2026"
+   },
+   {
+    "titel": "Wijzigingen Argenta hypotheekgids maart 2026",
+    "url": "https://www.argenta.nl/adviseur/over-ons/wijzigingen-argenta-hypotheekgids-maart-2026",
+    "versie": "mrt 2026"
+   },
+   {
+    "titel": "De Argenta hypotheek - Algemene voorwaarden",
+    "url": "https://www.argenta.nl/sites/default/files/documents/Argenta_Voorwaarden_Hypotheek_juli2025.pdf",
+    "versie": "juli 2025"
+   },
+   {
+    "titel": "De meest voorkomende wijzigingen van de Argenta hypotheek in beheer",
+    "url": "https://www.argenta.nl/adviseur/de-meest-voorkomende-wijzigingen-van-de-argenta-hypotheek-in-beheer",
+    "versie": "-"
+   }
+  ]
+ },
+ {
+  "naam": "bunq",
+  "gecontroleerd": "2026-10-04",
+  "criteria": {
+   "boete": {
+    "waarde": "~ 10% per jaar boetevrij; onbeperkt uit eigen middelen (volgens vergelijker)",
+    "bron": [
+     "https://www.homefinance.nl/hypotheek/aanbieders/bunq/voorwaarden/",
+     "https://www.actuelerentestanden.nl/?p=49985"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "laag",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Opnieuw alleen bij vergelijkers gevonden (homefinance, actuelerentestanden); niet op bunq.com/mortgages.bunq.com (laatste geblokkeerd voor fetch)."
+   },
+   "verh": {
+    "waarde": "~ Rente meenemen tot 3 maanden na aflossing huidige hypotheek (volgens vergelijker)",
+    "bron": [
+     "https://www.homefinance.nl/hypotheek/aanbieders/bunq/voorwaarden/"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "laag",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Alleen vergelijker; geen eigen bron gevonden."
+   },
+   "dag": {
+    "waarde": "+ Rente uit voorstel gegarandeerd; lagere rente op passeerdag wordt toegepast",
+    "bron": [
+     "https://mortgages.bunq.com/interest-rates"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Eigen site: rente in voorstel 4 mnd geldig; is er op de transportdag een lagere rente, dan krijg je die."
+   },
+   "geld": {
+    "waarde": "~ Rentevoorstel 4 maanden geldig",
+    "bron": [
+     "https://mortgages.bunq.com/interest-rates"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd; verlengingsmogelijkheid niet gevonden."
+   },
+   "ltv": {
+    "waarde": "+ Risicoklasse daalt mee met aflossing: lagere rente bij lagere schuld/waarde",
+    "bron": [
+     "https://mortgages.bunq.com/mortgages"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Eigen site: bij elke tijdige betaling daalt je persoonlijke risicoklasse en daarmee de rente."
+   },
+   "ebb": {
+    "waarde": "~ Extra lenen tot 106% van woningwaarde voor energiebesparende maatregelen",
+    "bron": [
+     "https://mortgages.bunq.com/",
+     "https://www.hypotheker.nl/en/mortgage-providers/bunq/"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Eigen site noemt extra financiering voor energiebesparende verbeteringen; 106% expliciet bij De Hypotheker."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Acceptance Guide - Easy Mortgages",
+    "url": "https://mortgages.bunq.com/mortgage-documents/acceptance-guide",
+    "versie": "onbekend (pagina niet op te halen)"
+   },
+   {
+    "titel": "Documents - Easy Mortgages (overzicht)",
+    "url": "https://mortgages.bunq.com/mortgage-documents",
+    "versie": "-"
+   }
+  ]
+ },
+ {
+  "naam": "Clarian Wonen",
+  "gecontroleerd": "2026-10-04",
+  "criteria": {
+   "ondh": {
+    "waarde": "~ Verkoop alleen met toestemming Clarian; restschuld meefinancieren alleen bij restschuld ontstaan 2012-2017, max. 15 jaar",
+    "bron": [
+     "https://www.clarianwonen.nl/uploads/clarian/files/Acceptatiegids-Clarian-Wonen-Januari-2025.pdf",
+     "https://www.clarianwonen.nl/uploads/clarian/files/Beheergids-Clarian-Wonen-April-2026.pdf"
+    ],
+    "brondatum": "2025-01",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Gidsen: woning niet verkopen, verhuren, splitsen of samenvoegen zonder toestemming Clarian Wonen. Financiering restschuld in principe niet mogelijk, behalve restschuld uit verkoop eigen woning ontstaan tussen 28-10-2012 en 1-1-2018 (looptijd max. 15 jaar). Tijdelijke verhuur toegestaan bij te koop staande woning zonder achterstand. Geen specifiek beleid voor onderhandse verkoop met verlies via Bijzonder Beheer gevonden."
+   },
+   "o106": {
+    "waarde": "~ Aparte risicoklasse >100% MW; tot 106% alleen met energiebesparende maatregelen",
+    "bron": [
+     "https://www.clarianwonen.nl/uploads/clarian/files/Acceptatiegids-Clarian-Wonen-Januari-2025.pdf",
+     "https://www.clarianwonen.nl/consument/rente"
+    ],
+    "brondatum": "2025-01",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Eigen gids: risicoklassen tot 106%; max. 100% MW + kosten energiebesparende voorzieningen, niet boven 106% MW na investering (ook voor ondernemers). Rentepagina noemt risicoklassen van <=60% tot >100% LTV: deel boven 100% valt dus in hoogste (duurste) klasse; hoogte toeslag niet vermeld."
+   },
+   "rmid": {
+    "waarde": "~ Rentemiddeling via boetesmeren (opslag op nieuwe rente); daarna 12 mnd wachten; €250",
+    "bron": [
+     "https://www.clarianwonen.nl/uploads/clarian/files/Beheergids-Clarian-Wonen-April-2026.pdf",
+     "https://www.clarianwonen.nl/consument/rentemiddeling"
+    ],
+    "brondatum": "2026-04",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Beheergids april 2026: alleen naar lagere rente; 10% boetevrije ruimte verrekend; na uitvoering 12 mnd geen nieuwe rentemiddeling; administratiekosten €250."
+   },
+   "rverl": {
+    "waarde": "~ Bestaande klanten kiezen bij verlenging uit volledig actueel aanbod in geldende risicoklasse",
+    "bron": [
+     "https://www.clarianwonen.nl/consument/rente"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Rentepagina: tarieven gelden ook voor bestaande klanten bij renteverlenging, verhoging en meenemen; risicoklasse op dat moment bepaalt rente."
+   },
+   "rvoor": {
+    "waarde": "~ Rentevoorstel min. 3 mnd voor einde rentevaste periode; zonder keuze zelfde periode verlengd",
+    "bron": [
+     "https://www.clarianwonen.nl/consument/rente"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd."
+   },
+   "duur": {
+    "waarde": "~ Extra leenruimte voor verduurzaming (tot 106% MW, deels buiten inkomenstoets); geen labelkorting gevonden",
+    "bron": [
+     "https://www.clarianwonen.nl/consument/duurzamer-wonen"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Consumentenpagina: financiering verduurzaming soms buiten inkomenstoets en 'soms zelfs rentekorting' (niet gespecificeerd). Geen rentekorting per energielabel gevonden; elbl blijft open."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Clarian Wonen Beheergids voor adviseurs",
+    "url": "https://www.clarianwonen.nl/uploads/clarian/files/Beheergids-Clarian-Wonen-April-2026.pdf",
+    "versie": "april 2026"
+   },
+   {
+    "titel": "Clarian Wonen Acceptatiegids voor adviseurs",
+    "url": "https://www.clarianwonen.nl/uploads/clarian/files/Acceptatiegids-Clarian-Wonen-Januari-2025.pdf",
+    "versie": "jan 2025"
+   },
+   {
+    "titel": "Clarian Wonen Acceptatiegids",
+    "url": "https://www.clarianwonen.nl/uploads/clarian/files/Acceptatiegids_Clarian-Wonen_-maart_2024.pdf",
+    "versie": "mrt 2024"
+   },
+   {
+    "titel": "Algemene voorwaarden Clarian Wonen",
+    "url": "https://www.clarianwonen.nl/uploads/clarian/files/Algemene-voorwaarden-Clarian-Wonen-2022-definitief.pdf",
+    "versie": "2022"
+   },
+   {
+    "titel": "Adviseurspagina (gidsen-downloads; zoekresultaat noemt publicatiedatum 22-06-2026)",
+    "url": "https://www.clarianwonen.nl/voor-adviseurs/",
+    "versie": "22-06-2026 (volgens zoeksamenvatting)"
+   }
+  ]
+ }
+]
