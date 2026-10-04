@@ -1,0 +1,347 @@
+[
+ {
+  "naam": "Lloyds Bank",
+  "algemeen": {
+   "intermediairsite": null,
+   "voorwaardenPdf": [
+    "https://www.lloydsbank.nl/dam/jcr:88c9d654-7afe-4c25-ba56-1ad826ad1bf9/productkaart-lloyds-bank-hypotheek.pdf",
+    "https://www.lloydsbank.nl/dam/jcr:3aefe396-d61d-45af-9c44-a6b77c1409d6/productkaart-verduurzamingshypotheek.pdf",
+    "https://www.lloydsbank.nl/dam/jcr:611d09df-d552-4f04-81a4-245bd7ab8df2/202607%20Vergelijkingskaart%20Hypotheek.pdf"
+   ],
+   "acceptatiegids": [
+    "https://lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/Lloyds%20Bank%20hypotheekgids%20december%202024.pdf",
+    "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf"
+   ],
+   "opmerking": "lloydsbank.nl, homefinance.nl, actuelerentestanden.nl geblokkeerd voor WebFetch; alles o.b.v. zoekresultaten. Nederlandse tak (Lloyds Bank GmbH), beheert ook Bank of Scotland-hypotheken. Q2 2026: financiering tot 100% LTV (was 90%) en rentekorting bij energielabel A of beter. Verhuurhypotheek sinds 1-10-2025 niet meer aangeboden. Geen aparte intermediairsite-URL gevonden."
+  },
+  "criteria": {
+   "zzp": {
+    "waarde": "~ Met NHG vanaf 1 jaar ondernemerschap; altijd inkomensverklaring ondernemer verplicht",
+    "bron": [
+     "https://www.homefinance.nl/hypotheek/aanbieders/lloyds-bank/voorwaarden/",
+     "https://lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/Lloyds%20Bank%20hypotheekgids%20december%202024.pdf"
+    ],
+    "brondatum": "2024",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Homefinance: NHG vanaf 1 jaar; zonder NHG gemiddelde winst laatste 3 jaar. Aparte 3-jaarsgrens buiten NHG niet letterlijk bevestigd."
+   },
+   "flex": {
+    "waarde": "~ Gemiddelde inkomen laatste 3 jaar (max. huidig); intentieverklaring vereist",
+    "bron": [
+     "https://www.homefinance.nl/hypotheek/aanbieders/lloyds-bank/voorwaarden/"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Variabel inkomen max. 20% van bruto-inkomen mits structureel"
+   },
+   "persp": {
+    "waarde": "- Perspectiefverklaring wordt niet geaccepteerd",
+    "bron": [
+     "https://www.homefinance.nl/hypotheek/aanbieders/lloyds-bank/voorwaarden/",
+     "https://www.homefinance.nl/hypotheek/informatie/perspectiefverklaring/"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "Twee homefinance-pagina's melden dat Lloyds de perspectiefverklaring niet accepteert; geen eigen bron gevonden"
+   },
+   "aow": {
+    "waarde": "~ Pensioeninkomen getoetst via Mijnpensioenoverzicht; pensioengat-proces versoepeld (2026)",
+    "bron": [
+     "https://lloydsbank.nl/dam/jcr:c1c62885-fedd-4340-9854-8ab0c18d2c2d/toetsing-betaalbaarheid-aflossingsvrij.pdf",
+     "https://www.lloydsbank.nl/dam/jcr:f7966c59-80de-434d-a9e2-0f14334842c4/lloyds-bank-nieuwsbrief-intermediair-q2-2026.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Aflossingsvrij deel altijd getoetst op verwacht pensioeninkomen"
+   },
+   "erfp": {
+    "waarde": "~ Erfpacht geaccepteerd; erfpachtakte apart nodig bij desktoptaxatie",
+    "bron": [
+     "https://lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/Lloyds%20Bank%20hypotheekgids%20december%202024.pdf"
+    ],
+    "brondatum": "2024",
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "Geen beperking gevonden; alleen documentvereiste. 'Beperkt' niet bevestigd"
+   },
+   "rvp": {
+    "waarde": "~ Variabel, 1, 5, 6, 10, 15, 20 en 30 jaar",
+    "bron": [
+     "https://www.lloydsbank.nl/dam/jcr:113a4f25-74ad-4301-9992-ffad2c7d983f/LBH(1)_20260822.pdf",
+     "https://www.lloydsbank.nl/dam/jcr:88c9d654-7afe-4c25-ba56-1ad826ad1bf9/productkaart-lloyds-bank-hypotheek.pdf"
+    ],
+    "brondatum": "2026-08-22",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Rentelijst aug 2026; geen 3 jaar vast in lijst, wel 1 en 6 jaar"
+   },
+   "dag": {
+    "waarde": "+ Dagrente: lagere rente op passeerdatum geldt",
+    "bron": [
+     "https://www.lloydsbank.nl/dam/jcr:88c9d654-7afe-4c25-ba56-1ad826ad1bf9/productkaart-lloyds-bank-hypotheek.pdf",
+     "https://www.homefinance.nl/hypotheek/aanbieders/lloyds-bank/review/"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Uit zoeksamenvatting productkaart/homefinance"
+   },
+   "geld": {
+    "waarde": "~ Aanbod 3 mnd, verlengbaar met 90 dagen; nieuwbouw tot 12 mnd totaal",
+    "bron": [
+     "https://www.lloydsbank.nl/dam/jcr:88c9d654-7afe-4c25-ba56-1ad826ad1bf9/productkaart-lloyds-bank-hypotheek.pdf",
+     "https://www.homefinance.nl/hypotheek/aanbieders/lloyds-bank/review/"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Nieuwbouw: verlenging 270 dagen"
+   },
+   "boete": {
+    "waarde": "+ 10% van oorspronkelijk leningdeel per jaar boetevrij",
+    "bron": [
+     "https://www.lloydsbank.nl/dam/jcr:88c9d654-7afe-4c25-ba56-1ad826ad1bf9/productkaart-lloyds-bank-hypotheek.pdf",
+     "https://www.homefinance.nl/hypotheek/aanbieders/lloyds-bank/voorwaarden/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": ""
+   },
+   "ltv": {
+    "waarde": "+ Maandelijkse automatische verlaging tariefklasse; waardestijging zelf melden met taxatie",
+    "bron": [
+     "https://www.lloydsbank.nl/dam/jcr:88c9d654-7afe-4c25-ba56-1ad826ad1bf9/productkaart-lloyds-bank-hypotheek.pdf",
+     "https://www.homefinance.nl/hypotheek/rente/risico-opslag/lloyds/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Tariefklassen tot 65/80/90/100% (100% LTV sinds 2026)"
+   },
+   "bdduur": {
+    "waarde": "~ Bestaande woning 12 mnd, nieuwbouw 24 mnd; verlenging met 6 mnd mogelijk",
+    "bron": [
+     "https://www.lloydsbank.nl/dam/jcr:6d5ae547-9fd0-44e0-a08d-a1b5f7a0f3b6/productkaart-lloyds-bank-hypotheek.pdf",
+     "https://www.lloydsbank.nl/dam/jcr:88c9d654-7afe-4c25-ba56-1ad826ad1bf9/productkaart-lloyds-bank-hypotheek.pdf"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Eén productkaartversie noemt 24 mnd voor verbouwing; verdere verlenging in overleg"
+   },
+   "bdrnt": {
+    "waarde": "~ Depotvergoeding gelijk aan gemiddeld te betalen hypotheekrente",
+    "bron": [
+     "https://www.lloydsbank.nl/dam/jcr:88c9d654-7afe-4c25-ba56-1ad826ad1bf9/productkaart-lloyds-bank-hypotheek.pdf"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Ook na verlenging"
+   },
+   "bddecl": {
+    "waarde": "~ Declareren via Mijn Hypotheek (app, foto van nota)",
+    "bron": [
+     "https://lloydsbank.nl/dam/jcr:1659555c-9be4-415f-ab38-58da14f11e43/Nieuwsbrief%20Lloyds%20Bank%20maart%202023.pdf"
+    ],
+    "brondatum": "2023",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Doorlooptijd niet uit betrouwbare bron gevonden"
+   },
+   "ebb": {
+    "waarde": "~ Verduurzamingshypotheek €5.000-50.000; tot 106% met NHG, 100% zonder",
+    "bron": [
+     "https://www.lloydsbank.nl/dam/jcr:3aefe396-d61d-45af-9c44-a6b77c1409d6/productkaart-verduurzamingshypotheek.pdf",
+     "https://www.lloydsbank.nl/dam/jcr:26fba841-f33a-423e-9e99-efdb0ead6514/poductkaart-verduurzamingshypotheek-en-energielabelkorting.pdf"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Eigen product i.p.v. alleen EBB conform NHG; voor Trhk-maatregelen, via duurzaamheidsdepot"
+   },
+   "duur": {
+    "waarde": "+ Verduurzamingsdeel met rentekorting gedurende rentevaste periode",
+    "bron": [
+     "https://www.lloydsbank.nl/dam/jcr:3aefe396-d61d-45af-9c44-a6b77c1409d6/productkaart-verduurzamingshypotheek.pdf",
+     "https://www.lloydsbank.nl/dam/jcr:26fba841-f33a-423e-9e99-efdb0ead6514/poductkaart-verduurzamingshypotheek-en-energielabelkorting.pdf"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Huidige waarde (expats) hoort niet bij dit criterium"
+   },
+   "verh": {
+    "waarde": "~ Verhuisregeling: rente meenemen binnen 6 mnd na aflossing oude lening",
+    "bron": [
+     "https://www.homefinance.nl/hypotheek/aanbieders/lloyds-bank/voorwaarden/",
+     "https://lloydsbank.nl/dam/jcr:def67308-3358-4b35-a941-4d4091d3a18e/toestemmingsverklaring-verhuisregeling.pdf"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Niet voor Verhuurhypotheek"
+   },
+   "ondh": {
+    "waarde": "~ Verkoop met restschuld in overleg met Bijzonder Beheer, via makelaar",
+    "bron": [
+     "https://lloydsbank.nl/dam/jcr:c6a8dfe8-e3a6-48a0-9ec6-41d2eff5aed2/brochure-betalingsproblemen-hypotheek.pdf"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": ""
+   },
+   "oha": {
+    "waarde": "~ Mogelijk na kredietwaardigheidstoets en advies; team Preventief Beheer",
+    "bron": [
+     "https://www.lloydsbank.nl/dam/jcr:80abb2c8-88b4-4751-91f5-3b0d7d02ffbd/lloyds-bank-nieuwsbrief-intermediair-q1-2026.pdf",
+     "https://lloydsbank.nl/dam/jcr:86dd5c5d-0c41-4418-8a20-699e95f34ed5/aanvraagformulier-ontslag-hoofdelijke-aansprakelijkheid.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Preventief Beheer sinds Q1 2026"
+   },
+   "tweede": {
+    "waarde": "~ Verhoging mogelijk met nieuwe toets, met of zonder NHG",
+    "bron": [
+     "https://www.lloydsbank.nl/dam/jcr:b2205cab-5819-4d16-a26f-5dd1430df6ec/202607%20Aanvraagformulier%20verhogen%20hypotheek.pdf"
+    ],
+    "brondatum": "2026-07",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Verhuurhypotheek niet meer te verhogen"
+   },
+   "ovbr": {
+    "waarde": "~ Overbrugging tot 98% verkoopprijs (verkocht) of 90% (niet verkocht) min schuld",
+    "bron": [
+     "https://www.lloydsbank.nl/dam/jcr:88c9d654-7afe-4c25-ba56-1ad826ad1bf9/productkaart-lloyds-bank-hypotheek.pdf"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Max. hypotheeksom met overbrugging €2 mln (€1 mln bij LTV >90%); looptijd niet gevonden"
+   },
+   "avrij": {
+    "waarde": "~ Max 50% marktwaarde; aflossingsvrij deel altijd consumptief + pensioentoets",
+    "bron": [
+     "https://www.lloydsbank.nl/dam/jcr:88c9d654-7afe-4c25-ba56-1ad826ad1bf9/productkaart-lloyds-bank-hypotheek.pdf"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": ""
+   },
+   "rmid": {
+    "waarde": "- Rentemiddeling niet mogelijk",
+    "bron": [
+     "https://www.actuelerentestanden.nl/hypotheek/aanbieders/lloyds-bank/"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Vergelijker; geen eigen bron"
+   },
+   "rverl": {
+    "waarde": "~ Nieuwe rente = actuele productrente; lagere rente op ingangsdatum geldt",
+    "bron": [
+     "https://lloydsbank.nl/dam/jcr:b9710345-a59a-4f20-8630-9b392255fc71/voorwaarden-lloyds-bank-verhuurhypotheek.pdf"
+    ],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Bron betreft Verhuurhypotheek-voorwaarden; voor woninghypotheek niet expliciet bevestigd"
+   },
+   "rvoor": {
+    "waarde": "~ Rentevoorstel 90 dagen voor einde rentevaste periode",
+    "bron": [
+     "https://www.homefinance.nl/hypotheek/aanbieders/lloyds-bank/review/",
+     "https://www.lloydsbank.nl/dam/jcr:d5704316-8a90-4c75-9e1f-41a853d9673a/lloyds-bank-hypotheekgids-verhuurhypotheek.pdf"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "bbrk": {
+    "waarde": "~ Contante waarde renteverschil o.b.v. vergelijkingsrente; niets bij hogere marktrente",
+    "bron": [
+     "https://www.homefinance.nl/lloyds-lening-informatie-over-aanvragen-voorwaarden-en-beheer/"
+    ],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Uit vergelijkerpagina; exacte vergelijkingsrente (resterende periode) niet uit eigen bron"
+   },
+   "elbl": {
+    "waarde": "~ Rentekorting bij label A of beter, hele rentevaste periode",
+    "bron": [
+     "https://www.lloydsbank.nl/dam/jcr:f7966c59-80de-434d-a9e2-0f14334842c4/lloyds-bank-nieuwsbrief-intermediair-q2-2026.pdf",
+     "https://www.lloydsbank.nl/dam/jcr:113a4f25-74ad-4301-9992-ffad2c7d983f/LBH(1)_20260822.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Sinds Q2 2026; niet voor variabel, overbrugging, verduurzamingsdeel. Geen opslag zonder label gevonden"
+   },
+   "o106": {
+    "waarde": "+ Verduurzamingsdeel in laagste tariefklasse, telt niet mee voor LTV-klasse",
+    "bron": [
+     "https://www.lloydsbank.nl/dam/jcr:3aefe396-d61d-45af-9c44-a6b77c1409d6/productkaart-verduurzamingshypotheek.pdf"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "bprov": {
+    "waarde": "! Verlengen kost bereidstellingsprovisie per maand als offerterente lager is dan actueel",
+    "bron": [
+     "https://www.lloydsbank.nl/dam/jcr:88c9d654-7afe-4c25-ba56-1ad826ad1bf9/productkaart-lloyds-bank-hypotheek.pdf",
+     "https://www.homefinance.nl/hypotheek/aanbieders/lloyds-bank/review/"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "wkost": {
+    "waarde": "+ Aanpassingen gratis of tegen lage kosten zelf te regelen",
+    "bron": [
+     "https://www.maxvandaag.nl/?p=47967",
+     "https://www.homefinance.nl/hypotheek/aanbieders/lloyds-bank-consumentenbond/"
+    ],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Oudere Consumentenbond-gerelateerde bron; geen tarieflijst gevonden"
+   },
+   "avlt": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Niets gevonden over verlengen aflossingsvrij na einde looptijd (alleen dat verlengen bij Verhuurhypotheek niet kan)"
+   },
+   "bproc": {
+    "waarde": "~ Bijzonder Beheer bespreekt oorzaak en oplossing; Preventief Beheer bij dreigende problemen",
+    "bron": [
+     "https://lloydsbank.nl/dam/jcr:c6a8dfe8-e3a6-48a0-9ec6-41d2eff5aed2/brochure-betalingsproblemen-hypotheek.pdf",
+     "https://www.lloydsbank.nl/dam/jcr:80abb2c8-88b4-4751-91f5-3b0d7d02ffbd/lloyds-bank-nieuwsbrief-intermediair-q1-2026.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Melding BKR na 3 gemiste termijnen"
+   }
+  },
+  "gecontroleerd": "2026-10-04"
+ }
+]

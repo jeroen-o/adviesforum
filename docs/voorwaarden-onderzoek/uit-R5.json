@@ -1,0 +1,342 @@
+[
+ {
+  "naam": "Nationale-Nederlanden",
+  "algemeen": {
+   "intermediairsite": "https://adviseur.nn.nl",
+   "voorwaardenPdf": [
+    "https://www.nn.nl/Download/Voorwaarden-NN-Hypotheek.htm"
+   ],
+   "acceptatiegids": [],
+   "opmerking": "NN Hypotheken alleen via adviseur. nn.nl geblokkeerd voor WebFetch; alles o.b.v. zoekresultaten (titel+samenvatting) van nn.nl en vergelijkers. Geen openbare acceptatiegids gevonden. Woonnu is NN-dochter met eigen (duurzaamheids)voorwaarden, niet meegenomen. Veel NN-zoekresultaten betreffen oude Delta Lloyd/OHRA-voorwaarden; die zijn niet als bron voor het huidige product gebruikt behalve waar vermeld."
+  },
+  "criteria": {
+   "zzp": {
+    "waarde": "~ Vanaf 1 jaar ondernemerschap met inkomensverklaring, met of zonder NHG; anders 3 jaar cijfers",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Een-hypotheek-voor-ondernemers.htm",
+     "https://www.nn.nl/Particulier/Hypotheken/Een-hypotheek-voor-ondernemers/Inkomensverklaring.htm",
+     "https://www.nn.nl/Particulier/Hypotheken/Hypotheek-voor-Medici.htm"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "NN: mogelijk vanaf 1 jaar ondernemerschap; IVO-toetsinkomen = gem. 3 jaar of lager laatste jaar. 'Met of zonder NHG' expliciet op medici-pagina; geen aparte 3-jaarseis buiten NHG gevonden."
+   },
+   "flex": {
+    "waarde": "~ Tijdelijk contract: toetsinkomen via werkgeversverklaring of UWV-verzekeringsbericht; ook perspectiefverklaring",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Hypotheek-voor-Medici.htm",
+     "https://www.nn.nl/Inspiratie/Perspectiefverklaring-hypotheek.htm"
+    ],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "gewijzigd",
+    "toelichting": "NN-pagina (medici) noemt WGV/UWV-verzekeringsbericht bij tijdelijk contract; 3-jaarsgemiddelde voor flex niet specifiek voor NN bevestigd."
+   },
+   "persp": {
+    "waarde": "+ Perspectiefverklaring geaccepteerd (ook met NHG)",
+    "bron": [
+     "https://www.nn.nl/Wonen/Perspectiefverklaring.htm",
+     "https://www.nn.nl/Inspiratie/Perspectiefverklaring-hypotheek.htm"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "NN-blog 'Een hypotheek voor flexwerkers met perspectiefverklaring'; consumentenvoorlichting, geen acceptatiegids."
+   },
+   "aow": {
+    "waarde": "+ Toets op pensioeninkomen; Senioren Verhuisregeling toetst op werkelijke lasten bij gelijke/lagere lasten",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Hypotheek-voor-ouderen.htm",
+     "https://www.nn.nl/Over-NationaleNederlanden/Actualiteiten/Nieuwsbericht/NationaleNederlanden-lanceert-Senioren-Verhuisregeling.htm",
+     "https://www.nn.nl/Inspiratie/Hypotheek-en-pensioen.htm"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "Senioren Verhuisregeling: binnen 10 jaar voor pensioen of gepensioneerd, nieuwe bruto lasten <= huidige; rekent met opgebouwd pensioen."
+   },
+   "erfp": {
+    "waarde": "~ Erfpacht mogelijk; aanvullende eisen in hypotheekvoorwaarden (o.a. bij einde erfpacht voor einde lening)",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Je-hypotheek/Erfpacht.htm",
+     "https://www.nn.nl/Download/Voorwaarden-NN-Hypotheek.htm"
+    ],
+    "brondatum": "2024-01",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "NN-pagina 'Wat betekent erfpacht voor je hypotheek?' meldt extra eisen; details uit voorwaarden (deels oudere Delta Lloyd-voorwaarden). Geen acceptatiegids gevonden."
+   },
+   "rvp": {
+    "waarde": "+ Variabel en vast 1, 5, 10, 15, 20, 30 jaar",
+    "bron": [
+     "https://www.homefinance.nl/hypotheek/rente/nn/",
+     "https://www.actuelerentestanden.nl/?p=4194",
+     "https://www.nn.nl/Particulier/Hypotheken/Variabele-Hypotheekrente.htm",
+     "https://www.nn.nl/Download/1-juni-2026-FLH01032026.htm"
+    ],
+    "brondatum": "2025-09",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Vergelijkers noemen deze periodes; NN-rentetarievenblad juni 2026 bestaat maar niet ingezien (geblokkeerd)."
+   },
+   "dag": {
+    "waarde": "! Standaard offerterente: geen automatische daling naar dagrente bij passeren",
+    "bron": [
+     "https://www.welingelichtekringen.nl/economie/dalende-hypotheekrente-dagrente-kan-kopers-duizenden-euros-besparen"
+    ],
+    "brondatum": "2025",
+    "zekerheid": "laag",
+    "status": "gewijzigd",
+    "toelichting": "Nieuwsartikel (2025) noemt NN bij verstrekkers met offerterente. Dagrente-regeling op NN-site geldt alleen oude NN Variant Hypotheek (Delta Lloyd). Bevestigen bij NN."
+   },
+   "geld": {
+    "waarde": "~ Nieuwbouw: offerte 12 mnd geldig; bestaande bouw-termijn niet gevonden",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Hypotheek-voor-Nieuwbouw.htm"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "Alleen nieuwbouwtermijn (12 mnd) op NN-site bevestigd; huidige '3 mnd + verlenging' niet teruggevonden."
+   },
+   "boete": {
+    "waarde": "+ 10% van oorspronkelijk bedrag per leningdeel per kalenderjaar boetevrij",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Je-hypotheek/Extra-aflossen.htm",
+     "https://www.nn.nl/Particulier/Hypotheken/Wanneer-betaal-je-een-vergoeding.htm"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Ook boetevrij: variabel deel, laatste 3 mnd RVP, bij verkoop woning, bij overlijden."
+   },
+   "ltv": {
+    "waarde": "+ Maandelijkse automatische check; lagere tariefklasse direct tijdens RVP (9 klassen)",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Hypotheekrente/Tariefklassen.htm",
+     "https://www.nn.nl/Over-NationaleNederlanden/Actualiteiten/Persbericht/NN-verlaagt-hypotheekrente-automatisch-bij-aflossing.htm"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Waardestijging aantonen via taxatie of actuele WOZ."
+   },
+   "bdduur": {
+    "waarde": "~ Nieuwbouw 24 mnd, verbouw 12 mnd; automatisch 12 mnd verlengd (zonder depotvergoeding)",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Je-hypotheek/Bouwdepot/Nieuwbouwdepot-en-verbouwdepot.htm",
+     "https://www.nn.nl/Particulier/Hypotheken/Je-hypotheek/Bouwdepot/Bouwdepot-verlengen-en-beeindigen.htm"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": ""
+   },
+   "bdrnt": {
+    "waarde": "~ Nieuwbouw: vergoeding = gemiddelde hypotheekrente; verbouw: lager dan hypotheekrente",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Je-hypotheek/Bouwdepot/Nieuwbouwdepot-en-verbouwdepot.htm",
+     "https://www.nn.nl/Particulier/Hypotheken/Hypotheek-voor-Nieuwbouw.htm"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Verbouwdepot krijgt vaste korting t.o.v. gemiddelde hypotheekrente (percentage niet genoemd i.v.m. AFM-regel); na verlenging geen vergoeding."
+   },
+   "bddecl": {
+    "waarde": "+ Declareren via NN App/mijn.nn; beoordeling max. 3 werkdagen, daarna direct uitbetaald",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Je-hypotheek/Bouwdepot/Bouwdepot-declareren.htm"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Nota max. 6 maanden oud."
+   },
+   "ebb": {
+    "waarde": "+ Duurzaamheidsdepot: EBB en EBV; tot 106% woningwaarde voor energiebesparing",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Je-hypotheek/Bouwdepot/Duurzaamheidsdepot.htm",
+     "https://www.nn.nl/Particulier/Hypotheken/Verbouwen/Extra-hypotheek-voor-verduurzamen.htm"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "EBV alleen voor maatregelen uit taxatierapport."
+   },
+   "duur": {
+    "waarde": "~ Extra leenruimte op basis van energielabel; geen labelrentekorting gevonden",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Verbouwen/Extra-hypotheek-voor-verduurzamen.htm",
+     "https://www.nn.nl/Particulier/Hypotheken/Hypotheekrente.htm"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "Extra lenen per label (wettelijke normen); NN-verduurzamingsrente zit bij dochter Woonnu, niet bij NN-label."
+   },
+   "verh": {
+    "waarde": "+ Rente meenemen tot einde RVP; nieuwe akte binnen 6 mnd na aflossing oude hypotheek",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Ander-huis-kopen/Hypotheek-meenemen.htm"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Meerbedrag tegen actuele rente/voorwaarden; zelf bewonen."
+   },
+   "ondh": {
+    "waarde": "~ Verkoop alleen met toestemming NN; restschuld via afspraak (regeling of meefinancieren)",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Je-hypotheek/Restschuld-op-je-hypotheek.htm",
+     "https://www.nn.nl/Download/Voorwaarden-NN-Hypotheek.htm"
+    ],
+    "brondatum": "2024-01",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Voorwaarden: verkopen/verhuren alleen met toestemming; bij NHG kwijtschelding onder voorwaarden. Expliciete toestemmingsprocedure onderhandse verkoop niet gevonden; wel advies vóór verkoop NN te benaderen."
+   },
+   "oha": {
+    "waarde": "~ Ontslag hoofdelijkheid met toestemming NN; achterblijver moet lasten alleen kunnen dragen",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Je-hypotheek/Uit-elkaar-en-een-hypotheek.htm",
+     "https://www.nn.nl/Inspiratie/Uit-elkaar-met-koophuis.htm"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": ""
+   },
+   "tweede": {
+    "waarde": "+ Verhogen binnen inschrijving zonder notaris, anders 2e hypotheek; min. € 10.000",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Je-hypotheek/Verbouwen/Verbouwing-financieren/Verbouwing-financieren-vanuit-je-hypotheek.htm"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": ""
+   },
+   "ovbr": {
+    "waarde": "~ Overbrugging 1 jr (bestaand) / 2 jr (nieuwbouw), 1 jr verlengbaar; max 95% taxatiewaarde minus schuld",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Een-nieuwe-hypotheek/Hypotheekvormen/Overbruggingskrediet.htm"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Ook mogelijk als oude woning nog niet verkocht (op taxatiewaarde); dubbele lasten 12 mnd moeten draagbaar zijn."
+   },
+   "avrij": {
+    "waarde": "~ Max. 50% van de woningwaarde aflossingsvrij (geen 2026-aanscherping gevonden)",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Hypotheekvormen/Aflossingsvrije-Hypotheek.htm"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "In 2026 scherpten Rabo/Obvion/ABN/ASN aan naar 30%; voor NN geen wijziging gevonden."
+   },
+   "rmid": {
+    "waarde": "+ Rentemiddeling mogelijk: renteverlies verwerkt als opslag over nieuwe RVP",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Je-hypotheek/Hypotheekrente-wijzigen/Tussentijdse-rentewijziging-met-rentemiddeling.htm"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Alternatief: tussentijdse rentewijziging met vergoeding ineens."
+   },
+   "rverl": {
+    "waarde": "~ Uniform rentebeleid: bestaande klanten zelfde kortingen als nieuwe klanten",
+    "bron": [
+     "https://www.homefinance.nl/hypotheek/oversluiten/nationale-nederlanden/"
+    ],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Alleen vergelijkerbron; niet op NN-site bevestigd."
+   },
+   "rvoor": {
+    "waarde": "~ Rentevoorstel 3 maanden voor einde rentevaste periode",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Je-hypotheek/Einde-rentevaste-periode.htm"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "bbrk": {
+    "waarde": "~ Contante waarde renteverlies; vergelijkingsrente = dichtstbijzijnde periode met hogere rente",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Wanneer-betaal-je-een-vergoeding.htm"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "10% vrije ruimte gaat eerst van grondslag af; rekening met aflossingen gehouden."
+   },
+   "elbl": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Op NN-site alleen extra leenruimte per label gevonden, geen rentedifferentiatie per energielabel; ook geen bevestiging dat die ontbreekt."
+   },
+   "o106": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "106% voor energiebesparing bevestigd, maar niet of tariefklasse >100% (hoogste opslag) dan geldt."
+   },
+   "bprov": {
+    "waarde": "! Verlengen offerte: provisie per maand alleen als rente bij passeren hoger is dan offerterente",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Hypotheekadvies-van-Nationale-Nederlanden.htm"
+    ],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Uit zoeksamenvatting van NN-pagina's (deels oude Delta Lloyd-voorwaarden); tarief niet genoemd."
+   },
+   "wkost": {
+    "waarde": "! Administratiekosten bij wijziging zonder nieuwe rente; extra aflossen en hypotheekvorm wijzigen kosteloos",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Je-hypotheek/Hypotheekvorm-aanpassen.htm",
+     "https://www.nn.nl/Particulier/Hypotheken/Hypotheek-oversluiten.htm"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Zoeksamenvatting noemt € 250 aanpassingskosten; adviseurskosten apart."
+   },
+   "avlt": {
+    "waarde": "! Op einddatum volledig aflossen; verlenging alleen als dan geldende leennormen het toelaten",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Je-hypotheek/Einde-looptijd-hypotheek.htm"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Geen automatische verlenging."
+   },
+   "bproc": {
+    "waarde": "+ Specialisten bij betalingsproblemen: betaalregeling, betaalpauze op maat, budgetcoach",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Hulp-bij-betalingsproblemen.htm",
+     "https://www.nn.nl/nieuws/nationale-nederlanden-biedt-betaalpauze-op-maat-voor-hypotheekklanten-met-betalingsproblemen/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": ""
+   }
+  },
+  "gecontroleerd": "2026-10-04"
+ }
+]

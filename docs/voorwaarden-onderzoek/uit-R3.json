@@ -1,0 +1,364 @@
+[
+ {
+  "naam": "Munt Hypotheken",
+  "algemeen": {
+   "intermediairsite": "https://www.munthypotheken.nl/ik-ben-adviseur/",
+   "voorwaardenPdf": [
+    "https://www.munthypotheken.nl/site/assets/files/1838/av_26_01.pdf",
+    "https://www.munthypotheken.nl/site/assets/files/1838/av_25_02.pdf",
+    "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf"
+   ],
+   "acceptatiegids": [
+    "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf"
+   ],
+   "opmerking": "Regiepartij; aanvragen lopen via serviceproviders (DAK, Huismerk, VCN, HypotheekCompany); beheer en bouwdepot via Stater. munthypotheken.nl en homefinance.nl geblokkeerd voor WebFetch; alles o.b.v. zoekresultaten (titel + samenvatting) van munthypotheken.nl, voornamelijk FAQ, Hypotheekgids 2026 en AV 26.01/25.02. Rentes/percentages bewust weggelaten."
+  },
+  "criteria": {
+   "zzp": {
+    "waarde": "! Met NHG min. 12 mnd ondernemer, zonder NHG 36 mnd; altijd inkomensverklaring",
+    "bron": [
+     "https://www.munthypotheken.nl/veelgestelde-vragen/aanvraag-munt-hypotheek/ik-ben-een-zelfstandig-ondernemer-kan-ik-een-munt-hypotheek-krijgen/",
+     "https://www.munthypotheken.nl/inkomensverklaring/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Zonder NHG alleen IVO van door MUNT erkende rekenexperts (o.a. Raadhuys, Zakelijk Inkomen); IVO max. 6 mnd oud; uitzonderingen op 36 mnd mogelijk"
+   },
+   "flex": {
+    "waarde": "~ Flexinkomen via Arbeidsmarktscan (12 van laatste 14 mnd gewerkt); tijdelijk contract evt. als vast",
+    "bron": [
+     "https://www.munthypotheken.nl/arbeidsmarktscan/",
+     "https://www.munthypotheken.nl/veelgestelde-vragen/aanvraag-munt-hypotheek/ik-heb-een-tijdelijk-contract-bij-mijn-werkgever-kan-ik-een-munt-hypotheek-krijgen/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Huidige waarde 'beperkt/voorkeur vast' niet onderbouwd; MUNT accepteert Arbeidsmarktscan en perspectiefverklaring"
+   },
+   "persp": {
+    "waarde": "+ Perspectiefverklaring geaccepteerd; huidig inkomen meestal volledig als toetsinkomen",
+    "bron": [
+     "https://www.munthypotheken.nl/perspectiefverklaring/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Min. 6 mnd bij zelfde uitzendbureau; verklaring 6 mnd geldig"
+   },
+   "aow": {
+    "waarde": "+ Seniorenregeling: toets op werkelijke lasten vanaf AOW met opgebouwd pensioen",
+    "bron": [
+     "https://www.munthypotheken.nl/kazan/munt-acceptatie-tips/de-seniorenpropositie/",
+     "https://www.munthypotheken.nl/senioren/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Voor bestaande eigenaren met AOW binnen 10 jaar; rentevast min. 20 jaar (uitz. mogelijk), nieuwe last niet hoger dan huidige; regeling tijdelijk tekort tussen AOW-data partners"
+   },
+   "erfp": {
+    "waarde": "! Alleen erfpacht met (semi)overheid als erfverpachter; canon gaat af van financieringslast",
+    "bron": [
+     "https://www.munthypotheken.nl/algemene-voorwaarden/",
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Uit zoeksamenvatting gids/AV: erfverpachter gemeente, provincie, waterschap of corporatie; bij oud contract (voor 1992) resterende duur min. halve looptijd; particuliere erfpacht niet genoemd"
+   },
+   "rvp": {
+    "waarde": "+ Variabel, 5, 10, 15, 20, 25 en 30 jaar",
+    "bron": [
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf",
+     "https://www.munthypotheken.nl/rente/"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Ook 25 jaar en variabel beschikbaar"
+   },
+   "dag": {
+    "waarde": "! Keuze: offerterente (vast) of dagrente (daling tot passeren) tegen hogere rente",
+    "bron": [
+     "https://www.munthypotheken.nl/veelgestelde-vragen/rente/wat-is-het-verschil-tussen-offerterente-en-dagrente/",
+     "https://www.munthypotheken.nl/veelgestelde-vragen/rente/de-rente-in-mijn-rente-aanbod-en-hypotheekaanbod-is-hoger-dan-op-de-passeerdatum-welke-rente-krijg-ik/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Dagrente moet bij aanvraag gekozen worden en kost renteopslag; bij offerterente geen daling"
+   },
+   "geld": {
+    "waarde": "~ 4 mnd; eenmalig verlengen met 2 mnd (bestaande bouw) of 8 mnd (nieuwbouw)",
+    "bron": [
+     "https://www.munthypotheken.nl/veelgestelde-vragen/aanvraag-munt-hypotheek/mijn-rente-aanbod-is-bijna-niet-meer-geldig-kan-ik-de-termijn-verlengen/",
+     "https://www.munthypotheken.nl/veelgestelde-vragen/aanvraag-munt-hypotheek/hoe-kan-ik-mijn-rente-of-hypotheekaanbod-verlengen/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Verlengingsformulier bij aanbod; adviseur stuurt in"
+   },
+   "boete": {
+    "waarde": "+ Onbeperkt boetevrij met eigen geld; 10% p.j. van oorspr. bedrag bij oversluiten/rentewijziging",
+    "bron": [
+     "https://www.munthypotheken.nl/veelgestelde-vragen/uw-munt-hypotheek/wanneer-mag-ik-zonder-kosten-aflossen/",
+     "https://www.munthypotheken.nl/veelgestelde-vragen/uw-munt-hypotheek/ik-wil-aflossen-op-mijn-hypotheek-moet-ik-een-boete-betalen/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Gunstiger dan '10% per jaar': met eigen middelen altijd onbeperkt; 10%-grens alleen bij aflossen met geleend geld of andere rentevaste periode; verkoop woning boetevrij"
+   },
+   "ltv": {
+    "waarde": "+ Automatisch lagere risico-opslag bij aflossen; waardestijging via taxatie/Calcasa (niet-NHG)",
+    "bron": [
+     "https://www.munthypotheken.nl/veelgestelde-vragen/rente/welke-opslagen-zitten-er-in-de-hypotheekrente/",
+     "https://www.munthypotheken.nl/veelgestelde-vragen/rente/hoe-kan-ik-mijn-rente-opslag-laten-vervallen-als-de-waarde-van-mijn-huis-is-gestegen/",
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Taxatierapport of Calcasa desktoptaxatie max. 6 mnd oud; NHG of t/m 60% LTV al laagste klasse"
+   },
+   "bdduur": {
+    "waarde": "+ 24 mnd (bestaande bouw en nieuwbouw); verlengbaar met 12 + 6 mnd tot max. 42 mnd",
+    "bron": [
+     "https://www.munthypotheken.nl/veelgestelde-vragen/bouwdepot/hoe-lang-is-mijn-bouwdepot-geldig/",
+     "https://www.munthypotheken.nl/kazan/munt-acceptatie-tips/een-bouwdepot-bij-munt/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Ook verbouw 24 mnd i.p.v. 12"
+   },
+   "bdrnt": {
+    "waarde": "! Vergoeding = gewogen hypotheekrente, maar max. 12 mnd (bestaand) / 24 mnd (nieuwbouw, EBB)",
+    "bron": [
+     "https://www.munthypotheken.nl/veelgestelde-vragen/bouwdepot/wat-is-de-rente-op-mijn-bouwdepot/",
+     "https://www.munthypotheken.nl/kazan/munt-acceptatie-tips/een-bouwdepot-bij-munt/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Rentevergoeding gebaseerd op gewogen gemiddelde van de leningdelen, in tijd begrensd"
+   },
+   "bddecl": {
+    "waarde": "~ Declareren via MijnHypotheekOnline (foto factuur) of e-mail; uitbetaling binnen 5 werkdagen",
+    "bron": [
+     "https://www.munthypotheken.nl/veelgestelde-vragen/bouwdepot/wanneer-wordt-mijn-declaratie-betaald/",
+     "https://www.munthypotheken.nl/veelgestelde-vragen/bouwdepot/ik-heb-rekeningen-die-betaald-moeten-worden-waar-kan-ik-dat-doorgeven/",
+     "https://www.munthypotheken.nl/veelgestelde-vragen/bouwdepot/kan-mijn-aannemer-ook-rechtstreeks-de-gelden-ontvangen-van-munt-hypotheken/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Afdeling bouwdepots via Stater (muntbouwdepot@stater.nl); nieuwbouw: aannemer rechtstreeks betaald; factuur vereist, geen offerte"
+   },
+   "ebb": {
+    "waarde": "+ Energiebespaarbudget naar label (max. 20k bij E-G), in duurzaamheidsdepot, 2 jaar",
+    "bron": [
+     "https://www.munthypotheken.nl/veelgestelde-vragen/aanvraag-munt-hypotheek/wat-is-het-energie-bespaar-budget/",
+     "https://www.munthypotheken.nl/duurzaamheidsdepot/",
+     "https://www.munthypotheken.nl/duurzaamheid/mijn-woning-verduurzamen/energiemaatregelingen/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Budget: 10k zonder label of A++-B, 15k C-D, 20k E-G, 0 bij A+++; rentevergoeding over depot"
+   },
+   "duur": {
+    "waarde": "~ Geen rentekorting gevonden; voordeel via extra leenruimte (EBB tot 106%) en Verbeterbudget",
+    "bron": [
+     "https://www.munthypotheken.nl/veelgestelde-vragen/verduurzamen/hoeveel-mogen-klanten-lenen-voor-energiebesparende-voorzieningen-ebv-in-relatie-tot-de-waarde-van-de-woning/",
+     "https://www.munthypotheken.nl/veelgestelde-vragen/aanvraag-munt-hypotheek/welke-voorwaarden-gelden-er-bij-een-verbeterbudget/",
+     "https://verwarming.nl/pages/geld-en-advies/groene-hypotheek-energiebespaarbudget-2026.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "Huidige waarde ging over risicoklassen, niet over verduurzaming; 'geen aparte rentekorting' alleen uit tweede bron (verwarming.nl 2026)"
+   },
+   "verh": {
+    "waarde": "+ Rente kosteloos meenemen binnen 3 mnd; meerlenen tegen actuele rente",
+    "bron": [
+     "https://www.munthypotheken.nl/veelgestelde-vragen/aanvraag-munt-hypotheek/heeft-munt-hypotheken-een-verhuisregeling/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Rentecondities ongedeeld, resterende rentevaste periode blijft; nieuwe risicoklasse geldt ook voor meegenomen deel"
+   },
+   "ondh": {
+    "waarde": "~ Verkoop met restschuld alleen met toestemming MUNT (bijzonder beheer)",
+    "bron": [
+     "https://www.munthypotheken.nl/veelgestelde-vragen/bijzonder-beheer/mag-ik-mijn-woning-verkopen-met-restschuld/",
+     "https://www.munthypotheken.nl/veelgestelde-vragen/bijzonder-beheer/ik-heb-een-hypotheek-met-nationale-hypotheek-garantie-nhg/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Eerst zelf tekort aanvullen of lenen; anders toestemming nodig; bij NHG kwijtschelding mogelijk"
+   },
+   "oha": {
+    "waarde": "~ Draagkrachttoets blijvende partner; evt. extra aflossing als voorwaarde; beide ex-partners kunnen nieuw lenen",
+    "bron": [
+     "https://www.munthypotheken.nl/veelgestelde-vragen/uw-munt-hypotheek/wat-is-ontslag-hoofdelijke-aansprakelijkheid/",
+     "https://www.munthypotheken.nl/relatiebeeindiging/",
+     "https://www.munthypotheken.nl/veelgestelde-vragen/bijzonder-beheer/mijn-partner-en-ik-gaan-scheiden/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Kosten ontslag hoofdelijkheid circa 150 euro; relatiebeëindiging o.b.v. werkelijke-lastentoets"
+   },
+   "tweede": {
+    "waarde": "~ Verhogen/2e hypotheek via adviseur; geen achterstand laatste 12 mnd; binnen inschrijving zonder notaris",
+    "bron": [
+     "https://www.munthypotheken.nl/veelgestelde-vragen/aanvraag-munt-hypotheek/kan-ik-een-tweede-hypotheek-afsluiten/",
+     "https://www.munthypotheken.nl/veelgestelde-vragen/uw-munt-hypotheek/moet-ik-naar-de-notaris-om-mijn-hypotheek-te-verhogen/",
+     "https://www.munthypotheken.nl/verhogen/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Min. verhoging 10.000 euro; inschrijving incl. 40% extra boven hoofdsom; elders 6 mnd zonder achterstand genoemd"
+   },
+   "ovbr": {
+    "waarde": "~ Eigen overbruggingshypotheek, variabele rente, max. 30 mnd; max. 90% waarde (97% verkoopprijs) min schuld",
+    "bron": [
+     "https://www.munthypotheken.nl/veelgestelde-vragen/aanvraag-munt-hypotheek/kan-ik-een-overbruggingslening-afsluiten/",
+     "https://www.munthypotheken.nl/servicepartner/eigen-middelen-tijdelijk-dubbele-lasten/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Huidig 'geen eigen overbruggingskrediet' klopt niet; afsluitkosten circa 500 euro; dubbele lasten getoetst, anders eigen middelen"
+   },
+   "avrij": {
+    "waarde": "~ Max. 50% van marktwaarde; bestaande spaar/beleggingsdelen mee als aflossingsvrij binnen 50%",
+    "bron": [
+     "https://www.munthypotheken.nl/veelgestelde-vragen/aanvraag-munt-hypotheek/welk-deel-van-mijn-hypotheek-mag-ik-aflossingsvrij-lenen/",
+     "https://www.homefinance.nl/hypotheek/aanbieders/munt/aflossingsvrij/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "'Geen renteopslag tot 50%' alleen via homefinance.nl (tweede bron)"
+   },
+   "rmid": {
+    "waarde": "! Tussentijds rente wijzigen: vergoeding ineens + administratiekosten; geen rentemiddeling gevonden",
+    "bron": [
+     "https://www.munthypotheken.nl/veelgestelde-vragen/rente/kan-ik-tussentijds-mijn-rentevasteperiode-wijzigen/",
+     "https://www.munthypotheken.nl/hypotheekcheck/acties/hoe-kan-ik-mijn-rente-aanpassen/"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Via Hypotheekcheck: vergoeding en kosten direct via iDEAL betalen; geen bron voor verwerking in rente"
+   },
+   "rverl": {
+    "waarde": "~ Bestaande klanten kiezen uit alle actuele tarieven; opslag naar actuele risicoklasse",
+    "bron": [
+     "https://www.munthypotheken.nl/veelgestelde-vragen/rente/wat-bedoelt-munt-met-het-tarief-is-tijdelijk-alleen-beschikbaar-voor-bestaande-klanten/",
+     "https://www.munthypotheken.nl/veelgestelde-vragen/rente/mijn-rentevasteperiode-loopt-af-hoe-kan-ik-een-nieuwe-rente-kiezen/"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Geen expliciete bron dat verlengrente gelijk is aan nieuwe-klantrente; soms tarieven alleen voor bestaande klanten open"
+   },
+   "rvoor": {
+    "waarde": "~ Uiterlijk 3 mnd vóór einde rentevast; voorstel met min. 3 rentevaste perioden",
+    "bron": [
+     "https://www.munthypotheken.nl/site/assets/files/1838/av_26_01.pdf",
+     "https://www.munthypotheken.nl/veelgestelde-vragen/rente/mijn-rentevasteperiode-loopt-af-hoe-kan-ik-een-nieuwe-rente-kiezen/"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Uit algemene voorwaarden (zoeksamenvatting)"
+   },
+   "bbrk": {
+    "waarde": "~ Contante waarde renteverschil met rente vergelijkbare leningen, resterende rvp, volgens aflosschema",
+    "bron": [
+     "https://www.munthypotheken.nl/veelgestelde-vragen/uw-munt-hypotheek/ik-wil-aflossen-op-mijn-hypotheek-moet-ik-een-boete-betalen/",
+     "https://www.munthypotheken.nl/site/assets/files/1838/av_25_02.pdf"
+    ],
+    "brondatum": "2025",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Berekend over uitstaande hoofdsom op aflosdatum en afgesproken aflossing tot einde rentevaste periode; alleen boven 10%-vrijstelling"
+   },
+   "elbl": {
+    "waarde": "~ Geen energielabelkorting of -opslag gevonden; rente hangt af van LTV en NHG",
+    "bron": [
+     "https://www.munthypotheken.nl/site/assets/files/31038/munt_renteoverzicht_20250910.pdf",
+     "https://verwarming.nl/pages/geld-en-advies/groene-hypotheek-energiebespaarbudget-2026.html"
+    ],
+    "brondatum": "2025-09-10",
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Renteoverzicht sept 2025 kent alleen NHG/LTV-klassen; tweede bron (2026) noemt geen aparte rentekorting"
+   },
+   "o106": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Tot 106% lenen voor EBV mogelijk (deel >100% volledig voor EBV), maar geen bron over wel/geen risico-opslag op dat deel"
+   },
+   "bprov": {
+    "waarde": "! Verlengen kost bereidstellingsprovisie per gebruikte dag, alleen als rente gestegen is",
+    "bron": [
+     "https://www.munthypotheken.nl/veelgestelde-vragen/aanvraag-munt-hypotheek/mijn-rente-aanbod-is-bijna-niet-meer-geldig-kan-ik-de-termijn-verlengen/",
+     "https://www.munthypotheken.nl/veelgestelde-vragen/aanvraag-munt-hypotheek/wat-is-bereidstellingsprovisie/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Alleen betaald over daadwerkelijk gebruikte verlengingsdagen"
+   },
+   "wkost": {
+    "waarde": "~ Vaste administratiekosten bij wijziging lening/rente en bij verhoging; acceptatie kosteloos",
+    "bron": [
+     "https://www.munthypotheken.nl/site/assets/files/31038/munt_renteoverzicht_20250910.pdf",
+     "https://www.munthypotheken.nl/hypotheekcheck/acties/hoe-kan-ik-mijn-rente-aanpassen/"
+    ],
+    "brondatum": "2025-09-10",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Administratiekosten wijziging/verhoging 150 euro (excl. eventuele vergoeding)"
+   },
+   "avlt": {
+    "waarde": "! Einde looptijd: aflosvrij deel aflossen; MUNT rekent dan nieuwe maandlast met aflossing over 30 jr",
+    "bron": [
+     "https://www.munthypotheken.nl/hypotheekcheck/betaalbaarheid/waarom-stijgt-de-maandlast-op-mijn-aflossingsvrije-leningdeel-zo-fors-aan-het-einde-van-de-looptijd/",
+     "https://www.munthypotheken.nl/veelgestelde-vragen/uw-munt-hypotheek/aflossingsvrije-leningdeel-aflossen/",
+     "https://www.munthypotheken.nl/levenslang-zeker-hypotheek/"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Herberekening uit zoeksamenvatting; voor AOW'ers Levenslang Zeker Hypotheek (aflossingsvrij zonder einddatum, max. 70% waarde, geen NHG)"
+   },
+   "bproc": {
+    "waarde": "+ Vroeg melden: MUNT belt binnen 3 dagen; tijdelijk minder betalen soms mogelijk",
+    "bron": [
+     "https://www.munthypotheken.nl/inkomensdaling/",
+     "https://www.munthypotheken.nl/veelgestelde-vragen/bijzonder-beheer/ik-verwacht-betalingsproblemen-wat-moet-ik-nu-doen/",
+     "https://www.munthypotheken.nl/veelgestelde-vragen/bijzonder-beheer/is-er-een-mogelijkheid-tijdelijk-minder-te-betalen/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Team Bijzonder Beheer; verwijst naar Nibud-budgetplanner"
+   }
+  },
+  "gecontroleerd": "2026-10-04"
+ }
+]
