@@ -156,7 +156,7 @@ main:focus{outline:none}
 }`;
 }
 
-function pagina({ pre, pad, titel, ogTitel, beschrijving, type = 'website', h1, intro = '', kruimel = [], meta = '', inhoud, jsonld = [], actief = '', extraCss = '' }) {
+function pagina({ pre, pad, titel, ogTitel, beschrijving, type = 'website', h1, intro = '', kruimel = [], meta = '', inhoud, jsonld = [], actief = '', extraCss = '', robots = '' }) {
   const url = BASE + pad;
   const nav = [['kennisbank/', 'Kennisbank', 'kb'], ['faq/', 'FAQ', 'faq'], ['begrippen/', 'Begrippen', 'beg'], ['index.html', 'Forum', 'forum']]
     .map(([h, n, k]) => `<a href="${pre}${h}"${actief === k ? ' aria-current="page"' : ''}>${n}</a>`).join('');
@@ -168,7 +168,7 @@ function pagina({ pre, pad, titel, ogTitel, beschrijving, type = 'website', h1, 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(titel)}</title>
-<meta name="description" content="${esc(beschrijving)}">
+<meta name="description" content="${esc(beschrijving)}">${robots ? `\n<meta name="robots" content="${esc(robots)}">` : ''}
 <link rel="canonical" href="${esc(url)}">
 <meta property="og:title" content="${esc(ogTitel || titel)}">
 <meta property="og:description" content="${esc(beschrijving)}">
@@ -369,7 +369,9 @@ for (const v of VRAGEN) {
     (opNr.length ? `<h2>Alle reacties (${opNr.length})</h2>\n<ul class="lijst reacties">\n` + opNr.map(a => `<li id="r${nr(a)}"><a href="${esc(forumLink(v, nr(a)))}">Reactie #${nr(a)}</a>${a.id === v.beste ? ' · beste antwoord' : ''}<small>${esc(datumNL(a.datum))} · lezen na inloggen</small></li>`).join('\n') + '\n</ul>\n' : '');
   uit[pad] = pagina({
     pre: '../', pad, titel: v.titel + ' – ' + SITE, ogTitel: v.titel, beschrijving: vraagBeschr(v), type: 'article', h1: v.titel, actief: 'forum',
-    kruimel: [KR_FORUM, [v.titel, '', url]], meta, inhoud, extraCss: VRAAG_CSS
+    kruimel: [KR_FORUM, [v.titel, '', url]], meta, inhoud, extraCss: VRAAG_CSS,
+    /* Voorbeeldvragen zijn fictief: niet in zoekmachines (AFM: niet misleidend), wel deelbaar via LinkedIn. */
+    robots: v.voorbeeld ? 'noindex, follow' : ''
   });
 }
 
