@@ -1,0 +1,708 @@
+[
+ {
+  "naam": "Triodos Bank",
+  "algemeen": {
+   "intermediairsite": "https://www.triodos.nl/intermediairs",
+   "voorwaardenPdf": [
+    "https://www.triodos.nl/downloads/basisinformatie-algemene-voorwaarden-voor-woningfinanciering?id=4ed5acec9074",
+    "https://www.triodos.nl/downloads/kenmerken-van-onze-hypotheek?id=72c133c7aa58",
+    "https://www.triodos.nl/downloads/algemene-voorwaarden-kredietverlening?id=38e3f6bbf0fd"
+   ],
+   "acceptatiegids": [
+    "https://www.triodos.nl/downloads/acceptatiebeleid-hypotheken-juli-2026?id=50c63188e554",
+    "https://www.triodos.nl/downloads/acceptatiebeleid-hypotheken-januari-2026?id=76259f3a29aa"
+   ],
+   "opmerking": "Triodos Bank (duurzame bank); distributie via eigen advies en een beperkt aantal onafhankelijke intermediairs. triodos.nl geblokkeerd voor WebFetch; gegevens uit zoeksamenvattingen van triodos.nl-pagina's, FAQ's en acceptatiebeleid v3.56 (juli 2026)."
+  },
+  "criteria": {
+   "zzp": {
+    "waarde": "~ Min. 12 mnd ondernemer met vergelijkbare werkervaring; IVO door NHG-erkende partij vereist",
+    "bron": [
+     "https://www.triodos.nl/downloads/acceptatiebeleid-hypotheken-juli-2026?id=50c63188e554",
+     "https://www.triodos.nl/veelgestelde-vragen/kan-ik-als-zzper-een-hypotheek-krijgen-bij-triodos-bank?id=449a4e60f53e"
+    ],
+    "brondatum": "2026-07",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Acceptatiebeleid v3.56: starter (<3 jaar) min. 12 mnd; toetsinkomen via IVO conform NHG-toetskader, ook buiten NHG via intermediair. Geen apart 3-jaarscriterium buiten NHG gevonden"
+   },
+   "flex": {
+    "waarde": "~ Gemiddelde 3 kalenderjaren; ook Arbeidsmarktscan (score min. 70) en perspectiefverklaring",
+    "bron": [
+     "https://www.triodos.nl/downloads/acceptatiebeleid-hypotheken-juli-2026?id=50c63188e554"
+    ],
+    "brondatum": "2026-07",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Tijdelijk met intentie: gemiddelde 3 jr, max. laagste van WGV/laatste jaar; Arbeidsmarktscan niet voor uitzendkrachten"
+   },
+   "persp": {
+    "waarde": "+ Perspectiefverklaring (uitzendwerk) geaccepteerd, met en zonder NHG; looptijdinkomen",
+    "bron": [
+     "https://www.triodos.nl/downloads/acceptatiebeleid-hypotheken-juli-2026?id=50c63188e554"
+    ],
+    "brondatum": "2026-07",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Uitzendbureau aangesloten bij Stichting Perspectiefverklaring; met WGV en loonstrook"
+   },
+   "aow": {
+    "waarde": "~ Pensioendatum binnen 10 jaar: toekomstig pensioeninkomen (incl. AOW) meegewogen",
+    "bron": [
+     "https://www.triodos.nl/downloads/acceptatiebeleid-hypotheken-juli-2026?id=50c63188e554"
+    ],
+    "brondatum": "2026-07",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Uit zoeksamenvatting acceptatiebeleid; detail toetsmethode niet gezien"
+   },
+   "erfp": {
+    "waarde": "! Gemeentelijke erfpacht ok; particuliere erfpacht alleen eeuwigdurend; canon telt als woonlast",
+    "bron": [
+     "https://www.triodos.nl/downloads/acceptatiebeleid-hypotheken-juli-2026?id=50c63188e554",
+     "https://www.triodos.nl/downloads/acceptatiebeleid-hypotheken-januari-2026?id=76259f3a29aa"
+    ],
+    "brondatum": "2026-07",
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "Bij particuliere erfpacht notarieel oordeel over duur en canon nodig"
+   },
+   "rvp": {
+    "waarde": "! 1 t/m 20 jaar vast; geen 25 of 30 jaar",
+    "bron": [
+     "https://www.triodos.nl/downloads/kenmerken-van-onze-hypotheek?id=72c133c7aa58",
+     "https://www.triodos.nl/hypotheken/hypotheekrente-kosten-hypotheek"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Eigen productkenmerken: 1-20 jaar (o.a. 1, 2, 5, 6, 7, 10, 12, 15, 20 in rentetabel). Oudere vergelijkerbron noemde ook 25/30, niet bevestigd door Triodos"
+   },
+   "dag": {
+    "waarde": "! Sinds 1-7-2025 offerterente: rente vast t/m passeren, geen daling naar lagere rente",
+    "bron": [
+     "https://www.triodos.nl/intermediairs",
+     "https://www.triodos.nl/service/particulieren/hypotheken/hypotheek-afsluiten"
+    ],
+    "brondatum": "2025",
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "Rente uit renteaanbod en offerte blijft gedurende aanvraag gelijk; oudere bronnen noemden nog dagrente"
+   },
+   "geld": {
+    "waarde": "+ Rente 4 mnd geldig; bij acceptatie binnen 120 dagen automatisch 300 dagen verlenging (~14 mnd)",
+    "bron": [
+     "https://www.triodos.nl/intermediairs",
+     "https://www.triodos.nl/downloads/basisinformatie-algemene-voorwaarden-voor-woningfinanciering?id=4ed5acec9074"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Akte binnen 120 kalenderdagen na getekende offerte, anders eenmalig +300 dagen"
+   },
+   "boete": {
+    "waarde": "+ 15% van oorspronkelijke hoofdsom per kalenderjaar per leningdeel boetevrij",
+    "bron": [
+     "https://www.triodos.nl/veelgestelde-vragen/kan-ik-bij-triodos-bank-extra-aflossen-op-mijn-hypotheek?id=37fa05268055",
+     "https://www.triodos.nl/downloads/basisinformatie-algemene-voorwaarden-voor-woningfinanciering?id=4ed5acec9074"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Niet benutte ruimte schuift niet door; ruimer dan 10%"
+   },
+   "ltv": {
+    "waarde": "+ Maandelijks automatisch lagere risico-opslag bij aflossing; waardestijging alleen via nieuwe taxatie",
+    "bron": [
+     "https://www.triodos.nl/veelgestelde-vragen/past-triodos-bank-automatisch-de-rente-aan-als-de-risicoopslag-van-mijn-hypotheek-wijzigt?id=0d28cacd5bb1",
+     "https://www.triodos.nl/veelgestelde-vragen/de-waarde-van-mijn-woning-is-gestegen-past-triodos-bank-automatisch-de-risicoopslag-aan?id=9aa6f4f5c06b"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Huidige waarde ging over energielabelkorting (zie elbl); vergelijking met taxatiewaarde bij afsluiten"
+   },
+   "bdduur": {
+    "waarde": "~ Nieuwbouw 36 mnd / verbouw en verduurzaming 24 mnd; verlenging op verzoek",
+    "bron": [
+     "https://www.triodos.nl/hypotheken/bouwdepot"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": ""
+   },
+   "bdrnt": {
+    "waarde": "~ Depotrente gelijk aan hypotheekrente; verrekend met maandtermijn",
+    "bron": [
+     "https://www.triodos.nl/hypotheken/bouwdepot"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": ""
+   },
+   "bddecl": {
+    "waarde": "~ Digitaal declareren in Mijn Triodos Hypotheek met scan/foto factuur",
+    "bron": [
+     "https://www.triodos.nl/veelgestelde-vragen/hoe-dien-ik-een-bouwdepotdeclaratie-in?id=96dff0ad1782",
+     "https://www.triodos.nl/hypotheken/bouwdepot"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Doorlooptijd niet gevonden"
+   },
+   "ebb": {
+    "waarde": "+ Tot 106% marktwaarde voor energiebesparende maatregelen (met NHG conform NHG-norm)",
+    "bron": [
+     "https://www.triodos.nl/service/nhg",
+     "https://www.triodos.nl/veelgestelde-vragen/welk-effect-heeft-het-verduurzamen-van-mijn-huis-op-het-maximale-bedrag-dat-ik-kan-lenen?id=d0608c4e4115"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Daarnaast labelafhankelijke extra leenruimte (tot €40.000 bij A++++)"
+   },
+   "duur": {
+    "waarde": "+ Rente gekoppeld aan label; Energiebespaarlening tot €25.000 (aanvraag t/m 2026); biobased korting",
+    "bron": [
+     "https://www.triodos.nl/hypotheken/energiebespaarlening",
+     "https://www.triodos.nl/service/energielabel",
+     "https://www.triodos.nl/biobased-hypotheek"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Energiebespaarlening: 10 jaar rentevoordeel, annuïtair 30 jaar, alleen met Triodos Hypotheek"
+   },
+   "verh": {
+    "waarde": "~ Rentecondities mee voor rest rvp; max 6 mnd tussen leveringen; rente herberekend o.b.v. label/LTV",
+    "bron": [
+     "https://www.triodos.nl/hypotheken/verhuisregeling",
+     "https://www.triodos.nl/downloads/basisinformatie-algemene-voorwaarden-voor-woningfinanciering?id=4ed5acec9074"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Energiebespaarlening gaat niet mee en moet worden afgelost"
+   },
+   "ondh": {
+    "waarde": "~ Bij verwachte verkoop met verlies vooraf contact; restschuldfinanciering max. 15 jaar annuïtair",
+    "bron": [
+     "https://www.triodos.nl/downloads/acceptatiebeleid-hypotheken-juli-2026?id=50c63188e554",
+     "https://www.triodos.nl/downloads/basisinformatie-algemene-voorwaarden-voor-woningfinanciering?id=4ed5acec9074"
+    ],
+    "brondatum": "2026-07",
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "Toestemmingsvereiste niet letterlijk gevonden; bij NHG mogelijk kwijtschelding via NHG"
+   },
+   "oha": {
+    "waarde": "~ Ontslag op verzoek na beoordeling betaalbaarheid achterblijver; motivatieformulier OHA",
+    "bron": [
+     "https://www.triodos.nl/downloads/motivatieformulier-ontslag-hoofdelijke-aansprakelijkheid?id=81de4f39d8f0",
+     "https://www.triodos.nl/downloads/acceptatiebeleid-hypotheken-juli-2026?id=50c63188e554"
+    ],
+    "brondatum": "2026-05",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Hoofdstuk 7 acceptatiebeleid (beheer) bij relatiebeëindiging"
+   },
+   "tweede": {
+    "waarde": "~ Verhoging als nieuwe aanvraag beoordeeld; binnen inschrijving zonder notaris; min. €10.000",
+    "bron": [
+     "https://www.triodos.nl/veelgestelde-vragen/wat-zijn-de-kosten-voor-het-wijzigen-van-mijn-hypotheek?id=faae486b7e9f",
+     "https://www.triodos.nl/downloads/basisinformatie-algemene-voorwaarden-voor-woningfinanciering?id=4ed5acec9074"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Voor verhoging is geldig definitief energielabel vereist"
+   },
+   "ovbr": {
+    "waarde": "~ Max 2 jaar; onverkocht 90% verwachte verkoopwaarde, verkocht 100% verkoopprijs minus hypotheek",
+    "bron": [
+     "https://www.triodos.nl/veelgestelde-vragen/wat-is-een-overbruggingskrediet?id=57b0d7e5b340",
+     "https://www.triodos.nl/veelgestelde-vragen/kan-ik-een-hypotheek-afsluiten-voor-mijn-nieuwe-woning-voordat-mijn-oude-woning-is-verkocht?id=e8be56725e0c"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Alleen in combinatie met Triodos-hypotheek; ook bij onverkochte woning mogelijk"
+   },
+   "avrij": {
+    "waarde": "! Per 1-7-2026 max 30% WW (ook verhogen), max €750.000; starters niet; bestaand tot 50% blijft",
+    "bron": [
+     "https://www.triodos.nl/persberichten/2026/260611-triodos-past-beleid-voor-aflossingsvrije-hypotheek-aan-per-1-juli-2026",
+     "https://www.triodos.nl/hypotheken/hypotheekvormen/aflossingsvrije-hypotheek"
+    ],
+    "brondatum": "2026-06-11",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Renteopslag niet in waarde opgenomen (tariefregel); starters: geen aflossingsvrij"
+   },
+   "rmid": {
+    "waarde": "- Geen rentemiddeling; vergoeding ineens volgens Triodos voordeliger en transparanter",
+    "bron": [
+     "https://www.triodos.nl/veelgestelde-vragen/biedt-triodos-bank-rentemiddeling-aan-bij-een-triodos-hypotheek?id=82b122c75062"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Bereid alternatieven te bespreken"
+   },
+   "rverl": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet gevonden of bestaande klanten bij renteverlenging dezelfde rente krijgen als nieuwe klanten"
+   },
+   "rvoor": {
+    "waarde": "~ Voorstel 3 mnd voor einde rvp; zonder reactie zelfde periode tegen dan geldende rente",
+    "bron": [
+     "https://www.triodos.nl/downloads/basisinformatie-algemene-voorwaarden-voor-woningfinanciering?id=4ed5acec9074"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Nooit langer dan resterende looptijd"
+   },
+   "bbrk": {
+    "waarde": "+ Contante waarde; vergelijkingsrente kortere rvp, hoogste van twee (laagste vergoeding)",
+    "bron": [
+     "https://www.triodos.nl/veelgestelde-vragen/kan-ik-bij-triodos-bank-extra-aflossen-op-mijn-hypotheek?id=37fa05268055",
+     "https://www.triodos.nl/downloads/basisinformatie-algemene-voorwaarden-voor-woningfinanciering?id=4ed5acec9074"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Uit zoeksamenvatting; berekening exclusief opslagen"
+   },
+   "elbl": {
+    "waarde": "+ Rente per energielabel: hoe groener hoe lager; extra korting biobased nieuwbouw",
+    "bron": [
+     "https://www.triodos.nl/veelgestelde-vragen/waarom-koppelt-triodos-bank-de-hypotheekrente-aan-het-energielabel-van-mijn-woning?id=ff0a16adf6dc",
+     "https://www.triodos.nl/service/energielabel",
+     "https://www.triodos.nl/biobased-hypotheek"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Na verduurzaming rente direct aangepast aan nieuw label; opslag zonder label niet gevonden"
+   },
+   "o106": {
+    "waarde": "~ Tot 106% lenen voor energiebesparende maatregelen toegestaan",
+    "bron": [
+     "https://www.triodos.nl/service/nhg",
+     "https://www.triodos.nl/veelgestelde-vragen/welk-effect-heeft-het-verduurzamen-van-mijn-huis-op-het-maximale-bedrag-dat-ik-kan-lenen?id=d0608c4e4115"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Niet bevestigd dat boven 100% geen extra risico-opslag geldt"
+   },
+   "bprov": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron over bereidstellingsprovisie; wel automatische verlenging +300 dagen (zie geld) en annuleringskosten sinds 1-7-2025"
+   },
+   "wkost": {
+    "waarde": "! Wijziging (verhoging, scheiding, vormwijziging) via vaste advies- en behandelkosten",
+    "bron": [
+     "https://www.triodos.nl/veelgestelde-vragen/wat-zijn-de-kosten-voor-het-wijzigen-van-mijn-hypotheek?id=faae486b7e9f"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Bedragen in FAQ betreffen eigen-adviesroute; kosten vaak meefinancierbaar"
+   },
+   "avlt": {
+    "waarde": "~ Bij einde looptijd herbeoordeling verlengen/herfinancieren; vaak kan bestaand deel blijven",
+    "bron": [
+     "https://www.triodos.nl/hypotheken/hypotheekvormen/aflossingsvrije-hypotheek",
+     "https://www.triodos.nl/persberichten/2026/260611-triodos-past-beleid-voor-aflossingsvrije-hypotheek-aan-per-1-juli-2026"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Geen automatische garantie; rekentool in Mijn Triodos Hypotheek"
+   },
+   "bproc": {
+    "waarde": "~ Samen zoeken naar (tijdelijke) oplossing; vroeg melden; BKR-melding na 3 mnd achterstand",
+    "bron": [
+     "https://www.triodos.nl/downloads/basisinformatie-algemene-voorwaarden-voor-woningfinanciering?id=4ed5acec9074",
+     "https://www.triodos.nl/service/nhg"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Bij NHG samen met NHG naar oplossingen"
+   }
+  },
+  "gecontroleerd": "2026-10-04"
+ },
+ {
+  "naam": "NIBC",
+  "algemeen": {
+   "intermediairsite": "https://nibc.nl/intermediair",
+   "voorwaardenPdf": [
+    "https://nibc.nl/media/seolj05l/2025-11-14-av-nibc-december-2025.pdf",
+    "https://nibc.nl/media/rvammeml/2025-09-17-av-nibc-extra-2025-versie-10.pdf",
+    "https://nibc.nl/media/jfwb4bnb/productkaart-nibc-extra-hypotheken-okt2025.pdf",
+    "https://nibc.nl/media/rxedztg0/productkaart-nibc-oktober-2025.pdf"
+   ],
+   "acceptatiegids": [
+    "https://nibc.nl/media/zzqnjuq1/hypotheekgids-2026.pdf",
+    "https://nibc.nl/intermediair/hypotheekgids-downloads"
+   ],
+   "opmerking": "NIBC Bank; producten NIBC Hypotheek (max €1 mln) en NIBC Extra Hypotheek (max €1,5 mln, ruimere voorwaarden), plus Investeringshypotheek. Bijzonder beheer via eigen afdeling Wooncollect. nibc.nl geblokkeerd voor WebFetch; gegevens uit zoeksamenvattingen van hypotheekgids 2026 v1.0, AV okt/dec 2025 en nibc.nl-pagina's. Geen latere 2026-versie van de gids gevonden."
+  },
+  "criteria": {
+   "zzp": {
+    "waarde": "~ Vanaf 1 jaar met IKV (met en zonder NHG); <3 jaar zonder NHG: 90% van IKV-inkomen en renteopslag 10 jr",
+    "bron": [
+     "https://nibc.nl/media/zzqnjuq1/hypotheekgids-2026.pdf",
+     "https://nibc.nl/particulieren/hypotheken/zzp-hypotheek/online-afsluiten",
+     "https://nibc.nl/intermediair/nieuwsberichten/nieuwsbrief-maart"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "IKV via Pentrax, Raadhuys, Overviewz, Zakelijk Inkomen (VIIZ alleen niet-NHG); opslag over hele lening"
+   },
+   "flex": {
+    "waarde": "~ 3-jaars gemiddelde (max. laatste jaar/huidig); ook Arbeidsmarktscan (score min. 70)",
+    "bron": [
+     "https://nibc.nl/media/zzqnjuq1/hypotheekgids-2026.pdf",
+     "https://nibc.nl/intermediair/hypotheken/flexwerkers",
+     "https://nibc.nl/particulieren/hypotheken/hypotheek-voor-flexwerkers"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Tijdelijk contract met/zonder intentie telt als flex"
+   },
+   "persp": {
+    "waarde": "+ Perspectiefverklaring geaccepteerd (min. 52 weken uitzendwerk); looptijdinkomen",
+    "bron": [
+     "https://nibc.nl/media/zzqnjuq1/hypotheekgids-2026.pdf",
+     "https://nibc.nl/particulieren/hypotheken/hypotheek-voor-flexwerkers"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Max. 6 mnd oud op datum bindend aanbod; WGV van zelfde uitzendbureau"
+   },
+   "aow": {
+    "waarde": "~ AOW binnen 10 jaar: toets op AOW + pensioen vanaf AOW-leeftijd; aparte seniorenpropositie",
+    "bron": [
+     "https://nibc.nl/media/zzqnjuq1/hypotheekgids-2026.pdf",
+     "https://nibc.nl/media/0d2hsk24/senioren-factsheet.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Bij NHG pensioenoverzicht met ingang teruggezet naar AOW-leeftijd"
+   },
+   "erfp": {
+    "waarde": "! Alleen publiekrechtelijke erfpacht; eeuwigdurend afgekocht = volle eigendom; canon als woonlast",
+    "bron": [
+     "https://nibc.nl/media/zzqnjuq1/hypotheekgids-2026.pdf",
+     "https://nibc.nl/particulieren/blog/hoe-moet-je-omgaan-met-erfpacht"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Buiten NHG bij andere uitgever erfpachtadvies nodig; geïndexeerde/stijgende canon meegewogen"
+   },
+   "rvp": {
+    "waarde": "+ 1 t/m 30 jaar rentevast",
+    "bron": [
+     "https://nibc.nl/media/l4indinq/mv_nibc-rentetarieven-per-19-06-2026_1133.pdf"
+    ],
+    "brondatum": "2026-06-19",
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "Uit samenvatting rentetabel juni 2026; exacte tussenliggende perioden niet gezien. Gids noemt bij bepaalde leningdelen in beginsel min. 20 jaar vast"
+   },
+   "dag": {
+    "waarde": "! Rente in renteaanbod is passeerrente; geen daling tot passeren gevonden",
+    "bron": [
+     "https://nibc.nl/media/zzqnjuq1/hypotheekgids-2026.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "Hypotheekgids 2026: passeerrente = rente uit renteaanbod"
+   },
+   "geld": {
+    "waarde": "~ NIBC Hypotheek 4 mnd, niet verlengbaar; Extra 6 + 6 mnd (nieuwbouw +12 mnd)",
+    "bron": [
+     "https://nibc.nl/media/zzqnjuq1/hypotheekgids-2026.pdf",
+     "https://nibc.nl/media/jfwb4bnb/productkaart-nibc-extra-hypotheken-okt2025.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": ""
+   },
+   "boete": {
+    "waarde": "+ 15% (Extra: 20%) van oorspronkelijke hoofdsom per jaar boetevrij",
+    "bron": [
+     "https://nibc.nl/particulieren/hypotheken/aflosvormen",
+     "https://nibc.nl/particulieren/hypotheken/mijn-situatie-wijzigt/ik-wil-extra-aflossen",
+     "https://nibc.nl/media/seolj05l/2025-11-14-av-nibc-december-2025.pdf"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Geen vergoeding als eigen rente niet hoger is dan actuele vergelijkbare rente; boetevrij bij verkoop"
+   },
+   "ltv": {
+    "waarde": "+ Maandelijks automatisch lagere tariefklasse bij aflossing; hogere woningwaarde zelf doorgeven",
+    "bron": [
+     "https://nibc.nl/particulieren/hypotheken/besparen",
+     "https://nibc.nl/particulieren/hypotheken/mijn-situatie-wijzigt/ik-wil-extra-aflossen"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Niet bij NHG (al laagste tarief); bij doorgeven waardestijging administratiekosten"
+   },
+   "bdduur": {
+    "waarde": "~ Nieuwbouw 24 mnd / verbouw 12 mnd; eenmalig +6 mnd verlenging",
+    "bron": [
+     "https://nibc.nl/particulieren/hypotheken/bouwdepot",
+     "https://nibc.nl/particulieren/hypotheken/verbouwen"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": ""
+   },
+   "bdrnt": {
+    "waarde": "~ Depotrente gelijk aan hypotheekrente; geen vergoeding na verlenging",
+    "bron": [
+     "https://nibc.nl/particulieren/hypotheken/bouwdepot"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": ""
+   },
+   "bddecl": {
+    "waarde": "~ Declareren via MijnNIBC-app; uitbetaling binnen 5 werkdagen",
+    "bron": [
+     "https://nibc.nl/particulieren/hypotheken/bouwdepot",
+     "https://nibc.nl/particulieren/hypotheken/verbouwen"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Nieuwbouw: termijnen aan aannemer"
+   },
+   "ebb": {
+    "waarde": "~ Energiebesparende maatregelen tot 106% marktwaarde, max €25.000",
+    "bron": [
+     "https://nibc.nl/hypotheken/huis-verduurzamen",
+     "https://nibc.nl/particulieren/blog/verduurzamen-met-je-hypotheek"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "Geen expliciet 'energiebespaarbudget conform NHG' gevonden"
+   },
+   "duur": {
+    "waarde": "+ Duurzaamheidskorting vanaf label A; hoger bij A+++ (Extra, sinds 25-3-2026)",
+    "bron": [
+     "https://nibc.nl/intermediair/hypotheken/duurzaamheidskorting",
+     "https://nibc.nl/particulieren/hypotheken/huis-verduurzamen/duurzaamheidskorting/voorwaarden",
+     "https://nibc.nl/intermediair/nieuwsberichten/nieuw-duurzaamheidskorting-verhoogd"
+    ],
+    "brondatum": "2026-03-25",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Huidige waarde ging over ondernemersmaatwerk, niet over verduurzaming"
+   },
+   "verh": {
+    "waarde": "+ Rente mee voor rest rvp; NIBC 6 mnd, Extra 9 mnd na aflossing oude lening",
+    "bron": [
+     "https://nibc.nl/intermediair/hypotheken/hypotheek-meenemen",
+     "https://nibc.nl/media/seolj05l/2025-11-14-av-nibc-december-2025.pdf"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Basisrente blijft; opslagen/kortingen herbeoordeeld o.b.v. nieuwe risicoklasse"
+   },
+   "ondh": {
+    "waarde": "~ Verkoop alleen na schriftelijke toestemming; begeleiding via Wooncollect; NHG-kwijtschelding",
+    "bron": [
+     "https://nibc.nl/media/seolj05l/2025-11-14-av-nibc-december-2025.pdf",
+     "https://nibc.nl/particulieren/hypotheken/mijn-situatie-wijzigt/ik-verwacht-betalingsproblemen",
+     "https://nibc.nl/particulieren/hypotheken/nhg"
+    ],
+    "brondatum": "2025-12",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Specifiek beleid onderhandse verkoop met restschuld niet gevonden"
+   },
+   "oha": {
+    "waarde": "~ Ontslag na goedkeuring NIBC (beoordeling achterblijver); administratiekosten",
+    "bron": [
+     "https://nibc.nl/media/seolj05l/2025-11-14-av-nibc-december-2025.pdf",
+     "https://nibc.nl/particulieren/hypotheken/mijn-situatie-wijzigt/mijn-partner-en-ik-gaan-uit-elkaar",
+     "https://nibc.nl/particulieren/blog/scheiden-hypotheek"
+    ],
+    "brondatum": "2025-12",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": ""
+   },
+   "tweede": {
+    "waarde": "~ Onderhandse verhoging of 2e hypotheek; max 100% MW, consumptief max 90% en zonder NHG",
+    "bron": [
+     "https://nibc.nl/particulieren/hypotheken/verhoging-hypotheek-voor-verbouwen",
+     "https://nibc.nl/particulieren/hypotheken/verhoging-hypotheek-consumptief"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Minimale verhoging volgens bronnen €5.000-€15.000 (niet eenduidig)"
+   },
+   "ovbr": {
+    "waarde": "+ Max 24 mnd (nieuwbouw 36); onverkocht tot 95% van overwaarde, verkocht 100%",
+    "bron": [
+     "https://nibc.nl/intermediair/nieuwsberichten/overbrugging-naar-95",
+     "https://nibc.nl/particulieren/hypotheken/overbruggingskrediet",
+     "https://nibc.nl/media/zzqnjuq1/hypotheekgids-2026.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Ruimer dan 'beperkt'; oudere bron noemde 90%"
+   },
+   "avrij": {
+    "waarde": "~ Max 50% marktwaarde aflossingsvrij (gids 2026); geen 30%-aanscherping gevonden",
+    "bron": [
+     "https://nibc.nl/media/zzqnjuq1/hypotheekgids-2026.pdf",
+     "https://nibc.nl/particulieren/hypotheken/aflosvormen/aflossingsvrije-hypotheek"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Gids 2026 v1.0 (begin 2026); controleren of later in 2026 aangescherpt zoals bij grootbanken"
+   },
+   "rmid": {
+    "waarde": "- Geen rentemiddeling sinds 1-6-2019",
+    "bron": [
+     "https://nibc.nl/particulieren/hypotheken/hypotheekrentes"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "rverl": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet gevonden of bestaande klanten bij renteverlenging dezelfde rente krijgen als nieuwe klanten"
+   },
+   "rvoor": {
+    "waarde": "~ Uiterlijk 3 mnd voor einde rvp voorstel; standaard zelfde rentevaste periode",
+    "bron": [
+     "https://nibc.nl/media/seolj05l/2025-11-14-av-nibc-december-2025.pdf"
+    ],
+    "brondatum": "2025-12",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "bbrk": {
+    "waarde": "~ Contante waarde renteverschil; vergelijkingsrente = actuele NIBC-rente vergelijkbaar leningdeel",
+    "bron": [
+     "https://nibc.nl/media/seolj05l/2025-11-14-av-nibc-december-2025.pdf",
+     "https://nibc.nl/media/rvammeml/2025-09-17-av-nibc-extra-2025-versie-10.pdf"
+    ],
+    "brondatum": "2025-12",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Vergelijkbaar = zelfde hypotheekvorm, tariefklasse en rvp; berekening in 5 stappen"
+   },
+   "elbl": {
+    "waarde": "+ Rentekorting vanaf label A, hoger bij A+++; 24 mnd om naar label A te verduurzamen",
+    "bron": [
+     "https://nibc.nl/particulieren/hypotheken/huis-verduurzamen/duurzaamheidskorting/voorwaarden",
+     "https://nibc.nl/intermediair/hypotheken/duurzaamheidskorting"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Geen opslag voor ontbrekend/slecht label gevonden; nieuwbouw niet meer automatisch A+++"
+   },
+   "o106": {
+    "waarde": "~ Tot 106% voor verduurzaming (max €25.000); valt in hoogste tariefklasse t/m 106%",
+    "bron": [
+     "https://nibc.nl/hypotheken/huis-verduurzamen",
+     "https://nibc.nl/media/l4indinq/mv_nibc-rentetarieven-per-19-06-2026_1133.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Rentetabel kent klassen o.a. t/m 95% en t/m 106%; dus geen aparte vrijstelling"
+   },
+   "bprov": {
+    "waarde": "+ Extra Hypotheek: verlenging zonder bereidstellingsprovisie; annuleringskosten na verlenging",
+    "bron": [
+     "https://nibc.nl/media/jfwb4bnb/productkaart-nibc-extra-hypotheken-okt2025.pdf",
+     "https://nibc.nl/intermediair/nieuwsberichten/nieuwsbrief-februari",
+     "https://nibc.nl/media/zzqnjuq1/hypotheekgids-2026.pdf"
+    ],
+    "brondatum": "2025",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "NIBC Hypotheek (standaard) niet verlengbaar"
+   },
+   "wkost": {
+    "waarde": "! Administratiekosten bij o.a. vormwijziging, verhoging, tussentijdse renteaanpassing, OHA",
+    "bron": [
+     "https://nibc.nl/media/seolj05l/2025-11-14-av-nibc-december-2025.pdf"
+    ],
+    "brondatum": "2025-12",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Tarievenoverzicht op nibc.nl; o.a. bij aanpassen tariefklasse na waardestijging"
+   },
+   "avlt": {
+    "waarde": "- Looptijd niet verlengbaar volgens AV; einde looptijd volledig aflossen",
+    "bron": [
+     "https://nibc.nl/media/seolj05l/2025-11-14-av-nibc-december-2025.pdf"
+    ],
+    "brondatum": "2025-12",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Herfinanciering als nieuwe aanvraag niet expliciet beschreven"
+   },
+   "bproc": {
+    "waarde": "+ Eigen afdeling Wooncollect begeleidt bij (dreigende) achterstand; samenwerking Geldfit",
+    "bron": [
+     "https://nibc.nl/particulieren/hypotheken/mijn-situatie-wijzigt/ik-verwacht-betalingsproblemen"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": ""
+   }
+  },
+  "gecontroleerd": "2026-10-04"
+ }
+]

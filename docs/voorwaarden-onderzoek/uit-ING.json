@@ -1,0 +1,370 @@
+[
+ {
+  "naam": "ING",
+  "algemeen": {
+   "intermediairsite": "https://intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/",
+   "voorwaardenPdf": [],
+   "acceptatiegids": [
+    "https://hypotheekcompany.nl/wp-content/uploads/2025/12/ING-acc-beleid-jan-2026.pdf",
+    "https://assets.ing.com/m/192e1ffba227517b/original/Acceptatiebeleid-ING-Hypotheken-versie-2025_1jan2025.pdf"
+   ],
+   "opmerking": "Aangevuld met ING Acceptatiebeleid Hypotheken 2026-1 (jan 2026; via zoeksamenvattingen, PDF-domein geblokkeerd voor WebFetch) en ING-pagina's. Aflossingsvrij-beleid per 23-7-2026 (max 30% WW) vervangt de 50%-grens uit acc.beleid jan 2026."
+  },
+  "criteria": {
+   "zzp": {
+    "waarde": "~ Inkomen = gem. netto winst 3 boekjaren, max laatste jaar; starter (<3 jr) via NHG-kader; IVO geaccepteerd",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2025/12/ING-acc-beleid-jan-2026.pdf",
+     "https://intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/ondernemer.html"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Acc.beleid 2026-1: starter = <3 volledige boekjaren; NHG-toetskader voor starters; IVO (Raadhuys, Pentrax e.a.) toegestaan. Eis zonder NHG individueel.",
+    "dubbel": "gecorrigeerd"
+   },
+   "flex": {
+    "waarde": "~ Gem. inkomen 3 kalenderjaren (max laatste jaar); uitzend fase B/C = vast; ook PV, IBL of Arbeidsmarktscan (score >=70)",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2025/12/ING-acc-beleid-jan-2026.pdf",
+     "https://intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/starters.html"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Acc.beleid 2026-1 bevestigt 3-jaarsgemiddelde naast PV/IBL/Arbeidsmarktscan; huidig '3 jaar gemiddelde' klopt dus.",
+    "dubbel": "gecorrigeerd"
+   },
+   "persp": {
+    "waarde": "+ Perspectiefverklaring geaccepteerd (uitzendbureau in register); max 6 mnd oud op datum bindend aanbod",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2025/12/ING-acc-beleid-jan-2026.pdf",
+     "https://intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/starters.html"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Inkomen dan getoetst als vast dienstverband.",
+    "dubbel": "bevestigd"
+   },
+   "aow": {
+    "waarde": "~ Toets op pensioeninkomen als AOW of pensioen binnen 10 jaar; dan evt. niet-annuïtaire (werkelijke) lasten",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2025/12/ING-acc-beleid-jan-2026.pdf",
+     "https://intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/hypotheekvoorsenioren57.html"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Pensioen o.b.v. opgave uitvoerder of mijnpensioenoverzicht.nl.",
+    "dubbel": "bevestigd"
+   },
+   "erfp": {
+    "waarde": "! Part. erfpacht vóór 2013 alleen met 'groene' notariële opinie; vanaf 2013 alleen eeuwigdurend + KNB-model",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2025/12/ING-acc-beleid-jan-2026.pdf"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Canon gaat af van max. woonlast; bij niet afgekochte canon looptijd max gelijk aan vaste canonperiode, herziening niet binnen 10 jr."
+   },
+   "rvp": {
+    "waarde": "~ Variabel en vast tot 30 jaar (1,2,5,7,10,15,20,30 jr); bij rentemiddeling max 12 jr (20 jr bij verhuizing)",
+    "bron": [
+     "https://www.homefinance.nl/hypotheek/hypotheek-aanbieders/ing/overzicht-hypotheken-standaard.asp",
+     "https://www.ing.nl/particulier/hypotheek/jouw-hypotheek/tussentijds-aanpassen",
+     "https://www.ing.nl/particulier/hypotheek/actuele-hypotheekrente/kenmerken-variabele-hypotheekrente"
+    ],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "gewijzigd",
+    "toelichting": "Periodelijst alleen via vergelijker; ING-acc.beleid noemt max looptijd 30 jr, geen periodelijst in samenvatting.",
+    "dubbel": "gecorrigeerd"
+   },
+   "dag": {
+    "waarde": "+ Dagrente: op passeerdatum de laagste van geoffreerde rente en rente op passeerdatum",
+    "bron": [
+     "https://www.ing.nl/particulier/hypotheek/actuele-hypotheekrente/wat-is-dagrente"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Dagrente is een keuze ('als je kiest voor Dagrente'); eventuele voorwaarden/kosten niet gezien."
+   },
+   "geld": {
+    "waarde": "+ Renteaanbod 6,5 mnd geldig (incl. 2 wk acceptatie); verlengen met max 6 mnd tot 12,5 mnd tegen vergoeding",
+    "bron": [
+     "https://intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/Waarom-een-hypotheek-bij-ING.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "Opnieuw bevestigd via ING-intermediairpagina.",
+    "dubbel": "bevestigd"
+   },
+   "boete": {
+    "waarde": "+ 10% van oorspr. hoofdsom per jaar; boetevrij bij verkoop+verhuizing en binnen 12 mnd na overlijden",
+    "bron": [
+     "https://www.ing.nl/particulier/hypotheek/jouw-hypotheek/kosten-aflossen-tussentijdse-renteaanpassing",
+     "https://www.ing.nl/particulier/hypotheek/jouw-hypotheek/hoe-aflossen"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Uitzondering: Voordeelrente Component 2 betaalt aflossingskosten bij verkoop. Ook boetevrij als vergelijkingsrente hoger is.",
+    "dubbel": "bevestigd"
+   },
+   "ltv": {
+    "waarde": "+ Rente automatisch omlaag bij lagere schuld-marktwaardeklasse door aflossing (11 klassen; niet bij NHG)",
+    "bron": [
+     "https://www.ing.nl/particulier/hypotheek/jouw-hypotheek/mogelijk-lagere-rente",
+     "https://www.ing.nl/particulier/hypotheek/jouw-hypotheek/rentevaste-periode-loopt-af"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Geldt voor nieuwe en bestaande klanten, alleen in voordeel klant.",
+    "dubbel": "bevestigd"
+   },
+   "bdduur": {
+    "waarde": "~ Bouwdepot 2 jaar (nieuwbouw en verbouw); eenmalig 1 jaar verlengbaar",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2025/12/ING-acc-beleid-jan-2026.pdf"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Acc.beleid 2026-1; zonder NHG min. depot €15.000 (kleiner wordt uitbetaald), met NHG geen minimum."
+   },
+   "bdrnt": {
+    "waarde": "~ Rente alleen over opgenomen deel; geen vergoeding over saldo (per saldo depotrente = hypotheekrente)",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2025/12/ING-acc-beleid-jan-2026.pdf",
+     "https://www.ing.nl/particulier/hypotheek/jouw-hypotheek/bouwdepot"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "ING: niet-opgenomen geld kost geen rente en levert niets op; huidig 'gelijk aan hypotheekrente' klopt economisch."
+   },
+   "bddecl": {
+    "waarde": "+ Facturen indienen via Mijn ING; ING betaalt binnen 5 werkdagen aan aannemer",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2025/12/ING-acc-beleid-jan-2026.pdf",
+     "https://www.ing.nl/particulier/hypotheek/jouw-hypotheek/bouwdepot"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Beëindiging depot binnen 5 werkdagen verwerkt."
+   },
+   "ebb": {
+    "waarde": "+ Verduurzamingsdepot (verplicht bij TRHK-ruimte): tot 106% MW, deel >100% alleen voor erkende maatregelen",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2025/12/ING-acc-beleid-jan-2026.pdf",
+     "https://www.ing.nl/particulier/hypotheek/duurzaam-wonen/verduurzamingsdepot"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "EBV: 100% MW vóór + kosten, max 106% MW na verbouwing. Eigen depot i.p.v. 'EBB conform NHG'. ING-site noemt extra tot €20.000.",
+    "dubbel": "bevestigd"
+   },
+   "duur": {
+    "waarde": "+ Rente per energielabel (G t/m A++++); daling tijdens rentevast bij beter geregistreerd label; TRHK-extra tot €40.000",
+    "bron": [
+     "https://www.ing.nl/particulier/hypotheek/actuele-hypotheekrente/het-energielabel-en-je-hypotheekrente",
+     "https://hypotheekcompany.nl/wp-content/uploads/2025/12/ING-acc-beleid-jan-2026.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Acc.beleid 2026-1: per label €0 (E-G) tot €30.000 (A++++), €40.000 met energieprestatiegarantie buiten lasten.",
+    "dubbel": "bevestigd"
+   },
+   "verh": {
+    "waarde": "+ Vaste rente meenemen tot bedrag oude hypotheek, tot 6 mnd na aflossing; restant meenemen of middelen",
+    "bron": [
+     "https://www.ing.nl/particulier/hypotheek/huis-kopen/ander-huis-kopen/hypotheek-meenemen",
+     "https://intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/doorstromers.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Oude rente gecorrigeerd voor nieuwe schuld-marktwaardeklasse; toets volgens geldend acc.beleid.",
+    "dubbel": "bevestigd"
+   },
+   "ondh": {
+    "waarde": "~ Restschuld (<1 jr oud, ook van andere geldverstrekker) mee te financieren: apart deel, annuïtair/lineair, max 15 jr",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2025/12/ING-acc-beleid-jan-2026.pdf",
+     "https://www.ing.nl/particulier/hypotheken/situatie/restschuld/index.html"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Procedure onderhandse verkoop met toestemming bank niet gevonden; wel restschuldbeleid uit acc.beleid 2026-1."
+   },
+   "oha": {
+    "waarde": "~ OHA mogelijk als achterblijver hypotheek alleen kan dragen; toets mag op niet-annuïtaire lasten bij blijven wonen",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2025/12/ING-acc-beleid-jan-2026.pdf",
+     "https://www.ing.nl/particulier/hypotheek/scheiden-en-hypotheek"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Echtscheidingsconvenant vereist; beide partners tekenen; via notaris (akte van verdeling)."
+   },
+   "tweede": {
+    "waarde": "+ Onderhandse verhoging binnen bestaande inschrijving zonder notaris; desktoptaxatie mogelijk tot 90% MW",
+    "bron": [
+     "https://intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/Hypotheekverhogen.html",
+     "https://hypotheekcompany.nl/wp-content/uploads/2025/12/ING-acc-beleid-jan-2026.pdf"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Max 1 aanvraag tegelijk; geen verhoging op 2 debiteuren als hypotheek op 1 debiteur staat. Ook 'Verhogen zonder advies'."
+   },
+   "ovbr": {
+    "waarde": "+ Overbruggingshypotheek voor (nog niet) verkochte woning; bij lange verkooptijd/MW>=1,5 mln 90% van waarde",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2025/12/ING-acc-beleid-jan-2026.pdf",
+     "https://www.ing.nl/particulier/hypotheek/hypotheekvormen/overbruggingshypotheek"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Ook bij niet-verkochte woning; dubbele lasten dan 24 mnd meegerekend. Huidig 'bij verkochte woning' te beperkt.",
+    "dubbel": "gecorrigeerd"
+   },
+   "avrij": {
+    "waarde": "! Sinds 23-7-2026 max 30% WW, plafond €150k/€250k/€500k (WW tot 1/2 mln/hoger); bestaand tot 50% houden",
+    "bron": [
+     "https://www.ing.nl/particulier/hypotheek/nieuwe-regels-voor-aflossingsvrije-hypotheken",
+     "https://nieuws.ing.nl/nl-NL/266100-ing-past-acceptatiebeleid-aflossingsvrije-hypotheken-aan",
+     "https://www.banken.nl/nieuws/27131/ook-ing-scherpt-beleid-voor-aflossingsvrije-hypotheken-aan",
+     "https://hypotheekcompany.nl/wp-content/uploads/2025/12/ING-acc-beleid-jan-2026.pdf"
+    ],
+    "brondatum": "2026-07",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Acc.beleid jan 2026 noemde nog max 50% MW. Nieuw beleid geldt bij nieuw, verhoging, omzetting en 2e hypotheek; bij verlengen 'wat je hebt mag je houden' tot 50%. Opslag aflossingsvrij is volgens banken.nl verhoogd (geen % genoemd i.v.m. AFM-regel)."
+   },
+   "rmid": {
+    "waarde": "+ Rentemiddeling of afkopen; nieuwe rentevaste periode max 12 jr (20 jr met verhuisregeling)",
+    "bron": [
+     "https://www.ing.nl/particulier/hypotheek/jouw-hypotheek/tussentijds-aanpassen",
+     "https://www.ing.nl/particulier/hypotheek/jouw-hypotheek/rentevaste-periode-loopt-af"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "",
+    "dubbel": "bevestigd"
+   },
+   "rverl": {
+    "waarde": "+ Zelfde rentetarieven voor bestaande klanten bij verlenging als voor nieuwe klanten",
+    "bron": [
+     "https://radar.avrotros.nl/artikel/reactie-ing-9169",
+     "https://www.ing.nl/particulier/hypotheek/actuele-hypotheekrente/het-energielabel-en-je-hypotheekrente"
+    ],
+    "brondatum": "2009",
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Beleid sinds 15-12-2009 (Radar-reactie ING); labelprijsmodel geldt gelijk voor nieuw, verlenging en verhoging. Actuele bevestiging ontbreekt."
+   },
+   "rvoor": {
+    "waarde": "~ Rentevoorstel min. 3 mnd voor einde rentevaste periode, via Mijn ING",
+    "bron": [
+     "https://www.homefinance.nl/hypotheek/rente/verhoging/ing/"
+    ],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Alleen vergelijkersbron (homefinance); geen ING-eigen termijn gevonden."
+   },
+   "bbrk": {
+    "waarde": "~ Aflossingskosten met actuele (vergelijkings)rente over deel boven boetevrije ruimte; ING publiceert die rente",
+    "bron": [
+     "https://www.ing.nl/particulier/hypotheek/jouw-hypotheek/actuele-rente-aflossings-afkoopkosten",
+     "https://www.ing.nl/particulier/hypotheek/jouw-hypotheek/kosten-aflossen-tussentijdse-renteaanpassing"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Contante-waardemethode niet expliciet gezien; ING volgt AFM-norm (herberekening sinds 2016).",
+    "dubbel": "bevestigd"
+   },
+   "elbl": {
+    "waarde": "! Rente per label G t/m A++++; zonder geregistreerd label 'geen label'-tarief (hoger); omlaag bij beter label",
+    "bron": [
+     "https://www.ing.nl/particulier/hypotheek/actuele-hypotheekrente/het-energielabel-en-je-hypotheekrente",
+     "https://banken.nl/nieuws/26072/ing-gaat-elk-energielabel-koppelen-aan-hypotheekrente"
+    ],
+    "brondatum": "2025",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Aanpassing vanaf maand na registratie.",
+    "dubbel": "bevestigd"
+   },
+   "o106": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "106% MW voor verduurzaming bevestigd (acc.beleid 2026-1), maar of de klasse >100% een opslag kent is niet gevonden."
+   },
+   "bprov": {
+    "waarde": "! Verlengen renteaanbod met max 6 mnd (tot 12,5 mnd) tegen maandelijkse vergoeding",
+    "bron": [
+     "https://intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/Waarom-een-hypotheek-bij-ING.html",
+     "https://www.ing.nl/particulier/hypotheek/advieskosten/verlengingsprovisie"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Tarief bewust niet genoemd (AFM-regel).",
+    "dubbel": "bevestigd"
+   },
+   "wkost": {
+    "waarde": "! Wijziging: vaste advies- én afhandelingskosten; Verhogen zonder advies €750 (verduurzaming tijdelijk €150)",
+    "bron": [
+     "https://www.ing.nl/particulier/hypotheek/advieskosten/bestaande-hypotheek",
+     "https://www.ing.nl/particulier/hypotheek/jouw-hypotheek/verhogen/verhogen-zonder-advies",
+     "https://www.ing.nl/particulier/hypotheek/jouw-hypotheek/einde-looptijd"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Verlengen einde looptijd €225. Hoogte advieskosten bestaande hypotheek niet in samenvatting."
+   },
+   "avlt": {
+    "waarde": "~ Brief 1,5 jr voor einde; verlengen tot 30 jr; aflossingsvrij alleen als schuld <=50% WW; inkomens- en BKR-toets; €225",
+    "bron": [
+     "https://www.ing.nl/particulier/hypotheek/jouw-hypotheek/einde-looptijd"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "ING-eigen bron vervangt vergelijkersbron.",
+    "dubbel": "gecorrigeerd"
+   },
+   "bproc": {
+    "waarde": "+ Proactief contact bij (dreigende) achterstand; gratis betaalafspraak; maatwerk bij langdurige problemen",
+    "bron": [
+     "https://www.ing.nl/particulier/achterstand/hypotheek-achterstand",
+     "https://www.ing.nl/particulier/achterstand/vragen-en-antwoorden/betaalafspraken"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Melding via Mijn ING/app; vroegsignalering. Bij 3+ gemiste termijnen BKR-melding (volgens ING-pagina)."
+   }
+  },
+  "gecontroleerd": "2026-10-04"
+ }
+]

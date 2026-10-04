@@ -1,0 +1,709 @@
+[
+ {
+  "naam": "ASN Bank",
+  "algemeen": {
+   "intermediairsite": "https://www.asnbank.nl/hypotheek/informatie-voor-adviseurs/ondernemers.html",
+   "voorwaardenPdf": [
+    "https://www.asnbank.nl/downloads/asn-informatiewijzer-hypotheken.html",
+    "https://www.asnbank.nl/web/file?uuid=98bf31e4-9fef-4628-b5ba-3ee3784015df&owner=6916ad14-918d-4ea8-80ac-f71f0ff1928e&contentid=2742",
+    "https://www.asnbank.nl/downloads/kostenoverzicht-wijzigen-hypotheek.html",
+    "https://www.asnbank.nl/downloads/toelichting-vergoeding-voor-het-renteverlies.html"
+   ],
+   "acceptatiegids": [
+    "https://www.asnbank.nl/hypotheek/informatie-voor-adviseurs/ondernemers.html",
+    "https://www.asnbank.nl/hypotheek/informatie-voor-adviseurs/nieuwbouw-voor-adviseurs.html"
+   ],
+   "opmerking": "Onderzoek overgenomen van SNS-onderzoek (uit-R2.json) en steekproefsgewijs gecontroleerd (zzp, avrij, rvp, dag). Merk SNS is opgegaan in ASN Bank (transitie afgerond maart 2026; BLG Wonen per 1-3-2026). Nieuwe aanvragen lopen als ASN Hypotheek (12 tariefgroepen) of ASN Bespaarhypotheek; waarden gelden voor ASN Hypotheek. Volmacht VCN Hypotheken (2026). 'Regels voor accepteren/verstrekken/wijzigen' staat achter Mijn Kantoor (niet openbaar). Alle websites geblokkeerd voor WebFetch; gebaseerd op zoekresultaten."
+  },
+  "criteria": {
+   "zzp": {
+    "waarde": "+ Vanaf 1 boekjaar met inkomensverklaring: 75% (1-2 jr), 90% (2-3 jr), 100% (3+ jr) van vastgesteld inkomen",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/informatie-voor-adviseurs/ondernemers.html",
+     "https://www.asnbank.nl/hypotheek/hypotheek-voor-zzp-of-ondernemer/inkomensverklaring.html",
+     "https://www.asnbank.nl/hypotheek/hypotheek-voor-zzp-of-ondernemer.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Gecontroleerd 2026-10: met NHG min. 12 mnd ondernemer; zonder 3 jaar cijfers prognose nodig"
+   },
+   "flex": {
+    "waarde": "~ Gemiddelde laatste 3 jaar, max. inkomen laatste jaar (zonder perspectiefverklaring)",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/uitzendcontract.html",
+     "https://www.asnbank.nl/hypotheek/hypotheek-zonder-vast-contract.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Laagste van gemiddelde/laatste jaar/huidig telt"
+   },
+   "persp": {
+    "waarde": "+ Perspectiefverklaring geaccepteerd (max. 6 mnd oud, gecertificeerd uitzendbureau); als vast contract",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/hypotheek-zonder-vast-contract.html",
+     "https://www.asnbank.nl/hypotheek/uitzendcontract.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Ook intentieverklaring-pagina aanwezig"
+   },
+   "aow": {
+    "waarde": "~ Vanaf 57 jaar toets op toekomstig pensioeninkomen; ook vermogen/lijfrente meegewogen",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/hypotheek-voor-ouderen/hypotheek-voor-57-tot-67-jarigen-wat-is-er-mogelijk.html",
+     "https://www.asnbank.nl/hypotheek/hypotheek-voor-ouderen.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Consumentenpagina's; geen adviseursnorm gevonden"
+   },
+   "erfp": {
+    "waarde": "~ Erfpacht geaccepteerd; canon telt mee als last (afgekocht: geen invloed op leenruimte)",
+    "bron": [
+     "https://www.asnbank.nl/downloads/asn-informatiewijzer-hypotheken.html",
+     "https://www.asnbank.nl/downloads/algemene-voorwaarden-hypotheken-blg.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Beleid particuliere erfpacht niet gevonden"
+   },
+   "rvp": {
+    "waarde": "~ Variabel, 1 t/m 7, 10, 12, 15 en 20 jaar vast",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/hypotheekvormen/asn-annuiteitenhypotheek.html",
+     "https://www.asnbank.nl/hypotheek/hypotheekvormen/asn-lineaire-hypotheek.html",
+     "https://www.asnbank.nl/downloads/rentetarieven-asn-hypotheek-per-30-juni-2026.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Tariefblad 2026 toont t/m 20 jaar; geen 30 jaar vast gevonden"
+   },
+   "dag": {
+    "waarde": "- Geen dagrente: offerterente staat vast tot passeren (korting hiervoor zit in tarief)",
+    "bron": [
+     "https://www.asnbank.nl/downloads/rentetarieven-asn-hypotheek-per-11-april-2025.html",
+     "https://www.snsbank.nl/particulier/support/download-tonen-op-pagina/asn-sns-hypotheektarieven-18-maart-2026.html",
+     "https://www.asnbank.nl/hypotheek/woordenlijst-hypotheken.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Tariefbladen: offerterente geldt altijd, geen keuze"
+   },
+   "geld": {
+    "waarde": "~ Max. 6 mnd bestaande bouw / 12 mnd nieuwbouw vanaf aanvraagdatum; daarna vervalt offerte",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/hypotheekofferte.html",
+     "https://www.asnbank.nl/hypotheek/informatie-voor-adviseurs/nieuwbouw-voor-adviseurs.html",
+     "https://www.asnbank.nl/downloads/asn-informatiewijzer-hypotheken.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Kosteloos annuleren tot 3 mnd na aanvraag"
+   },
+   "boete": {
+    "waarde": "~ 10% van oorspronkelijk bedrag per leningdeel per kalenderjaar",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/mijn-asn-hypotheek/extra-aflossen.html",
+     "https://www.asnbank.nl/downloads/asn-informatiewijzer-hypotheken.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Ook boetevrij bij einde rentevaste periode"
+   },
+   "ltv": {
+    "waarde": "~ 12 tariefgroepen o.b.v. schuld/marktwaarde; lagere groep op verzoek met WOZ/taxatie, niet automatisch",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/hypotheekrentes/hypotheekrente-tariefgroepen.html",
+     "https://www.asnbank.nl/downloads/aanpassen-marktwaarde-van-uw-huis.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Bespaarhypotheek past wel automatisch aan; bij renteverlenging herbeoordeling LTV"
+   },
+   "bdduur": {
+    "waarde": "~ Max. 24 mnd (1 jr, automatisch verlengd); daarna verlenging max. 12 mnd onder voorwaarden",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/mijn-asn-hypotheek/bouwdepot.html",
+     "https://www.asnbank.nl/hypotheek/informatie-voor-adviseurs/nieuwbouw-voor-adviseurs.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "Geen aparte 12-mnd-termijn voor verbouw gevonden"
+   },
+   "bdrnt": {
+    "waarde": "~ Depotrente gelijk aan hypotheekrente",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/mijn-asn-hypotheek/bouwdepot.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Rente op nog niet opgenomen deel"
+   },
+   "bddecl": {
+    "waarde": "~ Online declareren via app/internetbankieren; binnen 5 werkdagen; min. €250, factuur max. 6 mnd oud",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/mijn-asn-hypotheek/bouwdepot/regels-bouwdepot-declaratie.html",
+     "https://www.asnbank.nl/downloads/aanvragen-bouwdepotdeclaratie-asn-hypotheek.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Betaling naar IBAN leverancier"
+   },
+   "ebb": {
+    "waarde": "+ Extra lenen tot 106% conform labeltabel (tot €50.000 bij beste label), via bouwdepot",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/asn-hypotheek/extra-lenen-voor-verduurzaming.html",
+     "https://www.asnbank.nl/hypotheek/nationale-hypotheek-garantie-nhg.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Met NHG grens €498.200 bij verduurzaming"
+   },
+   "duur": {
+    "waarde": "+ Leningdeel ASN Duurzaam Wonen €2.500-30.000 tegen lager tarief, via bouwdepot",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/asn-duurzaam-wonen.html",
+     "https://www.asnbank.nl/hypotheek/rentekorting.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Korting op hele hypotheek alleen voor aanvragen voor 1-7-2025"
+   },
+   "verh": {
+    "waarde": "+ Rente meenemen bij aanvraag binnen 3 mnd, max. oude bedrag, resterende rentevaste periode",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/rente-meeneemregeling.html",
+     "https://www.asnbank.nl/hypotheek/hypotheek-meenemen.html",
+     "https://www.asnbank.nl/downloads/asn-informatiewijzer-hypotheken.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Alleen vaste rente; tariefgroep kan wijzigen"
+   },
+   "ondh": {
+    "waarde": "~ Verkoop met verlies alleen met toestemming; restschuld meefinancieren tot €30.000 bij verhuizing",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/restschuldfinanciering.html",
+     "https://www.asnbank.nl/web/file?uuid=98bf31e4-9fef-4628-b5ba-3ee3784015df&owner=6916ad14-918d-4ea8-80ac-f71f0ff1928e&contentid=2742"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Bij restschuldrisico naar Bijzonder Beheer"
+   },
+   "oha": {
+    "waarde": "~ Na inkomenstoets blijvende partner en geen achterstand in laatste 5 jaar; via notaris",
+    "bron": [
+     "https://www.asnbank.nl/web/file?uuid=98bf31e4-9fef-4628-b5ba-3ee3784015df&owner=6916ad14-918d-4ea8-80ac-f71f0ff1928e&contentid=2742",
+     "https://www.asnbank.nl/downloads/kostenoverzicht-wijzigen-hypotheek.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Administratiekosten €195 per hypotheek, max. €390"
+   },
+   "tweede": {
+    "waarde": "+ Verhogen binnen inschrijving zonder notaris, 2e hypotheek, of online zelf (klein bedrag)",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/hypotheek-verhogen.html",
+     "https://www.asnbank.nl/hypotheek/online-hypotheek-verhogen.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Online plafond €25.000 resp. €30.000 (bronnen verschillen); niet voor zzp"
+   },
+   "ovbr": {
+    "waarde": "+ Ook bij onverkochte woning (95% marktwaarde min schuld); max. 18 mnd, nieuwbouw 30 mnd",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/mijn-asn-hypotheek/overbruggingshypotheek.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Bij verkochte woning: verkoopprijs min schuld en kosten"
+   },
+   "avrij": {
+    "waarde": "! Per 11-5-2026 max. 30% van woningwaarde aflossingsvrij; bestaand blijft bij renteherziening",
+    "bron": [
+     "https://newsroom.asnbank.nl/download/f3cf2d60-84b6-40a3-bf75-25eaeddbae9e/persbericht-asnbankbeperktaflossingsvrijehypotheektot30procentwaardewoning.pdf",
+     "https://www.asnbank.nl/hypotheek/hypotheekvormen/asn-aflossingsvrije-hypotheek/nieuwe-regels-voor-een-aflossingsvrije-hypotheek.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "ASN-pagina bevestigt: geen maximumbedrag, alleen 30% van marktwaarde; bestaand blijft bij renteverlenging"
+   },
+   "rmid": {
+    "waarde": "~ Mogelijk bij vaste rente; nieuwe periode min. 5 jr langer dan resterende; niet bij Duurzaam Wonen",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/je-rente-middelen.html",
+     "https://www.asnbank.nl/downloads/kostenoverzicht-wijzigen-hypotheek.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Administratiekosten €195"
+   },
+   "rverl": {
+    "waarde": "+ Zelfde tarieven bij renteverlenging als voor nieuwe klanten",
+    "bron": [
+     "https://www.snsbank.nl/particulier/support/download-tonen-op-pagina/asn-voorheen-sns-bank-hypotheektarieven-18-juli-2026.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Tariefblad: tarieven gelden voor nieuwe en verlengende klanten"
+   },
+   "rvoor": {
+    "waarde": "~ Rentevoorstel 3 mnd voor einde rentevaste periode",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/mijn-asn-hypotheek/hypotheekrente-verlengen.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Per post, app en internetbankieren"
+   },
+   "bbrk": {
+    "waarde": "~ Contante waarde; vergelijkingsrente = actuele rente gelijke periode; boetevrije ruimte eraf",
+    "bron": [
+     "https://www.asnbank.nl/downloads/toelichting-vergoeding-voor-het-renteverlies.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Toelichting met rekenvoorbeeld"
+   },
+   "elbl": {
+    "waarde": "~ ASN Hypotheek: labelkorting alleen voor aanvragen voor 1-7-2025; Bespaarhypotheek rekent per energiegroep",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/rentekorting.html",
+     "https://www.asnbank.nl/hypotheek/asn-bespaarhypotheek/tariefgroepen.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Geen opslag zonder label gevonden"
+   },
+   "o106": {
+    "waarde": "! Tariefgroep o.b.v. totale schuld/marktwaarde, met aparte klassen ≤106% en >106%",
+    "bron": [
+     "https://www.snsbank.nl/particulier/support/download-tonen-op-pagina/asn-sns-hypotheektarieven-24-februari-2026.html",
+     "https://www.asnbank.nl/hypotheek/asn-duurzaam-wonen.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Leningdeel Duurzaam Wonen heeft eigen lager tarief"
+   },
+   "bprov": {
+    "waarde": "~ Nieuwbouw: geen verlengkosten tot 12 mnd; bestaande bouw max. 6 mnd, daarna vervalt offerte",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/informatie-voor-adviseurs/nieuwbouw-voor-adviseurs.html",
+     "https://www.asnbank.nl/hypotheek/hypotheekofferte.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Geen bereidstellingsprovisie genoemd voor ASN"
+   },
+   "wkost": {
+    "waarde": "~ Administratiekosten €195 per wijziging, €390 bij meerdere tegelijk",
+    "bron": [
+     "https://www.asnbank.nl/downloads/kostenoverzicht-wijzigen-hypotheek.html",
+     "https://www.asnbank.nl/hypotheek/hypotheekadvies/kosten-wijzigen-van-je-bestaande-hypotheek.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Online verhogen: €400 afsluitkosten"
+   },
+   "avlt": {
+    "waarde": "~ 18 mnd voor einddatum voorstel voor voortzetting aflossingsvrij deel na betaalbaarheidstoets",
+    "bron": [
+     "https://www.asnbank.nl/downloads/asn-informatiewijzer-hypotheken.html",
+     "https://www.asnbank.nl/downloads/productwijzer-aflossingsvrije-hypotheek.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "bproc": {
+    "waarde": "+ Afdeling Bijzonder Beheer: gratis hulp, haalbare betalingsregeling, geen incassobureaus",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/mijn-asn-hypotheek/hypotheken-en-hulp-bij-betalingsproblemen.html",
+     "https://www.asnbank.nl/hulp-bij-financiele-zorgen/onze-servicebeloftes.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": ""
+   }
+  },
+  "gecontroleerd": "2026-10-04"
+ },
+ {
+  "naam": "Allianz",
+  "algemeen": {
+   "intermediairsite": null,
+   "voorwaardenPdf": [
+    "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-47.pdf",
+    "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-46.pdf",
+    "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/algemene-informatie-allianz-hypotheek.pdf",
+    "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-51.pdf"
+   ],
+   "acceptatiegids": [
+    "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-47.pdf"
+   ],
+   "opmerking": "Allianz Nederland Levensverzekering; hypotheek via adviseur, servicing door Quion (samenwerking verlengd). Hypotheekwijzer versie 2026-04 bevat acceptatienormen (min. lening €70.000, woningwaarde min. €100.000, max. €1 mln zonder NHG, max. 2 aanvragers, min. label C of verbeterplan). Geen aparte intermediairsite gevonden. allianz.nl geblokkeerd voor WebFetch; gebaseerd op zoekresultaten."
+  },
+  "criteria": {
+   "zzp": {
+    "waarde": "~ Altijd Inkomensverklaring Ondernemer (NHG-normen), ook niet-NHG; jaarcijfers 3 jaar gevraagd",
+    "bron": [
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-47.pdf",
+     "https://hypotheek.allianz.nl/assets/pdf/vergelijkingskaart-hypotheek.pdf"
+    ],
+    "brondatum": "2026-04",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Minimaal aantal jaren ondernemerschap niet in eigen bron gevonden (vergelijker noemt 1 jaar)"
+   },
+   "flex": {
+    "waarde": "~ Uitzend fase A/B = flex; gemiddelde inkomen laatste 3 kalenderjaren (IB60), WW mag meetellen",
+    "bron": [
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-47.pdf"
+    ],
+    "brondatum": "2026-04",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Fase C telt als vast dienstverband"
+   },
+   "persp": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Geen Allianz-bron over perspectiefverklaring gevonden"
+   },
+   "aow": {
+    "waarde": "~ AOW binnen 10 jaar na offerte: toets op pensioeninkomen; vanaf 57 jaar pensioen meegewogen",
+    "bron": [
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-47.pdf",
+     "https://www.allianz.nl/particulier/hypotheken/afsluiten/maximale-hypotheek.html"
+    ],
+    "brondatum": "2026-04",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Inkomen meetellen tot 77 jaar"
+   },
+   "erfp": {
+    "waarde": "! Alleen (semi-)overheidserfpacht, geen particuliere; resterende duur min. helft looptijd bij oude akten",
+    "bron": [
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-47.pdf"
+    ],
+    "brondatum": "2026-04",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Regel looptijd geldt voor akten van voor 1-1-1992; afkoop canon bij nieuwbouw mee te financieren"
+   },
+   "rvp": {
+    "waarde": "~ Vast 1 t/m 30 jaar (elk jaar); geen variabele rente",
+    "bron": [
+     "https://www.allianz.nl/particulier/hypotheken/afsluiten/rente.html",
+     "https://www.hypotheekrente.nl/maatschappijen/allianz/"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Groen Leningdeel: 10, 20 of 30 jaar"
+   },
+   "dag": {
+    "waarde": "+ Dagrente: automatisch laagste van offerte- en passeerrente",
+    "bron": [
+     "https://www.allianz.nl/particulier/hypotheken/afsluiten/rente.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "geld": {
+    "waarde": "~ 3 mnd bestaande bouw / 6 mnd nieuwbouw; na tekenen automatisch verlengd met 6 resp. 3 mnd",
+    "bron": [
+     "https://www.allianz.nl/particulier/hypotheken/afsluiten/rente.html",
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-47.pdf"
+    ],
+    "brondatum": "2026-04",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Daarna vervalt bindend aanbod"
+   },
+   "boete": {
+    "waarde": "~ 10% van oorspronkelijk bedrag per leningdeel per kalenderjaar, eigen geld, min. €500",
+    "bron": [
+     "https://www.allianz.nl/particulier/hypotheken/beheren/extra-aflossen.html",
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-46.pdf"
+    ],
+    "brondatum": "2025-06",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Niet-benutte ruimte vervalt; ook boetevrij bij verkoop/overlijden/renteherziening"
+   },
+   "ltv": {
+    "waarde": "+ Risicoklassen 60/80/90/100%; klasse daalt automatisch mee met aflossing; waardestijging via taxatie/Calcasa",
+    "bron": [
+     "https://www.allianz.nl/particulier/hypotheken/afsluiten/rente.html",
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-46.pdf"
+    ],
+    "brondatum": "2025-06",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Bij einde rentevaste periode klasse aanpasbaar"
+   },
+   "bdduur": {
+    "waarde": "~ 24 mnd nieuwbouw / 12 mnd bestaande bouw; verlenging max. 6 mnd",
+    "bron": [
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-51.pdf",
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-47.pdf"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "bdrnt": {
+    "waarde": "! Depotrente gelijk aan hypotheekrente; na verlenging geen rentevergoeding meer",
+    "bron": [
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-51.pdf"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "bddecl": {
+    "waarde": "+ Declareren via allianz.mijnleninginzicht.nl of e-mail; beoordeling binnen 6 werkdagen, uitbetaling 1 werkdag",
+    "bron": [
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-51.pdf"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "ebb": {
+    "waarde": "+ Tot 106% marktwaarde bij energiebesparende maatregelen via Groen Leningdeel",
+    "bron": [
+     "https://www.allianz.nl/particulier/hypotheken/hypotheekvormen/groen-leningdeel.html",
+     "https://www.allianz.nl/particulier/hypotheken/afsluiten/duurzaam.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Max. €35.000 groen deel"
+   },
+   "duur": {
+    "waarde": "+ Groen Leningdeel tot €35.000 tegen lager tarief, los van risicoklasse; gratis verduurzamingsplan",
+    "bron": [
+     "https://www.allianz.nl/particulier/hypotheken/hypotheekvormen/groen-leningdeel.html",
+     "https://www.allianz.nl/particulier/hypotheken/afsluiten/duurzaam.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Verduurzamingsplan via HomeQgo"
+   },
+   "verh": {
+    "waarde": "+ Rentevoorwaarden meenemen naar nieuwe eigen woning, binnen 6 mnd na verkoop oude woning",
+    "bron": [
+     "https://www.allianz.nl/particulier/hypotheken/beheren/verhuisregeling.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Niet te splitsen bij scheiding; niet naar woning al in bezit; nieuwe acceptatietoets"
+   },
+   "ondh": {
+    "waarde": "~ Verkoop van onderpand alleen met toestemming Allianz; bij verzuim mag Allianz executeren",
+    "bron": [
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-46.pdf"
+    ],
+    "brondatum": "2025-06",
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Specifiek beleid onderhandse verkoop met restschuld niet gevonden"
+   },
+   "oha": {
+    "waarde": "~ Via adviseur met aanvraagformulier en inkomensstukken blijver; akkoord, daarna notaris; €250",
+    "bron": [
+     "https://www.allianz.nl/particulier/hypotheken/beheren/hoofdelijk-ontslag.html",
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/OHA-aanvraagformulier.pdf"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "tweede": {
+    "waarde": "~ Verhogen vanaf €10.000 als nieuw leningdeel; zonder notaris binnen bestaande inschrijving",
+    "bron": [
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-47.pdf",
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-46.pdf"
+    ],
+    "brondatum": "2026-04",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Geen extra labeleis bij verhoging"
+   },
+   "ovbr": {
+    "waarde": "! Looptijd 2 jaar; volgens Hypotheekwijzer alleen bij verkochte, nog niet overgedragen woning",
+    "bron": [
+     "https://www.allianz.nl/particulier/hypotheken/hypotheekvormen/overbrugging.html",
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-47.pdf"
+    ],
+    "brondatum": "2026-04",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Consumentenpagina noemt ook max. 90% waarde min schuld bij onverkochte woning; bronnen tegenstrijdig"
+   },
+   "avrij": {
+    "waarde": "~ Max. 50% van marktwaarde aflossingsvrij; geen verlaging naar 30% gevonden",
+    "bron": [
+     "https://www.allianz.nl/particulier/hypotheken/hypotheekvormen/aflossingsvrij.html",
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-47.pdf"
+    ],
+    "brondatum": "2026-04",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Consumptief alleen bij totale lening max. 80%; betaalbaarheid kan tussentijds worden nagevraagd"
+   },
+   "rmid": {
+    "waarde": "~ Rentemiddeling mogelijk; boete verwerkt in nieuwe rente; max. 2 voorstellen per jaar, €250",
+    "bron": [
+     "https://www.allianz.nl/particulier/hypotheken/beheren/rentemiddeling.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "rverl": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Geen bron of bestaande klanten bij verlenging dezelfde rente krijgen als nieuwe"
+   },
+   "rvoor": {
+    "waarde": "~ Rentevoorstel ca. 3 mnd voor einde rentevaste periode, met tarieven alle perioden",
+    "bron": [
+     "https://www.allianz.nl/particulier/hypotheken/afsluiten/rente.html",
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-46.pdf"
+    ],
+    "brondatum": "2025-06",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Zonder keuze zelfde periode verlengd"
+   },
+   "bbrk": {
+    "waarde": "~ Contante waarde van renteverschil over resterende rentevaste periode, tegen actuele vergelijkingsrente",
+    "bron": [
+     "https://www.allianz.nl/particulier/hypotheken/beheren/extra-aflossen.html",
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-46.pdf"
+    ],
+    "brondatum": "2025-06",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Boetevrije ruimte gaat eraf"
+   },
+   "elbl": {
+    "waarde": "! Geen labelkorting gevonden; label D of slechter alleen met verbeterplan naar min. C",
+    "bron": [
+     "https://www.allianz.nl/particulier/hypotheken/afsluiten/duurzaam.html",
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-47.pdf"
+    ],
+    "brondatum": "2026-04",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Alleen Groen Leningdeel heeft lager tarief"
+   },
+   "o106": {
+    "waarde": "! Groen Leningdeel tarief los van risicoklasse, maar telt mee voor risicoklasse overige delen",
+    "bron": [
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-46.pdf",
+     "https://www.allianz.nl/particulier/hypotheken/hypotheekvormen/groen-leningdeel.html"
+    ],
+    "brondatum": "2025-06",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "bprov": {
+    "waarde": "! Na automatische verlenging bereidstellingsprovisie per maand bij gestegen rente (nieuw geld)",
+    "bron": [
+     "https://www.allianz.nl/particulier/hypotheken/afsluiten/rente.html",
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-47.pdf"
+    ],
+    "brondatum": "2026-04",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Niet over meeneembedrag"
+   },
+   "wkost": {
+    "waarde": "~ Behandelingskosten €250 per wijziging (o.a. omzetting, rentemiddeling, OHA)",
+    "bron": [
+     "https://www.allianz.nl/particulier/hypotheken/afsluiten/kosten.html",
+     "https://www.allianz.nl/particulier/hypotheken/beheren/rentemiddeling.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "avlt": {
+    "waarde": "! Max. looptijd 30 jaar, niet te verlengen; daarna in één keer aflossen of herfinancieren",
+    "bron": [
+     "https://www.allianz.nl/particulier/hypotheken/hypotheekvormen/aflossingsvrij.html",
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-46.pdf"
+    ],
+    "brondatum": "2025-06",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "bproc": {
+    "waarde": "~ Zo snel mogelijk contact via servicer Quion; verwijzing naar NHG en schuldhulp",
+    "bron": [
+     "https://www.allianz.nl/particulier/hypotheken/beheren.html",
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/algemene-informatie-allianz-hypotheek.pdf"
+    ],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Geen specifiek beleid of afdeling gevonden"
+   }
+  },
+  "gecontroleerd": "2026-10-04"
+ }
+]

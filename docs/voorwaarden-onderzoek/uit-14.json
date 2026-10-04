@@ -1,0 +1,643 @@
+[
+ {
+  "naam": "Argenta",
+  "algemeen": {
+   "intermediairsite": "https://www.argenta.nl/adviseur",
+   "voorwaardenPdf": [
+    "https://www.argenta.nl/sites/default/files/documents/Argenta_Voorwaarden_Hypotheek_juli2025.pdf"
+   ],
+   "acceptatiegids": [
+    "https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf"
+   ],
+   "opmerking": "argenta.nl geblokkeerd voor WebFetch; gegevens uit zoekresultaten van argenta.nl-pagina's en -pdf's (Hypotheekgids augustus 2026). Aflossingsvrij-beleid aangescherpt per 17-8-2026."
+  },
+  "criteria": {
+   "zzp": {
+    "waarde": "~ 1-3 jaar ondernemer alleen met NHG + IKV; >3 jaar zonder NHG via IKV of cijfers 3 jaar",
+    "bron": [
+     "https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf",
+     "https://www.argenta.nl/hypotheekadvies/overzicht-documenten-hypotheekaanvraag"
+    ],
+    "brondatum": "2026-08",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids aug 2026; ondernemers tot 100% marktwaarde zonder extra opslag."
+   },
+   "flex": {
+    "waarde": "~ Uitzend, oproep en tijdelijk zonder intentie: gemiddelde inkomen laatste 3 kalenderjaren",
+    "bron": [
+     "https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf"
+    ],
+    "brondatum": "2026-08",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids aug 2026."
+   },
+   "persp": {
+    "waarde": "~ Mogelijk met en zonder NHG; zonder NHG alleen met 2e aanvrager en hoogste inkomen vast",
+    "bron": [
+     "https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf"
+    ],
+    "brondatum": "2026-08",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Perspectiefverklaring + werkgeversverklaring max. 6 mnd oud op datum bindend aanbod."
+   },
+   "aow": {
+    "waarde": "~ AOW binnen 10 jaar: toekomstig pensioen/AOW telt mee in toetsinkomen; MPO leidend",
+    "bron": [
+     "https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf"
+    ],
+    "brondatum": "2026-08",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Vanaf AOW-leeftijd toetsing op werkelijke lasten mogelijk."
+   },
+   "erfp": {
+    "waarde": "~ Gemeentelijke erfpacht doorgaans ok; particulier per situatie, vaak erfpachtopinie notaris",
+    "bron": [
+     "https://www.argenta.nl/hypotheekadvies/wat-is-erfpacht",
+     "https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf"
+    ],
+    "brondatum": "2026-08",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Jaarlijkse canon gaat van toetsinkomen af; bij afkoop canon duur erfpacht >= economische looptijd."
+   },
+   "rvp": {
+    "waarde": "+ Variabel (3 mnd) en rentevast van 1 t/m 30 jaar",
+    "bron": [
+     "https://www.argenta.nl/hypotheek-argenta/kenmerken",
+     "https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf"
+    ],
+    "brondatum": "2026-08",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "dag": {
+    "waarde": "+ Laagste van offerterente en dagrente bij passeren; bij verlenging vastgezet op dagrente na 3 mnd",
+    "bron": [
+     "https://www.argenta.nl/contact/veelgestelde-vragen/hypotheek/hoe-lang-is-mijn-renteaanbod-geldig",
+     "https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf"
+    ],
+    "brondatum": "2026-08",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Bij verlenging wordt rente 'vastgezet' op het laagste van offerte en dagrente op verlengmoment."
+   },
+   "geld": {
+    "waarde": "+ 3 maanden, kosteloos te verlengen met 9 maanden (totaal 12 mnd)",
+    "bron": [
+     "https://www.argenta.nl/contact/veelgestelde-vragen/hypotheek/hoe-lang-is-mijn-renteaanbod-geldig",
+     "https://www.argenta.nl/adviseur/over-ons/weet-je-dat/voordelen-argenta-hypotheek-bij-nieuwbouwhuis"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "boete": {
+    "waarde": "+ 15% van oorspronkelijke hoofdsom per kalenderjaar boetevrij",
+    "bron": [
+     "https://www.argenta.nl/faq/hypotheken/kan-ik-boetevrij-aflossen-bij-verkoop-van-het-huis",
+     "https://www.argenta.nl/sites/default/files/documents/Argenta_Voorwaarden_Hypotheek_juli2025.pdf"
+    ],
+    "brondatum": "2025-07",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Ook boetevrij bij verkoop woning en aflossing uit eigen middelen (schenking, erfenis, spaargeld)."
+   },
+   "ltv": {
+    "waarde": "! Lagere risicoklasse op verzoek met bewijs hogere waarde (taxatie of Calcasa); niet automatisch",
+    "bron": [
+     "https://www.argenta.nl/contact/veelgestelde-vragen/extra-aflossen/kan-mijn-risico-opslag-omlaag-als-mijn-huis-meer-waard-is-geworden",
+     "https://www.argenta.nl/hypotheek-argenta/risico-opslag-hypotheek"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Verzoek via info@argentahypotheken.nl met contractnummer."
+   },
+   "bdduur": {
+    "waarde": "~ Max. 24 maanden; nieuwbouw max. 36 maanden",
+    "bron": [
+     "https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf"
+    ],
+    "brondatum": "2026-08",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids aug 2026."
+   },
+   "bdrnt": {
+    "waarde": "~ Depotrente gelijk aan hypotheekrente, maar max. 24 maanden",
+    "bron": [
+     "https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf",
+     "https://www.argenta.nl/adviseur/over-ons/weet-je-dat/voordelen-argenta-hypotheek-bij-nieuwbouwhuis"
+    ],
+    "brondatum": "2026-08",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Na 24 mnd geen rentevergoeding meer."
+   },
+   "bddecl": {
+    "waarde": "+ Nota's uploaden in Mijn Leninginzicht; akkoord binnen 5 werkdagen, uitbetaling binnen 2 dagen",
+    "bron": [
+     "https://www.argenta.nl/mijn-argenta/mijn-bouwdepot",
+     "https://www.argenta.nl/hypotheekadvies/wat-is-een-bouwdepot"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Betaling naar leverancier of eigen rekening; notadatum niet voor offerteaanvraag."
+   },
+   "ebb": {
+    "waarde": "+ Eigen EBB (groen lenen): tot 106% met NHG / 100% zonder; extra ruimte op basis van label",
+    "bron": [
+     "https://www.argenta.nl/hypotheek-argenta/energiebespaarbudget",
+     "https://www.argenta.nl/adviseur/over-ons/weet-je-dat/het-argenta-energiebespaarbudget"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Geen bouwspecificatie vooraf nodig; declareren op facturen."
+   },
+   "duur": {
+    "waarde": "+ Argenta groen lenen: lagere rente op groen deel + extra leenruimte (EBB of EBV)",
+    "bron": [
+     "https://www.argenta.nl/hypotheek/Argenta-groen-lenen",
+     "https://www.argenta.nl/adviseur/wat-is-argenta-groen-lenen"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Facturen moeten na aanvraagdatum liggen; geen financiering achteraf."
+   },
+   "verh": {
+    "waarde": "~ Rente + resterende rentevaste periode mee, max. oud leningbedrag; binnen 12 mnd",
+    "bron": [
+     "https://www.argenta.nl/adviseur/de-argenta-verhuisregeling",
+     "https://www.argenta.nl/hypotheek-argenta/wat-is-de-argenta-verhuisregeling"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Min. 30 dagen voor aflossing melden via adviseur."
+   },
+   "ondh": {
+    "waarde": "! Toestemming Argenta nodig bij verkoop met restschuld; restschuld blijft verschuldigd",
+    "bron": [
+     "https://www.argenta.nl/sites/default/files/documents/Argenta_Voorwaarden_Hypotheek_juli2025.pdf"
+    ],
+    "brondatum": "2025-07",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Bij executie eerst overleg met klant; onderhandse verkoop door bank mogelijk met volmacht."
+   },
+   "oha": {
+    "waarde": "~ Via onafhankelijk adviseur met aanvraagformulier; na akkoord akte van ontslag bij notaris",
+    "bron": [
+     "https://www.argenta.nl/hypotheek/beheer/scheiden",
+     "https://www.argenta.nl/adviseur/hypotheekadvies/aanpassen-medeschuldenaren-voor-de-argenta-hypotheek"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "tweede": {
+    "waarde": "+ Onderhandse verhoging binnen inschrijving via adviseur; anders 2e hypotheek via notaris",
+    "bron": [
+     "https://www.argenta.nl/adviseur/de-meest-voorkomende-wijzigingen-van-de-argenta-hypotheek-in-beheer"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Uitbetaling 1 dag na akkoord."
+   },
+   "ovbr": {
+    "waarde": "~ Alleen met Argenta-hypotheek; max. 24 mnd (nieuwbouw 36); unverkocht 90-95% waarde",
+    "bron": [
+     "https://www.argenta.nl/adviseur/veelgestelde-vragen/overbruggingshypotheek",
+     "https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf"
+    ],
+    "brondatum": "2026-08",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Verwachte looptijd >12 mnd: dubbele lasten aantonen."
+   },
+   "avrij": {
+    "waarde": "! Vanaf 17-8-2026 max. 30% marktwaarde én max. €150.000; looptijd max. 30 jaar; niet voor starters",
+    "bron": [
+     "https://www.argenta.nl/hypotheekadvies/aflossingsvrije-hypotheek",
+     "https://www.argenta.nl/aflossingsvrij",
+     "https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf"
+    ],
+    "brondatum": "2026-08",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Tot 17-8-2026 gold max. 50% marktwaarde; ook bij wijzigingen bestaande klanten nu 30%."
+   },
+   "rmid": {
+    "waarde": "- Geen rentemiddeling; wel renteafkoop tegen eenmalige vergoeding",
+    "bron": [
+     "https://www.argenta.nl/contact/veelgestelde-vragen/hypotheek/heeft-argenta-rentemiddeling-of-rentebedenktijd",
+     "https://www.argenta.nl/mijn-argenta/rente-veranderingen"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Ook geen rentebedenktijd."
+   },
+   "rverl": {
+    "waarde": "+ Laagste van rentevoorstel en dagrente op ingangsdatum nieuwe rentevaste periode",
+    "bron": [
+     "https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf"
+    ],
+    "brondatum": "2026-08",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Geen expliciete bron dat bestaande klant exact nieuwe-klantenrente krijgt."
+   },
+   "rvoor": {
+    "waarde": "~ Rentevoorstel 3 maanden voor einde rentevaste periode",
+    "bron": [
+     "https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf"
+    ],
+    "brondatum": "2026-08",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "bbrk": {
+    "waarde": "~ Contante waarde renteverschil over resterende rvp; vergelijkingsrente = dagrente zelfde rvp en risicoklasse",
+    "bron": [
+     "https://www.argenta.nl/sites/default/files/documents/Argenta_Voorwaarden_Hypotheek_juli2025.pdf",
+     "https://www.argenta.nl/aflossingsvrij"
+    ],
+    "brondatum": "2025-07",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Vrije 15% wordt eerst afgetrokken."
+   },
+   "elbl": {
+    "waarde": "+ Duurzaamheidskorting bij label A of beter, kleinere korting bij B; alleen 1e rentevaste periode",
+    "bron": [
+     "https://www.argenta.nl/hypotheek/duurzaamheidskorting",
+     "https://www.argenta.nl/adviseur/contact/veelgestelde-vragen/adviseurs/duurzaamheidskorting"
+    ],
+    "brondatum": "2025-04",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Sinds 7-4-2025; bij renteherziening opnieuw vastgesteld op basis van label in EP-online. Geen opslag zonder label gevonden."
+   },
+   "o106": {
+    "waarde": "+ Rente groen-lenendeel onafhankelijk van risicoklasse; tot 106% met NHG",
+    "bron": [
+     "https://www.argenta.nl/hypotheek/Argenta-groen-lenen",
+     "https://www.argenta.nl/adviseur/wat-is-argenta-groen-lenen"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Groen deel telt wel mee voor risicoklasse van de rest van de hypotheek."
+   },
+   "bprov": {
+    "waarde": "+ Verlengen met 9 maanden zonder bereidstellingsprovisie; wel annuleringskosten na verlenging",
+    "bron": [
+     "https://www.argenta.nl/contact/veelgestelde-vragen/hypotheek/hoe-lang-is-mijn-renteaanbod-geldig",
+     "https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf"
+    ],
+    "brondatum": "2026-08",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Annuleringskosten bij afzien na verlenging."
+   },
+   "wkost": {
+    "waarde": "~ Eenvoudige wijzigingen zelf en kosteloos via klantenservice; overige via adviseur",
+    "bron": [
+     "https://www.argenta.nl/sites/default/files/documents/Overzicht_De_Argenta_hypotheek_wijzigen_met_of_zonder_advies.pdf",
+     "https://www.argenta.nl/adviseur/de-meest-voorkomende-wijzigingen-van-de-argenta-hypotheek-in-beheer"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Geen tarieflijst administratiekosten bij Argenta gevonden; adviseurskosten komen erbij."
+   },
+   "avlt": {
+    "waarde": "~ Einde looptijd: maatwerk met adviseur; opnieuw aflossingsvrij volgens dan geldende regels",
+    "bron": [
+     "https://www.argenta.nl/aflossingsvrij",
+     "https://www.argenta.nl/hypotheekadvies/aflossingsvrije-hypotheek"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Pagina noemt nog max. 50% voor nieuwe aflossingsvrije lening; nieuw beleid 30%/€150k mogelijk ook van toepassing."
+   },
+   "bproc": {
+    "waarde": "+ Team Financiële Zorg/Bijzonder Beheer: coaching, betaalpauze 3 mnd, betalingsregeling",
+    "bron": [
+     "https://www.argenta.nl/betaalbaarheid-van-mijn-hypotheek"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Budget-/jobcoaching en aanpassing hypotheek mogelijk."
+   }
+  },
+  "gecontroleerd": "2026-10-04"
+ },
+ {
+  "naam": "bunq",
+  "algemeen": {
+   "intermediairsite": "https://mortgages.bunq.com/find-advisor",
+   "voorwaardenPdf": [
+    "https://mortgages.bunq.com/documents/terms-conditions"
+   ],
+   "acceptatiegids": [
+    "https://mortgages.bunq.com/mortgage-documents/acceptance-guide"
+   ],
+   "opmerking": "bunq Easy Mortgage is een white label van Tulp Group (beheer Tulp, servicing Stater), sinds mei 2022; aanvraag via adviseur (HDN). Tulp-voorwaarden (o.a. 25% boetevrij, verhuisregeling 3 mnd) niet overgenomen omdat geen bron bevestigt dat ze voor bunq gelden. bunq-domeinen geblokkeerd voor WebFetch; acceptatiegids en voorwaarden zijn pdf's zonder geïndexeerde inhoud, daarom veel criteria onbekend."
+  },
+  "criteria": {
+   "zzp": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden; acceptatiegids bunq (pdf) niet geïndexeerd/bereikbaar."
+   },
+   "flex": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden; acceptatiegids bunq (pdf) niet geïndexeerd/bereikbaar."
+   },
+   "persp": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden; acceptatiegids bunq (pdf) niet geïndexeerd/bereikbaar."
+   },
+   "aow": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden; acceptatiegids bunq (pdf) niet geïndexeerd/bereikbaar."
+   },
+   "erfp": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden; acceptatiegids bunq (pdf) niet geïndexeerd/bereikbaar."
+   },
+   "rvp": {
+    "waarde": "+ Rentevast 1, 5, 10, 15, 20, 25 en 30 jaar",
+    "bron": [
+     "https://mortgages.bunq.com/interest-rates"
+    ],
+    "brondatum": "2026-09-30",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Rentetabel per LTV-klasse (NHG t/m 106%)."
+   },
+   "dag": {
+    "waarde": "+ Rente uit voorstel gegarandeerd; lagere rente op passeerdag wordt toegepast",
+    "bron": [
+     "https://mortgages.bunq.com/interest-rates",
+     "https://mortgages.bunq.com/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "geld": {
+    "waarde": "~ Rentevoorstel 4 maanden geldig",
+    "bron": [
+     "https://mortgages.bunq.com/interest-rates",
+     "https://mortgages.bunq.com/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Geen informatie over verlenging gevonden."
+   },
+   "boete": {
+    "waarde": "~ 10% per jaar boetevrij; volgens vergelijker onbeperkt uit eigen middelen",
+    "bron": [
+     "https://www.homefinance.nl/hypotheek/aanbieders/bunq/voorwaarden/"
+    ],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Alleen tweede bron (homefinance.nl), niet bevestigd op bunq-site."
+   },
+   "ltv": {
+    "waarde": "+ Risicoklasse daalt mee met aflossing: lagere rente bij lagere schuld/waarde",
+    "bron": [
+     "https://mortgages.bunq.com/interest-rates",
+     "https://mortgages.bunq.com/"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "bunq: 'with every payment on time your personal risk grade is lowered'; automatisch karakter niet in voorwaarden bevestigd."
+   },
+   "bdduur": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden; acceptatiegids bunq (pdf) niet geïndexeerd/bereikbaar."
+   },
+   "bdrnt": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden; acceptatiegids bunq (pdf) niet geïndexeerd/bereikbaar."
+   },
+   "bddecl": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden; acceptatiegids bunq (pdf) niet geïndexeerd/bereikbaar."
+   },
+   "ebb": {
+    "waarde": "~ Extra lenen tot 106% van woningwaarde voor energiebesparende maatregelen",
+    "bron": [
+     "https://mortgages.bunq.com/",
+     "https://press.bunq.com/209188-bunq-becomes-first-digital-bank-in-europe-to-offer-mortgages/"
+    ],
+    "brondatum": "2022-05",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Of dit conform NHG-EBB of eigen regeling is, niet gevonden."
+   },
+   "duur": {
+    "waarde": "~ Extra financiering voor verduurzaming tot 106% marktwaarde",
+    "bron": [
+     "https://mortgages.bunq.com/",
+     "https://www.hypotheker.nl/en/mortgage-providers/bunq/"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Geen rentekorting voor verduurzaming gevonden."
+   },
+   "verh": {
+    "waarde": "~ Rente meenemen tot 3 maanden na aflossing huidige hypotheek (volgens vergelijker)",
+    "bron": [
+     "https://www.homefinance.nl/hypotheek/aanbieders/bunq/voorwaarden/"
+    ],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Komt overeen met Tulp-voorwaarden (servicer), niet bevestigd op bunq-site."
+   },
+   "ondh": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden; acceptatiegids bunq (pdf) niet geïndexeerd/bereikbaar."
+   },
+   "oha": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden; acceptatiegids bunq (pdf) niet geïndexeerd/bereikbaar."
+   },
+   "tweede": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden; acceptatiegids bunq (pdf) niet geïndexeerd/bereikbaar."
+   },
+   "ovbr": {
+    "waarde": "~ Overbruggingslening beschikbaar",
+    "bron": [
+     "https://mortgages.bunq.com/our-collaboration"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Alleen bestaan en tarief gevonden; voorwaarden onbekend."
+   },
+   "avrij": {
+    "waarde": "~ Aflossingsvrij leverbaar met eigen rentetabel; max. 50% marktwaarde (volgens vergelijker)",
+    "bron": [
+     "https://mortgages.bunq.com/interest-rates/interest-only",
+     "https://www.actuelerentestanden.nl/?p=68191"
+    ],
+    "brondatum": "2026-08",
+    "zekerheid": "laag",
+    "status": "gewijzigd",
+    "toelichting": "'Lage opslag' niet te bevestigen; rentetabel aflossingsvrij lijkt hoger dan annuïtair. Max. 50% alleen uit tweede bron."
+   },
+   "rmid": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden; acceptatiegids bunq (pdf) niet geïndexeerd/bereikbaar."
+   },
+   "rverl": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden; acceptatiegids bunq (pdf) niet geïndexeerd/bereikbaar."
+   },
+   "rvoor": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden; acceptatiegids bunq (pdf) niet geïndexeerd/bereikbaar."
+   },
+   "bbrk": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden; acceptatiegids bunq (pdf) niet geïndexeerd/bereikbaar."
+   },
+   "elbl": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden; acceptatiegids bunq (pdf) niet geïndexeerd/bereikbaar."
+   },
+   "o106": {
+    "waarde": "! Aparte (hogere) LTV-klasse 'tot 106%' in rentetabel",
+    "bron": [
+     "https://mortgages.bunq.com/interest-rates"
+    ],
+    "brondatum": "2026-09-30",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Tabel toont aparte kolommen tot 100% en tot 106%; dus opslag boven 100%."
+   },
+   "bprov": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden; acceptatiegids bunq (pdf) niet geïndexeerd/bereikbaar."
+   },
+   "wkost": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden; acceptatiegids bunq (pdf) niet geïndexeerd/bereikbaar."
+   },
+   "avlt": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden; acceptatiegids bunq (pdf) niet geïndexeerd/bereikbaar."
+   },
+   "bproc": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden; acceptatiegids bunq (pdf) niet geïndexeerd/bereikbaar."
+   }
+  },
+  "gecontroleerd": "2026-10-04"
+ }
+]

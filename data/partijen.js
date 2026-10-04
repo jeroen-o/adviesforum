@@ -218,6 +218,17 @@ window.PARTIJEN=[
    {thema:'Boetevrij aflossen',tekst:'Afhankelijk van het product 10% of 15% van het hypotheekbedrag per jaar vergoedingsvrij',bron:'https://www.hypotrust.nl/faqs/aflossen'},
    {thema:'Acceptatie',tekst:'Acceptatiekader Elan Plus (versie januari 2026)',bron:'https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2026.pdf'}
   ],bijgewerkt:'2026-10-02'},
+ {naam:'Vrij Leven (Hypotrust)',toezicht:'Geen eigen vergunning',toezichtNoot:'Hypotheeklabel van Hypotrust (volgens Kifid een handelsnaam van Quion Hypotheekbemiddeling B.V.; toezicht AFM). Geldverstrekker volgens de algemene voorwaarden: BAWAG P.S.K.',toezichtBron:'https://www.vrijlevenhypotheek.nl/assets/uploads/2024/05/Algemene_Voorwaarden_Hypotrust_Vrij_Leven_Hypotheek_September-2023.pdf',type:'geldverstrekker',categorieen:['hypotheek'],url:'https://www.vrijlevenhypotheek.nl/',logo:'img/logos/vrij-leven.png',
+  producten:['hypotheek','NHG','overbrugging'],
+  kenmerken:[
+   {tekst:'Vrij Leven Hypotheek van Hypotrust; de lening wordt verstrekt door BAWAG P.S.K. en Hypotrust doet de administratie',bron:'https://www.vrijlevenhypotheek.nl/assets/uploads/2024/05/Algemene_Voorwaarden_Hypotrust_Vrij_Leven_Hypotheek_September-2023.pdf'},
+   {tekst:'Bedoeld voor starters, oversluiters en doorstromers; alleen via een adviseur',bron:'https://www.vrijlevenhypotheek.nl/assets/uploads/2024/05/Algemene_Voorwaarden_Hypotrust_Vrij_Leven_Hypotheek_September-2023.pdf'},
+   {thema:'Verhuisregeling',tekst:'Rente en einddatum van de rentevaste periode gaan mee naar de nieuwe woning; minimaal 30 dagen vooraf melden',bron:'https://www.vrijlevenhypotheek.nl/assets/uploads/2024/05/Algemene_Voorwaarden_Hypotrust_Vrij_Leven_Hypotheek_September-2023.pdf'},
+   {thema:'Boetevrij aflossen',tekst:'Ieder kalenderjaar 10% van de oorspronkelijke hoofdsom zonder vergoeding',bron:'https://www.vrijlevenhypotheek.nl/assets/uploads/2024/05/Algemene_Voorwaarden_Hypotrust_Vrij_Leven_Hypotheek_September-2023.pdf'},
+   {thema:'Offerte',tekst:'Renteaanbod 4 maanden geldig; verlengen met 2 maanden (bestaande bouw) of 8 maanden (nieuwbouw)',bron:'https://www.vrijlevenhypotheek.nl/assets/uploads/2024/05/Algemene_Voorwaarden_Hypotrust_Vrij_Leven_Hypotheek_September-2023.pdf'},
+   {thema:'Renteafspraken',tekst:'Na extra aflossing automatisch een lagere risicoklasse vanaf de volgende maand',bron:'https://www.vrijlevenhypotheek.nl/assets/uploads/2024/05/Algemene_Voorwaarden_Hypotrust_Vrij_Leven_Hypotheek_September-2023.pdf'},
+   {thema:'Acceptatie',tekst:'Rentevaste perioden van 1 tot en met 30 jaar; zonder NHG voor nieuwe klanten tot 80% van de marktwaarde',bron:'https://www.vrijlevenhypotheek.nl/assets/uploads/2026/01/Acceptatiegids-Vrij-Leven-Januari-2026-definitief-1.pdf'}
+  ],bijgewerkt:'2026-10-04'},
  {naam:'IQWOON',toezicht:'Geen eigen vergunning',toezichtNoot:'Hypotheeklabel van Blauwtrust Groep, ingevoerd via dochter Hypotrust en nu verdeeld door Conneqt. Wordt gefinancierd door een buitenlandse instelling onder ECB-toezicht. Vergunninghouder vermoedelijk Hypotrust (AFM); het nummer is niet beve',toezichtBron:'https://www.banken.nl/nieuws/8179/iqwoon-betreedt-nederlandse-hypotheekmarkt',type:'geldverstrekker',categorieen:['hypotheek'],url:'https://www.iqwoon.nl/adviseur',logo:'img/logos/iqwoon.png',
   status:'Geen nieuwe aanvragen sinds 1 mei 2023; alleen beheer van bestaande hypotheken',statusBron:'https://www.iqwoon.nl/adviseur',
   producten:['bestaande hypotheken','hypotheek verhogen'],

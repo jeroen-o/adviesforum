@@ -1,0 +1,694 @@
+[
+ {
+  "naam": "a.s.r.",
+  "algemeen": {
+   "intermediairsite": "https://www.asr.nl/zakelijk/login/adviseurs",
+   "voorwaardenPdf": [
+    "https://www.asr.nl/asr/api/asrnl/pod/getdirectpdf?uri=%2FPOD%2Fr%2FPdf%2F53997.pdf"
+   ],
+   "acceptatiegids": [
+    "https://www.aegon.nl/system/files/2026-01/Hypotheekgids%20januari%202026.pdf",
+    "https://www.asrnederland.nl/-/media/files/asrnederland-nl/nieuws-en-pers/2026/20260430-asr-hypotheekproduct-en-contactkaart.pdf"
+   ],
+   "opmerking": "Sinds 30-4-2026 nieuwe ASR Hypotheek (8 risicoklassen, vrije rentevaste periode tot 30 jr) met varianten Verduurzamings-, Overbruggings- en Levensrentehypotheek; WelThuis/DigiThuis-voorwaarden gelden nog voor bestaande leningen. Aegon-hypotheken zijn in 2025 naar a.s.r. verhuisd; Hypotheekgids a.s.r. (gepubliceerd op aegon.nl) geldt voor beide. Websites geblokkeerd voor WebFetch; alles uit zoekresultaten. Acceptatiedetails deels uit kopieën van de Hypotheekgids (2023/2025) op hypotheekcompany.nl."
+  },
+  "criteria": {
+   "zzp": {
+    "waarde": "+ Ondernemer vanaf 1 jaar welkom; inkomen via Inkomensverklaring Ondernemer (gem. max. 3 jaar)",
+    "bron": [
+     "https://www.asr.nl/blog/kun-je-als-zzper-een-hypotheek-krijgen",
+     "https://www.asr.nl/zakelijk/alles-over-ondernemerschap/life-events/zelfstandig-en-hypotheek",
+     "https://hypotheekcompany.nl/wp-content/uploads/2025/06/Hypotheekgids-juni-2025.pdf"
+    ],
+    "brondatum": "2025",
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "1 jaar bevestigd; aparte 3-jaarseis buiten NHG niet gevonden in bronnen"
+   },
+   "flex": {
+    "waarde": "~ Flexinkomen via IBL-tool; anders Arbeidsmarktscan of perspectiefverklaring",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2025/06/Hypotheekgids-juni-2025.pdf",
+     "https://www.asr.nl/blog/geen-vast-contract-en-toch-een-hypotheek"
+    ],
+    "brondatum": "2025-06",
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "Hypotheekgids a.s.r. juni 2025 (kopie op hypotheekcompany.nl): IBL leidend i.p.v. 3-jaarsgemiddelde"
+   },
+   "persp": {
+    "waarde": "+ Perspectiefverklaring geaccepteerd (min. 26 weken bij zelfde uitzendbureau, max. 6 mnd oud)",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2025/06/Hypotheekgids-juni-2025.pdf",
+     "https://www.asr.nl/blog/geen-vast-contract-en-toch-een-hypotheek"
+    ],
+    "brondatum": "2025-06",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Uit Hypotheekgids juni 2025 en a.s.r.-blog"
+   },
+   "aow": {
+    "waarde": "~ Pensioeninkomen getoetst met AOW-woonquote bij AOW binnen ~10 jaar; Levensrentevariant op werkelijke lasten",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2023/05/asr-acc-gids-mei-2023-gecomprimeerd.pdf",
+     "https://www.asr.nl/hypotheek/levensrente-hypotheek"
+    ],
+    "brondatum": "2023",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Gids mei 2023: AOW binnen 10 jr 8 mnd na bindend aanbod -> toets op pensioeninkomen; Levensrente (AOW'ers) toetst op werkelijke lasten"
+   },
+   "erfp": {
+    "waarde": "! Erfpacht o.v.v. eigen criteria; particuliere erfpacht niet acceptabel (Aegon-/a.s.r.-gids)",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2025/06/Hypotheekgids-juni-2025.pdf",
+     "https://www.asr.nl/asr/api/asrnl/pod/getdirectpdf?uri=%2FPOD%2Fr%2FPdf%2F53997.pdf"
+    ],
+    "brondatum": "2025",
+    "zekerheid": "laag",
+    "status": "gewijzigd",
+    "toelichting": "Uitsluiting particuliere erfpacht alleen via samenvatting zoekmachine; canon telt mee in toetslasten"
+   },
+   "rvp": {
+    "waarde": "+ Vrije keuze rentevaste periode tot max. 30 jaar (o.a. 1-30 jaar in renteblad)",
+    "bron": [
+     "https://www.asrnederland.nl/nieuws-en-pers/nieuws/20260430-asr-introduceert-de-asr-hypotheek",
+     "https://www.asr.nl/hypotheek/hypotheekrente"
+    ],
+    "brondatum": "2026-04-30",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "ASR Hypotheek (sinds 30-4-2026): vrije keuze aantal rentevaste jaren binnen looptijd, max. 30"
+   },
+   "dag": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden of a.s.r. bij rentedaling voor passeren de lagere rente geeft; alleen kosten bij rentestijging na verlenging"
+   },
+   "geld": {
+    "waarde": "~ Aanbod 90 dagen geldig, daarna automatisch verlengd tot max. 270 dagen",
+    "bron": [
+     "https://www.asr.nl/hypotheek/asr-hypotheek",
+     "https://www.asr.nl/hypotheek/digithuis-hypotheek"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Bij verlenging en gestegen rente betaal je kosten"
+   },
+   "boete": {
+    "waarde": "~ 10% van oorspronkelijk leningdeel per kalenderjaar boetevrij (WelThuis/bestaand: 15%)",
+    "bron": [
+     "https://www.asr.nl/hypotheek/je-hypotheek-aanpassen",
+     "https://www.asr.nl/hypotheek/aflossingsblij"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Huidige ASR Hypotheek 10%; oudere WelThuis-leningen 15%"
+   },
+   "ltv": {
+    "waarde": "+ 8 risicoklassen; maandelijkse check, rente daalt automatisch bij lagere klasse",
+    "bron": [
+     "https://www.asrnederland.nl/nieuws-en-pers/nieuws/20260430-asr-introduceert-de-asr-hypotheek",
+     "https://www.asr.nl/hypotheek/asr-hypotheek"
+    ],
+    "brondatum": "2026-04-30",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Ook bij extra aflossen; waarde volgens administratie a.s.r."
+   },
+   "bdduur": {
+    "waarde": "~ Nieuwbouw 24 mnd (+1x 6 mnd), verbouw 12 mnd (+1x 12 mnd)",
+    "bron": [
+     "https://www.asr.nl/hypotheek/mijn-bouwdepot",
+     "https://www.asr.nl/hypotheek/bouwdepot"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Verlenging mogelijk; Hypotheekgids noemt elders 30 mnd nieuwbouw (niet bevestigd)"
+   },
+   "bdrnt": {
+    "waarde": "! Depotrente gelijk aan gemiddelde leningrente; geen vergoeding meer tijdens verlenging",
+    "bron": [
+     "https://www.asr.nl/hypotheek/mijn-bouwdepot"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Kern bevestigd; aandachtspunt is vervallen vergoeding bij verlenging"
+   },
+   "bddecl": {
+    "waarde": "+ Factuur digitaal via a.s.r.-account; uitbetaling binnen max. 5 werkdagen",
+    "bron": [
+     "https://www.asr.nl/hypotheek/mijn-bouwdepot",
+     "https://afsluiten.asr.nl/hypotheek/mijn-bouwdepot"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Status per factuur zichtbaar in tab Depots"
+   },
+   "ebb": {
+    "waarde": "~ Extra lenen voor verduurzaming naar label: min. €10.000, label E-G €20.000",
+    "bron": [
+     "https://www.asr.nl/hypotheek/verduurzamingshypotheek",
+     "https://www.asr.nl/blog/duurzaam-huis-rekenvoorbeeld"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "Via Verduurzamingshypotheek (duurzaamheidsdepot, 2 jaar); term 'energiebespaarbudget' niet expliciet op asr.nl"
+   },
+   "duur": {
+    "waarde": "+ Verduurzamingshypotheek: lager tarief, max. €65.000, depot 2 jaar",
+    "bron": [
+     "https://www.asr.nl/hypotheek/verduurzamingshypotheek",
+     "https://www.asrnederland.nl/nieuws-en-pers/nieuws/20260430-asr-introduceert-de-asr-hypotheek"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Standaard op het renteaanbod van de ASR Hypotheek"
+   },
+   "verh": {
+    "waarde": "+ Verhuisregeling: rente + einddatum meenemen; oude lening wordt Verhuishypotheek",
+    "bron": [
+     "https://www.asr.nl/hypotheek/volgend-huis-kopen",
+     "https://www.asrnederland.nl/nieuws-en-pers/nieuws/20260202-verhuishypotheek"
+    ],
+    "brondatum": "2026-02-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Oude woning binnen 1 jaar aflossen; aflossingsvrije Verhuishypotheek kosteloos, ook met NHG"
+   },
+   "ondh": {
+    "waarde": "~ Bij restschuld: eigen geld, NHG-route of restschuld omzetten in lening",
+    "bron": [
+     "https://www.asr.nl/hypotheek/je-hypotheek-aanpassen"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "Specifiek toestemmingsbeleid onderhandse verkoop niet gevonden"
+   },
+   "oha": {
+    "waarde": "~ Lening op één naam met goedkeuring a.s.r.; kosten €200",
+    "bron": [
+     "https://www.asr.nl/hypotheek/je-hypotheek-aanpassen",
+     "https://www.asr.nl/asr/api/asrnl/pod/getdirectpdf?uri=%2FPOD%2Fr%2FPdf%2F53997.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Overgebleven partner moet lening kunnen dragen"
+   },
+   "tweede": {
+    "waarde": "+ Verhogen tot inschrijving of extra lening, max. 100% marktwaarde",
+    "bron": [
+     "https://www.asr.nl/hypotheek/je-hypotheek-aanpassen",
+     "https://www.asr.nl/hypotheek/situatie/verbouwen"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Nieuw deel tegen actuele rente; eenmalige kosten"
+   },
+   "ovbr": {
+    "waarde": "~ Overbruggingshypotheek: bestaande bouw max. 12 mnd, nieuwbouw max. 24 mnd",
+    "bron": [
+     "https://www.asr.nl/hypotheek/overbruggingshypotheek",
+     "https://www.asrnederland.nl/nieuws-en-pers/nieuws/20260430-asr-introduceert-de-asr-hypotheek"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Alleen in combinatie met nieuwe a.s.r.-hypotheek"
+   },
+   "avrij": {
+    "waarde": "~ Aflossingsvrij max. 50% marktwaarde; looptijd 30 jaar; 15% p.j. boetevrij (Aflossingsblij)",
+    "bron": [
+     "https://www.asr.nl/hypotheek/aflossingsblij",
+     "https://hypotheekcompany.nl/wp-content/uploads/2023/05/asr-acc-gids-mei-2023-gecomprimeerd.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "Max 50% uit gids 2023; 'geen renteopslag voor aflossingsvrij' niet bevestigd; Levensrente-variant max. 50% en €500.000"
+   },
+   "rmid": {
+    "waarde": "! Tussentijds rente aanpassen tegen vergoeding + €200; rentemiddeling niet gevonden",
+    "bron": [
+     "https://www.asr.nl/hypotheek/je-hypotheek-aanpassen"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "10%-vrijstelling telt mee bij renteaanpassing"
+   },
+   "rverl": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Geen a.s.r.-bron over gelijke rente bestaande vs. nieuwe klanten"
+   },
+   "rvoor": {
+    "waarde": "~ Rentevoorstel uiterlijk 3 maanden voor einde rentevaste periode",
+    "bron": [
+     "https://www.asr.nl/hypotheek/je-hypotheek-aanpassen",
+     "https://www.asr.nl/hypotheek/aflossingsblij"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Andere periode kiezen via tab Renteherziening"
+   },
+   "bbrk": {
+    "waarde": "~ Contante waarde renteverschil contract- vs. vergelijkingsrente per leningdeel; geen vergoeding bij verkoop",
+    "bron": [
+     "https://www.asr.nl/asr/api/asrnl/pod/getdirectpdf?uri=%2FPOD%2Fr%2FPdf%2F53997.pdf"
+    ],
+    "brondatum": "2026-05",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Ook vrij bij overlijden (binnen 12 mnd) en op einddatum rentevaste periode"
+   },
+   "elbl": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Geen labelafhankelijke rentekorting/opslag gevonden; voordeel loopt via Verduurzamingshypotheek"
+   },
+   "o106": {
+    "waarde": "+ Tot 106% voor verduurzaming; verduurzamingsdeel telt niet mee voor risicoklasse",
+    "bron": [
+     "https://www.asr.nl/hypotheek/verduurzamingshypotheek",
+     "https://www.asr.nl/hypotheek/huis-kopen/maximale-hypotheek"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "bprov": {
+    "waarde": "! Automatische verlenging; kosten alleen als rente gestegen is",
+    "bron": [
+     "https://www.asr.nl/hypotheek/asr-hypotheek"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Hoogte staat in renteaanbod; geen tarief genoemd"
+   },
+   "wkost": {
+    "waarde": "~ €200 administratiekosten bij aanpassing (o.a. renteaanpassing, lening op één naam)",
+    "bron": [
+     "https://www.asr.nl/hypotheek/je-hypotheek-aanpassen"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "avlt": {
+    "waarde": "~ Verlenging aflossingsvrij na einddatum mogelijk; AOW'ers kunnen naar Levensrentevariant",
+    "bron": [
+     "https://nos.nl/artikel/2294137-oproep-verleng-looptijd-aflossingsvrije-hypotheek",
+     "https://www.asr.nl/blog/wat-is-mogelijk-voor-aowers-die-willen-oversluiten"
+    ],
+    "brondatum": "2019",
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "NOS 2019: a.s.r. verlengt aflopende aflossingsvrije hypotheken; actueel beleid niet op eigen site bevestigd"
+   },
+   "bproc": {
+    "waarde": "+ Proactief contact, betalingsregeling, budget- en jobcoach (kosten budgetcoach voor a.s.r.)",
+    "bron": [
+     "https://www.asr.nl/contact/problemen-met-betalen/hypotheek"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": ""
+   }
+  },
+  "gecontroleerd": "2026-10-04"
+ },
+ {
+  "naam": "Centraal Beheer",
+  "algemeen": {
+   "intermediairsite": "https://www.centraalbeheer.nl/voor-adviseurs/hypotheek",
+   "voorwaardenPdf": [
+    "https://www.centraalbeheer.nl/hypotheek/klant/actuele-voorwaarden-en-formulieren"
+   ],
+   "acceptatiegids": [
+    "https://www.centraalbeheer.nl/-/media/files/voor-adviseurs/acceptatiegids-leef-hypotheek.pdf"
+   ],
+   "opmerking": "Huidig product: Leef Hypotheek (Achmea Bank). Woonfonds is per 24-3-2025 opgegaan in Centraal Beheer; oude producten (Basis/Plus/Thuis/Woongenot) hebben afwijkende aflosvrijheid. Websites geblokkeerd voor WebFetch; alles o.b.v. zoekresultaten, grotendeels eigen site en Acceptatiegids 1-7-2026. Voorwaarden Leef Hypotheek 2026 staan op de voorwaardenpagina (directe pdf-link niet gevonden)."
+  },
+  "criteria": {
+   "zzp": {
+    "waarde": "~ Min. 1 jaar ondernemer met NHG (IVO); 3 jaar zonder NHG",
+    "bron": [
+     "https://www.centraalbeheer.nl/-/media/files/voor-adviseurs/acceptatiegids-leef-hypotheek.pdf",
+     "https://www.centraalbeheer.nl/voor-adviseurs/hypotheek/hypotheek-voor-zelfstandigen"
+    ],
+    "brondatum": "2026-07-01",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Gemiddelde fiscale winst laatste 3 jaar; IVO max. 6 mnd oud bij NHG"
+   },
+   "flex": {
+    "waarde": "~ Gemiddelde laatste 3 jaar, max. inkomen laatste jaar/lopend jaar",
+    "bron": [
+     "https://www.centraalbeheer.nl/-/media/files/voor-adviseurs/acceptatiegids-leef-hypotheek.pdf"
+    ],
+    "brondatum": "2026-07-01",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Acceptatiegids Leef Hypotheek 1-7-2026"
+   },
+   "persp": {
+    "waarde": "+ Perspectiefverklaring geaccepteerd (na 26 weken bij zelfde uitzendbureau)",
+    "bron": [
+     "https://www.centraalbeheer.nl/-/media/files/voor-adviseurs/acceptatiegids-leef-hypotheek.pdf",
+     "https://www.centraalbeheer.nl/hypotheek/kennis/tijdelijk-dienstverband"
+    ],
+    "brondatum": "2026-07-01",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Voorwaarde o.a. 12 van laatste 14 maanden gewerkt"
+   },
+   "aow": {
+    "waarde": "~ Bij AOW binnen 10 jaar toets op verwacht pensioeninkomen; afwijken LTI mogelijk",
+    "bron": [
+     "https://www.centraalbeheer.nl/-/media/files/voor-adviseurs/acceptatiegids-leef-hypotheek.pdf",
+     "https://www.centraalbeheer.nl/artikelen/hypotheek-na-aow-leeftijd"
+    ],
+    "brondatum": "2026-07-01",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Bewijs pensioeninkomen (bv. mijnpensioenoverzicht.nl) vereist"
+   },
+   "erfp": {
+    "waarde": "! Niet-overheidserfpacht alleen bij 'groene' notarisopinie/NVB-richtlijn en recht vanaf 2013",
+    "bron": [
+     "https://www.centraalbeheer.nl/-/media/files/voor-adviseurs/acceptatiegids-leef-hypotheek.pdf"
+    ],
+    "brondatum": "2026-07-01",
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "Canon telt mee; bij aanpassing binnen 1 jaar hogere canon; overheidserfpacht regulier"
+   },
+   "rvp": {
+    "waarde": "+ 1 t/m 10, 12, 15, 20 en 30 jaar vast",
+    "bron": [
+     "https://www.centraalbeheer.nl/hypotheek/klant/rente-vast-periode",
+     "https://www.centraalbeheer.nl/hypotheek/leef-hypotheek"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "Opsomming via zoekmachinesamenvatting; ook kwartaalvariabel mogelijk"
+   },
+   "dag": {
+    "waarde": "- Rente na uitbrengen voorstel vast; daling wordt niet doorgegeven",
+    "bron": [
+     "https://www.centraalbeheer.nl/voor-adviseurs/hypotheek/hypotheek-aanvragen",
+     "https://www.centraalbeheer.nl/hypotheek/kennis/vaste-of-variabele-rente"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "Geen dagrente/rentebedenktijd bij Centraal Beheer"
+   },
+   "geld": {
+    "waarde": "~ Voorstel 4 mnd geldig; 1x verlengen: nieuwbouw +8 mnd, bestaande bouw +2 mnd",
+    "bron": [
+     "https://www.centraalbeheer.nl/voor-adviseurs/hypotheek/hypotheek-aanvragen",
+     "https://www.centraalbeheer.nl/voor-adviseurs/actueel/bereidstellingsprovisie"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Voorstel binnen 14 dagen getekend retour"
+   },
+   "boete": {
+    "waarde": "+ Onbeperkt boetevrij met eigen geld; met geleend geld 10% p.j.",
+    "bron": [
+     "https://www.centraalbeheer.nl/hypotheek/wijzigen/extra-aflossen",
+     "https://www.centraalbeheer.nl/hypotheek/kennis/boeterente"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Oude Basis/Woongenot 15%, Plus/Thuis 20%"
+   },
+   "ltv": {
+    "waarde": "+ 7 risicoklassen; rente daalt automatisch bij lagere klasse door aflossen",
+    "bron": [
+     "https://www.centraalbeheer.nl/hypotheek/kennis/automatisch-lagere-rente",
+     "https://www.centraalbeheer.nl/hypotheek/leef-hypotheek"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Bij waardestijging op verzoek met Calcasa-desktoptaxatie"
+   },
+   "bdduur": {
+    "waarde": "~ Max. 24 mnd; verlenging max. 6 mnd",
+    "bron": [
+     "https://www.centraalbeheer.nl/hypotheek/klant/bouwdepot",
+     "https://www.centraalbeheer.nl/hypotheek/klant/bouwdepot/handleiding"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Geen aparte termijn voor verbouw gevonden"
+   },
+   "bdrnt": {
+    "waarde": "~ Depotrente gelijk aan te betalen hypotheekrente",
+    "bron": [
+     "https://www.centraalbeheer.nl/hypotheek/kennis/bouwdepotrentepercentage",
+     "https://www.centraalbeheer.nl/hypotheek/klant/bouwdepot"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": ""
+   },
+   "bddecl": {
+    "waarde": "+ Declareren via app/Mijn Centraal Beheer; betaling binnen 6 werkdagen",
+    "bron": [
+     "https://www.centraalbeheer.nl/hypotheek/klant/bouwdepot",
+     "https://www.centraalbeheer.nl/hypotheek/klant/bouwdepot/handleiding"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Declaraties moeten passen bij verbouwingsplan"
+   },
+   "ebb": {
+    "waarde": "~ EBB/EBV tot 106%; budget binnen 2 jaar besteden",
+    "bron": [
+     "https://www.centraalbeheer.nl/duurzaam-woongemak/financieren-van-verduurzamen/via-de-hypotheek",
+     "https://www.centraalbeheer.nl/-/media/files/voor-adviseurs/acceptatiegids-leef-hypotheek.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": ""
+   },
+   "duur": {
+    "waarde": "+ Groen leningdeel met rentekorting (max. €25.000) + energielabelkorting vanaf A+",
+    "bron": [
+     "https://www.centraalbeheer.nl/hypotheek/energielabelkorting",
+     "https://www.centraalbeheer.nl/hypotheek/leef-hypotheek"
+    ],
+    "brondatum": "2025-05",
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "Labelkorting sinds 2-5-2025 voor nieuwe aanvragen, verhogingen en renteherzieningen"
+   },
+   "verh": {
+    "waarde": "+ Rente meenemen voor restschuld t/m einde oude rentevaste periode; aflossen binnen 6 mnd",
+    "bron": [
+     "https://www.centraalbeheer.nl/voor-adviseurs/hypotheek/verhuisregeling-voor-hypotheekadviseurs",
+     "https://www.centraalbeheer.nl/hypotheek/klant/verhuisregeling"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Opslagen/kortingen opnieuw bepaald; nieuwe hypotheek max. €1.000.000"
+   },
+   "ondh": {
+    "waarde": "~ Verkoop met toestemming; restschuld via betalingsregeling zonder rente",
+    "bron": [
+     "https://www.centraalbeheer.nl/hypotheek/klant/executieverkoop",
+     "https://www.centraalbeheer.nl/hypotheek/klant/woning-met-verlies-verkopen"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Centraal Beheer rekent geen rente over restschuld"
+   },
+   "oha": {
+    "waarde": "~ Ontslag mogelijk als achterblijver lasten volgens normen kan dragen; beoordeling ~4 weken",
+    "bron": [
+     "https://www.centraalbeheer.nl/hypotheek/klant/hypotheek-op-1-naam",
+     "https://www.centraalbeheer.nl/voor-adviseurs/actueel/klanten-uit-elkaar"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": ""
+   },
+   "tweede": {
+    "waarde": "+ Onderhandse verhoging binnen inschrijving of 2e hypotheek via notaris",
+    "bron": [
+     "https://www.centraalbeheer.nl/hypotheek/klant/verhogen",
+     "https://www.centraalbeheer.nl/hypotheek/kennis/hypotheek-verhogen-bij-centraal-beheer"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": ""
+   },
+   "ovbr": {
+    "waarde": "+ Overbrugging bestaande bouw max. 1 jaar, nieuwbouw max. 2 jaar; geen afsluitkosten",
+    "bron": [
+     "https://www.centraalbeheer.nl/hypotheek/kennis/overbruggingshypotheek-van-centraal-beheer"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": ""
+   },
+   "avrij": {
+    "waarde": "~ Aflossingsvrij max. 50% marktwaarde; risico-opslag boven 60% LTV",
+    "bron": [
+     "https://www.centraalbeheer.nl/-/media/files/voor-adviseurs/acceptatiegids-leef-hypotheek.pdf",
+     "https://www.centraalbeheer.nl/hypotheek/klant/risico-opslag"
+    ],
+    "brondatum": "2026-07-01",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Bestaand aflossingsvrij >50% mag blijven"
+   },
+   "rmid": {
+    "waarde": "+ Rentemiddeling of afkoop mogelijk, max. 1x per rentevaste periode",
+    "bron": [
+     "https://www.centraalbeheer.nl/hypotheek/klant/rente-wijzigen"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "€250 administratiekosten bij middeling"
+   },
+   "rverl": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Geen bron over gelijke rente bestaande vs. nieuwe klanten"
+   },
+   "rvoor": {
+    "waarde": "~ Melding 6 mnd vooraf; rentevoorstel met keuzeformulier ~3 mnd voor einde",
+    "bron": [
+     "https://www.centraalbeheer.nl/hypotheek/klant/rente-vast-periode"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "bbrk": {
+    "waarde": "~ Vergoeding o.b.v. AFM-rekenregels (contante waarde, vergelijkingsrente)",
+    "bron": [
+     "https://www.centraalbeheer.nl/hypotheek/kennis/boeterente",
+     "https://www.centraalbeheer.nl/hypotheek/wijzigen/extra-aflossen"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Alleen vergoeding als actuele CB-rente lager is; details vergelijkingsrente niet gevonden"
+   },
+   "elbl": {
+    "waarde": "+ Energielabelkorting bij label A+ of beter",
+    "bron": [
+     "https://www.centraalbeheer.nl/hypotheek/energielabelkorting",
+     "https://www.centraalbeheer.nl/voor-adviseurs/actueel/energielabelkorting"
+    ],
+    "brondatum": "2025-05-02",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Geen opslag zonder label gevonden"
+   },
+   "o106": {
+    "waarde": "~ Tot 106% (EBV/EBB) mogelijk; effect op risico-opslag niet gevonden",
+    "bron": [
+     "https://www.centraalbeheer.nl/-/media/files/voor-adviseurs/acceptatiegids-leef-hypotheek.pdf",
+     "https://www.centraalbeheer.nl/hypotheek/leef-hypotheek"
+    ],
+    "brondatum": "2026-07-01",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "bprov": {
+    "waarde": "! Verlenging nieuwbouw gratis; bestaande bouw +2 mnd tegen kosten",
+    "bron": [
+     "https://www.centraalbeheer.nl/voor-adviseurs/actueel/bereidstellingsprovisie",
+     "https://www.centraalbeheer.nl/voor-adviseurs/hypotheek/hypotheek-aanvragen"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Bereidstellingsprovisie nieuwbouw vervallen per 30 april"
+   },
+   "wkost": {
+    "waarde": "! Administratiekosten bij wijzigingen; o.a. €250 bij rentemiddeling",
+    "bron": [
+     "https://www.centraalbeheer.nl/hypotheek/klant/rente-wijzigen",
+     "https://www.centraalbeheer.nl/voor-adviseurs/hypotheek/aanpassen"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Actuele kostenlijst op site, niet volledig gevonden"
+   },
+   "avlt": {
+    "waarde": "! Einddatum: aflossen of nieuwe hypotheek; verlengen alleen bij voldoende inkomen",
+    "bron": [
+     "https://www.centraalbeheer.nl/artikelen/op-einddatum-hypotheek-aflossen",
+     "https://www.centraalbeheer.nl/artikelen/aflossingsvrije-hypotheek"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Hypotheekcheck-tool beschikbaar"
+   },
+   "bproc": {
+    "waarde": "+ Uitstel, betalingsregeling, tijdelijk lagere lasten, soms budgetcoach",
+    "bron": [
+     "https://www.centraalbeheer.nl/hypotheek/klant/geldzorgen/betalingsachterstand-wat-nu",
+     "https://www.centraalbeheer.nl/hypotheek/klant/geldzorgen"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "BKR-melding bij >3 mnd achterstand"
+   }
+  },
+  "gecontroleerd": "2026-10-04"
+ }
+]

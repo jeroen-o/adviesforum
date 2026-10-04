@@ -4467,6 +4467,46 @@ window.AANBIEDERS=[
     "opgezocht": "2026-10-03"
   },
   {
+    "id": "vrij-leven",
+    "demo": true,
+    "naam": "Vrij Leven (Hypotrust)",
+    "type": "geldverstrekker",
+    "logo": "img/logos/vrij-leven.png",
+    "omschrijving": "Voorbeeldprofiel. Hypotheeklabel van Hypotrust: de Vrij Leven Hypotheek wordt volgens de algemene voorwaarden (september 2023) verstrekt door BAWAG P.S.K. en via Hypotrust geadministreerd. Vrij Leven heeft deze pagina niet aangeleverd; zodra Vrij Leven meedoet, staan hier de eigen omschrijving, het nieuws en het extranet voor adviseurs.",
+    "website": "https://www.vrijlevenhypotheek.nl/",
+    "documenten": [
+      {
+        "titel": "Algemene voorwaarden Vrij Leven Hypotheek (september 2023)",
+        "url": "https://www.vrijlevenhypotheek.nl/assets/uploads/2024/05/Algemene_Voorwaarden_Hypotrust_Vrij_Leven_Hypotheek_September-2023.pdf",
+        "soort": "voorwaarden"
+      },
+      {
+        "titel": "Algemene voorwaarden Vrij Leven Hypotheek (september 2019)",
+        "url": "https://www.vrijlevenhypotheek.nl/assets/uploads/2024/05/AV-Hypotrust-Vrij-Leven-Hypotheek.pdf",
+        "soort": "voorwaarden"
+      },
+      {
+        "titel": "Acceptatievoorwaarden Vrij Leven (januari 2026)",
+        "url": "https://www.vrijlevenhypotheek.nl/assets/uploads/2026/01/Acceptatiegids-Vrij-Leven-Januari-2026-definitief-1.pdf",
+        "soort": "acceptatiegids"
+      },
+      {
+        "titel": "Handleiding hypotheek wijzigen (juli 2022)",
+        "url": "https://www.vrijlevenhypotheek.nl/assets/uploads/2024/04/Handleiding-Hypotheek-Wijzigen-Vrij-Leven-Hypotheek-jul-2022.pdf",
+        "soort": "formulier"
+      }
+    ],
+    "bijgewerkt": "2026-10-04",
+    "opgezocht": "2026-10-04",
+    "contactbronnen": [
+      "https://www.vrijlevenhypotheek.nl/downloads/",
+      "https://www.vrijlevenhypotheek.nl/hypotheek/"
+    ],
+    "toezicht": "Geen eigen vergunning",
+    "toezichtNoot": "Hypotheeklabel van Hypotrust, volgens Kifid een handelsnaam van Quion Hypotheekbemiddeling B.V. (Blauwtrust Groep; toezicht AFM). Geldverstrekker volgens de algemene voorwaarden is BAWAG P.S.K. (Oostenrijkse bank met Europees paspoort).",
+    "toezichtBron": "https://www.vrijlevenhypotheek.nl/assets/uploads/2024/05/Algemene_Voorwaarden_Hypotrust_Vrij_Leven_Hypotheek_September-2023.pdf"
+  },
+  {
     "id": "woonnu",
     "demo": true,
     "naam": "Woonnu",

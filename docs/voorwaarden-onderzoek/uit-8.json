@@ -1,0 +1,681 @@
+[
+ {
+  "naam": "Hypotrust",
+  "algemeen": {
+   "intermediairsite": "https://www.hypotrust.nl/adviseurs",
+   "voorwaardenPdf": [
+    "https://www.hypotrust.nl/uploads/hypotrust/files/AV-Hypotrust-Woon-Bewust.pdf"
+   ],
+   "acceptatiegids": [
+    "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2026.pdf",
+    "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Woon-Bewust-juli-2026.pdf",
+    "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-OK-januari-2026.pdf"
+   ],
+   "opmerking": "Handelsnaam van Quion Hypotheekbemiddeling (servicer Quion). Voor nieuwe klanten alleen Elan Plus en Vrij Leven; Comfort, Elan, OK, Woon Bewust e.a. inactief (alleen meenemen/bestaande klanten). Waarden betreffen Elan Plus (geen NHG, geen nieuwbouw) tenzij anders vermeld; Vrij Leven niet apart onderzocht (geen acceptatiekader gevonden). hypotrust.nl geblokkeerd voor WebFetch; alles uit zoeksamenvattingen."
+  },
+  "criteria": {
+   "zzp": {
+    "waarde": "! Elan Plus: min. 36 mnd zelfstandig; IKV conform NHG; gemiddelde 3 kalenderjaren",
+    "bron": [
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2026.pdf"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Elan Plus (enige actieve propositie naast Vrij Leven) kent geen NHG; 3 jaar definitieve jaarcijfers vereist"
+   },
+   "flex": {
+    "waarde": "~ Flexibel inkomen: gemiddelde laatste 3 kalenderjaren; werkgeversverklaring vereist",
+    "bron": [
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2026.pdf",
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2025-1.pdf"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Uitzend, oproep, tijdelijk zonder intentie, proeftijd; tijdelijke uitkeringen tellen niet mee"
+   },
+   "persp": {
+    "waarde": "- Perspectiefverklaring (en arbeidsmarktscan) niet toegestaan bij Elan Plus",
+    "bron": [
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2026.pdf"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "Uit zoeksamenvatting acceptatiekader; pdf zelf niet in te zien"
+   },
+   "aow": {
+    "waarde": "~ AOW binnen 10 jaar na offerte: inkomensdaling meegenomen in toetsing",
+    "bron": [
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2026.pdf"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Pensioeninkomen aantonen via mijnpensioenoverzicht.nl (max. 3 mnd oud); ook bij vervroegd pensioen"
+   },
+   "erfp": {
+    "waarde": "! Publiekrechtelijke erfpacht ok; particuliere erfpacht beperkt/per propositie",
+    "bron": [
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2026.pdf",
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Woon-Bewust-juli-2026.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Woon Bewust/OK: particulier met erfpachtadvies (groen) of model nieuwe erfpacht; voor Elan Plus wees samenvatting op niet mogelijk; looptijd niet langer dan erfpacht"
+   },
+   "rvp": {
+    "waarde": "~ Elan Plus: variabel, 1, 3, 5, 7, 10, 15, 20 en 30 jaar",
+    "bron": [
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2026.pdf"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": ""
+   },
+   "dag": {
+    "waarde": "- Elan (Plus): rente bij passeren is offerterente; geen dagrente",
+    "bron": [
+     "https://www.hypotrust.nl/onze-hypotheken/elan-plus-hypotheek",
+     "https://www.hypotrust.nl/onze-hypotheken/inactieve-hypotheken/ok-hypotheek"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "Dagrente gold wel bij (inactieve) OK Hypotheek"
+   },
+   "geld": {
+    "waarde": "~ Offerte 4 mnd geldig, kosteloos 2 mnd te verlengen",
+    "bron": [
+     "https://www.hypotrust.nl/onze-hypotheken/elan-plus-hypotheek"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Elan Plus"
+   },
+   "boete": {
+    "waarde": "~ 10% van oorspronkelijke hoofdsom per kalenderjaar boetevrij",
+    "bron": [
+     "https://www.hypotrust.nl/onze-hypotheken/elan-plus-hypotheek",
+     "https://www.hypotrust.nl/situatie/extra-aflossen"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Afhankelijk van product 10% of 15%"
+   },
+   "ltv": {
+    "waarde": "! Lagere risicoklasse op verzoek met taxatie/WOZ; bij Elan (Plus) pas einde rentevast",
+    "bron": [
+     "https://www.hypotrust.nl/situatie/risicoklasse-aanpassing/",
+     "https://www.hypotrust.nl/onze-hypotheken/elan-plus-hypotheek"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "Elan Plus-pagina spreekt van automatische aanpassing bij extra aflossen (6 risicoklassen); risicoklasse-pagina noemt einde rentevaste periode bij waardestijging"
+   },
+   "bdduur": {
+    "waarde": "! Elan Plus: geen nieuwbouw; verbouwdepot 9 mnd, 2x 6 mnd te verlengen",
+    "bron": [
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2026.pdf"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "In verlengingsperiode geen rentevergoeding"
+   },
+   "bdrnt": {
+    "waarde": "~ Depotrente gelijk aan hypotheekrente; niet in verlengingsperiode",
+    "bron": [
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2026.pdf"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": ""
+   },
+   "bddecl": {
+    "waarde": "+ Online declareren via Mijn Hypotrust; beoordeling ca. 5-6 werkdagen, betaling 1 werkdag",
+    "bron": [
+     "https://www.hypotrust.nl/faqs/bouwdepot"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Servicer Quion"
+   },
+   "ebb": {
+    "waarde": "! Elan Plus zonder NHG (geen EBB conform NHG); wel tot 106% voor energiebesparing",
+    "bron": [
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2026.pdf",
+     "https://www.hypotrust.nl/onze-hypotheken/elan-plus-hypotheek"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "NHG en EBB alleen bij (inactieve) proposities"
+   },
+   "duur": {
+    "waarde": "! Groen leningdeel met rentekorting alleen OK/Woon Bewust (niet meer voor nieuwe klanten)",
+    "bron": [
+     "https://www.hypotrust.nl/situatie/duurzaam-wonen/groen-leningdeel",
+     "https://www.hypotrust.nl/onze-hypotheken/inactieve-hypotheken"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "Groen leningdeel max €25.000, max 15 jaar"
+   },
+   "verh": {
+    "waarde": "~ Meeneemregeling: rente en rentevaste periode mee; akte binnen 6 mnd (OK: 12 mnd)",
+    "bron": [
+     "https://www.hypotrust.nl/faqs/meeneemregeling",
+     "https://www.hypotrust.nl/hypotheek-meenemen"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Geen achterstanden afgelopen 6 mnd; looptijd niet verlengen"
+   },
+   "ondh": {
+    "waarde": "~ Vooraf toestemming bij verkoop met restschuld; via afdeling Bijzonder Beheer",
+    "bron": [
+     "https://www.hypotrust.nl/situatie/betalingsproblemen"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": ""
+   },
+   "oha": {
+    "waarde": "~ Ontslag hoofdelijkheid alleen via adviseur na inkomenstoets; evt. NHG-beheertoets",
+    "bron": [
+     "https://www.hypotrust.nl/situatie/scheiden/",
+     "https://www.hypotrust.nl/uploads/hypotrust/files/ExplainFormulier_HO_december-2024.pdf"
+    ],
+    "brondatum": "2024-12",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": ""
+   },
+   "tweede": {
+    "waarde": "~ Onderhandse verhoging binnen inschrijving (min. €12.500); anders vervolghypotheek",
+    "bron": [
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2026.pdf",
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-OK-april-2025.pdf"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "Geen achterstanden afgelopen 12 mnd"
+   },
+   "ovbr": {
+    "waarde": "~ Elan Plus: overbrugging tot verkoopprijs-2% (verkocht) of 88% verwachte prijs (onverkocht)",
+    "bron": [
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2026.pdf"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "Max. hypotheek incl. overbrugging €2.250.000; dubbele lasten max 12 mnd"
+   },
+   "avrij": {
+    "waarde": "~ Max. 50% van marktwaarde aflossingsvrij",
+    "bron": [
+     "https://www.hypotrust.nl/onze-hypotheken/elan-plus-hypotheek",
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2026.pdf"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "rmid": {
+    "waarde": "- Rentemiddeling momenteel alleen bij Quion 9-hypotheken",
+    "bron": [
+     "https://www.hypotrust.nl/situatie/rente-aanpassen",
+     "https://www.hypotrust.nl/rentemiddeling-voor-quion-9"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "rverl": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron over gelijke rente bestaande/nieuwe klanten; wel risicoklasse bepaalt rente"
+   },
+   "rvoor": {
+    "waarde": "~ Rentevoorstel minimaal 3 mnd voor einde rentevaste periode",
+    "bron": [
+     "https://www.hypotrust.nl/situatie/rente-aanpassen",
+     "https://www.hypotrust.nl/hypotrust-verheldert-video/transcripten-hypotrust-verheldert/renteverlenging"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "bbrk": {
+    "waarde": "~ Contante waarde renteverschil t.o.v. marktrente/vergelijkingsrente tot einde rentevast",
+    "bron": [
+     "https://www.hypotrust.nl/faqs/aflossen",
+     "https://www.hypotrust.nl/uploads/hypotrust/files/AV-Hypotrust-Woon-Bewust.pdf"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Algemene voorwaarden Woon Bewust; Elan Plus-voorwaarden niet gezien"
+   },
+   "elbl": {
+    "waarde": "! Labelkorting (A/B) alleen bij OK Hypotheek (aanvraag vanaf 7-4-2025), niet Elan Plus",
+    "bron": [
+     "https://www.hypotrust.nl/duurzaamheidskorting"
+    ],
+    "brondatum": "2025",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "OK Hypotheek niet meer beschikbaar voor nieuwe klanten"
+   },
+   "o106": {
+    "waarde": "~ Elan Plus tot 106% marktwaarde bij energiebesparende voorzieningen",
+    "bron": [
+     "https://www.hypotrust.nl/onze-hypotheken/elan-plus-hypotheek"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Niet gevonden of daarbij een opslag geldt"
+   },
+   "bprov": {
+    "waarde": "! Verlengen 2 mnd kosteloos; na verlenging annuleringsvergoeding bij afzien",
+    "bron": [
+     "https://www.hypotrust.nl/onze-hypotheken/elan-plus-hypotheek"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Elan Plus; vergoeding over totale leenbedrag"
+   },
+   "wkost": {
+    "waarde": "~ Veel wijzigingen kosteloos; tussentijdse wijziging/rentemiddeling met administratiekosten",
+    "bron": [
+     "https://www.hypotrust.nl/situatie/kosten-hypotheek-wijzigen"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Kosteloos o.a. meenemen, omzetten, looptijd, aflossen (Woon Bewust/Elan Plus)"
+   },
+   "avlt": {
+    "waarde": "- Looptijd niet te verlengen; aflossingsvrij deel op einddatum ineens aflossen",
+    "bron": [
+     "https://www.hypotrust.nl/onze-hypotheken/elan-plus-hypotheek"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Elan Plus, max. looptijd 30 jaar"
+   },
+   "bproc": {
+    "waarde": "~ Afdeling Bijzonder Beheer zoekt met klant naar passende oplossing",
+    "bron": [
+     "https://www.hypotrust.nl/situatie/betalingsproblemen"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": ""
+   }
+  },
+  "gecontroleerd": "2026-10-04"
+ },
+ {
+  "naam": "Venn Hypotheken",
+  "algemeen": {
+   "intermediairsite": "https://www.vennhypotheken.nl/voor-adviseurs/",
+   "voorwaardenPdf": [
+    "https://www.vennhypotheken.nl/wp-content/uploads/Algemene-Voorwaarden-2022-2.0-Venn-Hypotheken-B.V.-.pdf",
+    "https://www.vennhypotheken.nl/algemene-voorwaarden/"
+   ],
+   "acceptatiegids": [
+    "https://www.vennhypotheken.nl/wp-content/uploads/Bijlage-2.pdf"
+   ],
+   "opmerking": "Hypotheeklabel opgericht door Venn Partners, gefinancierd door institutionele beleggers (NN IP/nu Goldman Sachs AM nam meerderheidsbelang); uitsluitend via adviseurs. Achterstanden via Mender. Algemene Voorwaarden versie 2026 1.0 bestaat (via /algemene-voorwaarden/), pdf niet gezien. vennhypotheken.nl geblokkeerd voor WebFetch; alles uit zoeksamenvattingen. Geen openbare acceptatiegids gevonden (Bijlage-2 = NHG-afwijkingenkaart jan 2024)."
+  },
+  "criteria": {
+   "zzp": {
+    "waarde": "+ Gewogen gemiddelde 3 jaar (laatste jaar 3x); IKV met prognose; zelfde rente als loondienst",
+    "bron": [
+     "https://www.vennhypotheken.nl/voor-adviseurs/hypotheek-voor-ondernemers/",
+     "https://www.vennhypotheken.nl/kennisplein/hypotheek-voor-ondernemers/"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "Minimaal aantal jaren zelfstandig niet gevonden; overwinst/dividend telt mee; tot 100% marktwaarde"
+   },
+   "flex": {
+    "waarde": "+ Flexinkomen 100% meegeteld (gewogen 3-jaarsgemiddelde); zelfde rente, tot 100%",
+    "bron": [
+     "https://www.vennhypotheken.nl/hypotheken/",
+     "https://www.vennhypotheken.nl/veelgestelde-hypotheekvragen/"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "Met intentieverklaring telt huidig inkomen volledig; ook met NHG"
+   },
+   "persp": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron van Venn over perspectiefverklaring gevonden"
+   },
+   "aow": {
+    "waarde": "~ Binnen 10 jaar voor AOW toets op pensioeninkomen; senioren 57+ toets op werkelijke lasten",
+    "bron": [
+     "https://www.vennhypotheken.nl/voor-adviseurs/ontslag-hoofdelijk-aansprakelijkheid/",
+     "https://www.vennhypotheken.nl/voor_adviseurs/nieuws/venn-hypotheken-past-hypotheekvoorwaarden-aan/"
+    ],
+    "brondatum": "2022",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Seniorenpropositie (verhuizen/oversluiten, tot 80% MW) sinds 1-4-2022"
+   },
+   "erfp": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Alleen algemene voorwaarden over verplichtingen erfpachter gevonden; geen acceptatiebeleid"
+   },
+   "rvp": {
+    "waarde": "+ 1, 2, 3, 5, 6, 7, 10, 12, 15, 20 en 30 jaar",
+    "bron": [
+     "https://www.vennhypotheken.nl/rente/"
+    ],
+    "brondatum": "2026-08",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Rentetabel 5-8-2026"
+   },
+   "dag": {
+    "waarde": "- Offerterente (geen dagrente) voor aanvragen vanaf 1-4-2022",
+    "bron": [
+     "https://www.vennhypotheken.nl/voor_adviseurs/nieuws/venn-hypotheken-past-hypotheekvoorwaarden-aan/",
+     "https://www.vennhypotheken.nl/veelgestelde-hypotheekvragen/"
+    ],
+    "brondatum": "2022",
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "Pagina /hypotheken/voordelen/ draagt nog titel 'Dagrente', maar FAQ noemt offerterente"
+   },
+   "geld": {
+    "waarde": "~ Offerte 4 mnd geldig; eenmaal kosteloos 2 mnd te verlengen",
+    "bron": [
+     "https://www.vennhypotheken.nl/veelgestelde-hypotheekvragen/",
+     "https://www.vennhypotheken.nl/voor-adviseurs/pluspunten/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": ""
+   },
+   "boete": {
+    "waarde": "+ 15% van oorspronkelijke hoofdsom per kalenderjaar; boetevrij bij verkoop en verhuizing",
+    "bron": [
+     "https://www.vennhypotheken.nl/veelgestelde-hypotheekvragen/",
+     "https://www.vennhypotheken.nl/hypotheken/voordelen/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Vrij te verdelen over leningdelen"
+   },
+   "ltv": {
+    "waarde": "+ Maandelijks automatisch lagere tariefklasse bij lagere LTV",
+    "bron": [
+     "https://www.vennhypotheken.nl/kennisplein/bespaar-door-automatische-rentedaling/",
+     "https://www.vennhypotheken.nl/voor-adviseurs/pluspunten/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Ook door extra aflossing; NHG heeft één tariefklasse"
+   },
+   "bdduur": {
+    "waarde": "~ Nieuwbouw 18 mnd / verbouw 12 mnd, elk +6 mnd verlenging zonder rentevergoeding",
+    "bron": [
+     "https://www.vennhypotheken.nl/veelgestelde-hypotheekvragen/",
+     "https://www.vennhypotheken.nl/tips-en-geldzaken/bouwdepot/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": ""
+   },
+   "bdrnt": {
+    "waarde": "! Depotvergoeding lager dan hypotheekrente (korting op gemiddelde hypotheekrente)",
+    "bron": [
+     "https://www.vennhypotheken.nl/veelgestelde-hypotheekvragen/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Exacte korting niet genoemd i.v.m. tarievenregel"
+   },
+   "bddecl": {
+    "waarde": "~ Online declareren via MijnHypotheekOnline met actueel saldo-overzicht",
+    "bron": [
+     "https://www.vennhypotheken.nl/kennisplein/bouwdepot-bij-bestaand-huis-hoe-werkt-dat/"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "Doorlooptijd niet gevonden"
+   },
+   "ebb": {
+    "waarde": "~ EBB bij aankoop via bouwdepot; tot 106% bij energiebesparende voorzieningen",
+    "bron": [
+     "https://www.vennhypotheken.nl/kennisplein/energiebespaarbudget-voor-het-verduurzamen-van-je-woning/",
+     "https://www.vennhypotheken.nl/voor-adviseurs/gemakkelijkgroen/"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Niet expliciet 'conform NHG' bevestigd"
+   },
+   "duur": {
+    "waarde": "+ Gemakkelijk Groen: €5.000-10.000 extra voor energiebesparing met eigen gunstige rente",
+    "bron": [
+     "https://www.vennhypotheken.nl/voor-adviseurs/gemakkelijkgroen/",
+     "https://www.vennhypotheken.nl/voor_adviseurs/nieuws/venn-hypotheken-introduceert-gemakkelijk-groen/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Standaard verhoogde inschrijving van €9.000 voor latere verduurzaming"
+   },
+   "verh": {
+    "waarde": "~ Rente mee voor resterende rentevast; melden 30 dgn vooraf, aanbod binnen 6 mnd, max €1 mln",
+    "bron": [
+     "https://www.vennhypotheken.nl/voor-adviseurs/verhuisregeling/",
+     "https://www.vennhypotheken.nl/mijnhypotheekonline/verhuisregeling/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Oude woning eerst verkocht en afgelost; geen achterstand afgelopen 6 mnd; administratiekosten"
+   },
+   "ondh": {
+    "waarde": "~ Verkoop alleen met voorafgaande schriftelijke toestemming; achterstanden via Mender",
+    "bron": [
+     "https://www.vennhypotheken.nl/wp-content/uploads/Algemene-Voorwaarden-2022-2.0-Venn-Hypotheken-B.V.-.pdf",
+     "https://www.vennhypotheken.nl/veelgestelde-hypotheekvragen/"
+    ],
+    "brondatum": "2022",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Geen specifiek restschuldbeleid gevonden"
+   },
+   "oha": {
+    "waarde": "+ Eigen OHA-kader: draagkrachttoets tussen reguliere en beheertoets; pensioen 10 jr",
+    "bron": [
+     "https://www.vennhypotheken.nl/voor-adviseurs/ontslag-hoofdelijk-aansprakelijkheid/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Hertoetsing met inkomens- en scheidingsdocumenten"
+   },
+   "tweede": {
+    "waarde": "+ Onderhands binnen (standaard verhoogde) inschrijving; anders tweede hypotheek bij Venn",
+    "bron": [
+     "https://www.vennhypotheken.nl/mijnhypotheekonline/verhogen/",
+     "https://www.vennhypotheken.nl/nieuws/vanaf-nu-standaard-verhoogde-inschrijving/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Hertoetsing inkomen en woningwaarde"
+   },
+   "ovbr": {
+    "waarde": "+ Overbrugging max 24 mnd, ook bij onverkochte woning (te koop); geen kosten behalve rente",
+    "bron": [
+     "https://www.vennhypotheken.nl/kennisplein/een-overbruggingskrediet-hoe-werkt-dat-eigenlijk/",
+     "https://www.vennhypotheken.nl/voor-adviseurs/pluspunten/",
+     "https://www.vennhypotheken.nl/rente/variabele-rente-overbruggingskrediet/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Vervroegd aflossen zonder boete; dubbele lasten 6 mnd toetsen (2023)"
+   },
+   "avrij": {
+    "waarde": "~ Max. 50% van marktwaarde aflossingsvrij",
+    "bron": [
+     "https://www.vennhypotheken.nl/hypotheken/hypotheekvormen/"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Context bron: meenemen bestaand aflossingsvrij van vóór 2013"
+   },
+   "rmid": {
+    "waarde": "- Geen rentemiddeling; verzoeken worden afgewezen",
+    "bron": [
+     "https://www.vennhypotheken.nl/mijnhypotheekonline/einde-rentevastperiode/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "rverl": {
+    "waarde": "+ Verlengingsrente gebaseerd op actuele Venn-rente voor vergelijkbare leningen",
+    "bron": [
+     "https://www.vennhypotheken.nl/mijnhypotheekonline/einde-rentevastperiode/"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Niet letterlijk 'gelijk aan nieuwe klanten'"
+   },
+   "rvoor": {
+    "waarde": "~ Voorstel min. 3 mnd vooraf; reageren tot 1 mnd voor einde rentevast",
+    "bron": [
+     "https://www.vennhypotheken.nl/mijnhypotheekonline/einde-rentevastperiode/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "bbrk": {
+    "waarde": "~ Contante waarde renteverschil met Venn-rente voor vergelijkbare lening tot einde rentevast",
+    "bron": [
+     "https://www.vennhypotheken.nl/veelgestelde-hypotheekvragen/",
+     "https://www.vennhypotheken.nl/wp-content/uploads/Algemene-Voorwaarden-2022-2.0-Venn-Hypotheken-B.V.-.pdf"
+    ],
+    "brondatum": "2022",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Alleen vergoeding als huidige rente lager is"
+   },
+   "elbl": {
+    "waarde": "- Rente niet afhankelijk van energielabel",
+    "bron": [
+     "https://www.vennhypotheken.nl/voor_adviseurs/nieuws/venn-hypotheken-introduceert-gemakkelijk-groen/",
+     "https://www.vennhypotheken.nl/gemakkelijkgroen/"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "o106": {
+    "waarde": "+ Gemakkelijk Groen-deel telt niet mee voor tariefklasse; tot 106% bij EBV",
+    "bron": [
+     "https://www.vennhypotheken.nl/voor-adviseurs/gemakkelijkgroen/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "bprov": {
+    "waarde": "+ Offerte kosteloos 2 mnd verlengen; geen annuleringskosten",
+    "bron": [
+     "https://www.vennhypotheken.nl/voor-adviseurs/pluspunten/",
+     "https://www.vennhypotheken.nl/hypotheken/voordelen/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "wkost": {
+    "waarde": "! Vaste administratiekosten (€300) per wijziging, ook bij verhuisregeling",
+    "bron": [
+     "https://www.vennhypotheken.nl/mijnhypotheekonline/verhuisregeling/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "avlt": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen duidelijke bron over verlengen aflossingsvrij deel na looptijd"
+   },
+   "bproc": {
+    "waarde": "~ Achterstanden begeleid door Mender, gericht op herstel met behoud van woning",
+    "bron": [
+     "https://www.vennhypotheken.nl/veelgestelde-hypotheekvragen/"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Mender is gespecialiseerde achterstandsbeheerder"
+   }
+  },
+  "gecontroleerd": "2026-10-04"
+ }
+]
