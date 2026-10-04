@@ -1,0 +1,529 @@
+{
+ "product": "bankgarantie",
+ "titel": "Bankgarantie en bieden met zekerheid",
+ "gecontroleerd": "2026-10-04",
+ "criteria": [
+  {
+   "id": "product",
+   "naam": "Product",
+   "kort": "Soort product: bankgarantie voor de waarborgsom, garantiestelling via een verzekeraar, of 'bieden met zekerheid' (garantie bij afwijzing van de financiering).",
+   "waarom": "Bepaalt of alleen de waarborgsom wordt gedekt of ook het risico van bieden zonder financieringsvoorbehoud."
+  },
+  {
+   "id": "voor",
+   "naam": "Voor wie",
+   "kort": "Of het product alleen voor eigen hypotheekklanten is of ook los van de hypotheekverstrekker, en of een hypotheekofferte vereist is.",
+   "waarom": "Bepaalt of de klant vrij is in de keuze van geldverstrekker en of de garantie al vóór de offerte te regelen is."
+  },
+  {
+   "id": "maximum",
+   "naam": "Maximaal garantiebedrag",
+   "kort": "Maximaal garantiebedrag of maximaal percentage van de koopsom.",
+   "waarom": "De waarborgsom is doorgaans 10% van de koopsom; de garantie moet dat bedrag volledig kunnen dekken."
+  },
+  {
+   "id": "duur",
+   "naam": "Looptijd en verlenging",
+   "kort": "Geldigheid van de garantie, maximale looptijd en mogelijkheid tot verlenging bij een verschoven passeerdatum.",
+   "waarom": "Bij uitgestelde levering of nieuwbouw moet de garantie lang genoeg geldig blijven."
+  },
+  {
+   "id": "snelheid",
+   "naam": "Afgifte en aanvraagkanaal",
+   "kort": "Afgiftetermijn en via welk kanaal de aanvraag loopt (adviseur, online, bank).",
+   "waarom": "De bankgarantie moet meestal binnen enkele dagen na tekenen van de koopovereenkomst bij de notaris liggen."
+  },
+  {
+   "id": "eisen",
+   "naam": "Voorwaarden en acceptatie",
+   "kort": "Acceptatie-eisen zoals betaalrekening, BKR-toets, inkomens- en haalbaarheidstoets, taxatie.",
+   "waarom": "Geeft vooraf inzicht in de kans op tijdige afgifte."
+  },
+  {
+   "id": "inroepen",
+   "naam": "Bij inroepen",
+   "kort": "Wat er gebeurt als de verkoper de garantie inroept: verhaal op de koper, terugbetaaltermijn, betalingsregeling of verzekerde dekking.",
+   "waarom": "Bepaalt het financiële risico van de koper als de koop niet doorgaat."
+  },
+  {
+   "id": "kosten",
+   "naam": "Kostenmoment",
+   "kort": "Wanneer de kosten verschuldigd zijn en of er iets wordt terugbetaald als de koop niet doorgaat (zonder bedragen).",
+   "waarom": "Relevant voor de liquiditeit van de koper en het risico op kosten zonder aankoop."
+  }
+ ],
+ "aanbieders": [
+  {
+   "naam": "Nationale Waarborg",
+   "url": "https://nationalewaarborg.nl/adviseur/producten/",
+   "domeinen": [
+    "nationalewaarborg.nl"
+   ],
+   "documenten": [
+    {
+     "titel": "IPID Bankgarantie Bestaande Bouw",
+     "url": "https://nationalewaarborg.nl/site-waarborg/storage/files/1135/ipid_bankgarantie_bestaande_bouw_versie_1_1-2020.pdf",
+     "versie": "1.1-2020"
+    },
+    {
+     "titel": "Dienstverleningsdocument BankGarantieZeker",
+     "url": "https://nationalewaarborg.nl/site-waarborg/storage/files/1431/dienstverleningsdocument_bankgarantiezeker.pdf",
+     "versie": "onbekend"
+    },
+    {
+     "titel": "Voorwaarden bij de regresverklaring (verzekering op de bankgarantie)",
+     "url": "https://nationalewaarborg.nl/site-waarborg/storage/files/1410/voorwaarden_verzekering_lm.pdf",
+     "versie": "3-2021"
+    },
+    {
+     "titel": "Handleiding NWB Online - Tussenpersonen",
+     "url": "https://nationalewaarborg.nl/site-waarborg/storage/files/1850/handleiding_nwb_online.pdf",
+     "versie": "5-2024"
+    }
+   ],
+   "criteria": {
+    "product": {
+     "waarde": "+ Bankgarantie bestaande bouw, nieuwbouw-bankgarantie, startersbankgarantie en BankGarantieZeker (bieden zonder financieringsvoorbehoud); optionele verzekering op de bankgarantie",
+     "bron": [
+      "https://nationalewaarborg.nl/adviseur/producten/",
+      "https://nationalewaarborg.nl/adviseur/producten/bankgarantiezeker/",
+      "https://nationalewaarborg.nl/adviseur/producten/verzekering-op-de-bankgarantie/"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Onafhankelijke aanbieder van bankgaranties sinds 2003. De verzekering dekt de situatie dat de koop na verlopen van de ontbindende voorwaarden niet doorgaat door overlijden, ziekte, onvrijwillige werkloosheid, arbeidsongeschiktheid of scheiding."
+    },
+    "voor": {
+     "waarde": "+ Onafhankelijk van de geldverstrekker; ook bij aankoop zonder hypotheek",
+     "bron": [
+      "https://nationalewaarborg.nl/adviseur/producten/bankgarantie-bestaande-bouw/",
+      "https://nationalewaarborg.nl/adviseur/werkwijze/aanvragen/"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Aanvraag alleen via een hypotheekadviseur met AFM-vergunning (geen directe aanvraag door consumenten). BankGarantieZeker alleen voor een woning in Nederland voor eigen gebruik."
+    },
+    "maximum": {
+     "waarde": "~ Tot 10% van de koopsom uit de koopovereenkomst",
+     "bron": [
+      "https://nationalewaarborg.nl/adviseur/producten/bankgarantie-bestaande-bouw/",
+      "https://nationalewaarborg.nl/site-waarborg/storage/files/1135/ipid_bankgarantie_bestaande_bouw_versie_1_1-2020.pdf"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "duur": {
+     "waarde": "+ Bestaande bouw max. 13 maanden (12 mnd + 1 mnd claimtermijn); kosteloos online verlengen binnen die 13 maanden; nieuwbouw verlengbaar per jaar",
+     "bron": [
+      "https://nationalewaarborg.nl/adviseur/producten/bankgarantie-bestaande-bouw/",
+      "https://nationalewaarborg.nl/adviseur/werkwijze/algemene-procedures/",
+      "https://nationalewaarborg.nl/site-waarborg/storage/files/1850/handleiding_nwb_online.pdf"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Dekking eindigt één kalendermaand na de opgegeven passeerdatum. Verlenging nieuwbouw is niet kosteloos. BankGarantieZeker-certificaat is 40 dagen geldig na afgifte; daarna gelden de voorwaarden van de aangevraagde bankgarantie."
+    },
+    "snelheid": {
+     "waarde": "+ Beoordeling binnen 1 werkdag; digitaal via NWB Online of adviessoftware (o.a. Elements, eBlinqx, Adviesbox), digitaal ondertekenen door kopers",
+     "bron": [
+      "https://nationalewaarborg.nl/adviseur/werkwijze/",
+      "https://nationalewaarborg.nl/adviseur/nwb-online/",
+      "https://nationalewaarborg.nl/adviseur/producten/bankgarantiezeker/"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "eisen": {
+     "waarde": "~ Getekende koopovereenkomst plus maximale-lastentoets en inkomensstukken; zonder renteaanbod of hypotheekaanvraag ook een private BKR-toets",
+     "bron": [
+      "https://nationalewaarborg.nl/adviseur/producten/bankgarantie-bestaande-bouw/",
+      "https://nationalewaarborg.nl/adviseur/werkwijze/algemene-procedures/"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Bij aankoop zonder hypotheek: aantonen dat de woning zonder financiering gekocht kan worden. BankGarantieZeker stelt aanvullende voorwaarden aan het adviseurskantoor en de aanvrager."
+    },
+    "inroepen": {
+     "waarde": "~ Verhaal op de kopers (hoofdelijk aansprakelijk); betalingsregeling mogelijk, minnelijke regeling uitgangspunt",
+     "bron": [
+      "https://nationalewaarborg.nl/adviseur/claims/",
+      "https://nationalewaarborg.nl/site-waarborg/storage/files/1410/voorwaarden_verzekering_lm.pdf"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Met verzekering op de bankgarantie vervalt het verhaal als aan de verzekeringsvoorwaarden is voldaan. Bij BankGarantieZeker vervalt het verhaal (max. 10% van de koopsom) als de hypotheekaanvraag na tekenen door de geldverstrekker wordt afgewezen en aan alle voorwaarden is voldaan, mits dit als voorwaarde in de koopovereenkomst staat."
+    },
+    "kosten": {
+     "waarde": "+ Kosten achteraf: notaris verrekent ze bij het passeren van de akte",
+     "bron": [
+      "https://nationalewaarborg.nl/adviseur/werkwijze/algemene-procedures/",
+      "https://nationalewaarborg.nl/adviseur/producten/bankgarantiezeker/"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "BankGarantieZeker-kosten zijn alleen verschuldigd als de aankoop doorgaat."
+    }
+   }
+  },
+  {
+   "naam": "BNP Paribas Cardif",
+   "url": "https://www.bnpparibascardif.nl/verzekeringen/garantiestelling",
+   "domeinen": [
+    "bnpparibascardif.nl"
+   ],
+   "documenten": [
+    {
+     "titel": "Algemene voorwaarden Garantiestelling Bieden met Zekerheid",
+     "url": "https://www.bnpparibascardif.nl/documents/95944688/0/Algemene+voorwaarden+Garantiestelling+Bieden+met+Zekerheid+GSB0724.pdf/51e82034-e714-c34f-e367-dcccc8713116?version=1.0&t=1723025266837&download=true",
+     "versie": "GSB0724 (juli 2024)"
+    },
+    {
+     "titel": "Verzekeringskaart Garantiestelling Bieden met Zekerheid",
+     "url": "https://www.bnpparibascardif.nl/documents/95944688/0/Verzekeringskaart+Garantiestelling-Bieden-met-Zekerheid.pdf/2791e2cd-e50a-71b1-618e-7ac660017e40?version=1.1&t=1723025218760&download=true",
+     "versie": "onbekend (2024)"
+    },
+    {
+     "titel": "Algemene voorwaarden Garantiestelling Beschermd",
+     "url": "https://www.bnpparibascardif.nl/documents/95944688/96332854/Algemene+voorwaarden+Garantiestelling+Beschermd+GSCGD1221.pdf/d11b599d-c09e-a0d4-a4c7-f00e20768236?version=1.0&t=1640690512247&download=true",
+     "versie": "GSCGD1221 (december 2021)"
+    },
+    {
+     "titel": "Handleiding aanvragen garantiestelling in Accelerate",
+     "url": "https://www.bnpparibascardif.nl/documents/95944688/96332817/Handleiding+aanvragen+garantiestelling+in+Accelerate+v3.pdf/0dfe142a-0b40-665b-8179-45d97f04d8ca?t=1716396998541",
+     "versie": "v3 (2024)"
+    }
+   ],
+   "criteria": {
+    "product": {
+     "waarde": "+ Garantiestelling (verzekeraarsgarantie voor de waarborgsom), variant Garantiestelling Beschermd en Garantiestelling Bieden met Zekerheid (certificaat + garantie bij afwijzing hypotheek)",
+     "bron": [
+      "https://www.bnpparibascardif.nl/verzekeringen/garantiestelling",
+      "https://www.bnpparibascardif.nl/voor-adviseurs/garantiestelling/biedenmetzekerheid"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Geen bankgarantie in strikte zin maar een garantiestelling door de verzekeraar, die door de notaris als zekerheid voor de waarborgsom wordt geaccepteerd. Bieden met Zekerheid is ontwikkeld met De Hypotheker; Woongarant en Hera Life spelen een rol in de aanvraag."
+    },
+    "voor": {
+     "waarde": "+ Onafhankelijk van de geldverstrekker; alleen via een financieel adviseur",
+     "bron": [
+      "https://www.bnpparibascardif.nl/voor-adviseurs",
+      "https://www.bnpparibascardif.nl/voor-adviseurs/garantiestelling/biedenmetzekerheid"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Bieden met Zekerheid: aanvrager 18 jaar of ouder, woning in Nederland; de hypotheek moet worden aangevraagd door de adviseur die het certificaat heeft afgegeven."
+    },
+    "maximum": {
+     "waarde": "~ Max. 10% van de koopsom; bij Bieden met Zekerheid gelimiteerd tot het bod op het certificaat",
+     "bron": [
+      "https://www.bnpparibascardif.nl/voor-adviseurs/garantiestelling/biedenmetzekerheid",
+      "https://www.bnpparibascardif.nl/documents/95944688/0/Algemene+voorwaarden+Garantiestelling+Bieden+met+Zekerheid+GSB0724.pdf/51e82034-e714-c34f-e367-dcccc8713116?version=1.0&t=1723025266837&download=true"
+     ],
+     "brondatum": "2024",
+     "zekerheid": "middel",
+     "toelichting": "Het geaccepteerde bod mag niet hoger zijn dan het bedrag op het certificaat. Voor de verzekerde dekking (bedrag dat niet terugbetaald hoeft te worden) geldt een maximum verzekerd bedrag."
+    },
+    "duur": {
+     "waarde": "~ Bieden met Zekerheid: koopovereenkomst binnen 3 maanden na afgifte certificaat; garantie loopt max. 1 jaar",
+     "bron": [
+      "https://www.bnpparibascardif.nl/documents/95944688/0/Algemene+voorwaarden+Garantiestelling+Bieden+met+Zekerheid+GSB0724.pdf/51e82034-e714-c34f-e367-dcccc8713116?version=1.0&t=1723025266837&download=true"
+     ],
+     "brondatum": "2024",
+     "zekerheid": "middel",
+     "toelichting": "Looptijd is de periode tussen ingangs- en einddatum van de garantiestelling. Over verlenging van de standaard garantiestelling is geen eigen bron gevonden."
+    },
+    "snelheid": {
+     "waarde": "+ Aanvragen vóór 15:00 uur meestal dezelfde dag verwerkt; via adviseur (o.a. Accelerate, FlexFront Bankgarantie Service)",
+     "bron": [
+      "https://www.bnpparibascardif.nl/verzekeringen/garantiestelling",
+      "https://www.bnpparibascardif.nl/documents/95944688/96332817/Handleiding+aanvragen+garantiestelling+in+Accelerate+v3.pdf/0dfe142a-0b40-665b-8179-45d97f04d8ca?t=1716396998541",
+      "https://bnpparibascardif.nl/-/flexfront-en-bnp-paribas-cardif-bundelen-krachten-met-bankgarantie-service"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Voorwaarden worden binnen vijf werkdagen toegestuurd. Bij Bieden met Zekerheid wordt de garantie enkele dagen na tekenen van de koopovereenkomst afgegeven."
+    },
+    "eisen": {
+     "waarde": "~ Bieden met Zekerheid: vooraf haalbaarheids- en betaalbaarheidstoets van de hypotheek plus taxatie van de woning",
+     "bron": [
+      "https://www.bnpparibascardif.nl/voor-adviseurs/garantiestelling/biedenmetzekerheid"
+     ],
+     "brondatum": "2024",
+     "zekerheid": "middel",
+     "toelichting": "Voor uitkering bij afwijzing moet de adviseur de hypotheek bij minimaal drie verschillende geldverstrekkers volledig hebben aangevraagd en afgewezen gekregen."
+    },
+    "inroepen": {
+     "waarde": "~ Contragarantie: koper betaalt het garantiebedrag binnen 30 dagen terug; bij Bieden met Zekerheid/Beschermd vervalt dit als aan de dekkingsvoorwaarden is voldaan",
+     "bron": [
+      "https://www.bnpparibascardif.nl/documents/95944688/96332854/Algemene+voorwaarden+Garantiestelling+Beschermd+GSCGD1221.pdf/d11b599d-c09e-a0d4-a4c7-f00e20768236?version=1.0&t=1640690512247&download=true",
+      "https://www.bnpparibascardif.nl/voor-adviseurs/garantiestelling/biedenmetzekerheid"
+     ],
+     "brondatum": "2021-2024",
+     "zekerheid": "middel",
+     "toelichting": "Verkoper en notaris kunnen de garantie inroepen als de koop niet doorgaat en de ontbindende voorwaarden verlopen zijn. Bij Bieden met Zekerheid betaalt Cardif het garantiebedrag als de hypotheek onverwacht niet wordt verstrekt."
+    },
+    "kosten": {
+     "waarde": "- Premie ook verschuldigd als de koop niet doorgaat; geen premie bij stoppen binnen 2 dagen na acceptatie of vóór ingangsdatum",
+     "bron": [
+      "https://www.bnpparibascardif.nl/documents/95944688/0/Algemene+voorwaarden+Garantiestelling+Bieden+met+Zekerheid+GSB0724.pdf/51e82034-e714-c34f-e367-dcccc8713116?version=1.0&t=1723025266837&download=true",
+      "https://www.bnpparibascardif.nl/documents/95944688/96332854/Algemene+voorwaarden+Garantiestelling+Beschermd+GSCGD1221.pdf/d11b599d-c09e-a0d4-a4c7-f00e20768236?version=1.0&t=1640690512247&download=true"
+     ],
+     "brondatum": "2021-2024",
+     "zekerheid": "middel",
+     "toelichting": ""
+    }
+   }
+  },
+  {
+   "naam": "ING",
+   "url": "https://www.ing.nl/particulier/klantenservice/veelgestelde-vragen/index.html?path=Hypotheken%2FBankgarantie",
+   "domeinen": [
+    "ing.nl"
+   ],
+   "documenten": [],
+   "criteria": {
+    "product": {
+     "waarde": "~ Bankgarantie voor de waarborgsom, als onderdeel van de hypotheekofferte",
+     "bron": [
+      "https://www.ing.nl/particulier/klantenservice/veelgestelde-vragen/index.html?path=Hypotheken%2FBankgarantie"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "voor": {
+     "waarde": "- Alleen bij een ING-hypotheek én een ING-betaalrekening; geen losse bankgarantie",
+     "bron": [
+      "https://www.ing.nl/particulier/klantenservice/veelgestelde-vragen/index.html?path=Hypotheken%2FBankgarantie",
+      "https://www.ing.nl/particulier/hypotheek/huis-kopen/hypotheek-aanvragen"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "maximum": {
+     "waarde": "~ Max. 10% van de koopsom",
+     "bron": [
+      "https://www.ing.nl/particulier/klantenservice/veelgestelde-vragen/index.html?path=Hypotheken%2FBankgarantie"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "De noodzaak van de bankgarantie moet uit de koopakte blijken."
+    },
+    "duur": {
+     "waarde": "~ Vervalt bij de overdracht bij de notaris",
+     "bron": [
+      "https://www.ing.nl/particulier/klantenservice/veelgestelde-vragen/index.html?path=Hypotheken%2FBankgarantie"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Geen informatie gevonden over een maximale looptijd of verlenging."
+    },
+    "snelheid": {
+     "waarde": "~ Aanvragen samen met de hypotheekofferte via de eigen (hypotheek)contactpersoon",
+     "bron": [
+      "https://www.ing.nl/particulier/klantenservice/veelgestelde-vragen/index.html?path=Hypotheken%2FBankgarantie"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Geen afgiftetermijn gepubliceerd."
+    },
+    "eisen": {
+     "waarde": "~ ING-hypotheek, ING-betaalrekening en koopakte waaruit de noodzaak blijkt",
+     "bron": [
+      "https://www.ing.nl/particulier/klantenservice/veelgestelde-vragen/index.html?path=Hypotheken%2FBankgarantie"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "inroepen": {
+     "waarde": "~ Wordt de garantie ingeroepen nadat de ontbindende voorwaarden verlopen zijn, dan moet de koper het bedrag aan ING terugbetalen",
+     "bron": [
+      "https://www.ing.nl/particulier/klantenservice/veelgestelde-vragen/index.html?path=Hypotheken%2FBankgarantie"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    }
+   }
+  },
+  {
+   "naam": "ABN AMRO",
+   "url": "https://www.abnamro.nl/nl/prive/hypotheken/huis-kopen/documenten/bankgarantie.html",
+   "domeinen": [
+    "abnamro.nl"
+   ],
+   "documenten": [],
+   "criteria": {
+    "product": {
+     "waarde": "~ Bankgarantie voor de waarborgsom, samen met de hypotheek",
+     "bron": [
+      "https://www.abnamro.nl/nl/prive/hypotheken/huis-kopen/documenten/bankgarantie.html"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "voor": {
+     "waarde": "- Bedoeld voor eigen hypotheekklanten: aanvragen bij het afsluiten van de ABN AMRO-hypotheek",
+     "bron": [
+      "https://www.abnamro.nl/nl/prive/hypotheken/huis-kopen/documenten/bankgarantie.html"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "De site noemt geen losse bankgarantie voor niet-hypotheekklanten."
+    },
+    "snelheid": {
+     "waarde": "~ Via de hypotheekadviseur; koper tekent een overeenkomst voor de bankgarantie, daarna stuurt ABN AMRO de garantie naar de notaris",
+     "bron": [
+      "https://www.abnamro.nl/nl/prive/hypotheken/huis-kopen/documenten/bankgarantie.html"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Geen afgiftetermijn gepubliceerd."
+    },
+    "kosten": {
+     "waarde": "+ Geen aparte kosten: inbegrepen in de afhandelingskosten van de hypotheek, betaald bij het afsluiten",
+     "bron": [
+      "https://www.abnamro.nl/nl/prive/hypotheken/huis-kopen/documenten/bankgarantie.html",
+      "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-afsluiten/hypotheekadvies/kosten.html"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    }
+   }
+  },
+  {
+   "naam": "Rabobank",
+   "url": "https://www.rabobank.nl/particulieren/hypotheek/hypotheek-afsluiten/hypotheekadvies-en-kosten",
+   "domeinen": [
+    "rabobank.nl"
+   ],
+   "documenten": [],
+   "criteria": {
+    "product": {
+     "waarde": "~ Bankgarantie voor de waarborgsom bij aankoop van een woning",
+     "bron": [
+      "https://www.rabobank.nl/particulieren/hypotheek/hypotheek-afsluiten/hypotheekadvies-en-kosten"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Genoemd op de pagina met hypotheekkosten; geen aparte productpagina voor particulieren gevonden. Voorwaarden (voor wie, looptijd, afgifte) zijn niet gepubliceerd."
+    },
+    "maximum": {
+     "waarde": "~ Gericht op de gebruikelijke 10% van de koopsom",
+     "bron": [
+      "https://www.rabobank.nl/particulieren/hypotheek/hypotheek-afsluiten/hypotheekadvies-en-kosten"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "kosten": {
+     "waarde": "~ Vast bedrag als aparte kostenpost bij de hypotheek",
+     "bron": [
+      "https://www.rabobank.nl/particulieren/hypotheek/hypotheek-afsluiten/hypotheekadvies-en-kosten"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Bedrag bewust niet opgenomen."
+    }
+   }
+  },
+  {
+   "naam": "BLG Wonen (ASN Bank)",
+   "url": "https://www.blgwonen.nl/hypotheken/wat-is-een-bankgarantie.html",
+   "domeinen": [
+    "blgwonen.nl",
+    "asnbank.nl"
+   ],
+   "documenten": [
+    {
+     "titel": "Informatiewijzer Hypotheken",
+     "url": "https://blgwonen.nl/download/informatiewijzer-hypotheken.html",
+     "versie": "onbekend"
+    }
+   ],
+   "criteria": {
+    "product": {
+     "waarde": "~ Bankgarantie voor de waarborgsom",
+     "bron": [
+      "https://www.blgwonen.nl/hypotheken/wat-is-een-bankgarantie.html"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "voor": {
+     "waarde": "- Alleen in combinatie met een BLG Wonen-hypotheek, via een hypotheekadviseur",
+     "bron": [
+      "https://www.blgwonen.nl/hypotheken/wat-is-een-bankgarantie.html"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Zonder BLG-hypotheek kan een ASN-adviseur een bankgarantie bemiddelen via Nationale Waarborg."
+    },
+    "maximum": {
+     "waarde": "~ Meestal 10% van de koopsom",
+     "bron": [
+      "https://www.blgwonen.nl/hypotheken/wat-is-een-bankgarantie.html"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "duur": {
+     "waarde": "~ Max. 2 jaar; vervalt zodra de koopsom aan de notaris is betaald",
+     "bron": [
+      "https://www.blgwonen.nl/hypotheken/wat-is-een-bankgarantie.html"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "De bron formuleert de maximale duur als 2 jaar vanaf de passeerdatum; formulering is niet eenduidig."
+    },
+    "snelheid": {
+     "waarde": "- Pas na goedkeuring van de hypotheekaanvraag en ontvangst van de getekende offerte",
+     "bron": [
+      "https://www.blgwonen.nl/hypotheken/wat-is-een-bankgarantie.html"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "eisen": {
+     "waarde": "~ Goedgekeurde hypotheekaanvraag en getekende hypotheekofferte bij BLG Wonen",
+     "bron": [
+      "https://www.blgwonen.nl/hypotheken/wat-is-een-bankgarantie.html"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "inroepen": {
+     "waarde": "~ Bank betaalt de waarborgsom via de notaris aan de verkoper; koper moet het bedrag aan de bank terugbetalen",
+     "bron": [
+      "https://www.blgwonen.nl/hypotheken/wat-is-een-bankgarantie.html"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "kosten": {
+     "waarde": "~ Percentage van het garantiebedrag met een minimum",
+     "bron": [
+      "https://www.blgwonen.nl/hypotheken/wat-is-een-bankgarantie.html",
+      "https://www.blgwonen.nl/hypotheken/kosten-afsluiten-hypotheek.html"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Bedragen bewust niet opgenomen; niet gevonden of kosten worden terugbetaald als de koop niet doorgaat."
+    }
+   }
+  }
+ ]
+}

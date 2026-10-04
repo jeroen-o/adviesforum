@@ -260,6 +260,312 @@
      "toelichting": ""
     }
    }
+  },
+  {
+   "naam": "Centraal Beheer",
+   "url": "https://www.centraalbeheer.nl/verzekeringen/opstalverzekering",
+   "domeinen": [
+    "centraalbeheer.nl"
+   ],
+   "documenten": [
+    {
+     "titel": "Opstalverzekering Verzekeringsvoorwaarden",
+     "url": "https://www.centraalbeheer.nl/-/media/files/prive/verzekeringen/woonverzekering/polisvoorwaarden-opstalverzekering.pdf",
+     "versie": "onbekend"
+    },
+    {
+     "titel": "Woonverzekering Verzekeringsvoorwaarden",
+     "url": "https://www.centraalbeheer.nl/-/media/files/prive/verzekeringen/woonverzekering/voorwaarden-woonverzekering-cb.pdf",
+     "versie": "onbekend"
+    }
+   ],
+   "criteria": {
+    "opstaldekking": {
+     "waarde": "+ Geen maximaal verzekerd bedrag, dus geen onderverzekering; All Risk als aanvulling",
+     "bron": [
+      "https://www.centraalbeheer.nl/verzekeringen/opstalverzekering",
+      "https://www.centraalbeheer.nl/verzekeringen/woonverzekering/all-risk"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Dekt woning, aanhorigheden zoals keuken en zonnepanelen, bijgebouwen tot 100 m2 en tuin. Rechtstreekse verzekeraar (Achmea)."
+    },
+    "inboedeldekking": {
+     "waarde": "~ Inboedelverzekering met optie All Risk",
+     "bron": [
+      "https://www.centraalbeheer.nl/verzekeringen/inboedelverzekering",
+      "https://www.centraalbeheer.nl/verzekeringen/woonverzekering/all-risk"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Garantieregeling tegen onderverzekering voor inboedel niet bevestigd in gevonden bronnen."
+    },
+    "glas": {
+     "waarde": "+ Glas standaard meeverzekerd op de opstalverzekering",
+     "bron": [
+      "https://www.centraalbeheer.nl/verzekeringen/opstalverzekering",
+      "https://www.centraalbeheer.nl/-/media/files/prive/verzekeringen/woonverzekering/polisvoorwaarden-opstalverzekering.pdf"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Ook glas van bij de woning horende gebouwen. Geen glasdekking bij leegstand langer dan 90 dagen."
+    },
+    "storm": {
+     "waarde": "~ Storm, neerslag en overstroming door niet-primaire waterkering gedekt; grondwater niet",
+     "bron": [
+      "https://www.centraalbeheer.nl/artikelen/wat-is-verzekerd-bij-lekkage-door-neerslag",
+      "https://www.centraalbeheer.nl/verzekeringen/waterschade/veelgestelde-vragen"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Schade door vocht, slecht onderhoud of constructiefouten is niet gedekt."
+    },
+    "aardbeving": {
+     "waarde": "- Aardbeving en vulkanische uitbarsting uitgesloten; overstroming door primaire waterkering niet gedekt",
+     "bron": [
+      "https://www.centraalbeheer.nl/-/media/files/prive/verzekeringen/woonverzekering/polisvoorwaarden-opstalverzekering.pdf",
+      "https://www.centraalbeheer.nl/verzekeringen/waterschade/veelgestelde-vragen"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "duurzaam": {
+     "waarde": "+ Zonnepanelen, laadpaal, thuisbatterij, warmtepomp, zonneboiler en regenwateropvang meeverzekerd",
+     "bron": [
+      "https://www.centraalbeheer.nl/verzekeringen/opstalverzekering",
+      "https://www.centraalbeheer.nl/artikelen/zonnepanelen-verzekeren",
+      "https://www.centraalbeheer.nl/-/media/files/prive/verzekeringen/woonverzekering/polisvoorwaarden-opstalverzekering.pdf"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Zichtbare schade aan zonnepanelen standaard gedekt."
+    },
+    "leegstand": {
+     "waarde": "~ Beperkingen bij leegstand langer dan 90 dagen; verhuur van hele woning of max. 4 kamers toegestaan",
+     "bron": [
+      "https://www.centraalbeheer.nl/-/media/files/prive/verzekeringen/woonverzekering/polisvoorwaarden-opstalverzekering.pdf",
+      "https://www.centraalbeheer.nl/verzekeringen/inboedelverzekering",
+      "https://www.centraalbeheer.nl/artikelen/tijdelijk-twee-woningen"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "laag",
+     "toelichting": "Verhuur aan toeristen max. 300 dagen per kalenderjaar (inboedel). Voorwaarden bevatten aparte regeling voor bouw/verbouw."
+    },
+    "eigenrisico": {
+     "waarde": "~ Keuze € 0, € 100 of € 200; bij stormschade altijd € 250",
+     "bron": [
+      "https://www.centraalbeheer.nl/verzekeringen/opstalverzekering"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "hypotheek": {
+     "waarde": "~ Opstalverzekering vaak vereist door geldverstrekker; tijdelijke dekking op twee adressen bij verhuizing",
+     "bron": [
+      "https://www.centraalbeheer.nl/hypotheek/kennis/woonverzekeringen",
+      "https://www.centraalbeheer.nl/artikelen/tijdelijk-twee-woningen"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "laag",
+     "toelichting": "Geen specifieke clausule voor de geldverstrekker gevonden."
+    }
+   }
+  },
+  {
+   "naam": "Interpolis",
+   "url": "https://www.interpolis.nl/verzekeren/woonhuisverzekering",
+   "domeinen": [
+    "interpolis.nl"
+   ],
+   "documenten": [
+    {
+     "titel": "Interpolis Alles in één Polis Verzekeringsvoorwaarden Woonhuis",
+     "url": "https://www.interpolis.nl/-/media/files/woo-rv-50-211.pdf",
+     "versie": "WOO-RV-50-211"
+    },
+    {
+     "titel": "Interpolis Alles in één Polis Verzekeringsvoorwaarden Inboedel",
+     "url": "https://www.interpolis.nl/-/media/files/inb-rv-51-211.pdf",
+     "versie": "INB-RV-51-211"
+    }
+   ],
+   "criteria": {
+    "opstaldekking": {
+     "waarde": "~ Verzekerd op herbouwwaarde, vastgesteld op moment van schade",
+     "bron": [
+      "https://www.interpolis.nl/verzekeren/woonhuisverzekering/dekking",
+      "https://www.interpolis.nl/verzekeren/woonhuisverzekering"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "laag",
+     "toelichting": "Een oudere voorwaardenversie noemt evenredigheid bij onderverzekering; voor het huidige product niet bevestigd. Interpolis werkt via de Rabobank."
+    },
+    "inboedeldekking": {
+     "waarde": "~ Inboedel Uitgebreid; garantie tegen onderverzekering met jaarlijkse controle door klant",
+     "bron": [
+      "https://www.interpolis.nl/verzekeren/woonverzekering",
+      "https://www.interpolis.nl/verzekeren/inboedelverzekering"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "laag",
+     "toelichting": ""
+    },
+    "glas": {
+     "waarde": "~ Breuk en lekkage van dubbel glas (jonger dan 10 jaar) gedekt",
+     "bron": [
+      "https://www.interpolis.nl/verzekeren/woonhuisverzekering/wat-is-een-opstalverzekering",
+      "https://www.interpolis.nl/verzekeren/woonhuisverzekering/dekking"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "laag",
+     "toelichting": "Zoekresultaten zijn niet eenduidig over de reikwijdte van glasdekking."
+    },
+    "storm": {
+     "waarde": "~ Storm (vanaf windkracht 7), neerslag in de woning en overstroming door extreme neerslag gedekt",
+     "bron": [
+      "https://www.interpolis.nl/-/media/files/woo-rv-50-211.pdf",
+      "https://www.interpolis.nl/schade/woning/waterschade-woning-door-neerslag-is-dit-verzekerd"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Extreme neerslag: minimaal 40 mm in 24 uur, 53 mm in 48 uur of 67 mm in 72 uur. Geen dekking voor storm/regen tijdens (ver)bouw of leegstand."
+    },
+    "aardbeving": {
+     "waarde": "- Aardbeving en vulkanische uitbarsting uitgesloten, ook indirect",
+     "bron": [
+      "https://www.interpolis.nl/-/media/files/woo-rv-50-211.pdf"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "duurzaam": {
+     "waarde": "+ Zonnepanelen en laadpaal standaard meeverzekerd; duurzaam herstel",
+     "bron": [
+      "https://www.interpolis.nl/verzekeren/woonverzekering/zonnepanelen",
+      "https://www.interpolis.nl/magazine/verzekeren/op-deze-manier-herstellen-we-onze-schades-duurzaam"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Onzichtbare schade aan panelen (zoals haarscheurtjes) niet gedekt. Warmtepomp niet expliciet gevonden."
+    },
+    "leegstand": {
+     "waarde": "- Geen dekking voor storm-, regen- en sneeuwschade tijdens (ver)bouw of bij leegstand",
+     "bron": [
+      "https://www.interpolis.nl/-/media/files/woo-rv-50-211.pdf"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "eigenrisico": {
+     "waarde": "~ Bij stormschade aan de woning € 250 (niet voor glas); inboedel vrijwillig € 0, € 100 of € 200",
+     "bron": [
+      "https://www.interpolis.nl/verzekeren/woonverzekering/eigen-risico"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Oudere voorwaarden noemen € 200 bij storm."
+    }
+   }
+  },
+  {
+   "naam": "Univé",
+   "url": "https://www.unive.nl/opstalverzekering/",
+   "domeinen": [
+    "unive.nl"
+   ],
+   "documenten": [
+    {
+     "titel": "Voorwaarden Woonverzekering Versie 4.1",
+     "url": "https://www.unive.nl/binaries/br/content/assets/particulier-sales/woonverzekering/voorwaarden-unive-woonverzekering-versie-4.1.pdf",
+     "versie": "2043.04.26"
+    }
+   ],
+   "criteria": {
+    "opstaldekking": {
+     "waarde": "+ Opstal Basis of Opstal All Risk; beide met garantie tegen onderverzekering",
+     "bron": [
+      "https://www.unive.nl/opstalverzekering/",
+      "https://www.unive.nl/woonverzekering/onderverzekering"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "inboedeldekking": {
+     "waarde": "+ Inboedel Basis, All Risk of All Risk met Buitenshuis; garantie tegen onderverzekering als er geen verzekerd bedrag op de polis staat",
+     "bron": [
+      "https://www.unive.nl/woonverzekering/onderverzekering",
+      "https://www.unive.nl/woonverzekering/inboedel-en-opstalverzekering"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "glas": {
+     "waarde": "~ Glas via aanvullende dekking Ruitbreuk",
+     "bron": [
+      "https://www.unive.nl/opstalverzekering/",
+      "https://www.unive.nl/binaries/br/content/assets/particulier-sales/woonverzekering/voorwaarden-unive-woonverzekering-versie-4.1.pdf"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Schade door verzakking, verbouw of bouw niet gedekt."
+    },
+    "storm": {
+     "waarde": "~ Storm vanaf windkracht 7; overstroming door niet-primaire waterkering gedekt",
+     "bron": [
+      "https://www.unive.nl/woonverzekering/opstalverzekering/stormschade",
+      "https://www.unive.nl/woonverzekering/overstroming"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "aardbeving": {
+     "waarde": "- Aardbeving en overstroming door primaire waterkering niet verzekerd",
+     "bron": [
+      "https://www.unive.nl/binaries/br/content/assets/particulier-sales/woonverzekering/voorwaarden-unive-woonverzekering-versie-4.1.pdf",
+      "https://www.unive.nl/woonverzekering/overstroming"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "duurzaam": {
+     "waarde": "+ Zonnepanelen inclusief omvormer, bekabeling en batterij standaard onbeperkt meeverzekerd",
+     "bron": [
+      "https://www.unive.nl/woonverzekering/zonnepanelen-verzekeren",
+      "https://www.unive.nl/woonverzekering/verduurzamen-woning-doorgeven-aan-verzekering"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Laadpaal/warmtepomp niet expliciet gevonden."
+    },
+    "leegstand": {
+     "waarde": "- Bij leegstand langer dan 3 maanden uitkering op verkoopwaarde; beperkte dekking bij verbouwing; beperkingen bij verhuur",
+     "bron": [
+      "https://www.unive.nl/binaries/br/content/assets/particulier-sales/woonverzekering/voorwaarden-unive-woonverzekering-versie-4.1.pdf",
+      "https://www.unive.nl/woonverzekering/verzekering-tijdens-verbouwing"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Bij verhuur aan anderen dan familie: brand alleen gedekt met werkende blusser per keuken, geen vandalisme door huurder, diefstal alleen na braak (bron: zoekresultaat voorwaarden; versie niet bevestigd)."
+    },
+    "eigenrisico": {
+     "waarde": "~ Standaard € 0, keuze € 100, € 250 of € 500; stormschade opstal € 250",
+     "bron": [
+      "https://www.unive.nl/woonverzekering/opstalverzekering/eigen-risico",
+      "https://www.unive.nl/woonverzekering/inboedelverzekering/eigen-risico"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": ""
+    }
+   }
   }
  ]
 }
