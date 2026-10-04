@@ -1,0 +1,672 @@
+[
+ {
+  "naam": "Handelsbanken",
+  "algemeen": {
+   "intermediairsite": null,
+   "voorwaardenPdf": [
+    "https://www.handelsbanken.nl/tron/nlpu/info/contents/v1/document/37-273739",
+    "https://www.handelsbanken.nl/tron/nlpu/info/contents/v1/document/37-268664"
+   ],
+   "acceptatiegids": [
+    "https://www.handelsbanken.nl/tron/nlpu/info/contents/v1/document/37-273740",
+    "https://www.handelsbanken.nl/tron/nlpu/info/contents/v1/document/37-265841",
+    "https://www.handelsbanken.nl/tron/nlpu/info/contents/v1/document/37-268665"
+   ],
+   "opmerking": "Handelsbanken (Zweedse relatiebank) verstrekt Woninghypotheek en Extra Woninghypotheek; via eigen kantoren en via samenwerkende intermediairs (Acceptatiebeleid Woninghypotheken Intermediair, versie 2026/01). Geen NHG. Geen maximale hoofdsom, looptijd max. 30 jaar. Geen aparte intermediairsite gevonden. handelsbanken.nl geblokkeerd voor WebFetch; alles gebaseerd op zoekresultaten (samenvattingen) van handelsbanken.nl-pagina's en -documenten. Kosten op consumentensite gelden voor eigen advieskanaal."
+  },
+  "criteria": {
+   "zzp": {
+    "waarde": "! Geen NHG; ondernemer 1-2 jaar: deel van laatste boekjaar, 2-3 jaar: deel van gemiddelde 2 jaar",
+    "bron": [
+     "https://www.handelsbanken.nl/tron/nlpu/info/contents/v1/document/37-273740"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Bank bepaalt ondernemersinkomen zelf; korting op inkomen bij <3 jaar (75% resp. 85%); minimaal ca. 1 boekjaar"
+   },
+   "flex": {
+    "waarde": "~ Flexibel inkomen: gemiddelde laatste 3 jaar, max. laatste jaar; tijdelijk zonder intentie: huidig inkomen",
+    "bron": [
+     "https://www.handelsbanken.nl/tron/nlpu/info/contents/v1/document/37-273740"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Hoofdstuk 2.2.4-2.2.6 acceptatiebeleid; details deels uit samenvattingen"
+   },
+   "persp": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Perspectiefverklaring niet genoemd in gevonden Handelsbanken-bronnen"
+   },
+   "aow": {
+    "waarde": "~ Inkomensdaling door (naderend) pensioen/AOW binnen 10 jaar getoetst; tekort max. 4 jaar met vrij vermogen",
+    "bron": [
+     "https://www.handelsbanken.nl/tron/nlpu/info/contents/v1/document/37-273740"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Prepensioenregeling: tekort tot 4 jaar mits te dekken uit vrij beschikbaar vermogen en gemotiveerd"
+   },
+   "erfp": {
+    "waarde": "~ Overheids-, particuliere, voortdurende en eeuwigdurende erfpacht in beleid; canon telt als last",
+    "bron": [
+     "https://www.handelsbanken.nl/tron/nlpu/info/contents/v1/document/37-273740"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Alleen inhoudsopgave/secties zichtbaar; precieze eisen niet gevonden"
+   },
+   "rvp": {
+    "waarde": "+ Variabel (3-mnds Euribor) en vast 1 t/m 20, 25 en 30 jaar",
+    "bron": [
+     "https://www.handelsbanken.nl/tron/nlpu/info/contents/v1/document/37-273740",
+     "https://www.handelsbanken.nl/nl/particulier/hypotheken/woning-hypotheek/hypotheekrente-woninghypotheek",
+     "https://www.handelsbanken.nl/nl/particulier/hypotheken/vaste-of-variabele-rente"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Extra Woninghypotheek max. 10 jaar vast"
+   },
+   "dag": {
+    "waarde": "! Laagste van offerterente en rente laatste dag acceptatietermijn (14 dagen); geen daling tot passeren gevonden",
+    "bron": [
+     "https://www.handelsbanken.nl/tron/nlpu/info/contents/v1/document/37-273740"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Bij renteaanbod geldt de rente uit het renteaanbod"
+   },
+   "geld": {
+    "waarde": "~ Bestaande bouw 3 mnd, nieuwbouw 12 mnd; verlengen max. 9 mnd tot totaal max. 12 mnd",
+    "bron": [
+     "https://www.handelsbanken.nl/tron/nlpu/info/contents/v1/document/37-273740"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatietermijn renteaanbod en bindend aanbod 14 dagen"
+   },
+   "boete": {
+    "waarde": "~ 10% per leningdeel van oorspronkelijke hoofdsom per jaar; aanvraag 1 mnd vooraf, min. €5.000 bij vaste rente",
+    "bron": [
+     "https://www.handelsbanken.nl/nl/particulier/hypotheken/hypotheek-vraag-antwoord",
+     "https://www.handelsbanken.nl/tron/nlpu/info/contents/v1/document/37-273739"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Vaste rente: max. 1x per kwartaal extra aflossen; aanvraag vóór 15 december"
+   },
+   "ltv": {
+    "waarde": "! Opslag naar marktwaardedekkingsratio; verlagen via aflossen of nieuw taxatierapport (op verzoek)",
+    "bron": [
+     "https://www.handelsbanken.nl/nl/particulier/hypotheken/hypotheek-vraag-antwoord",
+     "https://www.handelsbanken.nl/nl/particulier/hypotheken/woning-hypotheek/hypotheekrente-woninghypotheek",
+     "https://www.handelsbanken.nl/tron/nlpu/info/contents/v1/document/37-273740"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Niet bevestigd dat verlaging automatisch gaat"
+   },
+   "bdduur": {
+    "waarde": "~ Bouwdepot max. 2 jaar",
+    "bron": [
+     "https://www.handelsbanken.nl/tron/nlpu/info/contents/v1/document/37-273739",
+     "https://www.handelsbanken.nl/tron/nlpu/info/contents/v1/document/37-273740"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "bdrnt": {
+    "waarde": "+ Depotvergoeding gelijk aan gemiddelde gewogen hypotheekrente",
+    "bron": [
+     "https://www.handelsbanken.nl/tron/nlpu/info/contents/v1/document/37-273739"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "bddecl": {
+    "waarde": "~ Depot is geblokkeerde betaalrekening waarmee rekeningen van de verbouwing worden betaald",
+    "bron": [
+     "https://www.handelsbanken.nl/nl/particulier/hypotheken/hypotheek-vraag-antwoord"
+    ],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Doorlooptijd uitbetaling niet gevonden"
+   },
+   "ebb": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Geen eigen EBB-regeling of 106%-financiering gevonden; geen NHG"
+   },
+   "duur": {
+    "waarde": "+ Duurzaamheidskorting bij label A of beter (na 1-1-2021) of verbouwplan naar A; niet bij variabele rente",
+    "bron": [
+     "https://www.handelsbanken.nl/nl/particulier/hypotheken/duurzaam-wonen/duurzaamheidskorting",
+     "https://www.handelsbanken.nl/tron/nlpu/info/contents/v1/document/37-273739"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Ook bij renteverlenging/oversluiten; alleen bij start nieuwe rentevaste periode"
+   },
+   "verh": {
+    "waarde": "+ Rente meenemen tot 6 mnd na aflossing oude lening; max. afgeloste bedrag, resterende rentevaste periode",
+    "bron": [
+     "https://www.handelsbanken.nl/nl/particulier/hypotheken/hypotheek-vraag-antwoord",
+     "https://www.handelsbanken.nl/tron/nlpu/info/contents/v1/document/37-273739"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Oude lening vóór verkoop tijdelijk omgezet naar variabele rente"
+   },
+   "ondh": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Geen Handelsbanken-beleid over onderhandse verkoop met restschuld gevonden"
+   },
+   "oha": {
+    "waarde": "~ Via accountmanager; toestemming bank nodig; consumentenkanaal: advies + behandelkosten €2.750",
+    "bron": [
+     "https://www.handelsbanken.nl/nl/particulier/hypotheken/hypotheekadvies-en-kosten",
+     "https://www.handelsbanken.nl/nl/particulier/hypotheken/hypotheek-vraag-antwoord"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Relatiebeëindiging is situatie in intermediair-acceptatiebeleid"
+   },
+   "tweede": {
+    "waarde": "~ Verhogen mogelijk; zonder notaris binnen bestaande hypothecaire inschrijving; deeladvies tot €40.000",
+    "bron": [
+     "https://www.handelsbanken.nl/nl/particulier/hypotheken/hypotheek-vraag-antwoord",
+     "https://www.handelsbanken.nl/nl/particulier/hypotheken/hypotheekadvies-en-kosten"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Verhogen voor verbouwing: waarde voor en na verbouwing bepalend"
+   },
+   "ovbr": {
+    "waarde": "~ Max. 2 jaar (verlengbaar); onverkocht 90% marktwaarde, verkocht 100% minus verkoopkosten",
+    "bron": [
+     "https://www.handelsbanken.nl/tron/nlpu/info/contents/v1/document/37-273740",
+     "https://www.handelsbanken.nl/tron/nlpu/info/contents/v1/document/37-273739"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Dubbele lasten 12 mnd aantonen (nieuwbouw 12-24 mnd); verschil verkoopopbrengst binnen 3 mnd boetevrij"
+   },
+   "avrij": {
+    "waarde": "+ Max. 50% marktwaarde aflossingsvrij, geen renteopslag; meer mogelijk bij lage feitelijke woonlasten",
+    "bron": [
+     "https://www.handelsbanken.nl/tron/nlpu/info/contents/v1/document/37-273740",
+     "https://www.handelsbanken.nl/tron/nlpu/info/contents/v1/document/37-273739",
+     "https://www.handelsbanken.nl/nl/particulier/hypotheken/woning-hypotheek/hypotheekrente-woninghypotheek"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Meer dan 50% als financieringslast <60% van toegestane maximum"
+   },
+   "rmid": {
+    "waarde": "~ Rente tussentijds aanpassen mogelijk tegen behandelkosten €250; verwerking vergoeding onbekend",
+    "bron": [
+     "https://www.handelsbanken.nl/nl/particulier/hypotheken/hypotheekadvies-en-kosten",
+     "https://www.handelsbanken.nl/nl/particulier/hypotheken/hypotheek-vraag-antwoord"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Niet bevestigd dat het rentemiddeling (vergoeding in rente) betreft"
+   },
+   "rverl": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Bij einde rentevaste periode marktrente en marge herzien; geen bron over zelfde rente als nieuwe klanten"
+   },
+   "rvoor": {
+    "waarde": "~ Rentevoorstel 3 mnd voor einde rentevaste periode",
+    "bron": [
+     "https://www.handelsbanken.nl/nl/particulier/hypotheken/vaste-of-variabele-rente"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Zakelijke leningen: 4 weken"
+   },
+   "bbrk": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Berekeningswijze vergoeding vervroegde aflossing niet in Handelsbanken-bron gevonden"
+   },
+   "elbl": {
+    "waarde": "~ Korting bij label A of beter; geen opslag zonder label gevonden",
+    "bron": [
+     "https://www.handelsbanken.nl/nl/particulier/hypotheken/duurzaam-wonen/duurzaamheidskorting"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "o106": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Geen bron over financiering boven 100% voor verduurzaming"
+   },
+   "bprov": {
+    "waarde": "! Verlengen offerte kost per (deel)maand over vastrentend deel; niet bij variabel of verhuisregeling",
+    "bron": [
+     "https://www.handelsbanken.nl/tron/nlpu/info/contents/v1/document/37-273740"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Nieuwbouw 12 mnd zonder bereidstellingsprovisie"
+   },
+   "wkost": {
+    "waarde": "~ Rente tussentijds aanpassen €250; variabel naar vast gratis; combinatie max. €500 (eigen kanaal)",
+    "bron": [
+     "https://www.handelsbanken.nl/nl/particulier/hypotheken/hypotheekadvies-en-kosten"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Verhoging/looptijdwijziging met advies €2.050"
+   },
+   "avlt": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Looptijd max. 30 jaar; beleid bij einde looptijd aflossingsvrij niet gevonden"
+   },
+   "bproc": {
+    "waarde": "~ Bij dreigende betalingsproblemen zo snel mogelijk contact met eigen accountmanager",
+    "bron": [
+     "https://www.handelsbanken.nl/nl/particulier/hypotheken/hypotheek-vraag-antwoord"
+    ],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Geen uitgewerkt beleid gevonden"
+   }
+  },
+  "gecontroleerd": "2026-10-04"
+ },
+ {
+  "naam": "HollandWoont",
+  "algemeen": {
+   "intermediairsite": "https://www.hollandwoont.nl/adviseur",
+   "voorwaardenPdf": [
+    "https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Algemene-voorwaarden-September-2023.pdf",
+    "https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Informatiekaart-juni-2025-1-2.pdf",
+    "https://www.hollandwoont.nl/uploads/hollandwoont/files/Beheergids-HollandWoont-Juni-2025.pdf"
+   ],
+   "acceptatiegids": [
+    "https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Acceptatiegids-Juni-2026.pdf",
+    "https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Acceptatiegids-januari-2026.pdf"
+   ],
+   "opmerking": "Hypotheeklabel van Conneqt (Blauwtrust Groep; ook Hypotrust, IQWOON, Robuust), alleen via onafhankelijk adviseur. Nieuwe klanten uitsluitend NHG (max. €500.000 volgens informatiekaart 2025); bestaande klanten ook niet-NHG bij verhogen/meenemen. Voorwaarden van zusterlabels/servicer niet overgenomen; alle waarden uit eigen HollandWoont-bronnen (acceptatiegids juni 2026, beheergids juni 2025, consumentensite). hollandwoont.nl geblokkeerd voor WebFetch; gebaseerd op zoeksamenvattingen."
+  },
+  "criteria": {
+   "zzp": {
+    "waarde": "~ Alleen NHG: min. 12 mnd KvK-inschrijving met Inkomensverklaring Ondernemer (NHG-rekenexpert)",
+    "bron": [
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Acceptatiegids-Juni-2026.pdf",
+     "https://www.hollandwoont.nl/home-consument/hypotheek-met-een-eigen-zaak"
+    ],
+    "brondatum": "2026-06",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Volgt NHG-normen; zonder IKV gemiddelde 3 jaar, max. laatste jaar"
+   },
+   "flex": {
+    "waarde": "~ Flex/uitzend/oproep/tijdelijk zonder intentie: gemiddelde inkomen laatste 3 kalenderjaren",
+    "bron": [
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Acceptatiegids-Juni-2026.pdf"
+    ],
+    "brondatum": "2026-06",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Werkgeversverklaring vereist; arbeidsmarktscan niet toegestaan"
+   },
+   "persp": {
+    "waarde": "+ Perspectiefverklaring geaccepteerd bij flexibel dienstverband (NHG)",
+    "bron": [
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Acceptatiegids-Juni-2026.pdf",
+     "https://www.hollandwoont.nl/home-consument/hypotheek-voor-starters"
+    ],
+    "brondatum": "2026-06",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Arbeidsmarktscan niet toegestaan"
+   },
+   "aow": {
+    "waarde": "+ AOW binnen 10 jaar: toets op pensioeninkomen; seniorenregeling met toets op werkelijke lasten (NHG)",
+    "bron": [
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Acceptatiegids-Juni-2026.pdf",
+     "https://www.hollandwoont.nl/nieuws/seniorenregeling-hypotheek"
+    ],
+    "brondatum": "2026-06",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Werkelijke-lastentoets alleen met NHG, niet zonder NHG"
+   },
+   "erfp": {
+    "waarde": "! Alleen overheidserfpacht; particuliere erfpacht niet mogelijk; oude akten restduur min. helft looptijd",
+    "bron": [
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Acceptatiegids-Juni-2026.pdf"
+    ],
+    "brondatum": "2026-06",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Canonverhoging binnen 3 jaar meenemen in toets; regel restduur voor akten vóór 1-1-1992"
+   },
+   "rvp": {
+    "waarde": "+ Rentevast 1 t/m 30 jaar",
+    "bron": [
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Acceptatiegids-Juni-2026.pdf",
+     "https://www.hollandwoont.nl/home-consument/rente"
+    ],
+    "brondatum": "2026-06",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Nieuwe klanten alleen NHG-risicoklasse"
+   },
+   "dag": {
+    "waarde": "+ Dalrentegarantie: laagste rente tijdens 3 weken acceptatietermijn renteaanbod",
+    "bron": [
+     "https://www.hollandwoont.nl/home-consument/dalrentegarantie",
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Acceptatiegids-Juni-2026.pdf"
+    ],
+    "brondatum": "2026-06",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Geen daling tot passeren; daarna verlenging met bereidstellingsprovisie als markt hoger is"
+   },
+   "geld": {
+    "waarde": "~ Renteaanbod 3 weken; offerte 3 mnd bestaande bouw / 6 mnd nieuwbouw, verlengbaar met 3 resp. 6 mnd",
+    "bron": [
+     "https://www.hollandwoont.nl/home-consument/hoeveel-kan-ik-lenen/stap-5-het-renteaanbod",
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Acceptatiegids-Juni-2026.pdf"
+    ],
+    "brondatum": "2026-06",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "boete": {
+    "waarde": "+ Met eigen geld onbeperkt boetevrij; anders 10% van oorspronkelijke hoofdsom per kalenderjaar",
+    "bron": [
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Algemene-voorwaarden-September-2023.pdf",
+     "https://hollandwoont.nl/hypotheek/extra-aflossen/",
+     "https://www.hollandwoont.nl/home-consument/veelgestelde-vragen/moet-ik-een-boete-betalen-bij-een-extra-aflossing"
+    ],
+    "brondatum": "2023-09",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Herkomst eigen middelen op verzoek aantonen binnen 1 mnd; ook boetevrij bij verkoop en overlijden (binnen 1 jaar)"
+   },
+   "ltv": {
+    "waarde": "+ Bestaande klanten niet-NHG: klasse daalt automatisch bij (extra) aflossing; klassen <60/<80/<90/>90%",
+    "bron": [
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Informatiekaart-juni-2025-1-2.pdf",
+     "https://www.hollandwoont.nl/home-consument/rente"
+    ],
+    "brondatum": "2025-06",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Nieuwe klanten alleen NHG-risicoklasse"
+   },
+   "bdduur": {
+    "waarde": "~ Verbouw 9 mnd, nieuwbouw 24 mnd; verlengen max. 6 mnd",
+    "bron": [
+     "https://www.hollandwoont.nl/home-consument/veelgestelde-vragen/hoe-werkt-een-bouwdepot",
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/Beheergids-HollandWoont-Juni-2025.pdf"
+    ],
+    "brondatum": "2025-06",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "bdrnt": {
+    "waarde": "~ Depotvergoeding gelijk aan gewogen gemiddelde hypotheekrente; na verlenging geen vergoeding",
+    "bron": [
+     "https://www.hollandwoont.nl/home-consument/veelgestelde-vragen/hoe-werkt-een-bouwdepot"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "bddecl": {
+    "waarde": "+ Online declareren via MijnHollandWoont; factuur met KvK-, btw- en factuurnummer",
+    "bron": [
+     "https://www.hollandwoont.nl/home-consument/veelgestelde-vragen/hoe-werkt-een-bouwdepot"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Doorlooptijd niet gevonden"
+   },
+   "ebb": {
+    "waarde": "~ EBV en EBB conform NHG, tot 106% marktwaarde, besteding via depot",
+    "bron": [
+     "https://www.hollandwoont.nl/home-consument/verduurzamen-en-je-hypotheek",
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Acceptatiegids-Juni-2026.pdf"
+    ],
+    "brondatum": "2026-06",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Extra leenruimte op basis van energielabel volgens wettelijke normen"
+   },
+   "duur": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Geen eigen rentekorting of groen leningdeel gevonden; alleen EBV/EBB conform NHG"
+   },
+   "verh": {
+    "waarde": "+ Rente en rentevaste periode meenemen; nieuwe lening binnen 6 mnd na aflossing oude",
+    "bron": [
+     "https://www.hollandwoont.nl/nieuws/hoe-werkt-een-verhuisregeling",
+     "https://www.hollandwoont.nl/home-consument/verhuizen-en-je-hypotheek"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Melden min. 30 dagen voor verkoop; 6 mnd geen achterstand; looptijd niet verlengen"
+   },
+   "ondh": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Alleen algemeen: bij aanhoudende achterstand kan woning verkocht worden; NHG kan restschuld kwijtschelden"
+   },
+   "oha": {
+    "waarde": "+ Ontslag hoofdelijkheid zonder kosten; alleen op basis van advies",
+    "bron": [
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/Beheergids-HollandWoont-Juni-2025.pdf"
+    ],
+    "brondatum": "2025-06",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Mogelijk als vertrekkende partner geen eigenaar meer is of vertrekt met ontruimingsverklaring"
+   },
+   "tweede": {
+    "waarde": "+ Onderhandse verhoging binnen inschrijving zonder notaris; boven NHG-grens als 2e hypotheek",
+    "bron": [
+     "https://www.hollandwoont.nl/home-consument/hypotheek-verhogen",
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/Beheergids-HollandWoont-Juni-2025.pdf"
+    ],
+    "brondatum": "2025-06",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Bestaande klanten ook niet-NHG; 6 mnd geen achterstand"
+   },
+   "ovbr": {
+    "waarde": "~ Looptijd 24 mnd (verlengbaar); onverkocht 90% verwachte verkoopprijs min lening",
+    "bron": [
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Acceptatiegids-Juni-2026.pdf"
+    ],
+    "brondatum": "2026-06",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Verkocht: verkoopprijs min lening min 2%"
+   },
+   "avrij": {
+    "waarde": "~ Max. 50% van marktwaarde aflossingsvrij",
+    "bron": [
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Acceptatiegids-Juni-2026.pdf"
+    ],
+    "brondatum": "2026-06",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "rmid": {
+    "waarde": "+ Rentemiddeling mogelijk, vergoeding in nieuwe rente; €250 administratiekosten; daarna 12 mnd wachten",
+    "bron": [
+     "https://www.hollandwoont.nl/home-consument/rentemiddeling",
+     "https://www.hollandwoont.nl/home-consument/rentemiddeling/rekenvoorbeeld-rentemiddeling"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Contante-waardemethode; 10% boetevrije ruimte meegenomen"
+   },
+   "rverl": {
+    "waarde": "~ Nieuwe rente = actuele tarief voor vergelijkbare lening in geldende risicoklasse",
+    "bron": [
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Algemene-voorwaarden-September-2023.pdf",
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/Beheergids-HollandWoont-Juni-2025.pdf"
+    ],
+    "brondatum": "2023-09",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Niet expliciet dat bestaande klanten exact gelijk tarief als nieuwe krijgen (nieuwe klanten alleen NHG)"
+   },
+   "rvoor": {
+    "waarde": "~ Rentevoorstel min. 3 mnd voor einde rentevaste periode; geen keuze = zelfde periode",
+    "bron": [
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/Beheergids-HollandWoont-Juni-2025.pdf",
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Algemene-voorwaarden-September-2023.pdf"
+    ],
+    "brondatum": "2025-06",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "bbrk": {
+    "waarde": "~ Vergoeding volgens AFM-leidraad, contante-waardemethode, 10% boetevrij meegerekend",
+    "bron": [
+     "https://www.hollandwoont.nl/home-consument/rentemiddeling/rekenvoorbeeld-rentemiddeling",
+     "https://www.hollandwoont.nl/hypotheek/extra-aflossen/"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Vergoeding te berekenen in MijnHollandWoont"
+   },
+   "elbl": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Geen labelkorting of opslag zonder label gevonden"
+   },
+   "o106": {
+    "waarde": "~ Tot 106% met EBV/EBB; nieuwe klanten alleen in NHG-risicoklasse",
+    "bron": [
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Acceptatiegids-Juni-2026.pdf",
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Informatiekaart-juni-2025-1-2.pdf"
+    ],
+    "brondatum": "2026-06",
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Afgeleid: NHG is één risicoklasse; geen expliciete bron 'geen opslag tot 106%'"
+   },
+   "bprov": {
+    "waarde": "! Verlengen offerte: bereidstellingsprovisie per maand, alleen als markttarief bij passeren hoger is",
+    "bron": [
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Acceptatiegids-Juni-2026.pdf"
+    ],
+    "brondatum": "2026-06",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Per dag berekend; annuleren offerte kosteloos"
+   },
+   "wkost": {
+    "waarde": "+ Omzetten hypotheekvorm en rentevaste periode kosteloos; rentemiddeling €250",
+    "bron": [
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/Beheergids-HollandWoont-Juni-2025.pdf"
+    ],
+    "brondatum": "2025-06",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Wijzigingen met nieuw geld/ander onderpand alleen via advies"
+   },
+   "avlt": {
+    "waarde": "- Looptijd max. 30 jaar; verlengen aflossingsvrij in het algemeen niet mogelijk",
+    "bron": [
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/Beheergids-HollandWoont-Juni-2025.pdf"
+    ],
+    "brondatum": "2025-06",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Incidenteel alleen op basis van advies"
+   },
+   "bproc": {
+    "waarde": "~ Bij dreigende problemen contact; tijdelijke oplossing o.a. rentemiddeling of omzetten aflosvorm",
+    "bron": [
+     "https://www.hollandwoont.nl/home-consument/betalingsproblemen-hypotheek"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "NHG-vangnet bij restschuld"
+   }
+  },
+  "gecontroleerd": "2026-10-04"
+ }
+]
