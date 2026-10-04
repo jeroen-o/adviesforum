@@ -107,6 +107,17 @@
   .kopieer.ok{border-color:#2E7D32;color:#2E7D32}
   .themas{margin:0 0 12px;font-size:12.5px;color:var(--muted);overflow-wrap:anywhere}
   .themas b{color:var(--primary);font-weight:700}
+  details.voorwaarden{margin:0 0 14px;border:1px solid var(--line);border-radius:8px;background:#FAFAF7;min-width:0}
+  details.voorwaarden summary{cursor:pointer;padding:9px 12px;font-weight:700;font-size:14px;color:var(--primary);list-style-position:inside;overflow-wrap:anywhere}
+  details.voorwaarden[open] summary{border-bottom:1px solid var(--line)}
+  details.voorwaarden ul{margin:0;padding:8px 12px 4px 30px}
+  details.voorwaarden li{margin:6px 0;font-size:14px;overflow-wrap:anywhere}
+  details.voorwaarden li b{color:var(--primary)}
+  details.voorwaarden li a{color:var(--primary);font-size:12.5px;font-weight:600;white-space:nowrap;text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:2px;text-underline-offset:3px}
+  details.voorwaarden .dubbel{color:#2E7D32;font-weight:700;font-size:12.5px;white-space:nowrap}
+  details.voorwaarden .vglink{margin:4px 12px 10px;font-size:13.5px}
+  details.voorwaarden .vglink a{color:var(--primary);font-weight:700;text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:2px;text-underline-offset:3px}
+  details.voorwaarden .vwnoot{margin:0 12px 10px;font-size:12px;color:var(--muted)}
   .leeg{display:none;background:#fff;border:1px dashed var(--line);border-radius:10px;padding:28px;text-align:center;color:var(--muted)}
   footer{
     margin-top:34px;padding-top:20px;border-top:1px solid var(--line);
@@ -190,6 +201,11 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
 :root:not([data-theme="light"]) .kopieer.ok{border-color:#2E7D32;color:#a6dea8}
 :root:not([data-theme="light"]) .themas{color:#BDBDBD}
 :root:not([data-theme="light"]) .themas b{color:#F2F2F2}
+:root:not([data-theme="light"]) details.voorwaarden{background:#262626;border:1px solid #333333}
+:root:not([data-theme="light"]) details.voorwaarden summary,:root:not([data-theme="light"]) details.voorwaarden li b,:root:not([data-theme="light"]) details.voorwaarden li a,:root:not([data-theme="light"]) details.voorwaarden .vglink a{color:#F2F2F2}
+:root:not([data-theme="light"]) details.voorwaarden[open] summary{border-bottom:1px solid #333333}
+:root:not([data-theme="light"]) details.voorwaarden .dubbel{color:#a6dea8}
+:root:not([data-theme="light"]) details.voorwaarden .vwnoot{color:#BDBDBD}
 :root:not([data-theme="light"]) .leeg{background:#1E1E1E;border:1px dashed #333333;color:#BDBDBD}
 :root:not([data-theme="light"]) footer{border-top:1px solid #333333;color:#BDBDBD}
 :root:not([data-theme="light"]) footer a{color:#F2F2F2}
@@ -216,12 +232,12 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
     <h1>Aanbiederwegwijzer</h1>
     <p class="sub">Wat banken, geldverstrekkers, verzekeraars, lijfrenteaanbieders, kredietverstrekkers, PPI's en pensioenfondsen openbaar voor adviseurs publiceren: intermediairsites, acceptatiegidsen, opvallende productkenmerken en wie bij wie hoort. Elk kenmerk heeft een bronlink.</p>
     <p class="sub" style="margin-top:12px"><a class="back" href="vergelijken.html">Partijen per thema naast elkaar</a> &middot; <a class="back" href="voorwaarden-vergelijker.html">Voorwaarden van geldverstrekkers vergelijken &rarr;</a></p>
-    <p class="meta" id="meta">Peildatum 2 oktober 2026</p>
+    <p class="meta" id="meta">Laatst bijgewerkt: 4 oktober 2026 · peildatum kenmerken: 2 oktober 2026 · voorwaarden online gecontroleerd: 4 oktober 2026</p>
   </div>
 </header>
 <div class="wrap">
   <main id="inhoud" tabindex="-1">
-  <div class="let-op" role="note"><strong>Let op:</strong> Overzicht op basis van openbare informatie (peildatum 2 oktober 2026). Voorwaarden en acceptatiebeleid veranderen: controleer altijd de actuele informatie bij de partij zelf.</div>
+  <div class="let-op" role="note"><strong>Let op:</strong> Overzicht op basis van openbare informatie. Peildatum kenmerken: 2 oktober 2026 · voorwaarden online gecontroleerd: 4 oktober 2026. Voorwaarden en acceptatiebeleid veranderen: controleer altijd de actuele informatie bij de partij zelf.</div>
   <div class="toolbar">
     <input id="zoek" type="search" placeholder="Zoek op partij, product of kenmerk, bijv. verhuisregeling, boetevrij, senioren, status gewijzigd&hellip;" aria-label="Zoeken in partijen">
     <select id="type" aria-label="Filter op type">
@@ -285,6 +301,7 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
     if(!/^\d{4}-\d{2}-\d{2}$/.test(s||''))return '';
     var d=s.split('-');return (+d[2])+' '+NL_MAAND[+d[1]-1]+' '+d[0];
   }
+  var VOORWAARDEN=window.PARTIJ_VOORWAARDEN&&typeof window.PARTIJ_VOORWAARDEN==='object'?window.PARTIJ_VOORWAARDEN:{};
   var data=(window.PARTIJEN||[]).slice().sort(function(a,b){return a.naam.localeCompare(b.naam,'nl');});
   var zoek=document.getElementById('zoek'),typeSel=document.getElementById('type'),catSel=document.getElementById('cat'),
       lijst=document.getElementById('lijst'),leeg=document.getElementById('leeg'),
@@ -355,19 +372,41 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
       });
       a.appendChild(km);
     }
+    var vw=VOORWAARDEN[p.naam],vwItems=vw&&Array.isArray(vw.items)?vw.items:[],vwDatum=vw?datumNL(vw.gecontroleerd):'';
+    if(vwItems.length){
+      var dt=el('details','voorwaarden');
+      dt.appendChild(el('summary',null,'Voorwaarden'+(vwDatum?' (gecontroleerd '+vwDatum+')':'')));
+      var vu=el('ul');
+      vwItems.forEach(function(it){
+        var li=el('li');
+        li.appendChild(el('b',null,String(it.crit||'')+': '));
+        li.appendChild(document.createTextNode(String(it.tekst||'')+' '));
+        var b=veiligeUrl(it.bron);
+        if(b){var ln=el('a',null,'bron: '+host(b));ln.href=b;ln.target='_blank';ln.rel='noopener';li.appendChild(ln);}
+        if(it.dubbel){var db=el('span','dubbel',' ✓✓');db.title='Dubbel gecontroleerd';db.setAttribute('aria-label','dubbel gecontroleerd');li.appendChild(db);}
+        vu.appendChild(li);
+      });
+      dt.appendChild(vu);
+      if(typeof vw.vergelijk==='string'&&/^[a-z0-9-]+$/.test(vw.vergelijk)){
+        var vp=el('p','vglink'),va=el('a',null,'Vergelijk in de voorwaardenvergelijker →');
+        va.href='voorwaarden-vergelijker.html#vergelijk='+vw.vergelijk;vp.appendChild(va);dt.appendChild(vp);
+      }
+      dt.appendChild(el('p','vwnoot','Online gecontroleerd op de site van de geldverstrekker; ✓✓ = dubbel gecontroleerd. Controleer altijd de actuele voorwaarden.'));
+      a.appendChild(dt);
+    }
     var s=el('div','site'),u=veiligeUrl(p.url);
     if(u){var l=el('a',null,'Naar site / adviseursinformatie ↗');l.href=u;l.target='_blank';l.rel='noopener';l.title=u;s.appendChild(l);}
     else s.appendChild(el('span','geen','Geen eigen site of adviseursportaal gevonden'));
     a.appendChild(s);
     var voet=el('div','kaartvoet');
     var bw=datumNL(p.bijgewerkt);
-    voet.appendChild(el('span','bijgewerkt',bw?'Bijgewerkt '+bw:'Bijwerkdatum onbekend'));
+    voet.appendChild(el('span','bijgewerkt',(bw?'Bijgewerkt '+bw:'Bijwerkdatum onbekend')+(vwItems.length&&vwDatum?' · voorwaarden gecontroleerd '+vwDatum:'')));
     var kb=el('button','kopieer','Link kopiëren');kb.type='button';
     kb.setAttribute('aria-label','Link naar '+p.naam+' kopiëren');
     kb.addEventListener('click',function(){kopieerLink(p._slug,kb);});
     voet.appendChild(kb);
     a.appendChild(voet);
-    var zoektekst=[p.naam,TYPES[p.type]||'',(p.producten||[]).join(' '),(p.categorieen||[]).map(function(c){return CATS[c]||c;}).join(' ')].concat((p.kenmerken||[]).map(function(k){return (k.thema||'')+' '+k.tekst;})).concat(p.status?['status gewijzigd '+p.status]:[]).join(' ').toLowerCase();
+    var zoektekst=[p.naam,TYPES[p.type]||'',(p.producten||[]).join(' '),(p.categorieen||[]).map(function(c){return CATS[c]||c;}).join(' ')].concat((p.kenmerken||[]).map(function(k){return (k.thema||'')+' '+k.tekst;})).concat(p.status?['status gewijzigd '+p.status]:[]).concat(vwItems.map(function(it){return 'voorwaarden '+(it.crit||'')+' '+(it.tekst||'');})).join(' ').toLowerCase();
     lijst.appendChild(a);
     return {el:a,slug:p._slug,type:p.type,cats:p.categorieen||[],tekst:zoektekst};
   });
@@ -393,7 +432,7 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
     }else terugval();
   }
 
-  document.getElementById('meta').textContent=data.length+' partijen · peildatum 2 oktober 2026 · elk kenmerk met bronlink';
+  document.getElementById('meta').textContent='Laatst bijgewerkt: 4 oktober 2026 · '+data.length+' partijen · peildatum kenmerken: 2 oktober 2026 · voorwaarden online gecontroleerd: 4 oktober 2026 · elk kenmerk met bronlink';
 
   function update(){
     var q=zoek.value.trim().toLowerCase(),t=typeSel.value,c=catSel.value,zicht=0;
