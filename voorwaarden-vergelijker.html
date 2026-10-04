@@ -164,6 +164,25 @@ tr.groepkop small{font-weight:600;color:var(--grijs)}
 .ranking td.rang{font-weight:800;width:44px;text-align:right}
 .ranking td.naamcel{min-width:180px}
 .ranking td.val{max-width:none}
+/* Uitgebreid zoeken en filteren */
+.badge{display:inline-block;min-width:20px;margin-left:7px;padding:0 6px;border-radius:999px;background:var(--geel);color:#141414;font-size:12px;line-height:20px;text-align:center}
+.uitgebreid{display:block}
+.uf-kop{margin:0 0 8px;font-size:15px;font-weight:800}
+.ufblok{border:1px solid var(--lijn);border-radius:10px;background:#fff;padding:8px 12px 12px;margin:0 0 10px;min-width:0}
+.ufblok legend{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--grijs);padding:0 4px}
+.ufrij{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;margin-top:6px}
+.ufveld{display:inline-flex;flex-wrap:wrap;align-items:center;gap:6px;font-size:13px;font-weight:600;min-width:0;max-width:100%}
+.ufgetal input{width:76px}
+.ufhulp{margin:0;font-size:12.5px;color:var(--grijs);max-width:90ch}
+.ufvinken{gap:6px 18px}
+.paneel input[type=text],.paneel input[type=number]{font-size:14px;padding:8px 10px;border:1px solid #CFCFCF;border-radius:9px;background:#fff;color:var(--tekst);min-width:0;max-width:100%}
+.regel{display:flex;flex-wrap:wrap;gap:6px 8px;align-items:center;margin:6px 0}
+.regel select,.regel input[type=text]{flex:1 1 170px}
+.regel .rvoeg{font-size:11px;font-weight:800;letter-spacing:.06em;color:var(--blauw);flex:0 0 100%}
+.ufresultaat{margin-top:0}
+mark{background:#FFE36B;color:#141414;border-radius:2px;padding:0 1px}
+td.val.gedimd .cel{opacity:.38}
+.verborgen{color:#767676;font-style:italic}
 .uitleg{font-size:13.5px;color:var(--grijs);margin-top:16px;max-width:110ch}
 .uitleg b{color:var(--tekst)}
 
@@ -178,6 +197,11 @@ footer.voet a{color:var(--zwart);font-weight:700}
   .romp{padding:18px 16px 44px}
   footer.voet{padding:0 16px 32px}
   .paneel input[type=search],.paneel select{flex:1 1 100%}
+  .ufveld{display:flex;width:100%}
+  .ufveld select{flex:1 1 100%}
+  .ufgetal input{flex:0 0 76px}
+  .regel select,.regel input[type=text]{flex:1 1 100%}
+  #btnUitgebreid{white-space:normal}
   .cmpkolommen{grid-template-columns:minmax(0,1fr)}
   .vast{min-width:136px;max-width:150px}
   .cmp td.crit,.cmp th.crit{min-width:130px;max-width:150px}
@@ -240,6 +264,11 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
 :root:not([data-theme="light"]) .linkknop{color:#F2F2F2}
 :root:not([data-theme="light"]) .leeg{border:1px dashed #444;color:#BDBDBD;background:#1E1E1E}
 :root:not([data-theme="light"]) footer.voet a{color:#F2F2F2}
+:root:not([data-theme="light"]) .ufblok{background:#1E1E1E;border-color:#444}
+:root:not([data-theme="light"]) .paneel input[type=text],:root:not([data-theme="light"]) .paneel input[type=number]{border:1px solid #444;background:#141414;color:#F2F2F2}
+:root:not([data-theme="light"]) mark{background:#8a6d00;color:#fff}
+:root:not([data-theme="light"]) .verborgen{color:#9A9A9A}
+:root:not([data-theme="light"]) .badge{background:#FFD200;color:#141414}
 :root:not([data-theme="light"]) a:focus-visible,:root:not([data-theme="light"]) button:focus-visible,:root:not([data-theme="light"]) input:focus,:root:not([data-theme="light"]) input:focus-within,:root:not([data-theme="light"]) select:focus,:root:not([data-theme="light"]) textarea:focus,:root:not([data-theme="light"]) summary:focus-visible,:root:not([data-theme="light"]) [tabindex]:not([tabindex="-1"]):focus-visible{outline-color:#FFD200!important}
 :root:not([data-theme="light"]) .skiplink{background:#FFD200;color:#141414}
 :root:not([data-theme="light"]) .skiplink:focus{outline-color:#F2F2F2}
@@ -286,10 +315,65 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
         <button type="button" role="tab" id="tab-matrix" aria-selected="true" aria-controls="out">Matrix</button>
         <button type="button" role="tab" id="tab-cmp" aria-selected="false" aria-controls="out">Vergelijken</button>
       </div>
-      <input type="search" id="q" data-matrix placeholder="Zoek geldverstrekker of voorwaarde…" aria-label="Zoek geldverstrekker of voorwaarde" autocomplete="off">
+      <input type="search" id="q" data-matrix placeholder="Zoek geldverstrekker of voorwaarde…" aria-label="Zoek geldverstrekker of voorwaarde" aria-describedby="zoekhulp" autocomplete="off">
+      <button type="button" class="knop licht" id="btnUitgebreid" data-matrix aria-expanded="false" aria-controls="uitgebreid">Uitgebreid zoeken en filteren<span class="badge" id="ufTeller" hidden></span></button>
       <select id="fcrit" data-matrix aria-label="Filter op voorwaarde"><option value="">Filter op voorwaarde…</option></select>
       <select id="fval" aria-label="Filter op waarde" hidden><option value="">Alle waarden</option></select>
       <label class="vink" data-matrix><input type="checkbox" id="alleenIngevuld"> <span>Alleen ingevulde verstrekkers tonen</span></label>
+    </div>
+    <div class="rij uitgebreid" id="uitgebreid" role="region" aria-labelledby="uf-kop" hidden>
+      <h2 class="uf-kop" id="uf-kop">Uitgebreid zoeken en filteren</h2>
+      <fieldset class="ufblok">
+        <legend>Zoeken</legend>
+        <p class="ufhulp" id="zoekhulp">Typ in het zoekveld hierboven. Meerdere woorden: kies hieronder alle of één van de woorden. Gebruik <b>"aanhalingstekens"</b> voor een exacte woordgroep en <b>-woord</b> om uit te sluiten. Treffers worden in de matrix gemarkeerd.</p>
+        <div class="ufrij">
+          <label class="ufveld"><span>Zoek in</span>
+            <select id="ufIn"><option value="nw">Namen en waarden</option><option value="n">Alleen namen</option><option value="w">Alleen waarden</option></select></label>
+          <label class="ufveld"><span>Meerdere woorden</span>
+            <select id="ufModus"><option value="en">Alle woorden (EN)</option><option value="of">Eén van de woorden (OF)</option></select></label>
+        </div>
+      </fieldset>
+      <fieldset class="ufblok">
+        <legend>Voorwaarde-regels</legend>
+        <div id="ufRegels"></div>
+        <div class="ufrij">
+          <button type="button" class="knop licht" id="ufRegelPlus">+ regel toevoegen</button>
+          <label class="ufveld"><span>Regels combineren</span>
+            <select id="ufLogica"><option value="en">Alle regels (EN)</option><option value="of">Eén van de regels (OF)</option></select></label>
+        </div>
+      </fieldset>
+      <fieldset class="ufblok">
+        <legend>Snelfilters</legend>
+        <div class="ufrij">
+          <span class="lbl" id="uftype-lbl">Type verstrekker</span>
+          <div class="chips" id="ufTypes" role="group" aria-labelledby="uftype-lbl"></div>
+        </div>
+        <div class="ufrij">
+          <label class="ufveld ufgetal"><span>Minstens</span>
+            <input type="number" id="ufMinGev" min="0" max="40" step="1" value="0" inputmode="numeric" aria-describedby="ufMinGev-uitleg">
+            <span id="ufMinGev-uitleg">geverifieerde voorwaarden (0 = geen eis)</span></label>
+        </div>
+        <div class="ufrij ufvinken">
+          <label class="vink"><input type="checkbox" id="ufAlleenGev"> <span>Alleen geverifieerde waarden tonen (overige cellen gedimd)</span></label>
+          <label class="vink"><input type="checkbox" id="ufNvTonen" checked> <span>&lsquo;Nog niet geverifieerd&rsquo; tonen</span></label>
+          <label class="vink"><input type="checkbox" id="ufGeenNieuw"> <span>Verstrekkers zonder nieuwe klanten verbergen</span></label>
+          <label class="vink"><input type="checkbox" id="ufOverig"> <span>Overige financiers tonen</span></label>
+        </div>
+      </fieldset>
+      <fieldset class="ufblok">
+        <legend>Sorteren</legend>
+        <div class="ufrij">
+          <label class="ufveld"><span>Volgorde verstrekkers</span>
+            <select id="ufSort" aria-describedby="ufSort-uitleg"><option value="">Standaardvolgorde</option><option value="naam">Naam A-Z</option><option value="ruim">Meeste &lsquo;ruim&rsquo;</option><option value="gev">Meeste geverifieerde waarden</option><option value="beperk">Minste beperkingen</option></select></label>
+          <span class="ufhulp" id="ufSort-uitleg">&lsquo;Ruim&rsquo; en &lsquo;beperkingen&rsquo; tellen over de voorwaarden in uw regels, anders over alle zichtbare voorwaarden.</span>
+        </div>
+      </fieldset>
+      <div class="ufrij ufresultaat">
+        <span class="teller" id="ufResultaat" aria-live="polite"></span>
+        <span class="spacer"></span>
+        <button type="button" class="knop licht" id="ufWis">Filters wissen</button>
+        <button type="button" class="knop" id="ufVergelijk">Vergelijk deze resultaten</button>
+      </div>
     </div>
     <div class="rij" data-matrix>
       <span class="lbl" id="cats-lbl">Categorieën</span>
@@ -1116,6 +1200,19 @@ let activeCats = new Set(CATS.map(c=>c.id));
 const sel = new Set();
 let ksel = new Set();   // gekozen kenmerken (voorwaarde-id's) voor Vergelijken
 
+/* Uitgebreid zoeken en filteren. Staat alleen in het geheugen en in de hash (&f=…), nooit in browseropslag. */
+/* Geen nieuwe klanten meer (stand oktober 2026). */
+const GEEN_NIEUWE_KLANTEN = ['Neo Hypotheken','Woonnu','Tellius Hypotheken','IQWOON'];
+const TYPE_SOORTEN = [['bank','Bank'],['regie','Geldverstrekker / regiepartij'],['verz','Verzekeraar'],['label','Label']];
+const REGEL_OPS = {is:'is kleurcode', bevat:'bevat tekst', niet:'bevat niet'};
+const REGEL_KLEUREN = [['g','ruim'],['n','marktconform'],['a','aandachtspunt'],['r','beperkend'],['e','nog in te vullen']];
+const SORTEN = ['naam','ruim','gev','beperk'];
+const MAX_REGELS = 12;
+const fStandaard = () => ({zoekIn:'nw', zoekModus:'en', regels:[], logica:'en', types:new Set(), minGev:0, alleenGev:false, nvTonen:true, geenNieuw:false, sort:''});
+let F = fStandaard();
+let uitgebreidOpen = false;
+let markeer = {namen:[], waarden:[]};
+
 const $ = id => document.getElementById(id);
 const fmtGetal = n => new Intl.NumberFormat('nl-NL').format(n);
 const catNaam = id => (CATS.find(c=>c.id===id)||{naam:id}).naam;
@@ -1257,21 +1354,148 @@ function critUitleg(c){
   return [c.waarom ? 'Waarom: ' + c.waarom : '', d ? 'Genoemd door: ' + d : '', n && n.tekst ? 'Nieuws' + (n.datum ? ' (' + n.datum + ')' : '') + ': ' + n.tekst : ''].filter(Boolean).join('\n');
 }
 
+/* Zoektekst ontleden: "exacte woordgroep", -uitsluiten (ook -"woordgroep"), overige woorden los. */
+function parseZoek(q){
+  const inc = [], exc = [];
+  const re = /(-?)(?:["“”„]([^"“”„]*)["“”„]?|(\S+))/g;
+  let m;
+  const s = String(q||'').toLowerCase().slice(0,300);
+  while((m = re.exec(s))){
+    const t = (m[2] != null ? m[2] : m[3] || '').trim();
+    if(!t || t === '-') continue;
+    (m[1] ? exc : inc).push(t);
+  }
+  return {inc:[...new Set(inc)], exc:[...new Set(exc)]};
+}
+/* Cel telt mee voor zoeken, regels en sorteren (niet verborgen door de snelfilters). */
+function verborgen(cel){ return !!(cel && cel.v && cel.nv && !F.nvTonen); }
+function telt(cel){ return !!(cel && cel.v && !verborgen(cel) && (!F.alleenGev || cel.gec)); }
+function typeSoort(l){
+  const t = String(l.type||'').toLowerCase();
+  if(/label/.test(t)) return 'label';
+  if(/verzekeraar/.test(t)) return 'verz';
+  if(/bank/.test(t)) return 'bank';
+  if(/regie|geldverstrekker/.test(t)) return 'regie';
+  return 'overig';
+}
+function geenNieuweKlanten(l){ return GEEN_NIEUWE_KLANTEN.some(n=>naamSleutel(n)===naamSleutel(l.naam)); }
+function aantalGeverifieerd(l){ return crits.filter(c=>(celVan(l,c.id)||{}).gec).length; }
+function volledigeRegels(){
+  return F.regels.filter(r=>crits.some(c=>c.id===r.c) && (r.o==='is' ? REGEL_KLEUREN.some(k=>k[0]===r.w) : String(r.w||'').trim()));
+}
+function regelKlopt(l,r){
+  const cel = celVan(l,r.c), ok = telt(cel);
+  if(r.o==='is') return r.w==='e' ? !(cel && cel.v) : ok && cel.t===r.w;
+  const w = String(r.w).trim().toLowerCase();
+  const bevat = ok && cel.v.toLowerCase().includes(w);
+  return r.o==='niet' ? !bevat : bevat;
+}
+function zoekVelden(l){
+  const namen = F.zoekIn==='w' ? [] : [l.naam, l.type||'', hintVan(l.naam)].map(s=>s.toLowerCase());
+  const waarden = F.zoekIn==='n' ? [] : visCrits().map(c=>celVan(l,c.id)).filter(telt).map(x=>x.v.toLowerCase());
+  return namen.concat(waarden);
+}
+function zoekKlopt(l, z){
+  if(!z.inc.length && !z.exc.length) return true;
+  const velden = zoekVelden(l);
+  const heeft = t => velden.some(v=>v.includes(t));
+  if(z.exc.some(heeft)) return false;
+  if(!z.inc.length) return true;
+  return F.zoekModus==='of' ? z.inc.some(heeft) : z.inc.every(heeft);
+}
+function sorteerCrits(){
+  const ids = [...new Set(volledigeRegels().map(r=>r.c))];
+  return ids.length ? crits.filter(c=>ids.includes(c.id)) : visCrits();
+}
+function sorteer(list){
+  if(!SORTEN.includes(F.sort)) return list;
+  const naam = (a,b) => a.naam.localeCompare(b.naam,'nl');
+  if(F.sort==='naam') return list.slice().sort(naam);
+  if(F.sort==='gev'){
+    const n = new Map(list.map(l=>[l.id, aantalGeverifieerd(l)]));
+    return list.slice().sort((a,b)=>n.get(b.id)-n.get(a.id) || naam(a,b));
+  }
+  const cs = sorteerCrits();
+  const tel = (l,t) => cs.filter(c=>{ const x = celVan(l,c.id); return telt(x) && x.t===t; }).length;
+  const gevuld = l => cs.filter(c=>telt(celVan(l,c.id))).length;
+  const k = new Map(list.map(l=>[l.id, {g:tel(l,'g'), r:tel(l,'r'), v:gevuld(l)}]));
+  if(F.sort==='ruim') return list.slice().sort((a,b)=>k.get(b.id).g-k.get(a.id).g || naam(a,b));
+  return list.slice().sort((a,b)=>k.get(a.id).r-k.get(b.id).r || k.get(b.id).v-k.get(a.id).v || naam(a,b));
+}
 function filtered(){
-  const q = $('q').value.trim().toLowerCase();
+  const z = parseZoek($('q').value);
   const fc = $('fcrit').value;
   const fv = $('fval').value;
   const alleenIngevuld = $('alleenIngevuld').checked;
-  return lenders.filter(l=>{
+  const regels = volledigeRegels();
+  const list = lenders.filter(l=>{
     if(alleenIngevuld && !isIngevuld(l)) return false;
     if(fc && fv){
       const cel = celVan(l,fc)||{v:''};
       if(fv === LEEG ? !!cel.v : cel.v !== fv) return false;
     }
-    if(!q) return true;
-    if(l.naam.toLowerCase().includes(q) || (l.type||'').toLowerCase().includes(q) || hintVan(l.naam).toLowerCase().includes(q)) return true;
-    return visCrits().some(c=>((celVan(l,c.id)||{}).v||'').toLowerCase().includes(q));
+    if(F.types.size && !F.types.has(typeSoort(l))) return false;
+    if(F.geenNieuw && geenNieuweKlanten(l)) return false;
+    if(F.minGev > 0 && aantalGeverifieerd(l) < F.minGev) return false;
+    if(regels.length && !(F.logica==='of' ? regels.some(r=>regelKlopt(l,r)) : regels.every(r=>regelKlopt(l,r)))) return false;
+    return zoekKlopt(l, z);
   });
+  return sorteer(list);
+}
+function aantalFilters(){
+  const z = parseZoek($('q').value);
+  let n = volledigeRegels().length;
+  if(z.inc.length || z.exc.length) n++;
+  if($('fcrit').value && $('fval').value) n++;
+  if($('alleenIngevuld').checked) n++;
+  if(F.types.size) n++;
+  if(F.minGev > 0) n++;
+  if(F.alleenGev) n++;
+  if(!F.nvTonen) n++;
+  if(F.geenNieuw) n++;
+  return n;
+}
+/* Leesbare samenvatting van de filters (print en CSV). */
+function filterOmschrijving(){
+  const d = [];
+  const q = $('q').value.trim();
+  if(q) d.push('zoeken: ' + q + (F.zoekIn==='n' ? ' (namen)' : F.zoekIn==='w' ? ' (waarden)' : '') + (F.zoekModus==='of' ? ' (één van de woorden)' : ''));
+  const rs = volledigeRegels().map(r=>{
+    const c = crits.find(x=>x.id===r.c);
+    return c.naam + ' ' + REGEL_OPS[r.o] + ' ' + (r.o==='is' ? (REGEL_KLEUREN.find(k=>k[0]===r.w)||['',''])[1] : '"' + r.w + '"');
+  });
+  if(rs.length) d.push('regels: ' + rs.join(F.logica==='of' ? ' OF ' : ' EN '));
+  const fc = $('fcrit').value, fv = $('fval').value;
+  if(fc && fv){ const c = crits.find(x=>x.id===fc); d.push((c ? c.naam : fc) + ' = ' + (fv===LEEG ? 'nog in te vullen' : fv)); }
+  if($('alleenIngevuld').checked) d.push('alleen ingevulde verstrekkers');
+  if(F.types.size) d.push('type: ' + TYPE_SOORTEN.filter(t=>F.types.has(t[0])).map(t=>t[1].toLowerCase()).join(', '));
+  if(F.minGev > 0) d.push('minstens ' + F.minGev + ' geverifieerde voorwaarden');
+  if(F.alleenGev) d.push('alleen geverifieerde waarden');
+  if(!F.nvTonen) d.push("'nog niet geverifieerd' verborgen");
+  if(F.geenNieuw) d.push('zonder verstrekkers die geen nieuwe klanten aannemen');
+  return d.join(' · ');
+}
+
+/* Zoektreffers markeren met <mark>; alles via textContent/DOM, nooit innerHTML. */
+function zetTekst(node, tekst, termen){
+  tekst = String(tekst==null ? '' : tekst);
+  node.textContent = '';
+  const lc = tekst.toLowerCase();
+  const r = [];
+  if(termen && termen.length && lc.length === tekst.length){
+    termen.forEach(t=>{ if(!t) return; let i = lc.indexOf(t); while(i >= 0){ r.push([i, i+t.length]); i = lc.indexOf(t, i+t.length); } });
+  }
+  if(!r.length){ node.textContent = tekst; return; }
+  r.sort((a,b)=>a[0]-b[0] || b[1]-a[1]);
+  const m = [];
+  r.forEach(x=>{ const l = m[m.length-1]; if(l && x[0] <= l[1]) l[1] = Math.max(l[1], x[1]); else m.push(x.slice()); });
+  let p = 0;
+  m.forEach(([a,b])=>{
+    if(a > p) node.appendChild(document.createTextNode(tekst.slice(p,a)));
+    node.appendChild(el('mark',null,tekst.slice(a,b)));
+    p = b;
+  });
+  if(p < tekst.length) node.appendChild(document.createTextNode(tekst.slice(p)));
 }
 
 /* ======================= FILTERS ======================= */
@@ -1326,6 +1550,7 @@ function setView(v){
   $('tab-matrix').setAttribute('aria-selected', String(v==='matrix'));
   $('tab-cmp').setAttribute('aria-selected', String(v==='cmp'));
   document.querySelectorAll('[data-matrix]').forEach(n=>{ n.hidden = v!=='matrix'; });
+  $('uitgebreid').hidden = v!=='matrix' || !uitgebreidOpen;
   $('cmpPaneel').hidden = v!=='cmp';
   melding('');
   render();
@@ -1398,18 +1623,23 @@ function celNode(l,c){
   const td = el('td','val' + (cel.v ? '' : ' leegcel'));
   const tip = [Array.isArray(cel.bron) && cel.bron.length ? 'Bron: ' + cel.bron.join(' · ') : '', cel.noot || ''].filter(Boolean).join('\n');
   if(tip) td.title = tip;
+  const weg = !editMode && verborgen(cel);
   if(cel.gec) td.classList.add('gec');
-  if(cel.nv) td.classList.add('nv');
+  if(cel.nv && !weg) td.classList.add('nv');
+  if(!editMode && F.alleenGev && cel.v && !cel.gec){ td.classList.add('gedimd'); td.dataset.gedimd = '1'; }
   const w = el('div','cel');
-  w.appendChild(tintNode(l,c,cel.t));
+  w.appendChild(tintNode(l,c,weg ? '' : cel.t));
   const s = el('span','txt');
   if(editMode){
     s.textContent = cel.v;
     s.setAttribute('aria-label', l.naam + ', ' + c.naam);
     maakBewerkbaar(s, v=>{ (l.cel[c.id] = celVan(l,c.id)||{t:'',v:''}).v = v; });
+  } else if(weg){
+    s.appendChild(el('span','verborgen','verborgen (nog niet geverifieerd)'));
   } else if(cel.v){
-    s.textContent = cel.v;
+    zetTekst(s, cel.v, markeer.waarden);
     if(cel.t) s.appendChild(el('span','sr-only',' (' + TINT_NAME[cel.t] + ')'));
+    if(td.dataset.gedimd) s.appendChild(el('span','sr-only',' (niet geverifieerd, gedimd)'));
   } else {
     s.appendChild(el('span','nogleeg','nog in te vullen'));
   }
@@ -1426,7 +1656,8 @@ function partijKop(l, doel, inKop){
     im.addEventListener('error',()=>im.remove());
     doel.appendChild(im);
   }
-  const vn = el('span','vn',l.naam);
+  const vn = el('span','vn');
+  zetTekst(vn, l.naam, inKop || editMode ? [] : markeer.namen);
   const vt = el('span','vt',l.type||'');
   if(editMode && !inKop){
     vn.setAttribute('aria-label','Naam geldverstrekker');
@@ -1444,7 +1675,11 @@ function render(){
   const actief = document.activeElement && document.activeElement.dataset ? document.activeElement.dataset.sleutel : '';
   const oudVak = document.querySelector('#out .tabelvak');
   const scroll = oudVak ? [oudVak.scrollLeft, oudVak.scrollTop] : null;
+  const z = parseZoek($('q').value);
+  const metMarkering = view==='matrix' && !editMode;
+  markeer = {namen: metMarkering && F.zoekIn!=='w' ? z.inc : [], waarden: metMarkering && F.zoekIn!=='n' ? z.inc : []};
   const list = filtered();
+  werkUitgebreidBij(list);
   const cnt = $('cnt');
   cnt.textContent = '';
   const b = t => el('b',null,t);
@@ -1555,9 +1790,11 @@ function schrijfHash(){
   if(!crits.every(c=>ksel.has(c.id))) delen.push('k=' + critVolgorde().filter(c=>ksel.has(c.id)).map(c=>encodeURIComponent(c.id)).join(','));
   if($('optVerschil').checked) delen.push('verschil=1');
   if($('optLeeg').checked) delen.push('zonderleeg=1');
+  const f = filterHash();
+  if(f) delen.push('f=' + f);
   const h = delen.length ? '#' + delen.join('&') : '';
   if(h === location.hash) return;
-  if(!h && !/^#(vergelijk|k|verschil|zonderleeg)=/.test(location.hash)) return;
+  if(!h && !/^#(vergelijk|k|verschil|zonderleeg|f)=/.test(location.hash)) return;
   try{ history.replaceState(null, '', location.pathname + location.search + h); }catch(e){}
 }
 function leesHash(){
@@ -1573,6 +1810,187 @@ function leesHash(){
   $('optLeeg').checked = p.get('zonderleeg')==='1';
   return true;
 }
+/* Filterinstellingen in de hash: &f=sleutel:waarde;sleutel:waarde. Vrije tekst staat erin met encodeURIComponent,
+   zodat de scheidingstekens ; : , / nooit in een waarde voorkomen. Onbekende of ongeldige delen worden genegeerd. */
+function filterHash(){
+  const d = [], e = encodeURIComponent;
+  const q = $('q').value.trim();
+  if(q) d.push('q:' + e(q.slice(0,200)));
+  if(F.zoekIn!=='nw') d.push('in:' + F.zoekIn);
+  if(F.zoekModus==='of') d.push('m:of');
+  const rs = F.regels.filter(r=>r.c);
+  if(rs.length) d.push('r:' + rs.map(r=>[e(r.c), r.o, e(String(r.w||'').slice(0,200))].join(',')).join('/'));
+  if(F.logica==='of') d.push('l:of');
+  if(F.types.size) d.push('t:' + TYPE_SOORTEN.filter(t=>F.types.has(t[0])).map(t=>t[0]).join('.'));
+  if(F.minGev > 0) d.push('n:' + F.minGev);
+  if(F.alleenGev) d.push('g:1');
+  if(!F.nvTonen) d.push('nv:0');
+  if(F.geenNieuw) d.push('x:1');
+  if(F.sort) d.push('s:' + F.sort);
+  if(overigOpen) d.push('o:1');
+  const fc = $('fcrit').value, fv = $('fval').value;
+  if(fc){ d.push('fc:' + e(fc)); if(fv) d.push('fv:' + e(fv.slice(0,300))); }
+  if($('alleenIngevuld').checked) d.push('i:1');
+  if(activeCats.size !== CATS.length) d.push('c:' + CATS.filter(c=>activeCats.has(c.id)).map(c=>e(c.id)).join('.'));
+  return d.join(';');
+}
+function leesFilters(){
+  const m = /(?:^#|&)f=([^&]*)/.exec(location.hash);
+  if(!m) return false;
+  const dec = s => { try{ return decodeURIComponent(s); }catch(err){ return ''; } };
+  let raw = m[1];
+  if(raw.indexOf(':') < 0 && /%3A/i.test(raw)) raw = dec(raw); // link die onderweg nog eens is gecodeerd
+  F = fStandaard();
+  let q = '', fc = '', fv = '', ing = false, cats = null;
+  overigOpen = false;
+  raw.split(';').slice(0,40).forEach(seg=>{
+    const i = seg.indexOf(':');
+    if(i < 1) return;
+    const k = seg.slice(0,i), v = seg.slice(i+1);
+    if(k==='q') q = dec(v).slice(0,200);
+    else if(k==='in' && ['n','w'].includes(v)) F.zoekIn = v;
+    else if(k==='m' && v==='of') F.zoekModus = 'of';
+    else if(k==='l' && v==='of') F.logica = 'of';
+    else if(k==='r') v.split('/').slice(0,MAX_REGELS).forEach(rr=>{
+      const [c,o,w] = rr.split(',');
+      const cid = dec(c||'');
+      if(!crits.some(x=>x.id===cid) || !REGEL_OPS[o]) return;
+      let wd = dec(w||'').slice(0,200);
+      if(o==='is' && !REGEL_KLEUREN.some(x=>x[0]===wd)) wd = 'g';
+      F.regels.push({c:cid, o, w:wd});
+    });
+    else if(k==='t') v.split('.').forEach(t=>{ if(TYPE_SOORTEN.some(x=>x[0]===t)) F.types.add(t); });
+    else if(k==='n'){ const n = parseInt(v,10); if(n > 0) F.minGev = Math.min(n, crits.length); }
+    else if(k==='g') F.alleenGev = v==='1';
+    else if(k==='nv') F.nvTonen = v!=='0';
+    else if(k==='x') F.geenNieuw = v==='1';
+    else if(k==='s' && SORTEN.includes(v)) F.sort = v;
+    else if(k==='o') overigOpen = v==='1';
+    else if(k==='fc') fc = dec(v);
+    else if(k==='fv') fv = dec(v);
+    else if(k==='i') ing = v==='1';
+    else if(k==='c'){ const s = v.split('.').map(dec).filter(id=>CATS.some(c=>c.id===id)); if(s.length) cats = new Set(s); }
+  });
+  $('q').value = q;
+  $('alleenIngevuld').checked = ing;
+  if(cats) activeCats = cats; else activeCats = new Set(CATS.map(c=>c.id));
+  initFilters();
+  $('fcrit').value = crits.some(c=>c.id===fc) ? fc : '';
+  syncValFilter();
+  if($('fcrit').value && fv){ $('fval').value = fv; if($('fval').value !== fv) $('fval').value = ''; }
+  syncUitgebreid();
+  return true;
+}
+
+/* ======================= UITGEBREID ZOEKEN EN FILTEREN: PANEEL ======================= */
+function critOpties(sel, waarde){
+  const o0 = el('option',null,'Kies voorwaarde…'); o0.value = ''; sel.appendChild(o0);
+  CATS.forEach(cat=>{
+    const items = critVolgorde().filter(c=>c.cat===cat.id);
+    if(!items.length) return;
+    const g = document.createElement('optgroup'); g.label = cat.naam;
+    items.forEach(c=>{ const o = el('option',null,c.naam); o.value = c.id; g.appendChild(o); });
+    sel.appendChild(g);
+  });
+  sel.value = crits.some(c=>c.id===waarde) ? waarde : '';
+}
+function renderRegels(focus){
+  const box = $('ufRegels');
+  box.textContent = '';
+  if(!F.regels.length) box.appendChild(el('p','ufhulp','Nog geen regels. Voorbeeld: Verhuisregeling is kleurcode ruim, EN Rentemiddeling bevat tekst "mogelijk".'));
+  F.regels.forEach((r,i)=>{
+    const nr = i + 1;
+    const rij = el('div','regel'); rij.setAttribute('role','group'); rij.setAttribute('aria-label','Regel ' + nr); rij.dataset.regel = String(i);
+    if(i) rij.appendChild(el('span','rvoeg', F.logica==='of' ? 'OF' : 'EN'));
+    const sc = el('select','rc'); sc.setAttribute('aria-label','Voorwaarde, regel ' + nr);
+    critOpties(sc, r.c);
+    sc.addEventListener('change',()=>{ r.c = sc.value; render(); });
+    const so = el('select','ro'); so.setAttribute('aria-label','Vergelijking, regel ' + nr);
+    Object.keys(REGEL_OPS).forEach(k=>{ const o = el('option',null,REGEL_OPS[k]); o.value = k; so.appendChild(o); });
+    so.value = r.o;
+    so.addEventListener('change',()=>{ const was = r.o; r.o = so.value; if((was==='is') !== (r.o==='is')) r.w = r.o==='is' ? 'g' : ''; renderRegels(i + ':ro'); render(); });
+    let wv;
+    if(r.o==='is'){
+      wv = el('select','rw');
+      REGEL_KLEUREN.forEach(([k,n])=>{ const o = el('option',null,n); o.value = k; wv.appendChild(o); });
+      wv.value = r.w;
+      wv.addEventListener('change',()=>{ r.w = wv.value; render(); });
+    } else {
+      wv = el('input','rw'); wv.type = 'text'; wv.value = r.w || ''; wv.placeholder = 'tekst…'; wv.maxLength = 200; wv.autocomplete = 'off';
+      wv.addEventListener('input',()=>{ r.w = wv.value; render(); });
+    }
+    wv.setAttribute('aria-label', (r.o==='is' ? 'Kleurcode' : 'Tekst') + ', regel ' + nr);
+    const del = el('button','knop licht','Verwijder'); del.type = 'button'; del.setAttribute('aria-label','Regel ' + nr + ' verwijderen');
+    del.addEventListener('click',()=>{ F.regels.splice(i,1); renderRegels(); render(); $('ufRegelPlus').focus(); });
+    rij.append(sc, so, wv, del);
+    box.appendChild(rij);
+  });
+  $('ufRegelPlus').disabled = F.regels.length >= MAX_REGELS;
+  if(focus){ const [i,cls] = focus.split(':'); const n = box.querySelector('[data-regel="' + i + '"] .' + cls); if(n) n.focus(); }
+}
+function syncUitgebreid(){
+  $('ufIn').value = F.zoekIn;
+  $('ufModus').value = F.zoekModus;
+  $('ufLogica').value = F.logica;
+  $('ufMinGev').max = String(crits.length);
+  $('ufMinGev').value = String(F.minGev);
+  $('ufAlleenGev').checked = F.alleenGev;
+  $('ufNvTonen').checked = F.nvTonen;
+  $('ufGeenNieuw').checked = F.geenNieuw;
+  $('ufSort').value = F.sort;
+  const tc = $('ufTypes');
+  tc.textContent = '';
+  TYPE_SOORTEN.forEach(([k,naam])=>{
+    const n = lenders.filter(l=>typeSoort(l)===k).length;
+    const b = el('button','chip',naam); b.type = 'button'; b.dataset.type = k;
+    b.setAttribute('aria-pressed', String(F.types.has(k)));
+    b.appendChild(el('span','n',fmtGetal(n)));
+    b.addEventListener('click',()=>{ if(F.types.has(k)) F.types.delete(k); else F.types.add(k); syncUitgebreid(); render(); const t = $('ufTypes').querySelector('[data-type="' + k + '"]'); if(t) t.focus(); });
+    tc.appendChild(b);
+  });
+  renderRegels();
+}
+/* Teller op de knop, resultaatregel en schakelaar overige financiers bijwerken (bij elke render). */
+function werkUitgebreidBij(list){
+  const n = aantalFilters();
+  const t = $('ufTeller');
+  t.textContent = n ? fmtGetal(n) : '';
+  t.hidden = !n;
+  $('btnUitgebreid').setAttribute('aria-label','Uitgebreid zoeken en filteren' + (n ? ', ' + n + (n===1 ? ' actief filter' : ' actieve filters') : ''));
+  $('ufOverig').checked = overigOpen;
+  const r = $('ufResultaat');
+  const tekst = fmtGetal(list.length) + ' van ' + fmtGetal(lenders.length) + ' verstrekkers voldoen';
+  if(r.dataset.tekst !== tekst){
+    r.dataset.tekst = tekst;
+    r.textContent = '';
+    r.append(el('b',null,fmtGetal(list.length)), ' van ' + fmtGetal(lenders.length) + ' verstrekkers voldoen');
+  }
+  $('ufVergelijk').disabled = !list.length;
+}
+function wisFilters(){
+  F = fStandaard();
+  $('q').value = '';
+  $('alleenIngevuld').checked = false;
+  $('fcrit').value = '';
+  syncValFilter();
+  syncUitgebreid();
+  melding('Alle filters gewist.');
+  render();
+}
+function vergelijkResultaten(){
+  const list = zichtbaar();
+  if(!list.length){ melding('Er zijn geen resultaten om te vergelijken.'); return; }
+  sel.clear();
+  list.forEach(l=>sel.add(l.id));
+  setView('cmp');
+  melding(fmtGetal(list.length) + ' gefilterde verstrekkers staan nu in de vergelijking.');
+}
+function zetUitgebreid(open){
+  uitgebreidOpen = open;
+  $('btnUitgebreid').setAttribute('aria-expanded', String(open));
+  $('btnUitgebreid').classList.toggle('aan', open);
+  $('uitgebreid').hidden = view!=='matrix' || !open;
+}
 function leegNode(kop, tekst){
   const d = el('div','leeg');
   d.appendChild(el('h3',null,kop));
@@ -1581,7 +1999,14 @@ function leegNode(kop, tekst){
 }
 function matrixNode(list){
   const cs = visCrits();
-  if(!list.length) return leegNode('Geen resultaten','Pas de zoekterm of het filter aan.');
+  if(!list.length){
+    const d = leegNode('Geen verstrekkers gevonden', aantalFilters() ? 'Geen enkele verstrekker voldoet aan de zoekterm en filters (' + filterOmschrijving() + '). Pas ze aan of wis alle filters.' : 'Pas de zoekterm of het filter aan.');
+    d.id = 'geenResultaat';
+    const wis = el('button','knop','Filters wissen'); wis.type = 'button'; wis.id = 'leegWis';
+    wis.addEventListener('click',()=>{ wisFilters(); const q = $('q'); if(q) q.focus(); });
+    d.appendChild(wis);
+    return d;
+  }
   const vak = el('div','tabelvak' + (editMode?' bewerk':''));
   vak.tabIndex = 0;
   vak.setAttribute('role','region');
@@ -1751,11 +2176,13 @@ function resetData(){
   buildData(); sel.clear(); overigOpen = false;
   activeCats = new Set(CATS.map(c=>c.id)); ksel = new Set(crits.map(c=>c.id));
   $('peil').textContent = PEIL_BRON;
-  initFilters(); render(); renderBronnen();
+  initFilters(); syncUitgebreid(); render(); renderBronnen();
   melding('Brondata hersteld.');
 }
 function exportData(selectie){
   let vw = crits, gv = lenders;
+  const gefilterd = !selectie && view==='matrix' && aantalFilters() > 0;
+  if(gefilterd) gv = filtered();
   if(selectie){
     const m = cmpModel();
     vw = m.ranking ? m.cs : m.rows; gv = m.ranking ? m.ranking.map(x=>x.l) : m.chosen;
@@ -1770,6 +2197,7 @@ function exportData(selectie){
     geldverstrekkers:gv.map(l=>({naam:l.naam,type:l.type,groep:l.groep||'',cel:selectie ? Object.fromEntries(Object.entries(l.cel).filter(([k])=>ids.has(k))) : l.cel}))
   };
   if(selectie) d.selectie = true;
+  if(gefilterd) d.filter = filterOmschrijving();
   return d;
 }
 function download(inhoud, type, naam){
@@ -1792,6 +2220,7 @@ function csvVeld(x){
 }
 function csvCel(cel){
   if(!cel || !cel.v) return 'nog in te vullen';
+  if(verborgen(cel)) return 'verborgen (nog niet geverifieerd)';
   return cel.v + (cel.t ? ' [' + TINT_NAME[cel.t] + ']' : '');
 }
 function naamMetHint(l){ const h = hintVan(l.naam); return l.naam + (h ? ' (' + h + ')' : ''); }
@@ -1804,6 +2233,7 @@ function exportCsv(){
     r(['Geldverstrekker','Type'].concat(cs.map(c=>c.naam)));
     list.forEach(l=>r([naamMetHint(l), l.type||''].concat(cs.map(c=>csvCel(celVan(l,c.id))))));
     naam = 'voorwaarden-matrix.csv';
+    if(aantalFilters()){ regels.push(''); r(['Gefilterd: ' + filterOmschrijving()]); }
   } else {
     const m = cmpModel();
     if(!m.chosen.length || !m.cs.length){ melding('Er is niets te exporteren: kies aanbieders en kenmerken.'); return; }
@@ -1821,7 +2251,9 @@ function exportCsv(){
   download('\uFEFF' + regels.join('\r\n'), 'text/csv;charset=utf-8', naam);
 }
 function exportJson(){
-  download(JSON.stringify(exportData(false),null,2), 'application/json', 'voorwaarden-geldverstrekkers.json');
+  const d = exportData(false);
+  download(JSON.stringify(d,null,2), 'application/json', d.filter ? 'voorwaarden-gefilterd.json' : 'voorwaarden-geldverstrekkers.json');
+  if(d.filter) melding('De export bevat alleen de ' + fmtGetal(d.geldverstrekkers.length) + ' gefilterde verstrekkers. Wis de filters voor een volledige export.');
 }
 /* Import: structuur strikt controleren; alles wordt als platte tekst behandeld. */
 const tekst = (s,max) => String(s==null?'':s).slice(0,max||2000);
@@ -1862,7 +2294,7 @@ function importeer(d){
   crits = nc; lenders = nl;
   if(d.peildatum) $('peil').textContent = tekst(d.peildatum,60);
   sel.clear(); overigOpen = false; activeCats = new Set(crits.map(c=>c.cat)); ksel = new Set(crits.map(c=>c.id));
-  initFilters(); render(); renderBronnen();
+  initFilters(); syncUitgebreid(); render(); renderBronnen();
   melding('Dataset geïmporteerd: ' + fmtGetal(lenders.length) + ' geldverstrekkers, ' + fmtGetal(crits.length) + ' voorwaarden.');
 }
 function importJson(input){
@@ -1881,7 +2313,8 @@ function importJson(input){
 const TINT_KLEUR = {g:'#1F7A52',n:'#9AA7B6',a:'#E59A1A',r:'#C0392B'};
 function printCel(l,c){
   const cel = celVan(l,c.id)||{t:'',v:''};
-  const bol = cel.t ? '<span class="tint" style="background:' + TINT_KLEUR[cel.t] + '"></span>' : '<span class="tint leeg"></span>';
+  if(verborgen(cel)) return '<td><span class="tint leeg"></span><i class="nl">verborgen (nog niet geverifieerd)</i></td>';
+  const bol = cel.t ?'<span class="tint" style="background:' + TINT_KLEUR[cel.t] + '"></span>' : '<span class="tint leeg"></span>';
   return '<td>' + bol + (cel.v ? esc(cel.v) : '<i class="nl">nog in te vullen</i>') + '</td>';
 }
 function printNaam(l){
@@ -1928,6 +2361,7 @@ function doPrint(){
   const html = '<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><title>Voorwaardenvergelijker geldverstrekkers – Adviesforum</title><style>' + css + '</style></head><body>' +
     '<h1>Voorwaardenvergelijker geldverstrekkers</h1>' +
     '<p class="meta">Indicatief · niet geverifieerd · peildatum dataset: ' + esc($('peil').textContent.trim()) + ' · afgedrukt op ' + esc(datum) + ' · ' + esc(cnt) + '</p>' +
+    (view==='matrix' && aantalFilters() ? '<p class="meta">Gefilterd: ' + esc(filterOmschrijving()) + '</p>' : '') +
     '<p class="disc"><b>Compliance / AFM:</b> indicatieve, niet-geverifieerde waarden; uitsluitend voor intern gebruik. Leg in het dossier de voorwaarde vast zoals de geldverstrekker die op het moment van advies heeft gepubliceerd. Niet verstrekken aan consumenten en niet presenteren als volledige of actuele productvergelijking (Wft art. 4:19/4:20). Bevat geen rentes of tarieven.</p>' +
     tabel +
     '<p class="lg"><span class="tint" style="background:#1F7A52"></span>Ruim/gunstig &nbsp; <span class="tint" style="background:#9AA7B6"></span>Marktconform &nbsp; <span class="tint" style="background:#E59A1A"></span>Aandachtspunt &nbsp; <span class="tint" style="background:#C0392B"></span>Beperkend/niet mogelijk &nbsp; <span class="tint leeg"></span>Nog in te vullen</p>' +
@@ -1982,7 +2416,29 @@ $('btnKopieer').addEventListener('click',()=>{
   try{ navigator.clipboard.writeText(url).then(klaar, ()=>melding('Kopiëren lukte niet; kopieer de link uit de adresbalk: ' + url)); }
   catch(e){ melding('Kopieer de link uit de adresbalk: ' + url); }
 });
-window.addEventListener('hashchange',()=>{ if(leesHash()){ initFilters(); setView('cmp'); } });
+window.addEventListener('hashchange',()=>{
+  const f = leesFilters();
+  if(leesHash()){ initFilters(); setView('cmp'); }
+  else if(f) render();
+});
+$('btnUitgebreid').addEventListener('click',()=>zetUitgebreid(!uitgebreidOpen));
+$('ufIn').addEventListener('change',e=>{ F.zoekIn = ['n','w'].includes(e.target.value) ? e.target.value : 'nw'; render(); });
+$('ufModus').addEventListener('change',e=>{ F.zoekModus = e.target.value==='of' ? 'of' : 'en'; render(); });
+$('ufLogica').addEventListener('change',e=>{ F.logica = e.target.value==='of' ? 'of' : 'en'; renderRegels(); render(); });
+$('ufRegelPlus').addEventListener('click',()=>{
+  if(F.regels.length >= MAX_REGELS) return;
+  F.regels.push({c:'', o:'is', w:'g'});
+  renderRegels((F.regels.length-1) + ':rc');
+  render();
+});
+$('ufMinGev').addEventListener('input',e=>{ const n = parseInt(e.target.value,10); F.minGev = n > 0 ? Math.min(n, crits.length) : 0; render(); });
+$('ufAlleenGev').addEventListener('change',e=>{ F.alleenGev = e.target.checked; render(); });
+$('ufNvTonen').addEventListener('change',e=>{ F.nvTonen = e.target.checked; render(); });
+$('ufGeenNieuw').addEventListener('change',e=>{ F.geenNieuw = e.target.checked; render(); });
+$('ufOverig').addEventListener('change',e=>{ overigOpen = e.target.checked; render(); });
+$('ufSort').addEventListener('change',e=>{ F.sort = SORTEN.includes(e.target.value) ? e.target.value : ''; render(); });
+$('ufWis').addEventListener('click',wisFilters);
+$('ufVergelijk').addEventListener('click',vergelijkResultaten);
 $('tab-matrix').addEventListener('click',()=>setView('matrix'));
 $('tab-cmp').addEventListener('click',()=>setView('cmp'));
 $('q').addEventListener('input',render);
@@ -2004,6 +2460,7 @@ buildData();
 ksel = new Set(crits.map(c=>c.id));
 const uitLink = leesHash();
 initFilters();
+if(!leesFilters()) syncUitgebreid();
 setView(uitLink ? 'cmp' : 'matrix');
 renderBronnen();
 })();

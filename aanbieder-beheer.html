@@ -145,7 +145,7 @@ a.terug{display:inline-block;font-size:13.5px;font-weight:700;text-decoration:no
     <div class="ingelogd"><div>Ingelogd als <b id="wie"></b> <span style="color:var(--grijs)">(id <code id="wie-id"></code>)</span></div><button type="button" class="knop licht" id="uitloggen">Uitloggen</button></div>
     <div class="waarschuw" role="note">
       <p><strong>Let op: je wijzigingen staan alleen in dit tabblad.</strong> Verversen, sluiten of uitloggen betekent dat niet-ingediende wijzigingen verloren gaan. Dien in of download het bestand voordat je stopt.</p>
-      <p>Geen rentes, tarieven, premies of acties (AFM). Contactpersonen alleen met zakelijke gegevens en met hun toestemming (AVG).</p>
+      <p>Het Adviesforum toont zelf geen rentes, tarieven, premies of acties (AFM). Een renteblad voeg je alleen toe als link naar je eigen renteblad, met datum. Contactpersonen alleen met zakelijke gegevens en met hun toestemming (AVG).</p>
     </div>
     <div class="werk">
       <div class="editor" id="editor"></div>
@@ -179,15 +179,17 @@ a.terug{display:inline-block;font-size:13.5px;font-weight:700;text-decoration:no
 var MAIL='forumadvies@gmail.com',COOKIE='af_aanbieder',MAX_MAILTO=1900;
 /* VALIDATIE-BEGIN: dit blok wordt ook gebruikt door tools/aanbieder-import.js (geen DOM-code hierin). */
 var TYPES={geldverstrekker:'Geldverstrekker',verzekeraar:'Verzekeraar',pensioenuitvoerder:'Pensioenuitvoerder',kredietverstrekker:'Kredietverstrekker',serviceprovider:'Serviceprovider'};
-var SOORTEN={voorwaarden:'Voorwaarden',acceptatiegids:'Acceptatiegids',productblad:'Productblad',formulier:'Formulier'};
+var SOORTEN={voorwaarden:'Voorwaarden',acceptatiegids:'Acceptatiegids',productblad:'Productblad',renteblad:'Renteblad',formulier:'Formulier'};
 var RUBRIEKEN={bankgarantie:'Bankgaranties en bieden met zekerheid',krediet:'Consumptief krediet'};
 var AGENDASOORTEN={webinar:'Webinar',bijeenkomst:'Bijeenkomst','e-learning':'E-learning',beurs:'Beurs',overig:'Overig'};
 /* Lijsten: velden, maximale lengtes en aantallen. */
 var LIJSTEN={
   nieuws:{titel:'Nieuws',enkel:'Nieuwsbericht',max:50,uitleg:'Zakelijk nieuws voor adviseurs: wijzigingen in beleid, voorwaarden, processen of bereikbaarheid. Altijd met datum. Geen rentes of acties.',velden:[
     {k:'datum',l:'Datum',t:'date',req:1},{k:'titel',l:'Titel',max:120,req:1},{k:'tekst',l:'Tekst',t:'textarea',max:2000,req:1,tip:'Platte tekst; een lege regel begint een nieuwe alinea.'},{k:'url',l:'Link naar de bron (optioneel)',t:'url',max:300}]},
-  documenten:{titel:'Voorwaarden & documenten',enkel:'Document',max:50,uitleg:'Link naar het document op je eigen site of extranet (https).',velden:[
-    {k:'titel',l:'Titel',max:120,req:1},{k:'url',l:'Link (https)',t:'url',max:300,req:1},{k:'soort',l:'Soort',t:'select',opties:SOORTEN,req:1}]},
+  documenten:{titel:'Voorwaarden & documenten',enkel:'Document',max:50,uitleg:'Link naar het document op je eigen site of extranet (https), met datum en tijd van de laatste wijziging. Een renteblad is alleen een link naar je eigen renteblad: het Adviesforum toont zelf geen rentes, tarieven, premies of acties.',velden:[
+    {k:'titel',l:'Titel',max:120,req:1},{k:'url',l:'Link (https)',t:'url',max:300,req:1},{k:'soort',l:'Soort',t:'select',opties:SOORTEN,req:1},
+    {k:'bijgewerkt',l:'Bijgewerkt (JJJJ-MM-DD of JJJJ-MM-DDTuu:mm)',t:'moment',tip:'Datum en tijd van de laatste wijziging van het document. Wordt automatisch op nu gezet als je het document toevoegt of wijzigt.'},
+    {k:'geldigVanaf',l:'Geldig vanaf (alleen bij renteblad, JJJJ-MM-DD)',t:'date',alleen:'renteblad'}]},
   richtlijnen:{titel:'Richtlijnen',enkel:'Richtlijn',max:30,uitleg:'Korte werkafspraken of aandachtspunten voor adviseurs.',velden:[
     {k:'titel',l:'Titel',max:120,req:1},{k:'tekst',l:'Tekst',t:'textarea',max:2000,req:1}]},
   contact:{titel:'Contactpersonen',enkel:'Contactpersoon',max:20,uitleg:'Alleen zakelijke gegevens, en alleen met toestemming van de persoon zelf. Een algemeen teamadres mag ook.',velden:[
@@ -202,20 +204,26 @@ var LIJSTEN={
 var VOLGORDE=['nieuws','documenten','richtlijnen','contact','elearning','agenda'];
 var MET_ID={nieuws:1,agenda:1};
 var AFM_RE=/\d\s?%|\brente(?:s|tarie[fv]en|korting)?\b|\bactie(?:s)?\b|\bkorting|\bcashback|\bgratis\b|\bpremies?\b|\btarie[fv]en\b/i;
+/* Titel van een renteblad mag het woord rente noemen; percentages en acties niet. */
+var AFM_RENTEBLAD_RE=/\d\s?%|\bactie(?:s)?\b|\bkorting|\bcashback|\bgratis\b/i;
 function vandaag(){var d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
+/* Huidig moment als JJJJ-MM-DDTuu:mm (lokale tijd). */
+function nu(){var d=new Date();return vandaag()+'T'+String(d.getHours()).padStart(2,'0')+':'+String(d.getMinutes()).padStart(2,'0');}
 /* ---------- Normaliseren en valideren ---------- */
 function str(v){return typeof v==='string'?v.trim():(v==null?'':String(v).trim());}
 function normaliseer(a){
   a=a||{};var ex=a.extranet||{};
   var o={id:str(a.id),naam:str(a.naam),type:str(a.type),initialen:str(a.initialen),kleur:str(a.kleur),omschrijving:str(a.omschrijving),website:str(a.website),
     extranet:{url:str(ex.url),naam:str(ex.naam)},rubrieken:(Array.isArray(a.rubrieken)?a.rubrieken:[]).map(str)};
-  VOLGORDE.forEach(function(k){o[k]=(Array.isArray(a[k])?a[k]:[]).map(function(it){var r={};if(MET_ID[k])r.id=str(it&&it.id);LIJSTEN[k].velden.forEach(function(v){r[v.k]=v.t==='check'?!!(it&&it[v.k]):str(it&&it[v.k]);});return r;});});
+  VOLGORDE.forEach(function(k){o[k]=(Array.isArray(a[k])?a[k]:[]).map(function(it){var r={};if(MET_ID[k])r.id=str(it&&it.id);LIJSTEN[k].velden.forEach(function(v){r[v.k]=v.t==='check'?!!(it&&it[v.k]):str(it&&it[v.k]);if(v.alleen&&!r[v.k])delete r[v.k];});return r;});});
   o.bijgewerkt=str(a.bijgewerkt);
   return o;
 }
 function okUrl(u){return /^https:\/\/[^\s"'<>]+\.[^\s"'<>]+$/i.test(u);}
 function okMail(m){return /^[^\s@<>"',;]+@[^\s@<>"',;]+\.[a-z]{2,}$/i.test(m);}
 function okDatum(d){var m=/^(\d{4})-(\d{2})-(\d{2})$/.exec(d);if(!m)return false;var t=new Date(Date.UTC(+m[1],+m[2]-1,+m[3]));return t.getUTCMonth()===+m[2]-1&&t.getUTCDate()===+m[3];}
+/* Tijdstempel: JJJJ-MM-DD of JJJJ-MM-DDTuu:mm. */
+function okMoment(d){var m=/^(\d{4}-\d{2}-\d{2})(?:T([01]\d|2[0-3]):[0-5]\d)?$/.exec(d);return !!m&&okDatum(m[1]);}
 function valideer(o){
   var f=[],w=[];
   function fout(pad,msg){f.push({pad:pad,msg:msg});}
@@ -241,15 +249,21 @@ function valideer(o){
         if(v.req&&!val){fout(pad,nr+v.l.replace(/ \(.*\)$/,'')+' is verplicht.');return;}
         if(!val)return;
         if(v.max&&val.length>v.max)fout(pad,nr+v.l.replace(/ \(.*\)$/,'')+' is te lang ('+val.length+' van max. '+v.max+').');
-        if(v.t==='url'&&!okUrl(val))fout(pad,nr+'link moet beginnen met https:// en een geldig adres zijn.');
+        if(v.t==='url'&&!okUrl(val))fout(pad,nr+(k==='documenten'&&it.soort==='renteblad'?'een renteblad moet een https-link zijn naar het renteblad op je eigen site of extranet.':'link moet beginnen met https:// en een geldig adres zijn.'));
         if(v.t==='email'&&!okMail(val))fout(pad,nr+'e-mailadres is ongeldig.');
         if(v.t==='tel'&&!/^[0-9+()\s-]{6,20}$/.test(val))fout(pad,nr+'telefoonnummer is ongeldig.');
-        if(v.t==='date'&&!okDatum(val))fout(pad,nr+'datum is ongeldig (JJJJ-MM-DD).');
+        if(v.t==='date'&&!okDatum(val))fout(pad,nr+v.l.replace(/ \(.*\)$/,'').toLowerCase()+' is ongeldig (JJJJ-MM-DD).');
+        if(v.t==='moment'&&!okMoment(val))fout(pad,nr+'tijdstempel is ongeldig (JJJJ-MM-DD of JJJJ-MM-DDTuu:mm).');
+        if(v.alleen&&it.soort!==v.alleen)fout(pad,nr+v.l.replace(/ \(.*\)$/,'').toLowerCase()+' hoort alleen bij een '+v.alleen+'.');
         if(v.t==='time'&&!/^([01]\d|2[0-3]):[0-5]\d$/.test(val))fout(pad,nr+'tijd is ongeldig (uu:mm).');
         if(v.t==='select'&&!v.opties[val])fout(pad,nr+'kies een soort.');
-        if((v.k==='titel'||v.k==='tekst')&&AFM_RE.test(val))w.push({pad:pad,msg:nr+'lijkt een rente, tarief, premie of actie te noemen. Die plaatsen we niet (AFM); de beheerder kan dit weigeren.'});
+        if((v.k==='titel'||v.k==='tekst')&&(k==='documenten'&&it.soort==='renteblad'?AFM_RENTEBLAD_RE:AFM_RE).test(val))w.push({pad:pad,msg:nr+'lijkt een rente, tarief, premie of actie te noemen. Die plaatsen we niet (AFM); de beheerder kan dit weigeren.'});
       });
       if(k==='nieuws'&&okDatum(it.datum)&&it.datum>vandaag())w.push({pad:p+'datum',msg:nr+'datum ligt in de toekomst.'});
+      if(k==='documenten'){
+        if(okMoment(it.bijgewerkt)&&it.bijgewerkt.slice(0,10)>vandaag())w.push({pad:p+'bijgewerkt',msg:nr+'tijdstempel ligt in de toekomst.'});
+        if(it.soort==='renteblad'&&!it.geldigVanaf)w.push({pad:p+'geldigVanaf',msg:nr+'vul bij een renteblad bij voorkeur in vanaf wanneer het geldt.'});
+      }
       if(k==='agenda'){
         if(it.eind&&!it.tijd)fout(p+'tijd',nr+'vul ook de begintijd in, of maak de eindtijd leeg.');
         else if(it.eind&&it.tijd&&it.eind<=it.tijd)fout(p+'eind',nr+'eindtijd moet na de begintijd liggen.');
@@ -298,7 +312,7 @@ function veldHtml(pad,v,waarde){
   var input;
   if(v.t==='textarea')input='<textarea id="'+id+'" data-pad="'+pad+'"'+ml+req+'>'+esc(waarde)+'</textarea>';
   else if(v.t==='select')input='<select id="'+id+'" data-pad="'+pad+'"'+req+'><option value="">Kies…</option>'+Object.keys(v.opties).map(function(k){return '<option value="'+k+'"'+(waarde===k?' selected':'')+'>'+esc(v.opties[k])+'</option>';}).join('')+'</select>';
-  else input='<input id="'+id+'" data-pad="'+pad+'" type="'+(v.t==='url'?'url':v.t==='email'?'email':v.t==='tel'?'tel':v.t==='date'?'date':v.t==='time'?'time':'text')+'"'+(v.t==='url'?' placeholder="https://"':'')+' value="'+esc(waarde)+'"'+ml+req+'>';
+  else input='<input id="'+id+'" data-pad="'+pad+'" type="'+(v.t==='url'?'url':v.t==='email'?'email':v.t==='tel'?'tel':v.t==='date'?'date':v.t==='time'?'time':'text')+'"'+(v.t==='url'?' placeholder="https://"':v.t==='moment'?' placeholder="JJJJ-MM-DDTuu:mm" inputmode="numeric" spellcheck="false" maxlength="16"':'')+' value="'+esc(waarde)+'"'+ml+req+'>';
   return '<div class="veld"><label for="'+id+'">'+esc(v.l)+'</label>'+input+(v.tip?'<span class="tip">'+esc(v.tip)+'</span>':'')+'</div>';
 }
 function editor(){
@@ -318,7 +332,8 @@ function editor(){
     var cfg=LIJSTEN[k];
     h+='<fieldset class="groep" id="groep-'+k+'"><legend>'+esc(cfg.titel)+' ('+o[k].length+')</legend><p class="uitleg-kort">'+esc(cfg.uitleg)+'</p>'+
       o[k].map(function(it,i){return '<div class="kaart"><div class="kaart-kop"><span>'+esc(cfg.enkel)+' '+(i+1)+'</span><button type="button" class="knop rood" data-weg="'+k+'.'+i+'">Verwijderen</button></div>'+
-        cfg.velden.map(function(v){return veldHtml(k+'.'+i+'.'+v.k,v,it[v.k]);}).join('')+'</div>';}).join('')+
+        cfg.velden.filter(function(v){return !v.alleen||it.soort===v.alleen;}).map(function(v){return veldHtml(k+'.'+i+'.'+v.k,v,it[v.k]);}).join('')+
+        (k==='documenten'&&it.soort==='renteblad'?'<p class="tip">Alleen een link naar je eigen renteblad. Het Adviesforum toont zelf geen rentes; de actuele rente staat altijd bij jou.</p>':'')+'</div>';}).join('')+
       '<button type="button" class="knop licht" data-erbij="'+k+'"'+(o[k].length>=cfg.max?' disabled':'')+'>+ '+esc(cfg.enkel)+' toevoegen</button></fieldset>';
   });
   $('editor').innerHTML=h;
@@ -326,15 +341,21 @@ function editor(){
 }
 function zet(pad,waarde){var d=pad.split('.'),o=S;for(var i=0;i<d.length-1;i++)o=o[d[i]];o[d[d.length-1]]=waarde;}
 function leeg(k){var r={};if(MET_ID[k]){var pre=k==='agenda'?'a':'n',max=0;S[k].forEach(function(n){var m=new RegExp('^'+pre+'(\\d+)$').exec(n.id);if(m)max=Math.max(max,+m[1]);});r.id=pre+(max+1);}
-  LIJSTEN[k].velden.forEach(function(v){r[v.k]=v.t==='check'?false:'';});if(k==='nieuws')r.datum=vandaag();if(k==='documenten')r.soort='';return r;}
+  LIJSTEN[k].velden.forEach(function(v){r[v.k]=v.t==='check'?false:'';});if(k==='nieuws')r.datum=vandaag();if(k==='documenten'){r.soort='';r.bijgewerkt=nu();delete r.geldigVanaf;}return r;}
+/* Document gewijzigd (titel, link, soort of geldig vanaf): tijdstempel op nu. Zelf het tijdstempel aanpassen kan altijd. */
+var DOC_PAD=/^documenten\.(\d+)\.(titel|url|soort|geldigVanaf)$/;
+function docGewijzigd(pad){var m=DOC_PAD.exec(pad||'');if(!m)return;var d=S.documenten[+m[1]];if(!d)return;d.bijgewerkt=nu();var el=$(veldId('documenten.'+m[1]+'.bijgewerkt'));if(el)el.value=d.bijgewerkt;}
 $('editor').addEventListener('input',function(e){
   var el=e.target;
   if(el.id==='f-kleurkiezer'){S.kleur=el.value;$('f-kleur').value=el.value;}
-  else if(el.dataset.pad){zet(el.dataset.pad,el.type==='checkbox'?el.checked:el.value);if(el.id==='f-kleur'&&/^#[0-9a-f]{6}$/i.test(el.value))$('f-kleurkiezer').value=el.value;}
+  else if(el.dataset.pad){zet(el.dataset.pad,el.type==='checkbox'?el.checked:el.value);docGewijzigd(el.dataset.pad);if(el.id==='f-kleur'&&/^#[0-9a-f]{6}$/i.test(el.value))$('f-kleurkiezer').value=el.value;}
   else return;
   controleer();
 });
-$('editor').addEventListener('change',function(e){if(e.target.dataset.rubriek){var r=e.target.dataset.rubriek;S.rubrieken=(S.rubrieken||[]).filter(function(x){return x!==r;});if(e.target.checked)S.rubrieken.push(r);controleer();return;}if(e.target.type==='checkbox'||e.target.tagName==='SELECT'){zet(e.target.dataset.pad,e.target.type==='checkbox'?e.target.checked:e.target.value);controleer();}});
+$('editor').addEventListener('change',function(e){if(e.target.dataset.rubriek){var r=e.target.dataset.rubriek;S.rubrieken=(S.rubrieken||[]).filter(function(x){return x!==r;});if(e.target.checked)S.rubrieken.push(r);controleer();return;}if(e.target.type==='checkbox'||e.target.tagName==='SELECT'){var pad=e.target.dataset.pad;zet(pad,e.target.type==='checkbox'?e.target.checked:e.target.value);docGewijzigd(pad);
+  /* Soort document gewijzigd: veld "geldig vanaf" tonen of verbergen. */
+  if(/^documenten\.\d+\.soort$/.test(pad||'')){var d=S.documenten[+pad.split('.')[1]];if(d.soort!=='renteblad')delete d.geldigVanaf;else if(d.geldigVanaf==null)d.geldigVanaf='';editor();var sel=$(veldId(pad));if(sel)sel.focus();return;}
+  controleer();}});
 $('editor').addEventListener('click',function(e){
   var b=e.target.closest('[data-erbij]');
   if(b){var k=b.dataset.erbij;if(k==='nieuws')S.nieuws.unshift(leeg(k));else S[k].push(leeg(k));editor();
