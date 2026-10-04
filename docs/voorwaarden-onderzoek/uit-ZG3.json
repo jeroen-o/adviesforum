@@ -1,0 +1,786 @@
+[
+ {
+  "naam": "Nationale-Nederlanden",
+  "gecontroleerd": "2026-10-04",
+  "criteria": {
+   "o106": {
+    "waarde": "- Boven 100% marktwaarde aparte tariefklasse met risico-opslag; 106% alleen voor energiebesparing",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Hypotheekrente/Tariefklassen.htm",
+     "https://www.nn.nl/Particulier/Hypotheken/verbouwen-en-verduurzamen/Extra-hypotheek-voor-verduurzamen.htm"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Tariefklassenpagina NN noemt een aparte risico-opslag voor het deel boven 100% van de marktwaarde; lenen tot 106% kan als het extra deel volledig naar energiebesparende maatregelen gaat. Hoogte opslag bewust niet opgenomen."
+   },
+   "elbl": {
+    "waarde": "~ Geen labelrentekorting gevonden; energielabel bepaalt alleen extra leenruimte",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/verbouwen-en-verduurzamen/Extra-hypotheek-voor-verduurzamen.htm",
+     "https://www.nn.nl/Inspiratie/Besparen-energiezuinig-wonen.htm"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "NN-pagina's noemen alleen extra leenruimte op basis van label (C/D extra; t/m A+++++ meer) en extra lenen voor verduurzaming (E-G meer dan B-A++). Geen rentekorting of opslag op basis van energielabel gevonden (dochter Woonnu heeft wel duurzaamheidskorting). Negatieve bevinding, dus lage zekerheid."
+   },
+   "flex": {
+    "waarde": "~ Tijdelijk contract met intentieverklaring: toetsinkomen via werkgeversverklaring of UWV-verzekeringsbericht; ook perspectiefverklaring",
+    "bron": [
+     "https://www.nn.nl/Wonen/Hypotheekaanvraag.htm",
+     "https://www.nn.nl/Inspiratie/Perspectiefverklaring-hypotheek.htm"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Eigen site NN: bij tijdelijk contract met intentieverklaring bepaalt NN het toetsinkomen met werkgeversverklaring of UWV-verzekeringsbericht; perspectiefverklaring beschikbaar voor iedereen met flexibel contract (niet voor zzp)."
+   },
+   "ondh": {
+    "waarde": "~ Verkoop alleen met toestemming NN; restschuld aflossen, betalingsregeling of meefinancieren (max. 15 jr)",
+    "bron": [
+     "https://nn.nl/Particulier/Hypotheken/Je-hypotheek/Restschuld.htm",
+     "https://www.nn.nl/Download/Voorwaarden-NN-Hypotheek.htm"
+    ],
+    "brondatum": "jan 2024",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Voorwaarden NN Hypotheek (jan 2024): verkopen/verhuren alleen met toestemming; restschuld blijft verschuldigd, betalingsregeling mogelijk. Restschuldpagina: meefinancieren bij nieuwe NN-hypotheek bij voldoende inkomen, aflossen binnen 15 jaar.",
+    "dubbel": "bevestigd"
+   },
+   "rverl": {
+    "waarde": "~ Renteaanbod 3 mnd voor einde rvp tegen rente geldend op datum voorstel; geen reactie = zelfde periode verlengd",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Je-hypotheek/Einde-rentevaste-periode.htm"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "Eigen site: nieuwe rente = de rente die geldt op de datum van het voorstel; tariefklasse wordt opnieuw bepaald. Een expliciete 'zelfde rente/kortingen als nieuwe klanten'-garantie is op nn.nl niet teruggevonden; vorige formulering daarom geneutraliseerd."
+   },
+   "bprov": {
+    "waarde": "~ Nieuwbouw: offerte 12 mnd geldig en kosteloos verlengbaar; voor bestaande bouw geen actuele eigen bron",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Hypotheek-voor-Nieuwbouw.htm"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "Nieuwbouwpagina NN: offerte 12 maanden geldig, kosteloos te verlengen. Eerdere waarde (provisie per maand alleen bij hogere passeerrente) komt alleen uit oude Delta Lloyd-voorwaarden (2019) en is niet voor het huidige NN-product bevestigd."
+   },
+   "dag": {
+    "waarde": "! Standaard offerterente; dagrente alleen bij oude NN Variant (ex-Delta Lloyd) hypotheken",
+    "bron": [
+     "https://www.homefinance.nl/hypotheek/informatie/offerte-geldigheid/",
+     "https://www.nn.nl/Particulier/Hypotheken/Je-hypotheek/NN-Variant-Hypotheek.htm"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "laag",
+    "status": "bevestigd",
+    "toelichting": "Homefinance noemt NN (met ING, Obvion) als aanbieder die standaard de offerterente hanteert. NN-site beschrijft dagrente alleen voor de NN Variant Hypotheek (hernoemde Delta Lloyd-hypotheken, bestaande klanten)."
+   },
+   "boete": {
+    "waarde": "+ 10% van oorspronkelijk bedrag per leningdeel per kalenderjaar boetevrij",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Je-hypotheek/Extra-aflossen.htm"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Steekproef: bevestigd op eigen site.",
+    "dubbel": "bevestigd"
+   },
+   "ltv": {
+    "waarde": "+ Maandelijkse automatische check; lagere tariefklasse direct tijdens RVP",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Je-hypotheek/Extra-aflossen.htm",
+     "https://www.nn.nl/Particulier/Hypotheken/Hypotheekrente/Tariefklassen.htm"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Steekproef: NN controleert elke maand en verlaagt automatisch, ook binnen rentevaste periode.",
+    "dubbel": "bevestigd"
+   },
+   "bdduur": {
+    "waarde": "~ Nieuwbouw 24 mnd; automatisch 12 mnd verlengd (zonder depotvergoeding)",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Je-hypotheek/Bouwdepot/Bouwdepot-verlengen-en-beeindigen.htm",
+     "https://www.nn.nl/Particulier/Hypotheken/Je-hypotheek/Je-bouwdepot-bij-Nationale-Nederlanden/Nieuwbouwdepot-en-verbouwdepot.htm"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Steekproef: nieuwbouwdepot 24 mnd, automatische verlenging 12 mnd zonder rentevergoeding bevestigd.",
+    "dubbel": "bevestigd"
+   },
+   "rvoor": {
+    "waarde": "~ Rentevoorstel 3 maanden voor einde rentevaste periode",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Je-hypotheek/Einde-rentevaste-periode.htm"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Steekproef bevestigd; zonder reactie wordt dezelfde rentevaste periode gekozen.",
+    "dubbel": "bevestigd"
+   },
+   "ebb": {
+    "waarde": "+ Duurzaamheidsdepot: EBB en EBV; tot 106% woningwaarde voor energiebesparing",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Je-hypotheek/Bouwdepot/Duurzaamheidsdepot.htm",
+     "https://www.nn.nl/Particulier/Hypotheken/Hypotheekrente/Tariefklassen.htm"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Steekproef bevestigd.",
+    "dubbel": "bevestigd"
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Voorwaarden bij uw Nationale-Nederlanden Hypotheek",
+    "url": "https://www.nn.nl/Download/Voorwaarden-NN-Hypotheek.htm",
+    "versie": "jan 2024"
+   },
+   {
+    "titel": "Hypotheken downloads (o.a. Acceptatiegids Hypotheken, via adviseur.nn.nl)",
+    "url": "https://www.nn.nl/Particulier/Hypotheken/Hypotheken-downloads.htm",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "Acceptatiegids Hypotheken Januari 2026 (hypotheekcompany.nl)",
+    "url": "https://hypotheekcompany.nl/wp-content/uploads/2026/01/nn-Acceptatiegids-Hypotheken-2026.pdf",
+    "versie": "jan 2026"
+   },
+   {
+    "titel": "Acceptatiebeleid Hypotheken (hypotheekcompany.nl)",
+    "url": "https://hypotheekcompany.nl/wp-content/uploads/2026/03/nn-acceptatiebeleid-maart-2026.pdf",
+    "versie": "mrt 2026"
+   }
+  ]
+ },
+ {
+  "naam": "Tulp Hypotheken",
+  "gecontroleerd": "2026-10-04",
+  "criteria": {
+   "ondh": {
+    "waarde": "! Verkoop alleen na voorafgaande schriftelijke toestemming Tulp; restschuld blijft verschuldigd",
+    "bron": [
+     "https://tulphypotheken.nl/wp-content/uploads/2025/11/Algemene-Voorwaarden-Tulp-Riant-Hypotheek-PXB-maart-2022.pdf",
+     "https://tulphypotheken.nl/wp-content/uploads/2022/01/Algemene-Voorwaarden-Tulpenhuis-2-B.V.-PXB-september-2021.pdf"
+    ],
+    "brondatum": "mrt 2022",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Algemene Voorwaarden Tulp Riant (PXB maart 2022, in 2025 opnieuw gepubliceerd) en Tulp Compleet: zonder voorafgaande schriftelijke toestemming geen verkoop of vervreemding van het onderpand. Achterstandsbeheer via Mender niet opnieuw in eigen document teruggevonden.",
+    "dubbel": "bevestigd"
+   },
+   "ebb": {
+    "waarde": "~ EBB tot 6% van marktwaarde, binnen 15 mnd te besteden",
+    "bron": [
+     "https://tulphypotheken.nl/adviseurs/proces/verduurzamen/"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Steekproef: adviseurspagina verduurzamen bevestigt EBB max. 6% MW, besteden binnen 15 maanden.",
+    "dubbel": "bevestigd"
+   },
+   "duur": {
+    "waarde": "~ Extra ruimte tot 106% voor energiebesparende voorzieningen",
+    "bron": [
+     "https://tulphypotheken.nl/adviseurs/proces/verduurzamen/",
+     "https://tulphypotheken.nl/wp-content/uploads/2025/03/acceptatiegids-Tulp-Hypotheek_maart-2025.pdf"
+    ],
+    "brondatum": "mrt 2025",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Steekproef: deel boven 100% MW volledig voor energiebesparende voorzieningen (bouwdepot).",
+    "dubbel": "bevestigd"
+   },
+   "bdrnt": {
+    "waarde": "! Depotrente gelijk aan hypotheekrente",
+    "bron": [
+     "https://tulphypotheken.nl/adviseurs/proces/verduurzamen/"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Steekproef: rente bouwdepot gelijk aan hypotheekrente bevestigd; vervallen bij verlenging niet opnieuw gezien.",
+    "dubbel": "bevestigd"
+   },
+   "ltv": {
+    "waarde": "+ Automatische rentedaling naar lagere risicoklasse bij aflossing",
+    "bron": [
+     "https://tulphypotheken.nl/adviseurs/proces/verduurzamen/",
+     "https://tulphypotheken.nl/wp-content/uploads/2025/01/2025-1-Tulp-riant-hypotheek-productkaart-1.pdf"
+    ],
+    "brondatum": "2025",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Steekproef: rente daalt automatisch bij lagere risicoklasse door reguliere of extra aflossing.",
+    "dubbel": "bevestigd"
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Acceptatiegids Tulp Hypotheek",
+    "url": "https://tulphypotheken.nl/wp-content/uploads/2025/03/acceptatiegids-Tulp-Hypotheek_maart-2025.pdf",
+    "versie": "mrt 2025"
+   },
+   {
+    "titel": "Acceptatiegids Tulp Compleet Hypotheek",
+    "url": "https://tulphypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Tulp-Compleet-Hypotheek-april-2024.pdf",
+    "versie": "apr 2024"
+   },
+   {
+    "titel": "Acceptatiegids Tulp Riant Hypotheek",
+    "url": "https://tulphypotheken.nl/wp-content/uploads/2022/08/Acceptatiegids-Tulp-Riant-Hypotheek-nwe-opmaak_2022.pdf",
+    "versie": "2022"
+   },
+   {
+    "titel": "Productkaart Tulp",
+    "url": "https://tulphypotheken.nl/wp-content/uploads/2026/01/Productkaart-Tulp.pdf",
+    "versie": "jan 2026"
+   },
+   {
+    "titel": "Productkaart Tulp Riant Hypotheek 2025-1",
+    "url": "https://tulphypotheken.nl/wp-content/uploads/2025/01/2025-1-Tulp-riant-hypotheek-productkaart-1.pdf",
+    "versie": "2025-1"
+   },
+   {
+    "titel": "Algemene Voorwaarden Tulp Riant Hypotheek",
+    "url": "https://tulphypotheken.nl/wp-content/uploads/2025/11/Algemene-Voorwaarden-Tulp-Riant-Hypotheek-PXB-maart-2022.pdf",
+    "versie": "PXB-maart 2022"
+   },
+   {
+    "titel": "Algemene Voorwaarden Tulp Compleet Hypotheek (Tulpenhuis 2)",
+    "url": "https://tulphypotheken.nl/wp-content/uploads/2022/01/Algemene-Voorwaarden-Tulpenhuis-2-B.V.-PXB-september-2021.pdf",
+    "versie": "PXB-sep 2021"
+   }
+  ]
+ },
+ {
+  "naam": "Attens Hypotheken",
+  "gecontroleerd": "2026-10-04",
+  "criteria": {
+   "o106": {
+    "waarde": "+ Geen renteopslag boven 100% marktwaarde bij EBV/EBB (tot 106%)",
+    "bron": [
+     "https://www.attens.nl/-/media/attens/documenten/documenten-en-formulieren/2025/productkaart-attens.pdf",
+     "https://www.attens.nl/voor-klanten/tariefklasse-en-risico-opslag",
+     "https://www.attens.nl/hypotheken/hypotheekrentes"
+    ],
+    "brondatum": "2025",
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "Productkaart Attens: geen renteopslag boven 100% LTV bij gebruik van EBV/EBB; deel boven 100% moet volledig naar energiebesparende maatregelen. Productkaart is 2025-versie, daarom middel."
+   },
+   "flex": {
+    "waarde": "~ Gemiddelde 3 kalenderjaren (max. laatste jaar en verwacht huidig jaar); flexibel inkomen telt volledig mee",
+    "bron": [
+     "https://www.attens.nl/hypotheken/zorg-en-welzijn/flexibel-inkomen",
+     "https://www.attens.nl/uw-mogelijkheden/flexibel-arbeidscontract",
+     "https://www.attens.nl/-/media/attens/documenten/documenten-en-formulieren/2026/acceptatiegids-attens-1-juli-2026.pdf"
+    ],
+    "brondatum": "jul 2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Steekproef: jaaropgaven laatste 3 jaar; uitzend, oproep/invalkracht en tijdelijk zonder intentieverklaring vallen onder flexibele arbeidsrelatie.",
+    "dubbel": "bevestigd"
+   },
+   "ebb": {
+    "waarde": "+ EBV/EBB mogelijk, tot 106% van de marktwaarde",
+    "bron": [
+     "https://www.attens.nl/voor-klanten/verduurzamen",
+     "https://www.attens.nl/-/media/attens/documenten/documenten-en-formulieren/2026/acceptatiegids-attens-1-juli-2026.pdf"
+    ],
+    "brondatum": "jul 2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Steekproef bevestigd.",
+    "dubbel": "bevestigd"
+   },
+   "duur": {
+    "waarde": "+ Duurzaamheidskorting op EBV/EBB-deel (gemaximeerd bedrag)",
+    "bron": [
+     "https://www.attens.nl/uw-mogelijkheden/groen-leningdeel",
+     "https://www.attens.nl/voor-adviseurs/nieuwsoverzicht/duurzaamheidskorting"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Steekproef: korting geldt over max. € 30.000 van het EBV/EBB-deel. Hoogte korting niet in waarde opgenomen.",
+    "dubbel": "bevestigd"
+   },
+   "ltv": {
+    "waarde": "+ Automatische rentedaling bij lagere tariefklasse",
+    "bron": [
+     "https://www.attens.nl/uw-mogelijkheden/automatische-rentedaling",
+     "https://www.attens.nl/voor-klanten/tariefklasse-en-risico-opslag"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Steekproef bevestigd.",
+    "dubbel": "bevestigd"
+   },
+   "verh": {
+    "waarde": "~ Rente meenemen; resterende rentevast min. 1 jaar, nieuwe hypotheek binnen 6 mnd na aflossing",
+    "bron": [
+     "https://www.attens.nl/voor-klanten/verhuisregeling",
+     "https://www.attens.nl/voor-adviseurs/nieuwsoverzicht/gebruik-van-de-verhuisregeling"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Steekproef: meegenomen rente over gelijk of lager bedrag; voor meerbedrag actuele rente.",
+    "dubbel": "bevestigd"
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Acceptatiegids Attens",
+    "url": "https://www.attens.nl/-/media/attens/documenten/documenten-en-formulieren/2026/acceptatiegids-attens-1-juli-2026.pdf",
+    "versie": "1 jul 2026"
+   },
+   {
+    "titel": "Acceptatiegids Attens",
+    "url": "https://www.attens.nl/-/media/attens/documenten/documenten-en-formulieren/2026/acceptatiegids-attens-april-2026.pdf",
+    "versie": "1 apr 2026"
+   },
+   {
+    "titel": "Acceptatiegids Attens",
+    "url": "https://www.attens.nl/-/media/attens/documenten/documenten-en-formulieren/2026/acceptatiegids-attens-1-januari-2026.pdf",
+    "versie": "1 jan 2026"
+   },
+   {
+    "titel": "Productkaart Attens",
+    "url": "https://www.attens.nl/-/media/attens/documenten/documenten-en-formulieren/2025/productkaart-attens.pdf",
+    "versie": "2025"
+   },
+   {
+    "titel": "Productkaart Attens juli 2025",
+    "url": "https://www.attens.nl/-/media/attens/documenten/documenten-en-formulieren/2025/productkaart-attens-juli-2025.pdf",
+    "versie": "jul 2025"
+   },
+   {
+    "titel": "Algemene voorwaarden van uw hypotheek",
+    "url": "https://www.attens.nl/-/media/attens/documenten/wat-als/2016_09_attens_algemene_voorwaarden.pdf",
+    "versie": "sep 2016"
+   }
+  ]
+ },
+ {
+  "naam": "Lloyds Bank",
+  "gecontroleerd": "2026-10-04",
+  "criteria": {
+   "avlt": {
+    "waarde": "! Verlenging aflossingsvrij deel na einde looptijd mogelijk maar niet gegarandeerd; nieuwe toets en dan geldende regels (max. 50% MW aflossingsvrij)",
+    "bron": [
+     "https://www.lloydsbank.nl/hypotheken/aflossingsvrije-hypotheek",
+     "https://www.lloydsbank.nl/dam/jcr:74631c15-7cfa-4ad7-8eb1-cc3c8e0effde/hypotheekvoorwaarden-lhbv.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Eigen site: Lloyds Bank kan aflossingsvrije hypotheek op einddatum mogelijk verlengen, afhankelijk van situatie en dan geldende regels; aanvraag wordt opnieuw beoordeeld, maandlasten kunnen stijgen. Voorwaarden: op verzoek schriftelijk verlengingsvoorstel; looptijd max. 30 jaar."
+   },
+   "flex": {
+    "waarde": "~ Gemiddelde inkomen laatste 3 kalenderjaren of 36 mnd (IBL); tijdelijk met intentieverklaring na proeftijd",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-inkomen",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf"
+    ],
+    "brondatum": "feb 2026",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Hypotheekgids feb 2026: flexibel inkomen = gemiddelde laatste 3 kalenderjaren (jaaropgaven) of 36 maanden via IBL. Intentieverklaring is een aparte route voor tijdelijk dienstverband (afgegeven na proeftijd), niet vereist voor flexinkomen; eerdere formulering daarom aangepast.",
+    "dubbel": "gecorrigeerd"
+   },
+   "persp": {
+    "waarde": "- Perspectiefverklaring (en arbeidsmarktscan) wordt niet geaccepteerd",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-inkomen",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf"
+    ],
+    "brondatum": "feb 2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Hypotheekgids feb 2026: geen financiering op basis van perspectiefverklaring of arbeidsmarktscan."
+   },
+   "rmid": {
+    "waarde": "- Rentemiddeling niet mogelijk; tussentijds rente wijzigen tegen vergoeding ineens",
+    "bron": [
+     "https://www.lloydsbank.nl/hypotheken/rente-wijzigen-tijdens-rentevastperiode",
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-beheer"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Eigen site: bij tussentijds aanpassen rentevaste periode betaalt klant de vergoeding (boeterente) in één keer; geen variant met verwerking in de rente genoemd."
+   },
+   "rverl": {
+    "waarde": "+ Laagste van rente in rentevoorstel en rente op ingangsdatum nieuwe rvp (behalve BoS Budget)",
+    "bron": [
+     "https://www.lloydsbank.nl/hypotheken/einde-rentevastperiode"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Eigen site: wijzigt de rente tussen datum renteaanbod en ingangsdatum, dan geldt de laagste van beide. Uitzondering: Bank of Scotland Budget Hypotheek."
+   },
+   "bbrk": {
+    "waarde": "~ Contante waarde renteverschil tot einde rvp; vergelijkingsrente = voor klant gunstigste rente",
+    "bron": [
+     "https://www.lloydsbank.nl/hypotheken/rente-wijzigen-tijdens-rentevastperiode",
+     "https://www.lloydsbank.nl/hypotheken/extra-aflossen"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Eigen site: rente tot einde rvp over vervroegd bedrag tegen contractrente vs. vergelijkingsrente voor vergelijkbare nieuwe leningen; Lloyds gebruikt de voor klant gunstigste rente."
+   },
+   "wkost": {
+    "waarde": "+ Meeste aanpassingen kosteloos zelf te regelen (o.a. aflosvorm wijzigen, tussentijdse renteaanpassing zonder behandelkosten)",
+    "bron": [
+     "https://www.lloydsbank.nl/hypotheken/kostenoverzicht",
+     "https://www.lloydsbank.nl/hypotheken/aflosvorm-wijzigen",
+     "https://www.lloydsbank.nl/hypotheken/rente-wijzigen-tijdens-rentevastperiode"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Eigen site: aflosvorm wijzigen € 0 behandelkosten; tussentijds rentevast aanpassen zonder behandelkosten (wel eventuele vergoeding renteverlies)."
+   },
+   "bprov": {
+    "waarde": "! Verlengen kost bereidstellingsprovisie per maand als offerterente lager is dan actueel",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-hypotheekaanbod",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf"
+    ],
+    "brondatum": "feb 2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Steekproef: verlenging bestaande bouw max. 90 dagen, nieuwbouw max. 270 dagen; kosten per maand alleen als rente bij passeren hoger is.",
+    "dubbel": "bevestigd"
+   },
+   "dag": {
+    "waarde": "+ Dagrente: lagere rente op passeerdatum geldt",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-hypotheekaanbod"
+    ],
+    "brondatum": "feb 2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Steekproef bevestigd.",
+    "dubbel": "bevestigd"
+   },
+   "boete": {
+    "waarde": "+ 10% van oorspronkelijk leningdeel per jaar boetevrij",
+    "bron": [
+     "https://www.lloydsbank.nl/hypotheken/extra-aflossen"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Steekproef bevestigd (per leningdeel, per kalenderjaar).",
+    "dubbel": "bevestigd"
+   },
+   "ltv": {
+    "waarde": "+ Maandelijkse automatische verlaging tariefklasse",
+    "bron": [
+     "https://www.lloydsbank.nl/hypotheken/tariefklassen-lloyds"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Steekproef: eind elke maand berekend; lagere rente vanaf eerstvolgende maand voor rest van rvp.",
+    "dubbel": "bevestigd"
+   },
+   "rvoor": {
+    "waarde": "~ Rentevoorstel 3 maanden voor einde rentevaste periode",
+    "bron": [
+     "https://www.lloydsbank.nl/hypotheken/einde-rentevastperiode"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Steekproef: aankondiging ca. 6 mnd vooraf, renteaanbod 3 mnd vooraf.",
+    "dubbel": "bevestigd"
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Lloyds Bank Hypotheekgids",
+    "url": "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf",
+    "versie": "feb 2026"
+   },
+   {
+    "titel": "Hypotheekgids (online, adviseurs)",
+    "url": "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids",
+    "versie": "online"
+   },
+   {
+    "titel": "Hypotheekvoorwaarden Lloyds Bank Hypotheek (1)",
+    "url": "https://www.lloydsbank.nl/dam/jcr:74631c15-7cfa-4ad7-8eb1-cc3c8e0effde/hypotheekvoorwaarden-lhbv.pdf",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "Productkaart Lloyds Bank Hypotheek",
+    "url": "https://www.lloydsbank.nl/dam/jcr:88c9d654-7afe-4c25-ba56-1ad826ad1bf9/productkaart-lloyds-bank-hypotheek.pdf",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "Vergelijkingskaart Hypotheek",
+    "url": "https://www.lloydsbank.nl/dam/jcr:611d09df-d552-4f04-81a4-245bd7ab8df2/202607%20Vergelijkingskaart%20Hypotheek.pdf",
+    "versie": "jul 2026"
+   },
+   {
+    "titel": "Lloyds Bank Verhuurhypotheek Beheergids",
+    "url": "https://www.lloydsbank.nl/dam/jcr:d5704316-8a90-4c75-9e1f-41a853d9673a/Lloyds%20Bank%20Hypotheekgids%20Verhuurhypotheek.pdf",
+    "versie": "dec 2025"
+   },
+   {
+    "titel": "Voorwaarden Lloyds Bank Verhuurhypotheek",
+    "url": "https://www.lloydsbank.nl/dam/jcr:b9710345-a59a-4f20-8630-9b392255fc71/voorwaarden-lloyds-bank-verhuurhypotheek.pdf",
+    "versie": "mrt 2025"
+   },
+   {
+    "titel": "Voorwaarden Bank of Scotland Hypotheek",
+    "url": "https://www.lloydsbank.nl/dam/jcr:dd3fdf48-9f47-47da-a0f1-c14eb9b30ba3/voorwaarden-bank-of-scotland-hypotheek.pdf",
+    "versie": "sep 2026"
+   }
+  ]
+ },
+ {
+  "naam": "Hypotrust",
+  "gecontroleerd": "2026-10-04",
+  "criteria": {
+   "rverl": {
+    "waarde": "~ Renteaanbod min. 3 mnd voor einde rvp o.b.v. actuele risicoklasse; volgens derde partij zelfde rentes als nieuwe klanten",
+    "bron": [
+     "https://www.hypotrust.nl/hypotrust-verheldert-video/transcripten-hypotrust-verheldert/renteverlenging",
+     "https://www.hypotrust.nl/situatie/rente-aanpassen",
+     "https://www.homefinance.nl/hypotrust-rente-actuele-hypotheekrentes-en-voorwaarden-uitgelegd/"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Eigen site (Hypotrust Verheldert, renteverlenging): nieuw renteaanbod min. 3 mnd vooraf, rente bepaald door risicoklasse (aflossing/waardestijging kan lagere klasse geven). Dat bestaande klanten dezelfde rentes krijgen als nieuwe klanten staat alleen bij Homefinance (derde partij). Elan Plus: geen laagste-rentecheck."
+   },
+   "rvoor": {
+    "waarde": "~ Rentevoorstel minimaal 3 mnd voor einde rentevaste periode",
+    "bron": [
+     "https://www.hypotrust.nl/hypotrust-verheldert-video/transcripten-hypotrust-verheldert/renteverlenging"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Steekproef bevestigd.",
+    "dubbel": "bevestigd"
+   },
+   "dag": {
+    "waarde": "- Elan (Plus): rente bij passeren is offerterente; geen dagrente",
+    "bron": [
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Steekproef: Acceptatiekader Elan Plus jan 2026: laagste-rentecheck niet mogelijk, aangeboden rente = passeerrente.",
+    "dubbel": "bevestigd"
+   },
+   "geld": {
+    "waarde": "~ Renteaanbod 4 mnd geldig; acceptatietermijn 3 weken",
+    "bron": [
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Steekproef: renteaanbod 4 maanden geldig bevestigd; kosteloze verlenging 2 mnd niet opnieuw gezien in snippet.",
+    "dubbel": "bevestigd"
+   },
+   "rvp": {
+    "waarde": "~ Elan Plus: variabel, 1, 3, 5, 7, 10, 15, 20 en 30 jaar",
+    "bron": [
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Steekproef: 3-maands variabel niet kiesbaar bij renteverlenging.",
+    "dubbel": "bevestigd"
+   },
+   "elbl": {
+    "waarde": "! Labelkorting (A/B) alleen bij OK Hypotheek (aanvraag vanaf 7-4-2025), niet Elan Plus",
+    "bron": [
+     "https://www.hypotrust.nl/duurzaamheidskorting"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Steekproef: duurzaamheidskorting geldt alleen voor OK Hypotheek (met/zonder NHG), label B of beter, hele eerste rvp; OK niet meer voor nieuwe klanten.",
+    "dubbel": "bevestigd"
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Acceptatiekader Hypotrust Elan Plus",
+    "url": "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2026.pdf",
+    "versie": "jan 2026"
+   },
+   {
+    "titel": "Acceptatiekader Hypotrust Elan",
+    "url": "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-januari-2026.pdf",
+    "versie": "jan 2026"
+   },
+   {
+    "titel": "Acceptatiekader Hypotrust OK",
+    "url": "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-OK-januari-2026.pdf",
+    "versie": "jan 2026"
+   },
+   {
+    "titel": "Acceptatiekader Hypotrust Woon Bewust Hypotheek",
+    "url": "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Woon-Bewust-juli-2026.pdf",
+    "versie": "jul 2026"
+   },
+   {
+    "titel": "Acceptatiekader Hypotrust Goede Start",
+    "url": "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Goede-Start-januari-2025.pdf",
+    "versie": "jan 2025"
+   },
+   {
+    "titel": "Acceptatiekader Hypotrust Comfort",
+    "url": "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Comfort-januari-2025.pdf",
+    "versie": "jan 2025"
+   },
+   {
+    "titel": "Algemene voorwaarden Hypotheek met Profijt",
+    "url": "https://www.hypotrust.nl/uploads/hypotrust/files/Algemene-voorwaarden-profijt-juni.pdf",
+    "versie": "jun 2021"
+   },
+   {
+    "titel": "Downloads (acceptatiekaders, algemene voorwaarden)",
+    "url": "https://www.hypotrust.nl/downloads",
+    "versie": "online"
+   }
+  ]
+ },
+ {
+  "naam": "Vrij Leven (Hypotrust)",
+  "gecontroleerd": "2026-10-04",
+  "criteria": {
+   "rverl": {
+    "waarde": "~ Renteaanbod min. 3 mnd voor einde rvp o.b.v. actuele risicoklasse; laagste rente binnen 3 weken acceptatietermijn",
+    "bron": [
+     "https://www.vrijlevenhypotheek.nl/rente-aanpassen/",
+     "https://www.homefinance.nl/hypotrust-rente-actuele-hypotheekrentes-en-voorwaarden-uitgelegd/"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Eigen site Vrij Leven: nieuw renteaanbod min. 3 mnd vooraf; rentes o.b.v. dan geldende risicoklasse; recht op laagste rente in eerste 3 weken; geen vergoeding bij renteverlenging. Gelijke rente als nieuwe klanten alleen door derde partij (Homefinance, over Hypotrust) genoemd."
+   },
+   "elbl": {
+    "waarde": "- Geen labelkorting: duurzaamheidskorting van Hypotrust geldt alleen voor OK Hypotheek",
+    "bron": [
+     "https://www.hypotrust.nl/duurzaamheidskorting",
+     "https://www.vrijlevenhypotheek.nl/duurzamer-wonen/"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "hypotrust.nl/duurzaamheidskorting: korting (label A/B) geldt uitsluitend voor OK Hypotheek; Vrij Leven-pagina duurzamer wonen noemt alleen extra leenruimte tot 106% en label-afhankelijke leencapaciteit, geen rentekorting of -opslag."
+   },
+   "rvoor": {
+    "waarde": "~ Renteaanbod minimaal 3 maanden voor einde rentevastperiode",
+    "bron": [
+     "https://www.vrijlevenhypotheek.nl/rente-aanpassen/"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Steekproef bevestigd.",
+    "dubbel": "bevestigd"
+   },
+   "dag": {
+    "waarde": "~ Dalrentegarantie tijdens 3 weken acceptatietermijn",
+    "bron": [
+     "https://www.vrijlevenhypotheek.nl/rente-aanpassen/",
+     "https://www.vrijlevenhypotheek.nl/assets/uploads/2025/08/Acceptatiegids-Vrij-Leven-7-augustus-2025-.pdf"
+    ],
+    "brondatum": "aug 2025",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Steekproef: recht op laagste rente in eerste 3 weken na eerste renteaanbod.",
+    "dubbel": "bevestigd"
+   },
+   "rmid": {
+    "waarde": "~ Rentemiddeling mogelijk, met administratiekosten",
+    "bron": [
+     "https://www.vrijlevenhypotheek.nl/rentemiddeling/",
+     "https://www.vrijlevenhypotheek.nl/rente-aanpassen/"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Steekproef: rentemiddeling zonder vergoeding ineens; administratiekosten € 250.",
+    "dubbel": "bevestigd"
+   },
+   "ebb": {
+    "waarde": "+ Energiebespaarbudget mogelijk; tot 106% MW",
+    "bron": [
+     "https://www.vrijlevenhypotheek.nl/duurzamer-wonen/",
+     "https://www.vrijlevenhypotheek.nl/assets/uploads/2025/08/Acceptatiegids-Vrij-Leven-7-augustus-2025-.pdf"
+    ],
+    "brondatum": "aug 2025",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Steekproef: tot 106% MW mits voor energiebesparende voorzieningen (extra max. 6% MW).",
+    "dubbel": "bevestigd"
+   },
+   "rvp": {
+    "waarde": "~ Rentevast 1 t/m 30 jaar",
+    "bron": [
+     "https://www.vrijlevenhypotheek.nl/assets/uploads/2025/08/Acceptatiegids-Vrij-Leven-7-augustus-2025-.pdf"
+    ],
+    "brondatum": "aug 2025",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Steekproef bevestigd (acceptatiegids 7 aug 2025).",
+    "dubbel": "bevestigd"
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Acceptatievoorwaarden/Acceptatiegids Hypotrust Vrij Leven hypotheek",
+    "url": "https://www.vrijlevenhypotheek.nl/assets/uploads/2025/08/Acceptatiegids-Vrij-Leven-7-augustus-2025-.pdf",
+    "versie": "7 aug 2025"
+   },
+   {
+    "titel": "Acceptatievoorwaarden Vrij Leven",
+    "url": "https://www.vrijlevenhypotheek.nl/assets/uploads/2024/04/Acceptatievoorwaarden_Vrij-Leven_maart_2024.pdf",
+    "versie": "mrt 2024"
+   },
+   {
+    "titel": "Algemene Voorwaarden Hypotrust Vrij Leven Hypotheek",
+    "url": "https://www.vrijlevenhypotheek.nl/assets/uploads/2024/05/Algemene_Voorwaarden_Hypotrust_Vrij_Leven_Hypotheek_September-2023.pdf",
+    "versie": "sep 2023"
+   },
+   {
+    "titel": "Handleiding Hypotheek Wijzigen Vrij Leven",
+    "url": "https://www.vrijlevenhypotheek.nl/assets/uploads/2024/04/Handleiding-Hypotheek-Wijzigen-Vrij-Leven-Hypotheek-jul-2022.pdf",
+    "versie": "jul 2022"
+   },
+   {
+    "titel": "Downloads (o.a. Acceptatiegids apr 2026, Beheergids)",
+    "url": "https://www.vrijlevenhypotheek.nl/downloads/",
+    "versie": "apr 2026 (volgens zoeksnippet)"
+   }
+  ]
+ }
+]

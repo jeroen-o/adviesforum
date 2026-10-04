@@ -1,0 +1,648 @@
+[
+ {
+  "naam": "ASN Bank",
+  "gecontroleerd": "2026-10-04",
+  "criteria": {
+   "rverl": {
+    "waarde": "+ Alle tarieven gelden zowel voor nieuwe hypotheken als voor verlenging van bestaande hypotheken",
+    "bron": [
+     "https://www.asnbank.nl/downloads/rentetarieven-asn-hypotheek-per-30-juni-2026.html",
+     "https://www.asnbank.nl/downloads/rentetarieven-asn-bespaarhypotheek-per-11-april-2026.html"
+    ],
+    "brondatum": "2026-06-30",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Renteblad ASN Hypotheek (30-6-2026) en Bespaarhypotheek: tarieven en opslagen gelden voor nieuwe en bestaande klanten bij afsluiten of verlengen. Rente hangt wel af van actuele LTV-groep."
+   },
+   "rmid": {
+    "waarde": "~ Mogelijk bij vaste rente; nieuwe periode min. 5 jr langer dan resterende, binnen looptijd; niet bij spaarhypotheek",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/je-rente-middelen.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Consumentenpagina bevestigt rentemiddeling; let op: zoeksamenvatting van het document 'Regels voor het wijzigen van een hypotheek' suggereerde dat middelen niet kan - niet direct te controleren (site geblokkeerd), handmatig nakijken. Daarnaast administratiekosten en advieskosten."
+   },
+   "wkost": {
+    "waarde": "~ Administratiekosten per wijziging, hoger bij meerdere wijzigingen tegelijk",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/hypotheekadvies/kosten-wijzigen-van-je-bestaande-hypotheek.html",
+     "https://www.asnbank.nl/downloads/kostenoverzicht-wijzigen-hypotheek.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "EUR 195 per wijziging, EUR 390 bij meerdere wijzigingen tegelijk; rente eerder aanpassen EUR 195 per hypotheeknummer, max. EUR 390."
+   },
+   "rvoor": {
+    "waarde": "~ Rentevoorstel 3 mnd voor einde rentevaste periode; nieuwe periode binnen resterende looptijd",
+    "bron": [
+     "https://www.asnbank.nl/web/file?uuid=98bf31e4-9fef-4628-b5ba-3ee3784015df&owner=6916ad14-918d-4ea8-80ac-f71f0ff1928e&contentid=2742",
+     "https://www.asnbank.nl/hypotheek/asn-bespaarhypotheek/hypotheekrente-verlengen.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Regels voor het wijzigen van een hypotheek: voorstel 3 maanden voor renteverlengingsdatum; renteverlenging zonder advies."
+   },
+   "avrij": {
+    "waarde": "! Aanvragen vanaf 11-5-2026 max. 30% van woningwaarde aflossingsvrij; bestaand blijft, ook bij einde rentevast; bij verhogen/verhuizen geldt 30%",
+    "bron": [
+     "https://newsroom.asnbank.nl/download/f3cf2d60-84b6-40a3-bf75-25eaeddbae9e/persbericht-asnbankbeperktaflossingsvrijehypotheektot30procentwaardewoning.pdf",
+     "https://www.hypotheker.nl/actueel/nieuwsberichten/2026/ook-asn-bank-scherpt-aflossingsvrij-aan/"
+    ],
+    "brondatum": "2026-04",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Persbericht ASN Bank; grens geldt ongeacht totale hypotheekhoogte. Was 50%."
+   },
+   "verh": {
+    "waarde": "+ Rente Meeneemregeling: rente meenemen; tarief hangt af van verhouding woningwaarde/hypotheek",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/rente-meeneemregeling.html",
+     "https://www.asnbank.nl/hypotheek/hypotheek-meenemen.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Overnemen renteafspraken betekent niet per se gelijke rente: LTV-groep van nieuwe situatie telt mee. Termijn 3 mnd niet opnieuw in zoeksamenvatting gezien."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Regels voor het wijzigen van een hypotheek (ASN Bank)",
+    "url": "https://www.asnbank.nl/web/file?uuid=98bf31e4-9fef-4628-b5ba-3ee3784015df&owner=6916ad14-918d-4ea8-80ac-f71f0ff1928e&contentid=2742",
+    "versie": "onbekend (actueel op site)"
+   },
+   {
+    "titel": "Rentetarieven ASN Hypotheek per 30 juni 2026",
+    "url": "https://www.asnbank.nl/downloads/rentetarieven-asn-hypotheek-per-30-juni-2026.html",
+    "versie": "30 jun 2026"
+   },
+   {
+    "titel": "Informatiewijzer Hypotheken ASN",
+    "url": "https://www.asnbank.nl/downloads/informatiewijzer-hypotheek-afsluiten.html",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "Voorwaarden Hypotheek (overzicht algemene voorwaarden, o.a. vanaf 27 juni 2023)",
+    "url": "https://www.asnbank.nl/hypotheek/hypotheekvoorwaarden.html",
+    "versie": "27 jun 2023"
+   },
+   {
+    "titel": "Regels voor het accepteren, verstrekken en wijzigen van een ASN Hypotheek",
+    "url": "https://hypotheekcompany.nl/wp-content/uploads/2026/01/ASN-Regels-voor-het-accepteren-verstrekken-en-wijzigen-van-een-ASN-Hypotheek.pdf",
+    "versie": "jan 2026"
+   }
+  ]
+ },
+ {
+  "naam": "Munt Hypotheken",
+  "gecontroleerd": "2026-10-04",
+  "criteria": {
+   "o106": {
+    "waarde": "! Tot 106% voor EBV (deel boven 100% volledig naar EBV); geen aparte vrijstelling, vier risicoklassen met hoogste klasse >90% MW",
+    "bron": [
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf",
+     "https://www.munthypotheken.nl/veelgestelde-vragen/verduurzamen/hoeveel-mogen-klanten-lenen-voor-energiebesparende-voorzieningen-ebv-in-relatie-tot-de-waarde-van-de-woning/",
+     "https://www.munthypotheken.nl/veelgestelde-vragen/rente/welke-opslagen-zitten-er-in-de-hypotheekrente/"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids 2026: max. 106% MW als deel boven 100% volledig voor EBV wordt gebruikt. Risico-opslag alleen o.b.v. LTV (klassen t/m 60/80/90/>90%; geen opslag met NHG of <=60%). Nergens vermeld dat het EBV-deel buiten de LTV-bepaling blijft; afgeleid dat leningen >90% MW in de hoogste klasse vallen."
+   },
+   "elbl": {
+    "waarde": "~ Geen energielabelkorting of -opslag; risico-opslag alleen o.b.v. LTV en NHG",
+    "bron": [
+     "https://www.munthypotheken.nl/veelgestelde-vragen/rente/welke-opslagen-zitten-er-in-de-hypotheekrente/",
+     "https://www.munthypotheken.nl/rente/"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "FAQ 'Welke risico-opslagen zitten er in de hypotheekrente?' noemt alleen verhouding hypotheek/woningwaarde; label bepaalt alleen hoogte Energiebespaarbudget. Afwezigheid labelkorting is afgeleid (niet expliciet uitgesloten)."
+   },
+   "geld": {
+    "waarde": "~ 4 mnd; eenmalig verlengen met 2 mnd (bestaande bouw) of 8 mnd (nieuwbouw)",
+    "bron": [
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf",
+     "https://www.munthypotheken.nl/veelgestelde-vragen/aanvraag-munt-hypotheek/mijn-rente-aanbod-is-bijna-niet-meer-geldig-kan-ik-de-termijn-verlengen/"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Hypotheekgids 2026."
+   },
+   "bprov": {
+    "waarde": "! Verlengen kost bereidstellingsprovisie per verlengde dag",
+    "bron": [
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf",
+     "https://munthypotheken.nl/veelgestelde-vragen/uw-hypotheek/wat-is-bereidstellingsprovisie"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Formule in gids: percentage x hypotheekbedrag / 30 x aantal verlengde dagen. Voorwaarde 'alleen als rente gestegen is' niet opnieuw in zoeksamenvatting gezien."
+   },
+   "bdduur": {
+    "waarde": "+ 24 mnd; verlengbaar met 12 + 6 mnd tot max. 42 mnd (via MijnHypotheekOnline)",
+    "bron": [
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf",
+     "https://www.munthypotheken.nl/veelgestelde-vragen/bouwdepot/hoe-lang-is-mijn-bouwdepot-geldig/"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Hypotheekgids 2026; rentevergoeding = hypotheekrente, max. 12 mnd."
+   },
+   "ltv": {
+    "waarde": "+ Risico-opslag past automatisch aan bij aflossen naar lagere klasse; waardestijging op verzoek",
+    "bron": [
+     "https://www.munthypotheken.nl/veelgestelde-vragen/rente/welke-opslagen-zitten-er-in-de-hypotheekrente/",
+     "https://www.munthypotheken.nl/veelgestelde-vragen/rente/hoe-kan-ik-mijn-rente-opslag-laten-vervallen-als-de-waarde-van-mijn-huis-is-gestegen/"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Aanpassing bij (extra) aflossing gaat automatisch."
+   },
+   "avrij": {
+    "waarde": "~ Max. 50% van marktwaarde aflossingsvrij (eigen site); mogelijk per 1-6-2026 verlaagd naar 30%",
+    "bron": [
+     "https://www.munthypotheken.nl/veelgestelde-vragen/aanvraag-munt-hypotheek/welk-deel-van-mijn-hypotheek-mag-ik-aflossingsvrij-lenen/",
+     "https://www.homefinance.nl/hypotheek/aanbieders/munt/aflossingsvrij/"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "MUNT-FAQ noemt nog 50%; homefinance.nl meldt dat per 1-6-2026 max. 30% geldt (onduidelijk of MUNT-specifiek). Handmatig controleren."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "MUNT Hypotheekgids 2026",
+    "url": "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf",
+    "versie": "2026"
+   },
+   {
+    "titel": "Algemene Voorwaarden MUNT Hypotheek 26.01",
+    "url": "https://www.munthypotheken.nl/site/assets/files/1838/av_26_01.pdf",
+    "versie": "26.01"
+   },
+   {
+    "titel": "Algemene Voorwaarden MUNT Hypotheek 25.02",
+    "url": "https://www.munthypotheken.nl/algemene-voorwaarden/",
+    "versie": "25.02"
+   },
+   {
+    "titel": "MUNT Hypotheekgids 2024",
+    "url": "https://www.munthypotheken.nl/site/assets/files/_misc/MUNT_Hypotheekgids_2024.pdf",
+    "versie": "2024"
+   }
+  ]
+ },
+ {
+  "naam": "Obvion",
+  "gecontroleerd": "2026-10-04",
+  "criteria": {
+   "o106": {
+    "waarde": "! Tot 106% LTV voor verduurzaming; tariefgroep o.b.v. totale lening/woningwaarde, met aparte groep >106% (Woon)",
+    "bron": [
+     "https://obvion.nl/hypotheekrente/tariefopslag/",
+     "https://obvion.nl/hypotheek/verduurzaming/financiering/"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Tariefopslag-pagina: tariefgroep = verhouding schuld/marktwaarde, Woon Hypotheek kent groep 'meer dan 106%' (oude producten >101%). Extra lenen voor verduurzaming EUR 10.000 (label E-G EUR 20.000), totaal max. 106%; geen vrijstelling van tariefgroep gevonden."
+   },
+   "avrij": {
+    "waarde": "! Sinds 12-5-2026 max. 30% van woningwaarde met max. EUR 150.000 aflossingsvrij (nieuw, oversluiten, verhogen)",
+    "bron": [
+     "https://obvion.nl/hypotheek/vorm/aflossingsvrij/beleid-aflossingsvrij/",
+     "https://obvion.nl/media/kxudk0d2/product-en-acceptatiekaart.pdf"
+    ],
+    "brondatum": "2026-05",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Beleidspagina noemt 12 mei 2026, acceptatiekaart/samenvatting noemt 11 mei 2026. Bestaand aflossingsvrij mag blijven bij renteaanpassing; overgangsregeling bestaande klanten tot 1-1-2030."
+   },
+   "boete": {
+    "waarde": "+ 10% oorspr. hoofdsom per leningdeel per kalenderjaar; onbeperkt met eigen geld/erfenis/overlijdensuitkering",
+    "bron": [
+     "https://obvion.nl/media/kxudk0d2/product-en-acceptatiekaart.pdf"
+    ],
+    "brondatum": "2026-05",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Product- en acceptatiekaart Woon Hypotheek mei 2026."
+   },
+   "geld": {
+    "waarde": "+ Rente-aanbod 3 mnd (nieuwbouw 6); bindend aanbod 14 dagen tekenen",
+    "bron": [
+     "https://obvion.nl/media/kxudk0d2/product-en-acceptatiekaart.pdf"
+    ],
+    "brondatum": "2026-05",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Product- en acceptatiekaart mei 2026; verlengtermijnen niet opnieuw in samenvatting gezien."
+   },
+   "rvp": {
+    "waarde": "~ Vast 1 t/m 20, 25 en 30 jaar",
+    "bron": [
+     "https://obvion.nl/media/kxudk0d2/product-en-acceptatiekaart.pdf"
+    ],
+    "brondatum": "2026-05",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Product- en acceptatiekaart Woon Hypotheek mei 2026."
+   },
+   "ebb": {
+    "waarde": "+ Standaard extra EUR 10.000 voor verduurzaming (label E-G EUR 20.000), totaal max. 106% woningwaarde",
+    "bron": [
+     "https://obvion.nl/hypotheek/verduurzaming/financiering/"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bovenop maximale leensom o.b.v. inkomen."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Product- en acceptatiekaart Obvion Woon Hypotheek",
+    "url": "https://obvion.nl/media/kxudk0d2/product-en-acceptatiekaart.pdf",
+    "versie": "mei 2026"
+   },
+   {
+    "titel": "Handboek met product- en acceptatievoorwaarden (acceptatiegids)",
+    "url": "https://obvion.nl/adviseur/beleid/acceptatiegids/",
+    "versie": "online, actueel"
+   },
+   {
+    "titel": "Beleid aflossingsvrije hypotheek",
+    "url": "https://obvion.nl/hypotheek/vorm/aflossingsvrij/beleid-aflossingsvrij/",
+    "versie": "mei 2026"
+   },
+   {
+    "titel": "Obvion Beheerbeleid",
+    "url": "https://hypotheekcompany.nl/wp-content/uploads/2025/07/Obvion-beheer-mei-2025.pdf",
+    "versie": "15 mei 2025, v5.0"
+   }
+  ]
+ },
+ {
+  "naam": "Florius",
+  "gecontroleerd": "2026-10-04",
+  "criteria": {
+   "erfp": {
+    "waarde": "~ Erfpacht mogelijk; afkoop erfpacht financierbaar; Verzilver alleen bij eeuwigdurende erfpacht of tot jongste aanvrager 105 jr",
+    "bron": [
+     "https://www.florius.nl/-/media/florius/files/formulieren/voorwaarden/fl-vw02-profijt-hypotheek-per-1-oktober-2025.pdf",
+     "https://www.florius.nl/-/media/florius/files/verzilver/productkaart-florius-verzilver-hypotheek.pdf",
+     "https://woneninbeaufort.nl/blog/post/25698/florius-en-erfpacht-wijzigingen-van-erfpachtcontracten-en-het-noodzaak-van-een-nieuwe-hypotheekakte/"
+    ],
+    "brondatum": "2025-10",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Voorwaarden Profijt (1-10-2025): hypotheek o.a. voor afkoop van erfpacht, opstal of beklemming. Productkaart Verzilver (24-4-2023): geen tijdelijke erfpacht tenzij looptijd tot 105e jaar jongste aanvrager. Algemeen acceptatiebeleid (particuliere/gemeentelijke erfpacht, canon) niet openbaar gevonden; omzetting tijdelijk->eeuwigdurend vergt aanvullende hypotheekakte (derde bron/Kifid)."
+   },
+   "rverl": {
+    "waarde": "~ Nieuwe producten: tarieven gelijk aan nieuwe klanten; oude (niet nieuw af te sluiten) producten eigen renteblad",
+    "bron": [
+     "https://www.florius.nl/-/media/florius/files/formulieren/voorwaarden/fl-vw02-profijt-hypotheek-per-1-oktober-2025.pdf",
+     "https://www.florius.nl/-/media/florius/files/rentepagina/renteblad-compleet-hypotheek.pdf",
+     "https://www.florius.nl/hypotheek-aanpassen/rentevastperiode-herzien"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Voorwaarden Profijt verwijzen naar 'rentepercentage zoals dat geldt voor nieuwe klanten'; apart renteblad 'NIET NIEUW af te sluiten' geldt uitsluitend voor bestaande leningdelen (Compleet e.d.). Een expliciete garantie 'verlengrente = nieuwe-klantrente' niet letterlijk in zoekresultaat gezien."
+   },
+   "bprov": {
+    "waarde": "+ Aanbod na goedkeuring automatisch 12 mnd geldig vanaf datum renteaanbod; verlengen niet nodig",
+    "bron": [
+     "https://www.florius.nl/hypotheek/profijthypotheek",
+     "https://www.florius.nl/eerste-huis-kopen/in-drie-stappen"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Geldt voor Profijt drie + drie en Profijt twaalf. Geen bereidstellingsprovisie-regeling gevonden."
+   },
+   "geld": {
+    "waarde": "+ Aanbod na akkoord automatisch 12 maanden geldig (beide Profijt-varianten)",
+    "bron": [
+     "https://www.florius.nl/hypotheek/profijthypotheek"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "12 mnd vanaf datum renteaanbod om te passeren."
+   },
+   "avrij": {
+    "waarde": "! Per 1-6-2026 max 30% van woningwaarde en max EUR 150.000; bestaand ongewijzigd (ook bij nieuwe rentevaste periode)",
+    "bron": [
+     "https://www.florius.nl/hypotheek/aflossingsvrije-hypotheek/nieuwe-regels"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Daarvoor 50% en max. EUR 2,5 mln. Strengere regels gelden bij materiele wijziging (verhuizing, verhoging, verlenging). Let op: dit kan botsen met huidige avlt-waarde (herfinancieren tot 50%) - handmatig nakijken."
+   },
+   "elbl": {
+    "waarde": "+ Labelafhankelijke rente sinds 1-4-2026; duurzaamheidskorting (label A) liep van 1-8-2021 tot 1-4-2026",
+    "bron": [
+     "https://www.florius.nl/duurzaamheidskorting",
+     "https://www.florius.nl/energielabel"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bestaande klanten met renteaanbod tussen 1-8-2021 en 1-4-2026 kunnen na verduurzaming nog duurzaamheidskorting krijgen."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "De voorwaarden van de Profijt Hypotheek",
+    "url": "https://www.florius.nl/-/media/florius/files/formulieren/voorwaarden/fl-vw02-profijt-hypotheek-per-1-oktober-2025.pdf",
+    "versie": "1 okt 2025"
+   },
+   {
+    "titel": "De voorwaarden van de Compleet Hypotheek",
+    "url": "https://www.florius.nl/-/media/florius/files/formulieren/voorwaarden/fl-vw01-compleet-hypotheek-per-1-oktober-2025.pdf",
+    "versie": "1 okt 2025"
+   },
+   {
+    "titel": "Florius Renteblad",
+    "url": "https://www.florius.nl/-/media/florius/files/adviseurs---geen-inlog/rentebladen/huidig/florius-renteblad.pdf",
+    "versie": "28 jul 2026"
+   },
+   {
+    "titel": "Productkaart Florius Verzilver Hypotheek",
+    "url": "https://www.florius.nl/-/media/florius/files/verzilver/productkaart-florius-verzilver-hypotheek.pdf",
+    "versie": "24 apr 2023"
+   }
+  ]
+ },
+ {
+  "naam": "Aegon",
+  "gecontroleerd": "2026-10-04",
+  "criteria": {
+   "aow": {
+    "waarde": "+ Seniorenregeling: AOW bereikt of binnen 10 jaar, bij verhuizen; nieuwe maandlast gelijk aan of lager dan huidige",
+    "bron": [
+     "https://www.aegon.nl/particulier/hypotheek/hypotheek-afsluiten-op-latere-leeftijd",
+     "https://www.asr.nl/hypotheek/situatie/pensioen"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Aegon-pagina 'Een hypotheek afsluiten op latere leeftijd': soepelere toetsing voor senioren met eigen woning die verhuizen; anders telt na AOW alleen AOW + aanvullend pensioen. Brondatum pagina niet zichtbaar."
+   },
+   "erfp": {
+    "waarde": "! Particuliere erfpacht niet geaccepteerd; sinds 16-12-2022 geen Koop Goedkoop/Koop Garant/Regionaal Grondbezit (verhogen bestaand alleen met NHG)",
+    "bron": [
+     "https://www.aegon.nl/system/files/2022-10/Acceptatieproces_Hypotheekaanvraag.pdf",
+     "https://www.aegon.nl/voor-adviseurs/nieuws/hypotheek/we-stoppen-per-16-december-met-accepteren-van-aanvragen-met-koop-goedkoop-koop-garant-of-regionaal-grondbezit"
+    ],
+    "brondatum": "2022-10",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatieproces-document (okt 2022): woning moet hoofdverblijf/eigen bewoning zijn en geen particuliere erfpacht. Bron ouder dan 2025; canonbehandeling niet gevonden."
+   },
+   "o106": {
+    "waarde": "~ Tot 106% voor EBV (met en zonder NHG); tariefklasse o.b.v. totale schuld/waarde, 95-112,5% valt in hoogste klasse (>95%)",
+    "bron": [
+     "https://www.aegon.nl/particulier/klantenservice/veelgestelde-vragen/onder-welke-voorwaarden-kan-ik-106-van-mijn-woningwaarde-lenen",
+     "https://www.aegon.nl/particulier/klantenservice/veelgestelde-vragen/in-welke-tariefklasse-valt-mijn-hypotheek"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "FAQ tariefklasse: LTV tussen 95% en 112,5% betaalt tarief van klasse >95%; boven 112,5% extra opslag (vermoedelijk oudere producten). Geen aparte vrijstelling voor het EBV-deel gevonden."
+   },
+   "bbrk": {
+    "waarde": "~ Contante waarde renteverschil over resterende RVP; vergelijkingsrente = actuele rente gelijke resterende periode",
+    "bron": [
+     "https://www.aegon.nl/system/files/2024-12/Productwijzer_Aegon_Hypotheken.pdf",
+     "https://www.kifid.nl/wp-content/uploads/2021/12/Uitspraak-2021-1017-Bindend.pdf"
+    ],
+    "brondatum": "2024-12",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Productwijzer: vergelijkingsrente = actuele rente voor rentevaste periode gelijk aan resterende rentevaste periode."
+   },
+   "dag": {
+    "waarde": "! Standaard offerterente; laagste van offerte- of dagrente alleen als optie met meerprijs",
+    "bron": [
+     "https://www.aegon.nl/system/files/2024-12/Productwijzer_Aegon_Hypotheken.pdf"
+    ],
+    "brondatum": "2024-12",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Productwijzer: keuze passeerrente = offerterente, of laagste van offerte- en dagrente bij passeren."
+   },
+   "rvoor": {
+    "waarde": "~ Rentevoorstel 3 maanden voor einde rentevaste periode",
+    "bron": [
+     "https://www.aegon.nl/particulier/hypotheek/hypotheek-aanpassen"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": ""
+   },
+   "ebb": {
+    "waarde": "+ Tot 106% marktwaarde na verbouwing voor energiebesparende voorzieningen, met en zonder NHG; aflossen max. 30 jr",
+    "bron": [
+     "https://www.aegon.nl/particulier/vooruitdenken/verduurzamen",
+     "https://www.aegon.nl/particulier/klantenservice/veelgestelde-vragen/onder-welke-voorwaarden-kan-ik-106-van-mijn-woningwaarde-lenen"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bedrag buiten financieringslast afhankelijk van label (EUR 0 bij A++++ t/m EUR 20.000 bij E-G)."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Productwijzer Aegon Hypotheken",
+    "url": "https://www.aegon.nl/system/files/2024-12/Productwijzer_Aegon_Hypotheken.pdf",
+    "versie": "dec 2024"
+   },
+   {
+    "titel": "Aegon Hypotheekgids",
+    "url": "https://aegon.nl/system/files/2024-04/Aegon%20Hypotheekgids_april_2024_0.pdf",
+    "versie": "apr 2024"
+   },
+   {
+    "titel": "Algemene voorwaarden Aegon hypotheek (H30214 b)",
+    "url": "https://www.aegon.nl/system/files/2025-06/H30214_b_Algemene_voorwaarden_Aegon_hypotheek.pdf",
+    "versie": "jun 2025"
+   },
+   {
+    "titel": "Addendum overbruggingslening H 30212 a",
+    "url": "https://www.aegon.nl/system/files/2024-05/Formulier_addendum_overbruggingslening.pdf",
+    "versie": "mei 2024"
+   },
+   {
+    "titel": "Aegon Hypotheekgids januari 2025",
+    "url": "https://hypotheekcompany.nl/wp-content/uploads/2025/01/Aegon-Hypotheekgids-januari-2025_compressed.pdf",
+    "versie": "jan 2025"
+   }
+  ]
+ },
+ {
+  "naam": "a.s.r.",
+  "gecontroleerd": "2026-10-04",
+  "criteria": {
+   "rverl": {
+    "waarde": "+ Bij verlenging rentevaste periode geldt de actuele rente voor nieuwe leningen",
+    "bron": [
+     "https://www.asr.nl/hypotheek/hypotheek-aanpassen",
+     "https://www.asr.nl/asr/api/asrnl/pod/getdirectpdf?uri=%2FPOD%2Fr%2FPdf%2F53997.pdf"
+    ],
+    "brondatum": "2026-05",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Min. 3 mnd voor einde rentevast brief met nieuw renteaanbod; na afloop geldt de actuele rente zoals voor nieuwe hypotheken met dezelfde rentevaste periode. Tussentijds verlengen kosteloos als huidige rente <= rente nieuwe leningen."
+   },
+   "dag": {
+    "waarde": "+ Rente daalt automatisch mee tot passeren (volgens vergelijker)",
+    "bron": [
+     "https://www.homefinance.nl/hypotheek/aanbieders/asr/"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Alleen derde bron (homefinance.nl); niet bevestigd op asr.nl. Handmatig controleren in renteaanbod/voorwaarden ASR Hypotheek."
+   },
+   "elbl": {
+    "waarde": "~ Geen labelafhankelijke rente gevonden; risico-opslag o.b.v. LTV/NHG; lager tarief via Verduurzamingshypotheek",
+    "bron": [
+     "https://www.asr.nl/hypotheek/hypotheekrente",
+     "https://asr.nl/hypotheek/welthuis-hypotheek",
+     "https://www.asr.nl/hypotheek/verduurzamingshypotheek"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Label bepaalt alleen hoeveel extra geleend kan worden voor verduurzaming (min. EUR 10.000). Afwezigheid labelkorting/-opslag is afgeleid, niet expliciet bevestigd."
+   },
+   "erfp": {
+    "waarde": "~ Erfpacht mogelijk; canon tijdig betalen, wijziging erfpachtvoorwaarden vereist toestemming a.s.r.",
+    "bron": [
+     "https://www.asr.nl/asr/api/asrnl/pod/getdirectpdf?uri=%2FPOD%2Fr%2FPdf%2F53997.pdf"
+    ],
+    "brondatum": "2026-05",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Algemene voorwaarden mei 2026 ASR Hypotheek: verplichtingen bij erfpacht (canon), voorafgaande toestemming bij wijziging erfpachtrechten; wijziging canon kan grond voor opeising zijn. Uitsluiting particuliere erfpacht niet op eigen site teruggevonden (alleen in oudere gids)."
+   },
+   "avlt": {
+    "waarde": "~ Verlenging aflossingsvrij op einddatum mogelijk (bijv. nieuwe 30 jaar); AOW'ers kunnen naar Levensrente hypotheek",
+    "bron": [
+     "https://www.asr.nl/hypotheek/levensrente-hypotheek",
+     "https://www.asr.nl/blog/wat-is-mogelijk-voor-aowers-die-willen-oversluiten"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Levensrente hypotheek: rente vast zolang (partner) in woning woont, geen einddatum; beide partners AOW-leeftijd."
+   },
+   "ltv": {
+    "waarde": "+ 8 risicoklassen; maandelijkse check, rente daalt automatisch bij lagere klasse",
+    "bron": [
+     "https://www.asrnederland.nl/nieuws-en-pers/nieuws/20260430-asr-introduceert-de-asr-hypotheek",
+     "https://www.asr.nl/hypotheek/asr-hypotheek"
+    ],
+    "brondatum": "2026-04",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Geldt ook voor nieuwe ASR Hypotheek (sinds 30-4-2026), WelThuis en DigiThuis."
+   },
+   "rvp": {
+    "waarde": "+ Vrije keuze rentevaste periode tot max. 30 jaar",
+    "bron": [
+     "https://www.asrnederland.nl/nieuws-en-pers/nieuws/20260430-asr-introduceert-de-asr-hypotheek"
+    ],
+    "brondatum": "2026-04",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "ASR Hypotheek: annuitair, lineair en aflossingsvrij; vrije keuze aantal jaren rentevast binnen looptijd."
+   },
+   "rvoor": {
+    "waarde": "~ Rentevoorstel uiterlijk 3 maanden voor einde rentevaste periode",
+    "bron": [
+     "https://www.asr.nl/hypotheek/hypotheek-aanpassen"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": ""
+   },
+   "duur": {
+    "waarde": "+ Verduurzamingshypotheek met lager tarief (10 jaar vast); standaard optie op renteaanbod ASR Hypotheek",
+    "bron": [
+     "https://www.asr.nl/hypotheek/verduurzamingshypotheek",
+     "https://www.asrnederland.nl/nieuws-en-pers/nieuws/20260430-asr-introduceert-de-asr-hypotheek"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Plafond EUR 65.000 en depot 2 jaar niet opnieuw in zoeksamenvatting gezien."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Algemene voorwaarden ASR Hypotheek en ASR ZorgeloosThuis Hypotheek",
+    "url": "https://www.asr.nl/asr/api/asrnl/pod/getdirectpdf?uri=%2FPOD%2Fr%2FPdf%2F53997.pdf",
+    "versie": "mei 2026"
+   },
+   {
+    "titel": "a.s.r. hypotheekproduct- en contactkaart",
+    "url": "https://www.asrnederland.nl/-/media/files/asrnederland-nl/nieuws-en-pers/2026/20260430-asr-hypotheekproduct-en-contactkaart.pdf",
+    "versie": "30 apr 2026"
+   },
+   {
+    "titel": "Algemene voorwaarden DigiThuis hypotheek",
+    "url": "https://www.asr.nl/asr/api/asrnl/pod/getdirectpdf?uri=%2FPOD%2Fr%2FPdf%2F53826.pdf",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "Hypotheekgids a.s.r. Juni 2025",
+    "url": "https://hypotheekcompany.nl/wp-content/uploads/2025/06/Hypotheekgids-juni-2025.pdf",
+    "versie": "jun 2025"
+   }
+  ]
+ }
+]
