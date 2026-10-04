@@ -82,6 +82,7 @@ legend{font-weight:800;font-size:15px;padding:0 6px}
 .gv .bron{display:block;font-size:12px;color:var(--blauw);overflow-wrap:anywhere}
 .gv .nv{font-style:italic;color:var(--grijs);font-size:12px}
 .leeg{color:var(--grijs);font-style:italic}
+.gv .meld{display:block;font-size:11.5px;color:var(--grijs);margin-top:2px}
 .gv .tw{display:inline-block;font-size:11.5px;font-weight:800;background:var(--oranje-zacht);color:var(--oranje);border-radius:6px;padding:0 6px;margin-top:2px}
 .voet{max-width:1100px;margin:0 auto;padding:0 16px 40px;font-size:12.5px;color:var(--grijs)}
 @media (max-width:560px){.gv li{grid-template-columns:1fr}}
@@ -102,7 +103,7 @@ legend{font-weight:800;font-size:15px;padding:0 6px}
       <a class="terug" href="index.html#hulpmiddelen">Alle hulpmiddelen</a>
     </div>
     <h1>Situatiecheck voorwaarden</h1>
-    <p>Vink de situatie van de klant aan. Je ziet per geldverstrekker of verzekeraar of dat volgens de gecontroleerde voorwaarden kan, met de onderbouwing en de bron. Aanbieders staan op alfabet. Voor hypotheken, overlijdensrisicoverzekeringen en AOV.</p>
+    <p>Vink de situatie van de klant aan. Je ziet per geldverstrekker of verzekeraar of dat volgens de gecontroleerde voorwaarden kan, met de onderbouwing en de bron. Aanbieders staan op alfabet. Voor hypotheken en de producten uit de productvoorwaarden.</p>
   </div>
 </header>
 
@@ -147,7 +148,7 @@ function el(tag, cls, txt){ var e = document.createElement(tag); if(cls) e.class
 function veilig(u){ return typeof u==='string' && /^https:\/\/[^\s"'<>]+$/i.test(u) ? u : ''; }
 function host(u){ try{ return new URL(u).hostname.replace(/^www\./,''); }catch(e){ return u; } }
 var LABEL = {ja:'Ja', voorwaarden:'Onder voorwaarden', nee:'Nee', onbekend:'Onbekend'};
-var PRODUCTEN = [{id:'hyp', titel:'Hypotheek'}].concat(Object.keys(D.producten||{}).map(function(k){ return {id:k, titel:k==='orv' ? 'ORV' : k==='aov' ? 'AOV' : D.producten[k].titel}; }));
+var PRODUCTEN = [{id:'hyp', titel:'Hypotheek'}].concat(Object.keys(D.producten||{}).map(function(k){ return {id:k, titel:({orv:'ORV', aov:'AOV', uitvaart:'Uitvaart', lijfrente:'Lijfrente', krediet:'Krediet', woonlasten:'Woonlasten', bankgarantie:'Bankgarantie', woonverzekering:'Opstal en inboedel'})[k] || D.producten[k].titel}; }));
 var prod = 'hyp', gekozen = new Set();
 
 function data(){
@@ -217,6 +218,9 @@ function render(){
         if(r0.g){ var b = el('span','bron','✓ gecontroleerd'); var v = veilig(r0.b); if(v){ b.appendChild(document.createTextNode(' · bron: ')); var l = el('a', null, host(v)); l.href = v; l.target = '_blank'; l.rel = 'noopener'; b.appendChild(l); } r.appendChild(b); }
         else r.appendChild(el('span','nv','onderliggende voorwaarde nog niet geverifieerd'));
       }
+      var m = el('a','meld','Klopt deze indeling niet?');
+      m.href = 'mailto:forumadvies@gmail.com?subject=' + encodeURIComponent('Correctie situatiecheck: ' + g.naam + ' \u2013 ' + x.naam) + '&body=' + encodeURIComponent('Aanbieder: ' + g.naam + '\nSituatie: ' + x.naam + '\nHuidige indeling: ' + LABEL[r0.o] + ' \u2013 ' + (r0.t||'') + '\nPagina: ' + location.href + '\n\nWat klopt er niet?\n\n\nBron (link naar de voorwaarden van de aanbieder):\n\n');
+      r.appendChild(m);
       li.appendChild(r); ul.appendChild(li);
     });
     d.appendChild(ul); lijst.appendChild(d);

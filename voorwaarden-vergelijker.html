@@ -251,6 +251,9 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
 .wsoort.vervallen{background:var(--rood-zacht);color:var(--rood-tekst)}
 .woud{color:var(--grijs);text-decoration:line-through}
 .wmeer{margin-top:8px}
+.val .meld{display:inline-block;margin-top:4px;font-size:11.5px;color:var(--grijs);text-decoration:underline}
+.val .meld:hover,.val .meld:focus{color:var(--tekst)}
+@media print{.val .meld{display:none}}
 @media screen and (prefers-color-scheme:dark){
 :root:not([data-theme="light"]){color-scheme:dark}
 :root:not([data-theme="light"]){--geel-zacht:#3f3918;--zwart:#F2F2F2;--tekst:#F2F2F2;--grijs:#BDBDBD;--lijn:#333333;--vlak:#262626;--wit:#1E1E1E;--rood:#e9a29b;--rood-zacht:#3f1a18;--rood-tekst:#f3c2bd;--oranje:#f6cb8e;--oranje-zacht:#3f3118;--blauw:#9ec3e6;--blauw-zacht:#1f2a36;--kopvlak:#2A2A2A;--kopvlak-2:#333333;--zebra:#222222;--t-n:#8A96A3}
@@ -466,7 +469,7 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
     <span><i class="tint t-a"></i> Aandachtspunt</span>
     <span><i class="tint t-r"></i> Beperkend / niet mogelijk</span>
     <span><i class="tint t-e"></i> Nog in te vullen</span>
-  <span><b style="color:#1F7A52">&#10003;</b> Geverifieerd op de site van de geldverstrekker (oktober 2026), bron in de tooltip</span><span><i>(nog niet geverifieerd)</i> Gevonden, maar niet op de site van de geldverstrekker</span><span><b aria-hidden="true">&#9203;</b> Bron ouder dan 6 maanden: controleer of er een nieuwere versie is</span></div>
+  <span><b style="color:#1F7A52">&#10003;</b> Geverifieerd op de site van de geldverstrekker (oktober 2026), bron in de tooltip</span><span><i>(nog niet geverifieerd)</i> Gevonden, maar niet op de site van de geldverstrekker</span><span><b aria-hidden="true">&#9203;</b> Bron ouder dan 6 maanden: controleer of er een nieuwere versie is</span><span>Fout gezien? In <b>Vergelijken</b> staat bij elke waarde &lsquo;Klopt dit niet?&rsquo;</span></div>
 
   <section class="wijz" id="wijzigingen" aria-labelledby="wijz-kop">
     <h2 id="wijz-kop">Wijzigingen in de gecontroleerde voorwaarden</h2>
@@ -1708,7 +1711,23 @@ function celNode(l,c){
   }
   w.appendChild(s);
   td.appendChild(w);
+  if(view==='cmp' && !editMode && cel.v) td.appendChild(meldLink(l.naam, c.naam, cel.v, Array.isArray(cel.bron) ? cel.bron : []));
   return td;
+}
+/* "Klopt dit niet?": opent het mailprogramma met een voorbereide correctie (geen formulier, niets wordt opgeslagen). */
+const MELD_MAIL = 'forumadvies@gmail.com';
+function meldHref(naam, kenmerk, waarde, bronnen, pagina){
+  const onderwerp = 'Correctie voorwaarde: ' + naam + ' \u2013 ' + kenmerk;
+  const tekst = 'Aanbieder: ' + naam + '\nKenmerk: ' + kenmerk + '\nHuidige waarde: ' + waarde + '\n' +
+    (bronnen.length ? 'Huidige bron: ' + bronnen.join(' ') + '\n' : '') + 'Pagina: ' + pagina + '\n\n' +
+    'Wat klopt er niet en wat is de juiste waarde?\n\n\nBron van de juiste waarde (link naar de site of gids van de aanbieder, met datum of versie):\n\n';
+  return 'mailto:' + MELD_MAIL + '?subject=' + encodeURIComponent(onderwerp) + '&body=' + encodeURIComponent(tekst);
+}
+function meldLink(naam, kenmerk, waarde, bronnen){
+  const a = el('a','meld','Klopt dit niet?');
+  a.href = meldHref(naam, kenmerk, waarde, bronnen, location.href);
+  a.title = 'Meld een correctie voor ' + naam + ' \u2013 ' + kenmerk + ' (opent je mailprogramma)';
+  return a;
 }
 function partijKop(l, doel, inKop){
   const logo = logoVan(l.naam);
@@ -2558,7 +2577,7 @@ function dossierCel(l,c){
   if(!cel.v) return '<td><i class="nl">nog in te vullen</i></td>';
   const bol = cel.t ? '<span class="tint" style="background:' + TINT_KLEUR[cel.t] + '"></span>' : '';
   const status = cel.gec ? '<span class="st ok">✓ geverifieerd op de site van de geldverstrekker</span>' : cel.nv ? '<span class="st nv">nog niet geverifieerd</span>' : '<span class="st ds">indicatief (dataset)</span>';
-  const bron = Array.isArray(cel.bron) && cel.bron.length ? '<span class="br">Bron: ' + cel.bron.map(u=>{ const v = veiligeUrl(u); return v ? '<a href="' + esc(v) + '">' + esc(v) + '</a>' : ''; }).filter(Boolean).join('<br>') + '</span>' : '';
+  const bron = Array.isArray(cel.bron) && cel.bron.length ? '<span class="br">Bron: ' + cel.bron.map(u=>{ const v = veiligeUrl(u); return v ? '<a href="' + esc(v) + '">' + esc(v) + '</a> (<a href="' + esc('https://web.archive.org/web/20261004/' + v) + '">archief</a>)' : ''; }).filter(Boolean).join('<br>') + '</span>' : '';
   const oud = cel.oud ? '<span class="st nv">bron ouder dan 6 maanden</span>' : '';
   return '<td>' + bol + esc(cel.v.replace(/ \(nog niet geverifieerd\)$/,'')) + status + oud + bron + '</td>';
 }

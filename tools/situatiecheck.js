@@ -45,13 +45,13 @@ for (const naam of Object.keys(IND.indeling || {}).sort((a, b) => a.localeCompar
   }
   lijst.push({ naam, slug: slug(naam), geenNieuw: GEEN.includes(naam) ? 1 : 0, gecontroleerd: c.gecontroleerd, s: o });
 }
-/* ORV en AOV: indeling-<product>.json tegen data/productvoorwaarden.js (geverifieerd + bron per criterium). */
+/* Productvoorwaarden (ORV, AOV, uitvaart, lijfrente, krediet …): indeling-<product>.json tegen data/productvoorwaarden.js (geverifieerd + bron per criterium). */
 const vm = require('vm');
 const sb = { window: {} }; vm.createContext(sb);
 vm.runInContext(fs.readFileSync(path.join(ROOT, 'data', 'productvoorwaarden.js'), 'utf8'), sb);
 const PV = sb.window.PRODUCTVOORWAARDEN || [];
 const producten = {};
-for (const pid of ['orv', 'aov']) {
+for (const pid of PV.map(x => x.id)) {
   const f = path.join(ROOT, 'docs', 'situatiecheck', 'indeling-' + pid + '.json');
   const pr = PV.find(x => x.id === pid);
   if (!fs.existsSync(f) || !pr) continue;
