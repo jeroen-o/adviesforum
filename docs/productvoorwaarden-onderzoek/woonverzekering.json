@@ -566,6 +566,447 @@
      "toelichting": ""
     }
    }
+  },
+  {
+   "naam": "Allianz",
+   "url": "https://www.allianz.nl/particulier/producten/inboedelverzekering.html",
+   "domeinen": [
+    "allianz.nl"
+   ],
+   "documenten": [
+    {
+     "titel": "Voorwaarden Allianz Woonverzekering 04a",
+     "url": "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/1/1000129-507.pdf",
+     "versie": "04a"
+    },
+    {
+     "titel": "Specifieke verzekeringsvoorwaarden Woonhuis Plus",
+     "url": "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/s/S1623.pdf",
+     "versie": "OP23"
+    },
+    {
+     "titel": "Specifieke verzekeringsvoorwaarden Woonhuis Optimaal",
+     "url": "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/s/S1624.pdf",
+     "versie": "OO23"
+    },
+    {
+     "titel": "Specifieke verzekeringsvoorwaarden Inboedel Optimaal",
+     "url": "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/s/S1626.pdf",
+     "versie": "IO23"
+    }
+   ],
+   "criteria": {
+    "opstaldekking": {
+     "waarde": "~ Varianten o.a. Comfort, Plus en Optimaal; garantie tegen onderverzekering als die op de polis staat",
+     "bron": [
+      "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/1/1000129-507.pdf",
+      "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/s/S1623.pdf",
+      "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/s/S1624.pdf"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Voorwaarde: elke 10 jaar herbouwwaarde opnieuw laten berekenen en doorgeven, anders vervalt de garantie."
+    },
+    "inboedeldekking": {
+     "waarde": "~ Inboedel Plus of Optimaal",
+     "bron": [
+      "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/s/S1625.pdf",
+      "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/s/S1626.pdf"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "laag",
+     "toelichting": "Onderverzekeringsregeling voor inboedel niet bevestigd."
+    },
+    "glas": {
+     "waarde": "+ Glas altijd meeverzekerd bij de opstalverzekering, zonder eigen risico",
+     "bron": [
+      "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/1/1000129-507.pdf"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Ook glas in garages, schuren en bijgebouwen bij de woning."
+    },
+    "storm": {
+     "waarde": "~ Overstroming door niet-primaire waterkering gedekt",
+     "bron": [
+      "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/s/S1623.pdf",
+      "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/s/S1624.pdf"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "laag",
+     "toelichting": ""
+    },
+    "duurzaam": {
+     "waarde": "~ Zonnepanelen (ook op de grond) en laadpalen aan de woning of in de tuin gedekt; eisen aan installatie",
+     "bron": [
+      "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/1/1000129-507.pdf",
+      "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/1/1000129-454.pdf"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "laag",
+     "toelichting": "Bij zonnepanelen boven kunststof dakisolatie is vlamboogdetectie vereist en driejaarlijkse inspectie (bron: preventiedocument; reikwijdte niet bevestigd)."
+    },
+    "leegstand": {
+     "waarde": "- Geen vergoeding bij leegstand of niet-gebruik; tijdelijke verhuur max. 2 maanden per jaar; tijdens verbouwing alleen Comfort-dekking",
+     "bron": [
+      "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/s/S1623.pdf",
+      "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/s/S1624.pdf"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Is de woning niet wind- en waterdicht, dan alleen brand, ontploffing, blikseminslag en luchtvaartuigen. Wijziging binnen 2 maanden melden."
+    }
+   }
+  },
+  {
+   "naam": "Klaverblad",
+   "url": "https://www.klaverblad.nl/woonhuisverzekering",
+   "domeinen": [
+    "klaverblad.nl"
+   ],
+   "documenten": [
+    {
+     "titel": "Royaal woonhuisverzekering Polisvoorwaarden",
+     "url": "https://www.klaverblad.nl/voorwaarden-woonhuis.pdf",
+     "versie": "BW 22 AVWBW/2210"
+    },
+    {
+     "titel": "Inboedelverzekering Polisvoorwaarden",
+     "url": "https://www.klaverblad.nl/voorwaarden-inboedel.pdf",
+     "versie": "BI 24 AVWBI/2409"
+    }
+   ],
+   "criteria": {
+    "opstaldekking": {
+     "waarde": "~ Royaal woonhuisverzekering; garantie tegen onderverzekering bij bouwjaar vanaf 1900 en herbouwwaarde tot € 700.000",
+     "bron": [
+      "https://www.klaverblad.nl/woonhuisverzekering",
+      "https://www.klaverblad.nl/voorwaarden-woonhuis.pdf"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Zonder garantie vergoeding naar verhouding verzekerd bedrag/werkelijke waarde. Waardemeter woonhuis beschikbaar."
+    },
+    "inboedeldekking": {
+     "waarde": "+ Budget of Royaal (all risk); onderverzekeringsgarantie via waardemeter: Budget tot 150% van verzekerd bedrag, Royaal onbeperkt",
+     "bron": [
+      "https://www.klaverblad.nl/inboedelverzekering",
+      "https://www.klaverblad.nl/voorwaarden-inboedel.pdf"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Mobiele elektronica optioneel mee te verzekeren bij Royaal."
+    },
+    "glas": {
+     "waarde": "~ Module Glasverzekering, alleen indien op het polisblad vermeld",
+     "bron": [
+      "https://www.klaverblad.nl/voorwaarden-woonhuis.pdf"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Geen dekking voor ruiten in zonnecollectoren/-panelen en algemene ruimtes."
+    },
+    "storm": {
+     "waarde": "~ Neerslag direct van straat, dak of tuin gedekt; overstroming door hevige lokale neerslag gedekt",
+     "bron": [
+      "https://www.klaverblad.nl/voorwaarden-woonhuis.pdf",
+      "https://www.klaverblad.nl/blog/meer-blogs/is-schade-door-wateroverlast-verzekerd.htm"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "aardbeving": {
+     "waarde": "- Aardbeving en natuurrampen uitgesloten; overstroming door falen van waterkeringen uitgesloten tenzij door brand, ontploffing of hevige lokale neerslag",
+     "bron": [
+      "https://www.klaverblad.nl/voorwaarden-woonhuis.pdf"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "duurzaam": {
+     "waarde": "~ Zonnepanelen standaard meeverzekerd; verminderde opbrengst niet vergoed",
+     "bron": [
+      "https://www.klaverblad.nl/woonhuisverzekering"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "leegstand": {
+     "waarde": "- Bij leegstand alleen brand, ontploffing en storm; verhuur melden; onbewoonbaar door verbouwing alleen brand, ontploffing en storm",
+     "bron": [
+      "https://www.klaverblad.nl/voorwaarden-woonhuis.pdf"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Tijdens verbouwing zijn woning en bouwmaterialen ook tegen diefstal verzekerd."
+    },
+    "eigenrisico": {
+     "waarde": "~ Alleen bij stormschade een eigen risico, standaard € 250",
+     "bron": [
+      "https://www.klaverblad.nl/woonhuisverzekering"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": ""
+    }
+   }
+  },
+  {
+   "naam": "NH1816",
+   "url": "https://www.nh1816.nl/verzekeringen/woonhuisverzekering",
+   "domeinen": [
+    "nh1816.nl"
+   ],
+   "documenten": [
+    {
+     "titel": "Polismantel 2314 Woonhuisverzekering Optimaal",
+     "url": "https://nh1816.nl/voorwaarden/02314.pdf",
+     "versie": "mei 2024"
+    },
+    {
+     "titel": "Polismantel 2214 Inboedelverzekering Optimaal",
+     "url": "https://voorwaarden.nh1816.nl/02214.pdf",
+     "versie": "mei 2026"
+    },
+    {
+     "titel": "Inboedelwaardemeter 2026",
+     "url": "https://www.nh1816.nl/Files/Files.new/Polisvoorwaarden/Waardemeters/Nh1816-Inboedelwaardemeter-invulbaar-2026.pdf",
+     "versie": "2026"
+    }
+   ],
+   "criteria": {
+    "opstaldekking": {
+     "waarde": "+ Extra Uitgebreid of Optimaal (alle van buiten komende onheilen); onbeperkte garantie tegen onderverzekering met herbouwwaardemeter (elke 5 jaar)",
+     "bron": [
+      "https://www.nh1816.nl/verzekeringen/woonhuisverzekering",
+      "https://nh1816.nl/voorwaarden/02314.pdf",
+      "https://www.nh1816.nl/verzekeringen/waardemeters"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Tussentijdse aanpassingen aan de woning direct meeverzekerd. Alleen via adviseur."
+    },
+    "inboedeldekking": {
+     "waarde": "+ Extra Uitgebreid of Optimaal; 5 jaar garantie tegen onderverzekering na invullen inboedelwaardemeter",
+     "bron": [
+      "https://www.nh1816.nl/verzekeringen/inboedelverzekering",
+      "https://voorwaarden.nh1816.nl/02214.pdf"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Na 60 maanden binnen 60 dagen een nieuwe waardemeter indienen om de garantie te behouden."
+    },
+    "glas": {
+     "waarde": "+ Glas standaard meeverzekerd",
+     "bron": [
+      "https://www.nh1816.nl/verzekeringen/woonhuisverzekering"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "storm": {
+     "waarde": "~ Neerslag (incl. niet afgevoerd water bij hevige regen) en overstroming door niet-primaire waterkering gedekt; grondwater niet",
+     "bron": [
+      "https://nh1816.nl/voorwaarden/02314.pdf"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "aardbeving": {
+     "waarde": "- Aardbeving en vulkanische uitbarsting uitgesloten",
+     "bron": [
+      "https://nh1816.nl/voorwaarden/02314.pdf"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "duurzaam": {
+     "waarde": "+ Zonnepanelen, thuisbatterij, warmtepomp, laadpaal, regenwateropvang en domotica standaard meeverzekerd zonder melding",
+     "bron": [
+      "https://www.nh1816.nl/verzekeringen/woonhuisverzekering",
+      "https://www.nh1816.nl/nieuws/verduurzamen-woning-en-je-verzekering"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "leegstand": {
+     "waarde": "~ Verhuur alleen gedekt als 'verhuur' op de polis staat; tijdens verbouwing beperkte dekking",
+     "bron": [
+      "https://nh1816.nl/voorwaarden/02314.pdf"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Tijdens verbouwing gedekt: diefstal, inbraak, vandalisme, brand, bliksem, ontploffing, luchtvaartuigen, storm, aanrijding/aanvaring en omvallen van bomen/objecten."
+    },
+    "eigenrisico": {
+     "waarde": "+ Geen algemeen eigen risico; bij stormschade € 250",
+     "bron": [
+      "https://www.nh1816.nl/verzekeringen/woonhuisverzekering"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Inboedel Optimaal: € 150 per object bij mobiele elektronica en bij uitsluitend vlekken, krassen, scheuren of deuken."
+    }
+   }
+  },
+  {
+   "naam": "De Goudse",
+   "url": "https://www.goudse.nl/particulier/mijn-gezin-en-woning/woonhuis",
+   "domeinen": [
+    "goudse.nl"
+   ],
+   "documenten": [
+    {
+     "titel": "Privé Pakket Online Woonhuis Aanvullende Voorwaarden",
+     "url": "https://voorwaarden.goudse.nl/aanvullende-voorwaarden-woonhuis-pow-2601.pdf",
+     "versie": "POW-2601"
+    }
+   ],
+   "criteria": {
+    "opstaldekking": {
+     "waarde": "~ Woonhuis Basis of Plus; garantie tegen onderverzekering als herbouwwaarde automatisch wordt bepaald of met waardemeter/taxatie",
+     "bron": [
+      "https://www.goudse.nl/particulier/mijn-gezin-en-woning/woonhuis",
+      "https://voorwaarden.goudse.nl/aanvullende-voorwaarden-woonhuis-pow-2601.pdf"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Zonder herbouwwaardemeter of taxatierapport (als automatische bepaling niet kan) geen garantie."
+    },
+    "inboedeldekking": {
+     "waarde": "~ Inboedel Basis of Plus; garantie tegen onderverzekering",
+     "bron": [
+      "https://www.goudse.nl/particulier/mijn-gezin-en-woning/inboedelverzekering"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "glas": {
+     "waarde": "~ Glas als aanvullende dekking; uitbreiding Glas Plus",
+     "bron": [
+      "https://www.goudse.nl/particulier/mijn-gezin-en-woning/woonhuis",
+      "https://www.goudse.nl/particulier/mijn-gezin-en-woning/inboedelverzekering"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Glas Plus: eigen risico € 75 per gebeurtenis."
+    },
+    "storm": {
+     "waarde": "~ Neerslag die onverwacht binnenkomt gedekt; overstroming uitgesloten tenzij door hevige lokale neerslag",
+     "bron": [
+      "https://voorwaarden.goudse.nl/aanvullende-voorwaarden-woonhuis-pow-2601.pdf",
+      "https://www.goudse.nl/adviseur/nieuws/overstromingen-en-waterschade"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "aardbeving": {
+     "waarde": "- Aardbeving en vulkanische uitbarsting uitgesloten",
+     "bron": [
+      "https://voorwaarden.goudse.nl/aanvullende-voorwaarden-woonhuis-pow-2601.pdf"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "duurzaam": {
+     "waarde": "- Zonnepanelen max. € 5.000 bij brand, storm e.d.; ruimere dekking (incl. microscheurtjes) via aanvullende dekking Duurzaam Wonen",
+     "bron": [
+      "https://www.goudse.nl/particulier/mijn-gezin-en-woning/woonhuis"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "leegstand": {
+     "waarde": "~ Leegstand van 90 dagen of langer melden",
+     "bron": [
+      "https://voorwaarden.goudse.nl/aanvullende-voorwaarden-woonhuis-pow-2601.pdf"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "laag",
+     "toelichting": ""
+    },
+    "eigenrisico": {
+     "waarde": "~ Neerslag zonder eigen risico; bij storm € 300; bij Inboedel Plus keuze-eigen risico",
+     "bron": [
+      "https://voorwaarden.goudse.nl/aanvullende-voorwaarden-woonhuis-pow-2601.pdf",
+      "https://www.goudse.nl/particulier/mijn-gezin-en-woning/inboedelverzekering"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "laag",
+     "toelichting": ""
+    }
+   }
+  },
+  {
+   "naam": "Avéro Achmea",
+   "url": "https://www.averoachmea.nl/volmachten/particulier-op-zeker",
+   "domeinen": [
+    "averoachmea.nl"
+   ],
+   "documenten": [
+    {
+     "titel": "Particulier op Zeker Voorwaarden",
+     "url": "https://www.averoachmea.nl/volmachten/particulier-op-zeker/voorwaarden",
+     "versie": "onbekend"
+    },
+    {
+     "titel": "Voorwaarden Inboedel Uitgebreid Extra",
+     "url": "https://www.averoachmea.nl/-/media/files/zakelijk/voorwaarden-poz/voorwaarden-2025/voorwaarden-inboedel-uitgebreid-extra---inb-bv-51-251.pdf",
+     "versie": "INB-BV-51-251"
+    }
+   ],
+   "criteria": {
+    "opstaldekking": {
+     "waarde": "~ ParticulierOpZeker Woonhuis, o.a. Uitgebreid extra; standaard garantie tegen onderverzekering",
+     "bron": [
+      "https://www.averoachmea.nl/volmachten/particulier-op-zeker",
+      "https://www.averoachmea.nl/kennis/particulieropzeker-verzeker-bezit-en-vrije-tijd-in-1-keer-op-maat",
+      "https://www.averoachmea.nl/kennis/garantie-tegen-onderverzekering-en-de-meestgestelde-vragen"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "laag",
+     "toelichting": "Via volmachtkantoren/adviseurs. Woningen tot 1.500 m3 direct online te verzekeren; premie mede op basis van WOZ-waarde."
+    },
+    "inboedeldekking": {
+     "waarde": "~ Inboedel Uitgebreid extra; garantie tegen onderverzekering tot de maximale vergoeding op het polisblad",
+     "bron": [
+      "https://www.averoachmea.nl/-/media/files/zakelijk/voorwaarden-poz/voorwaarden-2025/voorwaarden-inboedel-uitgebreid-extra---inb-bv-51-251.pdf"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "laag",
+     "toelichting": ""
+    },
+    "glas": {
+     "waarde": "~ Woonhuisvoorwaarden met en zonder glasdekking",
+     "bron": [
+      "https://www.averoachmea.nl/volmachten/particulier-op-zeker/voorwaarden"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "laag",
+     "toelichting": ""
+    },
+    "duurzaam": {
+     "waarde": "~ Zonnepanelen als duurzame verbetering gedekt, niet-zichtbare schade (microcracks) niet; vanaf 50 panelen extra installatie-eisen",
+     "bron": [
+      "https://www.averoachmea.nl/kennis/volmachten/aanpassing-acceptatiebeleid-zonnepanelen",
+      "https://www.averoachmea.nl/-/media/files/zakelijk/voorwaarden-poz/voorwaarden-2025/voorwaarden-inboedel-uitgebreid-extra---inb-bv-51-251.pdf"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "laag",
+     "toelichting": "Bij niet voldoen aan de eisen geldt een verhoogd eigen risico."
+    }
+   }
   }
  ]
 }
