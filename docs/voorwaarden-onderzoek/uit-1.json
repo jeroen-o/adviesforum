@@ -1,0 +1,596 @@
+[
+ {
+  "naam": "ABN AMRO",
+  "algemeen": {
+   "intermediairsite": "https://intermediair.abnamro.nl",
+   "voorwaardenPdf": [],
+   "acceptatiegids": [],
+   "opmerking": "Florius is ABN AMRO-label en volgt hetzelfde aflossingsvrij- en energielabelbeleid (bron: abnamro.com/banken.nl). Websites geblokkeerd voor WebFetch; alles o.b.v. zoekresultaten. Voorwaarden Woning Hypotheek jan 2024 alleen als kopie op lawinsider.com gevonden."
+  },
+  "criteria": {
+   "zzp": {
+    "waarde": "~ Vanaf 1 jaar ondernemerschap; toetsinkomen o.b.v. jaarcijfers, volledig gemiddelde vanaf 3 jaar",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-afsluiten/zzp-hypotheek/index.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "ABN: 1 jr 75%, 2 jr 90% van gemiddelde, 3+ jr 100% gemiddelde laatste 3 jaar; geen aparte NHG-/niet-NHG-termijn gevonden"
+   },
+   "flex": {
+    "waarde": "~ 3-jaars gemiddelde, max. huidig inkomen; buiten NHG 90% daarvan",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-berekenen/inkomen.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Zonder NHG 90% van gemiddelde laatste 3 jaar (of lager huidig); met NHG 100% gemiddelde, max. laatste jaar"
+   },
+   "persp": {
+    "waarde": "+ Perspectiefverklaring geaccepteerd",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-berekenen/inkomen-perspectiefverklaring.html",
+     "https://www.abnamro.com/nl/nieuws/abn-amro-sluit-aan-bij-pilot-perspectiefverklaring-voor-hypotheekaanvraag-flexwerkers"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Eigen pagina 'Hypotheek met een perspectiefverklaring' bestaat; details uit oud pilotbericht"
+   },
+   "aow": {
+    "waarde": "~ Toets op werkelijke woonlasten vanaf pensioeninkomen",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/actueel/hypotheek-op-latere-leeftijd.html",
+     "https://www.abnamro.nl/nl/prive/speciaal-voor/senioren/ouder-worden-wonen/huis-kopen-voordat-je-met-pensioen-gaat.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "ABN kijkt naar werkelijke maandlasten vanaf start pensioeninkomen"
+   },
+   "erfp": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Alleen pagina over overstap naar eeuwigdurende erfpacht gevonden; geen acceptatiebeleid"
+   },
+   "rvp": {
+    "waarde": "+ 1 t/m 30 jaar, o.a. 1, 2, 3, 5, 6, 7, 10, 12, 15, 17, 20, 30",
+    "bron": [
+     "https://www.actuelerentestanden.nl/hypotheek/aanbieders/abn-amro/",
+     "https://www.actuelerentestanden.nl/pages/rente/hypotheekrente/abnamro.asp"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "Uit rentetabellen vergelijker; niet elke periode per product beschikbaar"
+   },
+   "dag": {
+    "waarde": "! Laagste rente bij passeren alleen bij Woning Hypotheek; Budget Hypotheek niet",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-afsluiten/hypotheekvormen/budget-woning-hypotheek/index.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Woning Hypotheek: lagere rente op ingangsdatum geldt; Budget Hypotheek: rente uit aanbod"
+   },
+   "geld": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Zoekresultaat noemde '12 maanden' zonder duidelijke context (mogelijk nieuwbouw); niet als betrouwbaar overgenomen"
+   },
+   "boete": {
+    "waarde": "+ 10% van oorspronkelijke hoofdsom per jaar; volledig boetevrij bij verkoop",
+    "bron": [
+     "https://www.homefinance.nl/hypotheek/aanbieders/abn-amro/boetevrij-aflossen/",
+     "https://www.homefinance.nl/hypotheek/aanbieders/abn-amro/aflossen-bij-verkoop/"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Per leningdeel; boetevrij bij verkoop sinds 3-10-2022"
+   },
+   "ltv": {
+    "waarde": "+ Maandelijks automatisch naar lagere tariefklasse bij lagere LTV",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/mijn-hypotheek/hypotheekrente-wijzigen/tariefklasse-aanpassen.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Controle eind elke maand; bevestigingsbrief eerste week volgende maand"
+   },
+   "bdduur": {
+    "waarde": "~ Nieuwbouw 24 mnd (+12 verlenging) / verbouw 18 mnd (+6 verlenging)",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-afsluiten/bouwdepot/voorwaarden-bouwdepot.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Eenmalige verlenging"
+   },
+   "bdrnt": {
+    "waarde": "~ Gelijk aan hypotheekrente; geen vergoeding in verlengingsperiode",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-afsluiten/bouwdepot/index.html",
+     "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-afsluiten/bouwdepot/voorwaarden-bouwdepot.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Rentevergoeding max. 30 mnd nieuwbouw / 18 mnd verbouw"
+   },
+   "bddecl": {
+    "waarde": "~ Digitaal via Internet Bankieren ca. 5 werkdagen; formulier ca. 10 werkdagen",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-afsluiten/bouwdepot/mijn-bouwdepot.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Nieuwbouw: termijnen rechtstreeks aan aannemer mogelijk"
+   },
+   "ebb": {
+    "waarde": "+ Energiebespaarbudget tot 106% woningwaarde; 2 jr (bestaand) / 3 jr (nieuwbouw)",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/duurzaam-wonen/financiering-hypotheek.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Bij annuïtair, lineair of aflossingsvrij"
+   },
+   "duur": {
+    "waarde": "+ Duurzaam Wonen Hypotheek-leningdeel met rentevoordeel, tot 106%",
+    "bron": [
+     "https://www.abnamro.com/nl/nieuws/abn-amro-introduceert-de-duurzaam-wonen-hypotheek",
+     "https://www.abnamro.nl/nl/prive/hypotheken/duurzaam-wonen/financiering-hypotheek.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "Daarnaast sinds 1-4-2026 energielabel in rentetabel (zie elbl)"
+   },
+   "verh": {
+    "waarde": "+ Verhuisregeling: rente en resterende rentevaste periode mee (vaste rente)",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/huis-kopen/verhuizen/index.html",
+     "https://www.abnamro.nl/nl/prive/hypotheken/mijn-hypotheek/verhuizen.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Actuele voorwaarden gaan gelden; labelvoordeel wordt herberekend; niet altijd volledig bedrag mee"
+   },
+   "ondh": {
+    "waarde": "~ Eerst contact met bank vóór verkoop; restschuldfinanciering max. 15 jaar",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/mijn-hypotheek/restschuld/index.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Schriftelijke toestemming niet letterlijk gevonden"
+   },
+   "oha": {
+    "waarde": "~ Ontslag mogelijk na betaalbaarheidstoets; getekend convenant of Scheidingsexpert",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/mijn-hypotheek/overnemen.html",
+     "https://www.abnamro.nl/nl/prive/themas/scheiden/huis-en-hypotheek.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Kosten meefinancierbaar"
+   },
+   "tweede": {
+    "waarde": "+ Onderhands verhogen tot inschrijving zonder notaris; anders 2e hypotheek",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/mijn-hypotheek/hypotheek-verhogen.html",
+     "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-afsluiten/tweede-hypotheek.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": ""
+   },
+   "ovbr": {
+    "waarde": "+ Ook bij onverkochte woning (max 95% waarde); 24 mnd, nieuwbouw 36 mnd",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/huis-kopen/verhuizen/overbruggingshypotheek/index.html",
+     "https://intermediair.abnamro.nl/overbruggingslening"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Waarde minus 1,5% verkoopkosten minus schuld; 90% bij woning ≥1,5 mln, funderingsrisico of inkomensuitleg"
+   },
+   "avrij": {
+    "waarde": "! Per 1-6-2026 max 30% WW, plafond 150k/250k/500k naar WW; bestaand bij einde looptijd 50%",
+    "bron": [
+     "https://www.abnamro.com/nl/nieuws/abn-amro-en-florius-passen-beleid-aflossingsvrije-hypotheken-aan",
+     "https://www.banken.nl/nieuws/26956/abn-amro-en-florius-beperken-aflossingsvrije-hypotheek-tot-30-procent-van-woningwaarde"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Bestaande klanten alleen geraakt bij inhoudelijke wijziging (verhuizing, verhoging)"
+   },
+   "rmid": {
+    "waarde": "+ Rentemiddeling mogelijk; zelf door te rekenen in app/Internet Bankieren",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/mijn-hypotheek/hypotheekrente-wijzigen/rentemiddeling.html",
+     "https://www.abnamro.com/nl/nieuws/abn-amro-kondigt-rentemiddeling-aan-voor-hypotheken"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Vergoeding verwerkt in opslag over nieuwe rentevaste periode"
+   },
+   "rverl": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Niet eenduidig gevonden of bestaande klanten dezelfde rente krijgen als nieuwe"
+   },
+   "rvoor": {
+    "waarde": "~ Voorstel minimaal 3 mnd vooraf; rentebedenktijd mogelijk",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/mijn-hypotheek/hypotheekrente-wijzigen/einde-rentevaste-periode/index.html",
+     "https://www.abnamro.nl/nl/prive/hypotheken/mijn-hypotheek/hypotheekrente-wijzigen/einde-rentevaste-periode/rentebedenktijd.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Automatisch voorstel; lagere rente op afloopdatum wordt toegepast"
+   },
+   "bbrk": {
+    "waarde": "+ Contante-waardemethode; 'naast betere' vergelijkingsrente in voordeel klant",
+    "bron": [
+     "https://www.abnamro.com/nl/nieuws/abn-amro-kiest-bij-berekening-boeterente-voordeel-voor-de-klant",
+     "https://www.abnamro.nl/nl/prive/hypotheken/actuele-hypotheekrente/vergoeding.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Volgens AFM-leidraad"
+   },
+   "elbl": {
+    "waarde": "+ Sinds 1-4-2026 energielabel verwerkt in rentetabel; voordeel vanaf label D",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/actuele-hypotheekrente/korting-hypotheekrente.html",
+     "https://www.banken.nl/nieuws/amp/26988/verduurzaming-moet-lonen-abn-amro-en-florius-koppelen-hypotheekrente-aan-energielabel"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Voorheen aparte duurzaamheidskorting vanaf label B"
+   },
+   "o106": {
+    "waarde": "~ Tot 106% lenen voor energiebesparende maatregelen, met en zonder NHG",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/duurzaam-wonen/financiering-hypotheek.html",
+     "https://www.abnamro.com/nl/nieuws/abn-amro-introduceert-de-duurzaam-wonen-hypotheek"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Niet expliciet bevestigd dat er geen LTV-opslag geldt boven 100%"
+   },
+   "bprov": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden binnen zoekbudget"
+   },
+   "wkost": {
+    "waarde": "~ Vaste administratiekosten bij online wijziging; met advies daarnaast advieskosten",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-afsluiten/hypotheekadvies/kosten.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Bedrag online wijziging volgens zoeksamenvatting ca. €100 (niet in waarde i.v.m. tarievenregel)"
+   },
+   "avlt": {
+    "waarde": "~ Einde looptijd herfinancieren tot 50% aflossingsvrij; brief 12 mnd vooraf",
+    "bron": [
+     "https://www.abnamro.com/nl/nieuws/abn-amro-en-florius-passen-beleid-aflossingsvrije-hypotheken-aan",
+     "https://www.abnamro.nl/nl/prive/hypotheken/mijn-hypotheek/hypotheek-verlengen.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Verlengen of omzetten naar annuïtair/lineair mogelijk"
+   },
+   "bproc": {
+    "waarde": "+ Hypotheek Care Team; proactief contact en maatwerk bij (dreigende) achterstand",
+    "bron": [
+     "https://www.abnamro.com/nl/nieuws/hypotheek-care-team-helpt-klanten-bij-dreigende-betalingsachterstanden",
+     "https://www.abnamro.com/nl/nieuws/hulp-aan-hypotheekklanten-bij-betalingsproblemen"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Oudere nieuwsberichten"
+   }
+  },
+  "gecontroleerd": "2026-10-04"
+ },
+ {
+  "naam": "Rabobank",
+  "algemeen": {
+   "intermediairsite": null,
+   "voorwaardenPdf": [],
+   "acceptatiegids": [],
+   "opmerking": "NIET onderzocht: het gedeelde zoekbudget van de sessie (200) was op na ABN AMRO en rabobank.nl is geblokkeerd voor WebFetch. Opnieuw uitvoeren met nieuw budget."
+  },
+  "criteria": {
+   "zzp": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Geen zoekopdrachten meer beschikbaar (sessiebudget van 200 op); WebFetch rabobank.nl geblokkeerd"
+   },
+   "flex": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Geen zoekopdrachten meer beschikbaar (sessiebudget van 200 op); WebFetch rabobank.nl geblokkeerd"
+   },
+   "persp": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Geen zoekopdrachten meer beschikbaar (sessiebudget van 200 op); WebFetch rabobank.nl geblokkeerd"
+   },
+   "aow": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Geen zoekopdrachten meer beschikbaar (sessiebudget van 200 op); WebFetch rabobank.nl geblokkeerd"
+   },
+   "erfp": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Geen zoekopdrachten meer beschikbaar (sessiebudget van 200 op); WebFetch rabobank.nl geblokkeerd"
+   },
+   "rvp": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Geen zoekopdrachten meer beschikbaar (sessiebudget van 200 op); WebFetch rabobank.nl geblokkeerd"
+   },
+   "dag": {
+    "waarde": "+ Dagrente mogelijk afhankelijk van gekozen voorwaarden",
+    "bron": [
+     "https://www.actuelerentestanden.nl/hypotheekrente-abn-amro-verwachting-wat-kun-je-verwachten"
+    ],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "bevestigd",
+    "toelichting": "Alleen indirect vermeld in vergelijkersartikel over ABN AMRO"
+   },
+   "geld": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Geen zoekopdrachten meer beschikbaar (sessiebudget van 200 op); WebFetch rabobank.nl geblokkeerd"
+   },
+   "boete": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Geen zoekopdrachten meer beschikbaar (sessiebudget van 200 op); WebFetch rabobank.nl geblokkeerd"
+   },
+   "ltv": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Geen zoekopdrachten meer beschikbaar (sessiebudget van 200 op); WebFetch rabobank.nl geblokkeerd"
+   },
+   "bdduur": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Geen zoekopdrachten meer beschikbaar (sessiebudget van 200 op); WebFetch rabobank.nl geblokkeerd"
+   },
+   "bdrnt": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Geen zoekopdrachten meer beschikbaar (sessiebudget van 200 op); WebFetch rabobank.nl geblokkeerd"
+   },
+   "bddecl": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Geen zoekopdrachten meer beschikbaar (sessiebudget van 200 op); WebFetch rabobank.nl geblokkeerd"
+   },
+   "ebb": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Geen zoekopdrachten meer beschikbaar (sessiebudget van 200 op); WebFetch rabobank.nl geblokkeerd"
+   },
+   "duur": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Geen zoekopdrachten meer beschikbaar (sessiebudget van 200 op); WebFetch rabobank.nl geblokkeerd"
+   },
+   "verh": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Geen zoekopdrachten meer beschikbaar (sessiebudget van 200 op); WebFetch rabobank.nl geblokkeerd"
+   },
+   "ondh": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Geen zoekopdrachten meer beschikbaar (sessiebudget van 200 op); WebFetch rabobank.nl geblokkeerd"
+   },
+   "oha": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Geen zoekopdrachten meer beschikbaar (sessiebudget van 200 op); WebFetch rabobank.nl geblokkeerd"
+   },
+   "tweede": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Geen zoekopdrachten meer beschikbaar (sessiebudget van 200 op); WebFetch rabobank.nl geblokkeerd"
+   },
+   "ovbr": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Geen zoekopdrachten meer beschikbaar (sessiebudget van 200 op); WebFetch rabobank.nl geblokkeerd"
+   },
+   "avrij": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Geen zoekopdrachten meer beschikbaar (sessiebudget van 200 op); WebFetch rabobank.nl geblokkeerd"
+   },
+   "rmid": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Geen zoekopdrachten meer beschikbaar (sessiebudget van 200 op); WebFetch rabobank.nl geblokkeerd"
+   },
+   "rverl": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Geen zoekopdrachten meer beschikbaar (sessiebudget van 200 op); WebFetch rabobank.nl geblokkeerd"
+   },
+   "rvoor": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Geen zoekopdrachten meer beschikbaar (sessiebudget van 200 op); WebFetch rabobank.nl geblokkeerd"
+   },
+   "bbrk": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Geen zoekopdrachten meer beschikbaar (sessiebudget van 200 op); WebFetch rabobank.nl geblokkeerd"
+   },
+   "elbl": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Geen zoekopdrachten meer beschikbaar (sessiebudget van 200 op); WebFetch rabobank.nl geblokkeerd"
+   },
+   "o106": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Geen zoekopdrachten meer beschikbaar (sessiebudget van 200 op); WebFetch rabobank.nl geblokkeerd"
+   },
+   "bprov": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Geen zoekopdrachten meer beschikbaar (sessiebudget van 200 op); WebFetch rabobank.nl geblokkeerd"
+   },
+   "wkost": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Geen zoekopdrachten meer beschikbaar (sessiebudget van 200 op); WebFetch rabobank.nl geblokkeerd"
+   },
+   "avlt": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Geen zoekopdrachten meer beschikbaar (sessiebudget van 200 op); WebFetch rabobank.nl geblokkeerd"
+   },
+   "bproc": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Geen zoekopdrachten meer beschikbaar (sessiebudget van 200 op); WebFetch rabobank.nl geblokkeerd"
+   }
+  },
+  "gecontroleerd": "2026-10-04"
+ }
+]

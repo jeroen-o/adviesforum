@@ -1,0 +1,556 @@
+[
+ {
+  "naam": "BLG Wonen",
+  "algemeen": {
+   "intermediairsite": null,
+   "voorwaardenPdf": [
+    "https://blgwonen.nl/download/algemene-voorwaarden-hypotheken-versie-27-06-2023.html",
+    "https://www.blgwonen.nl/download/informatiewijzer-bespaarhypotheek.html",
+    "https://www.asnbank.nl/downloads/factsheet-rente-meeneemregeling.html"
+   ],
+   "acceptatiegids": [],
+   "opmerking": "Merk BLG Wonen is per 1-3-2026 opgegaan in ASN Bank (laatste Volksbank-merk). Product loopt door als 'ASN Bank (voorheen BLG) Bespaarhypotheek' via intermediair met zelfde contactpersonen; bestaande BLG-hypotheken blijven ongewijzigd tot einde looptijd. Bronnen: persbericht newsroom.asnbank.nl (107e2eb7...), banken.nl/nieuws/26887. Onderzoek onvolledig: zoekbudget sessie raakte op na ~25 zoekopdrachten; alle verstrekkersites geblokkeerd voor WebFetch, dus waarden steunen op zoeksamenvattingen."
+  },
+  "criteria": {
+   "zzp": {
+    "waarde": "~ 1 jaar met IVO binnen NHG; 3 jaar daarbuiten",
+    "bron": [
+     "https://www.homefinance.nl/hypotheek/zakelijke-hypotheek/blg/",
+     "https://www.banken.nl/nieuws/20582/directeur-blg-wonen-als-zzper-een-huis-kopen-kan-dat"
+    ],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "bevestigd",
+    "toelichting": "Alleen 'vanaf 1 jaar ondernemerschap' en 'ook <3 jaar welkom' gevonden; eis buiten NHG niet hard bevestigd."
+   },
+   "flex": {
+    "waarde": "+ Ruimere toetsing flexinkomen dan marktgemiddelde",
+    "bron": [
+     "https://www.banken.nl/nieuws/20582/directeur-blg-wonen-als-zzper-een-huis-kopen-kan-dat"
+    ],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "bevestigd",
+    "toelichting": "Alleen interview: BLG kijkt verder dan cijfers en accepteert perspectiefverklaring; oud en indirect."
+   },
+   "persp": {
+    "waarde": "+ Perspectiefverklaring geaccepteerd (flexcontracten)",
+    "bron": [
+     "https://www.banken.nl/nieuws/20582/directeur-blg-wonen-als-zzper-een-huis-kopen-kan-dat",
+     "https://www.banken.nl/nieuws/7676/bredere-acceptatie-perspectiefverklaring-flexwerkerhypotheek"
+    ],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "bevestigd",
+    "toelichting": "Oudere vakpersbronnen; actualiteit onder ASN Bank niet bevestigd."
+   },
+   "aow": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden (zoekbudget sessie op; sites geblokkeerd voor WebFetch)"
+   },
+   "erfp": {
+    "waarde": "~ Erfpacht onder voorwaarden",
+    "bron": [
+     "https://blgwonen.nl/download/algemene-voorwaarden-hypotheken-versie-27-06-2023.html"
+    ],
+    "brondatum": "2023-06-27",
+    "zekerheid": "laag",
+    "status": "bevestigd",
+    "toelichting": "Algemene voorwaarden noemen erfpachtrecht als onderpand; geen acceptatiedetails (particulier/gemeentelijk) gevonden."
+   },
+   "rvp": {
+    "waarde": "~ Variabel, 1, 5, 10, 15, 20 jaar (30 jaar niet teruggezien in overzicht 1-9-2026)",
+    "bron": [
+     "https://www.asnbank.nl/downloads/renteoverzicht-asn-bank-voorheen-blg-bespaarhypotheek-per-01-09-2026.html",
+     "https://www.homefinance.nl/hypotheek/rente/blg/"
+    ],
+    "brondatum": "2026-09-01",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Periodes 1–20 jaar en variabel staan in renteoverzicht; 30 jaar alleen indirect (homefinance), dus niet hard bevestigd."
+   },
+   "dag": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden (zoekbudget sessie op; sites geblokkeerd voor WebFetch)"
+   },
+   "geld": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden (zoekbudget sessie op; sites geblokkeerd voor WebFetch)"
+   },
+   "boete": {
+    "waarde": "+ 10% per jaar boetevrij extra aflossen per leningdeel",
+    "bron": [
+     "https://www.homefinance.nl/hypotheek/aanbieders/blg/",
+     "https://www.homefinance.nl/blg-wonen-hypotheekrente-actuele-tarieven-en-voorwaarden/"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Vergelijkersite, geen eigen voorwaardenbron gevonden."
+   },
+   "ltv": {
+    "waarde": null,
+    "bron": [
+     "https://www.asnbank.nl/downloads/renteoverzicht-asn-bank-voorheen-blg-bespaarhypotheek-per-01-09-2026.html"
+    ],
+    "brondatum": "2026-09-01",
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Renteoverzicht kent 4 risicoklassen (≤60/≤80/≤90/>90% marktwaarde), maar of verlaging automatisch of op verzoek gaat is niet gevonden."
+   },
+   "bdduur": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden (zoekbudget sessie op; sites geblokkeerd voor WebFetch)"
+   },
+   "bdrnt": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden (zoekbudget sessie op; sites geblokkeerd voor WebFetch)"
+   },
+   "bddecl": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden (zoekbudget sessie op; sites geblokkeerd voor WebFetch)"
+   },
+   "ebb": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden (zoekbudget sessie op; sites geblokkeerd voor WebFetch)"
+   },
+   "duur": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden (zoekbudget sessie op; sites geblokkeerd voor WebFetch)"
+   },
+   "verh": {
+    "waarde": "+ Rente meeneemregeling: rente mee naar nieuwe (voorheen BLG) Bespaarhypotheek",
+    "bron": [
+     "https://www.asnbank.nl/downloads/factsheet-rente-meeneemregeling.html",
+     "https://blgwonen.nl/download/factsheet-rente-meeneemregeling.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Factsheet van verstrekker (via zoekresultaat); rente alleen mee naar nieuwe Bespaarhypotheek."
+   },
+   "ondh": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden (zoekbudget sessie op; sites geblokkeerd voor WebFetch)"
+   },
+   "oha": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden (zoekbudget sessie op; sites geblokkeerd voor WebFetch)"
+   },
+   "tweede": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden (zoekbudget sessie op; sites geblokkeerd voor WebFetch)"
+   },
+   "ovbr": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden (zoekbudget sessie op; sites geblokkeerd voor WebFetch)"
+   },
+   "avrij": {
+    "waarde": "!Vanaf 11-5-2026 max 30% van woningwaarde aflossingsvrij, geen bedragsplafond; bestaand blijft ook na renteherziening",
+    "bron": [
+     "https://newsroom.asnbank.nl/download/f3cf2d60-84b6-40a3-bf75-25eaeddbae9e/persbericht-asnbankbeperktaflossingsvrijehypotheektot30procentwaardewoning.pdf",
+     "https://www.hypotheker.nl/actueel/nieuwsberichten/2026/ook-asn-bank-scherpt-aflossingsvrij-aan/",
+     "https://www.banken.nl/nieuws/26876/ook-asn-bank-scherpt-beleid-voor-aflossingsvrije-hypotheekbeleid-aan"
+    ],
+    "brondatum": "2026-05",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "ASN-beleid geldt voor aanvragen vanaf 11-5-2026 (was 50%); bestaande BLG-klanten pas geraakt bij verhoging/verhuizing."
+   },
+   "rmid": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden (zoekbudget sessie op; sites geblokkeerd voor WebFetch)"
+   },
+   "rverl": {
+    "waarde": "+ Renteoverzicht geldt voor nieuwe én bestaande klanten bij afsluiten of renteverlenging",
+    "bron": [
+     "https://www.asnbank.nl/downloads/renteoverzicht-asn-bank-voorheen-blg-bespaarhypotheek-per-01-09-2026.html"
+    ],
+    "brondatum": "2026-09-01",
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Uit zoeksamenvatting van het renteoverzicht; document zelf niet ingezien (geblokkeerd)."
+   },
+   "rvoor": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden (zoekbudget sessie op; sites geblokkeerd voor WebFetch)"
+   },
+   "bbrk": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden (zoekbudget sessie op; sites geblokkeerd voor WebFetch)"
+   },
+   "elbl": {
+    "waarde": "~ Rente gedifferentieerd naar energielabel: A of beter, B, C en lager (laagste bij A+)",
+    "bron": [
+     "https://www.asnbank.nl/downloads/renteoverzicht-asn-bank-voorheen-blg-bespaarhypotheek-per-01-09-2026.html",
+     "https://www.homefinance.nl/hypotheek/aanbieders/blg/"
+    ],
+    "brondatum": "2026-09-01",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Bespaarhypotheek kent drie labelklassen in renteoverzicht; bedragen/percentages bewust weggelaten."
+   },
+   "o106": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden (zoekbudget sessie op; sites geblokkeerd voor WebFetch)"
+   },
+   "bprov": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden (zoekbudget sessie op; sites geblokkeerd voor WebFetch)"
+   },
+   "wkost": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden (zoekbudget sessie op; sites geblokkeerd voor WebFetch)"
+   },
+   "avlt": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden (zoekbudget sessie op; sites geblokkeerd voor WebFetch)"
+   },
+   "bproc": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden (zoekbudget sessie op; sites geblokkeerd voor WebFetch)"
+   }
+  },
+  "gecontroleerd": "2026-10-04"
+ },
+ {
+  "naam": "Tulp Hypotheken",
+  "algemeen": {
+   "intermediairsite": null,
+   "voorwaardenPdf": [],
+   "acceptatiegids": [],
+   "opmerking": "Niet onderzocht: sessiebreed zoekbudget (200 WebSearch) uitgeput tijdens onderzoek BLG Wonen; WebFetch naar alle geprobeerde domeinen geblokkeerd. Opnieuw uitvoeren met nieuw budget."
+  },
+  "criteria": {
+   "zzp": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget van de sessie (200) was op voordat dit verstrekker aan bod kwam; WebFetch geblokkeerd."
+   },
+   "flex": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget van de sessie (200) was op voordat dit verstrekker aan bod kwam; WebFetch geblokkeerd."
+   },
+   "persp": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget van de sessie (200) was op voordat dit verstrekker aan bod kwam; WebFetch geblokkeerd."
+   },
+   "aow": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget van de sessie (200) was op voordat dit verstrekker aan bod kwam; WebFetch geblokkeerd."
+   },
+   "erfp": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget van de sessie (200) was op voordat dit verstrekker aan bod kwam; WebFetch geblokkeerd."
+   },
+   "rvp": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget van de sessie (200) was op voordat dit verstrekker aan bod kwam; WebFetch geblokkeerd."
+   },
+   "dag": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget van de sessie (200) was op voordat dit verstrekker aan bod kwam; WebFetch geblokkeerd."
+   },
+   "geld": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget van de sessie (200) was op voordat dit verstrekker aan bod kwam; WebFetch geblokkeerd."
+   },
+   "boete": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget van de sessie (200) was op voordat dit verstrekker aan bod kwam; WebFetch geblokkeerd."
+   },
+   "ltv": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget van de sessie (200) was op voordat dit verstrekker aan bod kwam; WebFetch geblokkeerd."
+   },
+   "bdduur": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget van de sessie (200) was op voordat dit verstrekker aan bod kwam; WebFetch geblokkeerd."
+   },
+   "bdrnt": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget van de sessie (200) was op voordat dit verstrekker aan bod kwam; WebFetch geblokkeerd."
+   },
+   "bddecl": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget van de sessie (200) was op voordat dit verstrekker aan bod kwam; WebFetch geblokkeerd."
+   },
+   "ebb": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget van de sessie (200) was op voordat dit verstrekker aan bod kwam; WebFetch geblokkeerd."
+   },
+   "duur": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget van de sessie (200) was op voordat dit verstrekker aan bod kwam; WebFetch geblokkeerd."
+   },
+   "verh": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget van de sessie (200) was op voordat dit verstrekker aan bod kwam; WebFetch geblokkeerd."
+   },
+   "ondh": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget van de sessie (200) was op voordat dit verstrekker aan bod kwam; WebFetch geblokkeerd."
+   },
+   "oha": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget van de sessie (200) was op voordat dit verstrekker aan bod kwam; WebFetch geblokkeerd."
+   },
+   "tweede": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget van de sessie (200) was op voordat dit verstrekker aan bod kwam; WebFetch geblokkeerd."
+   },
+   "ovbr": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget van de sessie (200) was op voordat dit verstrekker aan bod kwam; WebFetch geblokkeerd."
+   },
+   "avrij": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget van de sessie (200) was op voordat dit verstrekker aan bod kwam; WebFetch geblokkeerd."
+   },
+   "rmid": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget van de sessie (200) was op voordat dit verstrekker aan bod kwam; WebFetch geblokkeerd."
+   },
+   "rverl": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget van de sessie (200) was op voordat dit verstrekker aan bod kwam; WebFetch geblokkeerd."
+   },
+   "rvoor": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget van de sessie (200) was op voordat dit verstrekker aan bod kwam; WebFetch geblokkeerd."
+   },
+   "bbrk": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget van de sessie (200) was op voordat dit verstrekker aan bod kwam; WebFetch geblokkeerd."
+   },
+   "elbl": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget van de sessie (200) was op voordat dit verstrekker aan bod kwam; WebFetch geblokkeerd."
+   },
+   "o106": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget van de sessie (200) was op voordat dit verstrekker aan bod kwam; WebFetch geblokkeerd."
+   },
+   "bprov": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget van de sessie (200) was op voordat dit verstrekker aan bod kwam; WebFetch geblokkeerd."
+   },
+   "wkost": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget van de sessie (200) was op voordat dit verstrekker aan bod kwam; WebFetch geblokkeerd."
+   },
+   "avlt": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget van de sessie (200) was op voordat dit verstrekker aan bod kwam; WebFetch geblokkeerd."
+   },
+   "bproc": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget van de sessie (200) was op voordat dit verstrekker aan bod kwam; WebFetch geblokkeerd."
+   }
+  },
+  "gecontroleerd": "2026-10-04"
+ }
+]

@@ -1,0 +1,601 @@
+[
+ {
+  "naam": "Aegon",
+  "algemeen": {
+   "intermediairsite": "https://www.aegon.nl/voor-adviseurs",
+   "voorwaardenPdf": [
+    "https://www.aegon.nl/system/files/2025-06/H30214_b_Algemene_voorwaarden_Aegon_hypotheek.pdf",
+    "https://www.aegon.nl/sites/default/files/2025-01/Algemene_voorwaarden_Aegon_Hypotheken_voor_nieuwe_klanten_(H30214a).pdf",
+    "https://www.aegon.nl/system/files/2024-12/Productwijzer_Aegon_Hypotheken.pdf"
+   ],
+   "acceptatiegids": [
+    "https://www.aegon.nl/system/files/2025-06/Hypotheekgids_juni2025.pdf",
+    "https://aegon.nl/system/files/2025-01/Aegon_Hypotheekgids_jan_2025.pdf"
+   ],
+   "opmerking": "Verouderd merk: Aegon Hypotheken is onderdeel van a.s.r.; alle Aegon-hypotheken staan sinds 13-10-2025 op het Stater-platform (beheer via E-adviseur, aanvragen via HDN). Aegon-label zou tot medio 2026 blijven, daarna naamswijziging naar a.s.r. (gepland Q2 2026); a.s.r.-productkaart 30-04-2026 noemt alleen a.s.r.-producten. Laatst gevonden Aegon-rentebericht: 5 maart 2026. Waarden hieronder komen uit Aegon-bronnen 2024-2026 en gelden mogelijk niet meer voor nieuwe aanvragen; a.s.r.-voorwaarden niet apart onderzocht (zoekbudget op). Alle verstrekker-sites geblokkeerd voor WebFetch; gewerkt met zoeksamenvattingen. Bronnen: https://www.banken.nl/nieuws/26235/stater-begonnen-met-verhuizing-aegon-hypotheken , https://www.vvponline.nl/nieuws/alle-aegon-hypotheken-verhuisd , https://www.asrnederland.nl/-/media/files/asrnederland-nl/nieuws-en-pers/2026/20260430-asr-hypotheekproduct-en-contactkaart.pdf"
+  },
+  "criteria": {
+   "zzp": {
+    "waarde": "~ Jaarcijfers 3 jaar of Inkomensverklaring Ondernemer; vergelijker meldt start na 1 jaar",
+    "bron": [
+     "https://www.aegon.nl/blog/hypotheek/hypotheek-aanvragen-welke-documenten-heb-je-nodig",
+     "https://www.aegon.nl/node/13481",
+     "https://www.actuelerentestanden.nl/?p=49944"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "IVO als alternatief voor 3 jaar cijfers; onderscheid NHG/niet-NHG niet in bron bevestigd."
+   },
+   "flex": {
+    "waarde": "~ Flex via perspectiefverklaring of arbeidsmarktscan (sinds 2025 ook zonder NHG); vast variabel deel telt mee",
+    "bron": [
+     "https://www.aegon.nl/voor-adviseurs/nieuws/hypotheek/wijzigingen-voor-2025",
+     "https://www.aegon.nl/particulier/hypotheek/hypotheek-afsluiten-zonder-vast-contract"
+    ],
+    "brondatum": "2025",
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "3-jaarsgemiddelde niet teruggevonden; wel AMS (laagste van WGV-inkomen en verdiencapaciteit) en voetnoot-4 variabel inkomen."
+   },
+   "persp": {
+    "waarde": "+ Perspectiefverklaring geaccepteerd; inkomen op WGV geldt dan als toetsinkomen",
+    "bron": [
+     "https://www.aegon.nl/voor-adviseurs/nieuws/hypotheek/wijzigingen-voor-2025",
+     "https://www.aegon.nl/blog/hypotheek/hypotheek-zonder-vast-contract-hoe-dan"
+    ],
+    "brondatum": "2025",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Uit Aegon-adviseursnieuws/Hypotheekgids 2025."
+   },
+   "aow": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Alleen algemene seniorenregeling gevonden (verhuizen met gelijke/lagere lasten binnen 10 jaar voor AOW); geen toetsmethode na AOW."
+   },
+   "erfp": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Algemene voorwaarden noemen erfpachtverplichtingen, maar geen acceptatiebeleid gevonden."
+   },
+   "rvp": {
+    "waarde": "+ Variabel en vast tot 2, 5, 10, 15, 20, 25 en 30 jaar",
+    "bron": [
+     "https://www.aegon.nl/system/files/2026-01/Hypotheekrente_bericht_21_januari_2026_0.pdf"
+    ],
+    "brondatum": "2026-01-21",
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "Rentebericht jan 2026 toont ook 2 en 25 jaar; zekerheid middel i.v.m. overgang naar a.s.r.-label."
+   },
+   "dag": {
+    "waarde": "! Standaard offerterente; laagste van offerte- of dagrente alleen als optie met meerprijs",
+    "bron": [
+     "https://www.aegon.nl/system/files/2024-12/Hypotheekrente_bericht_10_december_2024.pdf",
+     "https://aegon.nl/system/files/2024-10/Productwijzer_Aegon_Hypotheken.pdf"
+    ],
+    "brondatum": "2024-12",
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "Renteberichten: tabellen gelden voor 'passeerrente = offerterente'; dagrente-optie tegen opslag."
+   },
+   "geld": {
+    "waarde": "~ 3 mnd bestaande bouw, 6 mnd nieuwbouw; automatisch verlengd tot max. 1 jaar",
+    "bron": [
+     "https://www.aegon.nl/particulier/klantenservice/veelgestelde-vragen/met-welke-kosten-kan-ik-te-maken-krijgen-met-een-aegon-hypotheek",
+     "https://www.aegon.nl/node/14456"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Automatische verlenging sinds 14-06-2019."
+   },
+   "boete": {
+    "waarde": "+ 10% van oorspronkelijk bedrag per leningdeel per kalenderjaar; vervalt op 31 dec",
+    "bron": [
+     "https://www.aegon.nl/particulier/hypotheek/extra-aflossen-op-jouw-hypotheek",
+     "https://www.aegon.nl/system/files/2025-06/H30214_b_Algemene_voorwaarden_Aegon_hypotheek.pdf"
+    ],
+    "brondatum": "2025-06",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Niet-gebruikte ruimte niet overdraagbaar."
+   },
+   "ltv": {
+    "waarde": "+ Lagere tariefklasse automatisch bij (extra) aflossing, einde RVP en wijziging; waardestijging melden",
+    "bron": [
+     "https://www.aegon.nl/particulier/hypotheek/hypotheek-aanpassen/rente-aanpassen/tariefklasse",
+     "https://www.aegon.nl/particulier/klantenservice/veelgestelde-vragen/hoe-kan-ik-een-waardestijging-van-mijn-woning-aantonen"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Waardestijging via desktoptaxatie/taxatie (max 6 mnd oud), niet automatisch."
+   },
+   "bdduur": {
+    "waarde": "~ Verbouw 12 mnd, nieuwbouw 24 mnd (één bron noemt 30); verlenging 12 mnd bij overmacht",
+    "bron": [
+     "https://www.aegon.nl/system/files/2024-12/Gebruiksaanwijzing_bouw_of_energiedepot.pdf",
+     "https://www.aegon.nl/particulier/hypotheek/bouwdepot/"
+    ],
+    "brondatum": "2024-12",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Bronnen niet eenduidig over nieuwbouwduur (24 vs 30 mnd)."
+   },
+   "bdrnt": {
+    "waarde": "~ Gewogen gemiddelde hypotheekrente; max 12 mnd (verbouw) / 24 mnd (nieuwbouw), niet in verlenging",
+    "bron": [
+     "https://www.aegon.nl/system/files/2024-12/Gebruiksaanwijzing_bouw_of_energiedepot.pdf"
+    ],
+    "brondatum": "2024-12",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Nuance: geen vergoeding tijdens verlengde looptijd."
+   },
+   "bddecl": {
+    "waarde": "~ Declareren online (selfservice bouwdepot); start zodra saldo zichtbaar, ca. 5 werkdagen",
+    "bron": [
+     "https://www.aegon.nl/particulier/hypotheek/een-bouw-energiedepot-voor-uw-huis",
+     "https://www.aegon.nl/system/files/2025-06/Hypotheekgids_juni2025.pdf"
+    ],
+    "brondatum": "2025",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Na migratie naar Stater (okt 2025) kan portaal gewijzigd zijn."
+   },
+   "ebb": {
+    "waarde": "+ EnergieBespaarBudget tot 106% marktwaarde, 2 jaar om te besteden, depotrente = hypotheekrente",
+    "bron": [
+     "https://www.aegon.nl/blog/hypotheek/woning-verduurzamen-ontdek-de-mogelijkheden-van-het-energiebespaarbudget",
+     "https://www.aegon.nl/voor-adviseurs/nieuws/hypotheek/introductie-energiebespaarbudget-ebb"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Geen specificatie vooraf nodig."
+   },
+   "duur": {
+    "waarde": "~ Extra lenen voor verduurzaming afhankelijk van energielabel (label A/B tot € 10.000)",
+    "bron": [
+     "https://www.aegon.nl/particulier/hypotheek/financiering-voor-verduurzamen"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Geen aparte rentekorting gevonden."
+   },
+   "verh": {
+    "waarde": "+ Rente meenemen naar nieuwe Aegon-hypotheek, binnen 6 mnd na verkoop oude woning",
+    "bron": [
+     "https://www.aegon.nl/particulier/hypotheek/een-volgend-huis-kopen/hypotheek-meenemen"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Voorwaarden in art. 9 algemene voorwaarden."
+   },
+   "ondh": {
+    "waarde": "~ Verkoop met tekort alleen met toestemming; eerst wordt woonbehoud bekeken",
+    "bron": [
+     "https://www.aegon.nl/particulier/hypotheek/mijn-hypotheek-bij-een-echtscheiding",
+     "https://www.aegon.nl/particulier/klantenservice/veelgestelde-vragen/wat-gebeurt-er-als-ik-bij-de-verkoop-van-mijn-woning-de-hypotheek-niet-volledig-af-kan-lossen"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Bij NHG kwijtschelding restschuld onder NHG-voorwaarden."
+   },
+   "oha": {
+    "waarde": "~ OHA als achterblijvende partner hypotheek overneemt; aanvraag via adviseur (Figlo)",
+    "bron": [
+     "https://www.aegon.nl/particulier/klantenservice/veelgestelde-vragen/wat-als-wij-uit-elkaar-gaan-en-samen-een-hypotheek-hebben",
+     "https://www.aegon.nl/system/files/2023-02/Handleiding%20aanvraag%20OHA%20via%20Figlo.pdf"
+    ],
+    "brondatum": "2023",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Nieuwe toets niet expliciet genoemd; aanvraagkanaal na Stater-migratie mogelijk gewijzigd."
+   },
+   "tweede": {
+    "waarde": "~ Verhoging via adviespakket/HDN naar Stater, met aanvraagformulier hypotheekaanpassing",
+    "bron": [
+     "https://www.aegon.nl/system/files/2025-10/Aanvraagformulier%20hypotheekaanpassing%20met%20verhoging.pdf",
+     "https://www.banken.nl/nieuws/26235/stater-begonnen-met-verhuizing-aegon-hypotheken"
+    ],
+    "brondatum": "2025-10",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Onderhandse verhoging niet expliciet bevestigd."
+   },
+   "ovbr": {
+    "waarde": "~ Overbrugging 1 jaar (bestaand) / 2 jaar (nieuwbouw), verlengbaar; alleen met nieuwe hypotheek bij Aegon",
+    "bron": [
+     "https://www.homefinance.nl/hypotheek/aanbieders/aegon/overbruggingshypotheek/",
+     "https://www.actuelerentestanden.nl/?p=65187"
+    ],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "gewijzigd",
+    "toelichting": "Vergelijkerbronnen; eis 'verkochte woning' niet bevestigd, wel dubbele lasten moeten draagbaar zijn."
+   },
+   "avrij": {
+    "waarde": "~ Nieuw aflossingsvrij max. 50% van de marktwaarde",
+    "bron": [
+     "https://www.aegon.nl/particulier/hypotheek/aflossingsvrije-hypotheek/aflossingsvrije-hypotheek-uitgelegd"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Beleid t.a.v. WW niet gevonden."
+   },
+   "rmid": {
+    "waarde": "- Geen rentemiddeling sinds 1 september 2019",
+    "bron": [
+     "https://www.aegon.nl/particulier/klantenservice/veelgestelde-vragen/is-rentemiddeling-bij-jullie-mogelijk",
+     "https://www.aegon.nl/node/14711"
+    ],
+    "brondatum": "2019",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "rverl": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Wel: bij einde RVP kosteloos nieuwe periode kiezen; niet gevonden of bestaande klant zelfde rente als nieuwe klant krijgt."
+   },
+   "rvoor": {
+    "waarde": "~ Rentevoorstel minimaal 3 maanden voor einde rentevaste periode (Mijn Aegon of post)",
+    "bron": [
+     "https://www.aegon.nl/particulier/hypotheek/je-rentevaste-periode-verlengen",
+     "https://www.aegon.nl/particulier/klantenservice/veelgestelde-vragen/wat-gebeurt-er-als-de-rentevaste-periode-van-mijn-hypotheek-afloopt"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "bbrk": {
+    "waarde": "~ Contante waarde renteverschil over resterende RVP; vergelijkingsrente = actuele rente gelijke resterende periode",
+    "bron": [
+     "https://www.aegon.nl/particulier/klantenservice/veelgestelde-vragen/hoe-berekent-aegon-de-aflossingskosten-bij-een-extra-aflossing",
+     "https://www.kifid.nl/wp-content/uploads/2021/12/Uitspraak-2021-1017-Bindend.pdf"
+    ],
+    "brondatum": "2021",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Geen kosten als vergelijkingsrente hoger is dan contractrente."
+   },
+   "elbl": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Geen labelafhankelijke rente bij Aegon gevonden."
+   },
+   "o106": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "EBB tot 106% gevonden (zie ebb), maar niet of daarover opslag geldt; oude bron (NOS 2018) te verouderd."
+   },
+   "bprov": {
+    "waarde": "~ Bij verlenging alleen kosten als dagrente bij passeren hoger is dan offerterente; per verlengde dag",
+    "bron": [
+     "https://www.aegon.nl/voor-adviseurs/nieuws/hypotheek/vanaf-1-juni-2022-berekenen-we-bij-aktepasseringen-de",
+     "https://www.aegon.nl/particulier/klantenservice/veelgestelde-vragen/met-welke-kosten-kan-ik-te-maken-krijgen-met-een-aegon-hypotheek"
+    ],
+    "brondatum": "2022",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Tarief niet genoemd (AFM-regel)."
+   },
+   "wkost": {
+    "waarde": "! Kosten voor renteofferte bij omzetten hypotheekvorm; vanuit aflossingsvrij kosteloos",
+    "bron": [
+     "https://www.aegon.nl/particulier/hypotheek/hypotheek-aanpassen/hypotheekvorm-aanpassen"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Bedrag niet genoemd (tarief)."
+   },
+   "avlt": {
+    "waarde": "! Op einddatum volledig aflossen; lukt dat niet, nieuwe hypotheek aanvragen via adviseur",
+    "bron": [
+     "https://www.aegon.nl/particulier/klantenservice/veelgestelde-vragen/wat-gebeurt-er-als-ik-mijn-aflossingsvrije-hypotheek-op-einddatum-niet-kan-lossen"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Geen automatische verlenging gevonden."
+   },
+   "bproc": {
+    "waarde": "+ Betalingsregeling, budgetcoach op kosten Aegon, geen rente over achterstand",
+    "bron": [
+     "https://www.aegon.nl/particulier/klantenservice/betaalachterstand/hypotheek",
+     "https://www.aegon.nl/particulier/klantenservice/veelgestelde-vragen/betaal-ik-extra-kosten-over-de-betalingsachterstand-op-mijn-hypotheek"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": ""
+   }
+  },
+  "gecontroleerd": "2026-10-04"
+ },
+ {
+  "naam": "Nationale-Nederlanden",
+  "algemeen": {
+   "intermediairsite": null,
+   "voorwaardenPdf": [],
+   "acceptatiegids": [],
+   "opmerking": "NIET ONDERZOCHT: het sessiebrede WebSearch-budget (200) raakte op tijdens Aegon; nn.nl en vergelijkers (homefinance, actuelerentestanden) geblokkeerd voor WebFetch. Alle criteria 'onbekend'; huidige waarden ongewijzigd laten en NN opnieuw laten onderzoeken."
+  },
+  "criteria": {
+   "zzp": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: gedeeld zoekbudget (200) was op voordat NN aan de beurt was; nn.nl geblokkeerd voor WebFetch."
+   },
+   "flex": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: gedeeld zoekbudget (200) was op voordat NN aan de beurt was; nn.nl geblokkeerd voor WebFetch."
+   },
+   "persp": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: gedeeld zoekbudget (200) was op voordat NN aan de beurt was; nn.nl geblokkeerd voor WebFetch."
+   },
+   "aow": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: gedeeld zoekbudget (200) was op voordat NN aan de beurt was; nn.nl geblokkeerd voor WebFetch."
+   },
+   "erfp": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: gedeeld zoekbudget (200) was op voordat NN aan de beurt was; nn.nl geblokkeerd voor WebFetch."
+   },
+   "rvp": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: gedeeld zoekbudget (200) was op voordat NN aan de beurt was; nn.nl geblokkeerd voor WebFetch."
+   },
+   "dag": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: gedeeld zoekbudget (200) was op voordat NN aan de beurt was; nn.nl geblokkeerd voor WebFetch."
+   },
+   "geld": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: gedeeld zoekbudget (200) was op voordat NN aan de beurt was; nn.nl geblokkeerd voor WebFetch."
+   },
+   "boete": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: gedeeld zoekbudget (200) was op voordat NN aan de beurt was; nn.nl geblokkeerd voor WebFetch."
+   },
+   "ltv": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: gedeeld zoekbudget (200) was op voordat NN aan de beurt was; nn.nl geblokkeerd voor WebFetch."
+   },
+   "bdduur": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: gedeeld zoekbudget (200) was op voordat NN aan de beurt was; nn.nl geblokkeerd voor WebFetch."
+   },
+   "bdrnt": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: gedeeld zoekbudget (200) was op voordat NN aan de beurt was; nn.nl geblokkeerd voor WebFetch."
+   },
+   "bddecl": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: gedeeld zoekbudget (200) was op voordat NN aan de beurt was; nn.nl geblokkeerd voor WebFetch."
+   },
+   "ebb": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: gedeeld zoekbudget (200) was op voordat NN aan de beurt was; nn.nl geblokkeerd voor WebFetch."
+   },
+   "duur": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: gedeeld zoekbudget (200) was op voordat NN aan de beurt was; nn.nl geblokkeerd voor WebFetch."
+   },
+   "verh": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: gedeeld zoekbudget (200) was op voordat NN aan de beurt was; nn.nl geblokkeerd voor WebFetch."
+   },
+   "ondh": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: gedeeld zoekbudget (200) was op voordat NN aan de beurt was; nn.nl geblokkeerd voor WebFetch."
+   },
+   "oha": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: gedeeld zoekbudget (200) was op voordat NN aan de beurt was; nn.nl geblokkeerd voor WebFetch."
+   },
+   "tweede": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: gedeeld zoekbudget (200) was op voordat NN aan de beurt was; nn.nl geblokkeerd voor WebFetch."
+   },
+   "ovbr": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: gedeeld zoekbudget (200) was op voordat NN aan de beurt was; nn.nl geblokkeerd voor WebFetch."
+   },
+   "avrij": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: gedeeld zoekbudget (200) was op voordat NN aan de beurt was; nn.nl geblokkeerd voor WebFetch."
+   },
+   "rmid": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: gedeeld zoekbudget (200) was op voordat NN aan de beurt was; nn.nl geblokkeerd voor WebFetch."
+   },
+   "rverl": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: gedeeld zoekbudget (200) was op voordat NN aan de beurt was; nn.nl geblokkeerd voor WebFetch."
+   },
+   "rvoor": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: gedeeld zoekbudget (200) was op voordat NN aan de beurt was; nn.nl geblokkeerd voor WebFetch."
+   },
+   "bbrk": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: gedeeld zoekbudget (200) was op voordat NN aan de beurt was; nn.nl geblokkeerd voor WebFetch."
+   },
+   "elbl": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: gedeeld zoekbudget (200) was op voordat NN aan de beurt was; nn.nl geblokkeerd voor WebFetch."
+   },
+   "o106": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: gedeeld zoekbudget (200) was op voordat NN aan de beurt was; nn.nl geblokkeerd voor WebFetch."
+   },
+   "bprov": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: gedeeld zoekbudget (200) was op voordat NN aan de beurt was; nn.nl geblokkeerd voor WebFetch."
+   },
+   "wkost": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: gedeeld zoekbudget (200) was op voordat NN aan de beurt was; nn.nl geblokkeerd voor WebFetch."
+   },
+   "avlt": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: gedeeld zoekbudget (200) was op voordat NN aan de beurt was; nn.nl geblokkeerd voor WebFetch."
+   },
+   "bproc": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: gedeeld zoekbudget (200) was op voordat NN aan de beurt was; nn.nl geblokkeerd voor WebFetch."
+   }
+  },
+  "gecontroleerd": "2026-10-04"
+ }
+]

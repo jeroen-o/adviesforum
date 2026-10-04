@@ -1,0 +1,561 @@
+[
+ {
+  "naam": "RegioBank",
+  "algemeen": {
+   "intermediairsite": null,
+   "voorwaardenPdf": [
+    "https://www.regiobank.nl/downloads/informatiewijzer-bespaarhypotheek.html",
+    "https://www.regiobank.nl/downloads/informatiewijzer-hypotheken.html",
+    "https://www.asnbank.nl/downloads/factsheet-rente-meeneemregeling.html",
+    "https://www.asnbank.nl/downloads/kostenoverzicht-wijzigen-hypotheek.html"
+   ],
+   "acceptatiegids": [],
+   "opmerking": "Merk RegioBank is per 1-12-2025 opgegaan in ASN Bank (voorheen de Volksbank); producten (RegioBank Hypotheek, Bespaarhypotheek) worden in 2026 nog met eigen tarievenbladen op regiobank.nl gevoerd ('ASN Bank voorheen RegioBank'). Enkele bronnen gaan over ASN Bank algemeen; zie toelichting/zekerheid. Websites geblokkeerd voor WebFetch; alles op basis van zoeksamenvattingen. Zoekbudget sessie raakte op na ±25 zoekopdrachten, daardoor veel 'onbekend'."
+  },
+  "criteria": {
+   "zzp": {
+    "waarde": "~ Vanaf 1 jaar zelfstandig met jaarcijfers; korter niet mogelijk",
+    "bron": [
+     "https://www.actuelerentestanden.nl/hypotheek/aanbieders/regiobank",
+     "https://www.homefinance.nl/hypotheek/inkomen-en-werk/bank-zzp/"
+    ],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "gewijzigd",
+    "toelichting": "Alleen vergelijkers; onderscheid NHG/niet-NHG (3 jaar) niet bevestigd"
+   },
+   "flex": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden binnen zoekbudget"
+   },
+   "persp": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden binnen zoekbudget"
+   },
+   "aow": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden binnen zoekbudget"
+   },
+   "erfp": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden binnen zoekbudget"
+   },
+   "rvp": {
+    "waarde": "~ 1 t/m 7, 10, 12, 15 en 20 jaar; geen 30 jaar vast",
+    "bron": [
+     "https://www.regiobank.nl/downloads/rentetarieven-regiobank-hypotheek-per-8-augustus-2026.html",
+     "https://www.homefinance.nl/hypotheek/rente/regiobank/"
+    ],
+    "brondatum": "2026-08-08",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Tarievenblad aug 2026 toont 1-7,10,12,15,20 jr; 30 jaar niet aangeboden"
+   },
+   "dag": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden binnen zoekbudget"
+   },
+   "geld": {
+    "waarde": "~ Max. 6 mnd bestaande bouw, 12 mnd nieuwbouw",
+    "bron": [
+     "https://www.fx.nl/hypotheek/maatschappijen/asn-bank"
+    ],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "gewijzigd",
+    "toelichting": "Vergelijker over ASN Bank; geldt mogelijk niet voor RegioBank-product"
+   },
+   "boete": {
+    "waarde": "+ 10% van oorspronkelijke hoofdsom per leningdeel per jaar boetevrij",
+    "bron": [
+     "https://www.regiobank.nl/downloads/informatiewijzer-bespaarhypotheek.html",
+     "https://www.homefinance.nl/hypotheek/aanbieders/asn/voorwaarden/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Niet-gebruikte ruimte vervalt per 31 december"
+   },
+   "ltv": {
+    "waarde": "~ Lagere tariefklasse na aflossing; hogere woningwaarde op verzoek (WOZ/taxatie)",
+    "bron": [
+     "https://www.homefinance.nl/hypotheek/rente/risico-opslag/regiobank/",
+     "https://www.asnbank.nl/downloads/aanpassen-marktwaarde-van-uw-huis.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "10 tariefklassen; bij aflossen automatisch (Bespaarhypotheek), waardestijging op verzoek"
+   },
+   "bdduur": {
+    "waarde": "~ Bouwdepot max. 2 jaar, verlenging mogelijk",
+    "bron": [
+     "https://www.homefinance.nl/hypotheek/berekenen/asn/"
+    ],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "gewijzigd",
+    "toelichting": "Bron over ASN Bank; aparte termijn voor verbouw niet bevestigd"
+   },
+   "bdrnt": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden binnen zoekbudget"
+   },
+   "bddecl": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden binnen zoekbudget"
+   },
+   "ebb": {
+    "waarde": "+ Tot 106% bij verduurzaming; EBB tot €20.000 extra bij slecht label",
+    "bron": [
+     "https://www.regiobank.nl/downloads/rentetarieven-regiobank-hypotheek-per-1-augustus-2026.html"
+    ],
+    "brondatum": "2026-08-01",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Uit zoeksamenvatting rond tarievenblad; mogelijk generieke NHG-uitleg"
+   },
+   "duur": {
+    "waarde": "+ Leningdeel Duurzaam Wonen €2.500–€30.000 voor energie-/klimaatmaatregelen",
+    "bron": [
+     "https://www.regiobank.nl/downloads/rentetarieven-regiobank-hypotheek-per-8-augustus-2026.html"
+    ],
+    "brondatum": "2026-08-08",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Alleen in combinatie met RegioBank Hypotheek"
+   },
+   "verh": {
+    "waarde": "+ Rente meenemen bij verhuizing; binnen 3 mnd, max. oude bedrag, nieuwe toets",
+    "bron": [
+     "https://www.asnbank.nl/downloads/factsheet-rente-meeneemregeling.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Oude woning volledig verkocht; bij restant rentevast <10 jr toets op AFM-toetsrente"
+   },
+   "ondh": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden binnen zoekbudget"
+   },
+   "oha": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden binnen zoekbudget"
+   },
+   "tweede": {
+    "waarde": "+ Verhoging mogelijk; ook 2e hypotheek achter andere verstrekker (met opslag)",
+    "bron": [
+     "https://www.homefinance.nl/hypotheek/rente/risico-opslag/regiobank/"
+    ],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "bevestigd",
+    "toelichting": "2e hypotheek met opslag volgens vergelijker; nieuwe regels aflossingsvrij gelden bij verhoging"
+   },
+   "ovbr": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden binnen zoekbudget"
+   },
+   "avrij": {
+    "waarde": "! Per 11-5-2026 max. 30% WW (geen bedragsplafond); bestaand blijft bij renteherziening",
+    "bron": [
+     "https://www.banken.nl/nieuws/26876/ook-asn-bank-scherpt-beleid-voor-aflossingsvrije-hypotheekbeleid-aan",
+     "https://newsroom.asnbank.nl/en/asn-bank-puts-30-cap-on-interest-only-mortgages/",
+     "https://www.geld.nl/hypotheek/nieuws/ook-asn-scherpere-regels-aflossingsvrije-hypotheek"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Nieuwe grens geldt bij verhuizing, verhoging of nieuwe lening"
+   },
+   "rmid": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden binnen zoekbudget"
+   },
+   "rverl": {
+    "waarde": "+ Zelfde tarieven voor nieuwe hypotheken en renteverlenging",
+    "bron": [
+     "https://www.regiobank.nl/downloads/rentetarieven-regiobank-hypotheek-per-8-augustus-2026.html"
+    ],
+    "brondatum": "2026-08-08",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Tarievenblad: tarieven incl. kortingen/opslagen gelden ook bij verlenging"
+   },
+   "rvoor": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden binnen zoekbudget"
+   },
+   "bbrk": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden binnen zoekbudget"
+   },
+   "elbl": {
+    "waarde": "~ Tarief gedifferentieerd naar label: A of beter / B / C of lager",
+    "bron": [
+     "https://www.regiobank.nl/downloads/rentetarieven-regiobank-bespaarhypotheek-per-25-juli-2026.html"
+    ],
+    "brondatum": "2026-07-25",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Gezien op Bespaarhypotheek-tarievenblad"
+   },
+   "o106": {
+    "waarde": "! Aparte tariefklassen ≤100%, ≤106% en >106% WOZ/marktwaarde",
+    "bron": [
+     "https://www.regiobank.nl/downloads/rentetarieven-regiobank-hypotheek-per-8-augustus-2026.html"
+    ],
+    "brondatum": "2026-08-08",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Of klasse ≤106% duurder is dan ≤100% niet zichtbaar in samenvatting"
+   },
+   "bprov": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden binnen zoekbudget"
+   },
+   "wkost": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden binnen zoekbudget"
+   },
+   "avlt": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden binnen zoekbudget"
+   },
+   "bproc": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden binnen zoekbudget"
+   }
+  },
+  "gecontroleerd": "2026-10-04"
+ },
+ {
+  "naam": "Munt Hypotheken",
+  "algemeen": {
+   "intermediairsite": null,
+   "voorwaardenPdf": [],
+   "acceptatiegids": [],
+   "opmerking": "Niet onderzocht: het gedeelde WebSearch-budget (200) van de sessie was op voordat deze verstrekker aan de beurt kwam. Opnieuw uitvoeren."
+  },
+  "criteria": {
+   "zzp": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget sessie op"
+   },
+   "flex": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget sessie op"
+   },
+   "persp": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget sessie op"
+   },
+   "aow": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget sessie op"
+   },
+   "erfp": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget sessie op"
+   },
+   "rvp": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget sessie op"
+   },
+   "dag": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget sessie op"
+   },
+   "geld": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget sessie op"
+   },
+   "boete": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget sessie op"
+   },
+   "ltv": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget sessie op"
+   },
+   "bdduur": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget sessie op"
+   },
+   "bdrnt": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget sessie op"
+   },
+   "bddecl": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget sessie op"
+   },
+   "ebb": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget sessie op"
+   },
+   "duur": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget sessie op"
+   },
+   "verh": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget sessie op"
+   },
+   "ondh": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget sessie op"
+   },
+   "oha": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget sessie op"
+   },
+   "tweede": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget sessie op"
+   },
+   "ovbr": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget sessie op"
+   },
+   "avrij": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget sessie op"
+   },
+   "rmid": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget sessie op"
+   },
+   "rverl": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget sessie op"
+   },
+   "rvoor": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget sessie op"
+   },
+   "bbrk": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget sessie op"
+   },
+   "elbl": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget sessie op"
+   },
+   "o106": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget sessie op"
+   },
+   "bprov": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget sessie op"
+   },
+   "wkost": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget sessie op"
+   },
+   "avlt": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget sessie op"
+   },
+   "bproc": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget sessie op"
+   }
+  },
+  "gecontroleerd": "2026-10-04"
+ }
+]
