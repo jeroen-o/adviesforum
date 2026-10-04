@@ -483,11 +483,15 @@ footer a{display:inline-block;padding:4px 0}
 .volg-rij{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 14px}
 .volg-rij .btn{white-space:normal;text-align:left}
 </style>
+<link rel="stylesheet" href="css/sitenav.css">
 </head>
 <body>
 <a class="skiplink" href="#app">Naar de inhoud</a>
+<!-- sitenav: gegenereerd door tools/sitenav.js, niet met de hand wijzigen -->
+<nav class="sitenav" aria-label="Adviesforum"><div class="sitenav-in"><a class="sitenav-merk" href="index.html">Adviesforum</a><ul><li><a href="index.html" aria-current="page">Home</a></li><li><a href="voorwaarden.html">Voorwaarden</a></li><li><a href="index.html#hulpmiddelen">Hulpmiddelen</a></li><li><a href="laatste.html">Laatste nieuws</a></li><li><a href="aanmelden.html">Aanmelden</a></li></ul></div></nav>
+<!-- /sitenav -->
 
-<aside class="demo" aria-label="Over deze versie"><div class="wrap"><span>Voor en door financieel adviseurs. Nieuwe vragen gaan naar de beheerder en verschijnen na controle; antwoorden en beoordelingen in deze versie blijven alleen in je eigen sessie.</span><span class="util"><a href="index.html">Home</a><a href="aanmelden.html">Aanmelden</a><a href="laatste.html">Laatste nieuws</a><a href="uitnodigen.html">Uitnodigen</a><a href="https://verzekeringhypotheek.blinqx.tech/support" target="_blank" rel="noopener">Support</a><a href="elearning.html#blinqx">E-learning Blinqx</a><a href="https://verzekeringhypotheek.blinqx.tech/academy" target="_blank" rel="noopener">Academy</a><a href="https://verzekeringhypotheek.blinqx.tech/partners" target="_blank" rel="noopener">Partners</a><a href="aanbieders.html">Aanbieders</a></span></div></aside>
+<aside class="demo" aria-label="Over deze versie"><div class="wrap"><span>Voor en door financieel adviseurs. Nieuwe vragen gaan naar de beheerder en verschijnen na controle; antwoorden en beoordelingen in deze versie blijven alleen in je eigen sessie.</span><span class="util"><a href="uitnodigen.html">Uitnodigen</a><a href="https://verzekeringhypotheek.blinqx.tech/support" target="_blank" rel="noopener">Support</a><a href="elearning.html#blinqx">E-learning Blinqx</a><a href="https://verzekeringhypotheek.blinqx.tech/academy" target="_blank" rel="noopener">Academy</a><a href="https://verzekeringhypotheek.blinqx.tech/partners" target="_blank" rel="noopener">Partners</a><a href="aanbieders.html">Aanbieders</a></span></div></aside>
 <div class="sticky-kop">
 <header class="top">
   <div class="wrap">
@@ -529,29 +533,6 @@ footer a{display:inline-block;padding:4px 0}
 <script src="data/vragen/kred.js"></script>
 <script src="data/vragen/comp.js"></script>
 <script src="data/vragen/software.js"></script>
-<script src="data/rekentools-index.js"></script>
-<script src="data/kennisbank.js"></script>
-<script src="data/kennisbank-planning.js"></script>
-<script src="data/kennisbank-geldverstrekkers.js"></script>
-<script src="data/kennisbank-eblinqx.js"></script>
-<script src="data/kennisbank-afm.js"></script>
-<script src="data/kennisbank-nhg.js"></script>
-<script src="data/kennisbank-thema.js"></script>
-<script src="data/kennisbank-kifid.js"></script>
-<script src="data/kennisbank-wetgeving.js"></script>
-<script src="data/kennisbank-blinqx.js"></script>
-<script src="data/kennisbank-woning.js"></script>
-<script src="data/kennisbank-opleiding.js"></script>
-<script src="data/kennisbank-compliance2.js"></script>
-<script src="data/kennisbank-seh.js"></script>
-<script src="data/kennisbank-seh2.js"></script>
-<script src="data/kennisbank-vakpers.js"></script>
-<script src="data/kennisbank-kifid2.js"></script>
-<script src="data/kennisbank-verzekeraars.js"></script>
-<script src="data/kennisbank-adfiz.js"></script>
-<script src="data/kennisbank-dfosignalen.js"></script>
-<script src="data/kennisbank-aanvulling.js"></script>
-<script src="data/begrippen.js"></script>
 <script src="data/voorwaarden-onderwerpen.js"></script>
 <script>
 /* ---------- Delen op LinkedIn en afscherming van antwoorden ----------
@@ -578,7 +559,49 @@ const LEVELS=[[300,'Autoriteit'],[150,'Expert'],[50,'Kenner'],[0,'Starter']];
 const VRAGEN=window.VRAGEN_DATA||[];
 /* Demo-statistieken (bekeken/nuttig) los van de kennisbankinhoud */
 const KB_DEMO={k1:{views:188,nuttig:{u1:1,u2:1,u3:1,u4:1,u5:1,u7:1}},k2:{views:402,nuttig:{u1:1,u2:1,u4:1,u5:1,u7:1,u8:1}},k3:{views:356,nuttig:{u1:1,u2:1,u3:1,u4:1,u5:1,u6:1,u7:1}},k4:{views:54,nuttig:{u4:1,u1:1}},k5:{views:511,nuttig:{u1:1,u2:1,u3:1,u4:1,u6:1,u7:1,u8:1}},k6:{views:97,nuttig:{u4:1,u5:1,u1:1}},k7:{views:61,nuttig:{u7:1,u1:1}},k8:{views:289,nuttig:{u1:1,u2:1,u3:1,u4:1,u5:1,u7:1}},k9:{views:7,nuttig:{u1:1}},k10:{views:0,nuttig:{}},k11:{views:0,nuttig:{}},k12:{views:0,nuttig:{}}};
-const BEGRIPPEN=window.BEGRIPPEN||[];
+/* Kennisbank, begrippen en de rekentools-index (samen ruim 1,3 MB) laden niet render-blokkerend, net als de FAQ:
+   direct na de eerste weergave op de achtergrond, of eerder zodra iemand ze nodig heeft (kennisbank, artikel, begrippen,
+   hulpmiddelen, zoeken, favorieten). De arrays blijven dezelfde objecten; ze worden na het laden gevuld. */
+const KENNIS_BESTANDEN=[
+ 'data/rekentools-index.js',
+ 'data/kennisbank.js',
+ 'data/kennisbank-planning.js',
+ 'data/kennisbank-geldverstrekkers.js',
+ 'data/kennisbank-eblinqx.js',
+ 'data/kennisbank-afm.js',
+ 'data/kennisbank-nhg.js',
+ 'data/kennisbank-thema.js',
+ 'data/kennisbank-kifid.js',
+ 'data/kennisbank-wetgeving.js',
+ 'data/kennisbank-blinqx.js',
+ 'data/kennisbank-woning.js',
+ 'data/kennisbank-opleiding.js',
+ 'data/kennisbank-compliance2.js',
+ 'data/kennisbank-seh.js',
+ 'data/kennisbank-seh2.js',
+ 'data/kennisbank-vakpers.js',
+ 'data/kennisbank-kifid2.js',
+ 'data/kennisbank-verzekeraars.js',
+ 'data/kennisbank-adfiz.js',
+ 'data/kennisbank-dfosignalen.js',
+ 'data/kennisbank-aanvulling.js',
+ 'data/begrippen.js'
+];
+const BEGRIPPEN=(window.BEGRIPPEN||[]).slice();
+let KENNIS_GELADEN=false,KENNIS_BELOFTE=null;
+const KENNIS_VIEWS=['kennisbank','artikel','begrippen','hulpmiddelen','zoeken','favorieten','handleiding'];
+function laadKennis(){
+  if(KENNIS_GELADEN)return Promise.resolve();
+  if(KENNIS_BELOFTE)return KENNIS_BELOFTE;
+  KENNIS_BELOFTE=Promise.all(KENNIS_BESTANDEN.map(src=>new Promise(ok=>{const sc=document.createElement('script');sc.src=src;sc.async=false;sc.onload=ok;sc.onerror=()=>{console.warn('Bestand niet geladen: '+src);ok();};document.body.appendChild(sc);})))
+    .then(()=>{
+      ARTIKELEN.push(...(window.KENNISBANK||[]).map(a=>Object.assign({views:0,nuttig:{}},KB_DEMO[a.id]||{},a)));
+      BEGRIPPEN.push(...(window.BEGRIPPEN||[]).filter(b=>!BEGRIPPEN.includes(b)));
+      (window.REKENTOOLS||[]).forEach(r=>HULP.push({groep:'Rekentools · '+r.groep,tp:'Rekentool',titel:r.naam,url:r.url||('rekentools.html#'+r.id),tekst:r.tekst,kw:(r.kw||'')+' rekentool '+r.groep}));
+      KENNIS_GELADEN=true;naKennisGeladen();});
+  return KENNIS_BELOFTE;
+}
+const laadKaart=t=>`<section><div class="card"><div class="empty"><b>${esc(t)} wordt geladen…</b>Een ogenblik.</div></div></section>`;
 /* FAQ (ruim 1,5 MB) wordt niet render-blokkerend geladen: direct na de eerste weergave op de achtergrond,
    of eerder zodra iemand zoekt of het tabblad FAQ opent. Volgorde van de bestanden = volgorde in de lijst. */
 const FAQ_BESTANDEN=[
@@ -625,7 +648,7 @@ function laadFaq(){
 const FAQ_THEMAS={'hypotheek-normen':'Leennormen en maximale hypotheek','hypotheek-nhg-woning':'NHG, woning en verduurzaming','fiscaal-eigen-woning':'Fiscaal: eigen woning','hypotheek-producten':'Hypotheekproducten en rente','doelgroepen':'Doelgroepen','verzekeringen':'Verzekeringen','pensioen':'Pensioen','compliance':'Compliance en Wft','krediet-vermogen':'Krediet en vermogen','praktijk-software':'Praktijk en dossier'};
 /* Hulpmiddelen: losse pagina's en documenten in deze repository */
 const HULP=[
- {groep:'Naslag',tp:'Aanbieders',titel:'Aanbieders: nieuws, voorwaarden en contact',url:'aanbieders.html',tekst:'Geldverstrekkers en verzekeraars delen hier zelf hun nieuws, voorwaarden en acceptatiegidsen, richtlijnen, links naar hun extranet en hun accountmanagers. Aanbieders krijgen een eigen account om dit bij te houden.',kw:'aanbieders geldverstrekker verzekeraar nieuws voorwaarden acceptatiegids richtlijnen extranet accountmanager contactpersoon productinformatie documenten aanbiedersnieuws'},
+ {groep:'Naslag',tp:'Aanbieders',titel:'Aanbieders: nieuws, voorwaarden en contact',url:'aanbieders.html',tekst:'Aangeleverd door de aanbieders zelf (niet door het Adviesforum gecontroleerd): geldverstrekkers en verzekeraars delen hier hun nieuws, voorwaarden en acceptatiegidsen, richtlijnen, links naar hun extranet en hun accountmanagers. Aanbieders krijgen een eigen account om dit bij te houden.',kw:'aanbieders geldverstrekker verzekeraar nieuws voorwaarden acceptatiegids richtlijnen extranet accountmanager contactpersoon productinformatie documenten aanbiedersnieuws'},
  {groep:'Naslag',tp:'E-learning',titel:'E-learning Blinqx: 17 software-instructies',url:'elearning.html#blinqx',tekst:'Interactieve rondleidingen door de software van Blinqx V&H: inloggen, klant zoeken en aanmaken, mailbox, agenda, taken, schade, dossier splitsen, SMART en eBLINQX hypotheekadvies.',kw:'blinqx elearning e-learning storylane instructie software handleiding mailbox agenda kalender taken schade schademelding dossier smart eblinqx hypotheekadvies klant aanmaken inloggen'},
  {groep:'Naslag',tp:'E-learning',titel:'E-learning: 10 korte modules',url:'elearning.html',tekst:'Modules van 12–18 minuten met lessen, tussenvragen, eindtoets en deelnamebewijs: leennormen, NHG, fundering, duurzaam wonen, Wwft, zorgplicht, AOV/BAZ, Wtp, compliance en AI. Geen PE-punten.',kw:'elearning e-learning cursus module training leren toets deelnamebewijs certificaat leennormen nhg fundering duurzaam wwft zorgplicht aov baz wtp compliance ai'},
  {groep:'Naslag',tp:'Wegwijzer',titel:'Partners van Blinqx Verzekering & Hypotheek',url:'partners.html',tekst:'18 partners per categorie (brondata, taxatie, verduurzaming, compliance, KYC, financiering, opleiding) met wat je er als adviseur aan hebt en waar ze in het adviesproces passen.',kw:'partners blinqx ecosysteem ockto findesk hdn taxatheek positief wonen nationale waarborg jens hyarchis kyc m+ compliance dfo expertbox draagplicht dathuis aplaza vcn ratio letselschade huizengids yes-co integraties koppelingen'},
@@ -677,7 +700,7 @@ const HULP=[
  {groep:'Formulieren',tp:'Planner',titel:'Nazorgsignalen per klant',url:'nazorg-signalen.html',tekst:'Tijdlijn met actiemomenten: einde rentevast, AOW-datum, 30 jaar renteaftrek, einde aflossingsvrij, ORV en AOV. Met agendabestand (.ics) en printversie.',kw:'nazorg signalen tijdlijn rentevast aow-datum aow-leeftijd renteaftrek 30 jaar aflossingsvrij orv aov lijfrente agenda ics zorgplicht actieve bemoeienis'},
  {groep:'Naslag',titel:'Oefenen voor PE en Wft',url:'oefenen.html',tekst:'565 eigen oefenvragen in 9 modules (basis, hypothecair krediet, inkomen, pensioen, vermogen, consumptief krediet, schade particulier, schade zakelijk, zorgverzekeringen), met proefexamen op tijd en cesuur. Geen officiële CDFD-vragen.',kw:'oefenen pe wft examen toets oefenvragen meerkeuze cdfd permanente educatie vakbekwaamheid'},
  {groep:'Naslag',titel:'Adviesroute: stap voor stap',url:'adviesroute.html',tekst:'Procesgids voor hypotheekadvies, oversluiten, inkomens-/ORV-advies en pensioen: per stap wat de AFM-Leidraad vraagt, checklist, dossierstukken en Kifid-valkuilen.',kw:'adviesroute adviesproces stappenplan checklist dossier afm leidraad zorgplicht kifid valkuilen hypotheekadvies oversluiten orv aov pensioen'},
- {groep:'Naslag',titel:'Vergelijken: voorwaarden naast elkaar',url:'vergelijken.html',tekst:'Zet voorwaarden van geldverstrekkers en verzekeraars per thema naast elkaar (verhuisregeling, boetevrij aflossen, zzp, duurzaamheid …), met bron en status.',kw:'vergelijken vergelijker matrix voorwaarden geldverstrekker verhuisregeling boetevrij aflossen zzp senioren duurzaamheid bouwdepot acceptatie'},
+ {groep:'Naslag',titel:'Aanbiederwegwijzer: thema\'s naast elkaar',url:'vergelijken.html',tekst:'Kenmerken uit de Aanbiederwegwijzer per thema naast elkaar (verhuisregeling, boetevrij aflossen, zzp, duurzaamheid …), met bron en status. Voor gecontroleerde voorwaarden met brondatum: zie Voorwaarden van aanbieders.',kw:'vergelijken vergelijker matrix voorwaarden geldverstrekker verhuisregeling boetevrij aflossen zzp senioren duurzaamheid bouwdepot acceptatie'},
  {groep:'Naslag',tp:'Overzicht',titel:'Voorwaarden van aanbieders',url:'voorwaarden.html',tekst:'Startpunt voor alle voorwaarden: situatiecheck, voorwaarden-vergelijker hypotheken en productvoorwaarden (ORV, AOV, woonlasten, uitvaart, lijfrente, opstal en inboedel, bankgarantie, krediet), met de laatste wijzigingen en de aanbieders die je volgt.',kw:'voorwaarden aanbieders overzicht startpunt geldverstrekker verzekeraar vergelijken situatiecheck productvoorwaarden wijzigingen volgen'},
  {groep:'Naslag',tp:'Vergelijker',titel:'Voorwaardenvergelijker geldverstrekkers',url:'voorwaarden-vergelijker.html',tekst:'Interne matrix van hypotheekverstrekkers en 32 voorwaarden (zzp, flex, erfpacht, rentevast, aflossingsvrij, rentemiddeling, bouwdepot, verhuisregeling, overbrugging) met kleurcode; 42 geldverstrekkers online gecontroleerd met bron, wijzigingslog per geldverstrekker (volgen en RSS), signaal bij bronnen ouder dan 6 maanden en een uitdraai voor het dossier; zoveel naast elkaar als u wilt (ook op één kenmerk, met deelbare link), filter en JSON-export. Geen rentes of tarieven.',kw:'voorwaardenvergelijker voorwaarden vergelijken vergelijker geldverstrekker geldverstrekkers matrix acceptatie zzp flexwerk perspectiefverklaring aow erfpacht rentevastperiode dagrente geldigheid aanbod boetevrij aflossen risicoklasse ltv bouwdepot depotrente energiebespaarbudget verduurzaming verhuisregeling onderhandse verkoop ontslag hoofdelijkheid verhoging overbruggingskrediet aflossingsvrij rentemiddeling boeterente energielabel betalingsproblemen vereniging eigen huis independer'},
  {groep:'Naslag',tp:'Vergelijker',titel:'Situatiecheck voorwaarden',url:'situatiecheck.html',tekst:'Vink de situatie van de klant aan (hypotheek: zzp 1 jaar, perspectiefverklaring, particuliere erfpacht, overbrugging; ORV: roker, hoog bedrag, 60-plus; AOV: starter, psychische klachten, korte wachttijd) en zie per aanbieder of dat volgens de gecontroleerde voorwaarden kan, met bron. Alfabetisch, geen rangorde en geen advies.',kw:'situatiecheck situatie klant geldverstrekker welke geldverstrekker accepteert zzp starter ondernemer perspectiefverklaring flexwerk particuliere erfpacht aflossingsvrij overbrugging rentemiddeling energiebespaarbudget dagrente senioren aow'},
@@ -685,7 +708,7 @@ const HULP=[
  {groep:'Naslag',titel:'Klantuitleg: 32 printbare bladen',url:'klantuitleg.html',tekst:'Uitleg in B1-taal voor klanten over hypotheek, NHG, kosten koper, verzekeringen, pensioen, scheiding, klachten en privacy; met je kantoornaam, als PDF of mail.',kw:'klantuitleg uitlegblad brochure klant b1 voorlichting nhg rentevast annuiteit lineair aflossingsvrij orv aov privacy klacht'},
  {groep:'Naslag',titel:'Levensgebeurtenissen: wegwijzer',url:'levensgebeurtenissen.html',tekst:'15 levensgebeurtenissen (samenwonen, kind, scheiding, overlijden, werkloos, ziek, zzp, verhuizen, verduurzamen, erfenis, pensioen, emigratie e.a.) met checklist, documenten, termijnen en zorgplichtsignalen.',kw:'levensgebeurtenis scheiding overlijden geboorte kind trouwen samenwonen werkloos arbeidsongeschikt zzp verhuizen verbouwen erfenis schenking pensioen emigratie mantelzorg senior checklist'},
  {groep:'Naslag',titel:'Kalender 2026–2027 voor adviseurs',url:'kalender.html',tekst:'Belangrijke data en deadlines (aangifte, toeslagen, jaarruimte, schenken, NHG, Wtp, saldering) plus wat er verandert per 1 januari 2027. Te exporteren naar je agenda.',kw:'kalender agenda deadline data 2027 jaarruimte schenken aangifte toeslagen saldering wtp nhg 1 januari wijzigingen ics'},
- {groep:'Naslag',titel:'Aanbiederwegwijzer',url:'partijen.html',tekst:'82 banken, geldverstrekkers, verzekeraars, lijfrente- en kredietaanbieders, PPI\'s en pensioenfondsen: portals, producten, voorwaarden (verhuisregeling, boetevrij aflossen, zzp, duurzaamheid) en statuswijzigingen, met bron.',kw:'partijen geldverstrekker bank verzekeraar pensioenfonds portal intermediair ing abn rabobank obvion asr nn goudse zwitserleven abp munt'},
+ {groep:'Naslag',titel:'Aanbiederwegwijzer',url:'partijen.html',tekst:'Door het Adviesforum verzameld uit openbare bronnen: 82 banken, geldverstrekkers, verzekeraars, lijfrente- en kredietaanbieders, PPI\'s en pensioenfondsen: portals, producten, voorwaarden (verhuisregeling, boetevrij aflossen, zzp, duurzaamheid) en statuswijzigingen, met bron.',kw:'partijen geldverstrekker bank verzekeraar pensioenfonds portal intermediair ing abn rabobank obvion asr nn goudse zwitserleven abp munt'},
  {groep:'Naslag',titel:'Wet- en regelgeving',url:'wetgeving.html',tekst:'130 wetten, besluiten en bronnen, met wat er in 2026–2027 verandert (Wtp, CCD2, DORA, AMLR, AI-verordening, box 3) met zoekfunctie: Wft, Bgfo, Trhk, NHG, Wwft, Kifid, BW, fiscaal, pensioen.',kw:'wet wetgeving wetten regelgeving wft bgfo trhk wck wwft kifid burgerlijk wetboek inkomstenbelasting successiewet pensioenwet toeslagen bwbr'},
  {groep:'Naslag',titel:'Werkinstructie financieringsopzet (eBlinqx)',url:'werkinstructie-financieringsopzet.html',tekst:'Alle varianten om de financieringsopzet in eBlinqx Hypotheekadvies aan te passen.',kw:'financieringsopzet eblinqx werkinstructie kosten koper eigen middelen boeterente kostenpost'},
  {groep:'Documenten',tp:'PDF',titel:'NHG: Voorwaarden & Normen 2026',url:'documenten/nhg-voorwaarden-normen-2026.pdf',tekst:'De volledige Voorwaarden & Normen NHG 2026.',kw:'nhg voorwaarden normen 2026 v&n kostengrens borgtochtprovisie'},
@@ -703,8 +726,8 @@ const HULP=[
  {groep:'Forum',titel:'Privacyverklaring',url:'privacy.html',tekst:'Welke gegevens het forum verwerkt en waarom.',kw:'privacy avg persoonsgegevens'}
 ];
 /* Alle losse rekentools uit data/rekentools-index.js (gegenereerd) als hulpmiddel, gegroepeerd per onderwerp */
-(window.REKENTOOLS||[]).forEach(r=>HULP.push({groep:'Rekentools · '+r.groep,tp:'Rekentool',titel:r.naam,url:r.url||('rekentools.html#'+r.id),tekst:r.tekst,kw:(r.kw||'')+' rekentool '+r.groep}));
-const ARTIKELEN=(window.KENNISBANK||[]).map(a=>Object.assign({views:0,nuttig:{}},KB_DEMO[a.id]||{},a));
+/* Losse rekentools en kennisbankartikelen worden na het laden toegevoegd (zie laadKennis). */
+const ARTIKELEN=[];
 
 /* Supportindex: artikelen op de supportsites van Blinqx V&H (trefwoorden voor het automatische antwoord) */
 const FL='https://support-fastlane.vh.blinqx.tech/nl/articles/';
@@ -1048,7 +1071,7 @@ const kort=(s,n)=>{s=String(s||'').replace(/\s+/g,' ').trim();return s.length>n?
 function opNaam(lijst,naam,z){const q=zoekNorm(S.q);const sc=o=>{const n=zoekNorm(naam(o));return n===q?0:zoekPast(z,' '+n+' ')?1:2;};return lijst.map((o,i)=>[sc(o),i,o]).sort((a,b)=>a[0]-b[0]||a[1]-b[1]).map(x=>x[2]);}
 let ZOEK_RES=null;
 function zoekResultaten(){
-  const sleutel=[S.q,S.sort,VRAGEN.length,ARTIKELEN.length,FAQ_GELADEN,!!EXTRA.aanbieders,!!EXTRA.partijen,!!EXTRA.voorwaarden].join('|');
+  const sleutel=[S.q,S.sort,VRAGEN.length,ARTIKELEN.length,KENNIS_GELADEN,FAQ_GELADEN,!!EXTRA.aanbieders,!!EXTRA.partijen,!!EXTRA.voorwaarden].join('|');
   if(ZOEK_RES&&ZOEK_RES.k===sleutel)return ZOEK_RES.r;
   const z=zoekQuery(S.q),r={};
   r.forum=VRAGEN.filter(v=>zoekt('forum',v)).sort((a,b)=>{
@@ -1056,10 +1079,10 @@ function zoekResultaten(){
     if(S.sort==='rating')return bestRating(b)-bestRating(a)||b.datum.localeCompare(a.datum);
     if(S.sort==='views')return b.views-a.views;
     return b.datum.localeCompare(a.datum);});
-  r.kennisbank=ARTIKELEN.filter(a=>zoekt('kb',a)).sort((a,b)=>(b.gecontroleerd-a.gecontroleerd)||cnt(b.nuttig)-cnt(a.nuttig));
+  r.kennisbank=!KENNIS_GELADEN?null:ARTIKELEN.filter(a=>zoekt('kb',a)).sort((a,b)=>(b.gecontroleerd-a.gecontroleerd)||cnt(b.nuttig)-cnt(a.nuttig));
   r.faq=FAQ_GELADEN?FAQ.filter(f=>zoekt('faq',f)):null;
-  r.begrippen=BEGRIPPEN.filter(b=>zoekt('begrip',b));
-  r.rekentools=z?opNaam((window.REKENTOOLS||[]).filter(t=>zoekt('rekentool',t)),t=>t.naam,z):[];
+  r.begrippen=KENNIS_GELADEN?BEGRIPPEN.filter(b=>zoekt('begrip',b)):null;
+  r.rekentools=!KENNIS_GELADEN?null:z?opNaam((window.REKENTOOLS||[]).filter(t=>zoekt('rekentool',t)),t=>t.naam,z):[];
   r.hulpmiddelen=HULP.filter(h=>h.tp!=='Rekentool'&&zoekt('hulp',h));
   if(EXTRA.aanbieders){const uit=[];
     for(const a of opNaam(EXTRA.aanbieders.filter(a=>zoekt('aanbieder',a)),a=>a.naam,z||[]))uit.push({soort:'a',a});
@@ -1166,7 +1189,7 @@ function autoAnswer(v,force,live){
   for(const h of hits){if(gekozen.length>=(hulp?4:5))break;if(h===hulp)continue;if(h.type==='faq'){if(nFaq>=2)continue;nFaq++;}gekozen.push(h);}
   if(hulp)gekozen.splice(Math.min(1,gekozen.length),0,hulp);
   hits.length=0;hits.push(...gekozen);
-  v.auto={datum:(v.auto&&v.auto.datum)||v.datum||new Date().toISOString(),product:detectProduct(v),hits:hits.slice(0,5),feedback:(v.auto&&v.auto.feedback)||{},fin:(v.auto&&v.auto.fin)||null,metFaq:FAQ_GELADEN};
+  v.auto={zonderKb:!KENNIS_GELADEN,datum:(v.auto&&v.auto.datum)||v.datum||new Date().toISOString(),product:detectProduct(v),hits:hits.slice(0,5),feedback:(v.auto&&v.auto.feedback)||{},fin:(v.auto&&v.auto.fin)||null,metFaq:FAQ_GELADEN};
   if(live&&FIN.enabled&&FIN.autoAsk&&!v.auto.fin)finAsk(v);
 }
 function autoCard(v){
@@ -1197,7 +1220,7 @@ function renderShell(){
   $('#who').innerHTML=S.me?`<span class="ikn">${esc(me().naam)}</span>${verif(me())}<button class="btn btn-line btn-sm" data-act="uitloggen">Uitloggen</button>`:`<button class="btn btn-line btn-sm" data-act="inloggen">Inloggen adviseur</button>`;
   const open=VRAGEN.filter(v=>vraagStatus(v)==='open').length;
   $('#tabs').innerHTML=[
-    ['forum','Forum',VRAGEN.length],['kennisbank','Kennisbank',ARTIKELEN.length],['faq','FAQ',FAQ_GELADEN?FAQ.length:null],['hulpmiddelen','Hulpmiddelen',HULP.length],['begrippen','Begrippen A-Z',BEGRIPPEN.length],['adviseurs','Adviseurs',USERS.length],['favorieten','★ Mijn favorieten',FAV.fav.length||null],['handleiding','Handleiding',null],['voorwie','Voor wie',null]
+    ['forum','Forum',VRAGEN.length],['kennisbank','Kennisbank',KENNIS_GELADEN?ARTIKELEN.length:null],['faq','FAQ',FAQ_GELADEN?FAQ.length:null],['hulpmiddelen','Hulpmiddelen',HULP.length],['begrippen','Begrippen A-Z',BEGRIPPEN.length],['adviseurs','Adviseurs',USERS.length],['favorieten','★ Mijn favorieten',FAV.fav.length||null],['handleiding','Handleiding',null],['voorwie','Voor wie',null]
   ].map(([id,t,n])=>`<button class="tab ${S.tab===id?'on':''}" data-act="tab" data-tab="${id}">${t}${n!=null?`<span class="n">${fmtInt(n)}</span>`:''}</button>`).join('')
   +(open?`<span style="margin-left:auto;align-self:center;font-size:13px;color:var(--muted);padding:0 8px;white-space:nowrap">${plural(open,'onbeantwoorde vraag','onbeantwoorde vragen')}</span>`:'');
 }
@@ -1217,6 +1240,8 @@ function render(keepScroll){
   $('#hero').innerHTML=heroZichtbaar()?heroHtml():'';
   const app=$('#app');
   app.className='wrap';
+  if(!KENNIS_GELADEN&&KENNIS_VIEWS.includes(S.view)){laadKennis();
+    if(S.view==='kennisbank'||S.view==='artikel'||S.view==='begrippen'){app.innerHTML=laadKaart(S.view==='begrippen'?'Begrippenlijst':'Kennisbank');return;}}
   switch(S.view){
     case 'forum':app.innerHTML=viewForum();break;
     case 'vraag':app.className='wrap two';app.innerHTML=viewVraag();break;
@@ -1825,7 +1850,7 @@ function route(){leesBron();const ruw=location.hash.slice(1);let h=ruw,m;try{h=d
   if((m=ruw.match(/^zoek=([^&]*)(?:&in=([a-z]+))?$/))){zoekUitHash(m[1],m[2]);return true;}
   if((m=ruw.match(/^favorieten=([^&]*)(?:&volgen=([^&]*))?$/))){importeerFavorieten(m[1],m[2]||'');return true;}
   if((m=h.match(/^faq-([a-z0-9-]{1,40})$/))){Object.assign(S,{tab:'faq',view:'faq',faqOpen:m[1],faqScroll:m[1],faqThema:'alle',faqMax:100000,q:''});$('#search').value='';laadFaq();return true;}
-  if((m=h.match(/^artikel-(.+)$/))&&ARTIKELEN.find(a=>a.id===m[1]))Object.assign(S,{tab:'kennisbank',view:'artikel',artikel:m[1]});
+  if((m=h.match(/^artikel-(.+)$/))&&(!KENNIS_GELADEN||ARTIKELEN.find(a=>a.id===m[1])))Object.assign(S,{tab:'kennisbank',view:'artikel',artikel:m[1]});
   else if((m=h.match(/^vraag-(.+)-r(\d+)$/))&&VRAGEN.find(v=>v.id===m[1]))Object.assign(S,{tab:'forum',view:'vraag',vraag:m[1],reactie:+m[2]});
   else if((m=h.match(/^vraag-(.+)$/))&&VRAGEN.find(v=>v.id===m[1]))Object.assign(S,{tab:'forum',view:'vraag',vraag:m[1],reactie:null});
   else if(ROUTES.includes(h))Object.assign(S,{tab:h,view:h});else return false;return true;}
@@ -1955,7 +1980,7 @@ document.addEventListener('click',e=>{if(e.target.closest('[data-act="login-slui
 herstelLogin();
 $('#search').addEventListener('input',e=>{
   const was=S.q.trim();
-  S.q=e.target.value;if(S.q.trim()){laadFaq();laadExtra();}
+  S.q=e.target.value;if(S.q.trim()){laadKennis();laadFaq();laadExtra();}
   S.faqMax=50;S.forumMax=30;S.zoekOpen={};
   /* In een tabblad met eigen zoekresultaten blijf je daar; anders het overzicht over alle bronnen */
   if(['kennisbank','faq','hulpmiddelen','begrippen'].includes(S.tab))S.view=S.tab;
@@ -2068,7 +2093,7 @@ function zoekUitHash(termRuw,inTab){
   const tab=['forum','kennisbank','faq','hulpmiddelen','begrippen','zoeken'].includes(inTab)?inTab:zoekQuery(q)?'zoeken':'forum';
   Object.assign(S,{q,tab,view:tab,cat:'alle',status:'alle',kbCat:'alle',faqMax:50,forumMax:30,zoekOpen:{}});
   const i=$('#search');if(i)i.value=q;
-  if(q){laadFaq();laadExtra();}
+  if(q){laadKennis();laadFaq();laadExtra();}
 }
 /* Gevolgde aanbieders (tokens "b.<id>", gezet op aanbieders.html). Namen komen uit data/aanbieders.js, dat pas hier wordt geladen. */
 let AANB_BELOFTE=null;
@@ -2125,6 +2150,13 @@ function viewFavorieten(){
   </section>`;
 }
 const volgKnopNaam=(soort,c)=>{const aan=volgt(soort,c.id);return `<button type="button" class="btn btn-sm btn-line volg-knop" data-act="volg" data-soort="${soort}" data-cat="${c.id}" aria-pressed="${aan}">${aan?'✓ ':'+ '}${esc(c.naam)}</button>`;};
+/* Na het laden van kennisbank, begrippen en rekentools: alles opnieuw tekenen behalve een formulier dat wordt ingevuld */
+function naKennisGeladen(){
+  VIND_CACHE.clear();ZOEK_RES=null;
+  if(S.view==='nieuw'){renderShell();return;}
+  if(S.view==='vraag'){const v=VRAGEN.find(x=>x.id===S.vraag);if(v&&v.auto&&v.auto.zonderKb&&!v.antwoorden.length)autoAnswer(v,true);}
+  render(true);
+}
 /* Na het laden van de FAQ alleen bijwerken wat ervan afhangt (formulieren blijven staan) */
 function naFaqGeladen(){
   VIND_CACHE.clear();renderShell();
@@ -2137,7 +2169,7 @@ volgBezoek();
 route();
 render();
 /* FAQ op de achtergrond laden zodra de pagina er staat */
-if(document.readyState==='complete')setTimeout(laadFaq,50);else window.addEventListener('load',()=>setTimeout(laadFaq,50));
+if(document.readyState==='complete')setTimeout(()=>{laadKennis().then(laadFaq);},30);else window.addEventListener('load',()=>setTimeout(()=>{laadKennis().then(laadFaq);},30));
 /* Hoogte van het vaste menu als --kop-h (voor ankers) en een fade-rand op de tabbalk zolang er meer tabs rechts staan */
 (function(){
   const kop=document.querySelector('.sticky-kop'),tabs=document.querySelector('.tabs'),rij=document.getElementById('tabs');

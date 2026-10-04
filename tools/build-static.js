@@ -17,6 +17,7 @@ const fs = require('fs');
 const path = require('path');
 const vm = require('vm');
 const { execFileSync } = require('child_process');
+const { navHtml, CSS_LINK } = require('./sitenav');
 
 const ROOT = path.join(__dirname, '..');
 const BASE = 'https://jeroen-o.github.io/adviesforum/';
@@ -34,7 +35,7 @@ function uitIndex(naam) {
 const CATS = uitIndex('CATS');
 const FAQ_THEMAS = uitIndex('FAQ_THEMAS');
 const FAQ_BESTANDEN = uitIndex('FAQ_BESTANDEN');
-const KB_BESTANDEN = [...indexHtml.matchAll(/<script\s+src="(data\/kennisbank[^"]*\.js)"/g)].map(m => m[1]);
+const KB_BESTANDEN = uitIndex('KENNIS_BESTANDEN').filter(f => /^data\/kennisbank[^/]*\.js$/.test(f)); /* lijst in index.html (worden daar na de eerste weergave geladen) */
 if (!KB_BESTANDEN.length) fout('Geen data/kennisbank*.js scripts gevonden in index.html');
 const VRAAG_BESTANDEN = [...indexHtml.matchAll(/<script\s+src="(data\/vragen[^"]*\.js)"/g)].map(m => m[1]);
 if (!VRAAG_BESTANDEN.length) fout('Geen data/vragen*.js scripts gevonden in index.html');
@@ -183,9 +184,11 @@ function pagina({ pre, pad, titel, ogTitel, beschrijving, type = 'website', h1, 
 ${css(pre)}${extraCss ? '\n' + extraCss : ''}
 </style>
 ${[...jsonld.map(ld), ...bc].join('\n')}
+<link rel="stylesheet" href="${pre}${CSS_LINK}">
 </head>
 <body>
 <a class="skiplink" href="#inhoud">Naar de inhoud</a>
+${navHtml(pre)}
 <header class="site">
   <a class="merk" href="${pre}index.html"><span class="hex" aria-hidden="true"></span><span><span class="merknaam">ADVIESFORUM</span><br><span class="merksub">Voor en door financieel adviseurs</span></span></a>
   <nav class="hoofd" aria-label="Hoofdnavigatie">${nav}</nav>
@@ -393,7 +396,8 @@ const PAGINAS_LLMS = [
     ['wetgeving.html', 'Wet- en regelgeving', 'wetten, besluiten en bronnen voor adviseurs, met wat er verandert in 2026–2027'],
     ['partijen.html', 'Aanbiederwegwijzer', 'geldverstrekkers, verzekeraars en pensioenuitvoerders met portals en voorwaarden'],
     ['adviesroute.html', 'Adviesroute', 'het adviesproces stap voor stap met dossierstukken en aandachtspunten'],
-    ['vergelijken.html', 'Vergelijken', 'voorwaarden van aanbieders per thema naast elkaar'],
+    ['vergelijken.html', 'Thema\'s naast elkaar', 'kenmerken uit de Aanbiederwegwijzer per thema naast elkaar'],
+    ['voorwaarden.html', 'Voorwaarden van aanbieders', 'gecontroleerde voorwaarden per aanbieder met bron en brondatum'],
     ['kalender.html', 'Kalender', 'belangrijke data en deadlines voor adviseurs'],
     ['levensgebeurtenissen.html', 'Levensgebeurtenissen', 'wegwijzer per levensgebeurtenis met checklist'],
     ['klantuitleg.html', 'Klantuitleg', 'printbare uitleg in eenvoudige taal voor klanten'],

@@ -165,9 +165,13 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
 :root:not([data-theme="light"]) .skiplink:focus{outline-color:#F2F2F2}
 }
 </style>
+<link rel="stylesheet" href="css/sitenav.css">
 </head>
 <body>
 <a class="skiplink" href="#inhoud">Naar de inhoud</a>
+<!-- sitenav: gegenereerd door tools/sitenav.js, niet met de hand wijzigen -->
+<nav class="sitenav" aria-label="Adviesforum"><div class="sitenav-in"><a class="sitenav-merk" href="index.html">Adviesforum</a><ul><li><a href="index.html">Home</a></li><li><a href="voorwaarden.html">Voorwaarden</a></li><li><a href="index.html#hulpmiddelen">Hulpmiddelen</a></li><li><a href="laatste.html">Laatste nieuws</a></li><li><a href="aanmelden.html">Aanmelden</a></li></ul></div></nav>
+<!-- /sitenav -->
 
 <header class="hero">
   <div class="wrap">
@@ -599,7 +603,7 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
       w.document.write('<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>' +
         document.title + '</title><style>' +
         document.querySelector('style').textContent +
-        '</style></head><body>' + document.body.innerHTML + '</body></html>');
+        '</style></head><body>' + document.body.innerHTML.replace(/<!-- sitenav[\s\S]*?<!-- \/sitenav -->/, '') + '</body></html>');
       w.document.close();
       w.focus();
       setTimeout(function(){ w.print(); }, 350);

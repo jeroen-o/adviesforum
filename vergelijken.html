@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Partijen naast elkaar – Adviesforum</title>
+<title>Aanbiederwegwijzer: thema's naast elkaar – Adviesforum</title>
 <link rel="canonical" href="https://jeroen-o.github.io/adviesforum/vergelijken.html">
 <meta property="og:url" content="https://jeroen-o.github.io/adviesforum/vergelijken.html">
 <meta property="og:site_name" content="Adviesforum">
@@ -12,7 +12,7 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="description" content="Zet partijen uit de Aanbiederwegwijzer per thema naast elkaar: verhuisregeling, boetevrij aflossen, renteafspraken, zzp-inkomen, senioren en meer, elk kenmerk met bronlink. Geen productvergelijking en geen advies.">
-<meta property="og:title" content="Partijen naast elkaar – Adviesforum">
+<meta property="og:title" content="Aanbiederwegwijzer: thema's naast elkaar – Adviesforum">
 <meta property="og:description" content="Kenmerken uit de Aanbiederwegwijzer per thema naast elkaar, met bronlink. Geen productvergelijking en geen advies.">
 <meta property="og:type" content="website">
 <style>
@@ -48,6 +48,8 @@ button,input,select{font-family:inherit}
 .kop .stempel{display:inline-block;margin-top:16px;font-size:12px;font-weight:700;background:var(--zwart);color:var(--geel);padding:5px 11px;border-radius:999px}
 .kop .naarvv{margin:18px 0 0;display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;font-size:13.5px}
 .kop .naarvv span{max-width:60ch}
+.hypmelding{background:#FFF8D6;border-left:4px solid #FFD200;color:#1A1A1A;padding:10px 14px;border-radius:6px;font-size:14px;margin:0 0 14px}
+.hypmelding a{color:#1A1A1A;font-weight:700}
 
 .romp{max-width:1280px;margin:0 auto;padding:24px 24px 56px}
 
@@ -216,14 +218,14 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
 :root:not([data-theme="light"]) .skiplink:focus{outline-color:#F2F2F2}
 }
 </style>
+<link rel="stylesheet" href="css/sitenav.css">
 </head>
 <body>
 <a class="skiplink" href="#inhoud">Naar de inhoud</a>
 
-<nav class="balk" aria-label="Forum">
-  <span>Adviesforum &middot; hulpmiddelen voor financieel adviseurs</span>
-  <span><a href="index.html">Home</a> &middot; <a href="aanmelden.html">Aanmelden</a> &middot; <a href="laatste.html">Laatste nieuws</a></span>
-</nav>
+<!-- sitenav: gegenereerd door tools/sitenav.js, niet met de hand wijzigen -->
+<nav class="sitenav" aria-label="Adviesforum"><div class="sitenav-in"><a class="sitenav-merk" href="index.html">Adviesforum</a><ul><li><a href="index.html">Home</a></li><li><a href="voorwaarden.html">Voorwaarden</a></li><li><a href="index.html#hulpmiddelen">Hulpmiddelen</a></li><li><a href="laatste.html">Laatste nieuws</a></li><li><a href="aanmelden.html">Aanmelden</a></li></ul></div></nav>
+<!-- /sitenav -->
 
 <header class="kop">
   <div class="kop-in">
@@ -232,10 +234,10 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
       <a class="terug" href="partijen.html">&larr; Terug naar de Aanbiederwegwijzer</a>
       <a class="terug" href="index.html#hulpmiddelen">Alle hulpmiddelen</a>
     </div>
-    <h1>Partijen naast elkaar per thema</h1>
+    <h1>Aanbiederwegwijzer: thema's naast elkaar</h1>
     <p>Kies een productcategorie en de thema's die u wilt zien. U krijgt een matrix met per partij wat de Aanbiederwegwijzer over dat thema vastlegde, steeds met een link naar de bron van de partij zelf. Handig als startpunt voor uw eigen uitzoekwerk; niet als eindpunt.</p>
     <span class="stempel" id="stempel">Geen productvergelijking &middot; geen advies &middot; controleer altijd de actuele voorwaarden</span>
-    <p class="naarvv"><a class="knop" href="voorwaarden-vergelijker.html">Voorwaarden van geldverstrekkers vergelijken &rarr;</a> <span>Interne matrix van hypotheekverstrekkers en hun voorwaarden (indicatief, niet geverifieerd).</span></p>
+    <p class="naarvv"><a class="knop" href="voorwaarden.html">Gecontroleerde voorwaarden vergelijken &rarr;</a> <span>Voor hypotheek, ORV, AOV, krediet en meer: per criterium de waarde uit de eigen bron van de aanbieder, met brondatum. Gebruik die voor het vergelijken van voorwaarden; deze pagina is een snelle verkenning van de Aanbiederwegwijzer.</span></p>
   </div>
 </header>
 
@@ -248,6 +250,8 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
       <li><strong>Controleer altijd de actuele voorwaarden en de acceptatiegids van de partij</strong> (via het adviseursportaal of de actuele productvoorwaarden) voordat u iets in een advies of offerte gebruikt. Een lege cel betekent alleen dat het thema niet in de wegwijzer staat, niet dat de partij het niet aanbiedt.</li>
     </ul>
   </section>
+
+  <p class="hypmelding" id="hypMelding" role="note" hidden></p>
 
   <section class="paneel" aria-label="Selectie">
     <div class="rij">
@@ -438,6 +442,14 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
     var l=el('a','plink','In de wegwijzer →');l.href='partijen.html#partij-'+p._slug;l.title='Open '+p.naam+' in de Aanbiederwegwijzer';wrap.appendChild(l);
   }
 
+  /* Voor categorieën met gecontroleerde voorwaarden verwijzen we naar de vergelijker; daar staan de waarden met brondatum. */
+  function toonMelding(){
+    var m=document.getElementById('hypMelding'),c=catSel.value,naar=null;
+    if(c==='hypotheek')naar=['voorwaarden-vergelijker.html','de Voorwaarden-vergelijker','hypotheekvoorwaarden'];
+    else if(c==='leven'||c==='inkomen')naar=['productvoorwaarden.html','de Productvoorwaarden','voorwaarden van ORV, AOV en woonlastenverzekeringen'];
+    m.hidden=!naar;if(!naar)return;
+    m.innerHTML='Wilt u '+naar[2]+' vergelijken? Gebruik dan <a href="'+naar[0]+'">'+naar[1]+'</a>: daar staat per criterium de gecontroleerde waarde met bron en brondatum. Hieronder staan alleen de kenmerken uit de Aanbiederwegwijzer.';
+  }
   function teken(){
     var themas=gekozenThemas();
     var woorden=zoek.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
@@ -549,7 +561,8 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
     w.focus();setTimeout(function(){try{w.print();}catch(e){}},300);
   }
 
-  catSel.addEventListener('change',function(){bouwChips();teken();});
+  catSel.addEventListener('change',function(){bouwChips();teken();toonMelding();});
+  toonMelding();
   zoek.addEventListener('input',teken);
   verbergGestopt.addEventListener('change',teken);
   alleenGevuld.addEventListener('change',teken);

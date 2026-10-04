@@ -123,14 +123,14 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
 :root:not([data-theme="light"]) .skiplink:focus{outline-color:#F2F2F2}
 }
 </style>
+<link rel="stylesheet" href="css/sitenav.css">
 </head>
 <body>
 <a class="skiplink" href="#inhoud">Naar de inhoud</a>
 
-<nav class="balk" aria-label="Forum">
-  <span>Adviesforum &middot; voor en door financieel adviseurs</span>
-  <span><a href="index.html">Home</a> &middot; <a href="aanmelden.html">Aanmelden</a> &middot; <a href="laatste.html">Laatste nieuws</a></span>
-</nav>
+<!-- sitenav: gegenereerd door tools/sitenav.js, niet met de hand wijzigen -->
+<nav class="sitenav" aria-label="Adviesforum"><div class="sitenav-in"><a class="sitenav-merk" href="index.html">Adviesforum</a><ul><li><a href="index.html">Home</a></li><li><a href="voorwaarden.html">Voorwaarden</a></li><li><a href="index.html#hulpmiddelen">Hulpmiddelen</a></li><li><a href="laatste.html">Laatste nieuws</a></li><li><a href="aanmelden.html">Aanmelden</a></li></ul></div></nav>
+<!-- /sitenav -->
 
 <header class="kop">
   <div class="kop-in">
@@ -265,7 +265,7 @@ var T=[
  W.LEVENSGEBEURTENISSEN?{g:len(W.LEVENSGEBEURTENISSEN),e:'gebeurtenissen',t:'Levensgebeurtenissen',d:'Wat verandert er bij trouwen, scheiden, overlijden, baanverlies of verhuizen? Met checklist en termijnen.',u:'levensgebeurtenissen.html'}:null,
  W.ADVIESROUTE?{g:len(W.ADVIESROUTE.routes),e:'routes',t:'Adviesroute stap voor stap',d:'Hypotheek, verzekeren, pensioen en krediet: per stap het doel, de AFM-eisen en wat je vastlegt.',u:'adviesroute.html'}:null,
  W.KLANTUITLEG?{g:len(W.KLANTUITLEG),e:'uitlegbladen',t:'Klantuitleg in begrijpelijke taal',d:'Printbare uitlegbladen voor klanten, in B1-taal.',u:'klantuitleg.html'}:null,
- {g:3,e:'categorieën',t:'Vergelijken',d:'Partijen naast elkaar op voorwaarden en kenmerken, met bron.',u:'vergelijken.html'},
+ {g:3,e:'categorieën',t:'Voorwaarden',d:'Gecontroleerde voorwaarden per aanbieder naast elkaar, met bron.',u:'voorwaarden.html'},
  {g:W.__KB.wetgeving||0,e:'artikelen',t:'Wetgeving: nieuw en op komst',d:'Wat verandert er in 2025–2027 (Wtp, CCD2, DORA, AMLR, AI-verordening, box 3) en wat moet je doen.',u:'wetgeving.html#actueel'},
  {g:1,e:'overzicht',t:'Compliance-overzicht',d:'Alle AFM- en compliance-onderwerpen van het forum op één pagina.',u:'compliance-overzicht.html'},
  {g:len(W.PARTIJEN),e:'partijen',t:'Aanbiederwegwijzer',d:'Banken, geldverstrekkers, verzekeraars en pensioenuitvoerders: portals, producten en voorwaarden, met bron.',u:'partijen.html'},
@@ -285,6 +285,9 @@ document.getElementById('tegels').innerHTML=T.map(function(x){
 /* ---------- wijzigingen (uit git-historie en pull requests, in adviseurstaal) ---------- */
 var TH={forum:'Forum en inloggen',kennis:'Kennisbank',faq:'FAQ en begrippen',reken:'Rekentools',scan:'Klantscans en formulieren',naslag:'Naslag en wegwijzers',comp:'Compliance en AFM',nhg:'NHG'};
 var L=[
+ {d:'2026-10-04',pr:75,th:'forum',t:'Eén vaste navigatie op alle pagina\'s',x:'Bovenaan elke pagina staan nu dezelfde links: Home, Voorwaarden, Hulpmiddelen, Laatste nieuws en Aanmelden.',u:'index.html'},
+ {d:'2026-10-04',pr:75,th:'forum',t:'Forum laadt sneller',x:'De kennisbank, begrippen en rekentools-index worden pas geladen als ze nodig zijn of nadat de startpagina zichtbaar is.',u:'index.html'},
+ {d:'2026-10-04',pr:75,th:'naslag',t:'Duidelijker welke pagina waarvoor is',x:'Acceptatiewijzer en Situatiecheck verwijzen per situatie naar elkaar. Thema\'s naast elkaar valt nu onder de Aanbiederwegwijzer en verwijst voor hypotheken naar de Voorwaarden-vergelijker. Op Voorwaarden staat een overzicht van wat elke pagina bevat en wie het aanlevert.',u:'voorwaarden.html#welke'},
  {d:'2026-10-04',pr:74,th:'forum',t:'Voorbeeldvragen niet meer in zoekmachines',x:'De deelpagina\'s van de fictieve voorbeeldvragen staan op noindex en niet meer in de sitemap, zodat ze in Google niet als echte praktijkvragen verschijnen. Delen via LinkedIn blijft werken.',u:'index.html#forum'},
  {d:'2026-10-04',pr:74,th:'reken',t:'Normen elk jaar tijdig bijgewerkt',x:'Half december worden de nieuwe normen voor het komende jaar verzameld uit officiële bronnen; begin januari worden de rekentools bijgewerkt, met een normentabel voor compliance.',u:'rekentools.html'},
  {d:'2026-10-04',pr:73,th:'naslag',t:'Eén ingang voor alle voorwaarden',x:'Op de nieuwe pagina Voorwaarden staan de situatiecheck, de voorwaarden-vergelijker en de productvoorwaarden bij elkaar, met kerncijfers, de laatste wijzigingen en de aanbieders die je volgt.',u:'voorwaarden.html'},
