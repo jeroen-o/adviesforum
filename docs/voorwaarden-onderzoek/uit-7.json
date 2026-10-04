@@ -1,0 +1,620 @@
+[
+ {
+  "naam": "Attens Hypotheken",
+  "algemeen": {
+   "intermediairsite": "https://www.attens.nl/voor-adviseurs",
+   "voorwaardenPdf": [
+    "https://www.attens.nl/-/media/attens/documenten/wat-als/2016_09_attens_algemene_voorwaarden.pdf",
+    "https://www.attens.nl/-/media/attens/documenten/documenten-en-formulieren/2025/productkaart-attens-juli-2025.pdf",
+    "https://www.attens.nl/-/media/attens/documenten/documenten-en-formulieren/2025/productkaart-attens.pdf"
+   ],
+   "acceptatiegids": [
+    "https://www.attens.nl/-/media/attens/documenten/documenten-en-formulieren/2026/acceptatiegids-attens-1-juli-2026.pdf",
+    "https://www.attens.nl/-/media/attens/documenten/documenten-en-formulieren/2026/acceptatiegids-attens-april-2026.pdf",
+    "https://www.attens.nl/-/media/attens/documenten/documenten-en-formulieren/2026/acceptatiegids-attens-1-januari-2026.pdf"
+   ],
+   "opmerking": "Label van PFZW (beheer/servicing Syntrus Achmea); alleen voor deelnemers PFZW (en partners). attens.nl geblokkeerd voor WebFetch; gegevens uit zoekresultaten (snippets) van attens.nl-pagina's en -pdf's. Rentevastperioden/bouwdepot uit productkaart 2024/2025, niet bevestigd in 2026-versie."
+  },
+  "criteria": {
+   "zzp": {
+    "waarde": "! Onderneming min. 12 mnd (NHG, met IKV) / 36 mnd buiten NHG (3 jaar cijfers)",
+    "bron": [
+     "https://www.attens.nl/-/media/attens/documenten/documenten-en-formulieren/2026/acceptatiegids-attens-1-juli-2026.pdf",
+     "https://www.attens.nl/hypotheekaanvraag-voor-een-ondernemer"
+    ],
+    "brondatum": "2026-07-01",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Acceptatiegids juli 2026; buiten NHG eigen beoordeling op basis van jaarcijfers 3 jaar."
+   },
+   "flex": {
+    "waarde": "~ Gemiddelde 3 kalenderjaren (max. laatste jaar); ORT en vaste overuren tellen mee",
+    "bron": [
+     "https://www.attens.nl/-/media/attens/documenten/documenten-en-formulieren/2026/acceptatiegids-attens-1-juli-2026.pdf",
+     "https://www.attens.nl/hypotheken/zorg-en-welzijn/flexibel-inkomen"
+    ],
+    "brondatum": "2026-07-01",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Uitzend (ABU/NBBU), oproep, tijdelijk zonder intentie geaccepteerd; ruimer dan 'beperkt'."
+   },
+   "persp": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron over perspectiefverklaring gevonden; wel salarisverhoging binnen 6 mnd en AIOS/BBL-inkomen."
+   },
+   "aow": {
+    "waarde": "+ Seniorenregeling: afwijken van max. LTI bij AOW binnen 10 jaar; toets op pensioeninkomen",
+    "bron": [
+     "https://www.attens.nl/-/media/attens/documenten/documenten-en-formulieren/2026/acceptatiegids-attens-1-juli-2026.pdf",
+     "https://www.attens.nl/-/media/attens/documenten/documenten-en-formulieren/2026/acceptatiegids-attens-april-2026.pdf"
+    ],
+    "brondatum": "2026-07-01",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Bewijs inkomen na pensionering vereist bij AOW/pensioen binnen 10 jaar."
+   },
+   "erfp": {
+    "waarde": "! Particuliere erfpacht alleen met groene notarisopinie; erfpacht moet looptijd lening dekken",
+    "bron": [
+     "https://www.attens.nl/-/media/attens/documenten/documenten-en-formulieren/2026/acceptatiegids-attens-1-juli-2026.pdf",
+     "https://www.attens.nl/-/media/attens/documenten/documenten-en-formulieren/2026/acceptatiegids-attens-1-januari-2026.pdf"
+    ],
+    "brondatum": "2026-07-01",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Canonaanpassing binnen 1 jaar: rekenen met hogere canon."
+   },
+   "rvp": {
+    "waarde": "+ 1, 3, 5, 7, 10, 12, 15, 17, 20 en 30 jaar",
+    "bron": [
+     "https://www.attens.nl/-/media/attens/documenten/documenten-en-formulieren/2025/productkaart-attens-juli-2025.pdf",
+     "https://www.attens.nl/-/media/attens/documenten/documenten-en-formulieren/2024/productkaart-attens-juli-2024.pdf",
+     "https://www.attens.nl/hypotheken/hypotheekrentes"
+    ],
+    "brondatum": "2025-07",
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "Uit productkaart 2024/2025; niet in 2026-document bevestigd."
+   },
+   "dag": {
+    "waarde": "- Geen dagrente: offerterente = passeerrente (dagrente alleen over extra bedrag bij verhuizing)",
+    "bron": [
+     "https://www.attens.nl/-/media/attens/documenten/documenten-en-formulieren/2026/acceptatiegids-attens-1-juli-2026.pdf",
+     "https://www.rente-tarieven.nl/app/bank.jsp?bank=Attens&toonextrainfo=true"
+    ],
+    "brondatum": "2026-07-01",
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "Acceptatiegids en vergelijker: Attens werkt met offerterente."
+   },
+   "geld": {
+    "waarde": "~ Renteaanbod 3 weken; passeren uiterlijk 4 mnd; nieuwbouw verlenging tot 8 mnd mogelijk",
+    "bron": [
+     "https://www.attens.nl/-/media/attens/documenten/documenten-en-formulieren/2025/productkaart-attens-juli-2025.pdf",
+     "https://www.attens.nl/-/media/attens/documenten/documenten-en-formulieren/2026/acceptatiegids-attens-1-juli-2026.pdf"
+    ],
+    "brondatum": "2026-07-01",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Verlenging alleen nieuwbouw, tegen bereidstellingsprovisie."
+   },
+   "boete": {
+    "waarde": "+ 10% van oorspr. bedrag per kalenderjaar; aflossen uit eigen middelen onbeperkt vergoedingsvrij",
+    "bron": [
+     "https://www.attens.nl/voor-klanten/extra-aflossen",
+     "https://www.attens.nl/vergoedingsvrij-aflossen-uit-eigen-middelen",
+     "https://www.attens.nl/-/media/attens/documenten/documenten-en-formulieren/2025/productkaart-attens-juli-2025.pdf"
+    ],
+    "brondatum": "2025-07",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Ook boetevrij op renteherzieningsdatum."
+   },
+   "ltv": {
+    "waarde": "+ Automatische rentedaling bij lagere tariefklasse door aflossing; waardestijging op verzoek",
+    "bron": [
+     "https://www.attens.nl/uw-mogelijkheden/automatische-rentedaling",
+     "https://www.attens.nl/voor-klanten/tariefklasse-en-risico-opslag"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Geen risico-opslag bij NHG en laagste klasse t/m 60%."
+   },
+   "bdduur": {
+    "waarde": "~ Bouwdepot 24 mnd, verlenging met max. 6 mnd",
+    "bron": [
+     "https://www.attens.nl/-/media/attens/documenten/documenten-en-formulieren/2025/productkaart-attens-juli-2025.pdf",
+     "https://www.attens.nl/voor-klanten/uw-bouwdepot"
+    ],
+    "brondatum": "2025-07",
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "Aparte termijn voor verbouw (12 mnd) niet in bron gevonden."
+   },
+   "bdrnt": {
+    "waarde": "~ Depotrente gelijk aan hypotheekrente",
+    "bron": [
+     "https://www.attens.nl/-/media/attens/documenten/documenten-en-formulieren/2025/productkaart-attens-juli-2025.pdf",
+     "https://www.attens.nl/voor-klanten/uw-bouwdepot"
+    ],
+    "brondatum": "2025-07",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": ""
+   },
+   "bddecl": {
+    "waarde": "~ Nota's digitaal via Mijn Leninginzicht; uitbetaling doorgaans binnen 5 werkdagen",
+    "bron": [
+     "https://www.attens.nl/voor-klanten/uw-bouwdepot/zo-gebruikt-u-het-geld-van-uw-bouwdepot"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Klantportaal van servicer; betaling aan leverancier of klant (met betaalbewijs)."
+   },
+   "ebb": {
+    "waarde": "+ EBV/EBB mogelijk, tot 106% van de marktwaarde",
+    "bron": [
+     "https://www.attens.nl/-/media/attens/documenten/documenten-en-formulieren/2026/acceptatiegids-attens-1-juli-2026.pdf",
+     "https://www.attens.nl/uw-mogelijkheden/groen-leningdeel"
+    ],
+    "brondatum": "2026-07-01",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "'Conform NHG' niet letterlijk bevestigd; wel EBB/EBV tot 106%."
+   },
+   "duur": {
+    "waarde": "+ Duurzaamheidskorting op EBV/EBB-deel, max. €30.000 en max. 30 jaar",
+    "bron": [
+     "https://www.attens.nl/uw-mogelijkheden/groen-leningdeel",
+     "https://www.attens.nl/voor-adviseurs/nieuwsoverzicht/duurzaamheidskorting"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Rentekorting op verduurzamingsdeel i.p.v. 'lange rentevast'."
+   },
+   "verh": {
+    "waarde": "~ Rente meenemen; resterende rentevast min. 1 jaar, nieuwe hypotheek binnen 6 mnd na aflossing",
+    "bron": [
+     "https://www.attens.nl/voor-klanten/verhuisregeling",
+     "https://www.attens.nl/voor-adviseurs/nieuwsoverzicht/gebruik-van-de-verhuisregeling"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Extra bedrag tegen dagrente."
+   },
+   "ondh": {
+    "waarde": "~ Eerst betalingsregeling; onderhandse verkoop mogelijk, restschuldregeling op maat",
+    "bron": [
+     "https://www.attens.nl/voor-klanten/woning-met-verlies-verkopen",
+     "https://www.attens.nl/veelgestelde-vragen"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": ""
+   },
+   "oha": {
+    "waarde": "~ Mogelijk als achterblijver hypotheek alleen kan dragen; via adviseur en notaris",
+    "bron": [
+     "https://www.attens.nl/voor-klanten/uit-elkaar",
+     "https://www.attens.nl/-/media/attens/documenten/documenten-en-formulieren/2025/aanvraag-ontslag-hoofdelijke-aansprakelijkheid-attens.pdf"
+    ],
+    "brondatum": "2025",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Aanvraagformulier ontslag hoofdelijkheid beschikbaar."
+   },
+   "tweede": {
+    "waarde": "+ Verhoging/2e hypotheek zonder kosten Attens; binnen hogere inschrijving zonder notaris",
+    "bron": [
+     "https://www.attens.nl/voor-klanten/hypotheek-wijzigen",
+     "https://www.attens.nl/veelgestelde-vragen"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Voorwaarde: geen achterstanden in laatste 2 jaar."
+   },
+   "ovbr": {
+    "waarde": "~ Overbruggingslening max. 24 mnd, alleen rente, i.c.m. nieuwe hypotheek",
+    "bron": [
+     "https://www.attens.nl/hypotheken/aflossingsvormen",
+     "https://www.rente-tarieven.nl/app/bank.jsp?bank=Attens"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "Attens voert wel overbruggingslening; huidige 'geen eigen' klopt niet."
+   },
+   "avrij": {
+    "waarde": "~ Max. 50% van marktwaarde; tot AOW annuïtaire toets, daarna op pensioeninkomen",
+    "bron": [
+     "https://www.attens.nl/-/media/attens/documenten/documenten-en-formulieren/2026/acceptatiegids-attens-april-2026.pdf",
+     "https://www.attens.nl/-/media/attens/documenten/documenten-en-formulieren/2026/acceptatiegids-attens-1-juli-2026.pdf"
+    ],
+    "brondatum": "2026-07-01",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "rmid": {
+    "waarde": "- Rentemiddeling niet mogelijk; alleen renteafkoop met eenmalige vergoeding",
+    "bron": [
+     "https://www.attens.nl/veelgestelde-vragen",
+     "https://www.attens.nl/voor-klanten/rente-afkoop"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "rverl": {
+    "waarde": "+ Nieuwe rente voor bestaande klant gelijk aan rente voor nieuwe klanten",
+    "bron": [
+     "https://www.attens.nl/voor-klanten/rente-afkoop",
+     "https://www.attens.nl/hypotheken/rentevast-periode"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Expliciet genoemd bij renteafkoopvoorstel; voor verlenging indirect."
+   },
+   "rvoor": {
+    "waarde": "~ Voorstel 3 maanden voor einde rentevast; keuze uiterlijk 14 dagen voor einddatum",
+    "bron": [
+     "https://www.attens.nl/hypotheken/rentevast-periode",
+     "https://www.attens.nl/veelgestelde-vragen",
+     "https://www.attens.nl/-/media/attens/documenten/wat-als/2016_09_attens_algemene_voorwaarden.pdf"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "bbrk": {
+    "waarde": "~ Renteverlies: verschil eigen rente en actuele rente voor resterende rentevaste periode",
+    "bron": [
+     "https://www.attens.nl/voor-klanten/rente-afkoop"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Contante-waardeberekening niet expliciet in snippet; zie hypotheekvoorwaarden."
+   },
+   "elbl": {
+    "waarde": "~ Labelkorting bij label A of EPC max. 0,6; behoud bij verhuizing naar zo'n woning",
+    "bron": [
+     "https://www.attens.nl/-/media/attens/documenten/documenten-en-formulieren/2026/acceptatiegids-attens-april-2026.pdf",
+     "https://www.attens.nl/-/media/attens/documenten/documenten-en-formulieren/2026/acceptatiegids-attens-1-januari-2026.pdf"
+    ],
+    "brondatum": "2026-04-01",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Opslag zonder label niet gevonden."
+   },
+   "o106": {
+    "waarde": "~ Lenen tot 106% voor EBV/EBB; of daarboven een opslag geldt niet gevonden",
+    "bron": [
+     "https://www.attens.nl/-/media/attens/documenten/documenten-en-formulieren/2026/acceptatiegids-attens-1-juli-2026.pdf",
+     "https://www.attens.nl/uw-mogelijkheden/groen-leningdeel"
+    ],
+    "brondatum": "2026-07-01",
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Alleen bekend: geen opslag bij NHG en klasse t/m 60%."
+   },
+   "bprov": {
+    "waarde": "! Verlenging (alleen nieuwbouw, tot 8 mnd) tegen bereidstellingsprovisie per maand",
+    "bron": [
+     "https://www.attens.nl/-/media/attens/documenten/documenten-en-formulieren/2025/productkaart-attens-juli-2025.pdf",
+     "https://www.attens.nl/-/media/attens/documenten/documenten-en-formulieren/2026/acceptatiegids-attens-1-juli-2026.pdf"
+    ],
+    "brondatum": "2025-07",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "wkost": {
+    "waarde": "+ Geen administratiekosten bij wijziging aflosvorm, looptijd of verhoging",
+    "bron": [
+     "https://www.attens.nl/voor-klanten/hypotheek-wijzigen"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Renteafkoop wel vergoeding."
+   },
+   "avlt": {
+    "waarde": "! Looptijdverlenging alleen via adviseur; verlenging niet gegarandeerd",
+    "bron": [
+     "https://www.attens.nl/voor-klanten/hypotheek-wijzigen/aanpassen-aflossingsvrije-hypotheek",
+     "https://www.attens.nl/hypotheken/aflossingsvormen/risico-s-aflossingsvrije-hypotheek"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "bproc": {
+    "waarde": "~ Betalingsregeling of uitstel bij tijdelijke problemen; eerst zoeken naar betaalbaarheid",
+    "bron": [
+     "https://www.attens.nl/veelgestelde-vragen",
+     "https://www.attens.nl/voor-klanten/woning-met-verlies-verkopen"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": ""
+   }
+  },
+  "gecontroleerd": "2026-10-04"
+ },
+ {
+  "naam": "Lloyds Bank",
+  "algemeen": {
+   "intermediairsite": null,
+   "voorwaardenPdf": [],
+   "acceptatiegids": [],
+   "opmerking": "NIET onderzocht: het gedeelde zoekbudget van de sessie (200 WebSearch-calls) was uitgeput voordat Lloyds aan bod kwam; lloydsbank.nl, hypotheekrente.nl en web.archive.org niet bereikbaar via WebFetch. Alle criteria daarom 'onbekend'; opnieuw uitvoeren met nieuw zoekbudget."
+  },
+  "criteria": {
+   "zzp": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen onderzoek mogelijk (zoekbudget op)."
+   },
+   "flex": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen onderzoek mogelijk (zoekbudget op)."
+   },
+   "persp": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen onderzoek mogelijk (zoekbudget op)."
+   },
+   "aow": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen onderzoek mogelijk (zoekbudget op)."
+   },
+   "erfp": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen onderzoek mogelijk (zoekbudget op)."
+   },
+   "rvp": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen onderzoek mogelijk (zoekbudget op)."
+   },
+   "dag": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen onderzoek mogelijk (zoekbudget op)."
+   },
+   "geld": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen onderzoek mogelijk (zoekbudget op)."
+   },
+   "boete": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen onderzoek mogelijk (zoekbudget op)."
+   },
+   "ltv": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen onderzoek mogelijk (zoekbudget op)."
+   },
+   "bdduur": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen onderzoek mogelijk (zoekbudget op)."
+   },
+   "bdrnt": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen onderzoek mogelijk (zoekbudget op)."
+   },
+   "bddecl": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen onderzoek mogelijk (zoekbudget op)."
+   },
+   "ebb": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen onderzoek mogelijk (zoekbudget op)."
+   },
+   "duur": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen onderzoek mogelijk (zoekbudget op)."
+   },
+   "verh": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen onderzoek mogelijk (zoekbudget op)."
+   },
+   "ondh": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen onderzoek mogelijk (zoekbudget op)."
+   },
+   "oha": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen onderzoek mogelijk (zoekbudget op)."
+   },
+   "tweede": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen onderzoek mogelijk (zoekbudget op)."
+   },
+   "ovbr": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen onderzoek mogelijk (zoekbudget op)."
+   },
+   "avrij": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen onderzoek mogelijk (zoekbudget op)."
+   },
+   "rmid": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen onderzoek mogelijk (zoekbudget op)."
+   },
+   "rverl": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen onderzoek mogelijk (zoekbudget op)."
+   },
+   "rvoor": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen onderzoek mogelijk (zoekbudget op)."
+   },
+   "bbrk": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen onderzoek mogelijk (zoekbudget op)."
+   },
+   "elbl": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen onderzoek mogelijk (zoekbudget op)."
+   },
+   "o106": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen onderzoek mogelijk (zoekbudget op)."
+   },
+   "bprov": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen onderzoek mogelijk (zoekbudget op)."
+   },
+   "wkost": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen onderzoek mogelijk (zoekbudget op)."
+   },
+   "avlt": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen onderzoek mogelijk (zoekbudget op)."
+   },
+   "bproc": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen onderzoek mogelijk (zoekbudget op)."
+   }
+  },
+  "gecontroleerd": "2026-10-04"
+ }
+]

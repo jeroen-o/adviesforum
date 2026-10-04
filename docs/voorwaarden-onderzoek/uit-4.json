@@ -1,0 +1,574 @@
+[
+ {
+  "naam": "Obvion",
+  "algemeen": {
+   "intermediairsite": "https://obvion.nl/adviseur/",
+   "voorwaardenPdf": [
+    "https://www.obvion.nl/Downloads/Woonhypotheek-Alg-voorwaarden-11-2023",
+    "https://obvion.nl/media/ps3gtq2n/basis-hypotheek-algemene-voorwaarden-juni-2025.pdf"
+   ],
+   "acceptatiegids": [
+    "https://obvion.nl/media/kxudk0d2/product-en-acceptatiekaart.pdf",
+    "https://obvion.nl/adviseur/beleid/acceptatiegids/"
+   ],
+   "opmerking": "Rabobank-dochter. Product- en acceptatiekaart mei 2026. obvion.nl geblokkeerd voor fetch; waarden o.b.v. zoekresultaten (titel+samenvatting). Zoekbudget (sessiebreed) raakte op tijdens onderzoek; criteria ondh/oha/ovbr/erfp e.a. niet onderzocht."
+  },
+  "criteria": {
+   "zzp": {
+    "waarde": "+ Na 1 jaar zzp ook met NHG; ook startende zzp'er mogelijk; IVO door rekenexpert vereist",
+    "bron": [
+     "https://www.obvion.nl/Hypotheek-en-werk/ZZPer-ondernemer",
+     "https://obvion.nl/hypotheek/zzp/"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "1 jaar binnen NHG bevestigd; '2-3 jaar daarbuiten' niet teruggevonden, site noemt starters met/zonder NHG"
+   },
+   "flex": {
+    "waarde": "+ Arbeidsmarktscan (min. 12 mnd flexwerk in 14 mnd) en perspectiefverklaring als inkomensbewijs",
+    "bron": [
+     "https://obvion.nl/situatie/werken/arbeidsmarktscan/",
+     "https://obvion.nl/situatie/werken/perspectiefverklaring/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "3-jaarsgemiddelde niet teruggevonden; wel arbeidsmarktscan-route"
+   },
+   "persp": {
+    "waarde": "+ Perspectiefverklaring geaccepteerd (uitzendkracht, min. 1 jaar bij gecertificeerd bureau)",
+    "bron": [
+     "https://obvion.nl/situatie/werken/perspectiefverklaring/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Eigen site"
+   },
+   "aow": {
+    "waarde": "+ Seniorenregeling bij verhuizen (AOW of binnen 10 jaar): toets op werkelijke nieuwe last",
+    "bron": [
+     "https://www.obvion.nl/Hypotheek-en-werk/Hypotheek-en-pensioen",
+     "https://obvion.nl/media/kxudk0d2/product-en-acceptatiekaart.pdf"
+    ],
+    "brondatum": "2026-05",
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "Algemene toets vanaf AOW niet expliciet gevonden; versoepeling voor senioren wel"
+   },
+   "erfp": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden binnen zoekbudget"
+   },
+   "rvp": {
+    "waarde": "~ Vast 1 t/m 30 jaar (o.a. 20, 25, 30); variabele rente sinds 23-2-2026 niet meer nieuw af te sluiten",
+    "bron": [
+     "https://obvion.nl/hypotheekrente/vormen/"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "Exacte lijst periodes niet volledig zichtbaar in zoeksamenvatting"
+   },
+   "dag": {
+    "waarde": "! Laagste rente tussen aanvraag en voorlopige offerte; daling tot passeren niet bevestigd",
+    "bron": [
+     "https://www.obvion.nl/Hypotheek-kiezen/Veelgestelde-vragen-Woon-Hypotheek.htm"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "FAQ Woon Hypotheek"
+   },
+   "geld": {
+    "waarde": "+ Rente-aanbod 3 mnd (nieuwbouw 6); getekend aanbod kosteloos verlengd (bestaand max 9, nieuwbouw max 6 mnd)",
+    "bron": [
+     "https://www.obvion.nl/Hypotheek-kiezen/Veelgestelde-vragen-Woon-Hypotheek.htm"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "Formulering 'met' of 'tot' max 9 mnd uit samenvatting niet eenduidig"
+   },
+   "boete": {
+    "waarde": "+ 10% oorspr. hoofdsom per leningdeel per jaar (Woon); oudere producten 20%; boetevrij bij verkoop",
+    "bron": [
+     "https://obvion.nl/hypotheek/terugbetalen/extra/",
+     "https://www.obvion.nl/Hypotheek-wijzigen/Extra-terugbetalen"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Eigen site"
+   },
+   "ltv": {
+    "waarde": "+ Automatische rentedaling bij lagere tariefgroep (zonder NHG)",
+    "bron": [
+     "https://obvion.nl/hypotheekrente/automatisch-aanpassen/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Eigen site"
+   },
+   "bdduur": {
+    "waarde": "~ Max. 2 jaar, nieuwbouw max. 3 jaar; verlenging op verzoek via digitaal formulier",
+    "bron": [
+     "https://obvion.nl/hypotheek/afsluiten/bouwdepot/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Eigen site"
+   },
+   "bdrnt": {
+    "waarde": "~ Depotrente gelijk aan hypotheekrente, max. 12 mnd (bestaand) / 24 mnd (nieuwbouw, Woon)",
+    "bron": [
+     "https://obvion.nl/hypotheek/afsluiten/bouwdepot/"
+    ],
+    "brondatum": "2024-09",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Duur vergoeding toegevoegd; nieuwbouw 24 mnd voor aanvragen vanaf 16-9-2024"
+   },
+   "bddecl": {
+    "waarde": "+ Klant uploadt factuur in MijnObvion; afhandeling max. 5 werkdagen; restant < EUR 2.500 uitgekeerd",
+    "bron": [
+     "https://obvion.nl/hypotheek/afsluiten/bouwdepot/",
+     "https://www.obvion.nl/Over-Obvion/Reactietermijnen-voor-lopende-hypotheken"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Declaratie via klantportaal, niet adviseursportaal"
+   },
+   "ebb": {
+    "waarde": "+ Standaard extra EUR 10.000 voor verduurzaming (label E-G EUR 20.000) in duurzaamheidsdepot, 2 jaar",
+    "bron": [
+     "https://www.obvion.nl/Duurzaamheid/Financiering/EBM-en-hypotheek",
+     "https://obvion.nl/hypotheek/verduurzaming/duurzaamheidsdepot/"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Volgt NHG-normen; bedragen uit zoeksamenvatting"
+   },
+   "duur": {
+    "waarde": "+ Duurzaamheidskorting vanaf label B; Energiebespaarpakket (advies, label, bijdrage EUR 1.000) voor F/G",
+    "bron": [
+     "https://obvion.nl/hypotheek/verduurzaming/duurzaamheidskorting/",
+     "https://www.banken.nl/nieuws/26584/obvion-kondigt-uitbreiding-energiebespaarpakket-aan"
+    ],
+    "brondatum": "2025-11",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Energiebespaarpakket sinds april 2025, F-label vanaf nov 2025"
+   },
+   "verh": {
+    "waarde": "+ Rente mee tot einde rentevast; aanvraag binnen 6 mnd na aflossing; tariefgroep o.b.v. nieuwe woning",
+    "bron": [
+     "https://obvion.nl/situatie/wonen/verkopen/verhuisregeling/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Ook doorgeefregeling beschikbaar; hypotheekvorm blijft gelijk"
+   },
+   "ondh": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden binnen zoekbudget"
+   },
+   "oha": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden binnen zoekbudget"
+   },
+   "tweede": {
+    "waarde": "~ Hypotheek verhogen mogelijk (eigen infopagina)",
+    "bron": [
+     "https://obvion.nl/hypotheek/wijzigen/verhogen/"
+    ],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "bevestigd",
+    "toelichting": "Alleen paginatitel gezien, geen voorwaarden"
+   },
+   "ovbr": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden binnen zoekbudget"
+   },
+   "avrij": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Beleidspagina aflossingsvrij gevonden (obvion.nl/hypotheek/vorm/aflossingsvrij/beleid-aflossingsvrij/) maar inhoud niet zichtbaar; koppeling aan Rabobank-beleid niet bevestigd"
+   },
+   "rmid": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Infopagina 'Rentemiddeling' bestaat (obvion.nl/Hypotheek-rente/Rentemiddeling), inhoud niet zichtbaar"
+   },
+   "rverl": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Wel bekend: dalrente tussen renteaanbod en start nieuwe rentevaste periode"
+   },
+   "rvoor": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden binnen zoekbudget"
+   },
+   "bbrk": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden binnen zoekbudget"
+   },
+   "elbl": {
+    "waarde": "+ Duurzaamheidskorting vanaf label B, oplopend t/m A++++; aan te vragen tot 24 mnd na start rentevast",
+    "bron": [
+     "https://obvion.nl/hypotheek/verduurzaming/duurzaamheidskorting/"
+    ],
+    "brondatum": "2025-12",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Opslag bij geen/slecht label niet gevonden"
+   },
+   "o106": {
+    "waarde": "! Tot 106% LTV voor verduurzaming; tariefgroep o.b.v. totale lening/woningwaarde",
+    "bron": [
+     "https://obvion.nl/hypotheek/verduurzaming/financiering/",
+     "https://obvion.nl/hypotheekrente/tariefopslag/"
+    ],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Geen expliciete vrijstelling van opslag gevonden"
+   },
+   "bprov": {
+    "waarde": "+ Verlenging getekend aanbod zonder kosten",
+    "bron": [
+     "https://www.obvion.nl/Hypotheek-kiezen/Veelgestelde-vragen-Woon-Hypotheek.htm"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "FAQ Woon Hypotheek"
+   },
+   "wkost": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden binnen zoekbudget"
+   },
+   "avlt": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden binnen zoekbudget"
+   },
+   "bproc": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden binnen zoekbudget"
+   }
+  },
+  "gecontroleerd": "2026-10-04"
+ },
+ {
+  "naam": "Florius",
+  "algemeen": {
+   "intermediairsite": null,
+   "voorwaardenPdf": [],
+   "acceptatiegids": [],
+   "opmerking": "ABN AMRO-label. NIET onderzocht: sessiebreed zoekbudget (200) was op voordat Florius aan de beurt kwam; florius.nl en vergelijkers geblokkeerd voor WebFetch. Alle criteria onbekend; opnieuw uitvoeren."
+  },
+  "criteria": {
+   "zzp": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget sessie op, florius.nl geblokkeerd"
+   },
+   "flex": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget sessie op, florius.nl geblokkeerd"
+   },
+   "persp": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget sessie op, florius.nl geblokkeerd"
+   },
+   "aow": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget sessie op, florius.nl geblokkeerd"
+   },
+   "erfp": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget sessie op, florius.nl geblokkeerd"
+   },
+   "rvp": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget sessie op, florius.nl geblokkeerd"
+   },
+   "dag": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget sessie op, florius.nl geblokkeerd"
+   },
+   "geld": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget sessie op, florius.nl geblokkeerd"
+   },
+   "boete": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget sessie op, florius.nl geblokkeerd"
+   },
+   "ltv": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget sessie op, florius.nl geblokkeerd"
+   },
+   "bdduur": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget sessie op, florius.nl geblokkeerd"
+   },
+   "bdrnt": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget sessie op, florius.nl geblokkeerd"
+   },
+   "bddecl": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget sessie op, florius.nl geblokkeerd"
+   },
+   "ebb": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget sessie op, florius.nl geblokkeerd"
+   },
+   "duur": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget sessie op, florius.nl geblokkeerd"
+   },
+   "verh": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget sessie op, florius.nl geblokkeerd"
+   },
+   "ondh": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget sessie op, florius.nl geblokkeerd"
+   },
+   "oha": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget sessie op, florius.nl geblokkeerd"
+   },
+   "tweede": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget sessie op, florius.nl geblokkeerd"
+   },
+   "ovbr": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget sessie op, florius.nl geblokkeerd"
+   },
+   "avrij": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget sessie op, florius.nl geblokkeerd"
+   },
+   "rmid": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget sessie op, florius.nl geblokkeerd"
+   },
+   "rverl": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget sessie op, florius.nl geblokkeerd"
+   },
+   "rvoor": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget sessie op, florius.nl geblokkeerd"
+   },
+   "bbrk": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget sessie op, florius.nl geblokkeerd"
+   },
+   "elbl": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget sessie op, florius.nl geblokkeerd"
+   },
+   "o106": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget sessie op, florius.nl geblokkeerd"
+   },
+   "bprov": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget sessie op, florius.nl geblokkeerd"
+   },
+   "wkost": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget sessie op, florius.nl geblokkeerd"
+   },
+   "avlt": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget sessie op, florius.nl geblokkeerd"
+   },
+   "bproc": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Niet onderzocht: zoekbudget sessie op, florius.nl geblokkeerd"
+   }
+  },
+  "gecontroleerd": "2026-10-04"
+ }
+]

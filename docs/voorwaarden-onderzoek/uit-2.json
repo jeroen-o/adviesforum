@@ -1,0 +1,568 @@
+[
+ {
+  "naam": "ING",
+  "algemeen": {
+   "intermediairsite": "https://intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/",
+   "voorwaardenPdf": [],
+   "acceptatiegids": [
+    "https://assets.ing.com/m/192e1ffba227517b/original/Acceptatiebeleid-ING-Hypotheken-versie-2025_1jan2025.pdf"
+   ],
+   "opmerking": "Alle ING-domeinen en vergelijkers geblokkeerd voor WebFetch; gebaseerd op zoeksamenvattingen. Zoekbudget sessie (200) raakte op tijdens ING, daarom veel 'onbekend' (bdduur, bdrnt, bddecl, erfp, dag, ondh, oha, tweede, rverl, rvoor, wkost, bproc, avrij, o106). Acceptatiegids 2025 gevonden, niet gelezen."
+  },
+  "criteria": {
+   "zzp": {
+    "waarde": "~ Min. 12 mnd KvK; starters getoetst via NHG-kader IVO; inkomen = gem. 3 jr, max laatste jaar",
+    "bron": [
+     "https://intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/ondernemer.html",
+     "https://www.ing.nl/particulier/hypotheek/hypotheekvormen/zzp"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "ING volgt NHG-kader IVO voor starters; een aparte eis van 3 jaar buiten NHG is niet teruggevonden."
+   },
+   "flex": {
+    "waarde": "~ Uitzendinkomen via perspectiefverklaring; tijdelijk contract zonder intentie via Arbeidsmarktscan",
+    "bron": [
+     "https://intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/starters.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "3-jaarsgemiddelde niet bevestigd; ING noemt PV, IBL en Arbeidsmarktscan."
+   },
+   "persp": {
+    "waarde": "+ Perspectiefverklaring geaccepteerd (o.a. uitzendkrachten)",
+    "bron": [
+     "https://intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/starters.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Uit zoeksamenvatting van ING-intermediairpagina."
+   },
+   "aow": {
+    "waarde": "~ Toets op pensioeninkomen vanaf AOW; werkelijke-lastentoets mogelijk als AOW binnen 10 jaar valt",
+    "bron": [
+     "https://intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/hypotheekvoorsenioren57.html",
+     "https://www.ing.nl/particulier/hypotheek/pensioen-hypotheek"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Voorwaarde: resterende rentevast op AOW-datum min. 10 jaar; deel boven 75% MW afgelost voor AOW."
+   },
+   "erfp": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden (zoekbudget sessie uitgeput; sites geblokkeerd)."
+   },
+   "rvp": {
+    "waarde": "~ Variabel (1 mnd) en vaste perioden; bij renteaanpassing max 20 jaar",
+    "bron": [
+     "https://www.ing.nl/particulier/hypotheek/actuele-hypotheekrente/kenmerken-variabele-hypotheekrente",
+     "https://www.ing.nl/particulier/hypotheek/jouw-hypotheek/tussentijds-aanpassen",
+     "https://www.homefinance.nl/hypotheek/rente/ing/"
+    ],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "gewijzigd",
+    "toelichting": "Bronnen tegenstrijdig: homefinance noemt 1,2,5,7,10,15,20,30 jr; ING noemt max 20 jr (bestaande klanten). 30 jr niet bevestigd op ING-site."
+   },
+   "dag": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden (zoekbudget sessie uitgeput; sites geblokkeerd)."
+   },
+   "geld": {
+    "waarde": "+ Renteaanbod 6,5 mnd geldig; verlengen tot 12,5 mnd (tegen bereidstellingsprovisie)",
+    "bron": [
+     "https://intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/Waarom-een-hypotheek-bij-ING.html",
+     "https://www.ing.nl/particulier/hypotheek/voordelen-ing/waarom-een-hypotheek-bij-ing"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "Uit zoeksamenvatting van ING-pagina; huidig noemde 3 mnd."
+   },
+   "boete": {
+    "waarde": "+ 10% van oorspr. hoofdsom per kalenderjaar boetevrij; onbeperkt in 3 mnd voor einde rentevast",
+    "bron": [
+     "https://www.homefinance.nl/hypotheek/berekenen/ing/boetevrij-aflossen/",
+     "https://www.ing.nl/particulier/hypotheek/jouw-hypotheek/kosten-vervroegd-aflossen"
+    ],
+    "brondatum": "2022",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "10%-regel sinds 3-10-2022 (homefinance)."
+   },
+   "ltv": {
+    "waarde": "+ ING checkt maandelijks; rente automatisch omlaag bij lagere LTV door aflossing (niet bij NHG)",
+    "bron": [
+     "https://www.ing.nl/particulier/hypotheek/jouw-hypotheek/mogelijk-lagere-rente"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Ingang 1e van volgende maand, niet met terugwerkende kracht; spaarhypotheek niet automatisch."
+   },
+   "bdduur": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden (zoekbudget sessie uitgeput; sites geblokkeerd)."
+   },
+   "bdrnt": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden (zoekbudget sessie uitgeput; sites geblokkeerd)."
+   },
+   "bddecl": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden (zoekbudget sessie uitgeput; sites geblokkeerd)."
+   },
+   "ebb": {
+    "waarde": "+ Verduurzamingsdepot: tot 106% MW, extra max €20.000, alleen wettelijk erkende energiebesparende maatregelen",
+    "bron": [
+     "https://www.ing.nl/particulier/hypotheek/duurzaam-wonen/verduurzamingsdepot",
+     "https://www.homefinance.nl/hypotheek/verhogen/verduurzaming/ing/"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "Eigen regeling (Verduurzamingsdepot); 'EBB conform NHG' niet als zodanig bevestigd."
+   },
+   "duur": {
+    "waarde": "+ Rente per energielabel (G t/m A++++); verlaging tijdens rentevast bij beter geregistreerd label",
+    "bron": [
+     "https://www.ing.nl/particulier/hypotheek/actuele-hypotheekrente/het-energielabel-en-je-hypotheekrente",
+     "https://banken.nl/nieuws/26072/ing-gaat-elk-energielabel-koppelen-aan-hypotheekrente"
+    ],
+    "brondatum": "2025",
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "Sinds 30-4-2025 labelprijsmodel; oude duurzaamheidskorting (label A+) vervallen. Huidig 'geen labelkorting' klopt niet meer."
+   },
+   "verh": {
+    "waarde": "+ Vaste rente meenemen naar nieuwe ING-hypotheek; oude woning verkopen, nieuwe akte binnen ca. 6 mnd",
+    "bron": [
+     "https://www.homefinance.nl/hypotheek/aanbieders/ing/verhuisregeling/"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Alleen vaste rente; geen ING-eigen voorwaardenbron gezien."
+   },
+   "ondh": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden (zoekbudget sessie uitgeput; sites geblokkeerd)."
+   },
+   "oha": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden (zoekbudget sessie uitgeput; sites geblokkeerd)."
+   },
+   "tweede": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden (zoekbudget sessie uitgeput; sites geblokkeerd)."
+   },
+   "ovbr": {
+    "waarde": "+ Overbruggingshypotheek beschikbaar; altijd boetevrij af te lossen",
+    "bron": [
+     "https://www.homefinance.nl/hypotheek/berekenen/ing/boetevrij-aflossen/"
+    ],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "bevestigd",
+    "toelichting": "Voorwaarde 'verkochte woning' niet geverifieerd."
+   },
+   "avrij": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Huidige waarde (per 23-7-2026, 30% WW, plafonds) niet in een bron teruggevonden."
+   },
+   "rmid": {
+    "waarde": "+ Rentemiddeling mogelijk; nieuwe rentevaste periode max 12 jaar (tot 20 jaar bij verhuisregeling)",
+    "bron": [
+     "https://www.ing.nl/particulier/hypotheek/jouw-hypotheek/tussentijds-aanpassen"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Alternatief: rentevaste periode afkopen."
+   },
+   "rverl": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden (zoekbudget sessie uitgeput; sites geblokkeerd)."
+   },
+   "rvoor": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden (zoekbudget sessie uitgeput; sites geblokkeerd)."
+   },
+   "bbrk": {
+    "waarde": "~ Afkoopkosten over leningdeel met aftrek boetevrije ruimte; ING publiceert gehanteerde actuele rente",
+    "bron": [
+     "https://www.ing.nl/particulier/hypotheek/jouw-hypotheek/actuele-rente-aflossings-afkoopkosten",
+     "https://www.ing.nl/particulier/hypotheek/jouw-hypotheek/tussentijds-aanpassen"
+    ],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Contante-waardemethode niet expliciet gezien."
+   },
+   "elbl": {
+    "waarde": "! Rente per label G t/m A++++; zonder geregistreerd label hogere rente; omlaag bij beter label",
+    "bron": [
+     "https://www.ing.nl/particulier/hypotheek/actuele-hypotheekrente/het-energielabel-en-je-hypotheekrente",
+     "https://banken.nl/nieuws/26072/ing-gaat-elk-energielabel-koppelen-aan-hypotheekrente"
+    ],
+    "brondatum": "2025",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Geldt voor renteaanbod vanaf 30-4-2025 (nieuw, verlenging, verhoging)."
+   },
+   "o106": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "106% voor verduurzaming bevestigd, maar of daar geen opslag op zit is niet gevonden."
+   },
+   "bprov": {
+    "waarde": "! Verlengen renteaanbod (tot 12,5 mnd) kost bereidstellingsprovisie per maand",
+    "bron": [
+     "https://intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/Waarom-een-hypotheek-bij-ING.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Tarief bewust niet genoemd (AFM-regel)."
+   },
+   "wkost": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden (zoekbudget sessie uitgeput; sites geblokkeerd)."
+   },
+   "avlt": {
+    "waarde": "~ Verlengen aflossingsvrij deel na einde looptijd mogelijk; rente wordt opnieuw vastgesteld",
+    "bron": [
+     "https://www.actuelerentestanden.nl/hypotheek/vorm/aflossingsvrij/ing-afloop/"
+    ],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Alleen vergelijkersbron, voorwaarden (toets) onbekend."
+   },
+   "bproc": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden (zoekbudget sessie uitgeput; sites geblokkeerd)."
+   }
+  },
+  "gecontroleerd": "2026-10-04"
+ },
+ {
+  "naam": "SNS",
+  "algemeen": {
+   "intermediairsite": null,
+   "voorwaardenPdf": [],
+   "acceptatiegids": [],
+   "opmerking": "Niet onderzocht: zoekbudget van de sessie uitgeput (200/200) en alle sites geblokkeerd. Volgens de instructie is SNS opgegaan in ASN Bank (de Volksbank); niet zelf geverifieerd. Opnieuw onderzoeken onder ASN Bank."
+  },
+  "criteria": {
+   "zzp": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden (zoekbudget sessie uitgeput; sites geblokkeerd)."
+   },
+   "flex": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden (zoekbudget sessie uitgeput; sites geblokkeerd)."
+   },
+   "persp": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden (zoekbudget sessie uitgeput; sites geblokkeerd)."
+   },
+   "aow": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden (zoekbudget sessie uitgeput; sites geblokkeerd)."
+   },
+   "erfp": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden (zoekbudget sessie uitgeput; sites geblokkeerd)."
+   },
+   "rvp": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden (zoekbudget sessie uitgeput; sites geblokkeerd)."
+   },
+   "dag": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden (zoekbudget sessie uitgeput; sites geblokkeerd)."
+   },
+   "geld": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden (zoekbudget sessie uitgeput; sites geblokkeerd)."
+   },
+   "boete": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden (zoekbudget sessie uitgeput; sites geblokkeerd)."
+   },
+   "ltv": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden (zoekbudget sessie uitgeput; sites geblokkeerd)."
+   },
+   "bdduur": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden (zoekbudget sessie uitgeput; sites geblokkeerd)."
+   },
+   "bdrnt": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden (zoekbudget sessie uitgeput; sites geblokkeerd)."
+   },
+   "bddecl": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden (zoekbudget sessie uitgeput; sites geblokkeerd)."
+   },
+   "ebb": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden (zoekbudget sessie uitgeput; sites geblokkeerd)."
+   },
+   "duur": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden (zoekbudget sessie uitgeput; sites geblokkeerd)."
+   },
+   "verh": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden (zoekbudget sessie uitgeput; sites geblokkeerd)."
+   },
+   "ondh": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden (zoekbudget sessie uitgeput; sites geblokkeerd)."
+   },
+   "oha": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden (zoekbudget sessie uitgeput; sites geblokkeerd)."
+   },
+   "tweede": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden (zoekbudget sessie uitgeput; sites geblokkeerd)."
+   },
+   "ovbr": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden (zoekbudget sessie uitgeput; sites geblokkeerd)."
+   },
+   "avrij": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden (zoekbudget sessie uitgeput; sites geblokkeerd)."
+   },
+   "rmid": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden (zoekbudget sessie uitgeput; sites geblokkeerd)."
+   },
+   "rverl": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden (zoekbudget sessie uitgeput; sites geblokkeerd)."
+   },
+   "rvoor": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden (zoekbudget sessie uitgeput; sites geblokkeerd)."
+   },
+   "bbrk": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden (zoekbudget sessie uitgeput; sites geblokkeerd)."
+   },
+   "elbl": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden (zoekbudget sessie uitgeput; sites geblokkeerd)."
+   },
+   "o106": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden (zoekbudget sessie uitgeput; sites geblokkeerd)."
+   },
+   "bprov": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden (zoekbudget sessie uitgeput; sites geblokkeerd)."
+   },
+   "wkost": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden (zoekbudget sessie uitgeput; sites geblokkeerd)."
+   },
+   "avlt": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden (zoekbudget sessie uitgeput; sites geblokkeerd)."
+   },
+   "bproc": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden (zoekbudget sessie uitgeput; sites geblokkeerd)."
+   }
+  },
+  "gecontroleerd": "2026-10-04"
+ }
+]
