@@ -678,6 +678,7 @@ const HULP=[
  {groep:'Naslag',titel:'Oefenen voor PE en Wft',url:'oefenen.html',tekst:'565 eigen oefenvragen in 9 modules (basis, hypothecair krediet, inkomen, pensioen, vermogen, consumptief krediet, schade particulier, schade zakelijk, zorgverzekeringen), met proefexamen op tijd en cesuur. Geen officiële CDFD-vragen.',kw:'oefenen pe wft examen toets oefenvragen meerkeuze cdfd permanente educatie vakbekwaamheid'},
  {groep:'Naslag',titel:'Adviesroute: stap voor stap',url:'adviesroute.html',tekst:'Procesgids voor hypotheekadvies, oversluiten, inkomens-/ORV-advies en pensioen: per stap wat de AFM-Leidraad vraagt, checklist, dossierstukken en Kifid-valkuilen.',kw:'adviesroute adviesproces stappenplan checklist dossier afm leidraad zorgplicht kifid valkuilen hypotheekadvies oversluiten orv aov pensioen'},
  {groep:'Naslag',titel:'Vergelijken: voorwaarden naast elkaar',url:'vergelijken.html',tekst:'Zet voorwaarden van geldverstrekkers en verzekeraars per thema naast elkaar (verhuisregeling, boetevrij aflossen, zzp, duurzaamheid …), met bron en status.',kw:'vergelijken vergelijker matrix voorwaarden geldverstrekker verhuisregeling boetevrij aflossen zzp senioren duurzaamheid bouwdepot acceptatie'},
+ {groep:'Naslag',tp:'Overzicht',titel:'Voorwaarden van aanbieders',url:'voorwaarden.html',tekst:'Startpunt voor alle voorwaarden: situatiecheck, voorwaarden-vergelijker hypotheken en productvoorwaarden (ORV, AOV, woonlasten, uitvaart, lijfrente, opstal en inboedel, bankgarantie, krediet), met de laatste wijzigingen en de aanbieders die je volgt.',kw:'voorwaarden aanbieders overzicht startpunt geldverstrekker verzekeraar vergelijken situatiecheck productvoorwaarden wijzigingen volgen'},
  {groep:'Naslag',tp:'Vergelijker',titel:'Voorwaardenvergelijker geldverstrekkers',url:'voorwaarden-vergelijker.html',tekst:'Interne matrix van hypotheekverstrekkers en 32 voorwaarden (zzp, flex, erfpacht, rentevast, aflossingsvrij, rentemiddeling, bouwdepot, verhuisregeling, overbrugging) met kleurcode; 42 geldverstrekkers online gecontroleerd met bron, wijzigingslog per geldverstrekker (volgen en RSS), signaal bij bronnen ouder dan 6 maanden en een uitdraai voor het dossier; zoveel naast elkaar als u wilt (ook op één kenmerk, met deelbare link), filter en JSON-export. Geen rentes of tarieven.',kw:'voorwaardenvergelijker voorwaarden vergelijken vergelijker geldverstrekker geldverstrekkers matrix acceptatie zzp flexwerk perspectiefverklaring aow erfpacht rentevastperiode dagrente geldigheid aanbod boetevrij aflossen risicoklasse ltv bouwdepot depotrente energiebespaarbudget verduurzaming verhuisregeling onderhandse verkoop ontslag hoofdelijkheid verhoging overbruggingskrediet aflossingsvrij rentemiddeling boeterente energielabel betalingsproblemen vereniging eigen huis independer'},
  {groep:'Naslag',tp:'Vergelijker',titel:'Situatiecheck voorwaarden',url:'situatiecheck.html',tekst:'Vink de situatie van de klant aan (hypotheek: zzp 1 jaar, perspectiefverklaring, particuliere erfpacht, overbrugging; ORV: roker, hoog bedrag, 60-plus; AOV: starter, psychische klachten, korte wachttijd) en zie per aanbieder of dat volgens de gecontroleerde voorwaarden kan, met bron. Alfabetisch, geen rangorde en geen advies.',kw:'situatiecheck situatie klant geldverstrekker welke geldverstrekker accepteert zzp starter ondernemer perspectiefverklaring flexwerk particuliere erfpacht aflossingsvrij overbrugging rentemiddeling energiebespaarbudget dagrente senioren aow'},
  {groep:'Naslag',tp:'Vergelijker',titel:'Productvoorwaarden verzekeringen, lijfrente en krediet',url:'productvoorwaarden.html',tekst:'Acceptatie- en productvoorwaarden van ORV, AOV voor zelfstandigen, woonlastenverzekeringen, uitvaartverzekeringen, lijfrente, opstal- en inboedelverzekeringen, bankgaranties en consumptief krediet per aanbieder naast elkaar, met volgen en wijzigingslog, met bron en controledatum en een uitdraai voor het dossier. Geen premies, rentes of advies.',kw:'productvoorwaarden woonlastenverzekering woonlastenbeschermer maandlastbeschermer opstalverzekering inboedelverzekering woonverzekering bankgarantie waarborgsom bieden met zekerheid uitvaartverzekering uitvaart natura kapitaal lijfrente oudedagsvoorziening banksparen orv overlijdensrisicoverzekering aov arbeidsongeschiktheidsverzekering zelfstandigen krediet persoonlijke lening voorwaarden vergelijken medische acceptatie rookbeleid wachttijd beroepsklasse bkr verzekeraar kredietverstrekker'},
@@ -1008,10 +1009,10 @@ function zoekTellers(){const r=zoekResultaten(),t={};for(const [g] of ZOEK_GROEP
  * aanbiederwegwijzer (data/partijen.js) worden pas bij de eerste zoekopdracht geladen, net als de FAQ.
  * Die bestanden zetten alleen window.AANBIEDERS / window.PARTIJEN; een script dat al op de pagina staat
  * wordt niet nog eens toegevoegd. */
-const ZOEK_GROEPEN=[['forum','Forum'],['kennisbank','Kennisbank'],['faq','FAQ'],['begrippen','Begrippen'],['rekentools','Rekentools'],['hulpmiddelen','Hulpmiddelen'],['aanbieders','Aanbieders'],['partijen','Partijen']];
+const ZOEK_GROEPEN=[['forum','Forum'],['kennisbank','Kennisbank'],['faq','FAQ'],['begrippen','Begrippen'],['rekentools','Rekentools'],['hulpmiddelen','Hulpmiddelen'],['aanbieders','Aanbieders'],['partijen','Partijen'],['voorwaarden','Voorwaarden']];
 const ZOEK_TABS=['forum','kennisbank','faq','begrippen'];
 const ZOEK_MAX=5;
-const EXTRA_SCRIPTS={aanbieders:{src:'data/aanbieders.js',glob:'AANBIEDERS'},partijen:{src:'data/partijen.js',glob:'PARTIJEN'}};
+const EXTRA_SCRIPTS={aanbieders:{src:'data/aanbieders.js',glob:'AANBIEDERS'},partijen:{src:'data/partijen.js',glob:'PARTIJEN'},voorwaarden:{src:'data/voorwaarden-zoek.js',glob:'VOORWAARDEN_ZOEK'}};
 const EXTRA={},EXTRA_BELOFTE={};
 function laadExtra(){return Promise.all(Object.keys(EXTRA_SCRIPTS).map(naam=>{
   const {src,glob}=EXTRA_SCRIPTS[naam];
@@ -1031,8 +1032,12 @@ function partijSlug(p){if(!PARTIJ_SLUGS){PARTIJ_SLUGS=new Map();const gezien={};
   for(const x of EXTRA.partijen||[]){let s=String(x.naam||'').normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase().replace(/&/g,' en ').replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'')||'partij';const b=s;let i=2;while(gezien[s])s=b+'-'+(i++);gezien[s]=1;PARTIJ_SLUGS.set(x,s);}}
   return PARTIJ_SLUGS.get(p)||'';}
 const AANB_TYPE={geldverstrekker:'Geldverstrekker',verzekeraar:'Verzekeraar',pensioenuitvoerder:'Pensioenuitvoerder',kredietverstrekker:'Kredietverstrekker',serviceprovider:'Serviceprovider'};
+/* Zoekbron Voorwaarden (data/voorwaarden-zoek.js): [product, aanbieder, slug, kenmerk-id, kenmerk, waarde, geverifieerd] */
+const VW_PRODUCT={hyp:'Hypotheek',orv:'ORV',aov:'AOV',woonlasten:'Woonlastenverzekering',uitvaart:'Uitvaartverzekering',lijfrente:'Lijfrente',woonverzekering:'Opstal en inboedel',bankgarantie:'Bankgarantie',krediet:'Krediet'};
+const vwHref=r=>r[0]==='hyp'?'voorwaarden-vergelijker.html#vergelijk='+r[2]+'&k='+r[3]:'productvoorwaarden.html#p='+r[0]+'&a='+r[2]+'&k='+r[3];
 const PARTIJ_TYPE={bank:'Bank',geldverstrekker:'Geldverstrekker',verzekeraar:'Verzekeraar',kredietverstrekker:'Kredietverstrekker',pensioenverzekeraar:'Pensioenverzekeraar',pensioenfonds:'Pensioenfonds',beleggingsinstelling:'Beleggingsinstelling',ppi:'PPI'};
 Object.assign(HAY_F,{
+ voorwaarde:r=>[r[1],VW_PRODUCT[r[0]]||r[0],r[4],r[5]].join(' '),
  rekentool:r=>[r.naam,r.tekst,r.kw,r.groep].join(' '),
  aanbieder:a=>[a.naam,a.type,a.omschrijving,(a.documenten||[]).map(d=>d.titel).join(' '),(a.richtlijnen||[]).map(r=>r.titel).join(' ')].join(' '),
  aanbNieuws:n=>[n._a.naam,n.titel].join(' '),
@@ -1043,7 +1048,7 @@ const kort=(s,n)=>{s=String(s||'').replace(/\s+/g,' ').trim();return s.length>n?
 function opNaam(lijst,naam,z){const q=zoekNorm(S.q);const sc=o=>{const n=zoekNorm(naam(o));return n===q?0:zoekPast(z,' '+n+' ')?1:2;};return lijst.map((o,i)=>[sc(o),i,o]).sort((a,b)=>a[0]-b[0]||a[1]-b[1]).map(x=>x[2]);}
 let ZOEK_RES=null;
 function zoekResultaten(){
-  const sleutel=[S.q,S.sort,VRAGEN.length,ARTIKELEN.length,FAQ_GELADEN,!!EXTRA.aanbieders,!!EXTRA.partijen].join('|');
+  const sleutel=[S.q,S.sort,VRAGEN.length,ARTIKELEN.length,FAQ_GELADEN,!!EXTRA.aanbieders,!!EXTRA.partijen,!!EXTRA.voorwaarden].join('|');
   if(ZOEK_RES&&ZOEK_RES.k===sleutel)return ZOEK_RES.r;
   const z=zoekQuery(S.q),r={};
   r.forum=VRAGEN.filter(v=>zoekt('forum',v)).sort((a,b)=>{
@@ -1062,6 +1067,7 @@ function zoekResultaten(){
     for(const a of EXTRA.aanbieders)if(!naamPast(a))for(const n of a.nieuws||[]){if(!n._a)Object.defineProperty(n,'_a',{value:a});if(zoekt('aanbNieuws',n))uit.push({soort:'n',a,n});}
     r.aanbieders=uit;}else r.aanbieders=null;
   r.partijen=EXTRA.partijen?opNaam(EXTRA.partijen.filter(p=>zoekt('partij',p)),p=>p.naam,z||[]):null;
+  r.voorwaarden=EXTRA.voorwaarden?opNaam(EXTRA.voorwaarden.filter(v=>zoekt('voorwaarde',v)),v=>v[1]+' '+v[4],z||[]):null;
   ZOEK_RES={k:sleutel,r};return r;}
 /* Eén resultaatregel per bron */
 function zoekItem(g,o){
@@ -1080,6 +1086,7 @@ function zoekItem(g,o){
       const d=(a.documenten||[]).find(x=>past(x.titel)),rl=(a.richtlijnen||[]).find(x=>past(x.titel));
       return li(a.naam,'aanbieders.html#aanbieder-'+a.id,d?'Document: '+d.titel:rl?'Richtlijn: '+rl.titel:kort(a.omschrijving,150),chip(AANB_TYPE[a.type]||a.type)+demo);}
     case 'partijen':return li(o.naam,'partijen.html#partij-'+partijSlug(o),(o.producten||[]).join(', '),chip(PARTIJ_TYPE[o.type]||o.type));
+    case 'voorwaarden':return li(o[1]+' – '+o[4],vwHref(o),kort(o[5],170),chip(VW_PRODUCT[o[0]]||o[0])+(o[6]?chip('✓ gecontroleerd'):chip('nog niet geverifieerd')));
   }
   return '';}
 function zoekBlok(g,naam,lijst){
@@ -1607,7 +1614,7 @@ function viewAdviseur(){
 /* ---------- Handleiding ---------- */
 function viewHandleiding(){
   const fin=FIN.enabled;
-  const toc=[['h-vraag','1. Een vraag stellen'],['h-aanmelden','2. Aanmelden en geverifieerd'],['h-auto','3. Het automatische antwoord'],['h-antwoord','4. Antwoorden geven'],['h-beoordelen','5. Beoordelen'],['h-reputatie','6. Reputatie en niveaus'],['h-kennisbank','7. Kennisbank, FAQ en begrippen'],['h-hulp','8. Hulpmiddelen'],['h-rollen','9. Rollen'],['h-spelregels','10. Spelregels'],['h-faq','11. Veelgestelde vragen'],['h-volgen','12. Favorieten, volgen en RSS']];
+  const toc=[['h-vraag','1. Een vraag stellen'],['h-aanmelden','2. Aanmelden en geverifieerd'],['h-auto','3. Het automatische antwoord'],['h-antwoord','4. Antwoorden geven'],['h-beoordelen','5. Beoordelen'],['h-reputatie','6. Reputatie en niveaus'],['h-kennisbank','7. Kennisbank, FAQ en begrippen'],['h-hulp','8. Hulpmiddelen'],['h-rollen','9. Rollen'],['h-spelregels','10. Spelregels'],['h-faq','11. Veelgestelde vragen'],['h-volgen','12. Favorieten, volgen en RSS'],['h-voorwaarden','13. Voorwaarden vergelijken']];
   return `<section class="guide">
     <div class="card"><div class="pad">
       <h1 style="margin-bottom:10px">Handleiding: zo werkt het <span class="hl">Adviesforum</span></h1>
@@ -1682,6 +1689,7 @@ function viewHandleiding(){
         <li><b>Formulieren</b>: inventarisatie, documentenchecklist, afwijkend advies, gespreksverslag, nazorg-check, wijziging doorgeven, de Wwft/CDD-checklist met risicoscore, de adviesmotivatie volgens de AFM Leidraad en nazorgsignalen met agendabestand.</li>
         <li><b>Dossierpakket</b>: begin hier bij een nieuw dossier. Vul één dossierreferentie in (nooit een BSN) en open van daaruit de onderdelen; de referentie gaat automatisch mee. Het toetsinkomen uit de inkomensbepaling zet je met één klik in de adviesmotivatie. Er wordt niets opgeslagen: druk elk onderdeel af of bewaar het als PDF in je eigen dossier.</li>
         <li><b>Klantscans</b>: tien scans (o.a. nazorg, hypotheek, aflossingsvrij, ORV, pensioen, schade, auto, bedrijf, uitvaart en klanttevredenheid) die je als link naar je klant stuurt. De klant mailt het resultaat naar jou; er wordt niets opgeslagen.</li>
+        <li><b>Voorwaarden</b>: <a href="voorwaarden.html">alle voorwaarden van aanbieders op één plek</a>, met situatiecheck, voorwaarden-vergelijker hypotheken en productvoorwaarden (zie hoofdstuk 13).</li>
         <li><b>Naslag</b>: Aanbiederwegwijzer (banken, geldverstrekkers, verzekeraars en pensioenfondsen), partners van Blinqx V&amp;H, de aanbiederspagina's met nieuws, voorwaarden, extranet en contactpersonen, e-learning in korte modules, acceptatiewijzer voor bijzondere klantsituaties, wet- en regelgeving (met wat er in 2025–2027 verandert) en werkinstructies.</li>
         <li><b>Documenten</b>: o.a. Nibud-normen en NHG-documenten 2026 om te downloaden.</li>
       </ul>
@@ -1717,13 +1725,23 @@ function viewHandleiding(){
       <h3>Een categorie volgen</h3>
       <p>Kies in het forum of de kennisbank een categorie en klik op <b>Volg deze categorie</b>, of kies ze op de pagina Mijn favorieten. Bovenaan de forumstartpagina staat dan het blok <b>Nieuw in wat je volgt</b> met de vragen en artikelen die sinds je vorige bezoek zijn verschenen. De datum van je vorige bezoek staat in dezelfde cookie; volg je niets meer, dan wordt die datum niet meer bewaard.</p>
       <h3>Nieuw op het forum volgen met RSS</h3>
-      <p>Het forum heeft twee RSS-feeds: <a href="feed.xml">nieuw en bijgewerkt</a> (nieuwe onderdelen, rekentools en kennisbankartikelen, de nieuwste 50) en <a href="aanbieders-feed.xml">nieuws van aanbieders</a> (berichten die aanbieders zelf plaatsen; het forum toetst die niet). Zo volg je ze:</p>
+      <p>Het forum heeft drie RSS-feeds: <a href="voorwaarden-feed.xml">wijzigingen in voorwaarden</a>, <a href="feed.xml">nieuw en bijgewerkt</a> (nieuwe onderdelen, rekentools en kennisbankartikelen, de nieuwste 50) en <a href="aanbieders-feed.xml">nieuws van aanbieders</a> (berichten die aanbieders zelf plaatsen; het forum toetst die niet). Zo volg je ze:</p>
       <ul>
         <li><b>Outlook (Windows, klassieke versie)</b>: klik met de rechtermuisknop op de map <i>RSS-feeds</i> (of <i>RSS-abonnementen</i>), kies <i>Een nieuwe RSS-feed toevoegen</i> en plak het adres van de feed, bijvoorbeeld <code>${SITE_URL}feed.xml</code>. Nieuwe items verschijnen dan als berichten in die map. De nieuwe Outlook en Outlook op het web ondersteunen RSS (nog) niet; gebruik dan een feedlezer of een maildienst.</li>
         <li><b>Een feedlezer</b> (een app of website die feeds verzamelt): kies <i>abonneren</i> of <i>feed toevoegen</i> en plak het adres van de feed.</li>
         <li><b>Per e-mail</b>: er zijn diensten die nieuwe items uit een feed als e-mail naar je sturen, bijvoorbeeld Blogtrottr of Feedrabbit. Dat zijn alleen voorbeelden, geen aanbeveling van het forum; zo'n dienst verwerkt je e-mailadres volgens zijn eigen voorwaarden.</li>
       </ul>
       <p>Wil je softwareleverancier vanuit een klantdossier naar het forum linken? Zie <a href="koppelingen.html">Koppelen vanuit je adviessoftware</a>.</p>
+      <h2 id="h-voorwaarden">13. Voorwaarden vergelijken</h2>
+      <p>Alles over voorwaarden van aanbieders begint op <a href="voorwaarden.html">Voorwaarden</a>. Daar staan de onderdelen bij elkaar, met de laatste wijzigingen en de aanbieders die je volgt.</p>
+      <ol class="steps">
+        <li><b>Situatiecheck</b> (<a href="situatiecheck.html">situatiecheck.html</a>): vink de situatie van de klant aan, bijvoorbeeld zzp 1 jaar, particuliere erfpacht of roker. Per aanbieder zie je ja, onder voorwaarden, nee of onbekend, met onderbouwing en bron. Met <b>Neem mee naar de vergelijker</b> open je de passende aanbieders met precies die kenmerken.</li>
+        <li><b>Voorwaarden-vergelijker</b> (<a href="voorwaarden-vergelijker.html">hypotheken</a>) en <b>Productvoorwaarden</b> (<a href="productvoorwaarden.html">ORV, AOV, woonlasten, uitvaart, lijfrente, opstal en inboedel, bankgarantie en krediet</a>): zet aanbieders naast elkaar op één, enkele of alle kenmerken. Een &#10003; betekent gecontroleerd op de site of in de gids van de aanbieder; de bron staat erbij, met een link naar de kopie in het Internet Archive. &lsquo;Nog niet geverifieerd&rsquo; betekent gevonden bij derden. Een &#9203; betekent dat de bron ouder is dan 6 maanden.</li>
+        <li><b>Vastleggen voor dossier</b>: maak een uitdraai van je vergelijking met status, bron, datum, dossierkenmerk en ruimte voor je motivatie. De vergeleken aanbieders en de gekozen voorwaarden neem je met één klik over in de <a href="adviesmotivatie.html">adviesmotivatie</a>.</li>
+        <li><b>Volgen</b>: volg geldverstrekkers en verzekeraars. Wat er bij hen verandert, staat bovenaan <a href="laatste.html#voorwaarden">Laatste nieuws</a> en in de RSS-feed <a href="voorwaarden-feed.xml">wijzigingen voorwaarden</a>.</li>
+        <li><b>Klopt dit niet?</b> Bij elke waarde staat een link die je mailprogramma opent met een voorbereide correctie. Voeg de juiste waarde en een bron toe; de beheerder verwerkt het.</li>
+      </ol>
+      <div class="notice">De voorwaarden zijn een momentopname en geen advies. Rentes, premies en kosten staan er bewust niet in. Leg in het dossier de voorwaarde vast zoals de aanbieder die op het moment van advies publiceert, en controleer bij twijfel de actuele gids of polisvoorwaarden.</div>
     </div></div>
   </section>
   <aside class="rail">

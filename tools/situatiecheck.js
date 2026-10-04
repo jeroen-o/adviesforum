@@ -18,11 +18,11 @@ function fout(m) { console.error('situatiecheck: ' + m); process.exit(1); }
 
 let IND;
 try { IND = JSON.parse(fs.readFileSync(path.join(ROOT, 'docs', 'situatiecheck', 'indeling.json'), 'utf8')); } catch (e) { fout('docs/situatiecheck/indeling.json ontbreekt of is ongeldig: ' + e.message); }
-const html = fs.readFileSync(path.join(ROOT, 'voorwaarden-vergelijker.html'), 'utf8');
+const html = fs.readFileSync(path.join(ROOT, 'data', 'voorwaarden-controle.js'), 'utf8');
 const m = /const CONTROLE = (\{[\s\S]*?\});\s*const EIGEN_DOMEINEN/.exec(html);
-if (!m) fout('CONTROLE niet gevonden in voorwaarden-vergelijker.html');
+if (!m) fout('CONTROLE niet gevonden in data/voorwaarden-controle.js');
 const CONTROLE = JSON.parse(m[1]);
-const g = /const GEEN_NIEUWE_KLANTEN = (\[[^\]]*\])/.exec(html);
+const g = /const GEEN_NIEUWE_KLANTEN = (\[[^\]]*\])/.exec(fs.readFileSync(path.join(ROOT, 'voorwaarden-vergelijker.html'), 'utf8'));
 const GEEN = g ? JSON.parse(g[1].replace(/'/g, '"')) : [];
 const OORDELEN = ['ja', 'voorwaarden', 'nee', 'onbekend'];
 const slug = n => String(n || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/&/g, ' en ').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '') || 'partij';

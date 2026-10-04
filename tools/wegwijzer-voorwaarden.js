@@ -4,8 +4,8 @@
  *   node tools/wegwijzer-voorwaarden.js           schrijft het blok window.PARTIJ_VOORWAARDEN in data/partijen.js
  *   node tools/wegwijzer-voorwaarden.js --check   controleert alleen of dat blok actueel is (exit 1 als niet)
  *
- * Bron: const CONTROLE (tussen CONTROLE:start en CONTROLE:eind), CRITS, EXTRA_CRITS, SRC en NIEUW in
- * voorwaarden-vergelijker.html. Dat bestand wordt alleen gelezen.
+ * Bron: const CONTROLE (tussen CONTROLE:start en CONTROLE:eind) in data/voorwaarden-controle.js en CRITS, EXTRA_CRITS,
+ * SRC en NIEUW in voorwaarden-vergelijker.html. Dat bestand wordt alleen gelezen.
  * Per geldverstrekker komen alleen geverifieerde waarden mee (geverifieerd:true, bron op de eigen site),
  * maximaal MAX criteria in de vaste volgorde VOLGORDE. De naam wordt tolerant gekoppeld aan window.PARTIJEN;
  * wat niet te koppelen is, meldt de tool (geen fout). Het blok staat tussen VOORWAARDEN:start en VOORWAARDEN:eind.
@@ -33,7 +33,7 @@ function uitPagina(naam, re) {
   if (!m) fout('Kon ' + naam + ' niet vinden in voorwaarden-vergelijker.html');
   return vm.runInNewContext('(' + m[1] + ')');
 }
-const CONTROLE = uitPagina('CONTROLE', /\/\* CONTROLE:start[^\n]*\*\/\s*const CONTROLE = ([\s\S]*?);\s*(?:const EIGEN_DOMEINEN = [\s\S]*?;\s*)?\/\* CONTROLE:eind \*\//);
+const CONTROLE = (h => { const m = h.match(/\/\* CONTROLE:start[^\n]*\*\/\s*const CONTROLE = ([\s\S]*?);\s*(?:const EIGEN_DOMEINEN = [\s\S]*?;\s*)?\/\* CONTROLE:eind \*\//); if (!m) fout('Kon CONTROLE niet vinden in data/voorwaarden-controle.js'); return vm.runInNewContext('(' + m[1] + ')'); })(fs.readFileSync(path.join(ROOT, 'data', 'voorwaarden-controle.js'), 'utf8'));
 const CRITS = uitPagina('CRITS', /const CRITS = (\[[\s\S]*?\n\]);/);
 const EXTRA_CRITS = uitPagina('EXTRA_CRITS', /const EXTRA_CRITS = (\[[\s\S]*?\n\]);/);
 const SRC = uitPagina('SRC', /const SRC = (\[[\s\S]*?\n\]);/);

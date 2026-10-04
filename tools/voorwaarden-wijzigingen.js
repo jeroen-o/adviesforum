@@ -27,7 +27,7 @@ const UIT = path.join(ROOT, 'data', 'voorwaarden-wijzigingen.js');
 const CHECK = process.argv.includes('--check');
 const NULMETING = '2e4d536'; /* 4 oktober 2026: voorwaarden online gecontroleerd en gepubliceerd */
 
-function git(args) { return execFileSync('git', args, { cwd: ROOT, encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 }); }
+function git(args) { return execFileSync('git', args, { cwd: ROOT, encoding: 'utf8', maxBuffer: 64 * 1024 * 1024, stdio: ['ignore', 'pipe', 'pipe'] }); }
 function controleUit(html) {
   const m = /const CONTROLE = (\{[\s\S]*?\});\s*(?:const EIGEN_DOMEINEN|\/\* CONTROLE:eind)/.exec(html || '');
   if (!m) return null;
@@ -37,19 +37,23 @@ const NL = new Intl.DateTimeFormat('sv-SE', { timeZone: 'Europe/Amsterdam', year
 const dag = iso => NL.format(new Date(iso));
 const kaal = w => String(w || '').replace(/\s+/g, ' ').trim();
 
+/* Tot oktober 2026 stond CONTROLE in voorwaarden-vergelijker.html, daarna in data/voorwaarden-controle.js. */
+const BESTANDEN = ['data/voorwaarden-controle.js', BESTAND];
 let commits = [];
 try {
-  commits = git(['log', '--reverse', '--format=%H %aI', '--', BESTAND]).trim().split('\n').filter(Boolean)
+  commits = git(['log', '--reverse', '--format=%H %aI', '--', ...BESTANDEN]).trim().split('\n').filter(Boolean)
     .map(r => { const [h, d] = r.split(' '); return { h, d: dag(d) }; });
 } catch (e) { console.error('voorwaarden-wijzigingen: git log mislukt: ' + e.message); process.exit(1); }
+function controleOp(h) {
+  for (const b of BESTANDEN) { try { const C = controleUit(git(['show', h + ':' + b])); if (C) return C; } catch (e) { /* bestand bestaat niet in deze commit */ } }
+  return null;
+}
 
 const versies = [];
 let gezien = false;
 for (const c of commits) {
   if (!gezien) { if (!c.h.startsWith(NULMETING)) continue; gezien = true; }
-  let html = '';
-  try { html = git(['show', c.h + ':' + BESTAND]); } catch (e) { continue; }
-  const C = controleUit(html);
+  const C = controleOp(c.h);
   if (C) versies.push({ d: c.d, C, nul: versies.length === 0 });
 }
 if (!versies.length) {
@@ -59,7 +63,7 @@ if (!versies.length) {
   if (ondiep) { console.log('Overgeslagen: ondiepe git-checkout zonder de nulmeting ' + NULMETING + '; het wijzigingslog blijft ongewijzigd (actueel niet te controleren).'); process.exit(0); }
   console.error('voorwaarden-wijzigingen: nulmeting ' + NULMETING + ' niet gevonden in de geschiedenis'); process.exit(1);
 }
-const werk = controleUit(fs.readFileSync(path.join(ROOT, BESTAND), 'utf8'));
+const werk = controleUit(fs.readFileSync(path.join(ROOT, 'data', 'voorwaarden-controle.js'), 'utf8'));
 if (werk && JSON.stringify(versies[versies.length - 1].C) !== JSON.stringify(werk)) versies.push({ d: dag(new Date().toISOString()), C: werk });
 
 /* Nulmeting plus de laatste versie van elke dag. */

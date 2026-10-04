@@ -165,3 +165,38 @@ test('Klopt dit niet? opent een voorbereide mail in vergelijker en productvoorwa
   await expect(page.locator('#tabel td .meld').first()).toHaveAttribute('href', /^mailto:forumadvies@gmail\.com\?subject=Correctie/);
   await expect(page.locator('#tabel td .bron a', { hasText: 'archief' }).first()).toHaveAttribute('href', /^https:\/\/web\.archive\.org\/web\//);
 });
+
+test('node tools/voorwaarden-kwaliteit.js --check en voorwaarden-zoek.js --check zijn actueel', () => {
+  expect(node('voorwaarden-kwaliteit.js', '--check')).toMatch(/actueel/);
+  expect(node('voorwaarden-zoek.js', '--check')).toMatch(/actueel/);
+});
+test('voorwaarden.html: kerncijfers, kaarten en laatste wijzigingen', async ({ page }) => {
+  const fouten = await volgFouten(page);
+  await page.goto('/voorwaarden.html');
+  await expect(page.locator('#tegels .tegel')).toHaveCount(4);
+  await expect(page.locator('.kaart')).toHaveCount(6);
+  await expect(page.locator('#wijz li').first()).toBeVisible();
+  await expect(page.locator('#producten li')).toHaveCount(await page.evaluate(() => window.VOORWAARDEN_KWALITEIT.producten.length));
+  expect(fouten).toEqual([]);
+});
+test('beheer-voorwaarden.html: werklijst gesorteerd op werkscore', async ({ page }) => {
+  await page.goto('/beheer-voorwaarden.html');
+  const scores = (await page.locator('#rijen tr td:last-child').allTextContents()).map(Number);
+  expect(scores.length).toBeGreaterThan(5);
+  expect(scores).toEqual([...scores].sort((a, b) => b - a));
+});
+test('zoeken in het forum vindt voorwaarden met link naar de cel', async ({ page }) => {
+  await page.goto('/index.html#zoek=particuliere+erfpacht');
+  await expect(page.locator('#zg-voorwaarden li a').first()).toHaveAttribute('href', /voorwaarden-vergelijker\.html#vergelijk=.+&k=erfp|productvoorwaarden\.html#p=/);
+});
+test('situatiecheck neemt passende aanbieders mee naar de vergelijker en adviesmotivatie vinkt voorwaarden aan', async ({ page }) => {
+  await page.goto('/situatiecheck.html#s=perfp');
+  await expect(page.locator('#btnMee')).toHaveAttribute('href', /^voorwaarden-vergelijker\.html#vergelijk=[a-z0-9,-]+&k=erfp$/);
+  await page.goto('/adviesmotivatie.html#vgl=bunq&vw=boete,verh');
+  await expect(page.locator('#x-product-criteria input[value="Boetevrij extra aflossen"]')).toBeChecked();
+  await expect(page.locator('#x-product-criteria input[value="Verhuis- of meeneemregeling"]')).toBeChecked();
+});
+test('handleiding heeft het hoofdstuk Voorwaarden vergelijken', async ({ page }) => {
+  await page.goto('/index.html#handleiding');
+  await expect(page.locator('#h-voorwaarden')).toContainText('Voorwaarden vergelijken');
+});

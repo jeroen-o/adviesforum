@@ -987,7 +987,7 @@ function toonOvername(t, waarsch){
 }
 function leesOvername(){
   var p=hashParams(), heeft=function(k){ return Object.prototype.hasOwnProperty.call(p,k); };
-  if (!heeft('toets') && !heeft('bron') && !heeft('ref') && !heeft('vgl')) return;
+  if (!heeft('toets') && !heeft('bron') && !heeft('ref') && !heeft('vgl') && !heeft('vw')) return;
   var genomen=[], fout=[];
   if (heeft('toets')){
     var t = p.toets!=null && /^\d{1,8}(\.\d{1,2})?$/.test(p.toets) ? Number(p.toets) : NaN;
@@ -1012,8 +1012,17 @@ function leesOvername(){
     var sel=$('x-product-aantal');
     if (namen.length && sel){
       sel.value = namen.length===1 ? '1 (toelichting nodig)' : namen.length>=4 ? '4 of meer' : String(namen.length);
-      genomen.push('vergeleken aanbieders uit de voorwaarden-vergelijker ('+namen.join(', ')+'); vul de geadviseerde geldverstrekker en de doorslaggevende voorwaarden zelf in');
+      genomen.push('vergeleken aanbieders uit de voorwaarden-vergelijker ('+namen.join(', ')+'); vul de geadviseerde geldverstrekker zelf in'+(heeft('vw')?'':' en kies de doorslaggevende voorwaarden'));
     } else fout.push('vergeleken aanbieders');
+  }
+  if (heeft('vw')){
+    /* Kenmerken uit de voorwaarden-vergelijker (criterium-id's) -> vinkjes bij Doorslaggevende voorwaarden */
+    var VW={boete:'Boetevrij extra aflossen',bbrk:'Boetevrij extra aflossen',verh:'Verhuis- of meeneemregeling',rmid:'Rentemiddeling',ltv:'Rente daalt mee met lagere risicoklasse',
+      geld:'Geldigheid offerte en bereidstellingsprovisie',bprov:'Geldigheid offerte en bereidstellingsprovisie',dag:'Geldigheid offerte en bereidstellingsprovisie',ovbr:'Overbruggingskrediet',
+      zzp:'Acceptatie van inkomen',flex:'Acceptatie van inkomen',persp:'Acceptatie van inkomen',aow:'Acceptatie van inkomen',ebb:'Financiering verduurzaming',duur:'Financiering verduurzaming',o106:'Financiering verduurzaming',elbl:'Financiering verduurzaming'};
+    var box=$('x-product-criteria'), gezet=[];
+    String(p.vw||'').split(',').forEach(function(id){ var lab=VW[id]; if(!lab||!box) return; box.querySelectorAll('input').forEach(function(i){ if(i.value===lab&&!i.checked){ i.checked=true; gezet.push(lab); } }); });
+    if (gezet.length) genomen.push('doorslaggevende voorwaarden ('+gezet.join(', ')+')');
   }
   var uitInk = heeft('toets') || heeft('bron');
   var t1 = genomen.length ? (uitInk ? 'Overgenomen uit inkomensbepaling: ' : 'Overgenomen uit de link: ')+genomen.join(', ')+'. Controleer de waarden.' : '';

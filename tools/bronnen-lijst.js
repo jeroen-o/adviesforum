@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /*
  * Lijst van alle bronlinks achter de voorwaarden, voor de wekelijkse linkcontrole (.github/workflows/links.yml).
- * Bronnen: CONTROLE in voorwaarden-vergelijker.html (alleen geverifieerde waarden), data/productvoorwaarden.js
+ * Bronnen: CONTROLE in data/voorwaarden-controle.js (alleen geverifieerde waarden), data/productvoorwaarden.js
  * en de kenmerken, statussen en toezichtbronnen in data/partijen.js.
  *
  *   node tools/bronnen-lijst.js          schrijft docs/bronnen-urls.txt (één URL per regel, gesorteerd)
@@ -17,7 +17,7 @@ const UIT = path.join(ROOT, 'docs', 'bronnen-urls.txt');
 const urls = new Set();
 const voeg = u => { if (typeof u === 'string' && /^https:\/\/[^\s"'<>]+$/i.test(u)) urls.add(u.trim()); };
 
-const html = fs.readFileSync(path.join(ROOT, 'voorwaarden-vergelijker.html'), 'utf8');
+const html = fs.readFileSync(path.join(ROOT, 'data', 'voorwaarden-controle.js'), 'utf8');
 const m = /const CONTROLE = (\{[\s\S]*?\});\s*const EIGEN_DOMEINEN/.exec(html);
 if (!m) { console.error('bronnen-lijst: CONTROLE niet gevonden'); process.exit(1); }
 for (const x of Object.values(JSON.parse(m[1]))) for (const w of Object.values(x.criteria || {})) if (w.geverifieerd) (w.bron || []).forEach(voeg);

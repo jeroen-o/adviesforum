@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Datakwaliteit voorwaarden – Adviesforum</title>
+<link rel="canonical" href="https://jeroen-o.github.io/adviesforum/beheer-voorwaarden.html">
+<meta property="og:url" content="https://jeroen-o.github.io/adviesforum/beheer-voorwaarden.html">
+<meta property="og:site_name" content="Adviesforum">
+<meta property="og:locale" content="nl_NL">
+<meta name="theme-color" content="#FFD200">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="description" content="Beheeroverzicht: per aanbieder en product hoeveel voorwaarden gecontroleerd zijn, hoeveel bronnen ouder zijn dan 6 maanden en hoeveel twijfelgevallen er in de situatiecheck staan.">
+<meta property="og:title" content="Datakwaliteit voorwaarden – Adviesforum">
+<meta property="og:description" content="Beheeroverzicht: per aanbieder en product hoeveel voorwaarden gecontroleerd zijn, hoeveel bronnen ouder zijn dan 6 maanden en hoeveel twijfelgevallen er in de situatiecheck staan.">
+<meta property="og:type" content="website">
+<style>
+@font-face{font-family:Montserrat;font-style:normal;font-weight:400;font-display:swap;src:url(fonts/montserrat-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:700;font-display:swap;src:url(fonts/montserrat-latin-700-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:800;font-display:swap;src:url(fonts/montserrat-latin-800-normal.woff2) format('woff2')}
+:root{
+  --geel:#FFD200;--geel-donker:#E6BD00;--geel-zacht:#FFF6C7;--zwart:#141414;--tekst:#1F1F1F;--grijs:#5E5E5E;--lijn:#E4E4E4;--vlak:#F7F7F5;--wit:#fff;
+  --rood:#C0392B;--rood-zacht:#FFF1F0;--rood-tekst:#7A1F14;--oranje:#9A5B00;--oranje-zacht:#FFF4E0;--groen:#1F7A52;--blauw:#1F4E79;
+  --kop:#FFD200;--kop-tekst:#141414;--body:#fff;--knop-tekst:#141414;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --geel-zacht:#3f3918;--zwart:#F2F2F2;--tekst:#F2F2F2;--grijs:#BDBDBD;--lijn:#333;--vlak:#262626;--wit:#1E1E1E;
+  --rood-zacht:#3f1a18;--rood-tekst:#f3c2bd;--oranje:#f6cb8e;--oranje-zacht:#3f3118;--groen:#9de7c1;--blauw:#9ec3e6;
+  --kop:#1E1E1E;--kop-tekst:#F2F2F2;--body:#141414;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --geel-zacht:#3f3918;--zwart:#F2F2F2;--tekst:#F2F2F2;--grijs:#BDBDBD;--lijn:#333;--vlak:#262626;--wit:#1E1E1E;
+  --rood-zacht:#3f1a18;--rood-tekst:#f3c2bd;--oranje:#f6cb8e;--oranje-zacht:#3f3118;--groen:#9de7c1;--blauw:#9ec3e6;
+  --kop:#1E1E1E;--kop-tekst:#F2F2F2;--body:#141414;color-scheme:dark}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:Montserrat,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;color:var(--tekst);background:var(--body);line-height:1.55;font-size:15px;overflow-x:hidden}
+a{color:inherit}
+button,input,select{font-family:inherit}
+[hidden]{display:none!important}
+.skiplink{position:absolute;left:-9999px}.skiplink:focus{left:12px;top:12px;background:#FFD200;color:#141414;padding:8px 12px;z-index:9}
+.balk{background:#141414;color:#fff;font-size:12.5px;padding:8px 16px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.balk a{color:#fff;text-decoration:none;opacity:.88}.balk a:hover{opacity:1;text-decoration:underline}
+.kop{background:var(--kop);color:var(--kop-tekst);padding:30px 16px 34px;border-bottom:3px solid #FFD200}
+.kop-in,.romp{max-width:1280px;margin:0 auto}
+.merk{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.08em;font-size:12px;text-transform:uppercase;margin-bottom:14px}
+.zeshoek{width:22px;height:25px;background:currentColor;clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);flex:none}
+.terugs{display:flex;gap:8px 18px;flex-wrap:wrap;margin-bottom:12px}
+.terug{font-size:13.5px;font-weight:700;text-decoration:none;border-bottom:2px solid currentColor}
+.kop h1{margin:0 0 10px;font-size:clamp(26px,4.2vw,38px);line-height:1.12;font-weight:800}
+.kop p{margin:0;max-width:75ch}
+.romp{padding:22px 16px 56px}
+.compliance{border:2px solid var(--rood);border-left-width:8px;border-radius:0 12px 12px 0;padding:12px 16px;margin:0 0 18px;background:var(--rood-zacht);color:var(--rood-tekst);font-size:14px}
+.compliance h2{margin:0 0 4px;font-size:14px;font-weight:800;text-transform:uppercase;letter-spacing:.03em}
+.compliance ul{margin:0;padding-left:18px}
+h2.sectie{font-size:19px;margin:28px 0 10px}
+.sub{font-size:13.5px;color:var(--grijs);margin:0 0 10px}
+.tegels{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:0 0 6px}
+.tegel{border:1px solid var(--lijn);border-radius:12px;padding:12px 14px;background:var(--wit)}
+.tegel b{display:block;font-size:24px;font-weight:800;font-variant-numeric:tabular-nums}
+.tegel span{font-size:12.5px;color:var(--grijs)}
+.voet{max-width:1280px;margin:0 auto;padding:0 16px 40px;font-size:12.5px;color:var(--grijs)}
+table{border-collapse:collapse;width:100%;font-size:13.5px}
+.tabelvak{overflow-x:auto;border:1px solid var(--lijn);border-radius:12px;background:var(--wit)}
+th,td{border-bottom:1px solid var(--lijn);padding:8px 10px;text-align:left;vertical-align:top}
+thead th{background:#141414;color:#fff;font-size:12.5px;position:sticky;top:0;cursor:pointer;white-space:nowrap}
+td.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.balkje{display:inline-block;height:8px;border-radius:4px;background:#1F7A52;vertical-align:middle;margin-right:6px}
+.slecht{color:var(--rood-tekst);font-weight:700}
+.filters{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;margin:0 0 10px;font-size:14px}
+.filters select,.filters input{min-height:38px;border:1px solid var(--lijn);border-radius:10px;padding:6px 10px;background:var(--wit);color:var(--tekst)}
+.knop{border:1px solid var(--geel-donker);background:#FFD200;color:#141414;border-radius:999px;padding:7px 14px;font-weight:700;font-size:14px;cursor:pointer;min-height:38px}
+</style>
+</head>
+<body>
+<a class="skiplink" href="#inhoud">Naar de inhoud</a>
+<nav class="balk" aria-label="Forum">
+  <span>Adviesforum &middot; voor en door financieel adviseurs</span>
+  <span><a href="index.html">Home</a> &middot; <a href="aanmelden.html">Aanmelden</a> &middot; <a href="laatste.html">Laatste nieuws</a></span>
+</nav>
+<header class="kop">
+  <div class="kop-in">
+    <div class="merk"><span class="zeshoek" aria-hidden="true"></span>Adviesforum &middot; Beheer</div>
+    <div class="terugs"><a class="terug" href="voorwaarden.html">Voorwaarden</a><a class="terug" href="compliance-overzicht.html">Compliance-overzicht</a></div>
+    <h1>Datakwaliteit voorwaarden</h1>
+    <p>Waar levert een controle of een pdf-upload het meeste op? Per aanbieder en product: hoeveel voorwaarden gecontroleerd zijn bij de aanbieder, hoeveel bronnen ouder zijn dan 6 maanden en hoeveel twijfelgevallen er in de situatiecheck staan. Gesorteerd op werk te doen.</p>
+  </div>
+</header>
+<main class="romp" id="inhoud" tabindex="-1">
+  <div class="tegels" id="tegels" aria-label="Kerncijfers"></div>
+  <div class="filters">
+    <label>Product <select id="f-prod"><option value="">Alle</option></select></label>
+    <label>Zoeken <input type="search" id="f-q" placeholder="Aanbieder"></label>
+    <label><input type="checkbox" id="f-werk" checked> Alleen met werk te doen</label>
+    <button type="button" class="knop" id="btnCsv">Exporteer CSV</button>
+  </div>
+  <p class="sub" id="tel" role="status" aria-live="polite"></p>
+  <div class="tabelvak"><table>
+    <thead><tr><th scope="col">Aanbieder</th><th scope="col">Product</th><th scope="col">Gecontroleerd</th><th scope="col">Niet geverifieerd</th><th scope="col">Bron &gt; 6 mnd</th><th scope="col">Twijfelgevallen</th><th scope="col">Werkscore</th></tr></thead>
+    <tbody id="rijen"></tbody>
+  </table></div>
+  <h2 class="sectie">Dode bronlinks</h2>
+  <p class="sub">Alle bronlinks worden elke maandag gecontroleerd. Het rapport staat bij de workflow <a href="https://github.com/jeroen-o/adviesforum/actions/workflows/links.yml">Externe links controleren</a> (job &lsquo;bronnen&rsquo;, artefact rapport-bronlinks).</p>
+  <h2 class="sectie">Werklijst</h2>
+  <ol class="sub" style="font-size:14px;color:var(--tekst)">
+    <li>Upload bij de aanbieders bovenaan de nieuwste acceptatiegids of polisvoorwaarden (pdf) in een Claude-sessie; die verwerkt ze tot gecontroleerde waarden.</li>
+    <li>Controleer de twijfelgevallen in de <a href="situatiecheck.html">situatiecheck</a>.</li>
+    <li>Verwerk meldingen via &lsquo;Klopt dit niet?&rsquo; uit de mailbox.</li>
+  </ol>
+</main>
+<footer class="voet"><p>Beheerpagina, niet bedoeld voor adviseurs of consumenten. Cijfers uit data/voorwaarden-kwaliteit.js; &lsquo;bron ouder dan 6 maanden&rsquo; wordt berekend ten opzichte van vandaag.</p></footer>
+<script src="data/voorwaarden-kwaliteit.js"></script>
+<script>
+(function(){
+'use strict';
+var K = (window.VOORWAARDEN_KWALITEIT || {producten:[]}).producten;
+var $ = function(id){ return document.getElementById(id); };
+function esc(s){ return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];}); }
+var TITEL = {hyp:'Hypotheek', orv:'ORV', aov:'AOV', woonlasten:'Woonlasten', uitvaart:'Uitvaart', lijfrente:'Lijfrente', woonverzekering:'Opstal en inboedel', bankgarantie:'Bankgarantie', krediet:'Krediet'};
+var nu = new Date(), grens = nu.getFullYear() * 12 + nu.getMonth() - 6;
+function oud(b){ var t = 0; Object.keys(b||{}).forEach(function(k){ var p = k.split('-'); if((+p[0]) * 12 + (+p[1] - 1) < grens) t += b[k]; }); return t; }
+var R = [];
+K.forEach(function(p){ p.aanbieders.forEach(function(a){ var o = oud(a.b), nv = a.n - a.g;
+  R.push({naam:a.naam, p:p.id, pt:TITEL[p.id]||p.titel, href: p.id==='hyp' ? 'voorwaarden-vergelijker.html#vergelijk=' + a.slug : 'productvoorwaarden.html#p=' + p.id + '&a=' + a.slug, n:a.n, g:a.g, nv:nv, oud:o, tw:a.tw, score: nv * 2 + o + a.tw * 2 + Math.max(0, (p.nk||0) - a.n)}); }); });
+var opt = $('f-prod'); K.forEach(function(p){ var o = document.createElement('option'); o.value = p.id; o.textContent = TITEL[p.id] || p.titel; opt.appendChild(o); });
+var T = R.reduce(function(s,r){ s.n += r.n; s.g += r.g; s.oud += r.oud; s.tw += r.tw; return s; }, {n:0,g:0,oud:0,tw:0});
+$('tegels').innerHTML = [[T.n,'voorwaarden'],[(T.n ? Math.round(T.g/T.n*100) : 0) + '%','gecontroleerd bij de aanbieder'],[T.n - T.g,'niet geverifieerd'],[T.oud,'bron ouder dan 6 maanden'],[T.tw,'twijfelgevallen situatiecheck']].map(function(t){ return '<div class="tegel"><b>' + esc(typeof t[0]==='number' ? t[0].toLocaleString('nl-NL') : t[0]) + '</b><span>' + esc(t[1]) + '</span></div>'; }).join('');
+function lijst(){
+  var p = $('f-prod').value, q = $('f-q').value.trim().toLowerCase(), werk = $('f-werk').checked;
+  return R.filter(function(r){ return (!p || r.p===p) && (!q || r.naam.toLowerCase().indexOf(q) >= 0) && (!werk || r.score > 0); })
+    .sort(function(a,b){ return b.score - a.score || a.naam.localeCompare(b.naam,'nl'); });
+}
+function render(){
+  var l = lijst();
+  $('tel').textContent = l.length + ' van ' + R.length + ' aanbieder-productcombinaties';
+  $('rijen').innerHTML = l.map(function(r){ var pct = r.n ? Math.round(r.g / r.n * 100) : 0;
+    return '<tr><td><a href="' + esc(r.href) + '">' + esc(r.naam) + '</a></td><td>' + esc(r.pt) + '</td><td class="n"><span class="balkje" style="width:' + Math.round(pct * 0.6) + 'px"></span>' + r.g + ' / ' + r.n + ' (' + pct + '%)</td>' +
+      '<td class="n' + (r.nv ? ' slecht' : '') + '">' + r.nv + '</td><td class="n' + (r.oud ? ' slecht' : '') + '">' + r.oud + '</td><td class="n">' + r.tw + '</td><td class="n">' + r.score + '</td></tr>'; }).join('') || '<tr><td colspan="7">Niets te doen met deze filters.</td></tr>';
+}
+['f-prod','f-werk'].forEach(function(id){ $(id).addEventListener('change', render); });
+$('f-q').addEventListener('input', render);
+$('btnCsv').addEventListener('click', function(){
+  var rows = [['aanbieder','product','gecontroleerd','totaal','niet geverifieerd','bron ouder dan 6 maanden','twijfelgevallen','werkscore']].concat(lijst().map(function(r){ return [r.naam, r.pt, r.g, r.n, r.nv, r.oud, r.tw, r.score]; }));
+  var csv = rows.map(function(r){ return r.map(function(v){ v = String(v); return /[";\n]/.test(v) ? '"' + v.replace(/"/g,'""') + '"' : v; }).join(';'); }).join('\n');
+  var a = document.createElement('a'); a.href = 'data:text/csv;charset=utf-8,' + encodeURIComponent('\ufeff' + csv); a.download = 'datakwaliteit-voorwaarden.csv'; document.body.appendChild(a); a.click(); a.remove();
+});
+render();
+})();
+</script>
+</body>
+</html>

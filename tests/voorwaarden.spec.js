@@ -268,7 +268,7 @@ test('online gecontroleerde waarden: vinkje, tooltip met bron en controledatum',
   const tip = await gec.first().getAttribute('title');
   expect(tip).toMatch(/Bron: https:\/\//);
   expect(tip).toMatch(/gecontroleerd/);
-  await expect(page.locator('#peil')).toContainText('gecontroleerd');
+  await expect(page.locator('#stempel')).toContainText('gecontroleerd');
 });
 
 test.describe('voorwaardenvergelijker: uitgebreid zoeken en filteren', () => {

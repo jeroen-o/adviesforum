@@ -1,10 +1,10 @@
-/* Verwerkt onderzoeksresultaten (uit-*.json) in voorwaarden-vergelijker.html als const CONTROLE.
+/* Verwerkt onderzoeksresultaten (uit-*.json) in data/voorwaarden-controle.js als const CONTROLE (gebruikt door voorwaarden-vergelijker.html).
  * Gebruik: node docs/voorwaarden-onderzoek/verwerk.js <map-met-uit-bestanden>
  * Status bevestigd/gewijzigd/nieuw wordt getoond. Alleen bronnen op de eigen site van de geldverstrekker (domeinen.json)
  * met zekerheid hoog/middel tellen als geverifieerd; overige informatie komt erin als 'nog niet geverifieerd', zonder bronvermelding. Bij dubbelcheck (veld dubbel:'bevestigd') toont de pagina "2× gecontroleerd". */
 const fs = require('fs'), path = require('path');
 const map = process.argv[2] || path.join(__dirname);
-const pagina = path.join(__dirname, '..', '..', 'voorwaarden-vergelijker.html');
+const pagina = path.join(__dirname, '..', '..', 'data', 'voorwaarden-controle.js');
 const files = fs.readdirSync(map).filter(f => /^uit-.*\.json$/.test(f)).sort();
 const DOM = JSON.parse(fs.readFileSync(path.join(__dirname, 'domeinen.json'), 'utf8'));
 const eigen = (naam, u) => { try { const h = new URL(u).hostname.replace(/^www\./, ''); return (DOM[naam] || []).some(d => h === d || h.endsWith('.' + d)); } catch (e) { return false; } };
@@ -31,6 +31,6 @@ for (const f of files) {
 let s = fs.readFileSync(pagina, 'utf8');
 const blok = '/* CONTROLE:start (gegenereerd door docs/voorwaarden-onderzoek/verwerk.js; niet met de hand wijzigen) */\nconst CONTROLE = ' + JSON.stringify(C) + ';\nconst EIGEN_DOMEINEN = ' + JSON.stringify(DOM) + ';\n/* CONTROLE:eind */';
 if (/\/\* CONTROLE:start[\s\S]*?CONTROLE:eind \*\//.test(s)) s = s.replace(/\/\* CONTROLE:start[\s\S]*?CONTROLE:eind \*\//, blok);
-else s = s.replace('const CRIT_NOTITIE = {', blok + '\nconst CRIT_NOTITIE = {');
+else s = '/* Gecontroleerde voorwaarden per geldverstrekker voor voorwaarden-vergelijker.html (globale constanten CONTROLE en EIGEN_DOMEINEN). */\n' + blok + '\n';
 fs.writeFileSync(pagina, s);
 console.log('verwerkt:', Object.entries(C).map(([n, v]) => n + ' ' + Object.keys(v.criteria).length).join(', '));
