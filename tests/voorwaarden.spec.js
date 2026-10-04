@@ -3,7 +3,7 @@ const { test, expect } = require('@playwright/test');
 const fs = require('fs');
 const { volgFouten } = require('./helpers');
 
-const PAGINA = '/voorwaarden-vergelijker.html';
+const PAGINA = '/voorwaarden-vergelijker.html?bron=dataset';
 const BRON_NAMEN = ['ABN AMRO', 'Rabobank', 'ING', 'SNS', 'RegioBank', 'Munt Hypotheken', 'Obvion', 'Florius', 'Aegon',
   'Nationale-Nederlanden', 'BLG Wonen', 'Tulp Hypotheken', 'Attens Hypotheken', 'Lloyds Bank', 'Hypotrust', 'Venn Hypotheken',
   'Vista Hypotheken', 'bijBouwe', 'Woonfonds', 'Merius Hypotheken', 'a.s.r.', 'Centraal Beheer', 'Triodos Bank', 'NIBC', 'ASN Bank'];
@@ -259,4 +259,14 @@ test.describe('voorwaardenvergelijker', () => {
     await expect(popup.locator('.disc')).toContainText('Bevat geen rentes of tarieven');
     await popup.close();
   });
+});
+
+test('online gecontroleerde waarden: vinkje, tooltip met bron en controledatum', async ({ page }) => {
+  await page.goto('/voorwaarden-vergelijker.html#vergelijk=abn-amro');
+  const gec = page.locator('td.val.gec');
+  expect(await gec.count()).toBeGreaterThan(5);
+  const tip = await gec.first().getAttribute('title');
+  expect(tip).toMatch(/Bron: https:\/\//);
+  expect(tip).toMatch(/gecontroleerd/);
+  await expect(page.locator('#peil')).toContainText('gecontroleerd');
 });
