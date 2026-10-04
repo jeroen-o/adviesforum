@@ -1,0 +1,647 @@
+[
+ {
+  "naam": "Robuust Hypotheken",
+  "algemeen": {
+   "intermediairsite": "https://www.robuusthypotheken.nl/ik-ben-adviseur",
+   "voorwaardenPdf": [
+    "https://www.robuusthypotheken.nl/uploads/robuust/files/Algemene-voorwaarden-Robuust-Hypotheken-B.V.-September-2023.pdf",
+    "https://www.robuusthypotheken.nl/uploads/robuust/files/BeheerkaartRobuustV2.pdf"
+   ],
+   "acceptatiegids": [
+    "https://www.robuusthypotheken.nl/uploads/robuust/files/Acceptatiegids-Robuust-juni-2026.pdf",
+    "https://www.robuusthypotheken.nl/uploads/robuust/files/Acceptatiegids-Robuust-Hypotheken-Januari-2026.pdf",
+    "https://www.robuusthypotheken.nl/uploads/robuust/files/Acceptatiegids-Robuust-2025.pdf"
+   ],
+   "opmerking": "Label van Blauwtrust Groep (ook Hypotrust), sinds 2018, volgens vergelijker gefinancierd door Aegon (huidige financier na overname Aegon NL door a.s.r. niet bevestigd); alleen via adviseurs. Voorwaarden hier uitsluitend uit eigen Robuust-bronnen, niets van moeder/financier overgenomen. Website niet fetchbaar; info via zoeksamenvattingen."
+  },
+  "criteria": {
+   "zzp": {
+    "waarde": "~ Vanaf 12 mnd zelfstandig (met en zonder NHG); 1-2 jr max 80% MW; IBO door NHG-erkende rekenexpert",
+    "bron": [
+     "https://www.robuusthypotheken.nl/uploads/robuust/files/Acceptatiegids-Robuust-juni-2026.pdf",
+     "https://www.robuusthypotheken.nl/home/consument/startende-ondernemers"
+    ],
+    "brondatum": "2026-06",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "1-2 jr: 80% gem. inkomen max prognose; 2-3 jr: 90%; >3 jr gewogen gemiddelde 3 jaar, max laatste jaar"
+   },
+   "flex": {
+    "waarde": "~ Gemiddeld jaarinkomen laatste 3 kalenderjaren + werkgeversverklaring; lopend jaar kan toetsinkomen verlagen",
+    "bron": [
+     "https://www.robuusthypotheken.nl/uploads/robuust/files/Acceptatiegids-Robuust-juni-2026.pdf",
+     "https://www.robuusthypotheken.nl/uploads/robuust/files/Acceptatiegids-Robuust-Hypotheken-Januari-2026.pdf"
+    ],
+    "brondatum": "2026-06",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Geldt voor uitzend, oproep, tijdelijk zonder intentie, proeftijd e.d."
+   },
+   "persp": {
+    "waarde": "- Perspectiefverklaring en arbeidsmarktscan niet toegestaan",
+    "bron": [
+     "https://www.robuusthypotheken.nl/uploads/robuust/files/Acceptatiegids-Robuust-juni-2026.pdf",
+     "https://www.robuusthypotheken.nl/uploads/robuust/files/Acceptatiegids-Robuust-Hypotheken-Januari-2026.pdf",
+     "https://www.robuusthypotheken.nl/uploads/robuust/files/Acceptatiegids-Robuust-2025.pdf"
+    ],
+    "brondatum": "2026-06",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Ongewijzigd in gidsen 2025, jan en juni 2026"
+   },
+   "aow": {
+    "waarde": "~ Pensioendatum binnen 10 jaar na offerte: toets houdt rekening met inkomensdaling bij pensioen/AOW",
+    "bron": [
+     "https://www.robuusthypotheken.nl/uploads/robuust/files/Acceptatiegids-Robuust-juni-2026.pdf",
+     "https://www.robuusthypotheken.nl/uploads/robuust/files/Acceptatiegids-Robuust-Hypotheken-Januari-2026.pdf"
+    ],
+    "brondatum": "2026-06",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Pensioen/AOW incl. vakantiegeld telt als toetsinkomen"
+   },
+   "erfp": {
+    "waarde": "! Gemeentelijke erfpacht onder voorwaarden (duur/canon aantonen); particuliere erfpacht niet toegestaan",
+    "bron": [
+     "https://www.robuusthypotheken.nl/uploads/robuust/files/Acceptatiegids-Robuust-juni-2026.pdf",
+     "https://www.robuusthypotheken.nl/uploads/robuust/files/Acceptatiegids-Robuust-Hypotheken-Januari-2026.pdf",
+     "https://www.robuusthypotheken.nl/home/consument/calcasa-desktop-taxatie"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Canonstijging binnen 3 jr meetoetsen; einde termijn: individuele beoordeling als gemeente verlengingsvoorwaarden verklaart; geen desktoptaxatie bij erfpacht. Samenvattingen deels tegenstrijdig"
+   },
+   "rvp": {
+    "waarde": "+ Variabel (maand) en 1 t/m 30 jaar vast",
+    "bron": [
+     "https://www.robuusthypotheken.nl/uploads/robuust/files/Acceptatiegids-Robuust-juni-2026.pdf",
+     "https://www.robuusthypotheken.nl/uploads/robuust/files/Acceptatiegids-Robuust-Hypotheken-Januari-2026.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Exacte lijst periodes niet gezien"
+   },
+   "dag": {
+    "waarde": "! Slotrente met rentedaling alleen tijdens acceptatietermijn van 3 weken; daarna geen daling tot passeren gevonden",
+    "bron": [
+     "https://www.robuusthypotheken.nl/uploads/robuust/files/Acceptatiegids-Robuust-juni-2026.pdf",
+     "https://www.robuusthypotheken.nl/uploads/robuust/files/Acceptatiegids-Robuust-Hypotheken-Januari-2026.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Bij nieuwbouwverlenging provisie alleen als marktrente hoger is"
+   },
+   "geld": {
+    "waarde": "~ Renteaanbod 3 mnd bestaande bouw / 6 mnd nieuwbouw; na akkoord verlenging 3 resp. 6 mnd",
+    "bron": [
+     "https://www.robuusthypotheken.nl/uploads/robuust/files/Acceptatiegids-Robuust-juni-2026.pdf",
+     "https://www.robuusthypotheken.nl/uploads/robuust/files/Acceptatiegids-Robuust-Hypotheken-Januari-2026.pdf",
+     "https://www.robuusthypotheken.nl/home/consument/nieuwbouw-hypotheek"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Verlenging pas na ontvangst bindend kredietaanbod"
+   },
+   "boete": {
+    "waarde": "+ 10% van oorspronkelijke hoofdsom per kalenderjaar; met eigen geld onbeperkt boetevrij",
+    "bron": [
+     "https://www.robuusthypotheken.nl/extra-aflossen",
+     "https://www.robuusthypotheken.nl/home/consument/veelgestelde-vragen/hypotheek-extra-aflossen"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Met geleend geld max 10%; ook verzekeringsuitkering bij schade boetevrij"
+   },
+   "ltv": {
+    "waarde": "+ 10 risicoklassen; automatisch lagere klasse/rente na (extra) aflossing, zonder kosten",
+    "bron": [
+     "https://www.robuusthypotheken.nl/home/consument/automatische-renteaanpassing",
+     "https://www.robuusthypotheken.nl/kan-ik-een-nieuw-taxatierapport-of-woz-waarde-aanleveren-om-mijn-risicoklasse-te-verlagen"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Waardestijging via gevalideerd taxatierapport, pas per nieuwe rentevaste periode"
+   },
+   "bdduur": {
+    "waarde": "~ Bestaande bouw 9 mnd, nieuwbouw 24 mnd; verlenging met 6 mnd zonder rentevergoeding",
+    "bron": [
+     "https://www.robuusthypotheken.nl/home/consument/bouwdepot",
+     "https://www.robuusthypotheken.nl/uploads/robuust/files/Acceptatiegids-Robuust-juni-2026.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids noemt verlenging tot 2x 6 mnd; restant na einde wordt afgelost"
+   },
+   "bdrnt": {
+    "waarde": "+ Rentevergoeding gelijk aan hypotheekrente; vervalt bij verlenging",
+    "bron": [
+     "https://www.robuusthypotheken.nl/home/consument/bouwdepot",
+     "https://www.robuusthypotheken.nl/ontvang-ik-rente-over-mijn-bouwdepot"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "bddecl": {
+    "waarde": "+ Online declareren via Mijn Robuust; beoordeling binnen 6 werkdagen, uitbetaling binnen 1 werkdag",
+    "bron": [
+     "https://www.robuusthypotheken.nl/home/consument/veelgestelde-vragen/mijn-robuust-portaal-2",
+     "https://www.robuusthypotheken.nl/hoe-kan-ik-een-rekening-declareren"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Alleen facturen/bonnen, geen offertes; aan klant of aannemer"
+   },
+   "ebb": {
+    "waarde": "~ EBB mogelijk conform NHG/Tijdelijke regeling; tot 106% MW; maatregelen nog niet vastleggen",
+    "bron": [
+     "https://www.robuusthypotheken.nl/home/consument/verduurzamen",
+     "https://www.robuusthypotheken.nl/welke-maatregelen-vallen-onder-energiebesparende-voorzieningen-ebv-en-eenergiebespaarbudget-ebb"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Bedrag 15 mnd in depot"
+   },
+   "duur": {
+    "waarde": "~ Tot 106% MW lenen voor energiebesparende maatregelen; deel buiten inkomenstoets per label",
+    "bron": [
+     "https://www.robuusthypotheken.nl/home/consument/verduurzamen",
+     "https://www.robuusthypotheken.nl/duurzamer-wonen/"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Site noemt 'soms' rentekorting, niet specifiek voor Robuust bevestigd"
+   },
+   "verh": {
+    "waarde": "+ Meeneemregeling: rente en resterende rentevaste periode mee; nieuwe akte binnen 6 mnd",
+    "bron": [
+     "https://www.robuusthypotheken.nl/home/consument/verhuisregeling",
+     "https://www.robuusthypotheken.nl/nieuws/mark-de-bruijn-verduidelijkt-de-meeneemregeling"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Geen achterstand laatste 6 mnd; 30 dgn vooraf melden; extra bedrag tegen actuele rente; looptijd niet verlengbaar"
+   },
+   "ondh": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Geen beleid voor onderhandse verkoop met restschuld gevonden; wel: restschuldfinanciering bij nieuwe aanvraag niet toegestaan"
+   },
+   "oha": {
+    "waarde": "~ Ontslag hoofdelijkheid via aanvraagformulier; toets of achterblijver hypotheek kan dragen; geen administratiekosten",
+    "bron": [
+     "https://www.robuusthypotheken.nl/home/downloads",
+     "https://www.robuusthypotheken.nl/uploads/robuust/files/BeheerkaartRobuustV2.pdf",
+     "https://www.robuusthypotheken.nl/uploads/robuust/files/Acceptatiegids-Robuust-juni-2026.pdf"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Bij scheiding is advies in de regel verplicht"
+   },
+   "tweede": {
+    "waarde": "+ Onderhandse verhoging binnen (verhoogde) inschrijving zonder notaris; anders vervolghypotheek via notaris",
+    "bron": [
+     "https://www.robuusthypotheken.nl/home/consument/verhoogde-inschrijving",
+     "https://www.robuusthypotheken.nl/kan-ik-mijn-hypotheek-verhogen-om-te-verbouwen",
+     "https://www.robuusthypotheken.nl/uploads/robuust/files/Acceptatiegids-Robuust-juni-2026.pdf"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Nieuwe inkomenstoets en evt. taxatie; NHG-verhoging zonder herfinanciering max 20% van oorspronkelijk NHG-bedrag"
+   },
+   "ovbr": {
+    "waarde": "~ Max 24 mnd; onverkocht 90% verwachte verkoopprijs min schuld, verkocht volledige overwaarde min 2%",
+    "bron": [
+     "https://www.robuusthypotheken.nl/overbruggingshypotheek",
+     "https://www.robuusthypotheken.nl/uploads/robuust/files/Acceptatiegids-Robuust-juni-2026.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Aflossingsvrij en boetevrij; verlengen na 24 mnd alleen met akkoord + verkoopplan; courantheid max 12 mnd"
+   },
+   "avrij": {
+    "waarde": "~ Max 50% van marktwaarde aflossingsvrij, ook voor senioren niet meer",
+    "bron": [
+     "https://www.robuusthypotheken.nl/uploads/robuust/files/Acceptatiegids-Robuust-juni-2026.pdf",
+     "https://www.robuusthypotheken.nl/nieuws/aflossingsvrije-hypotheek-wat-zijn-de-risicos"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Rest annuïtair of lineair"
+   },
+   "rmid": {
+    "waarde": "+ Rentemiddeling mogelijk via Mijn Robuust, max 4 aanvragen per jaar; eenmalige kosten € 250",
+    "bron": [
+     "https://www.robuusthypotheken.nl/home/consument/rentemiddeling",
+     "https://www.robuusthypotheken.nl/uploads/robuust/files/BeheerkaartRobuustV2.pdf"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Advies niet verplicht"
+   },
+   "rverl": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Renteaanbod o.b.v. actuele risicoklasse gevonden, maar geen bron dat verlengingsrente gelijk is aan nieuwe-klantrente"
+   },
+   "rvoor": {
+    "waarde": "~ Minimaal 3 mnd voor einde rentevaste periode renteaanbod; zonder keuze zelfde periode gekozen",
+    "bron": [
+     "https://www.robuusthypotheken.nl/home/consument/rentevaste-periode",
+     "https://www.robuusthypotheken.nl/uploads/robuust/files/Algemene-voorwaarden-Robuust-Hypotheken-B.V.-September-2023.pdf"
+    ],
+    "brondatum": "2023-09",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "bbrk": {
+    "waarde": "~ AFM-methode: contante waarde rentenadeel, vergelijkingsrente = 'next best' rente op site, na vrije deel",
+    "bron": [
+     "https://www.robuusthypotheken.nl/uploads/robuust/files/Algemene-voorwaarden-Robuust-Hypotheken-B.V.-September-2023.pdf",
+     "https://www.robuusthypotheken.nl/home/consument/veelgestelde-vragen/hypotheek-extra-aflossen"
+    ],
+    "brondatum": "2023-09",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "elbl": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Geen labelafhankelijke rentekorting of -opslag bij Robuust gevonden"
+   },
+   "o106": {
+    "waarde": "! Lenen tot 106% kan, maar valt in hoogste risicoklasse (>100% MW) met bijbehorende rente",
+    "bron": [
+     "https://www.robuusthypotheken.nl/uploads/robuust/files/Acceptatiegids-Robuust-juni-2026.pdf",
+     "https://www.robuusthypotheken.nl/home/consument/verduurzamen"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Risicoklassen t/m 100% en >100% MW; geen vrijstelling voor verduurzaming gevonden"
+   },
+   "bprov": {
+    "waarde": "! Bestaande bouw kosteloos; nieuwbouw provisie per verlengde maand, alleen als marktrente hoger is",
+    "bron": [
+     "https://www.robuusthypotheken.nl/uploads/robuust/files/Acceptatiegids-Robuust-juni-2026.pdf",
+     "https://www.robuusthypotheken.nl/uploads/robuust/files/Acceptatiegids-Robuust-Hypotheken-Januari-2026.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "wkost": {
+    "waarde": "~ Renteaanpassing/middeling eenmalig € 250; uit elkaar zonder administratiekosten; advies soms verplicht",
+    "bron": [
+     "https://www.robuusthypotheken.nl/uploads/robuust/files/BeheerkaartRobuustV2.pdf",
+     "https://www.robuusthypotheken.nl/home/consument/hypotheek-aanpassen"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Volledige kostenlijst beheerkaart niet gezien"
+   },
+   "avlt": {
+    "waarde": "- Looptijd aflossingsvrij max 30 jaar, verlenging niet mogelijk",
+    "bron": [
+     "https://www.robuusthypotheken.nl/uploads/robuust/files/Acceptatiegids-Robuust-juni-2026.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Gids noemt elders verlenging leningdeel tot max 30 jr individueel"
+   },
+   "bproc": {
+    "waarde": "~ Vroeg contact met Bijzonder Beheer; uitgangspunt blijven wonen; BKR-melding na 3 mnd achterstand",
+    "bron": [
+     "https://www.robuusthypotheken.nl/ik-kan-mijn-hypotheek-niet-meer-betalen-wat-moet-ik-doen",
+     "https://www.robuusthypotheken.nl/uploads/robuust/files/Algemene-voorwaarden-Robuust-Hypotheken-B.V.-September-2023.pdf"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": ""
+   }
+  },
+  "gecontroleerd": "2026-10-04"
+ },
+ {
+  "naam": "SocioHypotheek",
+  "algemeen": {
+   "intermediairsite": "https://www.sociohypotheek.nl/adviseursportaal/downloads/",
+   "voorwaardenPdf": [
+    "https://www.sociohypotheek.nl/assets/files/renteberekening-uitleg-03072024.pdf"
+   ],
+   "acceptatiegids": [],
+   "opmerking": "Geen reguliere hypotheek maar verzilver-/overwaardehypotheek (initiatief van SocioCompany) voor senioren; uitsluitend via aangesloten adviseurs. Site noemt nu 57+ (oudere bronnen: 60+ resp. 65+). Rente 15 jaar vast, wordt jaarlijks vooraf bijgeschreven; eenmalige of jaarlijkse uitkering; restschuldgarantie. Algemene voorwaarden/productwijzer staan op adviseursportaal maar zijn niet ingezien. Veel criteria n.v.t. -> onbekend. Website niet fetchbaar; info via zoeksamenvattingen."
+  },
+  "criteria": {
+   "zzp": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Geen informatie over inkomenstoets voor ondernemers; product kent geen maandlasten (rente wordt bijgeschreven)"
+   },
+   "flex": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Geen informatie over inkomenstoets gevonden"
+   },
+   "persp": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Geen informatie gevonden"
+   },
+   "aow": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Doelgroep 57+; geen bron over toetsing pensioeninkomen gevonden"
+   },
+   "erfp": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Geen erfpachtbeleid gevonden"
+   },
+   "rvp": {
+    "waarde": "- Alleen 15 jaar rentevast (gelijk aan uitbetalingsfase)",
+    "bron": [
+     "https://www.sociohypotheek.nl/veelgestelde-vragen/",
+     "https://www.sociohypotheek.nl/assets/files/renteberekening-uitleg-03072024.pdf"
+    ],
+    "brondatum": "2024-07",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Verzilverproduct; geen andere periodes"
+   },
+   "dag": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Alleen dagrente bij passeren vóór eerste uitbetalingsdatum gevonden; geen dagrentegarantie bij rentedaling"
+   },
+   "geld": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Geldigheidsduur bindend aanbod niet gevonden"
+   },
+   "boete": {
+    "waarde": "~ Bij eerdere aflossing wordt vooraf bijgeschreven jaarrente verrekend; aan einde rentevaste periode boetevrij",
+    "bron": [
+     "https://www.sociohypotheek.nl/veelgestelde-vragen/",
+     "https://www.sociohypotheek.nl/assets/files/renteberekening-uitleg-03072024.pdf"
+    ],
+    "brondatum": "2024-07",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Rente wordt jaarlijks vooraf bijgeschreven. Of tijdens de rentevaste periode boeterente geldt is niet expliciet bevestigd"
+   },
+   "ltv": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Geen risicoklassen of LTV-afhankelijke rente gevonden"
+   },
+   "bdduur": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Verzilverhypotheek (overwaardehypotheek) zonder maandlasten; criterium niet of nauwelijks van toepassing en geen bron gevonden"
+   },
+   "bdrnt": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Verzilverhypotheek (overwaardehypotheek) zonder maandlasten; criterium niet of nauwelijks van toepassing en geen bron gevonden"
+   },
+   "bddecl": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Verzilverhypotheek (overwaardehypotheek) zonder maandlasten; criterium niet of nauwelijks van toepassing en geen bron gevonden"
+   },
+   "ebb": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Verzilverhypotheek (overwaardehypotheek) zonder maandlasten; criterium niet of nauwelijks van toepassing en geen bron gevonden"
+   },
+   "duur": {
+    "waarde": "~ Eenmalige uitkering inzetbaar voor verduurzaming; geen specifieke korting gevonden",
+    "bron": [
+     "https://www.sociohypotheek.nl/contact/blog/geld-besparen-door-uw-woning-te-verduurzamen/"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Blog van Socio"
+   },
+   "verh": {
+    "waarde": "- Niet mee te nemen naar nieuwe woning; afgelost bij verkoop/verhuizing",
+    "bron": [
+     "https://www.sociohypotheek.nl/veelgestelde-vragen/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Bij verhuizing opties met adviseur bespreken"
+   },
+   "ondh": {
+    "waarde": "+ Restschuldgarantie: bij verkoop met schuld boven woningwaarde scheldt Socio restschuld kwijt (onder voorwaarden)",
+    "bron": [
+     "https://www.sociohypotheek.nl/veelgestelde-vragen/",
+     "https://www.sociohypotheek.nl/contact/blog/overwaarde-op-je-huis-opeten-met-een-verzilverhypotheek-fijn-extraatje-of-risicovol/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Voorwaarden: taxatie elke 5 jaar en goed onderhoud; erven/bewoners 9 mnd voor verkoop"
+   },
+   "oha": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Geen ontslag-hoofdelijkheidsbeleid gevonden; aflossing pas als laatste kredietnemer de woning verlaat"
+   },
+   "tweede": {
+    "waarde": "- Uitbetalingsschema ligt 15 jaar vast en is tussentijds niet aan te passen",
+    "bron": [
+     "https://www.sociohypotheek.nl/rente/",
+     "https://www.sociohypotheek.nl/veelgestelde-vragen/"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Geen onderhandse verhoging gevonden"
+   },
+   "ovbr": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Verzilverhypotheek (overwaardehypotheek) zonder maandlasten; criterium niet of nauwelijks van toepassing en geen bron gevonden"
+   },
+   "avrij": {
+    "waarde": "! Geheel zonder aflossing: rente wordt bijgeschreven; max. bedrag afhankelijk van leeftijd en woningwaarde",
+    "bron": [
+     "https://www.sociohypotheek.nl/veelgestelde-vragen/",
+     "https://www.sociohypotheek.nl/overwaarde-verzilveren/"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Samenvatting noemt bij start max ca. 60% MW (rond 55% op 65 jr); niet hard bevestigd"
+   },
+   "rmid": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Geen rentemiddeling gevonden"
+   },
+   "rverl": {
+    "waarde": "+ Na 15 jaar verlenging tegen de actuele rente voor nieuwe klanten",
+    "bron": [
+     "https://www.sociohypotheek.nl/veelgestelde-vragen/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "rvoor": {
+    "waarde": "~ Ca. 3 mnd voor einde uitbetalingsschema brief met keuze verlengen of aflossen",
+    "bron": [
+     "https://www.sociohypotheek.nl/veelgestelde-vragen/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "bbrk": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Geen berekening boeterente gevonden; wel uitleg vooraf berekende rente"
+   },
+   "elbl": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Geen energielabelafhankelijke rente gevonden"
+   },
+   "o106": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Verzilverhypotheek (overwaardehypotheek) zonder maandlasten; criterium niet of nauwelijks van toepassing en geen bron gevonden"
+   },
+   "bprov": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Geen informatie over verlengen offerte"
+   },
+   "wkost": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": null,
+    "status": "onbekend",
+    "toelichting": "Alleen afsluitkosten gevonden (afsluitkosten, notaris, bouwkundig + modelwaarderapport, te betalen uit eerste uitkering); geen wijzigingskosten"
+   },
+   "avlt": {
+    "waarde": "+ Na 15 jaar verlengen met 15 jaar (zonder nieuwe uitkeringen) of boetevrij aflossen",
+    "bron": [
+     "https://www.sociohypotheek.nl/veelgestelde-vragen/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Geen aflosverplichting na 15 jaar"
+   },
+   "bproc": {
+    "waarde": "~ Geen periodieke betalingen aan Socio (rente bijgeschreven); klant moet woning onderhouden en lasten betalen",
+    "bron": [
+     "https://www.sociohypotheek.nl/veelgestelde-vragen/",
+     "https://www.sociohypotheek.nl/contact/blog/overwaarde-op-je-huis-opeten-met-een-verzilverhypotheek-fijn-extraatje-of-risicovol/"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Geen specifiek achterstandsbeleid gevonden"
+   }
+  },
+  "gecontroleerd": "2026-10-04"
+ }
+]

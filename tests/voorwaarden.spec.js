@@ -128,7 +128,7 @@ test.describe('voorwaardenvergelijker', () => {
     await page.goto(PAGINA + '#vergelijk=abn-amro,munt-hypotheken,hypotrust,handelsbanken,centraal-beheer&k=avrij');
     const namen = await page.locator('#ranking tbody tr .vn').allTextContents();
     expect(namen).toEqual(['Handelsbanken', 'Centraal Beheer', 'Munt Hypotheken', 'ABN AMRO', 'Hypotrust']);
-    await expect(page.locator('#ranking tbody tr').nth(1)).toContainText('(onzeker)');
+    await expect(page.locator('#ranking tbody tr').nth(1)).toContainText('(nog niet geverifieerd)');
     await expect(page.locator('#ranking tbody tr').last()).toContainText('nog in te vullen');
     await page.locator('#optLeeg').check();
     await expect(page.locator('#ranking tbody tr')).toHaveCount(4);

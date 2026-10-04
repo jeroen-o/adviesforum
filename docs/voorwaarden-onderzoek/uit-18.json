@@ -1,0 +1,690 @@
+[
+ {
+  "naam": "Knab",
+  "algemeen": {
+   "intermediairsite": "https://www.knab.nl/particulier/hypotheken/knab-hypotheek/adviseurs",
+   "voorwaardenPdf": [
+    "https://www.knab.nl/assets/35355cb5-f8a5-0105-c237-9bab7d11ff84/521d8320-00c4-4fd8-b25e-278faa649dbd/KnabHypotheek_Beheergids_13032026.pdf"
+   ],
+   "acceptatiegids": [
+    "https://www.knab.nl/assets/35355cb5-f8a5-0105-c237-9bab7d11ff84/a50a048d-3f34-4fd1-a920-6ada5d56cb7c/Knab%20Hypotheek_Acceptatiegids_07092026.pdf",
+    "https://www.knab.nl/assets/35355cb5-f8a5-0105-c237-9bab7d11ff84/892b3bcc-b0dd-430b-9b6e-359eba53ac11/KnabHypotheek_Acceptatiegids_24%20April%202026.pdf"
+   ],
+   "opmerking": "Knab (sinds 2024 onderdeel van BAWAG) verstrekt nog zelf woninghypotheken: de Knab Hypotheek, alleen via onafhankelijke adviseurs (dus niet alleen bemiddeling). Per april 2026 zijn Aegon-hypotheken (deels) overgedragen naar Knab als 'Knab Helder Hypotheek'; de acceptatiegids van 7-9-2026 geldt voor Knab en Knab Helder (Helder o.a. overbrugging max. 12 mnd). knab.nl geblokkeerd voor WebFetch; gegevens uit zoeksamenvattingen van knab.nl-pdf's (acceptatiegids sept/apr 2026, beheergids mrt 2026)."
+  },
+  "criteria": {
+   "zzp": {
+    "waarde": "~ Starter <36 mnd via 1-1-1-methode; inkomensverklaring ViiZ (alleen zonder NHG) of Zakelijk Inkomen",
+    "bron": [
+     "https://www.knab.nl/assets/35355cb5-f8a5-0105-c237-9bab7d11ff84/a50a048d-3f34-4fd1-a920-6ada5d56cb7c/Knab%20Hypotheek_Acceptatiegids_07092026.pdf",
+     "https://www.knab.nl/particulier/hypotheken/knab-hypotheek/ondernemers"
+    ],
+    "brondatum": "2026-09-07",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Ondernemer >=36 mnd: winst laatste 3 boekjaren; IKV max. 6 mnd oud bij bindend aanbod. Min. aantal jaren niet expliciet gevonden."
+   },
+   "flex": {
+    "waarde": "~ Flex/uitzend zonder intentie: gemiddelde laatste 3 kalenderjaren, max. inkomen laatste jaar of huidig",
+    "bron": [
+     "https://www.knab.nl/assets/35355cb5-f8a5-0105-c237-9bab7d11ff84/a50a048d-3f34-4fd1-a920-6ada5d56cb7c/Knab%20Hypotheek_Acceptatiegids_07092026.pdf"
+    ],
+    "brondatum": "2026-09-07",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Tijdelijk met intentieverklaring: huidig inkomen. Ook oproep-, nuluren- en payrollcontracten benoemd."
+   },
+   "persp": {
+    "waarde": "- Knab accepteert geen perspectiefverklaring",
+    "bron": [
+     "https://www.knab.nl/assets/35355cb5-f8a5-0105-c237-9bab7d11ff84/a50a048d-3f34-4fd1-a920-6ada5d56cb7c/Knab%20Hypotheek_Acceptatiegids_07092026.pdf"
+    ],
+    "brondatum": "2026-09-07",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids sept 2026."
+   },
+   "aow": {
+    "waarde": "~ AOW en pensioen (1e-3e pijler) volledig meegeteld voor de uitkeringsduur; enkele buitenlandse pensioenen ok",
+    "bron": [
+     "https://www.knab.nl/assets/35355cb5-f8a5-0105-c237-9bab7d11ff84/a50a048d-3f34-4fd1-a920-6ada5d56cb7c/Knab%20Hypotheek_Acceptatiegids_07092026.pdf"
+    ],
+    "brondatum": "2026-09-07",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Buitenlands pensioen uit BE/DE/LU/FR onder voorwaarden. Exacte toetsmethode vanaf AOW-datum niet in samenvatting."
+   },
+   "erfp": {
+    "waarde": "! Alleen traditionele erfpacht uitgegeven door overheid (Rijk, provincie, gemeente, waterschap); canon gaat van toetslast af",
+    "bron": [
+     "https://www.knab.nl/assets/35355cb5-f8a5-0105-c237-9bab7d11ff84/a50a048d-3f34-4fd1-a920-6ada5d56cb7c/Knab%20Hypotheek_Acceptatiegids_07092026.pdf"
+    ],
+    "brondatum": "2026-09-07",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Particuliere erfpacht dus niet geaccepteerd."
+   },
+   "rvp": {
+    "waarde": "! Diverse rentevaste perioden (zie site); geen nieuwe leningdelen met variabele rente",
+    "bron": [
+     "https://www.knab.nl/assets/35355cb5-f8a5-0105-c237-9bab7d11ff84/a50a048d-3f34-4fd1-a920-6ada5d56cb7c/Knab%20Hypotheek_Acceptatiegids_07092026.pdf",
+     "https://www.knab.nl/particulier/hypotheken/knab-hypotheek"
+    ],
+    "brondatum": "2026-09-07",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Exacte lijst perioden niet in bronsamenvatting; variabel niet toegestaan voor nieuwe leningdelen."
+   },
+   "dag": {
+    "waarde": "- Geen dagrente: rente bij passeren = offerterente (kan alleen hoger in verlengingsperiode)",
+    "bron": [
+     "https://www.knab.nl/assets/35355cb5-f8a5-0105-c237-9bab7d11ff84/892b3bcc-b0dd-430b-9b6e-359eba53ac11/KnabHypotheek_Acceptatiegids_24%20April%202026.pdf",
+     "https://www.knab.nl/assets/35355cb5-f8a5-0105-c237-9bab7d11ff84/a50a048d-3f34-4fd1-a920-6ada5d56cb7c/Knab%20Hypotheek_Acceptatiegids_07092026.pdf"
+    ],
+    "brondatum": "2026-09-07",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Geen daling tot passeren."
+   },
+   "geld": {
+    "waarde": "~ Renteaanbod 4 mnd geldig; eenmalig +2 mnd bestaande bouw, +8 mnd nieuwbouw",
+    "bron": [
+     "https://www.knab.nl/assets/35355cb5-f8a5-0105-c237-9bab7d11ff84/892b3bcc-b0dd-430b-9b6e-359eba53ac11/KnabHypotheek_Acceptatiegids_24%20April%202026.pdf",
+     "https://www.knab.nl/assets/35355cb5-f8a5-0105-c237-9bab7d11ff84/a50a048d-3f34-4fd1-a920-6ada5d56cb7c/Knab%20Hypotheek_Acceptatiegids_07092026.pdf"
+    ],
+    "brondatum": "2026-09-07",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Renteaanbod binnen 3 weken getekend retour; verlengingsvoorstel binnen oorspronkelijke termijn."
+   },
+   "boete": {
+    "waarde": "~ 10% per leningdeel van oorspronkelijke hoofdsom per kalenderjaar boetevrij",
+    "bron": [
+     "https://www.knab.nl/particulier/hypotheken/knab-hypotheek",
+     "https://www.knab.nl/assets/35355cb5-f8a5-0105-c237-9bab7d11ff84/521d8320-00c4-4fd8-b25e-278faa649dbd/KnabHypotheek_Beheergids_13032026.pdf"
+    ],
+    "brondatum": "2026-03-13",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Ook boetevrij bij verkoop+verhuizing, overlijden (binnen 1 jaar), laatste maand rentevast, depotaflossing."
+   },
+   "ltv": {
+    "waarde": "+ Automatisch lagere risicoklasse bij (extra) aflossing; bij waardestijging met (desktop)taxatie of WOZ",
+    "bron": [
+     "https://www.knab.nl/particulier/hypotheken/risicoklasse-hypotheek",
+     "https://www.knab.nl/assets/35355cb5-f8a5-0105-c237-9bab7d11ff84/521d8320-00c4-4fd8-b25e-278faa649dbd/KnabHypotheek_Beheergids_13032026.pdf"
+    ],
+    "brondatum": "2026-03-13",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Rente wijzigt per 1e van volgende/daaropvolgende maand; taxatiekosten voor klant."
+   },
+   "bdduur": {
+    "waarde": "~ Verbouw max. 12 mnd, nieuwbouw max. 24 mnd; eenmalig +12 mnd verlengbaar",
+    "bron": [
+     "https://www.knab.nl/assets/35355cb5-f8a5-0105-c237-9bab7d11ff84/892b3bcc-b0dd-430b-9b6e-359eba53ac11/KnabHypotheek_Acceptatiegids_24%20April%202026.pdf",
+     "https://www.knab.nl/assets/35355cb5-f8a5-0105-c237-9bab7d11ff84/a50a048d-3f34-4fd1-a920-6ada5d56cb7c/Knab%20Hypotheek_Acceptatiegids_07092026.pdf"
+    ],
+    "brondatum": "2026-09-07",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 2026."
+   },
+   "bdrnt": {
+    "waarde": "~ Rentevergoeding gelijk aan (gewogen) hypotheekrente; stopt na 12 mnd (verbouw) / 24 mnd (nieuwbouw)",
+    "bron": [
+     "https://www.knab.nl/assets/35355cb5-f8a5-0105-c237-9bab7d11ff84/892b3bcc-b0dd-430b-9b6e-359eba53ac11/KnabHypotheek_Acceptatiegids_24%20April%202026.pdf",
+     "https://www.knab.nl/assets/35355cb5-f8a5-0105-c237-9bab7d11ff84/a50a048d-3f34-4fd1-a920-6ada5d56cb7c/Knab%20Hypotheek_Acceptatiegids_07092026.pdf"
+    ],
+    "brondatum": "2026-09-07",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Verduurzamingsdepot: idem, stopt na 24 mnd."
+   },
+   "bddecl": {
+    "waarde": "~ Betaling direct aan aannemer of terugbetaling na voorschot; nota's tot 3 mnd vóór aanvraag declarabel",
+    "bron": [
+     "https://www.knab.nl/assets/35355cb5-f8a5-0105-c237-9bab7d11ff84/a50a048d-3f34-4fd1-a920-6ada5d56cb7c/Knab%20Hypotheek_Acceptatiegids_07092026.pdf"
+    ],
+    "brondatum": "2026-09-07",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Restant bij einde depot wordt afgelost. Doorlooptijd niet gevonden."
+   },
+   "ebb": {
+    "waarde": "~ Energiebespaarbudget mogelijk als de bestaande marktwaarde voldoende ruimte biedt",
+    "bron": [
+     "https://www.knab.nl/assets/35355cb5-f8a5-0105-c237-9bab7d11ff84/a50a048d-3f34-4fd1-a920-6ada5d56cb7c/Knab%20Hypotheek_Acceptatiegids_07092026.pdf"
+    ],
+    "brondatum": "2026-09-07",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Klant bepaalt zelf welke maatregelen en wanneer."
+   },
+   "duur": {
+    "waarde": "+ Duurzaam leningdeel met duurzaamheidskorting (NHG-voorwaarden) + automatische energielabelkorting",
+    "bron": [
+     "https://www.knab.nl/assets/35355cb5-f8a5-0105-c237-9bab7d11ff84/a50a048d-3f34-4fd1-a920-6ada5d56cb7c/Knab%20Hypotheek_Acceptatiegids_07092026.pdf",
+     "https://www.knab.nl/particulier/hypotheken/knab-hypotheek/ondernemers"
+    ],
+    "brondatum": "2026-09-07",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Verduurzamingsdepot min. EUR 5.000; geen minimum opname."
+   },
+   "verh": {
+    "waarde": "~ Rentecondities meenemen voor resterende rentevaste periode, keuze per leningdeel; melden 30 dagen vooraf",
+    "bron": [
+     "https://www.knab.nl/assets/35355cb5-f8a5-0105-c237-9bab7d11ff84/521d8320-00c4-4fd8-b25e-278faa649dbd/KnabHypotheek_Beheergids_13032026.pdf"
+    ],
+    "brondatum": "2026-03-13",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Bij eerst verkopen: nieuwe hypotheek binnen 6 mnd; labelkorting en duurzaam leningdeel niet mee te nemen."
+   },
+   "ondh": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen Knab-specifiek beleid voor onderhandse verkoop met restschuld gevonden (alleen algemene NHG-info)."
+   },
+   "oha": {
+    "waarde": "~ Alleen via adviseur; toets op Knab-normen, anders NHG-beheertoets of werkelijke lasten",
+    "bron": [
+     "https://www.knab.nl/assets/35355cb5-f8a5-0105-c237-9bab7d11ff84/521d8320-00c4-4fd8-b25e-278faa649dbd/KnabHypotheek_Beheergids_13032026.pdf"
+    ],
+    "brondatum": "2026-03-13",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Geen actuele achterstanden en geen achterstanden in laatste 6 mnd."
+   },
+   "tweede": {
+    "waarde": "~ Verhogen mogelijk als 1e inschrijving bij Knab ligt en geen andere geldverstrekker met hogere rang",
+    "bron": [
+     "https://www.knab.nl/assets/35355cb5-f8a5-0105-c237-9bab7d11ff84/521d8320-00c4-4fd8-b25e-278faa649dbd/KnabHypotheek_Beheergids_13032026.pdf"
+    ],
+    "brondatum": "2026-03-13",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Geen achterstanden in 6 mnd voor de aanvraag."
+   },
+   "ovbr": {
+    "waarde": "! Max. 24 mnd (Knab Helder: 12 mnd); tot 90% marktwaarde of 98% verkoopprijs minus restschuld",
+    "bron": [
+     "https://www.knab.nl/assets/35355cb5-f8a5-0105-c237-9bab7d11ff84/a50a048d-3f34-4fd1-a920-6ada5d56cb7c/Knab%20Hypotheek_Acceptatiegids_07092026.pdf"
+    ],
+    "brondatum": "2026-09-07",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Verlenging alleen na akkoord Knab en aangetoonde dubbele lasten uit eigen middelen."
+   },
+   "avrij": {
+    "waarde": "! Aflossingsvrij max. 50% marktwaarde en alleen met box 1-overgangsrecht",
+    "bron": [
+     "https://www.knab.nl/particulier/hypotheken/knab-hypotheek",
+     "https://www.knab.nl/assets/35355cb5-f8a5-0105-c237-9bab7d11ff84/521d8320-00c4-4fd8-b25e-278faa649dbd/KnabHypotheek_Beheergids_13032026.pdf",
+     "https://www.knab.nl/assets/35355cb5-f8a5-0105-c237-9bab7d11ff84/a50a048d-3f34-4fd1-a920-6ada5d56cb7c/Knab%20Hypotheek_Acceptatiegids_07092026.pdf"
+    ],
+    "brondatum": "2026-09-07",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Huidig noemt 50% WW; bron: max. 50% marktwaarde, alleen bij overgangsrecht. Bestaand aflosvrij bij verhuizing gerespecteerd binnen 50%."
+   },
+   "rmid": {
+    "waarde": "- Geen rentemiddeling; tussentijds rente aanpassen kan (niet in eerste 6 mnd) tegen vergoeding ineens",
+    "bron": [
+     "https://www.knab.nl/assets/35355cb5-f8a5-0105-c237-9bab7d11ff84/521d8320-00c4-4fd8-b25e-278faa649dbd/KnabHypotheek_Beheergids_13032026.pdf"
+    ],
+    "brondatum": "2026-03-13",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Vergoeding gelijk aan die bij vervroegde aflossing met geleend geld."
+   },
+   "rverl": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet gevonden of bestaande klanten bij renteverlenging dezelfde rente krijgen als nieuwe klanten."
+   },
+   "rvoor": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Termijn van het verlengingsvoorstel niet in Knab-bronnen gevonden."
+   },
+   "bbrk": {
+    "waarde": "~ Berekening volgens AFM-leidraad vervroegde aflossing; geen vergoeding als actuele Knab-rente hoger is",
+    "bron": [
+     "https://www.knab.nl/assets/35355cb5-f8a5-0105-c237-9bab7d11ff84/521d8320-00c4-4fd8-b25e-278faa649dbd/KnabHypotheek_Beheergids_13032026.pdf"
+    ],
+    "brondatum": "2026-03-13",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Vergelijkingsrente = actuele rente vergelijkbare Knab-leningen incl. kortingen."
+   },
+   "elbl": {
+    "waarde": "+ Energielabelkorting; beter label = hogere korting, automatisch na registratie in EP-Online",
+    "bron": [
+     "https://www.knab.nl/assets/35355cb5-f8a5-0105-c237-9bab7d11ff84/a50a048d-3f34-4fd1-a920-6ada5d56cb7c/Knab%20Hypotheek_Acceptatiegids_07092026.pdf",
+     "https://www.knab.nl/particulier/hypotheken/knab-hypotheek/ondernemers"
+    ],
+    "brondatum": "2026-09-07",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Opslag zonder label niet gevonden. Labelkorting niet mee bij verhuizing."
+   },
+   "o106": {
+    "waarde": "! Duurzaam leningdeel telt mee voor LTV en daarmee voor de risicoklasse van overige leningdelen",
+    "bron": [
+     "https://www.knab.nl/assets/35355cb5-f8a5-0105-c237-9bab7d11ff84/a50a048d-3f34-4fd1-a920-6ada5d56cb7c/Knab%20Hypotheek_Acceptatiegids_07092026.pdf"
+    ],
+    "brondatum": "2026-09-07",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Tot 106% (NHG) / 86% (zonder NHG) met energiebesparende maatregelen; geen vrijstelling van opslag gevonden."
+   },
+   "bprov": {
+    "waarde": "! Verlengingskosten per 30 dagen, alleen als dagrente bij passeren hoger is dan offerterente",
+    "bron": [
+     "https://www.knab.nl/assets/35355cb5-f8a5-0105-c237-9bab7d11ff84/892b3bcc-b0dd-430b-9b6e-359eba53ac11/KnabHypotheek_Acceptatiegids_24%20April%202026.pdf",
+     "https://www.knab.nl/assets/35355cb5-f8a5-0105-c237-9bab7d11ff84/a50a048d-3f34-4fd1-a920-6ada5d56cb7c/Knab%20Hypotheek_Acceptatiegids_07092026.pdf"
+    ],
+    "brondatum": "2026-09-07",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Pro rata over verlengingsdagen, exclusief overbruggingshypotheek."
+   },
+   "wkost": {
+    "waarde": "+ Geen administratiekosten voor beheerprocessen; bij bijzonder beheer mogelijk wel kosten",
+    "bron": [
+     "https://www.knab.nl/assets/35355cb5-f8a5-0105-c237-9bab7d11ff84/521d8320-00c4-4fd8-b25e-278faa649dbd/KnabHypotheek_Beheergids_13032026.pdf"
+    ],
+    "brondatum": "2026-03-13",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Adviseurskosten apart; taxatiekosten voor klant."
+   },
+   "avlt": {
+    "waarde": "- Looptijd niet te verlengen, behalve uitzonderingen tot max. 30 jaar vanaf start; aflosvrij niet verlengbaar",
+    "bron": [
+     "https://www.knab.nl/assets/35355cb5-f8a5-0105-c237-9bab7d11ff84/521d8320-00c4-4fd8-b25e-278faa649dbd/KnabHypotheek_Beheergids_13032026.pdf"
+    ],
+    "brondatum": "2026-03-13",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Bij OHA kan overgenomen deel opnieuw 360 mnd annuitair/lineair."
+   },
+   "bproc": {
+    "waarde": "~ Knab zoekt bij (dreigende) betalingsproblemen samen naar oplossing, o.a. betalingsregeling",
+    "bron": [
+     "https://www.knab.nl/particulier/hypotheken/knab-hypotheek",
+     "https://bieb.knab.nl/hypotheken/ik-kan-mijn-hypotheek-niet-meer-betalen-wat-nu"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Contact via hypotheken@knab.nl of hypotheekafdeling; geen gedetailleerd beleid gevonden."
+   }
+  },
+  "gecontroleerd": "2026-10-04"
+ },
+ {
+  "naam": "Lot Hypotheken",
+  "algemeen": {
+   "intermediairsite": "https://www.lothypotheken.nl/adviseur",
+   "voorwaardenPdf": [
+    "https://www.lothypotheken.nl/media/obyfxysm/lot-hypotheken-bv-algemene-voorwaarden-februari-2023.pdf",
+    "https://www.lothypotheken.nl/media/rq0fetas/productkaart-lot-nhg-hypotheken.pdf",
+    "https://www.lothypotheken.nl/media/aa3lpz5e/productkaart-lot-niet-nhg-hypotheken.pdf"
+   ],
+   "acceptatiegids": [
+    "https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf"
+   ],
+   "opmerking": "Label van NIBC Bank (gelanceerd 2020), alleen via onafhankelijke adviseurs. Voorwaarden niet overgenomen van NIBC Direct; alles uit eigen Lot-bronnen. lothypotheken.nl geblokkeerd voor WebFetch; gegevens uit zoeksamenvattingen van Hypotheekgids (versie jan 2026), productkaarten, algemene voorwaarden (feb 2023) en site-pagina's."
+  },
+  "criteria": {
+   "zzp": {
+    "waarde": "~ Min. 1 jaar ondernemer met NHG, 3 jaar zonder NHG; IKV van erkende rekenexpert (max. 6 mnd oud)",
+    "bron": [
+     "https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf",
+     "https://www.lothypotheken.nl/adviseur/hypotheken/verruimingen"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Rekenexperts: Raadhuys, Pentrax, Overviewz, Zakelijk Inkomen. Verruiming: 1-2-3-methode (gewogen gemiddelde 3 jaar)."
+   },
+   "flex": {
+    "waarde": "~ Flexibel inkomen: gemiddelde laatste 3 jaar, max. laatste jaar; lager huidig inkomen is leidend",
+    "bron": [
+     "https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Geldt o.a. voor seizoens-, uitzend-, oproep- en tijdelijk werk zonder intentie."
+   },
+   "persp": {
+    "waarde": "+ Perspectiefverklaring en Arbeidsmarktscan geaccepteerd, met en zonder NHG",
+    "bron": [
+     "https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf",
+     "https://www.lothypotheken.nl/media/rq0fetas/productkaart-lot-nhg-hypotheken.pdf",
+     "https://www.lothypotheken.nl/media/aa3lpz5e/productkaart-lot-niet-nhg-hypotheken.pdf"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Sinds juli 2024 ook zonder NHG. Verklaring max. 6 mnd oud + werkgeversverklaring."
+   },
+   "aow": {
+    "waarde": "~ AOW en NL pensioen volledig meegeteld; na AOW-leeftijd toets op werkelijke lasten",
+    "bron": [
+     "https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf",
+     "https://www.lothypotheken.nl/consument/hypotheek/senioren"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Seniorenpropositie (AOW binnen 10 jaar of bereikt): max. 80% marktwaarde."
+   },
+   "erfp": {
+    "waarde": "~ Met NHG alleen (semi-)overheidserfpacht; zonder NHG andere erfpacht met erfpachtopinie notaris/NivE",
+    "bron": [
+     "https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Canon gaat af van toegestane woonlasten."
+   },
+   "rvp": {
+    "waarde": "+ Rentevast 1 t/m 20 jaar, 25 jaar (alleen NHG) en 30 jaar",
+    "bron": [
+     "https://www.lothypotheken.nl/consument/blog/hoe-werkt-een-renteaannbod",
+     "https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Variabele rente niet genoemd."
+   },
+   "dag": {
+    "waarde": "- Geen dagrente: passeerrente is gelijk aan rente in het renteaanbod",
+    "bron": [
+     "https://www.lothypotheken.nl/media/rq0fetas/productkaart-lot-nhg-hypotheken.pdf",
+     "https://www.lothypotheken.nl/media/aa3lpz5e/productkaart-lot-niet-nhg-hypotheken.pdf",
+     "https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Daling tot passeren wordt niet doorgegeven volgens productkaart/gids."
+   },
+   "geld": {
+    "waarde": "! Renteaanbod 4 mnd (120 dagen) geldig; ID binnen 21 dagen; verlengen niet mogelijk",
+    "bron": [
+     "https://www.lothypotheken.nl/consument/blog/hoe-werkt-een-renteaannbod",
+     "https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Geen verlenging van geldigheidsduur."
+   },
+   "boete": {
+    "waarde": "+ 15% van oorspronkelijke hoofdsom per leningdeel per kalenderjaar boetevrij",
+    "bron": [
+     "https://www.lothypotheken.nl/consument/bestaande-klanten/extra-aflossen",
+     "https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf",
+     "https://www.lothypotheken.nl/media/obyfxysm/lot-hypotheken-bv-algemene-voorwaarden-februari-2023.pdf"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Ook geen vergoeding bij aflossing uit eigen middelen en bij verkoop/verhuizing."
+   },
+   "ltv": {
+    "waarde": "+ Tariefklasse maandelijks automatisch bepaald (ook bij extra aflossing); waardestijging met gevalideerde taxatie",
+    "bron": [
+     "https://www.lothypotheken.nl/consument/bestaande-klanten/extra-aflossen",
+     "https://www.lothypotheken.nl/media/obyfxysm/lot-hypotheken-bv-algemene-voorwaarden-februari-2023.pdf",
+     "https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Desktoptaxatie mogelijk (kosten EUR 95)."
+   },
+   "bdduur": {
+    "waarde": "~ Bouwdepot max. 24 mnd (nieuwbouw en verbouw); verlenging niet mogelijk",
+    "bron": [
+     "https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf",
+     "https://www.lothypotheken.nl/consument/bestaande-klanten/verbouwen"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Duurzaamheidsdepot ook 2 jaar."
+   },
+   "bdrnt": {
+    "waarde": "~ Rentevergoeding gelijk aan gewogen hypotheekrente, maandelijks verrekend met termijnbedrag",
+    "bron": [
+     "https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf",
+     "https://www.lothypotheken.nl/consument/bestaande-klanten/verbouwen"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "bddecl": {
+    "waarde": "+ Declareren alleen via MijnLot-app (foto nota); verwerking en uitbetaling binnen 5 werkdagen",
+    "bron": [
+     "https://www.lothypotheken.nl/consument/contact/app",
+     "https://www.lothypotheken.nl/consument/bestaande-klanten/verbouwen",
+     "https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Max. 2 werkdagen beoordeling + max. 3 werkdagen overboeking; restant wordt afgelost."
+   },
+   "ebb": {
+    "waarde": "~ Energiebespaarbudget mogelijk, geplaatst in duurzaamheidsdepot",
+    "bron": [
+     "https://www.lothypotheken.nl/consument/verduurzamen/",
+     "https://www.lothypotheken.nl/consument/verduurzamen/duurzaamheidskorting"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Vergoeding energiebespaaradvies tot EUR 200."
+   },
+   "duur": {
+    "waarde": "+ Duurzaamheidskorting bij label A of hoger (ook binnen 24 mnd te halen); duurzaamheidshypotheek tot EUR 35.000",
+    "bron": [
+     "https://www.lothypotheken.nl/consument/verduurzamen/duurzaamheidskorting",
+     "https://www.lothypotheken.nl/adviseur/verduurzamen/duurzaamheidskorting/voorwaarden",
+     "https://www.lothypotheken.nl/consument/verduurzamen/"
+    ],
+    "brondatum": "2025-02",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Korting geldt met en zonder NHG bij rentevastzetting vanaf 3-2-2025."
+   },
+   "verh": {
+    "waarde": "~ Meeneemregeling: rente en voorwaarden voor resterende looptijd mee; tot 6 mnd na aflossing",
+    "bron": [
+     "https://www.lothypotheken.nl/consument/bestaande-klanten/hypotheek-meenemen",
+     "https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Voor één nieuwe woning; extra lening tegen actuele rente."
+   },
+   "ondh": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen Lot-specifiek beleid voor onderhandse verkoop met restschuld gevonden (alleen algemene NHG-info)."
+   },
+   "oha": {
+    "waarde": "+ Vast stappenplan: acceptatietoets, werkelijke lasten, beheertoets stabiliteits- en NHG-norm; 1 werkdag",
+    "bron": [
+     "https://www.lothypotheken.nl/adviseur/beheer/oha"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Motivatieformulier bij beheertoets; administratiekosten mogelijk."
+   },
+   "tweede": {
+    "waarde": "~ Tweede hypotheek of onderhandse verhoging alleen als 1e hypotheek bij Lot; min. EUR 5.000",
+    "bron": [
+     "https://adviseur.lothypotheken.nl/consument/blog/hypotheek-verhogen",
+     "https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Geen achterstanden afgelopen 6 mnd; via Mijn Lot aan te vragen."
+   },
+   "ovbr": {
+    "waarde": "~ Max. 24 mnd; verkocht 100% verkoopprijs, onverkocht 95% marktwaarde, minus restschuld",
+    "bron": [
+     "https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf",
+     "https://www.lothypotheken.nl/consument/hypotheek/overbruggen"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Totaal incl. overbrugging max. EUR 1.250.000 volgens gids."
+   },
+   "avrij": {
+    "waarde": "~ Aflossingsvrij max. 50% marktwaarde, looptijd max. 360 mnd",
+    "bron": [
+     "https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf",
+     "https://www.lothypotheken.nl/media/aa3lpz5e/productkaart-lot-niet-nhg-hypotheken.pdf"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "rmid": {
+    "waarde": "! Tussentijds nieuwe rentevaste periode mogelijk tegen vergoeding (zichtbaar in MijnLot)",
+    "bron": [
+     "https://www.lothypotheken.nl/consument/bestaande-klanten/extra-aflossen",
+     "https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Niet bevestigd of vergoeding in de rente verwerkt kan worden (echte rentemiddeling)."
+   },
+   "rverl": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet gevonden of bestaande klanten bij renteverlenging dezelfde rente krijgen als nieuwe klanten."
+   },
+   "rvoor": {
+    "waarde": "~ Rentevoorstel min. 3 mnd voor einde rentevaste periode; keuze uiterlijk 14 dagen vooraf",
+    "bron": [
+     "https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "bbrk": {
+    "waarde": "~ Contante waarde van renteverschil met vergelijkingsrente (zelfde vorm, tariefklasse, resterende rentevast)",
+    "bron": [
+     "https://www.lothypotheken.nl/media/obyfxysm/lot-hypotheken-bv-algemene-voorwaarden-februari-2023.pdf",
+     "https://www.lothypotheken.nl/consument/bestaande-klanten/extra-aflossen"
+    ],
+    "brondatum": "2023-02",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Vergoeding ineens bij aflossing."
+   },
+   "elbl": {
+    "waarde": "+ Duurzaamheidskorting bij geregistreerd label A of hoger (NHG en niet-NHG)",
+    "bron": [
+     "https://www.lothypotheken.nl/consument/verduurzamen/duurzaamheidskorting",
+     "https://www.lothypotheken.nl/adviseur/verduurzamen/duurzaamheidskorting/voorwaarden"
+    ],
+    "brondatum": "2025-02",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Opslag zonder label niet gevonden."
+   },
+   "o106": {
+    "waarde": "+ Duurzaamheidshypotheek zonder risico-opslag en zonder invloed op tariefklasse overige delen",
+    "bron": [
+     "https://www.lothypotheken.nl/consument/verduurzamen/",
+     "https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Tot 106% marktwaarde; vaste rente over hele looptijd van dit leningdeel."
+   },
+   "bprov": {
+    "waarde": "- Renteaanbod is niet te verlengen",
+    "bron": [
+     "https://www.lothypotheken.nl/consument/blog/hoe-werkt-een-renteaannbod",
+     "https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Dus geen verlengingsoptie met provisie."
+   },
+   "wkost": {
+    "waarde": "! Administratiekosten mogelijk bij o.a. omzetten, tussentijdse renteaanpassing, verhoging en OHA",
+    "bron": [
+     "https://www.lothypotheken.nl/media/obyfxysm/lot-hypotheken-bv-algemene-voorwaarden-februari-2023.pdf"
+    ],
+    "brondatum": "2023-02",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Bedragen op lothypotheken.nl/hypotheek/kosten (niet ingezien)."
+   },
+   "avlt": {
+    "waarde": "- Looptijd niet te verlengen; aflosvrij deel aan einde looptijd ineens aflossen",
+    "bron": [
+     "https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf",
+     "https://www.lothypotheken.nl/media/obyfxysm/lot-hypotheken-bv-algemene-voorwaarden-februari-2023.pdf"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Herfinanciering opnieuw max. 30 jaar."
+   },
+   "bproc": {
+    "waarde": "~ Afdeling Wooncollect helpt bij achterstand; samenwerking met Geldfit voor gratis inzicht en advies",
+    "bron": [
+     "https://www.lothypotheken.nl/consument/contact"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": ""
+   }
+  },
+  "gecontroleerd": "2026-10-04"
+ }
+]
