@@ -1,0 +1,244 @@
+{
+ "gegenereerd": "2026-10-04",
+ "situaties": [
+  {
+   "id": "natura",
+   "naam": "Naturaverzekering (diensten)",
+   "vraag": "Is een naturaverzekering mogelijk, waarbij de uitvaart in diensten wordt verzorgd?",
+   "crit": [
+    "vorm"
+   ]
+  },
+  {
+   "id": "kapitaal",
+   "naam": "Kapitaalverzekering (geldbedrag)",
+   "vraag": "Is een kapitaalverzekering mogelijk met een geldbedrag dat vrij te besteden is?",
+   "crit": [
+    "vorm"
+   ]
+  },
+  {
+   "id": "oud",
+   "naam": "Instap op 70+",
+   "vraag": "Kan een klant van 70 jaar of ouder de verzekering nog afsluiten?",
+   "crit": [
+    "instap"
+   ]
+  },
+  {
+   "id": "geengezond",
+   "naam": "Zonder gezondheidsvragen",
+   "vraag": "Kan de verzekering worden afgesloten zonder gezondheidsvragen?",
+   "crit": [
+    "instap"
+   ]
+  },
+  {
+   "id": "index",
+   "naam": "Indexatie verzekerd bedrag",
+   "vraag": "Wordt het verzekerd bedrag (optioneel) geïndexeerd?",
+   "crit": [
+    "indexatie"
+   ]
+  },
+  {
+   "id": "buitenland",
+   "naam": "Overlijden in het buitenland",
+   "vraag": "Is er dekking of repatriëring bij overlijden in het buitenland?",
+   "crit": [
+    "buitenland"
+   ]
+  },
+  {
+   "id": "kinderen",
+   "naam": "Kinderen meeverzekerd",
+   "vraag": "Zijn kinderen gratis of automatisch meeverzekerd?",
+   "crit": [
+    "kinderen"
+   ]
+  },
+  {
+   "id": "koopsom",
+   "naam": "Koopsom of korte premieduur",
+   "vraag": "Is een eenmalige koopsom of een korte premieduur mogelijk?",
+   "crit": [
+    "premieduur"
+   ]
+  }
+ ],
+ "indeling": {
+  "Ardanta (a.s.r.)": {
+   "natura": {
+    "o": "ja",
+    "t": "Zorg Garant: standaardpakket diensten (natura)",
+    "c": "vorm"
+   },
+   "kapitaal": {
+    "o": "ja",
+    "t": "Geld Garant: uitkering aan begunstigde",
+    "c": "vorm"
+   },
+   "oud": {
+    "o": "voorwaarden",
+    "t": "Met premiebetaling tot 75 jaar; daarboven alleen koopsom via adviseur; twee gezondheidsvragen",
+    "c": "instap"
+   },
+   "geengezond": {
+    "o": "nee",
+    "t": "Twee gezondheidsvragen bij aanvraag",
+    "c": "instap"
+   },
+   "index": {
+    "o": "ja",
+    "t": "Zorg Garant: jaarlijkse indexatie; geldvarianten: optionele verhoging 25% per vijf jaar (met maximum)",
+    "c": "indexatie"
+   },
+   "buitenland": {
+    "o": "ja",
+    "t": "Vervoer naar Nederland gedekt (indien niet elders verzekerd); uitvaart in buitenland via geldverzekering",
+    "c": "buitenland"
+   },
+   "kinderen": {
+    "o": "ja",
+    "t": "Kinderen tot 21 jaar meeverzekerd tot hoogst verzekerd bedrag ouder; of dit premievrij is niet vermeld",
+    "c": "kinderen",
+    "tw": 1
+   },
+   "koopsom": {
+    "o": "ja",
+    "t": "Premieduur zelf te kiezen vanaf min. 5 jaar; koopsom via adviseur",
+    "c": "premieduur"
+   }
+  },
+  "DELA": {
+   "natura": {
+    "o": "ja",
+    "t": "UitvaartPlan in diensten (natura), met aanvullende geldverzekering",
+    "c": "vorm"
+   },
+   "kapitaal": {
+    "o": "ja",
+    "t": "UitvaartPlan in geld; ook geldvariant tegen koopsom",
+    "c": "vorm"
+   },
+   "oud": {
+    "o": "voorwaarden",
+    "t": "Instap max. 75 jaar bij levenslange premie (55 jaar bij tijdelijke premie); gezondheidsvragen",
+    "c": "instap"
+   },
+   "geengezond": {
+    "o": "nee",
+    "t": "Gezondheidsvragen bij aanvraag",
+    "c": "instap"
+   },
+   "index": {
+    "o": "ja",
+    "t": "Jaarlijkse aanpassing aan de ontwikkeling van uitvaartkosten",
+    "c": "indexatie"
+   },
+   "buitenland": {
+    "o": "voorwaarden",
+    "t": "Vervoer naar Nederland bij verblijf < 2 maanden en geen negatief reisadvies; uitvaart in buitenland: geldbedrag",
+    "c": "buitenland"
+   },
+   "kinderen": {
+    "o": "voorwaarden",
+    "t": "Kinderen tot 25 jaar meeverzekerd tegen kinderpremie; pasgeborene 60 dagen automatisch",
+    "c": "kinderen"
+   },
+   "koopsom": {
+    "o": "ja",
+    "t": "UitvaartPlan tegen koopsom mogelijk; premie ook tot het jaar waarin je 65 wordt",
+    "c": "premieduur"
+   }
+  },
+  "Monuta": {
+   "natura": {
+    "o": "voorwaarden",
+    "t": "Geen zuivere natura: combinatie van vrij te besteden bedrag plus begeleiding door Monuta-uitvaartverzorger",
+    "c": "vorm",
+    "tw": 1
+   },
+   "kapitaal": {
+    "o": "ja",
+    "t": "Geldverzekering met vrije keuze",
+    "c": "vorm"
+   },
+   "oud": {
+    "o": "voorwaarden",
+    "t": "Instap 18 tot 75 jaar; gezondheidsvragen bij aanvraag",
+    "c": "instap"
+   },
+   "geengezond": {
+    "o": "nee",
+    "t": "Gezondheidsvragen bij aanvraag",
+    "c": "instap"
+   },
+   "index": {
+    "o": "ja",
+    "t": "Jaarlijkse indexatie per 1 januari op basis van uitvaartkosten en geldwaarde",
+    "c": "indexatie"
+   },
+   "buitenland": {
+    "o": "voorwaarden",
+    "t": "Uitvaart in buitenland: geldbedrag op basis van nota's; repatriëring afhankelijk van polisvoorwaarden",
+    "c": "buitenland",
+    "tw": 1
+   },
+   "kinderen": {
+    "o": "ja",
+    "t": "Kinderen tot 18 jaar gratis meeverzekerd voor het bedrag van de best verzekerde ouder",
+    "c": "kinderen"
+   },
+   "koopsom": {
+    "o": "nee",
+    "t": "Alleen levenslange premiebetaling; koopsom niet meer af te sluiten sinds januari 2020",
+    "c": "premieduur"
+   }
+  },
+  "Univé": {
+   "natura": {
+    "o": "onbekend",
+    "t": "Geen eigen product; bemiddelt de Monuta-uitvaartverzekering (vormen niet apart vermeld)",
+    "c": "vorm",
+    "tw": 1
+   },
+   "kapitaal": {
+    "o": "onbekend",
+    "t": "Geen eigen product; bemiddelt de Monuta-uitvaartverzekering (vormen niet apart vermeld)",
+    "c": "vorm",
+    "tw": 1
+   },
+   "oud": {
+    "o": "onbekend",
+    "t": "Niet vermeld in de gecontroleerde voorwaarden",
+    "c": "instap"
+   },
+   "geengezond": {
+    "o": "onbekend",
+    "t": "Niet vermeld in de gecontroleerde voorwaarden",
+    "c": "instap"
+   },
+   "index": {
+    "o": "ja",
+    "t": "Indexatie is een keuze",
+    "c": "indexatie"
+   },
+   "buitenland": {
+    "o": "onbekend",
+    "t": "Niet vermeld in de gecontroleerde voorwaarden",
+    "c": "buitenland"
+   },
+   "kinderen": {
+    "o": "ja",
+    "t": "Kinderen tot 18 jaar gratis meeverzekerd op de polis van een ouder",
+    "c": "kinderen"
+   },
+   "koopsom": {
+    "o": "onbekend",
+    "t": "Niet vermeld in de gecontroleerde voorwaarden",
+    "c": "premieduur"
+   }
+  }
+ }
+}

@@ -1,0 +1,515 @@
+{
+ "gegenereerd": "2026-10-04",
+ "situaties": [
+  {
+   "id": "sparen",
+   "naam": "Lijfrentesparen",
+   "vraag": "Is lijfrentesparen op een bankspaarrekening mogelijk?",
+   "crit": [
+    "vormen"
+   ]
+  },
+  {
+   "id": "beleggen",
+   "naam": "Lijfrentebeleggen",
+   "vraag": "Is lijfrentebeleggen mogelijk?",
+   "crit": [
+    "vormen",
+    "beleggen"
+   ]
+  },
+  {
+   "id": "uitkering",
+   "naam": "Uitkeringsproduct",
+   "vraag": "Biedt de aanbieder een uitkeringsproduct (direct ingaande lijfrente) aan?",
+   "crit": [
+    "vormen",
+    "uitkering"
+   ]
+  },
+  {
+   "id": "zzp",
+   "naam": "Zzp'er of ondernemer",
+   "vraag": "Is het product geschikt voor zzp'ers en ondernemers?",
+   "crit": [
+    "doelgroep"
+   ]
+  },
+  {
+   "id": "overstap",
+   "naam": "Waardeoverdracht",
+   "vraag": "Is waardeoverdracht van of naar een andere aanbieder mogelijk?",
+   "crit": [
+    "overstap"
+   ]
+  },
+  {
+   "id": "erfgenamen",
+   "naam": "Saldo naar erfgenamen",
+   "vraag": "Gaat het saldo bij overlijden naar de erfgenamen?",
+   "crit": [
+    "overlijden"
+   ]
+  },
+  {
+   "id": "online",
+   "naam": "Online / execution only",
+   "vraag": "Kan het product online of execution only worden afgesloten en beheerd?",
+   "crit": [
+    "beheer"
+   ]
+  }
+ ],
+ "indeling": {
+  "a.s.r.": {
+   "sparen": {
+    "o": "nee",
+    "t": "Alleen lijfrentebeleggingsrekening 'Persoonlijk pensioen'; geen bankspaarrekening vermeld",
+    "c": "vormen"
+   },
+   "beleggen": {
+    "o": "ja",
+    "t": "Persoonlijk pensioen: keuze uit 4 fondsen (3 mixfondsen, 1 geldmarktfonds); geen lifecycle",
+    "c": "beleggen"
+   },
+   "uitkering": {
+    "o": "nee",
+    "t": "Geen nieuwe direct ingaande lijfrente meer; uitkering aankopen bij andere partij",
+    "c": "uitkering"
+   },
+   "zzp": {
+    "o": "ja",
+    "t": "Particulieren met pensioentekort, specifiek ook zzp'ers",
+    "c": "doelgroep"
+   },
+   "overstap": {
+    "o": "ja",
+    "t": "Lijfrentekapitaal (o.a. vrijkomende a.s.r.-lijfrenteverzekering) over te dragen naar Persoonlijk pensioen",
+    "c": "overstap"
+   },
+   "erfgenamen": {
+    "o": "ja",
+    "t": "Waarde gaat naar erfgenamen/begunstigden; zij kopen een uitkering aan of kopen af",
+    "c": "overlijden"
+   },
+   "online": {
+    "o": "ja",
+    "t": "Execution only: zelf online openen en beheren, zonder advies",
+    "c": "beheer"
+   }
+  },
+  "ABN AMRO": {
+   "sparen": {
+    "o": "ja",
+    "t": "Pensioenrekening: sparen, beleggen of beide",
+    "c": "vormen"
+   },
+   "beleggen": {
+    "o": "ja",
+    "t": "Modelportefeuilles met automatische risicoafbouw of vast risiconiveau",
+    "c": "beleggen"
+   },
+   "uitkering": {
+    "o": "voorwaarden",
+    "t": "Lijfrente uitkeren: alleen tijdelijke vaste bankuitkering met zelfgekozen looptijd",
+    "c": "uitkering"
+   },
+   "zzp": {
+    "o": "ja",
+    "t": "Particulieren en ondernemers/zzp'ers (aparte ondernemerspagina)",
+    "c": "doelgroep"
+   },
+   "overstap": {
+    "o": "ja",
+    "t": "Lijfrentekapitaal van elders inbrengen kan, voor opbouw en voor uitkering",
+    "c": "overstap"
+   },
+   "erfgenamen": {
+    "o": "ja",
+    "t": "Saldo gaat naar de erfgenamen; zij kopen een nabestaandenlijfrente",
+    "c": "overlijden"
+   },
+   "online": {
+    "o": "voorwaarden",
+    "t": "Zelf openen als ABN AMRO-klant; beleggen in een begeleide beleggingsvorm",
+    "c": "beheer",
+    "tw": 1
+   }
+  },
+  "Allianz": {
+   "sparen": {
+    "o": "nee",
+    "t": "Alleen uitkering: Allianz Direct Ingaande Lijfrente",
+    "c": "vormen"
+   },
+   "beleggen": {
+    "o": "nee",
+    "t": "Alleen uitkering: Allianz Direct Ingaande Lijfrente",
+    "c": "vormen"
+   },
+   "uitkering": {
+    "o": "ja",
+    "t": "Direct Ingaande Lijfrente tegen koopsom: tijdelijk of levenslang; hoog-laag mogelijk",
+    "c": "uitkering"
+   },
+   "zzp": {
+    "o": "onbekend",
+    "t": "Niet vermeld in de gecontroleerde voorwaarden",
+    "c": "doelgroep"
+   },
+   "overstap": {
+    "o": "nee",
+    "t": "Na ingang niet te stoppen of te wijzigen; inbreng van elders niet apart vermeld",
+    "c": "overstap",
+    "tw": 1
+   },
+   "erfgenamen": {
+    "o": "voorwaarden",
+    "t": "Zonder partnerdekking vervalt restant aan Allianz; partnerlijfrente en contraverzekering optioneel",
+    "c": "overlijden"
+   },
+   "online": {
+    "o": "voorwaarden",
+    "t": "Via financieel adviseur; zelf zonder advies kan met beperkte keuzes",
+    "c": "beheer"
+   }
+  },
+  "ASN Bank (de Volksbank)": {
+   "sparen": {
+    "o": "ja",
+    "t": "ASN Pensioen Opbouwen (sparen) en ASN Pensioendeposito",
+    "c": "vormen"
+   },
+   "beleggen": {
+    "o": "ja",
+    "t": "Duurzaam beleggen in 1 van 5 mixfondsen",
+    "c": "beleggen"
+   },
+   "uitkering": {
+    "o": "voorwaarden",
+    "t": "ASN Pensioen Uitkeringsrekening: maandelijks, tijdelijk, max. 35 jaar",
+    "c": "uitkering"
+   },
+   "zzp": {
+    "o": "ja",
+    "t": "Particulieren; aparte zakelijke pensioenpagina voor ondernemers",
+    "c": "doelgroep",
+    "tw": 1
+   },
+   "overstap": {
+    "o": "ja",
+    "t": "Inkomende kapitaaloverdracht van bank, verzekeraar of beleggingsinstelling; uitgaand altijd mogelijk",
+    "c": "overstap"
+   },
+   "erfgenamen": {
+    "o": "ja",
+    "t": "Opgebouwd bedrag naar nabestaanden; zij dragen het over naar een lijfrenteproduct",
+    "c": "overlijden"
+   },
+   "online": {
+    "o": "ja",
+    "t": "Zelf instellen en beheren via ASN-app of Online Bankieren",
+    "c": "beheer"
+   }
+  },
+  "Brand New Day": {
+   "sparen": {
+    "o": "ja",
+    "t": "Pensioenrekening-sparen (banksparen)",
+    "c": "vormen"
+   },
+   "beleggen": {
+    "o": "ja",
+    "t": "Pensioenrekening-beleggen: lifecycle met drie risicoprofielen",
+    "c": "beleggen"
+   },
+   "uitkering": {
+    "o": "voorwaarden",
+    "t": "Lijfrente-uitkering alleen tijdelijk (5 tot 30 jaar); levenslang via een verzekeraar",
+    "c": "uitkering"
+   },
+   "zzp": {
+    "o": "ja",
+    "t": "Particulieren, werknemers en zzp'ers",
+    "c": "doelgroep"
+   },
+   "overstap": {
+    "o": "ja",
+    "t": "Waardeoverdracht van elders naar de pensioenrekening kan",
+    "c": "overstap"
+   },
+   "erfgenamen": {
+    "o": "ja",
+    "t": "Volledig saldo naar erfgenamen; zij kopen binnen twee kalenderjaren een nabestaandenlijfrente",
+    "c": "overlijden"
+   },
+   "online": {
+    "o": "ja",
+    "t": "Online afsluiten en beheren; ook via adviseur",
+    "c": "beheer"
+   }
+  },
+  "Centraal Beheer (Achmea Bank)": {
+   "sparen": {
+    "o": "ja",
+    "t": "Extra Pensioen Opbouw: sparen, deposito en/of beleggen",
+    "c": "vormen"
+   },
+   "beleggen": {
+    "o": "ja",
+    "t": "Keuze uit 8 fondsen; zonder advies na kennis- en ervaringstoets",
+    "c": "beleggen"
+   },
+   "uitkering": {
+    "o": "ja",
+    "t": "Extra Pensioen Inkomen (bank, tijdelijk) en Garantie Inkomen Lijfrente (ook levenslang)",
+    "c": "uitkering"
+   },
+   "zzp": {
+    "o": "ja",
+    "t": "Particulieren met pensioentekort, ook zzp'ers",
+    "c": "doelgroep"
+   },
+   "overstap": {
+    "o": "ja",
+    "t": "Lijfrentekapitaal van elders inbrengen kan",
+    "c": "overstap"
+   },
+   "erfgenamen": {
+    "o": "ja",
+    "t": "Saldo gaat naar de erfgenamen; zij moeten het omzetten in een lijfrente",
+    "c": "overlijden"
+   },
+   "online": {
+    "o": "ja",
+    "t": "Online zelf afsluiten (execution only); ook via adviseur",
+    "c": "beheer"
+   }
+  },
+  "ING": {
+   "sparen": {
+    "o": "ja",
+    "t": "ING Pensioenspaarrekening (banksparen)",
+    "c": "vormen"
+   },
+   "beleggen": {
+    "o": "ja",
+    "t": "ING Pensioenbeleggen met automatische risicoafbouw (lifecycle)",
+    "c": "beleggen"
+   },
+   "uitkering": {
+    "o": "onbekend",
+    "t": "Alleen pensioensparen en -beleggen genoemd; uitkeringsproduct niet vermeld",
+    "c": "uitkering",
+    "tw": 1
+   },
+   "zzp": {
+    "o": "ja",
+    "t": "Particulieren en ondernemers/zzp'ers",
+    "c": "doelgroep"
+   },
+   "overstap": {
+    "o": "ja",
+    "t": "Kapitaaloverdracht naar ING mogelijk",
+    "c": "overstap"
+   },
+   "erfgenamen": {
+    "o": "ja",
+    "t": "100% van het saldo naar nabestaanden; afkoop of nabestaandenlijfrente",
+    "c": "overlijden"
+   },
+   "online": {
+    "o": "onbekend",
+    "t": "Niet vermeld in de gecontroleerde voorwaarden",
+    "c": "beheer"
+   }
+  },
+  "Knab": {
+   "sparen": {
+    "o": "ja",
+    "t": "Knab Pensioensparen",
+    "c": "vormen"
+   },
+   "beleggen": {
+    "o": "ja",
+    "t": "Knab Pensioenbeleggen: beheerd op risicoprofiel met automatische risicoafbouw",
+    "c": "beleggen"
+   },
+   "uitkering": {
+    "o": "nee",
+    "t": "Geen uitkeringsrekening; voor de uitkering overstappen naar andere aanbieder",
+    "c": "uitkering"
+   },
+   "zzp": {
+    "o": "ja",
+    "t": "Particulieren en zzp'ers; Knab-betaalrekening vereist",
+    "c": "doelgroep"
+   },
+   "overstap": {
+    "o": "ja",
+    "t": "Overstappen naar Knab is kosteloos; vorige aanbieder maakt het saldo over",
+    "c": "overstap"
+   },
+   "erfgenamen": {
+    "o": "ja",
+    "t": "Saldo gaat volledig naar de erfgenamen; zij openen een uitkeringsproduct",
+    "c": "overlijden"
+   },
+   "online": {
+    "o": "ja",
+    "t": "Zelf online openen via app of website, na vragen over kennis en ervaring",
+    "c": "beheer"
+   }
+  },
+  "Meesman": {
+   "sparen": {
+    "o": "nee",
+    "t": "Alleen beleggen: Meesman Pensioenrekening",
+    "c": "vormen"
+   },
+   "beleggen": {
+    "o": "ja",
+    "t": "Pensioenrekening: zelf samenstellen uit Meesman-indexfondsen",
+    "c": "beleggen"
+   },
+   "uitkering": {
+    "o": "nee",
+    "t": "Geen eigen uitkering; op einddatum elders een lijfrente-uitkering kopen",
+    "c": "uitkering"
+   },
+   "zzp": {
+    "o": "onbekend",
+    "t": "Niet vermeld in de gecontroleerde voorwaarden",
+    "c": "doelgroep"
+   },
+   "overstap": {
+    "o": "ja",
+    "t": "Uitgaande overdracht volgens Protocol Stroomlijning Kapitaaloverdrachten",
+    "c": "overstap"
+   },
+   "erfgenamen": {
+    "o": "ja",
+    "t": "Waarde gaat naar de erfgenamen; zij kopen een nabestaandenlijfrente",
+    "c": "overlijden"
+   },
+   "online": {
+    "o": "onbekend",
+    "t": "Niet vermeld in de gecontroleerde voorwaarden",
+    "c": "beheer"
+   }
+  },
+  "Nationale-Nederlanden": {
+   "sparen": {
+    "o": "ja",
+    "t": "Aanvullende PensioenOpbouw: banksparen, deposito en/of beheerd beleggen",
+    "c": "vormen"
+   },
+   "beleggen": {
+    "o": "ja",
+    "t": "Beheerd beleggen op beleggingsprofiel met lifecycle-risicoafbouw",
+    "c": "beleggen"
+   },
+   "uitkering": {
+    "o": "voorwaarden",
+    "t": "Aanvullende PensioenUitkering: alleen tijdelijk via bank, 5 tot 30 jaar",
+    "c": "uitkering"
+   },
+   "zzp": {
+    "o": "ja",
+    "t": "Particulieren, werknemers en zzp'ers",
+    "c": "doelgroep"
+   },
+   "overstap": {
+    "o": "ja",
+    "t": "Meerdere lijfrentekapitalen te bundelen in de uitkering; inbreng van elders niet apart vermeld",
+    "c": "overstap",
+    "tw": 1
+   },
+   "erfgenamen": {
+    "o": "ja",
+    "t": "Saldo gaat naar de erfgenamen; zij kopen een nabestaandenlijfrente",
+    "c": "overlijden"
+   },
+   "online": {
+    "o": "ja",
+    "t": "Online afsluiten en beheren via Mijn NN",
+    "c": "beheer"
+   }
+  },
+  "Rabobank": {
+   "sparen": {
+    "o": "ja",
+    "t": "Rabo ToekomstSparen (banksparen)",
+    "c": "vormen"
+   },
+   "beleggen": {
+    "o": "ja",
+    "t": "Rabo ToekomstBeleggen: beheerd per profiel met automatische risicoafbouw",
+    "c": "beleggen"
+   },
+   "uitkering": {
+    "o": "voorwaarden",
+    "t": "Rabo ToekomstUitkering: alleen tijdelijk, min. 5 jaar (vanaf AOW) of 20 jaar plus jaren tot AOW",
+    "c": "uitkering"
+   },
+   "zzp": {
+    "o": "ja",
+    "t": "Particulieren, IB-ondernemers/zzp'ers en DGA's",
+    "c": "doelgroep"
+   },
+   "overstap": {
+    "o": "ja",
+    "t": "Kapitaaloverdracht van andere bank/verzekeraar of eigen BV; bij ToekomstUitkering alleen bij opening",
+    "c": "overstap"
+   },
+   "erfgenamen": {
+    "o": "ja",
+    "t": "Tegoed gaat naar de erfgenamen; zij kiezen periodieke uitkering of afkoop",
+    "c": "overlijden"
+   },
+   "online": {
+    "o": "ja",
+    "t": "Online rekening openen en beheren",
+    "c": "beheer"
+   }
+  },
+  "Robeco (Evi)": {
+   "sparen": {
+    "o": "voorwaarden",
+    "t": "Alleen spaarrekening gekoppeld aan de lijfrentebeleggingsrekening; geen losse bankspaarrekening",
+    "c": "vormen",
+    "tw": 1
+   },
+   "beleggen": {
+    "o": "ja",
+    "t": "Evi Persoonlijk Pensioen: leeftijdsgebonden mix met automatische risicoafbouw",
+    "c": "beleggen"
+   },
+   "uitkering": {
+    "o": "voorwaarden",
+    "t": "Lijfrente-uitkering van Evi Persoonlijk Pensioen (bancair, dus tijdelijk)",
+    "c": "uitkering"
+   },
+   "zzp": {
+    "o": "onbekend",
+    "t": "Niet vermeld in de gecontroleerde voorwaarden",
+    "c": "doelgroep"
+   },
+   "overstap": {
+    "o": "ja",
+    "t": "Kapitaaloverdracht naar Evi mogelijk",
+    "c": "overstap"
+   },
+   "erfgenamen": {
+    "o": "onbekend",
+    "t": "Niet vermeld in de gecontroleerde voorwaarden",
+    "c": "overlijden"
+   },
+   "online": {
+    "o": "onbekend",
+    "t": "Niet vermeld in de gecontroleerde voorwaarden",
+    "c": "beheer"
+   }
+  }
+ }
+}

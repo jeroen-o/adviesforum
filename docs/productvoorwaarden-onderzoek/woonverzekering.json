@@ -1,0 +1,265 @@
+{
+ "product": "woonverzekering",
+ "titel": "Opstal- en inboedelverzekering",
+ "gecontroleerd": "2026-10-04",
+ "criteria": [
+  {
+   "id": "opstaldekking",
+   "naam": "Opstal: dekking",
+   "kort": "Dekkingsvorm voor de woning (uitgebreid/all risks), verzekeren op herbouwwaarde en garantie tegen onderverzekering.",
+   "waarom": "De geldverstrekker eist een opstalverzekering op herbouwwaarde; onderverzekering kan bij grote schade tot een te lage uitkering leiden."
+  },
+  {
+   "id": "inboedeldekking",
+   "naam": "Inboedel: dekking",
+   "kort": "Dekkingsvorm voor de inboedel (uitgebreid/all risks) en garantie tegen onderverzekering, bijvoorbeeld via een inboedelwaardemeter.",
+   "waarom": "Voorkomt dat de klant bij schade een deel zelf moet dragen omdat de inboedel te laag is verzekerd."
+  },
+  {
+   "id": "glas",
+   "naam": "Glas",
+   "kort": "Of glasschade standaard is meeverzekerd of als aparte module of optie wordt aangeboden.",
+   "waarom": "Glasbreuk is een veelvoorkomende schade; bij sommige verzekeraars is een aanvullende dekking nodig."
+  },
+  {
+   "id": "storm",
+   "naam": "Storm, neerslag en water",
+   "kort": "Dekking bij storm, (hevige) neerslag, lekkage, grondwater en overstroming door niet-primaire waterkeringen.",
+   "waarom": "Door klimaatverandering nemen water- en stormschades toe; de afbakening verschilt per verzekeraar."
+  },
+  {
+   "id": "aardbeving",
+   "naam": "Aardbeving en overstroming",
+   "kort": "Hoe aardbeving, overstroming door een primaire waterkering en andere klimaat-/natuurrampen zijn geregeld.",
+   "waarom": "Deze grote risico's zijn vaak uitgesloten; relevant voor klanten in risicogebieden (bijv. Groningen, buitendijks)."
+  },
+  {
+   "id": "duurzaam",
+   "naam": "Duurzame installaties en herstel",
+   "kort": "Dekking voor zonnepanelen, laadpaal, warmtepomp en thuisbatterij, en of schade duurzaam wordt hersteld.",
+   "waarom": "Steeds meer woningen hebben duurzame installaties; deze moeten zonder aparte melding goed verzekerd zijn."
+  },
+  {
+   "id": "leegstand",
+   "naam": "Leegstand, verhuur en verbouwing",
+   "kort": "Beperkingen van de dekking bij leegstand, (ver)huur en verbouwing van de woning.",
+   "waarom": "Relevant bij doorstromers met dubbele woonlasten, verhuur van (een deel van) de woning en verbouwing na aankoop."
+  },
+  {
+   "id": "eigenrisico",
+   "naam": "Eigen risico",
+   "kort": "Keuzemogelijkheden voor het eigen risico en vaste eigen risico's bij bepaalde schades (zoals storm).",
+   "waarom": "Bepaalt welk deel van een schade de klant zelf draagt."
+  },
+  {
+   "id": "hypotheek",
+   "naam": "Hypotheek en geldverstrekker",
+   "kort": "Afspraken met de geldverstrekker (clausule, verpanding, uitkering bij schade) en verzekeren vanaf de datum van passeren.",
+   "waarom": "De geldverstrekker eist dat de woning vanaf het passeren verzekerd is en wil bij grote schade betrokken worden."
+  }
+ ],
+ "aanbieders": [
+  {
+   "naam": "Nationale-Nederlanden",
+   "url": "https://www.nn.nl/Particulier/Verzekeren/Opstalverzekering.htm",
+   "domeinen": [
+    "nn.nl"
+   ],
+   "documenten": [
+    {
+     "titel": "Voorwaarden Woonverzekering UNWV-03",
+     "url": "https://www.nn.nl/Download/Polisvoorwaarden-Woonverzekering-versie-UNWV03.htm",
+     "versie": "UNWV-03 (1 mei 2024)"
+    },
+    {
+     "titel": "Opstalverzekering Leeswijzer",
+     "url": "https://www.nn.nl/Download/Verschillenoverzicht-Opstalverzekering-DL.htm",
+     "versie": "onbekend"
+    },
+    {
+     "titel": "Voorwaarden NN Hypotheek",
+     "url": "https://www.nn.nl/Download/Voorwaarden-NN-Hypotheek.htm",
+     "versie": "januari 2024"
+    }
+   ],
+   "criteria": {
+    "opstaldekking": {
+     "waarde": "+ Basis of All risk (onvoorziene schade); garantie tegen onderverzekering",
+     "bron": [
+      "https://www.nn.nl/Particulier/Verzekeren/Opstalverzekering.htm",
+      "https://www.nn.nl/Particulier/Verzekeren/Woonverzekeringen/Opstalverzekering/Dekkingen-Opstalverzekering.htm"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Bij gedekte schade vergoedt NN het volledige herbouwbedrag. All risk dekt naast de Basis-gebeurtenissen ook plotselinge, onvoorziene schade."
+    },
+    "inboedeldekking": {
+     "waarde": "~ Basis of All risk; garantie tegen onderverzekering, gekoppeld aan de inboedelwaardemeter",
+     "bron": [
+      "https://www.nn.nl/Particulier/Verzekeren/Inboedelverzekering.htm",
+      "https://www.nn.nl/Download/Verschillenoverzicht-NNReaal-Inboedelverzekering-Basis-Maatwerk-389840-2104.htm"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "laag",
+     "toelichting": "De voorwaarden in het verschillenoverzicht (NN/Reaal) noemen onderverzekeringsgarantie bij gebruik van de inboedelwaardemeter; de precieze grens in het huidige product is niet bevestigd."
+    },
+    "glas": {
+     "waarde": "~ Glas standaard gedekt bij o.a. brand, storm, hagel en inbraak; module Glas voor zelf veroorzaakte breuk",
+     "bron": [
+      "https://www.nn.nl/Particulier/Verzekeren/Opstalverzekering.htm"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Krassen en lekke dubbele beglazing (vocht tussen het glas) zijn niet verzekerd."
+    },
+    "storm": {
+     "waarde": "~ Hevige lokale neerslag, wolkbreuk en overstroming door niet-primaire waterkering gedekt; neerslag via open ramen/deuren niet",
+     "bron": [
+      "https://www.nn.nl/Download/Polisvoorwaarden-Woonverzekering-versie-UNWV03.htm"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Op basis van Voorwaarden Woonverzekering UNWV-03."
+    },
+    "aardbeving": {
+     "waarde": "- Aardbeving en overstroming door falen van een primaire waterkering of door zeewater uitgesloten",
+     "bron": [
+      "https://www.nn.nl/Download/Polisvoorwaarden-Woonverzekering-versie-UNWV03.htm"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Ook buitendijks overstroomd water en overstroming door overheidsingrijpen zijn uitgesloten."
+    },
+    "duurzaam": {
+     "waarde": "+ Laadpaal, zonnepanelen, (hybride) warmtepomp en thuisbatterij standaard meeverzekerd; duurzaam herstel via netwerk",
+     "bron": [
+      "https://www.nn.nl/Particulier/Verzekeren/Woonverzekeringen/Duurzame-kenmerken.htm",
+      "https://www.nn.nl/Inspiratie/zonnepanelen-verzekeren.htm"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Nieuw aangeschafte installaties zijn direct meeverzekerd zonder melding. Vergoeding gemiste opbrengst zonnepanelen € 2,50 per paneel per week (max. 26 weken). Herstelbedrijven met keurmerk GroenGedaan!."
+    },
+    "leegstand": {
+     "waarde": "~ Eerste zes maanden leegstand volledige dekking, maar diefstal/vandalisme alleen na inbraak",
+     "bron": [
+      "https://www.nn.nl/Download/Polisvoorwaarden-Woonverzekering-versie-UNWV03.htm",
+      "https://www.nn.nl/Inspiratie/verbouwen-woonverzekering.htm"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "laag",
+     "toelichting": "Bij verhuur gelden voorwaarden zoals een aantoonbare huurovereenkomst. Over verbouwing heeft NN een inspiratiepagina; afspraken in de voorwaarden niet nader bevestigd."
+    },
+    "eigenrisico": {
+     "waarde": "~ Keuze € 0 of € 100 per gebeurtenis; bij stormschade altijd € 250",
+     "bron": [
+      "https://www.nn.nl/Particulier/Verzekeren/Woonverzekeringen/Opstalverzekering/Dekkingen-Opstalverzekering.htm"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Volgens zoekresultaat geldt € 250 bij extreem weer (storm en/of hevige lokale neerslag)."
+    },
+    "hypotheek": {
+     "waarde": "~ NN-hypotheekvoorwaarden eisen opstalverzekering tegen herbouwwaarde; bij schade informeert NN de geldverstrekker",
+     "bron": [
+      "https://www.nn.nl/Download/Voorwaarden-NN-Hypotheek.htm"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "laag",
+     "toelichting": "Afspraken over uitkering aan geldverstrekker of klant volgens afspraken tussen verzekeraars en banken."
+    }
+   }
+  },
+  {
+   "naam": "a.s.r.",
+   "url": "https://www.asr.nl/verzekeringen/woonhuisverzekering/asr",
+   "domeinen": [
+    "asr.nl"
+   ],
+   "documenten": [
+    {
+     "titel": "Verzekeringskaarten a.s.r.",
+     "url": "https://www.asr.nl/verzekeringskaarten",
+     "versie": "onbekend"
+    }
+   ],
+   "criteria": {
+    "opstaldekking": {
+     "waarde": "+ Basis of Allrisk (via adviseur Basis of Top); onbeperkte garantie tegen onderverzekering",
+     "bron": [
+      "https://www.asr.nl/verzekeringen/woonhuisverzekering/asr",
+      "https://www.asr.nl/verzekeringen/opstalverzekering"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "a.s.r. vergoedt herstel of herbouw van een vergelijkbare woning op dezelfde plek. Woonhuisverzekering via adviseur."
+    },
+    "inboedeldekking": {
+     "waarde": "+ Verzekering zonder verzekerd bedrag, dus geen onderverzekering; Allrisk optioneel",
+     "bron": [
+      "https://www.asr.nl/verzekeringen/inboedelverzekering/asr"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Geen inboedelwaardemeter nodig."
+    },
+    "glas": {
+     "waarde": "~ Glas als optie",
+     "bron": [
+      "https://www.asr.nl/verzekeringen/woonhuisverzekering/asr"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Bij optie Glas geen dekking voor schade tijdens bouw, verbouw of aanbouw."
+    },
+    "storm": {
+     "waarde": "+ Storm, neerslag, lekkage en overstroming standaard gedekt; grondwater uitgesloten",
+     "bron": [
+      "https://www.asr.nl/verzekeringen/woonhuisverzekering/asr"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "aardbeving": {
+     "waarde": "- Aardbeving en overstroming door falen primaire waterkering of buitendijks wonen uitgesloten",
+     "bron": [
+      "https://www.asr.nl/verzekeringen/woonhuisverzekering/asr"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "duurzaam": {
+     "waarde": "+ Zonnepanelen standaard meeverzekerd; duurzaam herstel; optie Extra duurzaam na schade",
+     "bron": [
+      "https://www.asr.nl/verzekeringen/woonhuisverzekering/zonnepanelen-verzekeren",
+      "https://www.asr.nl/verzekeringen/duurzaam-herstel",
+      "https://www.asr.nl/verzekeringen/woonhuisverzekering/asr"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Herstelbedrijven Schadegarant en Glasgarant met keurmerk Erkend Duurzaam of GroenGedaan!."
+    },
+    "leegstand": {
+     "waarde": "~ Keuzedekking Verhuur; geen dekking voor vandalisme/diefstal door huurder of verhuur aan meerdere huishoudens",
+     "bron": [
+      "https://www.asr.nl/verzekeringen/woonhuisverzekering/asr"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Specifieke leegstandsregels niet gevonden."
+    },
+    "eigenrisico": {
+     "waarde": "~ Keuze € 0, € 100 of € 500",
+     "bron": [
+      "https://www.asr.nl/verzekeringen/woonhuisverzekering/asr"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": ""
+    }
+   }
+  }
+ ]
+}
