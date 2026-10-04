@@ -9,7 +9,7 @@ Stand: 4 oktober 2026. Niets hiervan is al op voorwaarden-vergelijker.html verwe
   - goed: ABN AMRO, Attens, Aegon; deels: ING, Obvion, RegioBank, BLG Wonen;
   - niet onderzocht: Rabobank, SNS, Munt, Florius, Nationale-Nederlanden, Tulp, Lloyds (opnieuw doen);
   - in-8 t/m in-21 nog niet gestart.
-- `rapport-ronde1.html`: leesbaar overzicht (noindex).
+- Het leesbare rapport van ronde 1 is als bestand aan de gebruiker gestuurd (niet in de repo, om de paginatests schoon te houden).
 
 ## Vervolg (nieuwe sessie)
 De zoeklimiet staat via `.claude/settings.json` op 5000 per sessie (`CLAUDE_CODE_MAX_WEB_SEARCHES_PER_SESSION`).
