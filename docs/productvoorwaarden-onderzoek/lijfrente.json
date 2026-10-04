@@ -1,0 +1,1127 @@
+{
+ "product": "lijfrente",
+ "titel": "Lijfrente en oudedagsvoorziening",
+ "gecontroleerd": "2026-10-04",
+ "criteria": [
+  {
+   "id": "vormen",
+   "naam": "Productvormen",
+   "kort": "Sparen, beleggen, verzekering, uitkering",
+   "waarom": "Bepaalt of je opbouwt met spaarrente, beleggingsrendement of een verzekeraarsgarantie, en of je ook de uitkering bij dezelfde partij kunt regelen."
+  },
+  {
+   "id": "opbouw",
+   "naam": "Inleg en fiscale ruimte",
+   "kort": "Eenmalig/periodiek, minimum, jaar- en reserveringsruimte",
+   "waarom": "Fiscale aftrek is begrensd door jaar- en reserveringsruimte; flexibele inleg zonder hoog minimum past bij wisselend inkomen."
+  },
+  {
+   "id": "beleggen",
+   "naam": "Beleggingsmogelijkheden",
+   "kort": "Fondskeuze en lifecycle",
+   "waarom": "Een lifecycle bouwt het risico automatisch af richting pensioendatum; vrije fondskeuze vraagt meer kennis."
+  },
+  {
+   "id": "overlijden",
+   "naam": "Overlijden tijdens opbouw",
+   "kort": "Saldo naar erfgenamen of naar de verzekeraar",
+   "waarom": "Bij banksparen valt het saldo in de nalatenschap; bij sommige verzekeringen vervalt het zonder overlijdensdekking aan de verzekeraar."
+  },
+  {
+   "id": "uitkering",
+   "naam": "Uitkeringsvormen",
+   "kort": "Tijdelijk, levenslang, hoog-laag; ingangsmoment",
+   "waarom": "Een bank keert alleen tijdelijk uit; voor levenslang inkomen heb je een verzekeraar nodig. Het ingangsmoment moet passen bij AOW en pensioen."
+  },
+  {
+   "id": "overstap",
+   "naam": "Overstappen en afkoop",
+   "kort": "Waardeoverdracht in/uit, afkoop",
+   "waarom": "Fiscaal geruisloos overstappen houdt je vrij om van aanbieder te wisselen; afkoop is alleen beperkt toegestaan."
+  },
+  {
+   "id": "doelgroep",
+   "naam": "Doelgroep",
+   "kort": "Particulier, zzp, DGA",
+   "waarom": "Niet elk product staat open voor iedereen; sommige richten zich op zelfstandigen of werken alleen via een adviseur."
+  },
+  {
+   "id": "beheer",
+   "naam": "Afsluiten en beheer",
+   "kort": "Online, via adviseur of execution only",
+   "waarom": "Bepaalt of je zelf online kunt afsluiten en wijzigen of een adviseur nodig hebt."
+  }
+ ],
+ "aanbieders": [
+  {
+   "naam": "Brand New Day",
+   "url": "https://new.brandnewday.nl/pensioenrekening-beleggen/",
+   "domeinen": [
+    "brandnewday.nl",
+    "new.brandnewday.nl"
+   ],
+   "documenten": [
+    {
+     "titel": "Productvoorwaarden Pensioenrekening-beleggen",
+     "url": "https://new.brandnewday.nl/documenten/productvoorwaarden-pensioenrekening-beleggen.pdf/",
+     "versie": "onbekend"
+    },
+    {
+     "titel": "Productvoorwaarden Pensioenrekening-sparen",
+     "url": "https://new.brandnewday.nl/documenten/productvoorwaarden-pensioenrekening-sparen.pdf/",
+     "versie": "onbekend"
+    },
+    {
+     "titel": "Productvoorwaarden Lijfrente-uitkering",
+     "url": "https://new.brandnewday.nl/documenten/productvoorwaarden-lijfrente-uitkering.pdf/",
+     "versie": "onbekend"
+    },
+    {
+     "titel": "Productvoorwaarden Nabestaandenlijfrente",
+     "url": "https://new.brandnewday.nl/documenten/productvoorwaarden-nabestaandenlijfrente.pdf/",
+     "versie": "onbekend"
+    },
+    {
+     "titel": "Productkaart adviseurs Lijfrente-uitkering",
+     "url": "https://new.brandnewday.nl/documenten/productkaart-adviseurs-lijfrente-uitkering.pdf/",
+     "versie": "onbekend"
+    }
+   ],
+   "criteria": {
+    "vormen": {
+     "waarde": "+ Pensioenrekening-sparen en Pensioenrekening-beleggen (banksparen), plus Lijfrente-uitkering en Nabestaandenlijfrente",
+     "bron": [
+      "https://new.brandnewday.nl/pensioenrekening-beleggen/",
+      "https://new.brandnewday.nl/pensioenrekening-sparen/",
+      "https://new.brandnewday.nl/lijfrente-uitkering/",
+      "https://new.brandnewday.nl/nabestaandenlijfrente/"
+     ],
+     "brondatum": "2025-2026",
+     "zekerheid": "hoog",
+     "toelichting": "Alle producten zijn bankproducten van Brand New Day Bank; geen lijfrenteverzekering."
+    },
+    "opbouw": {
+     "waarde": "+ Eenmalig en periodiek; geen minimum (automatische incasso min. € 50); inleg tot jaarruimte plus reserveringsruimte",
+     "bron": [
+      "https://new.brandnewday.nl/pensioenrekening-beleggen/",
+      "https://new.brandnewday.nl/documenten/productvoorwaarden-pensioenrekening-beleggen.pdf/"
+     ],
+     "brondatum": "2025-2026",
+     "zekerheid": "middel",
+     "toelichting": "Het in de bron genoemde maximum voor reserveringsruimte is een jaarlijks fiscaal bedrag."
+    },
+    "beleggen": {
+     "waarde": "+ Lifecycle met drie risicoprofielen (defensief, neutraal, offensief) voor vaste of variabele uitkering",
+     "bron": [
+      "https://www.brandnewday.nl/beleggingsbeleid.html"
+     ],
+     "brondatum": "onbekend",
+     "zekerheid": "middel",
+     "toelichting": "Jaarlijks worden aandelen afgebouwd ten gunste van obligaties; bij een vaste uitkering is een jaar voor pensioendatum alles in obligaties belegd."
+    },
+    "overlijden": {
+     "waarde": "+ Volledig saldo gaat naar de erfgenamen; zij kopen binnen twee kalenderjaren een nabestaandenlijfrente",
+     "bron": [
+      "https://new.brandnewday.nl/veelgestelde-vragen/klant-worden-bij-brand-new-day/wat-gebeurt-er-met-het-geld-op-mijn-rekening-als-ik-overlijd/",
+      "https://new.brandnewday.nl/nabestaandenlijfrente/"
+     ],
+     "brondatum": "2025-2026",
+     "zekerheid": "hoog",
+     "toelichting": "Bij meerdere erfgenamen wordt het saldo naar rato verdeeld. Ineens opnemen kan ook, met fiscale gevolgen. Nabestaandenlijfrente vanaf € 4.000 en min. € 100 per termijn."
+    },
+    "uitkering": {
+     "waarde": "~ Alleen tijdelijke uitkering, 5 tot 30 jaar; levenslang via een verzekeraar",
+     "bron": [
+      "https://new.brandnewday.nl/lijfrente-uitkering/",
+      "https://new.brandnewday.nl/veelgestelde-vragen/lijfrente-uitkering/wat-is-een-tijdelijke-oudedagslijfrente/",
+      "https://new.brandnewday.nl/adviseur/adviseur-particulier/lijfrente-uitkering-uitstellen/"
+     ],
+     "brondatum": "2025-2026",
+     "zekerheid": "hoog",
+     "toelichting": "Termijn maandelijks, per kwartaal, halfjaar of jaar. Minimaal kapitaal € 4.000 (inclusief over te dragen potten elders). Uitstel van de eerste uitkering mogelijk; aankoop uiterlijk 31 december van het vijfde jaar na de AOW-leeftijd."
+    },
+    "overstap": {
+     "waarde": "~ Waardeoverdracht van elders naar de pensioenrekening kan; vrij opnemen kan niet",
+     "bron": [
+      "https://new.brandnewday.nl/lijfrente-uitkering/",
+      "https://new.brandnewday.nl/pensioenrekening-sparen/"
+     ],
+     "brondatum": "2025-2026",
+     "zekerheid": "middel",
+     "toelichting": "Bij pensioendatum is ineens opnemen niet toegestaan: er moet een uitkering worden aangekocht."
+    },
+    "doelgroep": {
+     "waarde": "+ Particulieren, werknemers en zzp'ers",
+     "bron": [
+      "https://www.brandnewday.nl/zzp.html",
+      "https://new.brandnewday.nl/welke-rekening-past-bij-mij/"
+     ],
+     "brondatum": "onbekend",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "beheer": {
+     "waarde": "+ Online afsluiten en beheren; ook via adviseur (aparte adviseursproductkaarten)",
+     "bron": [
+      "https://new.brandnewday.nl/pensioenrekening-beleggen/",
+      "https://new.brandnewday.nl/documenten/productkaart-adviseurs-lijfrente-uitkering.pdf/"
+     ],
+     "brondatum": "2025-2026",
+     "zekerheid": "middel",
+     "toelichting": ""
+    }
+   }
+  },
+  {
+   "naam": "Centraal Beheer (Achmea Bank)",
+   "url": "https://www.centraalbeheer.nl/lijfrente",
+   "domeinen": [
+    "centraalbeheer.nl"
+   ],
+   "documenten": [
+    {
+     "titel": "Extra Pensioen Opbouw – Kenmerken",
+     "url": "https://www.centraalbeheer.nl/-/media/files/prive/lijfrente/kenmerken-extra-pensioen-opbouw.pdf",
+     "versie": "onbekend"
+    },
+    {
+     "titel": "Extra Pensioen Inkomen – Informatie en voorwaarden",
+     "url": "https://www.centraalbeheer.nl/-/media/files/prive/lijfrente/informatie-en-voorwaarden-extra-pensioen-inkomen.pdf",
+     "versie": "onbekend"
+    },
+    {
+     "titel": "Voorwaarden en documenten Extra Pensioen Opbouw",
+     "url": "https://www.centraalbeheer.nl/lijfrente/extra-pensioen-opbouw/voorwaarden-en-documenten",
+     "versie": "onbekend"
+    }
+   ],
+   "criteria": {
+    "vormen": {
+     "waarde": "+ Extra Pensioen Opbouw (sparen, deposito en/of beleggen), Extra Pensioen Inkomen (bankuitkering) en Garantie Inkomen Lijfrente (verzekering)",
+     "bron": [
+      "https://www.centraalbeheer.nl/lijfrente",
+      "https://www.centraalbeheer.nl/lijfrente/extra-pensioen-opbouw",
+      "https://www.centraalbeheer.nl/lijfrente/extra-pensioen-inkomen",
+      "https://www.centraalbeheer.nl/lijfrente/garantie-inkomen"
+     ],
+     "brondatum": "2025-2026",
+     "zekerheid": "hoog",
+     "toelichting": "Extra Pensioen Opbouw en Extra Pensioen Inkomen zijn bankproducten van Achmea Bank; Garantie Inkomen Lijfrente is een verzekering. Wisselen tussen sparen en beleggen kan."
+    },
+    "opbouw": {
+     "waarde": "+ Vrije inleg zonder minimum (deposito min. € 500); tot de jaarruimte",
+     "bron": [
+      "https://www.centraalbeheer.nl/lijfrente/extra-pensioen-opbouw/meer-informatie",
+      "https://www.centraalbeheer.nl/lijfrente/extra-pensioen-opbouw/geld-inleggen"
+     ],
+     "brondatum": "2025-2026",
+     "zekerheid": "hoog",
+     "toelichting": "Zelf bepalen wanneer en hoeveel je inlegt."
+    },
+    "beleggen": {
+     "waarde": "~ Keuze uit 8 beleggingsfondsen met elk een eigen risiconiveau; beleggen zonder advies na kennis- en ervaringstoets",
+     "bron": [
+      "https://www.centraalbeheer.nl/lijfrente/extra-pensioen-opbouw",
+      "https://www.centraalbeheer.nl/lijfrente/extra-pensioen-opbouw/meer-informatie"
+     ],
+     "brondatum": "2025-2026",
+     "zekerheid": "hoog",
+     "toelichting": "Geen lifecycle genoemd in de bron."
+    },
+    "overlijden": {
+     "waarde": "+ Saldo gaat naar de erfgenamen; zij moeten het omzetten in een lijfrente",
+     "bron": [
+      "https://www.centraalbeheer.nl/lijfrente/extra-pensioen-opbouw/meer-informatie"
+     ],
+     "brondatum": "2025-2026",
+     "zekerheid": "hoog",
+     "toelichting": "De Belastingdienst bepaalt de minimale looptijd van de uitkeringen aan erfgenamen."
+    },
+    "uitkering": {
+     "waarde": "+ Bank: tijdelijk (Extra Pensioen Inkomen); verzekering: tijdelijk of levenslang, ook overbruggingslijfrente en op twee levens (Garantie Inkomen Lijfrente)",
+     "bron": [
+      "https://www.centraalbeheer.nl/lijfrente/extra-pensioen-inkomen/meer-informatie",
+      "https://www.centraalbeheer.nl/lijfrente/garantie-inkomen",
+      "https://www.centraalbeheer.nl/voor-adviseurs/garantie-inkomen-lijfrente",
+      "https://www.centraalbeheer.nl/lijfrente/overbruggingslijfrente"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Extra Pensioen Inkomen: ingang voor of na AOW; minimaal 5 jaar bij ingang na AOW-datum, anders minimaal 20 jaar; termijn per maand, kwartaal, halfjaar of jaar. Garantie Inkomen Lijfrente: vaste uitkering; tweede verzekerde moet de fiscale partner zijn; minimale inleg gelijk aan de fiscale afkoopgrens (2026). Bij overlijden zonder partnerdekking stopt de uitkering. Hoog-laag wordt alleen bij Garantie Inkomen Pensioen genoemd, niet bij de lijfrente."
+    },
+    "overstap": {
+     "waarde": "~ Lijfrentekapitaal van elders inbrengen kan; afkoop alleen bij klein saldo",
+     "bron": [
+      "https://www.centraalbeheer.nl/lijfrente/kapitaaloverdracht",
+      "https://www.centraalbeheer.nl/lijfrente/extra-pensioen-opbouw/meer-informatie"
+     ],
+     "brondatum": "2025-2026",
+     "zekerheid": "hoog",
+     "toelichting": "Ineens opnemen mag als alle lijfrentesaldi bij Achmea Bank samen onder de fiscale afkoopgrens blijven; anders loonheffing en mogelijk revisierente."
+    },
+    "doelgroep": {
+     "waarde": "+ Particulieren met pensioentekort, ook zzp'ers",
+     "bron": [
+      "https://www.centraalbeheer.nl/lijfrente/extra-pensioen-opbouw/pensioen-voor-zzpers"
+     ],
+     "brondatum": "2025-2026",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "beheer": {
+     "waarde": "+ Online zelf afsluiten (execution only); ook via adviseur",
+     "bron": [
+      "https://www.centraalbeheer.nl/lijfrente/extra-pensioen-opbouw",
+      "https://www.centraalbeheer.nl/voor-adviseurs/extra-pensioen-opbouw",
+      "https://www.centraalbeheer.nl/voor-adviseurs/garantie-inkomen-lijfrente"
+     ],
+     "brondatum": "2025-2026",
+     "zekerheid": "hoog",
+     "toelichting": "Adviseurs berekenen Garantie Inkomen Lijfrente via de consumentensite en mailen de aanvraag naar Centraal Beheer."
+    }
+   }
+  },
+  {
+   "naam": "a.s.r.",
+   "url": "https://www.asr.nl/beleggen/persoonlijk-pensioen",
+   "domeinen": [
+    "asr.nl"
+   ],
+   "documenten": [],
+   "criteria": {
+    "vormen": {
+     "waarde": "~ Lijfrentebeleggingsrekening 'Persoonlijk pensioen' (a.s.r. vooruit); geen nieuwe direct ingaande lijfrente meer",
+     "bron": [
+      "https://www.asr.nl/beleggen/persoonlijk-pensioen",
+      "https://www.asr.nl/verzekeringen/levensverzekeringen/direct-ingaande-lijfrente"
+     ],
+     "brondatum": "2025-2026",
+     "zekerheid": "hoog",
+     "toelichting": "De direct ingaande lijfrente (verzekering) is niet meer af te sluiten; bestaande polissen lopen door. Voor werkgevers is er daarnaast Werknemersbeleggen lijfrente."
+    },
+    "opbouw": {
+     "waarde": "+ Zelf bepalen wanneer je inlegt; minimale inleg € 50; aftrekbaar binnen de fiscale ruimte",
+     "bron": [
+      "https://www.asr.nl/beleggen/persoonlijk-pensioen",
+      "https://www.asr.nl/beleggen/persoonlijk-pensioen/zzp"
+     ],
+     "brondatum": "2025-2026",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "beleggen": {
+     "waarde": "~ Keuze uit 4 fondsen (3 mixfondsen en 1 geldmarktfonds); geen automatische lifecycle",
+     "bron": [
+      "https://www.asr.nl/beleggen/persoonlijk-pensioen/fondsen",
+      "https://www.asr.nl/beleggen/lijfrente-komt-vrij/lijfrente-beleggen"
+     ],
+     "brondatum": "2025-2026",
+     "zekerheid": "hoog",
+     "toelichting": "Risico afbouwen doe je zelf door naar een minder risicovol fonds te switchen."
+    },
+    "overlijden": {
+     "waarde": "+ Waarde gaat naar de erfgenamen/begunstigden; zij kopen een uitkering aan of kopen af",
+     "bron": [
+      "https://www.asr.nl/beleggen/persoonlijk-pensioen/arbeidsongeschiktheid-en-overlijden"
+     ],
+     "brondatum": "2025-2026",
+     "zekerheid": "hoog",
+     "toelichting": "Bij afkoop door nabestaanden geldt revisierente, behalve onder de fiscale afkoopgrens per begunstigde."
+    },
+    "uitkering": {
+     "waarde": "- Op pensioendatum koop je met het kapitaal een uitkering aan; a.s.r. verkoopt geen nieuwe direct ingaande lijfrente",
+     "bron": [
+      "https://www.asr.nl/beleggen/persoonlijk-pensioen/je-lijfrente-komt-vrij",
+      "https://www.asr.nl/verzekeringen/levensverzekeringen/direct-ingaande-lijfrente"
+     ],
+     "brondatum": "2025-2026",
+     "zekerheid": "middel",
+     "toelichting": "a.s.r. legt uit dat de uitkering levenslang (verzekeraar) of tijdelijk kan zijn, en dat uitstel kan tot 5 jaar na de AOW-leeftijd."
+    },
+    "overstap": {
+     "waarde": "+ Lijfrentekapitaal (o.a. vrijkomende a.s.r.-lijfrenteverzekering) is over te dragen naar Persoonlijk pensioen",
+     "bron": [
+      "https://www.asr.nl/beleggen/lijfrente-komt-vrij/lijfrente-beleggen",
+      "https://www.asr.nl/beleggen/persoonlijk-pensioen/je-lijfrente-komt-vrij"
+     ],
+     "brondatum": "2025-2026",
+     "zekerheid": "hoog",
+     "toelichting": "Bij waardeoverdracht wordt direct belegd in het gekozen fonds."
+    },
+    "doelgroep": {
+     "waarde": "+ Particulieren met pensioentekort, specifiek ook zzp'ers",
+     "bron": [
+      "https://www.asr.nl/beleggen/persoonlijk-pensioen/zzp"
+     ],
+     "brondatum": "2025-2026",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "beheer": {
+     "waarde": "+ Execution only: zelf online openen en beheren, zonder advies",
+     "bron": [
+      "https://www.asr.nl/beleggen/persoonlijk-pensioen",
+      "https://www.asr.nl/beleggen"
+     ],
+     "brondatum": "2025-2026",
+     "zekerheid": "hoog",
+     "toelichting": "Rekening openen via a.s.r.-account; binnen een dag inloglink."
+    }
+   }
+  },
+  {
+   "naam": "Nationale-Nederlanden",
+   "url": "https://www.nn.nl/Particulier/Pensioen/Extra-pensioen-opbouwen/Aanvullende-PensioenOpbouw.htm",
+   "domeinen": [
+    "nn.nl"
+   ],
+   "documenten": [
+    {
+     "titel": "Productvoorwaarden Aanvullende PensioenOpbouw",
+     "url": "https://www.nn.nl/Download/Productvoorwaarden-Aanvullend-PensioenSparen-1-8.htm",
+     "versie": "1083-40.2606 (juni 2026)"
+    },
+    {
+     "titel": "Productvoorwaarden Aanvullende PensioenUitkering",
+     "url": "https://www.nn.nl/Download/Productvoorwaarden-Aanvullende-PensioenUitkering-1.htm",
+     "versie": "1084-40.2509 (september 2025)"
+    },
+    {
+     "titel": "Beleggingsbeleid Aanvullende PensioenOpbouw beheerd beleggen",
+     "url": "https://www.nn.nl/Download/Beleggingsbeleid-Aanvullende-PensioenOpbouw-beheerd-beleggen.htm",
+     "versie": "onbekend"
+    },
+    {
+     "titel": "Fiscale en juridische regels APO en APU",
+     "url": "https://www.nn.nl/Download/Fiscale-en-juridische-regels-APO-en-APU.htm",
+     "versie": "onbekend"
+    }
+   ],
+   "criteria": {
+    "vormen": {
+     "waarde": "+ Aanvullende PensioenOpbouw (banksparen, deposito en/of beheerd beleggen) en Aanvullende PensioenUitkering (bank)",
+     "bron": [
+      "https://www.nn.nl/Particulier/Pensioen/Extra-pensioen-opbouwen/Aanvullende-PensioenOpbouw.htm",
+      "https://www.nn.nl/Particulier/Pensioen/Bijna-met-pensioen/Aanvullende-PensioenUitkering.htm"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Zelf de verdeling sparen/beleggen kiezen. Voor lijfrente biedt NN alleen bankproducten aan."
+    },
+    "opbouw": {
+     "waarde": "+ Op elk moment extra inleggen; aftrekbaar binnen jaar- en reserveringsruimte",
+     "bron": [
+      "https://www.nn.nl/Particulier/Pensioen/Extra-pensioen-opbouwen/Aanvullende-PensioenOpbouw.htm"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "beleggen": {
+     "waarde": "+ Beheerd beleggen op basis van een beleggingsprofiel, met lifecycle-risicoafbouw richting de doeldatum",
+     "bron": [
+      "https://www.nn.nl/Particulier/Pensioen/Extra-pensioen-opbouwen/Aanvullende-PensioenOpbouw.htm",
+      "https://www.nn.nl/Download/Beleggingsbeleid-Aanvullende-PensioenOpbouw-beheerd-beleggen.htm"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Beleggen apart aanvragen in Mijn NN, na profielvragen."
+    },
+    "overlijden": {
+     "waarde": "+ Saldo gaat naar de erfgenamen; zij kopen binnen de wettelijke termijn een nabestaandenlijfrente",
+     "bron": [
+      "https://www.nn.nl/Particulier/Pensioen/Extra-pensioen-opbouwen/Aanvullende-PensioenOpbouw.htm"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Beslistermijn loopt tot 31 december van het tweede jaar na overlijden."
+    },
+    "uitkering": {
+     "waarde": "~ Alleen tijdelijk via bank: 5 tot 30 jaar; ingang zelf te kiezen",
+     "bron": [
+      "https://www.nn.nl/Particulier/Pensioen/Bijna-met-pensioen/Aanvullende-PensioenUitkering.htm",
+      "https://nn.nl/Particulier/Pensioen/Bijna-met-pensioen/Aanvullende-PensioenUitkering/Belasting-en-looptijd.htm",
+      "https://www.nn.nl/Particulier/Pensioen/Bijna-met-pensioen/Je-lijfrente-komt-vrij/Verschillen-tussen-banksparen-en-verzekeren.htm"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Vóór AOW-jaar minimaal 20 jaar plus de jaren tot AOW; vanaf AOW-jaar minimaal 5 jaar (5-20 jaar met fiscaal jaarmaximum). Min. € 100 bruto per termijn. Ingang binnen 12 maanden na openen, uiterlijk eind vijfde jaar na AOW-jaar. Levenslang kan alleen bij een verzekeraar."
+    },
+    "overstap": {
+     "waarde": "+ Meerdere lijfrentekapitalen te bundelen in de uitkering; uitstellen tot 5 jaar na AOW-leeftijd via doorsparen",
+     "bron": [
+      "https://www.nn.nl/Particulier/Pensioen/Bijna-met-pensioen/Aanvullende-PensioenUitkering.htm",
+      "https://www.nn.nl/Particulier/Pensioen/Extra-pensioen-opbouwen/Lijfrente-uitstellen.htm"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Over te dragen bedragen moeten binnen 12 maanden na aanvraag binnen zijn."
+    },
+    "doelgroep": {
+     "waarde": "+ Particulieren, werknemers en zzp'ers",
+     "bron": [
+      "https://www.nn.nl/Particulier/Pensioen/Extra-pensioen-opbouwen/Aanvullende-PensioenOpbouw-ZZP.htm",
+      "https://www.nn.nl/Particulier/Pensioen/Extra-pensioen-opbouwen/Aanvullende-PensioenOpbouw-werknemer.htm"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "beheer": {
+     "waarde": "+ Online afsluiten en beheren via Mijn NN",
+     "bron": [
+      "https://www.nn.nl/Particulier/Pensioen/Extra-pensioen-opbouwen/Aanvullende-PensioenOpbouw.htm"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": ""
+    }
+   }
+  },
+  {
+   "naam": "Allianz",
+   "url": "https://www.allianz.nl/particulier/pensioen/bijna-met-pensioen/dil.html",
+   "domeinen": [
+    "allianz.nl"
+   ],
+   "documenten": [
+    {
+     "titel": "Allianz Direct Ingaande Lijfrente – verzekeringsvoorwaarden LY1805, TD1512",
+     "url": "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/l/L3112.pdf",
+     "versie": "LY1805 / TD1512"
+    },
+    {
+     "titel": "Productinformatie Direct Ingaande Lijfrente ('Voor wie is het product bedoeld?')",
+     "url": "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/3/300008-301.pdf",
+     "versie": "onbekend"
+    }
+   ],
+   "criteria": {
+    "vormen": {
+     "waarde": "~ Alleen uitkering: Allianz Direct Ingaande Lijfrente (verzekering, tegen koopsom)",
+     "bron": [
+      "https://www.allianz.nl/particulier/pensioen/bijna-met-pensioen/dil.html"
+     ],
+     "brondatum": "onbekend",
+     "zekerheid": "middel",
+     "toelichting": "Geen opbouwproduct voor lijfrente gevonden. Voor pensioenkapitaal heeft Allianz aparte producten (Direct Ingaand Zeker/Keuze Pensioen)."
+    },
+    "overlijden": {
+     "waarde": "~ Zonder partnerdekking stopt de uitkering bij overlijden en vervalt het restant aan Allianz; partnerlijfrente en contraverzekering optioneel",
+     "bron": [
+      "https://www.allianz.nl/particulier/pensioen/bijna-met-pensioen/dil.html",
+      "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/3/300008-301.pdf"
+     ],
+     "brondatum": "onbekend",
+     "zekerheid": "middel",
+     "toelichting": "Partnerlijfrente bijvoorbeeld 70% van de eigen uitkering; dat verlaagt de eigen uitkering. Dit criterium beschrijft overlijden tijdens de uitkering, niet tijdens opbouw."
+    },
+    "uitkering": {
+     "waarde": "+ Tijdelijk (bv. 5 of 10 jaar) of levenslang; vaste bruto-uitkering; hoog-laag mogelijk",
+     "bron": [
+      "https://www.allianz.nl/particulier/pensioen/bijna-met-pensioen/dil.html",
+      "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/3/300008-301.pdf"
+     ],
+     "brondatum": "onbekend",
+     "zekerheid": "middel",
+     "toelichting": "Uitkering per maand, kwartaal, halfjaar of jaar. Na ingang kunnen verzekerde, ingangs- en einddatum en hoogte niet meer worden gewijzigd."
+    },
+    "overstap": {
+     "waarde": "- Na ingang niet te stoppen of te wijzigen",
+     "bron": [
+      "https://www.allianz.nl/particulier/pensioen/bijna-met-pensioen/dil.html"
+     ],
+     "brondatum": "onbekend",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "beheer": {
+     "waarde": "~ Via financieel adviseur; zelf zonder advies kan met beperkte keuzes",
+     "bron": [
+      "https://www.allianz.nl/particulier/pensioen/bijna-met-pensioen/dil.html",
+      "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/3/300008-301.pdf"
+     ],
+     "brondatum": "onbekend",
+     "zekerheid": "middel",
+     "toelichting": "Aanvraag met formulier, kopie ID en gegevens over de loonheffing."
+    }
+   }
+  },
+  {
+   "naam": "ABN AMRO",
+   "url": "https://www.abnamro.nl/nl/prive/pensioen/pensioen-opbouwen/pensioenrekening/index.html",
+   "domeinen": [
+    "abnamro.nl"
+   ],
+   "documenten": [],
+   "criteria": {
+    "vormen": {
+     "waarde": "+ Pensioenrekening (sparen, beleggen of beide) en Lijfrente uitkeren (bankuitkering)",
+     "bron": [
+      "https://www.abnamro.nl/nl/prive/pensioen/pensioen-opbouwen/pensioenrekening/index.html",
+      "https://www.abnamro.nl/nl/prive/pensioen/pensioen-opbouwen/pensioenrekening/pensioensparen-en-pensioenbeleggen.html",
+      "https://www.abnamro.nl/nl/prive/pensioen/pensioen-uitkeren/lijfrente-uitkeren/index.html"
+     ],
+     "brondatum": "2025-2026",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "opbouw": {
+     "waarde": "+ Zelf bepalen wanneer en hoeveel je inlegt; aftrek binnen jaar- en reserveringsruimte",
+     "bron": [
+      "https://www.abnamro.nl/nl/prive/pensioen/pensioen-opbouwen/pensioenrekening/index.html",
+      "https://www.abnamro.nl/nl/prive/pensioen/mijn-pensioenrekening/inleggen.html"
+     ],
+     "brondatum": "2025-2026",
+     "zekerheid": "middel",
+     "toelichting": "Geen minimum gevonden in de bron."
+    },
+    "beleggen": {
+     "waarde": "+ Modelportefeuilles: automatische risicoafbouw richting AOW-leeftijd, of zelf een vast risiconiveau kiezen",
+     "bron": [
+      "https://www.abnamro.nl/nl/prive/pensioen/pensioen-opbouwen/pensioenrekening/pensioenbeleggen/beleggingsvormen.html",
+      "https://www.abnamro.nl/nl/prive/pensioen/pensioen-opbouwen/pensioenrekening/pensioenbeleggen/index.html"
+     ],
+     "brondatum": "2025-2026",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "overlijden": {
+     "waarde": "+ Saldo gaat naar de erfgenamen; zij kopen een nabestaandenlijfrente",
+     "bron": [
+      "https://www.abnamro.nl/nl/prive/speciaal-voor/preferred-banking/smart/pensioen-aanvullen-met-lijfrente.html"
+     ],
+     "brondatum": "2025-2026",
+     "zekerheid": "middel",
+     "toelichting": "Ook bij een lopende bankuitkering gaan de termijnen over op de erfgenamen."
+    },
+    "uitkering": {
+     "waarde": "~ Tijdelijke vaste bankuitkering met zelfgekozen looptijd en frequentie",
+     "bron": [
+      "https://www.abnamro.nl/nl/prive/pensioen/pensioen-uitkeren/lijfrente-uitkeren/index.html"
+     ],
+     "brondatum": "2025-2026",
+     "zekerheid": "hoog",
+     "toelichting": "Vanaf AOW-leeftijd (of binnen 5 jaar daarna) minimaal 5 jaar; eerder: minimaal 20 jaar plus de jaren tot AOW. Per maand, kwartaal of halfjaar. Geen levenslange uitkering (bank)."
+    },
+    "overstap": {
+     "waarde": "+ Lijfrentekapitaal van elders inbrengen kan, zowel voor opbouw als voor uitkering",
+     "bron": [
+      "https://www.abnamro.nl/nl/prive/pensioen/waardeoverdracht.html",
+      "https://www.abnamro.nl/nl/prive/pensioen/pensioen-uitkeren/lijfrente-uitkeren/index.html"
+     ],
+     "brondatum": "2025-2026",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "doelgroep": {
+     "waarde": "+ Particulieren en ondernemers/zzp'ers (aparte ondernemerspagina)",
+     "bron": [
+      "https://www.abnamro.nl/nl/prive/pensioen/pensioen-voor-ondernemers/pensioenrekening/index.html"
+     ],
+     "brondatum": "2025-2026",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "beheer": {
+     "waarde": "~ Zelf openen als ABN AMRO-klant; beleggen in een begeleide beleggingsvorm",
+     "bron": [
+      "https://www.abnamro.nl/nl/prive/pensioen/pensioen-opbouwen/pensioenrekening/index.html"
+     ],
+     "brondatum": "2025-2026",
+     "zekerheid": "middel",
+     "toelichting": "Rol van een externe adviseur niet vermeld."
+    }
+   }
+  },
+  {
+   "naam": "Rabobank",
+   "url": "https://www.rabobank.nl/particulieren/pensioen/alle-oplossingen/rabo-toekomstsparen",
+   "domeinen": [
+    "rabobank.nl"
+   ],
+   "documenten": [],
+   "criteria": {
+    "vormen": {
+     "waarde": "+ Rabo ToekomstSparen (banksparen), Rabo ToekomstBeleggen (gekoppeld beleggen) en Rabo ToekomstUitkering",
+     "bron": [
+      "https://www.rabobank.nl/particulieren/pensioen/alle-oplossingen/rabo-toekomstsparen",
+      "https://www.rabobank.nl/particulieren/pensioen/alle-oplossingen/rabo-toekomstbeleggen",
+      "https://www.rabobank.nl/particulieren/pensioen/alle-oplossingen/rabo-toekomstuitkering"
+     ],
+     "brondatum": "2025-2026",
+     "zekerheid": "hoog",
+     "toelichting": "Inleg gaat via ToekomstSparen; ToekomstBeleggen is daaraan gekoppeld."
+    },
+    "opbouw": {
+     "waarde": "+ Zelf bepalen hoeveel; los overmaken of automatisch periodiek sparen; aftrek binnen jaar- of reserveringsruimte",
+     "bron": [
+      "https://www.rabobank.nl/particulieren/pensioen/alle-oplossingen/rabo-toekomstbeleggen",
+      "https://www.rabobank.nl/particulieren/pensioen/jaarruimte-berekenen-benutten"
+     ],
+     "brondatum": "2025-2026",
+     "zekerheid": "hoog",
+     "toelichting": "Jaarruimte is te berekenen tijdens de online aanvraag."
+    },
+    "beleggen": {
+     "waarde": "+ Beheerd beleggen in Rabo-fondsen per beleggingsprofiel, met automatische risicoafbouw richting einddatum",
+     "bron": [
+      "https://www.rabobank.nl/particulieren/pensioen/alle-oplossingen/rabo-toekomstbeleggen"
+     ],
+     "brondatum": "2025-2026",
+     "zekerheid": "hoog",
+     "toelichting": "Beleggingsspecialisten kopen de fondsen; je kiest het profiel."
+    },
+    "overlijden": {
+     "waarde": "+ Tegoed gaat naar de erfgenamen; zij kiezen vóór 31 december van het tweede jaar na overlijden voor periodieke uitkering of afkoop",
+     "bron": [
+      "https://www.rabobank.nl/particulieren/service/pensioen/uitkering-lijfrentetegoed-na-overlijden",
+      "https://www.rabobank.nl/particulieren/service/pensioen/rabo-toekomstsparen-na-overlijden"
+     ],
+     "brondatum": "2025-2026",
+     "zekerheid": "hoog",
+     "toelichting": "Beleggingen worden bij overlijden verkocht. Doorsparen van geërfd tegoed kan bij Rabobank niet."
+    },
+    "uitkering": {
+     "waarde": "~ Rabo ToekomstUitkering: tijdelijk, minimaal 5 jaar (vanaf AOW) of 20 jaar plus jaren tot AOW",
+     "bron": [
+      "https://www.rabobank.nl/particulieren/pensioen/alle-oplossingen/rabo-toekomstuitkering"
+     ],
+     "brondatum": "2025-2026",
+     "zekerheid": "hoog",
+     "toelichting": "Ingang uiterlijk 31 december van het vijfde jaar na het AOW-jaar. Geen levenslange uitkering (bank)."
+    },
+    "overstap": {
+     "waarde": "+ Kapitaaloverdracht van andere bank/verzekeraar of uit eigen BV mogelijk; bij ToekomstUitkering alleen bij opening",
+     "bron": [
+      "https://www.rabobank.nl/particulieren/pensioen/alles-over-pensioen/kapitaaloverdracht",
+      "https://www.rabobank.nl/particulieren/pensioen/alle-oplossingen/rabo-toekomstuitkering",
+      "https://www.rabobank.nl/particulieren/pensioen/pensioen-voor-ondernemers/DGA"
+     ],
+     "brondatum": "2025-2026",
+     "zekerheid": "hoog",
+     "toelichting": "Lijfrente uit de BV overdragen met formulier en lijfrenteovereenkomst van de accountant."
+    },
+    "doelgroep": {
+     "waarde": "+ Particulieren, IB-ondernemers/zzp'ers en DGA's",
+     "bron": [
+      "https://www.rabobank.nl/particulieren/pensioen/pensioen-voor-ondernemers",
+      "https://www.rabobank.nl/particulieren/pensioen/pensioen-voor-ondernemers/DGA",
+      "https://www.rabobank.nl/particulieren/pensioen/pensioen-voor-ondernemers/IB-ondernemer"
+     ],
+     "brondatum": "2025-2026",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "beheer": {
+     "waarde": "+ Online rekening openen en beheren",
+     "bron": [
+      "https://www.rabobank.nl/particulieren/pensioen/alle-oplossingen/rabo-toekomstbeleggen"
+     ],
+     "brondatum": "2025-2026",
+     "zekerheid": "middel",
+     "toelichting": ""
+    }
+   }
+  },
+  {
+   "naam": "ING",
+   "url": "https://www.ing.nl/particulier/beleggen/beleggen-bij-ing/pensioenbeleggen",
+   "domeinen": [
+    "ing.nl"
+   ],
+   "documenten": [],
+   "criteria": {
+    "vormen": {
+     "waarde": "~ ING Pensioenspaarrekening (banksparen) en ING Pensioenbeleggen",
+     "bron": [
+      "https://www.ing.nl/particulier/sparen/pensioenspaarrekening",
+      "https://www.ing.nl/particulier/beleggen/beleggen-bij-ing/pensioenbeleggen"
+     ],
+     "brondatum": "2025-2026",
+     "zekerheid": "middel",
+     "toelichting": "Eigen uitkeringsproduct niet gevonden."
+    },
+    "opbouw": {
+     "waarde": "+ Inleg tot jaarruimte; inhalen via reserveringsruimte",
+     "bron": [
+      "https://www.ing.nl/particulier/beleggen/beleggen-bij-ing/pensioenbeleggen"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "beleggen": {
+     "waarde": "+ Automatische risicoafbouw (lifecycle) op basis van de gewenste pensioenleeftijd",
+     "bron": [
+      "https://www.ing.nl/particulier/beleggen/beleggen-bij-ing/pensioenbeleggen"
+     ],
+     "brondatum": "2025-2026",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "overlijden": {
+     "waarde": "+ 100% van het saldo naar de nabestaanden; zij kiezen afkoop of een nabestaandenlijfrente",
+     "bron": [
+      "https://www.ing.nl/particulier/sparen/events-pensioenspaarrekening",
+      "https://www.ing.nl/particulier/beleggen/beleggen-bij-ing/veelgestelde-vragen-bij-bijzondere-pensioensituaties"
+     ],
+     "brondatum": "2025-2026",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "overstap": {
+     "waarde": "~ Kapitaaloverdracht naar ING mogelijk; vroegtijdig afkopen kan met inkomstenbelasting en revisierente",
+     "bron": [
+      "https://www.ing.nl/particulier/beleggen/beleggen-bij-ing/waarde-overdragen-kapitaaloverdracht",
+      "https://www.ing.nl/particulier/sparen/waardeoverdracht-pensioenspaarrekening",
+      "https://www.ing.nl/particulier/sparen/pensioenspaarrekening-beeindigen-voor-de-einddatum"
+     ],
+     "brondatum": "2025-2026",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "doelgroep": {
+     "waarde": "+ Particulieren en ondernemers/zzp'ers",
+     "bron": [
+      "https://www.ing.nl/particulier/beleggen/beleggen-bij-ing/pensioenbeleggen",
+      "https://www.ing.nl/zakelijk/beleggen/pensioenbeleggen"
+     ],
+     "brondatum": "2025-2026",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    }
+   }
+  },
+  {
+   "naam": "ASN Bank (de Volksbank)",
+   "url": "https://www.asnbank.nl/pensioen/asn-pensioen-opbouwen.html",
+   "domeinen": [
+    "asnbank.nl"
+   ],
+   "documenten": [
+    {
+     "titel": "Voorwaarden ASN Pensioen Opbouwen",
+     "url": "https://www.asnbank.nl/downloads/voorwaarden-asn-gespreid-pensioenbeleggen.html",
+     "versie": "geldig vanaf 1 juni 2024"
+    },
+    {
+     "titel": "Voorwaarden ASN Pensioen Uitkeringsrekening",
+     "url": "https://www.asnbank.nl/downloads/voorwaarden-asn-pensioen-uitkeringsrekening.html",
+     "versie": "onbekend"
+    }
+   ],
+   "criteria": {
+    "vormen": {
+     "waarde": "+ ASN Pensioen Opbouwen (sparen of sparen plus beleggen), ASN Pensioendeposito en ASN Pensioen Uitkeringsrekening",
+     "bron": [
+      "https://www.asnbank.nl/pensioen/asn-pensioen-opbouwen.html",
+      "https://www.asnbank.nl/pensioen/asn-pensioendeposito.html",
+      "https://www.asnbank.nl/pensioen/asn-pensioen-uitkeringsrekening.html"
+     ],
+     "brondatum": "2025-2026",
+     "zekerheid": "hoog",
+     "toelichting": "Op asnbank.nl staan ook (lopende) BLG Wonen-lijfrenteproducten. SNS en RegioBank hebben eigen lijfrenteproducten (SNS Lijfrente, SNS Lijfrentenieren, RegioBank Aanvullend Pensioen Opbouw-/Uitkeringsrekening); die zijn hier niet apart beoordeeld."
+    },
+    "opbouw": {
+     "waarde": "+ Geen minimum; eenmalig of periodiek; tot jaar- en/of reserveringsruimte",
+     "bron": [
+      "https://www.asnbank.nl/pensioen/asn-pensioen-opbouwen.html",
+      "https://www.asnbank.nl/downloads/voorwaarden-asn-gespreid-pensioenbeleggen.html"
+     ],
+     "brondatum": "2024-2026",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "beleggen": {
+     "waarde": "~ Duurzaam beleggen in 1 van 5 mixfondsen, eventueel via de ASN Beleggingsplanner",
+     "bron": [
+      "https://www.asnbank.nl/pensioen/asn-pensioen-opbouwen.html",
+      "https://www.asnbank.nl/pensioen/asn-pensioen-opbouwen/hoe-stel-ik-pensioenbeleggen-en-pensioenparen-in.html"
+     ],
+     "brondatum": "2025-2026",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "overlijden": {
+     "waarde": "+ Opgebouwd bedrag gaat naar de nabestaanden; zij dragen het uiterlijk 31 december van het tweede jaar over naar een lijfrenteproduct",
+     "bron": [
+      "https://www.asnbank.nl/pensioen/asn-pensioen-opbouwen.html"
+     ],
+     "brondatum": "2025-2026",
+     "zekerheid": "hoog",
+     "toelichting": "Bij regelen binnen 1 jaar geen boeterente. Bij de Uitkeringsrekening gaan de termijnen naar de nabestaanden."
+    },
+    "uitkering": {
+     "waarde": "~ ASN Pensioen Uitkeringsrekening: maandelijks, tijdelijk, maximaal 35 jaar",
+     "bron": [
+      "https://www.asnbank.nl/pensioen/asn-pensioen-uitkeringsrekening.html"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "hoog",
+     "toelichting": "Minimaal 5 jaar bij ingang in het AOW-jaar of uiterlijk 5 jaar daarna (met fiscaal jaarmaximum); anders minimaal 20 jaar plus jaren tot AOW. Geen levenslange uitkering (bank)."
+    },
+    "overstap": {
+     "waarde": "+ Inkomende kapitaaloverdracht van bank, verzekeraar of beleggingsinstelling; uitgaand altijd mogelijk",
+     "bron": [
+      "https://www.asnbank.nl/pensioen/asn-pensioen-opbouwen.html"
+     ],
+     "brondatum": "2025-2026",
+     "zekerheid": "hoog",
+     "toelichting": "Voor uitgaande overdracht rekent ASN een vaste vergoeding."
+    },
+    "doelgroep": {
+     "waarde": "+ Particulieren; aparte zakelijke pensioenpagina voor ondernemers",
+     "bron": [
+      "https://www.asnbank.nl/pensioen.html",
+      "https://www.asnbank.nl/zakelijk/pensioen.html"
+     ],
+     "brondatum": "2025-2026",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "beheer": {
+     "waarde": "+ Zelf instellen en beheren via ASN-app of Online Bankieren",
+     "bron": [
+      "https://www.asnbank.nl/pensioen/asn-pensioen-opbouwen.html"
+     ],
+     "brondatum": "2025-2026",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    }
+   }
+  },
+  {
+   "naam": "Knab",
+   "url": "https://www.knab.nl/particulier/pensioen/lijfrente",
+   "domeinen": [
+    "knab.nl"
+   ],
+   "documenten": [],
+   "criteria": {
+    "vormen": {
+     "waarde": "~ Knab Pensioensparen en Knab Pensioenbeleggen; geen eigen uitkeringsrekening",
+     "bron": [
+      "https://www.knab.nl/particulier/pensioen/lijfrente",
+      "https://www.knab.nl/particulier/pensioen/pensioen-opbouwen/pensioensparen",
+      "https://www.knab.nl/particulier/pensioen/pensioen-opbouwen/pensioenbeleggen"
+     ],
+     "brondatum": "2025-2026",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "opbouw": {
+     "waarde": "+ Zelf bepalen hoe vaak en hoeveel je inlegt; aftrek binnen jaar- en reserveringsruimte",
+     "bron": [
+      "https://www.knab.nl/particulier/pensioen/pensioen-opbouwen/pensioensparen",
+      "https://www.knab.nl/particulier/pensioen/pensioen-opbouwen-zzp/pensioen-berekenen-zzp"
+     ],
+     "brondatum": "2025-2026",
+     "zekerheid": "hoog",
+     "toelichting": "Geen minimum gevonden."
+    },
+    "beleggen": {
+     "waarde": "+ Belegd door experts op basis van een risicoprofiel, met automatische risicoafbouw richting de doeldatum",
+     "bron": [
+      "https://www.knab.nl/particulier/pensioen/pensioen-opbouwen/pensioenbeleggen",
+      "https://www.knab.nl/particulier/beleggen/risico-van-beleggen/risicoafbouw"
+     ],
+     "brondatum": "2025-2026",
+     "zekerheid": "hoog",
+     "toelichting": "Startmoment en tempo van de afbouw hangen af van het risicoprofiel."
+    },
+    "overlijden": {
+     "waarde": "+ Saldo gaat volledig naar de erfgenamen; zij openen een uitkeringsproduct",
+     "bron": [
+      "https://www.knab.nl/particulier/pensioen/pensioen-opbouwen/pensioensparen",
+      "https://www.knab.nl/particulier/pensioen/lijfrente"
+     ],
+     "brondatum": "2025-2026",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "uitkering": {
+     "waarde": "- Knab biedt geen uitkeringsrekening; voor de uitkering stap je over naar een andere aanbieder",
+     "bron": [
+      "https://www.knab.nl/particulier/pensioen/saldo-uitbetalen",
+      "https://www.knab.nl/particulier/pensioen/lijfrente"
+     ],
+     "brondatum": "2025-2026",
+     "zekerheid": "hoog",
+     "toelichting": "Binnen vijf jaar na de AOW-leeftijd een uitkeringsrekening elders openen."
+    },
+    "overstap": {
+     "waarde": "+ Overstappen naar Knab is kosteloos; vorige aanbieder maakt het saldo over. Vroegtijdig afkopen kan met belasting en mogelijk revisierente",
+     "bron": [
+      "https://www.knab.nl/particulier/pensioen/waardeoverdracht-pensioen",
+      "https://www.knab.nl/particulier/pensioen/pensioen-opbouwen/pensioensparen"
+     ],
+     "brondatum": "2025-2026",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "doelgroep": {
+     "waarde": "+ Particulieren en zzp'ers; een Knab-betaalrekening is vereist",
+     "bron": [
+      "https://www.knab.nl/particulier/pensioen/pensioen-opbouwen/pensioenbeleggen",
+      "https://knab.nl/zakelijk/pensioen/jaarruimte"
+     ],
+     "brondatum": "2025-2026",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "beheer": {
+     "waarde": "+ Zelf online openen via app of website, na vragen over kennis en ervaring",
+     "bron": [
+      "https://www.knab.nl/particulier/pensioen/saldo-uitbetalen",
+      "https://www.knab.nl/particulier/pensioen/pensioen-opbouwen/pensioensparen"
+     ],
+     "brondatum": "2025-2026",
+     "zekerheid": "middel",
+     "toelichting": ""
+    }
+   }
+  },
+  {
+   "naam": "Meesman",
+   "url": "https://www.meesman.nl/onze-rekeningen/pensioenrekening/",
+   "domeinen": [
+    "meesman.nl"
+   ],
+   "documenten": [
+    {
+     "titel": "Reglement Meesman Pensioenrekening",
+     "url": "https://www.meesman.nl/media/5lua35tq/reglement-meesman-pensioenrekening.pdf",
+     "versie": "onbekend"
+    },
+    {
+     "titel": "Essentiële-informatiedocument Meesman Pensioenrekening",
+     "url": "https://www.meesman.nl/media/ws3nq3v5/2024-eid-meesman-pensioenrekening.pdf",
+     "versie": "2024"
+    },
+    {
+     "titel": "Aandachtspunten overdracht lijfrenterekening",
+     "url": "https://www.meesman.nl/media/gnvdwnnv/aandachtspunten-overdracht-lijfrenterekening-2024.pdf",
+     "versie": "2024"
+    }
+   ],
+   "criteria": {
+    "vormen": {
+     "waarde": "~ Alleen beleggen: Meesman Pensioenrekening (geblokkeerd lijfrentebeleggingsrecht)",
+     "bron": [
+      "https://www.meesman.nl/onze-rekeningen/pensioenrekening/",
+      "https://www.meesman.nl/waarom-beleggen/beleggen-voor-pensioen/"
+     ],
+     "brondatum": "2024-2026",
+     "zekerheid": "middel",
+     "toelichting": "Daarnaast Meesman FlexPensioen voor werkgevers."
+    },
+    "opbouw": {
+     "waarde": "~ Periodiek gemiddeld min. € 50 per maand; losse stortingen min. € 600 per jaar; eenmalige storting min. € 10.000",
+     "bron": [
+      "https://www.meesman.nl/vragen/wat-is-de-minimum-inleg/",
+      "https://www.meesman.nl/veelgestelde-vragen/over-pensioenbeleggen/"
+     ],
+     "brondatum": "onbekend",
+     "zekerheid": "middel",
+     "toelichting": "Inleg tot de jaarruimte voor fiscale aftrek."
+    },
+    "beleggen": {
+     "waarde": "~ Zelf samenstellen uit Meesman-indexfondsen (twee aandelen- en twee obligatiefondsen)",
+     "bron": [
+      "https://www.meesman.nl/waarom-beleggen/beleggen-voor-pensioen/"
+     ],
+     "brondatum": "onbekend",
+     "zekerheid": "middel",
+     "toelichting": "Geen automatische lifecycle genoemd."
+    },
+    "overlijden": {
+     "waarde": "+ Waarde gaat naar de erfgenamen; zij kopen vóór 31 december van het tweede jaar na overlijden een nabestaandenlijfrente",
+     "bron": [
+      "https://www.meesman.nl/media/5lua35tq/reglement-meesman-pensioenrekening.pdf"
+     ],
+     "brondatum": "onbekend",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "uitkering": {
+     "waarde": "- Geen eigen uitkering: op de einddatum koop je elders een periodieke lijfrente-uitkering",
+     "bron": [
+      "https://www.meesman.nl/media/5lua35tq/reglement-meesman-pensioenrekening.pdf",
+      "https://www.meesman.nl/waarom-beleggen/beleggen-voor-pensioen/"
+     ],
+     "brondatum": "onbekend",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "overstap": {
+     "waarde": "+ Uitgaande overdracht volgens het Protocol Stroomlijning Kapitaaloverdrachten",
+     "bron": [
+      "https://www.meesman.nl/vragen/ik-wil-de-waarde-op-mijn-pensioenrekening-overdragen-aan-een-andere-aanbieder-kan-dat/",
+      "https://www.meesman.nl/media/jrjmgvit/formulier-uitgaande-waardeoverdracht-pensioenrekening.pdf"
+     ],
+     "brondatum": "onbekend",
+     "zekerheid": "middel",
+     "toelichting": "Tussentijds opnemen kan alleen met inkomstenbelasting en vaak revisierente."
+    }
+   }
+  },
+  {
+   "naam": "Robeco (Evi)",
+   "url": "https://www.robeco.nl/laten-beleggen/robeco-life/",
+   "domeinen": [
+    "robeco.nl"
+   ],
+   "documenten": [],
+   "criteria": {
+    "vormen": {
+     "waarde": "~ Evi Persoonlijk Pensioen: lijfrentebeleggingsrekening met gekoppelde spaarrekening, plus lijfrente-uitkering van Evi",
+     "bron": [
+      "https://www.robeco.nl/laten-beleggen/robeco-life/",
+      "https://www.robeco.nl/nieuws-en-kansen/zelf-pensioensparen-vrij-sparen-of-fiscaal-aftrekbaar-sparen.html"
+     ],
+     "brondatum": "onbekend",
+     "zekerheid": "middel",
+     "toelichting": "Het productaanbod (Evi/Robeco LIFE) kon niet aan een datering uit 2025-2026 worden gekoppeld."
+    },
+    "opbouw": {
+     "waarde": "~ Bedoeld voor wie binnen afzienbare tijd minstens € 2.500 opbouwt",
+     "bron": [
+      "https://www.robeco.nl/laten-beleggen/robeco-life/"
+     ],
+     "brondatum": "onbekend",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "beleggen": {
+     "waarde": "+ Leeftijdsgebonden mix van twee profielfondsen; risico neemt automatisch af richting pensioendatum",
+     "bron": [
+      "https://www.robeco.nl/laten-beleggen/robeco-life/",
+      "https://www.robeco.nl/nieuws-en-kansen/wat-is-doelbeleggen-en-hoe-werkt-het-bij-robeco.html"
+     ],
+     "brondatum": "onbekend",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "uitkering": {
+     "waarde": "~ Lijfrente-uitkering van Evi Persoonlijk Pensioen (bancair, dus tijdelijk)",
+     "bron": [
+      "https://www.robeco.nl/laten-beleggen/robeco-life/"
+     ],
+     "brondatum": "onbekend",
+     "zekerheid": "middel",
+     "toelichting": "Looptijden niet in de bron gevonden."
+    },
+    "overstap": {
+     "waarde": "+ Kapitaaloverdracht naar Evi mogelijk",
+     "bron": [
+      "https://www.robeco.nl/laten-beleggen/robeco-life/"
+     ],
+     "brondatum": "onbekend",
+     "zekerheid": "middel",
+     "toelichting": ""
+    }
+   }
+  }
+ ]
+}

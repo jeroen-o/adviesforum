@@ -195,8 +195,8 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
   <ul class="lijst2" id="l-aanbieders"></ul>
   <a class="meer" href="aanbieders.html">Naar alle aanbieders &rarr;</a>
 
-  <h2 class="sectie" id="voorwaarden">Wijzigingen in voorwaarden van geldverstrekkers</h2>
-  <p class="sub" id="voorwaarden-sub">Wat er is veranderd in de gecontroleerde hypotheekvoorwaarden. Volg geldverstrekkers in de voorwaarden-vergelijker om hun wijzigingen hier bovenaan te zien.</p>
+  <h2 class="sectie" id="voorwaarden">Wijzigingen in voorwaarden van aanbieders</h2>
+  <p class="sub" id="voorwaarden-sub">Wat er is veranderd in de gecontroleerde voorwaarden van geldverstrekkers, verzekeraars en kredietverstrekkers. Volg aanbieders in de voorwaarden-vergelijker of bij de productvoorwaarden om hun wijzigingen hier bovenaan te zien.</p>
   <ul class="lijst2" id="l-voorwaarden"></ul>
   <a class="meer" href="voorwaarden-vergelijker.html#wijzigingen">Alle wijzigingen in de voorwaarden-vergelijker &rarr;</a>
 
@@ -243,6 +243,7 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
 <script src="data/kennisbank-aanvulling.js"></script>
 <script src="data/aanbieders.js"></script>
 <script src="data/voorwaarden-wijzigingen.js"></script>
+<script src="data/productvoorwaarden-wijzigingen.js"></script>
 <script>
 (function(){
 'use strict';
@@ -268,13 +269,16 @@ vul('l-aanbieders',N.slice(0,8).map(function(x){return kaart('aanbieders.html#ni
 var WZ=(window.VOORWAARDEN_WIJZIGINGEN&&window.VOORWAARDEN_WIJZIGINGEN.items)||[];
 function slugNL(n){return String(n||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/&/g,' en ').replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'')||'partij';}
 var GV=(function(){var m=document.cookie.match(/(?:^|; )af_favorieten=([^;]*)/),w='';try{w=m?decodeURIComponent(m[1]):'';}catch(e){w='';}var d=w.split('~');if(d[0]!=='1')return [];return (d[1]||'').split('_').filter(function(t){return /^g\.[a-z0-9-]{1,60}$/.test(t);}).map(function(t){return t.slice(2);});})();
-var WG=[];WZ.forEach(function(i){var k=i.d+'|'+i.naam,g=WG.filter(function(x){return x.k===k;})[0];if(!g){g={k:k,d:i.d,naam:i.naam,items:[],volg:GV.indexOf(slugNL(i.naam))>=0};WG.push(g);}g.items.push(i);});
+var PT={orv:'ORV',aov:'AOV',uitvaart:'Uitvaartverzekering',lijfrente:'Lijfrente',krediet:'Krediet'};
+var PV=(function(){var m=document.cookie.match(/(?:^|; )af_favorieten=([^;]*)/),w='';try{w=m?decodeURIComponent(m[1]):'';}catch(e){w='';}var d=w.split('~');if(d[0]!=='1')return [];return (d[1]||'').split('_').filter(function(t){return /^p\.[a-z0-9-]{1,60}$/.test(t);});})();
+var WG=[];WZ.forEach(function(i){var k=i.d+'|'+i.naam,g=WG.filter(function(x){return x.k===k;})[0];if(!g){g={k:k,d:i.d,naam:i.naam,titel:'Voorwaarden '+i.naam,href:'voorwaarden-vergelijker.html#vergelijk='+slugNL(i.naam),items:[],volg:GV.indexOf(slugNL(i.naam))>=0};WG.push(g);}g.items.push(i);});
+((window.PRODUCTVOORWAARDEN_WIJZIGINGEN&&window.PRODUCTVOORWAARDEN_WIJZIGINGEN.items)||[]).forEach(function(i){var k=i.d+'|'+i.p+'|'+i.naam,g=WG.filter(function(x){return x.k===k;})[0];if(!g){g={k:k,d:i.d,naam:(PT[i.p]||i.p)+' · '+i.naam,titel:(PT[i.p]||i.p)+' '+i.naam,href:'productvoorwaarden.html#p='+i.p+'&a='+slugNL(i.naam),items:[],volg:PV.indexOf(('p.'+i.p+'-'+slugNL(i.naam)).slice(0,62))>=0};WG.push(g);}g.items.push(i);});
 WG.sort(function(a,b){return (b.volg-a.volg)||b.d.localeCompare(a.d)||a.naam.localeCompare(b.naam,'nl');});
-if(GV.length)document.getElementById('voorwaarden-sub').textContent='Wat er is veranderd in de gecontroleerde hypotheekvoorwaarden. Geldverstrekkers die je volgt ('+GV.length+') staan bovenaan.';
+if(GV.length+PV.length)document.getElementById('voorwaarden-sub').textContent='Wat er is veranderd in de gecontroleerde voorwaarden. Aanbieders die je volgt ('+(GV.length+PV.length)+') staan bovenaan.';
 var SRT={gewijzigd:'gewijzigd',nieuw:'nieuw ingevuld',geverifieerd:'geverifieerd',vervallen:'vervallen',eerste:'eerste controle'};
 vul('l-voorwaarden',WG.slice(0,8).map(function(g){var tel={};g.items.forEach(function(i){tel[i.soort]=(tel[i.soort]||0)+1;});
   var samen=Object.keys(tel).map(function(s){return tel[s]+' '+SRT[s];}).join(', ');
-  return kaart('voorwaarden-vergelijker.html#vergelijk='+slugNL(g.naam),(g.volg?'<span class="lbl">Je volgt</span> ':'')+esc(g.naam)+' <span>'+esc(datum(g.d))+'</span>','Voorwaarden '+g.naam+': '+g.items.length+(g.items.length===1?' wijziging':' wijzigingen'),samen);}).join(''),'Nog geen wijzigingen in de gecontroleerde voorwaarden.');
+  return kaart(g.href,(g.volg?'<span class="lbl">Je volgt</span> ':'')+esc(g.naam)+' <span>'+esc(datum(g.d))+'</span>',g.titel+': '+g.items.length+(g.items.length===1?' wijziging':' wijzigingen'),samen);}).join(''),'Nog geen wijzigingen in de gecontroleerde voorwaarden.');
 var lf=document.getElementById('l-forum');lf.innerHTML='<li class="leeg">Laden…</li>';
 function forumFout(){lf.innerHTML='<li class="leeg">Het overzicht kon niet worden geladen. Bekijk <a href="nieuw.html">wat is nieuw</a>.</li>';}
 try{fetch('feed.xml').then(function(r){if(!r.ok)throw 0;return r.text();}).then(function(t){

@@ -1,0 +1,600 @@
+{
+ "gegenereerd": "2026-10-04",
+ "situaties": [
+  {
+   "id": "starter",
+   "naam": "Starter (< 1 jaar zelfstandig)",
+   "vraag": "Kan een starter die korter dan 1 jaar zelfstandig is een AOV afsluiten?",
+   "crit": [
+    "starter"
+   ]
+  },
+  {
+   "id": "psych",
+   "naam": "Dekking psychische klachten",
+   "vraag": "Zijn psychische klachten gedekt?",
+   "crit": [
+    "psychisch"
+   ]
+  },
+  {
+   "id": "kort",
+   "naam": "Korte wachttijd (14 dagen / 1 maand)",
+   "vraag": "Is een eigenrisicotermijn van 14 dagen of 1 maand mogelijk?",
+   "crit": [
+    "wachttijd"
+   ]
+  },
+  {
+   "id": "eind67",
+   "naam": "Dekking tot 67/AOW-leeftijd",
+   "vraag": "Kan de dekking doorlopen tot 67 jaar of de AOW-leeftijd?",
+   "crit": [
+    "eindleeftijd"
+   ]
+  },
+  {
+   "id": "beroeps",
+   "naam": "Eigen-beroepsdekking",
+   "vraag": "Is dekking op basis van het eigen beroep (beroepsarbeidsongeschiktheid) mogelijk?",
+   "crit": [
+    "dekking"
+   ]
+  },
+  {
+   "id": "zwanger",
+   "naam": "Zwangerschap en bevalling",
+   "vraag": "Is er een uitkering bij zwangerschap of bevalling?",
+   "crit": [
+    "zwanger"
+   ]
+  },
+  {
+   "id": "index",
+   "naam": "Indexatie tijdens uitkering",
+   "vraag": "Kan de uitkering tijdens arbeidsongeschiktheid geïndexeerd worden?",
+   "crit": [
+    "indexatie"
+   ]
+  },
+  {
+   "id": "budget",
+   "naam": "Budget-/basis-/ongevallenvariant",
+   "vraag": "Is er een budget-, basis- of ongevallenvariant beschikbaar?",
+   "crit": [
+    "varianten"
+   ]
+  }
+ ],
+ "indeling": {
+  "Allianz": {
+   "starter": {
+    "o": "onbekend",
+    "t": "Niet vermeld in de gecontroleerde voorwaarden",
+    "c": "starter"
+   },
+   "psych": {
+    "o": "voorwaarden",
+    "t": "Bij bestaande klachten acceptatie met uitsluiting van die aandoening; standaarddekking niet expliciet",
+    "c": "psychisch",
+    "tw": 1
+   },
+   "kort": {
+    "o": "ja",
+    "t": "Wachttijd 30 dagen mogelijk (ook 60, 90, 180 dagen, 1 of 2 jaar)",
+    "c": "wachttijd"
+   },
+   "eind67": {
+    "o": "ja",
+    "t": "Eindleeftijd 55 t/m 68 jaar of AOW-leeftijd (Summum max. 70)",
+    "c": "eindleeftijd"
+   },
+   "beroeps": {
+    "o": "ja",
+    "t": "Beroepsarbeidsongeschiktheid (alleen eigen beroep)",
+    "c": "dekking"
+   },
+   "zwanger": {
+    "o": "ja",
+    "t": "Tijdelijke uitkering bij zwangerschap en adoptie",
+    "c": "zwanger"
+   },
+   "index": {
+    "o": "ja",
+    "t": "Uitkering jaarlijks 1-3% of CBS-index (max. 4%)",
+    "c": "indexatie"
+   },
+   "budget": {
+    "o": "onbekend",
+    "t": "Alleen Absoluut en Summum genoemd; geen budget-, basis- of ongevallenvariant vermeld",
+    "c": "varianten",
+    "tw": 1
+   }
+  },
+  "Avéro Achmea": {
+   "starter": {
+    "o": "voorwaarden",
+    "t": "Startersregeling: eerste 3 jaar verhogingsrecht tot € 20.000; acceptatiegrondslag niet vermeld",
+    "c": "starter",
+    "tw": 1
+   },
+   "psych": {
+    "o": "voorwaarden",
+    "t": "Bij (eerdere) psychische klachten kans op uitsluiting; standaarddekking niet expliciet",
+    "c": "psychisch",
+    "tw": 1
+   },
+   "kort": {
+    "o": "ja",
+    "t": "Wachttijd 1 maand mogelijk (ook 2, 3, 6, 12, 24 maanden)",
+    "c": "wachttijd"
+   },
+   "eind67": {
+    "o": "ja",
+    "t": "Eindleeftijd 55 t/m 68 jaar; AOV Basis afhankelijk van beroep",
+    "c": "eindleeftijd"
+   },
+   "beroeps": {
+    "o": "ja",
+    "t": "Uitkering als eigen beroep niet kan, ook als ander werk mogelijk is",
+    "c": "dekking"
+   },
+   "zwanger": {
+    "o": "voorwaarden",
+    "t": "Zwangerschaps- en bevallingsverlof gedekt na 1 jaar verzekering",
+    "c": "zwanger"
+   },
+   "index": {
+    "o": "ja",
+    "t": "Keuze 2%, 3% of prijsindex; AOV Basis indexeert uitkering met CBS-prijsindex",
+    "c": "indexatie"
+   },
+   "budget": {
+    "o": "ja",
+    "t": "AOV Basis (max. € 30.000, snelle acceptatie); ook Kort & Krachtig via Centraal Beheer",
+    "c": "varianten"
+   }
+  },
+  "Bovemij": {
+   "starter": {
+    "o": "onbekend",
+    "t": "Niet vermeld in de gecontroleerde voorwaarden",
+    "c": "starter"
+   },
+   "psych": {
+    "o": "onbekend",
+    "t": "Niet vermeld in de gecontroleerde voorwaarden",
+    "c": "psychisch"
+   },
+   "kort": {
+    "o": "onbekend",
+    "t": "Eigenrisicotermijn zelf te kiezen; beschikbare termijnen niet vermeld",
+    "c": "wachttijd",
+    "tw": 1
+   },
+   "eind67": {
+    "o": "onbekend",
+    "t": "Zelf gekozen einddatum; maximum niet vermeld",
+    "c": "eindleeftijd",
+    "tw": 1
+   },
+   "beroeps": {
+    "o": "ja",
+    "t": "AOV-O: beroepsarbeidsongeschiktheid incl. taakaanpassing binnen eigen bedrijf",
+    "c": "dekking"
+   },
+   "zwanger": {
+    "o": "ja",
+    "t": "Uitkering bij zwangerschap en bevalling: 16 weken minus eigenrisicotermijn",
+    "c": "zwanger"
+   },
+   "index": {
+    "o": "ja",
+    "t": "Verzekerd bedrag en uitkering jaarlijks geïndexeerd",
+    "c": "indexatie"
+   },
+   "budget": {
+    "o": "onbekend",
+    "t": "AOV-O en AOV-W (WAZ); geen budget-, basis- of ongevallenvariant vermeld",
+    "c": "varianten",
+    "tw": 1
+   }
+  },
+  "De Amersfoortse": {
+   "starter": {
+    "o": "voorwaarden",
+    "t": "< 1 jaar zelfstandig: geschat inkomen of loon uit dienstverband als basis, max. 90%",
+    "c": "starter"
+   },
+   "psych": {
+    "o": "ja",
+    "t": "Psychische klachten standaard gedekt; ook variant met uitsluiting; individuele uitsluiting mogelijk",
+    "c": "psychisch"
+   },
+   "kort": {
+    "o": "ja",
+    "t": "Wachttijd 14 of 30 dagen mogelijk",
+    "c": "wachttijd"
+   },
+   "eind67": {
+    "o": "ja",
+    "t": "Eindleeftijd te kiezen tot max. 68 jaar",
+    "c": "eindleeftijd"
+   },
+   "beroeps": {
+    "o": "ja",
+    "t": "Standaard beroepsarbeidsongeschiktheid",
+    "c": "dekking"
+   },
+   "zwanger": {
+    "o": "voorwaarden",
+    "t": "16 weken 100% minus eigenrisicotermijn; alleen als zwangerschap na ingangsdatum ontstond",
+    "c": "zwanger"
+   },
+   "index": {
+    "o": "ja",
+    "t": "Indexatie van verzekerd bedrag en/of uitkering",
+    "c": "indexatie"
+   },
+   "budget": {
+    "o": "ja",
+    "t": "Basis AOV (max. € 30.000) en AOV 2.5 (uitkeringsduur 2 of 5 jaar)",
+    "c": "varianten"
+   }
+  },
+  "De Goudse": {
+   "starter": {
+    "o": "voorwaarden",
+    "t": "Gestart < 6 maanden vóór ingang: max. € 25.000 verzekerd bij aanvang",
+    "c": "starter"
+   },
+   "psych": {
+    "o": "ja",
+    "t": "Psychische ziekte standaard gedekt; bij verhoogd risico uitsluiting of hogere premie mogelijk",
+    "c": "psychisch"
+   },
+   "kort": {
+    "o": "ja",
+    "t": "Wachttijd 30 dagen mogelijk",
+    "c": "wachttijd"
+   },
+   "eind67": {
+    "o": "voorwaarden",
+    "t": "Eindleeftijd 55 t/m 68 jaar; voor sommige beroepen max. 55 of 60",
+    "c": "eindleeftijd"
+   },
+   "beroeps": {
+    "o": "ja",
+    "t": "Uitkering als eigen werk niet meer kan; ook gedeeltelijke AO",
+    "c": "dekking"
+   },
+   "zwanger": {
+    "o": "voorwaarden",
+    "t": "112 dagen minus eigenrisicotermijn, als op uitgerekende datum ≥ 1 jaar verzekerd",
+    "c": "zwanger"
+   },
+   "index": {
+    "o": "ja",
+    "t": "Optioneel: uitkering stijgt jaarlijks met 2%",
+    "c": "indexatie"
+   },
+   "budget": {
+    "o": "onbekend",
+    "t": "Dekking Optimaal of Op Maat; geen budget-, basis- of ongevallenvariant vermeld",
+    "c": "varianten",
+    "tw": 1
+   }
+  },
+  "elipsLife": {
+   "starter": {
+    "o": "onbekend",
+    "t": "Niet vermeld in de gecontroleerde voorwaarden",
+    "c": "starter"
+   },
+   "psych": {
+    "o": "voorwaarden",
+    "t": "Uitgebreide medische vragen over psychische klachten; geen standaarduitsluiting gevonden",
+    "c": "psychisch",
+    "tw": 1
+   },
+   "kort": {
+    "o": "onbekend",
+    "t": "Verschillende wachttijden; welke niet vermeld",
+    "c": "wachttijd",
+    "tw": 1
+   },
+   "eind67": {
+    "o": "voorwaarden",
+    "t": "Gekozen eindleeftijd, meestal pensioenleeftijd; maximum niet exact vermeld",
+    "c": "eindleeftijd",
+    "tw": 1
+   },
+   "beroeps": {
+    "o": "ja",
+    "t": "Beroepsarbeidsongeschiktheid",
+    "c": "dekking"
+   },
+   "zwanger": {
+    "o": "onbekend",
+    "t": "Niet vermeld in de gecontroleerde voorwaarden",
+    "c": "zwanger"
+   },
+   "index": {
+    "o": "onbekend",
+    "t": "Indexatie-opties te kiezen; of dit tijdens uitkering geldt niet vermeld",
+    "c": "indexatie",
+    "tw": 1
+   },
+   "budget": {
+    "o": "onbekend",
+    "t": "Niet vermeld in de gecontroleerde voorwaarden",
+    "c": "varianten"
+   }
+  },
+  "Felison Assuradeuren": {
+   "starter": {
+    "o": "voorwaarden",
+    "t": "Geen inkomenstoets bij schade bij periodieke aanlevering; tot € 30.000 lichte toets; starters niet genoemd",
+    "c": "starter",
+    "tw": 1
+   },
+   "psych": {
+    "o": "onbekend",
+    "t": "Niet vermeld in de gecontroleerde voorwaarden",
+    "c": "psychisch"
+   },
+   "kort": {
+    "o": "onbekend",
+    "t": "Niet vermeld in de gecontroleerde voorwaarden",
+    "c": "wachttijd"
+   },
+   "eind67": {
+    "o": "ja",
+    "t": "Verzekeren tot 67 jaar mogelijk",
+    "c": "eindleeftijd"
+   },
+   "beroeps": {
+    "o": "voorwaarden",
+    "t": "Verzekerde (agrarische) beroep wordt meegewogen bij AO-mate; zuivere eigen-beroepsdekking niet vermeld",
+    "c": "dekking",
+    "tw": 1
+   },
+   "zwanger": {
+    "o": "onbekend",
+    "t": "Niet vermeld in de gecontroleerde voorwaarden",
+    "c": "zwanger"
+   },
+   "index": {
+    "o": "onbekend",
+    "t": "Niet vermeld in de gecontroleerde voorwaarden",
+    "c": "indexatie"
+   },
+   "budget": {
+    "o": "onbekend",
+    "t": "Agro-AOV (alleen agrariërs/tuinders) en Inkomenspakket; geen budgetvariant vermeld",
+    "c": "varianten",
+    "tw": 1
+   }
+  },
+  "Interpolis": {
+   "starter": {
+    "o": "voorwaarden",
+    "t": "Groei-optie: eerste 3 jaar verzekerd inkomen tot € 20.000 verhogen; acceptatiegrondslag niet vermeld",
+    "c": "starter",
+    "tw": 1
+   },
+   "psych": {
+    "o": "ja",
+    "t": "Psychische klachten gedekt; bij eerdere klachten individuele uitsluiting mogelijk",
+    "c": "psychisch"
+   },
+   "kort": {
+    "o": "ja",
+    "t": "Wachttijd 1 maand mogelijk",
+    "c": "wachttijd"
+   },
+   "eind67": {
+    "o": "voorwaarden",
+    "t": "Eindleeftijd 55 t/m 68 jaar; zware beroepen eindigen op 63 of 58",
+    "c": "eindleeftijd"
+   },
+   "beroeps": {
+    "o": "ja",
+    "t": "Keuze beroepsarbeidsongeschiktheid of passende arbeid",
+    "c": "dekking"
+   },
+   "zwanger": {
+    "o": "ja",
+    "t": "Zwangerschapsuitkering 16 weken minus eigenrisicotermijn",
+    "c": "zwanger"
+   },
+   "index": {
+    "o": "ja",
+    "t": "Uitkering geïndexeerd met prijsindex, max. 4% per jaar",
+    "c": "indexatie"
+   },
+   "budget": {
+    "o": "voorwaarden",
+    "t": "Alleen kortere uitkeringsduur (1-5 jaar); geen basis- of ongevallenvariant genoemd",
+    "c": "varianten",
+    "tw": 1
+   }
+  },
+  "Klaverblad": {
+   "starter": {
+    "o": "voorwaarden",
+    "t": "Geen aparte startersregeling; Royaal Opstap AOV (max. 5 jaar uitkering) o.a. voor starters",
+    "c": "starter",
+    "tw": 1
+   },
+   "psych": {
+    "o": "voorwaarden",
+    "t": "Gedekt als stoornis objectief is vastgesteld door aangewezen arts en erkend; anders uitsluiting mogelijk",
+    "c": "psychisch"
+   },
+   "kort": {
+    "o": "ja",
+    "t": "Wachttijd 14 of 30 dagen (sommige beroepen min. 30 dagen)",
+    "c": "wachttijd"
+   },
+   "eind67": {
+    "o": "ja",
+    "t": "Royaal Premium tot 68 of AOW-leeftijd; AOV Flex lager bij zware beroepen",
+    "c": "eindleeftijd"
+   },
+   "beroeps": {
+    "o": "ja",
+    "t": "Royaal Plus en AOV Flex eigen beroep; Royaal Premium eerste 3 jaar",
+    "c": "dekking"
+   },
+   "zwanger": {
+    "o": "voorwaarden",
+    "t": "Alleen bevallingsuitkering 1 maand, als uitgerekende datum ≥ 1 jaar na ingang",
+    "c": "zwanger",
+    "tw": 1
+   },
+   "index": {
+    "o": "ja",
+    "t": "Optioneel: uitkering stijgt jaarlijks met 2%",
+    "c": "indexatie"
+   },
+   "budget": {
+    "o": "voorwaarden",
+    "t": "AOV Flex met uitkeringsduur 1-5 jaar; geen basis- of ongevallenvariant genoemd",
+    "c": "varianten",
+    "tw": 1
+   }
+  },
+  "Movir": {
+   "starter": {
+    "o": "voorwaarden",
+    "t": "Gestart in laatste 3 jaar: alleen inkomen uit volledige jaren; min. € 11.250; < 1 jaar onduidelijk",
+    "c": "starter",
+    "tw": 1
+   },
+   "psych": {
+    "o": "voorwaarden",
+    "t": "Vragen over psychische klachten; bestaande of eerdere klachten kunnen tot hogere premie of uitsluiting leiden",
+    "c": "psychisch",
+    "tw": 1
+   },
+   "kort": {
+    "o": "ja",
+    "t": "Wachttijd 30 dagen mogelijk",
+    "c": "wachttijd"
+   },
+   "eind67": {
+    "o": "ja",
+    "t": "Vast 67 of 68 jaar, of AOW-volgend tot max. 70",
+    "c": "eindleeftijd"
+   },
+   "beroeps": {
+    "o": "ja",
+    "t": "Eigen (verzekerd) beroep; geen verplichting tot ander werk",
+    "c": "dekking"
+   },
+   "zwanger": {
+    "o": "voorwaarden",
+    "t": "16 weken als bevallingsdatum ≥ 1 jaar na ingang",
+    "c": "zwanger"
+   },
+   "index": {
+    "o": "ja",
+    "t": "Indexatie te kiezen, ook alleen tijdens uitkering",
+    "c": "indexatie"
+   },
+   "budget": {
+    "o": "onbekend",
+    "t": "Momentum Sommen en Schade AOV; geen budget-, basis- of ongevallenvariant vermeld",
+    "c": "varianten",
+    "tw": 1
+   }
+  },
+  "TAF": {
+   "starter": {
+    "o": "voorwaarden",
+    "t": "< 1 jaar zelfstandig: loondienstinkomen telt mee bij vergelijkbaar werk; GoedGezekerd zonder inkomenshistorie",
+    "c": "starter"
+   },
+   "psych": {
+    "o": "voorwaarden",
+    "t": "GoedGezekerd: psychische klachten optioneel; BasisGezekerd alleen ongevallen/ernstige ziekten",
+    "c": "psychisch"
+   },
+   "kort": {
+    "o": "ja",
+    "t": "Wachttijd vanaf 30 dagen",
+    "c": "wachttijd"
+   },
+   "eind67": {
+    "o": "voorwaarden",
+    "t": "Max. AOW-leeftijd; lager voor sommige beroepen",
+    "c": "eindleeftijd"
+   },
+   "beroeps": {
+    "o": "voorwaarden",
+    "t": "Eerste jaar eigen beroep; daarna keuze (zware/creatieve beroepen alleen passende arbeid)",
+    "c": "dekking"
+   },
+   "zwanger": {
+    "o": "voorwaarden",
+    "t": "InkomenZeker: 16 weken, pas vanaf 2 jaar na ingang",
+    "c": "zwanger"
+   },
+   "index": {
+    "o": "voorwaarden",
+    "t": "InkomenZeker: indexatie max. 3% per jaar; of dit tijdens uitkering geldt niet vermeld",
+    "c": "indexatie",
+    "tw": 1
+   },
+   "budget": {
+    "o": "ja",
+    "t": "BasisGezekerd (ongevallen, evt. + ernstige ziekten) en modulair GoedGezekerd",
+    "c": "varianten"
+   }
+  },
+  "Univé": {
+   "starter": {
+    "o": "onbekend",
+    "t": "Niet vermeld in de gecontroleerde voorwaarden",
+    "c": "starter"
+   },
+   "psych": {
+    "o": "ja",
+    "t": "Psychische klachten gedekt; bij eerdere klachten soms (tijdelijke) uitsluiting of hogere premie",
+    "c": "psychisch"
+   },
+   "kort": {
+    "o": "ja",
+    "t": "Wachttijd 30 dagen mogelijk",
+    "c": "wachttijd"
+   },
+   "eind67": {
+    "o": "voorwaarden",
+    "t": "Maximum afhankelijk van beroep: meestal 60, 62 of AOW-leeftijd",
+    "c": "eindleeftijd"
+   },
+   "beroeps": {
+    "o": "ja",
+    "t": "Beroepsarbeidsongeschiktheid; uitkering vanaf 25%",
+    "c": "dekking"
+   },
+   "zwanger": {
+    "o": "ja",
+    "t": "Uitkering 8 weken vóór tot 8 weken na bevalling, max. 18 weken",
+    "c": "zwanger"
+   },
+   "index": {
+    "o": "ja",
+    "t": "Optioneel: verzekerd inkomen en/of uitkering jaarlijks verhoogd",
+    "c": "indexatie"
+   },
+   "budget": {
+    "o": "voorwaarden",
+    "t": "AOV Kort (uitkeringsduur 2 of 5 jaar); geen basis- of ongevallenvariant genoemd",
+    "c": "varianten",
+    "tw": 1
+   }
+  }
+ }
+}

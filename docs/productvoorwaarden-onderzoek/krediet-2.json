@@ -1,0 +1,98 @@
+{
+ "product": "krediet",
+ "aanbieders": [
+  {
+   "naam": "DEFAM",
+   "url": "https://www.defam.nl/",
+   "domeinen": ["defam.nl", "alfam.nl"],
+   "documenten": [
+    {
+     "titel": "Actuele tarieven persoonlijke lening (bedragklassen)",
+     "url": "https://www.defam.nl/leningen/persoonlijke-lening/actuele-tarieven-persoonlijke-lening/",
+     "versie": "2026-01-01"
+    }
+   ],
+   "criteria": {
+    "bedrag": {
+     "waarde": "~ Persoonlijke Lening vanaf EUR 5.000; hoogste bedragklasse in eigen tarieftabel EUR 50.001 tot EUR 100.000",
+     "bron": [
+      "https://www.defam.nl/leningen/persoonlijke-lening/",
+      "https://www.defam.nl/leningen/persoonlijke-lening/actuele-tarieven-persoonlijke-lening/"
+     ],
+     "brondatum": "2026-01",
+     "zekerheid": "middel",
+     "toelichting": "Maximum afgeleid uit bedragklasse in de tarieftabel (geldig vanaf 1 januari 2026), uit zoekfragment; vervangt het maximum van EUR 75.000 van derde partij. Werkelijk maximum hangt af van leencapaciteit. GreenLoans-voorbeelden starten lager (vanaf EUR 2.500)."
+    },
+    "inkomen": {
+     "waarde": "~ Toets op netto (besteedbaar) inkomen, waarbij uitkering en pensioen meetellen; eisen voor tijdelijk contract en zzp niet openbaar gevonden",
+     "bron": [
+      "https://www.defam.nl/voor-partners/methodiek/",
+      "https://www.defam.nl/leningen/hoeveel-kan-ik-lenen/",
+      "https://www.defam.nl/veelgestelde-vragen/"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "laag",
+     "toelichting": "Bij offerte wordt gekeken naar inkomen en uitgaven, gezinssituatie en andere leningen. Acceptatiebeleid per inkomensvorm staat vermoedelijk alleen in het partnerportaal."
+    }
+   }
+  },
+  {
+   "naam": "Freo (Rabobank)",
+   "url": "https://www.freo.nl/",
+   "domeinen": ["freo.nl"],
+   "documenten": [],
+   "criteria": {
+    "toets": {
+     "waarde": "~ VFN-gedragscode en VFN-leennormen; toets op inkomen, huishoudsituatie (alleen of met partner), woonlasten en uitgaven zoals leaseauto, partner- of kinderalimentatie en kinderopvang; gehuwden/geregistreerd partners vragen altijd samen aan en partner levert ook gegevens aan",
+     "bron": [
+      "https://www.freo.nl/geld-lenen/hoeveel-kan-ik-lenen/",
+      "https://www.freo.nl/leentips-nieuws/nieuwe-leennormen-per-1-april/"
+     ],
+     "brondatum": "2026-10",
+     "zekerheid": "middel",
+     "toelichting": "Uit zoekfragmenten eigen site; site niet direct op te halen."
+    },
+    "hypotheek": {
+     "waarde": "~ Geen aparte woon- of groene lening; de Persoonlijke Lening (EUR 5.000-75.000, max. 120 mnd) wordt ingezet voor verbouwing en verduurzaming (zonnepanelen, (hybride) warmtepomp); EcoLening gestopt per 1 februari 2012",
+     "bron": [
+      "https://www.freo.nl/waarvoor-kan-ik-lenen/woning-verduurzamen/",
+      "https://www.freo.nl/waarvoor-kan-ik-lenen/warmtepomp/",
+      "https://www.freo.nl/geld-lenen/verbouwen",
+      "https://www.freo.nl/geld-lenen/ecolening/"
+     ],
+     "brondatum": "2026-10",
+     "zekerheid": "middel",
+     "toelichting": "Geen notaris-, taxatie- of advieskosten; rente bij besteding aan eigen woning onder voorwaarden fiscaal aftrekbaar."
+    }
+   }
+  },
+  {
+   "naam": "Qander Consumer Finance",
+   "url": "https://www.qander.nl/",
+   "domeinen": ["qander.nl"],
+   "documenten": [],
+   "criteria": {
+    "toets": {
+     "waarde": "~ Werkt volgens gedragscode, richtlijnen en normen van de VFN; maximaal kredietbedrag op basis van inkomen, vaste lasten en persoonlijke situatie",
+     "bron": [
+      "https://www.qander.nl/vraag-antwoord/detail?category=geld-lenen",
+      "https://www.qander.nl/onze-leenoplossingen/"
+     ],
+     "brondatum": "onbekend",
+     "zekerheid": "middel",
+     "toelichting": "Behandeling van woonlasten en partnerinkomen niet openbaar gevonden."
+    },
+    "hypotheek": {
+     "waarde": "~ Geen aparte woon- of groene lening gevonden; Persoonlijke lening (tot 180 mnd) inzetbaar voor aankoop, onderhoud of verbetering eigen woning, rente dan onder voorwaarden fiscaal aftrekbaar",
+     "bron": [
+      "https://www.qander.nl/onze-leenoplossingen/",
+      "https://www.qander.nl/vraag-antwoord/detail?category=geld-lenen"
+     ],
+     "brondatum": "onbekend",
+     "zekerheid": "middel",
+     "toelichting": "Uit zoekfragmenten eigen site."
+    }
+   }
+  }
+ ]
+}

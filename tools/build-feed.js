@@ -175,7 +175,27 @@ WZ.forEach(i => {
   if (!g) { g = { d: i.d, naam: i.naam, items: [] }; wGroepen.push(g); }
   g.items.push(i);
 });
-const wItems = wGroepen.filter(g => rfc822(g.d)).map(g => {
+/* Productvoorwaarden (ORV, AOV, uitvaart, lijfrente, krediet): zelfde opzet, één item per product, aanbieder en dag. */
+const PW = (laadData(['data/productvoorwaarden-wijzigingen.js']).PRODUCTVOORWAARDEN_WIJZIGINGEN || { items: [] }).items || [];
+const PVD = laadData(['data/productvoorwaarden.js']).PRODUCTVOORWAARDEN || [];
+const PT = { orv: 'ORV', aov: 'AOV', uitvaart: 'Uitvaartverzekering', lijfrente: 'Lijfrente', krediet: 'Krediet' };
+const PCRIT = {}; PVD.forEach(p => p.criteria.forEach(c => { PCRIT[p.id + '.' + c.id] = c.naam; }));
+const pGroepen = [];
+PW.forEach(i => {
+  let g = pGroepen.find(x => x.d === i.d && x.p === i.p && x.naam === i.naam);
+  if (!g) { g = { d: i.d, p: i.p, naam: i.naam, items: [] }; pGroepen.push(g); }
+  g.items.push(i);
+});
+const pItems = pGroepen.filter(g => rfc822(g.d)).map(g => {
+  const link = BASE + 'productvoorwaarden.html#p=' + g.p + '&a=' + slugNL(g.naam);
+  const regels = g.items.map(i => i.soort === 'eerste' ? 'Opgenomen met ' + i.aantal + ' kenmerken.' : ((PCRIT[g.p + '.' + i.crit] || i.crit) + ' (' + SOORT[i.soort] + '): ' + String(i.soort === 'vervallen' ? i.oud : i.nieuw).replace(/^[+~!-]\s*/, '')));
+  return {
+    titel: (PT[g.p] || g.p) + ' ' + g.naam + ': ' + g.items.length + (g.items.length === 1 ? ' wijziging' : ' wijzigingen'),
+    link, guid: link + '&d=' + g.d, permalink: false, pubDate: rfc822(g.d), sleutel: sorteerSleutel(g.d), volg: 0, categorie: (PT[g.p] || g.p) + ' · ' + g.naam,
+    beschrijving: kort(regels.join(' · '), 900) + ' (Gecontroleerde voorwaarden; geen premies, rentes of advies.)',
+  };
+});
+const wItems = pItems.concat(wGroepen.filter(g => rfc822(g.d)).map(g => {
   const link = BASE + 'voorwaarden-vergelijker.html#vergelijk=' + slugNL(g.naam);
   const regels = g.items.map(i => i.soort === 'eerste' ? 'Eerste controle: ' + i.aantal + ' voorwaarden.' : ((CRIT_NAAM[i.crit] || i.crit) + ' (' + SOORT[i.soort] + '): ' + String(i.soort === 'vervallen' ? i.oud : i.nieuw).replace(/^[+~!-]\s*/, '')));
   return {
@@ -183,10 +203,10 @@ const wItems = wGroepen.filter(g => rfc822(g.d)).map(g => {
     link, guid: link + '&d=' + g.d, permalink: false, pubDate: rfc822(g.d), sleutel: sorteerSleutel(g.d), volg: 0, categorie: g.naam,
     beschrijving: kort(regels.join(' · '), 900) + ' (Gecontroleerde voorwaarden; geen advies, controleer altijd de actuele gids van de geldverstrekker.)',
   };
-}).sort((a, b) => b.sleutel.localeCompare(a.sleutel) || a.titel.localeCompare(b.titel, 'nl')).slice(0, MAX_ITEMS);
+})).sort((a, b) => b.sleutel.localeCompare(a.sleutel) || a.titel.localeCompare(b.titel, 'nl')).slice(0, MAX_ITEMS);
 const wFeed = feedXml({
-  titel: 'Adviesforum – wijzigingen in voorwaarden geldverstrekkers', link: BASE + 'voorwaarden-vergelijker.html', self: BASE + 'voorwaarden-feed.xml',
-  beschrijving: 'Wijzigingen in de online gecontroleerde hypotheekvoorwaarden per geldverstrekker. Geen rentes, geen advies.',
+  titel: 'Adviesforum – wijzigingen in voorwaarden van aanbieders', link: BASE + 'voorwaarden-vergelijker.html', self: BASE + 'voorwaarden-feed.xml',
+  beschrijving: 'Wijzigingen in de online gecontroleerde voorwaarden per aanbieder: hypotheken, ORV, AOV, uitvaart, lijfrente en krediet. Geen rentes, premies of advies.',
 }, wItems);
 
 /* ---------- Schrijven of controleren ---------- */

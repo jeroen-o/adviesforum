@@ -67,7 +67,7 @@ test('adviesmotivatie neemt vergeleken aanbieders over uit de link', async ({ pa
 
 test('laatste nieuws toont wijzigingen in voorwaarden', async ({ page }) => {
   await page.goto('/laatste.html');
-  await expect(page.locator('#l-voorwaarden li').first()).toContainText('Voorwaarden');
+  await expect(page.locator('#l-voorwaarden li').first()).toContainText(/wijziging/);
 });
 
 test('kennisbankartikel over erfpacht linkt naar de vergelijker', async ({ page }) => {
@@ -114,5 +114,44 @@ test('situatiecheck: situatie kiezen toont geldverstrekkers op alfabet met onder
   expect(namen.length).toBeGreaterThan(5);
   expect(namen).toEqual([...namen].sort((a, b) => a.localeCompare(b, 'nl')));
   await expect(page.locator('.gv .lab').first()).toBeVisible();
+  expect(fouten).toEqual([]);
+});
+
+test('node tools/productvoorwaarden-wijzigingen.js --check: wijzigingslog productvoorwaarden is actueel', () => {
+  expect(node('productvoorwaarden-wijzigingen.js', '--check')).toMatch(/actueel/);
+});
+test('productvoorwaarden: aanbieder volgen via de functionele cookie', async ({ page, context }) => {
+  const fouten = await volgFouten(page);
+  await page.goto('/productvoorwaarden.html#p=orv');
+  await page.locator('thead .volg').first().click();
+  await expect(page.locator('thead .volg[aria-pressed="true"]')).toHaveCount(1);
+  const cookie = (await context.cookies()).find(c => c.name === 'af_favorieten');
+  expect(decodeURIComponent(cookie.value)).toMatch(/p\.orv-/);
+  await expect(page.locator('#wijzSub')).toContainText('sinds de eerste publicatie');
+  expect(fouten).toEqual([]);
+});
+test('compliance-overzicht: prioriteit filtert en sorteert', async ({ page }) => {
+  await page.goto('/compliance-overzicht.html');
+  await page.selectOption('#f-prio', 'hoog');
+  await expect(page.locator('#kb-tabel tbody tr').first().locator('td[data-k="Prioriteit"]')).toContainText('Hoog');
+});
+test('uitnodigen: tekst voor aanbieders met mailto', async ({ page }) => {
+  await page.goto('/uitnodigen.html');
+  await expect(page.locator('#aanb-mail')).toHaveAttribute('href', /^mailto:\?subject=/);
+  await expect(page.locator('#aanb-tekst')).toContainText('aanbieder-aanleveren.html');
+});
+test('situatiecheck: twijfelgevallen zijn gemarkeerd', async ({ page }) => {
+  await page.goto('/situatiecheck.html#s=dag');
+  await expect(page.locator('.gv .tw').first()).toBeVisible();
+});
+test('situatiecheck: tabbladen ORV en AOV met situaties uit de productvoorwaarden', async ({ page }) => {
+  const fouten = await volgFouten(page);
+  await page.goto('/situatiecheck.html#p=orv&s=roker');
+  await expect(page.locator('#tabs button[aria-selected="true"]')).toHaveText('ORV');
+  await expect(page.locator('.gv').first()).toBeVisible();
+  await expect(page.locator('.gv h3 a').first()).toHaveAttribute('href', /productvoorwaarden\.html#p=orv&a=/);
+  await page.locator('#tabs button', { hasText: 'AOV' }).click();
+  await expect(page.locator('#samen')).toContainText('Kies een of meer situaties');
+  await expect(page.locator('#optNieuwLbl')).toBeHidden();
   expect(fouten).toEqual([]);
 });

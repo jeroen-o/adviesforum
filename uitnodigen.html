@@ -339,6 +339,17 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
         <li>De melding dat aanmelden een geldig LinkedIn-profiel vraagt. Na goedkeuring door de beheerder is je collega geverifieerd adviseur.</li>
       </ul>
     </div>
+    <div class="kaart" id="aanbieder-uitnodigen">
+      <h2>Een aanbieder uitnodigen</h2>
+      <p style="margin-top:0">Ken je een accountmanager of intermediairteam van een geldverstrekker, verzekeraar of kredietverstrekker? Stuur deze uitnodiging om hun nieuws, documenten, agenda en voorwaarden op het forum te zetten.</p>
+      <details><summary>Bekijk de tekst</summary><pre class="tekst" id="aanb-tekst" tabindex="0" style="white-space:pre-wrap"></pre></details>
+      <p style="display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 0">
+        <a class="knop knop-primair" id="aanb-mail" href="#">Open in je mailprogramma &rarr;</a>
+        <button type="button" class="knop-tweede" id="aanb-kopieer">Tekst kopi&euml;ren</button>
+      </p>
+      <div class="gekopieerd" id="aanb-status" role="status" aria-live="polite"></div>
+      <p class="privacy">Alleen voor zakelijke contacten die je kent. Aanbieders plaatsen geen rentes, tarieven, premies of acties op het forum; zie de <a href="aanbieders-voorwaarden.html">deelnamevoorwaarden</a>.</p>
+    </div>
     <div class="kaart">
       <h2>Privacy</h2>
       <p style="margin-top:0">Er wordt niets opgeslagen en niets naar het forum gestuurd. E-mailadressen, het mobiele nummer en het LinkedIn-profiel van je collega gaan alleen naar je eigen mailprogramma, WhatsApp of LinkedIn op jouw apparaat. Het Adviesforum ziet ze niet.</p>
@@ -778,6 +789,33 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
   window.Uitnodigen = { normaliseerNummer: normaliseerNummer, whatsappUrl: whatsappUrl, whatsappTekst: whatsappTekst, linkedinTekst: linkedinTekst };
 
   kiesKanaal(kanaalUitHash() || "email");
+})();
+</script>
+<script>
+(function(){
+'use strict';
+var basis = 'https://jeroen-o.github.io/adviesforum/';
+var onderwerp = 'Uitnodiging: uw organisatie op het Adviesforum voor financieel adviseurs';
+var tekst = 'Beste relatie,\n\n' +
+  'Het Adviesforum is een onafhankelijk platform voor en door financieel adviseurs, met een forum, kennisbank, rekentools en een voorwaarden-vergelijker met bron.\n\n' +
+  'Wij nodigen u uit om uw organisatie gratis op het forum te presenteren. U kunt:\n' +
+  '- nieuws en productwijzigingen plaatsen (adviseurs kunnen u volgen en krijgen het te zien op Laatste nieuws en via RSS);\n' +
+  '- links naar uw voorwaarden, acceptatiegids, productbladen, formulieren en renteblad delen, met datum van de laatste wijziging;\n' +
+  '- webinars en PE-bijeenkomsten in de agenda zetten;\n' +
+  '- de contactgegevens van uw intermediairteam en extranet vermelden.\n\n' +
+  'Het forum toont zelf geen rentes, tarieven, premies of acties; een link naar uw eigen renteblad mag wel.\n\n' +
+  'Wat u aanlevert en hoe: ' + basis + 'aanbieder-aanleveren.html\n' +
+  'Deelnamevoorwaarden: ' + basis + 'aanbieders-voorwaarden.html\n' +
+  'Zo ziet het eruit: ' + basis + 'aanbieders.html\n\n' +
+  'Met vriendelijke groet,\n\n[naam]\n[functie en kantoor]';
+var pre = document.getElementById('aanb-tekst'), st = document.getElementById('aanb-status');
+pre.textContent = tekst;
+document.getElementById('aanb-mail').href = 'mailto:?subject=' + encodeURIComponent(onderwerp) + '&body=' + encodeURIComponent(tekst);
+document.getElementById('aanb-kopieer').addEventListener('click', function(){
+  var klaar = function(){ st.textContent = 'Tekst gekopieerd.'; };
+  try{ navigator.clipboard.writeText(onderwerp + '\n\n' + tekst).then(klaar, function(){ st.textContent = 'Kopiëren lukte niet; selecteer de tekst handmatig.'; }); }
+  catch(e){ st.textContent = 'Kopiëren lukte niet; selecteer de tekst handmatig.'; }
+});
 })();
 </script>
 </body>
