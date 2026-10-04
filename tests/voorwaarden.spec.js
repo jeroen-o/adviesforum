@@ -11,7 +11,7 @@ const BRON_VOORWAARDEN = ['Zzp / ondernemer', 'Flexwerk & uitzend', 'Perspectief
   'Rentevastperioden', 'Dagrentegarantie', 'Geldigheidsduur aanbod', 'Boetevrij aflossen', 'Risicoklassen & LTV-daling',
   'Looptijd bouwdepot', 'Rentevergoeding depot', 'Declaratie & uitbetaling', 'Energiebespaarbudget', 'Verduurzamingsvoordeel',
   'Verhuisregeling', 'Onderhandse verkoop', 'Ontslag hoofdelijkheid', 'Verhoging / 2e hypotheek', 'Overbruggingskrediet', 'Bron / peildatum'];
-const TOTAAL = 49, HOOFD = 42, OVERIG = 7, VOORWAARDEN = 32, INGEVULD = 32;
+const TOTAAL = 50, HOOFD = 43, OVERIG = 7, VOORWAARDEN = 32, INGEVULD = 32;
 
 const rijen = page => page.locator('#matrix tbody tr[data-id]');
 const exact = naam => new RegExp('^' + naam.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '$');

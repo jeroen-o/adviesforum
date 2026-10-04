@@ -1,0 +1,678 @@
+[
+ {
+  "naam": "Vista Hypotheken",
+  "algemeen": {
+   "intermediairsite": "https://www.vistahypotheken.nl/voor-adviseurs",
+   "voorwaardenPdf": [
+    "https://files.vistahypotheken.nl/1751270459-algemene-voorwaarden-vista-2025.pdf",
+    "https://files.vistahypotheken.nl/1751290709-vergelijkingskaart-algemene-voorwaarden-2020-2025.pdf",
+    "https://files.vistahypotheken.nl/1736755968-250110_vista_productkaart_beheer.pdf"
+   ],
+   "acceptatiegids": [
+    "https://files.vistahypotheken.nl/1767082949-hypothekengids-januari-2026.pdf",
+    "https://files.vistahypotheken.nl/1727868389-hypothekengids-vista-hypotheken-versie-september-2024-1.pdf",
+    "https://files.vistahypotheken.nl/1736755903-250110_vista_productkaart_acceptatie.pdf"
+   ],
+   "opmerking": "Dochter van Rabobank (bron vergelijkers). vistahypotheken.nl en files.vistahypotheken.nl geblokkeerd voor WebFetch/curl; alles uit zoeksamenvattingen van eigen pagina's/pdf's. Acceptatiecriteria in gids gelden voor niet-NHG; bij NHG zijn NHG-normen leidend."
+  },
+  "criteria": {
+   "zzp": {
+    "waarde": "! Min. 36 mnd onderneming; gemiddelde winst 3 jaar (max. laatste); IKV Zakelijk Inkomen/Raadhuys",
+    "bron": [
+     "https://files.vistahypotheken.nl/1767082949-hypothekengids-januari-2026.pdf",
+     "https://www.vistahypotheken.nl/kennisbank/hypotheek-voor-ondernemers"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Eigen (niet-NHG) norm; met NHG gelden NHG-normen leidend, geen aparte 1-jaarsregel bij Vista gevonden"
+   },
+   "flex": {
+    "waarde": "~ Gemiddelde 3 kalenderjaren (werkgever/UWV), max. laatste jaar of huidig inkomen",
+    "bron": [
+     "https://files.vistahypotheken.nl/1767082949-hypothekengids-januari-2026.pdf"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Ruimer omschreven dan 'beperkt'; conform marktstandaard"
+   },
+   "persp": {
+    "waarde": "~ Perspectiefverklaring uitzendkrachten: min. 26 wkn zelfde bureau, 12 van 14 mnd gewerkt",
+    "bron": [
+     "https://files.vistahypotheken.nl/1767082949-hypothekengids-januari-2026.pdf"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Verklaring max. 6 mnd oud op datum bindend aanbod"
+   },
+   "aow": {
+    "waarde": "~ AOW/pensioen binnen 10 jaar na aanbod: toets op verwacht inkomen na pensionering",
+    "bron": [
+     "https://files.vistahypotheken.nl/1767082949-hypothekengids-januari-2026.pdf",
+     "https://files.vistahypotheken.nl/1727868389-hypothekengids-vista-hypotheken-versie-september-2024-1.pdf"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Pensioenuitkering mag volledig meetellen"
+   },
+   "erfp": {
+    "waarde": "! Alleen erfpacht van (semi-)overheid; particuliere erfpacht niet toegestaan",
+    "bron": [
+     "https://files.vistahypotheken.nl/1727868389-hypothekengids-vista-hypotheken-versie-september-2024-1.pdf",
+     "https://files.vistahypotheken.nl/1767082949-hypothekengids-januari-2026.pdf"
+    ],
+    "brondatum": "2024-09",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Afkoop erfpacht wel als bestedingsdoel"
+   },
+   "rvp": {
+    "waarde": "~ 1, 5, 10, 15, 20 en 30 jaar; combineren per leningdeel",
+    "bron": [
+     "https://www.vistahypotheken.nl/actuele-hypotheekrente"
+    ],
+    "brondatum": "2026-09",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "1 jaar vast toegevoegd t.o.v. huidige waarde"
+   },
+   "dag": {
+    "waarde": "+ Laagste rente bij passeren binnen 3 mnd; na verlenging laagste van aanbod/verlengingsdatum",
+    "bron": [
+     "https://www.vistahypotheken.nl/veelgestelde-vragen"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Na verlenging telt dagrente op passeerdatum niet meer"
+   },
+   "geld": {
+    "waarde": "~ Renteaanbod 3 mnd; eenmalig verlengen +3 mnd bestaande bouw / +9 mnd nieuwbouw",
+    "bron": [
+     "https://www.vistahypotheken.nl/veelgestelde-vragen"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Acceptatietermijn renteaanbod 3 weken; verlenging kosteloos"
+   },
+   "boete": {
+    "waarde": "+ Onbeperkt boetevrij uit eigen middelen; anders 10% per jaar",
+    "bron": [
+     "https://www.vistahypotheken.nl/10-redenen-om-voor-een-vista-hypotheek-te-kiezen",
+     "https://www.vistahypotheken.nl/kennisbank/extra-aflossen-op-je-hypotheek"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Vista kan herkomst eigen middelen toetsen"
+   },
+   "ltv": {
+    "waarde": "+ Automatische opslagverlaging bij lagere klasse (aflossing); ook via hogere woningwaarde",
+    "bron": [
+     "https://www.vistahypotheken.nl/kennisbank/renteopslag-verlagen"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Klassen NHG, ≤60, ≤80, ≤90, ≤95, >95%; waardestijging aantonen via Calcasa desktoptaxatie of taxatie"
+   },
+   "bdduur": {
+    "waarde": "~ Nieuwbouw 24 mnd (+6 verlenging); verbouw 6 mnd (+verlenging)",
+    "bron": [
+     "https://www.vistahypotheken.nl/kennisbank/een-bouwdepot-bij-je-hypotheek"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "Duur verlenging verbouw wisselend in samenvattingen (6 of 18 mnd); oudere gids 2023 noemde nieuwbouw 18+12"
+   },
+   "bdrnt": {
+    "waarde": "~ Rentevergoeding gelijk aan hypotheekrente; stopt bij verlenging depot",
+    "bron": [
+     "https://www.vistahypotheken.nl/kennisbank/een-bouwdepot-bij-je-hypotheek"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": ""
+   },
+   "bddecl": {
+    "waarde": "+ Declareren via Mijn Vista; beoordeling binnen 4 werkdagen",
+    "bron": [
+     "https://www.vistahypotheken.nl/kennisbank/een-bouwdepot-bij-je-hypotheek"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Eigen portaal i.p.v. 'via servicer'"
+   },
+   "ebb": {
+    "waarde": "+ Tot 106% marktwaarde lenen voor energiebesparende maatregelen",
+    "bron": [
+     "https://www.vistahypotheken.nl/kennisbank/woning-verduurzamen",
+     "https://www.vistahypotheken.nl/kennisbank/energielabel-a-rentekorting"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Budget volledig besteden aan energiebesparende voorzieningen"
+   },
+   "duur": {
+    "waarde": "+ Rentekorting bij energielabel A (ook bij verbetering tijdens looptijd); Duurzaamheidsdesk",
+    "bron": [
+     "https://www.vistahypotheken.nl/kennisbank/energielabel-a-rentekorting",
+     "https://www.vistahypotheken.nl/verhalen/ontdek-de-6-meestgestelde-vragen-aan-de-vista-duurzaamheidsdesk"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Concreet voordeel i.p.v. 'tariefgedreven'"
+   },
+   "verh": {
+    "waarde": "+ Rente en resterende rentevaste periode mee, binnen 6 mnd na verkoop/aflossing",
+    "bron": [
+     "https://www.vistahypotheken.nl/kennisbank/je-rentecontract-meenemen"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Ook bij eerst kopen dan verkopen; extra lening tegen actuele rente; nieuwe woning moet hoofdverblijf in NL zijn"
+   },
+   "ondh": {
+    "waarde": "! Geen restschuldlening; restschuld uit eigen middelen (NHG kan dekken)",
+    "bron": [
+     "https://www.vistahypotheken.nl/kennisbank/hulp-bij-betalingsproblemen",
+     "https://www.vistahypotheken.nl/verhalen/wat-is-nhg"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "Geen specifiek beleid onderhandse verkoop gevonden; executie onderhands met rechterlijke goedkeuring"
+   },
+   "oha": {
+    "waarde": "~ Aanvraagformulier + toelichting en cijfermatige onderbouwing; ca. 5 dagen doorlooptijd",
+    "bron": [
+     "https://www.vistahypotheken.nl/kennisbank/ontslag-hoofdelijke-aansprakelijkheid",
+     "https://files.vistahypotheken.nl/1747747691-oha-aanvraagformulier.pdf"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Kosten vast bedrag; verhoging voor uitkoop via HDN-aanvraag"
+   },
+   "tweede": {
+    "waarde": "+ Onderhands ophogen tot inschrijving zonder notaris; anders 2e hypotheek; min. €10.000",
+    "bron": [
+     "https://www.vistahypotheken.nl/kennisbank/mijn-hypotheek-ophogen"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Wijzigingskosten van toepassing"
+   },
+   "ovbr": {
+    "waarde": "~ Overbruggingslening max. 24 mnd; onverkocht max. 90% marktwaarde oude woning",
+    "bron": [
+     "https://www.vistahypotheken.nl/kennisbank/overwaarde-benutten",
+     "https://www.vistahypotheken.nl/kennisbank/andere-woning-kopen"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Waarde via WOZ, taxatie of Calcasa; dubbele lasten moeten betaalbaar zijn"
+   },
+   "avrij": {
+    "waarde": "~ Max. 50% van marktwaarde aflossingsvrij",
+    "bron": [
+     "https://files.vistahypotheken.nl/1727868389-hypothekengids-vista-hypotheken-versie-september-2024-1.pdf",
+     "https://files.vistahypotheken.nl/1751270576-klantbrochure-vista-hypotheken_toegankelijkheid_2025.pdf"
+    ],
+    "brondatum": "2025",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Bij verhoging blijven bestaande aflossingsvrije delen tot einde oorspronkelijke looptijd"
+   },
+   "rmid": {
+    "waarde": "- Rentemiddeling niet mogelijk",
+    "bron": [
+     "https://www.vistahypotheken.nl/veelgestelde-vragen"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Tussentijds wisselen van rentevaste periode = vervroegd aflossen (mogelijk vergoeding)"
+   },
+   "rverl": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet gevonden of bestaande klanten bij verlenging hetzelfde tarief krijgen als nieuwe klanten"
+   },
+   "rvoor": {
+    "waarde": "~ Renteaanbod min. 3 mnd voor einde rentevaste periode",
+    "bron": [
+     "https://www.vistahypotheken.nl/veelgestelde-vragen",
+     "https://www.vistahypotheken.nl/kennisbank/je-rentevastperiode-loopt-af"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Keuze uiterlijk 14 dagen voor afloop doorgeven"
+   },
+   "bbrk": {
+    "waarde": "~ Contante waarde renteverschil; vergelijkingsrente = actuele rente resterende periode",
+    "bron": [
+     "https://files.vistahypotheken.nl/1751270459-algemene-voorwaarden-vista-2025.pdf"
+    ],
+    "brondatum": "2025",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Vergelijkingsrente o.b.v. laatst gebruikte woningwaarde en geldende klassen"
+   },
+   "elbl": {
+    "waarde": "+ Rentekorting bij energielabel A, ook voor bestaande klanten",
+    "bron": [
+     "https://www.vistahypotheken.nl/kennisbank/energielabel-a-rentekorting"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Geen opslag zonder label gevonden"
+   },
+   "o106": {
+    "waarde": "! Lenen boven 100% valt in tariefklasse >95%; geen vrijstelling gevonden",
+    "bron": [
+     "https://www.vistahypotheken.nl/kennisbank/renteopslag-verlagen",
+     "https://www.vistahypotheken.nl/actuele-hypotheekrente"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Afgeleid uit klassenindeling; niet expliciet bevestigd"
+   },
+   "bprov": {
+    "waarde": "+ Geen bereidstellingsprovisie; verlenging kosteloos",
+    "bron": [
+     "https://www.vistahypotheken.nl/veelgestelde-vragen",
+     "https://files.vistahypotheken.nl/1727868389-hypothekengids-vista-hypotheken-versie-september-2024-1.pdf"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": ""
+   },
+   "wkost": {
+    "waarde": "! Vaste wijzigingskosten (o.a. ophogen, ontslag hoofdelijkheid)",
+    "bron": [
+     "https://www.vistahypotheken.nl/kennisbank/mijn-hypotheek-ophogen",
+     "https://www.vistahypotheken.nl/kennisbank/ontslag-hoofdelijke-aansprakelijkheid"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Bedrag ca. €150 per wijziging"
+   },
+   "avlt": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Alleen gevonden dat aflossingsvrij deel aan einde looptijd ineens moet worden afgelost; geen verlengbeleid"
+   },
+   "bproc": {
+    "waarde": "~ Brief na gemiste termijn, na 2 wkn telefonisch contact; betalingsregeling mogelijk",
+    "bron": [
+     "https://www.vistahypotheken.nl/kennisbank/hulp-bij-betalingsproblemen"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Verwijst naar Nederlandse Schuldhulproute/Geldfit"
+   }
+  },
+  "gecontroleerd": "2026-10-04"
+ },
+ {
+  "naam": "bijBouwe",
+  "algemeen": {
+   "intermediairsite": "https://bijbouwe.nl/adviseurs",
+   "voorwaardenPdf": [
+    "https://bijbouwe.nl/belangrijke-documenten",
+    "https://media-01.imu.nl/storage/fintechdirect.nl/20791/vergelijkingskaart-hypotheek-bijbouwe.pdf"
+   ],
+   "acceptatiegids": [
+    "https://bijbouwe.nl/belangrijke-documenten"
+   ],
+   "opmerking": "Label van Dynamic Credit (funding door institutionele beleggers). Twee producten: bijBouwe (basis) en bijBouwe Vooruit; acceptatiehandleidingen sept 2026 op belangrijke-documenten (pdf-URL niet in zoekresultaten). bijbouwe.nl geblokkeerd voor WebFetch; alles uit zoeksamenvattingen. Max. hypotheek €1.000.000."
+  },
+  "criteria": {
+   "zzp": {
+    "waarde": "! Min. 36 mnd ondernemer; inkomensverklaring van geselecteerde partij",
+    "bron": [
+     "https://www.bijbouwe.nl/online-hypotheek/bijbouwe-vooruit-hypotheek",
+     "https://bijbouwe.nl/blog/een-bijbouwe-hypotheek-alle-productkenmerken-op-een-rijtje"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "Geen aparte kortere NHG-termijn (1 jaar met IVO) gevonden; bij NHG-conforme aanvraag wordt NHG automatisch aangevraagd"
+   },
+   "flex": {
+    "waarde": "! Gemiddelde 3 kalenderjaren, maar huidig inkomen leidend als dat lager is",
+    "bron": [
+     "https://bijbouwe.nl/online-hypotheek",
+     "https://www.bijbouwe.nl/blog/hypotheek-voor-de-flexwerker-hoe-jij-een-huis-kan-kopen-zonder-vast-contract"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Afwijkend van NHG; Vooruit Hypotheek gericht op zelfstandigen/flexwerkers"
+   },
+   "persp": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron over perspectiefverklaring bij bijBouwe gevonden"
+   },
+   "aow": {
+    "waarde": "~ Binnen 10 jaar voor AOW is toekomstig pensioeninkomen leidend",
+    "bron": [
+     "https://bijbouwe.nl/blog/een-hypotheek-afsluiten-na-65-jaar-hoe-zit-dat"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Blogartikel bijBouwe; pensioenoverzicht max. 3 mnd oud"
+   },
+   "erfp": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Acceptatiehandleiding (sept 2026) niet inzichtelijk; geen erfpachtbeleid gevonden"
+   },
+   "rvp": {
+    "waarde": "~ 1 t/m 30 jaar rentevast, met en zonder NHG",
+    "bron": [
+     "https://bijbouwe.nl/blog/een-bijbouwe-hypotheek-alle-productkenmerken-op-een-rijtje",
+     "https://bijbouwe.nl/blog/bestaande-belegger-vult-funding-aan-voldoende-funding-15-30-jaar-rentevast-niet-nhg"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "Beschikbaarheid per periode/LTV afhankelijk van funding beleggers (soms tijdelijk uitverkocht)"
+   },
+   "dag": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Geen bron gevonden dat bij lagere rente op passeerdatum die rente geldt; alleen voorwaarden garantieverklaring"
+   },
+   "geld": {
+    "waarde": "~ Garantieverklaring 4 mnd geldig; eenmalig +2 mnd verlengen (max. 6 mnd)",
+    "bron": [
+     "https://bijbouwe.nl/adviseurs/rente",
+     "https://bijbouwe.nl/adviseurs"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Acceptatietermijn 3 weken; verlengingsvoorstel getekend binnen 4 mnd"
+   },
+   "boete": {
+    "waarde": "~ 10% van oorspronkelijke hoofdsom per jaar; boetevrij bij verkoop",
+    "bron": [
+     "https://bijbouwe.nl/blog/een-bijbouwe-hypotheek-alle-productkenmerken-op-een-rijtje",
+     "https://bijbouwe.nl/je-bijbouwe-hypotheek/extra-aflossen"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": ""
+   },
+   "ltv": {
+    "waarde": "+ Automatisch lagere risicoklasse bij aflossing; bij waardestijging via taxatierapport",
+    "bron": [
+     "https://bijbouwe.nl/je-bijbouwe-hypotheek/je-hypotheek-in-een-lagere-risicoklasse"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Aanpassing rente volgende maand na verzoek met gevalideerd taxatierapport (max. 6 mnd oud)"
+   },
+   "bdduur": {
+    "waarde": "+ Nieuwbouw 24 mnd / bestaande bouw 12 mnd; 2x verlengen met 6 mnd",
+    "bron": [
+     "https://bijbouwe.nl/je-bijbouwe-hypotheek/je-bouwdepot"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Verlengingsmogelijkheid toegevoegd"
+   },
+   "bdrnt": {
+    "waarde": "~ Rentevergoeding over niet-opgenomen depot; geen vergoeding in verlenging",
+    "bron": [
+     "https://bijbouwe.nl/je-bijbouwe-hypotheek/je-bouwdepot"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Hoogte vergoeding niet expliciet gelijk aan hypotheekrente bevestigd"
+   },
+   "bddecl": {
+    "waarde": "+ Declareren via MijnLeninginzicht; beoordeling 5 werkdagen, uitbetaling binnen 2 werkdagen",
+    "bron": [
+     "https://bijbouwe.nl/je-bijbouwe-hypotheek/je-bouwdepot"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": ""
+   },
+   "ebb": {
+    "waarde": "+ Tot 106% marktwaarde voor energiebesparende maatregelen (via verduurzamingsdepot)",
+    "bron": [
+     "https://bijbouwe.nl/blog/wat-kun-je-met-extra-hypotheekruimte-voor-energiebesparing",
+     "https://www.bijbouwe.nl/blog/je-huis-verduurzamen-met-het-energiebespaarbudget"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Label D +€15.000, EFG +€20.000 buiten inkomenstoets (wettelijke norm)"
+   },
+   "duur": {
+    "waarde": "+ Vooruit Hypotheek: scherpere rente op verduurzamingsleningdeel; verbeterplan bij label D of slechter",
+    "bron": [
+     "https://www.bijbouwe.nl/online-hypotheek/bijbouwe-vooruit-hypotheek",
+     "https://bijbouwe.nl/verduurzaming",
+     "https://bijbouwe.nl/verduurzaming/verbeterplan"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Verplicht verduurzamingsdepot voor DEFG is afgeschaft"
+   },
+   "verh": {
+    "waarde": "~ Meeneem-/verhuisregeling; NHG-tarief vervalt bij nieuwe woning boven NHG-grens",
+    "bron": [
+     "https://bijbouwe.nl/je-bijbouwe-hypotheek",
+     "https://www.bijbouwe.nl/blog/waarom-grenzen-hypotheken-verhogingen"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Termijn niet gevonden; totaal max. €1.000.000 incl. openstaande verplichtingen"
+   },
+   "ondh": {
+    "waarde": "~ Preventief en bijzonder beheer; verkoop/executie als oplossingen falen",
+    "bron": [
+     "https://bijbouwe.nl/je-bijbouwe-hypotheek/preventief-en-bijzonder-beheer",
+     "https://bijbouwe.nl/je-bijbouwe-hypotheek/betalingsproblemen"
+    ],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "bevestigd",
+    "toelichting": "Geen specifiek beleid onderhandse verkoop/restschuld gevonden"
+   },
+   "oha": {
+    "waarde": "~ Via adviseur; toets of blijver hypotheek alleen kan dragen; looptijd kan opnieuw naar 30 jaar",
+    "bron": [
+     "https://bijbouwe.nl/je-bijbouwe-hypotheek/ontslag-hoofdelijke-aansprakelijkheid",
+     "https://www.bijbouwe.nl/blog/sneller-en-soepeler-bijbouwe-versnelt-het-proces-ontslag-hoofdelijk-aansprakelijkheid"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Uitkoop via verhoging mogelijk"
+   },
+   "tweede": {
+    "waarde": "~ Verhogen €5.000–€175.000; onderhands bij ruimte in inschrijving, anders notaris",
+    "bron": [
+     "https://bijbouwe.nl/je-bijbouwe-hypotheek/hypotheek-verhogen",
+     "https://www.bijbouwe.nl/blog/waarom-grenzen-hypotheken-verhogingen"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Onderhandse verhoging wel mogelijk; administratie- en bemiddelingskosten"
+   },
+   "ovbr": {
+    "waarde": "~ Overbruggingskrediet voor overwaarde onder voorwaarden; min. €10.000",
+    "bron": [
+     "https://bijbouwe.nl/blog/overwaarde-op-je-huis-bij-verkoop-denk-aan-je-overbruggingskrediet-hoe-het-werkt"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "Niet bij overbrugging korter dan 1 week; max. percentage/looptijd niet gevonden"
+   },
+   "avrij": {
+    "waarde": "~ Max. 50% van woningwaarde aflossingsvrij",
+    "bron": [
+     "https://bijbouwe.nl/blog/een-bijbouwe-hypotheek-alle-productkenmerken-op-een-rijtje",
+     "https://bijbouwe.nl/aflossingsvrij"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Uit blog productkenmerken; overname Hypotheekshop-bron niet nodig"
+   },
+   "rmid": {
+    "waarde": "! Rentevaste periode wijzigen alleen tegen vergoeding (ineens of meefinancieren)",
+    "bron": [
+     "https://bijbouwe.nl/je-bijbouwe-hypotheek/wijzigen-rentevaste-periode"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Geen rentemiddeling (vergoeding in rente) gevonden"
+   },
+   "rverl": {
+    "waarde": "+ Bestaande klanten kunnen uit alle tarieven kiezen, ook als die voor nieuwe klanten uitverkocht zijn",
+    "bron": [
+     "https://bijbouwe.nl/adviseurs/rente",
+     "https://bijbouwe.nl/online-hypotheek/hypotheekrente-tarieven"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Niet letterlijk bevestigd dat tarief identiek is aan nieuwe klanten"
+   },
+   "rvoor": {
+    "waarde": "~ Renteaanbod ca. 3 mnd voor einde rentevaste periode",
+    "bron": [
+     "https://www.bijbouwe.nl/blog/dit-kun-jij-doen-om-te-besparen-na-het-aflopen-van-je-rentevast-periode"
+    ],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Algemeen blog ('normaal'); niet specifiek als bijBouwe-voorwaarde"
+   },
+   "bbrk": {
+    "waarde": "~ Vergoeding o.b.v. vergelijkingsrente; geen vergoeding als die ≥ contractrente",
+    "bron": [
+     "https://bijbouwe.nl/je-bijbouwe-hypotheek/wijzigen-rentevaste-periode",
+     "https://bijbouwe.nl/je-bijbouwe-hypotheek/extra-aflossen"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Contante-waardemethode niet expliciet gevonden"
+   },
+   "elbl": {
+    "waarde": "+ Vooruit Hypotheek: rentekorting vanaf energielabel C",
+    "bron": [
+     "https://www.bijbouwe.nl/online-hypotheek/bijbouwe-vooruit-hypotheek"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Plus extra korting op verduurzamingsleningdeel"
+   },
+   "o106": {
+    "waarde": null,
+    "bron": [],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "onbekend",
+    "toelichting": "Niet gevonden of boven 100% LTV een opslag geldt"
+   },
+   "bprov": {
+    "waarde": "+ Verlenging garantieverklaring +2 mnd; geen kosten vermeld",
+    "bron": [
+     "https://bijbouwe.nl/adviseurs/rente"
+    ],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Geen expliciete vermelding van (geen) bereidstellingsprovisie"
+   },
+   "wkost": {
+    "waarde": "! Verhoging: administratie- en bemiddelingskosten (vaste bedragen)",
+    "bron": [
+     "https://bijbouwe.nl/je-bijbouwe-hypotheek/hypotheek-verhogen",
+     "https://bijbouwe.nl/je-bijbouwe-hypotheek/ontslag-hoofdelijke-aansprakelijkheid"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Ca. €250 administratie + €700 bemiddeling bij verhoging"
+   },
+   "avlt": {
+    "waarde": "! Verlengen/nieuwe hypotheek niet zeker; afhankelijk van inkomen, schuld en waarde",
+    "bron": [
+     "https://bijbouwe.nl/aflossingsvrij"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Opties: omzetten, extra aflossen of oversluiten"
+   },
+   "bproc": {
+    "waarde": "+ Preventief beheer: betaalpauze, renteafkoop, budget-/jobcoach, betalingsregeling",
+    "bron": [
+     "https://bijbouwe.nl/je-bijbouwe-hypotheek/betalingsproblemen",
+     "https://bijbouwe.nl/je-bijbouwe-hypotheek/preventief-en-bijzonder-beheer"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Contact bijzonder beheer"
+   }
+  },
+  "gecontroleerd": "2026-10-04"
+ }
+]
