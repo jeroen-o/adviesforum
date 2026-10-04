@@ -42,16 +42,17 @@ button,input,select{font-family:inherit}
 .zeshoek{width:22px;height:25px;background:currentColor;clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);flex:none}
 .terugs{display:flex;gap:8px 18px;flex-wrap:wrap;margin-bottom:12px}
 .terug{font-size:13.5px;font-weight:700;text-decoration:none;border-bottom:2px solid currentColor}
-.kop h1{margin:0 0 10px;font-size:clamp(26px,4.2vw,38px);line-height:1.12;font-weight:800}
+.kop h1{margin:0 0 10px;font-size:clamp(26px,4.2vw,38px);line-height:1.12;font-weight:800;overflow-wrap:break-word;hyphens:auto}
 .kop p{margin:0;max-width:75ch}
 .romp{padding:22px 16px 56px}
 .compliance{border:2px solid var(--rood);border-left-width:8px;border-radius:0 12px 12px 0;padding:12px 16px;margin:0 0 18px;background:var(--rood-zacht);color:var(--rood-tekst);font-size:14px}
 .vk{border:1px solid var(--lijn);border-radius:14px;padding:16px;margin:0 0 14px;background:var(--wit);break-inside:avoid}
 .vk h2{font-size:17px;margin:0 0 2px}
-.vk .link{font-size:13px;margin:0 0 8px;color:var(--grijs)}
+.vk .link{font-size:13px;margin:0 0 8px;color:var(--grijs);overflow-wrap:anywhere}
 .vk dl{margin:0;display:grid;grid-template-columns:220px 1fr;gap:6px 14px;font-size:14px}
 .vk dt{font-weight:800}
-.vk dd{margin:0}
+.vk dd{margin:0;min-width:0;overflow-wrap:anywhere}
+.vk dl > *{min-width:0}
 .veld{border:1px solid var(--lijn);border-radius:8px;min-height:40px;padding:6px 8px;background:var(--body)}
 .klein{font-size:12px;color:var(--grijs)}
 .knop{border:1px solid var(--geel-donker);background:#FFD200;color:#141414;border-radius:999px;padding:8px 16px;font-weight:700;font-size:14px;cursor:pointer;min-height:40px}
@@ -87,7 +88,7 @@ button,input,select{font-family:inherit}
       <dt>Bronnen</dt><dd>Acceptatiegidsen, productvoorwaarden en webpagina's van de geldverstrekker zelf (eigen domein). Waarden van derden staan erbij als &lsquo;nog niet geverifieerd&rsquo;, zonder bronvermelding. Daarnaast een oorspronkelijke, indicatieve dataset zonder markering.</dd>
       <dt>Controle en correctie</dt><dd>Elke waarde heeft status, bron, brondatum en controledatum. Bron ouder dan 6 maanden krijgt een zandloper. Maandelijkse controle op nieuwere gidsen, wekelijkse controle op dode bronlinks, correcties via &lsquo;Klopt dit niet?&rsquo;. Wijzigingen zijn per geldverstrekker zichtbaar (wijzigingslog en RSS).</dd>
       <dt>AFM- en compliance-overwegingen</dt><dd>Wft art. 4:19 (informatie correct, duidelijk, niet misleidend): momentopname en bron per waarde; de pagina noemt zichzelf geen volledige vergelijking. Wft art. 4:20 / zorgplicht: de adviseur legt de voorwaarde vast zoals de aanbieder die op het moment van advies publiceert. Kleurcode &lsquo;ruim/beperkend&rsquo; is een beschrijving van de voorwaarde, geen oordeel over geschiktheid voor de klant.</dd>
-      <dt>Beoordeling compliance</dt><dd><div class="veld" contenteditable="true" aria-label="Beoordeling compliance voor Voorwaarden-vergelijker hypotheken"></div><span class="klein">Naam, datum, akkoord of opmerkingen</span></dd>
+      <dt>Beoordeling compliance</dt><dd><div class="veld" contenteditable="true" role="textbox" aria-multiline="true" aria-label="Beoordeling compliance voor Voorwaarden-vergelijker hypotheken"></div><span class="klein">Naam, datum, akkoord of opmerkingen</span></dd>
     </dl>
   </article>
   <article class="vk" id="product">
@@ -99,7 +100,7 @@ button,input,select{font-family:inherit}
       <dt>Bronnen</dt><dd>Eigen site en documenten van de aanbieder. Acceptatiegrenzen en maximale bedragen (bijv. medische grens, maximaal verzekerd bedrag) staan wel in de waarden.</dd>
       <dt>Controle en correctie</dt><dd>Als bij de vergelijker; waarden zonder eigen bron zijn &lsquo;nog niet geverifieerd&rsquo;. Bij krediet staat de verplichte waarschuwing &lsquo;Let op! Geld lenen kost geld.&rsquo;.</dd>
       <dt>AFM- en compliance-overwegingen</dt><dd>Te bevestigen: dat acceptatiegrenzen en maximale bedragen (geen prijsinformatie) in de waarden mogen staan. Aanbieders die niet via onafhankelijke adviseurs werken (o.a. Interpolis, Univé, Freo) staan erin; besluit of dat wenselijk is.</dd>
-      <dt>Beoordeling compliance</dt><dd><div class="veld" contenteditable="true" aria-label="Beoordeling compliance voor Productvoorwaarden (ORV, AOV, woonlasten, uitvaart, lijfrente, opstal en inboedel, bankgarantie, krediet)"></div><span class="klein">Naam, datum, akkoord of opmerkingen</span></dd>
+      <dt>Beoordeling compliance</dt><dd><div class="veld" contenteditable="true" role="textbox" aria-multiline="true" aria-label="Beoordeling compliance voor Productvoorwaarden (ORV, AOV, woonlasten, uitvaart, lijfrente, opstal en inboedel, bankgarantie, krediet)"></div><span class="klein">Naam, datum, akkoord of opmerkingen</span></dd>
     </dl>
   </article>
   <article class="vk" id="situatie">
@@ -111,7 +112,7 @@ button,input,select{font-family:inherit}
       <dt>Bronnen</dt><dd>De gecontroleerde waarden van de vergelijker en de productvoorwaarden. De indeling is afgeleid uit de tekst van die waarden.</dd>
       <dt>Controle en correctie</dt><dd>Twijfelgevallen zijn zichtbaar gemarkeerd. Per indeling een link &lsquo;Klopt deze indeling niet?&rsquo;. Doorlopende route naar de vergelijker met precies de passende aanbieders en kenmerken.</dd>
       <dt>AFM- en compliance-overwegingen</dt><dd>Risico: een afgeleide indeling kan een nuance missen. Mitigatie: onderbouwing en bron bij elke indeling, twijfelmarkering en de expliciete melding op de pagina. Te overwegen: periodieke steekproef door een adviseur of compliance.</dd>
-      <dt>Beoordeling compliance</dt><dd><div class="veld" contenteditable="true" aria-label="Beoordeling compliance voor Situatiecheck"></div><span class="klein">Naam, datum, akkoord of opmerkingen</span></dd>
+      <dt>Beoordeling compliance</dt><dd><div class="veld" contenteditable="true" role="textbox" aria-multiline="true" aria-label="Beoordeling compliance voor Situatiecheck"></div><span class="klein">Naam, datum, akkoord of opmerkingen</span></dd>
     </dl>
   </article>
   <article class="vk" id="dossier">
@@ -123,7 +124,7 @@ button,input,select{font-family:inherit}
       <dt>Bronnen</dt><dd>Zelfde bronnen als de vergelijker en de productvoorwaarden; archieflink naar de Wayback Machine.</dd>
       <dt>Controle en correctie</dt><dd>Datum en tijd van vastlegging en de link naar de exacte selectie staan op de uitdraai.</dd>
       <dt>AFM- en compliance-overwegingen</dt><dd>Ondersteunt de vastlegging van de productkeuze (AFM Leidraad adviesmotivatie). De uitdraai vervangt niet de eigen controle van de actuele voorwaarde.</dd>
-      <dt>Beoordeling compliance</dt><dd><div class="veld" contenteditable="true" aria-label="Beoordeling compliance voor Dossieruitdraai en koppeling met de adviesmotivatie"></div><span class="klein">Naam, datum, akkoord of opmerkingen</span></dd>
+      <dt>Beoordeling compliance</dt><dd><div class="veld" contenteditable="true" role="textbox" aria-multiline="true" aria-label="Beoordeling compliance voor Dossieruitdraai en koppeling met de adviesmotivatie"></div><span class="klein">Naam, datum, akkoord of opmerkingen</span></dd>
     </dl>
   </article>
   <article class="vk" id="volgen">
@@ -135,7 +136,7 @@ button,input,select{font-family:inherit}
       <dt>Bronnen</dt><dd>Afgeleid uit de versiegeschiedenis van de gecontroleerde data (git).</dd>
       <dt>Controle en correctie</dt><dd>Automatisch gegenereerd en getest bij elke wijziging.</dd>
       <dt>AFM- en compliance-overwegingen</dt><dd>Functionele cookie (af_favorieten) zonder persoonsgegevens; valt onder de bestaande privacyverklaring.</dd>
-      <dt>Beoordeling compliance</dt><dd><div class="veld" contenteditable="true" aria-label="Beoordeling compliance voor Wijzigingslog, volgen en RSS"></div><span class="klein">Naam, datum, akkoord of opmerkingen</span></dd>
+      <dt>Beoordeling compliance</dt><dd><div class="veld" contenteditable="true" role="textbox" aria-multiline="true" aria-label="Beoordeling compliance voor Wijzigingslog, volgen en RSS"></div><span class="klein">Naam, datum, akkoord of opmerkingen</span></dd>
     </dl>
   </article>
   <article class="vk" id="melden">
@@ -147,7 +148,7 @@ button,input,select{font-family:inherit}
       <dt>Bronnen</dt><dd>&ndash;</dd>
       <dt>Controle en correctie</dt><dd>De beheerder verwerkt meldingen in het onderzoek (docs/voorwaarden-onderzoek) en alleen met een bron van de aanbieder.</dd>
       <dt>AFM- en compliance-overwegingen</dt><dd>Correcties worden niet automatisch overgenomen: alleen na controle tegen een eigen bron van de aanbieder.</dd>
-      <dt>Beoordeling compliance</dt><dd><div class="veld" contenteditable="true" aria-label="Beoordeling compliance voor Klopt dit niet?"></div><span class="klein">Naam, datum, akkoord of opmerkingen</span></dd>
+      <dt>Beoordeling compliance</dt><dd><div class="veld" contenteditable="true" role="textbox" aria-multiline="true" aria-label="Beoordeling compliance voor Klopt dit niet?"></div><span class="klein">Naam, datum, akkoord of opmerkingen</span></dd>
     </dl>
   </article>
   <article class="vk">

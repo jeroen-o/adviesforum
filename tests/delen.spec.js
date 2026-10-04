@@ -29,7 +29,9 @@ test('deelpagina van een bekende vraag heeft de juiste og:title, og:description,
   expect(html).toContain('<li id="r1">');
   // alleen een fragment van het antwoord, niet de volledige tekst
   expect(html).not.toContain('Leg in het dossier vast');
-  expect(fs.readFileSync(path.join(ROOT, 'sitemap.xml'), 'utf8')).toContain('<loc>' + BASE + 'vraag/v13.html</loc>');
+  // Voorbeeldvragen zijn fictief: niet in zoekmachines en niet in de sitemap (wel deelbaar via LinkedIn)
+  expect(html).toContain('<meta name="robots" content="noindex, follow">');
+  expect(fs.readFileSync(path.join(ROOT, 'sitemap.xml'), 'utf8')).not.toContain('<loc>' + BASE + 'vraag/v13.html</loc>');
 });
 
 test('knop "Deel op LinkedIn" bij vraag en reactie deelt de statische deelpagina en kopieert een posttekst', async ({ page, context }) => {
