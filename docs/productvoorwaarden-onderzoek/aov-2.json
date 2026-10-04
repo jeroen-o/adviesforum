@@ -57,6 +57,28 @@
           "brondatum": "2025",
           "zekerheid": "middel",
           "toelichting": "Uitkering in één keer. Bij 90 dagen eigenrisicotermijn resteert 22 dagen uitkering."
+        },
+        "varianten": {
+          "waarde": "~ AOV (volledig), Flexibele AOV (vast bedrag), AOV 2.5 (uitkeringsduur 2 of 5 jaar, max. € 50.000; voor starters/lagere inkomens), Basis AOV (max. € 30.000, eigenrisicotermijn 1 of 2 jaar), Langer mee AOV (zware/fysieke beroepen: 5 jaar afbouwende uitkering, daarna alleen bij volledige AO tot AOW), Doorgaanverzekering (AOV + aanvullende zorgverzekering); ook varianten met uitsluiting psychische klachten",
+          "bron": [
+            "https://www.asr.nl/zakelijk/verzekeringen/arbeidsongeschiktheidsverzekeringen/aov25",
+            "https://www.asr.nl/zakelijk/verzekeringen/arbeidsongeschiktheidsverzekeringen/basis-aov",
+            "https://www.asr.nl/zakelijk/verzekeringen/arbeidsongeschiktheidsverzekeringen/langer-mee-aov",
+            "https://www.asr.nl/zakelijk/verzekeringen/doorgaanverzekering-voor-ondernemers",
+            "https://www.asr.nl/zakelijk/verzekeringen/arbeidsongeschiktheidsverzekeringen/overzicht-voorwaarden-en-vergoedingen"
+          ],
+          "brondatum": "2025-2026",
+          "zekerheid": "hoog",
+          "toelichting": "Aanvulling op bestaande waarde. De Amersfoortse-AOV's worden inmiddels onder merk a.s.r. aangeboden (asr.nl). Langer mee AOV: langdurige uitkering tot 67 jaar en 3 maanden als minimumloon niet meer te verdienen is; coaching en omscholing via arbeidsdeskundige."
+        },
+        "beroepsklasse": {
+          "waarde": "~ Beroepsrisico beoordeeld op beroepsomschrijving, werkzaamheden en type bedrijf; aparte Langer mee AOV voor fysiek zware beroepen",
+          "bron": [
+            "https://www.asr.nl/zakelijk/verzekeringen/arbeidsongeschiktheidsverzekeringen/langer-mee-aov"
+          ],
+          "brondatum": "2025",
+          "zekerheid": "middel",
+          "toelichting": "Aanvulling op bestaande waarde (oude bron blijft geldig). Geen gepubliceerde klassenindeling gevonden."
         }
       }
     },
@@ -88,7 +110,7 @@
       ],
       "criteria": {
         "ontheffing": {
-          "waarde": "~ Premievrijstelling bij arbeidsongeschiktheid; na 1 jaar arbeidsongeschiktheid premiekorting gelijk aan arbeidsongeschiktheidspercentage",
+          "waarde": "~ Premievrijstelling bij arbeidsongeschiktheid; na 1 jaar arbeidsongeschiktheid premievrijstelling naar rato van arbeidsongeschiktheidspercentage",
           "bron": [
             "https://www.averoachmea.nl/arbeidsongeschiktheidsverzekering",
             "https://www.averoachmea.nl/-/media/files/zakelijk/aov/voorwaarden-2024/algemene-voorwaarden-aov-continu---iao-pv-21-241.pdf"
@@ -227,10 +249,10 @@
           ],
           "brondatum": "2025",
           "zekerheid": "middel",
-          "toelichting": "Zelfde opzet als Avéro Achmea (Achmea-groep). Startkorting op premie bestaat, maar is bewust niet opgenomen."
+          "toelichting": "Zelfde opzet als Avéro Achmea (Achmea-groep). Premieacties niet opgenomen."
         },
         "ontheffing": {
-          "waarde": "~ Geen premieverlaging in eerste jaar AO; daarna premiekorting gelijk aan arbeidsongeschiktheidspercentage (100% AO = geen premie)",
+          "waarde": "~ Geen premieverlaging in eerste jaar AO; daarna premievrijstelling naar rato van arbeidsongeschiktheidspercentage (100% AO = geen premie)",
           "bron": [
             "https://www.interpolis.nl/zakelijk/veelgestelde-vragen/verzekeringen/arbeidsongeschiktheidsverzekering"
           ],
@@ -283,6 +305,33 @@
           "brondatum": "2025-01",
           "zekerheid": "middel",
           "toelichting": "Bovemij richt zich op ondernemers in de mobiliteitsbranche; geen klassenindeling gevonden."
+        }
+      }
+    },
+    {
+      "naam": "elipsLife",
+      "url": "https://www.elipslife.com/nl/nld",
+      "domeinen": [
+        "elipslife.com"
+      ],
+      "criteria": {
+        "beroepsklasse": {
+          "waarde": "- Vier beroepsklassen (1 laagste, 4 hoogste risico); elipsLife verzekert alleen zelfstandigen met een beroep uit klasse 1",
+          "bron": [
+            "https://www.elipslife.com/nld/scmedia/Public/Downloads/Documents/Legal/nl/IDD-2025/IDD2025ned/elipsLife-IDD-AOV-individueel-2025-DEF.pdf?sc_lang=nl&hash=865669D18738685041AF4694E864B548"
+          ],
+          "brondatum": "2025",
+          "zekerheid": "hoog",
+          "toelichting": "IDD-productinformatie AOV individueel 2025. Beroepsklasse bepaalt de premie."
+        },
+        "psychisch": {
+          "waarde": "~ Medische acceptatie met uitgebreide vragen over psychische klachten (stress, burn-out, slapeloosheid, angst, ADHD, autisme, depressie, verslaving e.d.); geen standaarduitsluiting gevonden",
+          "bron": [
+            "https://www.elipslife.com/nld/scmedia/Public/Downloads/Documents/Medical-Risk-Assessment/nl/Medische-waarborgen-en-acceptatietraject--2024.pdf?sc_lang=nl&hash=68B9E06E2260AF897D4F734C1FC6F8AF"
+          ],
+          "brondatum": "2024",
+          "zekerheid": "middel",
+          "toelichting": "Opsomming van psychische klachten mogelijk afkomstig uit generieke gezondheidsverklaring (ook ORV); dekking/uitsluitingen in AOV-voorwaarden niet ingezien."
         }
       }
     }

@@ -67,7 +67,7 @@ test('adviesmotivatie neemt vergeleken aanbieders over uit de link', async ({ pa
 
 test('laatste nieuws toont wijzigingen in voorwaarden', async ({ page }) => {
   await page.goto('/laatste.html');
-  await expect(page.locator('#l-voorwaarden li').first()).toContainText('Voorwaarden');
+  await expect(page.locator('#l-voorwaarden li').first()).toContainText(/wijziging/);
 });
 
 test('kennisbankartikel over erfpacht linkt naar de vergelijker', async ({ page }) => {

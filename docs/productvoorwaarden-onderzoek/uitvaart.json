@@ -1,0 +1,408 @@
+{
+ "product": "uitvaart",
+ "titel": "Uitvaartverzekering",
+ "gecontroleerd": "2026-10-04",
+ "criteria": [
+  {
+   "id": "vorm",
+   "naam": "Natura of kapitaal",
+   "kort": "Natura, kapitaal of combinatie; vrije keuze uitvaartondernemer",
+   "waarom": "Bij natura is de uitvaart in diensten verzekerd, maar is een andere ondernemer vaak duurder; kapitaal geeft keuzevrijheid maar geen garantie dat het bedrag toereikend is."
+  },
+  {
+   "id": "instap",
+   "naam": "Instap en acceptatie",
+   "kort": "Instapleeftijd en gezondheidsvragen",
+   "waarom": "Bepaalt of iemand op latere leeftijd of met gezondheidsklachten nog verzekerd kan worden."
+  },
+  {
+   "id": "premieduur",
+   "naam": "Premiebetaling",
+   "kort": "Levenslang, tot leeftijd of koopsom",
+   "waarom": "Levenslang betalen kan bij lang leven meer kosten dan het verzekerde bedrag; een beperkte duur of koopsom voorkomt premie op hoge leeftijd."
+  },
+  {
+   "id": "indexatie",
+   "naam": "Indexatie",
+   "kort": "Waardevastheid verzekerd bedrag",
+   "waarom": "Uitvaartkosten stijgen jaarlijks; zonder indexatie is het bedrag later mogelijk onvoldoende."
+  },
+  {
+   "id": "wachttijd",
+   "naam": "Wachttijd en zelfdoding",
+   "kort": "Beperkte dekking eerste jaren",
+   "waarom": "Een wachttijd of uitsluiting kan betekenen dat er kort na ingang niets wordt uitgekeerd."
+  },
+  {
+   "id": "buitenland",
+   "naam": "Buitenland",
+   "kort": "Dekking en repatriëring bij overlijden in het buitenland",
+   "waarom": "Vervoer naar Nederland is kostbaar; belangrijk voor reizigers en voor wie in het land van herkomst begraven wil worden."
+  },
+  {
+   "id": "kinderen",
+   "naam": "Kinderen",
+   "kort": "Kinderen meeverzekerd",
+   "waarom": "Gratis of goedkoop meeverzekerde kinderen maken een aparte polis overbodig."
+  },
+  {
+   "id": "extra",
+   "naam": "Extra diensten",
+   "kort": "Nabestaandenzorg, coöperatie en overige diensten",
+   "waarom": "Ondersteuning na de uitvaart kan nabestaanden veel werk en zorgen besparen."
+  },
+  {
+   "id": "beeindig",
+   "naam": "Tussentijds stoppen",
+   "kort": "Premievrij maken en afkoop",
+   "waarom": "Bepaalt hoe flexibel de verzekering is als de situatie verandert."
+  }
+ ],
+ "aanbieders": [
+  {
+   "naam": "DELA",
+   "url": "https://www.dela.nl/verzekeringen/uitvaartverzekering",
+   "domeinen": [
+    "dela.nl"
+   ],
+   "documenten": [
+    {
+     "titel": "Productkaart DELA UitvaartPlan in diensten (intermediair)",
+     "url": "https://www.dela.nl/-/media/files/intermediair/dup/d447_w0124_productkaart_dup_in_diensten.pdf",
+     "versie": "W01.24"
+    },
+    {
+     "titel": "Productkaart DELA UitvaartPlan in geld (intermediair)",
+     "url": "https://www.dela.nl/-/media/files/intermediair/dup/d448_w0124_productkaart_dup_in_geld.pdf",
+     "versie": "W01.24"
+    },
+    {
+     "titel": "Productleeswijzer DELA UitvaartPlan model 4.1",
+     "url": "https://www.dela.nl/-/media/files/verzekeringen/dup/d220w1223productleeswijzerdupmodel41lr.pdf",
+     "versie": "W12.23"
+    },
+    {
+     "titel": "Algemene voorwaarden DELA UitvaartPlan 4.0",
+     "url": "https://www.dela.nl/-/media/files/verzekeringen/dup/d216_w0718_algemene_voorwaarden_dup_40.pdf",
+     "versie": "W07.18"
+    }
+   ],
+   "criteria": {
+    "vorm": {
+     "waarde": "~ UitvaartPlan in diensten (natura) met aanvullende geldverzekering, of in geld (kapitaal); ook geldvariant tegen koopsom",
+     "bron": [
+      "https://www.dela.nl/verzekeringen/uitvaartverzekering/natura-of-kapitaalverzekering",
+      "https://www.dela.nl/-/media/files/intermediair/dup/d447_w0124_productkaart_dup_in_diensten.pdf",
+      "https://www.dela.nl/inspiratie/ik-heb-een-natura-uitvaartverzekering-kan-ik-dan-zelf-kiezen-wie-mijn-uitvaart-regelt"
+     ],
+     "brondatum": "2024",
+     "zekerheid": "hoog",
+     "toelichting": "De dienstenverzekering is niet los af te sluiten en bevat altijd een aanvullende geldverzekering. Bij de natura-variant leidt keuze voor een andere uitvaartondernemer volgens DELA meestal tot hogere kosten voor nabestaanden; bij de geldvariant is de keuze vrij. DELA verzorgt uitvaarten alleen in Nederland en onder voorwaarden in België."
+    },
+    "instap": {
+     "waarde": "~ Instap vanaf 18 jaar; max. 75 jaar (levenslange premie) of 55 jaar (tijdelijke premie); gezondheidsvragen",
+     "bron": [
+      "https://www.dela.nl/-/media/files/intermediair/dup/d447_w0124_productkaart_dup_in_diensten.pdf",
+      "https://www.dela.nl/service-en-contact/veelgestelde-vragen/dela-uitvaartplan"
+     ],
+     "brondatum": "2024",
+     "zekerheid": "hoog",
+     "toelichting": "Twee medische vragen; bij een 'ja' volgt een aanvullende gezondheidsverklaring. Geen voorlopige dekking; ingang direct na acceptatie."
+    },
+    "premieduur": {
+     "waarde": "+ Levenslang of tot het jaar waarin je 65 wordt; koopsom mogelijk (UitvaartPlan tegen koopsom)",
+     "bron": [
+      "https://www.dela.nl/service-en-contact/veelgestelde-vragen/dela-uitvaartplan",
+      "https://www.dela.nl/service-en-contact/veelgestelde-vragen/uitvaartplan-tegen-koopsom"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Bij betaling tot 65 is de premie hoger, daarna is er geen premie meer verschuldigd."
+    },
+    "indexatie": {
+     "waarde": "+ Jaarlijkse aanpassing aan de ontwikkeling van uitvaartkosten",
+     "bron": [
+      "https://www.dela.nl/service-en-contact/veelgestelde-vragen/dela-uitvaartplan",
+      "https://www.dela.nl/-/media/files/intermediair/dup/d447_w0124_productkaart_dup_in_diensten.pdf"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "De premie stijgt in de regel mee met de kostenstijging van uitvaarten; de aanvullende geldverzekering wordt jaarlijks geïndexeerd."
+    },
+    "wachttijd": {
+     "waarde": "~ Geen algemene wachttijd gevonden; zelfdoding pas gedekt na twee jaar onafgebroken dekking",
+     "bron": [
+      "https://www.dela.nl/-/media/files/verzekeringen/dup/d216_w0718_algemene_voorwaarden_dup_40.pdf"
+     ],
+     "brondatum": "2018",
+     "zekerheid": "middel",
+     "toelichting": "Bron zijn de algemene voorwaarden model 4.0 (W07.18); geldt voor dat model."
+    },
+    "buitenland": {
+     "waarde": "~ Vervoer naar Nederland gedekt bij verblijf korter dan twee maanden en geen negatief reisadvies; uitvaart in buitenland: geldbedrag",
+     "bron": [
+      "https://www.dela.nl/uitvaart/regelen/een-uitvaart-regelen-in-het-buitenland",
+      "https://www.dela.nl/inspiratie/wat-te-doen-bij-overlijden-in-het-buitenland"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Repatriëring alleen als DELA de uitvaart verzorgt. Bij een uitvaart buiten Nederland/België keert DELA een vast bedrag uit."
+    },
+    "kinderen": {
+     "waarde": "~ Kinderen tot 25 jaar meeverzekerd tegen kinderpremie (risicopremie); pasgeborene 60 dagen automatisch",
+     "bron": [
+      "https://www.dela.nl/verzekeringen/uitvaartverzekering/info/kind",
+      "https://www.dela.nl/verzekeringen/uitvaartverzekering/info/een-polis-voor-het-gezin"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Kinderpremie bouwt geen waarde op. Vanaf het jaar waarin het kind 25 wordt geldt volwassenpremie; het kind mag op de polis blijven."
+    },
+    "extra": {
+     "waarde": "+ Coöperatief lidmaatschap met ledenvoordeel, nabestaandenzorg door coöperatieve consulenten en de DELA VoorelkaarDesk",
+     "bron": [
+      "https://www.dela.nl/over-dela/over-cooperatie-dela/lid-van-cooperatie-dela/voordelen-lidmaatschap"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "VoorelkaarDesk: vragen over testament, voogdij, schenken, levenstestament en samenleven."
+    },
+    "beeindig": {
+     "waarde": "~ Afkoop of stopzetting mogelijk; afkoopwaarde is polisrichtwaarde minus vaste kosten",
+     "bron": [
+      "https://www.dela.nl/verzekeringen/uitvaartverzekering/afkopen-of-stopzetten",
+      "https://www.dela.nl/service-en-contact/veelgestelde-vragen/dela-uitvaartplan"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Minimaal één maand voor de gewenste datum regelen."
+    }
+   }
+  },
+  {
+   "naam": "Monuta",
+   "url": "https://www.monuta.nl/uitvaartverzekeringen/",
+   "domeinen": [
+    "monuta.nl"
+   ],
+   "documenten": [
+    {
+     "titel": "Voorwaarden Uitvaartverzekering Geld MV25-200",
+     "url": "https://www.monuta.nl/files/voorwaarden-monuta-uitvaart-geldverzekering-mv25-200.pdf",
+     "versie": "MV25-200"
+    },
+    {
+     "titel": "Specificatie Monuta Voorwaarden",
+     "url": "https://www.monuta.nl/files/specificatie-monuta-voorwaarden.pdf",
+     "versie": "202604"
+    },
+    {
+     "titel": "Polisvoorwaarden Monuta (overzicht)",
+     "url": "https://www.monuta.nl/uitvaartverzekeringen/polisvoorwaarden-monuta/",
+     "versie": "onbekend"
+    }
+   ],
+   "criteria": {
+    "vorm": {
+     "waarde": "~ Combinatie (vrij te besteden bedrag plus begeleiding door Monuta-uitvaartverzorger) of geldverzekering met vrije keuze",
+     "bron": [
+      "https://www.monuta.nl/uitvaartverzekeringen/welke-uitvaartverzekering-past-bij-mij/",
+      "https://www.monuta.nl/uitvaartverzekeringen/uitvaart-geld-verzekering/",
+      "https://www.monuta.nl/uitvaartverzekeringen/natura-uitvaartverzekering/"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "De Uitvaartverzekering Monuta bestaat uit een vrij te besteden bedrag (instelbaar tussen € 7.000 en € 15.000) en een gereserveerd deel voor begeleiding door een Monuta-uitvaartverzorger. Bij keuze voor een andere uitvaartondernemer heeft dat gevolgen voor de uitkering. Bij de geldverzekering kiezen nabestaanden vrij."
+    },
+    "instap": {
+     "waarde": "~ Instap 18 tot 75 jaar; gezondheidsvragen bij aanvraag",
+     "bron": [
+      "https://www.monuta.nl/uitvaartverzekeringen/uitvaartverzekering-voor-ouderen/",
+      "https://www.monuta.nl/uitvaartverzekeringen/veelgestelde-vragen-uitvaartverzekeringen/"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Gezondheidsvragen worden online beantwoord voor alle te verzekeren personen. Voor wie niet geaccepteerd wordt noemt Monuta het Uitvaartfonds (sparen, zonder gezondheidsvragen) als alternatief."
+    },
+    "premieduur": {
+     "waarde": "- Alleen levenslange premiebetaling; koopsom niet meer af te sluiten sinds januari 2020",
+     "bron": [
+      "https://www.monuta.nl/uitvaartverzekeringen/veelgestelde-vragen-uitvaartverzekeringen/",
+      "https://www.monuta.nl/uitvaartverzekeringen/koopsom-uitvaartverzekering/"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Premie wordt maandelijks geïncasseerd."
+    },
+    "indexatie": {
+     "waarde": "+ Jaarlijkse indexatie per 1 januari op basis van uitvaartkosten en geldwaarde",
+     "bron": [
+      "https://www.monuta.nl/uitvaartverzekeringen/indexering/premieverandering/",
+      "https://www.monuta.nl/uitvaartverzekeringen/premiebeleid/"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Het verzekerd bedrag groeit mee met de uitvaartkosten; de premie wordt daarop aangepast."
+    },
+    "wachttijd": {
+     "waarde": "~ Geen uitkering bij zelfdoding binnen twee jaar na ingang",
+     "bron": [
+      "https://www.monuta.nl/files/voorwaarden-monuta-uitvaart-geldverzekering-mv25-200.pdf"
+     ],
+     "brondatum": "2025",
+     "zekerheid": "hoog",
+     "toelichting": "Volgens voorwaarden Uitvaartverzekering Geld MV25-200."
+    },
+    "buitenland": {
+     "waarde": "~ Uitvaart in buitenland: geldbedrag op basis van nota's; repatriëring afhankelijk van polisvoorwaarden",
+     "bron": [
+      "https://www.monuta.nl/uitvaartverzekeringen/veelgestelde-vragen-uitvaartverzekeringen/",
+      "https://www.monuta.nl/uitvaart/uitvaart-regelen/uitvaart-buitenland/"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Monuta verwijst voor dekking van repatriëring naar de polisvoorwaarden van de eigen verzekering; een algemene repatriëringsdekking voor nieuwe polissen is niet bevestigd."
+    },
+    "kinderen": {
+     "waarde": "+ Kinderen tot 18 jaar gratis meeverzekerd voor het bedrag van de best verzekerde ouder",
+     "bron": [
+      "https://www.monuta.nl/uitvaartverzekeringen/veelgestelde-vragen-uitvaartverzekeringen/",
+      "https://www.monuta.nl/uitvaartverzekeringen/welke-uitvaartverzekering-past-bij-mij/uitvaart-basis-verzekering/"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": ""
+    },
+    "beeindig": {
+     "waarde": "~ Afkopen (afkoopwaarde volgens actuariële methode minus kosten) of premievrij maken",
+     "bron": [
+      "https://www.monuta.nl/uitvaartverzekeringen/opzeggen/",
+      "https://www.monuta.nl/uitvaartverzekeringen/afkoopwaarde/"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Bij premievrij maken keren nabestaanden bij overlijden de opgebouwde waarde op het moment van stoppen uit."
+    }
+   }
+  },
+  {
+   "naam": "Ardanta (a.s.r.)",
+   "url": "https://ardanta.nl/uitvaartverzekering",
+   "domeinen": [
+    "ardanta.nl",
+    "asr.nl"
+   ],
+   "documenten": [],
+   "criteria": {
+    "vorm": {
+     "waarde": "~ Kapitaal (Geld Garant: uitkering aan begunstigde; Geld Geregeld: uitkering aan uitvaartverzorger) of natura (Zorg Garant: standaardpakket diensten)",
+     "bron": [
+      "https://ardanta.nl/uitvaartverzekeringen/geld-garant-uitvaartplan",
+      "https://ardanta.nl/uitvaartverzekeringen/geld-geregeld-uitvaartplan",
+      "https://ardanta.nl/uitvaartverzekeringen/zorg-garant-uitvaartplan"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Bij de geldverzekeringen is de uitvaartverzorger vrij te kiezen."
+    },
+    "instap": {
+     "waarde": "+ Met premiebetaling af te sluiten tot 75 jaar; daarboven koopsom via adviseur; twee gezondheidsvragen",
+     "bron": [
+      "https://ardanta.nl/uitvaartverzekering/zelf-kiezen-hoe-lang-u-premie-betaalt",
+      "https://ardanta.nl/uitvaartverzekering/twee-gezondheidsvragen",
+      "https://ardanta.nl/uitvaartverzekering/medische-acceptatie"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Vragen betreffen aandoeningen in de afgelopen 5 jaar en medicijngebruik."
+    },
+    "premieduur": {
+     "waarde": "+ Zelf te kiezen: min. 5 jaar tot max. 86 jaar (o.a. 20 of 30 jaar, tot 65, 80 of 85); koopsom via adviseur",
+     "bron": [
+      "https://ardanta.nl/uitvaartverzekering/zelf-kiezen-hoe-lang-u-premie-betaalt",
+      "https://ardanta.nl/uitvaartverzekeringen/geld-geregeld-uitvaartplan"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Na afloop van de premiebetaling blijft de dekking levenslang."
+    },
+    "indexatie": {
+     "waarde": "~ Geldvarianten: optionele automatische verhoging (25% per vijf jaar, met maximum); Zorg Garant: jaarlijkse indexatie",
+     "bron": [
+      "https://ardanta.nl/uitvaartverzekeringen/geld-garant-uitvaartplan",
+      "https://ardanta.nl/uitvaartverzekeringen/zorg-garant-uitvaartplan",
+      "https://www.asr.nl/verzekeringen/levensverzekeringen/uitvaartverzekering-van-ardanta"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Automatische verhoging kan worden gestopt en weer gestart."
+    },
+    "buitenland": {
+     "waarde": "+ Vervoer naar Nederland gedekt (indien niet elders verzekerd); uitvaart in buitenland via geldverzekering",
+     "bron": [
+      "https://informeren.ardanta.nl/buitenland"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Bij geldverzekering kan het bedrag worden gebruikt voor vervoer en een vliegticket voor een begeleider."
+    },
+    "kinderen": {
+     "waarde": "+ Kinderen tot 21 jaar meeverzekerd tot het hoogst verzekerde bedrag van de ouder",
+     "bron": [
+      "https://ardanta.nl/uitvaartverzekering/kinderen-meeverzekeren-tot-21-jaar"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Kind moet aangemeld zijn; dekking na drie maanden vanaf ingang van een nieuwe verzekering."
+    },
+    "beeindig": {
+     "waarde": "~ Premie stopzetten (premievrij, lagere uitkering) altijd mogelijk; afkoop van opgebouwde waarde onder voorwaarden",
+     "bron": [
+      "https://ardanta.nl/uitvaartverzekering/stoppen-met-premie-betalen-of-uw-verzekering-stopzetten",
+      "https://ardanta.nl/service-contact/meest-gestelde-vragen/meer-over-de-uitvaartverzekering/mijn-verzekering-stopzetten"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Na afkoop vervalt de dekking. Bij emigratie is afkoop altijd mogelijk na bewijs van in- en uitschrijving."
+    }
+   }
+  },
+  {
+   "naam": "Univé",
+   "url": "https://www.unive.nl/uitvaartverzekering",
+   "domeinen": [
+    "unive.nl"
+   ],
+   "documenten": [],
+   "criteria": {
+    "vorm": {
+     "waarde": "~ Geen eigen product; bemiddelt de uitvaartverzekering van Monuta",
+     "bron": [
+      "https://www.unive.nl/uitvaartverzekering/veelgestelde-vragen/heeft-unive-een-eigen-uitvaartverzekering"
+     ],
+     "brondatum": "onbekend",
+     "zekerheid": "middel",
+     "toelichting": "Univé ontvangt hiervoor een vergoeding. Productvoorwaarden: zie Monuta."
+    },
+    "indexatie": {
+     "waarde": "~ Indexatie is een keuze",
+     "bron": [
+      "https://www.unive.nl/uitvaartverzekering/veelgestelde-vragen"
+     ],
+     "brondatum": "onbekend",
+     "zekerheid": "middel",
+     "toelichting": "Bij indexatie gaat de premie jaarlijks met een percentage omhoog."
+    },
+    "kinderen": {
+     "waarde": "+ Kinderen tot 18 jaar gratis meeverzekerd op de polis van een ouder",
+     "bron": [
+      "https://www.unive.nl/uitvaartverzekering/veelgestelde-vragen/kan-ik-mijn-kinderen-ook-meeverzekeren"
+     ],
+     "brondatum": "onbekend",
+     "zekerheid": "middel",
+     "toelichting": "Vanaf 18 jaar is een eigen verzekering nodig."
+    }
+   }
+  }
+ ]
+}

@@ -43,7 +43,13 @@ for (const c of commits) {
   const P = lees(git(['show', c.h + ':' + BESTAND]));
   if (P) versies.push({ d: c.d, P: vlak(P), nul: versies.length === 0 });
 }
-if (!versies.length) { console.error('productvoorwaarden-wijzigingen: nulmeting ' + NULMETING + ' niet gevonden'); process.exit(1); }
+if (!versies.length) {
+  /* Ondiepe checkout (bijv. CI zonder fetch-depth: 0): geschiedenis ontbreekt, dus niets te controleren of te schrijven. */
+  let ondiep = false;
+  try { ondiep = git(['rev-parse', '--is-shallow-repository']).trim() === 'true'; } catch (e) { ondiep = false; }
+  if (ondiep) { console.log('Overgeslagen: ondiepe git-checkout zonder de nulmeting ' + NULMETING + '; het wijzigingslog blijft ongewijzigd (actueel niet te controleren).'); process.exit(0); }
+  console.error('productvoorwaarden-wijzigingen: nulmeting ' + NULMETING + ' niet gevonden in de geschiedenis'); process.exit(1);
+}
 const werk = lees(fs.readFileSync(path.join(ROOT, BESTAND), 'utf8'));
 if (werk && JSON.stringify(versies[versies.length - 1].P) !== JSON.stringify(vlak(werk))) versies.push({ d: dag(new Date().toISOString()), P: vlak(werk) });
 

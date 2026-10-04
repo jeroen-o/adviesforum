@@ -289,5 +289,323 @@
     "versie": "december 2025"
    }
   ]
+ },
+ {
+  "naam": "Handelsbanken",
+  "gecontroleerd": "2026-10-04",
+  "criteria": {
+   "duur": {
+    "waarde": "+ Duurzaamheidskorting bij label A of beter (na 1-1-2021) of verbouwplan naar A; niet bij variabele rente",
+    "bron": [
+     "https://www.handelsbanken.nl/nl/particulier/hypotheken/duurzaam-wonen/duurzaamheidskorting"
+    ],
+    "brondatum": "2026-10",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Pagina Duurzaamheidskorting (geraadpleegd okt 2026): korting bij energielabel A of beter, bij aankoop, renteverlenging en oversluiten. Details (verbouwplan, niet bij variabel) niet opnieuw in fragment."
+   },
+   "rvoor": {
+    "waarde": "~ Rentevoorstel 3 mnd voor einde rentevaste periode",
+    "bron": [
+     "https://www.handelsbanken.nl/nl/particulier/hypotheken/hypotheek-vraag-antwoord"
+    ],
+    "brondatum": "2026-10",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Vraag en antwoord: nieuw aanbod drie maanden voor einde rentevaste periode."
+   },
+   "rmid": {
+    "waarde": "~ Rente tussentijds aanpassen mogelijk tegen behandelkosten €250; verwerking vergoeding onbekend",
+    "bron": [
+     "https://www.handelsbanken.nl/nl/particulier/hypotheken/hypotheek-vraag-antwoord"
+    ],
+    "brondatum": "2026-10",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Vraag en antwoord: rente tussentijds aanpassen tegen behandelkosten EUR 250; bij openbreken vaste periode mogelijk vergoeding."
+   },
+   "wkost": {
+    "waarde": "~ Rente tussentijds aanpassen €250; variabel naar vast gratis; combinatie max. €500 (eigen kanaal)",
+    "bron": [
+     "https://www.handelsbanken.nl/nl/particulier/hypotheken/hypotheek-vraag-antwoord"
+    ],
+    "brondatum": "2026-10",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Vraag en antwoord: tussentijds rente aanpassen kost EUR 250 behandelkosten. Overige onderdelen (variabel naar vast gratis, max. EUR 500) niet in fragment."
+   },
+   "bprov": {
+    "waarde": "! Verlengen offerte kost per (deel)maand over vastrentend deel; niet bij variabel of verhuisregeling",
+    "bron": [
+     "https://www.handelsbanken.nl/nl/particulier/hypotheken/woning-hypotheek/hypotheekrente-woninghypotheek"
+    ],
+    "brondatum": "2026-10",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Rentepagina Woninghypotheek: offerte standaard 3 mnd geldig; langer geldig houden kost extra. Berekening per (deel)maand niet in fragment."
+   }
+  },
+  "documenten": []
+ },
+ {
+  "naam": "Aegon",
+  "gecontroleerd": "2026-10-04",
+  "criteria": {
+   "bdduur": {
+    "waarde": "~ Verbouwdepot 12 mnd, nieuwbouwdepot 30 mnd; verlenging verbouw 12 mnd, nieuwbouw 6 mnd (via MijnHypotheek)",
+    "bron": [
+     "https://www.aegon.nl/particulier/hypotheek/een-bouw-of-energiedepot-voor-je-huis"
+    ],
+    "brondatum": "2026-10",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "dubbel": "gecorrigeerd",
+    "toelichting": "Pagina Declareren uit een bouwdepot (geraadpleegd okt 2026): looptijd nieuwbouwdepot 30 mnd, verbouwdepot 12 mnd; verlenging nieuwbouw 6 mnd, verbouw 12 mnd, aan te vragen in MijnHypotheek zolang depot actief is. Oude waarde noemde nieuwbouw 24 mnd en verlenging 12 mnd bij overmacht."
+   },
+   "bdrnt": {
+    "waarde": "~ Rentevergoeding o.b.v. (gewogen gemiddelde) hypotheekrente; max. 12 mnd bestaande bouw / 30 mnd nieuwbouw",
+    "bron": [
+     "https://www.aegon.nl/particulier/klantenservice/veelgestelde-vragen/hoe-werkt-de-rentevergoeding-van-mijn-bouwdepot-energiedepot-en-rentedepot"
+    ],
+    "brondatum": "2026-10",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "dubbel": "gecorrigeerd",
+    "toelichting": "Veelgestelde vraag rentevergoeding depot: vergoeding gelijk aan hypotheekrente, bij meerdere leningdelen gewogen gemiddelde; bestaande bouw max. 12 mnd, nieuwbouw max. 30 mnd (oude waarde: 24 mnd)."
+   },
+   "boete": {
+    "waarde": "+ 10% van oorspronkelijk bedrag per leningdeel per kalenderjaar; vervalt op 31 dec",
+    "bron": [
+     "https://www2.aegon.nl/particulier/klantenservice/veelgestelde-vragen/hoeveel-kan-ik-kosteloos-extra-aflossen-op-mijn-hypotheek"
+    ],
+    "brondatum": "2026-10",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "FAQ: jaarlijks 10% van oorspronkelijk geleend bedrag per leningdeel vergoedingsvrij; niet bij aflossing uit verhoging/nieuwe Aegon-lening binnen 12 mnd voor/na aflossing. 'Vervalt 31 dec' niet in fragment."
+   },
+   "rvp": {
+    "waarde": "+ Variabel en vast tot 2, 5, 10, 15, 20, 25 en 30 jaar",
+    "bron": [
+     "https://www.aegon.nl/particulier/hypotheek/actuele-hypotheekrente/vaste-variabele-rente",
+     "https://www2.aegon.nl/particulier/hypotheek/actuele-hypotheekrente"
+    ],
+    "brondatum": "2026-10",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Rentepagina's: variabele rente (annuitair, lineair, aflossingsvrij) en vaste rente tot 30 jaar. Afzonderlijke perioden niet in fragment."
+   }
+  },
+  "documenten": []
+ },
+ {
+  "naam": "Groene Hart Hypotheken",
+  "gecontroleerd": "2026-10-04",
+  "criteria": {
+   "bdduur": {
+    "waarde": "~ Verbouw max. 9 mnd, nieuwbouw 18 mnd; beide eenmalig te verlengen met 6 mnd",
+    "bron": [
+     "https://groeneharthypotheken.nl/hypotheek/veelgestelde-vragen/bouwdepot/"
+    ],
+    "brondatum": "2026-10",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "FAQ Bouwdepot (geraadpleegd okt 2026): bouwdepot max. 9 mnd, verlenging 6 mnd (zonder rentevergoeding in verlenging). Nieuwbouwtermijn 18 mnd niet in fragment."
+   },
+   "verh": {
+    "waarde": "+ Rente meenemen naar nieuwe woning, gratis; min. 1 mnd voor overdracht melden, binnen 3 mnd nieuw aanbod",
+    "bron": [
+     "https://groeneharthypotheken.nl/hypotheek/veelgestelde-vragen/wijzigingen-hypotheek/",
+     "https://groeneharthypotheken.nl/advies/verhuizen/"
+    ],
+    "brondatum": "2026-10",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "FAQ Wijzigingen/Verhuizen: verhuisregeling kosteloos; min. 1 mnd voor verkoop oude woning melden. Termijn 3 mnd voor nieuw aanbod niet in fragment."
+   },
+   "oha": {
+    "waarde": "~ Mogelijk na min. 6 mnd looptijd; kosten €150",
+    "bron": [
+     "https://groeneharthypotheken.nl/hypotheek/veelgestelde-vragen/wijzigingen-hypotheek/"
+    ],
+    "brondatum": "2026-10",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "FAQ Wijzigingen hypotheek: kosten ontslag hoofdelijke aansprakelijkheid EUR 150. Minimale looptijd 6 mnd niet in fragment."
+   },
+   "tweede": {
+    "waarde": "~ Verhoging/2e hypotheek alleen achter eigen 1e hypotheek; toets op dan geldende normen; €150",
+    "bron": [
+     "https://groeneharthypotheken.nl/hypotheek/veelgestelde-vragen/wijzigingen-hypotheek/"
+    ],
+    "brondatum": "2026-10",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "FAQ Wijzigingen hypotheek: verhoging/2e hypotheek aan te vragen als 1e hypotheek bij Groene Hart en geen betalingsachterstand; kosten EUR 150."
+   },
+   "avrij": {
+    "waarde": "+ Standaard max. 50% van marktwaarde aflossingsvrij; in bepaalde situaties tot 75%",
+    "bron": [
+     "https://groeneharthypotheken.nl/hypotheek/aflossingsvrij/"
+    ],
+    "brondatum": "2026-10",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Pagina Aflossingsvrij: max. 50% van marktwaarde aflossingsvrij, in sommige gevallen tot 75%."
+   },
+   "wkost": {
+    "waarde": "~ €150 voor OHA, verhoging, conversie naar lagere rente; gratis: aflosvorm, renteopslag, ORV",
+    "bron": [
+     "https://groeneharthypotheken.nl/hypotheek/veelgestelde-vragen/wijzigingen-hypotheek/"
+    ],
+    "brondatum": "2026-10",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "FAQ Wijzigingen hypotheek: EUR 150 voor OHA en voor verhoging/2e hypotheek; verhuisregeling kosteloos. Overige gratis wijzigingen niet in fragment."
+   },
+   "duur": {
+    "waarde": "+ Rentekorting bij label A/B en bij labelsprong van 2 stappen (of B naar A) binnen 24 mnd na passeren",
+    "bron": [
+     "https://groeneharthypotheken.nl/verduurzamen/energielabel/"
+    ],
+    "brondatum": "2026-10",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Pagina Energielabel: binnen 24 mnd na passeren labelsprong van min. 2 stappen of B naar A aantonen; per twee stappen rentekorting."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Acceptatiegids Groene Hart (nieuwste gevonden PDF; webpagina Acceptatiegids zonder zichtbare 2026-versie)",
+    "url": "https://groeneharthypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Groene-Hart-april-2024-.pdf",
+    "versie": "april 2024"
+   },
+   {
+    "titel": "Acceptatiegids (adviseurspagina)",
+    "url": "https://groeneharthypotheken.nl/adviseurs/adviseur/acceptatiegids/",
+    "versie": "onbekend"
+   }
+  ]
+ },
+ {
+  "naam": "Clarian Wonen",
+  "gecontroleerd": "2026-10-04",
+  "criteria": {
+   "zzp": {
+    "waarde": "~ Min. 1 jaar ondernemer; IKV door NHG-erkend rekenexpert; <2 jr 80%, 2-3 jr 90%, >=3 jr 100% inkomen",
+    "bron": [
+     "https://www.clarianwonen.nl/consument/hypotheek/hypotheek-voor-ondernemers"
+    ],
+    "brondatum": "2026-10",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Pagina Hypotheek voor ondernemers (geraadpleegd okt 2026): IKV door rekenexpert o.b.v. jaarcijfers/aangiftes; <12 mnd niet mogelijk, 12-24 mnd 80%, 24-36 mnd 90%, >=3 jaar 100% van inkomen. Nieuwe Acceptatiegids (22-06-2026) vermeld op adviseurspagina maar inhoud/PDF-URL niet gevonden."
+   },
+   "aow": {
+    "waarde": "+ Senioren (AOW-leeftijd): toetsing op werkelijke last bij aankoop en oversluiten mogelijk",
+    "bron": [
+     "https://www.clarianwonen.nl/consument/hypotheek-voor-senioren"
+    ],
+    "brondatum": "2026-10",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Pagina Hypotheek voor senioren: toetsing op werkelijke lasten onder voorwaarden, ook bij oversluiten (AOW-leeftijd bereikt, blijven wonen, vast inkomen als AOW/pensioen)."
+   },
+   "rvp": {
+    "waarde": "+ Rentevast van 1 t/m 30 jaar",
+    "bron": [
+     "https://www.clarianwonen.nl/consument/rente"
+    ],
+    "brondatum": "2026-10",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Rentepagina: rentevaste perioden 1 t/m 30 jaar; aflossingsvrij deel min. 20 jaar rentevast."
+   },
+   "avrij": {
+    "waarde": "~ Max. 50% van marktwaarde aflossingsvrij; oversluiters met AOW (binnen 10 jr) tot 75%",
+    "bron": [
+     "https://www.clarianwonen.nl/consument/hypotheek/hypotheek-voor-ondernemers",
+     "https://www.clarianwonen.nl/consument/aflossingsvrije-hypotheek-tot-en-met-75-procent"
+    ],
+    "brondatum": "2026-10",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Webpagina's: aflossingsvrij max. 50% van woningwaarde; aparte pagina 'aflossingsvrije hypotheek tot en met 75 procent' (voorwaarden niet in fragment)."
+   },
+   "ovbr": {
+    "waarde": "~ Max. 24 mnd (verlenging na akkoord, met verkoopplan); 90% verwachte verkoopprijs min schuld; min. €2.500, kosten €250",
+    "bron": [
+     "https://www.clarianwonen.nl/consument/overbruggings-hypotheek"
+    ],
+    "brondatum": "2026-10",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "dubbel": "gecorrigeerd",
+    "toelichting": "Pagina Overbruggingshypotheek: max. 24 mnd, verlenging alleen na akkoord met realistisch verkoopplan; 90% van verwachte verkoopprijs minus restschuld (oude waarde: 90% marktwaarde); minimaal EUR 2.500; kosten EUR 250 bij aflossing; verkocht: koopakte met vervallen ontbindende voorwaarden."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Acceptatiegids Clarian Wonen (gepubliceerd 22-06-2026 volgens adviseurspagina; PDF-URL niet gevonden)",
+    "url": "https://www.clarianwonen.nl/voor-adviseurs/",
+    "versie": "juni 2026"
+   },
+   {
+    "titel": "Beheergids Clarian Wonen voor adviseurs",
+    "url": "https://www.clarianwonen.nl/uploads/clarian/files/Beheergids-Clarian-Wonen-April-2026.pdf",
+    "versie": "april 2026"
+   }
+  ]
+ },
+ {
+  "naam": "Hypotrust",
+  "gecontroleerd": "2026-10-04",
+  "criteria": {
+   "oha": {
+    "waarde": "~ Ontslag hoofdelijkheid alleen via adviseur na inkomenstoets; evt. NHG-beheertoets",
+    "bron": [
+     "https://www.hypotrust.nl/situatie/scheiden/"
+    ],
+    "brondatum": "2026-10",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Pagina Scheiden (geraadpleegd okt 2026): blijft een partner wonen, dan toetst de adviseur of de hypotheek op een naam kan; Hypotrust beoordeelt ontslag hoofdelijke aansprakelijkheid (formulier OHA). NHG-beheertoets niet in fragment. Nieuwste Elan Plus-acceptatiekader blijft januari 2026; wel Woon Bewust juli 2026 (product alleen nog voor bestaande klanten/meeneem)."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Acceptatiekader Hypotrust Elan Plus (nieuwste gevonden)",
+    "url": "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2026.pdf",
+    "versie": "januari 2026"
+   },
+   {
+    "titel": "Acceptatiekader Hypotrust Woon Bewust Hypotheek",
+    "url": "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Woon-Bewust-juli-2026.pdf",
+    "versie": "juli 2026"
+   },
+   {
+    "titel": "Acceptatiekader Hypotrust OK",
+    "url": "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-OK-januari-2026.pdf",
+    "versie": "januari 2026"
+   }
+  ]
  }
 ]

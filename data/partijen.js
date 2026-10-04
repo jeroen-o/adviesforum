@@ -776,6 +776,7 @@ window.PARTIJEN=[
    {tekst:'Partnerprogramma voor aankoopfinanciering via link of QR-code',bron:'https://www.lenderspender.nl/partners'}
   ],bijgewerkt:'2026-10-02'},
  {naam:'Ribank',toezicht:'AFM',toezichtNoot:'Financieringsmaatschappij voor de autobranche, onderdeel van Crédit Agricole Consumer Finance Nederland B.V.; aanbieden krediet onder AFM-vergunning.',toezichtBron:'https://www.leningen.nl/kredietverstrekkers/ribank/',type:'kredietverstrekker',categorieen:['krediet'],url:'https://www.ribank.nl/partners/onze_producten/financieringen.html',
+  status:'Verstrekt geen nieuwe kredieten: moederbedrijf Crédit Agricole Consumer Finance Nederland stopte per 1 oktober 2022 met nieuwe leningen en bouwt de portefeuille af (op ribank.nl zelf geen stopmelding gevonden)',statusBron:'https://fd.nl/financiele-markten/1454495/credit-agricole-trekt-zich-terug-uit-nederlandse-markt',
   producten:['Riflex (doorlopend krediet)','Ribusiness (zakelijk krediet)'],
   kenmerken:[
    {tekst:'Onderdeel van Crédit Agricole Consumer Finance Nederland',bron:'https://www.ribank.nl/cms/over_ribank/wie_zijn_wij.html'},

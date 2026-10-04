@@ -105,6 +105,24 @@
      "zekerheid": "middel",
      "toelichting": ""
     },
+    "verhogen": {
+     "waarde": "~ Na het eerste verzekeringsjaar jaarlijks max. 15% verhogen zonder nieuwe medische waarborgen, onder voorwaarden",
+     "bron": [
+      "https://heralife.nl/polisvoorwaarden/"
+     ],
+     "brondatum": "onbekend",
+     "zekerheid": "middel",
+     "toelichting": "Voorwaarden o.a.: oorspronkelijk zonder premieverhoging geaccepteerd en geen behandeling door medisch specialist voor bepaalde aandoeningen. Uit Hera Life-polisvoorwaarden; onduidelijk of dit in de huidige (2024) productversies staat."
+    },
+    "beeindig": {
+     "waarde": "~ Tussentijds beëindigen mogelijk; afkoopwaarde alleen als bij afsluiten voor uitkering van reservewaarde is gekozen (hogere premie)",
+     "bron": [
+      "https://heralife.nl/polisvoorwaarden/"
+     ],
+     "brondatum": "onbekend",
+     "zekerheid": "middel",
+     "toelichting": "Productversie waarin deze optie geldt niet eenduidig vastgesteld."
+    },
     "premieduur": {
      "waarde": "~ Premiebetaling per maand of per jaar via automatische incasso",
      "bron": [
@@ -113,6 +131,259 @@
      "brondatum": "2024-03",
      "zekerheid": "middel",
      "toelichting": "Koopsom of verkorte premieduur niet genoemd."
+    },
+    "bmi": {
+     "waarde": "- Geen gepubliceerde BMI-/gewichtsgrenzen gevonden",
+     "bron": [
+      "https://heralife.nl/wp-content/uploads/2024/03/Medisch-beoordelingstraject.pdf"
+     ],
+     "brondatum": "2024-03",
+     "zekerheid": "middel",
+     "toelichting": "Medisch beoordelingstraject noemt geen BMI-grenzen."
+    }
+   }
+  },
+  {
+   "naam": "Reaal",
+   "url": "https://www.reaal.nl/verzekering/overlijdensrisicoverzekering/medische-beoordeling/",
+   "domeinen": [
+    "reaal.nl"
+   ],
+   "documenten": [
+    {
+     "titel": "Verzekeringskaart Reaal ORV Start (via verzekeringskaarten.nl)",
+     "url": "https://verzekeringskaarten.nl/reaal/orv-start",
+     "versie": "onbekend"
+    }
+   ],
+   "criteria": {
+    "instap": {
+     "waarde": "~ Instapleeftijd 18 tot 65 jaar (ORV Start)",
+     "bron": [
+      "https://verzekeringskaarten.nl/reaal/orv-start"
+     ],
+     "brondatum": "onbekend",
+     "zekerheid": "laag",
+     "toelichting": "Uit verzekeringskaart op verzekeringskaarten.nl, niet op reaal.nl gevonden. ORV Senior heeft afwijkende leeftijden (niet gevonden)."
+    },
+    "looptijd": {
+     "waarde": "~ Looptijd max. 40 jaar; eindleeftijd max. 75 jaar (ORV Start)",
+     "bron": [
+      "https://verzekeringskaarten.nl/reaal/orv-start"
+     ],
+     "brondatum": "onbekend",
+     "zekerheid": "laag",
+     "toelichting": "Verzekerd bedrag € 5.000 tot € 500.000. Afsluiten alleen mogelijk als de aanvraag automatisch beoordeeld kan worden."
+    },
+    "uitsluit": {
+     "waarde": "~ Geen uitkering bij zelfdoding binnen 2 jaar en bij deelname aan oorlog/gevechtshandelingen of burgeroorlog",
+     "bron": [
+      "https://verzekeringskaarten.nl/reaal/orv-start",
+      "https://www.reaal.nl/je-bestaande-hypotheek-en-verzekeringen/overlijdensrisicoverzekering/"
+     ],
+     "brondatum": "onbekend",
+     "zekerheid": "laag",
+     "toelichting": "Ook geen uitkering bij onjuiste of onvolledige opgave."
+    },
+    "beeindig": {
+     "waarde": "~ Tussentijds stoppen mogelijk zonder uitkering; bij koppeling aan hypotheek alleen met toestemming geldverstrekker",
+     "bron": [
+      "https://verzekeringskaarten.nl/reaal/orv-start"
+     ],
+     "brondatum": "onbekend",
+     "zekerheid": "laag",
+     "toelichting": ""
+    },
+    "verpand": {
+     "waarde": "+ Verpanding aan geldverstrekker mogelijk",
+     "bron": [
+      "https://www.reaal.nl/klantenservice/antwoord/verpand/"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "premieduur": {
+     "waarde": "~ Premie per maand vooraf via automatische incasso (ORV Start)",
+     "bron": [
+      "https://verzekeringskaarten.nl/reaal/orv-start"
+     ],
+     "brondatum": "onbekend",
+     "zekerheid": "laag",
+     "toelichting": ""
+    },
+    "bmi": {
+     "waarde": "- Geen gepubliceerde BMI-/gewichtsgrenzen gevonden",
+     "bron": [
+      "https://www.reaal.nl/medische-beoordeling/"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Distributie via adviseur blijft onduidelijk: reaal.nl toont ORV deels onder 'je bestaande verzekeringen'; ORV Start lijkt vooral een direct (execution-only) product."
+    }
+   }
+  },
+  {
+   "naam": "Nationale-Nederlanden",
+   "criteria": {
+    "bmi": {
+     "waarde": "~ BMI weegt mee in de acceptatie; grenzen niet gepubliceerd",
+     "bron": [
+      "https://www.nn.nl/Particulier/Verzekeren/Overlijdensrisicoverzekering/Medische-acceptatie.htm"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "NN gebruikt de BMI om te bepalen of iemand een gezond gewicht heeft; bij afwijzing kan later met een gezond BMI opnieuw worden aangevraagd (tegen tarief van de hogere leeftijd)."
+    }
+   }
+  },
+  {
+   "naam": "a.s.r.",
+   "criteria": {
+    "bmi": {
+     "waarde": "- Geen gepubliceerde BMI-/gewichtsgrenzen gevonden",
+     "bron": [
+      "https://www.asr.nl/verzekeringen/medische-beoordeling-bij-levensverzekering"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Altijd gezondheidsverklaring; medisch adviseur kan aanvullend onderzoek vragen."
+    }
+   }
+  },
+  {
+   "naam": "Centraal Beheer",
+   "criteria": {
+    "bmi": {
+     "waarde": "- Geen gepubliceerde BMI-/gewichtsgrenzen gevonden",
+     "bron": [
+      "https://www.centraalbeheer.nl/voor-adviseurs/overlijdensrisicoverzekering/ruime-acceptatie"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Centraal Beheer meldt 96% acceptatie tegen normale premie en vrijwel alle overige aanvragen tegen hogere premie."
+    }
+   }
+  },
+  {
+   "naam": "Allianz",
+   "criteria": {
+    "bmi": {
+     "waarde": "- Geen gepubliceerde BMI-/gewichtsgrenzen gevonden",
+     "bron": [
+      "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/3/300158-11.pdf"
+     ],
+     "brondatum": null,
+     "zekerheid": "middel",
+     "toelichting": "Handleiding gezondheidsverklaring noemt geen BMI-grenzen (in gevonden fragmenten)."
+    }
+   }
+  },
+  {
+   "naam": "Scildon",
+   "criteria": {
+    "bmi": {
+     "waarde": "- Geen gepubliceerde BMI-/gewichtsgrenzen gevonden",
+     "bron": [
+      "https://www.scildon.nl/overlijdensrisicoverzekering/lifestyle-orv"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": ""
+    },
+    "uitsluit": {
+     "waarde": "~ Geen uitkering bij zelfdoding binnen 2 jaar na ingang; euthanasie is gedekt",
+     "bron": [
+      "https://scildon.files.prepr.io/4x08uhgrcyb8-algemene-voorwaarden-scildon-lifestyle-overlijdensrisicoverzekering-nov-21.pdf",
+      "https://verzekeringskaarten.nl/scildon/lifestyle-overlijdensrisicoverzekering"
+     ],
+     "brondatum": "2021-11",
+     "zekerheid": "middel",
+     "toelichting": "Oorlog/terrorisme-bepalingen niet in gevonden fragmenten. Lagere uitkering bij onjuiste niet-rokersverklaring."
+    }
+   }
+  },
+  {
+   "naam": "Dazure (GoedIdee)",
+   "criteria": {
+    "bmi": {
+     "waarde": "- Geen gepubliceerde BMI-/gewichtsgrenzen gevonden",
+     "bron": [
+      "https://www.dazure.nl/goedidee-orv"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Beoordeling op leeftijd, bedrag, rookgedrag en gezondheid."
+    }
+   }
+  },
+  {
+   "naam": "Credit Life (voorheen Callas)",
+   "criteria": {
+    "bmi": {
+     "waarde": "~ Bij BMI boven 35 aanvullende vragen en soms medisch onderzoek; langere doorlooptijd",
+     "bron": [
+      "https://www.creditlife.nl/faq/kan-ik-me-bij-credit-life-verzekeren-als-ik-morbide-obesitas-heb/"
+     ],
+     "brondatum": "onbekend",
+     "zekerheid": "middel",
+     "toelichting": "Lengte en gewicht worden gebruikt om te bepalen of het gewicht een gezondheidsrisico vormt. Geen harde afwijzingsgrens gepubliceerd. Datum FAQ onbekend."
+    }
+   }
+  },
+  {
+   "naam": "TAF",
+   "criteria": {
+    "bmi": {
+     "waarde": "~ Overgewicht vaak verzekerbaar; niet direct acceptabele aanvragen gaan automatisch naar De Hoop",
+     "bron": [
+      "https://www.taf.nl/over-taf/kennisbank/een-orv-afsluiten-blijkt-lastig-om-medische-redenen-wat-nu"
+     ],
+     "brondatum": "onbekend",
+     "zekerheid": "middel",
+     "toelichting": "Geen BMI-grenzen gepubliceerd. TAF noemt 98% directe acceptatie en via herverzekeraar De Hoop totaal 99,92%."
+    }
+   }
+  },
+  {
+   "naam": "Interpolis",
+   "criteria": {
+    "bmi": {
+     "waarde": "- Geen gepubliceerde BMI-/gewichtsgrenzen gevonden",
+     "bron": [
+      "https://www.interpolis.nl/service/leven/gezondheidsverklaring"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Lengte en gewicht worden gemeten bij keuring; geen grenzen gepubliceerd."
+    }
+   }
+  },
+  {
+   "naam": "DELA",
+   "criteria": {
+    "bmi": {
+     "waarde": "- Geen gepubliceerde BMI-/gewichtsgrenzen gevonden",
+     "bron": [
+      "https://www.dela.nl/verzekeringen/overlijdensrisicoverzekering/gezondheid"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "DELA meldt dat circa 10% van de aanvragen niet wordt geaccepteerd; geen BMI-grenzen genoemd."
+    }
+   }
+  },
+  {
+   "naam": "Univé",
+   "criteria": {
+    "bmi": {
+     "waarde": "- Geen gepubliceerde BMI-/gewichtsgrenzen gevonden",
+     "bron": [
+      "https://www.unive.nl/hypotheek/gezondheidsverklaring"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "middel",
+     "toelichting": "Gezondheidsverklaring vraagt lengte en gewicht; verzekeraar berekent BMI. Univé bemiddelt (o.a. DELA)."
     }
    }
   }
