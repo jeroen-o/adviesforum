@@ -65,7 +65,7 @@ L.forEach((x, i) => {
   if (!x || !/^\d{4}-\d{2}-\d{2}$/.test(x.d) || !x.t || !x.x || !x.u) fout('item ' + (i + 1) + ' in L (nieuw.html) mist d (JJJJ-MM-DD), t, x of u: ' + JSON.stringify(x).slice(0, 120));
 });
 
-const KB_BESTANDEN = [...indexHtml.matchAll(/<script\s+src="(data\/kennisbank[^"]*\.js)"/g)].map(m => m[1]);
+const KB_BESTANDEN = uitIndex('KENNIS_BESTANDEN').filter(f => /^data\/kennisbank[^/]*\.js$/.test(f)); /* lijst in index.html (worden daar na de eerste weergave geladen) */
 if (!KB_BESTANDEN.length) fout('geen data/kennisbank*.js scripts gevonden in index.html');
 const ARTIKELEN = laadData(KB_BESTANDEN).KENNISBANK || [];
 if (!ARTIKELEN.length) fout('de kennisbank is leeg');

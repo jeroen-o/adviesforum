@@ -72,6 +72,7 @@ test('laatste nieuws toont wijzigingen in voorwaarden', async ({ page }) => {
 
 test('kennisbankartikel over erfpacht linkt naar de vergelijker', async ({ page }) => {
   await page.goto('/index.html');
+  await page.waitForFunction(() => (window.KENNISBANK || []).some(a => a.cat === 'hyp' && /erfpacht/i.test(a.titel)));
   const id = await page.evaluate(() => (window.KENNISBANK || []).find(a => a.cat === 'hyp' && /erfpacht/i.test(a.titel)).id);
   await page.goto('/index.html#artikel-' + id);
   await expect(page.locator('.vw-koppeling a', { hasText: 'Erfpacht' })).toHaveAttribute('href', 'voorwaarden-vergelijker.html#k=erfp');

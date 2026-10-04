@@ -60,13 +60,13 @@ button,input,select{font-family:inherit}
 @media (max-width:640px){.vk dl{grid-template-columns:1fr}.vk dt{margin-top:6px}}
 @media print{.balk,.terugs,#btnPrint,.skiplink{display:none}.kop{background:#fff;border:0}}
 </style>
+<link rel="stylesheet" href="css/sitenav.css">
 </head>
 <body>
 <a class="skiplink" href="#inhoud">Naar de inhoud</a>
-<nav class="balk" aria-label="Forum">
-  <span>Adviesforum &middot; voor en door financieel adviseurs</span>
-  <span><a href="index.html">Home</a> &middot; <a href="compliance-overzicht.html">Compliance-overzicht</a></span>
-</nav>
+<!-- sitenav: gegenereerd door tools/sitenav.js, niet met de hand wijzigen -->
+<nav class="sitenav" aria-label="Adviesforum"><div class="sitenav-in"><a class="sitenav-merk" href="index.html">Adviesforum</a><ul><li><a href="index.html">Home</a></li><li><a href="voorwaarden.html">Voorwaarden</a></li><li><a href="index.html#hulpmiddelen">Hulpmiddelen</a></li><li><a href="laatste.html">Laatste nieuws</a></li><li><a href="aanmelden.html">Aanmelden</a></li></ul></div></nav>
+<!-- /sitenav -->
 <header class="kop">
   <div class="kop-in">
     <div class="merk"><span class="zeshoek" aria-hidden="true"></span>Adviesforum &middot; Compliance</div>
@@ -167,7 +167,7 @@ document.getElementById('btnPrint').addEventListener('click', function(){
   /* Afdrukken in een nieuw venster (werkt ook als de pagina in een iframe staat); ingevulde beoordelingen gaan mee. */
   var w = window.open('', '_blank');
   if(!w){ window.print(); return; }
-  w.document.write('<!DOCTYPE html>' + document.documentElement.outerHTML.replace(/<script[\s\S]*?<\/script>/g, ''));
+  w.document.write('<!DOCTYPE html>' + document.documentElement.outerHTML.replace(/<script[\s\S]*?<\/script>/g, '').replace(/<!-- sitenav[\s\S]*?<!-- \/sitenav -->/, ''));
   w.document.close(); w.focus(); setTimeout(function(){ w.print(); }, 300);
 });
 </script>

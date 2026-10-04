@@ -47,6 +47,7 @@ button,input{font-family:inherit}
 .terug{font-size:13.5px;font-weight:700;text-decoration:none;border-bottom:2px solid currentColor}
 .kop h1{margin:0 0 10px;font-size:clamp(26px,4.2vw,38px);line-height:1.12;font-weight:800}
 .kop p{margin:0;max-width:72ch}
+.kop p a{color:inherit;font-weight:700;text-decoration:underline}
 .romp{padding:22px 16px 56px}
 .compliance{border:2px solid var(--rood);border-left-width:8px;border-radius:0 12px 12px 0;padding:12px 16px;margin:0 0 18px;background:var(--rood-zacht);color:var(--rood-tekst);font-size:14px}
 .compliance h2{margin:0 0 4px;font-size:14px;font-weight:800;text-transform:uppercase;letter-spacing:.03em}
@@ -62,6 +63,7 @@ legend{font-weight:800;font-size:15px;padding:0 6px}
 .sit input{margin-top:3px;width:18px;height:18px;accent-color:#E6BD00;flex:none}
 .sit b{display:block;font-size:14px}
 .sit span{font-size:12.5px;color:var(--grijs)}
+.sit a.aw{display:block;font-size:12.5px;margin-top:4px}
 .opties{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:14px;margin-top:10px}
 .opties label{display:inline-flex;gap:6px;align-items:center}
 .knop{border:1px solid var(--geel-donker);background:#FFD200;color:#141414;border-radius:999px;padding:7px 14px;font-weight:700;font-size:14px;cursor:pointer;min-height:38px}
@@ -88,13 +90,13 @@ legend{font-weight:800;font-size:15px;padding:0 6px}
 .voet{max-width:1100px;margin:0 auto;padding:0 16px 40px;font-size:12.5px;color:var(--grijs)}
 @media (max-width:560px){.gv li{grid-template-columns:1fr}}
 </style>
+<link rel="stylesheet" href="css/sitenav.css">
 </head>
 <body>
 <a class="skiplink" href="#inhoud">Naar de inhoud</a>
-<nav class="balk" aria-label="Forum">
-  <span>Adviesforum &middot; voor en door financieel adviseurs</span>
-  <span><a href="index.html">Home</a> &middot; <a href="aanmelden.html">Aanmelden</a></span>
-</nav>
+<!-- sitenav: gegenereerd door tools/sitenav.js, niet met de hand wijzigen -->
+<nav class="sitenav" aria-label="Adviesforum"><div class="sitenav-in"><a class="sitenav-merk" href="index.html">Adviesforum</a><ul><li><a href="index.html">Home</a></li><li><a href="voorwaarden.html" aria-current="page">Voorwaarden</a></li><li><a href="index.html#hulpmiddelen">Hulpmiddelen</a></li><li><a href="laatste.html">Laatste nieuws</a></li><li><a href="aanmelden.html">Aanmelden</a></li></ul></div></nav>
+<!-- /sitenav -->
 <header class="kop">
   <div class="kop-in">
     <div class="merk"><span class="zeshoek" aria-hidden="true"></span>Adviesforum &middot; Hulpmiddelen</div>
@@ -105,7 +107,7 @@ legend{font-weight:800;font-size:15px;padding:0 6px}
       <a class="terug" href="index.html#hulpmiddelen">Alle hulpmiddelen</a>
     </div>
     <h1>Situatiecheck voorwaarden</h1>
-    <p>Vink de situatie van de klant aan. Je ziet per geldverstrekker of verzekeraar of dat volgens de gecontroleerde voorwaarden kan, met de onderbouwing en de bron. Aanbieders staan op alfabet. Voor hypotheken en de producten uit de productvoorwaarden.</p>
+    <p>Vink de situatie van de klant aan. Je ziet per geldverstrekker of verzekeraar of dat volgens de gecontroleerde voorwaarden kan, met de onderbouwing en de bron. Aanbieders staan op alfabet. Voor hypotheken en de producten uit de productvoorwaarden. Wil je weten welke regels (NHG, leennormen) en documenten bij een situatie horen? Kijk dan in de <a href="acceptatiewijzer.html">Acceptatiewijzer</a>.</p>
   </div>
 </header>
 
@@ -179,12 +181,16 @@ function bouwTabs(){
     b.addEventListener('click', function(){ prod = x.id; gekozen.clear(); bouwTabs(); bouwKeuze(); render(); }); t.appendChild(b); });
   $('optNieuwLbl').hidden = prod !== 'hyp';
 }
+/* Dezelfde situatie in de Acceptatiewijzer (NHG-regel, leennormen, documenten). */
+var NAAR_ACCEPTATIEWIJZER = {zzp1: 'zzp-starter', persp: 'flexwerk', flex: 'tijdelijk-contract', perfp: 'erfpacht', ebb: 'verduurzamen', senior: 'aow-leeftijd'};
 function bouwKeuze(){
   var box = $('sits'); box.textContent = '';
   data().situaties.forEach(function(x){
     var l = el('label','sit'), i = el('input'); i.type = 'checkbox'; i.value = x.id; i.checked = gekozen.has(x.id);
     i.addEventListener('change', function(){ if(i.checked) gekozen.add(x.id); else gekozen.delete(x.id); render(); });
     var t = el('div'); t.appendChild(el('b', null, x.naam)); if(x.vraag) t.appendChild(el('span', null, x.vraag));
+    var aw = prod === 'hyp' && NAAR_ACCEPTATIEWIJZER[x.id];
+    if(aw){ var a = el('a', 'aw', 'Regels en aandachtspunten in de Acceptatiewijzer'); a.href = 'acceptatiewijzer.html#situatie-' + aw; t.appendChild(a); }
     l.appendChild(i); l.appendChild(t); box.appendChild(l);
   });
 }

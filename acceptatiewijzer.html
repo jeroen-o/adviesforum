@@ -33,6 +33,7 @@ body{font-family:Montserrat,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,A
 a{color:inherit}
 button,input{font-family:inherit}
 
+.naar-sc{margin:12px 0 0;font-size:14px}.naar-sc a{font-weight:600}.naar-sc span{color:var(--grijs,#595959)}
 .balk{background:var(--zwart);color:#fff;font-size:12.5px;padding:8px 24px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 .balk a{color:#fff;text-decoration:none;opacity:.88}
 .balk a:hover{opacity:1;text-decoration:underline}
@@ -44,6 +45,7 @@ button,input{font-family:inherit}
 .terug{display:inline-block;font-size:13.5px;font-weight:700;text-decoration:none;border-bottom:2px solid var(--zwart);margin-bottom:14px}
 .kop h1{margin:0 0 10px;font-size:clamp(27px,4.2vw,40px);line-height:1.12;font-weight:800}
 .kop p{margin:0;max-width:70ch;font-size:15.5px}
+.kop p a{color:inherit;font-weight:700;text-decoration:underline}
 .kop .stempel{display:inline-block;margin-top:16px;font-size:12px;font-weight:700;background:var(--zwart);color:var(--geel);padding:5px 11px;border-radius:999px}
 
 .compliance{max-width:1132px;margin:22px auto 0;background:var(--rood-zacht);border-left:4px solid var(--rood);border-radius:0 10px 10px 0;padding:14px 18px;font-size:14px}
@@ -202,21 +204,21 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
 :root:not([data-theme="light"]) .skiplink:focus{outline-color:#F2F2F2}
 }
 </style>
+<link rel="stylesheet" href="css/sitenav.css">
 </head>
 <body>
 <a class="skiplink" href="#inhoud">Naar de inhoud</a>
 
-<nav class="balk" aria-label="Forum">
-  <span>Adviesforum &middot; hulpmiddelen voor financieel adviseurs</span>
-  <span><a href="index.html">Home</a> &middot; <a href="aanmelden.html">Aanmelden</a> &middot; <a href="laatste.html">Laatste nieuws</a></span>
-</nav>
+<!-- sitenav: gegenereerd door tools/sitenav.js, niet met de hand wijzigen -->
+<nav class="sitenav" aria-label="Adviesforum"><div class="sitenav-in"><a class="sitenav-merk" href="index.html">Adviesforum</a><ul><li><a href="index.html">Home</a></li><li><a href="voorwaarden.html">Voorwaarden</a></li><li><a href="index.html#hulpmiddelen">Hulpmiddelen</a></li><li><a href="laatste.html">Laatste nieuws</a></li><li><a href="aanmelden.html">Aanmelden</a></li></ul></div></nav>
+<!-- /sitenav -->
 
 <header class="kop">
   <div class="kop-in">
     <div class="merk"><span class="zeshoek" aria-hidden="true"></span>Adviesforum &middot; Hulpmiddelen</div>
     <a class="terug" href="index.html#hulpmiddelen">&larr; Terug naar de hulpmiddelen</a>
     <h1>Acceptatiewijzer bijzondere situaties</h1>
-    <p>Per klantsituatie de NHG-regel uit de Voorwaarden &amp; Normen 2026, wat de leennormen zeggen, de aandachtspunten en documenten, en wat geldverstrekkers er aantoonbaar over publiceren. Een startpunt voor de voorbereiding van de aanvraag, geen vervanging van de acceptatiegids.</p>
+    <p>Per klantsituatie de NHG-regel uit de Voorwaarden &amp; Normen 2026, wat de leennormen zeggen, de aandachtspunten en documenten, en wat geldverstrekkers er aantoonbaar over publiceren. Een startpunt voor de voorbereiding van de aanvraag, geen vervanging van de acceptatiegids. Wil je per geldverstrekker zien of een situatie volgens de gecontroleerde voorwaarden kan? Gebruik dan de <a href="situatiecheck.html">Situatiecheck</a>.</p>
     <span class="stempel" id="stempel">Peildatum 3 oktober 2026 &middot; geen advies &middot; controleer altijd de actuele gids</span>
   </div>
 </header>
@@ -306,6 +308,8 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
     } else {
       h += '<p class="uitleg" style="margin:0">' + esc(s.geenPartijen || 'Geen partij-specifieke informatie in de Aanbiederwegwijzer. Raadpleeg de acceptatiegids van de beoogde geldverstrekker.') + '</p>';
     }
+    var sc = NAAR_SITUATIECHECK[s.id];
+    if(sc) h += '<p class="naar-sc"><a href="situatiecheck.html#s=' + sc + '">Per geldverstrekker bekijken in de Situatiecheck &rarr;</a> <span>Gecontroleerde voorwaarden met bron, op alfabet.</span></p>';
     h += '</div>';
     h += '<div class="blok bronnen"><h3>Bronnen</h3><ul>' + s.bronnen.map(function(b){ return '<li>' + link(b[0], b[1]) + '</li>'; }).join('') + '</ul></div>';
     h += '</div>';
@@ -318,6 +322,9 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
       leeg = document.getElementById('leeg'), chipsEl = document.getElementById('chips');
   var kaarten = [], perId = {}, actieveCat = '';
 
+  /* Situaties die ook in de Situatiecheck staan: daar per geldverstrekker ja/nee met bron, hier de regels en aandachtspunten. */
+  var NAAR_SITUATIECHECK = {'zzp-starter': 'zzp1', 'tijdelijk-contract': 'flex,persp', 'flexwerk': 'flex,persp', 'erfpacht': 'perfp',
+    'verduurzamen': 'ebb', 'aow-leeftijd': 'senior', 'verzilveren': 'senior'};
   A.situaties.forEach(function(s){
     var pk = partijKenmerken(s);
     var art = document.createElement('article');

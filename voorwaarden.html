@@ -72,14 +72,18 @@ h2.sectie{font-size:19px;margin:28px 0 10px}
 .lijst .meta{display:block;font-size:12px;color:var(--grijs)}
 .lbl{display:inline-block;font-size:11px;font-weight:800;background:#FFD200;color:#141414;border-radius:6px;padding:0 6px;margin-right:6px}
 .leeg{color:var(--grijs);font-style:italic;font-size:14px}
+.welke-wrap{overflow-x:auto}
+.welke{border-collapse:collapse;width:100%;min-width:560px;font-size:14px;background:var(--wit,#fff)}
+.welke th,.welke td{text-align:left;vertical-align:top;padding:9px 11px;border-bottom:1px solid var(--lijn,#ddd)}
+.welke thead th{font-size:12.5px;text-transform:uppercase;letter-spacing:.04em}
 </style>
+<link rel="stylesheet" href="css/sitenav.css">
 </head>
 <body>
 <a class="skiplink" href="#inhoud">Naar de inhoud</a>
-<nav class="balk" aria-label="Forum">
-  <span>Adviesforum &middot; voor en door financieel adviseurs</span>
-  <span><a href="index.html">Home</a> &middot; <a href="aanmelden.html">Aanmelden</a> &middot; <a href="laatste.html">Laatste nieuws</a></span>
-</nav>
+<!-- sitenav: gegenereerd door tools/sitenav.js, niet met de hand wijzigen -->
+<nav class="sitenav" aria-label="Adviesforum"><div class="sitenav-in"><a class="sitenav-merk" href="index.html">Adviesforum</a><ul><li><a href="index.html">Home</a></li><li><a href="voorwaarden.html" aria-current="page">Voorwaarden</a></li><li><a href="index.html#hulpmiddelen">Hulpmiddelen</a></li><li><a href="laatste.html">Laatste nieuws</a></li><li><a href="aanmelden.html">Aanmelden</a></li></ul></div></nav>
+<!-- /sitenav -->
 <header class="kop">
   <div class="kop-in">
     <div class="merk"><span class="zeshoek" aria-hidden="true"></span>Adviesforum &middot; Voorwaarden</div>
@@ -108,6 +112,20 @@ h2.sectie{font-size:19px;margin:28px 0 10px}
     <a class="kaart" href="adviesmotivatie.html"><span class="stap">Stap 3</span><h3>Vastleggen en motiveren</h3><p>Maak in de vergelijker een uitdraai voor het dossier en neem de vergeleken aanbieders en voorwaarden over in de adviesmotivatie.</p></a>
     <a class="kaart" href="partijen.html"><span class="stap">Naslag</span><h3>Aanbiederwegwijzer</h3><p>Alle aanbieders met toezicht, contact, extranet en de belangrijkste kenmerken.</p></a>
     <a class="kaart" href="#wijzigingen"><span class="stap">Bijblijven</span><h3>Wijzigingen en volgen</h3><p>Volg aanbieders in de vergelijker of bij de productvoorwaarden. Hun wijzigingen staan hieronder en in de <span style="text-decoration:underline">RSS-feed</span>.</p></a>
+  </div>
+
+  <h2 class="sectie" id="welke">Welke pagina gebruik je waarvoor?</h2>
+  <div class="welke-wrap" tabindex="0" role="region" aria-label="Welke pagina gebruik je waarvoor">
+  <table class="welke">
+    <thead><tr><th scope="col">Pagina</th><th scope="col">Wat staat erin</th><th scope="col">Wie levert het aan</th></tr></thead>
+    <tbody>
+      <tr><th scope="row"><a href="voorwaarden-vergelijker.html">Voorwaarden-vergelijker</a> en <a href="productvoorwaarden.html">Productvoorwaarden</a></th><td>Voorwaarden per criterium naast elkaar, met de waarde, de bron en de brondatum. Hiermee vergelijk je.</td><td>Adviesforum, gecontroleerd bij de eigen bron van de aanbieder</td></tr>
+      <tr><th scope="row"><a href="situatiecheck.html">Situatiecheck</a></th><td>Per klantsituatie welke aanbieders het volgens die gecontroleerde voorwaarden toestaan.</td><td>Adviesforum (dezelfde gegevens)</td></tr>
+      <tr><th scope="row"><a href="acceptatiewijzer.html">Acceptatiewijzer</a></th><td>Per klantsituatie de regels: NHG, leennormen, aandachtspunten en documenten.</td><td>Adviesforum, uit officiële bronnen</td></tr>
+      <tr><th scope="row"><a href="partijen.html">Aanbiederwegwijzer</a> en <a href="vergelijken.html">thema&rsquo;s naast elkaar</a></th><td>Wie is wie: toezicht, intermediairsites, acceptatiegidsen en opvallende kenmerken, voor alle soorten aanbieders.</td><td>Adviesforum, uit openbare bronnen</td></tr>
+      <tr><th scope="row"><a href="aanbieders.html">Aanbieders voor adviseurs</a></th><td>Nieuws, documenten, extranetlinks en contactpersonen.</td><td>De aanbieder zelf; niet door het Adviesforum gecontroleerd</td></tr>
+    </tbody>
+  </table>
   </div>
 
   <h2 class="sectie" id="wijzigingen">Laatste wijzigingen</h2>
