@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Situatiecheck hypotheekvoorwaarden – Adviesforum</title>
+<title>Situatiecheck voorwaarden – Adviesforum</title>
 <link rel="canonical" href="https://jeroen-o.github.io/adviesforum/situatiecheck.html">
 <meta property="og:url" content="https://jeroen-o.github.io/adviesforum/situatiecheck.html">
 <meta property="og:site_name" content="Adviesforum">
@@ -51,6 +51,9 @@ button,input{font-family:inherit}
 .compliance{border:2px solid var(--rood);border-left-width:8px;border-radius:0 12px 12px 0;padding:12px 16px;margin:0 0 18px;background:var(--rood-zacht);color:var(--rood-tekst);font-size:14px}
 .compliance h2{margin:0 0 4px;font-size:14px;font-weight:800;text-transform:uppercase;letter-spacing:.03em}
 .compliance ul{margin:0;padding-left:18px}
+.tabs{display:inline-flex;flex-wrap:wrap;border:1px solid var(--lijn);border-radius:999px;padding:3px;background:var(--wit);gap:2px;margin:0 0 12px}
+.tabs button{border:0;background:transparent;color:var(--tekst);border-radius:999px;padding:8px 16px;font-weight:700;font-size:14px;cursor:pointer;min-height:40px}
+.tabs button[aria-selected="true"]{background:#FFD200;color:#141414}
 fieldset{border:1px solid var(--lijn);border-radius:14px;padding:12px 14px 14px;margin:0 0 14px;background:var(--vlak)}
 legend{font-weight:800;font-size:15px;padding:0 6px}
 .sits{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:8px}
@@ -98,8 +101,8 @@ legend{font-weight:800;font-size:15px;padding:0 6px}
       <a class="terug" href="productvoorwaarden.html">ORV, AOV en krediet</a>
       <a class="terug" href="index.html#hulpmiddelen">Alle hulpmiddelen</a>
     </div>
-    <h1>Situatiecheck hypotheekvoorwaarden</h1>
-    <p>Vink de situatie van de klant aan. Je ziet per geldverstrekker of dat volgens de gecontroleerde voorwaarden kan, met de onderbouwing en de bron. Geldverstrekkers staan op alfabet.</p>
+    <h1>Situatiecheck voorwaarden</h1>
+    <p>Vink de situatie van de klant aan. Je ziet per geldverstrekker of verzekeraar of dat volgens de gecontroleerde voorwaarden kan, met de onderbouwing en de bron. Aanbieders staan op alfabet. Voor hypotheken, overlijdensrisicoverzekeringen en AOV.</p>
   </div>
 </header>
 
@@ -114,13 +117,14 @@ legend{font-weight:800;font-size:15px;padding:0 6px}
     </ul>
   </section>
 
+  <div class="tabs" role="tablist" aria-label="Product" id="tabs"></div>
   <fieldset>
     <legend>Situatie van de klant</legend>
     <div class="sits" id="sits"></div>
     <div class="opties">
-      <label><input type="checkbox" id="optNee"> Verberg geldverstrekkers waar een gekozen situatie &lsquo;nee&rsquo; is</label>
-      <label><input type="checkbox" id="optOnb"> Verberg geldverstrekkers met &lsquo;onbekend&rsquo;</label>
-      <label><input type="checkbox" id="optNieuw" checked> Verberg geldverstrekkers die geen nieuwe klanten aannemen</label>
+      <label><input type="checkbox" id="optNee"> Verberg aanbieders waar een gekozen situatie &lsquo;nee&rsquo; is</label>
+      <label><input type="checkbox" id="optOnb"> Verberg aanbieders met &lsquo;onbekend&rsquo;</label>
+      <label id="optNieuwLbl"><input type="checkbox" id="optNieuw" checked> Verberg geldverstrekkers die geen nieuwe klanten aannemen</label>
       <button type="button" class="knop licht" id="btnWis">Wis keuze</button>
     </div>
   </fieldset>
@@ -137,61 +141,80 @@ legend{font-weight:800;font-size:15px;padding:0 6px}
 <script>
 (function(){
 'use strict';
-var D = window.SITUATIECHECK || {situaties:[], geldverstrekkers:[]};
+var D = window.SITUATIECHECK || {situaties:[], geldverstrekkers:[], producten:{}};
 var $ = function(id){ return document.getElementById(id); };
 function el(tag, cls, txt){ var e = document.createElement(tag); if(cls) e.className = cls; if(txt != null) e.textContent = txt; return e; }
 function veilig(u){ return typeof u==='string' && /^https:\/\/[^\s"'<>]+$/i.test(u) ? u : ''; }
 function host(u){ try{ return new URL(u).hostname.replace(/^www\./,''); }catch(e){ return u; } }
 var LABEL = {ja:'Ja', voorwaarden:'Onder voorwaarden', nee:'Nee', onbekend:'Onbekend'};
-var gekozen = new Set();
+var PRODUCTEN = [{id:'hyp', titel:'Hypotheek'}].concat(Object.keys(D.producten||{}).map(function(k){ return {id:k, titel:k==='orv' ? 'ORV' : k==='aov' ? 'AOV' : D.producten[k].titel}; }));
+var prod = 'hyp', gekozen = new Set();
 
+function data(){
+  if(prod === 'hyp') return {situaties: D.situaties, items: D.geldverstrekkers, soort: 'geldverstrekkers',
+    link: function(g, cs){ return 'voorwaarden-vergelijker.html#vergelijk=' + g.slug + (cs.length ? '&k=' + cs.join(',') : ''); }};
+  var p = D.producten[prod] || {situaties:[], aanbieders:[]};
+  return {situaties: p.situaties, items: p.aanbieders, soort: 'aanbieders',
+    link: function(g, cs){ return 'productvoorwaarden.html#p=' + prod + '&a=' + g.slug + (cs.length ? '&k=' + cs.join(',') : ''); }};
+}
 function leesHash(){
-  var m = /(?:^#|&)s=([a-z0-9,]*)/.exec(location.hash);
-  gekozen = new Set(m ? m[1].split(',').filter(function(id){ return D.situaties.some(function(s){ return s.id===id; }); }) : []);
+  var h = new URLSearchParams(location.hash.replace(/^#/,''));
+  var p = h.get('p'); prod = PRODUCTEN.some(function(x){ return x.id===p; }) ? p : 'hyp';
+  var ds = data();
+  gekozen = new Set((h.get('s')||'').split(',').filter(function(id){ return ds.situaties.some(function(x){ return x.id===id; }); }));
 }
 function schrijfHash(){
-  var h = gekozen.size ? '#s=' + D.situaties.filter(function(s){ return gekozen.has(s.id); }).map(function(s){ return s.id; }).join(',') : '';
-  try{ history.replaceState(null, '', location.pathname + location.search + h); }catch(e){}
+  var d = [];
+  if(prod !== 'hyp') d.push('p=' + prod);
+  if(gekozen.size) d.push('s=' + data().situaties.filter(function(x){ return gekozen.has(x.id); }).map(function(x){ return x.id; }).join(','));
+  try{ history.replaceState(null, '', location.pathname + location.search + (d.length ? '#' + d.join('&') : '')); }catch(e){}
+}
+function bouwTabs(){
+  var t = $('tabs'); t.textContent = '';
+  PRODUCTEN.forEach(function(x){ var b = el('button', null, x.titel); b.type = 'button'; b.setAttribute('role','tab'); b.setAttribute('aria-selected', x.id===prod ? 'true' : 'false');
+    b.addEventListener('click', function(){ prod = x.id; gekozen.clear(); bouwTabs(); bouwKeuze(); render(); }); t.appendChild(b); });
+  $('optNieuwLbl').hidden = prod !== 'hyp';
 }
 function bouwKeuze(){
   var box = $('sits'); box.textContent = '';
-  D.situaties.forEach(function(s){
-    var l = el('label','sit'), i = el('input'); i.type = 'checkbox'; i.value = s.id; i.checked = gekozen.has(s.id);
-    i.addEventListener('change', function(){ if(i.checked) gekozen.add(s.id); else gekozen.delete(s.id); render(); });
-    var t = el('div'); t.appendChild(el('b', null, s.naam)); if(s.vraag) t.appendChild(el('span', null, s.vraag));
+  data().situaties.forEach(function(x){
+    var l = el('label','sit'), i = el('input'); i.type = 'checkbox'; i.value = x.id; i.checked = gekozen.has(x.id);
+    i.addEventListener('change', function(){ if(i.checked) gekozen.add(x.id); else gekozen.delete(x.id); render(); });
+    var t = el('div'); t.appendChild(el('b', null, x.naam)); if(x.vraag) t.appendChild(el('span', null, x.vraag));
     l.appendChild(i); l.appendChild(t); box.appendChild(l);
   });
 }
 function render(){
   schrijfHash();
-  var sits = D.situaties.filter(function(s){ return gekozen.has(s.id); });
+  var ds = data(), sits = ds.situaties.filter(function(x){ return gekozen.has(x.id); });
   var lijst = $('lijst'); lijst.textContent = '';
-  if(!sits.length){ $('samen').textContent = 'Kies een of meer situaties om de geldverstrekkers te zien.'; return; }
-  var gv = D.geldverstrekkers.filter(function(g){
-    if($('optNieuw').checked && g.geenNieuw) return false;
-    var o = sits.map(function(s){ return (g.s[s.id]||{o:'onbekend'}).o; });
+  if(!sits.length){ $('samen').textContent = 'Kies een of meer situaties om de ' + ds.soort + ' te zien.'; return; }
+  var gv = ds.items.filter(function(g){
+    if(prod==='hyp' && $('optNieuw').checked && g.geenNieuw) return false;
+    var o = sits.map(function(x){ return (g.s[x.id]||{o:'onbekend'}).o; });
     if($('optNee').checked && o.indexOf('nee') >= 0) return false;
     if($('optOnb').checked && o.indexOf('onbekend') >= 0) return false;
     return true;
   });
-  var allesKan = gv.filter(function(g){ return sits.every(function(s){ var o = (g.s[s.id]||{}).o; return o==='ja' || o==='voorwaarden'; }); }).length;
-  $('samen').textContent = gv.length + ' geldverstrekkers getoond; bij ' + allesKan + ' kan elke gekozen situatie volgens de gecontroleerde voorwaarden (ja of onder voorwaarden).';
-  if(!gv.length){ lijst.appendChild(el('p','leeg','Geen geldverstrekkers met deze filters.')); return; }
+  var allesKan = gv.filter(function(g){ return sits.every(function(x){ var o = (g.s[x.id]||{}).o; return o==='ja' || o==='voorwaarden'; }); }).length;
+  $('samen').textContent = gv.length + ' ' + ds.soort + ' getoond; bij ' + allesKan + ' kan elke gekozen situatie volgens de gecontroleerde voorwaarden (ja of onder voorwaarden).';
+  if(!gv.length){ lijst.appendChild(el('p','leeg','Geen ' + ds.soort + ' met deze filters.')); return; }
   gv.forEach(function(g){
     var d = el('article','gv'), h = el('h3');
     h.appendChild(el('span', null, g.naam));
     if(g.geenNieuw) h.appendChild(el('span','let','geen nieuwe klanten'));
-    var a = el('a', null, 'Bekijk in de vergelijker'); a.href = 'voorwaarden-vergelijker.html#vergelijk=' + g.slug + '&k=' + Array.from(new Set(sits.map(function(s){ return (g.s[s.id]||{}).c; }).filter(Boolean))).join(',');
+    var cs = Array.from(new Set(sits.map(function(x){ return (g.s[x.id]||{}).c; }).filter(Boolean)));
+    var a = el('a', null, prod==='hyp' ? 'Bekijk in de vergelijker' : 'Bekijk de voorwaarden'); a.href = ds.link(g, cs);
     h.appendChild(a); d.appendChild(h);
     var ul = el('ul');
-    sits.forEach(function(s){
-      var x = g.s[s.id] || {o:'onbekend', t:''};
-      var li = el('li'); li.appendChild(el('span','lab ' + x.o, LABEL[x.o]));
-      var r = el('div'); r.appendChild(el('span','sn', s.naam));
-      r.appendChild(el('span','tk', x.t || (x.o==='onbekend' ? 'De gecontroleerde voorwaarden zeggen hier niets over.' : '')));
-      if(x.tw){ var tw = el('span','tw','Twijfelgeval: controleer in de gids'); tw.title = 'De indeling is niet eenduidig uit de tekst van de voorwaarde af te leiden.'; r.appendChild(tw); }
-      if(x.o !== 'onbekend'){
-        if(x.g){ var b = el('span','bron','✓ gecontroleerd'); var v = veilig(x.b); if(v){ b.appendChild(document.createTextNode(' · bron: ')); var l = el('a', null, host(v)); l.href = v; l.target = '_blank'; l.rel = 'noopener'; b.appendChild(l); } r.appendChild(b); }
+    sits.forEach(function(x){
+      var r0 = g.s[x.id] || {o:'onbekend', t:''};
+      var li = el('li'); li.appendChild(el('span','lab ' + r0.o, LABEL[r0.o]));
+      var r = el('div'); r.appendChild(el('span','sn', x.naam));
+      r.appendChild(el('span','tk', r0.t || (r0.o==='onbekend' ? 'De gecontroleerde voorwaarden zeggen hier niets over.' : '')));
+      if(r0.tw){ var tw = el('span','tw','Twijfelgeval: controleer in de voorwaarden'); tw.title = 'De indeling is niet eenduidig uit de tekst van de voorwaarde af te leiden.'; r.appendChild(tw); }
+      if(r0.o !== 'onbekend'){
+        if(r0.g){ var b = el('span','bron','✓ gecontroleerd'); var v = veilig(r0.b); if(v){ b.appendChild(document.createTextNode(' · bron: ')); var l = el('a', null, host(v)); l.href = v; l.target = '_blank'; l.rel = 'noopener'; b.appendChild(l); } r.appendChild(b); }
         else r.appendChild(el('span','nv','onderliggende voorwaarde nog niet geverifieerd'));
       }
       li.appendChild(r); ul.appendChild(li);
@@ -201,8 +224,8 @@ function render(){
 }
 ['optNee','optOnb','optNieuw'].forEach(function(id){ $(id).addEventListener('change', render); });
 $('btnWis').addEventListener('click', function(){ gekozen.clear(); bouwKeuze(); render(); });
-window.addEventListener('hashchange', function(){ leesHash(); bouwKeuze(); render(); });
-leesHash(); bouwKeuze(); render();
+window.addEventListener('hashchange', function(){ leesHash(); bouwTabs(); bouwKeuze(); render(); });
+leesHash(); bouwTabs(); bouwKeuze(); render();
 })();
 </script>
 </body>

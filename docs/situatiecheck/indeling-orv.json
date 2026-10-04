@@ -1,0 +1,645 @@
+{
+ "gegenereerd": "2026-10-04",
+ "situaties": [
+  {
+   "id": "roker",
+   "naam": "Roker of e-sigaret",
+   "vraag": "Kan een klant die rookt of een e-sigaret/nicotineproducten gebruikt een overlijdensrisicoverzekering afsluiten?",
+   "crit": [
+    "roken"
+   ]
+  },
+  {
+   "id": "hoogbedrag",
+   "naam": "Boven € 500.000 zonder keuring",
+   "vraag": "Kan een bedrag boven € 500.000 verzekerd worden met alleen een gezondheidsverklaring, zonder medische keuring?",
+   "crit": [
+    "medisch"
+   ]
+  },
+  {
+   "id": "oud",
+   "naam": "Instap op 60+",
+   "vraag": "Kan een klant van 60 jaar of ouder de verzekering nog afsluiten, en met welke looptijdgrens?",
+   "crit": [
+    "instap",
+    "looptijd"
+   ]
+  },
+  {
+   "id": "lang",
+   "naam": "Looptijd 30 jaar of langer",
+   "vraag": "Is een looptijd van 30 jaar of langer mogelijk?",
+   "crit": [
+    "looptijd"
+   ]
+  },
+  {
+   "id": "terminaal",
+   "naam": "Vooruitbetaling bij terminale ziekte",
+   "vraag": "Wordt (een deel van) het verzekerd bedrag vooruitbetaald bij een terminale diagnose?",
+   "crit": [
+    "terminaal"
+   ]
+  },
+  {
+   "id": "verhogen",
+   "naam": "Verhogen zonder nieuwe medische waarborgen",
+   "vraag": "Kan het verzekerd bedrag later verhoogd worden zonder nieuwe medische waarborgen?",
+   "crit": [
+    "verhogen"
+   ]
+  },
+  {
+   "id": "twee",
+   "naam": "Tweelevens of kruislings",
+   "vraag": "Is een tweelevens- of kruislingse verzekering voor partners mogelijk?",
+   "crit": [
+    "vormen"
+   ]
+  },
+  {
+   "id": "dalend",
+   "naam": "Annuïtair of lineair dalend",
+   "vraag": "Is een annuïtair of lineair dalend verzekerd bedrag mogelijk?",
+   "crit": [
+    "vormen"
+   ]
+  }
+ ],
+ "indeling": {
+  "a.s.r.": {
+   "roker": {
+    "o": "voorwaarden",
+    "t": "Lagere premie voor niet-rokers, dus rokerstarief; definitie en rookvrije periode niet gepubliceerd",
+    "c": "roken"
+   },
+   "hoogbedrag": {
+    "o": "nee",
+    "t": "Keuring door arts boven € 328.131 (of steekproef); internist vanaf € 1.000.000",
+    "c": "medisch"
+   },
+   "oud": {
+    "o": "voorwaarden",
+    "t": "Instap 18 tot 70 jaar; eindleeftijd max. 75 jaar beperkt de looptijd",
+    "c": "instap"
+   },
+   "lang": {
+    "o": "voorwaarden",
+    "t": "Alleen eindleeftijd max. 75 jaar genoemd; geen maximale looptijd vermeld",
+    "c": "looptijd",
+    "tw": 1
+   },
+   "terminaal": {
+    "o": "onbekend",
+    "t": "Niet vermeld in de gecontroleerde voorwaarden",
+    "c": "terminaal"
+   },
+   "verhogen": {
+    "o": "nee",
+    "t": "Verhogen altijd met nieuwe gezondheidsverklaring",
+    "c": "verhogen"
+   },
+   "twee": {
+    "o": "ja",
+    "t": "Op één of twee levens; kruislings mogelijk",
+    "c": "vormen"
+   },
+   "dalend": {
+    "o": "ja",
+    "t": "Annuïtair dalend en lineair dalend mogelijk",
+    "c": "vormen"
+   }
+  },
+  "Allianz": {
+   "roker": {
+    "o": "voorwaarden",
+    "t": "Niet-roker na 2 jaar niet roken; e-sigaret/vapen geldt als roken (rokerstarief impliciet)",
+    "c": "roken",
+    "tw": 1
+   },
+   "hoogbedrag": {
+    "o": "voorwaarden",
+    "t": "Gezondheidsverklaring tot € 750.000 alleen onder 50 jaar; vanaf 50 jaar of hoger aanvullend onderzoek",
+    "c": "medisch"
+   },
+   "oud": {
+    "o": "voorwaarden",
+    "t": "Instap tot 65/66 jaar; eindleeftijd max. 75 jaar",
+    "c": "instap"
+   },
+   "lang": {
+    "o": "voorwaarden",
+    "t": "Looptijd 5 tot 57 jaar (via adviseur bij hypotheek max. 40); eindleeftijd max. 75 jaar",
+    "c": "looptijd"
+   },
+   "terminaal": {
+    "o": "ja",
+    "t": "Standaard 50% van kapitaal (max. € 100.000) bij levensverwachting ≤ 1 jaar",
+    "c": "terminaal"
+   },
+   "verhogen": {
+    "o": "nee",
+    "t": "Verhogen altijd met nieuwe gezondheidsverklaring",
+    "c": "verhogen"
+   },
+   "twee": {
+    "o": "ja",
+    "t": "Twee verzekerden standaard kruislings",
+    "c": "vormen"
+   },
+   "dalend": {
+    "o": "ja",
+    "t": "Lineair en annuïtair dalend mogelijk",
+    "c": "vormen"
+   }
+  },
+  "Centraal Beheer": {
+   "roker": {
+    "o": "voorwaarden",
+    "t": "Niet-roker: nooit of ≥ 2 jaar gestopt; e-sigaret, vapen en shisha-pen gelden als roken",
+    "c": "roken",
+    "tw": 1
+   },
+   "hoogbedrag": {
+    "o": "voorwaarden",
+    "t": "Onder 50 jaar keuring pas vanaf € 750.001; vanaf 50 jaar keuring vanaf € 352.201",
+    "c": "medisch"
+   },
+   "oud": {
+    "o": "voorwaarden",
+    "t": "Verzekerde max. 68 jaar bij aanvang; eindleeftijd uiterlijk 75 jaar",
+    "c": "instap"
+   },
+   "lang": {
+    "o": "voorwaarden",
+    "t": "Eindleeftijd uiterlijk 75 jaar; maximale looptijd afhankelijk van leeftijd, niet als getal vermeld",
+    "c": "looptijd",
+    "tw": 1
+   },
+   "terminaal": {
+    "o": "onbekend",
+    "t": "Niet vermeld in de gecontroleerde voorwaarden",
+    "c": "terminaal"
+   },
+   "verhogen": {
+    "o": "nee",
+    "t": "Verhogen tot 68 jaar, altijd met nieuwe medische beoordeling",
+    "c": "verhogen"
+   },
+   "twee": {
+    "o": "ja",
+    "t": "Eén of twee verzekerden of kruislings",
+    "c": "vormen"
+   },
+   "dalend": {
+    "o": "ja",
+    "t": "Lineair en annuïtair dalend (eigen percentage)",
+    "c": "vormen"
+   }
+  },
+  "Credit Life (voorheen Callas)": {
+   "roker": {
+    "o": "voorwaarden",
+    "t": "Niet-roker: 2 jaar geen nicotinehoudende producten (rokerstarief impliciet)",
+    "c": "roken",
+    "tw": 1
+   },
+   "hoogbedrag": {
+    "o": "voorwaarden",
+    "t": "Gezondheidsverklaring tot € 600.000 alleen tot 50 jaar (vanaf 50: € 350.000); daarboven medisch onderzoek",
+    "c": "medisch"
+   },
+   "oud": {
+    "o": "onbekend",
+    "t": "Alleen minimale instapleeftijd 18 jaar vermeld; eindleeftijd max. 85 jaar",
+    "c": "instap",
+    "tw": 1
+   },
+   "lang": {
+    "o": "voorwaarden",
+    "t": "Looptijd tot 50 jaar; eindleeftijd max. 85 jaar",
+    "c": "looptijd"
+   },
+   "terminaal": {
+    "o": "onbekend",
+    "t": "Niet vermeld in de gecontroleerde voorwaarden",
+    "c": "terminaal"
+   },
+   "verhogen": {
+    "o": "onbekend",
+    "t": "Niet vermeld in de gecontroleerde voorwaarden",
+    "c": "verhogen"
+   },
+   "twee": {
+    "o": "onbekend",
+    "t": "Dekkingsvormen genoemd; één of twee levens niet vermeld",
+    "c": "vormen",
+    "tw": 1
+   },
+   "dalend": {
+    "o": "ja",
+    "t": "Lineair en annuïtair dalend mogelijk",
+    "c": "vormen"
+   }
+  },
+  "Dazure (GoedIdee)": {
+   "roker": {
+    "o": "voorwaarden",
+    "t": "Niet-roker na ≥ 24 maanden niet roken; bij onjuiste opgave 50% uitkering (rokerstarief impliciet)",
+    "c": "roken",
+    "tw": 1
+   },
+   "hoogbedrag": {
+    "o": "voorwaarden",
+    "t": "Keuring afhankelijk van bedrag en leeftijd; Eenjarig: keuring boven € 750.000 tot 55 jaar",
+    "c": "medisch",
+    "tw": 1
+   },
+   "oud": {
+    "o": "voorwaarden",
+    "t": "Instap 18 tot 65 jaar; eindleeftijd max. 80 jaar",
+    "c": "instap"
+   },
+   "lang": {
+    "o": "voorwaarden",
+    "t": "Looptijd 1 tot 50 jaar; eindleeftijd max. 80 jaar",
+    "c": "looptijd"
+   },
+   "terminaal": {
+    "o": "voorwaarden",
+    "t": "Voorschot 50% (max. € 50.000) bij levensverwachting ≤ 3 maanden, tot 65 jaar",
+    "c": "terminaal"
+   },
+   "verhogen": {
+    "o": "voorwaarden",
+    "t": "Optierecht: na eerste jaar jaarlijks verhogen zonder gezondheidsvragen, tot 55 jaar",
+    "c": "verhogen"
+   },
+   "twee": {
+    "o": "onbekend",
+    "t": "Eén of twee levens niet vermeld",
+    "c": "vormen",
+    "tw": 1
+   },
+   "dalend": {
+    "o": "ja",
+    "t": "Lineair en annuïtair dalend (1-12%)",
+    "c": "vormen"
+   }
+  },
+  "DELA": {
+   "roker": {
+    "o": "voorwaarden",
+    "t": "Niet-rokerstarief na ≥ 24 maanden niet roken; ook tijdens looptijd aan te vragen",
+    "c": "roken"
+   },
+   "hoogbedrag": {
+    "o": "nee",
+    "t": "Onder 50 jaar keuring vanaf € 500.001; vanaf 50 jaar boven € 360.000",
+    "c": "medisch"
+   },
+   "oud": {
+    "o": "voorwaarden",
+    "t": "Verzekerde t/m 64 jaar; looptijd min. 10 jaar en eindleeftijd uiterlijk 75 jaar",
+    "c": "instap"
+   },
+   "lang": {
+    "o": "voorwaarden",
+    "t": "Minimaal 10 jaar en eindleeftijd uiterlijk 75; maximale looptijd niet vermeld",
+    "c": "looptijd",
+    "tw": 1
+   },
+   "terminaal": {
+    "o": "voorwaarden",
+    "t": "Vooruitkering aan begunstigde bij levensverwachting ≤ 3 maanden",
+    "c": "terminaal"
+   },
+   "verhogen": {
+    "o": "nee",
+    "t": "Verhogen alleen met nieuwe gezondheidsvragen",
+    "c": "verhogen"
+   },
+   "twee": {
+    "o": "ja",
+    "t": "Op 1 of 2 levens (uitkering bij eerste overlijden)",
+    "c": "vormen"
+   },
+   "dalend": {
+    "o": "ja",
+    "t": "Lineair en annuïtair dalend mogelijk",
+    "c": "vormen"
+   }
+  },
+  "Hera Life": {
+   "roker": {
+    "o": "voorwaarden",
+    "t": "Niet-roker na 18 maanden; ook nicotinekauwgom en -pleisters gelden als roken (rokerstarief impliciet)",
+    "c": "roken",
+    "tw": 1
+   },
+   "hoogbedrag": {
+    "o": "voorwaarden",
+    "t": "Onder 51 jaar gezondheidsverklaring tot € 750.000; vanaf 51 jaar lagere keuringsgrenzen",
+    "c": "medisch"
+   },
+   "oud": {
+    "o": "voorwaarden",
+    "t": "Instap 18 tot 65 jaar; eindleeftijd max. 75 jaar",
+    "c": "instap"
+   },
+   "lang": {
+    "o": "voorwaarden",
+    "t": "Looptijd 5 tot 30 jaar (30 is het maximum); eindleeftijd max. 75 jaar",
+    "c": "looptijd",
+    "tw": 1
+   },
+   "terminaal": {
+    "o": "ja",
+    "t": "50% van kapitaal (max. € 300.000 per verzekerde) bij terminale diagnose",
+    "c": "terminaal"
+   },
+   "verhogen": {
+    "o": "voorwaarden",
+    "t": "Na eerste jaar jaarlijks max. 15% zonder nieuwe medische waarborgen, onder voorwaarden",
+    "c": "verhogen"
+   },
+   "twee": {
+    "o": "ja",
+    "t": "Op één of twee levens",
+    "c": "vormen"
+   },
+   "dalend": {
+    "o": "ja",
+    "t": "Lineair en annuïtair dalend mogelijk",
+    "c": "vormen"
+   }
+  },
+  "Interpolis": {
+   "roker": {
+    "o": "voorwaarden",
+    "t": "Alle nicotineproducten incl. e-sigaret gelden als roken; bij onjuiste opgave 50% uitkering",
+    "c": "roken",
+    "tw": 1
+   },
+   "hoogbedrag": {
+    "o": "voorwaarden",
+    "t": "Keuring boven € 750.000; vanaf 50 jaar al vanaf € 352.201",
+    "c": "medisch"
+   },
+   "oud": {
+    "o": "voorwaarden",
+    "t": "Verzekerde 15 tot 67 jaar bij aanvang; eindleeftijd max. 75 jaar",
+    "c": "instap"
+   },
+   "lang": {
+    "o": "voorwaarden",
+    "t": "Alleen eindleeftijd max. 75 jaar vermeld; geen maximale looptijd",
+    "c": "looptijd",
+    "tw": 1
+   },
+   "terminaal": {
+    "o": "onbekend",
+    "t": "Niet vermeld in de gecontroleerde voorwaarden",
+    "c": "terminaal"
+   },
+   "verhogen": {
+    "o": "nee",
+    "t": "Verhogen tot 68 jaar, altijd met nieuwe gezondheidsverklaring",
+    "c": "verhogen"
+   },
+   "twee": {
+    "o": "onbekend",
+    "t": "Eén of twee levens niet vermeld",
+    "c": "vormen",
+    "tw": 1
+   },
+   "dalend": {
+    "o": "onbekend",
+    "t": "Dalend verzekerd bedrag mogelijk; annuïtair of lineair niet gespecificeerd",
+    "c": "vormen",
+    "tw": 1
+   }
+  },
+  "Nationale-Nederlanden": {
+   "roker": {
+    "o": "voorwaarden",
+    "t": "Niet-roker: nooit of ≥ 2 jaar; e-sigaret/vapen (ook zonder nicotine) geldt als roken",
+    "c": "roken",
+    "tw": 1
+   },
+   "hoogbedrag": {
+    "o": "voorwaarden",
+    "t": "Gezondheidsverklaring tot € 1.000.000 (18-50 jr), tot € 500.000 (51-65 jr); daarboven onderzoek",
+    "c": "medisch"
+   },
+   "oud": {
+    "o": "voorwaarden",
+    "t": "Instap t/m 65 jaar; eindleeftijd oudste verzekerde max. 75 jaar",
+    "c": "instap"
+   },
+   "lang": {
+    "o": "voorwaarden",
+    "t": "Looptijd 5 tot 57 jaar; eindleeftijd max. 75 jaar",
+    "c": "looptijd"
+   },
+   "terminaal": {
+    "o": "onbekend",
+    "t": "Niet vermeld in de gecontroleerde voorwaarden",
+    "c": "terminaal"
+   },
+   "verhogen": {
+    "o": "voorwaarden",
+    "t": "Jaarlijks zonder medische waarborgen tot € 1 mln totaal, als < 60 jaar en vorige verhoging ≥ 5 jaar geleden",
+    "c": "verhogen"
+   },
+   "twee": {
+    "o": "ja",
+    "t": "Op één of twee levens",
+    "c": "vormen"
+   },
+   "dalend": {
+    "o": "ja",
+    "t": "Lineair en annuïtair dalend (0,01-20%)",
+    "c": "vormen"
+   }
+  },
+  "Reaal": {
+   "roker": {
+    "o": "onbekend",
+    "t": "Niet vermeld in de gecontroleerde voorwaarden",
+    "c": "roken"
+   },
+   "hoogbedrag": {
+    "o": "onbekend",
+    "t": "Vaak volstaat gezondheidsverklaring; zonder adviseur max. € 500.000; grens met adviseur niet vermeld",
+    "c": "medisch",
+    "tw": 1
+   },
+   "oud": {
+    "o": "onbekend",
+    "t": "Niet geverifieerd in de gecontroleerde voorwaarden (Instapleeftijd 18 tot 65 jaar (ORV Start))",
+    "c": "instap"
+   },
+   "lang": {
+    "o": "onbekend",
+    "t": "Niet geverifieerd in de gecontroleerde voorwaarden (Looptijd max. 40 jaar; eindleeftijd max. 75 jaar (ORV Start))",
+    "c": "looptijd"
+   },
+   "terminaal": {
+    "o": "onbekend",
+    "t": "Niet vermeld in de gecontroleerde voorwaarden",
+    "c": "terminaal"
+   },
+   "verhogen": {
+    "o": "onbekend",
+    "t": "Niet vermeld in de gecontroleerde voorwaarden",
+    "c": "verhogen"
+   },
+   "twee": {
+    "o": "onbekend",
+    "t": "Eén of twee levens niet vermeld",
+    "c": "vormen",
+    "tw": 1
+   },
+   "dalend": {
+    "o": "onbekend",
+    "t": "Dalend verzekerd bedrag mogelijk; annuïtair of lineair niet gespecificeerd",
+    "c": "vormen",
+    "tw": 1
+   }
+  },
+  "Scildon": {
+   "roker": {
+    "o": "voorwaarden",
+    "t": "Rokers verzekerbaar met lagere max. instap- en eindleeftijd; Stoppen met Roken ORV beschikbaar",
+    "c": "roken"
+   },
+   "hoogbedrag": {
+    "o": "voorwaarden",
+    "t": "16-49 jr uitgebreide gezondheidsverklaring tot € 750.000; vanaf 50 jr keuring vanaf € 500.001",
+    "c": "medisch"
+   },
+   "oud": {
+    "o": "voorwaarden",
+    "t": "Instap max. 70 (niet-roker) of 65 (roker); eindleeftijd 80 resp. 75 jaar",
+    "c": "instap"
+   },
+   "lang": {
+    "o": "voorwaarden",
+    "t": "Looptijd 2 tot 35 jaar; eindleeftijd t/m 80 (niet-roker) of 75 (roker)",
+    "c": "looptijd"
+   },
+   "terminaal": {
+    "o": "ja",
+    "t": "Deel van de uitkering bij leven bij terminale ziekte",
+    "c": "terminaal"
+   },
+   "verhogen": {
+    "o": "voorwaarden",
+    "t": "1-15% per keer, eerst ≥ 1 jaar na ingang, daarna 12-60 mnd na vorige; verzekerden < 60 jaar",
+    "c": "verhogen"
+   },
+   "twee": {
+    "o": "ja",
+    "t": "Partner meeverzekeren mogelijk; tweelevens/kruislings niet letterlijk genoemd",
+    "c": "vormen",
+    "tw": 1
+   },
+   "dalend": {
+    "o": "ja",
+    "t": "Annuïtair en lineair dalend mogelijk",
+    "c": "vormen"
+   }
+  },
+  "TAF": {
+   "roker": {
+    "o": "voorwaarden",
+    "t": "Niet-roker na ≥ 2 jaar geen tabak of nicotineproducten (rokerstarief impliciet)",
+    "c": "roken",
+    "tw": 1
+   },
+   "hoogbedrag": {
+    "o": "voorwaarden",
+    "t": "Gezondheidsverklaring tot € 750.000 (18-50 jr); 50-75 jr max. € 500.000 of € 352.200",
+    "c": "medisch"
+   },
+   "oud": {
+    "o": "ja",
+    "t": "Af te sluiten van 18 tot 75 jaar",
+    "c": "instap"
+   },
+   "lang": {
+    "o": "ja",
+    "t": "Looptijd 1 tot 50 jaar",
+    "c": "looptijd"
+   },
+   "terminaal": {
+    "o": "voorwaarden",
+    "t": "Standaard 50% (max. € 100.000) bij levensverwachting < 12 maanden, tot 65 jaar",
+    "c": "terminaal"
+   },
+   "verhogen": {
+    "o": "voorwaarden",
+    "t": "Optierecht: jaarlijks max. 15% verhogen zonder medische waarborgen",
+    "c": "verhogen"
+   },
+   "twee": {
+    "o": "onbekend",
+    "t": "Eén of twee levens niet vermeld",
+    "c": "vormen",
+    "tw": 1
+   },
+   "dalend": {
+    "o": "ja",
+    "t": "Lineair en annuïtair dalend; combinatie met gelijkblijvend mogelijk",
+    "c": "vormen"
+   }
+  },
+  "Univé": {
+   "roker": {
+    "o": "onbekend",
+    "t": "Niet vermeld in de gecontroleerde voorwaarden",
+    "c": "roken"
+   },
+   "hoogbedrag": {
+    "o": "onbekend",
+    "t": "Altijd gezondheidsverklaring, soms keuring; geen bedraggrens vermeld",
+    "c": "medisch",
+    "tw": 1
+   },
+   "oud": {
+    "o": "onbekend",
+    "t": "Niet vermeld in de gecontroleerde voorwaarden",
+    "c": "instap"
+   },
+   "lang": {
+    "o": "onbekend",
+    "t": "Niet vermeld in de gecontroleerde voorwaarden",
+    "c": "looptijd"
+   },
+   "terminaal": {
+    "o": "onbekend",
+    "t": "Niet vermeld in de gecontroleerde voorwaarden",
+    "c": "terminaal"
+   },
+   "verhogen": {
+    "o": "onbekend",
+    "t": "Niet vermeld in de gecontroleerde voorwaarden",
+    "c": "verhogen"
+   },
+   "twee": {
+    "o": "ja",
+    "t": "Partner mee te verzekeren; tweelevens/kruislings niet letterlijk genoemd",
+    "c": "vormen",
+    "tw": 1
+   },
+   "dalend": {
+    "o": "ja",
+    "t": "(Lineair) dalend mogelijk; annuïtair niet genoemd",
+    "c": "vormen",
+    "tw": 1
+   }
+  }
+ }
+}

@@ -144,3 +144,14 @@ test('situatiecheck: twijfelgevallen zijn gemarkeerd', async ({ page }) => {
   await page.goto('/situatiecheck.html#s=dag');
   await expect(page.locator('.gv .tw').first()).toBeVisible();
 });
+test('situatiecheck: tabbladen ORV en AOV met situaties uit de productvoorwaarden', async ({ page }) => {
+  const fouten = await volgFouten(page);
+  await page.goto('/situatiecheck.html#p=orv&s=roker');
+  await expect(page.locator('#tabs button[aria-selected="true"]')).toHaveText('ORV');
+  await expect(page.locator('.gv').first()).toBeVisible();
+  await expect(page.locator('.gv h3 a').first()).toHaveAttribute('href', /productvoorwaarden\.html#p=orv&a=/);
+  await page.locator('#tabs button', { hasText: 'AOV' }).click();
+  await expect(page.locator('#samen')).toContainText('Kies een of meer situaties');
+  await expect(page.locator('#optNieuwLbl')).toBeHidden();
+  expect(fouten).toEqual([]);
+});
