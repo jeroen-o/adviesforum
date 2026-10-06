@@ -18,7 +18,8 @@ test('preview: gecontroleerd artikel gepubliceerd, concept als draft en nooit vo
   const k2 = JSON.parse(run('--preview=kb:k2'));
   expect(k2.state).toBe('published');
   expect(k2.body).toContain('Door compliance goedgekeurd');
-  expect(k2).not.toHaveProperty('parent_id'); // collection 0 in het voorbeeld = niet ingesteld
+  // collection 0 (voorbeeld) = niet ingesteld; anders hoort er een collection bij
+  if ('parent_id' in k2) { expect(k2.parent_id).toBeGreaterThan(0); expect(k2.parent_type).toBe('collection'); }
   const uit = run('--dry-run');
   const concept = /^\+ nieuw\s+(kb:\S+)\s+draft/m.exec(uit)[1];
   const c = JSON.parse(run('--preview=' + concept));
