@@ -304,17 +304,29 @@ const hashOf = (payload) => createHash('sha256').update(JSON.stringify(payload))
 async function bootstrap() {
   log(`Regio: ${REGION} (${BASE}), API-versie ${VERSION}\n`);
   const admins = await api('GET', '/admins');
-  log('Admins (gebruik een van deze ids als authorId):');
-  /* Geen e-mailadressen loggen: deze uitvoer kan in een openbare Actions-log staan. */
-  for (const a of admins.admins || []) log(`  ${a.id}  ${a.name}`);
+  /* Geen e-mailadressen loggen: deze uitvoer kan in een openbare Actions-log staan. In GitHub Actions ook geen
+   * namen van alle medewerkers: dan alleen de admins waarvan de naam BOOTSTRAP_ADMIN bevat. */
+  const lijst = admins.admins || [];
+  const inActions = process.env.GITHUB_ACTIONS === 'true';
+  const filter = (process.env.BOOTSTRAP_ADMIN || '').trim().toLowerCase();
+  if (inActions && !filter) {
+    log(`Admins: ${lijst.length} gevonden. Namen worden in GitHub Actions niet getoond; vul bij Run workflow het veld admin in (deel van je naam).`);
+  } else {
+    log('Admins (gebruik een van deze ids als authorId):');
+    for (const a of lijst.filter((a) => !filter || String(a.name || '').toLowerCase().includes(filter))) log(`  ${a.id}  ${a.name}`);
+  }
 
   const hcs = await api('GET', '/help_center/help_centers');
   log('\nHelp centers:');
-  for (const h of hcs.data || []) log(`  ${h.id}  ${h.identifier || ''} ${h.website_turned_on ? '(live)' : ''}`);
+  const hcNaam = {};
+  for (const h of hcs.data || []) { hcNaam[h.id] = h.identifier || ''; log(`  ${h.id}  ${h.identifier || ''} ${h.website_turned_on ? '(live)' : ''}`); }
 
   const cols = await api('GET', '/help_center/collections?per_page=100');
   log('\nCollections (gebruik deze ids in collections):');
-  for (const c of cols.data || []) log(`  ${c.id}  ${c.name}${c.parent_id ? ` (onder ${c.parent_id})` : ''}`);
+  for (const c of cols.data || []) {
+    const hc = c.help_center_id ? `  [help center ${c.help_center_id}${hcNaam[c.help_center_id] ? ' ' + hcNaam[c.help_center_id] : ''}]` : '';
+    log(`  ${c.id}  ${c.name}${c.parent_id ? ` (onder ${c.parent_id})` : ''}${hc}`);
+  }
 
   log('\nZet deze waarden in scripts/intercom-sync.config.json, bijvoorbeeld:');
   log(JSON.stringify({

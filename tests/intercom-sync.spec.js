@@ -32,4 +32,5 @@ test('bootstrap logt geen e-mailadressen (Actions-logs van deze openbare reposit
   const bron = fs.readFileSync(path.join(ROOT, 'scripts', 'sync-intercom.mjs'), 'utf8');
   const bootstrap = bron.slice(bron.indexOf('async function bootstrap'), bron.indexOf('/* --------------------------------------------------------------------- Main'));
   expect(bootstrap).not.toMatch(/\.email/);
+  expect(bootstrap).toMatch(/GITHUB_ACTIONS/); // in Actions geen lijst met alle medewerkersnamen
 });

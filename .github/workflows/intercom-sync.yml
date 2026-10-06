@@ -30,6 +30,10 @@ on:
         description: 'Alleen de ids ophalen (admin en collections) en in de log tonen'
         type: boolean
         default: false
+      admin:
+        description: 'Bij bootstrap: deel van de naam van de admin (andere namen komen niet in de openbare log)'
+        type: string
+        default: ''
 
 concurrency:
   group: intercom-sync
@@ -71,6 +75,8 @@ jobs:
       # dus de log ook: het script toont bij --bootstrap geen e-mailadressen van admins.
       - name: Ids ophalen
         if: steps.mode.outputs.bootstrap == '1'
+        env:
+          BOOTSTRAP_ADMIN: ${{ github.event.inputs.admin }}
         run: |
           if [ -z "$INTERCOM_TOKEN" ]; then
             echo "::error::secrets.INTERCOM_TOKEN ontbreekt. Zet het token in Settings -> Secrets and variables -> Actions."; exit 1
