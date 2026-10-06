@@ -41,6 +41,8 @@ verantwoordelijk blijft voor het advies.
    ```
 
    Dat toont de admin-ids, de help centers en de collection-ids van je workspace.
+   Zonder lokaal te draaien: Actions → Intercom-sync → Run workflow, met het vinkje
+   **bootstrap** aan. De ids staan dan in de log (zonder e-mailadressen; de log is openbaar).
 4. **`scripts/intercom-sync.config.json` vullen:**
 
    ```json

@@ -26,3 +26,10 @@ test('preview: gecontroleerd artikel gepubliceerd, concept als draft en nooit vo
   expect(c.ai_chatbot_availability).toBe(false);
   expect(c.body).toContain('Concept: niet door compliance gecontroleerd');
 });
+
+test('bootstrap logt geen e-mailadressen (Actions-logs van deze openbare repository zijn openbaar)', () => {
+  const fs = require('fs');
+  const bron = fs.readFileSync(path.join(ROOT, 'scripts', 'sync-intercom.mjs'), 'utf8');
+  const bootstrap = bron.slice(bron.indexOf('async function bootstrap'), bron.indexOf('/* --------------------------------------------------------------------- Main'));
+  expect(bootstrap).not.toMatch(/\.email/);
+});

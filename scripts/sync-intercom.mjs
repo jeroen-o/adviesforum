@@ -305,7 +305,8 @@ async function bootstrap() {
   log(`Regio: ${REGION} (${BASE}), API-versie ${VERSION}\n`);
   const admins = await api('GET', '/admins');
   log('Admins (gebruik een van deze ids als authorId):');
-  for (const a of admins.admins || []) log(`  ${a.id}  ${a.name} <${a.email}>`);
+  /* Geen e-mailadressen loggen: deze uitvoer kan in een openbare Actions-log staan. */
+  for (const a of admins.admins || []) log(`  ${a.id}  ${a.name}`);
 
   const hcs = await api('GET', '/help_center/help_centers');
   log('\nHelp centers:');
