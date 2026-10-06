@@ -118,11 +118,12 @@ artikel-sync loopt.
 
 ## Let op
 
-- Niet geverifieerd: het veld `ai_chatbot_availability` in de artikel-payload. De
-  Intercom-documentatie was bij het bouwen niet bereikbaar. Weigert Intercom het veld bij de
-  eerste echte run (foutmelding 400), haal het dan uit `buildArticles()`; de poort blijft dan
-  werken via `state: draft`. Controleer na de eerste run in Intercom bij een concept of het
-  echt niet voor Fin beschikbaar is.
+- `ai_chatbot_availability` is gedocumenteerd, maar mogelijk niet in API-versie 2.14. Weigert
+  Intercom het veld (400), dan stuurt het script het artikel automatisch opnieuw zonder de
+  AI-velden en meldt dat in de log; concepten blijven dan buiten Fin via `state: draft`.
+  Controleer na de eerste run in Intercom bij een concept (bijvoorbeeld `kb:k6`) of het op Draft staat.
+- De eerste echte sync start alleen handmatig. Zolang er geen koppeltabel op `intercom-state`
+  staat, slaat een merge naar `main` de sync over met een waarschuwing.
 
 - Een Fin-antwoord is een **herformulering** van het artikel. De goedkeuring van
   compliance geldt voor de artikeltekst, niet voor wat Fin ervan maakt. Leg dat vast in
