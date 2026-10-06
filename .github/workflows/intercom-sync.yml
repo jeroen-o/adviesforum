@@ -26,6 +26,10 @@ on:
         description: 'Alleen een proefrun (niets naar Intercom sturen)'
         type: boolean
         default: true
+      bootstrap:
+        description: 'Alleen de ids ophalen (admin en collections) en in de log tonen'
+        type: boolean
+        default: false
 
 concurrency:
   group: intercom-sync
@@ -53,14 +57,28 @@ jobs:
       - name: Bepaal de modus
         id: mode
         run: |
-          if [ "${{ github.event_name }}" = "pull_request" ] \
+          if [ "${{ github.event.inputs.bootstrap }}" = "true" ]; then
+            echo "bootstrap=1" >> "$GITHUB_OUTPUT"
+            echo "dry=--dry-run" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event_name }}" = "pull_request" ] \
              || [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
             echo "dry=--dry-run" >> "$GITHUB_OUTPUT"
           else
             echo "dry=" >> "$GITHUB_OUTPUT"
           fi
 
+      # Haalt alleen ids op en schrijft ze in de log; er gaat niets naar Intercom. De repository is openbaar,
+      # dus de log ook: het script toont bij --bootstrap geen e-mailadressen van admins.
+      - name: Ids ophalen
+        if: steps.mode.outputs.bootstrap == '1'
+        run: |
+          if [ -z "$INTERCOM_TOKEN" ]; then
+            echo "::error::secrets.INTERCOM_TOKEN ontbreekt. Zet het token in Settings -> Secrets and variables -> Actions."; exit 1
+          fi
+          node scripts/sync-intercom.mjs --bootstrap
+
       - name: Haal de koppeltabel op
+        if: steps.mode.outputs.bootstrap != '1'
         run: |
           git fetch --depth=1 origin intercom-state 2>/dev/null || true
           if git cat-file -e origin/intercom-state:intercom-map.json 2>/dev/null; then
@@ -95,7 +113,7 @@ jobs:
           fi
 
       - name: Synchroniseren
-        if: steps.klaar.outputs.skip != '1'
+        if: steps.mode.outputs.bootstrap != '1' && steps.klaar.outputs.skip != '1'
         run: node scripts/sync-intercom.mjs ${{ steps.mode.outputs.dry }}
 
       - name: Bewaar de koppeltabel op de tak intercom-state
