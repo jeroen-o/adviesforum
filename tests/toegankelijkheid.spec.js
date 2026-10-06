@@ -10,7 +10,7 @@ const PAGINAS = [
   ['productvoorwaarden.html#p=orv', 'Productvoorwaarden'],
   ['voorwaarden-vergelijker.html#vergelijk=bunq,ing&k=zzp,erfp', 'Voorwaarden-vergelijker (vergelijken)'],
   ['beheer-voorwaarden.html', 'Datakwaliteit'],
-  ['hypotheekbond-tools.html', 'Rekentools van Hypotheekbond'],
+  ['rekentools-blinqx.html', 'Rekentools van Blinqx'],
 ];
 
 for (const [url, naam] of PAGINAS) {
