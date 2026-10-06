@@ -1,11 +1,29 @@
 # Sites die automatische controles weigeren (HTTP/2-fout, time-out of geen verbinding vanaf GitHub), terwijl de
 # pagina's in een browser gewoon werken. Hun bronnen worden in de maandelijkse voorwaardencontrole nagelopen.
-^https://(www\.|nieuws\.)?ing\.nl/
+^https://([a-z0-9-]+\.)*ing\.nl/
 ^https://(www\.)?tellius\.nl/
 ^https://(www\.)?woonfonds\.nl/
 ^https://www2?\.aegon\.nl/
 ^https://(www\.|extranet\.)?conneqt\.nl/
 ^https://(www\.)?ribank\.nl/
 ^https://login\.saa\.nl/
+# Achmea-groep, a.s.r.-groep en andere sites/portalen die verkeer van GitHub weigeren (HTTP/2-fout of geen verbinding)
+^https://(www\.)?centraalbeheer\.nl/
+^https://(www\.)?interpolis\.nl/
+^https://(www\.)?averoachmea\.nl/
+^https://(www\.)?syntrusachmeahypotheken\.nl/
+^https://(www\.)?attens\.nl/
+^https://(www\.)?amersfoortse\.nl/
+^https://afsluiten\.asr\.nl/
+^https://([a-z0-9-]+\.)*interbank\.nl/
+^https://intermediair\.nibcdirect\.nl/
+^https://login\.voogd\.com/
+^https://(www\.)?corins\.nl/
+^https://(www\.)?ankerrechtsbijstand\.nl/
+^https://portaal\.financieelfit\.nl/
+^https://(www\.)?mini\.ie/
+^https://(www\.)?wbf\.nl/
+# Inlogpagina's die doorsturen
+^https://adviseur\.das\.nl/inloggen
 # Archiefkopieën (Internet Archive) zijn vaste momentopnamen; die hoeven niet wekelijks gecontroleerd te worden.
 ^https://web\.archive\.org/
