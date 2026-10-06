@@ -1,8 +1,16 @@
-# Let op: crawlers lezen robots.txt alleen op de domeinroot (https://jeroen-o.github.io/robots.txt).
-# Dit bestand staat in /adviesforum/ en wordt daarom door zoekmachines genegeerd; het geldt alleen als iemand dit pad direct opvraagt.
-# De site blijft uit Google en Bing via <meta name="googlebot"> en <meta name="bingbot"> met noindex, follow in elke pagina
-# (tools/zoekmachines.js en tools/build-static.js). Zet hier geen "Disallow: /": dan kan Google die noindex niet meer lezen
-# en blokkeer je ook de Intercom-crawler.
+# Let op: crawlers lezen robots.txt alleen op de domeinroot,
+# dus op https://jeroen-o.github.io/robots.txt. Dit bestand staat onder
+# /adviesforum/ en wordt door zoekmachines genegeerd. Het staat hier voor
+# tools/build-static.js, dat de Disallow-regels gebruikt om pagina's uit
+# sitemap.xml te houden, en voor wie het pad direct opvraagt.
+#
+# Het uit de zoekmachines houden van deze site gebeurt met meta-tags in de
+# pagina's zelf (googlebot/bingbot: noindex, follow), niet hiermee.
+# Zet hier GEEN "Disallow: /" neer: dat verbiedt crawlen in plaats van
+# indexeren, waardoor Google de noindex-tag niet meer kan lezen en oude URL's
+# als kale link in de resultaten kunnen blijven staan. Het zou bovendien de
+# crawler van Intercom blokkeren die de kennisbank inleest voor Fin.
+
 User-agent: *
 Allow: /
 Disallow: /adviesforum/beheer-code.html
