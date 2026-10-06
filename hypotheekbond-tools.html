@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rekentools van Hypotheekbond – Adviesforum</title>
+<link rel="canonical" href="https://jeroen-o.github.io/adviesforum/hypotheekbond-tools.html">
+<meta property="og:url" content="https://jeroen-o.github.io/adviesforum/hypotheekbond-tools.html">
+<meta property="og:site_name" content="Adviesforum">
+<meta property="og:locale" content="nl_NL">
+<meta name="theme-color" content="#FFD200">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="description" content="Rekentools van Hypotheekbond op het Adviesforum: maximale hypotheek, maandlasten, aflossen, ORV, woningwaarde, inventarisatie en meer. De tools laden pas na een klik.">
+<meta property="og:title" content="Rekentools van Hypotheekbond – Adviesforum">
+<meta property="og:description" content="Rekentools van Hypotheekbond: hypotheek, maandlasten, aflossen, ORV, woningwaarde en meer.">
+<meta property="og:type" content="website">
+<style>
+@font-face{font-family:Montserrat;font-style:normal;font-weight:400;font-display:swap;src:url(fonts/montserrat-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:700;font-display:swap;src:url(fonts/montserrat-latin-700-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:800;font-display:swap;src:url(fonts/montserrat-latin-800-normal.woff2) format('woff2')}
+:root{
+  --geel-donker:#E6BD00;--geel-zacht:#FFF6C7;--tekst:#1F1F1F;--grijs:#5E5E5E;--lijn:#E4E4E4;--vlak:#F7F7F5;--wit:#fff;
+  --rood:#C0392B;--rood-zacht:#FFF1F0;--rood-tekst:#7A1F14;--oranje:#9A5B00;--oranje-zacht:#FFF4E0;--groen:#1F7A52;--groen-zacht:#E8F5EE;--blauw:#1F4E79;
+  --kop:#FFD200;--kop-tekst:#141414;--body:#fff;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --geel-zacht:#3f3918;--tekst:#F2F2F2;--grijs:#BDBDBD;--lijn:#333;--vlak:#262626;--wit:#1E1E1E;--rood-zacht:#3f1a18;--rood-tekst:#f3c2bd;
+  --oranje:#f6cb8e;--oranje-zacht:#3f3118;--groen:#9de7c1;--groen-zacht:#1b3328;--blauw:#9ec3e6;--kop:#1E1E1E;--kop-tekst:#F2F2F2;--body:#141414;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --geel-zacht:#3f3918;--tekst:#F2F2F2;--grijs:#BDBDBD;--lijn:#333;--vlak:#262626;--wit:#1E1E1E;--rood-zacht:#3f1a18;--rood-tekst:#f3c2bd;
+  --oranje:#f6cb8e;--oranje-zacht:#3f3118;--groen:#9de7c1;--groen-zacht:#1b3328;--blauw:#9ec3e6;--kop:#1E1E1E;--kop-tekst:#F2F2F2;--body:#141414;color-scheme:dark}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:Montserrat,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;color:var(--tekst);background:var(--body);line-height:1.55;font-size:15px;overflow-x:hidden}
+a{color:inherit}
+button,input{font-family:inherit}
+[hidden]{display:none!important}
+.skiplink{position:absolute;left:-9999px}.skiplink:focus{left:12px;top:12px;background:#FFD200;color:#141414;padding:8px 12px;z-index:9}
+.balk{background:#141414;color:#fff;font-size:12.5px;padding:8px 16px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.balk a{color:#fff;text-decoration:none;opacity:.88}.balk a:hover{opacity:1;text-decoration:underline}
+.kop{background:var(--kop);color:var(--kop-tekst);padding:30px 16px 34px;border-bottom:3px solid #FFD200}
+.kop-in,.romp{max-width:1100px;margin:0 auto}
+.merk{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.08em;font-size:12px;text-transform:uppercase;margin-bottom:14px}
+.zeshoek{width:22px;height:25px;background:currentColor;clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);flex:none}
+.terugs{display:flex;gap:8px 18px;flex-wrap:wrap;margin-bottom:12px}
+.terug{font-size:13.5px;font-weight:700;text-decoration:none;border-bottom:2px solid currentColor}
+.kop h1{margin:0 0 10px;font-size:clamp(26px,4.2vw,38px);line-height:1.12;font-weight:800}
+.kop p{margin:0;max-width:72ch}
+.kop p a{color:inherit;font-weight:700;text-decoration:underline}
+.romp{padding:22px 16px 56px}
+.compliance{border:2px solid var(--rood);border-left-width:8px;border-radius:0 12px 12px 0;padding:12px 16px;margin:0 0 18px;background:var(--rood-zacht);color:var(--rood-tekst);font-size:14px}
+.compliance h2,.compliance h3{margin:0 0 4px;font-size:14px;font-weight:800;text-transform:uppercase;letter-spacing:.03em}
+.compliance ul{margin:0;padding-left:18px}
+.info{border:1px solid var(--lijn);border-left:6px solid #FFD200;border-radius:0 12px 12px 0;padding:12px 16px;margin:0 0 18px;background:var(--vlak);font-size:14px}
+.info p{margin:0 0 6px}.info p:last-child{margin:0}
+h2.groep{font-size:20px;margin:28px 0 10px}
+.tools{display:grid;gap:12px}
+.tool{border:1px solid var(--lijn);border-radius:14px;background:var(--wit);padding:14px 16px}
+.tool-kop{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 14px}
+.tool h3{margin:0;font-size:16px}
+.tool p{margin:4px 0 0;font-size:14px;color:var(--grijs)}
+.tool-acties{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.tool-acties a{font-size:13.5px}
+.knop{border:1px solid var(--geel-donker);background:#FFD200;color:#141414;border-radius:999px;padding:7px 14px;font-weight:700;font-size:14px;cursor:pointer;min-height:38px}
+.vak{margin-top:12px}
+.vak iframe{display:block;width:100%;min-height:480px;border:0;background:#fff;border-radius:10px}
+.rente{border-color:var(--rood)}
+.voet{max-width:1100px;margin:0 auto;padding:0 16px 40px;font-size:12.5px;color:var(--grijs)}
+</style>
+<link rel="stylesheet" href="css/sitenav.css">
+</head>
+<body>
+<a class="skiplink" href="#inhoud">Naar de inhoud</a>
+<!-- sitenav: gegenereerd door tools/sitenav.js, niet met de hand wijzigen -->
+<nav class="sitenav" aria-label="Adviesforum"><div class="sitenav-in"><a class="sitenav-merk" href="index.html">Adviesforum</a><ul><li><a href="index.html">Home</a></li><li><a href="voorwaarden.html">Voorwaarden</a></li><li><a href="index.html#hulpmiddelen">Hulpmiddelen</a></li><li><a href="laatste.html">Laatste nieuws</a></li><li><a href="aanmelden.html">Aanmelden</a></li></ul></div></nav>
+<!-- /sitenav -->
+
+<header class="kop">
+  <div class="kop-in">
+    <div class="merk"><span class="zeshoek" aria-hidden="true"></span>Adviesforum &middot; Hulpmiddelen</div>
+    <div class="terugs">
+      <a class="terug" href="index.html#hulpmiddelen">&larr; Alle hulpmiddelen</a>
+      <a class="terug" href="rekentools.html">Eigen rekentools</a>
+    </div>
+    <h1>Rekentools van Hypotheekbond</h1>
+    <p>Rekentools van Hypotheekbond voor hypotheek, maandlasten, aflossen, verzekeren en woningwaarde, plus formulieren voor de inventarisatie en de werkgeversverklaring. Klik op &lsquo;Open tool&rsquo; om een tool te laden.</p>
+  </div>
+</header>
+
+<main class="romp" id="inhoud" tabindex="-1">
+  <section class="info" role="note" aria-labelledby="info-kop">
+    <p id="info-kop"><strong>Tools van een derde partij.</strong> Deze tools draaien bij Hypotheekbond en worden pas geladen als je op &lsquo;Open tool&rsquo; klikt. Wat je invult, gaat naar Hypotheekbond en niet naar het Adviesforum; daarvoor geldt de privacyverklaring van Hypotheekbond.</p>
+    <p>De uitkomsten zijn indicatief en geen advies. Vul geen klantgegevens in als dat niet nodig is.</p>
+  </section>
+
+  <div id="groepen"></div>
+</main>
+
+<footer class="voet">
+  <p>De tools en hun uitkomsten zijn van Hypotheekbond. Het Adviesforum maakt, controleert of beheert ze niet. Zie ook de <a href="privacy.html">privacyverklaring</a>.</p>
+</footer>
+
+<script>
+(function(){
+'use strict';
+/* Iframes van Hypotheekbond (websitetools). Ze laden pas na een klik: geen verkeer naar een derde partij zonder actie van de bezoeker. */
+var RESIZER = 'https://s.hstatic.nl/js/iframe/iframeResizer.min.js';
+var GROEPEN = [
+  {id:'hypotheek', titel:'Hypotheek en woning', tools:[
+    {id:'maxmortgage', naam:'Maximale hypotheek', tool:'maxmortgage-iframe', src:'https://90abc279-e47b-44fa-be93-b69768c31486.tools.hypotheekbond.nl/maxmortgage'},
+    {id:'kidwk', naam:'Kan ik deze woning kopen?', tool:'kidwk-iframe', src:'https://7ee9bdc9-2086-4273-b592-cda4aeabc67f.tools.hypotheekbond.nl/kidwk'},
+    {id:'hnk', naam:'Van huren naar kopen', tool:'hnk-iframe', src:'https://b050f87a-dc90-4a3d-abff-95b376ae970e.tools.hypotheekbond.nl/hnk'},
+    {id:'hns', naam:'Hypotheek nu en straks', tool:'hns-iframe', src:'https://4c1550e6-75ea-41af-83ff-81e7f504ec82.tools.hypotheekbond.nl/hns'},
+    {id:'woningwaarde', naam:'Woningwaarde', tool:'woningwaarde-iframe', src:'https://5cd9fb10-ab7c-44ed-bde5-7a1846f8b7a6.tools.hypotheekbond.nl/woningwaarde'}
+  ]},
+  {id:'maandlasten', titel:'Maandlasten, aflossen en sparen', tools:[
+    {id:'maandlastengrafiek', naam:'Maandlastengrafiek', tool:'maandlastengrafiek-iframe', src:'https://c51e2266-c35d-48b6-b632-aeb60bd2930c.tools.hypotheekbond.nl/maandlastengrafiek'},
+    {id:'maandlasten-bij-aflossen', naam:'Maandlasten bij aflossen', tool:'maandlasten-bij-aflossen-iframe', src:'https://882bbb6e-e888-4419-aa4c-b666b0756c4e.tools.hypotheekbond.nl/maandlasten-bij-aflossen'},
+    {id:'vast-bedrag-per-maand', naam:'Vast bedrag per maand aflossen', tool:'vast-bedrag-per-maand-iframe', src:'https://6db48fda-8066-46fa-8317-dbf6bee3f5fc.tools.hypotheekbond.nl/vast-bedrag-per-maand'},
+    {id:'hoeveel-aflossen', naam:'Hoeveel wilt u aflossen?', tool:'hoeveel-aflossen-iframe', src:'https://ac2ab1dd-526a-4b34-a86b-335ec3782055.tools.hypotheekbond.nl/hoeveel-aflossen'},
+    {id:'aflossen-of-beleggen', naam:'Aflossen of beleggen', tool:'aflossen-of-beleggen-iframe', src:'https://5cab0c36-5b21-4aa3-a957-3f5066b0e76b.tools.hypotheekbond.nl/aflossen-of-beleggen'},
+    {id:'hoeveel-levert-sparen-op', naam:'Hoeveel levert sparen op?', tool:'hoeveel-levert-sparen-op-iframe', src:'https://7f42eec9-53e2-429f-94bb-b5a7d918ccf4.tools.hypotheekbond.nl/hoeveel-levert-sparen-op'},
+    {id:'topafslag', naam:'Topafslag', tool:'topafslag-iframe', src:'https://90f6aab9-3daf-4547-add6-88a538830ac3.tools.hypotheekbond.nl/topafslag'}
+  ]},
+  {id:'verzekeren', titel:'Verzekeren', tools:[
+    {id:'orv', naam:'Overlijdensrisicoverzekering (ORV)', tool:'orv-iframe', src:'https://a8c10d10-22b6-421e-ad7b-22b3bc29a23e.tools.hypotheekbond.nl/orv'}
+  ]},
+  {id:'klant', titel:'Klant en adviseur', tools:[
+    {id:'inventarisatie', naam:'Inventarisatie', tool:'inventarisatie-iframe', src:'https://inventarisatie.hypotheekbond.nl/963830a4-551a-4e99-82f8-42ebb01dc2ca', klant:true},
+    {id:'werkgeversverklaring', naam:'Werkgeversverklaring', tool:'werkgeversverklaring-iframe', src:'https://formulier.werkgeversverklaring.nl', klant:true},
+    {id:'duurzaamheidsprofiel', naam:'Duurzaamheidsprofiel', tool:'duurzaamheidsprofiel-iframe', src:'https://duurzaamheidsprofiel.hypotheekbond.nl', klant:true},
+    {id:'zelfreflectie', naam:'Zelfreflectie', tool:'zelfreflectie-iframe', src:'https://94889ab0-f4ec-40aa-917f-4e2de45cc21c.tools.hypotheekbond.nl/zelfreflectie'}
+  ]},
+  {id:'rentes', titel:'Rentes (Hypotheekbond)', rente:true, tools:[
+    {id:'rente-top-5', naam:'Rente top 5', tool:'rente-top-5-iframe', src:'https://04af7673-c447-4c4b-9b03-690481887dc4.tools.hypotheekbond.nl/rente-top-5'},
+    {id:'spaar-rente', naam:'Spaarrente top 10', tool:'spaar-rente-iframe', src:'https://12d82dea-8983-42cb-a981-fd6685466759.tools.hypotheekbond.nl/spaar-rente'},
+    {id:'renteoverzicht', naam:'Renteoverzicht', tool:'renteoverzicht-iframe', src:'https://a19472c3-dc16-47aa-940c-8d060b9d7238.tools.hypotheekbond.nl/renteoverzicht'},
+    {id:'renteoverzicht-all', naam:'Renteoverzicht (volledig)', tool:'renteoverzicht-all-iframe', src:'https://a19472c3-dc16-47aa-940c-8d060b9d7238.tools.hypotheekbond.nl/renteoverzicht/all'},
+    {id:'looptijdrente', naam:'Maandlast per rentevaste periode', tool:'looptijdrente-iframe', src:'https://12d2ede0-c1be-4a3e-a446-1fb1b852e136.tools.hypotheekbond.nl/looptijdrente'},
+    {id:'hypotheekbespaarcheck', naam:'Bespaarcheck', tool:'hypotheekbespaarcheck-iframe', src:'https://550c1863-c26b-4284-9966-1b629cff6736.tools.hypotheekbond.nl/hypotheekbespaarcheck'}
+  ]}
+];
+window.HYPOTHEEKBOND_TOOLS = GROEPEN;
+
+function el(tag, cls, tekst){ var e = document.createElement(tag); if(cls) e.className = cls; if(tekst != null) e.textContent = tekst; return e; }
+var perId = {};
+
+function open(t, scroll){
+  var k = perId[t.id]; if(!k) return;
+  if(!k.vak.firstChild){
+    var f = document.createElement('iframe');
+    f.setAttribute('data-hypotheekbond-tool', t.tool);
+    f.setAttribute('data-auto-scrolling', 'enabled');
+    f.src = t.src; f.title = t.naam + ' (Hypotheekbond)';
+    f.setAttribute('scrolling', 'no'); f.setAttribute('frameborder', '0');
+    f.setAttribute('referrerpolicy', 'origin'); f.setAttribute('allowtransparency', 'true');
+    k.vak.appendChild(f);
+    /* Zoals de insluitcode van Hypotheekbond: het script direct na de iframe, zodat de hoogte meegroeit. */
+    var s = document.createElement('script'); s.src = RESIZER; k.vak.appendChild(s);
+  }
+  k.vak.hidden = false; k.knop.setAttribute('aria-expanded', 'true'); k.knop.textContent = 'Sluit tool';
+  try{ history.replaceState(null, '', location.pathname + location.search + '#tool=' + t.id); }catch(e){}
+  if(scroll) k.el.scrollIntoView({block:'start'});
+}
+function sluit(t){
+  var k = perId[t.id]; k.vak.hidden = true; k.knop.setAttribute('aria-expanded', 'false'); k.knop.textContent = 'Open tool';
+}
+
+var box = document.getElementById('groepen');
+GROEPEN.forEach(function(g){
+  var sec = el('section'); sec.id = 'groep-' + g.id; sec.setAttribute('aria-labelledby', 'kop-' + g.id);
+  var h = el('h2', 'groep', g.titel); h.id = 'kop-' + g.id; sec.appendChild(h);
+  if(g.rente){
+    var c = el('div', 'compliance'); c.setAttribute('role', 'note'); c.id = 'renteMelding';
+    c.appendChild(el('h3', null, 'Compliance / AFM: rentes van Hypotheekbond'));
+    var ul = el('ul');
+    ['Deze tools tonen actuele rentes zoals Hypotheekbond die publiceert. Het Adviesforum stelt deze rentes niet zelf samen en controleert ze niet.',
+     'Een volgorde of top 5/top 10 is de weergave van Hypotheekbond; het is geen aanbeveling, geen aanbod en geen advies van het Adviesforum.',
+     'Rentes veranderen vaak. Controleer de actuele rente en de voorwaarden altijd bij de geldverstrekker of bank zelf.'].forEach(function(t){ ul.appendChild(el('li', null, t)); });
+    c.appendChild(ul); sec.appendChild(c);
+  }
+  var lijst = el('div', 'tools');
+  g.tools.forEach(function(t){
+    var kaart = el('article', 'tool' + (g.rente ? ' rente' : '')); kaart.id = 'tool-' + t.id;
+    var kop = el('div', 'tool-kop'), tekst = el('div');
+    tekst.appendChild(el('h3', null, t.naam));
+    if(t.klant) tekst.appendChild(el('p', null, 'Formulier waarin persoonsgegevens worden ingevuld; die gaan naar Hypotheekbond.'));
+    var acties = el('div', 'tool-acties');
+    var knop = el('button', 'knop', 'Open tool'); knop.type = 'button'; knop.setAttribute('aria-expanded', 'false'); knop.setAttribute('aria-controls', 'vak-' + t.id);
+    var a = el('a', null, 'Open in nieuw venster'); a.href = t.src; a.target = '_blank'; a.rel = 'noopener';
+    acties.appendChild(knop); acties.appendChild(a);
+    kop.appendChild(tekst); kop.appendChild(acties); kaart.appendChild(kop);
+    var vak = el('div', 'vak'); vak.id = 'vak-' + t.id; vak.hidden = true; kaart.appendChild(vak);
+    perId[t.id] = {el: kaart, knop: knop, vak: vak};
+    knop.addEventListener('click', function(){ if(vak.hidden) open(t, false); else sluit(t); });
+    lijst.appendChild(kaart);
+  });
+  sec.appendChild(lijst); box.appendChild(sec);
+});
+
+/* Deeplink #tool=<id> */
+function leesHash(){
+  var m = /^#tool=([a-z0-9-]+)$/.exec(location.hash || ''); if(!m) return;
+  GROEPEN.forEach(function(g){ g.tools.forEach(function(t){ if(t.id === m[1]) open(t, true); }); });
+}
+leesHash();
+window.addEventListener('hashchange', leesHash);
+})();
+</script>
+</body>
+</html>
