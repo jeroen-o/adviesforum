@@ -6,6 +6,8 @@
 <title>Aanbieders voor adviseurs – Adviesforum</title>
 <link rel="canonical" href="https://jeroen-o.github.io/adviesforum/aanbieders.html">
 <meta name="description" content="Nieuws, voorwaarden, acceptatiegidsen, richtlijnen, extranetlinks en contactpersonen van geldverstrekkers, verzekeraars en andere aanbieders, aangeleverd door de aanbieders zelf.">
+<meta name="googlebot" content="noindex, follow">
+<meta name="bingbot" content="noindex, follow">
 <meta property="og:url" content="https://jeroen-o.github.io/adviesforum/aanbieders.html">
 <meta property="og:site_name" content="Adviesforum">
 <meta property="og:locale" content="nl_NL">
@@ -545,7 +547,6 @@ function meldHoogte(){if(voorbeeldData)window.parent.postMessage({type:'af-voorb
 var isVoorbeeld=/[?&]voorbeeld=1\b/.test(location.search)&&window.parent!==window;
 if(isVoorbeeld){
   document.body.classList.add('voorbeeldmodus');
-  var r=document.createElement('meta');r.name='robots';r.content='noindex';document.head.appendChild(r);
   window.addEventListener('message',function(e){
     if(e.source!==window.parent||(e.origin!==location.origin&&location.origin!=='null'))return;
     if(!e.data||e.data.type!=='af-voorbeeld'||!e.data.aanbieder)return;

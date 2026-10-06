@@ -18,6 +18,7 @@ const path = require('path');
 const vm = require('vm');
 const { execFileSync } = require('child_process');
 const { navHtml, CSS_LINK } = require('./sitenav');
+const { TAGS: ZOEKMACHINE_TAGS } = require('./zoekmachines');
 
 const ROOT = path.join(__dirname, '..');
 const BASE = 'https://jeroen-o.github.io/adviesforum/';
@@ -169,7 +170,8 @@ function pagina({ pre, pad, titel, ogTitel, beschrijving, type = 'website', h1, 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(titel)}</title>
-<meta name="description" content="${esc(beschrijving)}">${robots ? `\n<meta name="robots" content="${esc(robots)}">` : ''}
+<meta name="description" content="${esc(beschrijving)}">
+${ZOEKMACHINE_TAGS}${robots ? `\n<meta name="robots" content="${esc(robots)}">` : ''}
 <link rel="canonical" href="${esc(url)}">
 <meta property="og:title" content="${esc(ogTitel || titel)}">
 <meta property="og:description" content="${esc(beschrijving)}">
