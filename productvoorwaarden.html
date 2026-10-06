@@ -192,7 +192,9 @@ var $ = function(id){ return document.getElementById(id); };
 function el(tag, cls, txt){ var e = document.createElement(tag); if(cls) e.className = cls; if(txt != null) e.textContent = txt; return e; }
 function esc(s){ return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];}); }
 function veilig(u){ return typeof u==='string' && /^https:\/\/[^\s"'<>]+$/i.test(u) ? u : ''; }
-function host(u){ try{ return new URL(u).hostname.replace(/^www\./,''); }catch(e){ return u; } }
+/* Archieflink (Internet Archive): toon het domein van de oorspronkelijke pagina met '(archief)'. */
+function isArchief(u){ return /^https:\/\/web\.archive\.org\/web\/\d+[a-z_]*\/(https?:\/\/.+)$/.test(String(u)); }
+function host(u){ var m = /^https:\/\/web\.archive\.org\/web\/\d+[a-z_]*\/(https?:\/\/.+)$/.exec(String(u)); try{ return new URL(m ? m[1] : u).hostname.replace(/^www\./,'') + (m ? ' (archief)' : ''); }catch(e){ return u; } }
 function slug(n){ return String(n||'').normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase().replace(/&/g,' en ').replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'') || 'x'; }
 var MAANDEN = ['januari','februari','maart','april','mei','juni','juli','augustus','september','oktober','november','december'];
 function datumNL(d){ var m = /^(\d{4})-(\d{2})(?:-(\d{2}))?/.exec(d||''); return m ? (m[3] ? (+m[3])+' ' : '') + MAANDEN[+m[2]-1] + ' ' + m[1] : (d||''); }
@@ -249,7 +251,7 @@ function cel(a, c){
   if(w.g && w.b && w.b.length){
     var s = el('span','bron','Bron: ');
     w.b.forEach(function(u, i){ var v = veilig(u); if(!v) return; if(i) s.appendChild(document.createTextNode(' · ')); var l = el('a', null, host(v)); l.href = v; l.target = '_blank'; l.rel = 'noopener'; l.title = v; s.appendChild(l);
-      var ar = el('a', null, 'archief'); ar.href = archief(v); ar.target = '_blank'; ar.rel = 'noopener'; ar.title = 'Kopie in het Internet Archive (Wayback Machine), voor als de bron verdwijnt'; s.appendChild(document.createTextNode(' (')); s.appendChild(ar); s.appendChild(document.createTextNode(')')); });
+      if(isArchief(v)) return; var ar = el('a', null, 'archief'); ar.href = archief(v); ar.target = '_blank'; ar.rel = 'noopener'; ar.title = 'Kopie in het Internet Archive (Wayback Machine), voor als de bron verdwijnt'; s.appendChild(document.createTextNode(' (')); s.appendChild(ar); s.appendChild(document.createTextNode(')')); });
     if(w.bd) s.appendChild(document.createTextNode(' (' + w.bd + ')'));
     td.appendChild(s);
   }
@@ -347,7 +349,7 @@ function dossier(){
   var nu = new Date(), stempel = nu.toLocaleDateString('nl-NL',{day:'numeric',month:'long',year:'numeric'}) + ' om ' + nu.toLocaleTimeString('nl-NL',{hour:'2-digit',minute:'2-digit'});
   var rijen = cs.map(function(c){ return '<tr><th>' + esc(c.naam) + '</th>' + as.map(function(a){ var w = a.crit[c.id]; if(!w) return '<td class="nl">niet gevonden</td>';
     return '<td>' + esc(w.w.replace(/^[+~!-]\s*/,'')) + '<span class="st ' + (w.g ? 'ok">✓ gecontroleerd op de site van de aanbieder' : 'nv">nog niet geverifieerd') + '</span>' + (verouderd(w.bd) ? '<span class="st nv">bron ouder dan 6 maanden</span>' : '') +
-      (w.g && w.b ? '<span class="br">Bron: ' + w.b.map(function(u){ var v = veilig(u); return v ? esc(v) + ' (archief: ' + esc(archief(v)) + ')' : ''; }).filter(Boolean).join('<br>') + (w.bd ? ' (' + esc(w.bd) + ')' : '') + '</span>' : '') + '</td>'; }).join('') + '</tr>'; }).join('');
+      (w.g && w.b ? '<span class="br">Bron: ' + w.b.map(function(u){ var v = veilig(u); return v ? esc(v) + (isArchief(v) ? '' : ' (archief: ' + esc(archief(v)) + ')') : ''; }).filter(Boolean).join('<br>') + (w.bd ? ' (' + esc(w.bd) + ')' : '') + '</span>' : '') + '</td>'; }).join('') + '</tr>'; }).join('');
   var css = 'body{font-family:Montserrat,Arial,sans-serif;font-size:9.5pt;color:#141414;background:#fff;margin:14mm 10mm}h1{font-size:15pt;margin:0 0 2px}h2{font-size:11pt;margin:14px 0 4px}.meta{font-size:8pt;color:#444;margin:0 0 8px}' +
     '.disc{border:1.5px solid #C0392B;border-left:6px solid #C0392B;background:#FFF1F0;color:#7A1F14;padding:7px 9px;font-size:7.8pt;margin:0 0 12px}' +
     'table{border-collapse:collapse;width:100%;font-size:7.8pt}th,td{border:1px solid #bbb;padding:4px 5px;text-align:left;vertical-align:top}thead th{background:#141414;color:#fff}tr{break-inside:avoid}.nl{color:#888}' +

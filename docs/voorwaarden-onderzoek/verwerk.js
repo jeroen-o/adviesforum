@@ -7,7 +7,9 @@ const map = process.argv[2] || path.join(__dirname);
 const pagina = path.join(__dirname, '..', '..', 'data', 'voorwaarden-controle.js');
 const files = fs.readdirSync(map).filter(f => /^uit-.*\.json$/.test(f)).sort();
 const DOM = JSON.parse(fs.readFileSync(path.join(__dirname, 'domeinen.json'), 'utf8'));
-const eigen = (naam, u) => { try { const h = new URL(u).hostname.replace(/^www\./, ''); return (DOM[naam] || []).some(d => h === d || h.endsWith('.' + d)); } catch (e) { return false; } };
+/* Een archieflink (Internet Archive) telt als de oorspronkelijke pagina: het domein van die pagina bepaalt of het een eigen bron is. */
+const origineel = u => { const m = /^https:\/\/web\.archive\.org\/web\/\d+[a-z_]*\/(https?:\/\/.+)$/.exec(String(u)); return m ? m[1] : u; };
+const eigen = (naam, u) => { try { const h = new URL(origineel(u)).hostname.replace(/^www\./, ''); return (DOM[naam] || []).some(d => h === d || h.endsWith('.' + d)); } catch (e) { return false; } };
 const C = {};
 // Latere bestanden gaan voor, behalve dat een geverifieerde waarde niet wordt overschreven door een niet-geverifieerde.
 const samen = (a, b) => { const r = Object.assign({}, a); for (const [k, v] of Object.entries(b)) { if (!(r[k] && r[k].geverifieerd && !v.geverifieerd)) r[k] = v; } return r; };

@@ -6,7 +6,7 @@ on:
     branches-ignore: [main]
     paths: ['docs/dode-links.txt']
 permissions:
-  contents: read
+  contents: write
 jobs:
   zoek:
     runs-on: ubuntu-latest
@@ -16,7 +16,12 @@ jobs:
         with:
           node-version: '22'
       - run: node tools/archief-zoeken.js 20261001 | tee archief.tsv
-      - uses: actions/upload-artifact@v4
-        with:
-          name: archief
-          path: archief.tsv
+      # Resultaat als bestand op een eigen tak, zodat het buiten Actions op te halen is.
+      - name: Bewaar resultaat op tak dode-links-resultaat
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          BLOB=$(git hash-object -w archief.tsv)
+          TREE=$(printf '100644 blob %s\tarchief.tsv\n' "$BLOB" | git mktree)
+          COMMIT=$(git commit-tree "$TREE" -m "Archiefversies dode links ${GITHUB_SHA::7}")
+          git push -f origin "$COMMIT:refs/heads/dode-links-resultaat"
