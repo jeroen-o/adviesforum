@@ -1,4 +1,4 @@
-// Rekentools van Hypotheekbond: pas laden na een klik, rentetools apart met compliance-melding
+// Rekentools van Blinqx (gehost op hypotheekbond.nl): pas laden na een klik, rentetools apart met compliance-melding
 const { test, expect } = require('@playwright/test');
 const { volgFouten } = require('./helpers');
 
@@ -11,7 +11,9 @@ async function blokkeerDerden(page) {
 test('geen verkeer naar Hypotheekbond tot je een tool opent', async ({ page }) => {
   const fouten = await volgFouten(page);
   const verzoeken = await blokkeerDerden(page);
-  await page.goto('/hypotheekbond-tools.html');
+  await page.goto('/rekentools-blinqx.html');
+  await expect(page.locator('h1')).toHaveText('Rekentools van Blinqx');
+  await expect(page.locator('.kop p.eigen')).toContainText('accountmanager van Blinqx');
   const n = await page.evaluate(() => window.HYPOTHEEKBOND_TOOLS.reduce((s, g) => s + g.tools.length, 0));
   expect(n).toBe(23);
   await expect(page.locator('article.tool')).toHaveCount(23);
@@ -30,16 +32,17 @@ test('geen verkeer naar Hypotheekbond tot je een tool opent', async ({ page }) =
   expect(fouten).toEqual([]);
 });
 
-test('rentetools staan apart met compliance-melding en deeplink werkt', async ({ page }) => {
+test('rentetools staan apart met compliance-melding; oude link met deeplink verwijst door', async ({ page }) => {
   await blokkeerDerden(page);
   await page.goto('/hypotheekbond-tools.html#tool=rente-top-5');
+  await expect(page).toHaveURL(/\/rekentools-blinqx\.html#tool=rente-top-5$/);
   await expect(page.locator('#groep-rentes #renteMelding')).toContainText('geen aanbeveling');
   await expect(page.locator('#groep-rentes article.tool')).toHaveCount(6);
   await expect(page.locator('#tool-rente-top-5 iframe')).toHaveAttribute('src', /rente-top-5$/);
   await expect(page.locator('iframe')).toHaveCount(1);
 });
 
-test('privacyverklaring noemt Hypotheekbond', async ({ page }) => {
+test('privacyverklaring noemt de Rekentools van Blinqx en Hypotheekbond', async ({ page }) => {
   await page.goto('/privacy.html');
   await expect(page.locator('#hypotheekbond')).toContainText('pas geladen als je op');
 });
