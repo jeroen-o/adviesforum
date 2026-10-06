@@ -597,7 +597,6 @@ window.AANBIEDERS=[
     "telefoon": "050 520 99 99",
     "opgezocht": "2026-10-03",
     "contactbronnen": [
-      "https://anker.nl/merken/anker-rechtsbijstand/",
       "https://www.ankerrechtsbijstand.nl/"
     ],
     "toezicht": "DNB en AFM",
