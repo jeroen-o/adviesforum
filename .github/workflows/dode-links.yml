@@ -1,0 +1,19 @@
+name: Dode links opzoeken
+# Handmatig: zoekt voor de links in docs/dode-links.txt de archiefversie in het Internet Archive.
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  zoek:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+      - run: node tools/archief-zoeken.js 20261001 | tee archief.tsv
+      - uses: actions/upload-artifact@v4
+        with:
+          name: archief
+          path: archief.tsv
