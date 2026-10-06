@@ -73,6 +73,9 @@ jobs:
 
       # Zolang token of configuratie ontbreekt, slaat een push naar main de echte sync over met een waarschuwing
       # in plaats van main rood te maken. Een handmatige echte run faalt wel, zodat je de oorzaak ziet.
+      # De allereerste echte sync maakt alle artikelen in een keer aan. Dat mag geen bijvangst van een merge zijn:
+      # zolang er nog geen koppeltabel op intercom-state staat, wordt een automatische run overgeslagen en moet
+      # de eerste run handmatig worden gestart (Actions -> Intercom-sync -> Run workflow, dry run uit).
       - name: Controleer token en configuratie
         id: klaar
         if: steps.mode.outputs.dry == ''
@@ -85,6 +88,9 @@ jobs:
               echo "::error::$ONTBREEKT ontbreekt. Zie docs/intercom-sync.md."; exit 1
             fi
             echo "::warning::$ONTBREEKT ontbreekt; de Intercom-sync is overgeslagen. Zie docs/intercom-sync.md."
+            echo "skip=1" >> "$GITHUB_OUTPUT"
+          elif [ ! -f data/intercom-map.json ] && [ "${{ github.event_name }}" != "workflow_dispatch" ]; then
+            echo "::warning::Nog geen koppeltabel op intercom-state: dit zou de eerste sync zijn, die alle artikelen in een keer aanmaakt. Overgeslagen; start de eerste sync met Actions -> Intercom-sync -> Run workflow, dry run uit."
             echo "skip=1" >> "$GITHUB_OUTPUT"
           fi
 

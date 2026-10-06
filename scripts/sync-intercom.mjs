@@ -89,6 +89,32 @@ async function api(method, pathname, body) {
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
+/* De velden ai_chatbot_availability / ai_copilot_availability bestaan niet in
+ * elke API-versie. Weigert Intercom ze, dan sturen we het artikel opnieuw
+ * zonder die velden. Concepten blijven dan nog steeds buiten Fin, want die
+ * staan op state 'draft'. */
+let aiVeldenUit = false;
+
+function zonderAiVelden(body) {
+  const { ai_chatbot_availability, ai_copilot_availability, ai_sales_agent_availability, ...rest } = body;
+  return rest;
+}
+
+async function schrijfArtikel(method, pathname, body) {
+  if (aiVeldenUit) return api(method, pathname, zonderAiVelden(body));
+  try {
+    return await api(method, pathname, body);
+  } catch (e) {
+    const is400 = /-> 400\b/.test(e.message);
+    const overAiVeld = /ai_(chatbot|copilot|sales_agent)_availability/.test(e.message);
+    if (!is400 || !overAiVeld) throw e;
+    aiVeldenUit = true;
+    log('  let op: deze API-versie kent ai_chatbot_availability niet; verder zonder dat veld.');
+    log('  concepten blijven buiten Fin via state draft.');
+    return api(method, pathname, zonderAiVelden(body));
+  }
+}
+
 /* ------------------------------------------------------------- Data inlezen */
 
 /* De datafiles zijn browserscripts die window.KENNISBANK en window.FAQ vullen.
@@ -343,13 +369,13 @@ async function main() {
 
     if (known?.articleId) {
       log(`~ bijwerken  ${item.key}  ${item.payload.state.padEnd(9)} ${item.payload.title.slice(0, 60)}`);
-      if (!DRY) await api('PUT', `/articles/${known.articleId}`, item.payload);
+      if (!DRY) await schrijfArtikel('PUT', `/articles/${known.articleId}`, item.payload);
       map[item.key] = { articleId: known.articleId, hash, state: item.payload.state };
       updated++;
     } else {
       log(`+ nieuw      ${item.key}  ${item.payload.state.padEnd(9)} ${item.payload.title.slice(0, 60)}`);
       if (DRY) { map[item.key] = { articleId: null, hash, state: item.payload.state }; created++; continue; }
-      const res = await api('POST', '/articles', item.payload);
+      const res = await schrijfArtikel('POST', '/articles', item.payload);
       map[item.key] = { articleId: res.id, hash, state: item.payload.state };
       created++;
     }
@@ -360,7 +386,7 @@ async function main() {
   for (const [key, entry] of Object.entries(map)) {
     if (seen.has(key) || !entry.articleId || entry.state === 'draft') continue;
     log(`- intrekken  ${key}  staat niet meer in de repository, terug naar concept`);
-    if (!DRY) await api('PUT', `/articles/${entry.articleId}`, { state: 'draft', ai_chatbot_availability: false });
+    if (!DRY) await schrijfArtikel('PUT', `/articles/${entry.articleId}`, { state: 'draft', ai_chatbot_availability: false });
     map[key] = { ...entry, state: 'draft' };
     retired++;
   }
@@ -368,6 +394,7 @@ async function main() {
   if (!DRY) await writeFile(MAP_PATH, `${JSON.stringify(map, null, 1)}\n`);
 
   log(`\nKlaar. nieuw ${created}, bijgewerkt ${updated}, ongewijzigd ${unchanged}, ingetrokken ${retired}`);
+  if (aiVeldenUit) log('De AI-beschikbaarheidsvelden zijn niet meegestuurd; controleer in Intercom of een concept inderdaad draft is.');
   if (DRY) log('Proefrun: data/intercom-map.json is niet weggeschreven.');
 }
 
