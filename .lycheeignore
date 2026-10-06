@@ -1,0 +1,11 @@
+# Sites die automatische controles weigeren (HTTP/2-fout, time-out of geen verbinding vanaf GitHub), terwijl de
+# pagina's in een browser gewoon werken. Hun bronnen worden in de maandelijkse voorwaardencontrole nagelopen.
+^https://(www\.|nieuws\.)?ing\.nl/
+^https://(www\.)?tellius\.nl/
+^https://(www\.)?woonfonds\.nl/
+^https://www2?\.aegon\.nl/
+^https://(www\.|extranet\.)?conneqt\.nl/
+^https://(www\.)?ribank\.nl/
+^https://login\.saa\.nl/
+# Archiefkopieën (Internet Archive) zijn vaste momentopnamen; die hoeven niet wekelijks gecontroleerd te worden.
+^https://web\.archive\.org/

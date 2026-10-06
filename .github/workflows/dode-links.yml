@@ -1,10 +1,8 @@
 name: Dode links opzoeken
 # Handmatig: zoekt voor de links in docs/dode-links.txt de archiefversie in het Internet Archive.
+# Daarna: resultaat ophalen (tak dode-links-resultaat) naar docs/dode-links-archief.tsv en node tools/dode-links-vervangen.js.
 on:
   workflow_dispatch:
-  push:
-    branches-ignore: [main]
-    paths: ['docs/dode-links.txt']
 permissions:
   contents: write
 jobs:

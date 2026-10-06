@@ -357,7 +357,7 @@ Concept. Feiten over de labelplicht komen van rijksoverheid.nl en rvo.nl, over E
   kw:'woningcheck aankoop bodemverontreiniging bodemloket Wkpb publiekrechtelijke beperkingen BRK-PB Kadaster eigendomsinformatie asbest vóór 1994 asbestinventarisatie asbestdakenverbod Eerste Kamer erfpacht canon tijdvak afkoop NHG traditionele erfpacht sanering kwaliteitsverbetering checklist',
   links:[
    {titel:'Kadaster: Publiekrechtelijke beperkingen',url:'https://www.kadaster.nl/publiekrechtelijke-beperkingen'},
-   {titel:'Kadaster: Wkpb',url:'https://zakelijk.kadaster.nl/wkpb'},
+   {titel:'Kadaster: Wkpb',url:'https://web.archive.org/web/20200413001349/https://zakelijk.kadaster.nl/wkpb'},
    {titel:'Rijksoverheid: De belangrijkste asbestregels',url:'https://www.rijksoverheid.nl/onderwerpen/asbest/asbestregels'},
    {titel:'InfoMil: Eerste Kamer stemt tegen asbestdakenverbod',url:'https://www.infomil.nl/onderwerpen/asbest/nieuws-asbest/nieuwsberichten/eerste-kamer-stemt/'},
    {titel:'Erfpacht (intern)',url:'erfpacht.html'},

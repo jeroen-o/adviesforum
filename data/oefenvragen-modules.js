@@ -59,7 +59,7 @@
   const AFM_BELONING = 'https://www.afm.nl/nl-nl/sector/adviseurs-bemiddelaars-en-gevolmachtigde-agenten/beloning/directe-beloning';
   const RO_KREDIET = 'https://www.rijksoverheid.nl/onderwerpen/bescherming-van-consumenten/vraag-en-antwoord/wat-is-kredietvergoeding-en-wat-is-het-maximale-kredietvergoedingspercentage';
   const RO_WETTRENTE = 'https://www.rijksoverheid.nl/vraag-en-antwoord/schulden/hoogte-wettelijke-rente';
-  const RO_ZV = 'https://www.rijksoverheid.nl/onderwerpen/zorgverzekering/vraag-en-antwoord/';
+  const RO_ZV = 'https://web.archive.org/web/20260208073357/https://www.rijksoverheid.nl/onderwerpen/zorgverzekering/vraag-en-antwoord';
   const CDFD_BROCHURE = 'https://cdfd.nl/wp-content/uploads/2026/03/260302-Kandidatenbrochure-initiele-examens-per-1-april-2026-1.0.pdf';
 
   /* ================= BASIS ================= */
