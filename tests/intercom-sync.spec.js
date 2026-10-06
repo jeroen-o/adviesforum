@@ -35,3 +35,18 @@ test('bootstrap logt geen e-mailadressen (Actions-logs van deze openbare reposit
   expect(bootstrap).not.toMatch(/\.email/);
   expect(bootstrap).toMatch(/GITHUB_ACTIONS/); // in Actions geen lijst met alle medewerkersnamen
 });
+
+test('--herstel bouwt de koppeltabel op uit Intercom; daarna maakt de sync niets dubbel aan', () => {
+  const fs = require('fs');
+  const map = path.join(ROOT, 'data', 'intercom-map.json');
+  if (fs.existsSync(map)) test.skip(true, 'er staat al een lokale koppeltabel');
+  try {
+    const uit = execFileSync(process.execPath, [path.join(ROOT, 'tests', 'fixtures', 'intercom-herstel-mock.mjs'), ROOT], { cwd: ROOT, encoding: 'utf8' });
+    expect(uit).toMatch(/gekoppeld/);
+    const m = JSON.parse(fs.readFileSync(map, 'utf8'));
+    expect(Object.values(m).every((e) => e.articleId && e.hash)).toBe(true);
+    expect(run('--dry-run')).toMatch(/nieuw 0, bijgewerkt 0, ongewijzigd \d+/);
+  } finally {
+    if (fs.existsSync(map)) fs.unlinkSync(map);
+  }
+});

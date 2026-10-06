@@ -30,6 +30,10 @@ on:
         description: 'Alleen de ids ophalen (admin en collections) en in de log tonen'
         type: boolean
         default: false
+      herstel:
+        description: 'Koppeltabel opnieuw opbouwen uit de artikelen in Intercom (schrijft niets naar Intercom)'
+        type: boolean
+        default: false
       admin:
         description: 'Bij bootstrap: deel van de naam van de admin (andere namen komen niet in de openbare log)'
         type: string
@@ -61,7 +65,10 @@ jobs:
       - name: Bepaal de modus
         id: mode
         run: |
-          if [ "${{ github.event.inputs.bootstrap }}" = "true" ]; then
+          if [ "${{ github.event.inputs.herstel }}" = "true" ]; then
+            echo "dry=" >> "$GITHUB_OUTPUT"
+            echo "extra=--herstel" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event.inputs.bootstrap }}" = "true" ]; then
             echo "bootstrap=1" >> "$GITHUB_OUTPUT"
             echo "dry=--dry-run" >> "$GITHUB_OUTPUT"
           elif [ "${{ github.event_name }}" = "pull_request" ] \
@@ -120,7 +127,7 @@ jobs:
 
       - name: Synchroniseren
         if: steps.mode.outputs.bootstrap != '1' && steps.klaar.outputs.skip != '1'
-        run: node scripts/sync-intercom.mjs ${{ steps.mode.outputs.dry }}
+        run: node scripts/sync-intercom.mjs ${{ steps.mode.outputs.dry }} ${{ steps.mode.outputs.extra }}
 
       - name: Bewaar de koppeltabel op de tak intercom-state
         if: steps.mode.outputs.dry == '' && steps.klaar.outputs.skip != '1' && github.ref == 'refs/heads/main'
@@ -130,7 +137,8 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           BLOB=$(git hash-object -w data/intercom-map.json)
           TREE=$(printf '100644 blob %s\tintercom-map.json\n' "$BLOB" | git mktree)
-          PARENT=$(git rev-parse origin/intercom-state 2>/dev/null || true)
+          # --verify -q: geeft niets terug als de tak nog niet bestaat (eerste sync)
+          PARENT=$(git rev-parse --verify -q origin/intercom-state || true)
           MSG="Intercom-koppeltabel na ${GITHUB_SHA::7}"
           if [ -n "$PARENT" ]; then
             if [ "$(git rev-parse "$PARENT^{tree}")" = "$TREE" ]; then

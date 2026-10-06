@@ -44,6 +44,7 @@ if (!BASE) fail(`Onbekende INTERCOM_REGION: ${REGION}`);
 const args = new Set(process.argv.slice(2));
 const DRY = args.has('--dry-run');
 const BOOTSTRAP = args.has('--bootstrap');
+const HERSTEL = args.has('--herstel');
 const PREVIEW = [...args].find((a) => a.startsWith('--preview='))?.split('=')[1];
 
 function fail(msg) { console.error(`\nFOUT: ${msg}\n`); process.exit(1); }
@@ -345,6 +346,52 @@ async function bootstrap() {
   }, null, 2));
 }
 
+/* ------------------------------------------------------------------ Herstel */
+
+/* Bouwt de koppeltabel opnieuw op uit de artikelen die al in Intercom staan (bijvoorbeeld als het opslaan van
+ * de tabel mislukte). Alleen artikelen in de collections uit de configuratie tellen mee; koppelen gebeurt op titel.
+ * Schrijft niets naar Intercom. Daarna weet de sync weer welk artikel bij welk forum-id hoort en maakt hij
+ * niets dubbel aan. */
+const ontsnap = (s) => String(s || '').replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#39;/g, "'").trim();
+
+async function herstel(items, config) {
+  const eigen = new Set(Object.values(config.collections || {}).filter(Boolean).map(String));
+  if (!eigen.size) fail('Geen collections in de configuratie; herstel kan de artikelen niet afbakenen.');
+  const gevonden = [];
+  for (let pagina = 1; pagina <= 200; pagina++) {
+    const res = await api('GET', `/articles?per_page=50&page=${pagina}`);
+    for (const a of res.data || []) {
+      const ouders = [a.parent_id, ...(a.parent_ids || [])].filter((x) => x != null).map(String);
+      if (ouders.some((x) => eigen.has(x))) gevonden.push(a);
+    }
+    if (!(res.data || []).length || pagina >= (res.pages?.total_pages || 1)) break;
+  }
+  const perTitel = {};
+  for (const a of gevonden) (perTitel[ontsnap(a.title)] ||= []).push(a);
+  const dubbel = Object.entries(perTitel).filter(([, v]) => v.length > 1);
+  if (dubbel.length) {
+    log(`Dubbele titels in Intercom (${dubbel.length}):`);
+    for (const [t, v] of dubbel) log(`  ${t.slice(0, 70)}  ids ${v.map((a) => a.id).join(', ')}`);
+    fail('Herstel gestopt: verwijder eerst de dubbele artikelen in Intercom.');
+  }
+  const map = {};
+  let gekoppeld = 0;
+  const zonder = [];
+  for (const item of items) {
+    const a = (perTitel[ontsnap(item.payload.title)] || [])[0];
+    if (!a) { zonder.push(item.key); continue; }
+    map[item.key] = { articleId: String(a.id), hash: hashOf(item.payload), state: item.payload.state };
+    delete perTitel[ontsnap(item.payload.title)];
+    gekoppeld++;
+  }
+  const over = Object.values(perTitel).flat();
+  log(`Herstel: ${gevonden.length} artikelen in de eigen collections, ${gekoppeld} gekoppeld.`);
+  if (zonder.length) log(`Niet gevonden in Intercom (worden bij de volgende sync aangemaakt): ${zonder.join(', ')}`);
+  if (over.length) log(`In Intercom maar niet in de repository (blijven ongemoeid): ${over.map((a) => a.id).join(', ')}`);
+  await writeFile(MAP_PATH, `${JSON.stringify(map, null, 1)}\n`);
+  log('Koppeltabel geschreven: data/intercom-map.json');
+}
+
 /* --------------------------------------------------------------------- Main */
 
 async function main() {
@@ -362,6 +409,8 @@ async function main() {
 
   const data = await loadData();
   const items = buildArticles(data, config);
+
+  if (HERSTEL) return herstel(items, config);
 
   if (PREVIEW) {
     const item = items.find((i) => i.key === PREVIEW);
