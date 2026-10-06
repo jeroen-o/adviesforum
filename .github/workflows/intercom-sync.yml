@@ -1,0 +1,113 @@
+name: Intercom-sync
+
+# Zet de kennisbank van het Adviesforum om in native Intercom-artikelen.
+# Pull request -> proefrun (geen token nodig, niets wordt verstuurd).
+# Push naar main -> echte sync; de koppeltabel gaat naar de tak intercom-state,
+# zodat de branch protection op main niet in de weg zit.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'data/kennisbank*.js'
+      - 'data/faq/**'
+      - 'data/adviseurs.js'
+      - 'scripts/sync-intercom.mjs'
+      - 'scripts/intercom-sync.config.json'
+  pull_request:
+    paths:
+      - 'data/kennisbank*.js'
+      - 'data/faq/**'
+      - 'scripts/sync-intercom.mjs'
+      - 'scripts/intercom-sync.config.json'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Alleen een proefrun (niets naar Intercom sturen)'
+        type: boolean
+        default: true
+
+concurrency:
+  group: intercom-sync
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    env:
+      INTERCOM_TOKEN: ${{ secrets.INTERCOM_TOKEN }}
+      INTERCOM_REGION: eu
+      INTERCOM_VERSION: '2.14'
+      SITE_BASE: ${{ vars.SITE_BASE || 'https://jeroen-o.github.io/adviesforum' }}
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+
+      - name: Bepaal de modus
+        id: mode
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ] \
+             || [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
+            echo "dry=--dry-run" >> "$GITHUB_OUTPUT"
+          else
+            echo "dry=" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Haal de koppeltabel op
+        run: |
+          git fetch --depth=1 origin intercom-state 2>/dev/null || true
+          if git cat-file -e origin/intercom-state:intercom-map.json 2>/dev/null; then
+            mkdir -p data
+            git show origin/intercom-state:intercom-map.json > data/intercom-map.json
+            echo "Koppeltabel geladen: $(wc -c < data/intercom-map.json) bytes"
+          else
+            echo "Nog geen koppeltabel; eerste sync."
+          fi
+
+      # Zolang token of configuratie ontbreekt, slaat een push naar main de echte sync over met een waarschuwing
+      # in plaats van main rood te maken. Een handmatige echte run faalt wel, zodat je de oorzaak ziet.
+      - name: Controleer token en configuratie
+        id: klaar
+        if: steps.mode.outputs.dry == ''
+        run: |
+          ONTBREEKT=""
+          [ -z "$INTERCOM_TOKEN" ] && ONTBREEKT="secrets.INTERCOM_TOKEN"
+          [ -f scripts/intercom-sync.config.json ] || ONTBREEKT="${ONTBREEKT:+$ONTBREEKT en }scripts/intercom-sync.config.json"
+          if [ -n "$ONTBREEKT" ]; then
+            if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+              echo "::error::$ONTBREEKT ontbreekt. Zie docs/intercom-sync.md."; exit 1
+            fi
+            echo "::warning::$ONTBREEKT ontbreekt; de Intercom-sync is overgeslagen. Zie docs/intercom-sync.md."
+            echo "skip=1" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Synchroniseren
+        if: steps.klaar.outputs.skip != '1'
+        run: node scripts/sync-intercom.mjs ${{ steps.mode.outputs.dry }}
+
+      - name: Bewaar de koppeltabel op de tak intercom-state
+        if: steps.mode.outputs.dry == '' && steps.klaar.outputs.skip != '1' && github.ref == 'refs/heads/main'
+        run: |
+          test -f data/intercom-map.json || exit 0
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          BLOB=$(git hash-object -w data/intercom-map.json)
+          TREE=$(printf '100644 blob %s\tintercom-map.json\n' "$BLOB" | git mktree)
+          PARENT=$(git rev-parse origin/intercom-state 2>/dev/null || true)
+          MSG="Intercom-koppeltabel na ${GITHUB_SHA::7}"
+          if [ -n "$PARENT" ]; then
+            if [ "$(git rev-parse "$PARENT^{tree}")" = "$TREE" ]; then
+              echo "Koppeltabel ongewijzigd."; exit 0
+            fi
+            COMMIT=$(git commit-tree "$TREE" -p "$PARENT" -m "$MSG")
+          else
+            COMMIT=$(git commit-tree "$TREE" -m "$MSG")
+          fi
+          git push origin "$COMMIT:refs/heads/intercom-state"

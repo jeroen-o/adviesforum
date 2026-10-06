@@ -30,6 +30,8 @@ Na een aanmelding via `aanmelden.html`: voeg een regel toe in `data/adviseurs.js
 4. Compliance bekijkt de wijziging in de pull request en keurt goed (Review → Approve). Pas dan `gecontroleerd:true` en `gecontroleerdOp` zetten en mergen.
 5. De tests draaien automatisch; merge alleen als ze groen zijn.
 
+**Let op: `gecontroleerd:true` zet het artikel ook bij Fin (Intercom).** Na de merge publiceert de Intercom-sync het artikel en mag Fin het gebruiken; zonder `gecontroleerd:true` blijft het een concept dat Fin niet gebruikt. In de pull request toont de workflow Intercom-sync als proefrun wat er naar Fin zou gaan. Zie [docs/intercom-sync.md](docs/intercom-sync.md).
+
 Na `herzienVoor` toont het forum automatisch "Mogelijk verouderd". Filter in de kennisbank op **Herziening nodig** voor het overzicht.
 
 ### Goedkeuring afdwingen (eenmalig instellen)
