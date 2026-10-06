@@ -321,9 +321,16 @@ async function bootstrap() {
   const hcNaam = {};
   for (const h of hcs.data || []) { hcNaam[h.id] = h.identifier || ''; log(`  ${h.id}  ${h.identifier || ''} ${h.website_turned_on ? '(live)' : ''}`); }
 
-  const cols = await api('GET', '/help_center/collections?per_page=100');
-  log('\nCollections (gebruik deze ids in collections):');
-  for (const c of cols.data || []) {
+  /* Collections komen per pagina (max 100); alle pagina's ophalen. */
+  const alleCols = [];
+  for (let pagina = 1; pagina <= 50; pagina++) {
+    const res = await api('GET', `/help_center/collections?per_page=100&page=${pagina}`);
+    alleCols.push(...(res.data || []));
+    const totaal = res.pages?.total_pages || 1;
+    if (!(res.data || []).length || pagina >= totaal) break;
+  }
+  log(`\nCollections (${alleCols.length}; gebruik deze ids in collections):`);
+  for (const c of alleCols) {
     const hc = c.help_center_id ? `  [help center ${c.help_center_id}${hcNaam[c.help_center_id] ? ' ' + hcNaam[c.help_center_id] : ''}]` : '';
     log(`  ${c.id}  ${c.name}${c.parent_id ? ` (onder ${c.parent_id})` : ''}${hc}`);
   }
