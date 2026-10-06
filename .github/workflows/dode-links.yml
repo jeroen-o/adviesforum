@@ -2,6 +2,9 @@ name: Dode links opzoeken
 # Handmatig: zoekt voor de links in docs/dode-links.txt de archiefversie in het Internet Archive.
 on:
   workflow_dispatch:
+  push:
+    branches-ignore: [main]
+    paths: ['docs/dode-links.txt']
 permissions:
   contents: read
 jobs:
