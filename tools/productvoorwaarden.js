@@ -23,7 +23,9 @@ const VOLGORDE = ['orv', 'aov', 'woonlasten', 'uitvaart', 'lijfrente', 'woonverz
 const VERBODEN = /premie[^.;]{0,25}€|€[^.;]{0,20}premie|premie(?:s)?\s+(?:van|vanaf)\s+\d|\brente\s*(?:van|vanaf)?\s*\d|\bjkp\b|\d\s?%\s*(?:rente|korting|jkp)|\bkorting\b|\bactie\b|cashback/i;
 
 function fout(m) { console.error('productvoorwaarden: ' + m); process.exit(1); }
-const host = u => { try { return new URL(u).hostname.replace(/^www\./, ''); } catch (e) { return ''; } };
+/* Een archieflink (Internet Archive) telt als de oorspronkelijke pagina. */
+const origineel = u => { const m = /^https:\/\/web\.archive\.org\/web\/\d+[a-z_]*\/(https?:\/\/.+)$/.exec(String(u)); return m ? m[1] : u; };
+const host = u => { try { return new URL(origineel(u)).hostname.replace(/^www\./, ''); } catch (e) { return ''; } };
 const eigen = (doms, u) => { const h = host(u); return !!h && doms.some(d => h === d || h.endsWith('.' + d)); };
 const veilig = u => typeof u === 'string' && /^https:\/\/[^\s"'<>]+$/i.test(u);
 

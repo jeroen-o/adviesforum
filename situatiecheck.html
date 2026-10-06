@@ -153,7 +153,9 @@ var D = window.SITUATIECHECK || {situaties:[], geldverstrekkers:[], producten:{}
 var $ = function(id){ return document.getElementById(id); };
 function el(tag, cls, txt){ var e = document.createElement(tag); if(cls) e.className = cls; if(txt != null) e.textContent = txt; return e; }
 function veilig(u){ return typeof u==='string' && /^https:\/\/[^\s"'<>]+$/i.test(u) ? u : ''; }
-function host(u){ try{ return new URL(u).hostname.replace(/^www\./,''); }catch(e){ return u; } }
+/* Archieflink (Internet Archive): toon het domein van de oorspronkelijke pagina met '(archief)'. */
+function isArchief(u){ return /^https:\/\/web\.archive\.org\/web\/\d+[a-z_]*\/(https?:\/\/.+)$/.test(String(u)); }
+function host(u){ var m = /^https:\/\/web\.archive\.org\/web\/\d+[a-z_]*\/(https?:\/\/.+)$/.exec(String(u)); try{ return new URL(m ? m[1] : u).hostname.replace(/^www\./,'') + (m ? ' (archief)' : ''); }catch(e){ return u; } }
 var LABEL = {ja:'Ja', voorwaarden:'Onder voorwaarden', nee:'Nee', onbekend:'Onbekend'};
 var PRODUCTEN = [{id:'hyp', titel:'Hypotheek'}].concat(Object.keys(D.producten||{}).map(function(k){ return {id:k, titel:({orv:'ORV', aov:'AOV', uitvaart:'Uitvaart', lijfrente:'Lijfrente', krediet:'Krediet', woonlasten:'Woonlasten', bankgarantie:'Bankgarantie', woonverzekering:'Opstal en inboedel'})[k] || D.producten[k].titel}; }));
 var prod = 'hyp', gekozen = new Set();

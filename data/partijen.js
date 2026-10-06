@@ -60,15 +60,14 @@ window.PARTIJEN=[
    {thema:'Lijfrente-uitkering',tekst:'Ook een vrijkomende lijfrentespaarrekening van een andere bank kan naar de ToekomstUitkering',bron:'https://www.rabobank.nl/particulieren/pensioen/lijfrente-komt-vrij/vrijval-lijfrentespaarrekening-andere-bank'},
    {tekst:'Consumptief krediet loopt via dochter Freo',bron:'https://www.freo.nl/over-freo/'}
   ],bijgewerkt:'2026-10-02'},
- {naam:'Obvion',toezicht:'AFM',toezichtNoot:'Hypotheekaanbieder (AFM-vergunning 12012721) en dochter van Rabobank. Geen eigen bankvergunning; het moederbedrijf staat onder ECB/DNB-toezicht.',toezichtBron:'https://obvion.nl/artikel-1/Rentetarieven-Obvion-Woon-Hypotheek-4-mei-2021',type:'geldverstrekker',categorieen:['hypotheek'],url:'https://www.obvion.nl/adviseur/Samenwerken-Obvion',logo:'img/logos/obvion.png',
+ {naam:'Obvion',toezicht:'AFM',toezichtNoot:'Hypotheekaanbieder (AFM-vergunning 12012721) en dochter van Rabobank. Geen eigen bankvergunning; het moederbedrijf staat onder ECB/DNB-toezicht.',toezichtBron:'https://web.archive.org/web/20240903131756/https://www.obvion.nl/artikel-1/Rentetarieven-Obvion-Woon-Hypotheek-4-mei-2021',type:'geldverstrekker',categorieen:['hypotheek'],url:'https://www.obvion.nl/adviseur/Samenwerken-Obvion',logo:'img/logos/obvion.png',
   producten:['hypotheek','starters'],
   kenmerken:[
-   {tekst:'Werkt uitsluitend via onafhankelijke adviseurs',bron:'https://www.obvion.nl/faq/Waarom-werkt-Obvion-uitsluitend-met-adviseurs-1.htm'},
    {tekst:'Sinds 2012 volledig dochter van Rabobank',bron:'https://obvion.nl/over-obvion/wie-is-obvion/'},
    {tekst:'Informatie over de perspectiefverklaring voor inkomen uit flexibel werk',bron:'https://obvion.nl/situatie/werken/perspectiefverklaring/'},
    {tekst:'Duurzaamheidskorting vanaf energielabel B; aan te vragen tot 24 maanden na de start van de rentevaste periode (definitief label tijdig geregistreerd)',bron:'https://obvion.nl/hypotheek/verduurzaming/duurzaamheidskorting/'},
    {thema:'Verhuisregeling',tekst:'Wie de verhuisregeling later wil gebruiken, meldt dat uiterlijk 1 werkdag vóór aflossing van de huidige hypotheek schriftelijk aan Obvion',bron:'https://www.obvion.nl/Huis-verkopen/Verhuisregeling-3'},
-   {thema:'Boetevrij aflossen',tekst:'Geen vergoeding bij aflossing door verkoop van de woning en bij aflossen op de renteherzieningsdatum',bron:'https://www.obvion.nl/Financien/Hypotheek-aflossen.htm'},
+   {thema:'Boetevrij aflossen',tekst:'Geen vergoeding bij aflossing door verkoop van de woning en bij aflossen op de renteherzieningsdatum',bron:'https://web.archive.org/web/20170718175837/https://www.obvion.nl/Financien/Hypotheek-aflossen.htm'},
    {thema:'Renteafspraken',tekst:'Rentemiddeling op basis van een gewogen gemiddelde van oude en nieuwe rente, alleen voor de Obvion Hypotheek',bron:'https://www.obvion.nl/Hypotheekrente/Rentemiddeling.htm'},
    {thema:'Bouwdepot',tekst:'Bouwdepot maximaal 2 jaar (nieuwbouw 3 jaar); renteaanbod geldig 3 maanden bij bestaande bouw en 6 maanden bij nieuwbouw',bron:'https://obvion.nl/media/kxudk0d2/product-en-acceptatiekaart.pdf'},
    {thema:'Senioren',tekst:'Ruimere acceptatieregels voor verhuizende klanten die de AOW-leeftijd hebben of binnen 10 jaar bereiken',bron:'https://obvion.nl/media/kxudk0d2/product-en-acceptatiekaart.pdf'},
@@ -93,7 +92,7 @@ window.PARTIJEN=[
    {tekst:'De Volksbank gaat verder als ASN Bank; de merken SNS, RegioBank en BLG Wonen gaan op in ASN Bank',bron:'https://www.asnbank.nl/home/de-volksbank-kiest-asn-bank-als-merk-voor-de-toekomst.html'},
    {tekst:'Leningdeel ASN Duurzaam Wonen (€ 2.500 tot € 30.000) voor energiebesparende, klimaatadaptieve en natuurinclusieve maatregelen',bron:'https://www.asnbank.nl/hypotheek/asn-duurzaam-wonen/hoe-werkt-asn-duurzaam-wonen.html'},
    {tekst:'Bestaande klanten kunnen voor verduurzamen of verbouwen online verhogen zonder adviseur (met kennis- en ervaringstoets)',bron:'https://www.asnbank.nl/hypotheek/online-hypotheek-verhogen/kennis-en-ervaringstoets.html'},
-   {tekst:'ASN Hypotheek ook beschikbaar via serviceprovider Huismerk',bron:'https://www.asnbank.nl/nieuws-pers/asn-hypotheek-nu-ook-beschikbaar-via-serviceprovider-huismerk.html'},
+   {tekst:'ASN Hypotheek ook beschikbaar via serviceprovider Huismerk',bron:'https://web.archive.org/web/20260612143312/https://www.asnbank.nl/nieuws-pers/asn-hypotheek-nu-ook-beschikbaar-via-serviceprovider-huismerk.html'},
    {thema:'Verhuisregeling',tekst:'Rente Meeneemregeling voor verhuizende klanten',bron:'https://www.asnbank.nl/hypotheek/rente-meeneemregeling.html'},
    {thema:'Boetevrij aflossen',tekst:'Geen vergoeding bij verkoop en verhuizing als met de opbrengst wordt afgelost, en ook niet bij aflossen op de renteaanpassingsdatum',bron:'https://www.asnbank.nl/web/file?uuid=98bf31e4-9fef-4628-b5ba-3ee3784015df&owner=6916ad14-918d-4ea8-80ac-f71f0ff1928e&contentid=2742'},
    {thema:'Verhuisregeling',tekst:'Let op bij de budgetoptie \'boete bij verhuizen\': dan kan een vergoeding gelden als de nieuwe hypotheek niet bij de bank wordt afgesloten',bron:'https://www.asnbank.nl/web/file?uuid=98bf31e4-9fef-4628-b5ba-3ee3784015df&owner=6916ad14-918d-4ea8-80ac-f71f0ff1928e&contentid=2742'},
@@ -147,7 +146,7 @@ window.PARTIJEN=[
  {naam:'Lloyds Bank',toezicht:'Buitenlands toezicht en AFM',toezichtNoot:'Duitse bank (Berlijn) met een Nederlands bijkantoor. Prudentieel toezicht door BaFin, in NL ook geregistreerd bij DNB/AFM (12046352).',toezichtBron:'https://lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/Lloyds%20Bank%20hypotheekgids%20december%202024.pdf',type:'bank',categorieen:['hypotheek'],url:'https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs',logo:'img/logos/lloyds-bank.png',
   producten:['hypotheek'],
   kenmerken:[
-   {tekst:'Intermediair Service Desk (ISD) met vaste dossierbehandelaars',bron:'https://www.lloydsbank.nl/wie-zijn-wij/werken-bij/Hypotheek-Acceptant-ISD'},
+   {tekst:'Intermediair Service Desk (ISD) met vaste dossierbehandelaars',bron:'https://web.archive.org/web/20250701131345/https://www.lloydsbank.nl/wie-zijn-wij/werken-bij/Hypotheek-Acceptant-ISD'},
    {tekst:'Hypotheek online zonder advies of via een onafhankelijk adviseur',bron:'https://www.lloydsbank.nl/hypotheken/zelf-of-via-adviseur'},
    {tekst:'Hypotheekgids met de acceptatievoorwaarden',bron:'https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf'},
    {tekst:'Nieuwsbrief speciaal voor intermediairs',bron:'https://www.lloydsbank.nl/dam/jcr:80abb2c8-88b4-4751-91f5-3b0d7d02ffbd/lloyds-bank-nieuwsbrief-intermediair-q1-2026.pdf'},
@@ -168,7 +167,7 @@ window.PARTIJEN=[
    {thema:'Boetevrij aflossen',tekst:'Vergoedingsvrij aflossen uit eigen middelen; bij de NIBC Extra Hypotheek daarnaast een jaarlijks vrij percentage',bron:'https://nibc.nl/media/rvammeml/2025-09-17-av-nibc-extra-2025-versie-10.pdf'},
    {thema:'Senioren',tekst:'Extra financieringsmogelijkheden voor 57-plussers met een lange minimale rentevaste periode',bron:'https://nibc.nl/media/0d2hsk24/senioren-factsheet.pdf'}
   ],bijgewerkt:'2026-10-02'},
- {naam:'Handelsbanken',toezicht:'Buitenlands toezicht en AFM',toezichtNoot:'Nederlands bijkantoor van een Zweedse bank dat via het Europees paspoort werkt (DNB-register 12000981). Prudentieel toezicht ligt bij Finansinspektionen (Zweden), gedragstoezicht in NL bij AFM.',toezichtBron:'https://www.handelsbanken.nl/tron/nlpu/info/contents/v1/document/37-271051',type:'bank',categorieen:['hypotheek'],url:'https://www.handelsbanken.nl/nl/particulier/hypotheken/nieuw-huis-kopen',logo:'img/logos/handelsbanken.png',
+ {naam:'Handelsbanken',toezicht:'Buitenlands toezicht en AFM',toezichtNoot:'Nederlands bijkantoor van een Zweedse bank dat via het Europees paspoort werkt (DNB-register 12000981). Prudentieel toezicht ligt bij Finansinspektionen (Zweden), gedragstoezicht in NL bij AFM.',toezichtBron:'https://www.handelsbanken.nl/tron/nlpu/info/contents/v1/document/37-271051',type:'bank',categorieen:['hypotheek'],url:'https://web.archive.org/web/20251117211957/https://www.handelsbanken.nl/nl/particulier/hypotheken/nieuw-huis-kopen',logo:'img/logos/handelsbanken.png',
   producten:['hypotheek','vastgoedfinanciering'],
   kenmerken:[
    {tekst:'Lokale relatiebank met vaste contactpersoon; aanvragen worden lokaal beoordeeld, ook als de situatie minder standaard is',bron:'https://www.handelsbanken.nl/'},
@@ -176,7 +175,7 @@ window.PARTIJEN=[
    {thema:'Verhuisregeling',tekst:'Vaste rente meenemen naar een volgende eigen woning; beslissen kan ook na verkoop, tot 6 maanden na aflossing van de oude lening',bron:'https://www.handelsbanken.nl/nl/particulier/hypotheken/hypotheek-vraag-antwoord'},
    {thema:'Boetevrij aflossen',tekst:'Kosteloos volledig aflossen bij verkoop en aan het einde van de rentevaste periode; daarnaast jaarlijks 10% per oorspronkelijk leningdeel',bron:'https://www.handelsbanken.nl/nl/particulier/hypotheken/hypotheek-vraag-antwoord'}
   ],bijgewerkt:'2026-10-02'},
- {naam:'MUNT Hypotheken',toezicht:'Geen eigen vergunning',toezichtNoot:'Hypotheeklabel van DMFCO. De vergunning staat op naam van DMF Hypotheek Management B.V. (AFM-toezicht). Investeerders zijn o.a. pensioenfondsen en Achmea Bank.',toezichtBron:'https://www.achmeabank.nl/en/news/achmea-bank-treedt-toe-tot-platform-dmfco-en-investeert-in-munt-hypotheken',type:'geldverstrekker',categorieen:['hypotheek'],url:'https://www.munthypotheken.nl/contact/adviseur/',logo:'img/logos/munt-hypotheken.png',
+ {naam:'MUNT Hypotheken',toezicht:'Geen eigen vergunning',toezichtNoot:'Hypotheeklabel van DMFCO. De vergunning staat op naam van DMF Hypotheek Management B.V. (AFM-toezicht). Investeerders zijn o.a. pensioenfondsen en Achmea Bank.',toezichtBron:'https://web.archive.org/web/20250211043656/https://www.achmeabank.nl/en/news/achmea-bank-treedt-toe-tot-platform-dmfco-en-investeert-in-munt-hypotheken',type:'geldverstrekker',categorieen:['hypotheek'],url:'https://www.munthypotheken.nl/contact/adviseur/',logo:'img/logos/munt-hypotheken.png',
   producten:['hypotheek'],
   kenmerken:[
    {tekst:'Alleen via een onafhankelijk adviseur; MUNT geeft zelf geen advies',bron:'https://www.munthypotheken.nl/veelgestelde-vragen/aanvraag-munt-hypotheek/geeft-munt-hypotheken-ook-hypotheekadvies/'},
@@ -227,7 +226,7 @@ window.PARTIJEN=[
    {thema:'Boetevrij aflossen',tekst:'Ieder kalenderjaar 10% van de oorspronkelijke hoofdsom zonder vergoeding',bron:'https://www.vrijlevenhypotheek.nl/assets/uploads/2024/05/Algemene_Voorwaarden_Hypotrust_Vrij_Leven_Hypotheek_September-2023.pdf'},
    {thema:'Offerte',tekst:'Renteaanbod 4 maanden geldig; verlengen met 2 maanden (bestaande bouw) of 8 maanden (nieuwbouw)',bron:'https://www.vrijlevenhypotheek.nl/assets/uploads/2024/05/Algemene_Voorwaarden_Hypotrust_Vrij_Leven_Hypotheek_September-2023.pdf'},
    {thema:'Renteafspraken',tekst:'Na extra aflossing automatisch een lagere risicoklasse vanaf de volgende maand',bron:'https://www.vrijlevenhypotheek.nl/assets/uploads/2024/05/Algemene_Voorwaarden_Hypotrust_Vrij_Leven_Hypotheek_September-2023.pdf'},
-   {thema:'Acceptatie',tekst:'Rentevaste perioden van 1 tot en met 30 jaar; zonder NHG voor nieuwe klanten tot 80% van de marktwaarde',bron:'https://www.vrijlevenhypotheek.nl/assets/uploads/2026/01/Acceptatiegids-Vrij-Leven-Januari-2026-definitief-1.pdf'}
+   {thema:'Acceptatie',tekst:'Rentevaste perioden van 1 tot en met 30 jaar; zonder NHG voor nieuwe klanten tot 80% van de marktwaarde',bron:'https://web.archive.org/web/20260213142254/https://www.vrijlevenhypotheek.nl/assets/uploads/2026/01/Acceptatiegids-Vrij-Leven-Januari-2026-definitief-1.pdf'}
   ],bijgewerkt:'2026-10-04'},
  {naam:'Knab',toezicht:'Buitenlands toezicht en AFM',toezichtNoot:'Sinds 2024 onderdeel van BAWAG Group en sinds eind 2025 een Nederlandse vestiging van de Oostenrijkse BAWAG; prudentieel toezicht ECB/FMA (Oostenrijk), gedragstoezicht AFM. Peildatum 3 oktober 2026; controleer in het AFM-register.',type:'bank',categorieen:['hypotheek'],url:'https://www.knab.nl/particulier/hypotheken/knab-hypotheek/adviseurs',logo:'img/logos/knab.png',
   producten:['hypotheek','NHG','overbrugging','duurzaam leningdeel'],
@@ -250,7 +249,7 @@ window.PARTIJEN=[
    {thema:'Verhuisregeling',tekst:'Meeneemregeling voor bestaande klanten: minimaal 30 dagen vooraf melden, nieuwe lening binnen 6 maanden na aflossing; kan ook bij eerst kopen en dan verkopen',bron:'https://www.iqwoon.nl/uploads/iqwoon/files/IQWOON-Beheergids-Januari-2026.pdf'},
    {thema:'Boetevrij aflossen',tekst:'20% van de oorspronkelijke hoofdsom per kalenderjaar vergoedingsvrij; ook bij aflossen op de renteherzieningsdatum of bij verkoop en verhuizing',bron:'https://www.iqwoon.nl/uploads/iqwoon/files/IQWOON-Beheergids-Januari-2026.pdf'}
   ],bijgewerkt:'2026-10-02'},
- {naam:'HollandWoont',type:'geldverstrekker',categorieen:['hypotheek'],url:'https://hollandwoont.nl/onafhankelijk-hypotheekadvies/',logo:'img/logos/hollandwoont.png',
+ {naam:'HollandWoont',type:'geldverstrekker',categorieen:['hypotheek'],url:'https://web.archive.org/web/20250710042221/https://hollandwoont.nl/onafhankelijk-hypotheekadvies/',logo:'img/logos/hollandwoont.png',
   producten:['hypotheek met NHG','overbrugging'],
   kenmerken:[
    {tekst:'Richt zich op hypotheken met NHG',bron:'https://www.hollandwoont.nl/home-consument'},
@@ -287,11 +286,9 @@ window.PARTIJEN=[
    {thema:'Verhuisregeling',tekst:'Meegenomen rentevaste periode moet nog minimaal 1 jaar lopen; nieuwe hypotheek binnen 6 maanden na aflossing; voor een hoger bedrag geldt de actuele rente',bron:'https://www.tellius.nl/voor-klanten/verhuisregeling'},
    {thema:'Boetevrij aflossen',tekst:'Jaarlijks 10% van het oorspronkelijke bedrag vergoedingsvrij',bron:'https://www.tellius.nl/voor-klanten/extra-aflossen'}
   ],bijgewerkt:'2026-10-02'},
- {naam:'Syntrus Achmea / Achmea Mortgage Funds',type:'geldverstrekker',categorieen:['hypotheek'],url:'https://achmeabank.nl/en/news/achmea-splits-mortgage-and-real-estate-activities-of-syntrus-achmea-real-estate-and-finance',logo:'img/logos/syntrus-achmea.png',
+ {naam:'Syntrus Achmea / Achmea Mortgage Funds',type:'geldverstrekker',categorieen:['hypotheek'],url:'https://achmeabank.nl/',logo:'img/logos/syntrus-achmea.png',
   producten:['hypotheekfondsen','labels Attens en Tellius'],
   kenmerken:[
-   {tekst:'Hypotheek- en vastgoedactiviteiten zijn per 1 oktober 2024 gesplitst',bron:'https://achmeabank.nl/en/news/achmea-splits-mortgage-and-real-estate-activities-of-syntrus-achmea-real-estate-and-finance'},
-   {tekst:'Syntrus Achmea Hypotheekdiensten is dochter van Achmea Bank, samen met Achmea Hypotheken en Attens Hypotheken',bron:'https://achmeabank.nl/en/news/achmea-splits-mortgage-and-real-estate-activities-of-syntrus-achmea-real-estate-and-finance'},
    {tekst:'Achmea Mortgages (Achmea Mortgage Funds) beheert hypotheekfondsen en beleggingsportefeuilles',bron:'https://www.achmeabank.nl/nieuws/achmea-splitst-hypotheek--en-vastgoedactiviteiten-van-syntrus-achmea-real-estate-en-finance'}
   ],bijgewerkt:'2026-10-03'},
  {naam:'Lot Hypotheken',toezicht:'Geen eigen vergunning',toezichtNoot:'Hypotheeklabel dat NIBC in februari 2020 lanceerde. Vergunninghouder is NIBC Bank N.V. (DNB en AFM); de huidige eigendom is niet opnieuw gecontroleerd.',toezichtBron:'https://www.consumentenbond.nl/hypotheek/aanbieder/lot-hypotheken',type:'geldverstrekker',categorieen:['hypotheek'],url:'https://www.lothypotheken.nl/adviseur',
@@ -310,7 +307,7 @@ window.PARTIJEN=[
   kenmerken:[
    {tekst:'Alleen af te sluiten met onafhankelijk advies; Vista adviseert zelf niet',bron:'https://www.vistahypotheken.nl/veelgestelde-vragen'},
    {tekst:'Rentekorting voor woningen met een geregistreerd energielabel A, ook na verbetering tijdens de looptijd',bron:'https://www.vistahypotheken.nl/kennisbank/energielabel-a-rentekorting'},
-   {tekst:'Hypothekengids voor adviseurs met de acceptatiecriteria (versie september 2024)',bron:'https://files.vistahypotheken.nl/1727868389-hypothekengids-vista-hypotheken-versie-september-2024-1.pdf'},
+   {tekst:'Hypothekengids voor adviseurs met de acceptatiecriteria (versie september 2024)',bron:'https://web.archive.org/web/20241010020616/https://files.vistahypotheken.nl/1727868389-hypothekengids-vista-hypotheken-versie-september-2024-1.pdf'},
    {thema:'Verhuisregeling',tekst:'Rentecontract meenemen tot 6 maanden na verkoop van de oude woning',bron:'https://www.vistahypotheken.nl/kennisbank/je-rentecontract-meenemen'},
    {thema:'Boetevrij aflossen',tekst:'Uit eigen middelen onbeperkt; anders maximaal 10% per jaar vergoedingsvrij',bron:'https://www.vistahypotheken.nl/kennisbank/extra-aflossen-op-je-hypotheek'},
    {thema:'Offerte',tekst:'Renteaanbod moet binnen 3 weken getekend terug zijn',bron:'https://www.vistahypotheken.nl/veelgestelde-vragen'}
@@ -328,7 +325,6 @@ window.PARTIJEN=[
    {thema:'Duurzaamheid',tekst:'Nieuw energielabel dat vóór de 15e is verwerkt, geldt voor de rente vanaf de volgende maand',bron:'https://woonnu.nl/over-woonnu/veelgestelde-vragen/'},
    {thema:'Zzp en flexibel inkomen',tekst:'Ondernemer minimaal een jaar zelfstandig; inkomen op basis van het gemiddelde over de laatste drie kalenderjaren',bron:'https://woonnu.nl/media/rvqnigvm/202601-woonnu-acceptatiegids_final.pdf'},
    {thema:'Senioren',tekst:'Onder voorwaarden toetsing op werkelijke lasten voor senioren',bron:'https://woonnu.nl/media/rvqnigvm/202601-woonnu-acceptatiegids_final.pdf'},
-   {thema:'Bouwdepot',tekst:'Bouwdepot verbouw 12 maanden (was 6), nieuwbouw 24 maanden; onder voorwaarden verlenging',bron:'https://adviseurs.woonnu.nl/nieuwsoverzicht/verlenging-looptijd-bouwdepot-verbouw-van-6-naar-12-maanden/'}
   ],bijgewerkt:'2026-10-02'},
  {naam:'Dynamic Credit (bijBouwe)',toezicht:'AFM',toezichtNoot:'bijBouwe is het hypotheeklabel van Dynamic Credit; niet-bancaire hypotheekaanbieder met AFM-registratie, gefinancierd via beleggers/mortgage bonds.',toezichtBron:'https://www.consumentenbond.nl/hypotheek/aanbieder/bijbouwe',type:'geldverstrekker',categorieen:['hypotheek'],url:'https://www.bijbouwe.nl/over-bijbouwe/bijbouwe-hypotheek-nu-ook-via-onafhankelijke-adviseurs.aspx',logo:'img/logos/bijbouwe.png',
   producten:['hypotheek'],
@@ -426,7 +422,7 @@ window.PARTIJEN=[
    {thema:'Lijfrente-uitkering',tekst:'Direct ingaande lijfrente (tijdelijk of levenslang) is niet meer beschikbaar voor nieuwe klanten',bron:'https://www.asr.nl/verzekeringen/levensverzekeringen/direct-ingaande-lijfrente'},
    {thema:'Lijfrente',tekst:'Lijfrente beleggen met Persoonlijk pensioen, ook gericht op zzp\'ers',bron:'https://www.asr.nl/beleggen/persoonlijk-pensioen'},
    {thema:'Status',tekst:'Is sinds 4 juli 2023 moedermaatschappij van Aegon Nederland en daarmee van PPI Aegon Cappital',bron:'https://aegon.nl/sites/default/files/2024-09/24040524_Aegon_Cappital_JV_2023.pdf'},
-   {thema:'Status',tekst:'Rondde in 2021 de overname van Brand New Day PPI af',bron:'https://asrnederland.nl/-/media/files/asrnederland-nl/nieuws-en-pers/2021/20210330persbericht--asr-rondt-overname-brand-new-day-ppi-afnl.pdf'},
+   {thema:'Status',tekst:'Rondde in 2021 de overname van Brand New Day PPI af',bron:'https://web.archive.org/web/20240703214626/https://www.asrnederland.nl/-/media/files/asrnederland-nl/nieuws-en-pers/2021/20210330persbericht--asr-rondt-overname-brand-new-day-ppi-afnl.pdf'},
    {thema:'Marktpositie',tekst:'Volgens het ACM-besluit over de Aegon-overname de grootste partij in inkomensverzekeringen; NN, Achmea en De Goudse noemt de ACM als concurrenten',bron:'https://acm.nl/system/files/documents/openbare-versie-besluit-asr-aegon.pdf'}
   ],bijgewerkt:'2026-10-02'},
  {naam:'Nationale-Nederlanden',toezicht:'DNB en AFM',toezichtNoot:'NN Bank heeft een bankvergunning (art. 2:11 Wft) en valt onder toezicht van DNB en AFM. De NN-verzekeraars hebben ook een DNB-vergunning.',toezichtBron:'https://www.nn.nl/Over-Nationale-Nederlanden/Nationale-Nederlanden-Bank.htm',type:'verzekeraar',categorieen:['hypotheek','leven','inkomen','lijfrente','schade','pensioen'],url:'https://www.nn.nl/Particulier/Hypotheken.htm',logo:'img/logos/nationale-nederlanden.png',
@@ -489,7 +485,6 @@ window.PARTIJEN=[
   producten:['werkgeverspensioen','netto pensioen','lijfrente'],
   kenmerken:[
    {tekst:'Adviseursinformatie over de Wet toekomst pensioenen',bron:'https://www.zwitserleven.nl/en/adviseur/pensioenakkoord/'},
-   {tekst:'Doelgroepomschrijvingen per werkgeversproduct, zoals Nu Pensioen',bron:'https://www.zwitserleven.nl/4af8d0/siteassets/documenten/doelgroepomschrijving/nu-pensioen-doelgroepomschrijving.pdf'},
    {tekst:'Netto Pensioen voor werknemers boven de aftoppingsgrens',bron:'https://www.zwitserleven.nl/48e851/siteassets/documenten/doelgroepomschrijving/doelgroepomschrijving-zwitserleven-netto-pensioen.pdf'},
    {tekst:'Merk van Athora Netherlands',bron:'https://www.athora.nl/en/about-us/about-athora-netherlands/'},
    {thema:'Waardeoverdracht',tekst:'Geen kosten voor individuele waardeoverdracht en voor inkomende collectieve waardeoverdracht (Netto Pensioen)',bron:'https://zwitserleven.nl/4a5dc3/siteassets/documenten/adviseur/netto-pensioen/productkaart-zwitserleven-netto-pensioen-zl-nl-wtp---juli-2024.pdf'},
@@ -516,9 +511,7 @@ window.PARTIJEN=[
   producten:['ORV','keyman','compagnonsverzekering','beleggen'],
   kenmerken:[
    {tekst:'ORV alleen via een onafhankelijk financieel adviseur of Independer',bron:'https://www.scildon.nl/'},
-   {tekst:'Aparte adviseurssite (adviseur.scildon.nl)',bron:'https://adviseur.scildon.nl/binaries/content/assets/downloads/rapportage-provisieverbod.pdf'},
    {tekst:'Keyman- en compagnonsverzekering voor ondernemers',bron:'https://www.scildon.nl/overlijdensrisicoverzekering/lifestyle-orv/compagnonsverzekering'},
-   {tekst:'Informatie over de kleine keuring',bron:'https://www.scildon.nl/wp-content/uploads/2024/04/Kleine-keuring-2024.pdf'},
    {thema:'Medische acceptatie',tekst:'Digitale gezondheidsverklaring; afhankelijk van leeftijd en verzekerd bedrag ook een keuring; met een medische voorgeschiedenis soms een aangepast voorstel',bron:'https://scildon.nl/overlijdensrisicoverzekering/digitale-gezondheidsverklaring'},
    {thema:'Status',tekst:'Waard Leven is op 2 juli 2025 met Scildon gefuseerd; Waard Verzekeringen gaat verder onder de naam Scildon',bron:'https://www.scildon.nl/waard-verzekeringen'},
    {thema:'Lijfrente-uitkering',tekst:'Direct Ingaande Lijfrente: eenmalige storting wordt omgezet in periodieke uitkeringen; advies en afsluiten via een onafhankelijk adviseur',bron:'https://www.scildon.nl/aanvullend-pensioen-uitkeren/direct-ingaande-lijfrente'},
@@ -530,25 +523,24 @@ window.PARTIJEN=[
   producten:['ORV','uitvaart','lijfrente','beleggingsverzekering'],
   kenmerken:[
    {tekst:'Reaal geeft zelf geen advies en verwijst naar een financieel adviseur',bron:'https://www.reaal.nl/advies/'},
-   {tekst:'Alleen de adviseur die op de polis staat krijgt informatie over de verzekering',bron:'https://www.reaal.nl/klantenservice/antwoord/hoe-wijzig-ik-de-financieel-adviseur-op-mijn-verzekering/'},
-   {tekst:'Hersteladvies en verzekeringscheck voor beleggingsverzekeringen',bron:'https://www.reaal.nl/klantenservice/hersteladvies-en-verzekeringscheck/'},
+   {tekst:'Alleen de adviseur die op de polis staat krijgt informatie over de verzekering',bron:'https://web.archive.org/web/20210922230947/https://www.reaal.nl/klantenservice/antwoord/hoe-wijzig-ik-de-financieel-adviseur-op-mijn-verzekering/'},
+   {tekst:'Hersteladvies en verzekeringscheck voor beleggingsverzekeringen',bron:'https://web.archive.org/web/20240911191642/https://www.reaal.nl/klantenservice/hersteladvies-en-verzekeringscheck/'},
    {tekst:'Merk van Athora Netherlands',bron:'https://www.athora.nl/en/brands/reaal/'}
   ],bijgewerkt:'2026-10-03'},
  {naam:'ABP',toezicht:'DNB en AFM (pensioenfonds)',toezichtNoot:'Bedrijfstakpensioenfonds overheid en onderwijs; prudentieel toezicht DNB, gedragstoezicht AFM.',toezichtBron:'https://www.abp.nl/werkgevers/pensioen-bij-abp/engelstalige-pensioeninformatie',type:'pensioenfonds',categorieen:['pensioen'],url:'https://www.abp.nl/werkgevers/pensioen-bij-abp/engelstalige-pensioeninformatie',
   producten:['pensioen overheid en onderwijs'],
   kenmerken:[
-   {tekst:'Wettelijk communicatieplan over de overstap naar de nieuwe pensioenregeling, gepland per 1 januari 2027',bron:'https://www.abp.nl/content/dam/abp/documenten/juridisch/abp-wettelijk-communicatieplan-2025.pdf'},
    {tekst:'Werkgeversjournaal met uitleg voor werkgevers',bron:'https://www.abp.nl/content/dam/abp/documenten/handleidingen-magazines/transcript-werkgeversjournaal-16-juni-2026.pdf'},
    {tekst:'Engelstalige pensioeninformatie',bron:'https://www.abp.nl/werkgevers/pensioen-bij-abp/engelstalige-pensioeninformatie'},
    {thema:'Wtp-transitie',tekst:'Het bestuur heeft definitief besloten per 1 januari 2027 over te stappen op de nieuwe regels',bron:'https://www.abp.nl/over-abp/het-vernieuwde-pensioenstelsel'},
    {thema:'Waardeoverdracht',tekst:'Tijdens de transitie is waardeoverdracht niet altijd mogelijk of duurt langer; wie vóór 1 januari 2027 overdraagt, mist eventuele extra verhoging bij de overstap',bron:'https://www.abp.nl/uw-situatie-verandert/werk/nieuwe-baan-buiten-overheid-en-onderwijs/waardeoverdracht-van-abp'},
    {thema:'Partnerpensioen',tekst:'In de nieuwe regeling is het partnerpensioen bij overlijden voor pensioen een percentage van het salaris; het tot 2027 opgebouwde partnerpensioen blijft staan',bron:'https://www.abp.nl/over-abp/het-vernieuwde-pensioenstelsel/veelgestelde-vragen/ik-bouw-pensioen-op'}
   ],bijgewerkt:'2026-10-02'},
- {naam:'PFZW',toezicht:'DNB en AFM (pensioenfonds)',toezichtNoot:'Bedrijfstakpensioenfonds zorg en welzijn; toezicht DNB en AFM.',toezichtBron:'https://nieuwepensioenregels.pfzw.nl/slapers',type:'pensioenfonds',categorieen:['pensioen'],url:'https://nieuwepensioenregels.pfzw.nl/slapers',
+ {naam:'PFZW',toezicht:'DNB en AFM (pensioenfonds)',toezichtNoot:'Bedrijfstakpensioenfonds zorg en welzijn; toezicht DNB en AFM.',toezichtBron:'https://web.archive.org/web/20250718133304/https://nieuwepensioenregels.pfzw.nl/slapers/',type:'pensioenfonds',categorieen:['pensioen'],url:'https://web.archive.org/web/20250718133304/https://nieuwepensioenregels.pfzw.nl/slapers/',
   producten:['pensioen zorg en welzijn'],
   kenmerken:[
    {tekst:'Overgestapt naar de nieuwe pensioenregeling in januari 2026',bron:'https://www.pfzw.nl/content/dam/pfzw/web/over-ons/dit-presteren-we/kwartaalberichten/2026/persbericht-pfzw-resultaten-eerste-kwartaal-2026.pdf'},
-   {tekst:'Aparte site over de nieuwe pensioenregels per doelgroep',bron:'https://nieuwepensioenregels.pfzw.nl/slapers'},
+   {tekst:'Aparte site over de nieuwe pensioenregels per doelgroep',bron:'https://web.archive.org/web/20250718133304/https://nieuwepensioenregels.pfzw.nl/slapers/'},
    {tekst:'Levert pensioengeld voor het hypotheeklabel Attens, speciaal voor medewerkers in zorg en welzijn',bron:'https://www.pfzw.nl/over-pfzw/beleggen-voor-een-goed-pensioen/Jouw-geld-telt-voor-twee/een-hypotheek-speciaal-voor-collegas-in-zorg-en-welzijn.html'},
    {thema:'Partnerpensioen',tekst:'Partnerpensioen bij overlijden voor pensioen hangt in de nieuwe regeling niet meer af van diensttijd maar van het salaris bij overlijden',bron:'https://www.pfzw.nl/over-pfzw/nieuwe-regels/je-nieuwe-pensioenregeling.html'},
    {thema:'Waardeoverdracht',tekst:'Waardeoverdracht kan tijdelijk niet tussen een fonds dat al is overgestapt en een fonds dat nog niet over is',bron:'https://www.pfzw.nl/particulieren/pensioen-bij-ons/ik-bouw-pensioen-op/waardeoverdracht/hoe-werkt-het.html'}
@@ -574,7 +566,7 @@ window.PARTIJEN=[
   producten:['pensioen bouw en infra'],
   kenmerken:[
    {tekst:'Overgestapt naar de nieuwe pensioenregels per 1 januari 2026',bron:'https://www.bpfbouw.nl/over-bpfbouw/nieuws/2025/bpfbouw-gaat-vanaf-1-januari-2026-werken-met-de-nieuwe-regels-voor-pensioen'},
-   {tekst:'BeterExcedentregeling stopt; werkgevers kiezen met een Wft-pensioenadviseur een nieuwe aanvullende regeling',bron:'https://bpfbouw.nl/content/dam/bpfbouw/documents/pdf/werkgevers/bpfbouw_presentatie_bijeenkomst_bex_vervolgstappen_oktober%202024.pdf'},
+   {tekst:'BeterExcedentregeling stopt; werkgevers kiezen met een Wft-pensioenadviseur een nieuwe aanvullende regeling',bron:'https://web.archive.org/web/20241202195626/https://www.bpfbouw.nl/content/dam/bpfbouw/documents/pdf/werkgevers/bpfbouw_presentatie_bijeenkomst_bex_vervolgstappen_oktober%202024.pdf'},
    {tekst:'Samenvatting van het transitieplan',bron:'https://bpfbouw.nl/content/dam/bpfbouw/documenten/juridisch/bpfbouw-samenvatting-transitieplan.pdf'},
    {thema:'Waardeoverdracht',tekst:'Waardeoverdracht naar of van een ander fonds kan alleen als dat fonds ook al over is; naar een verzekeraar of PPI blijft mogelijk',bron:'https://www.bpfbouw.nl/uw-situatie-verandert/werk/waardeoverdracht/waardeoverdracht-naar-ons'},
    {thema:'Partnerpensioen',tekst:'Partnerpensioen tot 1 januari 2026 is omgezet in pensioenkapitaal; bij overlijden daarna geen onderscheid meer tussen samenwonende en gehuwde partners',bron:'https://werkgevers.bpfbouw.nl/pensioen-bij-bpfbouw/nieuwe-regels-pensioen/uw-werknemer-bouwde-pensioen-op-voor-2026'}
@@ -584,7 +576,7 @@ window.PARTIJEN=[
   kenmerken:[
    {thema:'Acceptatie',tekst:'Acceptatiegids voor adviseurs (versie juni 2026)',bron:'https://www.robuusthypotheken.nl/uploads/robuust/files/Acceptatiegids-Robuust-juni-2026.pdf'},
    {thema:'Offerte',tekst:'Renteaanbod moet binnen 3 weken worden geaccepteerd',bron:'https://www.robuusthypotheken.nl/uploads/robuust/files/Acceptatiegids-Robuust-juni-2026.pdf'},
-   {thema:'Zzp en flexibel inkomen',tekst:'NHG-hypotheek met perspectiefverklaring voor flexwerkers',bron:'https://www.robuusthypotheken.nl/hypotheek-met-perspectiefverklaring'},
+   {thema:'Zzp en flexibel inkomen',tekst:'NHG-hypotheek met perspectiefverklaring voor flexwerkers',bron:'https://web.archive.org/web/20221203062450/https://www.robuusthypotheken.nl/hypotheek-met-perspectiefverklaring'},
    {thema:'Intermediairportal',tekst:'Distributie via Conneqt, net als HollandWoont en Hypotrust',bron:'https://www.conneqt.nl/en/mortgage-labels/'}
   ],bijgewerkt:'2026-10-02'},
  {naam:'Impact Hypotheken',type:'geldverstrekker',categorieen:['hypotheek'],url:'https://impacthypotheken.nl/adviseur/oversluiten/',logo:'img/logos/impact-hypotheken.png',
@@ -628,7 +620,7 @@ window.PARTIJEN=[
    {thema:'Lijfrente',tekst:'Productkaart voor adviseurs bij de pensioenrekening beleggen',bron:'https://new.brandnewday.nl/documenten/productkaart-adviseurs-pensioenrekening-beleggen.pdf'},
    {thema:'Lijfrente-uitkering',tekst:'Productvoorwaarden van de lijfrente-uitkering staan online',bron:'https://new.brandnewday.nl/documenten/productvoorwaarden-lijfrente-uitkering.pdf/'},
    {tekst:'Nabestaandenlijfrente als apart product',bron:'https://new.brandnewday.nl/nabestaandenlijfrente/'},
-   {thema:'Status',tekst:'De premiepensioeninstelling (Brand New Day PPI) is sinds 2021 volledig van a.s.r.',bron:'https://asrnederland.nl/-/media/files/asrnederland-nl/nieuws-en-pers/2021/20210330persbericht--asr-rondt-overname-brand-new-day-ppi-afnl.pdf'}
+   {thema:'Status',tekst:'De premiepensioeninstelling (Brand New Day PPI) is sinds 2021 volledig van a.s.r.',bron:'https://web.archive.org/web/20240703214626/https://www.asrnederland.nl/-/media/files/asrnederland-nl/nieuws-en-pers/2021/20210330persbericht--asr-rondt-overname-brand-new-day-ppi-afnl.pdf'}
   ],bijgewerkt:'2026-10-02'},
  {naam:'Meesman',toezicht:'AFM',toezichtNoot:'Beleggingsonderneming en beheerder van beleggingsinstellingen met AFM-vergunning; geen bank of verzekeraar.',toezichtBron:'https://www.meesman.nl/onze-rekeningen/pensioenrekening/',type:'beleggingsinstelling',categorieen:['lijfrente'],url:'https://www.meesman.nl/onze-rekeningen/pensioenrekening/',
   producten:['pensioenrekening (lijfrente beleggen)'],
@@ -775,7 +767,7 @@ window.PARTIJEN=[
    {thema:'Duurzaamheid',tekst:'Go Green lening voor verduurzaming',bron:'https://partners.lenderspender.nl/support/lender-spender-introduceert-go-green-lening'},
    {tekst:'Partnerprogramma voor aankoopfinanciering via link of QR-code',bron:'https://www.lenderspender.nl/partners'}
   ],bijgewerkt:'2026-10-02'},
- {naam:'Ribank',toezicht:'AFM',toezichtNoot:'Financieringsmaatschappij voor de autobranche, onderdeel van Crédit Agricole Consumer Finance Nederland B.V.; aanbieden krediet onder AFM-vergunning.',toezichtBron:'https://www.leningen.nl/kredietverstrekkers/ribank/',type:'kredietverstrekker',categorieen:['krediet'],url:'https://www.ribank.nl/partners/onze_producten/financieringen.html',
+ {naam:'Ribank',toezicht:'AFM',toezichtNoot:'Financieringsmaatschappij voor de autobranche, onderdeel van Crédit Agricole Consumer Finance Nederland B.V.; aanbieden krediet onder AFM-vergunning.',toezichtBron:'https://web.archive.org/web/20191212222430/https://www.leningen.nl/kredietverstrekkers/ribank/',type:'kredietverstrekker',categorieen:['krediet'],url:'https://www.ribank.nl/partners/onze_producten/financieringen.html',
   status:'Verstrekt geen nieuwe kredieten: moederbedrijf Crédit Agricole Consumer Finance Nederland stopte per 1 oktober 2022 met nieuwe leningen en bouwt de portefeuille af (op ribank.nl zelf geen stopmelding gevonden)',statusBron:'https://fd.nl/financiele-markten/1454495/credit-agricole-trekt-zich-terug-uit-nederlandse-markt',
   producten:['Riflex (doorlopend krediet)','Ribusiness (zakelijk krediet)'],
   kenmerken:[

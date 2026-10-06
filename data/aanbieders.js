@@ -991,12 +991,10 @@ window.AANBIEDERS=[
     "telefoon": "088 886 69 00",
     "opgezocht": "2026-10-03",
     "contactbronnen": [
-      "https://www.bnpparibas.nl/en/get-in-touch-with-our-businesses/",
-      "https://www.bnpparibas-pf.nl/lenen/de-persoonlijkste-lening/geselecteerde-financieel-adviseurs"
+      "https://www.bnpparibas.nl/en/get-in-touch-with-our-businesses/"
     ],
     "toezicht": "AFM",
-    "toezichtNoot": "Nederlandse B.V. (Rotterdam) met AFM-registratie als kredietaanbieder. Het Franse moederbedrijf staat onder toezicht van de ACPR.",
-    "toezichtBron": "https://bnpparibas-pf.nl/hypotheken/voorwaarden-en-downloads/Dienstverleningsdocument%20Hypotheken"
+    "toezichtNoot": "Nederlandse B.V. (Rotterdam) met AFM-registratie als kredietaanbieder. Het Franse moederbedrijf staat onder toezicht van de ACPR."
   },
   {
     "id": "bnp-paribas-cardif",
@@ -1041,7 +1039,7 @@ window.AANBIEDERS=[
     "opgezocht": "2026-10-03",
     "contactbronnen": [
       "https://www.bnpparibascardif.nl/contact",
-      "https://www.bnpparibascardif.nl/nieuws/cardif-vernieuwt-inkomstenvalmeter"
+      "https://web.archive.org/web/20190819121628/https://www.bnpparibascardif.nl/nieuws/cardif-vernieuwt-inkomstenvalmeter"
     ],
     "toezicht": "Buitenlands toezicht en AFM",
     "toezichtNoot": "Franse verzekeraars met een Nederlands bijkantoor. Prudentieel toezicht door de ACPR, gedragstoezicht door de AFM.",
@@ -1090,8 +1088,7 @@ window.AANBIEDERS=[
       "https://portaal.bovemij.nl/"
     ],
     "toezicht": "DNB en AFM",
-    "toezichtNoot": "Nederlandse schadeverzekeraar (Nijmegen) met verzekeraarsvergunning; rapporteert aan DNB (SFCR) en staat in het AFM-register.",
-    "toezichtBron": "https://www.bovemij.nl/content/dienstenwijzerverzekeringen"
+    "toezichtNoot": "Nederlandse schadeverzekeraar (Nijmegen) met verzekeraarsvergunning; rapporteert aan DNB (SFCR) en staat in het AFM-register."
   },
   {
     "id": "bsb-volmachten",
@@ -1637,7 +1634,7 @@ window.AANBIEDERS=[
     ],
     "toezicht": "DNB en AFM",
     "toezichtNoot": "Nederlandse rechtsbijstandverzekeraar met een DNB-vergunning (nr. 145445) en registratie bij de AFM.",
-    "toezichtBron": "https://media.aonverzekeringen.nl/-/media/Files/Particulier/Verzekeringen/Rechtsbijstandverzekering/AON-TG-DAS-Rechtsbijstand-2023-01-V1.pdf"
+    "toezichtBron": "https://web.archive.org/web/20240703175850/https://media.aonverzekeringen.nl/-/media/Files/Particulier/Verzekeringen/Rechtsbijstandverzekering/AON-TG-DAS-Rechtsbijstand-2023-01-V1.pdf"
   },
   {
     "id": "de-goudse",
@@ -3059,9 +3056,7 @@ window.AANBIEDERS=[
     "bijgewerkt": "2026-10-03",
     "telefoon": "020 503 11 00",
     "opgezocht": "2026-10-03",
-    "contactbronnen": [
-      "https://www.msamlin.com/en/contact.html"
-    ],
+    "contactbronnen": [],
     "toezicht": "Buitenlands toezicht en AFM",
     "toezichtNoot": "Belgische verzekeraar (Brussel) met een Nederlands bijkantoor. Prudentieel toezicht door de Nationale Bank van België (NBB), gedrag in NL door AFM.",
     "toezichtBron": "https://www.reinsurancene.ws/belgian-regulator-approves-ms-amlins-post-brexit-eu-hub/"
@@ -3110,7 +3105,7 @@ window.AANBIEDERS=[
     ],
     "toezicht": "Geen eigen vergunning",
     "toezichtNoot": "Hypotheeklabel van DMFCO. De vergunning staat op naam van DMF Hypotheek Management B.V. (AFM-toezicht). Investeerders zijn o.a. pensioenfondsen en Achmea Bank.",
-    "toezichtBron": "https://www.achmeabank.nl/en/news/achmea-bank-treedt-toe-tot-platform-dmfco-en-investeert-in-munt-hypotheken"
+    "toezichtBron": "https://web.archive.org/web/20250211043656/https://www.achmeabank.nl/en/news/achmea-bank-treedt-toe-tot-platform-dmfco-en-investeert-in-munt-hypotheken"
   },
   {
     "id": "nationale-nederlanden",
@@ -3433,7 +3428,7 @@ window.AANBIEDERS=[
     ],
     "toezicht": "AFM",
     "toezichtNoot": "Hypotheekaanbieder (AFM-vergunning 12012721) en dochter van Rabobank. Geen eigen bankvergunning; het moederbedrijf staat onder ECB/DNB-toezicht.",
-    "toezichtBron": "https://obvion.nl/artikel-1/Rentetarieven-Obvion-Woon-Hypotheek-4-mei-2021"
+    "toezichtBron": "https://web.archive.org/web/20240903131756/https://www.obvion.nl/artikel-1/Rentetarieven-Obvion-Woon-Hypotheek-4-mei-2021"
   },
   {
     "id": "orange-credit",
@@ -4023,7 +4018,7 @@ window.AANBIEDERS=[
     "omschrijving": "Voorbeeldprofiel met fictieve tekst. SocioHypotheek heeft deze pagina niet aangeleverd. Zodra SocioHypotheek meedoet, staan hier de eigen omschrijving, het nieuws, de documenten en het extranet voor adviseurs over hypotheken.",
     "website": "https://www.sociohypotheek.nl/",
     "extranet": {
-      "url": "https://www.sociohypotheek.nl/adviseursportaal/",
+      "url": "https://web.archive.org/web/20260515164551/https://www.sociohypotheek.nl/adviseursportaal/",
       "naam": "Adviseursportaal"
     },
     "nieuws": [
@@ -4137,7 +4132,7 @@ window.AANBIEDERS=[
     "opgezocht": "2026-10-03",
     "contactbronnen": [
       "https://www.surebusiness.nl/contact",
-      "https://www.surebusiness.nl/over-ons/vragen-of-klachten",
+      "https://web.archive.org/web/20251214232038/https://www.surebusiness.nl/over-ons/vragen-of-klachten",
       "https://surenet.surebusiness.nl/document/push/?voorwaardeid=172"
     ],
     "toezicht": "AFM",
@@ -4183,7 +4178,6 @@ window.AANBIEDERS=[
     "telefoon": "020 606 58 58",
     "opgezocht": "2026-10-03",
     "contactbronnen": [
-      "https://achmeabank.nl/en/news/achmea-splits-mortgage-and-real-estate-activities-of-syntrus-achmea-real-estate-and-finance",
       "https://www.syntrusachmeahypotheken.nl/service/contact",
       "https://www.syntrusachmeahypotheken.nl/voor-adviseurs/adviseursportaal-en-mijn-leninginzicht",
       "https://www.syntrusachmeahypotheken.nl/voor-adviseurs/iets-voorleggen-of-bespreken"
@@ -4369,7 +4363,7 @@ window.AANBIEDERS=[
     ],
     "toezicht": "AFM",
     "toezichtNoot": "Treedt op als gevolmachtigd agent van UVM Verzekeringsmaatschappij N.V. (risicodrager binnen ANWB-groep, zelf onder DNB en AFM); Unigarant zelf alleen AFM. Het AFM-nummer komt uit een zoeksamenvatting en is niet in het register gecontroleer",
-    "toezichtBron": "https://www.unigarant.nl/globalassets/media/voorwaarden/unigarant/auto_aut_uge.pdf"
+    "toezichtBron": "https://web.archive.org/web/20240616191450/https://www.unigarant.nl//globalassets/media/voorwaarden/unigarant/auto_aut_uge.pdf"
   },
   {
     "id": "vcn-hypotheken",
@@ -4731,7 +4725,7 @@ window.AANBIEDERS=[
       },
       {
         "titel": "Acceptatievoorwaarden Vrij Leven (januari 2026)",
-        "url": "https://www.vrijlevenhypotheek.nl/assets/uploads/2026/01/Acceptatiegids-Vrij-Leven-Januari-2026-definitief-1.pdf",
+        "url": "https://web.archive.org/web/20260213142254/https://www.vrijlevenhypotheek.nl/assets/uploads/2026/01/Acceptatiegids-Vrij-Leven-Januari-2026-definitief-1.pdf",
         "soort": "acceptatiegids",
         "bijgewerkt": "2026-10-04"
       },

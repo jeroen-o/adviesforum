@@ -1,0 +1,25 @@
+name: Dode links opzoeken
+# Handmatig: zoekt voor de links in docs/dode-links.txt de archiefversie in het Internet Archive.
+# Daarna: resultaat ophalen (tak dode-links-resultaat) naar docs/dode-links-archief.tsv en node tools/dode-links-vervangen.js.
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  zoek:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+      - run: node tools/archief-zoeken.js 20261001 | tee archief.tsv
+      # Resultaat als bestand op een eigen tak, zodat het buiten Actions op te halen is.
+      - name: Bewaar resultaat op tak dode-links-resultaat
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          BLOB=$(git hash-object -w archief.tsv)
+          TREE=$(printf '100644 blob %s\tarchief.tsv\n' "$BLOB" | git mktree)
+          COMMIT=$(git commit-tree "$TREE" -m "Archiefversies dode links ${GITHUB_SHA::7}")
+          git push -f origin "$COMMIT:refs/heads/dode-links-resultaat"

@@ -235,7 +235,7 @@ Twijfelpunt: de zoekresultaten vermeldden dat de zorgplichtschending is vastgest
 
  {id:'k109',cat:'verz',titel:'Lessen uit Kifid-uitspraken: mededelingsplicht en de rol van de tussenpersoon',auteur:'u8',datum:'2026-10-03T09:30:00',herzienVoor:'2027-04-02',bron:null,gecontroleerd:false,
   kw:'Kifid uitspraak mededelingsplicht 7:928 BW gezondheidsverklaring aanvraagformulier samen invullen tussenpersoon opzet tot misleiding toerekening 2025-0701 2014-363 2017-735',
-  links:[{titel:'Kifid 2025-0701 (Geschillencommissie)',url:'https://www.kifid.nl/media/4lhgah1d/uitspraak-2025-0701-bindend.pdf'},{titel:'Kifid 2014-363',url:'https://www.kifid.nl/nieuws/judgement/uitspraak-2014-363-bindend/'},{titel:'Kifid 2017-735',url:'https://www.kifid.nl/media/oh0hadhn/uitspraak_2017-735.pdf'}],
+  links:[{titel:'Kifid 2025-0701 (Geschillencommissie)',url:'https://www.kifid.nl/media/4lhgah1d/uitspraak-2025-0701-bindend.pdf'},{titel:'Kifid 2017-735',url:'https://www.kifid.nl/media/oh0hadhn/uitspraak_2017-735.pdf'}],
   body:`Vult een tussenpersoon samen met de klant een aanvraag of gezondheidsverklaring in, dan blijft de klant tegenover de verzekeraar verantwoordelijk voor de juistheid. Een verkeerd advies van de tussenpersoon kan dan een zaak worden tussen klant en tussenpersoon.
 
 ## Uitspraak 2025-0701 (Geschillencommissie, bindend advies)
@@ -261,7 +261,7 @@ Twijfelpunt: de zaken 2014-363 en 2017-735 zijn bevestigd via korte zoekresultat
 
  {id:'k110',cat:'comp',titel:'Lessen uit Kifid-uitspraken: execution only en afwijken van advies',auteur:'u8',datum:'2026-10-03T09:40:00',herzienVoor:'2027-04-02',bron:null,gecontroleerd:false,
   kw:'Kifid uitspraak execution only zonder advies kennis- en ervaringstoets dienstverleningsovereenkomst afwijkend advies klant wijkt af ondertekening u wijkt af van ons advies 2021-0518 2017-480 2016-440 2011-178',
-  links:[{titel:'Kifid 2021-0518 (Geschillencommissie)',url:'https://www.kifid.nl/media/ckicxmod/uitspraak-2021-0518.pdf'},{titel:'Kifid 2017-480',url:'https://www.kifid.nl/judgement/uitspraak-2017-480-bindend/'},{titel:'Kifid 2016-440',url:'https://www.kifid.nl/media/3munrexm/uitspraak_2016-440__bindend_.pdf'},{titel:'Kifid 2011-178',url:'https://www.kifid.nl/media/twlbty2a/uitspraak_2011-178.pdf'}],
+  links:[{titel:'Kifid 2021-0518 (Geschillencommissie)',url:'https://www.kifid.nl/media/ckicxmod/uitspraak-2021-0518.pdf'},{titel:'Kifid 2016-440',url:'https://www.kifid.nl/media/3munrexm/uitspraak_2016-440__bindend_.pdf'},{titel:'Kifid 2011-178',url:'https://www.kifid.nl/media/twlbty2a/uitspraak_2011-178.pdf'}],
   body:`Een klant mag zonder advies een product afnemen of bewust afwijken van jouw advies. Kifid accepteert dat, mits je kunt aantonen dat de klant wist wat hij deed. Het bewijs zit in je dossier.
 
 ## Uitspraak 2021-0518 (Geschillencommissie, niet-bindend advies)
@@ -290,7 +290,7 @@ Twijfelpunt: 2011-178 en 2016-440 zijn oudere uitspraken, bevestigd via korte zo
 
  {id:'k111',cat:'comp',titel:'Lessen uit Kifid-uitspraken: advieskosten, taxatiekosten en wat je vooraf afspreekt',auteur:'u8',datum:'2026-10-03T09:50:00',herzienVoor:'2027-04-02',bron:null,gecontroleerd:false,
   kw:'Kifid uitspraak advieskosten nota declaratie adviesrapport niet ontvangen taxatiekosten vergoeden IB-aangifte opdrachtbevestiging dienstverleningsovereenkomst provisie 2017-282 2026-0772 2017-629',
-  links:[{titel:'Kifid 2017-282',url:'https://www.kifid.nl/judgement/uitspraak-2017-282-bindend/'},{titel:'Kifid 2026-0772 (Geschillencommissie)',url:'https://www.kifid.nl/media/4fuofrns/uitspraak-2026-0772-bindend.pdf'},{titel:'Kifid 2017-629 (Geschillencommissie)',url:'https://www.kifid.nl/media/launsjyz/uitspraak_2017-629.pdf'}],
+  links:[{titel:'Kifid 2017-282',url:'https://web.archive.org/web/20200930041219/https://www.kifid.nl/judgement/uitspraak-2017-282-bindend/'},{titel:'Kifid 2026-0772 (Geschillencommissie)',url:'https://www.kifid.nl/media/4fuofrns/uitspraak-2026-0772-bindend.pdf'},{titel:'Kifid 2017-629 (Geschillencommissie)',url:'https://www.kifid.nl/media/launsjyz/uitspraak_2017-629.pdf'}],
   body:`Geschillen over de nota zijn een vaste categorie bij Kifid. De rode draad: wat je vooraf schriftelijk afspreekt, is leidend, en kosten die de klant maakt door jouw onzorgvuldigheid kunnen bij jou terechtkomen.
 
 ## Uitspraak 2017-282 (bindend advies)

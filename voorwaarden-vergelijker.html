@@ -2580,7 +2580,7 @@ function dossierCel(l,c){
   if(!cel.v) return '<td><i class="nl">nog in te vullen</i></td>';
   const bol = cel.t ? '<span class="tint" style="background:' + TINT_KLEUR[cel.t] + '"></span>' : '';
   const status = cel.gec ? '<span class="st ok">✓ geverifieerd op de site van de geldverstrekker</span>' : cel.nv ? '<span class="st nv">nog niet geverifieerd</span>' : '<span class="st ds">indicatief (dataset)</span>';
-  const bron = Array.isArray(cel.bron) && cel.bron.length ? '<span class="br">Bron: ' + cel.bron.map(u=>{ const v = veiligeUrl(u); return v ? '<a href="' + esc(v) + '">' + esc(v) + '</a> (<a href="' + esc('https://web.archive.org/web/20261004/' + v) + '">archief</a>)' : ''; }).filter(Boolean).join('<br>') + '</span>' : '';
+  const bron = Array.isArray(cel.bron) && cel.bron.length ? '<span class="br">Bron: ' + cel.bron.map(u=>{ const v = veiligeUrl(u); return v ? '<a href="' + esc(v) + '">' + esc(v) + '</a>' + (/^https:\/\/web\.archive\.org\//.test(v) ? ' (archiefversie)' : ' (<a href="' + esc('https://web.archive.org/web/20261004/' + v) + '">archief</a>)') : ''; }).filter(Boolean).join('<br>') + '</span>' : '';
   const oud = cel.oud ? '<span class="st nv">bron ouder dan 6 maanden</span>' : '';
   return '<td>' + bol + esc(cel.v.replace(/ \(nog niet geverifieerd\)$/,'')) + status + oud + bron + '</td>';
 }

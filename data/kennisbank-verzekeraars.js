@@ -264,7 +264,7 @@ Rijksoverheid, wetten.overheid.nl (WAM, Implementatiewet zesde richtlijn), RDW, 
   links:[
    {titel:'Verbond: reis (verzekeringsthema)',url:'https://www.verzekeraars.nl/verzekeringsthemas/schade/reis'},
    {titel:'Verbond: Convenant Samenloop Reis- en Zorgverzekeringen',url:'https://www.verzekeraars.nl/branche/zelfreguleringsoverzicht-digiwijzer/convenant-samenloop-reis-en-zorgverzekeringen'},
-   {titel:'Verbond: zomer 2025, één op de tien zonder reisverzekering',url:'https://www.verzekeraars.nl/publicaties/actueel/zomer-2025-e%C3%A9n-op-de-tien-nederlanders-gaat-zonder-reisverzekering-op-pad'},
+   {titel:'Verbond: zomer 2025, één op de tien zonder reisverzekering',url:'https://web.archive.org/web/20250911155210/https://www.verzekeraars.nl/publicaties/actueel/zomer-2025-e%C3%A9n-op-de-tien-nederlanders-gaat-zonder-reisverzekering-op-pad'},
    {titel:'Verbond: op WK-reis naar de Verenigde Staten, wat is verzekerd?',url:'https://www.verzekeraars.nl/publicaties/actueel/op-wk-reis-naar-de-verenigde-staten-wat-is-wel-en-niet-verzekerd'}
   ],
   body:`De reisverzekering lijkt een eenvoudig product, maar de waarde zit in hulpverlening en in de aanvulling op de zorgverzekering. Volgens het Verbond ging in de zomer van 2025 ongeveer een op de tien Nederlanders zonder reisverzekering op reis.
@@ -394,7 +394,7 @@ Rijksoverheid (acceptatieplicht, eigen risico, overstappen, aanvullende verzeker
   kw:'AVB aansprakelijkheidsverzekering bedrijven BAV beroepsaansprakelijkheid bedrijfsschade bedrijfsschadeverzekering uitkeringstermijn brutowinst bedrijfsinventaris goederen opstal zakelijk zzp mkb contractstermijn 36 maanden geïnformeerde verlenging silent cyber claims made loss occurrence',
   links:[
    {titel:'Verbond: aansprakelijkheid en cyber (verzekeringsthema\'s)',url:'https://www.verzekeraars.nl/verzekeringsthemas'},
-   {titel:'Verbond: gedragscode verlenging en contractstermijnen zakelijke schade- en inkomensverzekeringen',url:'https://www.verzekeraars.nl/branche/zelfregulering/overzicht-zelfregulering/verlenging-en-contractstermijnen-zakelijke-schade-en-inkomensverzekeringen-gedragscode'},
+   
    {titel:'Verbond: aandachtspunten bij stille (cyber)dekkingen in traditionele polissen (pdf, 2023)',url:'https://www.verzekeraars.nl/media/boylmvia/white-paper-silent-cyber-docx-2.pdf'},
    {titel:'Scan: bedrijfsverzekeringen',url:'scan-bedrijfsverzekeringen.html'}
   ],
@@ -580,11 +580,11 @@ Verbond van Verzekeraars (overstroming en droogte, evaluatie Wts, publiek-privat
  {id:'k252',cat:'verz',titel:'Fraude en het incidentenregister: PIFI, EVR, CIS en wat de adviseur moet weten',auteur:'u3',datum:'2026-10-03T13:00:00',herzienVoor:'2027-04-02',bron:null,gecontroleerd:false,
   kw:'verzekeringsfraude Protocol Incidentenwaarschuwingssysteem Financiële Instellingen PIFI 2026 incidentenregister intern verwijzingsregister IVR extern verwijzingsregister EVR hit no hit CBV Centrum Bestrijding Verzekeringscriminaliteit Stichting CIS claimdatabase inzage AVG Gedragscode Persoonlijk Onderzoek vervallen 2024 Gedragscode Verwerking Persoonsgegevens',
   links:[
-   {titel:'NVB: PIFI 2026 (pdf)',url:'https://www.nvb.nl/media/su4lyvgn/protocol-incidenten-waarschuwingssysteem-financi%C3%ABle-instellingen-2026.pdf'},
+   {titel:'NVB: PIFI 2026 (pdf)',url:'https://web.archive.org/web/20260514100116/https://www.nvb.nl/media/su4lyvgn/protocol-incidenten-waarschuwingssysteem-financi%C3%ABle-instellingen-2026.pdf'},
    {titel:'Verbond: verzekeringscriminaliteit',url:'https://www.verzekeraars.nl/branche/verzekeringscriminaliteit'},
    {titel:'Verbond: meer verzekeringsfraude vastgesteld in 2024 (CBV-factsheet najaar 2025)',url:'https://www.verzekeraars.nl/publicaties/actueel/meer-verzekeringsfraude-vastgesteld-in-2024-opkomst-van-ai-zichtbaar'},
    {titel:'Verbond: elke onterechte frauderegistratie is er één te veel',url:'https://www.verzekeraars.nl/publicaties/actueel/elke-onterechte-frauderegistratie-is-er-een-te-veel'},
-   {titel:'Verbond: Gedragscode Persoonlijk Onderzoek (vervallen per 2024)',url:'https://www.verzekeraars.nl/branche/zelfreguleringsoverzicht-digiwijzer/gedragscode-persoonlijk-onderzoek'}
+   {titel:'Verbond: Gedragscode Persoonlijk Onderzoek (vervallen per 2024)',url:'https://web.archive.org/web/20240803202039/https://www.verzekeraars.nl/branche/zelfreguleringsoverzicht-digiwijzer/gedragscode-persoonlijk-onderzoek'}
   ],
   body:`Verzekeringsfraude raakt het advies op twee manieren: een klant kan bij een verzekeraar geregistreerd staan, en de adviseur kan zelf een fraudesignaal tegenkomen. Voor het incidentenbeleid van het eigen kantoor (SIRA, meldplichten) verwijzen we naar de compliance-reeks k160-k167 en k66.
 
