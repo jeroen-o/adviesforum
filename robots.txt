@@ -1,3 +1,8 @@
+# Let op: crawlers lezen robots.txt alleen op de domeinroot (https://jeroen-o.github.io/robots.txt).
+# Dit bestand staat in /adviesforum/ en wordt daarom door zoekmachines genegeerd; het geldt alleen als iemand dit pad direct opvraagt.
+# De site blijft uit Google en Bing via <meta name="googlebot"> en <meta name="bingbot"> met noindex, follow in elke pagina
+# (tools/zoekmachines.js en tools/build-static.js). Zet hier geen "Disallow: /": dan kan Google die noindex niet meer lezen
+# en blokkeer je ook de Intercom-crawler.
 User-agent: *
 Allow: /
 Disallow: /adviesforum/beheer-code.html
