@@ -25,6 +25,7 @@ test('geen verkeer naar Hypotheekbond tot je een tool opent', async ({ page }) =
   await expect(f).toHaveAttribute('src', 'https://90abc279-e47b-44fa-be93-b69768c31486.tools.hypotheekbond.nl/maxmortgage');
   await expect(f).toHaveAttribute('data-hypotheekbond-tool', 'maxmortgage-iframe');
   await expect(f).toHaveAttribute('referrerpolicy', 'origin');
+  expect(await f.evaluate(e => e.getBoundingClientRect().height)).toBeGreaterThanOrEqual(900);
   await expect(kaart.locator('script[src="https://s.hstatic.nl/js/iframe/iframeResizer.min.js"]')).toHaveCount(1);
   await expect(page).toHaveURL(/#tool=maxmortgage$/);
   await kaart.getByRole('button', { name: 'Sluit tool' }).click();
