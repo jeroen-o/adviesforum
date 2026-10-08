@@ -297,6 +297,7 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
 }
 </style>
 <link rel="stylesheet" href="css/sitenav.css">
+<link rel="stylesheet" href="css/huisstijl.css">
 </head>
 <body>
 <a class="skiplink" href="#inhoud">Naar de inhoud</a>
@@ -1468,7 +1469,7 @@ function pasControleToe(){
         cel.nv = true; nv++;
       } else {
         cel.bron = (w.bron||[]).slice(0,5);
-        cel.noot = (w.dubbel==='bevestigd' ? '2× gecontroleerd' : '1× gecontroleerd') + ' op ' + datumKort(x.gecontroleerd) +
+        cel.noot = (w.dubbel==='drievoudig' ? '3× gecontroleerd' : w.dubbel==='bevestigd' ? '2× gecontroleerd' : '1× gecontroleerd') + ' op ' + datumKort(x.gecontroleerd) +
           ' · bron: site van de geldverstrekker · zekerheid ' + w.zekerheid + (w.brondatum ? ' · bron van ' + w.brondatum : '') + ' · ' +
           (w.status==='gewijzigd' ? 'gewijzigd t.o.v. oorspronkelijke dataset' : w.status==='nieuw' ? 'nieuw ingevuld' : 'oorspronkelijke waarde bevestigd') + '.';
         cel.gec = true; gv++;

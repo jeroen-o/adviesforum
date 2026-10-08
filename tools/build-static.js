@@ -17,7 +17,7 @@ const fs = require('fs');
 const path = require('path');
 const vm = require('vm');
 const { execFileSync } = require('child_process');
-const { navHtml, CSS_LINK } = require('./sitenav');
+const { navHtml, CSS_LINK, HUISSTIJL_LINK } = require('./sitenav');
 
 const ROOT = path.join(__dirname, '..');
 const BASE = 'https://adviesforum.nl/';
@@ -185,6 +185,7 @@ ${css(pre)}${extraCss ? '\n' + extraCss : ''}
 </style>
 ${[...jsonld.map(ld), ...bc].join('\n')}
 <link rel="stylesheet" href="${pre}${CSS_LINK}">
+<link rel="stylesheet" href="${pre}${HUISSTIJL_LINK}">
 </head>
 <body>
 <a class="skiplink" href="#inhoud">Naar de inhoud</a>
