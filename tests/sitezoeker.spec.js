@@ -24,3 +24,13 @@ test('zoekbalk staat ook op gegenereerde pagina\'s en verwijst naar de homepage'
   await page.goto('/faq/');
   await expect(page.locator('.sitenav-zoek')).toHaveAttribute('action', '../index.html');
 });
+
+test('tabblad Voorwaarden vergelijken staat tussen Forum en Kennisbank en opent de vergelijker', async ({ page }) => {
+  await page.goto('/index.html');
+  const tabs = page.locator('#tabs .tab');
+  await expect(tabs.nth(0)).toContainText('Forum');
+  await expect(tabs.nth(1)).toHaveText('Voorwaarden vergelijken');
+  await expect(tabs.nth(2)).toContainText('Kennisbank');
+  await tabs.nth(1).click();
+  await expect(page).toHaveURL(/voorwaarden-vergelijker\.html$/);
+});

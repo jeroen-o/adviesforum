@@ -128,6 +128,7 @@ h2[id],h3[id],details[id],.guide [id]{scroll-margin-top:calc(var(--kop-h,170px) 
 @media (max-height:500px){.sticky-kop{position:static}h2[id],h3[id],details[id],.guide [id]{scroll-margin-top:12px}}
 @media (max-width:700px){.sticky-kop .top .wrap{padding:8px 14px;gap:8px;flex-wrap:wrap}.sticky-kop .top .search{order:10;flex:1 1 100%}.sticky-kop .top .who{margin-left:auto}.sticky-kop .top .who .btn,.sticky-kop .top>.wrap>.btn{padding:7px 10px;font-size:12px}.sticky-kop .top .search input{padding:8px 12px}.sticky-kop .tabs .wrap{padding:6px 14px}.sticky-kop .tab{padding:6px 12px}.sticky-kop .logo{height:26px;width:auto}.sticky-kop .brand-sep,.sticky-kop .brand-name{display:none}}
 .tabs .wrap{max-width:1240px;margin:0 auto;padding:10px 20px;display:flex;gap:8px;overflow-x:auto}
+a.tab{text-decoration:none;display:inline-flex;align-items:center}
 .tab{padding:8px 16px;border:1px solid var(--border);border-radius:999px;background:var(--surface);font-weight:600;color:var(--text);cursor:pointer;white-space:nowrap}
 .tab:hover{border-color:var(--text)}
 .tab.on{background:var(--yellow);border-color:var(--yellow);color:var(--black)}
@@ -1219,8 +1220,8 @@ function renderShell(){
   $('#who').innerHTML=S.me?`<span class="ikn">${esc(me().naam)}</span>${verif(me())}<button class="btn btn-line btn-sm" data-act="uitloggen">Uitloggen</button>`:`<button class="btn btn-line btn-sm" data-act="inloggen">Inloggen adviseur</button>`;
   const open=VRAGEN.filter(v=>vraagStatus(v)==='open').length;
   $('#tabs').innerHTML=[
-    ['forum','Forum',VRAGEN.length],['kennisbank','Kennisbank',KENNIS_GELADEN?ARTIKELEN.length:null],['faq','FAQ',FAQ_GELADEN?FAQ.length:null],['hulpmiddelen','Hulpmiddelen',HULP.length],['begrippen','Begrippen A-Z',BEGRIPPEN.length],['adviseurs','Adviseurs',USERS.length],['favorieten','★ Mijn favorieten',FAV.fav.length||null],['handleiding','Handleiding',null],['voorwie','Voor wie',null]
-  ].map(([id,t,n])=>`<button class="tab ${S.tab===id?'on':''}" data-act="tab" data-tab="${id}">${t}${n!=null?`<span class="n">${fmtInt(n)}</span>`:''}</button>`).join('')
+    ['forum','Forum',VRAGEN.length],['vergelijker','Voorwaarden vergelijken',null,'voorwaarden-vergelijker.html'],['kennisbank','Kennisbank',KENNIS_GELADEN?ARTIKELEN.length:null],['faq','FAQ',FAQ_GELADEN?FAQ.length:null],['hulpmiddelen','Hulpmiddelen',HULP.length],['begrippen','Begrippen A-Z',BEGRIPPEN.length],['adviseurs','Adviseurs',USERS.length],['favorieten','★ Mijn favorieten',FAV.fav.length||null],['handleiding','Handleiding',null],['voorwie','Voor wie',null]
+  ].map(([id,t,n,href])=>href?`<a class="tab" href="${href}">${t}</a>`:`<button class="tab ${S.tab===id?'on':''}" data-act="tab" data-tab="${id}">${t}${n!=null?`<span class="n">${fmtInt(n)}</span>`:''}</button>`).join('')
   +(open?`<span style="margin-left:auto;align-self:center;font-size:13px;color:var(--muted);padding:0 8px;white-space:nowrap">${plural(open,'onbeantwoorde vraag','onbeantwoorde vragen')}</span>`:'');
 }
 
