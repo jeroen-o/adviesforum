@@ -18,7 +18,7 @@
 <style>
 :root{
   --geel:#F68712;--geel-donker:#D9700A;--geel-zacht:#FEF0E2;
-  --zwart:#181A3D;--tekst:#15162F;--grijs:#55576F;--lijn:#E3E3EC;--vlak:#F7F7FA;--wit:#fff;
+  --zwart:#26306E;--tekst:#15162F;--grijs:#55576F;--lijn:#E3E3EC;--vlak:#F7F7FA;--wit:#fff;
   --rood:#9E2F45;--rood-zacht:#FFF1F0;--lijn-k:#B08800;
 }
 *{box-sizing:border-box}
@@ -44,7 +44,7 @@ button{font-family:inherit}
 .grid{display:grid;grid-template-columns:minmax(0,420px) minmax(0,1fr);gap:20px;align-items:start}
 .card{background:var(--wit);border:1px solid var(--lijn);border-radius:14px;padding:20px 22px;min-width:0}
 .card h2{margin:0 0 16px;font-size:18px;font-weight:800;color:var(--zwart)}
-.card h2 .num{display:inline-block;width:26px;height:26px;line-height:26px;text-align:center;background:var(--geel);color:#181A3D;border-radius:50%;font-size:13px;margin-right:8px;vertical-align:1px}
+.card h2 .num{display:inline-block;width:26px;height:26px;line-height:26px;text-align:center;background:var(--geel);color:#26306E;border-radius:50%;font-size:13px;margin-right:8px;vertical-align:1px}
 label,.lbl{display:block;font-size:13px;color:var(--zwart);margin-bottom:4px;font-weight:600}
 input[type=text],input[type=date],input[type=month]{width:100%;min-width:0;padding:9px 11px;border:1px solid #D0D1DC;border-radius:8px;font-size:15px;background:var(--wit);color:var(--tekst);font-family:inherit}
 input:focus{outline:2px solid var(--geel);outline-offset:1px;border-color:var(--zwart)}
@@ -59,7 +59,7 @@ input:focus{outline:2px solid var(--geel);outline-offset:1px;border-color:var(--
 .euro{position:relative}
 .euro input{padding-left:26px;text-align:right}
 .euro::before{content:"€";position:absolute;left:11px;top:50%;transform:translateY(-50%);color:var(--grijs);font-size:14px}
-.knop{width:100%;padding:13px;border:0;border-radius:999px;background:var(--geel);color:#181A3D;font-size:16px;font-weight:800;cursor:pointer}
+.knop{width:100%;padding:13px;border:0;border-radius:999px;background:var(--geel);color:#26306E;font-size:16px;font-weight:800;cursor:pointer}
 .knop:hover{background:var(--geel-donker)}
 .knop2{padding:8px 18px;border:1px solid var(--zwart);border-radius:999px;background:var(--wit);color:var(--zwart);font-size:13.5px;font-weight:700;cursor:pointer}
 .knop2:hover{background:var(--vlak)}
@@ -67,7 +67,7 @@ input:focus{outline:2px solid var(--geel);outline-offset:1px;border-color:var(--
 .resvak{background:var(--vlak);border:1px solid var(--lijn);border-radius:12px;padding:14px 16px;min-width:0}
 .resvak .l{font-size:12px;color:var(--grijs);font-weight:600}
 .resvak .w{font-size:23px;font-weight:800;margin-top:2px;color:var(--zwart);overflow-wrap:anywhere}
-.resvak.acc{background:#181A3D;border-color:#181A3D}
+.resvak.acc{background:#26306E;border-color:#26306E}
 .resvak.acc .l{color:#FFE680}
 .resvak.acc .w{color:#fff}
 .resvak .ind{display:block;font-size:11px;font-weight:700;color:#F68712;margin-top:2px}
@@ -117,17 +117,17 @@ a.terug{display:inline-block;padding:8px 0}
 </style>
 <style id="a11y">
 /* Toegankelijkheid en donkere modus (zie docs/toegankelijkheid.md). Staat in een eigen <style>, zodat printvensters licht blijven. */
-.skiplink{position:absolute;left:12px;top:-200px;z-index:10000;background:#181A3D;color:#fff;padding:10px 16px;border-radius:8px;font-weight:700;text-decoration:none;font-family:Segoe UI,Roboto,Helvetica Neue,Arial,system-ui,sans-serif}
+.skiplink{position:absolute;left:12px;top:-200px;z-index:10000;background:#26306E;color:#fff;padding:10px 16px;border-radius:8px;font-weight:700;text-decoration:none;font-family:Segoe UI,Roboto,Helvetica Neue,Arial,system-ui,sans-serif}
 .skiplink:focus{top:12px;outline:3px solid #F68712;outline-offset:2px}
 main[tabindex="-1"]:focus{outline:none}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus,textarea:focus,summary:focus-visible,[tabindex]:not([tabindex="-1"]):focus-visible{outline:3px solid #181A3D!important;outline-offset:2px!important}
+a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus,textarea:focus,summary:focus-visible,[tabindex]:not([tabindex="-1"]):focus-visible{outline:3px solid #26306E!important;outline-offset:2px!important}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 @media print{.skiplink{display:none}}
 @media screen and (prefers-color-scheme:dark){
 :root:not([data-theme="light"]){color-scheme:dark}
-:root:not([data-theme="light"]){--geel-zacht:#3F3018;--zwart:#F1F1F6;--tekst:#F1F1F6;--grijs:#C3C4D3;--lijn:#1E2040;--vlak:#181A3D;--wit:#12132B;--rood:#e9a29b;--rood-zacht:#3f1a18;--lijn-k:#F68712}
-:root:not([data-theme="light"]) body{color:#F1F1F6;background:#181A3D}
+:root:not([data-theme="light"]){--geel-zacht:#3F3018;--zwart:#F1F1F6;--tekst:#F1F1F6;--grijs:#C3C4D3;--lijn:#1E2040;--vlak:#26306E;--wit:#12132B;--rood:#e9a29b;--rood-zacht:#3f1a18;--lijn-k:#F68712}
+:root:not([data-theme="light"]) body{color:#F1F1F6;background:#26306E}
 :root:not([data-theme="light"]) .balk{background:#23254A;color:#fff}
 :root:not([data-theme="light"]) .balk a{color:#fff}
 :root:not([data-theme="light"]) .kop{background:#12132B;color:#F1F1F6;border-bottom:3px solid #F68712}
@@ -139,8 +139,8 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
 :root:not([data-theme="light"]) .card{background:#12132B;border:1px solid #1E2040}
 :root:not([data-theme="light"]) input[type=text],:root:not([data-theme="light"]) input[type=date],:root:not([data-theme="light"]) input[type=month]{background:#12132B;color:#F1F1F6;border:1px solid #55576F}
 :root:not([data-theme="light"]) .seg button{background:#12132B;color:#F1F1F6;border:1px solid #55576F}
-:root:not([data-theme="light"]) .seg button.act{background:#F68712;color:#181A3D;border-color:#F68712}
-:root:not([data-theme="light"]) .knop{background:#F68712;color:#181A3D}
+:root:not([data-theme="light"]) .seg button.act{background:#F68712;color:#26306E;border-color:#F68712}
+:root:not([data-theme="light"]) .knop{background:#F68712;color:#26306E}
 :root:not([data-theme="light"]) .knop2{background:#12132B;color:#F1F1F6;border:1px solid #7C7E95}
 :root:not([data-theme="light"]) .resvak{background:#1C1E3A;border:1px solid #1E2040}
 :root:not([data-theme="light"]) .resvak.acc{background:#23254A;border:1px solid #F68712}
@@ -150,7 +150,7 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
 :root:not([data-theme="light"]) .voet{color:#C3C4D3}
 :root:not([data-theme="light"]) .voet a{color:#F1F1F6}
 :root:not([data-theme="light"]) a:focus-visible,:root:not([data-theme="light"]) button:focus-visible,:root:not([data-theme="light"]) input:focus,:root:not([data-theme="light"]) input:focus-within,:root:not([data-theme="light"]) select:focus,:root:not([data-theme="light"]) textarea:focus,:root:not([data-theme="light"]) summary:focus-visible,:root:not([data-theme="light"]) [tabindex]:not([tabindex="-1"]):focus-visible{outline-color:#F68712!important}
-:root:not([data-theme="light"]) .skiplink{background:#F68712;color:#181A3D}
+:root:not([data-theme="light"]) .skiplink{background:#F68712;color:#26306E}
 :root:not([data-theme="light"]) .skiplink:focus{outline-color:#F1F1F6}
 }
 </style>
@@ -906,9 +906,9 @@ const TARIEF_DATA = {"q":{"q_M_NR":"ABDUFZAxYj8AsJTB0ZZhPwBtUsJS/2A/AFLSBzxrYD8A
     w.document.write('<!doctype html><html lang="nl"><head><meta charset="utf-8"><title>Indicatieve ORV-premie – Adviesforum</title>'
       + '<style>body{font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#15162F;margin:24px}'
       + 'h1{font-size:18px;margin:0 0 2px}h2{font-size:12px;color:#55576F;font-weight:400;margin:0 0 12px}'
-      + '.stempel{display:inline-block;background:#181A3D;color:#F68712;font-weight:700;font-size:11px;padding:3px 9px;border-radius:999px;margin-bottom:12px}'
+      + '.stempel{display:inline-block;background:#26306E;color:#F68712;font-weight:700;font-size:11px;padding:3px 9px;border-radius:999px;margin-bottom:12px}'
       + 'table{border-collapse:collapse;width:100%;margin-top:8px}'
-      + 'th{background:#181A3D;color:#fff;text-align:right;padding:5px 8px}th:first-child{text-align:left}'
+      + 'th{background:#26306E;color:#fff;text-align:right;padding:5px 8px}th:first-child{text-align:left}'
       + 'td{border-bottom:1px solid #E3E3EC;padding:3px 8px;text-align:right}td:first-child{text-align:left}'
       + '.kop td{border:0;text-align:left;padding:2px 10px 2px 0}'
       + '.let{margin:14px 0;font-size:11px;background:#FFF1F0;border-left:4px solid #9E2F45;padding:10px}'

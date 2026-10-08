@@ -17,26 +17,26 @@
 <meta property="og:type" content="website">
 <style>
 :root{
-  --geel:#F68712;--geel-donker:#D9700A;--geel-zacht:#FEF0E2;--zwart:#181A3D;--tekst:#15162F;--grijs:#55576F;--lijn:#E3E3EC;--vlak:#F7F7FA;--wit:#fff;
+  --geel:#F68712;--geel-donker:#D9700A;--geel-zacht:#FEF0E2;--zwart:#26306E;--tekst:#15162F;--grijs:#55576F;--lijn:#E3E3EC;--vlak:#F7F7FA;--wit:#fff;
   --rood:#9E2F45;--rood-zacht:#FFF1F0;--rood-tekst:#7A1F14;--oranje:#9A5B00;--oranje-zacht:#FFF4E0;--groen:#1F7A52;--blauw:#1F4E79;
-  --kop:#181A3D;--kop-tekst:#FFFFFF;--body:#fff;--knop-tekst:#181A3D;
+  --kop:#26306E;--kop-tekst:#FFFFFF;--body:#fff;--knop-tekst:#26306E;
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
   --geel-zacht:#3F3018;--zwart:#F1F1F6;--tekst:#F1F1F6;--grijs:#C3C4D3;--lijn:#333;--vlak:#1C1E3A;--wit:#12132B;
   --rood-zacht:#3f1a18;--rood-tekst:#f3c2bd;--oranje:#f6cb8e;--oranje-zacht:#3f3118;--groen:#9de7c1;--blauw:#9ec3e6;
-  --kop:#12132B;--kop-tekst:#F1F1F6;--body:#181A3D;color-scheme:dark}}
+  --kop:#12132B;--kop-tekst:#F1F1F6;--body:#26306E;color-scheme:dark}}
 :root[data-theme="dark"]{
   --geel-zacht:#3F3018;--zwart:#F1F1F6;--tekst:#F1F1F6;--grijs:#C3C4D3;--lijn:#333;--vlak:#1C1E3A;--wit:#12132B;
   --rood-zacht:#3f1a18;--rood-tekst:#f3c2bd;--oranje:#f6cb8e;--oranje-zacht:#3f3118;--groen:#9de7c1;--blauw:#9ec3e6;
-  --kop:#12132B;--kop-tekst:#F1F1F6;--body:#181A3D;color-scheme:dark}
+  --kop:#12132B;--kop-tekst:#F1F1F6;--body:#26306E;color-scheme:dark}
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
 body{font-family:Segoe UI,Roboto,Helvetica Neue,Arial,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;color:var(--tekst);background:var(--body);line-height:1.55;font-size:15px;overflow-x:hidden}
 a{color:inherit}
 button,input,select{font-family:inherit}
 [hidden]{display:none!important}
-.skiplink{position:absolute;left:-9999px}.skiplink:focus{left:12px;top:12px;background:#F68712;color:#181A3D;padding:8px 12px;z-index:9}
-.balk{background:#181A3D;color:#fff;font-size:12.5px;padding:8px 16px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.skiplink{position:absolute;left:-9999px}.skiplink:focus{left:12px;top:12px;background:#F68712;color:#26306E;padding:8px 12px;z-index:9}
+.balk{background:#26306E;color:#fff;font-size:12.5px;padding:8px 16px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 .balk a{color:#fff;text-decoration:none;opacity:.88}.balk a:hover{opacity:1;text-decoration:underline}
 .kop{background:var(--kop);color:var(--kop-tekst);padding:30px 16px 34px;border-bottom:3px solid #F68712}
 .kop-in,.romp{max-width:1280px;margin:0 auto}
@@ -53,20 +53,20 @@ button,input,select{font-family:inherit}
 .waarschuwing{font-weight:800}
 .tabs{display:inline-flex;flex-wrap:wrap;border:1px solid var(--lijn);border-radius:999px;padding:3px;background:var(--wit);gap:2px}
 .tabs button{border:0;background:transparent;color:var(--tekst);border-radius:999px;padding:8px 16px;font-weight:700;font-size:14px;cursor:pointer;min-height:40px}
-.tabs button[aria-selected="true"]{background:#F68712;color:#181A3D}
+.tabs button[aria-selected="true"]{background:#F68712;color:#26306E}
 .paneel{border:1px solid var(--lijn);border-radius:14px;padding:12px 14px;margin:14px 0;background:var(--vlak)}
 .paneel h2{font-size:13px;text-transform:uppercase;letter-spacing:.04em;margin:0 0 6px;color:var(--grijs)}
 .chips{display:flex;flex-wrap:wrap;gap:6px}
 .chip{border:1px solid var(--lijn);background:var(--wit);color:var(--tekst);border-radius:999px;padding:5px 12px;font-size:13px;font-weight:700;cursor:pointer;min-height:34px}
-.chip[aria-pressed="true"]{background:#F68712;color:#181A3D;border-color:var(--geel-donker)}
+.chip[aria-pressed="true"]{background:#F68712;color:#26306E;border-color:var(--geel-donker)}
 .rij{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
-.knop{border:1px solid var(--geel-donker);background:#F68712;color:#181A3D;border-radius:999px;padding:8px 16px;font-weight:700;font-size:14px;cursor:pointer;min-height:40px;text-decoration:none;display:inline-flex;align-items:center}
+.knop{border:1px solid var(--geel-donker);background:#F68712;color:#26306E;border-radius:999px;padding:8px 16px;font-weight:700;font-size:14px;cursor:pointer;min-height:40px;text-decoration:none;display:inline-flex;align-items:center}
 .knop.licht{background:var(--wit);color:var(--tekst);border-color:var(--lijn)}
 .intro{font-size:14px;color:var(--grijs);max-width:100ch;margin:4px 0 0}
 .tabelvak{overflow-x:auto;border:1px solid var(--lijn);border-radius:12px;background:var(--wit);margin-top:10px}
 table{border-collapse:collapse;width:100%;font-size:13.5px}
 th,td{border-bottom:1px solid var(--lijn);padding:9px 10px;text-align:left;vertical-align:top}
-thead th{background:#181A3D;color:#fff;font-size:13px;position:sticky;top:0;min-width:180px}
+thead th{background:#26306E;color:#fff;font-size:13px;position:sticky;top:0;min-width:180px}
 thead th a{color:#F68712}
 tbody th{min-width:170px;max-width:220px;background:var(--vlak);font-size:13px}
 tbody th .kort{display:block;font-weight:400;color:var(--grijs);font-size:12px}
@@ -87,7 +87,7 @@ td .bron{display:block;font-size:11.5px;color:var(--blauw);margin-top:3px}
 .docs ul{margin:0;padding-left:18px}
 .docs li{margin:3px 0;overflow-wrap:anywhere}
 .volg{border:1px solid #F68712;background:transparent;color:#F68712;border-radius:999px;font-size:11.5px;font-weight:700;padding:1px 8px;margin-left:6px;cursor:pointer;min-height:24px}
-.volg[aria-pressed="true"]{background:#F68712;color:#181A3D}
+.volg[aria-pressed="true"]{background:#F68712;color:#26306E}
 .wijz{margin-top:22px;border:1px solid var(--lijn);border-radius:14px;padding:12px 14px;background:var(--wit)}
 .wijz h2{font-size:16px;margin:0 0 4px}
 .wijz .sub{font-size:13px;color:var(--grijs);margin:0 0 8px}
@@ -345,12 +345,12 @@ function dossier(){
   var rijen = cs.map(function(c){ return '<tr><th>' + esc(c.naam) + '</th>' + as.map(function(a){ var w = a.crit[c.id]; if(!w) return '<td class="nl">niet gevonden</td>';
     return '<td>' + esc(w.w.replace(/^[+~!-]\s*/,'')) + '<span class="st ' + (w.g ? 'ok">✓ gecontroleerd op de site van de aanbieder' : 'nv">nog niet geverifieerd') + '</span>' + (verouderd(w.bd) ? '<span class="st nv">bron ouder dan 6 maanden</span>' : '') +
       (w.g && w.b ? '<span class="br">Bron: ' + w.b.map(function(u){ var v = veilig(u); return v ? esc(v) + (isArchief(v) ? '' : ' (archief: ' + esc(archief(v)) + ')') : ''; }).filter(Boolean).join('<br>') + (w.bd ? ' (' + esc(w.bd) + ')' : '') + '</span>' : '') + '</td>'; }).join('') + '</tr>'; }).join('');
-  var css = 'body{font-family:Segoe UI,Roboto,Helvetica Neue,Arial,Arial,sans-serif;font-size:9.5pt;color:#181A3D;background:#fff;margin:14mm 10mm}h1{font-size:15pt;margin:0 0 2px}h2{font-size:11pt;margin:14px 0 4px}.meta{font-size:8pt;color:#444;margin:0 0 8px}' +
+  var css = 'body{font-family:Segoe UI,Roboto,Helvetica Neue,Arial,Arial,sans-serif;font-size:9.5pt;color:#26306E;background:#fff;margin:14mm 10mm}h1{font-size:15pt;margin:0 0 2px}h2{font-size:11pt;margin:14px 0 4px}.meta{font-size:8pt;color:#444;margin:0 0 8px}' +
     '.disc{border:1.5px solid #9E2F45;border-left:6px solid #9E2F45;background:#FFF1F0;color:#7A1F14;padding:7px 9px;font-size:7.8pt;margin:0 0 12px}' +
-    'table{border-collapse:collapse;width:100%;font-size:7.8pt}th,td{border:1px solid #bbb;padding:4px 5px;text-align:left;vertical-align:top}thead th{background:#181A3D;color:#fff}tr{break-inside:avoid}.nl{color:#888}' +
+    'table{border-collapse:collapse;width:100%;font-size:7.8pt}th,td{border:1px solid #bbb;padding:4px 5px;text-align:left;vertical-align:top}thead th{background:#26306E;color:#fff}tr{break-inside:avoid}.nl{color:#888}' +
     '.st{display:block;font-size:6.6pt;margin-top:2px}.st.ok{color:#1F7A52}.st.nv{color:#9A5B00}.br{display:block;font-size:6.4pt;color:#1F4E79;overflow-wrap:anywhere}' +
     '.veld{border:1px solid #bbb;border-radius:4px;min-height:22px;padding:5px 7px;margin:2px 0 8px}.veld.groot{min-height:70px}.lbl{font-size:8pt;font-weight:700}' +
-    '.knoppen{margin:0 0 12px}.knoppen button{font:inherit;font-weight:700;border:1px solid #181A3D;background:#F68712;border-radius:999px;padding:6px 14px;cursor:pointer}@media print{.knoppen{display:none}}@page{size:A4 landscape;margin:10mm}';
+    '.knoppen{margin:0 0 12px}.knoppen button{font:inherit;font-weight:700;border:1px solid #26306E;background:#F68712;border-radius:999px;padding:6px 14px;cursor:pointer}@media print{.knoppen{display:none}}@page{size:A4 landscape;margin:10mm}';
   var html = '<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Dossiervastlegging ' + esc(pr.titel) + '</title><style>' + css + '</style></head><body>' +
     '<div class="knoppen"><button type="button" onclick="window.print()">Afdrukken of opslaan als pdf</button></div>' +
     '<h1>Dossiervastlegging: voorwaarden ' + esc(pr.titel) + '</h1>' +

@@ -18,7 +18,7 @@
 <style>
 :root{
   --geel:#F68712;--geel-donker:#D9700A;--geel-zacht:#FEF0E2;
-  --zwart:#181A3D;--tekst:#15162F;--grijs:#55576F;--lijn:#E3E3EC;--vlak:#F7F7FA;
+  --zwart:#26306E;--tekst:#15162F;--grijs:#55576F;--lijn:#E3E3EC;--vlak:#F7F7FA;
   --rood:#9E2F45;--rood-zacht:#FFF1F0;--groen:#1E7A4B;
 }
 *{box-sizing:border-box}
@@ -131,12 +131,12 @@ h2.sectie{font-size:22px;font-weight:800;margin:28px 0 6px;padding-bottom:8px;bo
 .tegelvak .volg-knop{position:absolute;left:14px;bottom:12px}
 .volg-knop{display:inline-flex;align-items:center;gap:6px;min-height:40px;border-radius:999px;padding:6px 14px;font-size:13px;font-weight:700;cursor:pointer;border:1px solid #D0D1DC;background:#fff;color:var(--zwart)}
 .volg-knop:hover{background:var(--vlak)}
-.volg-knop[aria-pressed="true"]{background:var(--geel);border-color:var(--geel-donker);color:#181A3D}
+.volg-knop[aria-pressed="true"]{background:var(--geel);border-color:var(--geel-donker);color:#26306E}
 .volg-knop[aria-pressed="true"]::before{content:"\2713"}
 .detailkop .volg-rij{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:10px}
 .filterrij{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center;margin:0 0 12px}
 .filterrij label{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-size:14px;font-weight:600;cursor:pointer}
-.filterrij input{width:20px;height:20px;accent-color:#181A3D;flex:none}
+.filterrij input{width:20px;height:20px;accent-color:#26306E;flex:none}
 .gevolgd-blok{border:2px solid var(--geel);border-radius:14px;padding:4px 16px 16px;margin-top:22px}
 .gevolgd-blok h2.sectie{margin-top:14px}
 .agenda-item .wanneer{font-weight:800;color:var(--tekst)}
@@ -169,7 +169,7 @@ body.voorbeeldmodus .romp{padding:12px}
 /* Donkere modus (zelfde aanpak als kalender.html); in een eigen <style> zodat afdrukken licht blijft. */
 @media screen and (prefers-color-scheme:dark){
 :root:not([data-theme="light"]){color-scheme:dark;--tekst:#F1F1F6;--grijs:#C3C4D3;--lijn:#1E2040;--vlak:#1C1E3A;--geel-zacht:#3F3018;--rood-zacht:#3a2220;--groen:#9de7c1}
-:root:not([data-theme="light"]) body{background:#181A3D;color:#F1F1F6}
+:root:not([data-theme="light"]) body{background:#26306E;color:#F1F1F6}
 :root:not([data-theme="light"]) :focus-visible{outline-color:#F68712}
 :root:not([data-theme="light"]) .balk{background:#23254A}
 :root:not([data-theme="light"]) .kop{background:#12132B;color:#F1F1F6;border-bottom:3px solid #F68712}
@@ -186,11 +186,11 @@ body.voorbeeldmodus .romp{padding:12px}
 :root:not([data-theme="light"]) .badge.type{background:#1C1E3A;border-color:#444;color:#F1F1F6}
 :root:not([data-theme="light"]) .badge.demo{background:#3f3318;border-color:#7a6529;color:#f6d28e}
 :root:not([data-theme="light"]) .badge.rubriek{background:#1c2a44;border-color:#3d5687;color:#c9d8f5}
-:root:not([data-theme="light"]) .knop{background:#F68712;border-color:#F68712;color:#181A3D}
+:root:not([data-theme="light"]) .knop{background:#F68712;border-color:#F68712;color:#26306E}
 :root:not([data-theme="light"]) .knop:hover{background:#F9A54D}
 :root:not([data-theme="light"]) .knop.licht,:root:not([data-theme="light"]) .volg-knop,:root:not([data-theme="light"]) .tabs button{background:#12132B;color:#F1F1F6;border-color:#444}
 :root:not([data-theme="light"]) .knop.licht:hover,:root:not([data-theme="light"]) .volg-knop:hover{background:#1C1E3A}
-:root:not([data-theme="light"]) .volg-knop[aria-pressed="true"],:root:not([data-theme="light"]) .tabs button[aria-selected="true"]{background:#F68712;color:#181A3D;border-color:#F68712}
+:root:not([data-theme="light"]) .volg-knop[aria-pressed="true"],:root:not([data-theme="light"]) .tabs button[aria-selected="true"]{background:#F68712;color:#26306E;border-color:#F68712}
 :root:not([data-theme="light"]) .naar-overzicht{color:#F1F1F6}
 :root:not([data-theme="light"]) .extranet{background:#1C1E3A;border-color:#1E2040}
 :root:not([data-theme="light"]) .aanvraag{background:#1C1E3A;border:1px solid #1E2040}
@@ -260,8 +260,8 @@ function docItem(a,x){
 }
 function alineas(t){return String(t||'').split(/\n\s*\n/).map(function(p){return p.trim();}).filter(Boolean).map(function(p){return '<p>'+esc(p).replace(/\n/g,'<br>')+'</p>';}).join('');}
 function linkExt(u,tekst,cls){return okUrl(u)?'<a'+(cls?' class="'+cls+'"':'')+' href="'+esc(u)+'" target="_blank" rel="noopener noreferrer">'+esc(tekst)+'</a>':'';}
-function kleur(a){return /^#[0-9a-f]{6}$/i.test(a.kleur||'')?a.kleur:'#181A3D';}
-function tekstKleur(hex){var r=parseInt(hex.substr(1,2),16),g=parseInt(hex.substr(3,2),16),b=parseInt(hex.substr(5,2),16);return (0.299*r+0.587*g+0.114*b)>150?'#181A3D':'#ffffff';}
+function kleur(a){return /^#[0-9a-f]{6}$/i.test(a.kleur||'')?a.kleur:'#26306E';}
+function tekstKleur(hex){var r=parseInt(hex.substr(1,2),16),g=parseInt(hex.substr(3,2),16),b=parseInt(hex.substr(5,2),16);return (0.299*r+0.587*g+0.114*b)>150?'#26306E':'#ffffff';}
 function initialen(a){var i=String(a.initialen||'').trim();if(!i)i=String(a.naam||'?').split(/\s+/).map(function(w){return w.charAt(0);}).join('');return i.slice(0,3).toUpperCase();}
 function logo(a,groot){if(typeof a.logo==='string'&&/^img\/logos\/[a-z0-9-]+\.png$/.test(a.logo))return '<span class="logo beeld'+(groot?' groot':'')+'"><img src="'+esc(a.logo)+'" alt="Logo '+esc(a.naam)+'" loading="lazy" decoding="async"></span>';var k=kleur(a);return '<span class="logo'+(groot?' groot':'')+'" aria-hidden="true" style="background:'+k+';color:'+tekstKleur(k)+'">'+esc(initialen(a))+'</span>';}
 function typeBadge(a){return '<span class="badge type">'+esc(TYPES[a.type]||'Aanbieder')+'</span>'+(a.toezicht?' <span class="badge toezicht" title="'+esc((a.toezichtNoot?a.toezichtNoot+' ':'')+'Peildatum 3 oktober 2026; controleer in het AFM- of DNB-register.')+'">Toezicht: '+esc(a.toezicht)+'</span>':'');}

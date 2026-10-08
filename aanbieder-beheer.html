@@ -19,7 +19,7 @@
 <style>
 :root{
   --geel:#F68712;--geel-donker:#D9700A;--geel-zacht:#FEF0E2;
-  --zwart:#181A3D;--tekst:#15162F;--grijs:#55576F;--lijn:#E3E3EC;--vlak:#F7F7FA;
+  --zwart:#26306E;--tekst:#15162F;--grijs:#55576F;--lijn:#E3E3EC;--vlak:#F7F7FA;
   --rood:#9E2F45;--rood-zacht:#FFF1F0;--groen:#1E7A4B;
 }
 *{box-sizing:border-box}
@@ -317,7 +317,7 @@ function editor(){
     '<div class="rij2">'+veldHtml('naam',{l:'Naam',max:80,req:1},o.naam)+
     '<div class="veld"><label for="f-type">Type</label><select id="f-type" data-pad="type">'+Object.keys(TYPES).map(function(k){return '<option value="'+k+'"'+(o.type===k?' selected':'')+'>'+TYPES[k]+'</option>';}).join('')+'</select></div></div>'+
     '<div class="rij2">'+veldHtml('initialen',{l:'Initialen voor het logo (max. 3)',max:3},o.initialen)+
-    '<div class="veld"><label for="f-kleur">Kleur logo</label><div class="kleurrij"><input type="color" id="f-kleurkiezer" aria-label="Kies kleur" value="'+(/^#[0-9a-f]{6}$/i.test(o.kleur)?esc(o.kleur):'#181A3D')+'"><input id="f-kleur" data-pad="kleur" maxlength="7" value="'+esc(o.kleur)+'" placeholder="#181A3D"></div></div></div>'+
+    '<div class="veld"><label for="f-kleur">Kleur logo</label><div class="kleurrij"><input type="color" id="f-kleurkiezer" aria-label="Kies kleur" value="'+(/^#[0-9a-f]{6}$/i.test(o.kleur)?esc(o.kleur):'#26306E')+'"><input id="f-kleur" data-pad="kleur" maxlength="7" value="'+esc(o.kleur)+'" placeholder="#26306E"></div></div></div>'+
     veldHtml('omschrijving',{l:'Korte omschrijving',t:'textarea',max:400,tip:'Zakelijk en feitelijk: wat bied je aan via het intermediair. Geen wervende teksten of acties.'},o.omschrijving)+
     veldHtml('website',{l:'Website (https)',t:'url',max:300},o.website)+
     '<div class="veld" id="f-rubrieken" tabindex="-1"><span class="tip" style="font-weight:700">Rubrieken op het Adviesforum (optioneel)</span>'+Object.keys(RUBRIEKEN).map(function(k){return '<div class="veld vink"><label for="f-rubriek-'+k+'"><input type="checkbox" id="f-rubriek-'+k+'" data-rubriek="'+k+'"'+(o.rubrieken.indexOf(k)>=0?' checked':'')+'>'+esc(RUBRIEKEN[k])+'</label></div>';}).join('')+'</div>'+

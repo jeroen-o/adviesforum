@@ -18,7 +18,7 @@
 <style>
 :root{
   --geel:#F68712;--geel-donker:#D9700A;--geel-zacht:#FEF0E2;
-  --zwart:#181A3D;--tekst:#15162F;--grijs:#55576F;--lijn:#E3E3EC;--vlak:#F7F7FA;
+  --zwart:#26306E;--tekst:#15162F;--grijs:#55576F;--lijn:#E3E3EC;--vlak:#F7F7FA;
   --rood:#9E2F45;--rood-zacht:#FFF1F0;--groen:#1E7A4B;
 }
 *{box-sizing:border-box}
@@ -106,17 +106,17 @@ a.terug{display:inline-block;padding:8px 0}
 </style>
 <style id="a11y">
 /* Toegankelijkheid en donkere modus (zie docs/toegankelijkheid.md). Staat in een eigen <style>, zodat printvensters licht blijven. */
-.skiplink{position:absolute;left:12px;top:-200px;z-index:10000;background:#181A3D;color:#fff;padding:10px 16px;border-radius:8px;font-weight:700;text-decoration:none;font-family:Segoe UI,Roboto,Helvetica Neue,Arial,system-ui,sans-serif}
+.skiplink{position:absolute;left:12px;top:-200px;z-index:10000;background:#26306E;color:#fff;padding:10px 16px;border-radius:8px;font-weight:700;text-decoration:none;font-family:Segoe UI,Roboto,Helvetica Neue,Arial,system-ui,sans-serif}
 .skiplink:focus{top:12px;outline:3px solid #F68712;outline-offset:2px}
 main[tabindex="-1"]:focus{outline:none}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus,textarea:focus,summary:focus-visible,[tabindex]:not([tabindex="-1"]):focus-visible{outline:3px solid #181A3D!important;outline-offset:2px!important}
+a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus,textarea:focus,summary:focus-visible,[tabindex]:not([tabindex="-1"]):focus-visible{outline:3px solid #26306E!important;outline-offset:2px!important}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 @media print{.skiplink{display:none}}
 @media screen and (prefers-color-scheme:dark){
 :root:not([data-theme="light"]){color-scheme:dark}
 :root:not([data-theme="light"]){--geel-zacht:#3F3018;--zwart:#F1F1F6;--tekst:#F1F1F6;--grijs:#C3C4D3;--lijn:#1E2040;--vlak:#1C1E3A;--rood:#e9a29b;--rood-zacht:#3f1a18;--groen:#9de7c1}
-:root:not([data-theme="light"]) body{color:#F1F1F6;background:#181A3D}
+:root:not([data-theme="light"]) body{color:#F1F1F6;background:#26306E}
 :root:not([data-theme="light"]) .balk{background:#23254A;color:#fff}
 :root:not([data-theme="light"]) .balk a{color:#fff}
 :root:not([data-theme="light"]) .kop{background:#12132B;color:#F1F1F6;border-bottom:3px solid #F68712}
@@ -130,8 +130,8 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
 :root:not([data-theme="light"]) .veld input,:root:not([data-theme="light"]) .veld select{border:1px solid #1E2040;background:#12132B;color:#F1F1F6}
 :root:not([data-theme="light"]) .veld input:focus,:root:not([data-theme="light"]) .veld select:focus{outline:3px solid rgba(255,210,0,.6);border-color:#9A9A9A}
 :root:not([data-theme="light"]) .deel{border:1px dashed #1E2040;background:#1C1E3A}
-:root:not([data-theme="light"]) .knop{border:1px solid #F68712;background:#F68712;color:#181A3D}
-:root:not([data-theme="light"]) .knop:hover{background:#F9A54D;color:#181A3D}
+:root:not([data-theme="light"]) .knop{border:1px solid #F68712;background:#F68712;color:#26306E}
+:root:not([data-theme="light"]) .knop:hover{background:#F9A54D;color:#26306E}
 :root:not([data-theme="light"]) .knop.licht{background:#12132B;color:#F1F1F6;border-color:#1E2040}
 :root:not([data-theme="light"]) .knop.licht:hover{background:#1C1E3A}
 :root:not([data-theme="light"]) .samenvat{background:#23254A;color:#fff}
@@ -155,10 +155,10 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
 :root:not([data-theme="light"]) .voet{color:#C3C4D3}
 :root:not([data-theme="light"]) .voet a{color:#F1F1F6}
 :root:not([data-theme="light"]) a:focus-visible,:root:not([data-theme="light"]) button:focus-visible,:root:not([data-theme="light"]) input:focus,:root:not([data-theme="light"]) input:focus-within,:root:not([data-theme="light"]) select:focus,:root:not([data-theme="light"]) textarea:focus,:root:not([data-theme="light"]) summary:focus-visible,:root:not([data-theme="light"]) [tabindex]:not([tabindex="-1"]):focus-visible{outline-color:#F68712!important}
-:root:not([data-theme="light"]) .skiplink{background:#F68712;color:#181A3D}
+:root:not([data-theme="light"]) .skiplink{background:#F68712;color:#26306E}
 :root:not([data-theme="light"]) [style*="background:#fff"],:root:not([data-theme="light"]) [style*="background:#FFF"]{background:#12132B!important}
 :root:not([data-theme="light"]) [style*="color:#555"]{color:#C3C4D3!important}
-:root:not([data-theme="light"]) [style*="color:#181A3D"]{color:#F1F1F6!important}
+:root:not([data-theme="light"]) [style*="color:#26306E"]{color:#F1F1F6!important}
 :root:not([data-theme="light"]) .back-inline{color:#F1F1F6!important;border-bottom-color:#F68712!important}
 :root:not([data-theme="light"]) .skiplink:focus{outline-color:#F1F1F6}
 }
@@ -462,7 +462,7 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
     var rijen = signalen.map(function (x) {
       return '<tr' + (x.datum < nu ? ' class="vb"' : '') + '><td>' + esc(nl(x.datum)) + '</td><td><b>' + esc(x.titel) + '</b><br>' + esc(x.actie) + '</td><td class="vk">&#9744;</td></tr>';
     }).join('');
-    var css = 'body{font-family:Segoe UI,Roboto,Helvetica Neue,Arial,Arial,sans-serif;color:#181A3D;margin:28px;font-size:12.5px;line-height:1.45}h1{font-size:20px;margin:0 0 4px}h2{font-size:15px;border-bottom:3px solid #F68712;padding-bottom:4px;margin:18px 0 8px}' +
+    var css = 'body{font-family:Segoe UI,Roboto,Helvetica Neue,Arial,Arial,sans-serif;color:#26306E;margin:28px;font-size:12.5px;line-height:1.45}h1{font-size:20px;margin:0 0 4px}h2{font-size:15px;border-bottom:3px solid #F68712;padding-bottom:4px;margin:18px 0 8px}' +
       'table{border-collapse:collapse;width:100%}td,th{border:1px solid #ccc;padding:6px 8px;text-align:left;vertical-align:top}th{background:#FEF0E2}td:first-child{white-space:nowrap}.vk{width:40px;text-align:center;font-size:15px}.vb{color:#888}.klein{font-size:11px;color:#555}@media print{body{margin:12mm}tr{break-inside:avoid}}';
     var html = '<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Nazorgsignalen' + (naam ? ' ' + esc(naam) : '') + '</title><style>' + css + '</style></head><body>' +
       '<h1>Nazorgsignalen' + (naam ? ': ' + esc(naam) : '') + '</h1><div class="klein">Afgedrukt op ' + esc(nl(nu)) + '. Indicatief overzicht uit het Adviesforum-hulpmiddel; geen advies.</div>' +
