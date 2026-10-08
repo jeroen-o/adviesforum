@@ -519,14 +519,7 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
    =========================================================== */
 const CATS = [
   {id:'A', naam:'Acceptatie & inkomen'},
-  {id:'I', naam:'Inkomen & uitkeringen'},
-  {id:'Z', naam:'Ondernemers'},
-  {id:'F', naam:'Financiële verplichtingen'},
-  {id:'X', naam:'Expats'},
-  {id:'W', naam:'Woning & taxatie'},
   {id:'P', naam:'Product & rente'},
-  {id:'O', naam:'Offerte & passeren'},
-  {id:'K', naam:'Overbrugging'},
   {id:'V', naam:'Verbouwing & verduurzaming'},
   {id:'N', naam:'Nazorg & beheer'},
   {id:'B', naam:'Bron'}
@@ -1136,78 +1129,7 @@ const EXTRA_CRITS = [
   {"id":"recr","cat":"A","naam":"Recreatiewoning","kort":"Financiering vakantie- of recreatiewoning","na":"vve","waarom":"Een recreatiewoning is geen eigen woning voor de belasting (geen hypotheekrenteaftrek). Niet elke verstrekker financiert die, en vaak gelden lagere maxima."},
   {"id":"cons","cat":"P","naam":"Consumptief deel","kort":"Vrij besteedbaar deel in de hypotheek","na":"avrij","waarom":"Een deel van de hypotheek vrij besteden (bijvoorbeeld voor een auto of verbouwing elders) is fiscaal niet aftrekbaar en valt niet onder NHG. Of en hoeveel het mag, verschilt per verstrekker."},
   {"id":"start","cat":"P","naam":"Starterslening","kort":"Starterslening naast de hypotheek","na":"cons","waarom":"Een starterslening (SVn of gemeente) komt naast de hypotheek. De verstrekker moet die accepteren en meenemen in de toets."},
-  {"id":"verhuur","cat":"N","naam":"Verhuur toegestaan","kort":"Woning (tijdelijk) verhuren","na":"verh","waarom":"Een eigen-woninghypotheek gaat ervan uit dat je er zelf woont. Verhuren of kamers verhuren mag vaak alleen met toestemming, soms tegen andere voorwaarden."},
-  {"id":"obmax","cat":"K","naam":"Maximaal overbruggingskrediet","kort":"Basis bij niet, voorwaardelijk of definitief verkocht","waarom":"Hoeveel overwaarde je mag overbruggen hangt af van de grondslag (marktwaarde, WOZ of verkoopprijs) en van de vraag of de oude woning al (voorwaardelijk) verkocht is. De meest gezochte voorwaarde."},
-  {"id":"oblast","cat":"K","naam":"Dubbele woonlasten","kort":"Hoe lang dubbele lasten worden getoetst","na":"obmax","waarom":"Bij een overbrugging betaal je tijdelijk twee hypotheken. De periode waarover de verstrekker dubbele lasten toetst, bepaalt of de financiering past."},
-  {"id":"obduur","cat":"K","naam":"Looptijd overbrugging","kort":"Maximale looptijd bestaande bouw / nieuwbouw","na":"oblast","waarom":"Verkoopt de oude woning niet op tijd, dan loopt het overbruggingskrediet af. Vooral bij nieuwbouw is een langere looptijd van belang."},
-  {"id":"obwaar","cat":"K","naam":"Waardebepaling bij overbrugging","kort":"Desktoptaxatie of WOZ voor de oude woning","na":"obduur","waarom":"Een volledig taxatierapport van de oude woning kost tijd en geld. Sommige verstrekkers accepteren een modelmatige waardering of de WOZ-waarde."},
-  {"id":"obels","cat":"K","naam":"Overbrugging bij hypotheek elders","kort":"Overbruggen als de oude hypotheek bij een andere verstrekker loopt","na":"obwaar","waarom":"Niet elke verstrekker wil een overbrugging geven als de huidige hypotheek bij een andere partij loopt."},
-  {"id":"obvw","cat":"K","naam":"Overige voorwaarden overbrugging","kort":"Afsluitkosten, minimumbedrag, aantal overbruggingen","na":"obels","waarom":"Kosten, een minimumbedrag of een maximum aantal overbruggingen kunnen een overbrugging onaantrekkelijk of onmogelijk maken."},
-  {"id":"geldnb","cat":"O","naam":"Geldigheid offerte nieuwbouw","kort":"Geldigheidsduur nieuwbouw, ook na verlenging","waarom":"Bij nieuwbouw duurt het vaak lang tot het passeren. Een lang geldige offerte voorkomt dat je een hogere rente krijgt."},
-  {"id":"annul","cat":"O","naam":"Annuleringskosten","kort":"Kosten als de offerte niet wordt gebruikt","na":"geldnb","waarom":"Wie meerdere offertes aanvraagt of de aankoop ziet afketsen, wil weten of annuleren kosten met zich meebrengt."},
-  {"id":"dig","cat":"O","naam":"Digitaal tekenen","kort":"Offerte digitaal ondertekenen","na":"annul","waarom":"Digitaal tekenen versnelt het proces, zeker als de koopakte of financieringsvoorbehoud krap is."},
-  {"id":"bgar","cat":"O","naam":"Bankgarantie","kort":"Bankgarantie via de geldverstrekker","na":"dig","waarom":"Bij aankoop is vaak een bankgarantie nodig voor de waarborgsom. Niet elke verstrekker regelt die zelf."},
-  {"id":"bovw","cat":"P","naam":"Overwaarde boetevrij aflossen","kort":"Boetevrij aflossen uit verkoop vorige woning","na":"boete","waarom":"Wie de overwaarde van de oude woning in de nieuwe hypotheek stopt, wil die later soms boetevrij kunnen aflossen."},
-  {"id":"bvrij","cat":"P","naam":"Boetevrij bij overlijden / executie","kort":"Boetevrije situaties naast de jaarlijkse ruimte","na":"bovw","waarom":"Bij overlijden van een partner of een gedwongen verkoop schelen boetevrije regelingen veel geld."},
-  {"id":"minh","cat":"P","naam":"Minimale hoofdsom","kort":"Kleinste hypotheekbedrag","na":"cons","waarom":"Bij een kleine hypotheek of een losse lening kan een minimumbedrag een verstrekker uitsluiten."},
-  {"id":"maxh","cat":"P","naam":"Maximale hoofdsom","kort":"Hoogste hypotheekbedrag in het reguliere proces","na":"minh","waarom":"Boven een bepaald bedrag gelden extra eisen of is de verstrekker niet mogelijk."},
-  {"id":"borg","cat":"P","naam":"Borgstelling","kort":"Borgstelling door derden mogelijk","na":"maxh","waarom":"Een borg (vaak ouders) kan de financiering mogelijk maken als het eigen inkomen net tekortschiet."},
-  {"id":"rest","cat":"P","naam":"Restschuld meefinancieren","kort":"Restschuld van de vorige woning meenemen","na":"borg","waarom":"Bij verhuizen met een restschuld bepaalt het beleid van de verstrekker of en hoe die mee kan."},
-  {"id":"geruis","cat":"P","naam":"Fiscaal geruisloze voortzetting","kort":"Oude polis of rekening fiscaal voortzetten","na":"rest","waarom":"Bestaande kapitaalverzekeringen of bankspaarrekeningen met fiscale voordelen wil je bij verhuizen of oversluiten kunnen meenemen."},
-  {"id":"oversl","cat":"P","naam":"Oversluiten","kort":"Maximale verstrekking bij oversluiten","na":"geruis","waarom":"Bij oversluiten van een andere verstrekker gelden soms lagere maxima dan bij aankoop."},
-  {"id":"verhw","cat":"N","naam":"Verhoging: waarde en minimum","kort":"Waardebepaling en minimum bij verhoging","na":"tweede","waarom":"Voor een verhoging is een waardebepaling nodig. Of desktoptaxatie of WOZ volstaat en welk minimumbedrag geldt, verschilt per verstrekker."},
-  {"id":"zelfb","cat":"V","naam":"Zelfbouw","kort":"Zelfbouw toegestaan, afbouwgarantie en taxatie","waarom":"Bij zelfbouw is het risico groter. Verstrekkers eisen soms een afbouwgarantie of taxatie, of doen het niet."},
-  {"id":"cpo","cat":"V","naam":"CPO","kort":"Collectief particulier opdrachtgeverschap","na":"zelfb","waarom":"Bij CPO bouwt een groep samen. Niet elke verstrekker financiert dit, en de eisen verschillen."},
-  {"id":"pnb","cat":"V","naam":"Projectmatige nieuwbouw","kort":"Afbouwgarantie en taxatie bij projectnieuwbouw","na":"cpo","waarom":"Bij projectnieuwbouw vragen verstrekkers soms een afbouwgarantie (zoals Woningborg) of een taxatie."},
-  {"id":"minmw","cat":"V","naam":"Minimale marktwaarde","kort":"Laagste marktwaarde (na verbouwing)","na":"pnb","waarom":"Goedkope woningen vallen soms buiten het beleid door een minimale marktwaarde."},
-  {"id":"mwbep","cat":"W","naam":"Waardebepaling woning","kort":"Taxatierapport en waarde bij nieuwbouw","waarom":"Of een taxatierapport nodig is en hoe de waarde van nieuwbouw wordt bepaald, bepaalt kosten en leenruimte."},
-  {"id":"woz","cat":"W","naam":"WOZ-waarde als marktwaarde","kort":"Waarde en maximum op basis van WOZ","na":"mwbep","waarom":"Mag de WOZ-waarde worden gebruikt, dan scheelt dat een taxatie. Vaak geldt dan een lager maximum."},
-  {"id":"ltvk","cat":"W","naam":"Maximale LTV","kort":"Op basis van koopsom of taxatiewaarde","na":"woz","waarom":"Rekent de verstrekker met de laagste van koopsom en taxatiewaarde of met de taxatiewaarde? Dat bepaalt hoeveel je kunt lenen bij een gunstige aankoop."},
-  {"id":"wwp","cat":"W","naam":"Woon-/winkelpand","kort":"Financiering van woon-/winkelpand","na":"ltvk","waarom":"Een woning met een bedrijfsruimte valt bij sommige verstrekkers buiten het beleid."},
-  {"id":"wboer","cat":"W","naam":"Woonboerderij","kort":"Financiering van woonboerderij","na":"wwp","waarom":"Woonboerderijen hebben vaak veel grond of bijgebouwen; verstrekkers stellen daar eisen aan."},
-  {"id":"wboot","cat":"W","naam":"Woonboot","kort":"Financiering van woonboot / ark","na":"wboer","waarom":"Weinig verstrekkers financieren een woonboot; als ze het doen gelden extra eisen."},
-  {"id":"hsb","cat":"W","naam":"Houtskeletbouw","kort":"Financiering van houtskeletbouw","na":"wboot","waarom":"Houtskeletbouw en andere afwijkende bouwwijzen vallen niet bij elke verstrekker binnen het beleid."},
-  {"id":"nhgk","cat":"W","naam":"Bijzondere koopconstructies","kort":"Koopgarant, Kopen naar Wens e.d. met NHG","na":"hsb","waarom":"Koopconstructies van corporaties of ontwikkelaars worden niet door elke verstrekker gefinancierd."},
-  {"id":"gron","cat":"W","naam":"Groninger akte","kort":"Woning met Groninger akte","na":"nhgk","waarom":"Een Groninger akte (gesplitste koop van grond en opstal) wordt niet overal geaccepteerd."},
-  {"id":"bsp","cat":"W","naam":"Banksparen in LTV","kort":"Opgebouwde bankspaarwaarde telt mee voor LTV","na":"gron","waarom":"Telt de opgebouwde waarde van een bankspaarrekening mee, dan valt de hypotheek in een lagere risicoklasse."},
-  {"id":"wbhuid","cat":"W","naam":"Waarde huidige woning","kort":"Waarde huidige woning aantonen zonder taxatie","na":"bsp","waarom":"Bij verhuizen moet de waarde van de huidige woning worden aangetoond; soms volstaat een waardebepaling zonder volledig rapport."},
-  {"id":"ort","cat":"I","naam":"Overwerk, ORT en ploegentoeslag","kort":"Over welke periode structureel","waarom":"Overwerk en toeslagen tellen alleen mee als ze structureel zijn. De periode waarover dat moet blijken verschilt."},
-  {"id":"uren","cat":"I","naam":"Maximaal aantal werkuren","kort":"Uren per week die meetellen","na":"ort","waarom":"Wie veel uren werkt, ziet soms niet al het inkomen meetellen door een maximum aantal uren."},
-  {"id":"meerink","cat":"I","naam":"Meerdere inkomens","kort":"Meerdere banen of inkomens uit arbeid","na":"uren","waarom":"Een tweede baan of inkomen uit loondienst en onderneming samen wordt niet overal meegeteld."},
-  {"id":"loondt","cat":"I","naam":"Inkomensbepaling Loondienst (IBL)","kort":"IBL als inkomensbewijs","na":"meerink","waarom":"De IBL-toets op basis van UWV-gegevens is vaak sneller en gunstiger dan een werkgeversverklaring."},
-  {"id":"intent","cat":"I","naam":"Tijdelijk contract met intentie","kort":"Huidig inkomen bij intentieverklaring","na":"loondt","waarom":"Met een tijdelijk contract en een intentieverklaring van de werkgever telt het huidige inkomen vaak mee."},
-  {"id":"toekdv","cat":"I","naam":"Toekomstig dienstverband","kort":"Inkomen uit nieuwe baan","na":"intent","waarom":"Wie binnenkort een nieuwe baan begint, wil dat inkomen al laten meetellen."},
-  {"id":"toekst","cat":"I","naam":"Toekomstige inkomensstijging","kort":"Stijging volgens cao of contract","na":"toekdv","waarom":"Een vastgelegde loonsverhoging kan extra leenruimte geven als de verstrekker die meeneemt."},
-  {"id":"proef","cat":"I","naam":"Proeftijd","kort":"Bindend aanbod tijdens proeftijd","na":"toekst","waarom":"Tijdens een proeftijd is het inkomen minder zeker; niet elke verstrekker geeft dan een bindend aanbod."},
-  {"id":"buitw","cat":"I","naam":"Buitenlandse werkgever","kort":"Inkomen van buitenlandse werkgever","na":"proef","waarom":"Grenswerkers en mensen met een buitenlandse werkgever lopen vaak tegen beperkingen aan."},
-  {"id":"ikb","cat":"I","naam":"Keuzebudget / IKB","kort":"Individueel keuzebudget als inkomen","na":"buitw","waarom":"Het IKB vervangt bij veel cao’s het vakantiegeld en de eindejaarsuitkering. Of het meetelt verschilt."},
-  {"id":"aios","cat":"I","naam":"AIOS / ANIOS","kort":"Inkomen arts in (niet-)opleiding","na":"ikb","waarom":"Artsen in opleiding hebben vaak tijdelijke contracten; sommige verstrekkers hebben daar een eigen regeling voor."},
-  {"id":"promo","cat":"I","naam":"Promovendus / onderzoeker","kort":"Inkomen zonder intentieverklaring","na":"aios","waarom":"Promovendi en wetenschappers hebben vaak tijdelijke contracten; soms telt het inkomen toch mee."},
-  {"id":"verm","cat":"I","naam":"Inkomen uit vermogen","kort":"Vermogen als toetsinkomen","na":"promo","waarom":"Wie weinig inkomen maar veel vermogen heeft, kan soms op basis van vermogen lenen."},
-  {"id":"lijfr","cat":"I","naam":"Lijfrente-inkomsten","kort":"(Toekomstige) lijfrente in de toets","na":"verm","waarom":"Lijfrente-uitkeringen kunnen inkomen vormen, vooral voor senioren."},
-  {"id":"wga","cat":"I","naam":"Inkomen uit WGA","kort":"WGA-uitkering als inkomen","na":"lijfr","waarom":"Een WGA-uitkering is niet altijd blijvend; verstrekkers kijken verschillend naar de duur."},
-  {"id":"ivawao","cat":"I","naam":"IVA, WAO en WAZ","kort":"Arbeidsongeschiktheidsuitkeringen","na":"wga","waarom":"Duurzame arbeidsongeschiktheidsuitkeringen tellen meestal mee, maar de voorwaarden verschillen."},
-  {"id":"wajong","cat":"I","naam":"Inkomen uit Wajong","kort":"Wajong-uitkering als inkomen","na":"ivawao","waarom":"Jonggehandicapten met een Wajong-uitkering kunnen alleen bij verstrekkers die dit inkomen accepteren."},
-  {"id":"senior","cat":"I","naam":"Seniorenbeleid","kort":"Apart acceptatiebeleid voor senioren","na":"wajong","waarom":"Voor senioren gelden soms ruimere regels, bijvoorbeeld toetsen op werkelijke lasten of een seniorenregeling."},
-  {"id":"zbep","cat":"Z","naam":"Bepaling inkomen ondernemer","kort":"Via rekenmeester, geldverstrekker of VIIZ","waarom":"Het inkomen van een ondernemer kan via een rekenmeester, de verstrekker zelf of een VIIZ-verklaring worden bepaald. Dat beïnvloedt snelheid en uitkomst."},
-  {"id":"z123","cat":"Z","naam":"1-2-3-regeling","kort":"Inkomen op basis van 1, 2 of 3 jaar","na":"zbep","waarom":"De 1-2-3-regeling bepaalt hoe jaarcijfers worden gemiddeld; dat kan voor groeiende ondernemers gunstig zijn."},
-  {"id":"zcijf","cat":"Z","naam":"Aanleveren cijfers","kort":"Definitieve en tussentijdse cijfers","na":"z123","waarom":"Welke cijfers nodig zijn en vanaf wanneer, bepaalt of een ondernemer direct kan aanvragen."},
-  {"id":"zniet","cat":"Z","naam":"Zonder ondernemersinkomen","kort":"Eisen als ondernemersinkomen niet meetelt","na":"zcijf","waarom":"Ook als het ondernemersinkomen niet meetelt, vragen sommige verstrekkers toch stukken over de onderneming."},
-  {"id":"zltv","cat":"Z","naam":"Maximale LTV ondernemer","kort":"Lager maximum voor zelfstandigen","na":"zniet","waarom":"Soms mogen zelfstandigen minder lenen ten opzichte van de woningwaarde."},
-  {"id":"zbv","cat":"Z","naam":"Meer dan 2 bv’s","kort":"Structuren met meerdere bv’s","na":"zltv","waarom":"Bij een holding met meerdere werkmaatschappijen wordt de beoordeling complexer; niet elke verstrekker doet het."},
-  {"id":"zstart","cat":"Z","naam":"Startende ondernemer","kort":"Loon van voor de start, zelfde branche, prognose","na":"zbv","waarom":"Voor starters kan inkomen uit eerdere loondienst in dezelfde branche of een prognose helpen."},
-  {"id":"zbuit","cat":"Z","naam":"Buitenlandse onderneming","kort":"Ondernemersinkomen uit het buitenland","na":"zstart","waarom":"Inkomen uit een buitenlandse onderneming wordt lang niet overal geaccepteerd."},
-  {"id":"bkr","cat":"F","naam":"BKR-coderingen","kort":"Herstelde A, RH/RN en HY-coderingen","waarom":"Een BKR-codering betekent niet altijd een afwijzing; het beleid voor herstelde of kwijtgescholden coderingen verschilt."},
-  {"id":"duo","cat":"F","naam":"Studielening","kort":"Toetsing DUO-schuld","na":"bkr","waarom":"Een studieschuld drukt op de leenruimte; de manier van toetsen kan verschillen van de standaardnorm."},
-  {"id":"plen","cat":"F","naam":"Persoonlijke lening","kort":"Werkelijke last of 2% van het krediet","na":"duo","waarom":"Toetsing op werkelijke last in plaats van 2% van het krediet kan veel leenruimte schelen."},
-  {"id":"dkr","cat":"F","naam":"Doorlopend krediet","kort":"Werkelijke last of 2% van de limiet","na":"plen","waarom":"Ook bij doorlopend krediet maakt de toetsmethode uit voor de leenruimte."},
-  {"id":"lease","cat":"F","naam":"Operational lease","kort":"Privélease in de toets","na":"dkr","waarom":"Een privéleaseauto telt mee als verplichting; de manier van rekenen verschilt per verstrekker."},
-  {"id":"rsk","cat":"F","naam":"Restschuldlening","kort":"Toetsing lening voor restschuld","na":"lease","waarom":"Een aparte lening voor een restschuld telt mee in de toets; de rekenmethode bepaalt de impact."},
-  {"id":"nlwon","cat":"X","naam":"Wonen en werken in NL","kort":"Minimale periode in Nederland","waarom":"Expats moeten soms een minimum aantal maanden in Nederland wonen of werken voordat ze een hypotheek krijgen."},
-  {"id":"r30","cat":"X","naam":"30%-regeling","kort":"30%-vergoeding in het inkomen","na":"nlwon","waarom":"Met de 30%-regeling is een deel van het loon onbelast. Of dat meetelt maakt veel uit voor de leenruimte."},
-  {"id":"brut","cat":"X","naam":"Bruteren inkomen","kort":"Netto inkomen bruteren","na":"r30","waarom":"Bij netto-inkomen (zoals de 30%-regeling) kan bruteren het toetsinkomen verhogen."},
-  {"id":"vblf","cat":"X","naam":"Tijdelijke verblijfsvergunning","kort":"Hypotheek en max. LTV bij tijdelijke vergunning","na":"brut","waarom":"Met een tijdelijke verblijfsvergunning is lenen vaak beperkt of onmogelijk, afhankelijk van het verblijfsdoel."},
-  {"id":"expbel","cat":"X","naam":"Belastingplicht buitenland","kort":"In NL wonen, elders belastingplichtig","na":"vblf","waarom":"Wie in Nederland woont maar elders belasting betaalt, valt bij veel verstrekkers buiten het beleid."}
+  {"id":"verhuur","cat":"N","naam":"Verhuur toegestaan","kort":"Woning (tijdelijk) verhuren","na":"verh","waarom":"Een eigen-woninghypotheek gaat ervan uit dat je er zelf woont. Verhuren of kamers verhuren mag vaak alleen met toestemming, soms tegen andere voorwaarden."}
 ];
 
 /* Ingevulde waarden voor aanvullende voorwaarden, per voorwaarde-id en verstrekkersnaam:
@@ -1333,12 +1255,9 @@ let editMode = false;
 let overigOpen = false;
 let activeCats = new Set(CATS.map(c=>c.id));
 const sel = new Set();
-/* Koppeling met de 183 veelgezochte voorwaarden: per criterium de codes van de voorwaarden die eronder vallen
-   (zie docs/voorwaarden-onderzoek/zoekvoorwaarden.json). Elke code hoort bij precies één criterium. */
-const VOORWAARDE_CODES = {"boete":["LEN150","LEN160","LEN180"],"geld":["OFF130","OFF140","OFF150"],"bprov":["OFF120","OFF210","OFF220"],"dag":["REN110","REN120","REN130","REN140"],"ltv":["REN100"],"verh":["OFF190","OFF230"],"desk":["OND110","OND120"],"ams":["ANV100"],"vve":["OND350"],"huur":["INK270","OND250"],"bonus":["INK150","INK160","INK170"],"recr":["OND190"],"bdduur":["LEN270","LEN280","LEN340","LEN350"],"bdrnt":["LEN230","LEN240"],"aanv":["ANV150","ANV160"],"pgb":["INK210"],"start":["LEN210"],"verhuur":["OND180","OND410"],"lensch":["FIN10","FIN20","FIN30","FIN40"],"cons":["LEN130"],"aow":["INK290"],"zzp":["ANV140","ONR240","ONR250"],"flex":["ANV130","INK100","INK120"],"persp":["INK110"],"erfp":["OND160","OND170","OND380","OND430"],"ebb":["LEN390"],"duur":["LEN380"],"o106":["LEN260"],"tweede":["LEN220"],"avrij":["LEN490"],"rmid":["LEN460"],"wkost":["LEN170","LEN450","LEN470","LEN480"],"obmax":["OBK110","OBK120","OBK130","OBK140","OBK150"],"oblast":["OBK200"],"obduur":["OBK160","OBK170"],"obwaar":["OBK230","OBK220"],"obels":["OBK190"],"obvw":["OBK100","OBK180","OBK210"],"geldnb":["OFF160","OFF170","OFF180"],"annul":["OFF100","OFF110"],"dig":["OFF200"],"bgar":["OFF240"],"bovw":["LEN320"],"bvrij":["LEN110","LEN100"],"minh":["LEN310"],"maxh":["LEN290","LEN300"],"borg":["LEN120"],"rest":["LEN200","LEN190"],"geruis":["LEN330"],"oversl":["LEN250"],"verhw":["LEN430","LEN440","LEN410","LEN420","LEN400"],"zelfb":["OND270","OND300","OND320"],"cpo":["OND260","OND290","OND340"],"pnb":["OND280","OND310"],"minmw":["OND420"],"mwbep":["OND100","OND150"],"woz":["OND130","OND140"],"ltvk":["OND360","OND370"],"wwp":["OND200"],"wboer":["OND210"],"wboot":["OND220"],"hsb":["OND400"],"nhgk":["OND390"],"gron":["OND330"],"bsp":["OND230"],"wbhuid":["OND240"],"ort":["INK190","INK180"],"uren":["INK200"],"meerink":["ANV120"],"loondt":["INK60"],"intent":["INK90"],"toekdv":["INK80"],"toekst":["INK70"],"proef":["INK10"],"buitw":["INK130"],"ikb":["INK140"],"aios":["INK300","INK310"],"promo":["INK40","INK30"],"verm":["ANV110"],"lijfr":["INK280"],"wga":["INK250"],"ivawao":["INK260","INK230","INK240"],"wajong":["INK220"],"senior":["ANV170"],"zbep":["ONR170","ONR180","ONR190"],"z123":["ONR210"],"zcijf":["ONR280","ONR270","ONR260"],"zniet":["ONR200","ONR290"],"zltv":["ONR230"],"zbv":["ONR220"],"zstart":["ONR100","ONR90","ONR120"],"zbuit":["ONR150"],"bkr":["FIN150","FIN130","FIN140"],"duo":["FIN160"],"plen":["FIN50","FIN60"],"dkr":["FIN70","FIN80"],"lease":["FIN90","FIN100"],"rsk":["FIN110","FIN120"],"nlwon":["EXP10"],"r30":["EXP20"],"brut":["EXP30"],"vblf":["EXP50","EXP60","EXP70","EXP110"],"expbel":["EXP100"]};
-/* De 20 criteria met de meest gezochte voorwaarde, meest gezocht eerst (overbrugging, boetevrij aflossen,
-   offertegeldigheid, consumptief deel enz.). */
-const MEEST_GEZOCHT = ['obmax','boete','geld','cons','oblast','lensch','bprov','desk','dag','verh','geldnb','ams','vve','huur','bonus','recr','bdduur','aanv','annul','pgb'];
+/* Volgorde naar zoekvolume in de gebruiksanalyse van de FinData voorwaarden-app (jan-sep 2026): overbrugging, boetevrij
+   aflossen, offertegeldigheid, consumptief deel, leen/schenkingsconstructies, verhuisregeling, desktoptaxatie, dagrente enz. */
+const MEEST_GEZOCHT = ['ovbr','boete','geld','cons','lensch','verh','desk','dag','bprov','bonus','ams','vve','huur','recr','aanv','pgb','start','verhuur','bdduur','ltv'];
 let ksel = new Set();   // gekozen kenmerken (voorwaarde-id's) voor Vergelijken
 
 /* Uitgebreid zoeken en filteren. Staat alleen in het geheugen en in de hash (&f=…), nooit in browseropslag. */
@@ -1913,11 +1832,12 @@ function renderCmpPaneel(){
   alle.setAttribute('aria-pressed', String(alleAan));
   alle.addEventListener('click',()=>{ crits.forEach(c=>ksel.add(c.id)); render(); });
   chips.appendChild(alle);
+  /* Meest gezochte voorwaarden volgens de gebruiksanalyse van de FinData voorwaarden-app (jan-sep 2026), in volgorde van zoekvolume. */
   const gezocht = MEEST_GEZOCHT.filter(id=>crits.some(c=>c.id===id));
   const mg = el('button','chip','Meest gezocht'); mg.type = 'button'; mg.dataset.sleutel = 'kc:gezocht';
   const mgAan = gezocht.length === ksel.size && gezocht.every(id=>ksel.has(id));
   mg.setAttribute('aria-pressed', String(mgAan));
-  mg.title = 'De voorwaarden waarop adviseurs het vaakst zoeken';
+  mg.title = 'De voorwaarden waarop adviseurs het vaakst zoeken (gebruiksanalyse FinData voorwaarden-app, januari t/m september 2026)';
   mg.addEventListener('click',()=>{ ksel = new Set(gezocht); render(); });
   chips.appendChild(mg);
   CATS.forEach(cat=>{
