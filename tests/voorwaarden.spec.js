@@ -248,7 +248,7 @@ test.describe('voorwaardenvergelijker', () => {
       logo: getComputedStyle(document.querySelector('#matrix img.plogo')).backgroundColor,
       cel: getComputedStyle(document.querySelector('#matrix tbody th.vast')).backgroundColor
     }));
-    expect(k.body).toBe('rgb(20, 20, 20)');
+    expect(k.body).toBe('rgb(12, 35, 64)');
     expect(k.logo).toBe('rgb(255, 255, 255)');
     expect(k.cel).not.toBe('rgb(255, 255, 255)');
   });
@@ -479,7 +479,7 @@ test.describe('voorwaardenvergelijker: uitgebreid zoeken en filteren', () => {
     expect(breed).toBeLessThanOrEqual(0);
     await page.emulateMedia({ colorScheme: 'dark' });
     const bg = await page.evaluate(() => getComputedStyle(document.querySelector('.ufblok')).backgroundColor);
-    expect(bg).toBe('rgb(30, 30, 30)');
+    expect(bg).toBe('rgb(15, 27, 43)');
   });
 });
 

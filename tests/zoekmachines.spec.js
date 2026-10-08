@@ -1,4 +1,4 @@
-// Uit Google en Bing, wel leesbaar voor andere crawlers (Intercom/Fin): per zoekmachine noindex, geen generieke robots-noindex
+// De site is vindbaar: geen googlebot/bingbot-noindex meer; losse pagina's mogen een eigen robots-noindex houden
 const { test, expect } = require('@playwright/test');
 const fs = require('fs');
 const path = require('path');
@@ -8,16 +8,16 @@ const ROOT = path.join(__dirname, '..');
 const G = '<meta name="googlebot" content="noindex, follow">';
 const B = '<meta name="bingbot" content="noindex, follow">';
 
-test('node tools/zoekmachines.js --check: alle pagina\'s in de hoofdmap hebben de tags', () => {
+test('node tools/zoekmachines.js --check: geen pagina in de hoofdmap heeft nog de oude tags', () => {
   expect(execFileSync(process.execPath, [path.join(ROOT, 'tools', 'zoekmachines.js'), '--check'], { cwd: ROOT, encoding: 'utf8' })).toMatch(/actueel/);
 });
 
-test('elke pagina (ook gegenereerd) heeft googlebot- en bingbot-noindex in de head, precies één keer', () => {
+test('geen enkele pagina (ook gegenereerd) heeft nog googlebot- of bingbot-noindex', () => {
   const mappen = ['.', 'kennisbank', 'faq', 'begrippen', 'vraag'];
   const fout = [];
   for (const m of mappen) for (const f of fs.readdirSync(path.join(ROOT, m)).filter(f => f.endsWith('.html'))) {
     const t = fs.readFileSync(path.join(ROOT, m, f), 'utf8'), kop = t.slice(0, t.indexOf('</head>'));
-    if (kop.split(G).length !== 2 || kop.split(B).length !== 2) fout.push(m + '/' + f);
+    if (kop.includes(G) || kop.includes(B)) fout.push(m + '/' + f);
   }
   expect(fout).toEqual([]);
 });

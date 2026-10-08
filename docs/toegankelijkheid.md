@@ -6,7 +6,7 @@ Peildatum: 3 oktober 2026. Norm: WCAG 2.2, niveau AA.
 
 **Status: voldoet gedeeltelijk aan WCAG 2.2 niveau AA.**
 
-Het Adviesforum wil voor iedere adviseur goed bruikbaar zijn, ook met een toetsenbord, een schermlezer, vergroting of een donkere weergave. Deze verklaring geldt voor de website op jeroen-o.github.io/adviesforum.
+Het Adviesforum wil voor iedere adviseur goed bruikbaar zijn, ook met een toetsenbord, een schermlezer, vergroting of een donkere weergave. Deze verklaring geldt voor de website op adviesforum.nl.
 
 ### Wat er is getest
 
@@ -61,7 +61,7 @@ Het Adviesforum wil voor iedere adviseur goed bruikbaar zijn, ook met een toetse
 
 ### Contact
 
-Loop je tegen een probleem aan, of kun je iets niet gebruiken? Mail naar forumadvies@gmail.com. Vermeld de pagina en wat er misging.
+Loop je tegen een probleem aan, of kun je iets niet gebruiken? Mail naar jeroen@oversteegen.nl. Vermeld de pagina en wat er misging.
 
 ## Nog te doen in index.html
 

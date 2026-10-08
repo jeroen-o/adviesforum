@@ -133,7 +133,7 @@ window.SJABLOON_VELDEN = {
   gebeurtenis: { label: 'Levensgebeurtenis', hint: 'Bijv. verbouwing, verhuizing of gezinsuitbreiding' },
   ingangsdatum: { label: 'Ingangsdatum wijziging', type: 'datum' },
   opzegreden: { label: 'Reden opzegging verzekeraar (zoals ontvangen)', type: 'lang' },
-  scanlink: { label: 'Link naar de schadeverzekeringsscan', type: 'url', hint: 'Bijv. https://jeroen-o.github.io/adviesforum/scan-schadeverzekeringen.html' },
+  scanlink: { label: 'Link naar de schadeverzekeringsscan', type: 'url', hint: 'Bijv. https://adviesforum.nl/scan-schadeverzekeringen.html' },
 
   /* Krediet */
   kredietverstrekker: { label: 'Kredietverstrekker' }

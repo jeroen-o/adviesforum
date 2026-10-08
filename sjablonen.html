@@ -4,34 +4,28 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mail- en briefsjablonen – Adviesforum</title>
-<link rel="canonical" href="https://jeroen-o.github.io/adviesforum/sjablonen.html">
-<meta property="og:url" content="https://jeroen-o.github.io/adviesforum/sjablonen.html">
+<link rel="canonical" href="https://adviesforum.nl/sjablonen.html">
+<meta property="og:url" content="https://adviesforum.nl/sjablonen.html">
 <meta property="og:site_name" content="Adviesforum">
 <meta property="og:locale" content="nl_NL">
-<meta name="theme-color" content="#FFD200">
+<meta name="theme-color" content="#F5A623">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="description" content="Ruim zestig mail- en briefsjablonen en interne memo’s voor adviseurs, van kennismaking tot klacht, schade en compliance. Vul de velden in en kopieer, mail of print de tekst.">
-<meta name="googlebot" content="noindex, follow">
-<meta name="bingbot" content="noindex, follow">
 <meta property="og:title" content="Mail- en briefsjablonen – Adviesforum">
 <meta property="og:description" content="Ruim zestig mail- en briefsjablonen en interne memo’s voor adviseurs, van kennismaking tot klacht, schade en compliance. Vul de velden in en kopieer, mail of print de tekst.">
 <meta property="og:type" content="website">
 <style>
-@font-face{font-family:Montserrat;font-style:normal;font-weight:400;font-display:swap;src:url(fonts/montserrat-latin-400-normal.woff2) format('woff2')}
-@font-face{font-family:Montserrat;font-style:normal;font-weight:600;font-display:swap;src:url(fonts/montserrat-latin-600-normal.woff2) format('woff2')}
-@font-face{font-family:Montserrat;font-style:normal;font-weight:700;font-display:swap;src:url(fonts/montserrat-latin-700-normal.woff2) format('woff2')}
-@font-face{font-family:Montserrat;font-style:normal;font-weight:800;font-display:swap;src:url(fonts/montserrat-latin-800-normal.woff2) format('woff2')}
 
 :root{
-  --geel:#FFD200;--geel-donker:#E6BD00;--geel-zacht:#FFF6C7;
-  --zwart:#141414;--tekst:#1F1F1F;--grijs:#5E5E5E;--lijn:#E4E4E4;--vlak:#F7F7F5;
-  --rood:#C0392B;--rood-zacht:#FFF1F0;--groen:#1E7A4B;--groen-zacht:#EFF8F2;
+  --geel:#F5A623;--geel-donker:#D98E0F;--geel-zacht:#FDF3E2;
+  --zwart:#0C2340;--tekst:#112033;--grijs:#4A5765;--lijn:#DCE3EB;--vlak:#F5F7FA;
+  --rood:#9E2F45;--rood-zacht:#FFF1F0;--groen:#1E7A4B;--groen-zacht:#EFF8F2;
 }
 *{box-sizing:border-box}
 [hidden]{display:none!important}
 html,body{margin:0;padding:0}
-body{font-family:Montserrat,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+body{font-family:Segoe UI,Roboto,Helvetica Neue,Arial,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
   color:var(--tekst);background:#fff;line-height:1.55;font-size:15px;-webkit-font-smoothing:antialiased}
 a{color:inherit}
 button,input,select,textarea{font-family:inherit}
@@ -40,10 +34,10 @@ button,input,select,textarea{font-family:inherit}
 .balk a{color:#fff;text-decoration:none;opacity:.88}
 .balk a:hover{opacity:1;text-decoration:underline}
 
-.kop{background:var(--geel);color:var(--zwart);padding:34px 24px 38px}
+.kop{background:var(--zwart);color:#fff;border-bottom:3px solid var(--geel);padding:34px 24px 38px}
 .kop-in{max-width:1180px;margin:0 auto}
 .merk{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.08em;font-size:12px;text-transform:uppercase;margin-bottom:16px}
-.zeshoek{width:22px;height:25px;background:var(--zwart);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);flex:none}
+.zeshoek{width:22px;height:22px;background:var(--geel);border-radius:7px;flex:none}
 .terug{display:inline-block;font-size:13.5px;font-weight:700;text-decoration:none;border-bottom:2px solid var(--zwart);margin-bottom:14px}
 .kop h1{margin:0 0 10px;font-size:clamp(27px,4.2vw,40px);line-height:1.12;font-weight:800}
 .kop p{margin:0;max-width:66ch;font-size:15.5px}
@@ -53,7 +47,7 @@ button,input,select,textarea{font-family:inherit}
 
 .menu{position:sticky;top:16px;border:1px solid var(--lijn);border-radius:14px;padding:14px;background:var(--vlak);max-height:calc(100vh - 32px);overflow-y:auto}
 .menu label.klein{display:block;font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--grijs);font-weight:800;margin:0 0 5px}
-.menu input,.menu select{width:100%;padding:9px 12px;border:1px solid #CFCFCF;border-radius:9px;font-size:14px;background:#fff;margin-bottom:10px;color:var(--tekst)}
+.menu input,.menu select{width:100%;padding:9px 12px;border:1px solid #C9D3DE;border-radius:9px;font-size:14px;background:#fff;margin-bottom:10px;color:var(--tekst)}
 .menu input:focus,.menu select:focus{outline:3px solid rgba(255,210,0,.6);outline-offset:1px}
 .menu .teller{font-size:12.5px;color:var(--grijs);margin:-2px 0 8px}
 .menu h3{font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--grijs);margin:12px 0 4px;padding:0 6px;font-weight:800}
@@ -75,7 +69,7 @@ button,input,select,textarea{font-family:inherit}
 .knoppen{display:flex;gap:8px;flex-wrap:wrap}
 .knop{border-radius:999px;padding:9px 16px;font-size:13.5px;font-weight:700;cursor:pointer;border:1px solid var(--zwart);background:var(--zwart);color:#fff}
 .knop:hover{background:#000}
-.knop.licht{background:#fff;color:var(--zwart);border-color:#CFCFCF}
+.knop.licht{background:#fff;color:var(--zwart);border-color:#C9D3DE}
 .knop.licht:hover{background:var(--vlak)}
 .knop:focus-visible{outline:3px solid rgba(255,210,0,.8);outline-offset:2px}
 
@@ -89,7 +83,7 @@ button,input,select,textarea{font-family:inherit}
 .veld{min-width:0}
 .veld label{display:block;font-weight:600;font-size:13.5px;margin-bottom:5px}
 .veld .tip{display:block;font-size:12px;color:var(--grijs);margin-top:4px}
-.veld input,.veld textarea{width:100%;padding:10px 12px;border:1px solid #CFCFCF;border-radius:9px;font-size:15px;background:#fff;color:var(--tekst)}
+.veld input,.veld textarea{width:100%;padding:10px 12px;border:1px solid #C9D3DE;border-radius:9px;font-size:15px;background:#fff;color:var(--tekst)}
 .veld textarea{resize:vertical;line-height:1.4;min-height:78px}
 .veld input:focus,.veld textarea:focus{outline:3px solid rgba(255,210,0,.6);outline-offset:1px;border-color:#9A9A9A}
 .veld.gevuld input,.veld.gevuld textarea{border-color:#9FCDB3;background:#FBFEFC}
@@ -127,7 +121,7 @@ button,input,select,textarea{font-family:inherit}
 .uitleg{font-size:13px;color:var(--grijs);margin:16px 0 0}
 
 .compliance{max-width:1132px;margin:0 auto;background:var(--rood-zacht);border-left:4px solid var(--rood);border-radius:0 10px 10px 0;padding:14px 18px;font-size:14px}
-.compliance strong{color:#A5281B}
+.compliance strong{color:#8A2539}
 .voet{max-width:1180px;margin:0 auto;padding:24px 24px 40px;font-size:12.5px;color:var(--grijs)}
 .voet a{color:var(--zwart);font-weight:600}
 
@@ -157,7 +151,7 @@ a.terug{display:inline-block;padding:8px 0}
 <body>
 
 <!-- sitenav: gegenereerd door tools/sitenav.js, niet met de hand wijzigen -->
-<nav class="sitenav" aria-label="Adviesforum"><div class="sitenav-in"><a class="sitenav-merk" href="index.html">Adviesforum</a><ul><li><a href="index.html">Home</a></li><li><a href="voorwaarden.html">Voorwaarden</a></li><li><a href="index.html#hulpmiddelen">Hulpmiddelen</a></li><li><a href="laatste.html">Laatste nieuws</a></li><li><a href="aanmelden.html">Aanmelden</a></li></ul></div></nav>
+<nav class="sitenav" aria-label="Adviesforum"><div class="sitenav-in"><a class="sitenav-merk" href="index.html"><span class="sitenav-teken" aria-hidden="true">A</span>Adviesforum</a><form class="sitenav-zoek" action="index.html" method="get" role="search"><input type="search" name="zoek" placeholder="Zoek op de hele site" aria-label="Zoek op de hele site" autocomplete="off"><button type="submit">Zoeken</button></form><ul><li><a href="index.html">Home</a></li><li><a href="voorwaarden.html">Voorwaarden</a></li><li><a href="index.html#hulpmiddelen">Hulpmiddelen</a></li><li><a href="laatste.html">Laatste nieuws</a></li><li><a href="aanmelden.html">Aanmelden</a></li></ul></div></nav>
 <!-- /sitenav -->
 
 <header class="kop">

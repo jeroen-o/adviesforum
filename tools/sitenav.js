@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 /*
- * Eén vaste navigatiebalk bovenaan alle pagina's: Home, Voorwaarden, Hulpmiddelen, Laatste nieuws, Aanmelden.
+ * Eén vaste navigatiebalk bovenaan alle pagina's: zoekbalk (doorzoekt de hele site via index.html?zoek=) en
+ * Home, Voorwaarden, Hulpmiddelen, Laatste nieuws, Aanmelden.
  * De balk staat als gewone HTML in elke pagina (werkt zonder JavaScript) tussen <!-- sitenav --> en <!-- /sitenav -->;
  * de opmaak staat in css/sitenav.css. tools/build-static.js gebruikt navHtml() voor de statische pagina's.
  *
@@ -29,13 +30,13 @@ const HOORT_BIJ = {
 const BEGIN = '<!-- sitenav: gegenereerd door tools/sitenav.js, niet met de hand wijzigen -->';
 const EIND = '<!-- /sitenav -->';
 const CSS_LINK = 'css/sitenav.css';
-/* 404.html wordt ook in submappen getoond (GitHub Pages) en heeft daarom absolute links nodig. */
-const PREFIX = { '404.html': '/adviesforum/' };
+/* 404.html wordt ook in submappen getoond (GitHub Pages, domein adviesforum.nl) en heeft daarom absolute links nodig. */
+const PREFIX = { '404.html': '/' };
 
 function navHtml(pre = '', bestand = '') {
   const huidig = HOORT_BIJ[bestand];
   const li = LINKS.map(([u, t]) => `<li><a href="${pre}${u}"${t === huidig ? ' aria-current="page"' : ''}>${t}</a></li>`).join('');
-  return `${BEGIN}\n<nav class="sitenav" aria-label="Adviesforum"><div class="sitenav-in"><a class="sitenav-merk" href="${pre}index.html">Adviesforum</a><ul>${li}</ul></div></nav>\n${EIND}`;
+  return `${BEGIN}\n<nav class="sitenav" aria-label="Adviesforum"><div class="sitenav-in"><a class="sitenav-merk" href="${pre}index.html"><span class="sitenav-teken" aria-hidden="true">A</span>Adviesforum</a><form class="sitenav-zoek" action="${pre}index.html" method="get" role="search"><input type="search" name="zoek" placeholder="Zoek op de hele site" aria-label="Zoek op de hele site" autocomplete="off"><button type="submit">Zoeken</button></form><ul>${li}</ul></div></nav>\n${EIND}`;
 }
 
 /* Oude balken die door de vaste balk worden vervangen. */

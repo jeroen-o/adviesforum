@@ -148,7 +148,7 @@ test('koppelingen.html: BSN-achtige referentie komt niet in de link', async ({ p
   await expect(page.locator('#b-melding')).toContainText('BSN');
   await expect(page.locator('#b-url')).not.toContainText('ref=');
   await page.fill('#b-ref', 'DOS-2026-0412');
-  await expect(page.locator('#b-url')).toHaveText('https://jeroen-o.github.io/adviesforum/inkomensbepaling.html#vast&ref=DOS-2026-0412');
+  await expect(page.locator('#b-url')).toHaveText('https://adviesforum.nl/inkomensbepaling.html#vast&ref=DOS-2026-0412');
   await page.fill('#b-ref', '2026-0412');
   await expect(page.locator('#b-url')).toContainText('ref=2026-0412');
 });

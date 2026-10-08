@@ -18,10 +18,9 @@ const path = require('path');
 const vm = require('vm');
 const { execFileSync } = require('child_process');
 const { navHtml, CSS_LINK } = require('./sitenav');
-const { TAGS: ZOEKMACHINE_TAGS } = require('./zoekmachines');
 
 const ROOT = path.join(__dirname, '..');
-const BASE = 'https://jeroen-o.github.io/adviesforum/';
+const BASE = 'https://adviesforum.nl/';
 const SITE = 'Adviesforum';
 const DISCLAIMER = 'Collegiale kennisdeling tussen financieel adviseurs, geen advies aan klanten of consumenten. Controleer altijd de actuele bron voordat je iets in een dossier gebruikt.';
 
@@ -89,24 +88,23 @@ function kort(t, max = 155) {
 /* Link uit de data: relatief = pagina in deze repository (vanuit een submap ../ ervoor) */
 const linkUrl = (u, pre) => /^(https?:|mailto:)/i.test(u) ? u : pre + u;
 
-/* ---------- Opmaak (huisstijl: geel/zwart, Montserrat lokaal) ---------- */
+/* ---------- Opmaak (huisstijl: navy/oranje, systeemlettertype) ---------- */
 function css(pre) {
-  const f = w => `@font-face{font-family:Montserrat;font-style:normal;font-weight:${w};font-display:swap;src:url(${pre}fonts/montserrat-latin-${w}-normal.woff2) format('woff2')}`;
-  return [400, 600, 700, 800].map(f).join('\n') + `
-:root{--geel:#FFD200;--zwart:#141414;--tekst:#1F1F1F;--grijs:#5F5F5F;--lijn:#E4E4E4;--vlak:#F7F7F5;--rood:#C0392B}
+  return `
+:root{--geel:#F5A623;--zwart:#0C2340;--tekst:#112033;--grijs:#4A5765;--lijn:#DCE3EB;--vlak:#F5F7FA;--rood:#9E2F45}
 *{box-sizing:border-box}html,body{margin:0;padding:0}
-body{font-family:Montserrat,system-ui,sans-serif;color:var(--tekst);background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-wrap:anywhere}
+body{font-family:Segoe UI,Roboto,Helvetica Neue,Arial,system-ui,sans-serif;color:var(--tekst);background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-wrap:anywhere}
 a{color:inherit}
 header.site{border-bottom:1px solid var(--lijn);padding:14px 20px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
 .merk{display:flex;align-items:center;gap:10px;text-decoration:none}
-.hex{width:26px;height:30px;background:var(--zwart);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);flex:none;position:relative}
+.hex{width:26px;height:30px;background:var(--zwart);border-radius:7px;flex:none;position:relative}
 .hex::after{content:'';position:absolute;inset:7px 6px;background:var(--geel);clip-path:inherit}
 .merknaam{font-weight:800;letter-spacing:.06em;font-size:16px}
 .merksub{font-size:12px;color:var(--grijs);letter-spacing:.04em}
 nav.hoofd{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap}
 nav.hoofd a{font-size:13px;text-decoration:none;font-weight:600;border:1px solid var(--lijn);padding:7px 13px;border-radius:999px}
 nav.hoofd a:hover,nav.hoofd a[aria-current]{background:var(--vlak)}
-.hero{background:var(--geel);padding:28px 20px 32px}
+.hero{background:var(--zwart);color:#fff;border-bottom:3px solid var(--geel);padding:28px 20px 32px}
 .hero-in,.inhoud{max-width:820px;margin:0 auto}
 .hero h1{margin:6px 0 10px;font-size:clamp(25px,4.4vw,38px);line-height:1.15;font-weight:800}
 .hero p{margin:0;max-width:66ch}
@@ -117,7 +115,7 @@ nav.hoofd a:hover,nav.hoofd a[aria-current]{background:var(--vlak)}
 .inhoud h2{font-size:20px;margin:30px 0 8px;line-height:1.3}
 .inhoud h3{font-size:16px;margin:22px 0 6px}
 .inhoud ul,.inhoud ol{padding-left:22px}.inhoud li{margin:4px 0}
-.melding{border:2px solid var(--zwart);background:#FFF6CC;border-radius:10px;padding:12px 16px;font-weight:700;margin:0 0 22px}
+.melding{border:2px solid var(--zwart);background:#FDF3E2;border-radius:10px;padding:12px 16px;font-weight:700;margin:0 0 22px}
 .knop{display:inline-block;background:var(--zwart);color:#fff;text-decoration:none;font-weight:700;padding:11px 18px;border-radius:999px;font-size:14px}
 .knop:hover{background:#333}
 .kader{border:1px solid var(--lijn);border-radius:12px;padding:16px 18px;background:var(--vlak);margin:28px 0 0;font-size:14px}
@@ -133,8 +131,8 @@ dl.begrippen dt{font-weight:700;margin-top:16px}dl.begrippen dd{margin:4px 0 0}
 footer{border-top:1px solid var(--lijn);padding:22px 20px;font-size:13px;color:var(--grijs);text-align:center}
 footer nav{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 16px;margin-bottom:8px}
 footer a{color:var(--tekst)}
-:focus-visible{outline:3px solid #141414;outline-offset:2px}
-.skiplink{position:absolute;left:12px;top:-200px;z-index:100;background:#141414;color:#fff;padding:10px 16px;border-radius:8px;font-weight:700;text-decoration:none}
+:focus-visible{outline:3px solid #0C2340;outline-offset:2px}
+.skiplink{position:absolute;left:12px;top:-200px;z-index:100;background:#0C2340;color:#fff;padding:10px 16px;border-radius:8px;font-weight:700;text-decoration:none}
 .skiplink:focus{top:12px}
 main:focus{outline:none}
 @media (max-width:760px){input,select,textarea{font-size:16px}}
@@ -142,19 +140,19 @@ main:focus{outline:none}
 @media print{header.site nav,footer nav,.knop,.skiplink{display:none}.hero{background:none;padding:0}}
 /* Donkere modus (alleen op het scherm; printen blijft licht). Zelfde opzet als index.html: data-theme="light" zet hem uit. */
 @media screen and (prefers-color-scheme:dark){
-:root:not([data-theme="light"]){color-scheme:dark;--zwart:#F2F2F2;--tekst:#F2F2F2;--grijs:#BDBDBD;--lijn:#333333;--vlak:#1E1E1E;--rood:#F08A80}
-:root:not([data-theme="light"]) body{background:#141414}
-:root:not([data-theme="light"]) .hero{background:#1E1E1E;border-bottom:3px solid var(--geel)}
-:root:not([data-theme="light"]) .hex::after{background:#141414}
-:root:not([data-theme="light"]) nav.hoofd a:hover,:root:not([data-theme="light"]) nav.hoofd a[aria-current]{background:#262626}
-:root:not([data-theme="light"]) .melding,:root:not([data-theme="light"]) .slot{background:#2E2810;border-color:var(--geel)}
-:root:not([data-theme="light"]) .knop{background:var(--geel);color:#141414}
-:root:not([data-theme="light"]) .knop:hover{background:#FFE04D}
-:root:not([data-theme="light"]) .knop-licht{background:transparent;color:#F2F2F2;border-color:#F2F2F2}
-:root:not([data-theme="light"]) .knop-licht:hover{background:#262626}
-:root:not([data-theme="light"]) .reacties li:target{background:#2E2810}
+:root:not([data-theme="light"]){color-scheme:dark;--zwart:#EDF1F6;--tekst:#EDF1F6;--grijs:#B8C4D1;--lijn:#16202C;--vlak:#0F1B2B;--rood:#F08A80}
+:root:not([data-theme="light"]) body{background:#0C2340}
+:root:not([data-theme="light"]) .hero{background:#0F1B2B;border-bottom:3px solid var(--geel)}
+:root:not([data-theme="light"]) .hex::after{background:#0C2340}
+:root:not([data-theme="light"]) nav.hoofd a:hover,:root:not([data-theme="light"]) nav.hoofd a[aria-current]{background:#162538}
+:root:not([data-theme="light"]) .melding,:root:not([data-theme="light"]) .slot{background:#2E2412;border-color:var(--geel)}
+:root:not([data-theme="light"]) .knop{background:var(--geel);color:#0C2340}
+:root:not([data-theme="light"]) .knop:hover{background:#F7B955}
+:root:not([data-theme="light"]) .knop-licht{background:transparent;color:#EDF1F6;border-color:#EDF1F6}
+:root:not([data-theme="light"]) .knop-licht:hover{background:#162538}
+:root:not([data-theme="light"]) .reacties li:target{background:#2E2412}
 :root:not([data-theme="light"]) :focus-visible{outline-color:var(--geel)}
-:root:not([data-theme="light"]) .skiplink{background:var(--geel);color:#141414}
+:root:not([data-theme="light"]) .skiplink{background:var(--geel);color:#0C2340}
 }`;
 }
 
@@ -171,7 +169,7 @@ function pagina({ pre, pad, titel, ogTitel, beschrijving, type = 'website', h1, 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(titel)}</title>
 <meta name="description" content="${esc(beschrijving)}">
-${ZOEKMACHINE_TAGS}${robots ? `\n<meta name="robots" content="${esc(robots)}">` : ''}
+${robots ? `<meta name="robots" content="${esc(robots)}">` : ''}
 <link rel="canonical" href="${esc(url)}">
 <meta property="og:title" content="${esc(ogTitel || titel)}">
 <meta property="og:description" content="${esc(beschrijving)}">
@@ -179,7 +177,7 @@ ${ZOEKMACHINE_TAGS}${robots ? `\n<meta name="robots" content="${esc(robots)}">` 
 <meta property="og:url" content="${esc(url)}">
 <meta property="og:site_name" content="${SITE}">
 <meta property="og:locale" content="nl_NL">
-<meta name="theme-color" content="#FFD200">
+<meta name="theme-color" content="#F5A623">
 <link rel="icon" href="${pre}favicon.svg" type="image/svg+xml">
 <link rel="manifest" href="${pre}manifest.webmanifest">
 <style>
@@ -348,9 +346,9 @@ const VRAAG_CSS = `.knoppen{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0 0
 .knop-licht{background:#fff;color:var(--zwart);border:2px solid var(--zwart);padding:9px 16px}.knop-licht:hover{background:var(--vlak)}
 .teaser{border:1px solid var(--lijn);border-left:4px solid var(--geel);border-radius:10px;padding:12px 16px;margin:10px 0 0}
 .teaser .waar{margin:0 0 4px}.teaser p{margin:0}
-.slot{border:2px solid var(--zwart);background:#FFF6CC;border-radius:12px;padding:16px 18px;margin:22px 0 0}
+.slot{border:2px solid var(--zwart);background:#FDF3E2;border-radius:12px;padding:16px 18px;margin:22px 0 0}
 .slot p{margin:0}
-.reacties li{scroll-margin-top:12px}.reacties li:target{background:#FFF6CC;outline:2px solid var(--geel);border-radius:6px;padding-left:8px}`;
+.reacties li{scroll-margin-top:12px}.reacties li:target{background:#FDF3E2;outline:2px solid var(--geel);border-radius:6px;padding-left:8px}`;
 const ordeAntw = v => v.antwoorden.slice().sort((a, b) => (b.id === v.beste) - (a.id === v.beste) || gem(b.rA) - gem(a.rA) || String(a.datum).localeCompare(String(b.datum)));
 const gem = o => { const w = Object.values(o || {}); return w.length ? w.reduce((x, y) => x + y, 0) / w.length : 0; };
 const nrVan = v => { const s = v.antwoorden.slice().sort((x, y) => String(x.datum).localeCompare(String(y.datum)) || String(x.id).localeCompare(String(y.id))); return a => s.indexOf(a) + 1; };

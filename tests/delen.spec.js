@@ -5,7 +5,7 @@ const path = require('path');
 const { volgFouten } = require('./helpers');
 
 const ROOT = path.join(__dirname, '..');
-const BASE = 'https://jeroen-o.github.io/adviesforum/';
+const BASE = 'https://adviesforum.nl/';
 const meta = (html, prop) => { const m = html.match(new RegExp('<meta property="' + prop + '" content="([^"]*)">')); return m && m[1]; };
 
 // testaccount met bekende code (TEST-CODE-1234), alleen in deze test

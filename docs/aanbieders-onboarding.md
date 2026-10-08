@@ -28,7 +28,7 @@ node tools/aanbieder-import.js aanbieder-<id>.json --nieuw
 
 Doe dat pas na de controles hieronder (deze paragraaf en paragraaf 2), en zet daarna de `codeHash` (stap 3). Controleer het voorgestelde `id` (afgeleid van de bedrijfsnaam) en pas het zo nodig aan in het JSON-bestand. Het logo plaatst de site nog niet: het datamodel kent alleen initialen en huiskleur.
 
-Daarnaast kan een korte aanvraag per mail binnenkomen op forumadvies@gmail.com, met onderwerp **Accountaanvraag aanbieder Adviesforum**. Controleer bij beide routes of je beschikt over:
+Daarnaast kan een korte aanvraag per mail binnenkomen op jeroen@oversteegen.nl, met onderwerp **Accountaanvraag aanbieder Adviesforum**. Controleer bij beide routes of je beschikt over:
 
 - [ ] bedrijfsnaam, type aanbieder en KvK-nummer;
 - [ ] AFM-vergunningnummer, of een uitleg waarom geen vergunning nodig is;
@@ -188,8 +188,8 @@ Bronnen bij de toetsing: [Telecommunicatiewet art. 11.7a](https://wetten.overhei
 > Deelname is in de opstartfase kosteloos; voorwaarden kunnen wijzigen.
 >
 > Meer informatie en de deelnamevoorwaarden vindt u op:
-> https://jeroen-o.github.io/adviesforum/aanbieders-info.html
-> https://jeroen-o.github.io/adviesforum/aanbieders-voorwaarden.html
+> https://adviesforum.nl/aanbieders-info.html
+> https://adviesforum.nl/aanbieders-voorwaarden.html
 >
 > Een account aanvragen kan via de knop op de informatiepagina of door deze mail te beantwoorden met uw bedrijfsnaam, AFM-vergunningnummer en een vaste contactpersoon (naam, functie, zakelijk e-mailadres en telefoonnummer).
 >
@@ -197,7 +197,7 @@ Bronnen bij de toetsing: [Telecommunicatiewet art. 11.7a](https://wetten.overhei
 >
 > [naam]
 > Beheer Adviesforum
-> forumadvies@gmail.com
+> jeroen@oversteegen.nl
 
 ## Sjabloon B: bevestigingsmail na goedkeuring (zonder code)
 
@@ -211,7 +211,7 @@ Bronnen bij de toetsing: [Telecommunicatiewet art. 11.7a](https://wetten.overhei
 >
 > Zo gaat u te werk:
 >
-> 1. Ga naar https://jeroen-o.github.io/adviesforum/aanbieder-beheer.html
+> 1. Ga naar https://adviesforum.nl/aanbieder-beheer.html
 > 2. Vul de code in (vorm XXXX-XXXX-XXXX) en klik op Inloggen.
 > 3. Vul uw gegevens, nieuws, documenten, richtlijnen, extranetlink, contactpersonen en e-learning in. Rechts of onder het formulier ziet u direct een voorbeeld.
 > 4. Vink aan dat u akkoord gaat met de deelnamevoorwaarden en klik op **Wijzigingen indienen per mail** (of download het bestand en stuur het als bijlage).
@@ -224,13 +224,13 @@ Bronnen bij de toetsing: [Telecommunicatiewet art. 11.7a](https://wetten.overhei
 > - Vermeld contactpersonen alleen met zakelijke gegevens en met hun toestemming.
 > - Houd de code geheim en deel hem alleen binnen uw organisatie. Code kwijt of uitgelekt? Mail ons, dan maken we een nieuwe en vervalt de oude.
 >
-> De deelnamevoorwaarden: https://jeroen-o.github.io/adviesforum/aanbieders-voorwaarden.html
+> De deelnamevoorwaarden: https://adviesforum.nl/aanbieders-voorwaarden.html
 >
 > Met vriendelijke groet,
 >
 > [naam]
 > Beheer Adviesforum
-> forumadvies@gmail.com
+> jeroen@oversteegen.nl
 
 ## Sjabloon C: bericht met de code (apart kanaal)
 
