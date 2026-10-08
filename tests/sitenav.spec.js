@@ -23,7 +23,7 @@ test('balk heeft overal dezelfde vijf links en markeert de huidige pagina', asyn
     await page.goto(url);
     const nav = page.locator('nav.sitenav');
     await expect(nav.locator('ul a')).toHaveText(LINKS);
-    await expect(nav).toHaveCSS('background-color', 'rgb(38, 48, 110)');
+    await expect(nav).toHaveCSS('background-color', 'rgb(255, 255, 255)');
     if (huidig) await expect(nav.locator('a[aria-current="page"]')).toHaveText(huidig);
     else await expect(nav.locator('a[aria-current="page"]')).toHaveCount(0);
   }
@@ -59,4 +59,15 @@ test('voorwaarden.html legt uit welke pagina waarvoor is', async ({ page }) => {
   await expect(t.locator('tbody tr')).toHaveCount(5);
   await expect(t).toContainText('De aanbieder zelf');
   await expect(t.locator('a[href="partijen.html"]')).toBeVisible();
+});
+
+test('huisstijl.css is in elke pagina de laatste stylesheet vóór </head>', () => {
+  const fs = require('fs'), path = require('path');
+  const ROOT = path.join(__dirname, '..');
+  const fout = [];
+  for (const m of ['.', 'kennisbank', 'faq', 'begrippen']) for (const f of fs.readdirSync(path.join(ROOT, m)).filter(f => f.endsWith('.html'))) {
+    const t = fs.readFileSync(path.join(ROOT, m, f), 'utf8'), kop = t.slice(0, t.indexOf('</head>'));
+    if (!/<link rel="stylesheet" href="[^"]*css\/huisstijl\.css">\s*$/.test(kop)) fout.push(m + '/' + f);
+  }
+  expect(fout).toEqual([]);
 });

@@ -1,0 +1,58 @@
+/* Huisstijl Adviesforum in Venn-stijl (lichte modus): wit en lichtblauw, indigo tekst, schreefkoppen,
+   witte kaarten met zachte blauwe schaduw, koraal en oranje accenten, turquoise links.
+   Laatste stylesheet in elke pagina (tools/sitenav.js); de donkere modus blijft ongewijzigd. */
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --hs-indigo: #26306E;
+    --hs-inkt: #171043;
+    --hs-licht: #ECF7FD;
+    --hs-lijn: #DFDEE5;
+    --hs-koraal: #E85B3F;
+    --hs-oranje: #F68712;
+    --hs-turq: #0B7C77;
+    --hs-schaduw: 0 6px 22px rgba(70, 160, 210, .16);
+    --hs-serif: "Source Serif 4", "Source Serif Pro", Georgia, "Times New Roman", serif;
+
+    & body { background: #fff; color: #2E2B4F; }
+
+    /* Navigatiebalk: wit met indigo tekst en een dunne lijn */
+    & .sitenav { background: #fff; color: var(--hs-inkt); border-bottom: 1px solid var(--hs-lijn); border-image: none; }
+    & .sitenav-merk, & .sitenav ul a { color: var(--hs-inkt); }
+    & .sitenav ul a[aria-current="page"] { background: var(--hs-licht); color: var(--hs-inkt); }
+    & .sitenav-zoek input { border: 1px solid var(--hs-lijn); border-right: 0; }
+
+    /* Koppen van pagina's: lichtblauw vlak, indigo schreefkop */
+    & header.hero, & .kop:not(h1, h2, h3), & .hero {
+      background: var(--hs-licht) !important; color: var(--hs-inkt) !important; border-bottom: 0 !important;
+    }
+    & :is(header.hero, .kop:not(h1, h2, h3), .hero) :is(h1, .sub, .meta, p, li) { color: var(--hs-inkt); }
+    & :is(header.hero, .kop:not(h1, h2, h3), .hero) h1 { font-family: var(--hs-serif); font-weight: 400; letter-spacing: 0; }
+    & :is(header.hero, .kop:not(h1, h2, h3), .hero) a:not(.btn):not(.knop) { color: var(--hs-inkt) !important; border-bottom-color: var(--hs-koraal) !important; }
+    & .zeshoek, & .hex, & .hero-points li::before { background: var(--hs-koraal) !important; }
+    & .eigen { background: #fff !important; color: var(--hs-inkt) !important; box-shadow: var(--hs-schaduw); }
+
+    /* Dubbel merk onder de navigatiebalk weg; donkere balken licht */
+    & header.site .merk, & header.site .sectie-naam { display: none; }
+    & header.site { justify-content: flex-end; }
+    & :is(.balk, .topbar) { background: var(--hs-licht) !important; color: #4A4770 !important; }
+    & :is(.balk, .topbar) a { color: var(--hs-inkt) !important; }
+
+    /* Homepage */
+    & .demo { background: var(--hs-licht); color: #4A4770; }
+    & .demo a { color: var(--hs-inkt); }
+    & .hero .outline { color: var(--hs-koraal); }
+    & .hero .arrow-link { color: var(--hs-inkt); }
+    & .hero-notch { border-top-color: var(--hs-licht); }
+    & .brand .logo, & .sitenav-teken { background: #fff; color: var(--hs-oranje); border: 2px solid var(--hs-oranje); }
+
+    /* Sectiekoppen in schreefletter, kaarttitels vet schreefloos */
+    & main h2, & .wrap > h2, & section > h2 { font-family: var(--hs-serif); font-weight: 400; color: var(--hs-inkt); letter-spacing: 0; }
+
+    /* Kaarten: wit, vrijwel vierkant, zachte blauwe schaduw */
+    & :is(section.card, .card, .tegel, .kaart, .rolecard, .item-kaart) {
+      border-radius: 2px !important; border-color: transparent !important; box-shadow: var(--hs-schaduw);
+    }
+    & .tab { border-radius: 2px; }
+    & .btn, & .knop { border-radius: 2px; }
+  }
+}
