@@ -13,13 +13,13 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Beheer voor aanbieders – Adviesforum">
 <meta property="og:description" content="Werk als aanbieder je informatie voor adviseurs bij en dien de wijzigingen in bij de beheerder.">
-<meta name="theme-color" content="#F5A623">
+<meta name="theme-color" content="#F68712">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="manifest" href="manifest.webmanifest">
 <style>
 :root{
-  --geel:#F5A623;--geel-donker:#D98E0F;--geel-zacht:#FDF3E2;
-  --zwart:#0C2340;--tekst:#112033;--grijs:#4A5765;--lijn:#DCE3EB;--vlak:#F5F7FA;
+  --geel:#F68712;--geel-donker:#D9700A;--geel-zacht:#FEF0E2;
+  --zwart:#181A3D;--tekst:#15162F;--grijs:#55576F;--lijn:#E3E3EC;--vlak:#F7F7FA;
   --rood:#9E2F45;--rood-zacht:#FFF1F0;--groen:#1E7A4B;
 }
 *{box-sizing:border-box}
@@ -54,7 +54,7 @@ a.terug{display:inline-block;font-size:13.5px;font-weight:700;text-decoration:no
 .veld{min-width:0;margin-bottom:12px}
 .veld label{display:block;font-weight:600;font-size:13.5px;margin-bottom:5px}
 .veld .tip{display:block;font-size:12px;color:var(--grijs);margin-top:3px}
-.veld input,.veld select,.veld textarea{width:100%;min-height:42px;padding:9px 12px;border:1px solid #C9D3DE;border-radius:9px;font-size:15px;background:#fff;color:var(--tekst)}
+.veld input,.veld select,.veld textarea{width:100%;min-height:42px;padding:9px 12px;border:1px solid #D0D1DC;border-radius:9px;font-size:15px;background:#fff;color:var(--tekst)}
 .veld textarea{min-height:110px;resize:vertical;line-height:1.45}
 .veld input:focus,.veld select:focus,.veld textarea:focus{outline:3px solid rgba(255,210,0,.6);outline-offset:1px;border-color:#9A9A9A}
 .veld [aria-invalid="true"]{border-color:var(--rood);background:#FFFAFA}
@@ -70,7 +70,7 @@ a.terug{display:inline-block;font-size:13.5px;font-weight:700;text-decoration:no
 
 .knop{display:inline-flex;align-items:center;justify-content:center;min-height:42px;border-radius:999px;padding:9px 18px;font-size:14px;font-weight:700;cursor:pointer;border:1px solid var(--zwart);background:var(--zwart);color:#fff;text-decoration:none}
 .knop:hover{background:#000}
-.knop.licht{background:#fff;color:var(--zwart);border-color:#C9D3DE}
+.knop.licht{background:#fff;color:var(--zwart);border-color:#D0D1DC}
 .knop.geel{background:var(--geel);color:var(--zwart);border-color:var(--geel-donker)}
 .knop.rood{background:#fff;color:#8A2539;border-color:#E3B4AE}
 .knop[disabled]{opacity:.5;cursor:not-allowed}
@@ -89,7 +89,7 @@ a.terug{display:inline-block;font-size:13.5px;font-weight:700;text-decoration:no
 .indienen{border:2px solid var(--zwart);border-radius:14px;padding:18px;margin-top:8px}
 .indienen h2{margin:0 0 8px;font-size:19px}
 .indienen p{margin:0 0 10px}
-.indienen textarea{width:100%;min-height:200px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12.5px;padding:10px;border:1px solid #C9D3DE;border-radius:9px}
+.indienen textarea{width:100%;min-height:200px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12.5px;padding:10px;border:1px solid #D0D1DC;border-radius:9px}
 #melding-indienen{margin-top:12px}
 .ingelogd{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:14px}
 .voet{max-width:1280px;margin:0 auto;padding:16px 24px 40px;font-size:12.5px;color:var(--grijs)}
@@ -317,7 +317,7 @@ function editor(){
     '<div class="rij2">'+veldHtml('naam',{l:'Naam',max:80,req:1},o.naam)+
     '<div class="veld"><label for="f-type">Type</label><select id="f-type" data-pad="type">'+Object.keys(TYPES).map(function(k){return '<option value="'+k+'"'+(o.type===k?' selected':'')+'>'+TYPES[k]+'</option>';}).join('')+'</select></div></div>'+
     '<div class="rij2">'+veldHtml('initialen',{l:'Initialen voor het logo (max. 3)',max:3},o.initialen)+
-    '<div class="veld"><label for="f-kleur">Kleur logo</label><div class="kleurrij"><input type="color" id="f-kleurkiezer" aria-label="Kies kleur" value="'+(/^#[0-9a-f]{6}$/i.test(o.kleur)?esc(o.kleur):'#0C2340')+'"><input id="f-kleur" data-pad="kleur" maxlength="7" value="'+esc(o.kleur)+'" placeholder="#0C2340"></div></div></div>'+
+    '<div class="veld"><label for="f-kleur">Kleur logo</label><div class="kleurrij"><input type="color" id="f-kleurkiezer" aria-label="Kies kleur" value="'+(/^#[0-9a-f]{6}$/i.test(o.kleur)?esc(o.kleur):'#181A3D')+'"><input id="f-kleur" data-pad="kleur" maxlength="7" value="'+esc(o.kleur)+'" placeholder="#181A3D"></div></div></div>'+
     veldHtml('omschrijving',{l:'Korte omschrijving',t:'textarea',max:400,tip:'Zakelijk en feitelijk: wat bied je aan via het intermediair. Geen wervende teksten of acties.'},o.omschrijving)+
     veldHtml('website',{l:'Website (https)',t:'url',max:300},o.website)+
     '<div class="veld" id="f-rubrieken" tabindex="-1"><span class="tip" style="font-weight:700">Rubrieken op het Adviesforum (optioneel)</span>'+Object.keys(RUBRIEKEN).map(function(k){return '<div class="veld vink"><label for="f-rubriek-'+k+'"><input type="checkbox" id="f-rubriek-'+k+'" data-rubriek="'+k+'"'+(o.rubrieken.indexOf(k)>=0?' checked':'')+'>'+esc(RUBRIEKEN[k])+'</label></div>';}).join('')+'</div>'+

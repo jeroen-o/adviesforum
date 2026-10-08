@@ -10,9 +10,9 @@
 <meta property="og:type" content="website">
 <meta name="robots" content="noindex, nofollow">
 <style>
-  :root{--geel:#F5A623;--zwart:#0C2340;--lijn:#DCE3EB}
+  :root{--geel:#F68712;--zwart:#181A3D;--lijn:#E3E3EC}
   *{box-sizing:border-box}
-  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;color:#112033;background:#fff;line-height:1.6}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;color:#15162F;background:#fff;line-height:1.6}
   .hero{background:var(--zwart);color:#fff;border-bottom:3px solid var(--geel);padding:28px 16px}
   .in{max-width:640px;margin:0 auto}
   main{padding:24px 16px 60px}
@@ -20,7 +20,7 @@
   label{display:block;font-weight:700;margin:14px 0 6px}
   input,select{width:100%;padding:10px 12px;border:1px solid #C9C9C9;border-radius:6px;font:inherit}
   button{margin-top:16px;padding:12px 20px;border:0;border-radius:999px;background:var(--zwart);color:#fff;font-weight:700;cursor:pointer}
-  pre{background:#F5F7FA;border:1px solid var(--lijn);border-radius:8px;padding:12px;white-space:pre-wrap;word-break:break-all;font-size:13px}
+  pre{background:#F7F7FA;border:1px solid var(--lijn);border-radius:8px;padding:12px;white-space:pre-wrap;word-break:break-all;font-size:13px}
   .let{background:#FFF9E0;border:1px solid #F0DC8A;border-radius:8px;padding:12px;font-size:14px}
   :focus-visible{outline:3px solid var(--zwart);outline-offset:2px}
   input:focus-visible,select:focus-visible{border-color:var(--zwart)}
@@ -30,31 +30,31 @@
 </style>
 <style id="a11y">
 /* Toegankelijkheid en donkere modus (zie docs/toegankelijkheid.md). Staat in een eigen <style>, zodat printvensters licht blijven. */
-.skiplink{position:absolute;left:12px;top:-200px;z-index:10000;background:#0C2340;color:#fff;padding:10px 16px;border-radius:8px;font-weight:700;text-decoration:none;font-family:Segoe UI,Roboto,Helvetica Neue,Arial,system-ui,sans-serif}
-.skiplink:focus{top:12px;outline:3px solid #F5A623;outline-offset:2px}
+.skiplink{position:absolute;left:12px;top:-200px;z-index:10000;background:#181A3D;color:#fff;padding:10px 16px;border-radius:8px;font-weight:700;text-decoration:none;font-family:Segoe UI,Roboto,Helvetica Neue,Arial,system-ui,sans-serif}
+.skiplink:focus{top:12px;outline:3px solid #F68712;outline-offset:2px}
 main[tabindex="-1"]:focus{outline:none}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus,textarea:focus,summary:focus-visible,[tabindex]:not([tabindex="-1"]):focus-visible{outline:3px solid #0C2340!important;outline-offset:2px!important}
+a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus,textarea:focus,summary:focus-visible,[tabindex]:not([tabindex="-1"]):focus-visible{outline:3px solid #181A3D!important;outline-offset:2px!important}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 @media print{.skiplink{display:none}}
 @media screen and (prefers-color-scheme:dark){
 :root:not([data-theme="light"]){color-scheme:dark}
-:root:not([data-theme="light"]){--zwart:#EDF1F6;--lijn:#16202C}
-:root:not([data-theme="light"]) body{color:#EDF1F6;background:#0C2340}
-:root:not([data-theme="light"]) .hero{background:#0F1B2B;color:#EDF1F6;border-bottom:3px solid #F5A623}
+:root:not([data-theme="light"]){--zwart:#F1F1F6;--lijn:#1E2040}
+:root:not([data-theme="light"]) body{color:#F1F1F6;background:#181A3D}
+:root:not([data-theme="light"]) .hero{background:#12132B;color:#F1F1F6;border-bottom:3px solid #F68712}
 :root:not([data-theme="light"]) input,:root:not([data-theme="light"]) select{border:1px solid #C9C9C9}
-:root:not([data-theme="light"]) button{background:#F5A623;color:#0C2340}
-:root:not([data-theme="light"]) pre{background:#162538;border:1px solid #16202C}
+:root:not([data-theme="light"]) button{background:#F68712;color:#181A3D}
+:root:not([data-theme="light"]) pre{background:#1C1E3A;border:1px solid #1E2040}
 :root:not([data-theme="light"]) .let{background:#3f3718;border:1px solid #7a6a29}
-:root:not([data-theme="light"]) :focus-visible{outline:3px solid #F5A623}
-:root:not([data-theme="light"]) input:focus-visible,:root:not([data-theme="light"]) select:focus-visible{border-color:#7A8796}
-:root:not([data-theme="light"]) a:focus-visible,:root:not([data-theme="light"]) button:focus-visible,:root:not([data-theme="light"]) input:focus,:root:not([data-theme="light"]) input:focus-within,:root:not([data-theme="light"]) select:focus,:root:not([data-theme="light"]) textarea:focus,:root:not([data-theme="light"]) summary:focus-visible,:root:not([data-theme="light"]) [tabindex]:not([tabindex="-1"]):focus-visible{outline-color:#F5A623!important}
-:root:not([data-theme="light"]) .skiplink{background:#F5A623;color:#0C2340}
-:root:not([data-theme="light"]) [style*="background:#fff"],:root:not([data-theme="light"]) [style*="background:#FFF"]{background:#0F1B2B!important}
-:root:not([data-theme="light"]) [style*="color:#555"]{color:#B8C4D1!important}
-:root:not([data-theme="light"]) [style*="color:#0C2340"]{color:#EDF1F6!important}
-:root:not([data-theme="light"]) .back-inline{color:#EDF1F6!important;border-bottom-color:#F5A623!important}
-:root:not([data-theme="light"]) .skiplink:focus{outline-color:#EDF1F6}
+:root:not([data-theme="light"]) :focus-visible{outline:3px solid #F68712}
+:root:not([data-theme="light"]) input:focus-visible,:root:not([data-theme="light"]) select:focus-visible{border-color:#7C7E95}
+:root:not([data-theme="light"]) a:focus-visible,:root:not([data-theme="light"]) button:focus-visible,:root:not([data-theme="light"]) input:focus,:root:not([data-theme="light"]) input:focus-within,:root:not([data-theme="light"]) select:focus,:root:not([data-theme="light"]) textarea:focus,:root:not([data-theme="light"]) summary:focus-visible,:root:not([data-theme="light"]) [tabindex]:not([tabindex="-1"]):focus-visible{outline-color:#F68712!important}
+:root:not([data-theme="light"]) .skiplink{background:#F68712;color:#181A3D}
+:root:not([data-theme="light"]) [style*="background:#fff"],:root:not([data-theme="light"]) [style*="background:#FFF"]{background:#12132B!important}
+:root:not([data-theme="light"]) [style*="color:#555"]{color:#C3C4D3!important}
+:root:not([data-theme="light"]) [style*="color:#181A3D"]{color:#F1F1F6!important}
+:root:not([data-theme="light"]) .back-inline{color:#F1F1F6!important;border-bottom-color:#F68712!important}
+:root:not([data-theme="light"]) .skiplink:focus{outline-color:#F1F1F6}
 }
 </style>
 <link rel="stylesheet" href="css/sitenav.css">

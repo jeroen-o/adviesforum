@@ -8,7 +8,7 @@
 <meta property="og:url" content="https://adviesforum.nl/extra-aflossen.html">
 <meta property="og:site_name" content="Adviesforum">
 <meta property="og:locale" content="nl_NL">
-<meta name="theme-color" content="#F5A623">
+<meta name="theme-color" content="#F68712">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="description" content="Bereken het effect van extra aflossen op een annuïtaire lening: lagere maandlast of kortere looptijd, en hoeveel rente de klant bespaart.">
@@ -17,8 +17,8 @@
 <meta property="og:type" content="website">
 <style>
   :root{
-    --primary:#0C2340;--accent:#F5A623;--bg:#F5F7FA;--text:#16202C;--muted:#4A5765;
-    --line:#DCE3EB;--white:#fff;--soft:#F5F7FA;--warn-bg:#FDF3E2;--warn-line:#D98E0F;
+    --primary:#181A3D;--accent:#F68712;--bg:#F7F7FA;--text:#1E2040;--muted:#55576F;
+    --line:#E3E3EC;--white:#fff;--soft:#F7F7FA;--warn-bg:#FEF0E2;--warn-line:#D9700A;
   }
   *{box-sizing:border-box}
   body{margin:0;background:var(--bg);color:var(--text);
@@ -69,8 +69,8 @@
   th{background:var(--soft);color:var(--primary);position:sticky;top:0;z-index:1;font-weight:700}
   td:first-child,th:first-child{text-align:left;position:sticky;left:0;background:#fff;z-index:2}
   th:first-child{background:var(--soft);z-index:3}
-  tr.hl td{background:#FDF3E2}
-  tr.hl td:first-child{background:#FBE3B8}
+  tr.hl td{background:#FEF0E2}
+  tr.hl td:first-child{background:#FDDBB5}
   td.hl{outline:2px solid var(--accent);outline-offset:-2px;font-weight:700}
   .simple td,.simple th{text-align:left}
   .simple td.n,.simple th.n{text-align:right}
@@ -113,7 +113,7 @@
   .warn{color:#8A2539;font-weight:600}
   @media print{ .back{display:none} }
   a.btn{display:inline-block;text-decoration:none;text-align:center}
-  a.btn:hover{background:#D98E0F}
+  a.btn:hover{background:#D9700A}
   .ext{margin:14px 0 0}
   .rows div span{min-width:0}
   @media print{ .ext{display:none} }
@@ -121,8 +121,8 @@
   /* Huisstijl Adviesforum (geel/zwart) */
   header.hero .back{color:#fff!important;opacity:1;font-weight:700;border-bottom:2px solid var(--accent)}
   header.hero .back:hover{text-decoration:none;border-bottom-color:transparent}
-  .btn:not(.sec):hover{background:#D98E0F}
-  .btn.sec:hover{background:#F5F7FA}
+  .btn:not(.sec):hover{background:#D9700A}
+  .btn.sec:hover{background:#F7F7FA}
   input:focus,select:focus,textarea:focus{border-color:var(--primary)}
 /* Mobiel: tikdoelen en leesbaarheid */
 @media (max-width:760px){input,select,textarea{font-size:16px!important}}
@@ -130,64 +130,64 @@ a.back{padding:8px 0}
 </style>
 <style id="a11y">
 /* Toegankelijkheid en donkere modus (zie docs/toegankelijkheid.md). Staat in een eigen <style>, zodat printvensters licht blijven. */
-.skiplink{position:absolute;left:12px;top:-200px;z-index:10000;background:#0C2340;color:#fff;padding:10px 16px;border-radius:8px;font-weight:700;text-decoration:none;font-family:Segoe UI,Roboto,Helvetica Neue,Arial,system-ui,sans-serif}
-.skiplink:focus{top:12px;outline:3px solid #F5A623;outline-offset:2px}
+.skiplink{position:absolute;left:12px;top:-200px;z-index:10000;background:#181A3D;color:#fff;padding:10px 16px;border-radius:8px;font-weight:700;text-decoration:none;font-family:Segoe UI,Roboto,Helvetica Neue,Arial,system-ui,sans-serif}
+.skiplink:focus{top:12px;outline:3px solid #F68712;outline-offset:2px}
 main[tabindex="-1"]:focus{outline:none}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus,textarea:focus,summary:focus-visible,[tabindex]:not([tabindex="-1"]):focus-visible{outline:3px solid #0C2340!important;outline-offset:2px!important}
+a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus,textarea:focus,summary:focus-visible,[tabindex]:not([tabindex="-1"]):focus-visible{outline:3px solid #181A3D!important;outline-offset:2px!important}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 @media print{.skiplink{display:none}}
 @media screen and (prefers-color-scheme:dark){
 :root:not([data-theme="light"]){color-scheme:dark}
-:root:not([data-theme="light"]){--primary:#EDF1F6;--bg:#0C2340;--text:#EDF1F6;--muted:#B8C4D1;--line:#16202C;--white:#0F1B2B;--soft:#162538;--warn-bg:#3F3018}
-:root:not([data-theme="light"]) body{background:#0C2340;color:#EDF1F6}
-:root:not([data-theme="light"]) header.hero{background:#0F1B2B;color:#EDF1F6;border-bottom:3px solid #F5A623}
-:root:not([data-theme="light"]) .tabs button{border:1px solid #16202C;background:#0F1B2B;color:#EDF1F6}
-:root:not([data-theme="light"]) .tabs button.on{background:#F5A623;color:#0C2340;border-color:#F5A623}
-:root:not([data-theme="light"]) section.card{background:#0F1B2B;border:1px solid #16202C}
-:root:not([data-theme="light"]) h2{color:#EDF1F6}
-:root:not([data-theme="light"]) h3{color:#EDF1F6}
-:root:not([data-theme="light"]) label{color:#EDF1F6}
-:root:not([data-theme="light"]) .hint{color:#B8C4D1}
-:root:not([data-theme="light"]) input[type=text],:root:not([data-theme="light"]) select{border:1px solid #16202C;background:#0F1B2B;color:#EDF1F6}
-:root:not([data-theme="light"]) input:focus,:root:not([data-theme="light"]) select:focus{outline:2px solid #F5A623}
-:root:not([data-theme="light"]) .eur span{color:#B8C4D1}
-:root:not([data-theme="light"]) .pct span{color:#B8C4D1}
-:root:not([data-theme="light"]) .result{background:#1B2C42;color:#fff}
+:root:not([data-theme="light"]){--primary:#F1F1F6;--bg:#181A3D;--text:#F1F1F6;--muted:#C3C4D3;--line:#1E2040;--white:#12132B;--soft:#1C1E3A;--warn-bg:#3F3018}
+:root:not([data-theme="light"]) body{background:#181A3D;color:#F1F1F6}
+:root:not([data-theme="light"]) header.hero{background:#12132B;color:#F1F1F6;border-bottom:3px solid #F68712}
+:root:not([data-theme="light"]) .tabs button{border:1px solid #1E2040;background:#12132B;color:#F1F1F6}
+:root:not([data-theme="light"]) .tabs button.on{background:#F68712;color:#181A3D;border-color:#F68712}
+:root:not([data-theme="light"]) section.card{background:#12132B;border:1px solid #1E2040}
+:root:not([data-theme="light"]) h2{color:#F1F1F6}
+:root:not([data-theme="light"]) h3{color:#F1F1F6}
+:root:not([data-theme="light"]) label{color:#F1F1F6}
+:root:not([data-theme="light"]) .hint{color:#C3C4D3}
+:root:not([data-theme="light"]) input[type=text],:root:not([data-theme="light"]) select{border:1px solid #1E2040;background:#12132B;color:#F1F1F6}
+:root:not([data-theme="light"]) input:focus,:root:not([data-theme="light"]) select:focus{outline:2px solid #F68712}
+:root:not([data-theme="light"]) .eur span{color:#C3C4D3}
+:root:not([data-theme="light"]) .pct span{color:#C3C4D3}
+:root:not([data-theme="light"]) .result{background:#23254A;color:#fff}
 :root:not([data-theme="light"]) .rows{border-top:1px solid rgba(255,255,255,.25)}
 :root:not([data-theme="light"]) .rows div{border-bottom:1px solid rgba(255,255,255,.15)}
-:root:not([data-theme="light"]) .let-op{background:#3F3018;border-left:4px solid #D98E0F}
+:root:not([data-theme="light"]) .let-op{background:#3F3018;border-left:4px solid #D9700A}
 :root:not([data-theme="light"]) .let-op strong{color:#f6d28e}
 :root:not([data-theme="light"]) .compliance{background:#3f1818;border-left:4px solid #9E2F45}
 :root:not([data-theme="light"]) .compliance strong{color:#ee9e96}
 :root:not([data-theme="light"]) .msg{color:#FFE3B0}
-:root:not([data-theme="light"]) .tblwrap{border:1px solid #16202C}
-:root:not([data-theme="light"]) th,:root:not([data-theme="light"]) td{border-bottom:1px solid #16202C}
-:root:not([data-theme="light"]) th{background:#162538;color:#EDF1F6}
-:root:not([data-theme="light"]) td:first-child,:root:not([data-theme="light"]) th:first-child{background:#0F1B2B}
-:root:not([data-theme="light"]) th:first-child{background:#162538}
+:root:not([data-theme="light"]) .tblwrap{border:1px solid #1E2040}
+:root:not([data-theme="light"]) th,:root:not([data-theme="light"]) td{border-bottom:1px solid #1E2040}
+:root:not([data-theme="light"]) th{background:#1C1E3A;color:#F1F1F6}
+:root:not([data-theme="light"]) td:first-child,:root:not([data-theme="light"]) th:first-child{background:#12132B}
+:root:not([data-theme="light"]) th:first-child{background:#1C1E3A}
 :root:not([data-theme="light"]) tr.hl td{background:#3F3018}
 :root:not([data-theme="light"]) tr.hl td:first-child{background:#3f3818}
-:root:not([data-theme="light"]) td.hl{outline:2px solid #F5A623}
-:root:not([data-theme="light"]) .btn{background:#F5A623;color:#0C2340}
-:root:not([data-theme="light"]) .btn.sec{background:#0F1B2B;color:#EDF1F6;border:1px solid #16202C}
-:root:not([data-theme="light"]) footer{border-top:1px solid #16202C;color:#B8C4D1}
-:root:not([data-theme="light"]) footer a{color:#EDF1F6}
-:root:not([data-theme="light"]) .chk{color:#EDF1F6}
-:root:not([data-theme="light"]) input:disabled{background:#162538;color:#B8C4D1}
+:root:not([data-theme="light"]) td.hl{outline:2px solid #F68712}
+:root:not([data-theme="light"]) .btn{background:#F68712;color:#181A3D}
+:root:not([data-theme="light"]) .btn.sec{background:#12132B;color:#F1F1F6;border:1px solid #1E2040}
+:root:not([data-theme="light"]) footer{border-top:1px solid #1E2040;color:#C3C4D3}
+:root:not([data-theme="light"]) footer a{color:#F1F1F6}
+:root:not([data-theme="light"]) .chk{color:#F1F1F6}
+:root:not([data-theme="light"]) input:disabled{background:#1C1E3A;color:#C3C4D3}
 :root:not([data-theme="light"]) .warn{color:#ee9e96}
-:root:not([data-theme="light"]) a.btn:hover{background:#D98E0F;color:#0C2340}
-:root:not([data-theme="light"]) header.hero .back{color:#EDF1F6!important;border-bottom:2px solid #7A8796}
-:root:not([data-theme="light"]) .btn:not(.sec):hover{background:#D98E0F;color:#0C2340}
-:root:not([data-theme="light"]) .btn.sec:hover{background:#162538}
-:root:not([data-theme="light"]) input:focus,:root:not([data-theme="light"]) select:focus,:root:not([data-theme="light"]) textarea:focus{border-color:#7A8796}
-:root:not([data-theme="light"]) a:focus-visible,:root:not([data-theme="light"]) button:focus-visible,:root:not([data-theme="light"]) input:focus,:root:not([data-theme="light"]) input:focus-within,:root:not([data-theme="light"]) select:focus,:root:not([data-theme="light"]) textarea:focus,:root:not([data-theme="light"]) summary:focus-visible,:root:not([data-theme="light"]) [tabindex]:not([tabindex="-1"]):focus-visible{outline-color:#F5A623!important}
-:root:not([data-theme="light"]) .skiplink{background:#F5A623;color:#0C2340}
-:root:not([data-theme="light"]) [style*="background:#fff"],:root:not([data-theme="light"]) [style*="background:#FFF"]{background:#0F1B2B!important}
-:root:not([data-theme="light"]) [style*="color:#555"]{color:#B8C4D1!important}
-:root:not([data-theme="light"]) [style*="color:#0C2340"]{color:#EDF1F6!important}
-:root:not([data-theme="light"]) .back-inline{color:#EDF1F6!important;border-bottom-color:#F5A623!important}
-:root:not([data-theme="light"]) .skiplink:focus{outline-color:#EDF1F6}
+:root:not([data-theme="light"]) a.btn:hover{background:#D9700A;color:#181A3D}
+:root:not([data-theme="light"]) header.hero .back{color:#F1F1F6!important;border-bottom:2px solid #7C7E95}
+:root:not([data-theme="light"]) .btn:not(.sec):hover{background:#D9700A;color:#181A3D}
+:root:not([data-theme="light"]) .btn.sec:hover{background:#1C1E3A}
+:root:not([data-theme="light"]) input:focus,:root:not([data-theme="light"]) select:focus,:root:not([data-theme="light"]) textarea:focus{border-color:#7C7E95}
+:root:not([data-theme="light"]) a:focus-visible,:root:not([data-theme="light"]) button:focus-visible,:root:not([data-theme="light"]) input:focus,:root:not([data-theme="light"]) input:focus-within,:root:not([data-theme="light"]) select:focus,:root:not([data-theme="light"]) textarea:focus,:root:not([data-theme="light"]) summary:focus-visible,:root:not([data-theme="light"]) [tabindex]:not([tabindex="-1"]):focus-visible{outline-color:#F68712!important}
+:root:not([data-theme="light"]) .skiplink{background:#F68712;color:#181A3D}
+:root:not([data-theme="light"]) [style*="background:#fff"],:root:not([data-theme="light"]) [style*="background:#FFF"]{background:#12132B!important}
+:root:not([data-theme="light"]) [style*="color:#555"]{color:#C3C4D3!important}
+:root:not([data-theme="light"]) [style*="color:#181A3D"]{color:#F1F1F6!important}
+:root:not([data-theme="light"]) .back-inline{color:#F1F1F6!important;border-bottom-color:#F68712!important}
+:root:not([data-theme="light"]) .skiplink:focus{outline-color:#F1F1F6}
 }
 </style>
 <link rel="stylesheet" href="css/sitenav.css">

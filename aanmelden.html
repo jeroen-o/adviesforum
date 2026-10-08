@@ -8,7 +8,7 @@
 <meta property="og:url" content="https://adviesforum.nl/aanmelden.html">
 <meta property="og:site_name" content="Adviesforum">
 <meta property="og:locale" content="nl_NL">
-<meta name="theme-color" content="#F5A623">
+<meta name="theme-color" content="#F68712">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="description" content="Meld je als financieel adviseur aan voor het Adviesforum: vragen stellen, collega’s helpen en antwoorden beoordelen, met een persoonlijke inlogcode.">
@@ -17,13 +17,13 @@
 <meta property="og:type" content="website">
 <style>
   :root{
-    --geel:#F5A623;
-    --geel-donker:#D98E0F;
-    --zwart:#0C2340;
-    --tekst:#112033;
+    --geel:#F68712;
+    --geel-donker:#D9700A;
+    --zwart:#181A3D;
+    --tekst:#15162F;
     --grijs:#6B6B6B;
-    --lijn:#DCE3EB;
-    --vlak:#F5F7FA;
+    --lijn:#E3E3EC;
+    --vlak:#F7F7FA;
     --rood:#9E2F45;
     --groen:#1E7A4B;
   }
@@ -67,7 +67,7 @@
   label{display:block;font-weight:600;font-size:14px;margin-bottom:6px}
   .optioneel{font-weight:400;color:var(--grijs)}
   input[type=text],input[type=email],input[type=tel],input[type=url],select{
-    width:100%;padding:11px 13px;border:1px solid #C9D3DE;border-radius:9px;font-size:15px;
+    width:100%;padding:11px 13px;border:1px solid #D0D1DC;border-radius:9px;font-size:15px;
     font-family:inherit;color:inherit;background:#fff;
   }
   input:focus,select:focus{outline:3px solid rgba(255,210,0,.55);outline-offset:1px;border-color:#9a9a9a}
@@ -84,7 +84,7 @@
   button{font-family:inherit;font-size:15px;font-weight:700;border-radius:999px;cursor:pointer;border:1px solid transparent;padding:13px 24px}
   .knop-primair{background:var(--zwart);color:#fff}
   .knop-primair:hover{background:#000}
-  .knop-tweede{background:#fff;color:var(--zwart);border-color:#C9D3DE}
+  .knop-tweede{background:#fff;color:var(--zwart);border-color:#D0D1DC}
   .knop-tweede:hover{background:var(--vlak)}
 
   .melding{display:none;margin-top:18px;border-radius:11px;padding:14px 16px;font-size:14px;border:1px solid}
@@ -115,54 +115,54 @@
 </style>
 <style id="a11y">
 /* Toegankelijkheid en donkere modus (zie docs/toegankelijkheid.md). Staat in een eigen <style>, zodat printvensters licht blijven. */
-.skiplink{position:absolute;left:12px;top:-200px;z-index:10000;background:#0C2340;color:#fff;padding:10px 16px;border-radius:8px;font-weight:700;text-decoration:none;font-family:Segoe UI,Roboto,Helvetica Neue,Arial,system-ui,sans-serif}
-.skiplink:focus{top:12px;outline:3px solid #F5A623;outline-offset:2px}
+.skiplink{position:absolute;left:12px;top:-200px;z-index:10000;background:#181A3D;color:#fff;padding:10px 16px;border-radius:8px;font-weight:700;text-decoration:none;font-family:Segoe UI,Roboto,Helvetica Neue,Arial,system-ui,sans-serif}
+.skiplink:focus{top:12px;outline:3px solid #F68712;outline-offset:2px}
 main[tabindex="-1"]:focus{outline:none}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus,textarea:focus,summary:focus-visible,[tabindex]:not([tabindex="-1"]):focus-visible{outline:3px solid #0C2340!important;outline-offset:2px!important}
+a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus,textarea:focus,summary:focus-visible,[tabindex]:not([tabindex="-1"]):focus-visible{outline:3px solid #181A3D!important;outline-offset:2px!important}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 @media print{.skiplink{display:none}}
 @media screen and (prefers-color-scheme:dark){
 :root:not([data-theme="light"]){color-scheme:dark}
-:root:not([data-theme="light"]){--zwart:#EDF1F6;--tekst:#EDF1F6;--grijs:#B8C4D1;--lijn:#16202C;--vlak:#162538;--rood:#e9a29b;--groen:#9de7c1}
-:root:not([data-theme="light"]) body{color:#EDF1F6;background:#0C2340}
-:root:not([data-theme="light"]) .topbar{background:#1B2C42;color:#fff}
+:root:not([data-theme="light"]){--zwart:#F1F1F6;--tekst:#F1F1F6;--grijs:#C3C4D3;--lijn:#1E2040;--vlak:#1C1E3A;--rood:#e9a29b;--groen:#9de7c1}
+:root:not([data-theme="light"]) body{color:#F1F1F6;background:#181A3D}
+:root:not([data-theme="light"]) .topbar{background:#23254A;color:#fff}
 :root:not([data-theme="light"]) .topbar a{color:#fff}
-:root:not([data-theme="light"]) header.site{border-bottom:1px solid #16202C}
-:root:not([data-theme="light"]) .hex{background:#F5A623;color:#0C2340}
-:root:not([data-theme="light"]) .merksub{color:#B8C4D1}
-:root:not([data-theme="light"]) .sectie-naam{border-left:1px solid #16202C}
-:root:not([data-theme="light"]) .terug{border:1px solid #16202C}
-:root:not([data-theme="light"]) .terug:hover{background:#162538}
-:root:not([data-theme="light"]) .hero{background:#0F1B2B;color:#EDF1F6;border-bottom:3px solid #F5A623}
-:root:not([data-theme="light"]) .kaart{border:1px solid #16202C;background:#0F1B2B}
-:root:not([data-theme="light"]) legend{color:#B8C4D1}
-:root:not([data-theme="light"]) .optioneel{color:#B8C4D1}
-:root:not([data-theme="light"]) input[type=text],:root:not([data-theme="light"]) input[type=email],:root:not([data-theme="light"]) input[type=tel],:root:not([data-theme="light"]) input[type=url],:root:not([data-theme="light"]) select{border:1px solid #16202C;background:#0F1B2B}
+:root:not([data-theme="light"]) header.site{border-bottom:1px solid #1E2040}
+:root:not([data-theme="light"]) .hex{background:#F68712;color:#181A3D}
+:root:not([data-theme="light"]) .merksub{color:#C3C4D3}
+:root:not([data-theme="light"]) .sectie-naam{border-left:1px solid #1E2040}
+:root:not([data-theme="light"]) .terug{border:1px solid #1E2040}
+:root:not([data-theme="light"]) .terug:hover{background:#1C1E3A}
+:root:not([data-theme="light"]) .hero{background:#12132B;color:#F1F1F6;border-bottom:3px solid #F68712}
+:root:not([data-theme="light"]) .kaart{border:1px solid #1E2040;background:#12132B}
+:root:not([data-theme="light"]) legend{color:#C3C4D3}
+:root:not([data-theme="light"]) .optioneel{color:#C3C4D3}
+:root:not([data-theme="light"]) input[type=text],:root:not([data-theme="light"]) input[type=email],:root:not([data-theme="light"]) input[type=tel],:root:not([data-theme="light"]) input[type=url],:root:not([data-theme="light"]) select{border:1px solid #1E2040;background:#12132B}
 :root:not([data-theme="light"]) input:focus,:root:not([data-theme="light"]) select:focus{outline:3px solid rgba(255,210,0,.55);border-color:#9a9a9a}
-:root:not([data-theme="light"]) .hint{color:#B8C4D1}
+:root:not([data-theme="light"]) .hint{color:#C3C4D3}
 :root:not([data-theme="light"]) .fout{color:#e9a29b}
 :root:not([data-theme="light"]) .veld.is-fout input,:root:not([data-theme="light"]) .veld.is-fout select{border-color:#9E2F45}
-:root:not([data-theme="light"]) .akkoord{background:#162538;border:1px solid #16202C}
-:root:not([data-theme="light"]) .knop-primair{background:#F5A623;color:#0C2340}
-:root:not([data-theme="light"]) .knop-primair:hover{background:#F7B955;color:#0C2340}
-:root:not([data-theme="light"]) .knop-tweede{background:#0F1B2B;color:#EDF1F6;border-color:#16202C}
-:root:not([data-theme="light"]) .knop-tweede:hover{background:#162538}
-:root:not([data-theme="light"]) .melding.ok{background:#162538;border-color:#346f4b;color:#9de7c1}
+:root:not([data-theme="light"]) .akkoord{background:#1C1E3A;border:1px solid #1E2040}
+:root:not([data-theme="light"]) .knop-primair{background:#F68712;color:#181A3D}
+:root:not([data-theme="light"]) .knop-primair:hover{background:#F9A54D;color:#181A3D}
+:root:not([data-theme="light"]) .knop-tweede{background:#12132B;color:#F1F1F6;border-color:#1E2040}
+:root:not([data-theme="light"]) .knop-tweede:hover{background:#1C1E3A}
+:root:not([data-theme="light"]) .melding.ok{background:#1C1E3A;border-color:#346f4b;color:#9de7c1}
 :root:not([data-theme="light"]) .melding.let-op{background:#3f3718;border-color:#7a6a29;color:#f6dc8e}
-:root:not([data-theme="light"]) .zijkant h2{color:#B8C4D1}
-:root:not([data-theme="light"]) .privacy{color:#B8C4D1}
+:root:not([data-theme="light"]) .zijkant h2{color:#C3C4D3}
+:root:not([data-theme="light"]) .privacy{color:#C3C4D3}
 :root:not([data-theme="light"]) .melding.fout-blok{background:#3f1c18;border-color:#7a3229;color:#e9a29b}
 :root:not([data-theme="light"]) .succes .vink{background:#1E7A4B;color:#fff}
-:root:not([data-theme="light"]) pre.kopie{background:#162538;border:1px solid #16202C}
-:root:not([data-theme="light"]) footer{border-top:1px solid #16202C;color:#B8C4D1}
-:root:not([data-theme="light"]) a:focus-visible,:root:not([data-theme="light"]) button:focus-visible,:root:not([data-theme="light"]) input:focus,:root:not([data-theme="light"]) input:focus-within,:root:not([data-theme="light"]) select:focus,:root:not([data-theme="light"]) textarea:focus,:root:not([data-theme="light"]) summary:focus-visible,:root:not([data-theme="light"]) [tabindex]:not([tabindex="-1"]):focus-visible{outline-color:#F5A623!important}
-:root:not([data-theme="light"]) .skiplink{background:#F5A623;color:#0C2340}
-:root:not([data-theme="light"]) [style*="background:#fff"],:root:not([data-theme="light"]) [style*="background:#FFF"]{background:#0F1B2B!important}
-:root:not([data-theme="light"]) [style*="color:#555"]{color:#B8C4D1!important}
-:root:not([data-theme="light"]) [style*="color:#0C2340"]{color:#EDF1F6!important}
-:root:not([data-theme="light"]) .back-inline{color:#EDF1F6!important;border-bottom-color:#F5A623!important}
-:root:not([data-theme="light"]) .skiplink:focus{outline-color:#EDF1F6}
+:root:not([data-theme="light"]) pre.kopie{background:#1C1E3A;border:1px solid #1E2040}
+:root:not([data-theme="light"]) footer{border-top:1px solid #1E2040;color:#C3C4D3}
+:root:not([data-theme="light"]) a:focus-visible,:root:not([data-theme="light"]) button:focus-visible,:root:not([data-theme="light"]) input:focus,:root:not([data-theme="light"]) input:focus-within,:root:not([data-theme="light"]) select:focus,:root:not([data-theme="light"]) textarea:focus,:root:not([data-theme="light"]) summary:focus-visible,:root:not([data-theme="light"]) [tabindex]:not([tabindex="-1"]):focus-visible{outline-color:#F68712!important}
+:root:not([data-theme="light"]) .skiplink{background:#F68712;color:#181A3D}
+:root:not([data-theme="light"]) [style*="background:#fff"],:root:not([data-theme="light"]) [style*="background:#FFF"]{background:#12132B!important}
+:root:not([data-theme="light"]) [style*="color:#555"]{color:#C3C4D3!important}
+:root:not([data-theme="light"]) [style*="color:#181A3D"]{color:#F1F1F6!important}
+:root:not([data-theme="light"]) .back-inline{color:#F1F1F6!important;border-bottom-color:#F68712!important}
+:root:not([data-theme="light"]) .skiplink:focus{outline-color:#F1F1F6}
 }
 </style>
 <link rel="stylesheet" href="css/sitenav.css">

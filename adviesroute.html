@@ -11,15 +11,15 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Adviesroute – Adviesforum">
 <meta property="og:description" content="Interactieve stap-voor-stap procesgids voor het adviesproces: hypotheek aankoop, oversluiten, inkomens- en ORV-advies en pensioenoriëntatie, met checklists, dossierstukken, valkuilen en hulpmiddelen.">
-<meta name="theme-color" content="#F5A623">
+<meta name="theme-color" content="#F68712">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="description" content="Interactieve stap-voor-stap procesgids voor het adviesproces: hypotheek aankoop, oversluiten, inkomens- en ORV-advies en pensioenoriëntatie, met checklists, dossierstukken, valkuilen en hulpmiddelen.">
 <style>
 
 :root{
-  --geel:#F5A623;--geel-donker:#D98E0F;--geel-zacht:#FDF3E2;
-  --zwart:#0C2340;--tekst:#112033;--grijs:#4A5765;--lijn:#DCE3EB;--vlak:#F5F7FA;
+  --geel:#F68712;--geel-donker:#D9700A;--geel-zacht:#FEF0E2;
+  --zwart:#181A3D;--tekst:#15162F;--grijs:#55576F;--lijn:#E3E3EC;--vlak:#F7F7FA;
   --rood:#9E2F45;--rood-zacht:#FFF1F0;--groen:#1E7A4B;--groen-zacht:#EAF6EF;
 }
 *{box-sizing:border-box}
@@ -46,7 +46,7 @@ button,input{font-family:inherit}
 
 /* tabbladen */
 .tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
-.tab{border:1px solid #C9D3DE;background:#fff;color:var(--zwart);border-radius:999px;padding:9px 16px;font-size:14px;font-weight:700;cursor:pointer;display:flex;align-items:center;gap:8px}
+.tab{border:1px solid #D0D1DC;background:#fff;color:var(--zwart);border-radius:999px;padding:9px 16px;font-size:14px;font-weight:700;cursor:pointer;display:flex;align-items:center;gap:8px}
 .tab:hover{border-color:var(--zwart)}
 .tab[aria-selected="true"]{background:var(--zwart);color:#fff;border-color:var(--zwart)}
 .tab .nr{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--geel);color:var(--zwart);font-size:12px;font-weight:800}
@@ -63,11 +63,11 @@ button,input{font-family:inherit}
 .acties{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;align-items:flex-end}
 .veld{min-width:0;flex:1 1 220px;max-width:340px}
 .veld label{display:block;font-size:12.5px;font-weight:700;margin-bottom:4px}
-.veld input{width:100%;padding:9px 12px;border:1px solid #C9D3DE;border-radius:9px;font-size:15px;background:#fff}
+.veld input{width:100%;padding:9px 12px;border:1px solid #D0D1DC;border-radius:9px;font-size:15px;background:#fff}
 .veld input:focus{outline:3px solid rgba(255,210,0,.6);outline-offset:1px}
 .knop{border-radius:999px;padding:9px 16px;font-size:13.5px;font-weight:700;cursor:pointer;border:1px solid var(--zwart);background:var(--zwart);color:#fff}
 .knop:hover{background:#000}
-.knop.licht{background:#fff;color:var(--zwart);border-color:#C9D3DE}
+.knop.licht{background:#fff;color:var(--zwart);border-color:#D0D1DC}
 .knop.licht:hover{background:var(--vlak)}
 .status{font-size:13px;color:var(--grijs);margin-top:8px;min-height:1em}
 
@@ -102,7 +102,7 @@ button,input{font-family:inherit}
 .afm.kb{border-left-color:var(--geel-donker);background:var(--geel-zacht)}
 .afm.wet{border-left-color:var(--zwart);background:#fff;border:1px solid #E2E2E2;border-left:4px solid var(--zwart)}
 .afm .bron a{overflow-wrap:anywhere}
-.afm.geen{border-left-color:#B8B8B8;background:#fff;border:1px dashed #C9D3DE;border-left:4px solid #B8B8B8}
+.afm.geen{border-left-color:#B8B8B8;background:#fff;border:1px dashed #D0D1DC;border-left:4px solid #B8B8B8}
 .afm h4{margin:0 0 4px;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
 .afm p{margin:0}
 .afm .bron{display:block;margin-top:6px;font-size:12.5px;color:var(--grijs)}
@@ -382,13 +382,13 @@ a.terug{display:inline-block;padding:8px 0}
       ? '<table><thead><tr><th>Stap</th><th>Soort</th><th>Open punt</th></tr></thead><tbody>' + openLijst.map(function(o){ return '<tr><td>' + o[0] + '. ' + esc(o[1]) + '</td><td>' + o[2] + '</td><td>' + esc(o[3]) + '</td></tr>'; }).join('') + '</tbody></table>'
       : '<p>Alle punten zijn afgevinkt.</p>';
 
-    var css = 'body{font-family:Segoe UI,Roboto,Helvetica Neue,Arial,Arial,sans-serif;color:#112033;margin:0;padding:28px 32px;font-size:12.5px;line-height:1.45}' +
-      'h1{font-size:20px;margin:0 0 4px}.meta{color:#4A5765;margin:0 0 4px}.balk{height:8px;background:#eee;border-radius:4px;overflow:hidden;margin:8px 0 16px;max-width:360px}.balk span{display:block;height:100%;background:#F5A623}' +
-      'h2{font-size:14px;margin:18px 0 6px;border-bottom:2px solid #F5A623;padding-bottom:3px}h2 small{font-weight:400;color:#4A5765}h3{font-size:11px;text-transform:uppercase;letter-spacing:.05em;margin:8px 0 3px;color:#4A5765}' +
+    var css = 'body{font-family:Segoe UI,Roboto,Helvetica Neue,Arial,Arial,sans-serif;color:#15162F;margin:0;padding:28px 32px;font-size:12.5px;line-height:1.45}' +
+      'h1{font-size:20px;margin:0 0 4px}.meta{color:#55576F;margin:0 0 4px}.balk{height:8px;background:#eee;border-radius:4px;overflow:hidden;margin:8px 0 16px;max-width:360px}.balk span{display:block;height:100%;background:#F68712}' +
+      'h2{font-size:14px;margin:18px 0 6px;border-bottom:2px solid #F68712;padding-bottom:3px}h2 small{font-weight:400;color:#55576F}h3{font-size:11px;text-transform:uppercase;letter-spacing:.05em;margin:8px 0 3px;color:#55576F}' +
       'ul{list-style:none;margin:0;padding:0}li{margin:2px 0;padding-left:20px;position:relative}.vk{position:absolute;left:0}.af{color:#1E7A4B}.leeg{margin:0;color:#999}' +
       '.k2{display:grid;grid-template-columns:1fr 1fr;gap:16px}section{break-inside:avoid}' +
-      'table{border-collapse:collapse;width:100%;margin-top:6px}th,td{border:1px solid #ddd;padding:4px 6px;text-align:left;vertical-align:top}th{background:#F5A623}' +
-      '.voet{margin-top:22px;color:#4A5765;font-size:11px;border-top:1px solid #ddd;padding-top:8px}' +
+      'table{border-collapse:collapse;width:100%;margin-top:6px}th,td{border:1px solid #ddd;padding:4px 6px;text-align:left;vertical-align:top}th{background:#F68712}' +
+      '.voet{margin-top:22px;color:#55576F;font-size:11px;border-top:1px solid #ddd;padding-top:8px}' +
       '@media (max-width:600px){body{padding:16px}.k2{grid-template-columns:1fr}}';
     var html = '<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Dossier-checklist ' + esc(r.naam) + '</title><style>' + css + '</style></head><body>' +
       '<h1>Dossier-checklist: ' + esc(r.naam) + '</h1>' +
