@@ -11,14 +11,14 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Nazorgsignalen per klant – Adviesforum">
 <meta property="og:description" content="Zet de belangrijke data van een klant op een tijdlijn: einde rentevaste periode, AOW-datum, 30 jaar renteaftrek, einde verzekeringen. Met adviesactie per signaal, agendabestand (.ics) en printversie.">
-<meta name="theme-color" content="#F5A623">
+<meta name="theme-color" content="#F68712">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="description" content="Zet de belangrijke data van een klant op een tijdlijn: einde rentevaste periode, AOW-datum, 30 jaar renteaftrek, einde verzekeringen. Met adviesactie per signaal, agendabestand (.ics) en printversie.">
 <style>
 :root{
-  --geel:#F5A623;--geel-donker:#D98E0F;--geel-zacht:#FDF3E2;
-  --zwart:#0C2340;--tekst:#112033;--grijs:#4A5765;--lijn:#DCE3EB;--vlak:#F5F7FA;
+  --geel:#F68712;--geel-donker:#D9700A;--geel-zacht:#FEF0E2;
+  --zwart:#181A3D;--tekst:#15162F;--grijs:#55576F;--lijn:#E3E3EC;--vlak:#F7F7FA;
   --rood:#9E2F45;--rood-zacht:#FFF1F0;--groen:#1E7A4B;
 }
 *{box-sizing:border-box}
@@ -48,16 +48,16 @@ button,input,select,textarea{font-family:inherit}
 .veld.breed{grid-column:1/-1}
 .veld label{display:block;font-weight:600;font-size:13.5px;margin-bottom:5px}
 .veld .tip{display:block;font-size:12px;color:var(--grijs);margin-top:4px}
-.veld input,.veld select{width:100%;padding:10px 12px;border:1px solid #C9D3DE;border-radius:9px;font-size:15px;background:#fff;color:var(--tekst);min-width:0}
+.veld input,.veld select{width:100%;padding:10px 12px;border:1px solid #D0D1DC;border-radius:9px;font-size:15px;background:#fff;color:var(--tekst);min-width:0}
 .veld input:focus,.veld select:focus{outline:3px solid rgba(255,210,0,.6);outline-offset:1px;border-color:#9A9A9A}
 .vink{display:flex;gap:9px;align-items:flex-start;margin-top:10px;font-size:14px}
 .vink input{margin-top:3px;width:18px;height:18px;flex:none;accent-color:var(--zwart)}
-.deel{border:1px dashed #C9D3DE;border-radius:12px;padding:6px 14px 14px;margin-top:12px;background:var(--vlak)}
+.deel{border:1px dashed #D0D1DC;border-radius:12px;padding:6px 14px 14px;margin-top:12px;background:var(--vlak)}
 .deel-kop{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:8px}
 .deel-kop b{font-size:14px}
 .knop{border-radius:999px;padding:10px 18px;font-size:14px;font-weight:700;cursor:pointer;border:1px solid var(--zwart);background:var(--zwart);color:#fff}
 .knop:hover{background:#000}
-.knop.licht{background:#fff;color:var(--zwart);border-color:#C9D3DE}
+.knop.licht{background:#fff;color:var(--zwart);border-color:#D0D1DC}
 .knop.licht:hover{background:var(--vlak)}
 .knop.mini{padding:5px 12px;font-size:12.5px}
 .knoppen{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
@@ -69,8 +69,8 @@ button,input,select,textarea{font-family:inherit}
 .tijdlijn{list-style:none;margin:0;padding:0 0 0 18px;border-left:3px solid var(--geel)}
 .tijdlijn li{position:relative;padding:0 0 14px 14px}
 .tijdlijn li::before{content:"";position:absolute;left:-27px;top:5px;width:14px;height:14px;border-radius:50%;background:var(--zwart);border:3px solid var(--geel)}
-.tijdlijn li.voorbij{color:#4A5765}
-.tijdlijn li.voorbij::before{background:#fff;border-color:#B8C4D1}
+.tijdlijn li.voorbij{color:#55576F}
+.tijdlijn li.voorbij::before{background:#fff;border-color:#C3C4D3}
 .tijdlijn li.binnenkort::before{background:var(--rood)}
 .tl-datum{font-size:12.5px;font-weight:800;letter-spacing:.03em;text-transform:uppercase;color:var(--grijs)}
 .tl-datum .label{display:inline-block;margin-left:6px;font-size:11px;padding:1px 8px;border-radius:999px;background:var(--geel-zacht);color:#7A5A00;border:1px solid var(--geel-donker);text-transform:none;letter-spacing:0}
@@ -106,61 +106,61 @@ a.terug{display:inline-block;padding:8px 0}
 </style>
 <style id="a11y">
 /* Toegankelijkheid en donkere modus (zie docs/toegankelijkheid.md). Staat in een eigen <style>, zodat printvensters licht blijven. */
-.skiplink{position:absolute;left:12px;top:-200px;z-index:10000;background:#0C2340;color:#fff;padding:10px 16px;border-radius:8px;font-weight:700;text-decoration:none;font-family:Segoe UI,Roboto,Helvetica Neue,Arial,system-ui,sans-serif}
-.skiplink:focus{top:12px;outline:3px solid #F5A623;outline-offset:2px}
+.skiplink{position:absolute;left:12px;top:-200px;z-index:10000;background:#181A3D;color:#fff;padding:10px 16px;border-radius:8px;font-weight:700;text-decoration:none;font-family:Segoe UI,Roboto,Helvetica Neue,Arial,system-ui,sans-serif}
+.skiplink:focus{top:12px;outline:3px solid #F68712;outline-offset:2px}
 main[tabindex="-1"]:focus{outline:none}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus,textarea:focus,summary:focus-visible,[tabindex]:not([tabindex="-1"]):focus-visible{outline:3px solid #0C2340!important;outline-offset:2px!important}
+a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus,textarea:focus,summary:focus-visible,[tabindex]:not([tabindex="-1"]):focus-visible{outline:3px solid #181A3D!important;outline-offset:2px!important}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 @media print{.skiplink{display:none}}
 @media screen and (prefers-color-scheme:dark){
 :root:not([data-theme="light"]){color-scheme:dark}
-:root:not([data-theme="light"]){--geel-zacht:#3F3018;--zwart:#EDF1F6;--tekst:#EDF1F6;--grijs:#B8C4D1;--lijn:#16202C;--vlak:#162538;--rood:#e9a29b;--rood-zacht:#3f1a18;--groen:#9de7c1}
-:root:not([data-theme="light"]) body{color:#EDF1F6;background:#0C2340}
-:root:not([data-theme="light"]) .balk{background:#1B2C42;color:#fff}
+:root:not([data-theme="light"]){--geel-zacht:#3F3018;--zwart:#F1F1F6;--tekst:#F1F1F6;--grijs:#C3C4D3;--lijn:#1E2040;--vlak:#1C1E3A;--rood:#e9a29b;--rood-zacht:#3f1a18;--groen:#9de7c1}
+:root:not([data-theme="light"]) body{color:#F1F1F6;background:#181A3D}
+:root:not([data-theme="light"]) .balk{background:#23254A;color:#fff}
 :root:not([data-theme="light"]) .balk a{color:#fff}
-:root:not([data-theme="light"]) .kop{background:#0F1B2B;color:#EDF1F6;border-bottom:3px solid #F5A623}
-:root:not([data-theme="light"]) .zeshoek{background:#1B2C42}
-:root:not([data-theme="light"]) .terug{border-bottom:2px solid #7A8796}
-:root:not([data-theme="light"]) .stempel{background:#1B2C42;color:#F5A623}
+:root:not([data-theme="light"]) .kop{background:#12132B;color:#F1F1F6;border-bottom:3px solid #F68712}
+:root:not([data-theme="light"]) .zeshoek{background:#23254A}
+:root:not([data-theme="light"]) .terug{border-bottom:2px solid #7C7E95}
+:root:not([data-theme="light"]) .stempel{background:#23254A;color:#F68712}
 :root:not([data-theme="light"]) .stempel.afm{background:#9E2F45;color:#fff}
-:root:not([data-theme="light"]) .kaart{border:1px solid #16202C;background:#0F1B2B}
-:root:not([data-theme="light"]) .kaart>p.sub{color:#B8C4D1}
-:root:not([data-theme="light"]) .veld .tip{color:#B8C4D1}
-:root:not([data-theme="light"]) .veld input,:root:not([data-theme="light"]) .veld select{border:1px solid #16202C;background:#0F1B2B;color:#EDF1F6}
+:root:not([data-theme="light"]) .kaart{border:1px solid #1E2040;background:#12132B}
+:root:not([data-theme="light"]) .kaart>p.sub{color:#C3C4D3}
+:root:not([data-theme="light"]) .veld .tip{color:#C3C4D3}
+:root:not([data-theme="light"]) .veld input,:root:not([data-theme="light"]) .veld select{border:1px solid #1E2040;background:#12132B;color:#F1F1F6}
 :root:not([data-theme="light"]) .veld input:focus,:root:not([data-theme="light"]) .veld select:focus{outline:3px solid rgba(255,210,0,.6);border-color:#9A9A9A}
-:root:not([data-theme="light"]) .deel{border:1px dashed #16202C;background:#162538}
-:root:not([data-theme="light"]) .knop{border:1px solid #F5A623;background:#F5A623;color:#0C2340}
-:root:not([data-theme="light"]) .knop:hover{background:#F7B955;color:#0C2340}
-:root:not([data-theme="light"]) .knop.licht{background:#0F1B2B;color:#EDF1F6;border-color:#16202C}
-:root:not([data-theme="light"]) .knop.licht:hover{background:#162538}
-:root:not([data-theme="light"]) .samenvat{background:#1B2C42;color:#fff}
-:root:not([data-theme="light"]) .samenvat .groot{color:#F5A623}
-:root:not([data-theme="light"]) .tijdlijn{border-left:3px solid #F5A623}
-:root:not([data-theme="light"]) .tijdlijn li::before{background:#1B2C42;border:3px solid #F5A623}
-:root:not([data-theme="light"]) .tijdlijn li.voorbij{color:#B8C4D1}
-:root:not([data-theme="light"]) .tijdlijn li.voorbij::before{background:#0F1B2B;border-color:#B8C4D1}
+:root:not([data-theme="light"]) .deel{border:1px dashed #1E2040;background:#1C1E3A}
+:root:not([data-theme="light"]) .knop{border:1px solid #F68712;background:#F68712;color:#181A3D}
+:root:not([data-theme="light"]) .knop:hover{background:#F9A54D;color:#181A3D}
+:root:not([data-theme="light"]) .knop.licht{background:#12132B;color:#F1F1F6;border-color:#1E2040}
+:root:not([data-theme="light"]) .knop.licht:hover{background:#1C1E3A}
+:root:not([data-theme="light"]) .samenvat{background:#23254A;color:#fff}
+:root:not([data-theme="light"]) .samenvat .groot{color:#F68712}
+:root:not([data-theme="light"]) .tijdlijn{border-left:3px solid #F68712}
+:root:not([data-theme="light"]) .tijdlijn li::before{background:#23254A;border:3px solid #F68712}
+:root:not([data-theme="light"]) .tijdlijn li.voorbij{color:#C3C4D3}
+:root:not([data-theme="light"]) .tijdlijn li.voorbij::before{background:#12132B;border-color:#C3C4D3}
 :root:not([data-theme="light"]) .tijdlijn li.binnenkort::before{background:#9E2F45}
-:root:not([data-theme="light"]) .tl-datum{color:#B8C4D1}
-:root:not([data-theme="light"]) .tl-datum .label{background:#3F3018;color:#f6db8e;border:1px solid #D98E0F}
+:root:not([data-theme="light"]) .tl-datum{color:#C3C4D3}
+:root:not([data-theme="light"]) .tl-datum .label{background:#3F3018;color:#f6db8e;border:1px solid #D9700A}
 :root:not([data-theme="light"]) .tl-datum .label.rood{background:#3f1a18;color:#ee9e96;border-color:#9E2F45}
-:root:not([data-theme="light"]) .tl-actie{color:#EDF1F6}
-:root:not([data-theme="light"]) .leeg{color:#B8C4D1}
-:root:not([data-theme="light"]) .blok.regel{background:#162538;border-left:4px solid #7A8796}
-:root:not([data-theme="light"]) .blok.let-op{background:#3F3018;border-left:4px solid #D98E0F}
+:root:not([data-theme="light"]) .tl-actie{color:#F1F1F6}
+:root:not([data-theme="light"]) .leeg{color:#C3C4D3}
+:root:not([data-theme="light"]) .blok.regel{background:#1C1E3A;border-left:4px solid #7C7E95}
+:root:not([data-theme="light"]) .blok.let-op{background:#3F3018;border-left:4px solid #D9700A}
 :root:not([data-theme="light"]) .blok.let-op h3,:root:not([data-theme="light"]) .blok.let-op h4{color:#f6db8e}
 :root:not([data-theme="light"]) .status{color:#9de7c1}
 :root:not([data-theme="light"]) .compliance{background:#3f1a18;border-left:4px solid #9E2F45}
 :root:not([data-theme="light"]) .compliance strong{color:#ee9e96}
-:root:not([data-theme="light"]) .voet{color:#B8C4D1}
-:root:not([data-theme="light"]) .voet a{color:#EDF1F6}
-:root:not([data-theme="light"]) a:focus-visible,:root:not([data-theme="light"]) button:focus-visible,:root:not([data-theme="light"]) input:focus,:root:not([data-theme="light"]) input:focus-within,:root:not([data-theme="light"]) select:focus,:root:not([data-theme="light"]) textarea:focus,:root:not([data-theme="light"]) summary:focus-visible,:root:not([data-theme="light"]) [tabindex]:not([tabindex="-1"]):focus-visible{outline-color:#F5A623!important}
-:root:not([data-theme="light"]) .skiplink{background:#F5A623;color:#0C2340}
-:root:not([data-theme="light"]) [style*="background:#fff"],:root:not([data-theme="light"]) [style*="background:#FFF"]{background:#0F1B2B!important}
-:root:not([data-theme="light"]) [style*="color:#555"]{color:#B8C4D1!important}
-:root:not([data-theme="light"]) [style*="color:#0C2340"]{color:#EDF1F6!important}
-:root:not([data-theme="light"]) .back-inline{color:#EDF1F6!important;border-bottom-color:#F5A623!important}
-:root:not([data-theme="light"]) .skiplink:focus{outline-color:#EDF1F6}
+:root:not([data-theme="light"]) .voet{color:#C3C4D3}
+:root:not([data-theme="light"]) .voet a{color:#F1F1F6}
+:root:not([data-theme="light"]) a:focus-visible,:root:not([data-theme="light"]) button:focus-visible,:root:not([data-theme="light"]) input:focus,:root:not([data-theme="light"]) input:focus-within,:root:not([data-theme="light"]) select:focus,:root:not([data-theme="light"]) textarea:focus,:root:not([data-theme="light"]) summary:focus-visible,:root:not([data-theme="light"]) [tabindex]:not([tabindex="-1"]):focus-visible{outline-color:#F68712!important}
+:root:not([data-theme="light"]) .skiplink{background:#F68712;color:#181A3D}
+:root:not([data-theme="light"]) [style*="background:#fff"],:root:not([data-theme="light"]) [style*="background:#FFF"]{background:#12132B!important}
+:root:not([data-theme="light"]) [style*="color:#555"]{color:#C3C4D3!important}
+:root:not([data-theme="light"]) [style*="color:#181A3D"]{color:#F1F1F6!important}
+:root:not([data-theme="light"]) .back-inline{color:#F1F1F6!important;border-bottom-color:#F68712!important}
+:root:not([data-theme="light"]) .skiplink:focus{outline-color:#F1F1F6}
 }
 </style>
 <link rel="stylesheet" href="css/sitenav.css">
@@ -462,8 +462,8 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
     var rijen = signalen.map(function (x) {
       return '<tr' + (x.datum < nu ? ' class="vb"' : '') + '><td>' + esc(nl(x.datum)) + '</td><td><b>' + esc(x.titel) + '</b><br>' + esc(x.actie) + '</td><td class="vk">&#9744;</td></tr>';
     }).join('');
-    var css = 'body{font-family:Segoe UI,Roboto,Helvetica Neue,Arial,Arial,sans-serif;color:#0C2340;margin:28px;font-size:12.5px;line-height:1.45}h1{font-size:20px;margin:0 0 4px}h2{font-size:15px;border-bottom:3px solid #F5A623;padding-bottom:4px;margin:18px 0 8px}' +
-      'table{border-collapse:collapse;width:100%}td,th{border:1px solid #ccc;padding:6px 8px;text-align:left;vertical-align:top}th{background:#FDF3E2}td:first-child{white-space:nowrap}.vk{width:40px;text-align:center;font-size:15px}.vb{color:#888}.klein{font-size:11px;color:#555}@media print{body{margin:12mm}tr{break-inside:avoid}}';
+    var css = 'body{font-family:Segoe UI,Roboto,Helvetica Neue,Arial,Arial,sans-serif;color:#181A3D;margin:28px;font-size:12.5px;line-height:1.45}h1{font-size:20px;margin:0 0 4px}h2{font-size:15px;border-bottom:3px solid #F68712;padding-bottom:4px;margin:18px 0 8px}' +
+      'table{border-collapse:collapse;width:100%}td,th{border:1px solid #ccc;padding:6px 8px;text-align:left;vertical-align:top}th{background:#FEF0E2}td:first-child{white-space:nowrap}.vk{width:40px;text-align:center;font-size:15px}.vb{color:#888}.klein{font-size:11px;color:#555}@media print{body{margin:12mm}tr{break-inside:avoid}}';
     var html = '<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Nazorgsignalen' + (naam ? ' ' + esc(naam) : '') + '</title><style>' + css + '</style></head><body>' +
       '<h1>Nazorgsignalen' + (naam ? ': ' + esc(naam) : '') + '</h1><div class="klein">Afgedrukt op ' + esc(nl(nu)) + '. Indicatief overzicht uit het Adviesforum-hulpmiddel; geen advies.</div>' +
       (aow ? '<p>AOW-datum: <b>' + esc(nl(aow.datum)) + '</b> (' + aow.jaren + ' jaar' + (aow.maanden ? ' en ' + aow.maanden + ' maanden' : '') + (aow.voorlopig ? ', voorlopig' : '') + '). Controleer bij de SVB.</p>' : '') +

@@ -11,15 +11,15 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Wegwijzer levensgebeurtenissen – Adviesforum">
 <meta property="og:description" content="Per levensgebeurtenis wat er verandert voor hypotheek, verzekeringen, pensioen, fiscaliteit en toeslagen, met checklist voor het klantgesprek, documenten, termijnen, zorgplichtsignalen en hulpmiddelen.">
-<meta name="theme-color" content="#F5A623">
+<meta name="theme-color" content="#F68712">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="description" content="Per levensgebeurtenis wat er verandert voor hypotheek, verzekeringen, pensioen, fiscaliteit en toeslagen, met checklist voor het klantgesprek, documenten, termijnen, zorgplichtsignalen en hulpmiddelen.">
 <style>
 
 :root{
-  --geel:#F5A623;--geel-donker:#D98E0F;--geel-zacht:#FDF3E2;
-  --zwart:#0C2340;--tekst:#112033;--grijs:#4A5765;--lijn:#DCE3EB;--vlak:#F5F7FA;
+  --geel:#F68712;--geel-donker:#D9700A;--geel-zacht:#FEF0E2;
+  --zwart:#181A3D;--tekst:#15162F;--grijs:#55576F;--lijn:#E3E3EC;--vlak:#F7F7FA;
   --rood:#9E2F45;--rood-zacht:#FFF1F0;--groen:#1E7A4B;
 }
 *{box-sizing:border-box}
@@ -45,17 +45,17 @@ button,input,select{font-family:inherit}
 .romp{max-width:1180px;margin:0 auto;padding:26px 24px 40px}
 
 .zoekbalk{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:center;margin-bottom:12px}
-.zoekbalk input{width:100%;padding:11px 14px;border:1px solid #C9D3DE;border-radius:10px;font-size:15px;background:#fff;color:var(--tekst)}
+.zoekbalk input{width:100%;padding:11px 14px;border:1px solid #D0D1DC;border-radius:10px;font-size:15px;background:#fff;color:var(--tekst)}
 .zoekbalk input:focus,.filters button:focus-visible,.knop:focus-visible,.kaart-kop:focus-visible{outline:3px solid rgba(255,210,0,.7);outline-offset:1px}
 .filters{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
-.filters button{border:1px solid #C9D3DE;background:#fff;border-radius:999px;padding:6px 13px;font-size:13px;font-weight:700;cursor:pointer;color:var(--tekst)}
+.filters button{border:1px solid #D0D1DC;background:#fff;border-radius:999px;padding:6px 13px;font-size:13px;font-weight:700;cursor:pointer;color:var(--tekst)}
 .filters button[aria-pressed="true"]{background:var(--zwart);border-color:var(--zwart);color:#fff}
 .filters button .n{font-weight:600;opacity:.7;margin-left:4px}
 .statusregel{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin:6px 0 16px;font-size:13px;color:var(--grijs)}
 .knoppen{display:flex;gap:8px;flex-wrap:wrap}
 .knop{border-radius:999px;padding:8px 15px;font-size:13px;font-weight:700;cursor:pointer;border:1px solid var(--zwart);background:var(--zwart);color:#fff;text-decoration:none;display:inline-block;line-height:1.3}
 .knop:hover{background:#000}
-.knop.licht{background:#fff;color:var(--zwart);border-color:#C9D3DE}
+.knop.licht{background:#fff;color:var(--zwart);border-color:#D0D1DC}
 .knop.licht:hover{background:var(--vlak)}
 
 .lijst{display:grid;gap:12px}
@@ -85,7 +85,7 @@ button,input,select{font-family:inherit}
 .twee{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px}
 .vinklijst{list-style:none;margin:0;padding:0;font-size:14px}
 .vinklijst li{display:flex;gap:9px;align-items:flex-start;padding:5px 0;border-bottom:1px dashed var(--lijn)}
-.vinklijst input{margin:3px 0 0;width:17px;height:17px;flex:none;accent-color:#0C2340}
+.vinklijst input{margin:3px 0 0;width:17px;height:17px;flex:none;accent-color:#181A3D}
 .vinklijst label{cursor:pointer;min-width:0}
 .gewone{margin:0;padding-left:18px;font-size:14px}
 .gewone li+li{margin-top:5px}
@@ -106,7 +106,7 @@ button,input,select{font-family:inherit}
 .bronlijst li+li{margin-top:4px}
 .bronlijst a{overflow-wrap:anywhere}
 .kaart-acties{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;padding-top:14px;border-top:1px solid var(--lijn)}
-.leeg{display:none;padding:22px;border:1px dashed #C9D3DE;border-radius:12px;color:var(--grijs);text-align:center}
+.leeg{display:none;padding:22px;border:1px dashed #D0D1DC;border-radius:12px;color:var(--grijs);text-align:center}
 mark{background:var(--geel);color:inherit;padding:0 1px;border-radius:2px}
 
 .compliance{max-width:1132px;margin:0 auto;background:var(--rood-zacht);border-left:4px solid var(--rood);border-radius:0 10px 10px 0;padding:14px 18px;font-size:14px}
@@ -138,65 +138,65 @@ a.terug{display:inline-block;padding:8px 0}
 </style>
 <style id="a11y">
 /* Toegankelijkheid en donkere modus (zie docs/toegankelijkheid.md). Staat in een eigen <style>, zodat printvensters licht blijven. */
-.skiplink{position:absolute;left:12px;top:-200px;z-index:10000;background:#0C2340;color:#fff;padding:10px 16px;border-radius:8px;font-weight:700;text-decoration:none;font-family:Segoe UI,Roboto,Helvetica Neue,Arial,system-ui,sans-serif}
-.skiplink:focus{top:12px;outline:3px solid #F5A623;outline-offset:2px}
+.skiplink{position:absolute;left:12px;top:-200px;z-index:10000;background:#181A3D;color:#fff;padding:10px 16px;border-radius:8px;font-weight:700;text-decoration:none;font-family:Segoe UI,Roboto,Helvetica Neue,Arial,system-ui,sans-serif}
+.skiplink:focus{top:12px;outline:3px solid #F68712;outline-offset:2px}
 main[tabindex="-1"]:focus{outline:none}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus,textarea:focus,summary:focus-visible,[tabindex]:not([tabindex="-1"]):focus-visible{outline:3px solid #0C2340!important;outline-offset:2px!important}
+a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus,textarea:focus,summary:focus-visible,[tabindex]:not([tabindex="-1"]):focus-visible{outline:3px solid #181A3D!important;outline-offset:2px!important}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 @media print{.skiplink{display:none}}
 @media screen and (prefers-color-scheme:dark){
 :root:not([data-theme="light"]){color-scheme:dark}
-:root:not([data-theme="light"]){--geel-zacht:#3F3018;--zwart:#EDF1F6;--tekst:#EDF1F6;--grijs:#B8C4D1;--lijn:#16202C;--vlak:#162538;--rood:#e9a29b;--rood-zacht:#3f1a18;--groen:#9de7c1}
-:root:not([data-theme="light"]) body{color:#EDF1F6;background:#0C2340}
-:root:not([data-theme="light"]) .balk{background:#1B2C42;color:#fff}
+:root:not([data-theme="light"]){--geel-zacht:#3F3018;--zwart:#F1F1F6;--tekst:#F1F1F6;--grijs:#C3C4D3;--lijn:#1E2040;--vlak:#1C1E3A;--rood:#e9a29b;--rood-zacht:#3f1a18;--groen:#9de7c1}
+:root:not([data-theme="light"]) body{color:#F1F1F6;background:#181A3D}
+:root:not([data-theme="light"]) .balk{background:#23254A;color:#fff}
 :root:not([data-theme="light"]) .balk a{color:#fff}
-:root:not([data-theme="light"]) .kop{background:#0F1B2B;color:#EDF1F6;border-bottom:3px solid #F5A623}
-:root:not([data-theme="light"]) .zeshoek{background:#1B2C42}
-:root:not([data-theme="light"]) .terug{border-bottom:2px solid #7A8796}
-:root:not([data-theme="light"]) .kop .stempel{background:#1B2C42;color:#F5A623}
-:root:not([data-theme="light"]) .zoekbalk input{border:1px solid #16202C;background:#0F1B2B;color:#EDF1F6}
+:root:not([data-theme="light"]) .kop{background:#12132B;color:#F1F1F6;border-bottom:3px solid #F68712}
+:root:not([data-theme="light"]) .zeshoek{background:#23254A}
+:root:not([data-theme="light"]) .terug{border-bottom:2px solid #7C7E95}
+:root:not([data-theme="light"]) .kop .stempel{background:#23254A;color:#F68712}
+:root:not([data-theme="light"]) .zoekbalk input{border:1px solid #1E2040;background:#12132B;color:#F1F1F6}
 :root:not([data-theme="light"]) .zoekbalk input:focus,:root:not([data-theme="light"]) .filters button:focus-visible,:root:not([data-theme="light"]) .knop:focus-visible,:root:not([data-theme="light"]) .kaart-kop:focus-visible{outline:3px solid rgba(255,210,0,.7)}
-:root:not([data-theme="light"]) .filters button{border:1px solid #16202C;background:#0F1B2B;color:#EDF1F6}
-:root:not([data-theme="light"]) .filters button[aria-pressed="true"]{background:#F5A623;border-color:#F5A623;color:#0C2340}
-:root:not([data-theme="light"]) .statusregel{color:#B8C4D1}
-:root:not([data-theme="light"]) .knop{border:1px solid #F5A623;background:#F5A623;color:#0C2340}
-:root:not([data-theme="light"]) .knop:hover{background:#F7B955;color:#0C2340}
-:root:not([data-theme="light"]) .knop.licht{background:#0F1B2B;color:#EDF1F6;border-color:#16202C}
-:root:not([data-theme="light"]) .knop.licht:hover{background:#162538}
-:root:not([data-theme="light"]) .kaart{border:1px solid #16202C;background:#0F1B2B}
-:root:not([data-theme="light"]) .kaart.open{border-color:#7A8796}
-:root:not([data-theme="light"]) .kaart-kop:hover{background:#162538}
-:root:not([data-theme="light"]) .kaart-kop .cat{color:#B8C4D1}
-:root:not([data-theme="light"]) .kaart-kop .kort{color:#EDF1F6}
-:root:not([data-theme="light"]) .tag{background:#3F3018;color:#f6db8e;border:1px solid #D98E0F}
-:root:not([data-theme="light"]) .tag.grijs{background:#162538;color:#B8C4D1;border-color:#16202C}
-:root:not([data-theme="light"]) .pijl{background:#F5A623;color:#0C2340}
-:root:not([data-theme="light"]) .kaart-body{border-top:1px solid #16202C}
-:root:not([data-theme="light"]) .sectie > h3{border-bottom:3px solid #F5A623}
-:root:not([data-theme="light"]) .domein{background:#162538;border-left:4px solid #7A8796}
-:root:not([data-theme="light"]) .vinklijst li{border-bottom:1px dashed #16202C}
-:root:not([data-theme="light"]) .termijn{background:#3F3018;border-left:4px solid #D98E0F}
+:root:not([data-theme="light"]) .filters button{border:1px solid #1E2040;background:#12132B;color:#F1F1F6}
+:root:not([data-theme="light"]) .filters button[aria-pressed="true"]{background:#F68712;border-color:#F68712;color:#181A3D}
+:root:not([data-theme="light"]) .statusregel{color:#C3C4D3}
+:root:not([data-theme="light"]) .knop{border:1px solid #F68712;background:#F68712;color:#181A3D}
+:root:not([data-theme="light"]) .knop:hover{background:#F9A54D;color:#181A3D}
+:root:not([data-theme="light"]) .knop.licht{background:#12132B;color:#F1F1F6;border-color:#1E2040}
+:root:not([data-theme="light"]) .knop.licht:hover{background:#1C1E3A}
+:root:not([data-theme="light"]) .kaart{border:1px solid #1E2040;background:#12132B}
+:root:not([data-theme="light"]) .kaart.open{border-color:#7C7E95}
+:root:not([data-theme="light"]) .kaart-kop:hover{background:#1C1E3A}
+:root:not([data-theme="light"]) .kaart-kop .cat{color:#C3C4D3}
+:root:not([data-theme="light"]) .kaart-kop .kort{color:#F1F1F6}
+:root:not([data-theme="light"]) .tag{background:#3F3018;color:#f6db8e;border:1px solid #D9700A}
+:root:not([data-theme="light"]) .tag.grijs{background:#1C1E3A;color:#C3C4D3;border-color:#1E2040}
+:root:not([data-theme="light"]) .pijl{background:#F68712;color:#181A3D}
+:root:not([data-theme="light"]) .kaart-body{border-top:1px solid #1E2040}
+:root:not([data-theme="light"]) .sectie > h3{border-bottom:3px solid #F68712}
+:root:not([data-theme="light"]) .domein{background:#1C1E3A;border-left:4px solid #7C7E95}
+:root:not([data-theme="light"]) .vinklijst li{border-bottom:1px dashed #1E2040}
+:root:not([data-theme="light"]) .termijn{background:#3F3018;border-left:4px solid #D9700A}
 :root:not([data-theme="light"]) .termijn .bron{color:#f6db8e}
 :root:not([data-theme="light"]) .termijn .bron a{color:#f6db8e}
 :root:not([data-theme="light"]) .signalen li{background:#3f1a18;border-left:4px solid #9E2F45}
-:root:not([data-theme="light"]) .tegels a{border:1px solid #16202C;background:#0F1B2B}
-:root:not([data-theme="light"]) .tegels a:hover{border-color:#7A8796}
-:root:not([data-theme="light"]) .tegels span{color:#B8C4D1}
-:root:not([data-theme="light"]) .kaart-acties{border-top:1px solid #16202C}
-:root:not([data-theme="light"]) .leeg{border:1px dashed #16202C;color:#B8C4D1}
-:root:not([data-theme="light"]) mark{background:#F5A623;color:#0C2340}
+:root:not([data-theme="light"]) .tegels a{border:1px solid #1E2040;background:#12132B}
+:root:not([data-theme="light"]) .tegels a:hover{border-color:#7C7E95}
+:root:not([data-theme="light"]) .tegels span{color:#C3C4D3}
+:root:not([data-theme="light"]) .kaart-acties{border-top:1px solid #1E2040}
+:root:not([data-theme="light"]) .leeg{border:1px dashed #1E2040;color:#C3C4D3}
+:root:not([data-theme="light"]) mark{background:#F68712;color:#181A3D}
 :root:not([data-theme="light"]) .compliance{background:#3f1a18;border-left:4px solid #9E2F45}
 :root:not([data-theme="light"]) .compliance strong{color:#ee9e96}
-:root:not([data-theme="light"]) .voet{color:#B8C4D1}
-:root:not([data-theme="light"]) .voet a{color:#EDF1F6}
-:root:not([data-theme="light"]) a:focus-visible,:root:not([data-theme="light"]) button:focus-visible,:root:not([data-theme="light"]) input:focus,:root:not([data-theme="light"]) input:focus-within,:root:not([data-theme="light"]) select:focus,:root:not([data-theme="light"]) textarea:focus,:root:not([data-theme="light"]) summary:focus-visible,:root:not([data-theme="light"]) [tabindex]:not([tabindex="-1"]):focus-visible{outline-color:#F5A623!important}
-:root:not([data-theme="light"]) .skiplink{background:#F5A623;color:#0C2340}
-:root:not([data-theme="light"]) [style*="background:#fff"],:root:not([data-theme="light"]) [style*="background:#FFF"]{background:#0F1B2B!important}
-:root:not([data-theme="light"]) [style*="color:#555"]{color:#B8C4D1!important}
-:root:not([data-theme="light"]) [style*="color:#0C2340"]{color:#EDF1F6!important}
-:root:not([data-theme="light"]) .back-inline{color:#EDF1F6!important;border-bottom-color:#F5A623!important}
-:root:not([data-theme="light"]) .skiplink:focus{outline-color:#EDF1F6}
+:root:not([data-theme="light"]) .voet{color:#C3C4D3}
+:root:not([data-theme="light"]) .voet a{color:#F1F1F6}
+:root:not([data-theme="light"]) a:focus-visible,:root:not([data-theme="light"]) button:focus-visible,:root:not([data-theme="light"]) input:focus,:root:not([data-theme="light"]) input:focus-within,:root:not([data-theme="light"]) select:focus,:root:not([data-theme="light"]) textarea:focus,:root:not([data-theme="light"]) summary:focus-visible,:root:not([data-theme="light"]) [tabindex]:not([tabindex="-1"]):focus-visible{outline-color:#F68712!important}
+:root:not([data-theme="light"]) .skiplink{background:#F68712;color:#181A3D}
+:root:not([data-theme="light"]) [style*="background:#fff"],:root:not([data-theme="light"]) [style*="background:#FFF"]{background:#12132B!important}
+:root:not([data-theme="light"]) [style*="color:#555"]{color:#C3C4D3!important}
+:root:not([data-theme="light"]) [style*="color:#181A3D"]{color:#F1F1F6!important}
+:root:not([data-theme="light"]) .back-inline{color:#F1F1F6!important;border-bottom-color:#F68712!important}
+:root:not([data-theme="light"]) .skiplink:focus{outline-color:#F1F1F6}
 }
 </style>
 <link rel="stylesheet" href="css/sitenav.css">
@@ -436,12 +436,12 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
     }
     var vandaag = new Date().toLocaleDateString('nl-NL', {day: 'numeric', month: 'long', year: 'numeric'});
     var h = '<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Checklist ' + esc(g.titel) + '</title>';
-    h += '<style>body{font-family:Segoe UI,Roboto,Helvetica Neue,Arial,Arial,sans-serif;color:#0C2340;margin:28px;font-size:12.5px;line-height:1.5}';
-    h += 'h1{font-size:20px;margin:0 0 2px}h2{font-size:13px;text-transform:uppercase;letter-spacing:.05em;border-bottom:3px solid #F5A623;padding-bottom:3px;margin:18px 0 6px}';
-    h += '.sub{color:#4A5765;margin:0 0 12px}.velden{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin:10px 0 4px}.velden div{border-bottom:1px solid #999;padding-top:16px;font-size:11px;color:#4A5765}';
+    h += '<style>body{font-family:Segoe UI,Roboto,Helvetica Neue,Arial,Arial,sans-serif;color:#181A3D;margin:28px;font-size:12.5px;line-height:1.5}';
+    h += 'h1{font-size:20px;margin:0 0 2px}h2{font-size:13px;text-transform:uppercase;letter-spacing:.05em;border-bottom:3px solid #F68712;padding-bottom:3px;margin:18px 0 6px}';
+    h += '.sub{color:#55576F;margin:0 0 12px}.velden{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin:10px 0 4px}.velden div{border-bottom:1px solid #999;padding-top:16px;font-size:11px;color:#55576F}';
     h += 'ul{list-style:none;padding:0;margin:0}li{padding:3px 0;display:flex;gap:8px}li .v{font-size:15px;line-height:1.1}';
     h += 'table{border-collapse:collapse;width:100%}td{border-bottom:1px solid #ddd;padding:4px 6px;vertical-align:top}td:first-child{width:52%;font-weight:600}';
-    h += '.bron{font-size:10.5px;color:#4A5765}.sig li{display:list-item;list-style:disc;margin-left:18px}.noot{margin-top:18px;font-size:10.5px;color:#4A5765;border-top:1px solid #ddd;padding-top:8px}';
+    h += '.bron{font-size:10.5px;color:#55576F}.sig li{display:list-item;list-style:disc;margin-left:18px}.noot{margin-top:18px;font-size:10.5px;color:#55576F;border-top:1px solid #ddd;padding-top:8px}';
     h += '.ruimte{border:1px solid #bbb;height:90px;border-radius:4px}@media print{body{margin:12mm}}</style></head><body>';
     h += '<h1>Checklist: ' + esc(g.titel) + '</h1><p class="sub">Adviesforum &middot; wegwijzer levensgebeurtenissen &middot; afgedrukt op ' + esc(vandaag) + '</p>';
     h += '<div class="velden"><div>Klant</div><div>Adviseur</div><div>Datum gesprek</div></div>';

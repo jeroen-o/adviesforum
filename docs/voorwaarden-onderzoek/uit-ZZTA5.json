@@ -1,0 +1,1195 @@
+[
+ {
+  "naam": "Argenta",
+  "gecontroleerd": "2026-10-08",
+  "criteria": {
+   "ort": {
+    "waarde": "~ Onregelmatigheidstoeslag en overwerk tellen mee als structureel: bedrag over de laatste 12 maanden",
+    "bron": [
+     "https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf"
+    ],
+    "brondatum": "aug 2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids aug 2026, toetsinkomen (ORT, overwerk en provisie \"zolang dit structureel is (het bedrag over de laatste 12 maanden)\")."
+   },
+   "uren": {
+    "waarde": "~ Max. 50 uur per week; bij twee dienstverbanden boven 50 uur wordt het tijdelijke of kleinste dienstverband afgetopt",
+    "bron": [
+     "https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf"
+    ],
+    "brondatum": "aug 2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids aug 2026, meerdere dienstverbanden; voorbeeld 40 + 20 uur: 40 + 10 uur telt mee."
+   },
+   "meerink": {
+    "waarde": "~ Meerdere dienstverbanden toegestaan mits deze een minimale duur hebben; samen max. 50 uur per week",
+    "bron": [
+     "https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf"
+    ],
+    "brondatum": "aug 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids aug 2026: \"Er mogen meerdere dienstverbanden zijn. Hierbij moeten de dienstverbanden ouder zijn dan 3 ...\" (zoektekst afgekapt; termijn waarschijnlijk 3 maanden)."
+   },
+   "loondt": {
+    "waarde": "+ IBL geaccepteerd (UWV-verzekeringsbericht plus salarisstrook); flexinkomen volledig via IBL telt altijd mee, ook bij één aanvrager",
+    "bron": [
+     "https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf",
+     "https://www.argenta.nl/adviseur/over-ons/weet-je-dat/inkomensbepaling-loondienst-voortaan-via-wwwtoetsinkomenberekenennl"
+    ],
+    "brondatum": "aug 2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids aug 2026, inkomen uit loondienst en 5.2.6 flexibele arbeidsrelaties; tool via toetsinkomenberekenen.nl sinds 17 juni 2024."
+   },
+   "intent": {
+    "waarde": "+ Contract bepaalde tijd met intentieverklaring voor onbepaalde tijd geldt als vast inkomen",
+    "bron": [
+     "https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf"
+    ],
+    "brondatum": "aug 2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids aug 2026: vast inkomen = onbepaalde tijd of bepaalde tijd met intentieverklaring voor onbepaalde tijd. Zonder of met tijdelijke intentie: gemiddelde (5.2.6)."
+   },
+   "toekdv": {
+    "waarde": "~ Nieuw dienstverband: start uiterlijk 6 mnd na bindend aanbod, onbepaalde tijd zonder proeftijd; werkgeversverklaring + arbeidsovereenkomst",
+    "bron": [
+     "https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf"
+    ],
+    "brondatum": "aug 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids aug 2026 volgens zoektekst; mogelijk aanvullend alleen samen met 2e aanvrager met (hoogste, vast) inkomen - koppeling in zoektekst niet eenduidig."
+   },
+   "toekst": {
+    "waarde": "~ Toekomstige stijging telt mee als onvoorwaardelijk volgens werkgeversverklaring en ingang uiterlijk 6 mnd na bindend aanbod",
+    "bron": [
+     "https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf"
+    ],
+    "brondatum": "aug 2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids aug 2026, toetsinkomen."
+   },
+   "proef": {
+    "waarde": "- Proeftijd moet voorbij zijn; bij lopende proeftijd geldt het gemiddelde inkomen (flexregeling)",
+    "bron": [
+     "https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf"
+    ],
+    "brondatum": "aug 2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids aug 2026, 5.2.3 (onbepaalde tijd: proeftijd voorbij) en 5.2.6 (flexibele arbeidsrelaties incl. proeftijd niet verlopen)."
+   },
+   "buitw": {
+    "waarde": "! Alleen inkomen in euro's op Nederlandse rekening; andere valuta telt niet mee",
+    "bron": [
+     "https://www.argenta.nl/faq/k/kan-ik-een-hypotheek-afsluiten-met-een-buitenlands-inkomen",
+     "https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf"
+    ],
+    "brondatum": "aug 2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "FAQ buitenlands inkomen en hypotheekgids aug 2026 (inkomen in andere valuta niet in toetsing). Belgisch/Duits ondernemersinkomen: IKV verplicht."
+   },
+   "lijfr": {
+    "waarde": "~ Toekomstige lijfrente telt mee (met en zonder NHG): alleen opgebouwd op bindend aanbod, uitkering t/m einde looptijd, prognose max. 4%",
+    "bron": [
+     "https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf"
+    ],
+    "brondatum": "aug 2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids aug 2026: fiscale lijfrenteclausule, reguliere premies min. 1 jaar vóór bindende offerte verschuldigd."
+   },
+   "ivawao": {
+    "waarde": "+ Duurzame uitkeringen zoals IVA tellen mee als toetsinkomen",
+    "bron": [
+     "https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf"
+    ],
+    "brondatum": "aug 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids aug 2026 noemt duurzame uitkeringen (IVA, Wajong); WAO/WAZ als duurzaam inkomen alleen op oudere Argenta-pagina; voorwaarden niet in zoektekst."
+   },
+   "wajong": {
+    "waarde": "+ Wajong-uitkering telt mee als duurzame uitkering",
+    "bron": [
+     "https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf"
+    ],
+    "brondatum": "aug 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids aug 2026, lijst toetsinkomen (duurzame uitkeringen); voorwaarden niet in zoektekst."
+   },
+   "senior": {
+    "waarde": "+ Seniorenregeling bij AOW binnen 10 jaar: toets op toekomstig pensioen, opgebouwd pensioen, tijdelijk tekort max. 10 jaar toegestaan",
+    "bron": [
+     "https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf"
+    ],
+    "brondatum": "aug 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids aug 2026, 5.1.1 senioren(verhuis)regeling; zoektekst noemt ook min. 10 jaar rentevast en (deels) aflossingsvrij - niet geheel eenduidig."
+   },
+   "r30": {
+    "waarde": "~ 30%-regeling: inkomen telt mee, maar de 30%-vergoeding wordt niet gebruteerd of bij het bruto jaarinkomen opgeteld",
+    "bron": [
+     "https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf",
+     "https://www.argenta.nl/adviseur/over-ons/weet-je-dat/wijzigingen-argenta-hypotheekgids-januari-2025"
+    ],
+    "brondatum": "aug 2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids aug 2026, 6.4.1; toegevoegd jan 2025."
+   },
+   "vblf": {
+    "waarde": "- Verblijfsvergunning onbepaalde tijd of niet-tijdelijk doel vereist; tijdelijke vergunning alleen voor medeaanvrager wiens inkomen niet nodig is",
+    "bron": [
+     "https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf"
+    ],
+    "brondatum": "aug 2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids aug 2026 (art. 3.5 Vreemdelingenbesluit). Tegenstrijdig: expatpagina noemt \"geen beperkingen in LTV voor kennismigranten\" (ongedateerd)."
+   },
+   "nlwon": {
+    "waarde": "+ Geen minimale verblijfsduur in NL genoemd, zolang een geldige verblijfsvergunning kan worden overgelegd",
+    "bron": [
+     "https://www.argenta.nl/adviseur/over-ons/weet-je-dat/expatmarkt"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Uitspraak adviseur op Argenta-pagina \"Argenta en de expatmarkt\", geen gidsregel."
+   },
+   "expbel": {
+    "waarde": "! Bij belastingplicht in buitenland toets met tabel voor fiscaal niet-aftrekbare leningen, tenzij verdrag of NL-plichtige met hoogste inkomen",
+    "bron": [
+     "https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf",
+     "https://www.argenta.nl/faq/k/kan-ik-een-hypotheek-afsluiten-met-een-buitenlands-inkomen"
+    ],
+    "brondatum": "aug 2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids aug 2026 (financieringslast)."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "De Argenta hypotheekgids",
+    "url": "https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf",
+    "versie": "augustus 2026"
+   },
+   {
+    "titel": "Een hypotheek afsluiten met een buitenlands inkomen (FAQ)",
+    "url": "https://www.argenta.nl/faq/k/kan-ik-een-hypotheek-afsluiten-met-een-buitenlands-inkomen",
+    "versie": "online"
+   },
+   {
+    "titel": "Argenta en de expatmarkt",
+    "url": "https://www.argenta.nl/adviseur/over-ons/weet-je-dat/expatmarkt",
+    "versie": "online"
+   },
+   {
+    "titel": "Wijzigingen Argenta hypotheekgids januari 2025",
+    "url": "https://www.argenta.nl/adviseur/over-ons/weet-je-dat/wijzigingen-argenta-hypotheekgids-januari-2025",
+    "versie": "jan 2025"
+   }
+  ]
+ },
+ {
+  "naam": "Centraal Beheer",
+  "gecontroleerd": "2026-10-08",
+  "criteria": {
+   "ort": {
+    "waarde": "~ Structurele ORT/ploegentoeslag en overwerk: bedrag laatste 12 maanden, max. 25% van 12x het maandinkomen",
+    "bron": [
+     "https://www.centraalbeheer.nl/-/media/files/voor-adviseurs/acceptatiegids-leef-hypotheek.pdf",
+     "https://www.centraalbeheer.nl/hypotheek/kennis/bruto-jaarsalaris"
+    ],
+    "brondatum": "2026-07",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 1 juli 2026, inkomenstabel (PDF-tekst rommelig, 25%-plafond niet helemaal eenduidig); kennispagina bruto jaarsalaris: alleen structureel, laatste 12 maanden."
+   },
+   "uren": {
+    "waarde": "~ Meerdere vaste dienstverbanden boven 40 uur: max. 125% van 12x het maandinkomen op basis van 40 uur",
+    "bron": [
+     "https://www.centraalbeheer.nl/-/media/files/voor-adviseurs/acceptatiegids-leef-hypotheek.pdf"
+    ],
+    "brondatum": "2026-07",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 1 juli 2026, inkomen loondienst."
+   },
+   "meerink": {
+    "waarde": "+ Meerdere dienstverbanden mogelijk; boven 40 uur geldt max. 125% van inkomen o.b.v. 40 uur; per werkgever loonstrook en werkgeversverklaring",
+    "bron": [
+     "https://www.centraalbeheer.nl/-/media/files/voor-adviseurs/acceptatiegids-leef-hypotheek.pdf",
+     "https://www.centraalbeheer.nl/hypotheek/kennis/documenten"
+    ],
+    "brondatum": "2026-07",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 1 juli 2026; documentenpagina (loonstrook en WGV van elke werkgever)."
+   },
+   "loondt": {
+    "waarde": "+ IBL geaccepteerd; UWV-verzekeringsbericht max. 3 maanden oud op datum Definitief Aanbod, bij flex ook recente loonstrook",
+    "bron": [
+     "https://www.centraalbeheer.nl/-/media/files/voor-adviseurs/acceptatiegids-leef-hypotheek.pdf",
+     "https://www.centraalbeheer.nl/voor-adviseurs/hypotheek/inkomensbepaling-loondienst"
+    ],
+    "brondatum": "2026-07",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 1 juli 2026; adviseurspagina Inkomensbepaling loondienst."
+   },
+   "intent": {
+    "waarde": "+ Contract bepaalde tijd met intentieverklaring telt als vast dienstverband; zonder intentie: gemiddelde laatste 3 kalenderjaren",
+    "bron": [
+     "https://www.centraalbeheer.nl/-/media/files/voor-adviseurs/acceptatiegids-leef-hypotheek.pdf",
+     "https://www.centraalbeheer.nl/hypotheek/kennis/tijdelijk-dienstverband"
+    ],
+    "brondatum": "2026-07",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 1 juli 2026, vast vs. flexibel dienstverband."
+   },
+   "toekdv": {
+    "waarde": "~ Nieuwe baan telt als start binnen 6 mnd na Definitief Aanbod, vast zonder proeftijd; getekend contract + WGV, spaargeld bij lasten eerder",
+    "bron": [
+     "https://www.centraalbeheer.nl/-/media/files/voor-adviseurs/acceptatiegids-leef-hypotheek.pdf"
+    ],
+    "brondatum": "2026-07",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 1 juli 2026, \"Inkomen uit toekomstig dienstverband\"."
+   },
+   "toekst": {
+    "waarde": "~ Onvoorwaardelijke inkomensstijging binnen 6 maanden telt mee; specifiek formulier nodig",
+    "bron": [
+     "https://www.centraalbeheer.nl/-/media/files/voor-adviseurs/acceptatiegids-leef-hypotheek.pdf"
+    ],
+    "brondatum": "2026-07",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 1 juli 2026 volgens zoektekst; welk formulier niet zichtbaar."
+   },
+   "proef": {
+    "waarde": "~ Vast dienstverband in proeftijd niet als vast inkomen; lopende proeftijd valt onder flexregeling (gemiddelde 3 jaar)",
+    "bron": [
+     "https://www.centraalbeheer.nl/-/media/files/voor-adviseurs/acceptatiegids-leef-hypotheek.pdf",
+     "https://www.centraalbeheer.nl/hypotheek/kennis/tijdelijk-dienstverband"
+    ],
+    "brondatum": "2026-07",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 1 juli 2026 en kennispagina tijdelijk dienstverband; zoektekst deels tegenstrijdig (ook \"telt niet mee\")."
+   },
+   "ikb": {
+    "waarde": "~ Structureel flexibel budget telt mee tot max. 25% van 12x het maandinkomen",
+    "bron": [
+     "https://www.centraalbeheer.nl/-/media/files/voor-adviseurs/acceptatiegids-leef-hypotheek.pdf"
+    ],
+    "brondatum": "2026-07",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 1 juli 2026 noemt \"structureel flexibel budget\", niet expliciet IKB."
+   },
+   "verm": {
+    "waarde": "~ Vermogen telt mee: min. vrij beschikbaar vermogen vereist, geen verpand/vreemde valuta/crypto; min. 70% van benodigd inkomen uit arbeid of pensioen",
+    "bron": [
+     "https://www.centraalbeheer.nl/-/media/files/voor-adviseurs/acceptatiegids-leef-hypotheek.pdf"
+    ],
+    "brondatum": "2026-07",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 1 juli 2026: min. EUR 20.000 vrij beschikbaar; rendement op door CHF vastgestelde rekenrente of hypotheekrente (laagste)."
+   },
+   "lijfr": {
+    "waarde": "~ Lopende lijfrente telt als gegarandeerd in polis; toekomstige lijfrente o.b.v. prognosekapitaal (max. 4%), uitkering niet korter dan leningdeel",
+    "bron": [
+     "https://www.centraalbeheer.nl/-/media/files/voor-adviseurs/acceptatiegids-leef-hypotheek.pdf"
+    ],
+    "brondatum": "2026-07",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 1 juli 2026, lijfrente."
+   },
+   "ivawao": {
+    "waarde": "+ WAO, WAZ en IVA (onbeperkte tijd) tellen mee; toekenningsbesluit en recente betalingsspecificatie",
+    "bron": [
+     "https://www.centraalbeheer.nl/-/media/files/voor-adviseurs/acceptatiegids-leef-hypotheek.pdf"
+    ],
+    "brondatum": "2026-07",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 1 juli 2026, uitkeringen."
+   },
+   "wajong": {
+    "waarde": "+ Wajong telt mee, behalve de studietoeslag",
+    "bron": [
+     "https://www.centraalbeheer.nl/-/media/files/voor-adviseurs/acceptatiegids-leef-hypotheek.pdf"
+    ],
+    "brondatum": "2026-07",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 1 juli 2026, uitkeringen."
+   },
+   "senior": {
+    "waarde": "+ Seniorenregeling bij (binnen 10 jaar) pensioen en dalende lasten: toets op werkelijke lasten en opgebouwd pensioen; min. 20 jaar rentevast",
+    "bron": [
+     "https://www.centraalbeheer.nl/-/media/files/voor-adviseurs/acceptatiegids-leef-hypotheek.pdf",
+     "https://www.centraalbeheer.nl/voor-adviseurs/actueel/seniorenregeling/"
+    ],
+    "brondatum": "2026-07",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 1 juli 2026; oudere actueelpagina meldde regeling alleen voor bestaande klanten."
+   },
+   "vblf": {
+    "waarde": "~ Inkomen telt bij vergunning onbepaalde tijd, EU langdurig ingezetene of type I/III bepaalde tijd met niet-tijdelijk doel (kennismigrant/expat)",
+    "bron": [
+     "https://www.centraalbeheer.nl/-/media/files/voor-adviseurs/acceptatiegids-leef-hypotheek.pdf"
+    ],
+    "brondatum": "2026-07",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 1 juli 2026 (art. 3.5 Vreemdelingenbesluit); per 1 juli 2026 \"verbetering voor expats\"."
+   },
+   "buitw": {
+    "waarde": "! Inkomen in andere valuta dan de euro telt niet mee",
+    "bron": [
+     "https://www.centraalbeheer.nl/hypotheek/kennis/bruto-jaarsalaris"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Kennispagina bruto jaarsalaris; buitenlandse werkgever niet expliciet in gids gevonden."
+   },
+   "expbel": {
+    "waarde": "! Buitenlands belastingplichtig: lastpercentages niet-aftrekbare lening, tenzij hoogste inkomen NL-plichtig of verdrag; wonen buiten eurozone uitgesloten",
+    "bron": [
+     "https://www.centraalbeheer.nl/-/media/files/voor-adviseurs/acceptatiegids-leef-hypotheek.pdf"
+    ],
+    "brondatum": "2026-07",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 1 juli 2026."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "De Leef Hypotheek Acceptatiegids",
+    "url": "https://www.centraalbeheer.nl/-/media/files/voor-adviseurs/acceptatiegids-leef-hypotheek.pdf",
+    "versie": "1 jul 2026"
+   },
+   {
+    "titel": "Inkomensbepaling loondienst (adviseurspagina)",
+    "url": "https://www.centraalbeheer.nl/voor-adviseurs/hypotheek/inkomensbepaling-loondienst",
+    "versie": "online"
+   },
+   {
+    "titel": "Geen vaste baan wel een hypotheek (kennisartikel)",
+    "url": "https://www.centraalbeheer.nl/hypotheek/kennis/tijdelijk-dienstverband",
+    "versie": "online"
+   },
+   {
+    "titel": "Seniorenregeling biedt meer mogelijkheden",
+    "url": "https://www.centraalbeheer.nl/voor-adviseurs/actueel/seniorenregeling/",
+    "versie": "ouder"
+   }
+  ]
+ },
+ {
+  "naam": "Hypotrust",
+  "gecontroleerd": "2026-10-08",
+  "criteria": {
+   "ort": {
+    "waarde": "~ ORT, provisie en overwerk mits structureel: bedrag over laatste 12 maanden volgens werkgeversverklaring (bevestigd via loonstrook)",
+    "bron": [
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2025-1.pdf"
+    ],
+    "brondatum": "jan 2025",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiekader Elan Plus jan 2025; jan 2026-versie noemt overige bestanddelen \"conform NHG-normen\"."
+   },
+   "uren": {
+    "waarde": "~ Bij meerdere dienstverbanden inkomen berekend op max. 48 uur per week (Elan Plus)",
+    "bron": [
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2026.pdf",
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2025-1.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiekader Elan Plus; Woon Bewust jul 2026: max. 40 uur, meer alleen als overwerk tot 20%. Versie-toewijzing 48 uur niet volledig eenduidig."
+   },
+   "meerink": {
+    "waarde": "~ Meerdere dienstverbanden toegestaan; inkomen berekend op max. 48 uur per week",
+    "bron": [
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2026.pdf",
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2025-1.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiekader Elan Plus."
+   },
+   "intent": {
+    "waarde": "+ Tijdelijk contract na proeftijd telt voor hele looptijd bij intentieverklaring vast dienstverband (NHG-norm); zonder: flexibele arbeidsrelatie",
+    "bron": [
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Acceptatiekader Elan Plus jan 2026, inkomen loondienst."
+   },
+   "toekdv": {
+    "waarde": "~ Toekomstig dienstverband telt bij onbepaalde tijd zonder proeftijd en ingang binnen 6 maanden na (bindend) aanbod",
+    "bron": [
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2026.pdf",
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiekader Elan Plus jan 2026 (tekst afgekapt; Elan jan 2026 noemt datum bindend aanbod)."
+   },
+   "toekst": {
+    "waarde": "~ Toekomstige stijging telt als onvoorwaardelijk, binnen 6 maanden, met werkgeversverklaring of aangepaste arbeidsovereenkomst",
+    "bron": [
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Acceptatiekader Elan Plus jan 2026."
+   },
+   "proef": {
+    "waarde": "~ Vast inkomen pas na verstreken proeftijd; lopende proeftijd valt onder flexibele arbeidsrelatie",
+    "bron": [
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiekader Elan Plus jan 2026; tabel noemt proeftijd ook bij \"niet mogelijk\" (PDF-tekst door elkaar)."
+   },
+   "verm": {
+    "waarde": "~ Vermogen telt mee (niet bij NHG): rendement op vermogen bij toetsinkomen opgeteld; min. vrij beschikbaar vermogen vereist, geen crypto",
+    "bron": [
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2026.pdf",
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Woon-Bewust-juli-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Elan Plus jan 2026 en Woon Bewust jul 2026 (6.14): min. EUR 100.000; rekenrendement afgetopt op hypotheekrente."
+   },
+   "lijfr": {
+    "waarde": "~ Toekomstige lijfrente telt tot pensioeninkomen voor de gegarandeerde periode; toekomstige lijfrentepremies niet",
+    "bron": [
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Elan Plus jan 2026; Woon Bewust jul 2026 strenger (toekomstige lijfrente telt niet mee)."
+   },
+   "wga": {
+    "waarde": "- WGA-uitkering telt niet mee als toetsinkomen",
+    "bron": [
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2026.pdf",
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Woon-Bewust-juli-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Elan Plus jan 2026 en Woon Bewust: lopende WW, bijstand, WGA en Wajong niet als toetsinkomen."
+   },
+   "ivawao": {
+    "waarde": "+ IVA, WAO en WAZ mogen voor de hele looptijd meetellen (vaste, blijvende uitkering)",
+    "bron": [
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-januari-2026.pdf",
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Elan jan 2026 expliciet; Elan Plus jan 2026: loonvervangende uitkering telt mee als vast."
+   },
+   "wajong": {
+    "waarde": "- Wajong-uitkering telt niet mee als toetsinkomen",
+    "bron": [
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2026.pdf",
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Woon-Bewust-juli-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Elan Plus jan 2026 en Woon Bewust."
+   },
+   "r30": {
+    "waarde": "~ 30%-regeling mag mee, maar het fiscale voordeel wordt niet gebruteerd en het bruto toetsinkomen niet verhoogd",
+    "bron": [
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2026.pdf",
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Woon-Bewust-juli-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Elan Plus jan 2026, ook Woon Bewust jul 2026."
+   },
+   "vblf": {
+    "waarde": "~ Verblijfsvergunning: NHG volgend",
+    "bron": [
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2026.pdf",
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Woon-Bewust-juli-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Kaders 2026 noemen \"NHG volgend\"; tabel in zoektekst onvolledig. Comfort (jan 2025): niet-EU vergunning onbepaalde tijd."
+   },
+   "expbel": {
+    "waarde": "! Bij belastingplicht in buitenland toets op basis van box 3, tenzij verdrag of NL-plichtige met hoogste inkomen; alleen NL-ingezetenen",
+    "bron": [
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiekaders 2026 (Elan Plus e.a.): \"Buitenlands ingezeten: alleen Nederlandse ingezetenen toegestaan\"."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Acceptatiekader Hypotrust Elan Plus",
+    "url": "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2026.pdf",
+    "versie": "jan 2026"
+   },
+   {
+    "titel": "Acceptatiekader Hypotrust Elan Plus",
+    "url": "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2025-1.pdf",
+    "versie": "jan 2025"
+   },
+   {
+    "titel": "Acceptatiekader Hypotrust Elan (niet meer voor nieuwe klanten)",
+    "url": "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-januari-2026.pdf",
+    "versie": "jan 2026"
+   },
+   {
+    "titel": "Acceptatiekader Hypotrust Woon Bewust Hypotheek (alleen doorgeef-/meeneemregeling)",
+    "url": "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Woon-Bewust-juli-2026.pdf",
+    "versie": "jul 2026"
+   }
+  ]
+ },
+ {
+  "naam": "Lot Hypotheken",
+  "gecontroleerd": "2026-10-08",
+  "criteria": {
+   "ort": {
+    "waarde": "~ ORT, overwerk en provisie tellen als gebruikelijk in de bedrijfstak en ook in de toekomst te verwachten: bedrag over laatste 12 maanden",
+    "bron": [
+     "https://www.lothypotheken.nl/media/rmmnao1y/hypotheekgids.pdf"
+    ],
+    "brondatum": "jul 2024",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids (titel juli 2024), inkomen loondienst. Gids juli 2023 eiste dat ORT onderdeel van de arbeidsovereenkomst is."
+   },
+   "uren": {
+    "waarde": "~ Inkomen max. op basis van 40-urige werkweek; het meerdere kan als overwerk worden meegenomen",
+    "bron": [
+     "https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids versie januari 2026 (titel in PDF nog juli 2024). Gids juli 2023: bij meerdere dienstverbanden >40 uur max. 48 uur per week."
+   },
+   "meerink": {
+    "waarde": "~ Meerdere dienstverbanden: bij samen meer dan 40 uur per week telt inkomen tot max. 48 uur per week",
+    "bron": [
+     "https://adviseur.lothypotheken.nl/media/3ahhlijh/hypotheekgids-lot-juli-2023.pdf"
+    ],
+    "brondatum": "jul 2023",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids juli 2023; jan 2026-versie noemt 40-urige werkweek met meerdere als overwerk, niet eenduidig of 48 uur nog geldt."
+   },
+   "loondt": {
+    "waarde": "+ IBL toegestaan naast werkgeversverklaring; bij vast, tijdelijk met intentie en tijdelijk zonder intentie (flex). UWV-bericht + loonstrook max. 3 mnd",
+    "bron": [
+     "https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf",
+     "https://www.lothypotheken.nl/adviseur/nieuws/inkomensbepaling-loondienst"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids, inkomen loondienst; nieuwsbericht over nieuwe IBL-rekentool (rekenregels 8.0, 2024)."
+   },
+   "intent": {
+    "waarde": "+ Tijdelijk contract telt voor hele looptijd met intentieverklaring op NHG-model werkgeversverklaring; zonder intentie: flexibele arbeidsrelatie",
+    "bron": [
+     "https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids, tijdelijk dienstverband. Flex: gemiddelde 3 kalenderjaren, max. huidig jaarinkomen."
+   },
+   "toekdv": {
+    "waarde": "~ Toekomstig dienstverband telt bij contract onbepaalde tijd zonder proeftijd, ingang binnen 6 maanden na bindend aanbod",
+    "bron": [
+     "https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids; arbeidsovereenkomst en werkgeversverklaring nieuwe werkgever vereist."
+   },
+   "toekst": {
+    "waarde": "~ Onvoorwaardelijke stijging binnen 6 mnd na bindend aanbod met schriftelijke werkgeversverklaring; vast of tijdelijk met intentie, proeftijd voorbij",
+    "bron": [
+     "https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids; niet bij dienstverband bij (schoon)familie, behalve cao-verhogingen."
+   },
+   "proef": {
+    "waarde": "- Proeftijd moet verstreken zijn voor definitieve offerte (behalve bij flexibele arbeidsrelatie); Lot kan dit bij werkgever verifiëren",
+    "bron": [
+     "https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids, proeftijd. Ambtenaren en tijdelijke contracten < 6 mnd: geen proeftijd."
+   },
+   "ikb": {
+    "waarde": "~ Keuzebudget telt mits structureel, onvoorwaardelijk in arbeidsvoorwaarden, vrij besteedbaar en in geld uitkeerbaar",
+    "bron": [
+     "https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids, inkomen loondienst; tekst via zoeksnippet, versie niet volledig eenduidig."
+   },
+   "ivawao": {
+    "waarde": "+ AO-uitkering (o.a. IVA, WAO, WAZ) van blijvende aard telt voor hele looptijd; blijkend uit toekenningsbesluit of verklaring uitkeringsinstantie",
+    "bron": [
+     "https://www.lothypotheken.nl/media/rmmnao1y/hypotheekgids.pdf"
+    ],
+    "brondatum": "jul 2024",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids, uitkeringen. Verhoging telt alleen als onvoorwaardelijk en binnen 6 mnd na bindend aanbod."
+   },
+   "wajong": {
+    "waarde": "+ Wajong telt als uitkering van blijvende aard (toekenningsbesluit UWV) voor hele looptijd",
+    "bron": [
+     "https://www.lothypotheken.nl/media/rmmnao1y/hypotheekgids.pdf"
+    ],
+    "brondatum": "jul 2024",
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids, uitkeringen; Wajong expliciet genoemd alleen in samenvattend zoekresultaat."
+   },
+   "senior": {
+    "waarde": "+ Seniorenpropositie (NHG-conform, ook zonder NHG) bij AOW binnen 10 jaar: toets op werkelijke lasten max. 120 mnd; max. 80% marktwaarde",
+    "bron": [
+     "https://www.lothypotheken.nl/consument/hypotheek/senioren",
+     "https://www.lothypotheken.nl/adviseur/nieuws/lot-hypotheken-is-er-ook-voor-de-57-plusser",
+     "https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids + seniorenpagina; min. rentevast 10 jaar tot jongste AOW; Tijdelijk Tekort Regeling voor AOW-gat."
+   },
+   "nlwon": {
+    "waarde": "~ Niet-EU/EER: min. 3 mnd wonen en werken in NL (niet bij NHG); < 36 mnd in NL: vast contract of tijdelijk met intentie vereist",
+    "bron": [
+     "https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids; uitzondering 3 mnd bij huwelijk/partnerschap met Nederlander. Gids 2023: expats/kennismigranten vast contract na proeftijd."
+   },
+   "vblf": {
+    "waarde": "! Niet-EU/EER: verblijfsvergunning onbepaalde tijd, EU-langdurig ingezetene of niet-tijdelijk verblijfsdoel genoemd als eis",
+    "bron": [
+     "https://www.lothypotheken.nl/media/rmmnao1y/hypotheekgids.pdf"
+    ],
+    "brondatum": "jul 2024",
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids (titel juli 2024); tekst slechts deels zichtbaar, regeling tijdelijke vergunning en LTV niet gevonden."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Hypotheekgids Lot Hypotheken",
+    "url": "https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf",
+    "versie": "januari 2026"
+   },
+   {
+    "titel": "Hypotheekgids Lot Hypotheken (www)",
+    "url": "https://www.lothypotheken.nl/media/rmmnao1y/hypotheekgids.pdf",
+    "versie": "juli 2024 (titel)"
+   },
+   {
+    "titel": "Hypotheekgids Lot juli 2023",
+    "url": "https://adviseur.lothypotheken.nl/media/3ahhlijh/hypotheekgids-lot-juli-2023.pdf",
+    "versie": "juli 2023"
+   },
+   {
+    "titel": "Inkomensbepaling Loondienst (nieuws)",
+    "url": "https://www.lothypotheken.nl/adviseur/nieuws/inkomensbepaling-loondienst",
+    "versie": "2024"
+   },
+   {
+    "titel": "Hypotheek voor senioren: vanaf 57 jaar",
+    "url": "https://www.lothypotheken.nl/consument/hypotheek/senioren",
+    "versie": "online"
+   }
+  ]
+ },
+ {
+  "naam": "NIBC",
+  "gecontroleerd": "2026-10-08",
+  "criteria": {
+   "ort": {
+    "waarde": "~ ORT, overwerk en provisie: gemiddelde laatste 12 mnd (of sinds indiensttreding) als gebruikelijk in bedrijfstak; >20% van totaalinkomen: Hypotheekdesk",
+    "bron": [
+     "https://nibc.nl/media/zzqnjuq1/hypotheekgids-2026.pdf"
+    ],
+    "brondatum": "2026 v1.0",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 2026, hfst. 5.1 inkomen uit dienstverband."
+   },
+   "uren": {
+    "waarde": "~ Inkomen berekend op 40-urige werkweek; meer uren alleen in bepaalde gevallen als overwerk; meerdere banen samen max. 48 uur",
+    "bron": [
+     "https://nibc.nl/media/zzqnjuq1/hypotheekgids-2026.pdf"
+    ],
+    "brondatum": "2026 v1.0",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 2026, inkomen uit dienstverband."
+   },
+   "meerink": {
+    "waarde": "+ Meerdere dienstverbanden toegestaan tot max. 48 uur per week van alle dienstverbanden samen",
+    "bron": [
+     "https://nibc.nl/media/zzqnjuq1/hypotheekgids-2026.pdf"
+    ],
+    "brondatum": "2026 v1.0",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 2026, inkomen uit dienstverband."
+   },
+   "loondt": {
+    "waarde": "+ IBL toegestaan bij vast, tijdelijk met en zonder intentie; max. 3 mnd oud bij bindend aanbod; min. 12 van 14 mnd gewerkt; niet met arbeidsmarktscan",
+    "bron": [
+     "https://nibc.nl/media/zzqnjuq1/hypotheekgids-2026.pdf"
+    ],
+    "brondatum": "2026 v1.0",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 2026, Inkomensbepaling Loondienst; gecertificeerde UWV-pdf in dossier."
+   },
+   "intent": {
+    "waarde": "+ Tijdelijk contract met intentieverklaring (NHG-model werkgeversverklaring) beoordeeld gelijk aan vast dienstverband",
+    "bron": [
+     "https://nibc.nl/media/lxvgygx4/nibc-hypotheken-acceptatiegids-2023-versie-10.pdf"
+    ],
+    "brondatum": "2023 v1.0",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 2023; in de 2026-gids apart genoemd maar tekst niet volledig zichtbaar."
+   },
+   "toekdv": {
+    "waarde": "~ Toekomstig dienstverband telt bij vast contract zonder proeftijd, ingang binnen 6 mnd na toetsing definitieve offerte; tekort uit eigen middelen",
+    "bron": [
+     "https://nibc.nl/media/zzqnjuq1/hypotheekgids-2026.pdf"
+    ],
+    "brondatum": "2026 v1.0",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 2026, art. 5.1.10; werkgeversverklaring en arbeidsovereenkomst vereist; inkomenstekort tot indiensttreding zelf opvangen."
+   },
+   "toekst": {
+    "waarde": "~ Loonsverhoging telt als onvoorwaardelijk, schriftelijk bevestigd en ingaand binnen 6 mnd na toetsing definitieve offerte; overige stijgingen niet",
+    "bron": [
+     "https://nibc.nl/media/zzqnjuq1/hypotheekgids-2026.pdf"
+    ],
+    "brondatum": "2026 v1.0",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 2026; bij IBL worden toekomstige salarisverhogingen niet meegenomen."
+   },
+   "proef": {
+    "waarde": "~ Dienstverband in proeftijd alleen met arbeidsmarktscan (score min. 70) en min. 12 mnd gewerkt in laatste 14 mnd",
+    "bron": [
+     "https://nibc.nl/media/zzqnjuq1/hypotheekgids-2026.pdf"
+    ],
+    "brondatum": "2026 v1.0",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 2026, arbeidsmarktscan; tekst via zoeksnippet, deels afgekapt."
+   },
+   "ikb": {
+    "waarde": "~ Keuzebudget telt mits structureel (onvoorwaardelijk in arbeidsvoorwaarden), vrij besteedbaar en in geld uitkeerbaar",
+    "bron": [
+     "https://nibc.nl/media/kszfdfok/nibc-hypotheekgids-2025-versie-13.pdf"
+    ],
+    "brondatum": "2025 v1.3",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 2025 v1.3; niet in 2026-tekst geverifieerd."
+   },
+   "aios": {
+    "waarde": "! AIOS/AIO e.d. is bijzondere arbeidsrelatie: als vast beoordeeld mits beeld toekomstig inkomen en marktconform; voorleggen aan Hypotheekdesk",
+    "bron": [
+     "https://nibc.nl/media/zzqnjuq1/hypotheekgids-2026.pdf"
+    ],
+    "brondatum": "2026 v1.0",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 2026, art. 5.1.9 bijzondere arbeidsrelaties; AIOS niet letterlijk, wel 'AIO of vergelijkbaar'."
+   },
+   "promo": {
+    "waarde": "! Promovendus (OIO/AIO) als bijzondere arbeidsrelatie: als vast beoordeeld mits marktconform; altijd voorleggen aan Hypotheekdesk",
+    "bron": [
+     "https://nibc.nl/media/zzqnjuq1/hypotheekgids-2026.pdf",
+     "https://nibc.nl/media/cx5fxooc/nibc-acceptatiegids-2025-10.pdf"
+    ],
+    "brondatum": "2026 v1.0",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 2026/2025, art. 5.1.9."
+   },
+   "lijfr": {
+    "waarde": "~ Lijfrente (fiscale clausule) telt voor duur van uitkering; gegarandeerd, uitkering binnen 6 mnd; tijdelijk inkomen: apart af te lossen leningdeel",
+    "bron": [
+     "https://nibc.nl/media/zzqnjuq1/hypotheekgids-2026.pdf",
+     "https://nibc.nl/media/kszfdfok/nibc-hypotheekgids-2025-versie-13.pdf"
+    ],
+    "brondatum": "2026 v1.0",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 2026, pensioeninkomen en 5.3.5; garantie-eis (6 mnd) uit 2025-versies. Max. prognoserendement en rekenrente in gids."
+   },
+   "wga": {
+    "waarde": "~ Uitkering niet van blijvende aard telt alleen voor periode met zekerheid over hoogte; besluit met duur en hoogte vereist",
+    "bron": [
+     "https://nibc.nl/media/zzqnjuq1/hypotheekgids-2026.pdf"
+    ],
+    "brondatum": "2026 v1.0",
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 2026, 5.3.4 sociale uitkeringen; WGA niet letterlijk genoemd."
+   },
+   "ivawao": {
+    "waarde": "+ Sociale uitkering van blijvende aard telt met werkelijk uitkeringsbedrag als inkomen",
+    "bron": [
+     "https://nibc.nl/media/zzqnjuq1/hypotheekgids-2026.pdf"
+    ],
+    "brondatum": "2026 v1.0",
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 2026, 5.3.4; IVA/WAO/WAZ niet letterlijk genoemd. Overige sociale uitkeringen (bv. kinderbijslag) tellen niet."
+   },
+   "senior": {
+    "waarde": "+ NIBC seniorenpropositie als min. één aanvrager binnen 10 jaar na bindend aanbod de AOW-leeftijd bereikt",
+    "bron": [
+     "https://nibc.nl/media/kszfdfok/nibc-hypotheekgids-2025-versie-13.pdf"
+    ],
+    "brondatum": "2025 v1.3",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 2025; 2026-tekst niet gevonden."
+   },
+   "nlwon": {
+    "waarde": "~ Min. 3 mnd wonen en werken in NL (2025: 6 mnd); Investeringshypotheek pas na 3 jaar",
+    "bron": [
+     "https://nibc.nl/media/zzqnjuq1/hypotheekgids-2026.pdf"
+    ],
+    "brondatum": "2026 v1.0",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 2026, hfst. 4; uitzondering huwelijk/partnerschap met Nederlander en art. 4.3."
+   },
+   "r30": {
+    "waarde": "~ 30%-regeling voor expats/kenniswerkers alleen na goedkeuring Hypotheekdesk",
+    "bron": [
+     "https://nibc.nl/media/zzqnjuq1/hypotheekgids-2026.pdf"
+    ],
+    "brondatum": "2026 v1.0",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 2026; extra deel apart administreren en laten aflopen op einddatum regeling (oudere gidsen)."
+   },
+   "brut": {
+    "waarde": "~ Bruteren (factor 1,5) alleen voor medewerkers VN-gerelateerde organisaties met nergens belast inkomen; alleen bij NIBC Extra Hypotheek",
+    "bron": [
+     "https://nibc.nl/media/zzqnjuq1/hypotheekgids-2026.pdf"
+    ],
+    "brondatum": "2026 v1.0",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 2026 (2025: factor 1,4); overige expats individuele beoordeling via Hypotheekdesk."
+   },
+   "vblf": {
+    "waarde": "- Buiten EU/EER: vast dienstverband en verblijfsvergunning voor niet-tijdelijk doel vereist",
+    "bron": [
+     "https://nibc.nl/media/zzqnjuq1/hypotheekgids-2026.pdf"
+    ],
+    "brondatum": "2026 v1.0",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 2026, hfst. 4 nationaliteit."
+   },
+   "buitw": {
+    "waarde": "~ Inkomen moet in euro's, op NL-privérekening of privérekening in SEPA-land; aparte regeling grensstreek België/Duitsland",
+    "bron": [
+     "https://nibc.nl/media/zzqnjuq1/hypotheekgids-2026.pdf"
+    ],
+    "brondatum": "2026 v1.0",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 2026; grensstreek o.a. min. 2 mnd in dienst bij bindend aanbod."
+   },
+   "expbel": {
+    "waarde": "! Belastingplichtig in buitenland: financieringslastpercentage verlaagd volgens NHG-normen (uitzonderingen bij belastingverdrag)",
+    "bron": [
+     "https://nibc.nl/media/zzqnjuq1/hypotheekgids-2026.pdf"
+    ],
+    "brondatum": "2026 v1.0",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 2026."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "NIBC Acceptatiegids (Hypotheekgids) 2026",
+    "url": "https://nibc.nl/media/zzqnjuq1/hypotheekgids-2026.pdf",
+    "versie": "2026 v1.0"
+   },
+   {
+    "titel": "NIBC Acceptatiegids 2025",
+    "url": "https://nibc.nl/media/kszfdfok/nibc-hypotheekgids-2025-versie-13.pdf",
+    "versie": "2025 v1.3"
+   },
+   {
+    "titel": "NIBC Acceptatiegids 2025",
+    "url": "https://nibc.nl/media/cx5fxooc/nibc-acceptatiegids-2025-10.pdf",
+    "versie": "2025 v1.0"
+   },
+   {
+    "titel": "NIBC Acceptatiegids 2023",
+    "url": "https://nibc.nl/media/lxvgygx4/nibc-hypotheken-acceptatiegids-2023-versie-10.pdf",
+    "versie": "2023 v1.0"
+   }
+  ]
+ },
+ {
+  "naam": "SocioHypotheek",
+  "gecontroleerd": "2026-10-08",
+  "criteria": {
+   "senior": {
+    "waarde": "+ Product uitsluitend voor senioren (overwaardehypotheek 57+, beide partners); geen periodieke betalingen, rente bijgeschreven",
+    "bron": [
+     "https://www.sociohypotheek.nl/",
+     "https://www.sociohypotheek.nl/veelgestelde-vragen/"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Homepage en FAQ noemen min. 57 jaar; productkenmerken/blogs noemen aanvangsleeftijd 65 jaar (jongste partner): tegenstrijdig. Geen inkomenseis gevonden. Max. bedrag afhankelijk van leeftijd en woningwaarde."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "De overwaarde hypotheek voor 57+",
+    "url": "https://www.sociohypotheek.nl/",
+    "versie": "online"
+   },
+   {
+    "titel": "Veelgestelde vragen Overwaarde Hypotheek",
+    "url": "https://www.sociohypotheek.nl/veelgestelde-vragen/",
+    "versie": "online"
+   }
+  ]
+ },
+ {
+  "naam": "Vrij Leven (Hypotrust)",
+  "gecontroleerd": "2026-10-08",
+  "criteria": {
+   "ort": {
+    "waarde": "~ Structurele ORT en overwerk: gemiddelde over laatste 12 mnd (zonder NHG: 24 mnd)",
+    "bron": [
+     "https://www.vrijlevenhypotheek.nl/assets/uploads/2025/08/Acceptatiegids-Vrij-Leven-7-augustus-2025-.pdf"
+    ],
+    "brondatum": "aug 2025",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 7 aug 2025; 24-mnd-termijn niet-NHG alleen in samenvattende snippet. Nieuwere gids april 2026 niet ingezien."
+   },
+   "intent": {
+    "waarde": "+ Tijdelijk contract na proeftijd telt voor hele looptijd bij intentieverklaring vast dienstverband (NHG-norm); zonder: gemiddelde 3 jaar",
+    "bron": [
+     "https://www.vrijlevenhypotheek.nl/assets/uploads/2025/08/Acceptatiegids-Vrij-Leven-7-augustus-2025-.pdf"
+    ],
+    "brondatum": "aug 2025",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 7 aug 2025, inkomen loondienst. Gids april 2026 niet ingezien."
+   },
+   "toekdv": {
+    "waarde": "~ Toekomstig dienstverband telt als vast zonder proeftijd en ingang binnen 6 mnd na hypotheekaanbod",
+    "bron": [
+     "https://www.vrijlevenhypotheek.nl/assets/uploads/2025/08/Acceptatiegids-Vrij-Leven-7-augustus-2025-.pdf"
+    ],
+    "brondatum": "aug 2025",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 7 aug 2025."
+   },
+   "toekst": {
+    "waarde": "~ Onvoorwaardelijke stijging binnen 6 mnd na offerte telt bij vast of tijdelijk met intentie; proeftijd verstreken",
+    "bron": [
+     "https://www.vrijlevenhypotheek.nl/assets/uploads/2025/08/Acceptatiegids-Vrij-Leven-7-augustus-2025-.pdf"
+    ],
+    "brondatum": "aug 2025",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 7 aug 2025; schriftelijke bevestiging werkgever."
+   },
+   "proef": {
+    "waarde": "- Inkomen telt pas als proeftijd is verstreken (vast, tijdelijk met intentie en bij inkomensstijging)",
+    "bron": [
+     "https://www.vrijlevenhypotheek.nl/assets/uploads/2025/08/Acceptatiegids-Vrij-Leven-7-augustus-2025-.pdf"
+    ],
+    "brondatum": "aug 2025",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Afgeleid uit regels inkomen loondienst in Acceptatiegids aug 2025; geen aparte proeftijdregeling gevonden."
+   },
+   "verm": {
+    "waarde": "~ Zonder NHG mag een percentage van het vermogen (3%) bij toetsinkomen; minimumvermogen geldt; crypto telt niet",
+    "bron": [
+     "https://www.vrijlevenhypotheek.nl/assets/uploads/2025/08/Acceptatiegids-Vrij-Leven-7-augustus-2025-.pdf"
+    ],
+    "brondatum": "aug 2025",
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Snippet noemt 3% van vermogen tenzij hypotheekrente lager, ondergrens 100.000 euro; toewijzing aan deze gids niet volledig zeker."
+   },
+   "lijfr": {
+    "waarde": "~ Toekomstige lijfrente telt als pensioeninkomen voor de gegarandeerde periode (offerte of polis)",
+    "bron": [
+     "https://www.vrijlevenhypotheek.nl/assets/uploads/2025/08/Acceptatiegids-Vrij-Leven-7-augustus-2025-.pdf",
+     "https://www.vrijlevenhypotheek.nl/assets/uploads/2024/05/Acceptatievoorwaarden_Vrij-Leven_maart_2024.pdf"
+    ],
+    "brondatum": "aug 2025",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids aug 2025, pensioeninkomen; ook in maart 2024."
+   },
+   "ivawao": {
+    "waarde": "~ Arbeidsongeschiktheidsuitkering telt als de uitkering vaststaat; WW en bijstand tellen niet",
+    "bron": [
+     "https://www.vrijlevenhypotheek.nl/assets/uploads/2025/08/Acceptatiegids-Vrij-Leven-7-augustus-2025-.pdf"
+    ],
+    "brondatum": "aug 2025",
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Samenvattende snippet Acceptatiegids aug 2025; IVA/WAO/WAZ niet letterlijk genoemd."
+   },
+   "senior": {
+    "waarde": "+ AOW binnen 10 jaar: inkomensdaling meegewogen; zonder NHG toets werkelijke lasten tot 60% marktwaarde als beide pensioeninkomen hebben",
+    "bron": [
+     "https://www.vrijlevenhypotheek.nl/assets/uploads/2025/08/Acceptatiegids-Vrij-Leven-7-augustus-2025-.pdf"
+    ],
+    "brondatum": "aug 2025",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 7 aug 2025; met NHG seniorenpropositie volgens NHG-normen. Aflossingsvrij alleen oud recht (box 1)."
+   },
+   "r30": {
+    "waarde": "~ 30%-regeling mogelijk, maar zonder verhoging van bruto toetsinkomen (fiscaal voordeel niet gebruteerd)",
+    "bron": [
+     "https://www.vrijlevenhypotheek.nl/assets/uploads/2025/08/Acceptatiegids-Vrij-Leven-7-augustus-2025-.pdf"
+    ],
+    "brondatum": "aug 2025",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 7 aug 2025, letterlijke tekst in snippet."
+   },
+   "brut": {
+    "waarde": "- Fiscaal voordeel 30%-regeling wordt niet bruto gemaakt",
+    "bron": [
+     "https://www.vrijlevenhypotheek.nl/assets/uploads/2025/08/Acceptatiegids-Vrij-Leven-7-augustus-2025-.pdf"
+    ],
+    "brondatum": "aug 2025",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids aug 2025, bij 30%-regeling; algemene bruteerregel netto inkomen niet gevonden."
+   },
+   "vblf": {
+    "waarde": "- Buiten EU/EER/Zwitserland: verblijfsvergunning onbepaalde tijd, EU-langdurig of niet-tijdelijk; anders telt inkomen niet",
+    "bron": [
+     "https://www.vrijlevenhypotheek.nl/assets/uploads/2025/08/Acceptatiegids-Vrij-Leven-7-augustus-2025-.pdf",
+     "https://www.vrijlevenhypotheek.nl/assets/uploads/2024/05/Acceptatievoorwaarden_Vrij-Leven_maart_2024.pdf"
+    ],
+    "brondatum": "aug 2025",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids aug 2025 / maart 2024, nationaliteit. Versie 2024 vermeldde alleen ingezetenen van NL."
+   },
+   "buitw": {
+    "waarde": "~ Inkomen uit dienstverband in België, Duitsland, Luxemburg of Frankrijk kan tellen; beoordeling fiscale woonplaats en reisafstand",
+    "bron": [
+     "https://www.vrijlevenhypotheek.nl/assets/uploads/2025/08/Acceptatiegids-Vrij-Leven-7-augustus-2025-.pdf"
+    ],
+    "brondatum": "aug 2025",
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Samenvattende snippet; exacte voorwaarden niet zichtbaar."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Acceptatievoorwaarden Hypotrust Vrij Leven hypotheek",
+    "url": "https://www.vrijlevenhypotheek.nl/assets/uploads/2025/08/Acceptatiegids-Vrij-Leven-7-augustus-2025-.pdf",
+    "versie": "7 aug 2025"
+   },
+   {
+    "titel": "Acceptatievoorwaarden Vrij Leven",
+    "url": "https://www.vrijlevenhypotheek.nl/assets/uploads/2024/05/Acceptatievoorwaarden_Vrij-Leven_maart_2024.pdf",
+    "versie": "mrt 2024"
+   },
+   {
+    "titel": "Downloads (o.a. Acceptatiegids apr 2026)",
+    "url": "https://www.vrijlevenhypotheek.nl/downloads/",
+    "versie": "apr 2026 (niet ingezien)"
+   }
+  ]
+ }
+]

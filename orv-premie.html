@@ -11,14 +11,14 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="ORV-premie indicatief berekenen – Adviesforum">
 <meta property="og:description" content="Indicatieve maandpremie van een overlijdensrisicoverzekering voor 1 of 2 verzekerden, vaste of variabele premie, gelijkblijvend, annuïtair of lineair dalend. Geen offerte en geen marktvergelijking.">
-<meta name="theme-color" content="#F5A623">
+<meta name="theme-color" content="#F68712">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="description" content="Indicatieve maandpremie van een overlijdensrisicoverzekering voor 1 of 2 verzekerden, vaste of variabele premie, gelijkblijvend, annuïtair of lineair dalend. Geen offerte en geen marktvergelijking.">
 <style>
 :root{
-  --geel:#F5A623;--geel-donker:#D98E0F;--geel-zacht:#FDF3E2;
-  --zwart:#0C2340;--tekst:#112033;--grijs:#4A5765;--lijn:#DCE3EB;--vlak:#F5F7FA;--wit:#fff;
+  --geel:#F68712;--geel-donker:#D9700A;--geel-zacht:#FEF0E2;
+  --zwart:#181A3D;--tekst:#15162F;--grijs:#55576F;--lijn:#E3E3EC;--vlak:#F7F7FA;--wit:#fff;
   --rood:#9E2F45;--rood-zacht:#FFF1F0;--lijn-k:#B08800;
 }
 *{box-sizing:border-box}
@@ -44,14 +44,14 @@ button{font-family:inherit}
 .grid{display:grid;grid-template-columns:minmax(0,420px) minmax(0,1fr);gap:20px;align-items:start}
 .card{background:var(--wit);border:1px solid var(--lijn);border-radius:14px;padding:20px 22px;min-width:0}
 .card h2{margin:0 0 16px;font-size:18px;font-weight:800;color:var(--zwart)}
-.card h2 .num{display:inline-block;width:26px;height:26px;line-height:26px;text-align:center;background:var(--geel);color:#0C2340;border-radius:50%;font-size:13px;margin-right:8px;vertical-align:1px}
+.card h2 .num{display:inline-block;width:26px;height:26px;line-height:26px;text-align:center;background:var(--geel);color:#181A3D;border-radius:50%;font-size:13px;margin-right:8px;vertical-align:1px}
 label,.lbl{display:block;font-size:13px;color:var(--zwart);margin-bottom:4px;font-weight:600}
-input[type=text],input[type=date],input[type=month]{width:100%;min-width:0;padding:9px 11px;border:1px solid #C9D3DE;border-radius:8px;font-size:15px;background:var(--wit);color:var(--tekst);font-family:inherit}
+input[type=text],input[type=date],input[type=month]{width:100%;min-width:0;padding:9px 11px;border:1px solid #D0D1DC;border-radius:8px;font-size:15px;background:var(--wit);color:var(--tekst);font-family:inherit}
 input:focus{outline:2px solid var(--geel);outline-offset:1px;border-color:var(--zwart)}
 .rij{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;margin-bottom:14px}
 .rij1{margin-bottom:14px}
 .seg{display:flex;gap:6px;flex-wrap:wrap}
-.seg button{flex:1 1 0;min-width:88px;padding:9px 6px;border:1px solid #C9D3DE;border-radius:8px;background:var(--wit);color:var(--zwart);font-size:13.5px;cursor:pointer;font-weight:600}
+.seg button{flex:1 1 0;min-width:88px;padding:9px 6px;border:1px solid #D0D1DC;border-radius:8px;background:var(--wit);color:var(--zwart);font-size:13.5px;cursor:pointer;font-weight:600}
 .seg button:hover{border-color:var(--zwart)}
 .seg button.act{background:var(--zwart);border-color:var(--zwart);color:#fff}
 .vzblok{border:1px solid var(--lijn);border-radius:12px;padding:14px;margin-bottom:14px}
@@ -59,7 +59,7 @@ input:focus{outline:2px solid var(--geel);outline-offset:1px;border-color:var(--
 .euro{position:relative}
 .euro input{padding-left:26px;text-align:right}
 .euro::before{content:"€";position:absolute;left:11px;top:50%;transform:translateY(-50%);color:var(--grijs);font-size:14px}
-.knop{width:100%;padding:13px;border:0;border-radius:999px;background:var(--geel);color:#0C2340;font-size:16px;font-weight:800;cursor:pointer}
+.knop{width:100%;padding:13px;border:0;border-radius:999px;background:var(--geel);color:#181A3D;font-size:16px;font-weight:800;cursor:pointer}
 .knop:hover{background:var(--geel-donker)}
 .knop2{padding:8px 18px;border:1px solid var(--zwart);border-radius:999px;background:var(--wit);color:var(--zwart);font-size:13.5px;font-weight:700;cursor:pointer}
 .knop2:hover{background:var(--vlak)}
@@ -67,10 +67,10 @@ input:focus{outline:2px solid var(--geel);outline-offset:1px;border-color:var(--
 .resvak{background:var(--vlak);border:1px solid var(--lijn);border-radius:12px;padding:14px 16px;min-width:0}
 .resvak .l{font-size:12px;color:var(--grijs);font-weight:600}
 .resvak .w{font-size:23px;font-weight:800;margin-top:2px;color:var(--zwart);overflow-wrap:anywhere}
-.resvak.acc{background:#0C2340;border-color:#0C2340}
+.resvak.acc{background:#181A3D;border-color:#181A3D}
 .resvak.acc .l{color:#FFE680}
 .resvak.acc .w{color:#fff}
-.resvak .ind{display:block;font-size:11px;font-weight:700;color:#F5A623;margin-top:2px}
+.resvak .ind{display:block;font-size:11px;font-weight:700;color:#F68712;margin-top:2px}
 dl.det{display:grid;grid-template-columns:auto minmax(0,1fr);gap:6px 20px;margin:0 0 14px;font-size:14px}
 dl.det dt{color:var(--grijs)}
 dl.det dd{margin:0;font-weight:600;overflow-wrap:anywhere}
@@ -83,7 +83,7 @@ table.mnd th{background:var(--zwart);color:#fff;padding:8px 10px;text-align:righ
 table.mnd th:first-child{text-align:left}
 table.mnd td{padding:5px 10px;border-bottom:1px solid var(--lijn);text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
 table.mnd td:first-child{text-align:left}
-table.mnd tr:nth-child(12n) td{border-bottom:1.5px solid #B8C4D1}
+table.mnd tr:nth-child(12n) td{border-bottom:1.5px solid #C3C4D3}
 .tabelbox{max-height:360px;overflow:auto;border:1px solid var(--lijn);border-radius:12px;margin-top:10px}
 .tabelkop{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-top:18px}
 svg.grafiek{width:100%;height:200px;display:block;margin-top:8px}
@@ -117,41 +117,41 @@ a.terug{display:inline-block;padding:8px 0}
 </style>
 <style id="a11y">
 /* Toegankelijkheid en donkere modus (zie docs/toegankelijkheid.md). Staat in een eigen <style>, zodat printvensters licht blijven. */
-.skiplink{position:absolute;left:12px;top:-200px;z-index:10000;background:#0C2340;color:#fff;padding:10px 16px;border-radius:8px;font-weight:700;text-decoration:none;font-family:Segoe UI,Roboto,Helvetica Neue,Arial,system-ui,sans-serif}
-.skiplink:focus{top:12px;outline:3px solid #F5A623;outline-offset:2px}
+.skiplink{position:absolute;left:12px;top:-200px;z-index:10000;background:#181A3D;color:#fff;padding:10px 16px;border-radius:8px;font-weight:700;text-decoration:none;font-family:Segoe UI,Roboto,Helvetica Neue,Arial,system-ui,sans-serif}
+.skiplink:focus{top:12px;outline:3px solid #F68712;outline-offset:2px}
 main[tabindex="-1"]:focus{outline:none}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus,textarea:focus,summary:focus-visible,[tabindex]:not([tabindex="-1"]):focus-visible{outline:3px solid #0C2340!important;outline-offset:2px!important}
+a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus,textarea:focus,summary:focus-visible,[tabindex]:not([tabindex="-1"]):focus-visible{outline:3px solid #181A3D!important;outline-offset:2px!important}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 @media print{.skiplink{display:none}}
 @media screen and (prefers-color-scheme:dark){
 :root:not([data-theme="light"]){color-scheme:dark}
-:root:not([data-theme="light"]){--geel-zacht:#3F3018;--zwart:#EDF1F6;--tekst:#EDF1F6;--grijs:#B8C4D1;--lijn:#16202C;--vlak:#0C2340;--wit:#0F1B2B;--rood:#e9a29b;--rood-zacht:#3f1a18;--lijn-k:#F5A623}
-:root:not([data-theme="light"]) body{color:#EDF1F6;background:#0C2340}
-:root:not([data-theme="light"]) .balk{background:#1B2C42;color:#fff}
+:root:not([data-theme="light"]){--geel-zacht:#3F3018;--zwart:#F1F1F6;--tekst:#F1F1F6;--grijs:#C3C4D3;--lijn:#1E2040;--vlak:#181A3D;--wit:#12132B;--rood:#e9a29b;--rood-zacht:#3f1a18;--lijn-k:#F68712}
+:root:not([data-theme="light"]) body{color:#F1F1F6;background:#181A3D}
+:root:not([data-theme="light"]) .balk{background:#23254A;color:#fff}
 :root:not([data-theme="light"]) .balk a{color:#fff}
-:root:not([data-theme="light"]) .kop{background:#0F1B2B;color:#EDF1F6;border-bottom:3px solid #F5A623}
-:root:not([data-theme="light"]) .zeshoek{background:#1B2C42}
-:root:not([data-theme="light"]) .terug{border-bottom:2px solid #7A8796}
-:root:not([data-theme="light"]) .kop .stempel{background:#1B2C42;color:#F5A623}
+:root:not([data-theme="light"]) .kop{background:#12132B;color:#F1F1F6;border-bottom:3px solid #F68712}
+:root:not([data-theme="light"]) .zeshoek{background:#23254A}
+:root:not([data-theme="light"]) .terug{border-bottom:2px solid #7C7E95}
+:root:not([data-theme="light"]) .kop .stempel{background:#23254A;color:#F68712}
 :root:not([data-theme="light"]) .let{background:#3f1a18;border-left:4px solid #9E2F45}
 :root:not([data-theme="light"]) .let strong{color:#ee9e96}
-:root:not([data-theme="light"]) .card{background:#0F1B2B;border:1px solid #16202C}
-:root:not([data-theme="light"]) input[type=text],:root:not([data-theme="light"]) input[type=date],:root:not([data-theme="light"]) input[type=month]{background:#0F1B2B;color:#EDF1F6;border:1px solid #4A5765}
-:root:not([data-theme="light"]) .seg button{background:#0F1B2B;color:#EDF1F6;border:1px solid #4A5765}
-:root:not([data-theme="light"]) .seg button.act{background:#F5A623;color:#0C2340;border-color:#F5A623}
-:root:not([data-theme="light"]) .knop{background:#F5A623;color:#0C2340}
-:root:not([data-theme="light"]) .knop2{background:#0F1B2B;color:#EDF1F6;border:1px solid #7A8796}
-:root:not([data-theme="light"]) .resvak{background:#162538;border:1px solid #16202C}
-:root:not([data-theme="light"]) .resvak.acc{background:#1B2C42;border:1px solid #F5A623}
+:root:not([data-theme="light"]) .card{background:#12132B;border:1px solid #1E2040}
+:root:not([data-theme="light"]) input[type=text],:root:not([data-theme="light"]) input[type=date],:root:not([data-theme="light"]) input[type=month]{background:#12132B;color:#F1F1F6;border:1px solid #55576F}
+:root:not([data-theme="light"]) .seg button{background:#12132B;color:#F1F1F6;border:1px solid #55576F}
+:root:not([data-theme="light"]) .seg button.act{background:#F68712;color:#181A3D;border-color:#F68712}
+:root:not([data-theme="light"]) .knop{background:#F68712;color:#181A3D}
+:root:not([data-theme="light"]) .knop2{background:#12132B;color:#F1F1F6;border:1px solid #7C7E95}
+:root:not([data-theme="light"]) .resvak{background:#1C1E3A;border:1px solid #1E2040}
+:root:not([data-theme="light"]) .resvak.acc{background:#23254A;border:1px solid #F68712}
 :root:not([data-theme="light"]) .melding.fout{background:#3f1a18;color:#ee9e96}
 :root:not([data-theme="light"]) .melding.letop{background:#3F3018;color:#f6db8e}
-:root:not([data-theme="light"]) table.mnd th{background:#1B2C42;color:#EDF1F6}
-:root:not([data-theme="light"]) .voet{color:#B8C4D1}
-:root:not([data-theme="light"]) .voet a{color:#EDF1F6}
-:root:not([data-theme="light"]) a:focus-visible,:root:not([data-theme="light"]) button:focus-visible,:root:not([data-theme="light"]) input:focus,:root:not([data-theme="light"]) input:focus-within,:root:not([data-theme="light"]) select:focus,:root:not([data-theme="light"]) textarea:focus,:root:not([data-theme="light"]) summary:focus-visible,:root:not([data-theme="light"]) [tabindex]:not([tabindex="-1"]):focus-visible{outline-color:#F5A623!important}
-:root:not([data-theme="light"]) .skiplink{background:#F5A623;color:#0C2340}
-:root:not([data-theme="light"]) .skiplink:focus{outline-color:#EDF1F6}
+:root:not([data-theme="light"]) table.mnd th{background:#23254A;color:#F1F1F6}
+:root:not([data-theme="light"]) .voet{color:#C3C4D3}
+:root:not([data-theme="light"]) .voet a{color:#F1F1F6}
+:root:not([data-theme="light"]) a:focus-visible,:root:not([data-theme="light"]) button:focus-visible,:root:not([data-theme="light"]) input:focus,:root:not([data-theme="light"]) input:focus-within,:root:not([data-theme="light"]) select:focus,:root:not([data-theme="light"]) textarea:focus,:root:not([data-theme="light"]) summary:focus-visible,:root:not([data-theme="light"]) [tabindex]:not([tabindex="-1"]):focus-visible{outline-color:#F68712!important}
+:root:not([data-theme="light"]) .skiplink{background:#F68712;color:#181A3D}
+:root:not([data-theme="light"]) .skiplink:focus{outline-color:#F1F1F6}
 }
 </style>
 <link rel="stylesheet" href="css/sitenav.css">
@@ -904,12 +904,12 @@ const TARIEF_DATA = {"q":{"q_M_NR":"ABDUFZAxYj8AsJTB0ZZhPwBtUsJS/2A/AFLSBzxrYD8A
     const vandaag = new Date();
     const dat = vandaag.getDate()+'-'+(vandaag.getMonth()+1)+'-'+vandaag.getFullYear();
     w.document.write('<!doctype html><html lang="nl"><head><meta charset="utf-8"><title>Indicatieve ORV-premie – Adviesforum</title>'
-      + '<style>body{font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#112033;margin:24px}'
-      + 'h1{font-size:18px;margin:0 0 2px}h2{font-size:12px;color:#4A5765;font-weight:400;margin:0 0 12px}'
-      + '.stempel{display:inline-block;background:#0C2340;color:#F5A623;font-weight:700;font-size:11px;padding:3px 9px;border-radius:999px;margin-bottom:12px}'
+      + '<style>body{font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#15162F;margin:24px}'
+      + 'h1{font-size:18px;margin:0 0 2px}h2{font-size:12px;color:#55576F;font-weight:400;margin:0 0 12px}'
+      + '.stempel{display:inline-block;background:#181A3D;color:#F68712;font-weight:700;font-size:11px;padding:3px 9px;border-radius:999px;margin-bottom:12px}'
       + 'table{border-collapse:collapse;width:100%;margin-top:8px}'
-      + 'th{background:#0C2340;color:#fff;text-align:right;padding:5px 8px}th:first-child{text-align:left}'
-      + 'td{border-bottom:1px solid #DCE3EB;padding:3px 8px;text-align:right}td:first-child{text-align:left}'
+      + 'th{background:#181A3D;color:#fff;text-align:right;padding:5px 8px}th:first-child{text-align:left}'
+      + 'td{border-bottom:1px solid #E3E3EC;padding:3px 8px;text-align:right}td:first-child{text-align:left}'
       + '.kop td{border:0;text-align:left;padding:2px 10px 2px 0}'
       + '.let{margin:14px 0;font-size:11px;background:#FFF1F0;border-left:4px solid #9E2F45;padding:10px}'
       + '</style></head><body>'

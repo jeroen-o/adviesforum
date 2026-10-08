@@ -1,0 +1,1184 @@
+[
+ {
+  "naam": "ABN AMRO",
+  "gecontroleerd": "2026-10-08",
+  "criteria": {
+   "mwbep": {
+    "waarde": "~ Bestaande bouw: taxatierapport; nieuwbouw: waarde = koop-/aanneemsom + meerwerk + bouwrente/renteverlies",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-berekenen/huis.html",
+     "https://www.abnamro.nl/nl/prive/hypotheken/begrippenlijst/index.html",
+     "https://www.abnamro.nl/nl/prive/hypotheken/huis-kopen/documenten/taxatie.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Consumentenpagina's 'Zo bepaalt de woningwaarde jouw hypotheek' en begrippenlijst; na de bouw kan aanvullende taxatie worden gevraagd. Zelfbouw zonder aannemer: nieuwbouwtaxatie verplicht (zelfbouwpagina). Geen acceptatiegids ingezien."
+   },
+   "woz": {
+    "waarde": "~ WOZ-verslag/Calcasa alleen bij wijziging bestaande hypotheek; bij oversluiten (sinds 30-6-2021) taxatierapport nodig",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/huis-kopen/documenten/taxatie.html",
+     "https://www.abnamro.nl/nl/prive/hypotheken/mijn-hypotheek/hypotheekrente-wijzigen/tariefklasse-aanpassen.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Taxatiepagina; voor verlaging tariefklasse kan recente WOZ-waarde worden geüpload (oudere pagina, ca. 2022). Tekst niet helemaal eenduidig."
+   },
+   "ltvk": {
+    "waarde": "~ Max. 100% van de marktwaarde (in de meeste gevallen)",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-berekenen/huis.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Consumentenpagina 'Zo bepaalt de woningwaarde jouw hypotheek'. Uitzondering: met restschuld tot 115% (zie rsk)."
+   },
+   "wboot": {
+    "waarde": "- Geen standaard woonboothypotheek; alleen financiering via persoonlijke lening",
+    "bron": [
+     "https://www.homefinance.nl/hypotheek/aanbieders/abn-amro/woonboot/"
+    ],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Alleen vergelijkingssite HomeFinance; niet bevestigd op abnamro.nl."
+   },
+   "zbep": {
+    "waarde": "+ Inkomensverklaring Ondernemer meestal niet nodig: ABN AMRO-adviseur berekent toetsinkomen; bij NHG IBO of berekening door adviseur",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-afsluiten/zzp-hypotheek/index.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Pagina 'Hypotheek berekenen als zzp / ondernemer voor 2026'. Bij dalende cijfers kan een deskundige om een verwachting worden gevraagd (pagina inkomen)."
+   },
+   "z123": {
+    "waarde": "~ 1-2 jaar: max. 75% gem. fiscale winst; 2-3 jaar: 90%; vanaf 3 jaar gemiddelde laatste 3 jaar, max. laatste jaar",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/wonen/hypotheek-zonder-vast-contract.html",
+     "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-afsluiten/zzp-hypotheek/index.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Staffel verschilt licht tussen ABN AMRO-pagina's (oudere pagina: 90% van gemiddelde over 2 jaar). Bij bv: gemiddeld bruto inkomen uit onderneming over 3 jaar, laatste jaar als max. (pagina ondernemershypotheek)."
+   },
+   "zcijf": {
+    "waarde": "~ Jaarrekeningen en IB-aangiften van de laatste 3 jaar plus prognose komend jaar",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/speciaal-voor/preferred-banking/smart/hypotheek-aanvragen-als-ondernemer.html",
+     "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-afsluiten/zzp-hypotheek/index.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Jaarrekeningen mogen zelf of door accountant zijn opgesteld. Geen eisen over tussentijdse cijfers gevonden."
+   },
+   "zstart": {
+    "waarde": "~ Vaak mogelijk vanaf 1 jaar ondernemerschap; bij < 3 jaar prognose van accountant vereist",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/speciaal-voor/preferred-banking/smart/hypotheek-aanvragen-als-ondernemer.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Preferred Banking-pagina 'Een huis kopen als ondernemer'. Niets gevonden over loon van voor de start of zelfde branche."
+   },
+   "duo": {
+    "waarde": "~ Actuele studieschuld telt mee (sinds 1-1-2024); volledig afgelost = geen last",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-berekenen/studieschuld-en-hypotheek.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Consumentenpagina 'Studieschuld en een hypotheek'; studieschuld moet zelf gemeld worden (niet in BKR)."
+   },
+   "lease": {
+    "waarde": "~ Volledige werkelijke leaselast telt mee (100% sinds 1-4-2022, voorheen 65%)",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/actueel/hypotheek-wijzigingen-2022.html"
+    ],
+    "brondatum": "2022",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Pagina 'Hypotheek in 2022 - wat is er gewijzigd?'; ouder, wel nog online."
+   },
+   "rsk": {
+    "waarde": "~ Restschuld (tot een maximumbedrag) mee te financieren tot 115% marktwaarde nieuwe woning; oude woning definitief verkocht, aflossing binnen 15 jaar",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/mijn-hypotheek/restschuld/index.html",
+     "https://www.abnamro.nl/en/personal/mortgages/my-mortgage/mortgage-shortfall/loan/index.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Restschuldpagina's NL/EN; 'soms' mogelijk. Met NHG gelden NHG-grenzen. (Oorspronkelijke waarde: ~ Restschuld (max. € 75.000) mee te financieren tot 115% marktwaarde nieuwe woning; oude woning definitief verkocht, aflossing binnen 15 jaar)"
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Zo bepaalt de woningwaarde jouw hypotheek",
+    "url": "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-berekenen/huis.html",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "Hypotheek berekenen als zzp / ondernemer voor 2026",
+    "url": "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-afsluiten/zzp-hypotheek/index.html",
+    "versie": "2026"
+   },
+   {
+    "titel": "Restschuld van je hypotheek",
+    "url": "https://www.abnamro.nl/nl/prive/hypotheken/mijn-hypotheek/restschuld/index.html",
+    "versie": "onbekend"
+   }
+  ]
+ },
+ {
+  "naam": "bijBouwe",
+  "gecontroleerd": "2026-10-08",
+  "criteria": {
+   "mwbep": {
+    "waarde": "~ Gevalideerd taxatierapport of Calcasa-desktoptaxatie, max. 6 maanden oud (gerekend vanaf bindend aanbod)",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/03/bijbouwe-vooruit-acceptatiehandleiding-012026-.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Acceptatiehandleiding Vooruit jan 2026 (kopie hypotheekcompany.nl). Minimale marktwaarde onderpand (Vooruit) in toelichting gids. Geen regel voor nieuwbouw gevonden."
+   },
+   "ltvk": {
+    "waarde": "~ Max. 100% van de marktwaarde; met energiebesparende maatregelen max. 106% marktwaarde na verbouwing",
+    "bron": [
+     "https://dynamic-credit-xmn7.files.prepr.io/2926eb8qexqw/acceptatiehandleiding-bijbouwe-vooruit-september-2026.pdf"
+    ],
+    "brondatum": "sep 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiehandleiding Vooruit sep 2026 (CDN van Dynamic Credit). Versie jan 2026 noemt max. 90% schuld-marktwaardeverhouding (mogelijk andere context): tegenstrijdig."
+   },
+   "wwp": {
+    "waarde": "- Woon-winkelpanden, woon-bedrijfspanden en bedrijfspanden worden niet geaccepteerd",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/03/bijbouwe-vooruit-acceptatiehandleiding-012026-.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Lijst niet-acceptabele onderpanden, Vooruit jan 2026; in sep 2026-versie niet volledig zichtbaar in zoekfragment."
+   },
+   "wboer": {
+    "waarde": "- Onderpanden met agrarische bestemming en woningen onder Wet plattelandswoningen niet geaccepteerd",
+    "bron": [
+     "https://dynamic-credit-xmn7.files.prepr.io/2926eb8qexqw/acceptatiehandleiding-bijbouwe-vooruit-september-2026.pdf",
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/03/bijbouwe-vooruit-acceptatiehandleiding-012026-.pdf"
+    ],
+    "brondatum": "sep 2026",
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Woonboerderij niet expliciet genoemd; volgt uit uitsluitingen. Canon-/erfpachtparagraaf noemt woonboerderijen zonder agrarische bestemming als aandachtspunt (details niet zichtbaar)."
+   },
+   "wboot": {
+    "waarde": "- Woonschepen (woonboot, woonark, waterwoning) en vaartuigen niet geaccepteerd",
+    "bron": [
+     "https://dynamic-credit-xmn7.files.prepr.io/2926eb8qexqw/acceptatiehandleiding-bijbouwe-vooruit-september-2026.pdf"
+    ],
+    "brondatum": "sep 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Lijst niet-acceptabele onderpanden, acceptatiehandleiding Vooruit sep 2026."
+   },
+   "wbhuid": {
+    "waarde": "~ Niet verkochte woning: gevalideerd taxatierapport of Calcasa-desktoptaxatie (max. 6 mnd); verkocht: verkoopsom minus 2% kosten",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/03/bijbouwe-vooruit-acceptatiehandleiding-012026-.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Paragraaf overbruggingshypotheek Vooruit jan 2026: niet verkocht 90% van marktwaarde minus schuldrest."
+   },
+   "zbep": {
+    "waarde": "~ Zakelijk inkomen via inkomensverklaring van door bijBouwe geaccepteerde externe partij (max. 6 mnd geldig)",
+    "bron": [
+     "https://dynamic-credit-xmn7.files.prepr.io/2926eb8qexqw/acceptatiehandleiding-bijbouwe-vooruit-september-2026.pdf",
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/03/bijbouwe-vooruit-acceptatiehandleiding-012026-.pdf"
+    ],
+    "brondatum": "sep 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Par. 4.3.1 Voorwaarden zakelijk inkomen; lijst partijen op bijbouwe.nl/inkomensverklaring. Geldigheid 6 mnd uit versie jan 2026. Ook nodig bij inkomsten uit overige werkzaamheden."
+   },
+   "zstart": {
+    "waarde": "- Onderneming min. 36 maanden actief na KvK-inschrijving; toetreding tot bestaand bedrijf (36 mnd) na min. 12 maanden",
+    "bron": [
+     "https://dynamic-credit-xmn7.files.prepr.io/2926eb8qexqw/acceptatiehandleiding-bijbouwe-vooruit-september-2026.pdf",
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/09/bijbouwe-basis-accgids-september-2026.pdf"
+    ],
+    "brondatum": "sep 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Par. 4.3.1; startende ondernemers < 36 mnd vallen daarmee buiten de standaardroute. Toetredingsregel staat zeker in basisgids sep 2026."
+   },
+   "zbuit": {
+    "waarde": "! Alleen inkomen in euro's; buitenlands inkomen getoetst via aparte tabel (in NL belastingplichtig = als binnenlands)",
+    "bron": [
+     "https://dynamic-credit-xmn7.files.prepr.io/2926eb8qexqw/acceptatiehandleiding-bijbouwe-vooruit-september-2026.pdf"
+    ],
+    "brondatum": "sep 2026",
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Algemene regel buitenlands inkomen, niet specifiek ondernemersinkomen; fragmentarisch."
+   },
+   "bkr": {
+    "waarde": "~ BKR-coderingen individueel beoordeeld conform NHG-normen; max. 6 geregistreerde kredieten boven een drempelbedrag",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/03/bijbouwe-vooruit-acceptatiehandleiding-012026-.pdf",
+     "https://dynamic-credit-xmn7.files.prepr.io/2926eb8qexqw/acceptatiehandleiding-bijbouwe-vooruit-september-2026.pdf"
+    ],
+    "brondatum": "sep 2026",
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "NHG-beoordeling in versie jan 2026; maximum aantal kredieten in versie sep 2026 (volgens zoekfragment). Geen aparte regels voor A-hersteld, RH/RN, HY gevonden. (Oorspronkelijke waarde: ~ BKR-coderingen individueel beoordeeld conform NHG-normen; max. 6 geregistreerde kredieten (> € 5.000))"
+   },
+   "duo": {
+    "waarde": "~ Termijnbedrag rente+aflossing; in aanloop-/aflosvrije fase berekend op actuele restschuld, rente en resterende looptijd",
+    "bron": [
+     "https://dynamic-credit-xmn7.files.prepr.io/2926eb8qexqw/acceptatiehandleiding-bijbouwe-vooruit-september-2026.pdf"
+    ],
+    "brondatum": "sep 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Bij nog opbouwende schuld wordt verwachte studieschuld meegenomen. DUO-correspondentie vereist (documentenchecker)."
+   },
+   "plen": {
+    "waarde": "~ Aflopend krediet: werkelijke last; buiten beschouwing als aantoonbaar afgelost uit eigen middelen",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/03/bijbouwe-vooruit-acceptatiehandleiding-012026-.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Paragraaf financiële verplichtingen Vooruit jan 2026 (kopie hypotheekcompany.nl)."
+   },
+   "dkr": {
+    "waarde": "~ 2% van de BKR-limiet, of werkelijke last als die hoger is; geen lagere last als krediet weer opneembaar is",
+    "bron": [
+     "https://dynamic-credit-xmn7.files.prepr.io/2926eb8qexqw/acceptatiehandleiding-bijbouwe-vooruit-september-2026.pdf",
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/03/bijbouwe-vooruit-acceptatiehandleiding-012026-.pdf"
+    ],
+    "brondatum": "sep 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Paragraaf financiële verplichtingen; ook BKR Buitenland."
+   },
+   "lease": {
+    "waarde": "~ Private autolease: werkelijke last",
+    "bron": [
+     "https://dynamic-credit-xmn7.files.prepr.io/2926eb8qexqw/acceptatiehandleiding-bijbouwe-vooruit-september-2026.pdf"
+    ],
+    "brondatum": "sep 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Paragraaf financiële verplichtingen (aflopende kredieten en autolease in privé)."
+   },
+   "rsk": {
+    "waarde": "- Restschuld niet mee te financieren; aantonen dat restschuld uit eigen middelen betaald kan worden",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2025/10/Productkaart_bijBouwe_Vooruit.pdf",
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/03/bijbouwe-vooruit-acceptatiehandleiding-012026-.pdf"
+    ],
+    "brondatum": "jul 2025",
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Productkaart Vooruit jul 2025: restschuldfinanciering 'Nee'; gids: schuldrestopgave max. 3 maanden oud."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Acceptatiehandleiding bijBouwe Vooruit Hypotheek",
+    "url": "https://dynamic-credit-xmn7.files.prepr.io/2926eb8qexqw/acceptatiehandleiding-bijbouwe-vooruit-september-2026.pdf",
+    "versie": "september 2026"
+   },
+   {
+    "titel": "Acceptatiehandleiding bijBouwe Vooruit Hypotheek",
+    "url": "https://hypotheekcompany.nl/wp-content/uploads/2026/03/bijbouwe-vooruit-acceptatiehandleiding-012026-.pdf",
+    "versie": "01-2026"
+   },
+   {
+    "titel": "Wijzigingstabel acceptatiehandleiding bijBouwe Vooruit",
+    "url": "https://dynamic-credit-xmn7.files.prepr.io/5sxn8pdn68q7/wijzigingstabel-acceptatiehandleiding-bijbouwe-vooruit-september-2026.pdf",
+    "versie": "september 2026"
+   },
+   {
+    "titel": "Productkaart bijBouwe Vooruit Hypotheek",
+    "url": "https://hypotheekcompany.nl/wp-content/uploads/2025/10/Productkaart_bijBouwe_Vooruit.pdf",
+    "versie": "juli 2025"
+   }
+  ]
+ },
+ {
+  "naam": "Groene Hart Hypotheken",
+  "gecontroleerd": "2026-10-08",
+  "criteria": {
+   "mwbep": {
+    "waarde": "~ Gevalideerd taxatierapport (NRVT), max. 6 mnd oud bij bindend aanbod; nieuwbouw tot 100% marktwaarde",
+    "bron": [
+     "https://groeneharthypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Groene-Hart-april-2024-.pdf"
+    ],
+    "brondatum": "apr 2024",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatiegids apr 2024 (via zoekfragmenten). Minimale getaxeerde marktwaarde onderpand EUR 100.000. Bouwkundig rapport als taxateur dat adviseert of achterstallig onderhoud >10% marktwaarde. Bij oversluiten/verhogen hybride of desktopwaardering (Calcasa/NRVT Bureauwaardering) mogelijk, dan max. 90%.",
+    "status": "nieuw"
+   },
+   "ltvk": {
+    "waarde": "~ Max. % marktwaarde (na verbouw) volgens Tijdelijke regeling; nieuwbouw 100%; bij desktop-/hybride waardering max. 90%",
+    "bron": [
+     "https://groeneharthypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Groene-Hart-april-2024-.pdf"
+    ],
+    "brondatum": "apr 2024",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatiegids apr 2024. Boven 90% marktwaarde is consumptieve besteding beperkt (max. EUR 40.000). Niet-EU-ingezetenen max. 100% marktwaarde (2021: 95%).",
+    "status": "nieuw"
+   },
+   "wbhuid": {
+    "waarde": "~ Huidige (onverkochte) woning: opgave makelaar van verwachte verkoopprijs en courantheid plus schuldrestopgave",
+    "bron": [
+     "https://groeneharthypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Groene-Hart-april-2024-.pdf"
+    ],
+    "brondatum": "apr 2024",
+    "zekerheid": "laag",
+    "toelichting": "Documentenlijst acceptatiegids; ook bewijs eigen middelen voor 6 maanden dubbele lasten. Versie van het fragment (2021 of 2024) niet volledig zeker.",
+    "status": "nieuw"
+   },
+   "wwp": {
+    "waarde": "- Woning met bedrijvigheid als kadastrale bestemming (woon-/winkelpand) uitgesloten",
+    "bron": [
+     "https://groeneharthypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Groene-Hart-april-2024-.pdf"
+    ],
+    "brondatum": "apr 2024",
+    "zekerheid": "middel",
+    "toelichting": "Lijst uitgesloten onderpanden in de acceptatiegids.",
+    "status": "nieuw"
+   },
+   "wboot": {
+    "waarde": "- Woonboot (en woonwagen/caravan) uitgesloten als onderpand",
+    "bron": [
+     "https://groeneharthypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Groene-Hart-april-2024-.pdf"
+    ],
+    "brondatum": "apr 2024",
+    "zekerheid": "middel",
+    "toelichting": "Lijst uitgesloten onderpanden in de acceptatiegids.",
+    "status": "nieuw"
+   },
+   "hsb": {
+    "waarde": "- Woningen gebouwd op basis van houtskeletbouw uitgesloten",
+    "bron": [
+     "https://groeneharthypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Groene-Hart-april-2024-.pdf"
+    ],
+    "brondatum": "apr 2024",
+    "zekerheid": "middel",
+    "toelichting": "Lijst uitgesloten onderpanden; zoekfragment, niet volledig ingezien. Opvallend streng, controleren in actuele gids.",
+    "status": "nieuw"
+   },
+   "zbep": {
+    "waarde": "~ Toetsinkomen via onafhankelijk rekeninstituut, gemachtigd door Groene Hart (inkomenscertificaat); kosten voor aanvrager",
+    "bron": [
+     "https://groeneharthypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Groene-Hart-april-2024-.pdf"
+    ],
+    "brondatum": "apr 2024",
+    "zekerheid": "middel",
+    "toelichting": "Hoofdstuk zelfstandigen. DGA met aanmerkelijk belang >=5% geldt als ondernemer.",
+    "status": "nieuw"
+   },
+   "z123": {
+    "waarde": "+ 1-2-3-methode toegestaan bij bepaling toetsinkomen ondernemer",
+    "bron": [
+     "https://groeneharthypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Groene-Hart-april-2024-.pdf"
+    ],
+    "brondatum": "apr 2024",
+    "zekerheid": "middel",
+    "toelichting": "Hoofdstuk zelfstandigen.",
+    "status": "nieuw"
+   },
+   "zstart": {
+    "waarde": "~ Min. 12 mnd actief; gemiddelde van 1e ondernemersjaar en 2 voorgaande loondienstjaren, laatste jaar als max.",
+    "bron": [
+     "https://groeneharthypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Groene-Hart-april-2024-.pdf"
+    ],
+    "brondatum": "apr 2024",
+    "zekerheid": "middel",
+    "toelichting": "Lopend boekjaar moet in lijn zijn met gemiddelde. Diverse branches uitgesloten (o.a. horeca, vastgoedhandel, autohandel).",
+    "status": "nieuw"
+   },
+   "zbuit": {
+    "waarde": "! Geen hypotheek als aanvrager in het buitenland belastingplichtig is",
+    "bron": [
+     "https://groeneharthypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Groene-Hart-april-2024-.pdf"
+    ],
+    "brondatum": "apr 2024",
+    "zekerheid": "laag",
+    "toelichting": "Algemene regel buitenlands inkomen; niets specifieks over buitenlandse onderneming gevonden. Loondienstinkomen uit BE/DE onder voorwaarden.",
+    "status": "nieuw"
+   },
+   "bkr": {
+    "waarde": "- Geen hypotheek bij achterstands- of herstelcodering (A, H) of (lopende) schuldregeling; >5 noteringen voorleggen",
+    "bron": [
+     "https://groeneharthypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Groene-Hart-april-2024-.pdf"
+    ],
+    "brondatum": "apr 2024",
+    "zekerheid": "middel",
+    "toelichting": "Kredieten tot EUR 1.000 tellen niet mee bij het aantal noteringen. RH/RN: zie rsk (getoetst op netto last).",
+    "status": "nieuw"
+   },
+   "duo": {
+    "waarde": "~ Studielening telt mee in leencapaciteit; last via opslag afhankelijk van hypotheekrente",
+    "bron": [
+     "https://groeneharthypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Groene-Hart-april-2024-.pdf"
+    ],
+    "brondatum": "apr 2024",
+    "zekerheid": "middel",
+    "toelichting": "Gids 2021 rekende met een vast percentage van de oorspronkelijke hoofdsom (onderscheid start aflossing voor/na sep 2015).",
+    "status": "nieuw"
+   },
+   "plen": {
+    "waarde": "~ Persoonlijke lening: hoofdsom gedeeld door looptijd telt als last; aflossen bij passeren mag",
+    "bron": [
+     "https://groeneharthypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Groene-Hart-april-2024-.pdf"
+    ],
+    "brondatum": "apr 2024",
+    "zekerheid": "middel",
+    "toelichting": "Aflossing uit eigen middelen of uit hypotheekgelden toegestaan, moet aantoonbaar zijn.",
+    "status": "nieuw"
+   },
+   "dkr": {
+    "waarde": "~ 2% van de geregistreerde limiet; lagere vaste contractuele last mag",
+    "bron": [
+     "https://groeneharthypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Groene-Hart-april-2024-.pdf",
+     "https://groeneharthypotheken.nl/wp-content/uploads/2021/11/Groene_Hart_Hypotheken_Acceptatiegids_V6_211028.pdf"
+    ],
+    "brondatum": "apr 2024",
+    "zekerheid": "middel",
+    "toelichting": "Uitzondering werkelijke last (contractueel <2%, niet wijzigbaar) alleen gezien in gids V6 okt 2021.",
+    "status": "nieuw"
+   },
+   "lease": {
+    "waarde": "~ Privélease (OA) telt mee: hoofdsom gedeeld door looptijd",
+    "bron": [
+     "https://groeneharthypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Groene-Hart-april-2024-.pdf"
+    ],
+    "brondatum": "apr 2024",
+    "zekerheid": "middel",
+    "toelichting": "Tabel lasten BKR-kredieten in de acceptatiegids.",
+    "status": "nieuw"
+   },
+   "rsk": {
+    "waarde": "+ Restschuldlening (RN/RH) getoetst op netto last; schuldrestopgave en onderbouwing netto lasten vereist",
+    "bron": [
+     "https://groeneharthypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Groene-Hart-april-2024-.pdf",
+     "https://groeneharthypotheken.nl/hypotheek/veelgestelde-vragen/hypotheek/"
+    ],
+    "brondatum": "apr 2024",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatiegids plus FAQ consumentensite (netto maandlast fiscaal aftrekbare restschuldlening).",
+    "status": "nieuw"
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Acceptatiegids Groene Hart Hypotheken",
+    "url": "https://groeneharthypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Groene-Hart-april-2024-.pdf",
+    "versie": "apr 2024"
+   },
+   {
+    "titel": "Acceptatiegids Groene Hart Hypotheken V6",
+    "url": "https://groeneharthypotheken.nl/wp-content/uploads/2021/11/Groene_Hart_Hypotheken_Acceptatiegids_V6_211028.pdf",
+    "versie": "V6 okt 2021"
+   },
+   {
+    "titel": "Veelgestelde vragen hypotheek",
+    "url": "https://groeneharthypotheken.nl/hypotheek/veelgestelde-vragen/hypotheek/",
+    "versie": "onbekend"
+   }
+  ]
+ },
+ {
+  "naam": "IQWOON",
+  "gecontroleerd": "2026-10-08",
+  "criteria": {
+   "mwbep": {
+    "waarde": "~ Gevalideerd taxatierapport verplicht; Calcasa desktoptaxatie mag (max. 90% marktwaarde, niet bij erfpacht/veilingwoning)",
+    "bron": [
+     "https://www.iqwoon.nl/uploads/iqwoon/files/Acceptatiegids-IQWOON-Januari.pdf"
+    ],
+    "brondatum": "jan 2025",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatiegids IQWOON jan 2025 (zoekfragmenten). Minimale marktwaarde onderpand EUR 100.000. Let op: IQWOON neemt sinds 1 mei 2023 geen nieuwe aanvragen aan; gids geldt voor bestaande klanten (verhogen/meenemen).",
+    "status": "nieuw"
+   },
+   "woz": {
+    "waarde": "! Leningdeel boven de meest recente WOZ-waarde moet uit eigen middelen worden afgelost",
+    "bron": [
+     "https://www.iqwoon.nl/uploads/iqwoon/files/Acceptatiegids-IQWOON-Januari.pdf"
+    ],
+    "brondatum": "jan 2025",
+    "zekerheid": "laag",
+    "toelichting": "Fragment afgekapt; context (vermoedelijk overbrugging/oversluiten) en uitzonderingen niet zichtbaar.",
+    "status": "nieuw"
+   },
+   "ltvk": {
+    "waarde": "~ Max. 100% van de marktwaarde (NHG en niet-NHG); tot 106% bij energiebesparende voorzieningen",
+    "bron": [
+     "https://www.iqwoon.nl/uploads/iqwoon/files/Acceptatiegids-IQWOON-Januari.pdf"
+    ],
+    "brondatum": "jan 2025",
+    "zekerheid": "middel",
+    "toelichting": "Aankoop en oversluiting. Aflossingsvrij max. 50% marktwaarde. Max. niet-NHG-bedrag EUR 750.000 excl. overbrugging.",
+    "status": "nieuw"
+   },
+   "wwp": {
+    "waarde": "- Bedrijfspanden en woon-/winkelpanden worden niet gefinancierd",
+    "bron": [
+     "https://www.iqwoon.nl/uploads/iqwoon/files/Clarian-Wonen-Acceptatiegids-Januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "toelichting": "Lijst uitgesloten objecten in de Clarian Wonen Acceptatiegids jan 2026, gehost op iqwoon.nl. Onderpand moet vrij van huur en geschikt voor permanente bewoning zijn.",
+    "status": "nieuw"
+   },
+   "wboer": {
+    "waarde": "- Landelijke eigendommen en onderpanden met agrarische bestemming uitgesloten",
+    "bron": [
+     "https://www.iqwoon.nl/uploads/iqwoon/files/Clarian-Wonen-Acceptatiegids-Januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "toelichting": "Lijst uitgesloten objecten (Clarian Wonen gids jan 2026 op iqwoon.nl). Woonboerderij zonder agrarische bestemming niet expliciet genoemd.",
+    "status": "nieuw"
+   },
+   "wboot": {
+    "waarde": "- Woonschip (woonboot, woonark, waterwoning) en vaartuigen uitgesloten",
+    "bron": [
+     "https://www.iqwoon.nl/uploads/iqwoon/files/Clarian-Wonen-Acceptatiegids-Januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "toelichting": "Lijst uitgesloten objecten (Clarian Wonen gids jan 2026 op iqwoon.nl).",
+    "status": "nieuw"
+   },
+   "nhgk": {
+    "waarde": "~ Alleen met NHG: Koopgarant mogelijk; zonder NHG geen koopregelingen",
+    "bron": [
+     "https://www.iqwoon.nl/uploads/iqwoon/files/Acceptatiegids-IQWOON-Januari.pdf"
+    ],
+    "brondatum": "jan 2025",
+    "zekerheid": "laag",
+    "toelichting": "Zoekfragment uit tabel koopregelingen; formulering ('Koopgarant enige mogelijkheid') niet volledig ingezien.",
+    "status": "nieuw"
+   },
+   "gron": {
+    "waarde": "~ Groninger akte alleen met NHG; zonder NHG niet mogelijk",
+    "bron": [
+     "https://www.iqwoon.nl/uploads/iqwoon/files/Acceptatiegids-IQWOON-Januari.pdf"
+    ],
+    "brondatum": "jan 2025",
+    "zekerheid": "laag",
+    "toelichting": "Zoekfragment tabel koopregelingen.",
+    "status": "nieuw"
+   },
+   "bsp": {
+    "waarde": "~ Bankspaarsaldo mag lening verlagen als geldverstrekker verrekening bij aflossing bevestigt; verpand saldo telt als eigen middelen",
+    "bron": [
+     "https://www.iqwoon.nl/uploads/iqwoon/files/Acceptatiegids-IQWOON-Januari.pdf"
+    ],
+    "brondatum": "jan 2025",
+    "zekerheid": "laag",
+    "toelichting": "Staat in de paragraaf overbruggingskrediet; niet expliciet over LTV-klasse.",
+    "status": "nieuw"
+   },
+   "zbep": {
+    "waarde": "~ Altijd via Inkomensverklaring Ondernemer van NHG-goedgekeurde rekenexpert",
+    "bron": [
+     "https://www.iqwoon.nl/uploads/iqwoon/files/Acceptatiegids-IQWOON-Januari.pdf"
+    ],
+    "brondatum": "jan 2025",
+    "zekerheid": "middel",
+    "toelichting": "Hoofdstuk zelfstandigen; onderneming moet in Nederland gevestigd zijn.",
+    "status": "nieuw"
+   },
+   "zstart": {
+    "waarde": "- Min. 3 jaar zelfstandig (oudste jaar mag gebroken zijn); korter niet mogelijk",
+    "bron": [
+     "https://www.iqwoon.nl/uploads/iqwoon/files/Acceptatiegids-IQWOON-Januari.pdf"
+    ],
+    "brondatum": "jan 2025",
+    "zekerheid": "middel",
+    "toelichting": "Inkomen uit hetzelfde bedrijf met dezelfde activiteiten. Clarian Wonen gids jan 2026 (op iqwoon.nl) noemt bij <3 jaar aanvullende voorwaarden i.p.v. uitsluiting: tegenstrijdig, actuele gids jun 2026 niet ingezien.",
+    "status": "nieuw"
+   },
+   "zbuit": {
+    "waarde": "- Onderneming moet in Nederland gevestigd zijn",
+    "bron": [
+     "https://www.iqwoon.nl/uploads/iqwoon/files/Acceptatiegids-IQWOON-Januari.pdf"
+    ],
+    "brondatum": "jan 2025",
+    "zekerheid": "middel",
+    "toelichting": "Hoofdstuk zelfstandigen.",
+    "status": "nieuw"
+   },
+   "bkr": {
+    "waarde": "- BKR-codering of negatieve registratie is afwijzingsgrond; max. 6 (1 klant) / 10 (2 klanten) geregistreerde kredieten",
+    "bron": [
+     "https://www.iqwoon.nl/uploads/iqwoon/files/Acceptatiegids-IQWOON-Januari.pdf"
+    ],
+    "brondatum": "jan 2025",
+    "zekerheid": "middel",
+    "toelichting": "Bepaalde patronen (krediet aflossen met groter krediet) alleen na individuele beoordeling en plausibele verklaring. Herstelde A/RH/RN niet apart gevonden.",
+    "status": "nieuw"
+   },
+   "duo": {
+    "waarde": "~ Aflosfase: werkelijk termijnbedrag volgens DUO; aanloop-/opbouwfase via DUO-rekenhulp maandbedrag",
+    "bron": [
+     "https://www.iqwoon.nl/uploads/iqwoon/files/Acceptatiegids-IQWOON-Januari.pdf"
+    ],
+    "brondatum": "jan 2025",
+    "zekerheid": "middel",
+    "toelichting": "Lasten conform actuele Tijdelijke regeling hypothecair krediet, volgens de gids.",
+    "status": "nieuw"
+   },
+   "plen": {
+    "waarde": "~ Aflopend krediet altijd op werkelijke last (BKR-bedrag / looptijd in maanden)",
+    "bron": [
+     "https://www.iqwoon.nl/uploads/iqwoon/files/Acceptatiegids-IQWOON-Januari.pdf"
+    ],
+    "brondatum": "jan 2025",
+    "zekerheid": "middel",
+    "toelichting": "Tabel kredietlasten.",
+    "status": "nieuw"
+   },
+   "rsk": {
+    "waarde": "~ Restschuldlening op werkelijke bruto last indien ontstaan 28-10-2012 t/m 2017, max. 15 jr, annuïtair; meefinancieren niet mogelijk",
+    "bron": [
+     "https://www.iqwoon.nl/uploads/iqwoon/files/Acceptatiegids-IQWOON-Januari.pdf"
+    ],
+    "brondatum": "jan 2025",
+    "zekerheid": "laag",
+    "toelichting": "Ook: geen opnamemogelijkheid, rente aftrekbaar. Passage 'meefinancieren niet mogelijk' slecht leesbaar in fragment.",
+    "status": "nieuw"
+   }
+  },
+  "documenten": [
+   {
+    "titel": "IQWOON Acceptatiegids voor adviseurs",
+    "url": "https://www.iqwoon.nl/uploads/iqwoon/files/Acceptatiegids-IQWOON-Januari.pdf",
+    "versie": "jan 2025"
+   },
+   {
+    "titel": "Clarian Wonen Acceptatiegids voor adviseurs (gehost op iqwoon.nl)",
+    "url": "https://www.iqwoon.nl/uploads/iqwoon/files/Clarian-Wonen-Acceptatiegids-Januari-2026.pdf",
+    "versie": "jan 2026"
+   },
+   {
+    "titel": "IQWOON adviseurspagina (gidsen juni 2026, niet ingezien)",
+    "url": "https://www.iqwoon.nl/adviseur",
+    "versie": "jun 2026"
+   }
+  ]
+ },
+ {
+  "naam": "Nationale-Nederlanden",
+  "gecontroleerd": "2026-10-08",
+  "criteria": {
+   "mwbep": {
+    "waarde": "~ Taxatierapport; Calcasa desktoptaxatie mag bij aankoop bestaande woning (niet bij erfpacht), max. 6 mnd oud",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/01/nn-Acceptatiegids-Hypotheken-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "laag",
+    "toelichting": "NN Acceptatiegids Hypotheken jan 2026, kopie op hypotheekcompany.nl. Desktoptaxatie tot een maximaal hypotheekbedrag (EUR 750.000). Recreatiepark: alleen gevalideerd taxatierapport. Min. koopsom EUR 90.000.",
+    "status": "nieuw"
+   },
+   "woz": {
+    "waarde": "~ WOZ-beschikking toegestaan om waarde huidige woning aan te tonen als geen overbruggingskrediet nodig is",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/01/nn-Acceptatiegids-Hypotheken-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "laag",
+    "toelichting": "Kopie op hypotheekcompany.nl; gebruikt o.a. voor indeling in tariefklasse. Zie ook wbhuid.",
+    "status": "nieuw"
+   },
+   "wbhuid": {
+    "waarde": "~ Waarde huidige woning via WOZ-beschikking mogelijk als geen overbruggingskrediet nodig is",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/01/nn-Acceptatiegids-Hypotheken-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "laag",
+    "toelichting": "Kopie op hypotheekcompany.nl; fragment.",
+    "status": "nieuw"
+   },
+   "ltvk": {
+    "waarde": "~ Tot 106% bij energiebesparende maatregelen; tot 112,5% als berekende last <60% van toegestane last; niet-EU tijdelijke vergunning 75%",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/03/nn-acceptatiebeleid-maart-2026.pdf",
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/01/nn-Acceptatiegids-Hypotheken-2026.pdf"
+    ],
+    "brondatum": "mrt 2026",
+    "zekerheid": "laag",
+    "toelichting": "Acceptatiebeleid 18-03-2026 (kopie hypotheekcompany.nl): overschrijding LTV toegestaan als lasten substantieel lager zijn. Standaard max. LTV niet in fragmenten gezien.",
+    "status": "nieuw"
+   },
+   "wwp": {
+    "waarde": "~ Tot 100% marktwaarde: woongedeelte min. 50% gebruiksoppervlak, één kadastrale eenheid, bedrijfsdeel niet verhuurd",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/01/nn-Acceptatiegids-Hypotheken-2026.pdf",
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/03/nn-acceptatiebeleid-maart-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "laag",
+    "toelichting": "Tegenstrijdig: acceptatiebeleid mrt 2026 noemt 'winkelpanden' bij niet-acceptabele onderpanden (vermoedelijk zuivere winkelpanden). Bij NN navragen.",
+    "status": "nieuw"
+   },
+   "wboer": {
+    "waarde": "~ Mogelijk bij woonbestemming (geen agrarische), goede staat volgens taxatierapport en aansluiting op nutsvoorzieningen",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/01/nn-Acceptatiegids-Hypotheken-2026.pdf",
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/03/nn-acceptatiebeleid-maart-2026.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "laag",
+    "toelichting": "Kopieën op hypotheekcompany.nl; uit welk van beide documenten precies niet zeker.",
+    "status": "nieuw"
+   },
+   "wboot": {
+    "waarde": "- Woonboten, woonschepen en watervilla's worden niet gefinancierd",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/03/nn-acceptatiebeleid-maart-2026.pdf"
+    ],
+    "brondatum": "mrt 2026",
+    "zekerheid": "laag",
+    "toelichting": "Lijst niet-acceptabele onderpanden, acceptatiebeleid 18-03-2026 (kopie hypotheekcompany.nl). Ook woonwagens uitgesloten.",
+    "status": "nieuw"
+   },
+   "zbep": {
+    "waarde": "~ Inkomensverklaring van onafhankelijke rekenexpert bepaalt toetsinkomen; gebroken boekjaar telt mee",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Een-hypotheek-voor-ondernemers.htm",
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/03/nn-acceptatiebeleid-maart-2026.pdf"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "toelichting": "Consumentenpagina Ondernemershypotheek nn.nl en acceptatiebeleid mrt 2026 (kopie).",
+    "status": "nieuw"
+   },
+   "zstart": {
+    "waarde": "+ Vanaf 1 jaar ondernemerschap (12-36 mnd met inkomensverklaring); loondienstinkomen uit 3 jaar ervoor telt mee in gemiddelde",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Een-hypotheek-voor-ondernemers.htm",
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/03/nn-acceptatiebeleid-maart-2026.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "toelichting": "nn.nl: 'mogelijkheden zonder jaarcijfers van de afgelopen 3 jaar'; toetsinkomen = gemiddelde winst 3 jaar of lager laatste jaar. Acceptatiebeleid: uitgangspunt 3 jaar zelfstandig, starter 12-36 mnd met IKV.",
+    "status": "nieuw"
+   },
+   "bkr": {
+    "waarde": "- Codes A, H, 1, 3, 4, 5 niet toegestaan; code 2 alleen met HY; HY onder voorwaarden; afgeloste RH/RN wordt meegenomen",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/01/nn-Acceptatiegids-Hypotheken-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "laag",
+    "toelichting": "BKR-codetabel NN Acceptatiegids jan 2026 (kopie hypotheekcompany.nl), fragmentarisch. HY-2 onder voorwaarden (afgelost gemeld, NHG-kwijtscheldingsbrief, geen A-codering).",
+    "status": "nieuw"
+   },
+   "duo": {
+    "waarde": "~ Werkelijk DUO-termijnbedrag; nog niet aflossend via DUO-rekenhulp; gebruteerd, minimaal annuïteit",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/03/nn-acceptatiebeleid-maart-2026.pdf"
+    ],
+    "brondatum": "mrt 2026",
+    "zekerheid": "laag",
+    "toelichting": "Acceptatiebeleid 18-03-2026 (kopie). DUO-schuld altijd vermelden; brutering met correctiefactor afhankelijk van toetsrente; is termijnbedrag lager dan berekende annuïteit, dan annuïteit.",
+    "status": "nieuw"
+   },
+   "plen": {
+    "waarde": "~ Aflopend krediet op werkelijke last",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/01/nn-Acceptatiegids-Hypotheken-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "laag",
+    "toelichting": "Tabel financiële verplichtingen, kopie hypotheekcompany.nl.",
+    "status": "nieuw"
+   },
+   "dkr": {
+    "waarde": "~ Doorlopend krediet met (minimaal) 2% van de limiet per maand",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/01/nn-Acceptatiegids-Hypotheken-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "laag",
+    "toelichting": "Tabel financiële verplichtingen, kopie hypotheekcompany.nl.",
+    "status": "nieuw"
+   },
+   "lease": {
+    "waarde": "~ Operational (auto)lease telt mee met werkelijke last",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/01/nn-Acceptatiegids-Hypotheken-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "laag",
+    "toelichting": "Tabel financiële verplichtingen; privélease niet apart genoemd in fragment.",
+    "status": "nieuw"
+   },
+   "rsk": {
+    "waarde": "+ Restschuld onbeperkt mee te financieren (geen max. LTV) onder voorwaarden, o.a. bestaande NN-hypotheek; tijdstip ontstaan speelt geen rol",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/03/nn-acceptatiebeleid-maart-2026.pdf",
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/01/nn-Acceptatiegids-Hypotheken-2026.pdf"
+    ],
+    "brondatum": "mrt 2026",
+    "zekerheid": "laag",
+    "toelichting": "Voorwaarden o.a. restschuld uit door NN gefinancierde woning, deel boven 50% marktwaarde aflossen. Restschuldkrediet max. 15 jaar looptijd, geen opnames.",
+    "status": "nieuw"
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Acceptatiegids Hypotheken (kopie hypotheekcompany.nl)",
+    "url": "https://hypotheekcompany.nl/wp-content/uploads/2026/01/nn-Acceptatiegids-Hypotheken-2026.pdf",
+    "versie": "jan 2026"
+   },
+   {
+    "titel": "Acceptatiebeleid Hypotheken (kopie hypotheekcompany.nl)",
+    "url": "https://hypotheekcompany.nl/wp-content/uploads/2026/03/nn-acceptatiebeleid-maart-2026.pdf",
+    "versie": "18 mrt 2026"
+   },
+   {
+    "titel": "Ondernemershypotheek (consumentenpagina)",
+    "url": "https://www.nn.nl/Particulier/Hypotheken/Een-hypotheek-voor-ondernemers.htm",
+    "versie": "onbekend"
+   }
+  ]
+ },
+ {
+  "naam": "RegioBank",
+  "gecontroleerd": "2026-10-08",
+  "criteria": {
+   "mwbep": {
+    "waarde": "~ Taxatierapport (model NVM/VastgoedPro/VBO, max. 6 mnd, geen kopie) of Calcasa Desktop Taxatie (Plus) bij bestaande woning",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/marktwaarde.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "toelichting": "Pagina Woningwaarde. Desktop Taxatie (Plus) alleen bij woning min. 2 jaar oud en tot een maximale woningwaarde (ca. EUR 1,1 mln); niet bij nieuwbouw, verbouwing, erfpacht, opstal, recreatiewoning, woonboot, woon-/winkelpand. Let op: RegioBank is per 1 dec 2025 opgegaan in ASN Bank.",
+    "status": "nieuw"
+   },
+   "woz": {
+    "waarde": "! WOZ-taxatieverslag niet voor nieuwe hypotheek; wel voor waarde-update (tariefgroep): marktwaarde op 85% WOZ, max. 12 mnd oud",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/marktwaarde.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "toelichting": "Pagina Woningwaarde; taxatierapport nodig als totale hypotheekschuld >75% van WOZ-waarde.",
+    "status": "nieuw"
+   },
+   "ltvk": {
+    "waarde": "~ Max. 100% van de woningwaarde; onder voorwaarden tot 106% (energiebesparende maatregelen)",
+    "bron": [
+     "https://www.regiobank.nl/downloads/regiobank-uitgangspunten-voor-de-berekening-van-de-maximale-hypotheek.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "toelichting": "Document 'Uitgangspunten voor de berekening van de maximale hypotheek' (zoekfragment noemt '106% van de WOZ-waarde', vermoedelijk woningwaarde; document ca. 2 jaar oud).",
+    "status": "nieuw"
+   },
+   "wwp": {
+    "waarde": "! Woon-/winkelpand: geen Calcasa Desktop Taxatie mogelijk, volledig taxatierapport vereist",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/marktwaarde.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "toelichting": "Alleen indirect: uitsluiting desktoptaxatie. Of en tot welk % woon-/winkelpanden worden gefinancierd niet gevonden.",
+    "status": "nieuw"
+   },
+   "wboot": {
+    "waarde": "! Woonboot: geen Calcasa Desktop Taxatie mogelijk; acceptatie als onderpand niet bevestigd",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/marktwaarde.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "toelichting": "Alleen indirect via uitsluitingslijst desktoptaxatie. Algemene voorwaarden noemen hypotheekrecht op 'sommige boten'.",
+    "status": "nieuw"
+   },
+   "zbep": {
+    "waarde": "~ Inkomensverklaring (IKV) ondernemer; gemiddelde saldo fiscale winst 3 jaar, laatste jaar als max.",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/hypotheek-zonder-vast-contract-kan-dit/zzper-of-ondernemer.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "toelichting": "Pagina 'Hypotheek voor zzp'er of ondernemer' (nu onder ASN Bank-titel).",
+    "status": "nieuw"
+   },
+   "zcijf": {
+    "waarde": "~ Jaarrekeningen en IB-aangiften van laatste 3 jaar, prognose en KvK-uittreksel; zonder jaarcijfers geen hypotheek",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/hypotheek-zonder-vast-contract-kan-dit/zzper-of-ondernemer.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "toelichting": "Documentenlijst op dezelfde pagina.",
+    "status": "nieuw"
+   },
+   "zstart": {
+    "waarde": "~ Na 1 jaar zelfstandigheid onder voorwaarden; bij <3 jaar jaarcijfers plus prognose van administratiekantoor/RA",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/hypotheek-zonder-vast-contract-kan-dit/zzper-of-ondernemer.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "toelichting": "Pagina 'Hypotheek voor zzp'er of ondernemer'; tekst noemt 'ASN Bank'.",
+    "status": "nieuw"
+   },
+   "duo": {
+    "waarde": "~ Rekenpercentage op oorspronkelijke studieschuld, verschillend voor oud stelsel en leenstelsel; zelf melden",
+    "bron": [
+     "https://regiobank.nl/hypotheken/huis-kopen-met-studieschuld.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "laag",
+    "toelichting": "Pagina noemt 0,75% (oud stelsel, voor sep 2015) en 0,35% (leenstelsel) van de oorspronkelijke schuld als maandlast; ouder artikel noemt 0,45%. Tegenstrijdig.",
+    "status": "nieuw"
+   },
+   "rsk": {
+    "waarde": "~ Restschuldfinanciering mogelijk als hypotheek + restschuld >100% en max. 110% woningwaarde; oude woning definitief verkocht",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/restschuld.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "toelichting": "Pagina Restschuld: max. EUR 30.000 restschuld. Onder 100%: meefinancieren in nieuwe hypotheek als inkomen toereikend is.",
+    "status": "nieuw"
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Woningwaarde (taxatie, WOZ, desktoptaxatie)",
+    "url": "https://www.regiobank.nl/hypotheken/marktwaarde.html",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "Hypotheek voor zzp'er of ondernemer",
+    "url": "https://www.regiobank.nl/hypotheken/hypotheek-zonder-vast-contract-kan-dit/zzper-of-ondernemer.html",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "Restschuld",
+    "url": "https://www.regiobank.nl/hypotheken/restschuld.html",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "Uitgangspunten voor de berekening van de maximale hypotheek",
+    "url": "https://www.regiobank.nl/downloads/regiobank-uitgangspunten-voor-de-berekening-van-de-maximale-hypotheek.html",
+    "versie": "onbekend"
+   }
+  ]
+ },
+ {
+  "naam": "Tulp Hypotheken",
+  "gecontroleerd": "2026-10-08",
+  "criteria": {
+   "mwbep": {
+    "waarde": "~ Gevalideerd taxatierapport (NWWI); Calcasa hybride/desktop alleen onder voorwaarden (o.a. bij oversluiten)",
+    "bron": [
+     "https://tulphypotheken.nl/wp-content/uploads/2025/03/acceptatiegids-Tulp-Hypotheek_maart-2025.pdf",
+     "https://tulphypotheken.nl/wp-content/uploads/2026/01/Productkaart-Tulp.pdf"
+    ],
+    "brondatum": "mrt 2025",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatiegids mrt 2025 en productkaart jan 2026: minimale getaxeerde marktwaarde EUR 100.000; courantheid max. 12 mnd; bouwkundig rapport max. 6 mnd. Hybride Calcasa: betrouwbaarheidsindicator min. 5. Nieuwbouw max. 100% stichtingskosten.",
+    "status": "nieuw"
+   },
+   "ltvk": {
+    "waarde": "~ Max. % marktwaarde (na verbouw) volgens Tijdelijke regeling; 106% met energiebesparende voorzieningen; bij afwijkende koopsom 100% taxatiewaarde",
+    "bron": [
+     "https://tulphypotheken.nl/wp-content/uploads/2025/03/acceptatiegids-Tulp-Hypotheek_maart-2025.pdf",
+     "https://tulphypotheken.nl/wp-content/uploads/2026/01/Productkaart-Tulp.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "toelichting": "Aflossingsvrij max. 50% marktwaarde. Boven 90% marktwaarde consumptief max. EUR 40.000 (Riant).",
+    "status": "nieuw"
+   },
+   "wbhuid": {
+    "waarde": "~ Onverkochte woning (overbrugging): 90% van verwachte marktwaarde minus uitstaande hypotheek; verkocht: 100% verkoopprijs",
+    "bron": [
+     "https://tulphypotheken.nl/wp-content/uploads/2026/01/Productkaart-Tulp.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "laag",
+    "toelichting": "Productkaart, onderdeel overbrugging (max. 12 mnd). Hoe de verwachte marktwaarde wordt aangetoond niet in fragment.",
+    "status": "nieuw"
+   },
+   "wwp": {
+    "waarde": "- Woning met bedrijvigheid als kadastrale bestemming uitgesloten, ook met NHG",
+    "bron": [
+     "https://tulphypotheken.nl/wp-content/uploads/2025/03/acceptatiegids-Tulp-Hypotheek_maart-2025.pdf"
+    ],
+    "brondatum": "mrt 2025",
+    "zekerheid": "middel",
+    "toelichting": "Lijst niet-geaccepteerde onderpanden; onderpand moet uitsluitend bestemd zijn voor woondoeleinden (Kadaster + taxatierapport).",
+    "status": "nieuw"
+   },
+   "wboot": {
+    "waarde": "- Woonboot (en woonwagen/caravan) niet geaccepteerd, ook niet met NHG",
+    "bron": [
+     "https://tulphypotheken.nl/wp-content/uploads/2025/03/acceptatiegids-Tulp-Hypotheek_maart-2025.pdf",
+     "https://tulphypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Tulp-Compleet-Hypotheek-april-2024.pdf"
+    ],
+    "brondatum": "mrt 2025",
+    "zekerheid": "middel",
+    "toelichting": "Lijst niet-geaccepteerde onderpanden (gelijk in gidsen 2021-2025).",
+    "status": "nieuw"
+   },
+   "hsb": {
+    "waarde": "- Woningen gebouwd op basis van houtskeletbouw niet geaccepteerd, ook niet met NHG",
+    "bron": [
+     "https://tulphypotheken.nl/wp-content/uploads/2025/03/acceptatiegids-Tulp-Hypotheek_maart-2025.pdf",
+     "https://tulphypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Tulp-Compleet-Hypotheek-april-2024.pdf"
+    ],
+    "brondatum": "mrt 2025",
+    "zekerheid": "middel",
+    "toelichting": "Lijst niet-geaccepteerde onderpanden.",
+    "status": "nieuw"
+   },
+   "zbep": {
+    "waarde": "~ Inkomenscertificaat van gemachtigd instituut (Raadhuys, Zakelijk Inkomen, Overviewz, Pentrax, Viiz); kosten voor aanvrager",
+    "bron": [
+     "https://tulphypotheken.nl/wp-content/uploads/2025/03/acceptatiegids-Tulp-Hypotheek_maart-2025.pdf"
+    ],
+    "brondatum": "mrt 2025",
+    "zekerheid": "middel",
+    "toelichting": "Tulp volgt het toetsinkomen op het certificaat. DGA met belang >=5% geldt als ondernemer. Tulp accepteerde als eerste het VIIZ-certificaat (nieuwsbericht).",
+    "status": "nieuw"
+   },
+   "z123": {
+    "waarde": "+ 1-2-3-beoordeling mogelijk met inkomensverklaring Viiz of Zakelijk Inkomen, al vanaf 1 jaar zelfstandig",
+    "bron": [
+     "https://tulphypotheken.nl/wp-content/uploads/2026/01/Productkaart-Tulp.pdf",
+     "https://tulphypotheken.nl/wp-content/uploads/2025/03/acceptatiegids-Tulp-Hypotheek_maart-2025.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "hoog",
+    "toelichting": "Productkaart jan 2026: anders gemiddelde 3 jaar, gemaximeerd op laatste jaar of huidig inkomen.",
+    "status": "nieuw"
+   },
+   "zstart": {
+    "waarde": "~ Min. 12 mnd actief; gemiddelde van 1e ondernemersjaar + 2 voorgaande loondienstjaren, laatste jaar als max.",
+    "bron": [
+     "https://tulphypotheken.nl/wp-content/uploads/2025/03/acceptatiegids-Tulp-Hypotheek_maart-2025.pdf"
+    ],
+    "brondatum": "mrt 2025",
+    "zekerheid": "middel",
+    "toelichting": "Lopend boekjaar moet in lijn zijn met gemiddelde. Ouder nieuwsbericht noemde 9 mnd en zelfde branche: achterhaald.",
+    "status": "nieuw"
+   },
+   "bkr": {
+    "waarde": "- Geen hypotheek bij achterstands- of herstelcodering of (lopende/geregistreerde) schuldregeling; >5 noteringen voorleggen",
+    "bron": [
+     "https://tulphypotheken.nl/wp-content/uploads/2025/03/acceptatiegids-Tulp-Hypotheek_maart-2025.pdf",
+     "https://tulphypotheken.nl/wp-content/uploads/2026/01/Productkaart-Tulp.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "toelichting": "Productkaart: 'BKR codering: niet toegestaan'. Kredieten tot EUR 1.000 tellen niet mee bij aantal noteringen. Toetsing BKR, VIS en SFH, min. twee keer.",
+    "status": "nieuw"
+   },
+   "duo": {
+    "waarde": "~ Studielening telt mee: percentage van oorspronkelijke hoofdsom (oud/nieuw stelsel), met opslag afhankelijk van hypotheekrente",
+    "bron": [
+     "https://tulphypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Tulp-Compleet-Hypotheek-april-2024.pdf"
+    ],
+    "brondatum": "apr 2024",
+    "zekerheid": "laag",
+    "toelichting": "Gidsen noemen 0,65% (aflossing gestart voor sep 2015) en 0,35% (na sep 2015); recentere gidsen opslag op termijnbedrag. Versie van fragment niet eenduidig.",
+    "status": "nieuw"
+   },
+   "plen": {
+    "waarde": "~ Persoonlijke lening (AK): hoofdsom gedeeld door looptijd",
+    "bron": [
+     "https://tulphypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Tulp-Compleet-Hypotheek-april-2024.pdf"
+    ],
+    "brondatum": "apr 2024",
+    "zekerheid": "middel",
+    "toelichting": "Tabel lasten BKR-kredieten. Inlossen uit hypotheekgelden verschilt per product (Riant: toegestaan, deel in box 3 toetsen).",
+    "status": "nieuw"
+   },
+   "dkr": {
+    "waarde": "~ Doorlopend krediet (RK): 2% van de geregistreerde kredietlimiet",
+    "bron": [
+     "https://tulphypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Tulp-Compleet-Hypotheek-april-2024.pdf"
+    ],
+    "brondatum": "apr 2024",
+    "zekerheid": "middel",
+    "toelichting": "Tabel lasten BKR-kredieten.",
+    "status": "nieuw"
+   },
+   "lease": {
+    "waarde": "~ Privélease (OA): hoofdsom gedeeld door looptijd telt als last",
+    "bron": [
+     "https://tulphypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Tulp-Compleet-Hypotheek-april-2024.pdf"
+    ],
+    "brondatum": "apr 2024",
+    "zekerheid": "middel",
+    "toelichting": "Tabel lasten BKR-kredieten.",
+    "status": "nieuw"
+   },
+   "rsk": {
+    "waarde": "~ Lasten restschuldlening tellen mee (netto last); geen last als betaling uit eigen middelen is aangetoond",
+    "bron": [
+     "https://tulphypotheken.nl/wp-content/uploads/2022/01/Acceptatiegids-Tulp-Compleet-092021.pdf"
+    ],
+    "brondatum": "sep 2021",
+    "zekerheid": "laag",
+    "toelichting": "Oudere gids Tulp Compleet 2021; actuele regeling niet bevestigd.",
+    "status": "nieuw"
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Acceptatiegids Tulp Hypotheek",
+    "url": "https://tulphypotheken.nl/wp-content/uploads/2025/03/acceptatiegids-Tulp-Hypotheek_maart-2025.pdf",
+    "versie": "mrt 2025"
+   },
+   {
+    "titel": "Productkaart Tulp",
+    "url": "https://tulphypotheken.nl/wp-content/uploads/2026/01/Productkaart-Tulp.pdf",
+    "versie": "jan 2026"
+   },
+   {
+    "titel": "Acceptatiegids Tulp Compleet Hypotheek",
+    "url": "https://tulphypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Tulp-Compleet-Hypotheek-april-2024.pdf",
+    "versie": "apr 2024"
+   },
+   {
+    "titel": "Acceptatiegids Tulp Compleet",
+    "url": "https://tulphypotheken.nl/wp-content/uploads/2022/01/Acceptatiegids-Tulp-Compleet-092021.pdf",
+    "versie": "sep 2021"
+   }
+  ]
+ }
+]

@@ -9,7 +9,7 @@
 <meta property="og:url" content="https://adviesforum.nl/voorwaarden-vergelijker.html">
 <meta property="og:site_name" content="Adviesforum">
 <meta property="og:locale" content="nl_NL">
-<meta name="theme-color" content="#F5A623">
+<meta name="theme-color" content="#F68712">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="description" content="Interne matrix voor adviseurs: hypotheekverstrekkers en hun voorwaarden (acceptatie, product, bouwdepot, nazorg) naast elkaar, met kleurcode; 25 verstrekkers ingevuld, de rest nog in te vullen. Indicatief en niet geverifieerd; geen rentes of tarieven en niet voor consumenten.">
@@ -19,10 +19,10 @@
 <style>
 
 :root{
-  --geel:#F5A623;--geel-donker:#D98E0F;--geel-zacht:#FDF3E2;
-  --zwart:#0C2340;--tekst:#112033;--grijs:#4A5765;--lijn:#DCE3EB;--vlak:#F5F7FA;--wit:#fff;
+  --geel:#F68712;--geel-donker:#D9700A;--geel-zacht:#FEF0E2;
+  --zwart:#181A3D;--tekst:#15162F;--grijs:#55576F;--lijn:#E3E3EC;--vlak:#F7F7FA;--wit:#fff;
   --rood:#9E2F45;--rood-zacht:#FFF1F0;--rood-tekst:#7A1F14;--oranje:#9A5B00;--oranje-zacht:#FFF4E0;--blauw:#1F4E79;--blauw-zacht:#EEF4FA;
-  --kopvlak:#0C2340;--kopvlak-2:#2E2E2E;--koptekst:#fff;--zebra:#FCFCFB;
+  --kopvlak:#181A3D;--kopvlak-2:#2E2E2E;--koptekst:#fff;--zebra:#FCFCFB;
   --t-g:#1F7A52;--t-n:#9AA7B6;--t-a:#E59A1A;--t-r:#9E2F45;
 }
 *{box-sizing:border-box}
@@ -59,10 +59,10 @@ button,input,select{font-family:inherit}
 .rij{display:flex;flex-wrap:wrap;gap:10px 12px;align-items:center}
 .rij + .rij{margin-top:12px;padding-top:12px;border-top:1px solid var(--lijn)}
 .lbl{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--grijs)}
-.tabs{display:inline-flex;border:1px solid #C9D3DE;border-radius:999px;padding:3px;gap:3px;background:#fff}
+.tabs{display:inline-flex;border:1px solid #D0D1DC;border-radius:999px;padding:3px;gap:3px;background:#fff}
 .tabs button{border:0;background:transparent;padding:7px 15px;border-radius:999px;font-size:13.5px;font-weight:700;color:var(--tekst);cursor:pointer}
 .tabs button[aria-selected="true"]{background:var(--zwart);color:#fff}
-.paneel input[type=search],.paneel select{font-size:14px;padding:9px 11px;border:1px solid #C9D3DE;border-radius:9px;background:#fff;color:var(--tekst);min-width:0;max-width:100%}
+.paneel input[type=search],.paneel select{font-size:14px;padding:9px 11px;border:1px solid #D0D1DC;border-radius:9px;background:#fff;color:var(--tekst);min-width:0;max-width:100%}
 .paneel input[type=search]{flex:1 1 240px}
 .paneel select{flex:0 1 260px}
 .spacer{flex:1 1 auto}
@@ -70,11 +70,11 @@ button,input,select{font-family:inherit}
 .teller b{color:var(--tekst)}
 .knop{display:inline-block;text-decoration:none;border-radius:999px;padding:8px 15px;font-size:13.5px;font-weight:700;cursor:pointer;border:1px solid var(--zwart);background:var(--zwart);color:#fff;white-space:nowrap}
 .knop:hover{background:#000}
-.knop.licht{background:#fff;color:var(--zwart);border-color:#C9D3DE}
+.knop.licht{background:#fff;color:var(--zwart);border-color:#D0D1DC}
 .knop.licht:hover{background:var(--vlak)}
-.knop.aan{background:var(--geel);color:#0C2340;border-color:var(--geel-donker)}
+.knop.aan{background:var(--geel);color:#181A3D;border-color:var(--geel-donker)}
 .chips{display:flex;flex-wrap:wrap;gap:6px}
-.chip{font-size:13px;font-weight:600;padding:5px 11px;border-radius:999px;border:1px solid #C9D3DE;background:#fff;color:var(--tekst);cursor:pointer;line-height:1.35}
+.chip{font-size:13px;font-weight:600;padding:5px 11px;border-radius:999px;border:1px solid #D0D1DC;background:#fff;color:var(--tekst);cursor:pointer;line-height:1.35}
 .chip[aria-pressed="true"]{background:var(--zwart);border-color:var(--zwart);color:#fff}
 .chip .n{font-weight:600;opacity:.7;margin-left:5px}
 
@@ -87,30 +87,30 @@ button,input,select{font-family:inherit}
 .tabelvak table{border-collapse:separate;border-spacing:0;width:100%;font-size:13px}
 .tabelvak th,.tabelvak td{text-align:left;vertical-align:top;padding:9px 11px;border-bottom:1px solid var(--lijn);border-right:1px solid var(--lijn)}
 .tabelvak thead th{position:sticky;top:0;z-index:3;background:var(--kopvlak);color:var(--koptekst);font-size:12px;font-weight:700;line-height:1.35;border-right-color:#3a3a3a}
-.tabelvak thead th .cat{display:block;font-size:9.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#C9D3DE;margin-bottom:2px}
+.tabelvak thead th .cat{display:block;font-size:9.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#D0D1DC;margin-bottom:2px}
 .tabelvak thead th.vast{left:0;z-index:4}
 .vast{position:sticky;left:0;z-index:2;background:#fff;min-width:200px;max-width:240px;box-shadow:2px 0 0 var(--lijn)}
 .tabelvak tbody tr:nth-child(even) td{background:var(--zebra)}
 .tabelvak tbody tr:nth-child(even) .vast{background:var(--zebra)}
 td.val{min-width:190px;max-width:270px}
 .partij{display:flex;gap:8px;align-items:flex-start}
-.partij .sel{width:16px;height:16px;margin:3px 0 0;flex:none;accent-color:#0C2340;cursor:pointer}
+.partij .sel{width:16px;height:16px;margin:3px 0 0;flex:none;accent-color:#181A3D;cursor:pointer}
 .plogo{display:block;height:20px;width:auto;max-width:92px;object-fit:contain;object-position:left center;margin:0 0 4px;border-radius:3px}
 thead .plogo{background:#fff;padding:2px 4px;box-sizing:content-box}
 .vn{display:block;font-weight:800;font-size:13.5px;line-height:1.3;overflow-wrap:anywhere}
 .hint{display:block;font-size:11px;font-weight:700;color:var(--blauw);margin-top:1px}
-thead .hint{color:#F5A623}
+thead .hint{color:#F68712}
 .vt{display:block;font-size:11.5px;color:var(--grijs);margin-top:1px}
-thead .vt{color:#C9D3DE}
+thead .vt{color:#D0D1DC}
 .cel{display:flex;gap:6px;align-items:flex-start}
 .cel .txt{flex:1 1 auto;overflow-wrap:anywhere}
-.leegwaarde{color:#7A8796}
+.leegwaarde{color:#7C7E95}
 .tint{display:inline-block;width:9px;height:9px;border-radius:50%;margin-top:5px;flex:none}
 .t-g{background:var(--t-g)}.t-n{background:var(--t-n)}.t-a{background:var(--t-a)}.t-r{background:var(--t-r)}
 .tintknop{border:0;background:transparent;padding:2px;margin:-2px;cursor:pointer;line-height:0;flex:none}
 .tintknop .tint{width:11px;height:11px;outline:2px solid transparent}
 .bewerk [contenteditable]{outline:1px dashed #B8B8B8;outline-offset:2px;border-radius:3px;min-height:18px;min-width:30px;display:block}
-.bewerk [contenteditable]:focus{outline:2px solid var(--blauw);background:#fff;color:#0C2340}
+.bewerk [contenteditable]:focus{outline:2px solid var(--blauw);background:#fff;color:#181A3D}
 /* Vergelijkweergave */
 .cmp td.crit,.cmp th.crit{position:sticky;left:0;z-index:2;min-width:190px;max-width:230px;font-weight:700;background:var(--vlak);box-shadow:2px 0 0 var(--lijn)}
 .cmp thead th.crit{z-index:4;background:var(--kopvlak-2)}
@@ -118,14 +118,14 @@ thead .vt{color:#C9D3DE}
 .cmp td.crit .vt{font-weight:400}
 .cmp tr.grp td{background:var(--kopvlak-2);color:#fff;font-weight:800;font-size:11.5px;letter-spacing:.07em;text-transform:uppercase;padding:7px 11px}
 .cmp tr.grp td span{position:sticky;left:11px}
-.leeg{border:1px dashed #C9D3DE;border-radius:12px;padding:30px 20px;text-align:center;color:var(--grijs);background:#fff}
+.leeg{border:1px dashed #D0D1DC;border-radius:12px;padding:30px 20px;text-align:center;color:var(--grijs);background:#fff}
 .leeg h3{margin:0 0 6px;color:var(--tekst);font-size:16px}
 
 .legenda{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:12.5px;color:var(--grijs);margin:12px 0 0}
 .legenda span{display:inline-flex;align-items:center;gap:6px}
 .legenda .tint{margin:0}
 .vink{display:inline-flex;align-items:center;gap:7px;font-size:13.5px;font-weight:600;cursor:pointer}
-.vink input{width:16px;height:16px;margin:0;accent-color:#0C2340}
+.vink input{width:16px;height:16px;margin:0;accent-color:#181A3D}
 .ingevuld{display:block;font-weight:600}
 .t-e{background:transparent;box-shadow:inset 0 0 0 1.5px var(--t-n)}
 .nogleeg{color:#595959;font-style:italic}
@@ -156,12 +156,12 @@ tr.groepkop small{font-weight:600;color:var(--grijs)}
 .linkknop{border:0;background:none;padding:4px 0;font-size:12.5px;font-weight:700;text-decoration:underline;cursor:pointer;color:var(--zwart)}
 .opties{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:10px}
 .kolomknop{display:inline-block;margin-top:5px;border:1px solid #555;background:transparent;color:#fff;border-radius:999px;font-size:10.5px;font-weight:700;padding:1px 8px;cursor:pointer;white-space:nowrap}
-.kolomknop[aria-pressed="true"]{background:#F5A623;border-color:#F5A623;color:#0C2340}
+.kolomknop[aria-pressed="true"]{background:#F68712;border-color:#F68712;color:#181A3D}
 .ranking td.rang{font-weight:800;width:44px;text-align:right}
 .ranking td.naamcel{min-width:180px}
 .ranking td.val{max-width:none}
 /* Uitgebreid zoeken en filteren */
-.badge{display:inline-block;min-width:20px;margin-left:7px;padding:0 6px;border-radius:999px;background:var(--geel);color:#0C2340;font-size:12px;line-height:20px;text-align:center}
+.badge{display:inline-block;min-width:20px;margin-left:7px;padding:0 6px;border-radius:999px;background:var(--geel);color:#181A3D;font-size:12px;line-height:20px;text-align:center}
 .uitgebreid{display:block}
 .uf-kop{margin:0 0 8px;font-size:15px;font-weight:800}
 .ufblok{border:1px solid var(--lijn);border-radius:10px;background:#fff;padding:8px 12px 12px;margin:0 0 10px;min-width:0}
@@ -171,12 +171,12 @@ tr.groepkop small{font-weight:600;color:var(--grijs)}
 .ufgetal input{width:76px}
 .ufhulp{margin:0;font-size:12.5px;color:var(--grijs);max-width:90ch}
 .ufvinken{gap:6px 18px}
-.paneel input[type=text],.paneel input[type=number]{font-size:14px;padding:8px 10px;border:1px solid #C9D3DE;border-radius:9px;background:#fff;color:var(--tekst);min-width:0;max-width:100%}
+.paneel input[type=text],.paneel input[type=number]{font-size:14px;padding:8px 10px;border:1px solid #D0D1DC;border-radius:9px;background:#fff;color:var(--tekst);min-width:0;max-width:100%}
 .regel{display:flex;flex-wrap:wrap;gap:6px 8px;align-items:center;margin:6px 0}
 .regel select,.regel input[type=text]{flex:1 1 170px}
 .regel .rvoeg{font-size:11px;font-weight:800;letter-spacing:.06em;color:var(--blauw);flex:0 0 100%}
 .ufresultaat{margin-top:0}
-mark{background:#FFE36B;color:#0C2340;border-radius:2px;padding:0 1px}
+mark{background:#FFE36B;color:#181A3D;border-radius:2px;padding:0 1px}
 td.val.gedimd .cel{opacity:.38}
 .verborgen{color:#767676;font-style:italic}
 .uitleg{font-size:13.5px;color:var(--grijs);margin-top:16px;max-width:110ch}
@@ -207,7 +207,7 @@ footer.voet a{color:var(--zwart);font-weight:700}
 }
 @media print{
   .balk,.paneel,.beheerbalk{display:none}
-  .kop{background:#fff;border-bottom:3px solid #0C2340}
+  .kop{background:#fff;border-bottom:3px solid #181A3D}
   .tabelvak{max-height:none;overflow:visible}
   .tabelvak thead th,.vast,.cmp td.crit{position:static}
 }
@@ -217,11 +217,11 @@ footer.voet a{color:var(--zwart);font-weight:700}
 </style>
 <style id="a11y">
 /* Toegankelijkheid en donkere modus (zie docs/toegankelijkheid.md). Staat in een eigen <style>, zodat printvensters licht blijven. */
-.skiplink{position:absolute;left:12px;top:-200px;z-index:10000;background:#0C2340;color:#fff;padding:10px 16px;border-radius:8px;font-weight:700;text-decoration:none;font-family:Segoe UI,Roboto,Helvetica Neue,Arial,system-ui,sans-serif}
-.skiplink:focus{top:12px;outline:3px solid #F5A623;outline-offset:2px}
+.skiplink{position:absolute;left:12px;top:-200px;z-index:10000;background:#181A3D;color:#fff;padding:10px 16px;border-radius:8px;font-weight:700;text-decoration:none;font-family:Segoe UI,Roboto,Helvetica Neue,Arial,system-ui,sans-serif}
+.skiplink:focus{top:12px;outline:3px solid #F68712;outline-offset:2px}
 main[tabindex="-1"]:focus{outline:none}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus,textarea:focus,summary:focus-visible,[tabindex]:not([tabindex="-1"]):focus-visible{outline:3px solid #0C2340!important;outline-offset:2px!important}
+a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus,textarea:focus,summary:focus-visible,[tabindex]:not([tabindex="-1"]):focus-visible{outline:3px solid #181A3D!important;outline-offset:2px!important}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 @media print{.skiplink{display:none}}
 /* Wijzigingslog, volgen, verouderde bron, dossier */
@@ -252,48 +252,48 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
 @media print{.val .meld{display:none}}
 @media screen and (prefers-color-scheme:dark){
 :root:not([data-theme="light"]){color-scheme:dark}
-:root:not([data-theme="light"]){--geel-zacht:#3F3018;--zwart:#EDF1F6;--tekst:#EDF1F6;--grijs:#B8C4D1;--lijn:#16202C;--vlak:#162538;--wit:#0F1B2B;--rood:#e9a29b;--rood-zacht:#3f1a18;--rood-tekst:#f3c2bd;--oranje:#f6cb8e;--oranje-zacht:#3f3118;--blauw:#9ec3e6;--blauw-zacht:#1f2a36;--kopvlak:#1B2C42;--kopvlak-2:#16202C;--zebra:#222222;--t-n:#8A96A3}
-:root:not([data-theme="light"]) body{color:#EDF1F6;background:#0C2340}
-:root:not([data-theme="light"]) .balk{background:#1B2C42;color:#fff}
+:root:not([data-theme="light"]){--geel-zacht:#3F3018;--zwart:#F1F1F6;--tekst:#F1F1F6;--grijs:#C3C4D3;--lijn:#1E2040;--vlak:#1C1E3A;--wit:#12132B;--rood:#e9a29b;--rood-zacht:#3f1a18;--rood-tekst:#f3c2bd;--oranje:#f6cb8e;--oranje-zacht:#3f3118;--blauw:#9ec3e6;--blauw-zacht:#1f2a36;--kopvlak:#23254A;--kopvlak-2:#1E2040;--zebra:#222222;--t-n:#8A96A3}
+:root:not([data-theme="light"]) body{color:#F1F1F6;background:#181A3D}
+:root:not([data-theme="light"]) .balk{background:#23254A;color:#fff}
 :root:not([data-theme="light"]) .balk a{color:#fff}
-:root:not([data-theme="light"]) .kop{background:#0F1B2B;color:#EDF1F6;border-bottom:3px solid #F5A623}
-:root:not([data-theme="light"]) .zeshoek{background:#1B2C42}
-:root:not([data-theme="light"]) .terug{border-bottom:2px solid #7A8796}
-:root:not([data-theme="light"]) .kop .stempel{background:#1B2C42;color:#F5A623}
+:root:not([data-theme="light"]) .kop{background:#12132B;color:#F1F1F6;border-bottom:3px solid #F68712}
+:root:not([data-theme="light"]) .zeshoek{background:#23254A}
+:root:not([data-theme="light"]) .terug{border-bottom:2px solid #7C7E95}
+:root:not([data-theme="light"]) .kop .stempel{background:#23254A;color:#F68712}
 :root:not([data-theme="light"]) .compliance{border-color:#9E2F45}
-:root:not([data-theme="light"]) .paneel{border:1px solid #16202C;background:#162538}
-:root:not([data-theme="light"]) .paneel input[type=search],:root:not([data-theme="light"]) .paneel select{border:1px solid #444;background:#0F1B2B;color:#EDF1F6}
-:root:not([data-theme="light"]) .tabs{background:#0F1B2B;border-color:#444}
-:root:not([data-theme="light"]) .tabs button{color:#EDF1F6}
-:root:not([data-theme="light"]) .tabs button[aria-selected="true"]{background:#F5A623;color:#0C2340}
-:root:not([data-theme="light"]) .chip{border:1px solid #444;background:#0F1B2B;color:#EDF1F6}
-:root:not([data-theme="light"]) .chip[aria-pressed="true"]{background:#F5A623;color:#0C2340;border-color:#F5A623}
-:root:not([data-theme="light"]) .knop{border:1px solid #F5A623;background:#F5A623;color:#0C2340}
-:root:not([data-theme="light"]) .knop:hover{background:#F7B955;color:#0C2340}
-:root:not([data-theme="light"]) .knop.licht{background:#0F1B2B;color:#EDF1F6;border-color:#444}
-:root:not([data-theme="light"]) .knop.licht:hover{background:#162538}
-:root:not([data-theme="light"]) .knop.aan{background:#F5A623;color:#0C2340;border-color:#F5A623}
+:root:not([data-theme="light"]) .paneel{border:1px solid #1E2040;background:#1C1E3A}
+:root:not([data-theme="light"]) .paneel input[type=search],:root:not([data-theme="light"]) .paneel select{border:1px solid #444;background:#12132B;color:#F1F1F6}
+:root:not([data-theme="light"]) .tabs{background:#12132B;border-color:#444}
+:root:not([data-theme="light"]) .tabs button{color:#F1F1F6}
+:root:not([data-theme="light"]) .tabs button[aria-selected="true"]{background:#F68712;color:#181A3D}
+:root:not([data-theme="light"]) .chip{border:1px solid #444;background:#12132B;color:#F1F1F6}
+:root:not([data-theme="light"]) .chip[aria-pressed="true"]{background:#F68712;color:#181A3D;border-color:#F68712}
+:root:not([data-theme="light"]) .knop{border:1px solid #F68712;background:#F68712;color:#181A3D}
+:root:not([data-theme="light"]) .knop:hover{background:#F9A54D;color:#181A3D}
+:root:not([data-theme="light"]) .knop.licht{background:#12132B;color:#F1F1F6;border-color:#444}
+:root:not([data-theme="light"]) .knop.licht:hover{background:#1C1E3A}
+:root:not([data-theme="light"]) .knop.aan{background:#F68712;color:#181A3D;border-color:#F68712}
 :root:not([data-theme="light"]) .beheerbalk{border-color:#6b5a2a;background:#3f3118;color:#f6cb8e}
-:root:not([data-theme="light"]) .tabelvak{border:1px solid #16202C;background:#0F1B2B}
+:root:not([data-theme="light"]) .tabelvak{border:1px solid #1E2040;background:#12132B}
 :root:not([data-theme="light"]) .tabelvak thead th{border-right-color:#444}
-:root:not([data-theme="light"]) .vast{background:#0F1B2B}
+:root:not([data-theme="light"]) .vast{background:#12132B}
 :root:not([data-theme="light"]) .plogo{background:#fff;padding:2px 4px;box-sizing:content-box}
-:root:not([data-theme="light"]) .partij .sel,:root:not([data-theme="light"]) .vink input{accent-color:#F5A623}
+:root:not([data-theme="light"]) .partij .sel,:root:not([data-theme="light"]) .vink input{accent-color:#F68712}
 :root:not([data-theme="light"]) .nogleeg{color:#9A9A9A}
 :root:not([data-theme="light"]) td.val.leegcel{background-image:repeating-linear-gradient(135deg,transparent 0 6px,rgba(255,255,255,.035) 6px 12px)}
 :root:not([data-theme="light"]) .bewerk [contenteditable]{outline-color:#6E6E6E}
-:root:not([data-theme="light"]) .vinklijst{background:#0F1B2B;border-color:#444}
-:root:not([data-theme="light"]) .linkknop{color:#EDF1F6}
-:root:not([data-theme="light"]) .leeg{border:1px dashed #444;color:#B8C4D1;background:#0F1B2B}
-:root:not([data-theme="light"]) footer.voet a{color:#EDF1F6}
-:root:not([data-theme="light"]) .ufblok{background:#0F1B2B;border-color:#444}
-:root:not([data-theme="light"]) .paneel input[type=text],:root:not([data-theme="light"]) .paneel input[type=number]{border:1px solid #444;background:#0C2340;color:#EDF1F6}
+:root:not([data-theme="light"]) .vinklijst{background:#12132B;border-color:#444}
+:root:not([data-theme="light"]) .linkknop{color:#F1F1F6}
+:root:not([data-theme="light"]) .leeg{border:1px dashed #444;color:#C3C4D3;background:#12132B}
+:root:not([data-theme="light"]) footer.voet a{color:#F1F1F6}
+:root:not([data-theme="light"]) .ufblok{background:#12132B;border-color:#444}
+:root:not([data-theme="light"]) .paneel input[type=text],:root:not([data-theme="light"]) .paneel input[type=number]{border:1px solid #444;background:#181A3D;color:#F1F1F6}
 :root:not([data-theme="light"]) mark{background:#8a6d00;color:#fff}
 :root:not([data-theme="light"]) .verborgen{color:#9A9A9A}
-:root:not([data-theme="light"]) .badge{background:#F5A623;color:#0C2340}
-:root:not([data-theme="light"]) a:focus-visible,:root:not([data-theme="light"]) button:focus-visible,:root:not([data-theme="light"]) input:focus,:root:not([data-theme="light"]) input:focus-within,:root:not([data-theme="light"]) select:focus,:root:not([data-theme="light"]) textarea:focus,:root:not([data-theme="light"]) summary:focus-visible,:root:not([data-theme="light"]) [tabindex]:not([tabindex="-1"]):focus-visible{outline-color:#F5A623!important}
-:root:not([data-theme="light"]) .skiplink{background:#F5A623;color:#0C2340}
-:root:not([data-theme="light"]) .skiplink:focus{outline-color:#EDF1F6}
+:root:not([data-theme="light"]) .badge{background:#F68712;color:#181A3D}
+:root:not([data-theme="light"]) a:focus-visible,:root:not([data-theme="light"]) button:focus-visible,:root:not([data-theme="light"]) input:focus,:root:not([data-theme="light"]) input:focus-within,:root:not([data-theme="light"]) select:focus,:root:not([data-theme="light"]) textarea:focus,:root:not([data-theme="light"]) summary:focus-visible,:root:not([data-theme="light"]) [tabindex]:not([tabindex="-1"]):focus-visible{outline-color:#F68712!important}
+:root:not([data-theme="light"]) .skiplink{background:#F68712;color:#181A3D}
+:root:not([data-theme="light"]) .skiplink:focus{outline-color:#F1F1F6}
 }
 </style>
 <link rel="stylesheet" href="css/sitenav.css">
@@ -513,7 +513,14 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
    =========================================================== */
 const CATS = [
   {id:'A', naam:'Acceptatie & inkomen'},
+  {id:'I', naam:'Inkomen & uitkeringen'},
+  {id:'Z', naam:'Ondernemers'},
+  {id:'F', naam:'Financiële verplichtingen'},
+  {id:'X', naam:'Expats'},
+  {id:'W', naam:'Woning & taxatie'},
   {id:'P', naam:'Product & rente'},
+  {id:'O', naam:'Offerte & passeren'},
+  {id:'K', naam:'Overbrugging'},
   {id:'V', naam:'Verbouwing & verduurzaming'},
   {id:'N', naam:'Nazorg & beheer'},
   {id:'B', naam:'Bron'}
@@ -1123,7 +1130,78 @@ const EXTRA_CRITS = [
   {"id":"recr","cat":"A","naam":"Recreatiewoning","kort":"Financiering vakantie- of recreatiewoning","na":"vve","waarom":"Een recreatiewoning is geen eigen woning voor de belasting (geen hypotheekrenteaftrek). Niet elke verstrekker financiert die, en vaak gelden lagere maxima."},
   {"id":"cons","cat":"P","naam":"Consumptief deel","kort":"Vrij besteedbaar deel in de hypotheek","na":"avrij","waarom":"Een deel van de hypotheek vrij besteden (bijvoorbeeld voor een auto of verbouwing elders) is fiscaal niet aftrekbaar en valt niet onder NHG. Of en hoeveel het mag, verschilt per verstrekker."},
   {"id":"start","cat":"P","naam":"Starterslening","kort":"Starterslening naast de hypotheek","na":"cons","waarom":"Een starterslening (SVn of gemeente) komt naast de hypotheek. De verstrekker moet die accepteren en meenemen in de toets."},
-  {"id":"verhuur","cat":"N","naam":"Verhuur toegestaan","kort":"Woning (tijdelijk) verhuren","na":"verh","waarom":"Een eigen-woninghypotheek gaat ervan uit dat je er zelf woont. Verhuren of kamers verhuren mag vaak alleen met toestemming, soms tegen andere voorwaarden."}
+  {"id":"verhuur","cat":"N","naam":"Verhuur toegestaan","kort":"Woning (tijdelijk) verhuren","na":"verh","waarom":"Een eigen-woninghypotheek gaat ervan uit dat je er zelf woont. Verhuren of kamers verhuren mag vaak alleen met toestemming, soms tegen andere voorwaarden."},
+  {"id":"obmax","cat":"K","naam":"Maximaal overbruggingskrediet","kort":"Basis bij niet, voorwaardelijk of definitief verkocht","waarom":"Hoeveel overwaarde je mag overbruggen hangt af van de grondslag (marktwaarde, WOZ of verkoopprijs) en van de vraag of de oude woning al (voorwaardelijk) verkocht is. De meest gezochte voorwaarde."},
+  {"id":"oblast","cat":"K","naam":"Dubbele woonlasten","kort":"Hoe lang dubbele lasten worden getoetst","na":"obmax","waarom":"Bij een overbrugging betaal je tijdelijk twee hypotheken. De periode waarover de verstrekker dubbele lasten toetst, bepaalt of de financiering past."},
+  {"id":"obduur","cat":"K","naam":"Looptijd overbrugging","kort":"Maximale looptijd bestaande bouw / nieuwbouw","na":"oblast","waarom":"Verkoopt de oude woning niet op tijd, dan loopt het overbruggingskrediet af. Vooral bij nieuwbouw is een langere looptijd van belang."},
+  {"id":"obwaar","cat":"K","naam":"Waardebepaling bij overbrugging","kort":"Desktoptaxatie of WOZ voor de oude woning","na":"obduur","waarom":"Een volledig taxatierapport van de oude woning kost tijd en geld. Sommige verstrekkers accepteren een modelmatige waardering of de WOZ-waarde."},
+  {"id":"obels","cat":"K","naam":"Overbrugging bij hypotheek elders","kort":"Overbruggen als de oude hypotheek bij een andere verstrekker loopt","na":"obwaar","waarom":"Niet elke verstrekker wil een overbrugging geven als de huidige hypotheek bij een andere partij loopt."},
+  {"id":"obvw","cat":"K","naam":"Overige voorwaarden overbrugging","kort":"Afsluitkosten, minimumbedrag, aantal overbruggingen","na":"obels","waarom":"Kosten, een minimumbedrag of een maximum aantal overbruggingen kunnen een overbrugging onaantrekkelijk of onmogelijk maken."},
+  {"id":"geldnb","cat":"O","naam":"Geldigheid offerte nieuwbouw","kort":"Geldigheidsduur nieuwbouw, ook na verlenging","waarom":"Bij nieuwbouw duurt het vaak lang tot het passeren. Een lang geldige offerte voorkomt dat je een hogere rente krijgt."},
+  {"id":"annul","cat":"O","naam":"Annuleringskosten","kort":"Kosten als de offerte niet wordt gebruikt","na":"geldnb","waarom":"Wie meerdere offertes aanvraagt of de aankoop ziet afketsen, wil weten of annuleren kosten met zich meebrengt."},
+  {"id":"dig","cat":"O","naam":"Digitaal tekenen","kort":"Offerte digitaal ondertekenen","na":"annul","waarom":"Digitaal tekenen versnelt het proces, zeker als de koopakte of financieringsvoorbehoud krap is."},
+  {"id":"bgar","cat":"O","naam":"Bankgarantie","kort":"Bankgarantie via de geldverstrekker","na":"dig","waarom":"Bij aankoop is vaak een bankgarantie nodig voor de waarborgsom. Niet elke verstrekker regelt die zelf."},
+  {"id":"bovw","cat":"P","naam":"Overwaarde boetevrij aflossen","kort":"Boetevrij aflossen uit verkoop vorige woning","na":"boete","waarom":"Wie de overwaarde van de oude woning in de nieuwe hypotheek stopt, wil die later soms boetevrij kunnen aflossen."},
+  {"id":"bvrij","cat":"P","naam":"Boetevrij bij overlijden / executie","kort":"Boetevrije situaties naast de jaarlijkse ruimte","na":"bovw","waarom":"Bij overlijden van een partner of een gedwongen verkoop schelen boetevrije regelingen veel geld."},
+  {"id":"minh","cat":"P","naam":"Minimale hoofdsom","kort":"Kleinste hypotheekbedrag","na":"cons","waarom":"Bij een kleine hypotheek of een losse lening kan een minimumbedrag een verstrekker uitsluiten."},
+  {"id":"maxh","cat":"P","naam":"Maximale hoofdsom","kort":"Hoogste hypotheekbedrag in het reguliere proces","na":"minh","waarom":"Boven een bepaald bedrag gelden extra eisen of is de verstrekker niet mogelijk."},
+  {"id":"borg","cat":"P","naam":"Borgstelling","kort":"Borgstelling door derden mogelijk","na":"maxh","waarom":"Een borg (vaak ouders) kan de financiering mogelijk maken als het eigen inkomen net tekortschiet."},
+  {"id":"rest","cat":"P","naam":"Restschuld meefinancieren","kort":"Restschuld van de vorige woning meenemen","na":"borg","waarom":"Bij verhuizen met een restschuld bepaalt het beleid van de verstrekker of en hoe die mee kan."},
+  {"id":"geruis","cat":"P","naam":"Fiscaal geruisloze voortzetting","kort":"Oude polis of rekening fiscaal voortzetten","na":"rest","waarom":"Bestaande kapitaalverzekeringen of bankspaarrekeningen met fiscale voordelen wil je bij verhuizen of oversluiten kunnen meenemen."},
+  {"id":"oversl","cat":"P","naam":"Oversluiten","kort":"Maximale verstrekking bij oversluiten","na":"geruis","waarom":"Bij oversluiten van een andere verstrekker gelden soms lagere maxima dan bij aankoop."},
+  {"id":"verhw","cat":"N","naam":"Verhoging: waarde en minimum","kort":"Waardebepaling en minimum bij verhoging","na":"tweede","waarom":"Voor een verhoging is een waardebepaling nodig. Of desktoptaxatie of WOZ volstaat en welk minimumbedrag geldt, verschilt per verstrekker."},
+  {"id":"zelfb","cat":"V","naam":"Zelfbouw","kort":"Zelfbouw toegestaan, afbouwgarantie en taxatie","waarom":"Bij zelfbouw is het risico groter. Verstrekkers eisen soms een afbouwgarantie of taxatie, of doen het niet."},
+  {"id":"cpo","cat":"V","naam":"CPO","kort":"Collectief particulier opdrachtgeverschap","na":"zelfb","waarom":"Bij CPO bouwt een groep samen. Niet elke verstrekker financiert dit, en de eisen verschillen."},
+  {"id":"pnb","cat":"V","naam":"Projectmatige nieuwbouw","kort":"Afbouwgarantie en taxatie bij projectnieuwbouw","na":"cpo","waarom":"Bij projectnieuwbouw vragen verstrekkers soms een afbouwgarantie (zoals Woningborg) of een taxatie."},
+  {"id":"minmw","cat":"V","naam":"Minimale marktwaarde","kort":"Laagste marktwaarde (na verbouwing)","na":"pnb","waarom":"Goedkope woningen vallen soms buiten het beleid door een minimale marktwaarde."},
+  {"id":"mwbep","cat":"W","naam":"Waardebepaling woning","kort":"Taxatierapport en waarde bij nieuwbouw","waarom":"Of een taxatierapport nodig is en hoe de waarde van nieuwbouw wordt bepaald, bepaalt kosten en leenruimte."},
+  {"id":"woz","cat":"W","naam":"WOZ-waarde als marktwaarde","kort":"Waarde en maximum op basis van WOZ","na":"mwbep","waarom":"Mag de WOZ-waarde worden gebruikt, dan scheelt dat een taxatie. Vaak geldt dan een lager maximum."},
+  {"id":"ltvk","cat":"W","naam":"Maximale LTV","kort":"Op basis van koopsom of taxatiewaarde","na":"woz","waarom":"Rekent de verstrekker met de laagste van koopsom en taxatiewaarde of met de taxatiewaarde? Dat bepaalt hoeveel je kunt lenen bij een gunstige aankoop."},
+  {"id":"wwp","cat":"W","naam":"Woon-/winkelpand","kort":"Financiering van woon-/winkelpand","na":"ltvk","waarom":"Een woning met een bedrijfsruimte valt bij sommige verstrekkers buiten het beleid."},
+  {"id":"wboer","cat":"W","naam":"Woonboerderij","kort":"Financiering van woonboerderij","na":"wwp","waarom":"Woonboerderijen hebben vaak veel grond of bijgebouwen; verstrekkers stellen daar eisen aan."},
+  {"id":"wboot","cat":"W","naam":"Woonboot","kort":"Financiering van woonboot / ark","na":"wboer","waarom":"Weinig verstrekkers financieren een woonboot; als ze het doen gelden extra eisen."},
+  {"id":"hsb","cat":"W","naam":"Houtskeletbouw","kort":"Financiering van houtskeletbouw","na":"wboot","waarom":"Houtskeletbouw en andere afwijkende bouwwijzen vallen niet bij elke verstrekker binnen het beleid."},
+  {"id":"nhgk","cat":"W","naam":"Bijzondere koopconstructies","kort":"Koopgarant, Kopen naar Wens e.d. met NHG","na":"hsb","waarom":"Koopconstructies van corporaties of ontwikkelaars worden niet door elke verstrekker gefinancierd."},
+  {"id":"gron","cat":"W","naam":"Groninger akte","kort":"Woning met Groninger akte","na":"nhgk","waarom":"Een Groninger akte (gesplitste koop van grond en opstal) wordt niet overal geaccepteerd."},
+  {"id":"bsp","cat":"W","naam":"Banksparen in LTV","kort":"Opgebouwde bankspaarwaarde telt mee voor LTV","na":"gron","waarom":"Telt de opgebouwde waarde van een bankspaarrekening mee, dan valt de hypotheek in een lagere risicoklasse."},
+  {"id":"wbhuid","cat":"W","naam":"Waarde huidige woning","kort":"Waarde huidige woning aantonen zonder taxatie","na":"bsp","waarom":"Bij verhuizen moet de waarde van de huidige woning worden aangetoond; soms volstaat een waardebepaling zonder volledig rapport."},
+  {"id":"ort","cat":"I","naam":"Overwerk, ORT en ploegentoeslag","kort":"Over welke periode structureel","waarom":"Overwerk en toeslagen tellen alleen mee als ze structureel zijn. De periode waarover dat moet blijken verschilt."},
+  {"id":"uren","cat":"I","naam":"Maximaal aantal werkuren","kort":"Uren per week die meetellen","na":"ort","waarom":"Wie veel uren werkt, ziet soms niet al het inkomen meetellen door een maximum aantal uren."},
+  {"id":"meerink","cat":"I","naam":"Meerdere inkomens","kort":"Meerdere banen of inkomens uit arbeid","na":"uren","waarom":"Een tweede baan of inkomen uit loondienst en onderneming samen wordt niet overal meegeteld."},
+  {"id":"loondt","cat":"I","naam":"Inkomensbepaling Loondienst (IBL)","kort":"IBL als inkomensbewijs","na":"meerink","waarom":"De IBL-toets op basis van UWV-gegevens is vaak sneller en gunstiger dan een werkgeversverklaring."},
+  {"id":"intent","cat":"I","naam":"Tijdelijk contract met intentie","kort":"Huidig inkomen bij intentieverklaring","na":"loondt","waarom":"Met een tijdelijk contract en een intentieverklaring van de werkgever telt het huidige inkomen vaak mee."},
+  {"id":"toekdv","cat":"I","naam":"Toekomstig dienstverband","kort":"Inkomen uit nieuwe baan","na":"intent","waarom":"Wie binnenkort een nieuwe baan begint, wil dat inkomen al laten meetellen."},
+  {"id":"toekst","cat":"I","naam":"Toekomstige inkomensstijging","kort":"Stijging volgens cao of contract","na":"toekdv","waarom":"Een vastgelegde loonsverhoging kan extra leenruimte geven als de verstrekker die meeneemt."},
+  {"id":"proef","cat":"I","naam":"Proeftijd","kort":"Bindend aanbod tijdens proeftijd","na":"toekst","waarom":"Tijdens een proeftijd is het inkomen minder zeker; niet elke verstrekker geeft dan een bindend aanbod."},
+  {"id":"buitw","cat":"I","naam":"Buitenlandse werkgever","kort":"Inkomen van buitenlandse werkgever","na":"proef","waarom":"Grenswerkers en mensen met een buitenlandse werkgever lopen vaak tegen beperkingen aan."},
+  {"id":"ikb","cat":"I","naam":"Keuzebudget / IKB","kort":"Individueel keuzebudget als inkomen","na":"buitw","waarom":"Het IKB vervangt bij veel cao’s het vakantiegeld en de eindejaarsuitkering. Of het meetelt verschilt."},
+  {"id":"aios","cat":"I","naam":"AIOS / ANIOS","kort":"Inkomen arts in (niet-)opleiding","na":"ikb","waarom":"Artsen in opleiding hebben vaak tijdelijke contracten; sommige verstrekkers hebben daar een eigen regeling voor."},
+  {"id":"promo","cat":"I","naam":"Promovendus / onderzoeker","kort":"Inkomen zonder intentieverklaring","na":"aios","waarom":"Promovendi en wetenschappers hebben vaak tijdelijke contracten; soms telt het inkomen toch mee."},
+  {"id":"verm","cat":"I","naam":"Inkomen uit vermogen","kort":"Vermogen als toetsinkomen","na":"promo","waarom":"Wie weinig inkomen maar veel vermogen heeft, kan soms op basis van vermogen lenen."},
+  {"id":"lijfr","cat":"I","naam":"Lijfrente-inkomsten","kort":"(Toekomstige) lijfrente in de toets","na":"verm","waarom":"Lijfrente-uitkeringen kunnen inkomen vormen, vooral voor senioren."},
+  {"id":"wga","cat":"I","naam":"Inkomen uit WGA","kort":"WGA-uitkering als inkomen","na":"lijfr","waarom":"Een WGA-uitkering is niet altijd blijvend; verstrekkers kijken verschillend naar de duur."},
+  {"id":"ivawao","cat":"I","naam":"IVA, WAO en WAZ","kort":"Arbeidsongeschiktheidsuitkeringen","na":"wga","waarom":"Duurzame arbeidsongeschiktheidsuitkeringen tellen meestal mee, maar de voorwaarden verschillen."},
+  {"id":"wajong","cat":"I","naam":"Inkomen uit Wajong","kort":"Wajong-uitkering als inkomen","na":"ivawao","waarom":"Jonggehandicapten met een Wajong-uitkering kunnen alleen bij verstrekkers die dit inkomen accepteren."},
+  {"id":"senior","cat":"I","naam":"Seniorenbeleid","kort":"Apart acceptatiebeleid voor senioren","na":"wajong","waarom":"Voor senioren gelden soms ruimere regels, bijvoorbeeld toetsen op werkelijke lasten of een seniorenregeling."},
+  {"id":"zbep","cat":"Z","naam":"Bepaling inkomen ondernemer","kort":"Via rekenmeester, geldverstrekker of VIIZ","waarom":"Het inkomen van een ondernemer kan via een rekenmeester, de verstrekker zelf of een VIIZ-verklaring worden bepaald. Dat beïnvloedt snelheid en uitkomst."},
+  {"id":"z123","cat":"Z","naam":"1-2-3-regeling","kort":"Inkomen op basis van 1, 2 of 3 jaar","na":"zbep","waarom":"De 1-2-3-regeling bepaalt hoe jaarcijfers worden gemiddeld; dat kan voor groeiende ondernemers gunstig zijn."},
+  {"id":"zcijf","cat":"Z","naam":"Aanleveren cijfers","kort":"Definitieve en tussentijdse cijfers","na":"z123","waarom":"Welke cijfers nodig zijn en vanaf wanneer, bepaalt of een ondernemer direct kan aanvragen."},
+  {"id":"zniet","cat":"Z","naam":"Zonder ondernemersinkomen","kort":"Eisen als ondernemersinkomen niet meetelt","na":"zcijf","waarom":"Ook als het ondernemersinkomen niet meetelt, vragen sommige verstrekkers toch stukken over de onderneming."},
+  {"id":"zltv","cat":"Z","naam":"Maximale LTV ondernemer","kort":"Lager maximum voor zelfstandigen","na":"zniet","waarom":"Soms mogen zelfstandigen minder lenen ten opzichte van de woningwaarde."},
+  {"id":"zbv","cat":"Z","naam":"Meer dan 2 bv’s","kort":"Structuren met meerdere bv’s","na":"zltv","waarom":"Bij een holding met meerdere werkmaatschappijen wordt de beoordeling complexer; niet elke verstrekker doet het."},
+  {"id":"zstart","cat":"Z","naam":"Startende ondernemer","kort":"Loon van voor de start, zelfde branche, prognose","na":"zbv","waarom":"Voor starters kan inkomen uit eerdere loondienst in dezelfde branche of een prognose helpen."},
+  {"id":"zbuit","cat":"Z","naam":"Buitenlandse onderneming","kort":"Ondernemersinkomen uit het buitenland","na":"zstart","waarom":"Inkomen uit een buitenlandse onderneming wordt lang niet overal geaccepteerd."},
+  {"id":"bkr","cat":"F","naam":"BKR-coderingen","kort":"Herstelde A, RH/RN en HY-coderingen","waarom":"Een BKR-codering betekent niet altijd een afwijzing; het beleid voor herstelde of kwijtgescholden coderingen verschilt."},
+  {"id":"duo","cat":"F","naam":"Studielening","kort":"Toetsing DUO-schuld","na":"bkr","waarom":"Een studieschuld drukt op de leenruimte; de manier van toetsen kan verschillen van de standaardnorm."},
+  {"id":"plen","cat":"F","naam":"Persoonlijke lening","kort":"Werkelijke last of 2% van het krediet","na":"duo","waarom":"Toetsing op werkelijke last in plaats van 2% van het krediet kan veel leenruimte schelen."},
+  {"id":"dkr","cat":"F","naam":"Doorlopend krediet","kort":"Werkelijke last of 2% van de limiet","na":"plen","waarom":"Ook bij doorlopend krediet maakt de toetsmethode uit voor de leenruimte."},
+  {"id":"lease","cat":"F","naam":"Operational lease","kort":"Privélease in de toets","na":"dkr","waarom":"Een privéleaseauto telt mee als verplichting; de manier van rekenen verschilt per verstrekker."},
+  {"id":"rsk","cat":"F","naam":"Restschuldlening","kort":"Toetsing lening voor restschuld","na":"lease","waarom":"Een aparte lening voor een restschuld telt mee in de toets; de rekenmethode bepaalt de impact."},
+  {"id":"nlwon","cat":"X","naam":"Wonen en werken in NL","kort":"Minimale periode in Nederland","waarom":"Expats moeten soms een minimum aantal maanden in Nederland wonen of werken voordat ze een hypotheek krijgen."},
+  {"id":"r30","cat":"X","naam":"30%-regeling","kort":"30%-vergoeding in het inkomen","na":"nlwon","waarom":"Met de 30%-regeling is een deel van het loon onbelast. Of dat meetelt maakt veel uit voor de leenruimte."},
+  {"id":"brut","cat":"X","naam":"Bruteren inkomen","kort":"Netto inkomen bruteren","na":"r30","waarom":"Bij netto-inkomen (zoals de 30%-regeling) kan bruteren het toetsinkomen verhogen."},
+  {"id":"vblf","cat":"X","naam":"Tijdelijke verblijfsvergunning","kort":"Hypotheek en max. LTV bij tijdelijke vergunning","na":"brut","waarom":"Met een tijdelijke verblijfsvergunning is lenen vaak beperkt of onmogelijk, afhankelijk van het verblijfsdoel."},
+  {"id":"expbel","cat":"X","naam":"Belastingplicht buitenland","kort":"In NL wonen, elders belastingplichtig","na":"vblf","waarom":"Wie in Nederland woont maar elders belasting betaalt, valt bij veel verstrekkers buiten het beleid."}
 ];
 
 /* Ingevulde waarden voor aanvullende voorwaarden, per voorwaarde-id en verstrekkersnaam:
@@ -1249,9 +1327,12 @@ let editMode = false;
 let overigOpen = false;
 let activeCats = new Set(CATS.map(c=>c.id));
 const sel = new Set();
-/* Volgorde naar zoekvolume in de gebruiksanalyse van de FinData voorwaarden-app (jan-sep 2026): overbrugging, boetevrij
-   aflossen, offertegeldigheid, consumptief deel, leen/schenkingsconstructies, verhuisregeling, desktoptaxatie, dagrente enz. */
-const MEEST_GEZOCHT = ['ovbr','boete','geld','cons','lensch','verh','desk','dag','bprov','bonus','ams','vve','huur','recr','aanv','pgb','start','verhuur','bdduur','ltv'];
+/* Koppeling met de 183 veelgezochte voorwaarden: per criterium de codes van de voorwaarden die eronder vallen
+   (zie docs/voorwaarden-onderzoek/zoekvoorwaarden.json). Elke code hoort bij precies één criterium. */
+const VOORWAARDE_CODES = {"boete":["LEN150","LEN160","LEN180"],"geld":["OFF130","OFF140","OFF150"],"bprov":["OFF120","OFF210","OFF220"],"dag":["REN110","REN120","REN130","REN140"],"ltv":["REN100"],"verh":["OFF190","OFF230"],"desk":["OND110","OND120"],"ams":["ANV100"],"vve":["OND350"],"huur":["INK270","OND250"],"bonus":["INK150","INK160","INK170"],"recr":["OND190"],"bdduur":["LEN270","LEN280","LEN340","LEN350"],"bdrnt":["LEN230","LEN240"],"aanv":["ANV150","ANV160"],"pgb":["INK210"],"start":["LEN210"],"verhuur":["OND180","OND410"],"lensch":["FIN10","FIN20","FIN30","FIN40"],"cons":["LEN130"],"aow":["INK290"],"zzp":["ANV140","ONR240","ONR250"],"flex":["ANV130","INK100","INK120"],"persp":["INK110"],"erfp":["OND160","OND170","OND380","OND430"],"ebb":["LEN390"],"duur":["LEN380"],"o106":["LEN260"],"tweede":["LEN220"],"avrij":["LEN490"],"rmid":["LEN460"],"wkost":["LEN170","LEN450","LEN470","LEN480"],"obmax":["OBK110","OBK120","OBK130","OBK140","OBK150"],"oblast":["OBK200"],"obduur":["OBK160","OBK170"],"obwaar":["OBK230","OBK220"],"obels":["OBK190"],"obvw":["OBK100","OBK180","OBK210"],"geldnb":["OFF160","OFF170","OFF180"],"annul":["OFF100","OFF110"],"dig":["OFF200"],"bgar":["OFF240"],"bovw":["LEN320"],"bvrij":["LEN110","LEN100"],"minh":["LEN310"],"maxh":["LEN290","LEN300"],"borg":["LEN120"],"rest":["LEN200","LEN190"],"geruis":["LEN330"],"oversl":["LEN250"],"verhw":["LEN430","LEN440","LEN410","LEN420","LEN400"],"zelfb":["OND270","OND300","OND320"],"cpo":["OND260","OND290","OND340"],"pnb":["OND280","OND310"],"minmw":["OND420"],"mwbep":["OND100","OND150"],"woz":["OND130","OND140"],"ltvk":["OND360","OND370"],"wwp":["OND200"],"wboer":["OND210"],"wboot":["OND220"],"hsb":["OND400"],"nhgk":["OND390"],"gron":["OND330"],"bsp":["OND230"],"wbhuid":["OND240"],"ort":["INK190","INK180"],"uren":["INK200"],"meerink":["ANV120"],"loondt":["INK60"],"intent":["INK90"],"toekdv":["INK80"],"toekst":["INK70"],"proef":["INK10"],"buitw":["INK130"],"ikb":["INK140"],"aios":["INK300","INK310"],"promo":["INK40","INK30"],"verm":["ANV110"],"lijfr":["INK280"],"wga":["INK250"],"ivawao":["INK260","INK230","INK240"],"wajong":["INK220"],"senior":["ANV170"],"zbep":["ONR170","ONR180","ONR190"],"z123":["ONR210"],"zcijf":["ONR280","ONR270","ONR260"],"zniet":["ONR200","ONR290"],"zltv":["ONR230"],"zbv":["ONR220"],"zstart":["ONR100","ONR90","ONR120"],"zbuit":["ONR150"],"bkr":["FIN150","FIN130","FIN140"],"duo":["FIN160"],"plen":["FIN50","FIN60"],"dkr":["FIN70","FIN80"],"lease":["FIN90","FIN100"],"rsk":["FIN110","FIN120"],"nlwon":["EXP10"],"r30":["EXP20"],"brut":["EXP30"],"vblf":["EXP50","EXP60","EXP70","EXP110"],"expbel":["EXP100"]};
+/* De 20 criteria met de meest gezochte voorwaarde, meest gezocht eerst (overbrugging, boetevrij aflossen,
+   offertegeldigheid, consumptief deel enz.). */
+const MEEST_GEZOCHT = ['obmax','boete','geld','cons','oblast','lensch','bprov','desk','dag','verh','geldnb','ams','vve','huur','bonus','recr','bdduur','aanv','annul','pgb'];
 let ksel = new Set();   // gekozen kenmerken (voorwaarde-id's) voor Vergelijken
 
 /* Uitgebreid zoeken en filteren. Staat alleen in het geheugen en in de hash (&f=…), nooit in browseropslag. */
@@ -1826,12 +1907,11 @@ function renderCmpPaneel(){
   alle.setAttribute('aria-pressed', String(alleAan));
   alle.addEventListener('click',()=>{ crits.forEach(c=>ksel.add(c.id)); render(); });
   chips.appendChild(alle);
-  /* Meest gezochte voorwaarden volgens de gebruiksanalyse van de FinData voorwaarden-app (jan-sep 2026), in volgorde van zoekvolume. */
   const gezocht = MEEST_GEZOCHT.filter(id=>crits.some(c=>c.id===id));
   const mg = el('button','chip','Meest gezocht'); mg.type = 'button'; mg.dataset.sleutel = 'kc:gezocht';
   const mgAan = gezocht.length === ksel.size && gezocht.every(id=>ksel.has(id));
   mg.setAttribute('aria-pressed', String(mgAan));
-  mg.title = 'De voorwaarden waarop adviseurs het vaakst zoeken (gebruiksanalyse FinData voorwaarden-app, januari t/m september 2026)';
+  mg.title = 'De voorwaarden waarop adviseurs het vaakst zoeken';
   mg.addEventListener('click',()=>{ ksel = new Set(gezocht); render(); });
   chips.appendChild(mg);
   CATS.forEach(cat=>{
@@ -2450,15 +2530,15 @@ function doPrint(){
       tabel += '</tbody></table>';
     }
   }
-  const css = 'body{font-family:Segoe UI,Roboto,Helvetica Neue,Arial,Arial,sans-serif;font-size:9.5pt;color:#0C2340;margin:14mm 10mm}' +
+  const css = 'body{font-family:Segoe UI,Roboto,Helvetica Neue,Arial,Arial,sans-serif;font-size:9.5pt;color:#181A3D;margin:14mm 10mm}' +
     'h1{font-size:15pt;margin:0 0 2px}.meta{font-size:8pt;color:#444;margin:0 0 10px}' +
     '.disc{border:1.5px solid #9E2F45;border-left:6px solid #9E2F45;background:#FFF1F0;color:#7A1F14;padding:7px 9px;font-size:7.8pt;margin:0 0 12px;line-height:1.45}' +
     'table{border-collapse:collapse;width:100%;font-size:7.8pt}th,td{border:1px solid #bbb;padding:4px 5px;text-align:left;vertical-align:top}' +
-    'thead th{background:#0C2340;color:#fff;font-size:7.4pt}thead{display:table-header-group}tr{break-inside:avoid}' +
+    'thead th{background:#181A3D;color:#fff;font-size:7.4pt}thead{display:table-header-group}tr{break-inside:avoid}' +
     '.cat{display:block;font-size:6pt;color:#ccc;text-transform:uppercase;letter-spacing:.5px}' +
     'tr.grp td{background:#2E2E2E;color:#fff;font-weight:700;text-transform:uppercase;font-size:7pt}' +
     '.tint{display:inline-block;width:6px;height:6px;border-radius:50%;margin-right:4px;-webkit-print-color-adjust:exact;print-color-adjust:exact}' +
-    '.vt{display:block;font-size:6.8pt;color:#555;font-weight:400}.hint{font-size:6.8pt;color:#1F4E79}thead .hint{color:#F5A623}thead .vt{color:#ccc}' +
+    '.vt{display:block;font-size:6.8pt;color:#555;font-weight:400}.hint{font-size:6.8pt;color:#1F4E79}thead .hint{color:#F68712}thead .vt{color:#ccc}' +
     '.tint.leeg{box-shadow:inset 0 0 0 1px #9AA7B6}.nl{color:#888}' +
     '.lg{font-size:7.5pt;color:#444;margin-top:8px}@page{size:A4 landscape;margin:10mm}';
   const cnt = $('cnt').textContent;
@@ -2618,16 +2698,16 @@ function doDossier(){
   });
   const namen = chosen.map(l=>l.naam);
   const motLink = 'adviesmotivatie.html#vgl=' + encodeURIComponent(namen.join(', ')) + '&vw=' + cs.map(c=>encodeURIComponent(c.id)).join(',');
-  const css = 'body{font-family:Segoe UI,Roboto,Helvetica Neue,Arial,Arial,sans-serif;font-size:9.5pt;color:#0C2340;margin:14mm 10mm;background:#fff}' +
+  const css = 'body{font-family:Segoe UI,Roboto,Helvetica Neue,Arial,Arial,sans-serif;font-size:9.5pt;color:#181A3D;margin:14mm 10mm;background:#fff}' +
     'h1{font-size:15pt;margin:0 0 2px}h2{font-size:11pt;margin:14px 0 4px}.meta{font-size:8pt;color:#444;margin:0 0 8px}' +
     '.disc{border:1.5px solid #9E2F45;border-left:6px solid #9E2F45;background:#FFF1F0;color:#7A1F14;padding:7px 9px;font-size:7.8pt;margin:0 0 12px;line-height:1.45}' +
     'table{border-collapse:collapse;width:100%;font-size:7.8pt}th,td{border:1px solid #bbb;padding:4px 5px;text-align:left;vertical-align:top}' +
-    'thead th{background:#0C2340;color:#fff}thead{display:table-header-group}tr{break-inside:avoid}tr.grp td{background:#2E2E2E;color:#fff;font-weight:700;text-transform:uppercase;font-size:7pt}' +
+    'thead th{background:#181A3D;color:#fff}thead{display:table-header-group}tr{break-inside:avoid}tr.grp td{background:#2E2E2E;color:#fff;font-weight:700;text-transform:uppercase;font-size:7pt}' +
     '.tint{display:inline-block;width:6px;height:6px;border-radius:50%;margin-right:4px;-webkit-print-color-adjust:exact;print-color-adjust:exact}' +
     '.vt{display:block;font-size:6.8pt;color:#555;font-weight:400}.nl{color:#888}' +
     '.st{display:block;font-size:6.6pt;margin-top:2px}.st.ok{color:#1F7A52}.st.nv{color:#9A5B00}.st.ds{color:#666}.br{display:block;font-size:6.4pt;color:#1F4E79;overflow-wrap:anywhere;margin-top:2px}.br a{color:inherit}' +
     '.veld{border:1px solid #bbb;border-radius:4px;min-height:22px;padding:5px 7px;margin:2px 0 8px;font-size:9pt}.veld.groot{min-height:70px}.lbl{font-size:8pt;font-weight:700}' +
-    '.knoppen{margin:0 0 12px;display:flex;gap:8px;flex-wrap:wrap}.knoppen a,.knoppen button{font:inherit;font-size:9pt;font-weight:700;border:1px solid #0C2340;background:#F5A623;color:#0C2340;border-radius:999px;padding:6px 14px;cursor:pointer;text-decoration:none}' +
+    '.knoppen{margin:0 0 12px;display:flex;gap:8px;flex-wrap:wrap}.knoppen a,.knoppen button{font:inherit;font-size:9pt;font-weight:700;border:1px solid #181A3D;background:#F68712;color:#181A3D;border-radius:999px;padding:6px 14px;cursor:pointer;text-decoration:none}' +
     '@media print{.knoppen{display:none}.veld{border-color:#888}}@page{size:A4 landscape;margin:10mm}';
   const html = '<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Dossiervastlegging voorwaarden – Adviesforum</title><style>' + css + '</style></head><body>' +
     '<div class="knoppen"><button type="button" onclick="window.print()">Afdrukken of opslaan als pdf</button><a href="' + esc(new URL(motLink, location.href).href) + '" target="_blank" rel="noopener">Neem over in de adviesmotivatie</a></div>' +

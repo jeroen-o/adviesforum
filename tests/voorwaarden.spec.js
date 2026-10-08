@@ -11,7 +11,7 @@ const BRON_VOORWAARDEN = ['Zzp / ondernemer', 'Flexwerk & uitzend', 'Perspectief
   'Rentevastperioden', 'Dagrentegarantie', 'Geldigheidsduur aanbod', 'Boetevrij aflossen', 'Risicoklassen & LTV-daling',
   'Looptijd bouwdepot', 'Rentevergoeding depot', 'Declaratie & uitbetaling', 'Energiebespaarbudget', 'Verduurzamingsvoordeel',
   'Verhuisregeling', 'Onderhandse verkoop', 'Ontslag hoofdelijkheid', 'Verhoging / 2e hypotheek', 'Overbruggingskrediet', 'Bron / peildatum'];
-const TOTAAL = 50, HOOFD = 43, OVERIG = 7, VOORWAARDEN = 44, INGEVULD = 32;
+const TOTAAL = 50, HOOFD = 43, OVERIG = 7, VOORWAARDEN = 115, INGEVULD = 32;
 
 const rijen = page => page.locator('#matrix tbody tr[data-id]');
 const exact = naam => new RegExp('^' + naam.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '$');
@@ -82,7 +82,7 @@ test.describe('voorwaardenvergelijker', () => {
     await expect(page.locator('#cmpPaneel')).toBeVisible();
     await expect(page.locator('#q')).toBeHidden();
     await expect(page.locator('#vergelijking thead th')).toHaveCount(6);
-    await expect(page.locator('#vergelijking tr.grp')).toHaveCount(5);
+    await expect(page.locator('#vergelijking tr.grp')).toHaveCount(12);
     await expect(page.locator('#vergelijking')).toContainText('Overbrugging bij verkochte woning');
     expect(page.url()).toContain('#vergelijk=abn-amro,rabobank,ing,obvion,florius');
   });
@@ -103,11 +103,12 @@ test.describe('voorwaardenvergelijker', () => {
 
   test('6 aanbieders × 2 kenmerken via de kiezer', async ({ page }) => {
     await page.locator('#tab-cmp').click();
-    for (const cat of ['Acceptatie & inkomen', 'Product & rente', 'Verbouwing & verduurzaming', 'Nazorg & beheer', 'Bron']) {
+    for (const cat of ['Acceptatie & inkomen', 'Inkomen & uitkeringen', 'Ondernemers', 'Financiële verplichtingen', 'Expats', 'Woning & taxatie',
+      'Product & rente', 'Offerte & passeren', 'Overbrugging', 'Verbouwing & verduurzaming', 'Nazorg & beheer', 'Bron']) {
       await page.locator('#kenmChips .chip', { hasText: cat }).click();
     }
     await expect(page.locator('#kenmTeller')).toHaveText(`0 van ${VOORWAARDEN} gekozen`);
-    await page.locator('#kenmLijst label', { hasText: 'Boetevrij aflossen' }).locator('input').check();
+    await page.locator('#kenmLijst label', { hasText: /^Boetevrij aflossen/i }).locator('input').check();
     await page.locator('#kenmLijst label', { hasText: 'Verhuisregeling' }).locator('input').check();
     for (const n of ['ABN AMRO', 'Rabobank', 'Tulp', 'Venn', 'Argenta', 'Domivest']) {
       await page.locator('#aanbZoek').fill(n);
@@ -248,7 +249,7 @@ test.describe('voorwaardenvergelijker', () => {
       logo: getComputedStyle(document.querySelector('#matrix img.plogo')).backgroundColor,
       cel: getComputedStyle(document.querySelector('#matrix tbody th.vast')).backgroundColor
     }));
-    expect(k.body).toBe('rgb(12, 35, 64)');
+    expect(k.body).toBe('rgb(24, 26, 61)');
     expect(k.logo).toBe('rgb(255, 255, 255)');
     expect(k.cel).not.toBe('rgb(255, 255, 255)');
   });
@@ -479,7 +480,7 @@ test.describe('voorwaardenvergelijker: uitgebreid zoeken en filteren', () => {
     expect(breed).toBeLessThanOrEqual(0);
     await page.emulateMedia({ colorScheme: 'dark' });
     const bg = await page.evaluate(() => getComputedStyle(document.querySelector('.ufblok')).backgroundColor);
-    expect(bg).toBe('rgb(15, 27, 43)');
+    expect(bg).toBe('rgb(18, 19, 43)');
   });
 });
 
@@ -528,13 +529,13 @@ test.describe('voorwaardenvergelijker: filters op geverifieerde waarden', () => 
   });
 });
 
-test('knop Meest gezocht kiest de veelgezochte voorwaarden in volgorde van zoekvolume', async ({ page }) => {
+test('knop Meest gezocht kiest de veelgezochte voorwaarden (meest gezocht eerst)', async ({ page }) => {
   await page.goto('/voorwaarden-vergelijker.html');
   await page.locator('#tab-cmp').click();
   const knop = page.locator('#kenmChips button', { hasText: 'Meest gezocht' });
   await knop.click();
   await expect(knop).toHaveAttribute('aria-pressed', 'true');
-  await expect(page.locator('#kenmTeller')).toHaveText(/^20 van 44 gekozen$/);
-  await expect(page).toHaveURL(/[#&]k=[^&]*ovbr/);
+  await expect(page.locator('#kenmTeller')).toHaveText(/^20 van 115 gekozen$/);
+  await expect(page).toHaveURL(/[#&]k=[^&]*obmax/);
   await expect(page).toHaveURL(/[#&]k=[^&]*cons/);
 });

@@ -40,7 +40,7 @@ test('llms.txt en manifest zijn bruikbaar', () => {
   expect(llms).toContain('geen klantadvies');
   expect(llms).not.toMatch(/berekenhet/i);
   const m = JSON.parse(lees('manifest.webmanifest'));
-  expect(m.theme_color).toBe('#F5A623');
+  expect(m.theme_color).toBe('#F68712');
   expect(m.lang).toBe('nl');
 });
 
