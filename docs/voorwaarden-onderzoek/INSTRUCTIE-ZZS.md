@@ -1,6 +1,6 @@
 # Onderzoeksronde nieuwe voorwaarden (fase S, oktober 2026)
 
-Aanleiding: een gebruiksanalyse (FinData voorwaarden-app, jan-sep 2026) laat zien dat adviseurs veel zoeken op voorwaarden die de Voorwaardenvergelijker van het Adviesforum nog niet heeft. Jij onderzoekt die twaalf voorwaarden (criteria-nieuw.json) voor de geldverstrekkers in je invoerbestand.
+Aanleiding: adviseurs zoeken veel op voorwaarden die de Voorwaardenvergelijker van het Adviesforum nog niet heeft. Jij onderzoekt die twaalf voorwaarden (criteria-nieuw.json) voor de geldverstrekkers in je invoerbestand.
 
 Wijzig GEEN bestanden in /home/user/adviesforum. Laad WebSearch (en WebFetch) via ToolSearch ("select:WebSearch,WebFetch"). Websites en PDF's zijn vanuit deze omgeving meestal niet te openen met WebFetch; werk dan met de tekst in zoekresultaten. Probeer WebFetch wel even op de gidsen in `documenten`.
 
