@@ -1,0 +1,748 @@
+[
+ {
+  "naam": "BLG Wonen",
+  "gecontroleerd": "2026-10-09",
+  "criteria": {
+   "zzp": {
+    "waarde": "~ Inkomen o.b.v. saldo fiscale winstberekening (sfwb) over 3 jaar",
+    "bron": [
+     "https://www.blgwonen.nl/jouw-situatie/hypotheek-zzp-of-ondernemer/hypotheek-berekenen.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Daarom rekenen we met je saldo fiscale winstberekening (sfwb) over de afgelopen drie jaar."
+   },
+   "flex": {
+    "waarde": "+ Flexinkomen o.b.v. inkomenshistorie of perspectiefverklaring (uitzend) / hypotheek zonder vast contract mogelijk",
+    "bron": [
+     "https://www.blgwonen.nl/jouw-situatie/hypotheek-zonder-vast-contract/intentieverklaring-hypotheek.html",
+     "https://www.blgwonen.nl/jouw-situatie/uitzendcontract.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Dan beoordeelt de hypotheekverstrekker jouw inkomen over de afgelopen 3 kalenderjaren."
+   },
+   "persp": {
+    "waarde": "+ Perspectiefverklaring geaccepteerd (uitzendbureau gecertificeerd en in register Stichting Perspectiefverklaring)",
+    "bron": [
+     "https://www.blgwonen.nl/jouw-situatie/uitzendcontract.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Perspectiefverklaring van een uitzendbureau: behandelen alsof je een vast contract hebt"
+   },
+   "erfp": {
+    "waarde": "~ Erfpacht financierbaar; canon telt mee als financiële last bij max. hypotheek",
+    "bron": [
+     "https://www.blgwonen.nl/jouw-situatie/huis-kopen/erfpacht.html",
+     "https://www.blgwonen.nl/download/informatiewijzer-hypotheken.html",
+     "https://www.blgwonen.nl/hypotheken/recreatiewoning-kopen.html",
+     "https://www.asnbank.nl/hypotheek/zaken-die-invloed-hebben-op-je-hypotheek.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. (consumptieve) leningen, partneralimentatieverplichting, studielening en erfpachtcanon die je moet betalen."
+   },
+   "rvp": {
+    "waarde": "~ Variabel (maand), 1 t/m 7, 10, 12, 15 en 20 jaar vast; 30 jaar niet in overzicht",
+    "bron": [
+     "https://www.asnbank.nl/downloads/rentetarieven-asn-blg-hypotheek-per-21-04-2026.html",
+     "https://www.blgwonen.nl/hypotheken/lineaire-hypotheek.html",
+     "https://www.asnbank.nl/blg-wonen/rentearchief-blg-hypotheken.html"
+    ],
+    "brondatum": "2026-04-21",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Gewijzigd na controle (A/B/arbitrage): Renteoverzicht ASN Bank (voorheen BLG) 21-04-2026 toont 1,2,3,4,5,6,7,10,12,15,20 jaar plus maandvariabel; eigen productpagina idem. Overzicht 22-09-2026 bestaat maar inhoud niet leesbaar."
+   },
+   "boete": {
+    "waarde": "+ 10% per leningdeel per jaar met geleend geld; onbeperkt boetevrij met eigen geld",
+    "bron": [
+     "https://www.blgwonen.nl/voor-klanten/hypotheeklasten-verlagen/extra-aflossen.html",
+     "https://www.blgwonen.nl/download/informatiewijzer-hypotheken.html",
+     "https://www.blgwonen.nl/voor-klanten/hypotheeklasten-verlagen/extra-aflossen/onbeperkt-aflossen-op-je-hypotheek-met-eigen-geld.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. elk kalenderjaar 10% van de oorspronkelijke schuld van een leningdeel mag aflossen zonder een vergoeding te betalen"
+   },
+   "verh": {
+    "waarde": "+ Rente Meeneemregeling: vaste rente mee naar nieuwe eigen woning, max. oude schuld en resterende rentevaste periode; aanvragen binnen 3 mnd",
+    "bron": [
+     "https://www.blgwonen.nl/voor-klanten/rente-meeneemregeling.html",
+     "https://www.asnbank.nl/downloads/factsheet-rente-meeneemregeling.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Gewijzigd na controle (A/B/arbitrage): Regeling geldt voor alle hypotheken met vaste rente; beperking tot Bespaarhypotheek geldt alleen voor bestaande Bespaarhypotheek (product is gesloten). Oude woning moet volledig verkocht; anders omzetting naar overbruggingsrente 2 jr vast."
+   },
+   "avrij": {
+    "waarde": "! Vanaf 11-5-2026 max 30% van woningwaarde aflossingsvrij, geen bedragsplafond; bestaand blijft ook na renteherziening",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/hypotheekvormen/asn-aflossingsvrije-hypotheek/nieuwe-regels-voor-een-aflossingsvrije-hypotheek.html",
+     "https://newsroom.asnbank.nl/en/asn-bank-puts-30-cap-on-interest-only-mortgages/"
+    ],
+    "brondatum": "2026-05",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. maximaal 30% van de waarde van hun huis aflossingsvrij ... Voorheen 50%"
+   },
+   "elbl": {
+    "waarde": "- Geen rente o.b.v. energielabel bij BLG Wonen Hypotheek (12 tariefgroepen op LTV); labelgroepen alleen bij gesloten Bespaarhypotheek",
+    "bron": [
+     "https://www.asnbank.nl/blg-wonen/bespaarhypotheek.html",
+     "https://www.asnbank.nl/blg-wonen/bespaarhypotheek/tariefgroepen.html",
+     "https://www.asnbank.nl/downloads/rentetarieven-asn-blg-hypotheek-per-21-04-2026.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Gewijzigd na controle (A/B/arbitrage): Energiegroepen (A of beter, B, C of slechter) bestaan alleen bij de Bespaarhypotheek, die niet meer nieuw af te sluiten is."
+   },
+   "aow": {
+    "waarde": "~ Pensioen binnen 10 jaar: max. hypotheek o.b.v. verwacht pensioeninkomen",
+    "bron": [
+     "https://www.blgwonen.nl/jouw-situatie/hypotheek-pensioen.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. in de tien jaar voor de AOW-leeftijd ... maximale hypotheek berekend op basis van het verwachte pensioeninkomen"
+   },
+   "geld": {
+    "waarde": "~ Max. 6 mnd bestaande bouw / 12 mnd nieuwbouw vanaf aanvraagdatum",
+    "bron": [
+     "https://www.blgwonen.nl/hypotheken/de-hypotheekofferte.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Offertes voor nieuwbouwhuizen zijn bij ons geen 6 maar 12 maanden geldig."
+   },
+   "bprov": {
+    "waarde": "~ Annuleren kosteloos tot 3 mnd na aanvraag; daarna of bij verlopen offerte annuleringskosten",
+    "bron": [
+     "https://www.blgwonen.nl/download/informatiewijzer-bespaarhypotheek.html",
+     "https://www.blgwonen.nl/hypotheken/de-hypotheekofferte.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Dan brengen wij €750 annuleringskosten in rekening voor de door ons uitgevoerde werkzaamheden."
+   },
+   "ltv": {
+    "waarde": "~ Lagere tariefgroep niet automatisch: zelf nieuwe marktwaarde doorgeven via Mijn BLG/app (automatisch alleen bij gesloten Bespaarhypotheek)",
+    "bron": [
+     "https://www.asnbank.nl/blg-wonen/tariefgroep-aanpassen.html",
+     "https://www.blgwonen.nl/download/informatiewijzer-hypotheken.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Gewijzigd na controle (A/B/arbitrage): Informatiewijzer: actuele marktwaarde aantonen en verzoek tariefgroep te wijzigen; verwerking per 1e van volgende maand."
+   },
+   "bdduur": {
+    "waarde": "~ Bouwdepot 1 jaar, automatisch verlengd tot max. 2 jaar; daarna op verzoek max. 1 jaar extra (voorwaarden, fiscale gevolgen)",
+    "bron": [
+     "https://www.blgwonen.nl/voor-klanten/declaratie-bouwdepot-indienen/spelregels-bouwdepot.html",
+     "https://www.blgwonen.nl/hypotheken/zo-werkt-een-bouwdepot.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Gewijzigd na controle (A/B/arbitrage): Informatiewijzer noemt max. 2 jaar vanaf passeerdatum, maar meerdere eigen pagina's noemen verlenging met 1 jaar na 2 jaar; 'max. 2 jaar' is daarmee onvolledig."
+   },
+   "bdrnt": {
+    "waarde": "~ Depotrente gelijk aan hypotheekrente over niet-opgenomen bedrag",
+    "bron": [
+     "https://www.blgwonen.nl/download/informatiewijzer-bespaarhypotheek.html",
+     "https://www.blgwonen.nl/voor-klanten/declaratie-bouwdepot-indienen/spelregels-bouwdepot.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. rentepercentage elke maand opnieuw vast ... op basis van het actuele gewogen gemiddelde van de hypotheek"
+   },
+   "bddecl": {
+    "waarde": "+ Declareren via app of Mijn BLG (verwerking binnen 2 werkdagen) of formulier per e-mail (max. 5 dagen); factuur max. 6 mnd oud",
+    "bron": [
+     "https://www.blgwonen.nl/contact/veelgestelde-vragen.html",
+     "https://www.blgwonen.nl/home/bouwdepotdeclaratie.html",
+     "https://www.blgwonen.nl/voor-klanten/declaratie-bouwdepot-indienen/spelregels-bouwdepot.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Gewijzigd na controle (A/B/arbitrage): '2-3 werkdagen' niet teruggevonden; eigen bronnen noemen 2 werkdagen (online) en max. 5 dagen (formulier)."
+   },
+   "ebb": {
+    "waarde": "~ Extra lenen voor energiebesparing afhankelijk van label, binnen 106% van woningwaarde",
+    "bron": [
+     "https://www.blgwonen.nl/hypotheken/leningdeel-duurzaam-wonen/hoe-werkt-het-leningdeel-duurzaam-wonen.html",
+     "https://www.asnbank.nl/hypotheek/asn-duurzaam-wonen/geld-lenen-voor-verduurzamingsmaatregelen.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. bepaald door het energielabel van je woning en kan oplopen tot € 20.000 ... binnen de 106%"
+   },
+   "duur": {
+    "waarde": "~ Bespaarhypotheek (labelkorting) niet meer af te sluiten; verduurzamen via leningdeel ASN Duurzaam Wonen (niet met Bespaarhypotheek)",
+    "bron": [
+     "https://www.asnbank.nl/blg-wonen/bespaarhypotheek.html",
+     "https://blgwonen.nl/hypotheken/leningdeel-duurzaam-wonen.html",
+     "https://www.asnbank.nl/hypotheek/asn-duurzaam-wonen/hoe-werkt-asn-duurzaam-wonen.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Gewijzigd na controle (A/B/arbitrage): Labelvoordeel alleen nog voor bestaande Bespaarhypotheek-klanten; niet-combineerbaarheid met Duurzaam Wonen bevestigd. Leningdeel €2.500-€30.000 (asnbank.nl)."
+   },
+   "o106": {
+    "waarde": "~ Tot 106% van woningwaarde voor energiebesparende maatregelen (TRHK-lijst) via leningdeel Duurzaam Wonen; overige duurzame maatregelen tot 100%",
+    "bron": [
+     "https://www.blgwonen.nl/hypotheken/leningdeel-duurzaam-wonen/hoe-werkt-het-leningdeel-duurzaam-wonen.html",
+     "https://www.asnbank.nl/hypotheek/asn-duurzaam-wonen/geld-lenen-voor-verduurzamingsmaatregelen.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Voor maatregelen uit de Tijdelijke regeling hypothecair krediet (TRHK) kan je tot 106% van de waarde van je woning lenen."
+   },
+   "oha": {
+    "waarde": "~ Ontslag hoofdelijkheid alleen via adviseur, na toets achterblijver",
+    "bron": [
+     "https://www.blgwonen.nl/voor-klanten/hoofdelijk-ontslag.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Dit kan alleen door middel van een aanvraag via je adviseur."
+   },
+   "tweede": {
+    "waarde": "+ Onderhands verhogen binnen inschrijving of tweede hypotheek; ook zelf online verhogen",
+    "bron": [
+     "https://www.blgwonen.nl/voor-klanten/online-hypotheek-verhogen.html",
+     "https://www.asnbank.nl/hypotheek/hypotheek-verhogen.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Zelf je hypotheek verhogen zonder adviseur"
+   },
+   "ovbr": {
+    "waarde": "+ Overbruggingskrediet max. 18 mnd (bestaand) / 30 mnd (nieuwbouw)",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/mijn-asn-hypotheek/overbruggingshypotheek.html",
+     "https://www.blgwonen.nl/jouw-situatie/overbruggingskrediet.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. De maximale duur van het overbruggingshypotheek is 18 maanden bij de aankoop van een bestaande woning en 30 maanden bij de aankoop van een nieuwbouwwoning."
+   },
+   "rmid": {
+    "waarde": "~ Mogelijk bij vaste rente; nieuwe rentevaste periode 6, 7, 10 of 12 jr en min. 5 jr langer dan resterende periode, binnen looptijd; niet bij spaarhypotheek of ",
+    "bron": [
+     "https://www.blgwonen.nl/voor-klanten/hypotheeklasten-verlagen/rentemiddeling.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Rente middelen kan alleen met een vaste hypotheekrente, dus niet met een variabele rente."
+   },
+   "rvoor": {
+    "waarde": "~ Rentevoorstel minstens 3 mnd vóór einde rvp; 3 mnd reactietijd",
+    "bron": [
+     "https://www.blgwonen.nl/voor-klanten/hypotheeklasten-verlagen/rentemiddeling.html",
+     "https://www.blgwonen.nl/voor-klanten/rentevastperiode.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. 3 maanden voor het einde van je rentevaste periode een voorstel ... Je hebt daarna 3 maanden de tijd"
+   },
+   "bbrk": {
+    "waarde": "~ Vergelijkingsrente = actuele rente zelfde rvp en hypotheekvorm; over deel boven 10%",
+    "bron": [
+     "https://www.blgwonen.nl/hypotheken/het-aflossen-van-je-hypotheek/vergoeding-renteverlies.html",
+     "https://www.blgwonen.nl/download/informatiewijzer-hypotheken.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Vergelijkingsrente: de rente die BLG Wonen nu zou krijgen voor een vergelijkbare hypotheek met dezelfde rentevaste periode."
+   },
+   "wkost": {
+    "waarde": "~ Administratiekosten per wijziging, gemaximeerd",
+    "bron": [
+     "https://www.blgwonen.nl/voor-klanten/hypotheeklasten-verlagen/hypotheekrente-aanpassen.html",
+     "https://www.blgwonen.nl/voor-klanten/hoofdelijk-ontslag.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. € 195 per hypotheek, met een maximum van € 390"
+   },
+   "bproc": {
+    "waarde": "+ Financieel coach en Bijzonder Beheer; vast contactpersoon en passende betalingsregeling",
+    "bron": [
+     "https://www.blgwonen.nl/voor-klanten/betalingsproblemen/veelgestelde-vragen-betalingsproblemen.html",
+     "https://www.blgwonen.nl/voor-klanten/mijn-hypotheek/betalingsproblemen.html",
+     "https://www.asnbank.nl/blg-wonen/betalingsproblemen.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Voor betalingsproblemen noemt de bank de afdeling Bijzonder Beheer"
+   },
+   "dag": {
+    "waarde": "- Geen dagrentegarantie: rente uit het renteaanbod/offerte is definitief voor de eerste rentevaste periode, ook als de rente op de passeerdatum lager is",
+    "bron": [
+     "https://www.asnbank.nl/downloads/informatiewijzer-hypotheek-afsluiten.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. de rente die we voor je hebben gereserveerd in het renteaanbod = geoffreerde rente = hypotheekrente. Dit geldt ook als tussen reserveren en passeren de rente verandert."
+   },
+   "ondh": {
+    "waarde": "+ Bij verkoop via makelaar in overleg met BLG geen veiling; bij restschuld betaalt BLG makelaars- en notariskosten; restschuld in overleg oplossen; Restschuldre",
+    "bron": [
+     "https://www.blgwonen.nl/voor-klanten/betalingsproblemen/veelgestelde-vragen-betalingsproblemen.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. niet via een veiling ... Als er een restschuld ontstaat en de woning in overleg met de bank via een makelaar is verkocht, neemt de bank deze kosten voor haar rekening."
+   },
+   "avlt": {
+    "waarde": "~ Aflossingsvrij deel aan einde looptijd ineens aflossen; looptijd verlengen of nieuwe lening alleen in overleg met BLG Wonen via adviseur (niet gegarandeerd)",
+    "bron": [
+     "https://www.blgwonen.nl/voor-klanten/einde-looptijd-hypotheek.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. De looptijd vernieuwen gebeurt altijd in overleg met BLG Wonen, en je regelt dat via je adviseur."
+   },
+   "desk": {
+    "waarde": "~ Calcasa Desktop Taxatie vaak mogelijk: totale hypotheek max. € 1 mln, woning min. 2 jaar oud, geen erfpacht/opstal",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/desktop-taxatie.html",
+     "https://www.blgwonen.nl/jouw-situatie/huis-kopen/taxatie/desktop-taxatie.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Het huis is minimaal 2 jaar oud ... hypotheek niet hoger dan 90% van de waarde"
+   },
+   "ams": {
+    "waarde": "~ Arbeidsmarktscan bij tijdelijk contract: score min. 70 en 12 van laatste 14 mnd gewerkt; max. inkomen werkgeversverklaring",
+    "bron": [
+     "https://www.blgwonen.nl/jouw-situatie/hypotheek-zonder-vast-contract/intentieverklaring-hypotheek.html",
+     "https://www.blgwonen.nl/jouw-situatie/hypotheek-met-een-oproepcontract.html",
+     "https://www.blgwonen.nl/jouw-situatie/hypotheek-met-een-tijdelijk-contract.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Is de uitslag van de scan 70 punten of hoger? Dan kom je eerder in aanmerking voor een hypotheek"
+   },
+   "recr": {
+    "waarde": "~ Recreatiewoning eigen gebruik: max. 70% marktwaarde, volledig annuïtair/lineair, taxatie verplicht, lasten hoofdverblijf in toets",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/hypotheek-recreatiewoning.html",
+     "https://www.blgwonen.nl/hypotheken/recreatiewoning-kopen.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. De maximale financiering is 70% van de marktwaarde van de recreatiewoning."
+   },
+   "verhuur": {
+    "waarde": "- Woning zelf bewonen; verhuur niet toegestaan zonder toestemming van de bank",
+    "bron": [
+     "https://www.blgwonen.nl/download/algemene-voorwaarden-hypotheken-versie-27-06-2023.html",
+     "https://www.blgwonen.nl/download/informatiewijzer-hypotheken.html",
+     "https://www.blgwonen.nl/hypotheken/verhuurhypotheek/hoeveel-huur-verhuurhypotheek.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. u moet uw huis zelf bewonen, goed onderhouden en verzekeren; niet verhuren zonder toestemming van de bank, ook niet tijdelijk"
+   },
+   "ort": {
+    "waarde": "~ ORT over laatste 12 mnd telt mee; structureel overwerk, bonus en provisie (laatste 12 mnd) tot max. 30% van vast inkomen",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/online-hypotheek-verhogen/veelgestelde-vragen.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. onregelmatigheids- of overwerktoeslag ... niet meer dan 30% van je totale inkomen ... bedrag van de afgelopen 12 maanden"
+   },
+   "proef": {
+    "waarde": "- Vast dienstverband telt pas mee als de proeftijd is verstreken; werkgeversverklaring volgens NHG-model",
+    "bron": [
+     "https://www.blgwonen.nl/jouw-situatie/hypotheek-zonder-vast-contract/intentieverklaring-hypotheek.html",
+     "https://www.blgwonen.nl/jouw-situatie/hypotheek-met-een-tijdelijk-contract.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Als je nog in je proeftijd zit, is het niet mogelijk om een hypotheek af te sluiten. Ook niet met een intentieverklaring."
+   },
+   "intent": {
+    "waarde": "~ Tijdelijk contract met intentieverklaring telt mee; verklaring afgegeven na verstreken proeftijd en conform NHG-richtlijnen",
+    "bron": [
+     "https://www.blgwonen.nl/jouw-situatie/hypotheek-zonder-vast-contract/intentieverklaring-hypotheek.html",
+     "https://www.asnbank.nl/hypotheek/hypotheek-zonder-vast-contract/intentieverklaring.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Met een intentieverklaring wordt jouw huidige inkomen meegenomen in de berekening van je maximale hypotheek."
+   },
+   "wajong": {
+    "waarde": "+ Wajong-uitkering wordt meegenomen als inkomen",
+    "bron": [
+     "https://www.blgwonen.nl/hypotheken/veelgestelde-vragen-hypotheken.html",
+     "https://www.blgwonen.nl/jouw-situatie/hypotheek-pensioen.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Met een WAO-uitkering en een Wajong- uitkering wordt je uitkering meegenomen in de berekening van je maximale hypotheek."
+   },
+   "senior": {
+    "waarde": "~ Pensioen/AOW binnen 10 jaar: ook toekomstig inkomen getoetst; AOW-gat: tekort max. 10 jaar, rentevast t/m einde AOW-gat",
+    "bron": [
+     "https://www.blgwonen.nl/jouw-situatie/hypotheek-pensioen.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. in de tien jaar voor de AOW-leeftijd ... op basis van het verwachte pensioeninkomen"
+   },
+   "mwbep": {
+    "waarde": "~ NWWI-gevalideerd taxatierapport (NRVT); taxatie verplicht o.a. bij zelfbouw/CPO/prefab, recreatiewoning en gedeeltelijke woonbestemming",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/taxatie-van-je-huis.html",
+     "https://www.asnbank.nl/hypotheek/desktop-taxatie.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Bij een hypotheekaanvraag is een zogenaamde 'gevalideerde taxatie' verplicht. Dat betekent dat het NWWI controleert"
+   },
+   "woz": {
+    "waarde": "~ Bij wijziging: hypotheek max. 75% WOZ-waarde dan geen taxatie, marktwaarde = 85% WOZ; WOZ-taxatieverslag niet bij overbrugging",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/hypotheekrentes/hypotheekrente-tariefgroepen.html",
+     "https://www.asnbank.nl/web/file?uuid=98bf31e4-9fef-4628-b5ba-3ee3784015df&owner=6916ad14-918d-4ea8-80ac-f71f0ff1928e&contentid=2742",
+     "https://www.blgwonen.nl/voor-klanten/hypotheeklasten-verlagen/tariefgroep-aanpassen.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Als je totale openstaande hypotheekschuld maximaal 75% van de WOZ-waarde is, mag je een WOZ-taxatieverslag aanleveren."
+   },
+   "ltvk": {
+    "waarde": "~ Max. 100% marktwaarde; 90% bij zeer hoge hypotheek; koopsom is basis als die lager is dan getaxeerde waarde",
+    "bron": [
+     "https://www.blgwonen.nl/jouw-situatie/huis-kopen/taxatie.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. Hypotheek tot 100% van de woningwaarde mogelijk"
+   },
+   "zbep": {
+    "waarde": "~ Inkomensverklaring Ondernemer via erkende partij (o.a. VIIZ, Raadhuys, Pentrax, Zakelijk Inkomen, Overviewz)",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/hypotheek-voor-zzp-of-ondernemer/inkomensverklaring.html",
+     "https://www.blgwonen.nl/jouw-situatie/hypotheek-zzp-of-ondernemer/inkomensverklaring-ondernemer.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. VIIZ, Raadhuys, Pentrax, Zakelijk Inkomen Nieuwegein en Overviewz"
+   },
+   "zstart": {
+    "waarde": "~ Start <36 mnd: min. 1 volledig boekjaar; 24 mnd cijfers: 90% gemiddelde; 12 mnd: 75% plus prognose accountant (verhoogt inkomen niet)",
+    "bron": [
+     "https://www.blgwonen.nl/jouw-situatie/hypotheek-zzp-of-ondernemer/hypotheek-berekenen.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. 1 tot 2 jaar: 75% van de fiscaal belastbare winst ... 2 tot 3 jaar: 90% van de gemiddelde fiscaal belastbare winst"
+   },
+   "bkr": {
+    "waarde": "! Achterstandscoderingen (A, H, HY e.a.) niet toegestaan, lopend of hersteld; uitzondering na beoordeling Bijzonder Beheer",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/hypotheek-met-bkr-registratie.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Met een negatieve BKR-registratie is het niet mogelijk een hypotheek af te sluiten."
+   },
+   "rsk": {
+    "waarde": "~ Restschuld: apart leningdeel, lineair, max. 15 jaar; max. 110% schuld-marktwaarde; externe restschuld gemaximeerd",
+    "bron": [
+     "https://www.blgwonen.nl/voor-klanten/restschuldregeling.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Together with your new mortgage, the residual-debt financing may be at most 110% of the market value of your new home."
+   },
+   "obmax": {
+    "waarde": "~ Niet verkocht: 95% marktwaarde min hypotheek; definitief verkocht: 99% verkoopprijs min hypotheek",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/mijn-asn-hypotheek/overbruggingshypotheek.html",
+     "https://www.blgwonen.nl/jouw-situatie/overbruggingskrediet.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. We rekenen met 95% van de marktwaarde van je huis min de hypotheekschuld ... 99% van de verkoopprijs min de hypotheekschuld"
+   },
+   "obduur": {
+    "waarde": "~ Max. 18 maanden bij bestaande bouw, 30 maanden bij nieuwbouw",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/mijn-asn-hypotheek/overbruggingshypotheek.html",
+     "https://www.blgwonen.nl/jouw-situatie/overbruggingskrediet.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. 18 maanden bij de aankoop van een bestaande woning en 30 maanden bij de aankoop van een nieuwbouwwoning"
+   },
+   "oblast": {
+    "waarde": "~ Inkomen en/of spaargeld moet de extra maandlasten van de overbrugging kunnen dragen",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/een-ander-huis-kopen/dubbele-woonlasten-bij-verhuizen.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Ook kijken we of je inkomen en/of spaargeld voldoende is om de extra maandlasten te betalen."
+   },
+   "obvw": {
+    "waarde": "! Overbruggingskrediet aflossingsvrij en niet te verhogen; in één keer aflossen bij overdracht oude woning",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/mijn-asn-hypotheek/overbruggingshypotheek.html",
+     "https://www.blgwonen.nl/download/informatiewijzer-bespaarhypotheek.html",
+     "https://www.blgwonen.nl/jouw-situatie/overbruggingskrediet.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. De overbrugging is een aflossingsvrije lening, dus je betaalt alleen rente. Je lost haar af zodra het oude huis verkocht is"
+   },
+   "geldnb": {
+    "waarde": "~ Offerte nieuwbouw 12 maanden na aanvraagdatum geldig (bestaande bouw 6 maanden); daarna nieuwe offerte nodig",
+    "bron": [
+     "https://www.blgwonen.nl/hypotheken/de-hypotheekofferte.html",
+     "https://www.blgwonen.nl/jouw-situatie/huis-kopen/nieuwbouwhuis-kopen/veelgestelde-vragen-nieuwbouw.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Offertes voor nieuwbouwhuizen zijn bij ons geen 6 maar 12 maanden geldig."
+   },
+   "annul": {
+    "waarde": "~ Kosteloos annuleren tot 3 maanden na aanvraag; daarna of bij verlopen offerte annuleringskosten (uitzonderingen o.a. overlijden, scheiding)",
+    "bron": [
+     "https://www.blgwonen.nl/download/informatiewijzer-bespaarhypotheek.html",
+     "https://www.blgwonen.nl/hypotheken/de-hypotheekofferte.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Annuleer je daarna of laat je de geldigheidsduur van de offerte verlopen ... Dan brengen wij €750 annuleringskosten in rekening"
+   },
+   "bgar": {
+    "waarde": "- Geen bankgarantie via BLG bij de Bespaarhypotheek; verwijst naar bv. Nationale Waarborg",
+    "bron": [
+     "https://www.blgwonen.nl/hypotheken/wat-is-een-bankgarantie.html",
+     "https://www.blgwonen.nl/jouw-situatie/huis-kopen/nieuwbouwhuis-kopen/veelgestelde-vragen-nieuwbouw.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. A bankgarantie cannot be requested from BLG Wonen in combination with an ASN Bespaarhypotheek."
+   },
+   "bovw": {
+    "waarde": "+ Onbeperkt vergoedingsvrij aflossen met eigen geld, o.a. opbrengst vorige woning (niet bij Verhuurhypotheek)",
+    "bron": [
+     "https://www.blgwonen.nl/voor-klanten/hypotheeklasten-verlagen/extra-aflossen/onbeperkt-vergoedingsvrij-aflossen.html",
+     "https://www.blgwonen.nl/voor-klanten/hypotheeklasten-verlagen/extra-aflossen/onbeperkt-aflossen-op-je-hypotheek-met-eigen-geld.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Bij BLG Wonen kun je onbeperkt aflossen op je hypotheek met eigen geld."
+   },
+   "bvrij": {
+    "waarde": "+ Binnen 1 jaar na overlijden (partner) vergoedingsvrij (gedeeltelijk) aflossen; bij verkoop woning geen vergoeding",
+    "bron": [
+     "https://www.blgwonen.nl/voor-klanten/hypotheeklasten-verlagen/extra-aflossen/onbeperkt-aflossen-op-je-hypotheek-met-eigen-geld.html",
+     "https://www.blgwonen.nl/download/informatiewijzer-hypotheken.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. geen vergoeding ... binnen 1 jaar na het overlijden van je echtgenoot, geregistreerd partner of partner waarmee je een samenlevingscontract had"
+   },
+   "rest": {
+    "waarde": "~ Restschuld meefinancieren tot max. 110% van de waarde nieuwe woning; oude woning definitief verkocht, lineair in max. 15 jaar",
+    "bron": [
+     "https://www.blgwonen.nl/voor-klanten/restschuldregeling.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. a linear mortgage that you fully repay within a maximum of 15 years ... at most 110% of the market value"
+   },
+   "verhw": {
+    "waarde": "~ Online verhogen: recent taxatierapport (max. 6 mnd) nodig; onderhands verhogen zonder notaris binnen inschrijving",
+    "bron": [
+     "https://www.blgwonen.nl/voor-klanten/online-hypotheek-verhogen.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Het taxatierapport mag maximaal 6 maanden oud zijn"
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Informatiewijzer Hypotheken (BLG Wonen/ASN Bank)",
+    "url": "https://www.blgwonen.nl/download/informatiewijzer-hypotheken.html",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "Informatiewijzer Bespaarhypotheek",
+    "url": "https://www.blgwonen.nl/download/informatiewijzer-bespaarhypotheek.html",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "Nieuwe regels voor een aflossingsvrije hypotheek (ASN Bank)",
+    "url": "https://www.asnbank.nl/hypotheek/hypotheekvormen/asn-aflossingsvrije-hypotheek/nieuwe-regels-voor-een-aflossingsvrije-hypotheek.html",
+    "versie": "per 11-05-2026"
+   },
+   {
+    "titel": "Factsheet Rente Meeneemregeling",
+    "url": "https://www.asnbank.nl/downloads/factsheet-rente-meeneemregeling.html",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "Regels voor het wijzigen van een hypotheek (ASN Bank)",
+    "url": "https://www.asnbank.nl/web/file?uuid=98bf31e4-9fef-4628-b5ba-3ee3784015df&owner=6916ad14-918d-4ea8-80ac-f71f0ff1928e&contentid=2742",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "Algemene voorwaarden Hypotheken",
+    "url": "https://www.blgwonen.nl/download/algemene-voorwaarden-hypotheken-versie-27-06-2023.html",
+    "versie": "27-06-2023"
+   },
+   {
+    "titel": "Calcasa Desktop Taxatie (ASN Bank)",
+    "url": "https://www.asnbank.nl/hypotheek/desktop-taxatie.html",
+    "versie": "online"
+   },
+   {
+    "titel": "Spelregels bouwdepot",
+    "url": "https://www.blgwonen.nl/voor-klanten/declaratie-bouwdepot-indienen/spelregels-bouwdepot.html",
+    "versie": "online"
+   },
+   {
+    "titel": "Informatiewijzer Hypotheken",
+    "url": "https://www.blgwonen.nl/download/informatiewijzer-hypotheken.html",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "Factsheet BLG Wonen Rente Meeneemregeling",
+    "url": "https://www.asnbank.nl/downloads/factsheet-rente-meeneemregeling.html",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "Renteoverzicht BLG hypotheek per 2 april 2026",
+    "url": "https://www.asnbank.nl/downloads/rentetarieven-asn-bank-blg-hypotheek-per-2-april-2026.html",
+    "versie": "2026-04-02"
+   },
+   {
+    "titel": "ASN Bank beperkt aflossingsvrije hypotheek tot 30%",
+    "url": "https://newsroom.asnbank.nl/en/asn-bank-puts-30-cap-on-interest-only-mortgages/",
+    "versie": "2026-05"
+   }
+  ]
+ }
+]

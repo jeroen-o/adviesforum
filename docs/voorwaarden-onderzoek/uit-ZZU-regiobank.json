@@ -1,0 +1,793 @@
+[
+ {
+  "naam": "RegioBank",
+  "gecontroleerd": "2026-10-09",
+  "criteria": {
+   "zzp": {
+    "waarde": "~ Vanaf 1 jaar zelfstandig; 1-3 jaar met jaarcijfers + prognose (administratiekantoor/RA); inkomen = gem. 3 jaar, max laatste jaar",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/hypotheek-zonder-vast-contract-kan-dit/zzper-of-ondernemer.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Voor de berekening van je inkomen, nemen we het gemiddelde van de afgelopen drie jaar."
+   },
+   "rvp": {
+    "waarde": "~ 1 t/m 7, 10, 12, 15 en 20 jaar; geen 30 jaar vast",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/asn-duurzaam-wonen/hoe-werkt-asn-duurzaam-wonen.html",
+     "https://www.regiobank.nl/downloads/rentetarieven-regiobank-hypotheken-per-1-maart-2026.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Je kunt kiezen uit rentevaste periodes van 1, 2, 3, 4, 5, 6, 7, 10, 12, 15 en 20 jaar."
+   },
+   "geld": {
+    "waarde": "~ Max. 6 mnd bestaande bouw, 12 mnd nieuwbouw (vanaf aanvraagdatum)",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/annuleringskosten-hypotheekofferte.html",
+     "https://www.regiobank.nl/downloads/informatiewijzer-hypotheken.html",
+     "https://www.regiobank.nl/hypotheken/hypotheekofferte.html"
+    ],
+    "brondatum": "2026-03",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Voor bestaande bouw is de geldigheid maximaal 6 maanden en voor nieuwbouw maximaal 12 maanden, gerekend vanaf de aanvraagdatum."
+   },
+   "boete": {
+    "waarde": "+ 10% per leningdeel per jaar; daarnaast onbeperkt boetevrij aflossen met eigen geld",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/uw-hypotheek-aflossen/hypotheek-extra-aflossen.html",
+     "https://www.regiobank.nl/hypotheken/hypotheek-onbeperkt-aflossen.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Per kalenderjaar kun je tot 10% van de oorspronkelijke hoogte van elk leningdeel aflossen zonder dat je ons een vergoeding betaalt voor ons renteverlies."
+   },
+   "ltv": {
+    "waarde": "~ Lagere tariefklasse na aflossing; hogere woningwaarde op verzoek (WOZ/taxatie)",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/rente-verlagen.html",
+     "https://www.regiobank.nl/hypotheken/hypotheekrente/tariefgroepen.html",
+     "https://www.regiobank.nl/service/hypotheken/hypotheekrente-verlengen/nieuwe-rente-en-rentevaste-periode-kiezen.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Wij hebben dan wel altijd een nieuwe marktwaarde van je woning nodig."
+   },
+   "bdduur": {
+    "waarde": "~ Bouwdepot max. 2 jaar, verlenging mogelijk",
+    "bron": [
+     "https://www.regiobank.nl/downloads/informatiewijzer-hypotheken.html",
+     "https://www.regiobank.nl/hypotheken/bouwdepot.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Je kunt het maximaal 2 jaar gebruiken. Onder voorwaarden is het bouwdepot daarna nog met 1 jaar te verlengen."
+   },
+   "ebb": {
+    "waarde": "+ Tot 106% bij verduurzaming; EBB tot €20.000 extra bij slecht label",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/duurzaam-wonen/leningdeel-duurzaam-wonen.html",
+     "https://www.regiobank.nl/hypotheken/bespaarhypotheek.html",
+     "https://www.regiobank.nl/hypotheken/duurzaam-wonen/hoe-werkt-duurzaam-wonen.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Tot 106% van de waarde van je huis; voor label C of D tot 20.000 euro extra lenen."
+   },
+   "duur": {
+    "waarde": "+ Leningdeel Duurzaam Wonen €2.500–€30.000 voor energie-/klimaatmaatregelen",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/duurzaam-wonen/leningdeel-duurzaam-wonen.html",
+     "https://www.regiobank.nl/hypotheken/duurzaam-wonen/hoe-werkt-duurzaam-wonen.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Het bedrag ligt tussen minimaal € 2.500 en maximaal € 30.000."
+   },
+   "verh": {
+    "waarde": "+ Rente meenemen bij verhuizing (meeneemregeling)",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/meeneemregeling.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Je moet binnen drie maanden na het aflossen van de oude RegioBank Hypotheek een nieuwe RegioBank Hypotheek aanvragen"
+   },
+   "tweede": {
+    "waarde": "~ Verhoging of tweede hypotheek mogelijk na betaalbaarheidstoets",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/hypotheek-verhogen/hypotheek-verhogen-via-zelfstandig-adviseur.html",
+     "https://www.regiobank.nl/hypotheken/bouwdepot.html",
+     "https://www.regiobank.nl/hypotheken/extra-hypotheek-voor-verbouwing.html",
+     "https://www.regiobank.nl/downloads/informatiewijzer-hypotheken.html"
+    ],
+    "brondatum": "2026-03",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Bij een nieuwe lening wordt de aanvraag beoordeeld volgens de acceptatievoorwaarden die op dat moment gelden."
+   },
+   "avrij": {
+    "waarde": "! Per 11-5-2026 max. 30% WW; bestaand blijft bij renteherziening",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/hypotheekvormen/asn-aflossingsvrije-hypotheek/nieuwe-regels-voor-een-aflossingsvrije-hypotheek.html",
+     "https://www.regiobank.nl/hypotheken/hypotheekvormen/aflossingsvrije-hypotheek.html",
+     "https://newsroom.asnbank.nl/en/asn-bank-puts-30-cap-on-interest-only-mortgages/",
+     "https://www.regiobank.nl/hypotheken/oversluiten.html"
+    ],
+    "brondatum": "2026-05",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. De regels voor het afsluiten van een nieuwe aflossingsvrije hypotheek veranderen per 11 mei 2026. Vanaf dan kun je maximaal 30% van de marktwaarde van je huis aflossingsvrij lenen."
+   },
+   "elbl": {
+    "waarde": "~ Tarief gedifferentieerd naar label: A of beter / B / C of lager",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/hypotheekrente/tariefgroepen.html",
+     "https://www.regiobank.nl/hypotheken/bespaarhypotheek/tariefgroepen-bespaarhypotheek.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Je hypotheek valt ook in energiegroep C of slechter als er geen energielabel geregistreerd is"
+   },
+   "flex": {
+    "waarde": "~ Gemiddelde 3 jaar/36 mnd, max. laatste jaar; ook intentieverklaring of Arbeidsmarktscan",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/hypotheek-zonder-vast-contract-kan-dit/tijdelijk-contract.html",
+     "https://www.asnbank.nl/hypotheek/uitzendcontract.html",
+     "https://www.regiobank.nl/hypotheken/hypotheek-zonder-vast-contract-kan-dit.html",
+     "https://www.regiobank.nl/hypotheken/hypotheek-zonder-vast-contract-kan-dit/zzper-of-ondernemer.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Krijg je geen perspectiefverklaring? Dan gaan we uit van je gemiddelde inkomen van de laatste 3 jaar. Met een maximum van het laatste jaarinkomen."
+   },
+   "persp": {
+    "waarde": "+ Perspectiefverklaring uitzendbureau geaccepteerd (min. 12 mnd bij uitzendbureau)",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/hypotheek-zonder-vast-contract-kan-dit.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. ASN Bank accepteert de verklaring van uitzendbureaus die gecertificeerd zijn en ingeschreven staan in het register van de Stichting Perspectiefverklaring."
+   },
+   "aow": {
+    "waarde": "~ Pensioen binnen 10 jaar: max. hypotheek mede o.b.v. inkomen na pensionering",
+    "bron": [
+     "https://www.regiobank.nl/downloads/regiobank-uitgangspunten-voor-de-berekening-van-de-maximale-hypotheek.html",
+     "https://www.regiobank.nl/hypotheken/hypotheek-boven-je-50ste-wat-is-er-mogelijk/hypotheek-na-je-50ste-ontdek-je-mogelijkheden.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Als je binnen 10 jaar de AOW-gerechtigde leeftijd bereikt, dan houden we rekening met je toekomstige pensioeninkomen."
+   },
+   "erfp": {
+    "waarde": "~ Alleen erfpacht voor onbepaalde tijd (vanaf 2013) conform NVB-criteria; geen verplichte afkoop; canon telt mee als last",
+    "bron": [
+     "https://www.regiobank.nl/nieuws/hypotheken/artikel/een-huis-kopen-met-erfpacht-wel-of-niet-doen.html",
+     "https://www.regiobank.nl/downloads/informatiewijzer-verhuurhypotheek.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. erfpacht ... onbepaalde tijd ... NVB-criteria vanaf 1 januari 2013; de erfpachtcanon telt mee als vaste last"
+   },
+   "dag": {
+    "waarde": "- Geen dagrente: rente in offerte geldt ook als rente daarna daalt",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/rente-verlagen.html",
+     "https://www.regiobank.nl/hypotheken/hypotheekofferte.html",
+     "https://www.regiobank.nl/downloads/informatiewijzer-hypotheken.html"
+    ],
+    "brondatum": "2026-03",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. De rente in het renteaanbod is altijd hetzelfde als de rente in de offerte. Dat geldt ook als de rente voor eenzelfde offerte op de passeerdatum hoger of lager is."
+   },
+   "bprov": {
+    "waarde": "~ Verlengen offerte tegen kosten; annuleren gratis binnen 3 mnd na aanvraag, daarna annuleringskosten",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/annuleringskosten-hypotheekofferte.html",
+     "https://www.regiobank.nl/hypotheken/begrippenlijst-hypotheken.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Je kunt de getekende offerte binnen 3 maanden vanaf de aanvraagdatum annuleren zonder annuleringskosten."
+   },
+   "bdrnt": {
+    "waarde": "~ Depotrente gelijk aan hypotheekrente (verrekend met te betalen rente)",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/bouwdepot.html",
+     "https://www.regiobank.nl/downloads/informatiewijzer-hypotheken.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Over het bedrag dat nog in het bouwdepot zit krijg je een rente die gelijk is aan je hypotheekrente."
+   },
+   "bddecl": {
+    "waarde": "+ Declareren via Mijn RegioBank of app; uitbetaling op IBAN van factuur of na zelf betalen",
+    "bron": [
+     "https://www.regiobank.nl/service/hypotheken/betalen-uit-uw-bouwdepot.html",
+     "https://www.regiobank.nl/hypotheken/bouwdepot.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Je dient declaraties in via Mijn RegioBank of de app. ... Is de factuur nog niet betaald, dan gaat het geld naar het IBAN op de factuur."
+   },
+   "oha": {
+    "waarde": "~ Ontslag hoofdelijkheid als achterblijver lasten alleen kan dragen; ook met nieuwe partner mogelijk",
+    "bron": [
+     "https://www.regiobank.nl/uw-situatie/scheiden/hypotheek-overnemen-scheiding.html",
+     "https://www.asnbank.nl/web/file?contentid=2742"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. De bank bekijkt of de schuldenaar die overblijft de maandlasten zelfstandig kan dragen."
+   },
+   "ovbr": {
+    "waarde": "+ Overbruggingskrediet max. 18 mnd (bestaande bouw) / 30 mnd (nieuwbouw); aflossingsvrij",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/overbruggingskrediet.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. De maximale looptijd is 18 maanden bij de aankoop van een bestaande woning en 30 maanden bij de aankoop van een nieuwbouwwoning."
+   },
+   "rmid": {
+    "waarde": "~ Mogelijk bij vaste rente; nieuwe rentevaste periode 6, 7, 10 of 12 jr en min. 5 jr langer dan resterende periode, binnen looptijd; niet bij spaarhypotheek of ",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/rentemiddeling.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. De nieuwe rentevaste periode is tenminste 5 jaar langer dan je huidige rentevaste periode."
+   },
+   "rvoor": {
+    "waarde": "~ Rentevoorstel minstens 3 mnd vóór einde rvp (Mijn RegioBank + post)",
+    "bron": [
+     "https://www.regiobank.nl/service/hypotheken/uw-hypotheek-loopt-af.html",
+     "https://www.regiobank.nl/hypotheken/bespaarhypotheek/rentevaste-periode-bespaarhypotheek-verlengen.html",
+     "https://www.regiobank.nl/service/hypotheken/hypotheekrente-verlengen/nieuwe-rente-en-rentevaste-periode-kiezen.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Tenminste 3 maanden voordat de rentevaste periode afloopt, krijg je een nieuw rentevoorstel."
+   },
+   "bbrk": {
+    "waarde": "~ Contante waarde; vergelijkingsrente = hoogste van naastliggende kortere/langere rvp",
+    "bron": [
+     "https://www.regiobank.nl/zakelijk/zakelijk-lenen/bedrijfshypotheek/berekening-vergoeding-renteverlies.html",
+     "https://www.regiobank.nl/downloads/informatiewijzer-hypotheken.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Van die twee wordt de hoogste rente genomen als vergelijkingsrente; contante-waarde-berekening."
+   },
+   "wkost": {
+    "waarde": "~ Administratiekosten per wijziging, gemaximeerd per keer (meerdere wijzigingen)",
+    "bron": [
+     "https://www.regiobank.nl/downloads/kostenoverzicht-hypotheken.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Je betaalt maximaal €390 aan administratiekosten, ongeacht het aantal wijzigingen."
+   },
+   "avlt": {
+    "waarde": "~ Brief 1 jaar vóór einddatum; nieuwe hypotheek aanvragen voor aflopend deel",
+    "bron": [
+     "https://www.regiobank.nl/service/hypotheken/uw-hypotheek-loopt-af.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Daarom krijg je 1 jaar voor de einddatum een brief van ons. Daarin staat hoeveel je nog moet terugbetalen."
+   },
+   "bproc": {
+    "waarde": "+ Bijzonder Beheer helpt gratis; geen incassobureaus en geen loonbeslag",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/hulp-bij-financiele-zorgen.html",
+     "https://www.regiobank.nl/hypotheken/betalingsproblemen.html",
+     "https://www.regiobank.nl/hypotheken/hulp-bij-financiele-zorgen/beslag-op-je-huis.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Bijzonder Beheer ... geen incassobureaus ... geen loonbeslag"
+   },
+   "cons": {
+    "waarde": "! Krediethypotheek (consumptief, box 3) staat onder 'uit de verkoop'; actueel beleid voor consumptief deel in gewone hypotheek niet gevonden",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/uit-de-verkoop/krediethypotheek.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. Krediethypotheek - RegioBank (uit de verkoop)"
+   },
+   "lensch": {
+    "waarde": "~ Lening van ouders (marktconforme rente) wordt meegenomen in de toets; ouders kunnen ook hoofdelijk medeschuldenaar worden",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/je-eerste-huis-kopen/starterslening.html",
+     "https://www.regiobank.nl/hypotheken/duurzaam-wonen/financieringsmogelijkheden.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. If you agree, your parents can become co-debtors at the start of the mortgage."
+   },
+   "desk": {
+    "waarde": "~ Calcasa Desktop Taxatie (Plus) bij aankoop bestaande woning, oversluiten of wijzigen: max. 90% van waarde, woning min. 2 jaar oud; geen andere aanbieders",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/marktwaarde.html",
+     "https://www.asnbank.nl/hypotheek/desktop-taxatie.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Je kunt een Calcasa Desktop Taxatie (Plus) gebruiken als je een bestaand huis koopt, je hypotheek oversluit of je hypotheek wijzigt."
+   },
+   "huur": {
+    "waarde": "~ Verhuurhypotheek: huur telt voor 85% mee minus lasten verhuurd pand, max. tot inkomen uit arbeid; niet bij recreatiewoning of Airbnb",
+    "bron": [
+     "https://www.regiobank.nl/downloads/informatiewijzer-verhuurhypotheek.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Inkomsten uit verhuur van een recreatiewoning of AirBnB rekenen we niet mee."
+   },
+   "recr": {
+    "waarde": "~ Recreatiehypotheek: max. 70% marktwaarde, annuitair/lineair binnen 30 jaar, geen NHG; geen permanente bewoning, verhuur max. 60 dagen/jaar",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/hypotheek-recreatiewoning/recreatiewoning-voor-en-nadelen.html",
+     "https://www.regiobank.nl/hypotheken/hypotheek-recreatiewoning/checklist-recreatiewoning-kopen.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. de recreatiehypotheek financiert tot maximaal 70 procent van de marktwaarde van de woning"
+   },
+   "aanv": {
+    "waarde": "~ Ouders kunnen bij start van de hypotheek van hun kind hoofdelijk medeschuldenaar worden zonder eigenaar te zijn; max. aantal aanvragers niet gevonden",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/hulp-bij-het-kopen-van-een-huis.html",
+     "https://www.regiobank.nl/downloads/informatiewijzer-hypotheken.html"
+    ],
+    "brondatum": "2026-03",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. we can agree that your parents become co-debtors at the start of the mortgage"
+   },
+   "start": {
+    "waarde": "+ Starterslening via SVn mogelijk naast RegioBank-hypotheek",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/je-eerste-huis-kopen/starterslening.html",
+     "https://www.regiobank.nl/hypotheken/hulp-bij-het-kopen-van-een-huis.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. You take out a starter loan with the Stimuleringsfonds Volkshuisvesting Nederlandse Gemeenten (SVn)."
+   },
+   "verhuur": {
+    "waarde": "~ Verhuur (ook tijdelijk) alleen met schriftelijke toestemming; tijdelijke verhuur via Overbruggingsverhuur.nl en met Leegstandwet-vergunning",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/huis-tijdelijk-verhuren.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. Koophuis tijdelijk verhuren: de regels - RegioBank"
+   },
+   "intent": {
+    "waarde": "+ Met intentieverklaring telt huidig inkomen mee; zonder: gemiddelde laatste 3 jaar (lager laatste jaar telt) of arbeidsmarktscan/perspectiefverklaring",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/hypotheek-zonder-vast-contract-kan-dit/tijdelijk-contract.html",
+     "https://www.regiobank.nl/hypotheken/hypotheek-zonder-vast-contract-kan-dit.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Heb je een werkgeversverklaring met intentieverklaring? Dan behandelen we je aanvraag alsof je een vast contract hebt."
+   },
+   "toekst": {
+    "waarde": "~ Maximale hypotheek berekend op het inkomen dat de aanvrager in de toekomst naar verwachting bereikt",
+    "bron": [
+     "https://www.regiobank.nl/downloads/regiobank-uitgangspunten-voor-de-berekening-van-de-maximale-hypotheek.html",
+     "https://www.regiobank.nl/downloads/uitgangspunten-maximale-hypotheek-berekening-2025.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. We berekenen de maximale hypotheek op basis van het inkomen dat je in de toekomst verwacht te bereiken."
+   },
+   "senior": {
+    "waarde": "~ Bij pensioen binnen 10 jaar rekent de berekening met 70% van huidig inkomen; 67+: nadruk op betaalbaarheid, bestendig aanvullend inkomen telt",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/hypotheek-oudere-leeftijd.html",
+     "https://www.regiobank.nl/downloads/regiobank-uitgangspunten-voor-de-berekening-van-de-maximale-hypotheek.html",
+     "https://www.regiobank.nl/hypotheken/hypotheek-boven-je-50ste-wat-is-er-mogelijk/hypotheek-na-je-50ste-ontdek-je-mogelijkheden.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Ga je binnen tien jaar met pensioen? Dan gaan we ervan uit dat je pensioeninkomen straks 70% van je huidige inkomen is."
+   },
+   "mwbep": {
+    "waarde": "~ Taxatierapport (model NVM/VastgoedPro/VBO, max. 6 mnd, geen kopie) of Calcasa Desktop Taxatie (Plus) bij bestaande woning",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/marktwaarde.html",
+     "https://www.regiobank.nl/hypotheken/huis-taxeren.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Taxatierapport model 'Taxatierapport financiering woonruimte' (NVM, VastgoedPro, VBO), niet ouder dan 6 maanden; Calcasa Desktop Taxatie"
+   },
+   "woz": {
+    "waarde": "! WOZ-taxatieverslag niet voor nieuwe hypotheek; wel voor waarde-update (tariefgroep): marktwaarde op 85% WOZ, max. 12 mnd oud",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/marktwaarde.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Wij stellen de marktwaarde vast op 85% van deze WOZ-waarde. ... Een WOZ-taxatieverslag kun je niet gebruiken voor het aanvragen van een nieuwe hypotheek."
+   },
+   "ltvk": {
+    "waarde": "~ Max. 100% van de woningwaarde; onder voorwaarden tot 106% (energiebesparende maatregelen)",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/duurzaam-wonen/leningdeel-duurzaam-wonen.html",
+     "https://www.regiobank.nl/hypotheken/extra-hypotheek-voor-verbouwing.html",
+     "https://www.regiobank.nl/downloads/uitgangspunten-maximale-hypotheek-berekening-2025.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Normaal mag je maximaal 100% van de waarde van je huis lenen. ... tot maximaal 106% van de waarde van je huis"
+   },
+   "wwp": {
+    "waarde": "! Woon-/winkelpand: geen Calcasa Desktop Taxatie mogelijk, volledig taxatierapport vereist",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/marktwaarde.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Calcasa Desktop Taxatie (Plus) is niet mogelijk voor woon-/winkelpand of kantoorpand"
+   },
+   "wboot": {
+    "waarde": "! Woonboot: geen Calcasa Desktop Taxatie mogelijk; acceptatie als onderpand niet bevestigd",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/marktwaarde.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Calcasa Desktop Taxatie niet mogelijk voor woonboot"
+   },
+   "zbep": {
+    "waarde": "~ Inkomensverklaring (IKV) ondernemer; gemiddelde saldo fiscale winst 3 jaar, laatste jaar als max.",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/hypotheek-zonder-vast-contract-kan-dit/zzper-of-ondernemer.html",
+     "https://www.asnbank.nl/hypotheek/hypotheek-voor-zzp-of-ondernemer/inkomensverklaring.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. inkomensverklaring (IKV) voor ondernemers; ... Als je het laatste jaar minder hebt verdiend, dan gaan we uit van je inkomen van het afgelopen jaar."
+   },
+   "zcijf": {
+    "waarde": "~ Jaarrekeningen en IB-aangiften van laatste 3 jaar, prognose en KvK-uittreksel; zonder jaarcijfers geen hypotheek",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/hypotheek-zonder-vast-contract-kan-dit/zzper-of-ondernemer.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Daarom kun je bij ons geen hypotheek aanvragen zonder jaarcijfers."
+   },
+   "zstart": {
+    "waarde": "~ Na 1 jaar zelfstandigheid onder voorwaarden; bij <3 jaar jaarcijfers plus prognose van administratiekantoor/RA",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/hypotheek-zonder-vast-contract-kan-dit/zzper-of-ondernemer.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Onderbouw je hypotheekaanvraag in dat geval met jaarcijfers en een prognose ... opgesteld door een administratiekantoor of een registeraccountant."
+   },
+   "duo": {
+    "waarde": "~ Rekenpercentage op oorspronkelijke studieschuld, verschillend voor oud stelsel en leenstelsel; zelf melden",
+    "bron": [
+     "https://www.regiobank.nl/uw-situatie/studeren/huis-kopen-met-studieschuld.html",
+     "https://www.regiobank.nl/nieuws/hypotheken/artikel/huis-kopen-studieschuld.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. We kijken naar je oorspronkelijke studieschuld. Het maakt dus niet uit hoeveel je al hebt afgelost."
+   },
+   "rsk": {
+    "waarde": "~ Restschuldfinanciering mogelijk als hypotheek + restschuld >100% en max. 110% woningwaarde; oude woning definitief verkocht",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/restschuld.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. De restschuldfinanciering mag samen met je nieuwe hypotheek maximaal 110% van de waarde van je huis zijn."
+   },
+   "obmax": {
+    "waarde": "~ Niet verkocht: 95% marktwaarde min schuld; verkocht (ontbindende voorwaarden verlopen): 99% verkoopprijs min schuld",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/overbruggingskrediet.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. We rekenen met 95% van de marktwaarde van je huis min de hypotheekschuld die nog openstaat als je huis nog niet verkocht is."
+   },
+   "obduur": {
+    "waarde": "~ Max. 18 maanden bij bestaande woning, 30 maanden bij nieuwbouw",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/overbruggingskrediet.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. De maximale looptijd is 18 maanden bij de aankoop van een bestaande woning en 30 maanden bij de aankoop van een nieuwbouwwoning."
+   },
+   "oblast": {
+    "waarde": "~ Inkomen en/of spaargeld moet voldoende zijn voor de extra maandlasten tijdens de overbrugging",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/overbruggingskrediet.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Dan bekijken we of je op basis van je inkomen en/of spaargeld de extra maandlasten kunt betalen."
+   },
+   "obwaar": {
+    "waarde": "~ Niet verkocht: marktwaarde vastgesteld door onafhankelijk taxateur; verkocht: verkoopprijs",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/overbruggingskrediet.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. We rekenen met 95% van de marktwaarde van je huis ... 99% van de verkoopprijs"
+   },
+   "obels": {
+    "waarde": "- Overbrugging alleen in combinatie met een RegioBank (Bespaar)hypotheek op de nieuwe woning",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/overbruggingskrediet.html",
+     "https://www.regiobank.nl/downloads/informatiewijzer-bespaarhypotheek.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. een overbruggingskrediet kan alleen worden afgesloten voor je nieuwe huis als je ook kiest voor een RegioBank Hypotheek"
+   },
+   "obvw": {
+    "waarde": "! Overbruggingskrediet aflossingsvrij en niet te verhogen; extra bedrag vraagt nieuwe hypotheekakte",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/overbruggingskrediet.html",
+     "https://www.regiobank.nl/hypotheken/bouwdepot.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Een overbruggingskrediet kun je niet verhogen."
+   },
+   "geldnb": {
+    "waarde": "+ Offerte nieuwbouw 12 maanden geldig (bestaande bouw 6 maanden); verlenging tegen bereidstellingsprovisie",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/annuleringskosten-hypotheekofferte.html",
+     "https://www.regiobank.nl/hypotheken/begrippenlijst-hypotheken.html",
+     "https://www.regiobank.nl/hypotheken/hypotheek-voor-een-nieuwbouwwoning.html",
+     "https://www.regiobank.nl/hypotheken/hypotheekofferte.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Voor bestaande bouw is de geldigheid maximaal 6 maanden en voor nieuwbouw maximaal 12 maanden"
+   },
+   "annul": {
+    "waarde": "~ Binnen 3 mnd na aanvraag kosteloos annuleren; daarna annuleringskosten, behalve bij o.a. ontbinding, overlijden, scheiding",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/annuleringskosten-hypotheekofferte.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Je kunt de getekende offerte binnen 3 maanden vanaf de aanvraagdatum annuleren zonder annuleringskosten."
+   },
+   "bgar": {
+    "waarde": "+ Bankgarantie via RegioBank mogelijk; niet bij Bespaarhypotheek volgens informatiewijzer",
+    "bron": [
+     "https://www.regiobank.nl/downloads/kostenoverzicht-hypotheken.html",
+     "https://www.regiobank.nl/hypotheken/bankgarantie.html",
+     "https://www.regiobank.nl/downloads/informatiewijzer-bespaarhypotheek.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Bankgarantie 1% van het garantiebedrag met een minimum van €100"
+   },
+   "rest": {
+    "waarde": "~ Restschuld tot max. EUR 30.000 meefinancieren, totaal max. 110% woningwaarde; lineair in max. 15 jaar",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/restschuld.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Je mag je restschuld tot maximaal € 30.000 meefinancieren ... lineaire hypotheek die je binnen maximaal 15 jaar helemaal aflost."
+   },
+   "verhw": {
+    "waarde": "~ Verhogen max. 100% marktwaarde (106% bij verduurzaming); WOZ-verslag: marktwaarde 85% van WOZ",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/hypotheek-verhogen/hypotheek-verhogen-via-zelfstandig-adviseur.html",
+     "https://www.regiobank.nl/hypotheken/marktwaarde.html",
+     "https://www.regiobank.nl/hypotheken/extra-hypotheek-voor-verbouwing.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Bij een tweede hypotheek mag je in totaal 100% van de marktwaarde van je huis lenen. Voor verduurzaming is tot 106% van de waarde mogelijk."
+   },
+   "pnb": {
+    "waarde": "~ Nieuwbouw: meestal koop-/aanneemsom als waarde, taxatierapport soms nodig; bouwdepot max. 2 jaar",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/extra-hypotheek-voor-verbouwing.html",
+     "https://www.regiobank.nl/hypotheken/bouwdepot.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. Voor nieuwbouw is de looptijd maximaal 2 jaar"
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Informatiewijzer Hypotheken",
+    "url": "https://www.regiobank.nl/downloads/informatiewijzer-hypotheken.html",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "Kostenoverzicht hypotheken",
+    "url": "https://www.regiobank.nl/downloads/kostenoverzicht-hypotheken.html",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "Rentetarieven RegioBank hypotheken per 1 maart 2026",
+    "url": "https://www.regiobank.nl/downloads/rentetarieven-regiobank-hypotheken-per-1-maart-2026.html",
+    "versie": "1 mrt 2026"
+   },
+   {
+    "titel": "Nieuwe regels voor een aflossingsvrije hypotheek (ASN Bank)",
+    "url": "https://www.asnbank.nl/hypotheek/hypotheekvormen/asn-aflossingsvrije-hypotheek/nieuwe-regels-voor-een-aflossingsvrije-hypotheek.html",
+    "versie": "geldig per 11-5-2026"
+   },
+   {
+    "titel": "Informatiewijzer Verhuurhypotheek",
+    "url": "https://www.regiobank.nl/downloads/informatiewijzer-verhuurhypotheek.html",
+    "versie": "3.0"
+   },
+   {
+    "titel": "Algemene Voorwaarden RegioBank Hypotheken",
+    "url": "https://www.regiobank.nl/hypotheken/voorwaarden.html",
+    "versie": "27-06-2023"
+   },
+   {
+    "titel": "Informatiewijzer Hypotheken",
+    "url": "https://www.regiobank.nl/downloads/informatiewijzer-hypotheken.html",
+    "versie": "2026-03"
+   },
+   {
+    "titel": "Informatiewijzer Bespaarhypotheek",
+    "url": "https://www.regiobank.nl/downloads/informatiewijzer-bespaarhypotheek.html",
+    "versie": null
+   },
+   {
+    "titel": "Nieuwe regels voor een aflossingsvrije hypotheek (ASN Bank)",
+    "url": "https://www.asnbank.nl/hypotheek/hypotheekvormen/asn-aflossingsvrije-hypotheek/nieuwe-regels-voor-een-aflossingsvrije-hypotheek.html",
+    "versie": "2026-05"
+   },
+   {
+    "titel": "Uitgangspunten berekening maximale hypotheek",
+    "url": "https://www.regiobank.nl/downloads/uitgangspunten-maximale-hypotheek-berekening-2025.html",
+    "versie": "2025"
+   },
+   {
+    "titel": "Informatiewijzer Verhuurhypotheek",
+    "url": "https://www.regiobank.nl/downloads/informatiewijzer-verhuurhypotheek.html",
+    "versie": "3.0"
+   }
+  ]
+ }
+]

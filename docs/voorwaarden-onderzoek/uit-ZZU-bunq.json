@@ -1,0 +1,142 @@
+[
+ {
+  "naam": "bunq",
+  "gecontroleerd": "2026-10-09",
+  "criteria": {
+   "dag": {
+    "waarde": "+ Laagste van de rente uit het renteaanbod en de rente op de passeerdatum",
+    "bron": [
+     "https://mortgages.bunq.com/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. The interest rate offered in our mortgage proposal is valid for 4 months; lower rate on purchase day applies"
+   },
+   "duur": {
+    "waarde": "~ Tot 106% van de marktwaarde voor energiebesparende voorzieningen (in bouwdepot)",
+    "bron": [
+     "https://mortgages.bunq.com/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. up to 106% of your property's value so you can boost your new home's energy efficiency"
+   },
+   "o106": {
+    "waarde": "! Aparte (hogere) LTV-klasse 'tot 106%' in rentetabel",
+    "bron": [
+     "https://mortgages.bunq.com/interest-rates"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. rates appear under \"Up to 100%\" and \"Up to 106%\" headings"
+   },
+   "bonus": {
+    "waarde": "~ Vaste toeslagen en variabele bonussen waarop recht bestaat worden meegenomen in het inkomen",
+    "bron": [
+     "https://mortgages.bunq.com/calculator"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. jaarlijks brutosalaris incl. vakantiegeld, vaste toeslagen en variabele bonussen"
+   },
+   "expbel": {
+    "waarde": "- Aanvrager moet fiscaal inwoner van Nederland zijn (wonen en belasting betalen in NL); woning moet in NL staan",
+    "bron": [
+     "https://help.bunq.com/articles/who-can-get-a-bunq-easy-mortgage"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. tax resident in the Netherlands, buying property there"
+   },
+   "vblf": {
+    "waarde": "~ Nederlanders, EER-paspoorthouders en houders van een Nederlandse verblijfsvergunning kunnen aanvragen; regels tijdelijke vergunning/LTV niet gevonden",
+    "bron": [
+     "https://help.bunq.com/articles/who-can-get-a-bunq-easy-mortgage",
+     "https://mortgages.bunq.com/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Nederlanders en mensen met een EER-paspoort of Nederlandse verblijfsvergunning kunnen een hypotheek aanvragen"
+   },
+   "minh": {
+    "waarde": "~ Minimale hoofdsom € 70.000",
+    "bron": [
+     "https://help.bunq.com/articles/who-can-get-a-bunq-easy-mortgage",
+     "https://help.bunq.com/en/articles/bunq-easy-mortgages"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Gewijzigd na controle (A/B/arbitrage): Huidige waarde is niet onjuist maar noemt geen bedrag ('zie toelichting'); twee bunq-helppagina's noemen eensluidend € 70.000. Aanvulling met concreet bedrag; daarom afwijkend (eens met B)."
+   },
+   "maxh": {
+    "waarde": "~ Maximale hoofdsom € 1.000.000; tot 106% van de woningwaarde bij energiebesparende maatregelen",
+    "bron": [
+     "https://help.bunq.com/articles/who-can-get-a-bunq-easy-mortgage",
+     "https://help.bunq.com/en/articles/bunq-easy-mortgages",
+     "https://mortgages.bunq.com/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Gewijzigd na controle (A/B/arbitrage): 106% bevestigd; 'vast maximum' zonder bedrag aangevuld met € 1.000.000 uit helpcentrum. Product loopt nog (rentepagina mortgages.bunq.com met wijzigingen t/m okt. 2026)."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Acceptance Guide - Easy Mortgages",
+    "url": "https://mortgages.bunq.com/mortgage-documents/acceptance-guide",
+    "versie": "onbekend (pagina niet op te halen)"
+   },
+   {
+    "titel": "Documents - Easy Mortgages (overzicht)",
+    "url": "https://mortgages.bunq.com/mortgage-documents",
+    "versie": "-"
+   },
+   {
+    "titel": "Documentenpagina bunq Easy Mortgages",
+    "url": "https://mortgages.bunq.com/nl/mortgage-documents",
+    "versie": "aangeleverd door gebruiker 2026-10-04; geblokkeerd voor fetch"
+   },
+   {
+    "titel": "Acceptatiegids bunq Easy Mortgage",
+    "url": "https://static.bunq.com/website/documents/bunq-mortgages-acceptation-guide-2026-nl.pdf",
+    "versie": "februari 2026"
+   },
+   {
+    "titel": "Who can get a bunq Easy Mortgage?",
+    "url": "https://help.bunq.com/articles/who-can-get-a-bunq-easy-mortgage",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "bunq Easy Mortgages (Help Center)",
+    "url": "https://help.bunq.com/articles/bunq-easy-mortgages",
+    "versie": "online"
+   },
+   {
+    "titel": "Mortgage Interest Rates (overbruggingslening vermeld)",
+    "url": "https://mortgages.bunq.com/interest-rates",
+    "versie": "30 sep 2026"
+   },
+   {
+    "titel": "Acceptance Guide - Easy Mortgages (PDF)",
+    "url": "https://mortgages.bunq.com/mortgage-documents/acceptance-guide",
+    "versie": "onbekend"
+   }
+  ]
+ }
+]

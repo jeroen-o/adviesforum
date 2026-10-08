@@ -16,7 +16,7 @@ test('partijkaart toont uitklapbare gecontroleerde voorwaarden met bron en link 
   await page.goto('/partijen.html');
   const kaart = page.locator('#partij-abn-amro');
   const vw = kaart.locator('details.voorwaarden');
-  await expect(vw.locator('summary')).toHaveText('Voorwaarden (gecontroleerd 8 oktober 2026)');
+  await expect(vw.locator('summary')).toHaveText('Voorwaarden (gecontroleerd 9 oktober 2026)');
   await expect(vw.locator('li').first()).not.toBeVisible();
   await vw.locator('summary').click();
   await expect(vw.locator('li').first()).toContainText('Boetevrij aflossen:');
@@ -25,7 +25,7 @@ test('partijkaart toont uitklapbare gecontroleerde voorwaarden met bron en link 
   expect(n).toBeLessThanOrEqual(8);
   await expect(vw.locator('li a').first()).toHaveText(/^bron: /);
   await expect(vw.locator('li a').first()).toHaveAttribute('href', /^https:\/\//);
-  await expect(kaart.locator('.bijgewerkt')).toContainText('voorwaarden gecontroleerd 8 oktober 2026');
+  await expect(kaart.locator('.bijgewerkt')).toContainText('voorwaarden gecontroleerd 9 oktober 2026');
   // Partij zonder gecontroleerde voorwaarden: geen sectie
   await expect(page.locator('#partij-movir details.voorwaarden')).toHaveCount(0);
   await expect(page.locator('#partij-movir .bijgewerkt')).not.toContainText('voorwaarden gecontroleerd');

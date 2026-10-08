@@ -1,0 +1,895 @@
+[
+ {
+  "naam": "ABN AMRO",
+  "gecontroleerd": "2026-10-09",
+  "criteria": {
+   "zzp": {
+    "waarde": "~ Vanaf 1 jaar ondernemerschap; toetsinkomen o.b.v. jaarcijfers, volledig gemiddelde vanaf 3 jaar",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-afsluiten/zzp-hypotheek/index.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. 1 jaar: 75% van dat jaarinkomen; 2 jaar: 90% van het gemiddelde; 3 jaar of langer: 100% van het gemiddelde van de laatste drie jaar"
+   },
+   "flex": {
+    "waarde": "~ 3-jaars gemiddelde, max. huidig inkomen; buiten NHG 90% daarvan",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-berekenen/inkomen.html",
+     "https://www.abnamro.nl/nl/prive/hypotheken/wonen/hypotheek-zonder-vast-contract.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. 90% van je gemiddelde inkomen van de laatste 3 jaar ... Met NHG 100% van je gemiddelde inkomen van de laatste 3 jaar, tot maximaal het inkomen van het laatste jaar"
+   },
+   "persp": {
+    "waarde": "+ Perspectiefverklaring geaccepteerd",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-berekenen/inkomen-perspectiefverklaring.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Hypotheek met een perspectiefverklaring"
+   },
+   "aow": {
+    "waarde": "~ Toets op werkelijke woonlasten vanaf pensioeninkomen",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/actueel/hypotheek-op-latere-leeftijd.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. 57+ hypotheek ... werkelijke woonlasten"
+   },
+   "rvp": {
+    "waarde": "+ 1 t/m 30 jaar vast; rentebedenktijd bij 2, 3, 7, 12 en 17 jaar",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/mijn-hypotheek/hypotheekrente-wijzigen/einde-rentevaste-periode/rente.html",
+     "https://www.abnamro.nl/nl/prive/hypotheken/mijn-hypotheek/hypotheekrente-wijzigen/einde-rentevaste-periode/rentebedenktijd.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. Bedenktijd geldt bij rentevaste periodes van 2, 3, 7, 12 en 17 jaar"
+   },
+   "boete": {
+    "waarde": "+ 10% van oorspronkelijke hoofdsom per jaar; boetevrij bij verkoop, variabele rente, einde rvp",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/actuele-hypotheekrente/vergoeding.html",
+     "https://www.abnamro.nl/nl/prive/hypotheken/mijn-hypotheek/extra-aflossen/index.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. geen vergoeding ... tijdens de rentebedenktijd ... Aan het einde van de rentevaste periode kun je zonder vergoeding de hypotheek aflossen"
+   },
+   "ltv": {
+    "waarde": "+ Maandelijks automatisch naar lagere tariefklasse bij lagere LTV",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/mijn-hypotheek/hypotheekrente-wijzigen/tariefklasse-aanpassen.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. de automatische berekening kan alleen leiden tot een lagere tariefklasse"
+   },
+   "bdduur": {
+    "waarde": "~ Nieuwbouw 24 mnd (+12 verlenging) / verbouw 18 mnd (+6 verlenging)",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-afsluiten/bouwdepot/voorwaarden-bouwdepot.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Looptijd is 24 maanden, met eenmalige verlenging van 12 maanden ... verbouw 18 maanden, eenmalige verlenging van 6 maanden"
+   },
+   "bdrnt": {
+    "waarde": "~ Gelijk aan hypotheekrente (gewogen gemiddelde); bij verlenging laatste 6 mnd geen rente (nieuwbouw max. 30 mnd, verbouw max. 18 mnd)",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-afsluiten/bouwdepot/voorwaarden-bouwdepot.html",
+     "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-afsluiten/bouwdepot/index.html"
+    ],
+    "brondatum": "2026-10",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Gewijzigd na controle (A/B/arbitrage): 'Gelijk aan hypotheekrente' klopt. 'Geen vergoeding in verlengingsperiode' te absoluut: nieuwbouw 24+12 mnd, alleen laatste 6 mnd geen rente; verbouw 18+6 mnd, verlenging zonder rente."
+   },
+   "bddecl": {
+    "waarde": "~ Digitaal via Internet Bankieren ca. 5 werkdagen; formulier ca. 10 werkdagen",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-afsluiten/bouwdepot/mijn-bouwdepot.html",
+     "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-afsluiten/bouwdepot/voorwaarden-bouwdepot.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. Declaraties worden aan jou uitbetaald; je betaalt zelf de aannemer"
+   },
+   "ebb": {
+    "waarde": "+ Energiebespaarbudget tot 106% woningwaarde; 2 jr (bestaand) / 3 jr (nieuwbouw)",
+    "bron": [
+     "https://intermediair.abnamro.nl/energiebespaarbudget",
+     "https://www.abnamro.nl/nl/prive/hypotheken/duurzaam-wonen/financiering-hypotheek.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. tot 106% van de woningwaarde ... binnen je bestaande annuïtaire, lineaire of aflossingsvrije hypotheek"
+   },
+   "duur": {
+    "waarde": "+ Duurzaam Wonen Hypotheek-leningdeel met rentevoordeel, tot 106%",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/duurzaam-wonen/duurzaam-wonen-hypotheek.html",
+     "https://www.abnamro.nl/nl/prive/hypotheken/duurzaam-wonen/duurzaamheidskorting.html"
+    ],
+    "brondatum": "2026-10",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Arbitrage: Waarde gaat over het Duurzaam Wonen Hypotheek-leningdeel (EUR 5.000-25.000), dat nog bestaat met lagere rente en tot 106%. Duurzaamheidskorting is per 1-4-2026 vervallen (rente per energielabel), maar gold nooit voor dit leningdeel; waarde blijft juist."
+   },
+   "verh": {
+    "waarde": "+ Verhuisregeling: rente en resterende rentevaste periode mee (vaste rente)",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/huis-kopen/verhuizen/index.html",
+     "https://intermediair.abnamro.nl/verhuisregeling-hypotheek"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Alleen een vaste rente kan worden meegenomen ... De rente en (resterende) looptijd van de rentevaste periode blijven altijd ongewijzigd"
+   },
+   "ondh": {
+    "waarde": "~ Eerst contact met bank vóór verkoop; restschuldfinanciering max. 15 jaar",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/mijn-hypotheek/restschuld/index.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. Neem dan eerst contact met de bank om een oplossing te vinden voor de restschuld"
+   },
+   "tweede": {
+    "waarde": "+ Onderhands verhogen tot inschrijving zonder notaris; anders 2e hypotheek",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-afsluiten/tweede-hypotheek.html",
+     "https://www.abnamro.nl/nl/prive/hypotheken/mijn-hypotheek/hypotheek-verhogen.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Staat je hypotheek hoger ingeschreven dan je huidige lening? Dan kun je je hypotheek misschien verhogen tot dat bedrag zonder een nieuwe akte"
+   },
+   "ovbr": {
+    "waarde": "+ Ook bij onverkochte woning (max 95% waarde); 24 mnd, nieuwbouw 36 mnd",
+    "bron": [
+     "https://intermediair.abnamro.nl/overbruggingslening",
+     "https://www.abnamro.nl/nl/prive/hypotheken/huis-kopen/verhuizen/overbruggingshypotheek/index.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Bij een nieuwbouwhuis is de maximale looptijd 36 maanden en bij een bestaand huis 24 maanden"
+   },
+   "avrij": {
+    "waarde": "! Per 1-6-2026 max 30% WW, plafond 150k/250k/500k naar WW; bestaand bij einde looptijd 50%",
+    "bron": [
+     "https://www.abnamro.com/nl/nieuws/abn-amro-en-florius-passen-beleid-aflossingsvrije-hypotheken-aan",
+     "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-afsluiten/hypotheekvormen/aflossingsvrije-hypotheek/index.html"
+    ],
+    "brondatum": "2026-06",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. aflossingsvrije hypotheek maximaal 30% van de woningwaarde ... €150.000 / €250.000 / €500.000"
+   },
+   "rmid": {
+    "waarde": "+ Rentemiddeling mogelijk; zelf door te rekenen in app/Internet Bankieren",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/mijn-hypotheek/hypotheekrente-wijzigen/rentemiddeling.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. De vergoeding betaal je gespreid, via een maandelijkse renteopslag, over de hele nieuwe rentevaste periode"
+   },
+   "rvoor": {
+    "waarde": "~ Voorstel minimaal 3 mnd vooraf; rentebedenktijd mogelijk",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/mijn-hypotheek/hypotheekrente-wijzigen/einde-rentevaste-periode/index.html",
+     "https://www.abnamro.nl/nl/prive/hypotheken/mijn-hypotheek/hypotheekrente-wijzigen/einde-rentevaste-periode/rente.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. minstens 3 maanden van tevoren automatisch een nieuw rentevoorstel"
+   },
+   "bbrk": {
+    "waarde": "+ Contante-waardemethode; 'naast betere' vergelijkingsrente in voordeel klant",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/actuele-hypotheekrente/vergoeding.html",
+     "https://www.abnamro.com/nl/nieuws/abn-amro-kiest-bij-berekening-boeterente-voordeel-voor-de-klant"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Het hoogste van de relevante rentes wordt gebruikt, wat in jouw voordeel is"
+   },
+   "elbl": {
+    "waarde": "+ Sinds 1-4-2026 energielabel verwerkt in rentetabel; voordeel vanaf label D",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/duurzaam-wonen/energielabel.html",
+     "https://intermediair.abnamro.nl/duurzaamheidskorting-2",
+     "https://www.abnamro.nl/nl/prive/hypotheken/duurzaam-wonen/duurzaamheidskorting.html"
+    ],
+    "brondatum": "2026-04",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Vanaf energielabel D geldt een rentevoordeel"
+   },
+   "o106": {
+    "waarde": "~ Tot 106% lenen voor energiebesparende maatregelen, met en zonder NHG",
+    "bron": [
+     "https://intermediair.abnamro.nl/energiebespaarbudget",
+     "https://intermediair.abnamro.nl/duurzaam-wonen-hypotheek",
+     "https://www.abnamro.nl/nl/prive/hypotheken/duurzaam-wonen/financiering-hypotheek.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Het budget kan bij een reguliere hypotheek en bij een verhoging worden aangevraagd ... met en zonder NHG"
+   },
+   "wkost": {
+    "waarde": "~ Vaste administratiekosten bij online wijziging; met advies daarnaast advieskosten",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/mijn-hypotheek/hypotheekrente-wijzigen/rentemiddeling.html",
+     "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-afsluiten/hypotheekadvies/kosten.html",
+     "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-afsluiten/execution-only/kosten.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Er geldt ook een afhandelingskosten van €100"
+   },
+   "avlt": {
+    "waarde": "~ Einde looptijd herfinancieren tot 50% aflossingsvrij; brief 12 mnd vooraf",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-afsluiten/hypotheekvormen/aflossingsvrije-hypotheek/index.html",
+     "https://www.abnamro.com/nl/nieuws/abn-amro-en-florius-passen-beleid-aflossingsvrije-hypotheken-aan"
+    ],
+    "brondatum": "2026-06",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Bij herfinanciering aan het einde van de looptijd blijft het maximum van 50% van de woningwaarde gelden"
+   },
+   "bproc": {
+    "waarde": "+ Hypotheek Care Team; proactief contact en maatwerk bij (dreigende) achterstand",
+    "bron": [
+     "https://www.abnamro.com/nl/nieuws/hypotheek-care-team-helpt-klanten-bij-dreigende-betalingsachterstanden"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Dit team helpt klanten die in financiële problemen dreigen te komen"
+   },
+   "erfp": {
+    "waarde": "~ Erfpacht financierbaar (ook afkoop canon meefinancieren); overstap eeuwigdurend (A'dam/Utrecht) met 'positieve verklaring'; alle NHG-erfpachtconstructies geac",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/actueel/erfpacht.html",
+     "https://www.abnamro.nl/nl/prive/hypotheken/wonen/wat-is-erfpacht.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. moet de notaris eerst toestemming aan ons vragen ... 'positieve verklaring'"
+   },
+   "geld": {
+    "waarde": "~ Renteaanbod 90 dagen geldig; offerte max. 12 mnd vanaf datum renteaanbod, passeren binnen die termijn, niet verlengbaar",
+    "bron": [
+     "https://intermediair.abnamro.nl/hoe-werkt-een-hypotheekaanvraag-bij-abn-amro",
+     "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-afsluiten/hypotheekvormen/budget-woning-hypotheek/index.html"
+    ],
+    "brondatum": "2026-10",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Gewijzigd na controle (A/B/arbitrage): Huidige waarde verwart renteaanbod (90 dagen) met offertetermijn (12 mnd vanaf renteaanbod). Consumentenpagina noemt 12 mnd voor Budget en Woning Hypotheek."
+   },
+   "bprov": {
+    "waarde": "+ Geen bereidstellingsprovisie: offerte automatisch 12 mnd geldig (Budget Hypotheek)",
+    "bron": [
+     "https://intermediair.abnamro.nl/hoe-werkt-een-hypotheekaanvraag-bij-abn-amro",
+     "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-afsluiten/hypotheekvormen/budget-woning-hypotheek/index.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. De hypotheek moet binnen deze periode passeren: deze termijn kan niet verlengd worden"
+   },
+   "cons": {
+    "waarde": "~ Consumptief via hypotheekverhoging alleen bij aflossing binnen 10 jaar (consumptief krediet); vrij besteedbaar via Overwaarde Hypotheek (62+)",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-afsluiten/execution-only/voorwaarden.html",
+     "https://www.abnamro.nl/nl/prive/hypotheken/overwaarde/overwaarde-hypotheek.html"
+    ],
+    "brondatum": "2026-10",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Gewijzigd na controle (A/B/arbitrage): Absoluut verbod op consumptieve doelen klopt niet: kan als consumptief krediet met aflossing binnen 10 jaar. Overwaarde Hypotheek (62+, vrij besteedbaar) bevestigd."
+   },
+   "lensch": {
+    "waarde": "~ Familielening: maandlast telt mee in toets. Leen-schenkcombinatie (groot)ouder-kind tot 50% van max. ABN-hypotheek, mits volledig aflossend",
+    "bron": [
+     "https://intermediair.abnamro.nl/met-hulp-van-familie-een-woning-financieren",
+     "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-afsluiten/huis-kopen-met-hulp-van-familie.html"
+    ],
+    "brondatum": "2025-01",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Vanaf 13 januari 2025 kan jouw klant tot 50% van de maximale hypotheek bij ABN AMRO extra lenen bij de (groot)ouders"
+   },
+   "desk": {
+    "waarde": "~ Calcasa Desktop Taxatie (Plus) o.a. bij overbrugging (max. 85-90% MW naar confidence level) en verhoging; Calcasa-model voor tariefklasse",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/huis-kopen/documenten/taxatie.html",
+     "https://intermediair.abnamro.nl/overbruggingslening",
+     "https://www.abnamro.nl/nl/prive/hypotheken/huis-kopen/documenten/desktoptaxatie.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. maximale verstrekking bij Confidence Level 5 is 85% van de marktwaarde. Bij Confidence Level 6 tot 90%"
+   },
+   "ams": {
+    "waarde": "+ Arbeidsmarktscan geaccepteerd voor flexwerkers (tijdelijk zonder intentie, oproep, seizoen) met min. 12 mnd loon in 14 mnd; niet uitzendkrachten",
+    "bron": [
+     "https://intermediair.abnamro.nl/arbeidsmarktscan",
+     "https://www.abnamro.nl/nl/prive/hypotheken/wonen/hypotheek-zonder-vast-contract.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. minimaal 12 maanden inkomen uit loondienst ... in de afgelopen 14 maanden"
+   },
+   "huur": {
+    "waarde": "~ Bij Hypotheek voor verhuur telt bruto huur mee als toetsinkomen (100% bij huurcontract >12 mnd); maatwerk o.b.v. 90% netto huur",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/huis-kopen/verhuizen/hypotheek-voor-verhuur.html",
+     "https://intermediair.abnamro.nl/hypotheek-voor-verhuur"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Gebruik dan 100% van de bruto huurinkomsten ... 90% van de netto huurinkomsten ... minimaal 15% exploitatiekosten"
+   },
+   "bonus": {
+    "waarde": "~ Vaste 13e maand telt mee; bonus, provisie, winstuitkering en overwerk samen max. 25% van bruto jaarsalaris + vakantiegeld (werkgeversverklaring)",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-berekenen/inkomen.html",
+     "https://intermediair.abnamro.nl/werkgeversverklaring"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Die variabele delen rekenen we mee voor maximaal 25% van het bruto jaarsalaris plus vakantiegeld"
+   },
+   "recr": {
+    "waarde": "- Geen hypotheek voor recreatiewoningen; tweede woning (pied-a-terre) eigen gebruik wel, max. 85% van waarde",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/speciaal-voor/preferred-banking/smart/wonen-hypotheek/vakantiehuis-kopen.html",
+     "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-afsluiten/hypotheek-voor-een-tweede-huis.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. ABN AMRO biedt geen hypotheek voor recreatiewoningen aan"
+   },
+   "start": {
+    "waarde": "~ SVn Starterslening geaccepteerd als koopconstructie, alleen bij hypotheek met NHG",
+    "bron": [
+     "https://intermediair.abnamro.nl/starters",
+     "https://www.abnamro.nl/nl/prive/hypotheken/huis-kopen/huis-kopen-als-starter.html",
+     "https://intermediair.abnamro.nl/koopconstructies-voor-starters"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Een klant kan deze starterslening alleen aanvragen voor een hypotheek met NHG"
+   },
+   "verhuur": {
+    "waarde": "~ Verhuur alleen met vooraf schriftelijke toestemming (tijdelijk: uitzending, woning te koop/Leegstandwet); permanent via Hypotheek voor verhuur",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/verhuur/index.html",
+     "https://www.abnamro.nl/nl/prive/hypotheken/huis-kopen/verhuizen/hypotheek-voor-verhuur.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Voor de verhuur van je woning heb je eerst schriftelijk toestemming nodig van ABN AMRO"
+   },
+   "ort": {
+    "waarde": "~ Structureel overwerk/ORT/provisie: totaal laatste 12 mnd op WGV; wisselende delen max. 25% van bruto jaarsalaris + vakantiegeld",
+    "bron": [
+     "https://intermediair.abnamro.nl/werkgeversverklaring",
+     "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-berekenen/inkomen.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. dan vult u in de totale uitkering van de afgelopen 12 maanden in"
+   },
+   "loondt": {
+    "waarde": "+ IBL (UWV-verzekeringsbericht) of werkgeversverklaring; IBL niet geschikt bij <3 mnd loondienst of starters",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/wonen/financiele-voordelen-starters.html",
+     "https://www.abnamro.nl/nl/prive/hypotheken/wonen/hypotheek-zonder-vast-contract.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Je downloadt dan het verzekeringsbericht van het UWV, op basis daarvan bepalen we je toetsinkomen"
+   },
+   "intent": {
+    "waarde": "+ Tijdelijk contract met intentie voor onbepaalde tijd = vast contract; volledig huidig inkomen telt",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/wonen/hypotheek-zonder-vast-contract.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Heb je een tijdelijk contract met een intentieverklaring voor onbepaalde tijd? Dan wordt dat gezien als een vast contract"
+   },
+   "toekst": {
+    "waarde": "~ Loonstijging binnen 6 mnd telt mee als werkgever die per brief bevestigt",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/wonen/financiele-voordelen-starters.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Verwacht je dat je inkomen binnen 6 maanden stijgt? Dan vragen we je werkgever om de loonstijging te bevestigen via een brief"
+   },
+   "proef": {
+    "waarde": "- Tijdens de proeftijd geen hypotheek mogelijk",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/wonen/hypotheek-zonder-vast-contract.html",
+     "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-afsluiten/zzp-hypotheek/index.html",
+     "https://www.abnamro.nl/nl/prive/speciaal-voor/medici/hypotheek-voor-medici.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. ABN AMRO stelt dat je tijdens je proeftijd geen hypotheek kunt afsluiten"
+   },
+   "buitw": {
+    "waarde": "~ Inkomen in vreemde valuta geaccepteerd; toets op 90% van omgerekend bedrag",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-berekenen/inkomen-in-vreemde-valuta.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Voor inkomen in vreemde valuta ... maximaal 90% van het bedrag in euro's"
+   },
+   "aios": {
+    "waarde": "+ AIOS/ANIOS: tijdelijk contract geldt als vast contract; volledig inkomen telt mee",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/speciaal-voor/medici/tips-voor-medici/hypotheek-voor-medici-met-studieschuld.html",
+     "https://www.abnamro.nl/nl/prive/speciaal-voor/medici/hypotheek-voor-medici.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. tijdelijk contract als vast contract beschouwt, waardoor het volledige inkomen meetelt"
+   },
+   "lijfr": {
+    "waarde": "~ AOW, aanvullend pensioen en lijfrente tellen mee in de berekening",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-berekenen/inkomen.html",
+     "https://www.abnamro.nl/nl/prive/hypotheken/actueel/hypotheek-op-latere-leeftijd.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. AOW, aanvullend pensioen en lijfrente"
+   },
+   "senior": {
+    "waarde": "+ 57+ hypotheek: toetsing op werkelijke woonlasten vanaf pensioendatum",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/actueel/hypotheek-op-latere-leeftijd.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. 57+ hypotheek ... werkelijke woonlasten"
+   },
+   "brut": {
+    "waarde": "~ Bruteren bij medewerkers internationale organisaties (vrijgesteld inkomen) met bruteringsfactoren; bij volledig vrijgesteld voor gehele looptijd",
+    "bron": [
+     "https://intermediair.abnamro.nl/bijzonderheden-internationale-organisaties"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Als het volledige inkomen vrijgesteld is van inkomstenbelasting ... voor de gehele looptijd"
+   },
+   "vblf": {
+    "waarde": "+ 100% LTV mogelijk bij verblijfsvergunning voor bepaalde tijd met niet-tijdelijk verblijfsdoel",
+    "bron": [
+     "https://intermediair.abnamro.nl/expats",
+     "https://www.abnamro.nl/en/personal/mortgages/applying-for-mortgage/mortgage-for-expats.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Bij een verblijfsvergunning voor bepaalde tijd met een niet-tijdelijk verblijfsdoel is 100% van de woningwaarde (LTV) al mogelijk"
+   },
+   "mwbep": {
+    "waarde": "~ Bestaande bouw: taxatierapport; nieuwbouw: waarde = koop-/aanneemsom + meerwerk + bouwrente/renteverlies",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-berekenen/huis.html",
+     "https://www.abnamro.nl/nl/prive/hypotheken/huis-kopen/nieuwbouw/zelfbouw.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. De stichtingskosten kunnen gebruikt om de waarde te bepalen bij zelfbouw in eigen beheer met aannemer"
+   },
+   "woz": {
+    "waarde": "~ WOZ-verslag/Calcasa alleen bij wijziging bestaande hypotheek; bij oversluiten (sinds 30-6-2021) taxatierapport nodig",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/mijn-hypotheek/hypotheekrente-wijzigen/tariefklasse-aanpassen.html",
+     "https://www.abnamro.nl/nl/prive/hypotheken/huis-kopen/documenten/taxatie.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Je kunt hiervoor een van de volgende documenten uploaden: een recente WOZ-beschikking, een desktoptaxatie, een Calcasa-rapport, een taxatierapport"
+   },
+   "ltvk": {
+    "waarde": "~ Max. 100% van de marktwaarde (in de meeste gevallen)",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-berekenen/huis.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Je kunt niet meer dan 100% van de waarde van het huis lenen"
+   },
+   "zbep": {
+    "waarde": "+ Inkomensverklaring Ondernemer meestal niet nodig: ABN AMRO-adviseur berekent toetsinkomen; bij NHG IBO of berekening door adviseur",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-afsluiten/zzp-hypotheek/index.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. Inkomensverklaring Ondernemer niet nodig: adviseurs kunnen je toetsinkomen zelf berekenen"
+   },
+   "z123": {
+    "waarde": "~ 1-2 jaar: max. 75% gem. fiscale winst; 2-3 jaar: 90%; vanaf 3 jaar gemiddelde laatste 3 jaar, max. laatste jaar",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-afsluiten/zzp-hypotheek/index.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Dan tellen we maximaal 75% van je gemiddelde fiscale winst mee"
+   },
+   "zcijf": {
+    "waarde": "~ Jaarrekeningen en IB-aangiften van de laatste 3 jaar plus prognose komend jaar",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-afsluiten/zzp-hypotheek/index.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. fiscale winst uit de aangiftes van de laatste drie jaar"
+   },
+   "zstart": {
+    "waarde": "~ Vaak mogelijk vanaf 1 jaar ondernemerschap; bij < 3 jaar prognose van accountant vereist",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-afsluiten/zzp-hypotheek/index.html",
+     "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-afsluiten/hypotheek-ondernemers.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. prognose ... van een boekhouder of accountant"
+   },
+   "duo": {
+    "waarde": "~ Actuele studieschuld telt mee (sinds 1-1-2024); volledig afgelost = geen last",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-berekenen/studieschuld-en-hypotheek.html"
+    ],
+    "brondatum": "2024-01",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Bij het berekenen van je maximale hypotheek telt sinds 1 januari 2024 je actuele studieschuld mee"
+   },
+   "rsk": {
+    "waarde": "~ Restschuld (tot een maximumbedrag) mee te financieren tot 115% marktwaarde nieuwe woning; oude woning definitief verkocht, aflossing binnen 15 jaar",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/mijn-hypotheek/restschuld/index.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Klanten met een restschuld mogen maximaal 115 procent van de marktwaarde van de nieuwe woning lenen"
+   },
+   "obmax": {
+    "waarde": "~ Verkocht (ook o.v.): tot 100% min verkoopkosten; niet verkocht: 95% taxatie of 85-90% Calcasa (CL5/6), min 1,5% kosten",
+    "bron": [
+     "https://intermediair.abnamro.nl/overbruggingslening",
+     "https://www.abnamro.nl/nl/prive/hypotheken/huis-kopen/verhuizen/overbruggingshypotheek/index.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. waarde ... 95% van de marktwaarde ... 1,5% verkoopkosten"
+   },
+   "obduur": {
+    "waarde": "~ Max. 24 maanden bestaande bouw, 36 maanden nieuwbouw; verlengen niet vanzelfsprekend",
+    "bron": [
+     "https://intermediair.abnamro.nl/overbruggingslening",
+     "https://www.abnamro.nl/nl/prive/hypotheken/huis-kopen/verhuizen/overbruggingshypotheek/index.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Bij een nieuwbouwhuis is de maximale looptijd 36 maanden en bij een bestaand huis is de maximale looptijd 24 maanden"
+   },
+   "obwaar": {
+    "waarde": "~ Taxatierapport of Calcasa Desktop Taxatie (Plus); WOZ/Calcasa-waarderapport sinds 30-06-2021 niet meer; verkoopakte vervangt taxatie",
+    "bron": [
+     "https://intermediair.abnamro.nl/overbruggingslening",
+     "https://www.abnamro.nl/nl/prive/hypotheken/huis-kopen/documenten/taxatie.html",
+     "https://www.abnamro.nl/nl/prive/hypotheken/huis-kopen/verhuizen/overbruggingshypotheek/index.html",
+     "https://www.abnamro.nl/nl/prive/hypotheken/huis-kopen/documenten/desktoptaxatie.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Een Calcasa-waarderapport of WOZ-taxatieverslag mag je dan niet meer gebruiken"
+   },
+   "obels": {
+    "waarde": "- Alleen voor klanten met lopende hypotheek bij ABN AMRO, Florius of Moneyou",
+    "bron": [
+     "https://intermediair.abnamro.nl/overbruggingslening"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. De nieuwe hypotheek moet dan bij ABN AMRO, Florius of Moneyou worden afgesloten"
+   },
+   "obvw": {
+    "waarde": "~ Alleen icm ABN AMRO-hypotheek; niet op meer dan één woning; administratief leningdeel met zelfde looptijd",
+    "bron": [
+     "https://intermediair.abnamro.nl/overbruggingslening",
+     "https://www.abnamro.nl/nl/prive/hypotheken/huis-kopen/verhuizen/overbruggingshypotheek/index.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Het combinatieleningdeel van € 5.000 heeft dezelfde looptijd als de overbruggingslening"
+   },
+   "geldnb": {
+    "waarde": "! Nieuwbouwofferte meestal 12 maanden; verlengen vooraf met adviseur bespreken",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/huis-kopen/nieuwbouw/nieuwbouw-hypotheek.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. offerte meestal 12 maanden geldig; vraag vooraf aan je adviseur of verlenging mogelijk is"
+   },
+   "annul": {
+    "waarde": "~ Geen annuleringskosten binnen 3 maanden na renteaanbod; daarna wel; gratis annuleren als nieuwbouw niet doorgaat",
+    "bron": [
+     "https://intermediair.abnamro.nl/hoe-werkt-een-hypotheekaanvraag-bij-abn-amro",
+     "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-afsluiten/hypotheekvormen/budget-woning-hypotheek/index.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. geen annuleringskosten tot 3 maanden (90 dagen) na uitbrengen van het renteaanbod, daarna 1% over de hoofdsom"
+   },
+   "dig": {
+    "waarde": "+ Alle hypotheekdocumenten digitaal te ondertekenen (Stiply, iDIN verplicht)",
+    "bron": [
+     "https://intermediair.abnamro.nl/digitaal-ondertekenen-met-stiply"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Stiply ... het gebruik van iDIN als authenticatiewijze verplicht"
+   },
+   "bgar": {
+    "waarde": "+ Bankgarantie via ABN AMRO mogelijk; kosten zitten in de afhandelingskosten",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/huis-kopen/documenten/bankgarantie.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. De kosten van een bankgarantie zijn meegenomen in de afhandelingskosten van je hypotheek"
+   },
+   "bovw": {
+    "waarde": "+ Hogere opbrengst vorige woning binnen 12 maanden na verkoop kosteloos aflossen",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/actuele-hypotheekrente/vergoeding.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. binnen 12 maanden na de verkoop van je oude woning kosteloos"
+   },
+   "bvrij": {
+    "waarde": "+ Geen vergoeding bij verkoop (verhuizing) en bij aflossen binnen 1 jaar na overlijden",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/actuele-hypotheekrente/vergoeding.html",
+     "https://www.abnamro.nl/nl/prive/themas/overlijden/overlijden-melden/overige-bankzaken.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Ook geen vergoeding bij overlijden binnen 1 jaar"
+   },
+   "maxh": {
+    "waarde": "! Vanaf 1 mln aparte toets (LTI/LTV); vanaf 2 mln max. 90% marktwaarde",
+    "bron": [
+     "https://intermediair.abnamro.nl/hoe-werkt-een-hypotheekaanvraag-bij-abn-amro"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Hoofdsom vanaf €2.000.000 (de maximale lening wordt in deze categorie beperkt tot 90% MW)"
+   },
+   "rest": {
+    "waarde": "~ Restschuldfinanciering mogelijk, looptijd max. 15 jaar",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/mijn-hypotheek/restschuld/index.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. De restschuldfinanciering van ABN AMRO heeft een looptijd van maximaal 15 jaar"
+   },
+   "verhw": {
+    "waarde": "~ Verhogen met Calcasa Desktop Taxatie mogelijk tot 1 mln; geen minimum gevonden",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/huis-kopen/documenten/desktoptaxatie.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. Calcasa Desktop Taxatie ... verhogen tot EUR 1.000.000"
+   },
+   "zelfb": {
+    "waarde": "~ Zelfbouw mogelijk; zonder aannemer taxatie verplicht, met aannemer stichtingskosten; tussentijdse inspectie bij 50% depot",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/huis-kopen/nieuwbouw/zelfbouw.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Die is verplicht zodra je 50% van je bouwdepot hebt gebruikt"
+   },
+   "cpo": {
+    "waarde": "+ Hypotheek voor woning in CPO-project mogelijk",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/huis-kopen/nieuwbouw/collectief-particulier-opdrachtgeverschap.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Binnen zo'n project financiert elke deelnemende particulier de eigen woning: dat kan natuurlijk ook bij ABN AMRO"
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Voorwaarden Woning Hypotheek",
+    "url": "https://assets.abnamro.com/api/public/content/voorwaarden-woning-hypotheek.pdf",
+    "versie": "juni 2025"
+   },
+   {
+    "titel": "Voorwaarden bouwdepot",
+    "url": "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-afsluiten/bouwdepot/voorwaarden-bouwdepot.html",
+    "versie": "actueel"
+   },
+   {
+    "titel": "ABN AMRO en Florius passen beleid aflossingsvrije hypotheken aan",
+    "url": "https://www.abnamro.com/nl/nieuws/abn-amro-en-florius-passen-beleid-aflossingsvrije-hypotheken-aan",
+    "versie": "2026 (per 1-6-2026)"
+   },
+   {
+    "titel": "Hoe werkt een hypotheekaanvraag bij ABN AMRO? (intermediair)",
+    "url": "https://intermediair.abnamro.nl/hoe-werkt-een-hypotheekaanvraag-bij-abn-amro",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "Overbruggingshypotheek (intermediair)",
+    "url": "https://intermediair.abnamro.nl/overbruggingslening",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "Voorwaarden Woning Hypotheek (juni 2025)",
+    "url": "https://assets.abnamro.com/api/public/content/voorwaarden-woning-hypotheek.pdf",
+    "versie": "2025-06"
+   }
+  ]
+ }
+]

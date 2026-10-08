@@ -1,0 +1,1011 @@
+[
+ {
+  "naam": "Munt Hypotheken",
+  "gecontroleerd": "2026-10-09",
+  "criteria": {
+   "zzp": {
+    "waarde": "! Met NHG min. 12 mnd ondernemer, zonder NHG 36 mnd; altijd inkomensverklaring",
+    "bron": [
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf",
+     "https://www.munthypotheken.nl/inkomensverklaring/"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. De IKV mag op de datum van het hypotheekaanbod niet ouder zijn dan 6 maanden."
+   },
+   "flex": {
+    "waarde": "~ Flexinkomen via Arbeidsmarktscan (12 van laatste 14 mnd gewerkt); tijdelijk contract evt. als vast",
+    "bron": [
+     "https://www.munthypotheken.nl/arbeidsmarktscan/",
+     "https://www.munthypotheken.nl/perspectiefverklaring/",
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. worked at least 12 of the last 14 months"
+   },
+   "persp": {
+    "waarde": "+ Perspectiefverklaring geaccepteerd; huidig inkomen meestal volledig als toetsinkomen",
+    "bron": [
+     "https://www.munthypotheken.nl/perspectiefverklaring/"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. With a PVK, current income is usually counted in full."
+   },
+   "aow": {
+    "waarde": "+ Seniorenregeling: toets op werkelijke lasten vanaf AOW met opgebouwd pensioen",
+    "bron": [
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf",
+     "https://www.munthypotheken.nl/senioren/"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. voor het inkomen vanaf de AOW-leeftijd wordt uitgegaan van het al opgebouwde pensioen"
+   },
+   "erfp": {
+    "waarde": "! Alleen erfpacht met (semi)overheid als erfverpachter; canon gaat af van financieringslast",
+    "bron": [
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf",
+     "https://www.munthypotheken.nl/site/assets/files/1838/av_26_01.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. De erfverpachter moet een (semi-)overheidsinstantie zijn."
+   },
+   "rvp": {
+    "waarde": "+ Variabel, 5, 10, 15, 20, 25 en 30 jaar",
+    "bron": [
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf",
+     "https://www.munthypotheken.nl/rente/"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. variabel, 5, 10, 15, 20, 25 en 30 jaar"
+   },
+   "dag": {
+    "waarde": "! Keuze: offerterente (vast) of dagrente (daling tot passeren) tegen hogere rente",
+    "bron": [
+     "https://www.munthypotheken.nl/veelgestelde-vragen/rente/wat-is-het-verschil-tussen-offerterente-en-dagrente/",
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Bij dagrente wordt het tarief nooit hoger dan de rente in het aanbod."
+   },
+   "geld": {
+    "waarde": "~ 4 mnd; eenmalig verlengen met 2 mnd (bestaande bouw) of 8 mnd (nieuwbouw)",
+    "bron": [
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf",
+     "https://www.munthypotheken.nl/veelgestelde-vragen/aanvraag-munt-hypotheek/mijn-rente-aanbod-is-bijna-niet-meer-geldig-kan-ik-de-termijn-verlengen/"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Het renteaanbod is vanaf de datum van uitgifte 4 maanden geldig."
+   },
+   "boete": {
+    "waarde": "+ Onbeperkt boetevrij met eigen geld; 10% p.j. van oorspr. bedrag bij oversluiten/rentewijziging",
+    "bron": [
+     "https://www.munthypotheken.nl/veelgestelde-vragen/uw-munt-hypotheek/wanneer-mag-ik-zonder-kosten-aflossen/",
+     "https://www.munthypotheken.nl/site/assets/files/1838/av_26_01.pdf",
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. U mag bij MUNT altijd en onbeperkt aflossen met uw eigen geld"
+   },
+   "ltv": {
+    "waarde": "+ Risico-opslag past automatisch aan bij aflossen naar lagere klasse; waardestijging op verzoek",
+    "bron": [
+     "https://www.munthypotheken.nl/site/assets/files/1838/av_26_01.pdf",
+     "https://www.munthypotheken.nl/veelgestelde-vragen/rente/hoe-kan-ik-mijn-rente-opslag-laten-vervallen-als-de-waarde-van-mijn-huis-is-gestegen/"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. vervalt daardoor per de eerste van de volgende maand de eventuele risico-opslag automatisch"
+   },
+   "bdduur": {
+    "waarde": "+ 24 mnd; verlengbaar met 12 + 6 mnd tot max. 42 mnd (via MijnHypotheekOnline)",
+    "bron": [
+     "https://www.munthypotheken.nl/veelgestelde-vragen/bouwdepot/hoe-lang-is-mijn-bouwdepot-geldig/",
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. eerst met 12 maanden, daarna nog eens met 6 maanden"
+   },
+   "bdrnt": {
+    "waarde": "! Vergoeding = gewogen hypotheekrente, maar max. 12 mnd (bestaand) / 24 mnd (nieuwbouw, EBB)",
+    "bron": [
+     "https://www.munthypotheken.nl/veelgestelde-vragen/bouwdepot/wat-is-de-rente-op-mijn-bouwdepot/",
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. voor bestaande bouw krijgt u de eerste 12 maanden een rentevergoeding"
+   },
+   "bddecl": {
+    "waarde": "~ Declareren via MijnHypotheekOnline (foto factuur) of e-mail; uitbetaling binnen 5 werkdagen",
+    "bron": [
+     "https://www.munthypotheken.nl/veelgestelde-vragen/bouwdepot/wanneer-wordt-mijn-declaratie-betaald/"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. U dient een declaratie in door alleen een foto van uw factuur te uploaden."
+   },
+   "ebb": {
+    "waarde": "+ Energiebespaarbudget naar label (max. 20k bij E-G), in duurzaamheidsdepot, 2 jaar",
+    "bron": [
+     "https://www.munthypotheken.nl/veelgestelde-vragen/aanvraag-munt-hypotheek/wat-is-het-energie-bespaar-budget/",
+     "https://www.munthypotheken.nl/duurzaamheidsdepot/"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. € 20.000 bij energielabel E, F of G"
+   },
+   "duur": {
+    "waarde": "~ Geen rentekorting gevonden; voordeel via extra leenruimte (EBB tot 106%) en Verbeterbudget",
+    "bron": [
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf",
+     "https://www.munthypotheken.nl/veelgestelde-vragen/aanvraag-munt-hypotheek/wat-is-een-verbeterbudget/"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. Dit mag 106% zijn als het gedeelte boven 100% volledig wordt gebruikt voor energiebesparende voorzieningen."
+   },
+   "verh": {
+    "waarde": "+ Rente kosteloos meenemen binnen 3 mnd; meerlenen tegen actuele rente",
+    "bron": [
+     "https://www.munthypotheken.nl/veelgestelde-vragen/aanvraag-munt-hypotheek/heeft-munt-hypotheken-een-verhuisregeling/"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Dan moet hij binnen 3 maanden na het aflossen van zijn hypotheek het renteaanbod aanvragen."
+   },
+   "ondh": {
+    "waarde": "~ Verkoop met restschuld alleen met toestemming MUNT (bijzonder beheer)",
+    "bron": [
+     "https://www.munthypotheken.nl/veelgestelde-vragen/bijzonder-beheer/mag-ik-mijn-woning-verkopen-met-restschuld/"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Vraag om deze toestemming zodra u weet dat u een restschuld heeft"
+   },
+   "oha": {
+    "waarde": "~ Draagkrachttoets blijvende partner; evt. extra aflossing als voorwaarde; beide ex-partners kunnen nieuw lenen",
+    "bron": [
+     "https://www.munthypotheken.nl/veelgestelde-vragen/uw-munt-hypotheek/wat-is-ontslag-hoofdelijke-aansprakelijkheid/",
+     "https://www.munthypotheken.nl/relatiebeeindiging/",
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. MUNT rekent €150,- voor het ontslag hoofdelijke aansprakelijkheid."
+   },
+   "tweede": {
+    "waarde": "~ Verhogen/2e hypotheek via adviseur; geen achterstand laatste 12 mnd; binnen inschrijving zonder notaris",
+    "bron": [
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf",
+     "https://www.munthypotheken.nl/veelgestelde-vragen/aanvraag-munt-hypotheek/kan-ik-een-tweede-hypotheek-afsluiten/"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Een verhoging kan onderhands als dit binnen de bestaande hypothecaire inschrijving past."
+   },
+   "ovbr": {
+    "waarde": "~ Eigen overbruggingshypotheek, variabele rente, max. 30 mnd; max. 98% verkoopprijs (verkocht) of 90% waarde/vraagprijs (onverkocht) min schuldrest",
+    "bron": [
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf",
+     "https://www.munthypotheken.nl/veelgestelde-vragen/aanvraag-munt-hypotheek/kan-ik-een-overbruggingslening-afsluiten/"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Gewijzigd na controle (A/B/arbitrage): Gids 2026 noemt 98% (2% voor courtage/notaris; 90% zolang ontbindende voorwaarden lopen); FAQ (ongedateerd) en gids 2024 nog 97%. Gids 2026 is de nieuwste bron. 30 mnd en variabele rente bevestigd."
+   },
+   "avrij": {
+    "waarde": "~ Max. 50% van marktwaarde aflossingsvrij (samen met eventueel aflossingsvrij deel familiehypotheek); bestaande spaar-/beleggingsdelen mee te nemen als aflossin",
+    "bron": [
+     "https://www.munthypotheken.nl/veelgestelde-vragen/aanvraag-munt-hypotheek/welk-deel-van-mijn-hypotheek-mag-ik-aflossingsvrij-lenen/",
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. U kunt bij MUNT maximaal 50% van de marktwaarde van uw woning aflossingsvrij lenen."
+   },
+   "rmid": {
+    "waarde": "! Tussentijds rente wijzigen: vergoeding ineens + administratiekosten; geen rentemiddeling gevonden",
+    "bron": [
+     "https://www.munthypotheken.nl/veelgestelde-vragen/rente/kan-ik-tussentijds-mijn-rentevasteperiode-wijzigen/",
+     "https://www.munthypotheken.nl/hypotheekcheck/acties/hoe-kan-ik-mijn-rente-aanpassen/"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Bij de laatste stap kunt u uw hypotheekrente meteen aanpassen, als u met iDEAL de vergoeding en de administratiekosten van €150 betaalt."
+   },
+   "rverl": {
+    "waarde": "~ Bestaande klanten kiezen uit alle actuele tarieven; opslag naar actuele risicoklasse",
+    "bron": [
+     "https://www.munthypotheken.nl/veelgestelde-vragen/rente/wat-bedoelt-munt-met-het-tarief-is-tijdelijk-alleen-beschikbaar-voor-bestaande-klanten/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Zij kunnen uit alle tarieven kiezen als zij hun MUNT Hypotheek willen verlengen of verhogen."
+   },
+   "rvoor": {
+    "waarde": "~ Uiterlijk 3 mnd vóór einde rentevast; voorstel met min. 3 rentevaste perioden",
+    "bron": [
+     "https://www.munthypotheken.nl/site/assets/files/1838/av_26_01.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. ten minste drie (3) maanden voor afloop van de lopende Rentevasteperiode"
+   },
+   "bbrk": {
+    "waarde": "~ Contante waarde renteverschil met rente vergelijkbare leningen, resterende rvp, volgens aflosschema",
+    "bron": [
+     "https://www.munthypotheken.nl/veelgestelde-vragen/uw-munt-hypotheek/ik-wil-aflossen-op-mijn-hypotheek-moet-ik-een-boete-betalen/",
+     "https://www.munthypotheken.nl/site/assets/files/1838/av_26_01.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. contante waarde van het verschil tussen de rente die u betaalt en de rente voor soortgelijke leningen voor de duur van het restant van de rentevasteperiode"
+   },
+   "bprov": {
+    "waarde": "! Verlengen kost bereidstellingsprovisie per verlengde dag",
+    "bron": [
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf",
+     "https://www.munthypotheken.nl/veelgestelde-vragen/aanvraag-munt-hypotheek/wat-is-bereidstellingsprovisie/"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. (0,25% x hypotheekbedrag) / 30 dagen x aantal verlengde dagen"
+   },
+   "wkost": {
+    "waarde": "~ Vaste administratiekosten bij wijziging lening/rente en bij verhoging; acceptatie kosteloos",
+    "bron": [
+     "https://www.munthypotheken.nl/hypotheekcheck/acties/hoe-kan-ik-mijn-rente-aanpassen/",
+     "https://www.munthypotheken.nl/site/assets/files/31038/munt_renteoverzicht_20250910.pdf",
+     "https://www.munthypotheken.nl/site/assets/files/1838/av_26_01.pdf"
+    ],
+    "brondatum": "2025-09",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. administratiekosten bij wijzigen van de lening of rente (excl. vergoeding) · € 150,-"
+   },
+   "avlt": {
+    "waarde": "! Einde looptijd: aflosvrij deel aflossen; MUNT rekent dan nieuwe maandlast met aflossing over 30 jr",
+    "bron": [
+     "https://www.munthypotheken.nl/veelgestelde-vragen/uw-munt-hypotheek/aflossingsvrije-leningdeel-aflossen/",
+     "https://www.munthypotheken.nl/levenslang-zeker-hypotheek/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. maken wij een nieuwe maandlastenberekening inclusief maandelijkse terugbetaling met opnieuw een looptijd van 30 jaar"
+   },
+   "bproc": {
+    "waarde": "+ Vroeg melden: MUNT belt binnen 3 dagen; tijdelijk minder betalen soms mogelijk",
+    "bron": [
+     "https://www.munthypotheken.nl/inkomensdaling/",
+     "https://www.munthypotheken.nl/veelgestelde-vragen/bijzonder-beheer/is-er-een-mogelijkheid-tijdelijk-minder-te-betalen/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. MUNT adviseert om tijdig contact op te nemen, dan kan MUNT u goed helpen."
+   },
+   "o106": {
+    "waarde": "! Tot 106% voor EBV (deel boven 100% volledig naar EBV); geen aparte vrijstelling, vier risicoklassen met hoogste klasse >90% MW",
+    "bron": [
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf",
+     "https://www.munthypotheken.nl/veelgestelde-vragen/verduurzamen/hoeveel-mogen-klanten-lenen-voor-energiebesparende-voorzieningen-ebv-in-relatie-tot-de-waarde-van-de-woning/"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. The part above 100% must be fully used for these measures."
+   },
+   "cons": {
+    "waarde": "~ Consumptief gebruik mogelijk in box 3-leningdeel als het past in annuïtaire lastentoets; niet met NHG; bij nieuwbouw pas na oplevering",
+    "bron": [
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Consumptief gebruik van de hypotheek is mogelijk als dit past volgens de annuïtaire lastentoets"
+   },
+   "lensch": {
+    "waarde": "+ Familielening: werkelijke last bij rente min. 10 jaar vast; teruggeschonken lasten (schriftelijk vastgelegd) mogen buiten beschouwing blijven",
+    "bron": [
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf",
+     "https://www.munthypotheken.nl/familiehypotheek/"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. De schenkingen tellen mee als ze duurzaam zijn, met een toetshorizon van tien jaar."
+   },
+   "desk": {
+    "waarde": "~ Alleen Calcasa Desktop Taxatie (max. 6 mnd oud) bij hypotheek < 90% marktwaarde; vaker ook bij appartementen; anders taxatierapport",
+    "bron": [
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. MUNT accepts only the Desktop Taxatie from Calcasa"
+   },
+   "ams": {
+    "waarde": "+ Arbeidsmarktscan is een van de toetsinstrumenten voor inkomen (naast werkgeversverklaring, IBL, perspectiefverklaring)",
+    "bron": [
+     "https://www.munthypotheken.nl/arbeidsmarktscan/",
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. The AMS can establish the income for flexible or temporary work."
+   },
+   "vve": {
+    "waarde": "~ VvE ingeschreven bij KvK, VvE in oprichting (splitsing/nieuwbouw) of splitsingsakte van vóór 1972; eis 'actief' niet meer genoemd",
+    "bron": [
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. registered with the KvK (Chamber of Commerce), one that is being set up for a splitting or new-build, or one whose splitting deed dates from before 1972"
+   },
+   "huur": {
+    "waarde": "~ Huur uit verhuurde woningen telt mee (niet met NHG): woning min. 1 jaar in bezit, contract min. 6 mnd, 25% afslag; boven huurgrens beleggersregels",
+    "bron": [
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf",
+     "https://www.munthypotheken.nl/huurinkomstenverklaring/"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. MUNT neemt inkomen uit verhuurde woningen mee in het toetsinkomen."
+   },
+   "bonus": {
+    "waarde": "~ Provisie, overwerk en bonus samen max. 40% van vast inkomen (overwerk max. 20%); structureel, laatste 12 mnd; ORT 100%",
+    "bron": [
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Provisie, overwerk en bonus samen: maximaal 40% van het vaste inkomen."
+   },
+   "recr": {
+    "waarde": "- Alleen eigen woning als hoofdverblijf; vakantie-/recreatiewoning niet financierbaar",
+    "bron": [
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf",
+     "https://www.munthypotheken.nl/veelgestelde-vragen/aanvraag-munt-hypotheek/kan-een-tweede-woning-gefinancierd-worden-met-een-munt-hypotheek/"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. MUNT verstrekt alleen hypotheken voor een eigen woning als u die als hoofdverblijf gebruikt."
+   },
+   "aanv": {
+    "waarde": "- Maximaal 2 aanvragers, beiden hoofdelijk aansprakelijk; beide wonen in de woning, min. 1 is eigenaar",
+    "bron": [
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Een MUNT Hypotheek kan door maximaal 2 personen worden aangevraagd."
+   },
+   "start": {
+    "waarde": "~ Starterslening SVn alleen in combinatie met NHG",
+    "bron": [
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. MUNT accepteert aanvragen met NHG in combinatie met een starterslening van het Stimuleringsfonds Volkshuisvesting SVn."
+   },
+   "verhuur": {
+    "waarde": "~ Verhuur alleen met vooraf uitdrukkelijke schriftelijke toestemming; tijdelijk mogelijk (buitenland, verkoop); anders opeisbaar",
+    "bron": [
+     "https://www.munthypotheken.nl/site/assets/files/1838/av_26_01.pdf",
+     "https://www.munthypotheken.nl/veelgestelde-vragen/uw-munt-hypotheek/ik-wil-mijn-woning-verhuren-mag-dat/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. U heeft altijd toestemming van MUNT nodig vóórdat u de woning verhuurt."
+   },
+   "ort": {
+    "waarde": "~ ORT telt 100% mee; overwerk max. 20% van vast inkomen; provisie, overwerk en bonus samen max. 40% van vast inkomen",
+    "bron": [
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Onregelmatigheidstoeslag: 100% wordt meegerekend."
+   },
+   "loondt": {
+    "waarde": "+ IBL (UWV-verzekeringsbericht) geaccepteerd i.p.v. werkgeversverklaring, ook bij tijdelijk contract; alleen Nederlandse werkgever",
+    "bron": [
+     "https://www.munthypotheken.nl/inkomensbepaling-loondienst/",
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. It works whether you have a permanent or temporary contract, but only for a Dutch employer."
+   },
+   "intent": {
+    "waarde": "~ Tijdelijk contract: IBL, Arbeidsmarktscan (min. 12 van laatste 14 mnd gewerkt, proeftijd voorbij) of Perspectiefverklaring (uitzend, min. 6 mnd)",
+    "bron": [
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf",
+     "https://www.munthypotheken.nl/arbeidsmarktscan/",
+     "https://www.munthypotheken.nl/veelgestelde-vragen/aanvraag-munt-hypotheek/ik-heb-een-tijdelijk-contract-bij-mijn-werkgever-kan-ik-een-munt-hypotheek-krijgen/"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. The applicant needs to have worked at least 12 of the last 14 months, the probation period must have ended"
+   },
+   "toekdv": {
+    "waarde": "~ Toekomstig dienstverband telt mee: start binnen 6 mnd na renteaanbod, onbepaalde tijd zonder proeftijd; tekort tot indiensttreding uit eigen middelen",
+    "bron": [
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Het dienstverband moet ingaan binnen 6 maanden na de datum van het renteaanbod."
+   },
+   "toekst": {
+    "waarde": "~ Salarisstijging/uren-uitbreiding telt mee als ingang binnen 6 mnd na aanbod en contract vast of met intentieverklaring, proeftijd verlopen",
+    "bron": [
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. De verhoging moet ingaan binnen 6 maanden na de datum van het hypotheekaanbod."
+   },
+   "proef": {
+    "waarde": "- Proeftijd moet verlopen zijn (salarisstijging, AMS); toekomstig dienstverband alleen zonder proeftijd",
+    "bron": [
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. De arbeidsovereenkomst moet voor onbepaalde tijd zijn én zonder proeftijd."
+   },
+   "buitw": {
+    "waarde": "~ Werkgever in BE, DE, LU of FR: salaris in euro, min. 3 mnd in dienst, NHG-werkgeversverklaring NL/EN; andere landen per geval",
+    "bron": [
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. De aanvrager is op de datum van het renteaanbod al minstens 3 maanden in dienst van de werkgever"
+   },
+   "wajong": {
+    "waarde": "~ Wajong telt mee als uitkering gegarandeerd loopt tot pensioen-/AOW-leeftijd; toekenningsbesluit vereist",
+    "bron": [
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Benefits that are guaranteed up to AOW age include Wajong, WAO and IVA."
+   },
+   "ivawao": {
+    "waarde": "~ IVA en WAO tellen mee als uitkering gegarandeerd loopt tot pensioen-/AOW-leeftijd; toekenningsbesluit vereist",
+    "bron": [
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Benefits that are guaranteed up to AOW age include Wajong, WAO and IVA."
+   },
+   "lijfr": {
+    "waarde": "+ Toekomstige lijfrente-uitkeringen tellen mee in pensioeninkomen; toekomstige lijfrentepremies niet",
+    "bron": [
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf",
+     "https://www.munthypotheken.nl/lijfrente/"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. future lijfrente premiums are not included in the pension income calculation"
+   },
+   "senior": {
+    "waarde": "~ Inkomen vanaf AOW op basis van reeds opgebouwd pensioen (niet te bereiken); AOW binnen 10 jaar: gevolgen pensionering beoordeeld",
+    "bron": [
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf",
+     "https://www.munthypotheken.nl/senioren/"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Tot de AOW-leeftijd wordt altijd getoetst op de annuïtaire last."
+   },
+   "nlwon": {
+    "waarde": "~ Niet-Nederlandse nationaliteit: boven 90% MW alleen na min. 12 mnd wonen én werken in NL; anders max. 90% MW",
+    "bron": [
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Woont of werkt uw klant korter dan 12 maanden in Nederland? Dan kan hij maximaal 90% van de marktwaarde van de woning lenen."
+   },
+   "vblf": {
+    "waarde": "- Alleen NL/EU/EVA, vergunning onbepaalde tijd, langdurig ingezetene of niet-tijdelijke vergunning; expats en diplomaten geen klant",
+    "bron": [
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Expats, diplomaten en ambassademedewerkers komen niet in aanmerking"
+   },
+   "mwbep": {
+    "waarde": "~ Taxatierapport of Desktop Taxatie max. 6 mnd oud; desktop alleen tot 90% en niet bij nieuwbouw; nieuwbouw: laagste van stichtingskosten en taxatie",
+    "bron": [
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. The guide sets a maximum age of 6 months for both a taxatierapport and a Desktop Taxatie."
+   },
+   "ltvk": {
+    "waarde": "~ Max. 100% marktwaarde (ook na verbouwing); 106% bij energiebesparende voorzieningen; nieuwbouw 100% van laagste van stichtingskosten/taxatie",
+    "bron": [
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf",
+     "https://www.munthypotheken.nl/veelgestelde-vragen/aanvraag-munt-hypotheek/welk-deel-van-mijn-hypotheek-mag-ik-aflossingsvrij-lenen/"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Het totale leenbedrag voor de eigen woning (inclusief de familiehypotheek) is maximaal 100% van de marktwaarde van de woning (na verbouwing)."
+   },
+   "wwp": {
+    "waarde": "- Woon-/winkelpanden (combinatiepanden) niet geaccepteerd",
+    "bron": [
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. serviceflats, woonboten, woon-/winkelpanden (combinatiepanden)"
+   },
+   "wboer": {
+    "waarde": "~ Alleen als woning gebruikt; met agrarische bestemming geen agrarische activiteiten meer toegestaan",
+    "bron": [
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf",
+     "https://www.munthypotheken.nl/veelgestelde-vragen/aanvraag-munt-hypotheek/kan-een-tweede-woning-gefinancierd-worden-met-een-munt-hypotheek/"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Een woonboerderij met agrarische bestemming die uitsluitend als woning dient, vormt geen belemmering"
+   },
+   "wboot": {
+    "waarde": "- Woonboten worden niet geaccepteerd",
+    "bron": [
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. serviceflats, woonboten, woon-/winkelpanden (combinatiepanden)"
+   },
+   "hsb": {
+    "waarde": "~ Houtskeletbouw, prefab en CLT mogelijk bij betonnen fundering en bouwjaar na 2012",
+    "bron": [
+     "https://www.munthypotheken.nl/veelgestelde-vragen/aanvraag-munt-hypotheek/kan-ik-een-munt-hypotheek-aanvragen-voor-een-houten-huis/"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. prefab woningen, houtskeletbouw en CLT-woningen"
+   },
+   "nhgk": {
+    "waarde": "~ Koopconstructies (o.a. Koopgarant) uitsluitend met NHG",
+    "bron": [
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Een MUNT Hypotheek met een koopconstructie is alleen mogelijk met NHG."
+   },
+   "zbep": {
+    "waarde": "~ Inkomensverklaring vereist; zonder NHG alleen van MUNT-geautoriseerde rekenexpert (Raadhuys, Zakelijk Inkomen); telt 100% mee",
+    "bron": [
+     "https://www.munthypotheken.nl/inkomensverklaring/",
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf",
+     "https://www.munthypotheken.nl/rekenexperts/"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Dit inkomen nemen wij voor 100% mee in het toetsinkomen."
+   },
+   "zstart": {
+    "waarde": "+ Startende ondernemers in veel gevallen geaccepteerd; bij NHG min. 12 maanden zelfstandig",
+    "bron": [
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf",
+     "https://www.munthypotheken.nl/inkomensverklaring/"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. MUNT in veel gevallen nu ook startende ondernemers accepteert"
+   },
+   "bkr": {
+    "waarde": "- Strikt: alleen BKR-codering RN 3 met finale kwijting toegestaan",
+    "bron": [
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf",
+     "https://www.munthypotheken.nl/veelgestelde-vragen/aanvraag-munt-hypotheek/ik-heb-een-codering-bij-bkr-kan-ik-een-munt-hypotheek-krijgen/"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Uitzondering hierop is een RN-3 codering als gevolg van een restschuld waarvoor NHG u kwijtschelding heeft verleend."
+   },
+   "duo": {
+    "waarde": "~ Lasten DUO-studielening in mindering op toegestane financieringslast",
+    "bron": [
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. De lasten van DUO-studieleningen worden in mindering gebracht op de toegestane financieringslast."
+   },
+   "plen": {
+    "waarde": "~ Persoonlijke lening (aflopend, BKR AK): werkelijke last mits maandlast vast en einde looptijd afgelost; doorlopend krediet 2% p.m. van kredietsom",
+    "bron": [
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Gewijzigd na controle (A/B/arbitrage): Gids 2026: 2% p.m. (of hogere werkelijke last) geldt standaard/voor doorlopend krediet; aflopende lening op werkelijke last onder voorwaarden (geen slottermijn). 'Aflossen uit hypotheek tot 90%' niet specifiek bevestigd (gids noemt alleen consumptief tot 90% LTV), daarom weggelaten."
+   },
+   "dkr": {
+    "waarde": "~ 2% p.m. van oorspronkelijke kredietsom (limiet) of werkelijke last indien hoger",
+    "bron": [
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Doorlopende kredieten (BKR-code RK) worden standaard getoetst met 2% van de oorspronkelijke kredietsom per maand"
+   },
+   "lease": {
+    "waarde": "~ OA-lease: geregistreerd bedrag/looptijd minus 35% servicedeel (65%); niet-OA en bij NHG volledige leasetermijn",
+    "bron": [
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Private autolease met BKR-code OA telt voor 65% mee als financiële verplichting."
+   },
+   "rsk": {
+    "waarde": "~ Restschuld meefinancieren mogelijk als totale hypotheek max. 100% marktwaarde nieuwe woning is; telt mee voor LTV",
+    "bron": [
+     "https://www.munthypotheken.nl/veelgestelde-vragen/aanvraag-munt-hypotheek/kan-ik-met-een-restschuld-een-munt-hypotheek-sluiten/",
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. U kunt een restschuld van uw vorige woning meefinancieren als de totale hypotheek niet hoger is dan 100% van de marktwaarde van uw nieuwe woning."
+   },
+   "obmax": {
+    "waarde": "~ Verkocht: max. 98% verkoopprijs minus schuldrest; niet verkocht: max. 90% marktwaarde minus schuldrest (ook bij desktoptaxatie)",
+    "bron": [
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf",
+     "https://www.munthypotheken.nl/veelgestelde-vragen/aanvraag-munt-hypotheek/kan-ik-een-overbruggingslening-afsluiten/"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. verkochte woning tot 98%, te verkopen woning tot 90%"
+   },
+   "oblast": {
+    "waarde": "~ Dubbele lasten op toegestane financieringslast; tekort x aantal maanden dubbele lasten aantonen met eigen middelen; nieuwbouw: uit bouwdepot",
+    "bron": [
+     "https://www.munthypotheken.nl/servicepartner/eigen-middelen-tijdelijk-dubbele-lasten/",
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Vermenigvuldig het maandelijkse tekort met het aantal maanden dat de dubbele-lastensituatie duurt of aangetoond moet worden."
+   },
+   "obduur": {
+    "waarde": "~ Max. 30 maanden; oude woning uiterlijk binnen 30 maanden na passeren verkocht en geleverd, anders opeisbaar",
+    "bron": [
+     "https://www.munthypotheken.nl/veelgestelde-vragen/aanvraag-munt-hypotheek/kan-ik-een-overbruggingslening-afsluiten/",
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. De maximale looptijd van een overbruggingshypotheek is 30 maanden."
+   },
+   "obwaar": {
+    "waarde": "~ Taxatierapport of Calcasa Desktop Taxatie (max. 6 maanden oud) of verkoopovereenkomst; WOZ-waarde niet geaccepteerd",
+    "bron": [
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. Levert uw klant een Desktop Taxatie aan? Dan gaan we uit van maximaal 90% van de marktwaarde."
+   },
+   "obvw": {
+    "waarde": "~ Afsluitkosten voor overbruggingshypotheek (via notaris); variabele rente; schuldrestopgave huidige woning nodig",
+    "bron": [
+     "https://www.munthypotheken.nl/veelgestelde-vragen/aanvraag-munt-hypotheek/kan-ik-een-overbruggingslening-afsluiten/",
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. De afsluitkosten voor een overbruggingshypotheek zijn € 500."
+   },
+   "geldnb": {
+    "waarde": "~ Aanbod 4 maanden geldig; nieuwbouw eenmalig verlengen met 8 maanden (bestaande bouw 2); verlengingskosten alleen als passeerrente hoger is",
+    "bron": [
+     "https://www.munthypotheken.nl/veelgestelde-vragen/aanvraag-munt-hypotheek/mijn-rente-aanbod-is-bijna-niet-meer-geldig-kan-ik-de-termijn-verlengen/",
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Die termijn kunt u één keer verlengen met 2 maanden voor bestaande bouw en 8 maanden voor nieuwbouw."
+   },
+   "annul": {
+    "waarde": "~ Annuleringskosten na ontvangst getekend aanbod / als akte niet passeert binnen (verlengde) geldigheid; bedrag in hypotheekgids",
+    "bron": [
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf",
+     "https://www.munthypotheken.nl/veelgestelde-vragen/aanvraag-munt-hypotheek/hoe-kan-ik-mijn-rente-of-hypotheekaanbod-verlengen/"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. € 750 na het getekend retour sturen van het hypotheekaanbod"
+   },
+   "bvrij": {
+    "waarde": "+ Met eigen geld altijd onbeperkt boetevrij; ook bij vrijwillige verkoop, overlijden (binnen 1 jaar aanpassen/aflossen) en tenietgaan onderpand",
+    "bron": [
+     "https://www.munthypotheken.nl/veelgestelde-vragen/uw-munt-hypotheek/wanneer-mag-ik-zonder-kosten-aflossen/",
+     "https://www.munthypotheken.nl/site/assets/files/1838/av_26_01.pdf",
+     "https://www.munthypotheken.nl/melden-van-een-overlijden/",
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. volledige vervroegde aflossing bij vrijwillige onderhandse verkoop van het Onderpand, gevolgd door verhuizing"
+   },
+   "minh": {
+    "waarde": "~ Aparte minima voor eerste hypotheek, verhoging/tweede hypotheek en energiebesparende verhoging (bedragen in toelichting)",
+    "bron": [
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. minimaal bedrag nieuwe MUNT Hypotheek: € 75.000"
+   },
+   "maxh": {
+    "waarde": "~ Maximale hoofdsom excl. overbrugging vastgelegd (bedrag in toelichting); hoogste schijf alleen bij passende annuïtaire lastentoets",
+    "bron": [
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Bij een bedrag boven € 1.000.000 is financiering alleen mogelijk als dit past volgens een annuïtaire lastentoets."
+   },
+   "rest": {
+    "waarde": "~ Restschuld vorige woning meefinancieren als totale hypotheek max. 100% marktwaarde nieuwe woning is",
+    "bron": [
+     "https://www.munthypotheken.nl/veelgestelde-vragen/aanvraag-munt-hypotheek/kan-ik-met-een-restschuld-een-munt-hypotheek-sluiten/"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. U kunt een restschuld van uw vorige woning meefinancieren als de totale hypotheek niet hoger is dan 100% van de marktwaarde van uw nieuwe woning."
+   },
+   "verhw": {
+    "waarde": "~ Minimumbedrag verhoging (zie toelichting); Calcasa desktoptaxatie tot 90% marktwaarde, daarboven gevalideerd taxatierapport; WOZ niet",
+    "bron": [
+     "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf",
+     "https://www.munthypotheken.nl/site/assets/files/38851/munt_beheergids_2026.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. De waardestijging laat u zien met een gevalideerd taxatierapport of een Calcasa Desktop Taxatie, en beiden mogen niet ouder zijn dan 6 maanden."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "MUNT Hypotheekgids 2026",
+    "url": "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf",
+    "versie": "2026"
+   },
+   {
+    "titel": "Algemene Voorwaarden MUNT Hypotheek 26.01",
+    "url": "https://www.munthypotheken.nl/site/assets/files/1838/av_26_01.pdf",
+    "versie": "26.01"
+   },
+   {
+    "titel": "Algemene Voorwaarden MUNT Hypotheek 25.02",
+    "url": "https://www.munthypotheken.nl/algemene-voorwaarden/",
+    "versie": "25.02"
+   },
+   {
+    "titel": "MUNT Hypotheekgids 2024",
+    "url": "https://www.munthypotheken.nl/site/assets/files/_misc/MUNT_Hypotheekgids_2024.pdf",
+    "versie": "2024"
+   },
+   {
+    "titel": "MUNT Hypotheekgids 2026 (kopie hypotheekcompany.nl)",
+    "url": "https://hypotheekcompany.nl/wp-content/uploads/2026/01/Munt-Hypotheken-acceptatie-2026.pdf",
+    "versie": "jan 2026"
+   },
+   {
+    "titel": "MUNT Beheergids 2026",
+    "url": "https://www.munthypotheken.nl/site/assets/files/38851/munt_beheergids_2026.pdf",
+    "versie": "2026"
+   },
+   {
+    "titel": "MUNT - Inkomensbepaling Loondienst (IBL)",
+    "url": "https://www.munthypotheken.nl/inkomensbepaling-loondienst/",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "MUNT Hypotheekgids 2023",
+    "url": "https://www.munthypotheken.nl/site/assets/img/files/munt-hypotheekgids-2023.pdf",
+    "versie": "2023"
+   },
+   {
+    "titel": "Eigen middelen tijdelijk dubbele lasten (servicepartner)",
+    "url": "https://www.munthypotheken.nl/servicepartner/eigen-middelen-tijdelijk-dubbele-lasten/",
+    "versie": "actueel"
+   },
+   {
+    "titel": "MUNT Hypotheekgids 2026 (2026.002)",
+    "url": "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf",
+    "versie": "2026.002"
+   },
+   {
+    "titel": "Algemene voorwaarden 26.01",
+    "url": "https://www.munthypotheken.nl/site/assets/files/1838/av_26_01.pdf",
+    "versie": "26.01"
+   }
+  ]
+ }
+]

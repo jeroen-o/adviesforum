@@ -1,0 +1,711 @@
+[
+ {
+  "naam": "ING",
+  "gecontroleerd": "2026-10-09",
+  "criteria": {
+   "zzp": {
+    "waarde": "~ Inkomen = gem. netto winst 3 boekjaren, max laatste jaar; starter (<3 jr) via NHG-kader; IVO geaccepteerd",
+    "bron": [
+     "https://intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/ondernemer.html",
+     "https://www.ing.nl/particulier/hypotheek/huis-kopen/ondernemer/zzp"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Inkomen: gemiddelde afgelopen 3 jaar, max. laatste jaar; starters volgens NHG Toetskaders Inkomensverklaring Ondernemer; Overviewz, Pentrax, Raadhuys, Zakelijk Inkomen"
+   },
+   "persp": {
+    "waarde": "+ Perspectiefverklaring geaccepteerd (uitzendbureau in register); max 6 mnd oud op datum bindend aanbod",
+    "bron": [
+     "https://intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/starters.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Is je klant uitzendkracht? Dan kan het inkomen aangetoond worden met een Perspectiefverklaring."
+   },
+   "aow": {
+    "waarde": "~ Toets op pensioeninkomen als AOW of pensioen binnen 10 jaar; dan evt. niet-annuïtaire (werkelijke) lasten",
+    "bron": [
+     "https://mijn.intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/hypotheekvoorsenioren57.html",
+     "https://intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/hypotheekvoorsenioren57.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Het inkomen van de aanvrager moet binnen tien jaar de AOW-leeftijd bereiken ... toetsen op werkelijke lasten"
+   },
+   "rvp": {
+    "waarde": "+ Variabel en vast 1, 2, 3, 5, 6, 7, 10, 12, 15 en 20 jaar; geen 30 jaar; tussentijds max. 20 jr, rentemiddeling max. 12 jr (20 jr bij verhuisregeling)",
+    "bron": [
+     "https://www.ing.nl/particulier/hypotheek/jouw-hypotheek/tussentijds-aanpassen"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. Bij een gewone tussentijdse aanpassing kun je kiezen uit rentevaste periodes tot maximaal 20 jaar. Bij rentemiddeling is dat maximaal 12 jaar."
+   },
+   "geld": {
+    "waarde": "+ Renteaanbod 6,5 mnd geldig (incl. 2 wk acceptatie); verlengen met max 6 mnd tot 12,5 mnd tegen vergoeding",
+    "bron": [
+     "https://www.ing.nl/particulier/hypotheek/advieskosten/verlengingsprovisie",
+     "https://intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/starters.html",
+     "https://intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/Waarom-een-hypotheek-bij-ING.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. standaard geldigheid van een hypotheekofferte 6,5 maand, inclusief een acceptatietermijn van 2 weken. Tegen vergoeding verlengt ING de offerte met maximaal 6 maanden"
+   },
+   "boete": {
+    "waarde": "+ 10% van oorspr. hoofdsom per jaar; boetevrij bij verkoop+verhuizing en binnen 12 mnd na overlijden",
+    "bron": [
+     "https://www.ing.nl/particulier/hypotheek/jouw-hypotheek/kosten-aflossen-tussentijdse-renteaanpassing"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. ING laat je jaarlijks 10% van de oorspronkelijke hoofdsom aflossen zonder kosten."
+   },
+   "ltv": {
+    "waarde": "+ Rente automatisch omlaag bij lagere schuld-marktwaardeklasse door aflossing (11 klassen; niet bij NHG)",
+    "bron": [
+     "https://www.ing.nl/particulier/hypotheek/jouw-hypotheek/aflossen",
+     "https://nieuws.ing.nl/nl-NL/248949-lagere-hypotheekrente-bij-verduurzamen-woning/",
+     "https://www.ing.nl/particulier/hypotheek/jouw-hypotheek/mogelijk-lagere-rente",
+     "https://www.ing.nl/particulier/hypotheek/oversluiten/hypotheekrente-verlagen"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Bij ING hebben we maar liefst 11 unieke schuld-marktwaardeklassen."
+   },
+   "ebb": {
+    "waarde": "+ Verduurzamingsdepot (verplicht bij TRHK-ruimte): tot 106% MW, deel >100% alleen voor erkende maatregelen",
+    "bron": [
+     "https://www.ing.nl/particulier/hypotheek/duurzaam-wonen/verduurzamingsdepot",
+     "https://intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/Waarom-een-hypotheek-bij-ING.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Je klant mag maximaal 6% (106% LTV) van de woningwaarde extra lenen voor verduurzaming ... Verduurzamingsdepot ... alleen voor wettelijk toegestane energiebesparende maatregelen"
+   },
+   "verh": {
+    "waarde": "+ Vaste rente meenemen tot bedrag oude hypotheek, tot 6 mnd na aflossing; restant meenemen of middelen",
+    "bron": [
+     "https://www.ing.nl/particulier/hypotheek/huis-kopen/hypotheek-meenemen",
+     "https://www.ing.nl/particulier/hypotheek/huis-kopen/ander-huis-kopen/hypotheek-meenemen"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Tot 6 maanden na de aflossing van de oude hypotheek kan je klant gebruikmaken van deze verhuisregeling."
+   },
+   "rmid": {
+    "waarde": "+ Rentemiddeling of afkopen; nieuwe rentevaste periode max 12 jr (20 jr met verhuisregeling)",
+    "bron": [
+     "https://www.ing.nl/particulier/hypotheek/jouw-hypotheek/kosten-aflossen-tussentijdse-renteaanpassing",
+     "https://www.ing.nl/particulier/hypotheek/huis-kopen/ander-huis-kopen/hypotheek-meenemen"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Er zijn twee manieren: door rentemiddeling, of door je lopende rentevaste periode af te kopen. ... Bij rentemiddeling is dat maximaal 12 jaar."
+   },
+   "bbrk": {
+    "waarde": "~ Aflossingskosten met actuele (vergelijkings)rente over deel boven boetevrije ruimte; ING publiceert die rente",
+    "bron": [
+     "https://www.ing.nl/particulier/hypotheek/jouw-hypotheek/kosten-aflossen-tussentijdse-renteaanpassing",
+     "https://www.ing.nl/particulier/hypotheek/jouw-hypotheek/actuele-rente-aflossings-afkoopkosten",
+     "https://www.ing.nl/particulier/hypotheek/advieskosten/annuleringskosten"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Daarbij houdt ING rekening met het percentage dat je jaarlijks zonder kosten mag aflossen"
+   },
+   "elbl": {
+    "waarde": "! Rente per label G t/m A++++; zonder geregistreerd label 'geen label'-tarief (hoger); omlaag bij beter label",
+    "bron": [
+     "https://nieuws.ing.nl/nl-NL/248949-lagere-hypotheekrente-bij-verduurzamen-woning/",
+     "https://www.ing.nl/particulier/hypotheek/actuele-hypotheekrente/het-energielabel-en-je-hypotheekrente"
+    ],
+    "brondatum": "2025-04",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. geldt voortaan een hypotheekrente per energielabel - van G tot en met A++++"
+   },
+   "bprov": {
+    "waarde": "! Verlengen renteaanbod met max 6 mnd (tot 12,5 mnd) tegen maandelijkse vergoeding",
+    "bron": [
+     "https://www.ing.nl/particulier/hypotheek/advieskosten/verlengingsprovisie",
+     "https://intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/Waarom-een-hypotheek-bij-ING.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Tegen vergoeding verlengt ING de offerte met maximaal 6 maanden ... totaal tot wel 12,5 maand"
+   },
+   "avlt": {
+    "waarde": "~ Brief 1,5 jr voor einde; verlengen tot 30 jr; aflossingsvrij alleen als schuld <=50% WW; inkomens- en BKR-toets; €225",
+    "bron": [
+     "https://www.ing.nl/particulier/hypotheek/jouw-hypotheek/einde-looptijd",
+     "https://www.ing.nl/particulier/hypotheek/datasource-chatbot/hypotheken/einde-looptijd"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Je ontvangt 1,5 jaar voor het einde van de looptijd een brief van ons. ... Verlengen kost 225. Verlengen aflossingsvrij kan alleen als de schuld 50% of minder van de woningwaarde is."
+   },
+   "dag": {
+    "waarde": "+ Dagrente: op passeerdatum de laagste van geoffreerde rente en rente op passeerdatum",
+    "bron": [
+     "https://www.ing.nl/particulier/hypotheek/actuele-hypotheekrente/wat-is-dagrente"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Als je kiest voor Dagrente wordt op de passeerdatum gekeken welke rente lager is: de geoffreerde rente of de rente op de passeerdatum."
+   },
+   "bdduur": {
+    "waarde": "~ Bouwdepot 2 jaar (nieuwbouw en verbouw); eenmalig 1 jaar verlengbaar",
+    "bron": [
+     "https://www.ing.nl/particulier/hypotheek/jouw-hypotheek/bouwdepot",
+     "https://www.ing.nl/particulier/hypotheek/nieuwbouw/betalen-wat-en-hoe"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Het bouwdepot heeft standaard een looptijd van twee jaar, en je kunt het één keer met een jaar verlengen."
+   },
+   "bdrnt": {
+    "waarde": "~ Rente alleen over opgenomen deel; geen vergoeding over saldo (per saldo depotrente = hypotheekrente)",
+    "bron": [
+     "https://www.ing.nl/particulier/hypotheek/jouw-hypotheek/bouwdepot",
+     "https://mijn.intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/Nieuwbouw.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Je betaalt alleen rente over het bedrag dat je daadwerkelijk opneemt. ... bouwdepotvergoeding is gelijk aan de hypotheekrente."
+   },
+   "bddecl": {
+    "waarde": "+ Facturen indienen via Mijn ING; ING betaalt binnen 5 werkdagen aan aannemer",
+    "bron": [
+     "https://www.ing.nl/particulier/hypotheek/nieuwbouw/betalen-wat-en-hoe",
+     "https://www.ing.nl/particulier/hypotheek/jouw-hypotheek/bouwdepot"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. ING maakt het bedrag binnen 5 werkdagen naar de aannemer over."
+   },
+   "oha": {
+    "waarde": "~ OHA mogelijk als achterblijver hypotheek alleen kan dragen; toets mag op niet-annuïtaire lasten bij blijven wonen",
+    "bron": [
+     "https://www.ing.nl/particulier/hypotheek/scheiden-en-hypotheek"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Als de partner die blijft de hypotheek alleen kan dragen, kan ING de vertrekkende partner uit de hoofdelijke aansprakelijkheid halen."
+   },
+   "tweede": {
+    "waarde": "+ Onderhandse verhoging binnen bestaande inschrijving zonder notaris; desktoptaxatie mogelijk tot 90% MW",
+    "bron": [
+     "https://www.ing.nl/particulier/hypotheek/jouw-hypotheek/verhogen/verhogen-zonder-advies",
+     "https://www.ing.nl/particulier/hypotheek/jouw-hypotheek/hypotheek-verhogen",
+     "https://intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/Hypotheekverhogen.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Als je huidige hypotheek plus het bedrag dat je wil verhogen lager is dan 90% van de marktwaarde ... ING Calcasa Desktoptaxatie"
+   },
+   "avrij": {
+    "waarde": "! Sinds 23-7-2026 max 30% WW, plafond €150k/€250k/€500k (WW tot 1/2 mln/hoger); bestaand tot 50% houden",
+    "bron": [
+     "https://nieuws.ing.nl/nl-NL/266100-ing-past-acceptatiebeleid-aflossingsvrije-hypotheken-aan/",
+     "https://www.ing.nl/particulier/hypotheek/nieuwe-regels-voor-aflossingsvrije-hypotheken"
+    ],
+    "brondatum": "2026-07",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Voor nieuwe hypotheken geldt dat het aflossingsvrije deel wordt beperkt tot 30% van de woningwaarde met een maximum van 150.000. ... \"wat je hebt mag je houden\" ... maximum van 50%"
+   },
+   "rverl": {
+    "waarde": "+ Zelfde prijsmodel (rente per energielabel, schuld-marktwaardeklasse) voor nieuwe klanten en bij nieuwe rentevaste periode",
+    "bron": [
+     "https://www.ing.nl/particulier/hypotheek/actuele-hypotheekrente/het-energielabel-en-je-hypotheekrente"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. voor wie een nieuwe rentevaste periode afsluit, de hypotheek verhoogt of een nieuw rentevoorstel krijgt"
+   },
+   "rvoor": {
+    "waarde": "~ Rentevoorstel 3 mnd voor einde rentevaste periode, via Mijn ING",
+    "bron": [
+     "https://www.ing.nl/particulier/hypotheek/jouw-hypotheek/rentevaste-periode-loopt-af",
+     "https://mijn.intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/duurzaamheidskorting.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Klanten ontvangen 3 maanden voor het einde van de rentevaste periode een brief met een nieuw rentevoorstel."
+   },
+   "wkost": {
+    "waarde": "! Wijziging: vaste advies- én afhandelingskosten; Verhogen zonder advies €750 (verduurzaming tijdelijk €150)",
+    "bron": [
+     "https://www.ing.nl/particulier/hypotheek/jouw-hypotheek/verhogen/verhogen-zonder-advies"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Je moet voldoende eigen geld hebben om de afhandelingskosten van maximaal 750 te betalen ... tijdelijk verlaagde afhandelingskosten van 150"
+   },
+   "bproc": {
+    "waarde": "+ Proactief contact bij (dreigende) achterstand; gratis betaalafspraak; maatwerk bij langdurige problemen",
+    "bron": [
+     "https://www.ing.nl/particulier/achterstand/hypotheek-achterstand",
+     "https://www.ing.nl/particulier/achterstand/vragen-en-antwoorden/betaalafspraken",
+     "https://www.ing.nl/particulier/hypotheek/jouw-hypotheek/hypotheek-niet-meer-kunnen-betalen"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Het maken van een betaalafspraak is gratis. Heb je een achterstand op je ING Hypotheek? Dan betaal je wel vertragingsrente"
+   },
+   "cons": {
+    "waarde": "~ Consumptieve besteding (box 3) mogelijk, ook aflossingsvrij; aflossingsvrij deel sinds 23-7-2026 max. 30% van woningwaarde",
+    "bron": [
+     "https://www.ing.nl/particulier/hypotheek/nieuwe-regels-voor-aflossingsvrije-hypotheken"
+    ],
+    "brondatum": "2026-07",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. aflossingsvrije deel ... maximaal 30% van de woningwaarde"
+   },
+   "lensch": {
+    "waarde": "~ Lasten familielening tellen mee in de toets; bij schenking en schuldig blijven worden lasten tegen werkelijke rente (met minimum) meegenomen",
+    "bron": [
+     "https://ing.nl/particulier/hypotheken/ander-huis-kopen/financiering/familiehypotheek/index.html",
+     "https://www.ing.nl/particulier/hypotheek/huis-kopen/ander-huis-kopen/financiering/familiehypotheek"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. De lasten van de lening tellen mee bij je aanvraag bij ING."
+   },
+   "desk": {
+    "waarde": "~ ING Calcasa Desktoptaxatie mogelijk bij hypotheek tot 90% van de marktwaarde (ook bij verhogen); anders fysieke taxatie",
+    "bron": [
+     "https://www.ing.nl/particulier/hypotheek/woondiensten/ingcalcasadesktoptaxatie",
+     "https://www.ing.nl/particulier/hypotheek/jouw-hypotheek/hypotheek-verhogen"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Desktoptaxatie ... voor hypotheekaanvragen tot 90% van de marktwaarde"
+   },
+   "ams": {
+    "waarde": "+ Arbeidsmarktscan als inkomensbewijs bij tijdelijk contract zonder intentieverklaring",
+    "bron": [
+     "https://intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/starters.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Wanneer je klant een tijdelijk dienstverband zonder intentieverklaring heeft, biedt de Arbeidsmarktscan uitkomst."
+   },
+   "recr": {
+    "waarde": "~ Recreatiewoning max. 75% marktwaarde, annuïtair/lineair, max. 25 jaar; volwaardige fundering, eigen grond/directe erfpacht",
+    "bron": [
+     "https://intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/Waarom-een-hypotheek-bij-ING.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. houtskeletbouw ... nieuwbouw of ... classificatie goed; oudere voorwaarden: 75% marktwaarde, max 25 jaar, volwaardige fundering, eigen grond of directe erfpacht"
+   },
+   "verhuur": {
+    "waarde": "~ Alleen tijdelijke verhuur via Leegstandwet (max. 3 jaar + 2, woning in verkoop) of bij verblijf buitenland (max. 60 mnd, NHG 36); geen reguliere verhuur",
+    "bron": [
+     "https://www.ing.nl/particulier/hypotheek/jouw-hypotheek/tijdelijk-woning-verhuren"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. ING geeft bij de eerste aanvraag toestemming voor maximaal 3 jaar. Je kan daarna nog een verlenging aanvragen voor maximaal 2 jaar. ING verstrekt geen hypotheken waarbij sprake is van normale verhuur."
+   },
+   "r30": {
+    "waarde": "+ Bij 30%-regeling rekent ING met het volledige bruto jaarinkomen",
+    "bron": [
+     "https://intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/Internationale_klanten.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Heeft je klant te maken met de 30%-regeling? Dan rekent ING met het volledige bruto jaarinkomen."
+   },
+   "vblf": {
+    "waarde": "~ Geldige verblijfsvergunning vereist; bij vergunning bepaalde tijd met tijdelijk verblijfsdoel max. 90% van de reguliere maximale verstrekking",
+    "bron": [
+     "https://intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/Internationale_klanten.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Een tijdelijke verblijfsvergunning met een tijdelijk verblijfsdoel ... 90% van de reguliere maximale verstrekking."
+   },
+   "nlwon": {
+    "waarde": "~ Bij aanvraag woonplaats in NL, België of Duitsland; na passeren vaste woonplaats in NL. Acceptatie-inkomen altijd in euro",
+    "bron": [
+     "https://intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/Internationale_klanten.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. woon- en verblijfplaats in Nederland, Belgie of Duitsland ... na het passeren ... vaste woon- en verblijfplaats in Nederland"
+   },
+   "intent": {
+    "waarde": "+ Verklaring voortzetting dienstverband (min. 36 mnd) op WGV: inkomen als vast dienstverband; zonder intentie: Arbeidsmarktscan",
+    "bron": [
+     "https://intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/starters.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Tijdelijk dienstverband zonder intentieverklaring: Arbeidsmarktscan"
+   },
+   "loondt": {
+    "waarde": "+ Inkomen aantonen met werkgeversverklaring of IBL; bij <6 mnd in dienst vraagt ING het UWV-verzekeringsbericht op",
+    "bron": [
+     "https://intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/starters.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. De klant kan het inkomen aantonen met een werkgeversverklaring of met de Inkomensbepaling Loondienst (IBL)."
+   },
+   "senior": {
+    "waarde": "~ AOW binnen 10 jaar (of 67+ met min. 10 jr rentevast): toets op werkelijke lasten, max. 75% MW op AOW-datum; toets op verwacht pensioeninkomen",
+    "bron": [
+     "https://mijn.intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/hypotheekvoorsenioren57.html",
+     "https://intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/hypotheekvoorsenioren57.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Maximum van 75% van de marktwaarde op AOW-leeftijd, en tot 50% van de woningwaarde mag aflossingsvrij ... Is de aanvrager al 67 of ouder, dan moet de rentevaste periode minimaal tien jaar zijn"
+   },
+   "verm": {
+    "waarde": "+ Vermogende klanten (min. vrij beschikbaar vermogen) ruimer beleid: inkomen uit vermogen telt mee in toegestane financieringslast",
+    "bron": [
+     "https://mijn.intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/vermogende-klanten.html",
+     "https://intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/vermogende-klanten.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. ING heeft speciaal voor vermogende klanten een verruimd acceptatiebeleid. ... vrij beschikbaar vermogen van 25.000 of meer"
+   },
+   "hsb": {
+    "waarde": "~ Houtskeletbouw mogelijk als nieuwbouw of bouwkundige toestand 'goed' volgens taxatie",
+    "bron": [
+     "https://intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/Waarom-een-hypotheek-bij-ING.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. houtskeletbouw ... moet nieuwbouw zijn of conform taxatie een classificatie goed bij de Bouwkundige toestand van de hele woning hebben"
+   },
+   "wbhuid": {
+    "waarde": "~ Marktwaarde te verkopen woning via taxatie of verkoopprijs; overbrugging max. 90% bij desktoptaxatie (elders 95% genoemd)",
+    "bron": [
+     "https://intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/doorstromers.html",
+     "https://intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/Waarom-een-hypotheek-bij-ING.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. De marktwaarde wordt bepaald door de getaxeerde waarde of de overeengekomen verkoopprijs ... 90% bij desktoptaxatie; elders 95%"
+   },
+   "zbep": {
+    "waarde": "~ Beoordeling volgens NHG-toetskaders inkomensverklaring ondernemer; correcties o.a. auto van de zaak, solvabiliteit en liquiditeit",
+    "bron": [
+     "https://intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/ondernemer.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. ING beoordeelt aanvragen van startende ondernemers volgens de NHG-toetskaders voor de inkomensverklaring ondernemer (IKV). ... correctieposten, zoals de auto van de zaak, solvabiliteit en liquiditeit"
+   },
+   "z123": {
+    "waarde": "~ Gemiddelde over laatste 3 jaar, max. laatste jaar; lopend jaar mag oudste jaar vervangen (vanaf 1 april)",
+    "bron": [
+     "https://intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/ondernemer.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Vanaf 1 april kan het lopende boekjaar in plaats van het oudste jaar worden meegenomen"
+   },
+   "zcijf": {
+    "waarde": "~ Definitieve cijfers en IB-aangifte vorig jaar per 1 mei; tussentijdse balans/W&V vanaf 1 april; tussentijdse btw-cijfers vanaf 1 augustus",
+    "bron": [
+     "https://intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/ondernemer.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Per 1 mei zijn definitieve cijfers en de IB-aangifte ... Vanaf 1 april ... tussentijdse balans en W&V ... Vanaf 1 augustus ... aangiften omzetbelasting"
+   },
+   "zbv": {
+    "waarde": "+ Meerdere bv's mogelijk; bij voldoende inkomen uit holding zijn cijfers onderliggende bv's mogelijk niet nodig",
+    "bron": [
+     "https://intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/ondernemer.html",
+     "https://www.ing.nl/private-banking/hypotheken/de-hypotheek-voor-dgas"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Voor DGA's kan het gebeuren dat de jaarcijfers van de onderliggende bv's niet meer nodig zijn als het inkomen uit de holding voldoende is."
+   },
+   "zstart": {
+    "waarde": "~ Min. 12 maanden KvK-inschrijving / 1 volledig boekjaar; eerdere loondienst in dezelfde branche telt vaak mee",
+    "bron": [
+     "https://intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/ondernemer.html",
+     "https://www.ing.nl/particulier/hypotheek/huis-kopen/ondernemer/zzp"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. De onderneming moet minimaal 12 maanden ingeschreven staan bij de KvK ... minimaal een volledig boekjaar"
+   },
+   "obmax": {
+    "waarde": "~ Niet verkocht: max. 95% marktwaarde (90% bij Calcasa desktoptaxatie); verkocht: netto verkoopprijs minus restant hypotheek",
+    "bron": [
+     "https://intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/Waarom-een-hypotheek-bij-ING.html",
+     "https://intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/doorstromers.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Nu is namelijk een overbrugging tot maximaal 95% van de marktwaarde mogelijk. Dit was eerst maximaal 90%. ... ING Calcasa Desktoptaxatie ... maximaal 90%"
+   },
+   "obwaar": {
+    "waarde": "~ Marktwaarde oude woning via taxatie (ook ING Calcasa desktoptaxatie, dan max. 90%) of verkoopprijs uit verkoopcontract",
+    "bron": [
+     "https://intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/doorstromers.html",
+     "https://www.ing.nl/particulier/hypotheek/woondiensten/ingcalcasadesktoptaxatie"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. De marktwaarde wordt bepaald door de getaxeerde waarde of de overeengekomen verkoopprijs ... Calcasa Desktoptaxatie ... 90%"
+   },
+   "oblast": {
+    "waarde": "~ Dubbele woonlasten: voldoende eigen middelen aantonen of volledig op inkomen dragen; bij nieuwbouw alleen rente uit bouwdepot",
+    "bron": [
+     "https://intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/doorstromers.html",
+     "https://mijn.intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/Nieuwbouw.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. moet er aangetoond worden dat er voldoende eigen middelen zijn of dat de dubbele woonlasten volledig op het inkomen gedragen kunnen worden. Bij nieuwbouw ... alleen de rente uit het bouwdepot"
+   },
+   "geldnb": {
+    "waarde": "~ Offerte (nieuwbouw en bestaande bouw) 6,5 maand geldig; daarna automatisch verlengd met 6 maanden tegen vergoeding",
+    "bron": [
+     "https://mijn.intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/Nieuwbouw.html",
+     "https://www.ing.nl/particulier/hypotheek/jouw-hypotheek/bouwdepot",
+     "https://intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/Nieuwbouw.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Onze offertes voor nieuwbouw en bestaande bouw zijn 6,5 maand geldig. Dan verlengen we de offerte tegen een vergoeding automatisch met nog eens 6 maanden."
+   },
+   "annul": {
+    "waarde": "~ Annuleringskosten alleen als rente is gedaald (gemaximeerd); geen kosten bij geannuleerd nieuwbouwproject, scheiding, AO, werkloosheid",
+    "bron": [
+     "https://www.ing.nl/particulier/hypotheek/advieskosten/annuleringskosten"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. Stijgt de rente juist ... geen annuleringskosten ... maximaal 3% van de geoffreerde hoofdsom"
+   },
+   "bovw": {
+    "waarde": "~ Overwaarde vergoedingsvrij aflossen alleen bij volledig afgeloste ING-overbruggingshypotheek, binnen 3 maanden na verkoop",
+    "bron": [
+     "https://www.ing.nl/particulier/hypotheek/jouw-hypotheek/aflossen-extra-overwaarde",
+     "https://intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/doorstromers.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. De extra aflossing moet binnen drie maanden na de verkoop plaatsvinden"
+   },
+   "bvrij": {
+    "waarde": "~ Kosteloos bij verkoop met verhuizing van alle schuldenaren en binnen 12 maanden na overlijden medeschuldenaar/partner; niet bij Voordeelrente Component 2",
+    "bron": [
+     "https://www.ing.nl/particulier/hypotheek/jouw-hypotheek/kosten-aflossen-tussentijdse-renteaanpassing"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Als je Voordeelrente Component 2 hebt gekozen, betaal je wel aflossingskosten bij verkoop van je woning."
+   },
+   "oversl": {
+    "waarde": "~ Zuivere oversluiting: toets op werkelijke lasten, max. 115% marktwaarde; met verhoging annuïtaire toets, aflossingsvrij max. 50%",
+    "bron": [
+     "https://intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/oversluiters.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. zuivere oversluiting ... werkelijke lasten ... maximaal 115% van de marktwaarde ... tot 50% van de marktwaarde aflossingsvrij"
+   },
+   "verhw": {
+    "waarde": "~ Verhoging: ING Calcasa desktoptaxatie mogelijk als totale hypotheek < 90% marktwaarde; anders fysieke taxatie; monument altijd taxatie",
+    "bron": [
+     "https://intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/Hypotheekverhogen.html",
+     "https://www.ing.nl/particulier/hypotheek/jouw-hypotheek/hypotheek-verhogen"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Bij een monument of deels zakelijk gebruik is een taxatie altijd verplicht. ... lager dan 90% van de marktwaarde ... Desktoptaxatie"
+   },
+   "zelfb": {
+    "waarde": "~ Individuele nieuwbouw: grond met woonbestemming, omgevingsvergunning aangevraagd (hoeft nog niet verleend); bouwdepot 2 jaar",
+    "bron": [
+     "https://intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/Waarom-een-hypotheek-bij-ING.html",
+     "https://mijn.intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/Nieuwbouw.html",
+     "https://intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/Nieuwbouw.html",
+     "https://www.ing.nl/particulier/hypotheek/jouw-hypotheek/bouwdepot"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Bij individuele nieuwbouw geldt dat de bouwgrond een woonbestemming heeft en de aanvraag voor de omgevingsvergunning is ingediend."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Intermediairs Ondernemers",
+    "url": "https://intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/ondernemer.html",
+    "versie": "actueel"
+   },
+   {
+    "titel": "Intermediairs Starters",
+    "url": "https://intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/starters.html",
+    "versie": "actueel"
+   },
+   {
+    "titel": "Intermediairs Internationale klanten",
+    "url": "https://intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/Internationale_klanten.html",
+    "versie": "actueel"
+   },
+   {
+    "titel": "Intermediairs Senioren",
+    "url": "https://mijn.intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/hypotheekvoorsenioren57.html",
+    "versie": "actueel (verwijst naar 2021)"
+   },
+   {
+    "titel": "Intermediairs Doorstromers",
+    "url": "https://intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/doorstromers.html",
+    "versie": "actueel"
+   },
+   {
+    "titel": "Intermediairs Waarom een hypotheek bij ING",
+    "url": "https://intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/Waarom-een-hypotheek-bij-ING.html",
+    "versie": "actueel"
+   },
+   {
+    "titel": "Intermediairs Oversluiters",
+    "url": "https://intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/oversluiters.html",
+    "versie": "actueel"
+   },
+   {
+    "titel": "Intermediairs Vermogende klanten",
+    "url": "https://mijn.intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/vermogende-klanten.html",
+    "versie": "actueel"
+   },
+   {
+    "titel": "Nieuwe regels voor aflossingsvrije hypotheken",
+    "url": "https://www.ing.nl/particulier/hypotheek/nieuwe-regels-voor-aflossingsvrije-hypotheken",
+    "versie": "2026-07 (per 23-7-2026)"
+   },
+   {
+    "titel": "ING Acceptatiebeleid (via intermediairs.ing.nl, niet volledig gevonden)",
+    "url": "https://intermediairs.ing.nl/content/ingex-live-public/nl_NL/home/Waarom-een-hypotheek-bij-ING.html",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "ING voorwaarden en overige regelingen",
+    "url": "https://assets.ing.com/m/994ae1a1e1c62b8/original/ING_voorwaarden-en-overige-regelingen.pdf",
+    "versie": "onbekend"
+   }
+  ]
+ }
+]

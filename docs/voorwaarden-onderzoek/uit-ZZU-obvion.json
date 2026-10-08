@@ -1,0 +1,965 @@
+[
+ {
+  "naam": "Obvion",
+  "gecontroleerd": "2026-10-09",
+  "criteria": {
+   "flex": {
+    "waarde": "+ Arbeidsmarktscan (min. 12 mnd flexwerk in 14 mnd) en perspectiefverklaring als inkomensbewijs",
+    "bron": [
+     "https://obvion.nl/situatie/werken/arbeidsmarktscan/",
+     "https://obvion.nl/media/kxudk0d2/product-en-acceptatiekaart.pdf"
+    ],
+    "brondatum": "2026-05",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. minimaal 12 maanden hebben gewerkt in de afgelopen 14 maanden"
+   },
+   "persp": {
+    "waarde": "+ Perspectiefverklaring geaccepteerd (uitzendkracht, min. 1 jaar bij gecertificeerd bureau)",
+    "bron": [
+     "https://www.obvion.nl/Hypotheek-en-werk/Hypotheek-bereikbaar-voor-flexwerker",
+     "https://obvion.nl/situatie/werken/perspectiefverklaring/",
+     "https://obvion.nl/media/kxudk0d2/product-en-acceptatiekaart.pdf"
+    ],
+    "brondatum": "2026-05",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. flexwerkers die minimaal 1 jaar in dienst zijn bij een uitzendbureau bij Obvion met een perspectiefverklaring een hypotheek kunnen aanvragen"
+   },
+   "aow": {
+    "waarde": "+ Seniorenregeling bij verhuizen (AOW of binnen 10 jaar): toets op werkelijke nieuwe last",
+    "bron": [
+     "https://www.obvion.nl/Hypotheek-en-werk/Hypotheek-en-pensioen",
+     "https://obvion.nl/media/kxudk0d2/product-en-acceptatiekaart.pdf",
+     "https://obvion.nl/situatie/wonen/verkopen/verhuisregeling/"
+    ],
+    "brondatum": "2026-05",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. voor iedereen die de AOW-leeftijd heeft bereikt of die de AOW-leeftijd binnen 10 jaar bereikt én wil verhuizen"
+   },
+   "rvp": {
+    "waarde": "~ Vast 1 t/m 20, 25 en 30 jaar",
+    "bron": [
+     "https://obvion.nl/media/kxudk0d2/product-en-acceptatiekaart.pdf",
+     "https://obvion.nl/hypotheekrente/vormen/"
+    ],
+    "brondatum": "2026-05",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Arbitrage: Product- en acceptatiekaart Woon Hypotheek mei 2026 en rentevormenpagina noemen 1 t/m 20, 25 en 30 jaar. '1 tot 30 jaar' (keuzehulp/renteverhogingsbericht) is een bereikaanduiding, geen bewijs voor 21-24 en 26-29 jaar. Flexibele rente vervalt sinds 23-2-2026 (aparte noot)."
+   },
+   "geld": {
+    "waarde": "+ Rente-aanbod 3 mnd (nieuwbouw 6); bindend aanbod 14 dagen tekenen",
+    "bron": [
+     "https://obvion.nl/hypotheek/producten/woon/",
+     "https://obvion.nl/media/kxudk0d2/product-en-acceptatiekaart.pdf",
+     "https://obvion.nl/hypotheek/afsluiten/nieuwbouw/",
+     "https://obvion.nl/hypotheek/afsluiten/stappenplan/"
+    ],
+    "brondatum": "2026-05",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. 3 maanden geldig voor bestaande bouw en 6 maanden geldig voor nieuwbouw"
+   },
+   "boete": {
+    "waarde": "+ 10% oorspr. hoofdsom per leningdeel per kalenderjaar; onbeperkt met eigen geld/erfenis/overlijdensuitkering",
+    "bron": [
+     "https://obvion.nl/media/kxudk0d2/product-en-acceptatiekaart.pdf",
+     "https://obvion.nl/hypotheek/terugbetalen/extra/"
+    ],
+    "brondatum": "2026-05",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. elk kalenderjaar per leningdeel 10% van de oorspronkelijke hoofdsom"
+   },
+   "ltv": {
+    "waarde": "+ Automatische rentedaling bij lagere tariefgroep (zonder NHG)",
+    "bron": [
+     "https://obvion.nl/hypotheekrente/tariefopslag/",
+     "https://www.obvion.nl/Hypotheekrente/Automatisch-aanpassen-rente-bij-lagere-hypotheekschuld"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Obvion past automatisch de hypotheekrente aan als u in een lagere tariefgroep terechtkomt"
+   },
+   "bdduur": {
+    "waarde": "~ Max. 2 jaar, nieuwbouw max. 3 jaar; verlenging op verzoek via digitaal formulier",
+    "bron": [
+     "https://obvion.nl/hypotheek/afsluiten/bouwdepot/",
+     "https://obvion.nl/hypotheek/verduurzaming/duurzaamheidsdepot/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. maximaal 2 jaar ... Bij nieuwbouw geldt een looptijd van maximaal 3 jaar"
+   },
+   "bdrnt": {
+    "waarde": "~ Depotrente gelijk aan hypotheekrente, max. 12 mnd (bestaand) / 24 mnd (nieuwbouw, Woon)",
+    "bron": [
+     "https://obvion.nl/hypotheek/afsluiten/bouwdepot/",
+     "https://obvion.nl/hypotheek/afsluiten/nieuwbouw/"
+    ],
+    "brondatum": "2024-09",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Woon Hypotheek bestaande bouw: maximaal 12 maanden, en voor nieuwbouw ... vanaf 16 september 2024 maximaal 24 maanden"
+   },
+   "bddecl": {
+    "waarde": "+ Klant uploadt factuur in MijnObvion; afhandeling max. 5 werkdagen; restant < EUR 2.500 uitgekeerd",
+    "bron": [
+     "https://obvion.nl/hypotheek/afsluiten/bouwdepot/",
+     "https://www.obvion.nl/Over-Obvion/Reactietermijnen-voor-lopende-hypotheken"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Als er minder dan € 2.500 over is, betalen we dat bedrag aan u uit."
+   },
+   "ebb": {
+    "waarde": "+ Standaard extra EUR 10.000 voor verduurzaming (label E-G EUR 20.000), totaal max. 106% woningwaarde",
+    "bron": [
+     "https://obvion.nl/hypotheek/verduurzaming/financiering/",
+     "https://obvion.nl/hypotheek/afsluiten/bouwdepot/",
+     "https://obvion.nl/media/kxudk0d2/product-en-acceptatiekaart.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. In de Woon Hypotheek kun je € 10.000 extra lenen voor energiebesparende maatregelen"
+   },
+   "duur": {
+    "waarde": "+ Duurzaamheidskorting vanaf label B; Energiebespaarpakket (advies, label, bijdrage EUR 1.000) voor bestaande klanten met label D t/m G",
+    "bron": [
+     "https://obvion.nl/nieuws/nieuwsarchief/uitbreiding-obvion-energiebespaarpakket/",
+     "https://obvion.nl/hypotheek/verduurzaming/duurzaamheidskorting/"
+    ],
+    "brondatum": "2026-01-15",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Gewijzigd na controle (A/B/arbitrage): Pakket uitgebreid van G/F naar ook D en E (gefaseerde uitnodigingen); adviseurpagina's noemen label D, E, F of G. Duurzaamheidskorting vanaf B ongewijzigd."
+   },
+   "verh": {
+    "waarde": "+ Rente mee tot einde rentevast; aanvraag binnen 6 mnd na aflossing; tariefgroep o.b.v. nieuwe woning",
+    "bron": [
+     "https://obvion.nl/situatie/wonen/verkopen/verhuisregeling/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Na het terugbetalen van uw hypotheek heeft u dan 6 maanden de tijd om de Verhuisregeling in te zetten"
+   },
+   "tweede": {
+    "waarde": "~ Verhogen na inkomens- en LTV-toets; zonder notaris binnen hogere inschrijving; 2e hypotheek alleen als 1e bij Obvion",
+    "bron": [
+     "https://obvion.nl/hypotheek/wijzigen/verhogen/",
+     "https://obvion.nl/hypotheek/verduurzaming/financiering/"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Een tweede hypotheek kan alleen als je eerste hypotheek ook bij Obvion loopt."
+   },
+   "elbl": {
+    "waarde": "+ Duurzaamheidskorting vanaf label B, oplopend t/m A++++; aan te vragen tot 24 mnd na start rentevast",
+    "bron": [
+     "https://obvion.nl/hypotheek/verduurzaming/duurzaamheidskorting/"
+    ],
+    "brondatum": "2025-12",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Je kunt tot 24 maanden na start van een rentevaste periode in aanmerking komen."
+   },
+   "o106": {
+    "waarde": "! Tot 106% LTV voor verduurzaming; tariefgroep o.b.v. totale lening/woningwaarde, met aparte groep >106% (Woon)",
+    "bron": [
+     "https://obvion.nl/hypotheekrente/tariefopslag/",
+     "https://obvion.nl/media/kxudk0d2/product-en-acceptatiekaart.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. groepen t/m 60%, t/m 80%, t/m 90%, t/m 106% en meer dan 106% marktwaarde"
+   },
+   "bprov": {
+    "waarde": "+ Verlenging getekend aanbod zonder kosten",
+    "bron": [
+     "https://obvion.nl/hypotheek/producten/woon/",
+     "https://obvion.nl/media/kxudk0d2/product-en-acceptatiekaart.pdf",
+     "https://obvion.nl/hypotheek/afsluiten/nieuwbouw/"
+    ],
+    "brondatum": "2026-05",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Nu 0% verlengingskosten"
+   },
+   "ondh": {
+    "waarde": "~ Verkoop met restschuld vereist toestemming; restschuld meefinancieren tot 110% MW, aflossen binnen 15 jaar",
+    "bron": [
+     "https://obvion.nl/hypotheek/terugbetalen/restschuld/",
+     "https://obvion.nl/situatie/persoonlijk/uit-elkaar/",
+     "https://obvion.nl/media/kxudk0d2/product-en-acceptatiekaart.pdf"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Het bedrag mag maximaal tot 110% van de marktwaarde van je nieuwe huis worden meegefinancierd."
+   },
+   "oha": {
+    "waarde": "~ Alleen via adviseur; inkomenstoets blijvende partner; bindend aanbod + akte ontslag; EUR 250 administratiekosten",
+    "bron": [
+     "https://obvion.nl/situatie/persoonlijk/uit-elkaar/ontslag-hoofdelijke-aansprakelijkheid/",
+     "https://obvion.nl/situatie/persoonlijk/uit-elkaar/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Voor ontslag uit de hoofdelijke aansprakelijkheid is de vergoeding ... € 250,- administratiekosten"
+   },
+   "ovbr": {
+    "waarde": "~ Max. 2 jr (nieuwbouw 3); max. waarde oude woning -2% -schuld; dubbele lasten 6 mnd dragen; vaste rente",
+    "bron": [
+     "https://www.obvion.nl/Huis-verkopen/Overbruggingskrediet",
+     "https://obvion.nl/hypotheek/afsluiten/overbruggingskrediet/",
+     "https://obvion.nl/adviseur/Beleid/Calcasa"
+    ],
+    "brondatum": "2025-06",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. De maximale looptijd is 2 jaar. Voor nieuwbouw hypotheekaanvragen geldt een looptijd van maximaal 3 jaar."
+   },
+   "avrij": {
+    "waarde": "! Sinds 11-5-2026 (aanvragen) max. 30% van woningwaarde en max. EUR 150.000 aflossingsvrij bij nieuw, oversluiten en verhogen; bestaand deel blijft bij renteaan",
+    "bron": [
+     "https://obvion.nl/media/kxudk0d2/product-en-acceptatiekaart.pdf",
+     "https://obvion.nl/hypotheek/vorm/aflossingsvrij/beleid-aflossingsvrij/"
+    ],
+    "brondatum": "2026-05",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Per 11 mei 2026 wijzigen wij ons beleid voor aflossingsvrije hypotheken."
+   },
+   "rmid": {
+    "waarde": "- Niet bij Woon Hypotheek (alleen oude Obvion Hypotheek); anders tussentijds aanpassen met vergoeding",
+    "bron": [
+     "https://obvion.nl/hypotheekrente/middelen/",
+     "https://www.obvion.nl/Hypotheekrente/Rentemiddeling.htm"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Het kan alleen bij de Obvion Hypotheek, niet bij de Woon Hypotheek, Compact Hypotheek of Basis Hypotheek."
+   },
+   "rvoor": {
+    "waarde": "+ Automatisch rentevoorstel minimaal 3 mnd voor einde rentevaste periode; keuze doorgeven tot de 25e van de maand",
+    "bron": [
+     "https://obvion.nl/hypotheek/wijzigen/einde-rentevaste-periode/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. U krijgt 3 maanden vóór het aflopen van de rentevaste periode ... automatisch een nieuw aanbod"
+   },
+   "bbrk": {
+    "waarde": "~ Netto contante waarde; vergelijkingsrente = actuele rente resterende rvp (anders hoogste van naastliggende periodes)",
+    "bron": [
+     "https://obvion.nl/hypotheek/terugbetalen/vergoeding/",
+     "https://www.obvion.nl/Hypotheek-wijzigen/Vergoeding-vervroegd-terugbetalen-hypotheek"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. hanteert Obvion als vergelijkingsrente de hoogste rente van de dichtstbijzijnde langere en kortere rentevaste periode"
+   },
+   "wkost": {
+    "waarde": "! EUR 150 administratiekosten bij wijziging buiten einde rentevast (vorm, rente aanpassen); OHA EUR 250",
+    "bron": [
+     "https://obvion.nl/hypotheekrente/tussentijds-aanpassen/",
+     "https://obvion.nl/situatie/persoonlijk/uit-elkaar/ontslag-hoofdelijke-aansprakelijkheid/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. U betaalt ook € 150 administratiekosten."
+   },
+   "avlt": {
+    "waarde": "! Verlengen tot einddatum langstlopend leningdeel; mogelijk inkomens-/waardetoets; tot 2030 max. 50% MW",
+    "bron": [
+     "https://obvion.nl/hypotheek/terugbetalen/hypotheekcheck/aflopende-looptijd/",
+     "https://obvion.nl/hypotheek/vorm/aflossingsvrij/beleid-aflossingsvrij/",
+     "https://obvion.nl/hypotheek/wijzigen/aflopende-hypotheek/"
+    ],
+    "brondatum": "2026-05",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Verlengen is mogelijk tot maximaal de einddatum van het langstlopende leningdeel."
+   },
+   "bproc": {
+    "waarde": "+ Vast aanspreekpunt; betalingsregeling, gratis budgetcoach, tijdelijke verhuur, vergoeding advieskosten",
+    "bron": [
+     "https://obvion.nl/hypotheek/terugbetalen/problemen/",
+     "https://obvion.nl/hypotheek/terugbetalen/problemen/budgetcoach/",
+     "https://obvion.nl/hypotheek/terugbetalen/problemen/tijdelijke-verhuur/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Obvion biedt een budgetcoach kosteloos aan"
+   },
+   "cons": {
+    "waarde": "~ Consumptief bestedingsdoel tot max. 90% LTV (eigen woning en box 3); aflossingsvrij bij consumptieve verhoging max. 30% LTV",
+    "bron": [
+     "https://obvion.nl/media/kxudk0d2/product-en-acceptatiekaart.pdf",
+     "https://obvion.nl/hypotheek/vorm/aflossingsvrij/beleid-aflossingsvrij/"
+    ],
+    "brondatum": "2026-05",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. Bestedingsdoel consumptief tot maximaal 90% LTV"
+   },
+   "lensch": {
+    "waarde": "~ Leen-schenkconstructie: lasten buiten inkomenstoets als lening max. 50% van Obvion-hypotheek; ouders kunnen meetekenen (zonder NHG)",
+    "bron": [
+     "https://obvion.nl/hypotheek/starters/meetekenen-ouders/",
+     "https://obvion.nl/adviseur/doelgroep/wonen/starters/"
+    ],
+    "brondatum": "2026-05",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Aangescherpte voorwaarde is dat de lening maximaal 50% van de door Obvion verstrekte hypotheek bedraagt."
+   },
+   "desk": {
+    "waarde": "~ Calcasa Desktop Taxatie (Plus) tot max. 90% marktwaarde; woning min. 2 jaar oud, geen erfpacht/opstal, betrouwbaarheid 5+",
+    "bron": [
+     "https://obvion.nl/situatie/wonen/kopen/calcasa/",
+     "https://obvion.nl/adviseur/Beleid/Calcasa"
+    ],
+    "brondatum": "2025-11",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. de woningwaarde maximaal € 1.000.000 is"
+   },
+   "ams": {
+    "waarde": "+ Arbeidsmarktscan geaccepteerd (score 70+, 12 van 14 mnd gewerkt); laagste van verdiencapaciteit en huidig inkomen telt als vast dienstverband",
+    "bron": [
+     "https://obvion.nl/situatie/werken/arbeidsmarktscan/",
+     "https://obvion.nl/media/kxudk0d2/product-en-acceptatiekaart.pdf"
+    ],
+    "brondatum": "2026-05",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Zit uw score tussen de 70 en 100? Dan kunt u deze scan gebruiken bij uw hypotheekaanvraag."
+   },
+   "vve": {
+    "waarde": "- Alleen appartement met een actieve vereniging van eigenaren wordt geaccepteerd",
+    "bron": [
+     "https://obvion.nl/media/kxudk0d2/product-en-acceptatiekaart.pdf"
+    ],
+    "brondatum": "2026-05",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. appartement met een actieve vereniging van eigenaren"
+   },
+   "huur": {
+    "waarde": "~ Verhuurinkomsten tellen mee als overig inkomen na aftrek lasten; huur van kind (ouders kopen voor kind) max. 50% toetsinkomen",
+    "bron": [
+     "https://obvion.nl/media/kxudk0d2/product-en-acceptatiekaart.pdf",
+     "https://obvion.nl/hypotheek/starters/meetekenen-ouders/"
+    ],
+    "brondatum": "2026-05",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. huurinkomsten die zij van hun kind ontvangen, kunnen onder voorwaarden worden meegenomen in het toetsinkomen tot maximaal 50%"
+   },
+   "recr": {
+    "waarde": "~ Via Verhuur- en Recreatiehypotheek: eigen gebruik, alleen tijdelijke verhuur; box 3, geen NHG, niet aflossingsvrij, annuitaire toets",
+    "bron": [
+     "https://obvion.nl/hypotheek/producten/verhuur/",
+     "https://obvion.nl/media/kxudk0d2/product-en-acceptatiekaart.pdf"
+    ],
+    "brondatum": "2026-05",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. moet bedoeld zijn voor eigen gebruik en mag alleen tijdelijk worden verhuurd"
+   },
+   "aanv": {
+    "waarde": "~ Ouders kunnen meetekenen als hoofdelijk medeschuldenaar (zonder NHG); maximaal aantal aanvragers niet gevonden",
+    "bron": [
+     "https://obvion.nl/hypotheek/starters/meetekenen-ouders/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Deze regeling geldt ... alleen zonder NHG."
+   },
+   "pgb": {
+    "waarde": "~ Pgb-inkomen telt in principe niet mee; wel als het binnen een eigen onderneming wordt ontvangen",
+    "bron": [
+     "https://obvion.nl/media/kxudk0d2/product-en-acceptatiekaart.pdf"
+    ],
+    "brondatum": "2026-05",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. PGB, alleen indien inkomen uit onderneming"
+   },
+   "start": {
+    "waarde": "+ SVn-starterslening geaccepteerd in combinatie met Woon Hypotheek, alleen met NHG",
+    "bron": [
+     "https://obvion.nl/hypotheek/starters/svn/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. in combinatie met de Woon Hypotheek en kan alleen met NHG worden afgesloten"
+   },
+   "verhuur": {
+    "waarde": "- Verhuur met gewone hypotheek niet toegestaan; tijdelijk alleen met toestemming (Leegstandwet, werk buitenland max. 3 jaar)",
+    "bron": [
+     "https://obvion.nl/hypotheek/terugbetalen/problemen/tijdelijke-verhuur/",
+     "https://obvion.nl/hypotheek/producten/verhuur/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Als u een 'gewone' hypotheek heeft bij Obvion, is verhuren van uw woning niet toegestaan."
+   },
+   "loondt": {
+    "waarde": "+ IBL geaccepteerd bij vast en tijdelijk dienstverband; geen werkgeversverklaring nodig, Obvion controleert met HDN-rekentool",
+    "bron": [
+     "https://obvion.nl/adviseur/beleid/inkomensbepaling-loondienst/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Obvion accepteert de Inkomensbepaling Loondienst (IBL) zowel bij een vast als bij een tijdelijk dienstverband"
+   },
+   "intent": {
+    "waarde": "+ Intentie voor vast contract: huidig inkomen; intentie bepaalde tijd (alleen zonder NHG): gemiddelde 2 jaar en huidig inkomen",
+    "bron": [
+     "https://obvion.nl/situatie/werken/tijdelijk-contract/",
+     "https://obvion.nl/adviseur/beleid/inkomensbepaling-loondienst/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Alleen voor hypotheken zonder NHG berekenen we dan het gemiddelde toetsinkomen op basis van uw inkomen van de afgelopen twee kalenderjaren"
+   },
+   "proef": {
+    "waarde": "! Bij intentieverklaring voor bepaalde tijd moet de proeftijd van het huidige dienstverband verstreken zijn",
+    "bron": [
+     "https://obvion.nl/situatie/werken/tijdelijk-contract/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. De proeftijd van het huidige dienstverband is verstreken."
+   },
+   "aios": {
+    "waarde": "+ Arts in opleiding (lang tijdelijk contract zonder intentie): huidig inkomen telt mee voor toetsinkomen",
+    "bron": [
+     "https://obvion.nl/media/kxudk0d2/product-en-acceptatiekaart.pdf",
+     "https://obvion.nl/situatie/werken/tijdelijk-contract/"
+    ],
+    "brondatum": "2026-05",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. tijdelijk dienstverband met een lange duur zónder intentieverklaring: we nemen óók het huidige inkomen mee"
+   },
+   "promo": {
+    "waarde": "+ Promovendus (lang tijdelijk contract zonder intentie): huidig inkomen telt mee voor toetsinkomen",
+    "bron": [
+     "https://obvion.nl/media/kxudk0d2/product-en-acceptatiekaart.pdf",
+     "https://obvion.nl/situatie/werken/tijdelijk-contract/"
+    ],
+    "brondatum": "2026-05",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. tijdelijk dienstverband met een lange duur zónder intentieverklaring: we nemen óók het huidige inkomen mee"
+   },
+   "wga": {
+    "waarde": "- WGA-uitkering telt niet mee als inkomen",
+    "bron": [
+     "https://obvion.nl/media/kxudk0d2/product-en-acceptatiekaart.pdf"
+    ],
+    "brondatum": "2026-05",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. INKOMSTENBRONNEN DIE WIJ NIET MEETELLEN • PGB, alleen indien inkomen uit onderneming; • WGA."
+   },
+   "wajong": {
+    "waarde": "! Wajong-uitkering op basis van studieregeling telt niet mee",
+    "bron": [
+     "https://obvion.nl/media/kxudk0d2/product-en-acceptatiekaart.pdf"
+    ],
+    "brondatum": "2026-05",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Wajong uitkering op basis van studieregeling wordt niet meegeteld"
+   },
+   "senior": {
+    "waarde": "+ Verhuisregeling senioren (AOW of binnen 10 jaar AOW), met en zonder NHG: toets op werkelijke last, mits niet hoger dan huidige last",
+    "bron": [
+     "https://www.obvion.nl/Hypotheek-en-werk/Hypotheek-en-pensioen",
+     "https://obvion.nl/media/kxudk0d2/product-en-acceptatiekaart.pdf",
+     "https://obvion.nl/situatie/wonen/verkopen/verhuisregeling/"
+    ],
+    "brondatum": "2026-05",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Als één van de twee partners hieraan voldoet dan is dit voor ons ook acceptabel."
+   },
+   "nlwon": {
+    "waarde": "+ Expats: hypotheek mogelijk vanaf de dag van vestiging in Nederland; binding met Nederland is voorwaarde",
+    "bron": [
+     "https://obvion.nl/media/kxudk0d2/product-en-acceptatiekaart.pdf",
+     "https://obvion.nl/situatie/werken/expats/"
+    ],
+    "brondatum": "2026-05",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. dat dit mogelijk is vanaf de dag van vestiging in Nederland"
+   },
+   "vblf": {
+    "waarde": "~ Expats: geen extra beperking op LTV; binding met Nederland vereist",
+    "bron": [
+     "https://obvion.nl/media/kxudk0d2/product-en-acceptatiekaart.pdf"
+    ],
+    "brondatum": "2026-05",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. voor expats geen extra beperking ten aanzien van de LTV"
+   },
+   "brut": {
+    "waarde": "~ Volledig netto inkomen wordt gebruteerd met vaste factor, afhankelijk van inkomenshoogte",
+    "bron": [
+     "https://obvion.nl/media/kxudk0d2/product-en-acceptatiekaart.pdf"
+    ],
+    "brondatum": "2026-05",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Bij een volledig netto inkomen tot € 70.000 geldt factor 1,6; vanaf € 70.000 is de factor 1,7."
+   },
+   "mwbep": {
+    "waarde": "~ NWWI-gevalideerd taxatierapport (NRVT-taxateur) of Calcasa Desktop Taxatie t/m 90% MW; max. 6 mnd oud bij bindend aanbod",
+    "bron": [
+     "https://obvion.nl/media/kxudk0d2/product-en-acceptatiekaart.pdf",
+     "https://obvion.nl/adviseur/Beleid/Calcasa",
+     "https://obvion.nl/hypotheek/wijzigen/woningwaarde/",
+     "https://obvion.nl/situatie/wonen/kopen/calcasa/"
+    ],
+    "brondatum": "2026-05",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Het rapport mag niet ouder zijn dan 6 maanden vanaf de waardepeildatum."
+   },
+   "woz": {
+    "waarde": "- WOZ-waarde niet geaccepteerd voor aantonen woningwaarde; taxatierapport of Calcasa Desktop Taxatie nodig",
+    "bron": [
+     "https://obvion.nl/hypotheek/wijzigen/woningwaarde/",
+     "https://obvion.nl/adviseur/Beleid/Calcasa",
+     "https://obvion.nl/situatie/wonen/kopen/woz-waarde/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Obvion accepteert de WOZ-waarde niet om de woningwaarde aan te tonen."
+   },
+   "ltvk": {
+    "waarde": "~ Max. 100% marktwaarde; 106% met energiebesparende maatregelen; 110% bij zuivere oversluiters of LTI < 60%",
+    "bron": [
+     "https://obvion.nl/media/kxudk0d2/product-en-acceptatiekaart.pdf"
+    ],
+    "brondatum": "2026-05",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Max. 100% marktwaarde • Energie Besparende Maatregelen maximaal 106% • Zuivere oversluiters maximaal 110% • LTI <60% maximaal 110%"
+   },
+   "wwp": {
+    "waarde": "~ Woon-winkel/woon-bedrijfspand buiten industrieterrein, mits aanvrager er woont en winkel-/bedrijfsruimte zelf gebruikt",
+    "bron": [
+     "https://obvion.nl/media/kxudk0d2/product-en-acceptatiekaart.pdf"
+    ],
+    "brondatum": "2026-05",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. buiten een industrieterrein ligt, de aanvrager er woont en de winkel- of bedrijfsruimte zelf gebruikt"
+   },
+   "wboer": {
+    "waarde": "~ Woonboerderij met woonbestemming en < 3 ha mogelijk",
+    "bron": [
+     "https://obvion.nl/media/kxudk0d2/product-en-acceptatiekaart.pdf"
+    ],
+    "brondatum": "2026-05",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. woonboerderij met woonbestemming ... perceel kleiner is dan 3 ha"
+   },
+   "zbep": {
+    "waarde": "~ Toetsinkomen via inkomensverklaring van een rekenexpert; Obvion neemt het toetsinkomen van de rekenexpert over",
+    "bron": [
+     "https://www.obvion.nl/Hypotheek-en-werk/ZZPer-ondernemer",
+     "https://obvion.nl/media/kxudk0d2/product-en-acceptatiekaart.pdf",
+     "https://obvion.nl/hypotheek/zzp/"
+    ],
+    "brondatum": "2026-05",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Obvion neemt het toetsinkomen van de rekenexpert over."
+   },
+   "zstart": {
+    "waarde": "~ Startende zzp'er/ondernemer kan in aanmerking komen, met of zonder NHG (inkomensverklaring rekenexpert)",
+    "bron": [
+     "https://www.obvion.nl/Hypotheek-en-werk/ZZPer-ondernemer",
+     "https://obvion.nl/hypotheek/zzp/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. ook startende zzp'ers in aanmerking kunnen komen voor een hypotheek bij Obvion, met of zonder NHG"
+   },
+   "bkr": {
+    "waarde": "- Niet: A/1 zonder herstelcode, A met code 2 t/m 5, lopende/terugbetaalde schuldregeling (SK/SH), lopende RO/ZO zonder herstelcode",
+    "bron": [
+     "https://obvion.nl/media/kxudk0d2/product-en-acceptatiekaart.pdf"
+    ],
+    "brondatum": "2026-05",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. A- of 1-registratie zonder herstelcode, een A-registratie met code 2 t/m 5, lopende of terugbetaalde schuldregelingen (SK en SH)"
+   },
+   "duo": {
+    "waarde": "~ Werkelijk maandbedrag (rente + aflossing) om studieschuld in restant looptijd (15 of 35 jaar) af te lossen; aanloopfase afwijkend",
+    "bron": [
+     "https://obvion.nl/hypotheek/starters/studieschuld/",
+     "https://obvion.nl/Huis-kopen/Studieschuld-en-hypotheek.htm"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. het maandbedrag (rente en aflossing) dat u moet betalen om de studieschuld in de restant looptijd (oorspronkelijk 15 of 35 jaar) volledig terug te betalen"
+   },
+   "rsk": {
+    "waarde": "~ Restschuld meefinancieren in apart annuïtair/lineair leningdeel, max. 110% MW nieuwe woning, aflossen binnen max. 15 jaar",
+    "bron": [
+     "https://obvion.nl/hypotheek/terugbetalen/restschuld/",
+     "https://obvion.nl/media/kxudk0d2/product-en-acceptatiekaart.pdf"
+    ],
+    "brondatum": "2026-05",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. De extra lening moet zo snel mogelijk worden afgelost, uiterlijk binnen 15 jaar."
+   },
+   "wbhuid": {
+    "waarde": "~ Verkocht: verkoopsom excl. roerende zaken (na bedenktijd); niet verkocht: taxatie of Calcasa (x 90%). WOZ niet toegestaan",
+    "bron": [
+     "https://www.obvion.nl/Huis-verkopen/Overbruggingskrediet",
+     "https://obvion.nl/adviseur/Beleid/Calcasa"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Obvion rekent dan met de verkoopsom uit de koopovereenkomst, zonder de roerende zaken."
+   },
+   "obmax": {
+    "waarde": "+ 100% waarde oude woning -/- 2% verkoopkosten -/- hypotheek; bij Calcasa desktoptaxatie (waarde -/- 2%) x 90% -/- hypotheek",
+    "bron": [
+     "https://www.obvion.nl/Huis-verkopen/Overbruggingskrediet",
+     "https://obvion.nl/media/kxudk0d2/product-en-acceptatiekaart.pdf",
+     "https://obvion.nl/adviseur/Beleid/Calcasa"
+    ],
+    "brondatum": "2026-05",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. 100% van de waarde oude woning minus 2% verkoopkosten minus hypotheekschuld oude woning"
+   },
+   "oblast": {
+    "waarde": "~ Hogere lasten minstens 6 maanden aantoonbaar; nieuwbouw tot opleverdatum + 3 maanden",
+    "bron": [
+     "https://www.obvion.nl/Huis-verkopen/Overbruggingskrediet"
+    ],
+    "brondatum": "2026-05",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Bij nieuwbouw moet u kunnen aantonen dat u deze hogere lasten tot aan de opleverdatum + 3 maanden kunt betalen."
+   },
+   "obduur": {
+    "waarde": "~ Max. 2 jaar; bij nieuwbouwaanvragen max. 3 jaar",
+    "bron": [
+     "https://www.obvion.nl/Huis-verkopen/Overbruggingskrediet",
+     "https://obvion.nl/media/kxudk0d2/product-en-acceptatiekaart.pdf"
+    ],
+    "brondatum": "2026-05",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. De maximale looptijd is 2 jaar. Voor nieuwbouw hypotheekaanvragen geldt een looptijd van maximaal 3 jaar."
+   },
+   "obwaar": {
+    "waarde": "~ Taxatierapport of Calcasa Desktop Taxatie (Plus, met lagere max.); WOZ-waarde niet geaccepteerd",
+    "bron": [
+     "https://obvion.nl/hypotheek/afsluiten/overbruggingskrediet/",
+     "https://obvion.nl/adviseur/Beleid/Calcasa",
+     "https://obvion.nl/situatie/wonen/kopen/woz-waarde/"
+    ],
+    "brondatum": "2025-11",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Een gevalideerd taxatierapport of Calcasa Desktop Taxatie moet u zelf laten opmaken en betalen."
+   },
+   "obvw": {
+    "waarde": "+ Geen afsluitkosten; alleen in combinatie met Obvion-hypotheek; altijd vergoedingsvrij extra terugbetalen",
+    "bron": [
+     "https://www.obvion.nl/Huis-verkopen/Overbruggingskrediet"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Voor een overbruggingskrediet worden geen extra afsluitkosten gerekend."
+   },
+   "geldnb": {
+    "waarde": "+ Renteaanbod nieuwbouw 6 mnd; bindend aanbod automatisch verlengd met max. 6 mnd (bestaande bouw 9 mnd)",
+    "bron": [
+     "https://obvion.nl/media/kxudk0d2/product-en-acceptatiekaart.pdf",
+     "https://obvion.nl/hypotheek/afsluiten/nieuwbouw/"
+    ],
+    "brondatum": "2026-05",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. bij bestaande bouw met maximaal 9 maanden en bij nieuwbouw met maximaal 6 maanden verlengen"
+   },
+   "annul": {
+    "waarde": "~ Kosteloos binnen oorspronkelijke geldigheid; annuleringskosten na verlenging (uitzonderingen o.a. ontbinding, overlijden, scheiding)",
+    "bron": [
+     "https://obvion.nl/media/kxudk0d2/product-en-acceptatiekaart.pdf",
+     "https://obvion.nl/hypotheek/afsluiten/nieuwbouw/",
+     "https://obvion.nl/hypotheek/afsluiten/stappenplan/"
+    ],
+    "brondatum": "2026-05",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Annuleren is kosteloos binnen de oorspronkelijke geldigheidsduur."
+   },
+   "dig": {
+    "waarde": "+ Digitaal ondertekenen via DocuSign, Stiply of Ondertekenen.nl; voorkeur voor iDIN",
+    "bron": [
+     "https://www.obvion.nl/adviseur/Beleid/Corona/Digitaal-ondertekenen"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Docusign, Stiply of Ondertekenen.nl ... Obvion strongly prefers the option that uses iDIN"
+   },
+   "bgar": {
+    "waarde": "+ Garantie voor waarborgsom via adviseur, max. 10% koopsom, max. 12 mnd geldig; alleen bij Obvion-hypotheek",
+    "bron": [
+     "https://obvion.nl/situatie/wonen/kopen/bankgarantie/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. maximaal 10% van de koopsom van de woning zonder roerende zaken"
+   },
+   "bovw": {
+    "waarde": "+ Bij verkoop van de woning geen vergoeding bij vervroegd terugbetalen",
+    "bron": [
+     "https://www.obvion.nl/Hypotheek-wijzigen/Vergoeding-vervroegd-terugbetalen-hypotheek",
+     "https://obvion.nl/hypotheek/terugbetalen/extra/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Als uw huis is verkocht, berekent Obvion géén vergoeding (boete) voor het vervroegd terugbetalen van de hypotheek."
+   },
+   "maxh": {
+    "waarde": "~ Maximale hoofdsom incl. OBK; boven grens met LTV > 90% beoordeling door kredietcommissie",
+    "bron": [
+     "https://obvion.nl/media/kxudk0d2/product-en-acceptatiekaart.pdf"
+    ],
+    "brondatum": "2026-05",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. De maximale hoofdsom is €3.000.000, inclusief overbruggingskrediet."
+   },
+   "minh": {
+    "waarde": "~ Minimale hoofdsom EUR 50.000 (Woon Hypotheek)",
+    "bron": [
+     "https://obvion.nl/media/kxudk0d2/product-en-acceptatiekaart.pdf"
+    ],
+    "brondatum": "2026-05",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Gewijzigd na controle (A/B/arbitrage): Productkaart mei 2026 noemt EUR 50.000; huidige waarde is niet-informatief. Bedrag Verhuur/Recreatie niet eenduidig uit tekst te halen, daarom weggelaten."
+   },
+   "oversl": {
+    "waarde": "+ Zuiver oversluiten tot max. 110% van getaxeerde waarde (incl. kosten en boete)",
+    "bron": [
+     "https://obvion.nl/hypotheek/wijzigen/oversluiten/",
+     "https://obvion.nl/media/kxudk0d2/product-en-acceptatiekaart.pdf"
+    ],
+    "brondatum": "2026-05",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Oversluiten kan tot maximaal 110% van de getaxeerde waarde van uw huis."
+   },
+   "rest": {
+    "waarde": "~ Restschuld meefinancieren in nieuwe hypotheek mogelijk voor bestaande klanten, onder voorwaarden",
+    "bron": [
+     "https://obvion.nl/hypotheek/terugbetalen/restschuld/",
+     "https://obvion.nl/situatie/persoonlijk/uit-elkaar/",
+     "https://obvion.nl/media/kxudk0d2/product-en-acceptatiekaart.pdf"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Bestaande klanten kunnen dit doen, maar ook klanten die hun hypotheek elders hebben"
+   },
+   "verhw": {
+    "waarde": "~ Waardecontrole bij verhoging, soms taxatierapport nodig; nieuw deel alleen aflossingsvrij binnen max. 30% marktwaarde en EUR 150.000",
+    "bron": [
+     "https://obvion.nl/hypotheek/vorm/aflossingsvrij/beleid-aflossingsvrij/",
+     "https://obvion.nl/hypotheek/wijzigen/verhogen/"
+    ],
+    "brondatum": "2026-05-12",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Gewijzigd na controle (A/B/arbitrage): Beleid per 11/12 mei 2026 geldt ook voor verhogingen; bestaand aflossingsvrij deel mag blijven. Voorbeeld (Jansen, al boven grens) toont dat verhoging dan niet aflossingsvrij kan; generiek 'niet aflossingsvrij' klopt dus niet. Waardecontrole/taxatie bevestigd."
+   },
+   "zelfb": {
+    "waarde": "+ Zelfbouw toegestaan; marktwaarde via taxatierapport op basis van tekening en bestek",
+    "bron": [
+     "https://obvion.nl/media/kxudk0d2/product-en-acceptatiekaart.pdf"
+    ],
+    "brondatum": "2026-05",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Bij zelfbouw bepaalt Obvion de marktwaarde op basis van een taxatierapport met tekening en bestek."
+   },
+   "cpo": {
+    "waarde": "+ CPO toegestaan; waarde = stichtings- + planontwikkelingskosten; afbouwgarantie aannemer en achtervangverklaring vereist",
+    "bron": [
+     "https://obvion.nl/hypotheek/afsluiten/nieuwbouw/cpo/",
+     "https://obvion.nl/media/kxudk0d2/product-en-acceptatiekaart.pdf",
+     "https://www.obvion.nl/Huis-kopen/CPO-kosten-en-financiering"
+    ],
+    "brondatum": "2026-05",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Vóór het passeren van de hypotheekakte moet een onherroepelijke omgevingsvergunning getoond kunnen worden."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Product- en acceptatiekaart Obvion Woon Hypotheek",
+    "url": "https://obvion.nl/media/kxudk0d2/product-en-acceptatiekaart.pdf",
+    "versie": "mei 2026"
+   },
+   {
+    "titel": "Beleid aflossingsvrije hypotheek",
+    "url": "https://obvion.nl/hypotheek/vorm/aflossingsvrij/beleid-aflossingsvrij/",
+    "versie": "11/12 mei 2026"
+   },
+   {
+    "titel": "Calcasa Desktop Taxatie (adviseur)",
+    "url": "https://obvion.nl/adviseur/Beleid/Calcasa",
+    "versie": "nov 2025"
+   },
+   {
+    "titel": "ABP Hypotheek algemene voorwaarden",
+    "url": "https://obvion.nl/media/ztkdle4y/abp-hypotheek-algemene-voorwaarden-juni-2026.pdf",
+    "versie": "juni 2026"
+   },
+   {
+    "titel": "Product- en acceptatiekaart Obvion Woon Hypotheek (aanvragers)",
+    "url": "https://obvion.nl/media/kxudk0d2/product-en-acceptatiekaart.pdf",
+    "versie": "mei 2026 (ACPK019_2605)"
+   },
+   {
+    "titel": "Acceptatiegids Obvion",
+    "url": "https://obvion.nl/adviseur/beleid/acceptatiegids/",
+    "versie": "niet geopend"
+   },
+   {
+    "titel": "Beleid aflossingsvrije hypotheek",
+    "url": "https://obvion.nl/hypotheek/vorm/aflossingsvrij/beleid-aflossingsvrij/",
+    "versie": "geldig vanaf 11-5-2026"
+   }
+  ]
+ }
+]

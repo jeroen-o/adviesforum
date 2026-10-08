@@ -1,0 +1,1229 @@
+[
+ {
+  "naam": "Lloyds Bank",
+  "gecontroleerd": "2026-10-09",
+  "criteria": {
+   "zzp": {
+    "waarde": "~ Met NHG vanaf 1 jaar ondernemerschap; altijd inkomensverklaring ondernemer verplicht",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-inkomen",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Een Lloyds Bank Hypotheek met NHG is mogelijk voor alle ondernemers die minimaal een jaar zelfstandig zijn."
+   },
+   "flex": {
+    "waarde": "~ Gemiddelde inkomen laatste 3 kalenderjaren of 36 mnd (IBL); tijdelijk met intentieverklaring na proeftijd",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-inkomen",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Gemiddelde inkomen over de afgelopen drie kalenderjaren; tijdelijk dienstverband met intentieverklaring volgens NHG; proeftijd verstreken"
+   },
+   "persp": {
+    "waarde": "- Perspectiefverklaring (en arbeidsmarktscan) wordt niet geaccepteerd",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-inkomen",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Financiering op basis van een perspectiefverklaring of arbeidsmarktscan is niet mogelijk."
+   },
+   "aow": {
+    "waarde": "~ Pensioeninkomen getoetst via Mijnpensioenoverzicht; pensioengat-proces versoepeld (2026)",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-inkomen",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf",
+     "https://www.lloydsbank.nl/dam/jcr:f7966c59-80de-434d-a9e2-0f14334842c4/lloyds-bank-nieuwsbrief-intermediair-q2-2026.pdf",
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-lloyds-bank-hypotheek"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Dit moet aangetoond worden met een overzicht van MijnPensioenoverzicht.nl."
+   },
+   "erfp": {
+    "waarde": "~ Erfpacht van overheidsinstantie geaccepteerd; particuliere erfpacht op voorlegbasis met groene notariële opinie; canon telt mee in toets",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-onderpand",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Gewijzigd na controle (A/B/arbitrage): Hypotheekgids feb 2026 is specifieker; erfpachtakte-eis bij desktoptaxatie niet teruggevonden."
+   },
+   "rvp": {
+    "waarde": "~ Variabel, 1, 5, 6, 10, 15, 20 en 30 jaar",
+    "bron": [
+     "https://www.lloydsbank.nl/hypotheken/lloyds-bank-hypotheek",
+     "https://www.lloydsbank.nl/dam/jcr:88c9d654-7afe-4c25-ba56-1ad826ad1bf9/productkaart-lloyds-bank-hypotheek.pdf",
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-lloyds-bank-hypotheek"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Voor de Lloyds Bank Hypotheek gelden maandvariabel, 1, 5, 6, 10, 15, 20 en 30 jaar."
+   },
+   "dag": {
+    "waarde": "+ Dagrente: lagere rente op passeerdatum geldt",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-hypotheekaanbod"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. wijzigt de hypotheekrente naar de lagere rente van dat moment"
+   },
+   "geld": {
+    "waarde": "~ Aanbod 3 mnd, verlengbaar met 90 dagen; nieuwbouw tot 12 mnd totaal",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-hypotheekaanbod",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Het hypotheekaanbod is 90 dagen geldig... Bij bestaande bouw verlengen wij het aanbod met maximaal 90 dagen. Bij nieuwbouw ... maximaal 270 dagen."
+   },
+   "boete": {
+    "waarde": "+ 10% van oorspronkelijk leningdeel per jaar boetevrij",
+    "bron": [
+     "https://www.lloydsbank.nl/hypotheken/extra-aflossen",
+     "https://www.lloydsbank.nl/hypotheken/hele-hypotheek-aflossen"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Ieder kalenderjaar mag u 10% van uw oorspronkelijke hypotheek zonder vergoeding (boeterente) extra aflossen."
+   },
+   "ltv": {
+    "waarde": "+ Maandelijkse automatische verlaging tariefklasse",
+    "bron": [
+     "https://www.lloydsbank.nl/hypotheken/tariefklassen-lloyds"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Lloyds Bank stelt aan het einde van elke maand de tariefklasse vast voor de volgende maand."
+   },
+   "bdduur": {
+    "waarde": "~ Bouwdepot bestaande woning en nieuwbouw 24 mnd; eenmalig 6 mnd verlengen op verzoek (kosteloos)",
+    "bron": [
+     "https://www.lloydsbank.nl/hypotheken/bouwdepot",
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-beheer",
+     "https://www.lloydsbank.nl/dam/jcr:88c9d654-7afe-4c25-ba56-1ad826ad1bf9/productkaart-lloyds-bank-hypotheek.pdf"
+    ],
+    "brondatum": "2026-07",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Gewijzigd na controle (A/B/arbitrage): Oudere voorwaarden LHBV noemen 12 mnd bij verbouw; gids feb 2026, productkaart juli 2026 en consumentenpagina noemen 24 mnd."
+   },
+   "bdrnt": {
+    "waarde": "~ Depotvergoeding gelijk aan gemiddeld te betalen hypotheekrente",
+    "bron": [
+     "https://www.lloydsbank.nl/hypotheken/bouwdepot"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. De rentevergoeding is gelijk aan de gemiddelde hypotheekrente, ook na verlenging van het bouwdepot."
+   },
+   "bddecl": {
+    "waarde": "~ Declareren via Mijn Hypotheek (app, foto van nota)",
+    "bron": [
+     "https://www.lloydsbank.nl/hypotheken/declareren-depot"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. Maak een foto of scan van de rekening en verstuur deze via Mijn Hypotheek."
+   },
+   "ebb": {
+    "waarde": "~ Verduurzamingshypotheek €5.000-50.000; tot 106% met NHG, 100% zonder",
+    "bron": [
+     "https://www.lloydsbank.nl/hypotheken/verduurzamingshypotheek",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Minimaal € 5.000,- en maximaal € 50.000,- ... 106% van de marktwaarde na verbouwing met NHG; 100% zonder NHG."
+   },
+   "duur": {
+    "waarde": "+ Verduurzamingsdeel met rentekorting gedurende rentevaste periode",
+    "bron": [
+     "https://www.lloydsbank.nl/hypotheken/verduurzamingshypotheek",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Deze korting geldt alleen tijdens de rentevastperiode die de klant voor dit leningdeel heeft gekozen."
+   },
+   "verh": {
+    "waarde": "~ Verhuisregeling: rente meenemen binnen 6 mnd na aflossing oude lening",
+    "bron": [
+     "https://www.lloydsbank.nl/hypotheken/verhuizen",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Wordt binnen zes maanden na aflossing van de hypotheek na verkoop van de woning een nieuwe hypotheek voor een andere woning bij Lloyds Bank aangevraagd? Dan is het mogelijk ... mee te nemen"
+   },
+   "ondh": {
+    "waarde": "~ Verkoop met restschuld in overleg met Bijzonder Beheer, via makelaar",
+    "bron": [
+     "https://www.lloydsbank.nl/dam/jcr:c6a8dfe8-e3a6-48a0-9ec6-41d2eff5aed2/brochure-betalingsproblemen-hypotheek.pdf",
+     "https://www.lloydsbank.nl/hypotheken/overwaarde-of-restschuld"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. moeten wij eerst akkoord geven voor de hoogte van de restschuld voordat u een afspraak maakt bij de notaris"
+   },
+   "oha": {
+    "waarde": "~ Mogelijk na kredietwaardigheidstoets en advies; team Preventief Beheer",
+    "bron": [
+     "https://www.lloydsbank.nl/hypotheken/uit-elkaar-gaan",
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-beheer"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. alleen een financieel adviseur hiervoor een verzoek indienen ... nieuwe toetsing plaats tegen de op dat moment geldende acceptatienormen"
+   },
+   "tweede": {
+    "waarde": "~ Verhoging mogelijk met nieuwe toets, met of zonder NHG",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-lloyds-bank-hypotheek",
+     "https://www.lloydsbank.nl/hypotheken/verhogen-hypotheek-lloyds"
+    ],
+    "brondatum": "2026-07",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Tweede hypotheek alleen als de eerste hypotheek ook bij Lloyds Bank loopt; verhoging ook met NHG mogelijk (aanvraagformulier versie juli 2026)."
+   },
+   "ovbr": {
+    "waarde": "~ Overbrugging tot 98% verkoopprijs (verkocht) of 90% (niet verkocht) min schuld",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-lloyds-bank-hypotheek"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. Een overbruggingskrediet tot en met 90% van de marktwaarde van het te verkopen onderpand"
+   },
+   "avrij": {
+    "waarde": "~ Max 50% marktwaarde; aflossingsvrij deel altijd consumptief + pensioentoets",
+    "bron": [
+     "https://www.lloydsbank.nl/hypotheken/aflossingsvrije-hypotheek",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf",
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-lloyds-bank-hypotheek"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Er geldt een maximaal aflossingsvrij leningdeel van 50% van de marktwaarde van de woning."
+   },
+   "rmid": {
+    "waarde": "- Rentemiddeling niet mogelijk; tussentijds rente wijzigen tegen vergoeding ineens",
+    "bron": [
+     "https://www.lloydsbank.nl/hypotheken/rente-wijzigen-tijdens-rentevastperiode"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. Voor het stopzetten van uw huidige rentevastperiode betaalt u een vergoeding. Deze vergoeding, ook wel boeterente, betaalt u in één keer."
+   },
+   "rverl": {
+    "waarde": "+ Laagste van rente in rentevoorstel en rente op ingangsdatum nieuwe rvp (behalve BoS Budget)",
+    "bron": [
+     "https://www.lloydsbank.nl/hypotheken/einde-rentevastperiode"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Lloyds zetten uw rente vast tegen de laagste van deze twee rentes (behalve Bank of Scotland Budget)."
+   },
+   "rvoor": {
+    "waarde": "~ Rentevoorstel 3 maanden voor einde rentevaste periode",
+    "bron": [
+     "https://www.lloydsbank.nl/hypotheken/einde-rentevastperiode"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Drie maanden voor het einde van uw rentevastperiode krijgt u een nieuw renteaanbod"
+   },
+   "bbrk": {
+    "waarde": "~ Contante waarde renteverschil tot einde rvp; vergelijkingsrente = voor klant gunstigste rente",
+    "bron": [
+     "https://www.lloydsbank.nl/hypotheken/extra-aflossen",
+     "https://www.lloydsbank.nl/hypotheken/hele-hypotheek-aflossen"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Wij gebruiken de voor u meest gunstige rente als vergelijkingsrente."
+   },
+   "elbl": {
+    "waarde": "~ Rentekorting bij label A of beter, hele rentevaste periode",
+    "bron": [
+     "https://www.lloydsbank.nl/hypotheken/einde-rentevastperiode",
+     "https://www.lloydsbank.nl/dam/jcr:f7966c59-80de-434d-a9e2-0f14334842c4/lloyds-bank-nieuwsbrief-intermediair-q2-2026.pdf"
+    ],
+    "brondatum": "2026-06",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. rentekorting voor woningen met een A-label of beter ... blijft gedurende de hele rentevastperiode van kracht"
+   },
+   "o106": {
+    "waarde": "+ Verduurzamingsdeel in laagste tariefklasse, telt niet mee voor LTV-klasse",
+    "bron": [
+     "https://www.lloydsbank.nl/hypotheken/verduurzamingshypotheek",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf",
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-lloyds-bank-hypotheek"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. De verduurzamingshypotheek zelf valt altijd in de laagste tariefklasse ... telt niet mee bij de berekening van de tariefklasse"
+   },
+   "bprov": {
+    "waarde": "! Verlengen kost bereidstellingsprovisie per maand als offerterente lager is dan actueel",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-hypotheekaanbod"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. De kosten worden per maand (30 dagen) berekend, ook als uw klant een gedeelte van een maand verlengt"
+   },
+   "wkost": {
+    "waarde": "+ Meeste aanpassingen kosteloos zelf te regelen (o.a. aflosvorm wijzigen, tussentijdse renteaanpassing zonder behandelkosten)",
+    "bron": [
+     "https://www.lloydsbank.nl/hypotheken/aflosvorm-wijzigen",
+     "https://www.lloydsbank.nl/hypotheken/kostenoverzicht"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. U kunt dit kosteloos met ons regelen. Vul het aanvraagformulier 'Omzetten aflosvorm' in"
+   },
+   "bproc": {
+    "waarde": "~ Bijzonder Beheer bespreekt oorzaak en oplossing; Preventief Beheer bij dreigende problemen",
+    "bron": [
+     "https://www.lloydsbank.nl/hypotheken/betalingsproblemen",
+     "https://www.lloydsbank.nl/dam/jcr:c6a8dfe8-e3a6-48a0-9ec6-41d2eff5aed2/brochure-betalingsproblemen-hypotheek.pdf"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Bel ons op 020 563 28 68 of stuur een e-mail naar bijzonderbeheer@lloydsbank.nl. Dan gaan wij samen met u op zoek naar een oplossing"
+   },
+   "avlt": {
+    "waarde": "! Verlenging aflossingsvrij deel na einde looptijd mogelijk maar niet gegarandeerd; nieuwe toets en dan geldende regels (max. 50% MW aflossingsvrij)",
+    "bron": [
+     "https://www.lloydsbank.nl/hypotheken/aflossingsvrije-hypotheek",
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-lloyds-bank-hypotheek"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Lloyds meldt dat uw hypotheek niet altijd kan worden verlengd. Of dat kan, hangt af van uw situatie op dat moment en de regels die dan gelden."
+   },
+   "cons": {
+    "waarde": "~ Consumptief (box 3) mogelijk zonder NHG tot en met 90% marktwaarde; niet met NHG",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-lloyds-bank-hypotheek",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Bij een consumptieve hypotheek ... geldt een grens van 90%."
+   },
+   "lensch": {
+    "waarde": "~ Familielening (ouder-kind) toegestaan, telt mee in toets; terugschenking lasten = lastenvrij; saldering niet met NHG",
+    "bron": [
+     "https://www.lloydsbank.nl/hypotheken/hulp-van-uw-ouders",
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-aanvragers"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. de geldgever moet 1e graad familie zijn ... Is de last hoger, dan past Lloyds saldering toe, maar saldering is niet toegestaan in combinatie met NHG"
+   },
+   "desk": {
+    "waarde": "~ Calcasa Desktop Taxatie: met NHG tot 90%, zonder NHG tot 65% marktwaarde; niet bij nieuwbouw; WOZ niet geaccepteerd",
+    "bron": [
+     "https://www.lloydsbank.nl/hypotheken/desktoptaxatie"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Bij NHG kan het tot 90% van de marktwaarde, bij een hypotheek zonder NHG tot 65%. ... Voor nieuwbouw kan een desktoptaxatie niet worden gebruikt."
+   },
+   "ams": {
+    "waarde": "- Arbeidsmarktscan en perspectiefverklaring niet mogelijk; flexinkomen via gemiddelde laatste 3 kalenderjaren",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-inkomen",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Financiering op basis van een perspectiefverklaring of arbeidsmarktscan is niet mogelijk."
+   },
+   "vve": {
+    "waarde": "~ VvE moet actief zijn (blijkend uit taxatie); niet-actieve VvE kan ter beoordeling worden voorgelegd",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-onderpand",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Is de VvE inactief of het fonds onvoldoende gevuld, dan kan de aanvraag worden voorgelegd."
+   },
+   "huur": {
+    "waarde": "~ Alleen zonder NHG: lasten verhuurde panden saldeerbaar tot nul met 80% bruto huur; overschot telt niet mee",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-financiele-verplichtingen",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf",
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-inkomen"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Costs on rented properties can be offset down to zero, but no more than 80% of the gross rent received (alleen zonder NHG)."
+   },
+   "bonus": {
+    "waarde": "~ Provisie en bonus bij 3 jr structureel, gemiddelde 3 jr; bonus/tantième niet bij NHG, zonder NHG max. 20% bruto inkomen",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-inkomen",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. bonus en tantième kunnen meegenomen worden tot maximaal 20% van het bruto inkomen (incl. vakantiegeld)"
+   },
+   "recr": {
+    "waarde": "- Vakantie-, recreatie- en tweede woningen niet financierbaar (met en zonder NHG)",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-onderpand",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Woningen die zowel met als zonder NHG niet in aanmerking komen omvatten onder meer woonboten en vakantie-, recreatie- of tweede woningen."
+   },
+   "aanv": {
+    "waarde": "- Max. twee aanvragers; duurzame relatie vereist, familieverbanden (bijv. broers/zussen) niet geaccepteerd",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-aanvragers",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Samenlevingsvormen waarbij meer dan twee aanvragers zijn betrokken, zijn niet acceptabel voor Lloyds Bank."
+   },
+   "pgb": {
+    "waarde": "- Inkomen uit pgb wordt niet geaccepteerd (met en zonder NHG)",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-inkomen",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Income from a persoonsgebonden budget is not accepted by Lloyds Bank, with or without NHG."
+   },
+   "start": {
+    "waarde": "~ SVn-starterslening mogelijk bij aanvraag met NHG; totaal met familielening binnen maximale verstrekking",
+    "bron": [
+     "https://www.lloydsbank.nl/hypotheken/starterslening"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Lloyds meldt dat het mogelijk is om een Lloyds Bank Hypotheek met NHG-voorwaarden af te sluiten in combinatie met een SVn Starterslening."
+   },
+   "verhuur": {
+    "waarde": "~ Verhuur alleen met vooraf expliciete toestemming; tijdelijke verhuur onder Leegstandwet (via overbruggingsverhuur.nl) of diplomatenclausule",
+    "bron": [
+     "https://www.lloydsbank.nl/hypotheken/betalingsproblemen",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf",
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-beheer"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Lloyds Bank kan alleen akkoord gaan met tijdelijke verhuur als wordt voldaan aan de regels van de Leegstandswet en de tijdelijke verhuur in samenwerking met overbruggingsverhuur.nl wordt geregeld."
+   },
+   "ort": {
+    "waarde": "~ Structurele ORT en overwerk: gemiddelde over laatste 3 jaar, max. laatste jaar of bedrag op werkgeversverklaring",
+    "bron": [
+     "https://www.lloydsbank.nl/dam/jcr:88c9d654-7afe-4c25-ba56-1ad826ad1bf9/productkaart-lloyds-bank-hypotheek.pdf",
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-inkomen"
+    ],
+    "brondatum": "2026-07",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Gemiddelde bedrag over de afgelopen 3 jaar met als maximum het laatste jaar, of het bedrag op de werkgeversverklaring."
+   },
+   "uren": {
+    "waarde": "~ Bij meerdere dienstverbanden max. toetsinkomen gebaseerd op 40 uur per week",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-inkomen"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. Bij meerdere dienstverbanden rekent Lloyds Bank maximaal met een toetsinkomen dat gebaseerd is op 40 uur per week."
+   },
+   "meerink": {
+    "waarde": "~ Meerdere dienstverbanden mogelijk; toetsinkomen max. gebaseerd op 40 uur per week",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-inkomen"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. Het is mogelijk om inkomen uit meerdere dienstverbanden te rekenen tot het toetsinkomen."
+   },
+   "loondt": {
+    "waarde": "+ IBL toe te passen bij vast dienstverband, tijdelijk met intentieverklaring en flexibele arbeidsrelatie",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-inkomen",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Inkomen uit loondienst behoort tot het toetsinkomen als er sprake is van een: Vast dienstverband; Tijdelijk dienstverband waarbij de werkgever een intentieverklaring ... afgeeft"
+   },
+   "intent": {
+    "waarde": "~ Tijdelijk contract met intentieverklaring volgens NHG-normen telt mee; afgegeven na proeftijd",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-inkomen",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. The probation period must have ended at the moment the statement is issued (intentieverklaring volgens NHG-normen)."
+   },
+   "toekdv": {
+    "waarde": "~ Nieuwe baan die binnen 6 mnd na bindend aanbod start telt alleen bij vast dienstverband zonder proeftijd",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-inkomen",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Gewijzigd na controle (A/B/arbitrage): Tabel in gids is in tekstweergave rommelig: 'vast of tijdelijk met intentieverklaring' lijkt bij de regel loonsverhoging te horen, 'vast zonder proeftijd' bij nieuw dienstverband. Lezing B gevolgd; controle in pdf aanbevolen."
+   },
+   "toekst": {
+    "waarde": "~ Loonsverhoging binnen 6 mnd na bindend aanbod telt mee mits schriftelijk door werkgever bevestigd; bij dienstverband bij familie tellen verhogingen niet",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-inkomen",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Gewijzigd na controle (A/B/arbitrage): De regel 'salarisverhogingen afgelopen 6 mnd en toekomstige tellen niet mee' staat in §8.3 Dienstverband bij familie, niet als algemene regel. Tabel deels afgekapt; detail in pdf controleren."
+   },
+   "proef": {
+    "waarde": "- Proeftijd moet verstreken zijn op moment van afgeven werkgeversverklaring",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-inkomen",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. The employment's probation period must have ended at the moment the statement is issued."
+   },
+   "buitw": {
+    "waarde": "! Inkomen moet in euro op EU/EER-rekening worden betaald; buitenlands inkomen altijd getoetst in box 3",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-lloyds-bank-hypotheek",
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-aanvragers",
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-inkomen"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. geen hypotheken verstrekt aan personen met een inkomen uitbetaald in een andere valuta dan euro, of aan personen met een verblijfplaats buiten Nederland"
+   },
+   "lijfr": {
+    "waarde": "~ Lijfrente telt mee als uitkering gegarandeerd is tot overlijden of minimaal de vereiste duur; met en zonder NHG",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-inkomen",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Lijfrente counts if the payout is guaranteed until the applicant's death, or at least for the period needed (met en zonder NHG)."
+   },
+   "ivawao": {
+    "waarde": "~ Sociale uitkeringen met duurzaam karakter worden geaccepteerd",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-inkomen",
+     "https://www.lloydsbank.nl/dam/jcr:88c9d654-7afe-4c25-ba56-1ad826ad1bf9/productkaart-lloyds-bank-hypotheek.pdf"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Social benefits count only if they are permanent, and this must be shown in the benefit decision letter."
+   },
+   "senior": {
+    "waarde": "~ Geen maximumleeftijd; AOW binnen ca. 10 jaar: toets op inkomen na AOW, tekort versneld aflossen; seniorenpropositie",
+    "bron": [
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf",
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-inkomen",
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-aanvragers"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Lloyds Bank hanteert geen maximumleeftijd voor het afsluiten van een hypotheek."
+   },
+   "nlwon": {
+    "waarde": "! Verblijfplaats in NL vereist (buiten NL binnen eurozone voorleggen); nationaliteit NL/EU/Zwitserland/IJsland of geldige vergunning",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-aanvragers",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Lloyds Bank verstrekt alleen hypotheken aan aanvragers die beschikken over de Nederlandse nationaliteit of de nationaliteit van een andere lidstaat van de Europese Unie, Zwitserland, IJsland, Noorwege"
+   },
+   "vblf": {
+    "waarde": "~ Type I (bepaalde tijd regulier) mogelijk volgens NHG-regels verblijfsdoel; type III asiel en W-document niet bij inkomen",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-aanvragers",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Is er sprake van een verblijfsvergunning voor bepaalde tijd dan moet Lloyds Bank ook een kopie van het geldig paspoort ontvangen."
+   },
+   "expbel": {
+    "waarde": "! Buitenlands inkomen wordt altijd in box 3 getoetst",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-inkomen"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. buitenlands inkomen altijd getoetst in box 3"
+   },
+   "mwbep": {
+    "waarde": "~ NWWI-gevalideerd taxatierapport (max. 6 mnd); Calcasa alleen bij lage LTV; nieuwbouw: koop-/aanneemsom + meerwerk, geen desktoptaxatie",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-onderpand"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. Calcasa ... max 6 maanden; nieuwbouw: koop-/aanneemsom + meerwerk"
+   },
+   "woz": {
+    "waarde": "- WOZ-verklaring niet geaccepteerd om marktwaarde aan te tonen",
+    "bron": [
+     "https://www.lloydsbank.nl/hypotheken/desktoptaxatie",
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-onderpand"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Lloyds Bank accepteert geen WOZ-verklaringen om de marktwaarde aan te tonen."
+   },
+   "ltvk": {
+    "waarde": "~ Max. 100% marktwaarde (laagste van taxatie of koopsom + kosten); met NHG tot 106% bij energiebesparing",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-lloyds-bank-hypotheek",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Zonder NHG is dit maximaal 100% van de marktwaarde. Met NHG is dit ook 100%, en met energiebesparende maatregelen tot 106%."
+   },
+   "wwp": {
+    "waarde": "- Woning met bedrijfsruimte of woon-/winkelpand uitgesloten (met en zonder NHG)",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-onderpand",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Ook woningen met bedrijfsruimte, (gedeeltelijk) verhuurde woningen, woningen met een recht van opstal en woonwagens vallen hieronder."
+   },
+   "wboer": {
+    "waarde": "- Woonboerderij met agrarische bestemming uitgesloten",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-onderpand",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. woonboerderijen met agrarische bestemming"
+   },
+   "wboot": {
+    "waarde": "- Woonboot uitgesloten (met en zonder NHG)",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-onderpand",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Woningen die zowel met als zonder NHG niet in aanmerking komen omvatten onder meer woonboten"
+   },
+   "gron": {
+    "waarde": "- Bestaande woning met Groninger akte uitgesloten",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-onderpand",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. De gids sluit bestaande woningen uit waar sprake is van een Groninger Akte."
+   },
+   "zbep": {
+    "waarde": "~ Zonder NHG: Inkomensverklaring Ondernemer door door Lloyds geaccepteerde rekenexpert (max. 6 mnd); met NHG: NHG-inkomensverklaring",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-inkomen",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. De Inkomensverklaring Ondernemer mag op de datum van het bindend aanbod niet ouder zijn dan zes maanden."
+   },
+   "z123": {
+    "waarde": "~ Gemiddelde fiscale winst laatste 3 kalenderjaren; is laatste jaar lager, dan telt laatste jaar",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-inkomen",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Als het inkomen van het laatste kalenderjaar lager is dan het gemiddelde, dan is het inkomen van het laatste jaar het toetsinkomen."
+   },
+   "zcijf": {
+    "waarde": "~ Jaarcijfers moeten positieve solvabiliteit en liquiditeit tonen (met analyse); negatief eigen vermogen voorleggen",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-inkomen"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Uit de jaarcijfers moet blijken dat de solvabiliteit en liquiditeit positief zijn en dit moet aangetoond worden met een analyse. Negatief eigen vermogen ... moet worden voorgelegd."
+   },
+   "zstart": {
+    "waarde": "- Zonder NHG min. 2 jaar zelfstandig; met NHG volstaat 1 jaar",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-inkomen",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Een Lloyds Bank Hypotheek zonder NHG is mogelijk als men minimaal twee jaar zelfstandig is."
+   },
+   "zbv": {
+    "waarde": "! Max. 4 geregistreerde ondernemingen per aanvrager, ongeacht rechtsvorm of dochters",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-inkomen"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Er geldt een maximum van totaal vier geregistreerde ondernemingen per aanvrager ongeacht rechtsvorm of eventuele dochterondernemingen."
+   },
+   "zbuit": {
+    "waarde": "- Geen hypotheek bij inkomen in andere valuta dan euro; ondernemers in sanctielanden uitgesloten",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-inkomen",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Lloyds Bank verstrekt geen hypotheek aan ondernemers die actief zijn in landen die op sanctielijsten staan"
+   },
+   "bkr": {
+    "waarde": "- Lopende codering, HY-, SH- of SK-registratie: geen financiering; bij NHG gelden NHG-regels behalve herstelcode (H)",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-bkr",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Lloyds Bank accepteert geen hypotheekaanvragen waarbij er sprake is van een BKR-codering op een lopend geregistreerd krediet. Ook is het niet mogelijk ... HY ... SH & SK"
+   },
+   "duo": {
+    "waarde": "~ Studieschuld via weegfactor Trhk op oorspronkelijke schuld; ook bij aflosvrije periode",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-financiele-verplichtingen",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Lloyds Bank bases the monthly burden of a DUO loan on the table published in the TRHK, which includes a weighting factor for student loans."
+   },
+   "plen": {
+    "waarde": "~ Aflopend krediet: contractuele rente en aflossing over oorspronkelijke hoofdsom, min. 2%",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-bkr",
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-financiele-verplichtingen"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. tenminste de contractuele rente en aflossing van de oorspronkelijke hoofdsom bij aflopend krediet ... minimaal 2%"
+   },
+   "dkr": {
+    "waarde": "~ Doorlopend krediet: min. 2% van de kredietlimiet per maand",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-bkr",
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-financiele-verplichtingen"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Lloyds Bank stelt de betalingsverplichting op minimaal 2% van de kredietlimiet bij doorlopend krediet"
+   },
+   "lease": {
+    "waarde": "~ Operational lease op werkelijke last; vóór 1-4-2022 geregistreerd (65%) wordt opgehoogd naar 100%",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-bkr",
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-financiele-verplichtingen"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Het bedrag is voor 65% ingeschreven in het BKR. Dit bedrag wordt teruggerekend naar 100% waarna de werkelijke last wordt berekend"
+   },
+   "rsk": {
+    "waarde": "~ Lasten van lening voor restschuld tellen mee in de toets (BKR-code RN/RH)",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-bkr",
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-financiele-verplichtingen"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Een krediet voor het financieren van een restschuld ... staat in BKR geregistreerd onder de code RN of RH. Lloyds Bank houdt rekening met de maandlast"
+   },
+   "obmax": {
+    "waarde": "~ Te koop of voorwaardelijk verkocht: 90% van laagste van marktwaarde/(verwachte) verkoopprijs minus hypotheek; definitief verkocht: 98% verkoopprijs",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-lloyds-bank-hypotheek"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. Een overbruggingskrediet tot en met 90% van de marktwaarde van het te verkopen onderpand"
+   },
+   "oblast": {
+    "waarde": "~ Niet verkocht: dubbele lasten 12 mnd betaalbaar aantonen (of langer bij langere verwachte verkooptermijn)",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-lloyds-bank-hypotheek"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. U moet aantonen dat die dubbele lasten betaalbaar zijn met voldoende eigen middelen"
+   },
+   "obduur": {
+    "waarde": "~ Bestaande bouw 12 mnd, eenmalig +6 mnd op verzoek; nieuwbouw max. 2 jaar, verlengen niet mogelijk",
+    "bron": [
+     "https://www.lloydsbank.nl/hypotheken/overbruggingskrediet",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. De maximale looptijd van het overbruggingskrediet is een jaar bij bestaande bouw en twee jaar bij nieuwbouw. Bij bestaande bouw kunt u de looptijd eenmalig kosteloos met zes maanden verlengen."
+   },
+   "obwaar": {
+    "waarde": "+ Calcasa-desktoptaxatie mogelijk voor niet verkochte woning (overbrugging tot 90% MW); geen WOZ",
+    "bron": [
+     "https://www.lloydsbank.nl/hypotheken/desktoptaxatie",
+     "https://www.lloydsbank.nl/hypotheken/overbruggingskrediet"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Ook een overbruggingskrediet of een wijziging zonder verhoging kan tot 90%."
+   },
+   "obels": {
+    "waarde": "- Overbruggingskrediet alleen als de nieuwe hypotheek ook bij Lloyds Bank wordt afgesloten",
+    "bron": [
+     "https://www.lloydsbank.nl/hypotheken/overbruggingskrediet",
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-lloyds-bank-hypotheek"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Het afsluiten van een overbruggingskrediet is alleen mogelijk als de nieuwe hypotheek ook bij Lloyds Bank wordt afgesloten."
+   },
+   "obvw": {
+    "waarde": "+ Vervroegd aflossen overbrugging kosteloos; verlenging bestaande bouw kosteloos",
+    "bron": [
+     "https://www.lloydsbank.nl/hypotheken/overbruggingskrediet"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Bij bestaande bouw kunt u de looptijd eenmalig kosteloos met zes maanden verlengen."
+   },
+   "geldnb": {
+    "waarde": "+ Aanbod 90 dagen geldig; bij nieuwbouw verlenging bindend aanbod met max. 270 dagen",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-hypotheekaanbod"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Bij nieuwbouw verlengen wij het bindend hypotheek aanbod met maximaal 270 dagen."
+   },
+   "annul": {
+    "waarde": "+ Geen annuleringskosten, ook niet na verlenging",
+    "bron": [
+     "https://www.lloydsbank.nl/dam/jcr:88c9d654-7afe-4c25-ba56-1ad826ad1bf9/productkaart-lloyds-bank-hypotheek.pdf",
+     "https://www.lloydsbank.nl/hypotheken/lloyds-bank-hypotheek"
+    ],
+    "brondatum": "2026-07",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Volgens de productkaart van de Lloyds Bank Hypotheek zijn er geen annuleringskosten, ook niet na verlenging."
+   },
+   "bgar": {
+    "waarde": "+ Bankgarantie via Lloyds Bank tot max. 10% van de koopsom, na acceptatie en ondertekening bindend aanbod",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-hypotheekaanbod"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. bankgarantie van maximaal 10% van de koopsom"
+   },
+   "bvrij": {
+    "waarde": "+ Boetevrij bij verkoop met juridische en feitelijke levering en bij overlijden (binnen 12 mnd)",
+    "bron": [
+     "https://www.lloydsbank.nl/hypotheken/hele-hypotheek-aflossen",
+     "https://www.lloydsbank.nl/dam/jcr:74631c15-7cfa-4ad7-8eb1-cc3c8e0effde/hypotheekvoorwaarden-lhbv.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Aflossing na overlijden is vergoedingsvrij binnen twaalf maanden; bij executoriale verkoop is geen vergoeding verschuldigd."
+   },
+   "minh": {
+    "waarde": "~ Minimale hypotheeksom geldt; apart minimum voor onderhandse verhoging en tweede hypotheek (zie toelichting)",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-lloyds-bank-hypotheek",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Lloyds hanteert een minimum van €40.000 (onderhandse verhoging min. €5.000, tweede hypotheek min. €10.000)."
+   },
+   "maxh": {
+    "waarde": "~ Maximum afhankelijk van LTV (lager boven 90%) en hoger met overbrugging; max. 100% MW (106% energiebesparing)",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-lloyds-bank-hypotheek",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Tot en met 90% LTV is de maximale hypotheek €1.500.000 zonder overbrugging en €2.000.000 met overbrugging."
+   },
+   "borg": {
+    "waarde": "- Borgstelling of hoofdelijke medeschuldenaarsverklaring van derden niet toegestaan (met en zonder NHG)",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-aanvragers"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. Garanties zoals een borgstelling of verklaring als hoofdelijk schuldenaar van een derde zijn niet toegestaan."
+   },
+   "rest": {
+    "waarde": "~ Restschuld: financiering moet aangetoond; lasten van aparte restschuldlening tellen mee in toetsing",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-financiele-verplichtingen",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf",
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-lloyds-bank-hypotheek"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Is er sprake is van een (voorzienbare) restschuld na verkoop? Dan moet worden aangetoond hoe deze wordt gefinancierd."
+   },
+   "verhw": {
+    "waarde": "~ Verhoging: taxatie max. 6 mnd oud, Calcasa-desktop tot 90% MW; onderhands vanaf minimum, niet bij eerste hypotheek zonder NHG",
+    "bron": [
+     "https://www.lloydsbank.nl/hypotheken/verhogen-hypotheek-lloyds",
+     "https://www.lloydsbank.nl/hypotheken/desktoptaxatie"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Een desktoptaxatie is hier mogelijk tot en met 90% van de marktwaarde ... voor een verhoging."
+   },
+   "zelfb": {
+    "waarde": "- Zelfbouw en nieuwbouw in eigen beheer uitgesloten (eigen beheer via erkende aannemer kan worden voorgelegd)",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-onderpand",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. homes built through own management via a reputable contractor can be submitted for review"
+   },
+   "cpo": {
+    "waarde": "- CPO (collectief particulier opdrachtgeverschap) niet toegestaan",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-onderpand",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Collective Particulier Opdrachtgeverschap (CPO) is on the excluded list."
+   },
+   "pnb": {
+    "waarde": "~ Afbouwgarantie/insolventieverzekering vereist; waarde uit koop-/aannemingsovereenkomst, taxatie na oplevering soms nodig",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-onderpand",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf",
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-lloyds-bank-hypotheek"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. New builds are excluded without an insolvency insurance and without a completion guarantee (afbouwgarantie)."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Lloyds Bank Hypotheekgids",
+    "url": "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf",
+    "versie": "feb 2026"
+   },
+   {
+    "titel": "Hypotheekgids (online, adviseurs)",
+    "url": "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids",
+    "versie": "online"
+   },
+   {
+    "titel": "Hypotheekvoorwaarden Lloyds Bank Hypotheek (1)",
+    "url": "https://www.lloydsbank.nl/dam/jcr:74631c15-7cfa-4ad7-8eb1-cc3c8e0effde/hypotheekvoorwaarden-lhbv.pdf",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "Productkaart Lloyds Bank Hypotheek",
+    "url": "https://www.lloydsbank.nl/dam/jcr:88c9d654-7afe-4c25-ba56-1ad826ad1bf9/productkaart-lloyds-bank-hypotheek.pdf",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "Vergelijkingskaart Hypotheek",
+    "url": "https://www.lloydsbank.nl/dam/jcr:611d09df-d552-4f04-81a4-245bd7ab8df2/202607%20Vergelijkingskaart%20Hypotheek.pdf",
+    "versie": "jul 2026"
+   },
+   {
+    "titel": "Lloyds Bank Verhuurhypotheek Beheergids",
+    "url": "https://www.lloydsbank.nl/dam/jcr:d5704316-8a90-4c75-9e1f-41a853d9673a/Lloyds%20Bank%20Hypotheekgids%20Verhuurhypotheek.pdf",
+    "versie": "dec 2025"
+   },
+   {
+    "titel": "Voorwaarden Lloyds Bank Verhuurhypotheek",
+    "url": "https://www.lloydsbank.nl/dam/jcr:b9710345-a59a-4f20-8630-9b392255fc71/voorwaarden-lloyds-bank-verhuurhypotheek.pdf",
+    "versie": "mrt 2025"
+   },
+   {
+    "titel": "Voorwaarden Bank of Scotland Hypotheek",
+    "url": "https://www.lloydsbank.nl/dam/jcr:dd3fdf48-9f47-47da-a0f1-c14eb9b30ba3/voorwaarden-bank-of-scotland-hypotheek.pdf",
+    "versie": "sep 2026"
+   },
+   {
+    "titel": "Hypotheekgids online - 8. Het inkomen",
+    "url": "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-inkomen",
+    "versie": "online"
+   },
+   {
+    "titel": "Hypotheekgids online - 7. De aanvrager(s)",
+    "url": "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-aanvragers",
+    "versie": "online"
+   },
+   {
+    "titel": "Hypotheekgids online, hfst. 9 Onderpand",
+    "url": "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-onderpand",
+    "versie": "online"
+   },
+   {
+    "titel": "Hypotheekgids online, hfst. 10 BKR-registraties",
+    "url": "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-bkr",
+    "versie": "online"
+   },
+   {
+    "titel": "Hypotheekgids online, hfst. 11 Overige financiële verplichtingen",
+    "url": "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-financiele-verplichtingen",
+    "versie": "online"
+   },
+   {
+    "titel": "Stroomschema overbrugging",
+    "url": "https://www.lloydsbank.nl/dam/jcr:e8fddcda-09c0-40b3-a4eb-75c1644bd278/stroomschema-overbrugging.pdf",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "Overbruggingskrediet (productpagina)",
+    "url": "https://www.lloydsbank.nl/hypotheken/overbruggingskrediet",
+    "versie": "online"
+   },
+   {
+    "titel": "Lloyds Bank Hypotheekgids",
+    "url": "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf",
+    "versie": "februari 2026"
+   },
+   {
+    "titel": "Productkaart Lloyds Bank Hypotheek",
+    "url": "https://www.lloydsbank.nl/dam/jcr:88c9d654-7afe-4c25-ba56-1ad826ad1bf9/productkaart-lloyds-bank-hypotheek.pdf",
+    "versie": "juli 2026"
+   },
+   {
+    "titel": "Hypotheekgids (webversie)",
+    "url": "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids",
+    "versie": "2026"
+   }
+  ]
+ }
+]
