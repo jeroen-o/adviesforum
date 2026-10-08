@@ -1,0 +1,1332 @@
+[
+ {
+  "naam": "Argenta",
+  "gecontroleerd": "2026-10-08",
+  "criteria": {
+   "obmax": {
+    "waarde": "~ Verkocht (ontb. voorw. verstreken): 100% verkoopprijs min 1,85% kosten; onverkocht: 95% marktwaarde (taxatie) of 90% (Calcasa)",
+    "bron": [
+     "https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf",
+     "https://www.argenta.nl/adviseur/over-ons/wijzigingen-argenta-hypotheekgids-maart-2026",
+     "https://www.argenta.nl/hypotheek-argenta/kenmerken"
+    ],
+    "brondatum": "2026-08",
+    "zekerheid": "hoog",
+    "toelichting": "Hypotheekgids aug 2026, tabel overbruggingshypotheek; telkens minus restschuld huidige hypotheek. Verkocht met nog niet verstreken ontbindende voorwaarden: 95%. Per 26-01-2026 verruimd van 90% naar 95% (Calcasa blijft 90%); oudere pagina's noemen nog 90%.",
+    "status": "nieuw"
+   },
+   "oblast": {
+    "waarde": "~ Bij verwachte overbrugging > 12 mnd dubbele lasten aantonen (toetsruimte, eigen middelen of werkelijke lasten); meefinancieren mag",
+    "bron": [
+     "https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf",
+     "https://www.argenta.nl/contact/veelgestelde-vragen/adviseurs/overbruggingshypotheek"
+    ],
+    "brondatum": "2026-08",
+    "zekerheid": "middel",
+    "toelichting": "Hypotheekgids aug 2026 en adviseurs-FAQ overbruggingshypotheek; lasten oude hypotheek annuïtair over resterende looptijd. Tekst via zoeksamenvatting, niet volledig nagelezen.",
+    "status": "nieuw"
+   },
+   "obduur": {
+    "waarde": "+ Max. 24 maanden bestaande bouw, 36 maanden nieuwbouw",
+    "bron": [
+     "https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf",
+     "https://www.argenta.nl/adviseur/over-ons/wijzigingen-argenta-hypotheekgids-maart-2026"
+    ],
+    "brondatum": "2026-08",
+    "zekerheid": "hoog",
+    "toelichting": "Nieuwbouwtermijn per maart 2026 verlengd van 24 naar 36 maanden (wijzigingen hypotheekgids maart 2026).",
+    "status": "nieuw"
+   },
+   "obwaar": {
+    "waarde": "+ Onverkochte woning: taxatierapport (95%) of Calcasa-desktoptaxatie (90% van marktwaarde)",
+    "bron": [
+     "https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf",
+     "https://www.argenta.nl/adviseur/over-ons/wijzigingen-argenta-hypotheekgids-maart-2026"
+    ],
+    "brondatum": "2026-08",
+    "zekerheid": "hoog",
+    "toelichting": "Hypotheekgids aug 2026, tabel maximale overbrugging.",
+    "status": "nieuw"
+   },
+   "obels": {
+    "waarde": "~ Alleen icm Argenta-hypotheek op nieuwe woning; proforma aflosnota van bestaande geldverstrekker vereist (oude hypotheek elders lijkt mogelijk)",
+    "bron": [
+     "https://www.argenta.nl/contact/veelgestelde-vragen/adviseurs/overbruggingshypotheek",
+     "https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "toelichting": "Geen expliciete regel gevonden; afgeleid uit gevraagde stukken (restantschuld lopende hypotheken + proforma aflosnota bestaande geldverstrekker).",
+    "status": "nieuw"
+   },
+   "obvw": {
+    "waarde": "~ Afsluitkosten per overbrugging, verrekend bij aflossing; alleen met Argenta-hypotheek; hypotheekrecht op beide woningen",
+    "bron": [
+     "https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf"
+    ],
+    "brondatum": "2026-08",
+    "zekerheid": "hoog",
+    "toelichting": "Hypotheekgids aug 2026: afsluitkosten EUR 250 per overbrugging. Minimumbedrag en max. aantal overbruggingen niet gevonden.",
+    "status": "nieuw"
+   },
+   "geldnb": {
+    "waarde": "~ Renteaanbod 3 maanden, kosteloos te verlengen met 9 maanden (totaal 12); bij verlenging laagste rente; bouwdepot 24 maanden",
+    "bron": [
+     "https://www.argenta.nl/adviseur/over-ons/weet-je-dat/voordelen-argenta-hypotheek-bij-nieuwbouwhuis",
+     "https://www.argenta.nl/contact/veelgestelde-vragen/hypotheek/hoe-lang-is-mijn-renteaanbod-geldig",
+     "https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf"
+    ],
+    "brondatum": "2026-08",
+    "zekerheid": "middel",
+    "toelichting": "Algemene geldigheidsregeling, door Argenta als voordeel bij nieuwbouw genoemd; geen afwijkende nieuwbouwtermijn gevonden.",
+    "status": "nieuw"
+   },
+   "annul": {
+    "waarde": "~ Geen annuleringskosten binnen eerste 3 mnd; wel annuleringskosten als offerte in de verlengingsperiode zit",
+    "bron": [
+     "https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf",
+     "https://www.argenta.nl/contact/veelgestelde-vragen/hypotheek/hoe-lang-is-mijn-renteaanbod-geldig"
+    ],
+    "brondatum": "2026-08",
+    "zekerheid": "middel",
+    "toelichting": "Gids aug 2026 en FAQ: EUR 500 bij annuleren na verlenging. Tegenstrijdig: adviseurspagina 'Helpen met fijn wonen' zegt geen vergoeding bij annuleren (waarschijnlijk verouderd).",
+    "status": "nieuw"
+   },
+   "bgar": {
+    "waarde": "~ Garantiestelling waarborgsom via Argenta (uitgevoerd door Woongarant), digitaal aan te vragen; kosten via notaris",
+    "bron": [
+     "https://www.argenta.nl/adviseur/over-ons/weet-je-dat/vraag-eenvoudig-en-snel-een-garantiestelling-aan-tegen-een-scherp-tarief"
+    ],
+    "brondatum": "2022",
+    "zekerheid": "middel",
+    "toelichting": "Adviseurspagina uit 2022 (premie destijds EUR 250). Consumentenpagina nieuwbouwkosten spreekt van bankgarantie waarbij Argenta het bedrag voorschiet.",
+    "status": "nieuw"
+   },
+   "bvrij": {
+    "waarde": "+ Boetevrij bij overlijden (aflossing binnen 12 mnd na overlijden) en bij verkoop van de woning; onbeperkt met eigen geld",
+    "bron": [
+     "https://www.argenta.nl/contact/veelgestelde-vragen/extra-aflossen/wanneer-mag-je-de-hypotheekschuld-boetevrij-aflossen",
+     "https://www.argenta.nl/sites/default/files/documents/Argenta_Voorwaarden_Hypotheek_juli2025.pdf"
+    ],
+    "brondatum": "2025-07",
+    "zekerheid": "middel",
+    "toelichting": "FAQ en algemene voorwaarden juli 2025. Overlijden partner: mede-eigenaar en medeschuldenaar. Executie niet gevonden.",
+    "status": "nieuw"
+   },
+   "minh": {
+    "waarde": "~ Minimale hoofdsom EUR 25.000",
+    "bron": [
+     "https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf",
+     "https://www.argenta.nl/hypotheek-argenta/kenmerken"
+    ],
+    "brondatum": "2026-08",
+    "zekerheid": "hoog",
+    "toelichting": "Hypotheekgids aug 2026; consumptieve hypotheek en groen wonen hebben eigen grenzen.",
+    "status": "nieuw"
+   },
+   "maxh": {
+    "waarde": "~ Max. EUR 2.000.000 incl. overbrugging; boven EUR 1.250.000 max. 90% marktwaarde; met Calcasa-waardering max. EUR 1.000.000",
+    "bron": [
+     "https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf",
+     "https://www.argenta.nl/hypotheek-argenta/kenmerken"
+    ],
+    "brondatum": "2026-08",
+    "zekerheid": "hoog",
+    "toelichting": "Gids aug 2026; april-2026-versie noemde lagere grenzen. Overbrugging op onverkochte woning bij hoge bedragen: individuele beoordeling.",
+    "status": "nieuw"
+   },
+   "oversl": {
+    "waarde": "+ Max. 100% marktwaarde, ook bij oversluiten; 106% met NHG bij energiebesparende maatregelen",
+    "bron": [
+     "https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf"
+    ],
+    "brondatum": "2026-08",
+    "zekerheid": "middel",
+    "toelichting": "Algemene LTV-regel uit hypotheekgids; geen aparte oversluitgrens gevonden. Boven EUR 1.250.000 max. 90%.",
+    "status": "nieuw"
+   },
+   "verhw": {
+    "waarde": "~ Verhoging min. EUR 5.000; hogere marktwaarde aantonen met Calcasa-desktoptaxatie of taxatierapport",
+    "bron": [
+     "https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf",
+     "https://www.argenta.nl/adviseur/de-meest-voorkomende-wijzigingen-van-de-argenta-hypotheek-in-beheer"
+    ],
+    "brondatum": "2026-08",
+    "zekerheid": "hoog",
+    "toelichting": "Hypotheekgids aug 2026 (onderhandse verhoging of tweede hypotheek; 2e hypotheek alleen als eerdere ook bij Argenta).",
+    "status": "nieuw"
+   },
+   "zelfb": {
+    "waarde": "- Zelfbouw zonder aannemer niet toegestaan; bouwen in eigen beheer met (hoofd)aannemer wel",
+    "bron": [
+     "https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf"
+    ],
+    "brondatum": "2026-08",
+    "zekerheid": "hoog",
+    "toelichting": "Hypotheekgids, nieuwbouw/uitsluitingen. Bouwdepot 24 maanden; uitbetaling pas na vergunning.",
+    "status": "nieuw"
+   },
+   "cpo": {
+    "waarde": "+ CPO wordt gefinancierd (genoemd naast projectbouw en eigen beheer met aannemer)",
+    "bron": [
+     "https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf"
+    ],
+    "brondatum": "2026-08",
+    "zekerheid": "middel",
+    "toelichting": "Hypotheekgids, nieuwbouw; eisen afbouwgarantie/taxatie voor CPO niet gevonden.",
+    "status": "nieuw"
+   },
+   "pnb": {
+    "waarde": "~ Garantiecertificaat van instelling met keurmerk Stichting GarantieWoning vereist; marktwaarde o.b.v. koop-/aanneemsom",
+    "bron": [
+     "https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf",
+     "https://www.argenta.nl/hypotheekadvies/desktoptaxatie"
+    ],
+    "brondatum": "2026-08",
+    "zekerheid": "hoog",
+    "toelichting": "Bij verkoop door woningcorporatie volstaat afbouwgarantie corporatie. Calcasa-desktoptaxatie niet mogelijk bij nieuwbouw.",
+    "status": "nieuw"
+   },
+   "minmw": {
+    "waarde": "~ Minimale marktwaarde (na verbouwing) EUR 100.000",
+    "bron": [
+     "https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf",
+     "https://www.argenta.nl/hypotheek-argenta/kenmerken"
+    ],
+    "brondatum": "2026-08",
+    "zekerheid": "hoog",
+    "toelichting": "Hypotheekgids aug 2026 en april 2026 gelijk.",
+    "status": "nieuw"
+   }
+  },
+  "documenten": [
+   {
+    "titel": "De Argenta hypotheekgids",
+    "url": "https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf",
+    "versie": "augustus 2026"
+   },
+   {
+    "titel": "Wijzigingen Argenta hypotheekgids maart 2026",
+    "url": "https://www.argenta.nl/adviseur/over-ons/wijzigingen-argenta-hypotheekgids-maart-2026",
+    "versie": "mrt 2026"
+   },
+   {
+    "titel": "De Argenta hypotheek - Algemene voorwaarden",
+    "url": "https://www.argenta.nl/sites/default/files/documents/Argenta_Voorwaarden_Hypotheek_juli2025.pdf",
+    "versie": "juli 2025"
+   },
+   {
+    "titel": "Overbruggingshypotheek (FAQ adviseurs)",
+    "url": "https://www.argenta.nl/contact/veelgestelde-vragen/adviseurs/overbruggingshypotheek",
+    "versie": "online"
+   },
+   {
+    "titel": "Kenmerken van de Argenta hypotheek",
+    "url": "https://www.argenta.nl/hypotheek-argenta/kenmerken",
+    "versie": "online"
+   }
+  ]
+ },
+ {
+  "naam": "Centraal Beheer",
+  "gecontroleerd": "2026-10-08",
+  "criteria": {
+   "obmax": {
+    "waarde": "~ Onverkocht/voorwaardelijk verkocht: 90% marktwaarde min restschuld; definitief verkocht: verkoopprijs min 2% verkoopkosten min restschuld",
+    "bron": [
+     "https://www.centraalbeheer.nl/-/media/files/voor-adviseurs/acceptatiegids-leef-hypotheek.pdf"
+    ],
+    "brondatum": "2026-07",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatiegids 1 jul 2026, overbrugging. PDF-tekst in zoekresultaat deels door elkaar; percentage verkoopkosten (2%) in één van twee samenvattingen genoemd.",
+    "status": "nieuw"
+   },
+   "oblast": {
+    "waarde": "~ Onverkocht: eigen middelen aantonen voor lasten oude hypotheek + overbrugging gedurende 12 mnd (of tot levering); bij definitieve verkoop niet nodig",
+    "bron": [
+     "https://www.centraalbeheer.nl/-/media/files/voor-adviseurs/acceptatiegids-leef-hypotheek.pdf"
+    ],
+    "brondatum": "2026-07",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatiegids 1 jul 2026; lasten moeten bij definitieve verkoop binnen de inkomenstoets passen.",
+    "status": "nieuw"
+   },
+   "obduur": {
+    "waarde": "~ Max. 12 maanden bestaande bouw, 24 maanden nieuwbouw; rente 1 jaar vast",
+    "bron": [
+     "https://www.centraalbeheer.nl/-/media/files/voor-adviseurs/acceptatiegids-leef-hypotheek.pdf",
+     "https://www.centraalbeheer.nl/hypotheek/kennis/overbruggingslening"
+    ],
+    "brondatum": "2026-07",
+    "zekerheid": "hoog",
+    "toelichting": "Acceptatiegids en consumentenpagina overbruggingslening eensluidend.",
+    "status": "nieuw"
+   },
+   "obwaar": {
+    "waarde": "+ Gevalideerd taxatierapport of Calcasa Desktop Taxatie (of getekende koopovereenkomst) voor de oude woning",
+    "bron": [
+     "https://www.centraalbeheer.nl/-/media/files/voor-adviseurs/acceptatiegids-leef-hypotheek.pdf"
+    ],
+    "brondatum": "2026-07",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatiegids 1 jul 2026; met recente saldo-opgave. Taxatierapport max. 6 maanden oud. Desktoptaxatie niet bij erfpacht of lening > EUR 900.000.",
+    "status": "nieuw"
+   },
+   "obvw": {
+    "waarde": "+ Geen afsluitkosten overbrugging; alleen icm nieuwe Leef Hypotheek; inschrijving op beide woningen; aflossen direct na levering",
+    "bron": [
+     "https://www.centraalbeheer.nl/-/media/files/voor-adviseurs/acceptatiegids-leef-hypotheek.pdf",
+     "https://www.centraalbeheer.nl/hypotheek/kennis/overbruggingshypotheek-van-centraal-beheer"
+    ],
+    "brondatum": "2026-07",
+    "zekerheid": "middel",
+    "toelichting": "Geen afsluitkosten volgens consumentenpagina; overbrugging telt niet mee in max. hoofdsom. Minimumbedrag/aantal niet gevonden.",
+    "status": "nieuw"
+   },
+   "geldnb": {
+    "waarde": "+ Voorstel 4 maanden geldig; bij nieuwbouw kosteloos 8 maanden te verlengen (totaal 12 mnd)",
+    "bron": [
+     "https://www.centraalbeheer.nl/voor-adviseurs/hypotheek/hypotheek-aanvragen",
+     "https://www.centraalbeheer.nl/voor-adviseurs/actueel/bereidstellingsprovisie"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "toelichting": "Adviseurspagina aanvragen; bereidstellingspagina (ouder) is intern tegenstrijdig over kosten. Bestaande bouw: 2 maanden verlenging tegen kosten.",
+    "status": "nieuw"
+   },
+   "annul": {
+    "waarde": "+ Geen annuleringskosten; klant mag kosteloos annuleren",
+    "bron": [
+     "https://www.centraalbeheer.nl/-/media/files/voor-adviseurs/acceptatiegids-leef-hypotheek.pdf"
+    ],
+    "brondatum": "2026-07",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatiegids 1 jul 2026 volgens zoeksamenvatting.",
+    "status": "nieuw"
+   },
+   "bvrij": {
+    "waarde": "~ Boetevrij bij verhuizing binnen 12 mnd na overlijden (partner/erfgenamen); onbeperkt uit eigen middelen, 10% per jaar met geleend geld",
+    "bron": [
+     "https://www.centraalbeheer.nl/-/media/files/prive/hypotheek/voorwaarden/voorwaarden-leef-hypotheek-2021-versie-1.pdf",
+     "https://www.centraalbeheer.nl/hypotheek/klant/extra-aflossen"
+    ],
+    "brondatum": "jan 2021",
+    "zekerheid": "middel",
+    "toelichting": "Overlijdensregeling uit voorwaarden jan 2021 (Achmea Hypotheken); aflosruimte uit actuele klantpagina en acceptatiegids 2026. Executie niet gevonden.",
+    "status": "nieuw"
+   },
+   "minh": {
+    "waarde": "~ Minimale hoofdsom 1e hypotheek EUR 25.000",
+    "bron": [
+     "https://www.centraalbeheer.nl/-/media/files/voor-adviseurs/acceptatiegids-leef-hypotheek.pdf"
+    ],
+    "brondatum": "2026-07",
+    "zekerheid": "hoog",
+    "toelichting": "Acceptatiegids 1 jul 2026.",
+    "status": "nieuw"
+   },
+   "maxh": {
+    "waarde": "- Max. hoofdsom EUR 1.000.000 incl. vervolghypotheek en onderhandse opnames, excl. overbrugging",
+    "bron": [
+     "https://www.centraalbeheer.nl/-/media/files/voor-adviseurs/acceptatiegids-leef-hypotheek.pdf",
+     "https://www.centraalbeheer.nl/hypotheek/leef-hypotheek"
+    ],
+    "brondatum": "2026-07",
+    "zekerheid": "hoog",
+    "toelichting": "Acceptatiegids 1 jul 2026; consumentenpagina: past niet bij lenen boven EUR 1.000.000.",
+    "status": "nieuw"
+   },
+   "oversl": {
+    "waarde": "+ Max. 100% marktwaarde, 106% bij energiebesparende voorzieningen; Calcasa-desktoptaxatie mogelijk bij oversluiten",
+    "bron": [
+     "https://www.centraalbeheer.nl/-/media/files/voor-adviseurs/acceptatiegids-leef-hypotheek.pdf",
+     "https://www.centraalbeheer.nl/hypotheek/desktop-taxatie"
+    ],
+    "brondatum": "2026-07",
+    "zekerheid": "middel",
+    "toelichting": "Algemene LTV-regel acceptatiegids; geen aparte oversluitgrens gevonden. Desktoptaxatiepagina: tot 90% marktwaarde en max. EUR 900.000.",
+    "status": "nieuw"
+   },
+   "verhw": {
+    "waarde": "~ Calcasa-desktoptaxatie bij verhoging tot 90% marktwaarde, anders taxatierapport; geen onderhandse verhoging bij lopend bouwdepot",
+    "bron": [
+     "https://www.centraalbeheer.nl/hypotheek/desktop-taxatie",
+     "https://www.centraalbeheer.nl/-/media/files/voor-adviseurs/acceptatiegids-leef-hypotheek.pdf"
+    ],
+    "brondatum": "2026-07",
+    "zekerheid": "middel",
+    "toelichting": "Desktoptaxatie alleen eigen bewoning en tot EUR 900.000, niet bij erfpacht. Minimumbedrag verhoging niet gevonden.",
+    "status": "nieuw"
+   },
+   "zelfb": {
+    "waarde": "- Zelfbouw niet toegestaan; nieuwbouw in eigen beheer wel (taxatie o.b.v. tekeningen, bestek, vergunning; max. 100% stichtingskosten)",
+    "bron": [
+     "https://www.centraalbeheer.nl/-/media/files/voor-adviseurs/acceptatiegids-leef-hypotheek.pdf"
+    ],
+    "brondatum": "2026-07",
+    "zekerheid": "hoog",
+    "toelichting": "Acceptatiegids 1 jul 2026, voorwaarden onderpand.",
+    "status": "nieuw"
+   },
+   "cpo": {
+    "waarde": "- CPO niet mogelijk",
+    "bron": [
+     "https://www.centraalbeheer.nl/-/media/files/voor-adviseurs/acceptatiegids-leef-hypotheek.pdf"
+    ],
+    "brondatum": "2026-07",
+    "zekerheid": "hoog",
+    "toelichting": "Acceptatiegids 1 jul 2026: 'Niet mogelijk bij ons: Collectief Particulier Opdrachtgeverschap (CPO)'.",
+    "status": "nieuw"
+   },
+   "pnb": {
+    "waarde": "~ Projectmatige nieuwbouw door erkend bouw-/aannemingsbedrijf; bouwdepot max. 24 maanden",
+    "bron": [
+     "https://www.centraalbeheer.nl/-/media/files/voor-adviseurs/acceptatiegids-leef-hypotheek.pdf"
+    ],
+    "brondatum": "2026-07",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatiegids, voorwaarden onderpand en bouwdepot; eis afbouwgarantie/taxatie niet expliciet gevonden.",
+    "status": "nieuw"
+   }
+  },
+  "documenten": [
+   {
+    "titel": "De Leef Hypotheek Acceptatiegids",
+    "url": "https://www.centraalbeheer.nl/-/media/files/voor-adviseurs/acceptatiegids-leef-hypotheek.pdf",
+    "versie": "1 jul 2026"
+   },
+   {
+    "titel": "Leef Hypotheek aanvragen (adviseurs)",
+    "url": "https://www.centraalbeheer.nl/voor-adviseurs/hypotheek/hypotheek-aanvragen",
+    "versie": "online"
+   },
+   {
+    "titel": "Voorwaarden Leef Hypotheek januari 2021",
+    "url": "https://www.centraalbeheer.nl/-/media/files/prive/hypotheek/voorwaarden/voorwaarden-leef-hypotheek-2021-versie-1.pdf",
+    "versie": "jan 2021"
+   },
+   {
+    "titel": "Centraal Beheer Calcasa Desktop taxatie",
+    "url": "https://www.centraalbeheer.nl/hypotheek/desktop-taxatie",
+    "versie": "online"
+   }
+  ]
+ },
+ {
+  "naam": "Hypotrust",
+  "criteria": {
+   "obmax": {
+    "waarde": "~ Elan Plus: verkocht (ontb. voorw. verlopen) verkoopprijs min 2% min huidige lening; niet verkocht max. 88% verwachte verkoopprijs min lening",
+    "bron": [
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "hoog",
+    "toelichting": "Acceptatiekader Elan Plus jan 2026, overbruggingskrediet. Alleen voor overwaarde, aflossen noodzakelijke kredieten en verbouwing. Elan (inactief): overbrugging niet mogelijk. OK (inactief) jan 2026: niet verkocht 95% MW/verkoopprijs, Calcasa max. 90%.",
+    "status": "nieuw"
+   },
+   "oblast": {
+    "waarde": "~ Elan Plus: dubbele lasten max. 12 maanden; verkocht tot overdrachtsdatum (max. 12 mnd na aankoop nieuwe woning)",
+    "bron": [
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2025-1.pdf",
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "toelichting": "Detailtabel komt uit versie jan 2025; samenvatting van versie jan 2026 noemt verwachte verkoopperiode en dubbele lasten max. 12 maanden. Dubbele lasten = oude woning + nieuwe woning + overbrugging.",
+    "status": "nieuw"
+   },
+   "obduur": {
+    "waarde": "~ Elan Plus: looptijd overbrugging 12 maanden, verlengen niet mogelijk",
+    "bron": [
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2025-1.pdf"
+    ],
+    "brondatum": "jan 2025",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatiekader Elan Plus jan 2025; in versie jan 2026 niet teruggevonden in zoekresultaat. OK (inactief) jan 2026: 24 mnd bestaande bouw, 36 mnd nieuwbouw.",
+    "status": "nieuw"
+   },
+   "obvw": {
+    "waarde": "~ Elan Plus: min. overbrugging EUR 10.000; variabele rente; ex-partner mede-eigenaar moet hypotheekgever worden",
+    "bron": [
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "hoog",
+    "toelichting": "Acceptatiekader Elan Plus jan 2026, overbruggingskrediet.",
+    "status": "nieuw"
+   },
+   "geldnb": {
+    "waarde": "! Elan Plus niet mogelijk bij aankoop nieuwbouw; offerte 4 maanden geldig, kosteloos 2 maanden te verlengen",
+    "bron": [
+     "https://www.hypotrust.nl/onze-hypotheken/elan-plus-hypotheek",
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "hoog",
+    "toelichting": "Productpagina: niet mogelijk met NHG of bij aankoop nieuwbouwwoning. Acceptatiekader: geldigheid rente-aanbod 4 mnd, verlengingstermijn 2 mnd na ontvangst getekend aanbod.",
+    "status": "nieuw"
+   },
+   "annul": {
+    "waarde": "~ Annuleringsvergoeding alleen na verlenging van de offerte; percentage in acceptatiekader",
+    "bron": [
+     "https://www.hypotrust.nl/onze-hypotheken/elan-plus-hypotheek",
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "hoog",
+    "toelichting": "Productpagina: over totale leenbedrag; acceptatiekader: over hoofdsom excl. variabele leningdelen (kleine tegenstrijdigheid).",
+    "status": "nieuw"
+   },
+   "bvrij": {
+    "waarde": "+ Elan Plus: boetevrij o.a. bij overlijden (binnen 6 mnd), ORV-uitkering, verwoesting woning, einde rentevast, marktrente hoger dan contractrente",
+    "bron": [
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatiekader Elan Plus jan 2026, boetevrij aflossen; jaarlijks 10% van oorspronkelijke hoofdsom. Ook aflossen met overbrugging/bouwdepot boetevrij. Tekst via zoeksamenvatting.",
+    "status": "nieuw"
+   },
+   "minh": {
+    "waarde": "~ Elan Plus: min. EUR 37.500 bij eerste verstrekking; EUR 12.500 bij verhoging",
+    "bron": [
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "hoog",
+    "toelichting": "Acceptatiekader Elan Plus jan 2026, hypotheekbedragen.",
+    "status": "nieuw"
+   },
+   "maxh": {
+    "waarde": "~ Elan Plus: max. EUR 1.250.000 excl. en EUR 2.250.000 incl. overbrugging",
+    "bron": [
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "hoog",
+    "toelichting": "Acceptatiekader Elan Plus jan 2026.",
+    "status": "nieuw"
+   },
+   "rest": {
+    "waarde": "- Meefinancieren restschuld niet mogelijk; externe restschuldlening (2012-2018, max. 15 jaar annuïtair) telt mee in lasten",
+    "bron": [
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "hoog",
+    "toelichting": "Acceptatiekader Elan Plus jan 2026; ook in OK en Woon Bewust jan 2026 niet mogelijk.",
+    "status": "nieuw"
+   },
+   "oversl": {
+    "waarde": "~ Max. 100% marktwaarde bij oversluiten (106% met EBV/EBB); tweede hypotheek achter andere verstrekker niet mogelijk",
+    "bron": [
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "hoog",
+    "toelichting": "Acceptatiekader Elan Plus jan 2026, maximale financiering aankoop/oversluiting.",
+    "status": "nieuw"
+   },
+   "verhw": {
+    "waarde": "~ Elan Plus: verhoging min. EUR 12.500; desktoptaxatie t/m 90% MW bij marktwaarde max. EUR 750.000",
+    "bron": [
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatiekader Elan Plus jan 2026; desktopregel is algemeen, niet specifiek voor verhoging genoemd.",
+    "status": "nieuw"
+   },
+   "obwaar": {
+    "waarde": "~ Niet verkocht: taxatie; desktoptaxatie (Elan Plus) t/m 90% MW en marktwaarde max. EUR 750.000",
+    "bron": [
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2026.pdf",
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-OK-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "toelichting": "Elan Plus: makelaarsverklaring bij niet verkocht; desktopregel algemeen. OK (inactief): taxatie max. 6 mnd oud, Calcasa max. 90% MW, WOZ onder voorwaarden.",
+    "status": "nieuw"
+   },
+   "obels": {
+    "waarde": "! Comfort: overbrugging altijd via dezelfde geldverstrekker als de nieuwe (eerste) hypotheek",
+    "bron": [
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Comfort-januari-2025.pdf"
+    ],
+    "brondatum": "jan 2025",
+    "zekerheid": "laag",
+    "toelichting": "Comfort jan 2025 (inactief product): overbrugging altijd door dezelfde geldverstrekker als de eerste hypotheek. Niet expliciet bevestigd voor Elan Plus.",
+    "status": "nieuw"
+   },
+   "zelfb": {
+    "waarde": "- Elan Plus niet mogelijk bij aankoop nieuwbouw; zelfbouw daarmee niet mogelijk",
+    "bron": [
+     "https://www.hypotrust.nl/onze-hypotheken/elan-plus-hypotheek",
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2025-1.pdf"
+    ],
+    "brondatum": "jan 2025",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatiekader jan 2025: financiering nieuwbouw niet mogelijk (o.a. zelfbouw in aanbouw). Woon Bewust jul 2026: zelfbouw niet mogelijk.",
+    "status": "nieuw"
+   },
+   "minmw": {
+    "waarde": "~ Elan Plus: marktwaarde onderpand min. EUR 100.000",
+    "bron": [
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatiekader Elan Plus jan 2026, onderpandeisen (via zoeksamenvatting).",
+    "status": "nieuw"
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Acceptatiekader Hypotrust Elan Plus",
+    "url": "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2026.pdf",
+    "versie": "jan 2026"
+   },
+   {
+    "titel": "Acceptatiekader Hypotrust Elan Plus",
+    "url": "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2025-1.pdf",
+    "versie": "jan 2025"
+   },
+   {
+    "titel": "Elan Plus Hypotheek (productpagina)",
+    "url": "https://www.hypotrust.nl/onze-hypotheken/elan-plus-hypotheek",
+    "versie": "online"
+   },
+   {
+    "titel": "Acceptatiekader Hypotrust OK (inactief)",
+    "url": "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-OK-januari-2026.pdf",
+    "versie": "jan 2026"
+   },
+   {
+    "titel": "Acceptatiekader Hypotrust Comfort (inactief)",
+    "url": "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Comfort-januari-2025.pdf",
+    "versie": "jan 2025"
+   }
+  ],
+  "gecontroleerd": "2026-10-08"
+ },
+ {
+  "naam": "Lot Hypotheken",
+  "criteria": {
+   "obmax": {
+    "waarde": "~ Onherroepelijk verkocht: 100% verkoopprijs min restschuld; niet verkocht: 95% getaxeerde marktwaarde min restschuld",
+    "bron": [
+     "https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf",
+     "https://www.lothypotheken.nl/adviseur/nieuws/nieuwe-hypotheekgids-juli-2024"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "hoog",
+    "toelichting": "Hypotheekgids jan 2026, overbruggingshypotheek. Per juli 2024 verruimd van 90% naar 95%; productkaarten noemen nog 90%.",
+    "status": "nieuw"
+   },
+   "oblast": {
+    "waarde": "~ Toets of klant tijdelijke dubbele bruto lasten (nieuwe, oude en overbruggingshypotheek) kan dragen; verkooptermijn niet verkocht max. 6 maanden",
+    "bron": [
+     "https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "toelichting": "Hypotheekgids, overbrugging. Duur van de toets niet expliciet; zesmaands-verkooptermijn mogelijk uit oudere gids (2023).",
+    "status": "nieuw"
+   },
+   "obduur": {
+    "waarde": "~ Looptijd overbrugging 24 maanden (verkocht en niet verkocht)",
+    "bron": [
+     "https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf",
+     "https://www.lothypotheken.nl/consument/hypotheek/overbruggen"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "hoog",
+    "toelichting": "Hypotheekgids jan 2026, tabel overbrugging. Geen apart nieuwbouwregime gevonden.",
+    "status": "nieuw"
+   },
+   "obwaar": {
+    "waarde": "~ Niet verkocht: taxatierapport (marktwaarde) vereist; desktoptaxatie niet bij nieuw te bouwen woning",
+    "bron": [
+     "https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf",
+     "https://adviseur.lothypotheken.nl/media/3ahhlijh/hypotheekgids-lot-juli-2023.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "toelichting": "Gids 2023 noemt voor niet-verkochte woning desktoptaxatie of verkoopwaardering; gids 2026 spreekt van getaxeerde marktwaarde.",
+    "status": "nieuw"
+   },
+   "obvw": {
+    "waarde": "~ Totale hypotheek incl. overbrugging max. EUR 1.250.000; oude lening wordt na start nieuwe hypotheek omgezet naar overbruggingsrente",
+    "bron": [
+     "https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "hoog",
+    "toelichting": "Hypotheekgids, overbrugging. Afsluitkosten/minimumbedrag niet gevonden.",
+    "status": "nieuw"
+   },
+   "geldnb": {
+    "waarde": "- Renteaanbod 4 maanden geldig, ook bij nieuwbouw; verlengen niet mogelijk",
+    "bron": [
+     "https://lothypotheken.nl/hypotheek/kenmerken",
+     "https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "toelichting": "Kenmerkenpagina (ouder) en hypotheekgids: geldigheidsduur renteaanbod niet te verlengen; passeren binnen geldigheid. Geen aparte nieuwbouwtermijn gevonden.",
+    "status": "nieuw"
+   },
+   "annul": {
+    "waarde": "+ Geen annuleringskosten (n.v.t.)",
+    "bron": [
+     "https://lothypotheken.nl/hypotheek/kenmerken"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "toelichting": "Kenmerkenpagina: annuleringskosten n.v.t. Gids: na ontvangst eerste stuk kan aanvraag niet meer worden geannuleerd (wel kosteloos verlopen).",
+    "status": "nieuw"
+   },
+   "dig": {
+    "waarde": "+ Digitaal ondertekenen van documenten mogelijk",
+    "bron": [
+     "https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "toelichting": "Hypotheekgids: klanten mogen i.p.v. natte handtekening digitaal ondertekenen (via zoeksamenvatting).",
+    "status": "nieuw"
+   },
+   "bgar": {
+    "waarde": "- Bankgarantie niet mogelijk",
+    "bron": [
+     "https://www.lothypotheken.nl/media/rq0fetas/productkaart-lot-nhg-hypotheken.pdf",
+     "https://www.lothypotheken.nl/media/aa3lpz5e/productkaart-lot-niet-nhg-hypotheken.pdf"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "toelichting": "Productkaarten NHG en niet-NHG, versie onbekend.",
+    "status": "nieuw"
+   },
+   "bovw": {
+    "waarde": "+ Bij verkoop woning onbeperkt vergoedingsvrij aflossen; daarnaast 15% per jaar en 100% uit eigen middelen",
+    "bron": [
+     "https://www.lothypotheken.nl/consument/bestaande-klanten/extra-aflossen",
+     "https://www.lothypotheken.nl/media/rq0fetas/productkaart-lot-nhg-hypotheken.pdf"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "toelichting": "Consumentenpagina extra aflossen en productkaarten.",
+    "status": "nieuw"
+   },
+   "bvrij": {
+    "waarde": "+ Binnen 6 maanden na overlijden leningnemer vergoedingsvrij aflossen; aflossen uit eigen middelen volledig vergoedingsvrij",
+    "bron": [
+     "https://www.lothypotheken.nl/consument/bestaande-klanten/extra-aflossen",
+     "https://www.lothypotheken.nl/adviseur/beheer"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "toelichting": "Consumentenpagina en beheerpagina adviseurs.",
+    "status": "nieuw"
+   },
+   "minh": {
+    "waarde": "~ Min. EUR 70.000 bij eerste hypotheek; EUR 5.000 bij aanvullende hypotheek",
+    "bron": [
+     "https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf",
+     "https://www.lothypotheken.nl/media/aa3lpz5e/productkaart-lot-niet-nhg-hypotheken.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "hoog",
+    "toelichting": "Hypotheekgids jan 2026; gids 2023 noemde EUR 9.000 voor aanvullend, AV feb 2023 ook EUR 9.000.",
+    "status": "nieuw"
+   },
+   "maxh": {
+    "waarde": "~ Max. EUR 1.000.000 excl. overbrugging (NHG: NHG-grens); EUR 1.250.000 incl. overbrugging; max. 100% MW (106% met EBV/EBB)",
+    "bron": [
+     "https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf",
+     "https://lothypotheken.nl/hypotheek/kenmerken"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "hoog",
+    "toelichting": "Hypotheekgids, maximale hypotheeksom.",
+    "status": "nieuw"
+   },
+   "oversl": {
+    "waarde": "~ Oversluiten: reguliere LTV-normen; LTI-toets op werkelijke lasten; nieuwe last niet hoger dan max. financieringslast",
+    "bron": [
+     "https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "toelichting": "Hypotheekgids jan 2026, oversluiten (o.a. NHG zonder LTI/LTV-toets door NHG). Max. dus 100% MW (106% EBV/EBB).",
+    "status": "nieuw"
+   },
+   "verhw": {
+    "waarde": "~ Verhoging vergt nieuwe aanvraag met nieuwe taxatie; min. EUR 5.000 (aanvullende hypotheek)",
+    "bron": [
+     "https://www.lothypotheken.nl/media/obyfxysm/lot-hypotheken-bv-algemene-voorwaarden-februari-2023.pdf",
+     "https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "toelichting": "AV feb 2023: nieuwe aanvraag, nieuwe taxatie, min. EUR 9.000; gids jan 2026: aanvullend min. EUR 5.000.",
+    "status": "nieuw"
+   },
+   "zelfb": {
+    "waarde": "- Zelfbouw niet mogelijk; individuele bouw alleen met omgevingsvergunning en 1 aannemer, afbouwgarantie vereist",
+    "bron": [
+     "https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "hoog",
+    "toelichting": "Hypotheekgids: onderpand bestaande bouw en nieuwbouw (geen zelfbouw). Geen afbouwgarantie nodig als grond in bezit en bouwkosten in depot tot oplevering.",
+    "status": "nieuw"
+   },
+   "cpo": {
+    "waarde": "~ CPO onder voorwaarden mogelijk",
+    "bron": [
+     "https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "laag",
+    "toelichting": "Alleen in zoeksamenvatting van de gids; voorwaarden niet zichtbaar.",
+    "status": "nieuw"
+   },
+   "pnb": {
+    "waarde": "~ Projectbouw met koop-/aannemingsovereenkomst; waarborgcertificaat (GarantieWoning) en onherroepelijke omgevingsvergunning vereist; geen desktoptaxatie",
+    "bron": [
+     "https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "toelichting": "Hypotheekgids, nieuwbouw. Bouwdepot 24 maanden.",
+    "status": "nieuw"
+   },
+   "minmw": {
+    "waarde": "~ Minimale waarde onderpand EUR 70.000",
+    "bron": [
+     "https://www.lothypotheken.nl/media/rq0fetas/productkaart-lot-nhg-hypotheken.pdf"
+    ],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "toelichting": "Volgens zoeksamenvatting van productkaart/gids; mogelijk verward met minimale hoofdsom EUR 70.000. Verifiëren.",
+    "status": "nieuw"
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Hypotheekgids Lot Hypotheken",
+    "url": "https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf",
+    "versie": "januari 2026"
+   },
+   {
+    "titel": "Hypotheekgids Lot juli 2023",
+    "url": "https://adviseur.lothypotheken.nl/media/3ahhlijh/hypotheekgids-lot-juli-2023.pdf",
+    "versie": "juli 2023"
+   },
+   {
+    "titel": "Kenmerken Lot hypotheek",
+    "url": "https://lothypotheken.nl/hypotheek/kenmerken",
+    "versie": "online"
+   },
+   {
+    "titel": "Productkaart Lot NHG-hypotheken",
+    "url": "https://www.lothypotheken.nl/media/rq0fetas/productkaart-lot-nhg-hypotheken.pdf",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "Productkaart Lot Niet-NHG-hypotheken",
+    "url": "https://www.lothypotheken.nl/media/aa3lpz5e/productkaart-lot-niet-nhg-hypotheken.pdf",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "Algemene voorwaarden Lot Hypotheken",
+    "url": "https://www.lothypotheken.nl/media/obyfxysm/lot-hypotheken-bv-algemene-voorwaarden-februari-2023.pdf",
+    "versie": "februari 2023"
+   },
+   {
+    "titel": "Nieuwe hypotheekgids juli 2024",
+    "url": "https://www.lothypotheken.nl/adviseur/nieuws/nieuwe-hypotheekgids-juli-2024",
+    "versie": "juli 2024"
+   }
+  ],
+  "gecontroleerd": "2026-10-08"
+ },
+ {
+  "naam": "NIBC",
+  "criteria": {
+   "obmax": {
+    "waarde": "~ Definitief verkocht: 100% overwaarde (verkoopprijs min restschuld); niet verkocht: 95% marktwaarde min restschuld",
+    "bron": [
+     "https://nibc.nl/intermediair/nieuwsberichten/overbrugging-naar-95",
+     "https://nibc.nl/particulieren/hypotheken/overbruggingskrediet",
+     "https://nibc.nl/intermediair/situatie-wijzigt/overbruggen"
+    ],
+    "brondatum": "2024-06",
+    "zekerheid": "middel",
+    "toelichting": "Nieuwsbericht (aangekondigd nieuwsbrief juni 2024): 95% i.p.v. 90%. Intermediairpagina Overbruggen en zoeksamenvatting gids 2026 noemen nog 90% (LTV overbrugging 90% bij hoofdsom > EUR 1 mln). Tegenstrijdig.",
+    "status": "nieuw"
+   },
+   "oblast": {
+    "waarde": "~ Niet onherroepelijk verkocht: aantonen dat dubbele lasten gedragen kunnen worden; eigen middelen vorige woning tellen niet mee",
+    "bron": [
+     "https://nibc.nl/media/zzqnjuq1/hypotheekgids-2026.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatiegids 2026 v1.0; duur van de toets niet gevonden.",
+    "status": "nieuw"
+   },
+   "obduur": {
+    "waarde": "~ Looptijd overbrugging max. 24 maanden; daarna eventueel omzetting naar annuïtair/lineair (max. 180 mnd)",
+    "bron": [
+     "https://nibc.nl/particulieren/hypotheken/overbruggingskrediet",
+     "https://nibc.nl/media/kkkgt52q/algemene_voorwaarden_nibc-hypotheek_2023.pdf"
+    ],
+    "brondatum": "2023",
+    "zekerheid": "middel",
+    "toelichting": "Consumentenpagina (24 mnd) en AV NIBC Hypotheek 2023 (2 jaar, omzetting). Eén nieuwsbericht noemt 36 maanden; niet bevestigd.",
+    "status": "nieuw"
+   },
+   "obwaar": {
+    "waarde": "~ Geen taxatie verplicht: (desktop)taxatie Calcasa of NWWI-rapport, of (verkoop)waardebepaling met verkooptermijn max. 6 maanden",
+    "bron": [
+     "https://nibc.nl/intermediair/situatie-wijzigt/overbruggen",
+     "https://nibc.nl/media/owugtbq2/nibc-acceptatiegids-juli-2024-versie-11.pdf"
+    ],
+    "brondatum": "jul 2024",
+    "zekerheid": "middel",
+    "toelichting": "Intermediairpagina Overbruggen; desktoptaxatie van andere partij wordt niet geaccepteerd. Gids 2024: Calcasa of NWWI-gevalideerd.",
+    "status": "nieuw"
+   },
+   "obvw": {
+    "waarde": "~ Alleen icm nieuwe hypotheek bij NIBC; boven EUR 1 mln aparte maxima (hoofdsom incl. overbrugging max. EUR 1.350.000; Extra EUR 3.000.000)",
+    "bron": [
+     "https://nibc.nl/particulieren/hypotheken/overbruggingskrediet",
+     "https://nibc.nl/media/zzqnjuq1/hypotheekgids-2026.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "toelichting": "Overbrugging telt niet als eigen middelen; altijd boetevrij eerder aflossen. Kort-zelfstandigen: pand moet definitief verkocht zijn.",
+    "status": "nieuw"
+   },
+   "geldnb": {
+    "waarde": "~ NIBC Hypotheek: 4 mnd, niet verlengbaar; NIBC Extra: 6 mnd + 6 mnd, bij nieuwbouw + 12 mnd (totaal 18 mnd)",
+    "bron": [
+     "https://nibc.nl/media/zzqnjuq1/hypotheekgids-2026.pdf",
+     "https://nibc.nl/intermediair/nieuwsberichten/offertegeldigheid-van-12-naar-18-maanden-bij-nieuwbouw"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatiegids 2026 / 2025 en nieuwsbericht. Geldigheid NIBC Hypotheek uit gids 2025 (120 dagen).",
+    "status": "nieuw"
+   },
+   "annul": {
+    "waarde": "~ Annuleringskosten alleen bij annulering of niet passeren na verlenging; vóór verlenging kosteloos",
+    "bron": [
+     "https://nibc.nl/media/jfwb4bnb/productkaart-nibc-extra-hypotheken-okt2025.pdf",
+     "https://nibc.nl/media/zzqnjuq1/hypotheekgids-2026.pdf"
+    ],
+    "brondatum": "okt 2025",
+    "zekerheid": "hoog",
+    "toelichting": "Productkaart NIBC Extra okt 2025 (percentage van hoofdsom); gids 2026 bevestigt regeling.",
+    "status": "nieuw"
+   },
+   "bovw": {
+    "waarde": "+ Bij verkoop onbeperkt vergoedingsvrij; surplus verkoop oude woning binnen 3 mnd vergoedingsvrij af te lossen",
+    "bron": [
+     "https://nibc.nl/particulieren/hypotheken/mijn-situatie-wijzigt/ik-wil-extra-aflossen",
+     "https://nibc.nl/media/gexchbmq/algemene_voorwaarden_extra_nibc-hypotheek_2023.pdf"
+    ],
+    "brondatum": "2023",
+    "zekerheid": "middel",
+    "toelichting": "Consumentenpagina extra aflossen; 3-maandenregel uit AV NIBC Extra 2023.",
+    "status": "nieuw"
+   },
+   "bvrij": {
+    "waarde": "+ Vergoedingsvrij bij overlijden (binnen 6 mnd), verkoop, einde rentevast, rente hoger dan contractrente; jaarlijks 15% (Extra 20%)",
+    "bron": [
+     "https://nibc.nl/particulieren/hypotheken/mijn-situatie-wijzigt/ik-wil-extra-aflossen"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "toelichting": "Consumentenpagina NIBC extra aflossen.",
+    "status": "nieuw"
+   },
+   "minh": {
+    "waarde": "~ Min. EUR 70.000 (NIBC en NIBC Extra); verhoging min. EUR 5.000",
+    "bron": [
+     "https://nibc.nl/media/zzqnjuq1/hypotheekgids-2026.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "toelichting": "Acceptatiegids 2026 v1.0.",
+    "status": "nieuw"
+   },
+   "maxh": {
+    "waarde": "~ NIBC Hypotheek t/m EUR 1 mln regulier (daarboven tabellen); NIBC Extra max. EUR 2.500.000 (EUR 3.000.000 incl. overbrugging)",
+    "bron": [
+     "https://nibc.nl/media/zzqnjuq1/hypotheekgids-2026.pdf",
+     "https://nibc.nl/particulieren/hypotheken/hypotheek-producten"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "toelichting": "Gids 2026; productvergelijking noemt EUR 1 mln / 1,5 mln, rentepagina EUR 1,5 mln / 2,5 mln. Tegenstrijdig.",
+    "status": "nieuw"
+   },
+   "borg": {
+    "waarde": "- Borgstelling door derde (geen eigenaar-bewoner) niet toegestaan",
+    "bron": [
+     "https://nibc.nl/media/zzqnjuq1/hypotheekgids-2026.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatiegids 2026, NHG en niet-NHG. Via zoeksamenvatting.",
+    "status": "nieuw"
+   },
+   "oversl": {
+    "waarde": "~ Max. 100% MW (106% met EBV); hoofdsom max. huidige hypotheek plus kosten; zuiver oversluiten: rentevast min. 10 jaar",
+    "bron": [
+     "https://nibc.nl/media/zzqnjuq1/hypotheekgids-2026.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatiegids 2026, oversluiten. Bij NHG past NIBC versoepeld NHG-regime niet toe.",
+    "status": "nieuw"
+   },
+   "verhw": {
+    "waarde": "~ Verhoging min. EUR 5.000",
+    "bron": [
+     "https://nibc.nl/media/zzqnjuq1/hypotheekgids-2026.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "toelichting": "Acceptatiegids 2026 v1.0; waardebepaling bij verhoging niet gevonden.",
+    "status": "nieuw"
+   },
+   "zelfb": {
+    "waarde": "- Zelfbouw, PO en MO niet mogelijk; nieuwbouw alleen met afbouwgarantie (waarborgcertificaat)",
+    "bron": [
+     "https://nibc.nl/media/zzqnjuq1/hypotheekgids-2026.pdf",
+     "https://nibc.nl/media/kszfdfok/nibc-hypotheekgids-2025-versie-13.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "toelichting": "Gids 2026 (nieuwbouwparagraaf) en 2025 v1.3. Kavel in project met eigen aannemer: afbouwgarantie verplicht, voorleggen bij Hypotheekdesk.",
+    "status": "nieuw"
+   },
+   "cpo": {
+    "waarde": "! CPO: gidsen 2023-2025 niet mogelijk; digitale hypotheekgids noemt voorwaarden (afbouwgarantie, één aannemer, achtervang)",
+    "bron": [
+     "https://nibc.nl/media/kszfdfok/nibc-hypotheekgids-2025-versie-13.pdf",
+     "https://nibc.nl/intermediair/hypotheekgids"
+    ],
+    "brondatum": "2025",
+    "zekerheid": "laag",
+    "toelichting": "Tegenstrijdig; gids 2026 niet te controleren.",
+    "status": "nieuw"
+   },
+   "pnb": {
+    "waarde": "~ Afbouwgarantie (SWK/GarantieWoning) verplicht; marktwaarde = stichtingskosten, geen taxatie bij projectnieuwbouw; max. 100% LTV",
+    "bron": [
+     "https://nibc.nl/media/zzqnjuq1/hypotheekgids-2026.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "toelichting": "Acceptatiegids 2026, nieuwbouw. Meerwerk max. 25% van koop-/aanneemsom in stichtingskosten.",
+    "status": "nieuw"
+   }
+  },
+  "documenten": [
+   {
+    "titel": "NIBC Acceptatiegids 2026",
+    "url": "https://nibc.nl/media/zzqnjuq1/hypotheekgids-2026.pdf",
+    "versie": "2026 v1.0"
+   },
+   {
+    "titel": "NIBC Acceptatiegids 2025",
+    "url": "https://nibc.nl/media/kszfdfok/nibc-hypotheekgids-2025-versie-13.pdf",
+    "versie": "2025 v1.3"
+   },
+   {
+    "titel": "Overbruggen (intermediair)",
+    "url": "https://nibc.nl/intermediair/situatie-wijzigt/overbruggen",
+    "versie": "online"
+   },
+   {
+    "titel": "Maximale overbrugging naar 95%",
+    "url": "https://nibc.nl/intermediair/nieuwsberichten/overbrugging-naar-95",
+    "versie": "2024"
+   },
+   {
+    "titel": "Overbruggingskrediet (consument)",
+    "url": "https://nibc.nl/particulieren/hypotheken/overbruggingskrediet",
+    "versie": "online"
+   },
+   {
+    "titel": "Productkaart NIBC Extra Hypotheken",
+    "url": "https://nibc.nl/media/jfwb4bnb/productkaart-nibc-extra-hypotheken-okt2025.pdf",
+    "versie": "okt 2025"
+   },
+   {
+    "titel": "Extra aflossen (consument)",
+    "url": "https://nibc.nl/particulieren/hypotheken/mijn-situatie-wijzigt/ik-wil-extra-aflossen",
+    "versie": "online"
+   }
+  ],
+  "gecontroleerd": "2026-10-08"
+ },
+ {
+  "naam": "SocioHypotheek",
+  "criteria": {
+   "maxh": {
+    "waarde": "~ Max. EUR 450.000 vrij te maken (incl. rentekosten); bij aanvang max. 60% van marktwaarde, afhankelijk van leeftijd",
+    "bron": [
+     "https://www.sociohypotheek.nl/",
+     "https://www.sociohypotheek.nl/rente/"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "toelichting": "Hoofdpagina (max. bedrag) en rentepagina (60% MW). Blog noemt voor 65-jarige ca. 55% van de woningwaarde. Overwaardehypotheek 57+ met bijgeschreven rente.",
+    "status": "nieuw"
+   },
+   "verhw": {
+    "waarde": "- Verhogen of aanpassen van het uitbetalingsschema niet mogelijk",
+    "bron": [
+     "https://www.sociohypotheek.nl/veelgestelde-vragen/voorbeelden/"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "toelichting": "Pagina Uitbetalingsschema. Eenmalige uitkering; SocioHypotheek kan naast bestaande hypotheek worden gevestigd.",
+    "status": "nieuw"
+   }
+  },
+  "documenten": [
+   {
+    "titel": "De overwaarde hypotheek voor 57+",
+    "url": "https://www.sociohypotheek.nl/",
+    "versie": "online"
+   },
+   {
+    "titel": "Actuele hypotheekrente",
+    "url": "https://www.sociohypotheek.nl/rente/",
+    "versie": "online"
+   },
+   {
+    "titel": "Uitbetalingsschema",
+    "url": "https://www.sociohypotheek.nl/veelgestelde-vragen/voorbeelden/",
+    "versie": "online"
+   },
+   {
+    "titel": "Veelgestelde vragen Overwaarde Hypotheek",
+    "url": "https://www.sociohypotheek.nl/veelgestelde-vragen/",
+    "versie": "online"
+   }
+  ],
+  "gecontroleerd": "2026-10-08"
+ },
+ {
+  "naam": "Vrij Leven (Hypotrust)",
+  "criteria": {
+   "obmax": {
+    "waarde": "~ Verkocht (ontb. voorw. verlopen): 98% verkoopprijs min huidige lening; niet verkocht: 90% verwachte verkoopprijs min lening",
+    "bron": [
+     "https://www.vrijlevenhypotheek.nl/assets/uploads/2025/08/Acceptatiegids-Vrij-Leven-7-augustus-2025-.pdf"
+    ],
+    "brondatum": "aug 2025",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatievoorwaarden 7 aug 2025, overbruggingskrediet. Versie apr 2026 (downloadpagina) niet ingezien.",
+    "status": "nieuw"
+   },
+   "oblast": {
+    "waarde": "~ Dubbele lasten (nieuw + oud + overbrugging, bruto) over verwachte verkooptermijn, minimaal 12 maanden volgens makelaarsverklaring",
+    "bron": [
+     "https://www.vrijlevenhypotheek.nl/assets/uploads/2025/08/Acceptatiegids-Vrij-Leven-7-augustus-2025-.pdf"
+    ],
+    "brondatum": "aug 2025",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatievoorwaarden aug 2025. Makelaarsverklaring met verwachte opbrengst en verkooptermijn vereist.",
+    "status": "nieuw"
+   },
+   "obduur": {
+    "waarde": "~ Looptijd overbrugging 24 maanden; daarna verlengen mogelijk met akkoord geldverstrekker",
+    "bron": [
+     "https://www.vrijlevenhypotheek.nl/assets/uploads/2024/05/Algemene_Voorwaarden_Hypotrust_Vrij_Leven_Hypotheek_September-2023.pdf"
+    ],
+    "brondatum": "sep 2023",
+    "zekerheid": "middel",
+    "toelichting": "Algemene voorwaarden sep 2023; acceptatievoorwaarden aug 2025 noemen geen expliciete looptijd in zoekresultaat.",
+    "status": "nieuw"
+   },
+   "obwaar": {
+    "waarde": "~ Taxatierapport of Calcasa desktoptaxatie (max. 6 mnd oud; desktop max. 90% MW, alleen bestaande bouw, niet bij erfpacht)",
+    "bron": [
+     "https://www.vrijlevenhypotheek.nl/assets/uploads/2025/08/Acceptatiegids-Vrij-Leven-7-augustus-2025-.pdf"
+    ],
+    "brondatum": "aug 2025",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatievoorwaarden aug 2025, waardebepaling; niet specifiek voor de oude woning bij overbrugging genoemd. Desktop alleen bij marktwaarde min. EUR 75.000.",
+    "status": "nieuw"
+   },
+   "obvw": {
+    "waarde": "+ Min. overbrugging EUR 2.500; geen afsluitkosten; vaste rente voor de duur; overbrugging op twee onderpanden mogelijk",
+    "bron": [
+     "https://www.vrijlevenhypotheek.nl/assets/uploads/2025/08/Acceptatiegids-Vrij-Leven-7-augustus-2025-.pdf"
+    ],
+    "brondatum": "aug 2025",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatievoorwaarden aug 2025 (kosten overbrugging nihil). Maart 2024 noemde nog min. EUR 10.000 (Goede Start-kader).",
+    "status": "nieuw"
+   },
+   "geldnb": {
+    "waarde": "~ Renteaanbod 4 maanden geldig; verlenging 2 maanden (bestaande bouw) of 8 maanden (nieuwbouw)",
+    "bron": [
+     "https://www.vrijlevenhypotheek.nl/assets/uploads/2025/08/Acceptatiegids-Vrij-Leven-7-augustus-2025-.pdf",
+     "https://www.vrijlevenhypotheek.nl/hypotheek/"
+    ],
+    "brondatum": "aug 2025",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatievoorwaarden aug 2025; productpagina: aan verlenging kunnen kosten verbonden zijn (bereidstellingsprovisie, alleen als marktrente hoger is).",
+    "status": "nieuw"
+   },
+   "annul": {
+    "waarde": "~ Geen annuleringskosten binnen de offertetermijn; annuleringsvergoeding als offerte in verlengingsperiode niet wordt afgenomen",
+    "bron": [
+     "https://www.vrijlevenhypotheek.nl/hypotheek/",
+     "https://www.vrijlevenhypotheek.nl/assets/uploads/2024/05/Acceptatievoorwaarden_Vrij-Leven_maart_2024.pdf"
+    ],
+    "brondatum": "mrt 2024",
+    "zekerheid": "middel",
+    "toelichting": "Productpagina en acceptatievoorwaarden maart 2024 (percentage over hoofdsom).",
+    "status": "nieuw"
+   },
+   "bovw": {
+    "waarde": "+ Bij verkoop (eigendomsoverdracht aan ander dan partner) en verhuizing vergoedingsvrij aflossen",
+    "bron": [
+     "https://www.vrijlevenhypotheek.nl/assets/uploads/2024/05/Algemene_Voorwaarden_Hypotrust_Vrij_Leven_Hypotheek_September-2023.pdf"
+    ],
+    "brondatum": "sep 2023",
+    "zekerheid": "middel",
+    "toelichting": "Algemene voorwaarden sep 2023.",
+    "status": "nieuw"
+   },
+   "bvrij": {
+    "waarde": "+ Binnen 12 maanden na overlijden vergoedingsvrij aflossen; jaarlijks 10% van oorspronkelijke hoofdsom",
+    "bron": [
+     "https://www.vrijlevenhypotheek.nl/assets/uploads/2024/05/Algemene_Voorwaarden_Hypotrust_Vrij_Leven_Hypotheek_September-2023.pdf",
+     "https://www.vrijlevenhypotheek.nl/assets/uploads/2024/04/Handleiding-Hypotheek-Wijzigen-Vrij-Leven-Hypotheek-jul-2022.pdf"
+    ],
+    "brondatum": "sep 2023",
+    "zekerheid": "middel",
+    "toelichting": "AV sep 2023 en handleiding jul 2022. Woning onder water: tot WOZ-waarde vergoedingsvrij (kader 2024).",
+    "status": "nieuw"
+   },
+   "minh": {
+    "waarde": "~ Min. EUR 50.000 eerste hypotheek (excl. overbrugging); verhoging min. EUR 5.000",
+    "bron": [
+     "https://www.vrijlevenhypotheek.nl/assets/uploads/2025/08/Acceptatiegids-Vrij-Leven-7-augustus-2025-.pdf"
+    ],
+    "brondatum": "aug 2025",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatievoorwaarden aug 2025.",
+    "status": "nieuw"
+   },
+   "maxh": {
+    "waarde": "~ NHG: NHG-grens; niet-NHG max. EUR 750.000 excl. overbrugging",
+    "bron": [
+     "https://www.vrijlevenhypotheek.nl/assets/uploads/2025/08/Acceptatiegids-Vrij-Leven-7-augustus-2025-.pdf",
+     "https://www.vrijlevenhypotheek.nl/hypotheek/"
+    ],
+    "brondatum": "aug 2025",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatievoorwaarden aug 2025; productsite noemt EUR 750.000 als beperking.",
+    "status": "nieuw"
+   },
+   "rest": {
+    "waarde": "- Meefinancieren restschuld niet mogelijk",
+    "bron": [
+     "https://www.vrijlevenhypotheek.nl/assets/uploads/2024/05/Acceptatievoorwaarden_Vrij-Leven_maart_2024.pdf"
+    ],
+    "brondatum": "mrt 2024",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatievoorwaarden maart 2024; in versie aug 2025 niet bevestigd.",
+    "status": "nieuw"
+   },
+   "oversl": {
+    "waarde": "~ Oversluiten NHG naar NHG volgens NHG-regels plus inkomenstoets; niet-NHG max. EUR 750.000",
+    "bron": [
+     "https://www.vrijlevenhypotheek.nl/assets/uploads/2025/08/Acceptatiegids-Vrij-Leven-7-augustus-2025-.pdf"
+    ],
+    "brondatum": "aug 2025",
+    "zekerheid": "laag",
+    "toelichting": "Zoeksamenvatting acceptatievoorwaarden; max. % MW bij oversluiten niet eenduidig (nieuwe klanten zonder NHG max. 80% MW genoemd).",
+    "status": "nieuw"
+   },
+   "verhw": {
+    "waarde": "~ Verhoging min. EUR 5.000; bestaande klanten buiten NHG tot 100% MW (106% met EBV); waarde via taxatie of Calcasa desktop",
+    "bron": [
+     "https://www.vrijlevenhypotheek.nl/assets/uploads/2025/08/Acceptatiegids-Vrij-Leven-7-augustus-2025-.pdf",
+     "https://www.vrijlevenhypotheek.nl/hypotheek/"
+    ],
+    "brondatum": "aug 2025",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatievoorwaarden aug 2025; onderhands of vervolghypotheek.",
+    "status": "nieuw"
+   },
+   "zelfb": {
+    "waarde": "~ Zelfbouw alleen met aannemer; afbouwgarantie verplicht; alleen bouwkavel financieren niet mogelijk",
+    "bron": [
+     "https://www.vrijlevenhypotheek.nl/assets/uploads/2025/08/Acceptatiegids-Vrij-Leven-7-augustus-2025-.pdf"
+    ],
+    "brondatum": "aug 2025",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatievoorwaarden aug 2025, nieuwbouw. Bouwdepot nieuwbouw 24 mnd.",
+    "status": "nieuw"
+   },
+   "pnb": {
+    "waarde": "~ Waarborgcertificaat (GarantieWoning) vereist; geen financiering bij koop-/aanneemsom zonder vast maximum",
+    "bron": [
+     "https://www.vrijlevenhypotheek.nl/assets/uploads/2025/08/Acceptatiegids-Vrij-Leven-7-augustus-2025-.pdf"
+    ],
+    "brondatum": "aug 2025",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatievoorwaarden aug 2025; desktoptaxatie alleen bij bestaande bouw.",
+    "status": "nieuw"
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Acceptatievoorwaarden Hypotrust Vrij Leven hypotheek",
+    "url": "https://www.vrijlevenhypotheek.nl/assets/uploads/2025/08/Acceptatiegids-Vrij-Leven-7-augustus-2025-.pdf",
+    "versie": "7 aug 2025"
+   },
+   {
+    "titel": "Acceptatievoorwaarden Vrij Leven",
+    "url": "https://www.vrijlevenhypotheek.nl/assets/uploads/2024/05/Acceptatievoorwaarden_Vrij-Leven_maart_2024.pdf",
+    "versie": "mrt 2024"
+   },
+   {
+    "titel": "Algemene Voorwaarden Hypotrust Vrij Leven Hypotheek",
+    "url": "https://www.vrijlevenhypotheek.nl/assets/uploads/2024/05/Algemene_Voorwaarden_Hypotrust_Vrij_Leven_Hypotheek_September-2023.pdf",
+    "versie": "sep 2023"
+   },
+   {
+    "titel": "Handleiding Hypotheek Wijzigen Vrij Leven",
+    "url": "https://www.vrijlevenhypotheek.nl/assets/uploads/2024/04/Handleiding-Hypotheek-Wijzigen-Vrij-Leven-Hypotheek-jul-2022.pdf",
+    "versie": "jul 2022"
+   },
+   {
+    "titel": "Hypotheek (productpagina)",
+    "url": "https://www.vrijlevenhypotheek.nl/hypotheek/",
+    "versie": "online"
+   },
+   {
+    "titel": "Downloads (o.a. Acceptatiegids apr 2026)",
+    "url": "https://www.vrijlevenhypotheek.nl/downloads/",
+    "versie": "apr 2026"
+   }
+  ],
+  "gecontroleerd": "2026-10-08"
+ }
+]

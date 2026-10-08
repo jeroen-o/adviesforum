@@ -1,0 +1,919 @@
+[
+ {
+  "naam": "Allianz",
+  "gecontroleerd": "2026-10-08",
+  "criteria": {
+   "mwbep": {
+    "waarde": "~ Taxatierapport >80% marktwaarde; tot 80% (non-NHG) desktoptaxatie mogelijk; nieuwbouw: koop-/aanneemsom",
+    "bron": [
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-47.pdf"
+    ],
+    "brondatum": "2026-04",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Hypotheekwijzer 2026-04; uit zoekfragmenten, tekst deels fragmentarisch. Taxatierapport max. 6 maanden oud volgens aanvraagformulier."
+   },
+   "woz": {
+    "waarde": "- WOZ-rapport en Calcasa modeltaxatie niet meer toegestaan (BGFO-wijziging)",
+    "bron": [
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-47.pdf"
+    ],
+    "brondatum": "2026-04",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Hypotheekwijzer 2026-04: geen statische waarderapporten zoals WOZ-rapport, geldt voor alle processen."
+   },
+   "ltvk": {
+    "waarde": "~ Max. 100% marktwaarde nieuwe woning; tot 106% bij energiebesparende voorzieningen (taxatie vereist)",
+    "bron": [
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-47.pdf"
+    ],
+    "brondatum": "2026-04",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Hypotheekwijzer 2026-04. Maximaal leenbedrag bij aankoop non-NHG in toelichting: EUR 1.000.000. Aflossingsvrij non-NHG max. 50% marktwaarde."
+   },
+   "wwp": {
+    "waarde": "- Woon-/winkelpand niet acceptabel als onderpand",
+    "bron": [
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-47.pdf"
+    ],
+    "brondatum": "2026-04",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Hypotheekwijzer 2026-04 par. 1.11, lijst niet-acceptabele onderpanden."
+   },
+   "wboer": {
+    "waarde": "~ Woonboerderij niet uitgesloten; wordt apart beoordeeld op bewoonbaarheid",
+    "bron": [
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-47.pdf"
+    ],
+    "brondatum": "2026-04",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Hypotheekwijzer 2026-04 par. 1.11; via zoekfragment, exacte voorwaarden onbekend."
+   },
+   "wboot": {
+    "waarde": "- Woonboot niet acceptabel als onderpand",
+    "bron": [
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-47.pdf"
+    ],
+    "brondatum": "2026-04",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Hypotheekwijzer 2026-04 par. 1.11; ook woonwagen, tiny house, recreatiewoning uitgesloten."
+   },
+   "nhgk": {
+    "waarde": "~ Volgt NHG-lijst geaccepteerde bijzondere koop- en leenconstructies",
+    "bron": [
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-47.pdf"
+    ],
+    "brondatum": "2026-04",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Hypotheekwijzer 2026-04 par. 1.11 verwijst naar de actuele NHG-lijst; Koopgarant niet expliciet genoemd in fragment."
+   },
+   "zbep": {
+    "waarde": "~ Inkomensverklaring via Raadhuys, Pentrax of Overviewz (max. 6 mnd oud); non-NHG meestal rekenexpert",
+    "bron": [
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-47.pdf"
+    ],
+    "brondatum": "2026-04",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Hypotheekwijzer 2026-04. Toetskader ondernemer (500083-66, ca. 2024) noemt eis hoofdvestiging in Nederland."
+   },
+   "zcijf": {
+    "waarde": "~ Zonder rekenexpert: jaarcijfers laatste 3 jaar, opgesteld door administratiekantoor of accountant",
+    "bron": [
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-47.pdf"
+    ],
+    "brondatum": "2026-04",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Hypotheekwijzer 2026-04, documentenlijst ondernemer; via zoekfragment."
+   },
+   "zbuit": {
+    "waarde": "- Hoofdvestiging van de onderneming moet in Nederland zijn",
+    "bron": [
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-66.pdf"
+    ],
+    "brondatum": "2024",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Toetskader ondernemers Allianz (500083-66), lijkt versie 2024 (noemt NHG-grenzen 2024)."
+   },
+   "bkr": {
+    "waarde": "- Aanvraag niet geaccepteerd bij BKR-registratie wegens niet terugbetaalde eerdere lening",
+    "bron": [
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-47.pdf"
+    ],
+    "brondatum": "2026-04",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Hypotheekwijzer 2026-04. Behandeling herstelde A-, RH/RN- en HY-coderingen niet gevonden (een zoekresultaat noemde HY-2 bij NHG-kwijtschelding als uitzondering, bron onduidelijk)."
+   },
+   "duo": {
+    "waarde": "~ Studielening telt mee; actuele maandlast met opslag, wel reeds plaatsgevonden indexatie",
+    "bron": [
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-47.pdf"
+    ],
+    "brondatum": "2026-04",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Hypotheekwijzer 2026-04; tekst in fragment afgekapt, opslagfactor niet gezien. DUO-overzicht vereist."
+   },
+   "plen": {
+    "waarde": "~ Aflopend krediet getoetst op werkelijke maandlast",
+    "bron": [
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-47.pdf"
+    ],
+    "brondatum": "2026-04",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Hypotheekwijzer 2026-04: aflopende kredieten, onderhandse leningen en operationele autolease op werkelijke maandlast."
+   },
+   "dkr": {
+    "waarde": "~ Doorlopend krediet altijd 2% van de oorspronkelijke limiet per maand",
+    "bron": [
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-47.pdf"
+    ],
+    "brondatum": "2026-04",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Hypotheekwijzer 2026-04; zoekfragment licht verminkt ('oorspronkelijke leenbedrag')."
+   },
+   "lease": {
+    "waarde": "~ Operationele autolease getoetst op werkelijke maandlast",
+    "bron": [
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-47.pdf"
+    ],
+    "brondatum": "2026-04",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Hypotheekwijzer 2026-04, zelfde passage als aflopende kredieten."
+   },
+   "rsk": {
+    "waarde": "~ Lening voor restschuld vorige woning telt mee als schuld in de toets",
+    "bron": [
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-47.pdf"
+    ],
+    "brondatum": "2026-04",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Hypotheekwijzer 2026-04: restschuldlening in mindering op maximale lening; toetsmethode (werkelijke last of anders) niet gevonden."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Hypotheekwijzer Allianz Hypotheek",
+    "url": "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-47.pdf",
+    "versie": "2026-04"
+   },
+   {
+    "titel": "Toetskader ondernemers Allianz Hypotheek",
+    "url": "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-66.pdf",
+    "versie": "ca. 2024"
+   }
+  ]
+ },
+ {
+  "naam": "bunq",
+  "gecontroleerd": "2026-10-08",
+  "criteria": {
+   "z123": {
+    "waarde": "! Volgens derde partij 1-2-3-methode voor ondernemers (inkomen via UWV-verzekeringsbericht); onduidelijk, verifiëren in acceptatiegids",
+    "bron": [
+     "https://www.homefinance.nl/hypotheek/berekenen/bunq/"
+    ],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Alleen HomeFinance (derde partij); tekst vermengt 1-2-3-methode met UWV-verzekeringsbericht (loondienst), mogelijk onjuist. Acceptatiegids bunq (feb 2026) niet via zoekmachine te lezen."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Acceptatiegids bunq Easy Mortgage",
+    "url": "https://static.bunq.com/website/documents/bunq-mortgages-acceptation-guide-2026-nl.pdf",
+    "versie": "februari 2026 (inhoud niet via zoekresultaten bereikbaar)"
+   }
+  ]
+ },
+ {
+  "naam": "HollandWoont",
+  "criteria": {
+   "mwbep": {
+    "waarde": "~ Gevalideerd taxatierapport; Calcasa desktoptaxatie tot 90% marktwaarde (alleen bestaande bouw); nieuwbouw: koopsom is marktwaarde",
+    "bron": [
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Acceptatiegids-Juni-2026.pdf"
+    ],
+    "brondatum": "jun 2026",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatiegids juni 2026 (publ. 11-08-2026); Calcasa betrouwbaarheid min. 5. Tekst in zoekfragment deels door elkaar; nieuwbouwpassage noemt mogelijk ook Calcasa. Waardestijging door afkoop erfpacht alleen via gevalideerd nieuwbouwtaxatierapport.",
+    "status": "nieuw"
+   },
+   "ltvk": {
+    "waarde": "~ Max. 100% marktwaarde, tot 106% bij energiebesparende voorzieningen; niet-NHG alleen voor bestaande klanten",
+    "bron": [
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Acceptatiegids-Juni-2026.pdf",
+     "https://www.hollandwoont.nl/home-consument/hoeveel-kan-ik-lenen"
+    ],
+    "brondatum": "jun 2026",
+    "zekerheid": "middel",
+    "toelichting": "100%/106% op consumentensite; gids juni 2026 noemt boven-LTV tot 100% o.b.v. energielabel/groenverklaring. Aflossingsvrij max. 50% marktwaarde. Beperking niet-NHG tot bestaande klanten via zoekfragment gids.",
+    "status": "nieuw"
+   },
+   "wwp": {
+    "waarde": "- Woon-/winkelpanden niet te financieren",
+    "bron": [
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Acceptatiegids-Juni-2026.pdf"
+    ],
+    "brondatum": "jun 2026",
+    "zekerheid": "hoog",
+    "toelichting": "Acceptatiegids, lijst 'niet mogelijk om te financieren' (ook bedrijfspanden, verhuurd onroerend goed).",
+    "status": "nieuw"
+   },
+   "wboer": {
+    "waarde": "- Landelijke eigendommen en onderpand met agrarische bestemming uitgesloten; woonboerderij niet expliciet genoemd",
+    "bron": [
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Acceptatiegids-Juni-2026.pdf"
+    ],
+    "brondatum": "jun 2026",
+    "zekerheid": "middel",
+    "toelichting": "Afgeleid uit uitsluitingslijst acceptatiegids; woonboerderij met woonbestemming niet expliciet behandeld.",
+    "status": "nieuw"
+   },
+   "wboot": {
+    "waarde": "- Woonschip (woonboot, woonark, waterwoning) en vaartuigen niet te financieren",
+    "bron": [
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Acceptatiegids-Juni-2026.pdf"
+    ],
+    "brondatum": "jun 2026",
+    "zekerheid": "hoog",
+    "toelichting": "Acceptatiegids, uitsluitingslijst onderpanden.",
+    "status": "nieuw"
+   },
+   "gron": {
+    "waarde": "~ Met NHG mogelijk; zonder NHG alleen als koper bij passeren hypotheekakte juridisch én economisch eigenaar is",
+    "bron": [
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Acceptatiegids-januari-2026.pdf",
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Acceptatiegids-Juni-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "toelichting": "Volledige tekst uit gids jan 2026; in juni 2026 zelfde passage maar afgekapt. Eén zoekfragment noemde niet-NHG 'niet mogelijk' (tabelvermenging).",
+    "status": "nieuw"
+   },
+   "zbep": {
+    "waarde": "~ Toetsinkomen altijd via Inkomensverklaring Ondernemer door NHG-goedgekeurde rekenexpert",
+    "bron": [
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Acceptatiegids-Juni-2026.pdf"
+    ],
+    "brondatum": "jun 2026",
+    "zekerheid": "hoog",
+    "toelichting": "Acceptatiegids juni 2026 en juni 2025, paragraaf zelfstandig ondernemer. Freelancer zonder KvK: gemiddelde 3 jaar, max. laatste jaar.",
+    "status": "nieuw"
+   },
+   "zstart": {
+    "waarde": "~ Mogelijk na min. 12 maanden eigen zaak, mits eerder inkomen uit loondienst",
+    "bron": [
+     "https://www.hollandwoont.nl/home-consument/hypotheek-met-een-eigen-zaak",
+     "https://www.hollandwoont.nl/home-consument/hypotheek-voor-starters"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "toelichting": "Consumentenpagina's HollandWoont; eis 'zelfde branche' of prognose niet gevonden. Perspectiefverklaring mogelijk volgens gids, arbeidsmarktscan niet.",
+    "status": "nieuw"
+   },
+   "zbuit": {
+    "waarde": "- Onderneming moet in Nederland gevestigd zijn",
+    "bron": [
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Acceptatiegids-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatiegids jan 2026, ondernemers; tekst in fragment onduidelijk. Horeca en drugs-/seksbranche worden niet geaccepteerd.",
+    "status": "nieuw"
+   },
+   "bkr": {
+    "waarde": "~ Negatieve codering of aflospatroon: alleen na individuele beoordeling en plausibele verklaring; max. 6 kredieten per klant",
+    "bron": [
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Acceptatiegids-Juni-2026.pdf"
+    ],
+    "brondatum": "jun 2026",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatiegids juni 2026; max. 10 geregistreerde kredieten bij 2 klanten. Specifieke regels voor herstelde A, RH/RN en HY niet gevonden.",
+    "status": "nieuw"
+   },
+   "duo": {
+    "waarde": "~ Volgens Trhk: aflosfase werkelijk termijnbedrag DUO; aanloop-/opbouwfase via DUO-rekenhulp op actuele restschuld",
+    "bron": [
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Acceptatiegids-Juni-2026.pdf"
+    ],
+    "brondatum": "jun 2026",
+    "zekerheid": "hoog",
+    "toelichting": "Acceptatiegids juni 2026, studielening; Overzicht studieschuld DUO vereist.",
+    "status": "nieuw"
+   },
+   "plen": {
+    "waarde": "~ Aflopend krediet altijd op werkelijke last (BKR-bedrag gedeeld door looptijd in maanden)",
+    "bron": [
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Acceptatiegids-Juni-2026.pdf"
+    ],
+    "brondatum": "jun 2026",
+    "zekerheid": "hoog",
+    "toelichting": "Acceptatiegids juni 2026, consumptieve kredieten.",
+    "status": "nieuw"
+   },
+   "dkr": {
+    "waarde": "~ Overige kredieten: 2% maandlast of hogere werkelijke last",
+    "bron": [
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Acceptatiegids-Juni-2026.pdf"
+    ],
+    "brondatum": "jun 2026",
+    "zekerheid": "hoog",
+    "toelichting": "Acceptatiegids juni 2026; 'andere kredieten' dan aflopend, dus o.a. doorlopend krediet.",
+    "status": "nieuw"
+   },
+   "rsk": {
+    "waarde": "~ Restschuldlening onder voorwaarden op werkelijke bruto maandlast (o.a. max. 15 jaar, min. annuïtair)",
+    "bron": [
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Acceptatiegids-Juni-2026.pdf"
+    ],
+    "brondatum": "jun 2026",
+    "zekerheid": "hoog",
+    "toelichting": "Acceptatiegids juni 2026 (1-50, 1-51). Contract met hoofdsom, looptijd, maandlast aanleveren.",
+    "status": "nieuw"
+   },
+   "wbhuid": {
+    "waarde": "+ Waarde te verkopen woning aan te tonen met Calcasa desktoptaxatie of WOZ-beschikking",
+    "bron": [
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/Acceptatiegids-HollandWoont-Juni-2025-1.pdf"
+    ],
+    "brondatum": "jun 2025",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatiegids juni 2025 (overbrugging); niet bevestigd in versie juni 2026. Calcasa betrouwbaarheid min. 5.",
+    "status": "nieuw"
+   }
+  },
+  "documenten": [
+   {
+    "titel": "HollandWoont Acceptatiegids voor adviseurs",
+    "url": "https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Acceptatiegids-Juni-2026.pdf",
+    "versie": "jun 2026 (publ. 11-08-2026)"
+   },
+   {
+    "titel": "HollandWoont Acceptatiegids voor adviseurs",
+    "url": "https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Acceptatiegids-januari-2026.pdf",
+    "versie": "jan 2026"
+   },
+   {
+    "titel": "HollandWoont Acceptatiegids voor adviseurs",
+    "url": "https://www.hollandwoont.nl/uploads/hollandwoont/files/Acceptatiegids-HollandWoont-Juni-2025-1.pdf",
+    "versie": "jun 2025"
+   }
+  ],
+  "gecontroleerd": "2026-10-08"
+ },
+ {
+  "naam": "Lloyds Bank",
+  "criteria": {
+   "mwbep": {
+    "waarde": "~ NWWI-gevalideerd taxatierapport (max. 6 mnd); Calcasa alleen bij lage LTV; nieuwbouw: koop-/aanneemsom + meerwerk, geen desktoptaxatie",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-onderpand",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf"
+    ],
+    "brondatum": "feb 2026",
+    "zekerheid": "middel",
+    "toelichting": "Hypotheekgids feb 2026 hfst. 9 / online. Calcasa: consumentensite noemt <65% zonder NHG of <90% met NHG, elders max. 90%; niet eenduidig. Nieuwbouw zonder NHG max. 4% renteverlies erbij.",
+    "status": "nieuw"
+   },
+   "woz": {
+    "waarde": "- WOZ-verklaring niet geaccepteerd om marktwaarde aan te tonen",
+    "bron": [
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf"
+    ],
+    "brondatum": "feb 2026",
+    "zekerheid": "middel",
+    "toelichting": "Via zoekfragment hypotheekgids; ook Verhuurhypotheek: WOZ + Calcasa niet toegestaan.",
+    "status": "nieuw"
+   },
+   "ltvk": {
+    "waarde": "~ Max. 100% marktwaarde (laagste van taxatie of koopsom + kosten); met NHG tot 106% bij energiebesparing",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-lloyds-bank-hypotheek",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf"
+    ],
+    "brondatum": "feb 2026",
+    "zekerheid": "hoog",
+    "toelichting": "Hypotheekgids hfst. 5. Max. hypotheek zonder overbrugging EUR 1,5 mln, met overbrugging EUR 2 mln, boven 90% LTV EUR 1 mln; aflossingsvrij max. 50%.",
+    "status": "nieuw"
+   },
+   "wwp": {
+    "waarde": "- Woning met bedrijfsruimte of woon-/winkelpand uitgesloten (met en zonder NHG)",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-onderpand",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf"
+    ],
+    "brondatum": "feb 2026",
+    "zekerheid": "hoog",
+    "toelichting": "Hypotheekgids par. 9.8, uitgesloten onderpanden.",
+    "status": "nieuw"
+   },
+   "wboer": {
+    "waarde": "- Woonboerderij met agrarische bestemming uitgesloten",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-onderpand",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf"
+    ],
+    "brondatum": "feb 2026",
+    "zekerheid": "hoog",
+    "toelichting": "Hypotheekgids par. 9.8; woonboerderij met woonbestemming niet expliciet uitgesloten.",
+    "status": "nieuw"
+   },
+   "wboot": {
+    "waarde": "- Woonboot uitgesloten (met en zonder NHG)",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-onderpand",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf"
+    ],
+    "brondatum": "feb 2026",
+    "zekerheid": "hoog",
+    "toelichting": "Hypotheekgids par. 9.8; ook tiny houses, recreatiewoningen, CPO-woningen uitgesloten.",
+    "status": "nieuw"
+   },
+   "gron": {
+    "waarde": "- Bestaande woning met Groninger akte uitgesloten",
+    "bron": [
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf"
+    ],
+    "brondatum": "feb 2026",
+    "zekerheid": "hoog",
+    "toelichting": "Hypotheekgids hfst. 9 Onderpand, lijst uitgesloten woningen.",
+    "status": "nieuw"
+   },
+   "zbep": {
+    "waarde": "~ Zonder NHG: Inkomensverklaring Ondernemer door door Lloyds geaccepteerde rekenexpert (max. 6 mnd); met NHG: NHG-inkomensverklaring",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-inkomen",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf"
+    ],
+    "brondatum": "feb 2026",
+    "zekerheid": "hoog",
+    "toelichting": "Hypotheekgids hfst. 8. DGA vanaf 5% aandelen = zelfstandige.",
+    "status": "nieuw"
+   },
+   "z123": {
+    "waarde": "~ Gemiddelde fiscale winst laatste 3 kalenderjaren; is laatste jaar lager, dan telt laatste jaar",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-inkomen",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf"
+    ],
+    "brondatum": "feb 2026",
+    "zekerheid": "hoog",
+    "toelichting": "Hypotheekgids hfst. 8 (niet-NHG). DGA: gemiddeld uitbetaald loon en dividend over 3 jaar.",
+    "status": "nieuw"
+   },
+   "zcijf": {
+    "waarde": "~ Jaarcijfers moeten positieve solvabiliteit en liquiditeit tonen (met analyse); negatief eigen vermogen voorleggen",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-inkomen"
+    ],
+    "brondatum": "feb 2026",
+    "zekerheid": "middel",
+    "toelichting": "Hypotheekgids hfst. 8; welke stukken (definitief/tussentijds) precies niet gevonden.",
+    "status": "nieuw"
+   },
+   "zstart": {
+    "waarde": "- Zonder NHG min. 2 jaar zelfstandig; met NHG volstaat 1 jaar",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-inkomen",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf"
+    ],
+    "brondatum": "feb 2026",
+    "zekerheid": "middel",
+    "toelichting": "Hypotheekgids hfst. 8; NHG-termijn uit samenvatting zoekmachine.",
+    "status": "nieuw"
+   },
+   "zbv": {
+    "waarde": "! Max. 4 geregistreerde ondernemingen per aanvrager, ongeacht rechtsvorm of dochters",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-inkomen"
+    ],
+    "brondatum": "feb 2026",
+    "zekerheid": "middel",
+    "toelichting": "Hypotheekgids hfst. 8, via zoekfragment.",
+    "status": "nieuw"
+   },
+   "zbuit": {
+    "waarde": "- Geen hypotheek bij inkomen in andere valuta dan euro; ondernemers in sanctielanden uitgesloten",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-inkomen",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf"
+    ],
+    "brondatum": "feb 2026",
+    "zekerheid": "laag",
+    "toelichting": "Geen expliciete regel over buitenlandse onderneming gevonden; afgeleid uit valuta- en sanctie-uitsluitingen.",
+    "status": "nieuw"
+   },
+   "bkr": {
+    "waarde": "- Lopende codering, HY-, SH- of SK-registratie: geen financiering; bij NHG gelden NHG-regels behalve herstelcode (H)",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-bkr",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf"
+    ],
+    "brondatum": "feb 2026",
+    "zekerheid": "middel",
+    "toelichting": "Hypotheekgids hfst. 10 BKR-registraties; behandeling herstelde A niet volledig gezien.",
+    "status": "nieuw"
+   },
+   "duo": {
+    "waarde": "~ Studieschuld via weegfactor Trhk op oorspronkelijke schuld; ook bij aflosvrije periode",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-financiele-verplichtingen"
+    ],
+    "brondatum": "feb 2026",
+    "zekerheid": "hoog",
+    "toelichting": "Hypotheekgids hfst. 11. Extra aflossing: lager bedrag mits DUO-bevestiging.",
+    "status": "nieuw"
+   },
+   "plen": {
+    "waarde": "~ Aflopend krediet: contractuele rente en aflossing over oorspronkelijke hoofdsom, min. 2%",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-bkr"
+    ],
+    "brondatum": "feb 2026",
+    "zekerheid": "middel",
+    "toelichting": "Hypotheekgids hfst. 10/11; zoekfragment 'minimaal 2% van limiet of oorspronkelijke hoofdsom', niet eenduidig.",
+    "status": "nieuw"
+   },
+   "dkr": {
+    "waarde": "~ Doorlopend krediet: min. 2% van de kredietlimiet per maand",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-bkr",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf"
+    ],
+    "brondatum": "feb 2026",
+    "zekerheid": "hoog",
+    "toelichting": "Hypotheekgids hfst. 10/11; geldt ook voor niet-BKR-geregistreerde kredieten.",
+    "status": "nieuw"
+   },
+   "lease": {
+    "waarde": "~ Operational lease op werkelijke last; vóór 1-4-2022 geregistreerd (65%) wordt opgehoogd naar 100%",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-bkr"
+    ],
+    "brondatum": "feb 2026",
+    "zekerheid": "middel",
+    "toelichting": "Hypotheekgids, via zoekfragment. Kredietgids persoonlijke lening (dec 2024) rekent private lease op 100% van de kosten.",
+    "status": "nieuw"
+   },
+   "rsk": {
+    "waarde": "~ Lasten van lening voor restschuld tellen mee in de toets (BKR-code RN/RH)",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-financiele-verplichtingen"
+    ],
+    "brondatum": "feb 2026",
+    "zekerheid": "middel",
+    "toelichting": "Hypotheekgids hfst. 11; toetsmethode (werkelijke last of anders) niet gezien. Toets op werkelijke last alleen op voorlegbasis.",
+    "status": "nieuw"
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Lloyds Bank Hypotheekgids",
+    "url": "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf",
+    "versie": "feb 2026"
+   },
+   {
+    "titel": "Hypotheekgids online, hfst. 8 Het inkomen",
+    "url": "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-inkomen",
+    "versie": "online"
+   },
+   {
+    "titel": "Hypotheekgids online, hfst. 9 Onderpand",
+    "url": "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-onderpand",
+    "versie": "online"
+   },
+   {
+    "titel": "Hypotheekgids online, hfst. 10 BKR-registraties",
+    "url": "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-bkr",
+    "versie": "online"
+   },
+   {
+    "titel": "Hypotheekgids online, hfst. 11 Overige financiële verplichtingen",
+    "url": "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-financiele-verplichtingen",
+    "versie": "online"
+   }
+  ],
+  "gecontroleerd": "2026-10-08"
+ },
+ {
+  "naam": "Nestr",
+  "criteria": {
+   "mwbep": {
+    "waarde": "~ Taxatierapport met waarde in verhuurde staat; bij renovatie ook waarde in verhuurde staat na verbouwing",
+    "bron": [
+     "https://nestr.nl/product/renovatiefinanciering",
+     "https://nestr.nl/nieuws/taxatierapport-voor-een-woning"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "toelichting": "Productpagina renovatiefinanciering en kennisartikel taxatierapport; ongedateerd. Commercieel vastgoed >EUR 3 mln: taxatieopdracht via Nestr.",
+    "status": "nieuw"
+   },
+   "ltvk": {
+    "waarde": "~ Verhuurde woningen tot 85% LTV op waarde in verhuurde staat (tot 80% aflossingsvrij); combipand max. 75%",
+    "bron": [
+     "https://www.nestr.nl/producten/verhuurde-woningen"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "toelichting": "Productpagina verhuurde woningen; elders ook '85% met annuïtaire aflossing' genoemd, niet eenduidig. Alleen voor professionele beleggers, geen consumenten (Wft).",
+    "status": "nieuw"
+   },
+   "wwp": {
+    "waarde": "+ Combinatiepand (wonen + zakelijk) mogelijk tot 75% van waarde in verhuurde staat; zakelijk deel >50%: commerciële voorwaarden",
+    "bron": [
+     "https://www.nestr.nl/product/de-nestr-combipandfinanciering/",
+     "https://nestr.nl/producten/combinatiepanden"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "toelichting": "Productpagina combipandfinanciering, aflossingsvrij; hoofdsom tussen EUR 100.000 en EUR 2,5 mln. Pagina mogelijk verouderd.",
+    "status": "nieuw"
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Product Verhuurde Woningen",
+    "url": "https://www.nestr.nl/producten/verhuurde-woningen",
+    "versie": "online"
+   },
+   {
+    "titel": "Product Combinatiepanden",
+    "url": "https://nestr.nl/producten/combinatiepanden",
+    "versie": "online"
+   },
+   {
+    "titel": "Nestr FAQ - Over hypotheekvoorwaarden",
+    "url": "https://www.nestr.nl/faqs-categories/over-hypotheekvoorwaarden",
+    "versie": "onbekend"
+   }
+  ],
+  "gecontroleerd": "2026-10-08"
+ },
+ {
+  "naam": "SNS",
+  "criteria": {
+   "mwbep": {
+    "waarde": "~ Volledige taxatie of Calcasa Desktop Taxatie (Plus) tot 90% van de waarde; nieuwbouw: koop-/aanneemsom + meerwerk, erfpachtafkoop, bouwrente",
+    "bron": [
+     "https://www.snsbank.nl/particulier/hypotheken/taxatie-huis.html",
+     "https://www.asnbank.nl/hypotheek/desktop-taxatie.html",
+     "https://www.asnbank.nl/downloads/informatiewijzer-hypotheek-afsluiten.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "toelichting": "Consumentenpagina's SNS/ASN (ca. 2024) en Informatiewijzer. Desktop alleen bestaande woning >= 2 jaar oud, niet bij nieuwbouw, erfpacht, opstal, recreatie, woon-/winkelpand; waardegrens EUR 1,1 mln (ASN: EUR 1.111.111). Rapport max. 6 mnd.",
+    "status": "nieuw"
+   },
+   "zbep": {
+    "waarde": "~ Inkomensverklaring Ondernemer (IKV) via erkende partij, bv. VIIZ, Raadhuys, Pentrax, Overviewz",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/hypotheek-voor-zzp-of-ondernemer/inkomensverklaring.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "toelichting": "ASN-consumentenpagina (SNS is opgegaan in ASN); ongedateerd.",
+    "status": "nieuw"
+   },
+   "z123": {
+    "waarde": "~ 1-2 jaar: 75% fiscale winst; 2-3 jaar: 90% gemiddelde; laatste jaar lager dan gemiddelde: laatste jaar",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/hypotheek-voor-zzp-of-ondernemer/hypotheek-berekenen.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "toelichting": "ASN-pagina hypotheek berekenen als zzp'er; prognose begrenst inkomen. Voorbeelden op verschillende ASN-pagina's niet identiek.",
+    "status": "nieuw"
+   },
+   "zcijf": {
+    "waarde": "~ Jaarcijfers en IB-aangiften laatste 3 jaar (of 1-2 jaar), prognose lopend jaar door accountant, KvK-uittreksel",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/hypotheek-voor-zzp-of-ondernemer.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "toelichting": "ASN-consumentenpagina zzp/ondernemer; tussentijdse cijfers niet expliciet genoemd.",
+    "status": "nieuw"
+   },
+   "zstart": {
+    "waarde": "~ Min. 12 maanden ondernemen; prognose door administrateur/accountant op basis van behaalde resultaten en getekende opdrachten",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/hypotheek-voor-zzp-of-ondernemer/hypotheek-berekenen.html",
+     "https://www.asnbank.nl/hypotheek/hypotheek-voor-zzp-of-ondernemer.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "toelichting": "ASN-pagina's; korter dan 12 maanden geen aanvraag mogelijk (partner met vast inkomen als uitweg).",
+    "status": "nieuw"
+   },
+   "bkr": {
+    "waarde": "- Negatieve BKR-registratie: hypotheek niet mogelijk; positieve registratie verlaagt alleen maximum",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/hypotheek-met-bkr-registratie.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "toelichting": "ASN-consumentenpagina; herstelde A-, RH/RN- en HY-coderingen niet specifiek behandeld.",
+    "status": "nieuw"
+   },
+   "duo": {
+    "waarde": "~ Wettelijk termijnbedrag x factor (afh. van toetsrente) bij renteaftrek; aanloop-/opbouwfase op actuele schuld, rente en looptijd",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/informatie-voor-adviseurs/starters/kopen-met-een-studieschuld.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "toelichting": "ASN-adviseurspagina 'Kopen met een studieschuld', factortabel 1,05-1,40. Tijdelijke verlaging maandbedrag telt niet mee.",
+    "status": "nieuw"
+   }
+  },
+  "documenten": [
+   {
+    "titel": "ASN adviseurspagina Kopen met een studieschuld",
+    "url": "https://www.asnbank.nl/hypotheek/informatie-voor-adviseurs/starters/kopen-met-een-studieschuld.html",
+    "versie": "online"
+   },
+   {
+    "titel": "Taxatie huis - SNS Bank",
+    "url": "https://www.snsbank.nl/particulier/hypotheken/taxatie-huis.html",
+    "versie": "online"
+   },
+   {
+    "titel": "ASN Informatiewijzer Hypotheken",
+    "url": "https://www.asnbank.nl/downloads/informatiewijzer-hypotheek-afsluiten.html",
+    "versie": "onbekend"
+   }
+  ],
+  "gecontroleerd": "2026-10-08"
+ },
+ {
+  "naam": "Vista Hypotheken",
+  "criteria": {
+   "mwbep": {
+    "waarde": "~ Gevalideerd taxatierapport; Vista Desktoptaxatie (Calcasa) tot 90% bij bestaande woning >= 2 jaar, geen erfpacht/opstal, max. 6 mnd",
+    "bron": [
+     "https://www.vistahypotheken.nl/verhalen/meer-gemak-bij-taxatie"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "toelichting": "Vista-website (verhaal desktoptaxatie), ongedateerd. Taxatierapport: bouwkundige staat min. 'redelijk' (gids 2026).",
+    "status": "nieuw"
+   },
+   "zbep": {
+    "waarde": "~ Alleen inkomensverklaring van Zakelijk Inkomen of Raadhuys (max. 6 mnd geldig)",
+    "bron": [
+     "https://www.vistahypotheken.nl/kennisbank/hypotheek-voor-ondernemers",
+     "https://files.vistahypotheken.nl/1727868389-hypothekengids-vista-hypotheken-versie-september-2024-1.pdf"
+    ],
+    "brondatum": "sep 2024",
+    "zekerheid": "middel",
+    "toelichting": "Kennisbank en gids sep 2024; gids 2026 noemt deels geldigheid 3 maanden + 3 maanden verlenging (tegenstrijdig).",
+    "status": "nieuw"
+   },
+   "z123": {
+    "waarde": "~ Gemiddelde fiscale winst laatste 3 jaar, met het laatste jaar als maximum",
+    "bron": [
+     "https://files.vistahypotheken.nl/1767082949-hypothekengids-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "hoog",
+    "toelichting": "Hypothekengids jan 2026 (inhoud vermeldt april 2026), ondernemers.",
+    "status": "nieuw"
+   },
+   "zcijf": {
+    "waarde": "~ Zonder rekenexpert: jaarcijfers 3 jaar (administratiekantoor/accountant) plus IB-aangiften en -aanslagen 3 jaar",
+    "bron": [
+     "https://files.vistahypotheken.nl/1727868389-hypothekengids-vista-hypotheken-versie-september-2024-1.pdf"
+    ],
+    "brondatum": "sep 2024",
+    "zekerheid": "middel",
+    "toelichting": "Hypothekengids sep 2024; in meeste gevallen is rekenexpert nodig.",
+    "status": "nieuw"
+   },
+   "zniet": {
+    "waarde": "~ Ondernemersinkomen niet nodig: nulverklaring (beoordelingsverklaring) vereist",
+    "bron": [
+     "https://www.vistahypotheken.nl/kennisbank/hypotheek-voor-ondernemers"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "toelichting": "Kennisbank Vista; combinatie onderneming + loondienst bij één aanvrager niet: één inkomensbron telt.",
+    "status": "nieuw"
+   },
+   "zstart": {
+    "waarde": "- Onderneming min. 36 maanden actief en ingeschreven bij KvK; startende ondernemer niet mogelijk",
+    "bron": [
+     "https://files.vistahypotheken.nl/1767082949-hypothekengids-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "hoog",
+    "toelichting": "Hypothekengids jan 2026, ondernemers; ook in versie sep 2024.",
+    "status": "nieuw"
+   },
+   "zbuit": {
+    "waarde": "- Onderneming moet in Nederland gevestigd zijn; inkomen in euro",
+    "bron": [
+     "https://files.vistahypotheken.nl/1767082949-hypothekengids-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "toelichting": "Hypothekengids jan 2026, via zoekfragment.",
+    "status": "nieuw"
+   },
+   "bkr": {
+    "waarde": "- Codering/negatieve registratie: geen hypotheek, behalve RN of RH zonder achterstand/bijzondere codering; herstelmeldingen niet",
+    "bron": [
+     "https://files.vistahypotheken.nl/1767082949-hypothekengids-januari-2026.pdf",
+     "https://files.vistahypotheken.nl/1736755903-250110_vista_productkaart_acceptatie.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "toelichting": "Gids jan 2026 en productkaart jan 2025. RN: bewijs kwijtschelding. Wsnp niet. 'Herstelmeldingen niet geaccepteerd' uit fragment, niet geheel eenduidig.",
+    "status": "nieuw"
+   },
+   "duo": {
+    "waarde": "~ Termijnbedrag volgens DUO-rekenhulp op actuele restschuld; geen lager maandbedrag uit draagkrachtberekening",
+    "bron": [
+     "https://files.vistahypotheken.nl/1727868389-hypothekengids-vista-hypotheken-versie-september-2024-1.pdf"
+    ],
+    "brondatum": "sep 2024",
+    "zekerheid": "middel",
+    "toelichting": "Hypothekengids sep 2024; uitgebreid DUO-overzicht vereist. Niet bevestigd in versie 2026.",
+    "status": "nieuw"
+   },
+   "plen": {
+    "waarde": "~ Aflopend krediet: geregistreerd bedrag gedeeld door looptijd in BKR",
+    "bron": [
+     "https://files.vistahypotheken.nl/1727868389-hypothekengids-vista-hypotheken-versie-september-2024-1.pdf"
+    ],
+    "brondatum": "sep 2024",
+    "zekerheid": "middel",
+    "toelichting": "Hypothekengids sep 2024.",
+    "status": "nieuw"
+   },
+   "dkr": {
+    "waarde": "~ Doorlopend krediet 2% per maand van geregistreerd kredietbedrag, of hogere werkelijke last",
+    "bron": [
+     "https://files.vistahypotheken.nl/1727868389-hypothekengids-vista-hypotheken-versie-september-2024-1.pdf"
+    ],
+    "brondatum": "sep 2024",
+    "zekerheid": "middel",
+    "toelichting": "Hypothekengids sep 2024.",
+    "status": "nieuw"
+   },
+   "lease": {
+    "waarde": "~ Operational autolease (BKR): geregistreerd bedrag gedeeld door looptijd in BKR",
+    "bron": [
+     "https://files.vistahypotheken.nl/1727868389-hypothekengids-vista-hypotheken-versie-september-2024-1.pdf"
+    ],
+    "brondatum": "sep 2024",
+    "zekerheid": "middel",
+    "toelichting": "Hypothekengids sep 2024; private lease niet apart genoemd.",
+    "status": "nieuw"
+   },
+   "rsk": {
+    "waarde": "- Lening voor financiering van restschuld niet mogelijk",
+    "bron": [
+     "https://www.vistahypotheken.nl/veelgestelde-vragen"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "toelichting": "FAQ Vista; toetsing van een externe restschuldlening niet gevonden.",
+    "status": "nieuw"
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Vista Hypothekengids",
+    "url": "https://files.vistahypotheken.nl/1767082949-hypothekengids-januari-2026.pdf",
+    "versie": "jan 2026 (inhoud vermeldt april 2026)"
+   },
+   {
+    "titel": "Hypothekengids Vista Hypotheken",
+    "url": "https://files.vistahypotheken.nl/1727868389-hypothekengids-vista-hypotheken-versie-september-2024-1.pdf",
+    "versie": "sep 2024"
+   },
+   {
+    "titel": "Vista in Vogelvlucht – productkaart Acceptatie",
+    "url": "https://files.vistahypotheken.nl/1736755903-250110_vista_productkaart_acceptatie.pdf",
+    "versie": "10-01-2025"
+   }
+  ],
+  "gecontroleerd": "2026-10-08"
+ }
+]

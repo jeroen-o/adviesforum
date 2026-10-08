@@ -1,0 +1,1220 @@
+[
+ {
+  "naam": "Argenta",
+  "gecontroleerd": "2026-10-08",
+  "criteria": {
+   "mwbep": {
+    "waarde": "~ Taxatierapport of Calcasa desktoptaxatie (bestaande bouw); nieuwbouw: waarde o.b.v. koop-/aanneemsom, geen desktoptaxatie",
+    "bron": [
+     "https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf",
+     "https://www.argenta.nl/hypotheekadvies/desktoptaxatie"
+    ],
+    "brondatum": "aug 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids aug 2026 en pagina desktoptaxatie (zoekfragmenten). Desktoptaxatie max. 90% van de waarde, max. hoofdsom en onderpandwaarde begrensd; niet bij nieuwbouw en erfpacht. Taxatie in opdracht van aanvrager, taxateur onafhankelijk."
+   },
+   "ltvk": {
+    "waarde": "~ Max. 100% van de marktwaarde (met en zonder NHG); 90% bij hoofdsom boven de grens excl. overbrugging",
+    "bron": [
+     "https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf",
+     "https://www.argenta.nl/hypotheek-argenta/kenmerken"
+    ],
+    "brondatum": "aug 2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids aug 2026: 90% marktwaarde bij hoofdsom > EUR 1.250.000 excl. overbrugging. Bij verkoopovereenkomst geldt de verkoopprijs als marktwaarde. Met NHG tot 106% bij energiebesparende maatregelen."
+   },
+   "zltv": {
+    "waarde": "+ Ook voor ondernemers max. 100% van de marktwaarde",
+    "bron": [
+     "https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf"
+    ],
+    "brondatum": "aug 2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids aug 2026: \"maximaal 100% van de marktwaarde (ook voor ondernemers)\"."
+   },
+   "wboer": {
+    "waarde": "~ Mogelijk als het woongedeelte de bestemming Wonen heeft; omliggende grond mag agrarische bestemming hebben",
+    "bron": [
+     "https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf"
+    ],
+    "brondatum": "aug 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids aug 2026 (zoekfragment, paragraaf onderpand)."
+   },
+   "gron": {
+    "waarde": "! Volgt NHG-norm: aankoop met Groninger akte geen probleem; verkoop van het onderpand onder deze voorwaarden niet toegestaan",
+    "bron": [
+     "https://www.argenta.nl/adviseur/contact/veelgestelde-vragen/veelgestelde-vragen-adviseurs"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Veelgestelde vragen adviseurs; ongedateerd."
+   },
+   "zbep": {
+    "waarde": "~ Inkomensverklaring ondernemer (IKV, o.a. Zakelijk Inkomen); zonder NHG ook o.b.v. jaarcijfers mogelijk",
+    "bron": [
+     "https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf",
+     "https://www.argenta.nl/hypotheekadvies/overzicht-documenten-hypotheekaanvraag"
+    ],
+    "brondatum": "aug 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids aug 2026: met NHG IKV; zonder NHG 2 manieren (IKV of cijfers laatste 3 kalenderjaren). Doorlooptijd IKV 5 dagen."
+   },
+   "z123": {
+    "waarde": "~ Zonder NHG: inkomen o.b.v. cijfers van de laatste 3 kalenderjaren (of IKV); met NHG via IKV",
+    "bron": [
+     "https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf"
+    ],
+    "brondatum": "aug 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids aug 2026 (zoekfragment); exacte middelingsregel niet zichtbaar. Oudere Argenta-pagina noemt bij 1-3 jaar zzp alleen NHG mogelijk: mogelijk verouderd."
+   },
+   "zcijf": {
+    "waarde": "~ Vanaf 1 mei definitieve jaarcijfers vorig jaar verplicht; vanaf 1 augustus voorlopige halfjaarcijfers",
+    "bron": [
+     "https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf"
+    ],
+    "brondatum": "aug 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids aug 2026 (zoekfragment, route jaarcijfers zonder NHG)."
+   },
+   "bkr": {
+    "waarde": "- Afwijzing bij codes 1-5, A, SK/SH/ZO/RO; afgeloste/herstelde A of A1 en enkele H-code worden individueel beoordeeld",
+    "bron": [
+     "https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf",
+     "https://www.argenta.nl/hypotheekadvies/studieschuld-en-bkr"
+    ],
+    "brondatum": "aug 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids aug 2026: bij herstelde A/A1 telt tijd tussen aanvraag en herstel. Consumptieve hypotheek niet mogelijk bij beeindigde of herstelde BKR-codering."
+   },
+   "duo": {
+    "waarde": "~ Toetsing volgens Tijdelijke regeling hypothecair krediet (maandlast DUO opgehoogd)",
+    "bron": [
+     "https://www.argenta.nl/hypotheekadvies/studieschuld-en-bkr"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Consumentenpagina Studieschuld en BKR; voorbeeld met ophoging maandlast factor 1,25."
+   },
+   "plen": {
+    "waarde": "~ Aflopend krediet (AK): werkelijke last = BKR-bedrag gedeeld door looptijd",
+    "bron": [
+     "https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf"
+    ],
+    "brondatum": "aug 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids aug 2026, regels standaardlasten financiele verplichtingen (zoekfragment)."
+   },
+   "dkr": {
+    "waarde": "~ Doorlopend krediet (RK): 2% van de (oorspronkelijke) kredietlimiet per maand",
+    "bron": [
+     "https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf"
+    ],
+    "brondatum": "aug 2026",
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids aug 2026; zoekfragment met verminkte opsomming, verifieren."
+   },
+   "lease": {
+    "waarde": "~ Operational lease (OA): maandlast = BKR-bedrag gedeeld door looptijd in BKR",
+    "bron": [
+     "https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf"
+    ],
+    "brondatum": "aug 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids aug 2026, standaardlasten (zoekfragment)."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "De Argenta hypotheekgids",
+    "url": "https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf",
+    "versie": "augustus 2026"
+   },
+   {
+    "titel": "Wat is een Desktop Taxatie van Calcasa?",
+    "url": "https://www.argenta.nl/hypotheekadvies/desktoptaxatie",
+    "versie": "online"
+   },
+   {
+    "titel": "Studieschuld en BKR",
+    "url": "https://www.argenta.nl/hypotheekadvies/studieschuld-en-bkr",
+    "versie": "online"
+   },
+   {
+    "titel": "Veelgestelde vragen adviseurs",
+    "url": "https://www.argenta.nl/adviseur/contact/veelgestelde-vragen/veelgestelde-vragen-adviseurs",
+    "versie": "online"
+   }
+  ]
+ },
+ {
+  "naam": "Centraal Beheer",
+  "gecontroleerd": "2026-10-08",
+  "criteria": {
+   "mwbep": {
+    "waarde": "~ Gevalideerd taxatierapport (NRVT/NWWI, max. 6 mnd); bij bouw in eigen beheer o.b.v. bouwtekeningen, bestek en vergunning; Calcasa onder voorwaarden",
+    "bron": [
+     "https://www.centraalbeheer.nl/-/media/files/voor-adviseurs/acceptatiegids-leef-hypotheek.pdf"
+    ],
+    "brondatum": "1 jul 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 1 jul 2026 (zoekfragmenten, tabelopmaak). Renteverlies tijdens de bouw wordt in de marktwaarde meegenomen. Calcasa-regels gewijzigd per 1 jul 2026; oudere pagina sluit Calcasa uit bij nieuwbouw en erfpacht."
+   },
+   "ltvk": {
+    "waarde": "~ Max. 100% marktwaarde en niet meer dan 106% koopsom; bouw in eigen beheer max. 100% stichtingskosten; tot 106% met EBV",
+    "bron": [
+     "https://www.centraalbeheer.nl/-/media/files/voor-adviseurs/acceptatiegids-leef-hypotheek.pdf"
+    ],
+    "brondatum": "1 jul 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 1 jul 2026 (zoekfragment, deels afgekapt). Aflossingsvrij max. 50% marktwaarde."
+   },
+   "wwp": {
+    "waarde": "~ Mogelijk als het woongedeelte min. 75% van de marktwaarde is, blijkend uit gevalideerd taxatierapport",
+    "bron": [
+     "https://www.centraalbeheer.nl/-/media/files/voor-adviseurs/acceptatiegids-leef-hypotheek.pdf"
+    ],
+    "brondatum": "1 jul 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 1 jul 2026 (zoekfragment, tabelopmaak)."
+   },
+   "wboot": {
+    "waarde": "- Woonboten worden niet gefinancierd",
+    "bron": [
+     "https://www.centraalbeheer.nl/-/media/files/voor-adviseurs/acceptatiegids-leef-hypotheek.pdf"
+    ],
+    "brondatum": "1 jul 2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 1 jul 2026: uitgesloten zijn o.a. recreatiewoningen, stacaravans, woonwagens(standplaatsen) en woonboten."
+   },
+   "hsb": {
+    "waarde": "~ Houtskeletbouw lijkt toegestaan; (overige) houtbouw uitgesloten",
+    "bron": [
+     "https://www.centraalbeheer.nl/-/media/files/voor-adviseurs/acceptatiegids-leef-hypotheek.pdf"
+    ],
+    "brondatum": "1 jul 2026",
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 1 jul 2026; zoekfragment door elkaar gehaald, verifieren."
+   },
+   "nhgk": {
+    "waarde": "+ Combinatie met NHG-constructies Koopgarant, Slimmer Kopen en Starterslening mogelijk",
+    "bron": [
+     "https://www.centraalbeheer.nl/-/media/files/voor-adviseurs/acceptatiegids-leef-hypotheek.pdf"
+    ],
+    "brondatum": "1 jul 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 1 jul 2026 (zoekfragment)."
+   },
+   "gron": {
+    "waarde": "! Kennispagina noemt Groninger akte mogelijk bij de Leef Hypotheek, maar zegt ook dat het niet kan met de CB-hypotheek",
+    "bron": [
+     "https://www.centraalbeheer.nl/hypotheek/kennis/groninger-akte"
+    ],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Consumentenkennispagina, ongedateerd en tegenstrijdig; niet bevestigd in acceptatiegids."
+   },
+   "bsp": {
+    "waarde": "~ Bij oversluiten spaarhypotheek mag schuld verlaagd worden met opgebouwd spaarkapitaal, mits verrekenbaar bij passeren",
+    "bron": [
+     "https://www.centraalbeheer.nl/-/media/files/voor-adviseurs/acceptatiegids-leef-hypotheek.pdf"
+    ],
+    "brondatum": "1 jul 2026",
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 1 jul 2026 (zoekfragment); onduidelijk of dit ook voor bankspaarwaarde in de LTV geldt."
+   },
+   "zbep": {
+    "waarde": "~ NHG: IKV van door NHG geselecteerde rekenexpert (max. 6 mnd); niet-NHG: beoordeling door eigen acceptanten of IKV Raadhuys",
+    "bron": [
+     "https://www.centraalbeheer.nl/-/media/files/voor-adviseurs/acceptatiegids-leef-hypotheek.pdf",
+     "https://www.centraalbeheer.nl/voor-adviseurs/hypotheek/hypotheek-voor-zelfstandigen"
+    ],
+    "brondatum": "1 jul 2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 1 jul 2026 en adviseurspagina zelfstandigen."
+   },
+   "z123": {
+    "waarde": "~ Gemiddelde nettowinst laatste 3 kalenderjaren, gemaximeerd op winst laatste jaar",
+    "bron": [
+     "https://www.centraalbeheer.nl/-/media/files/voor-adviseurs/acceptatiegids-leef-hypotheek.pdf",
+     "https://www.centraalbeheer.nl/voor-adviseurs/hypotheek/hypotheek-voor-zelfstandigen"
+    ],
+    "brondatum": "1 jul 2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 1 jul 2026: saldo fiscale winstberekening IB-aangifte, correctie bijtelling auto."
+   },
+   "zniet": {
+    "waarde": "~ Als ondernemersinkomen niet nodig is: risico beoordeeld o.b.v. laatst beschikbare jaar (evt. beoordelingsverklaring Raadhuys)",
+    "bron": [
+     "https://www.centraalbeheer.nl/-/media/files/voor-adviseurs/acceptatiegids-leef-hypotheek.pdf"
+    ],
+    "brondatum": "1 jul 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 1 jul 2026 (zoekfragment)."
+   },
+   "zstart": {
+    "waarde": "- Niet mogelijk bij korter dan 1 jaar zelfstandig (NHG) of korter dan 3 jaar (niet-NHG)",
+    "bron": [
+     "https://www.centraalbeheer.nl/-/media/files/voor-adviseurs/acceptatiegids-leef-hypotheek.pdf"
+    ],
+    "brondatum": "1 jul 2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 1 jul 2026."
+   },
+   "bkr": {
+    "waarde": "- Afwijzing bij codes 1-5, SK, SH, RO, ZO, HY; max. 1 A/1-code op afgelost krediet en HY/RN door NHG-kwijtschelding geaccepteerd",
+    "bron": [
+     "https://www.centraalbeheer.nl/-/media/files/voor-adviseurs/acceptatiegids-leef-hypotheek.pdf"
+    ],
+    "brondatum": "1 jul 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 1 jul 2026 (zoekfragment). Na WSNP niet zolang er BKR-coderingen staan."
+   },
+   "duo": {
+    "waarde": "~ Maandbedrag volgens DUO-overzicht; als de schuld nog oploopt het termijnbedrag volgens DUO",
+    "bron": [
+     "https://www.centraalbeheer.nl/hypotheek/kennis/bestaande-leningen"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Consumentenkennispagina Bestaande leningen; ongedateerd."
+   },
+   "plen": {
+    "waarde": "~ Rekening met 2% van de oorspronkelijke kredietsom per maand",
+    "bron": [
+     "https://www.centraalbeheer.nl/hypotheek/kennis/bestaande-leningen"
+    ],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Kennispagina Bestaande leningen noemt 2% van oorspronkelijke som lopende leningen; niet in gids bevestigd."
+   },
+   "dkr": {
+    "waarde": "~ Rekening met 2% van de oorspronkelijke kredietsom/limiet per maand",
+    "bron": [
+     "https://www.centraalbeheer.nl/hypotheek/kennis/bestaande-leningen"
+    ],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Kennispagina Bestaande leningen; algemene vuistregel, niet in gids bevestigd."
+   },
+   "rsk": {
+    "waarde": "- Meefinancieren van een restschuld is niet mogelijk",
+    "bron": [
+     "https://www.centraalbeheer.nl/-/media/files/voor-adviseurs/acceptatiegids-leef-hypotheek.pdf"
+    ],
+    "brondatum": "1 jul 2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 1 jul 2026: \"Meefinancieren van een restschuld is niet mogelijk bij ons\"."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "De Leef Hypotheek Acceptatiegids",
+    "url": "https://www.centraalbeheer.nl/-/media/files/voor-adviseurs/acceptatiegids-leef-hypotheek.pdf",
+    "versie": "1 jul 2026"
+   },
+   {
+    "titel": "Leef Hypotheek voor zelfstandigen",
+    "url": "https://www.centraalbeheer.nl/voor-adviseurs/hypotheek/hypotheek-voor-zelfstandigen",
+    "versie": "online"
+   },
+   {
+    "titel": "Bestaande leningen (kennisartikel)",
+    "url": "https://www.centraalbeheer.nl/hypotheek/kennis/bestaande-leningen",
+    "versie": "online"
+   },
+   {
+    "titel": "Groninger akte (kennisartikel)",
+    "url": "https://www.centraalbeheer.nl/hypotheek/kennis/groninger-akte",
+    "versie": "online"
+   }
+  ]
+ },
+ {
+  "naam": "Hypotrust",
+  "gecontroleerd": "2026-10-08",
+  "criteria": {
+   "mwbep": {
+    "waarde": "~ Elan(-Plus): gevalideerd taxatierapport bestaande woning; desktoptaxatie alleen t/m 90% MW en tot een max. marktwaarde",
+    "bron": [
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2026.pdf",
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiekaders Elan Plus en Elan jan 2026 (zoekfragmenten). Elan: nieuwbouw niet financierbaar. Elan Plus: desktoptaxatie tot max. marktwaarde EUR 750.000."
+   },
+   "woz": {
+    "waarde": "- Elan Plus: WOZ-waarde als marktwaarde niet mogelijk",
+    "bron": [
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiekader Elan Plus jan 2026 (zoekfragment \"WOZ Niet mogelijk\")."
+   },
+   "ltvk": {
+    "waarde": "~ Elan: max. 100% marktwaarde bij aankoop, 106% met EBV/EBB",
+    "bron": [
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiekader Elan jan 2026; Elan is niet meer aan te vragen voor nieuwe klanten. Waarde voor Elan Plus niet bevestigd."
+   },
+   "wwp": {
+    "waarde": "- Woon-/winkelpand niet toegestaan (Elan, Elan Plus, Woon Bewust)",
+    "bron": [
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2026.pdf",
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-januari-2026.pdf",
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Woon-Bewust-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiekaders jan 2026 (zoekfragmenten). Oud product Comfort (jan 2025) stond het wel toe als woongedeelte min. 50% van de marktwaarde."
+   },
+   "wboer": {
+    "waarde": "~ Elan Plus: agrarische bestemming niet acceptabel tenzij grond max. 2 ha; Woon Bewust: zonder agrarische bestemming acceptabel",
+    "bron": [
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2026.pdf",
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Woon-Bewust-juli-2026.pdf"
+    ],
+    "brondatum": "jan/jul 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Elan Plus jan 2026 en Woon Bewust jul 2026 (zoekfragmenten). Woon Bewust: uitzondering als minder dan 25% agrarische bestemming heeft."
+   },
+   "wboot": {
+    "waarde": "- Woonboten, woonarken en waterwoningen niet financierbaar",
+    "bron": [
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2026.pdf",
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Woon-Bewust-juli-2026.pdf"
+    ],
+    "brondatum": "jan/jul 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Volgens zoekfragmenten in alle acceptatiekaders uitgesloten."
+   },
+   "hsb": {
+    "waarde": "~ Woon Bewust: combinatie traditionele bouw en houtskeletbouw acceptabel; massief houten woningen niet",
+    "bron": [
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Woon-Bewust-juli-2026.pdf"
+    ],
+    "brondatum": "jul 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiekader Woon Bewust jul 2026 (zoekfragment); voor Elan Plus geen regel gevonden."
+   },
+   "gron": {
+    "waarde": "- Elan Plus: Groninger akte niet mogelijk (Woon Bewust: toegestaan conform NHG)",
+    "bron": [
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2026.pdf",
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Woon-Bewust-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiekaders Elan Plus en Woon Bewust jan 2026 (zoekfragmenten)."
+   },
+   "zbep": {
+    "waarde": "~ Inkomensverklaring Ondernemer conform NHG-normen, met uitzonderingen",
+    "bron": [
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2026.pdf",
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiekaders Elan (Plus) jan 2026. Horeca en drugs-/seksbranche worden niet gehonoreerd; bedrijf in Nederland."
+   },
+   "z123": {
+    "waarde": "~ Gemiddelde laatste 3 kalenderjaren, max. inkomen laatste jaar en huidig inkomen",
+    "bron": [
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiekader Elan jan 2026 (zoekfragment)."
+   },
+   "zcijf": {
+    "waarde": "~ Woon Bewust: definitieve cijfers laatste 3 jaar; vanaf 1 april die van vorig jaar; na 1 augustus tussentijdse cijfers lopend jaar mogelijk",
+    "bron": [
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Woon-Bewust-juli-2026.pdf"
+    ],
+    "brondatum": "jul 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiekader Woon Bewust jul 2026 (zoekfragment); solvabiliteit en liquiditeit eisen, eigen vermogen positief."
+   },
+   "zstart": {
+    "waarde": "- Min. 36 maanden zelfstandig ondernemer (Elan, Elan Plus)",
+    "bron": [
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2026.pdf",
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Acceptatiekaders Elan en Elan Plus jan 2026: \"Aanvrager moet tenminste 36 maanden zelfstandig ondernemer zijn\". Elan Plus: perspectiefverklaring niet toegestaan."
+   },
+   "bkr": {
+    "waarde": "- Weigering bij A, codes 1-5, HY, SH/SK en RO; max. 6 geregistreerde kredieten, daarboven individueel",
+    "bron": [
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Woon-Bewust-juli-2026.pdf"
+    ],
+    "brondatum": "jul 2026",
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Zoekfragmenten uit acceptatiekaders (versie jan 2026/Woon Bewust); kaders 2025 kenden uitzondering voor herstelde A/A1. Productversie niet eenduidig."
+   },
+   "duo": {
+    "waarde": "~ Elan Plus: maandlast volgens TRHK; recent overzicht Mijn DUO vereist",
+    "bron": [
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiekader Elan Plus jan 2026 (zoekfragment); Woon Bewust: in opbouwfase via Rekenhulp DUO."
+   },
+   "plen": {
+    "waarde": "~ Aflopend krediet: werkelijke last (BKR-bedrag gedeeld door looptijd in maanden)",
+    "bron": [
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiekader Elan Plus jan 2026 (zoekfragment)."
+   },
+   "dkr": {
+    "waarde": "~ 2% van de kredietlimiet of oorspronkelijke hoofdsom, of de hogere werkelijke last",
+    "bron": [
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Woon-Bewust-juli-2026.pdf"
+    ],
+    "brondatum": "jul 2026",
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Zoekfragmenten: versies verschillen in grondslag (BKR-limiet vs oorspronkelijke hoofdsom)."
+   },
+   "lease": {
+    "waarde": "~ Operationele autolease getoetst op werkelijke last",
+    "bron": [
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Zoekfragment acceptatiekaders; product niet eenduidig."
+   },
+   "rsk": {
+    "waarde": "~ Externe restschuldlening (ontstaan 2012-2018, aftrekbaar, max. 15 jr, annuitair) op werkelijke last; meefinancieren niet mogelijk",
+    "bron": [
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-januari-2026.pdf",
+     "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Woon-Bewust-juli-2026.pdf"
+    ],
+    "brondatum": "jan/jul 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Elan jan 2026: meefinanciering restschuld niet mogelijk. Voorwaarden restschuldlening uit zoekfragment acceptatiekader (product niet eenduidig)."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Acceptatiekader Hypotrust Elan Plus",
+    "url": "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-Plus-januari-2026.pdf",
+    "versie": "jan 2026"
+   },
+   {
+    "titel": "Acceptatiekader Hypotrust Elan",
+    "url": "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Elan-januari-2026.pdf",
+    "versie": "jan 2026"
+   },
+   {
+    "titel": "Acceptatiekader Hypotrust Woon Bewust Hypotheek",
+    "url": "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Woon-Bewust-juli-2026.pdf",
+    "versie": "jul 2026"
+   },
+   {
+    "titel": "Acceptatiekader Hypotrust Woon Bewust Hypotheek",
+    "url": "https://www.hypotrust.nl/uploads/hypotrust/files/Acceptatiekader-Hypotrust-Woon-Bewust-januari-2026.pdf",
+    "versie": "jan 2026"
+   }
+  ]
+ },
+ {
+  "naam": "Lot Hypotheken",
+  "gecontroleerd": "2026-10-08",
+  "criteria": {
+   "mwbep": {
+    "waarde": "~ Gevalideerd taxatierapport (NRVT, max. 6 mnd) of alleen Calcasa desktoptaxatie; nieuwbouw o.b.v. stichtingskosten, geen desktoptaxatie",
+    "bron": [
+     "https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids jan 2026 (inhoud deels gelabeld juli 2024). Stichtingskosten: koop-/aanneemsom, grond, meerwerk/EBV, bouwrente, renteverlies (gemaximeerd). Nieuwbouw zonder afbouwgarantie niet mogelijk."
+   },
+   "ltvk": {
+    "waarde": "~ Max. 100% van de marktwaarde; 106% met energiebesparende maatregelen (EBV/EBB)",
+    "bron": [
+     "https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids jan 2026. Minimale marktwaarde volgens gids EUR 70.000."
+   },
+   "wwp": {
+    "waarde": "- Combinatiepanden (woon-/winkel-, woon-/kantoor-, woon-/praktijkpand) niet acceptabel",
+    "bron": [
+     "https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids jan 2026, lijst niet-acceptabele onderpanden."
+   },
+   "wboer": {
+    "waarde": "! Woonboerderij niet expliciet geregeld; gids 2023 sloot agrarische bestemming uit, niet bevestigd in nieuwe gids",
+    "bron": [
+     "https://adviseur.lothypotheken.nl/media/3ahhlijh/hypotheekgids-lot-juli-2023.pdf"
+    ],
+    "brondatum": "jul 2023",
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids juli 2023: \"Panden met een agrarische bestemming\" niet acceptabel; actuele positie onbevestigd."
+   },
+   "wboot": {
+    "waarde": "- Woonboten en waterwoningen niet acceptabel",
+    "bron": [
+     "https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids jan 2026, lijst niet-acceptabele onderpanden."
+   },
+   "hsb": {
+    "waarde": "~ Mogelijk met betonnen fundering vast in de grond en eigen nutsaansluitingen; zonder betonfundering uitgesloten",
+    "bron": [
+     "https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids jan 2026 (zoekfragment)."
+   },
+   "nhgk": {
+    "waarde": "~ Alleen met NHG: door NHG goedgekeurde koop- en leenconstructies; zonder NHG niet mogelijk",
+    "bron": [
+     "https://www.lothypotheken.nl/media/aa3lpz5e/productkaart-lot-niet-nhg-hypotheken.pdf",
+     "https://www.lothypotheken.nl/media/rq0fetas/productkaart-lot-nhg-hypotheken.pdf"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Productkaarten NHG en niet-NHG (ongedateerd): \"Koop- en leenconstructies niet mogelijk\" bij niet-NHG."
+   },
+   "gron": {
+    "waarde": "+ Groninger akte akkoord als Lot financier van de koper is; ook zonder NHG",
+    "bron": [
+     "https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf",
+     "https://www.lothypotheken.nl/adviseur/nieuws/nieuwe-hypotheekgids-juli-2024"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids jan 2026 par. 8.9.1; nieuwsbericht juli 2024: toegestaan bij niet-NHG. Gids 2023 stond het alleen met NHG toe."
+   },
+   "zbep": {
+    "waarde": "~ Inkomensverklaring Ondernemer door NHG-geaccepteerde rekenexpert, max. 6 mnd oud bij bindend aanbod",
+    "bron": [
+     "https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids jan 2026 (zoekfragment). Extra eisen voor o.a. horeca, casino, autohandel, kunst, sloop, vastgoed, juweliers."
+   },
+   "z123": {
+    "waarde": "~ Zonder NHG 1-2-3-methode (jaar 1x1 + jaar 2x2 + jaar 3x3, gedeeld door 6) bij 3 volledige jaarrekeningen en > 36 mnd actief",
+    "bron": [
+     "https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids jan 2026 (zoekfragment)."
+   },
+   "zstart": {
+    "waarde": "- Zonder NHG min. 3 jaar zelfstandig (zzp of dga) op datum bindend aanbod",
+    "bron": [
+     "https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids jan 2026 (zoekfragment); aandeelhouder vanaf 5% wordt als dga beoordeeld."
+   },
+   "bkr": {
+    "waarde": "~ BKR-coderingen volgens NHG-normen; max. 7 geregistreerde kredieten per aanvrager; ook toets VIS, EVA en SFH",
+    "bron": [
+     "https://www.lothypotheken.nl/media/rq0fetas/productkaart-lot-nhg-hypotheken.pdf",
+     "https://www.lothypotheken.nl/media/aa3lpz5e/productkaart-lot-niet-nhg-hypotheken.pdf",
+     "https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Productkaarten: \"Coderingen volgens NHG\"; aantal kredieten uit hypotheekgids."
+   },
+   "duo": {
+    "waarde": "~ Maandbedrag o.b.v. actueel DUO-schuldoverzicht; bij aftrekbare hypotheek gebruteerd",
+    "bron": [
+     "https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids jan 2026, tabel mee te nemen lasten (zoekfragment)."
+   },
+   "plen": {
+    "waarde": "~ Aflopend krediet tegen werkelijke lasten",
+    "bron": [
+     "https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids jan 2026, tabel mee te nemen lasten (zoekfragment)."
+   },
+   "dkr": {
+    "waarde": "~ 2% per maand van de kredietlimiet",
+    "bron": [
+     "https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids jan 2026: \"Doorlopend krediet (RK) | 2% per maand van de kredietlimiet\"."
+   },
+   "lease": {
+    "waarde": "~ Private/operational lease tegen werkelijke lasten",
+    "bron": [
+     "https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids jan 2026 (zoekfragment)."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Hypotheekgids Lot Hypotheken",
+    "url": "https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf",
+    "versie": "januari 2026"
+   },
+   {
+    "titel": "Productkaart Lot NHG-hypotheken",
+    "url": "https://www.lothypotheken.nl/media/rq0fetas/productkaart-lot-nhg-hypotheken.pdf",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "Productkaart Lot Niet-NHG-hypotheken",
+    "url": "https://www.lothypotheken.nl/media/aa3lpz5e/productkaart-lot-niet-nhg-hypotheken.pdf",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "Nieuwe hypotheekgids juli 2024",
+    "url": "https://www.lothypotheken.nl/adviseur/nieuws/nieuwe-hypotheekgids-juli-2024",
+    "versie": "juli 2024"
+   }
+  ]
+ },
+ {
+  "naam": "NIBC",
+  "gecontroleerd": "2026-10-08",
+  "criteria": {
+   "mwbep": {
+    "waarde": "~ NWWI/iValidatie-taxatie max. 6 mnd of Calcasa desktop (max. 90% MW, niet bij nieuwbouw); nieuwbouw: stichtingskosten, meerwerk max. 25%",
+    "bron": [
+     "https://nibc.nl/media/zzqnjuq1/hypotheekgids-2026.pdf"
+    ],
+    "brondatum": "2026 v1.0",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 2026 v1.0 (zoekfragmenten, tekst niet volledig ingezien). Desktoptaxatie volgens fragment tot marktwaarde max. EUR 1 mln."
+   },
+   "ltvk": {
+    "waarde": "~ Max. 100% van de marktwaarde; met energiebesparende voorzieningen tot 106%",
+    "bron": [
+     "https://nibc.nl/particulieren/hypotheken/hypotheekrentes",
+     "https://nibc.nl/media/zzqnjuq1/hypotheekgids-2026.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Rentepagina noemt 'tot 100% van de marktwaarde'; 106% met EBV uit zoekfragment, bron niet eenduidig toe te wijzen."
+   },
+   "wwp": {
+    "waarde": "- Onderpand moet uitsluitend woondoeleinden hebben; bedrijfsruimte/handelsobjecten niet acceptabel (wel via Vastgoed Hypotheek voor beleggers)",
+    "bron": [
+     "https://nibc.nl/media/owugtbq2/nibc-acceptatiegids-juli-2024-versie-11.pdf",
+     "https://nibc.nl/media/5c5adrqp/hypotheekgids-2024-10.pdf"
+    ],
+    "brondatum": "jul 2024",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 2024 v1.0/v1.1 par. 6.1 (niet-acceptabele onderpanden). Tekst in 2026-gids niet ingezien."
+   },
+   "wboer": {
+    "waarde": "~ Alleen als agrarische bestemming vervallen is / geen agrarische activiteiten; geen grote loodsen of stallen",
+    "bron": [
+     "https://nibc.nl/media/owugtbq2/nibc-acceptatiegids-juli-2024-versie-11.pdf",
+     "https://nibc.nl/media/jfwb4bnb/productkaart-nibc-extra-hypotheken-okt2025.pdf"
+    ],
+    "brondatum": "jul 2024 / okt 2025",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 2024 par. 6.1; productkaart Extra okt 2025: woonboerderijen zonder agrarische activiteiten onder NIBC Extra Hypotheek. Geen achterstallig onderhoud."
+   },
+   "wboot": {
+    "waarde": "- Woonboten, woonwagens en stacaravans niet acceptabel",
+    "bron": [
+     "https://nibc.nl/media/owugtbq2/nibc-acceptatiegids-juli-2024-versie-11.pdf",
+     "https://nibc.nl/media/5c5adrqp/hypotheekgids-2024-10.pdf"
+    ],
+    "brondatum": "jul 2024",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 2024 lijst niet-acceptabele onderpanden; ook in 2023-gids. 2026-tekst niet ingezien."
+   },
+   "hsb": {
+    "waarde": "~ Houtskeletbouw alleen met betonnen fundering",
+    "bron": [
+     "https://nibc.nl/media/owugtbq2/nibc-acceptatiegids-juli-2024-versie-11.pdf",
+     "https://nibc.nl/media/5c5adrqp/hypotheekgids-2024-10.pdf"
+    ],
+    "brondatum": "jul 2024",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 2024: houtskeletbouw zonder betonnen fundering niet acceptabel. 2026-tekst niet ingezien."
+   },
+   "nhgk": {
+    "waarde": "! Bij koop- of erfpachtkortingsconstructie is NHG verplicht",
+    "bron": [
+     "https://nibc.nl/media/5c5adrqp/hypotheekgids-2024-10.pdf"
+    ],
+    "brondatum": "2024 v1.0",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 2024 (zoekfragment); 2026-tekst niet gevonden."
+   },
+   "gron": {
+    "waarde": "+ Groninger akte acceptabel als NIBC financier van de koper is",
+    "bron": [
+     "https://nibc.nl/media/lxvgygx4/nibc-hypotheken-acceptatiegids-2023-versie-10.pdf"
+    ],
+    "brondatum": "2023 v1.0",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 2023 v1.0; nieuwere tekst niet gevonden, mogelijk verouderd."
+   },
+   "zbep": {
+    "waarde": "~ Inkomensverklaring via erkende rekenexpert (Raadhuys, Pentrax, Overviewz, Zakelijk Inkomen; VIIZ alleen zonder NHG), max. 6 mnd oud",
+    "bron": [
+     "https://nibc.nl/media/zzqnjuq1/hypotheekgids-2026.pdf",
+     "https://nibc.nl/media/pidhezud/werkinstructie_toetsinkomen_ondernemers-202601.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 2026 en werkinstructie toetsinkomen ondernemers jan 2026: standaard NHG-toetskaders, ook zonder NHG. Kosten rekenexpert voor aanvrager."
+   },
+   "z123": {
+    "waarde": "~ Zonder NHG en >36 mnd ondernemer: 1-2-3-methode alleen op 3 volledige boekjaren; YTD-cijfers niet in plaats van oudste jaar",
+    "bron": [
+     "https://nibc.nl/media/pidhezud/werkinstructie_toetsinkomen_ondernemers-202601.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Werkinstructie jan 2026. Afwijkingen niet combineren; max. 20% boven NHG-inkomensverklaring. Oudere nieuwsbrief beschreef 1-2-3 als uitzondering via hypotheekdesk."
+   },
+   "zcijf": {
+    "waarde": "~ IB-ondernemer: recente IB-aangifte; bv: IB-aangifte plus jaarrekening; tussentijdse cijfers werken als plafond",
+    "bron": [
+     "https://nibc.nl/media/zzqnjuq1/hypotheekgids-2026.pdf",
+     "https://nibc.nl/media/pidhezud/werkinstructie_toetsinkomen_ondernemers-202601.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 2026 en werkinstructie jan 2026 (zoekfragmenten). Prognoses alleen ter onderbouwing, niet om inkomen te verhogen."
+   },
+   "zstart": {
+    "waarde": "~ Vanaf 12 mnd ondernemer; <36 mnd: 10% afslag op IKV-inkomen (niet bij NHG); eerder loondienst telt mee voor 36 mnd",
+    "bron": [
+     "https://nibc.nl/media/zzqnjuq1/hypotheekgids-2026.pdf"
+    ],
+    "brondatum": "2026 v1.0",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 2026 (kort-zelfstandigen). Bij twee ondernemende partners moet één min. 3 jaar ondernemer zijn. Prognose verhoogt toetsinkomen niet (werkinstructie jan 2026)."
+   },
+   "bkr": {
+    "waarde": "~ BKR-coderingen volgens NHG-beleid; niet-toegestane codering kan niet worden voorgelegd; >10 notaties via Hypotheekdesk",
+    "bron": [
+     "https://nibc.nl/media/jfwb4bnb/productkaart-nibc-extra-hypotheken-okt2025.pdf",
+     "https://nibc.nl/media/zzqnjuq1/hypotheekgids-2026.pdf"
+    ],
+    "brondatum": "okt 2025 / 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Productkaart Extra okt 2025 ('BKR-coderingen NHG volgend', tekst afgekapt); acceptatiegids 2026 par. 5.5 met schema (schema niet ingezien). WSNP schone lei: 1 jaar na vonnis (NHG)."
+   },
+   "duo": {
+    "waarde": "~ Werkelijke maandlast op basis van actuele DUO-schuld, rente en resterende looptijd, bruto gemaakt met factor",
+    "bron": [
+     "https://nibc.nl/media/zzqnjuq1/hypotheekgids-2026.pdf"
+    ],
+    "brondatum": "2026 v1.0",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 2026 (zoekfragment, voorbeeldfactor 1,30 bij gedeeltelijk box 1)."
+   },
+   "plen": {
+    "waarde": "~ Last conform Trhk; standaard 2% van oorspronkelijke kredietsom; vaste aflopende kredieten mogen bij notaris worden afgelost",
+    "bron": [
+     "https://nibc.nl/media/zzqnjuq1/hypotheekgids-2026.pdf",
+     "https://nibc.nl/media/cx5fxooc/nibc-acceptatiegids-2025-10.pdf"
+    ],
+    "brondatum": "2025-2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "2%-regel expliciet in gids 2025 v1.0; in 2026-fragment onduidelijk geplaatst. Werkelijke last niet bevestigd."
+   },
+   "dkr": {
+    "waarde": "~ 2% van de limiet; aflossen bij notaris alleen met opnameblokkade",
+    "bron": [
+     "https://nibc.nl/media/zzqnjuq1/hypotheekgids-2026.pdf",
+     "https://nibc.nl/media/cx5fxooc/nibc-acceptatiegids-2025-10.pdf"
+    ],
+    "brondatum": "2025-2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegidsen 2025/2026 (zoekfragmenten). Af te lossen kredieten vóór bindend aanbod uit eigen middelen, contract opgeheven."
+   },
+   "lease": {
+    "waarde": "~ Private lease: werkelijke lasten",
+    "bron": [
+     "https://nibc.nl/media/zzqnjuq1/hypotheekgids-2026.pdf"
+    ],
+    "brondatum": "2026 v1.0",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 2026: bij verplichting die niet kan veranderen (zoals PL) werkelijke lasten (zoekfragment)."
+   },
+   "rsk": {
+    "waarde": "~ Restschuld na verkoop woning: werkelijke lasten",
+    "bron": [
+     "https://nibc.nl/media/zzqnjuq1/hypotheekgids-2026.pdf"
+    ],
+    "brondatum": "2026 v1.0",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 2026 (zoekfragment). Restschuld valt onder eigen middelen-inbreng (aantonen vanaf EUR 25.000)."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "NIBC Acceptatiegids 2026",
+    "url": "https://nibc.nl/media/zzqnjuq1/hypotheekgids-2026.pdf",
+    "versie": "2026 v1.0"
+   },
+   {
+    "titel": "Werkinstructie toetsinkomen ondernemers",
+    "url": "https://nibc.nl/media/pidhezud/werkinstructie_toetsinkomen_ondernemers-202601.pdf",
+    "versie": "jan 2026"
+   },
+   {
+    "titel": "Productkaart NIBC Extra Hypotheken",
+    "url": "https://nibc.nl/media/jfwb4bnb/productkaart-nibc-extra-hypotheken-okt2025.pdf",
+    "versie": "okt 2025"
+   },
+   {
+    "titel": "NIBC Acceptatiegids 2025",
+    "url": "https://nibc.nl/media/cx5fxooc/nibc-acceptatiegids-2025-10.pdf",
+    "versie": "2025 v1.0"
+   },
+   {
+    "titel": "NIBC Acceptatiegids 2024",
+    "url": "https://nibc.nl/media/owugtbq2/nibc-acceptatiegids-juli-2024-versie-11.pdf",
+    "versie": "2024 v1.1"
+   },
+   {
+    "titel": "NIBC Acceptatiegids 2023",
+    "url": "https://nibc.nl/media/lxvgygx4/nibc-hypotheken-acceptatiegids-2023-versie-10.pdf",
+    "versie": "2023 v1.0"
+   }
+  ]
+ },
+ {
+  "naam": "SocioHypotheek",
+  "gecontroleerd": "2026-10-08",
+  "criteria": {
+   "mwbep": {
+    "waarde": "! Taxatie bij aanvraag; voor restschuldgarantie moet de woning elke 5 jaar opnieuw getaxeerd worden",
+    "bron": [
+     "https://www.sociohypotheek.nl/contact/blog/overwaarde-op-je-huis-opeten-met-een-verzilverhypotheek-fijn-extraatje-of-risicovol/"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Blog op eigen site (zoekfragment); garantie geldt alleen bij goed onderhoud. Kostenpost bouwkundig- en modelwaarderapport genoemd op site. Geen eisen aan validatie gevonden."
+   },
+   "ltvk": {
+    "waarde": "- Bij aanvang max. 60% van de marktwaarde; afhankelijk van leeftijd (bv. 65 jaar ca. 55%)",
+    "bron": [
+     "https://www.sociohypotheek.nl/rente/",
+     "https://www.sociohypotheek.nl/contact/blog/overwaarde-op-je-huis-opeten-met-een-verzilverhypotheek-fijn-extraatje-of-risicovol/"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Rentepagina: 'niet meer dan 60% van de marktwaarde' bij aanvang; 55% bij 65 jaar uit uitspraak in blog. Overwaardehypotheek 57+, max. vrij te maken bedrag op homepage in toelichting: EUR 450.000."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Actuele hypotheekrente (met leenmaximum)",
+    "url": "https://www.sociohypotheek.nl/rente/",
+    "versie": "online"
+   },
+   {
+    "titel": "Blog: Overwaarde op je huis 'opeten' met een verzilverhypotheek",
+    "url": "https://www.sociohypotheek.nl/contact/blog/overwaarde-op-je-huis-opeten-met-een-verzilverhypotheek-fijn-extraatje-of-risicovol/",
+    "versie": "online"
+   },
+   {
+    "titel": "Veelgestelde vragen Overwaarde Hypotheek",
+    "url": "https://www.sociohypotheek.nl/veelgestelde-vragen/",
+    "versie": "online"
+   }
+  ]
+ },
+ {
+  "naam": "Vrij Leven (Hypotrust)",
+  "gecontroleerd": "2026-10-08",
+  "criteria": {
+   "mwbep": {
+    "waarde": "~ Taxatierapport (niet gevalideerd, max. 6 mnd) of makelaarsverklaring; Calcasa desktop tot 90% MW, niet bij erfpacht",
+    "bron": [
+     "https://www.vrijlevenhypotheek.nl/assets/uploads/2025/08/Acceptatiegids-Vrij-Leven-7-augustus-2025-.pdf"
+    ],
+    "brondatum": "aug 2025",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 7 aug 2025 (zoekfragmenten). Nieuwere gids apr 2026 bestaat (downloadpagina) maar niet ingezien. Nieuwbouw: bouwdepot 24 mnd, 2x6 mnd verlengbaar. Minimale marktwaarde EUR 75.000."
+   },
+   "ltvk": {
+    "waarde": "~ Met NHG max. 100% MW (106% met EBV/EBB); zonder NHG nieuwe klanten max. 80% MW, bestaande klanten 100%",
+    "bron": [
+     "https://www.vrijlevenhypotheek.nl/assets/uploads/2025/08/Acceptatiegids-Vrij-Leven-7-augustus-2025-.pdf"
+    ],
+    "brondatum": "aug 2025",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 7 aug 2025. Zonder NHG max. EUR 750.000 excl. overbrugging; aflossingsvrij max. 50% MW."
+   },
+   "wwp": {
+    "waarde": "- Woon-/winkelpanden en bedrijfspanden niet acceptabel",
+    "bron": [
+     "https://www.vrijlevenhypotheek.nl/assets/uploads/2025/08/Acceptatiegids-Vrij-Leven-7-augustus-2025-.pdf"
+    ],
+    "brondatum": "aug 2025",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 7 aug 2025, niet-acceptabele onderpanden; ook in versie mrt 2024."
+   },
+   "wboer": {
+    "waarde": "- Onderpanden met agrarische bestemming en landelijke eigendommen niet acceptabel",
+    "bron": [
+     "https://www.vrijlevenhypotheek.nl/assets/uploads/2025/08/Acceptatiegids-Vrij-Leven-7-augustus-2025-.pdf"
+    ],
+    "brondatum": "aug 2025",
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 7 aug 2025 (zoekfragment); woonboerderij zonder agrarische bestemming niet expliciet genoemd."
+   },
+   "wboot": {
+    "waarde": "- Woonboot, woonark, waterwoning en vaartuigen niet acceptabel",
+    "bron": [
+     "https://www.vrijlevenhypotheek.nl/assets/uploads/2025/08/Acceptatiegids-Vrij-Leven-7-augustus-2025-.pdf"
+    ],
+    "brondatum": "aug 2025",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 7 aug 2025, niet-acceptabele onderpanden; ook in versie mrt 2024."
+   },
+   "nhgk": {
+    "waarde": "~ Met NHG alle door NHG goedgekeurde koopregelingen; zonder NHG niet mogelijk",
+    "bron": [
+     "https://www.vrijlevenhypotheek.nl/assets/uploads/2025/08/Acceptatiegids-Vrij-Leven-7-augustus-2025-.pdf"
+    ],
+    "brondatum": "aug 2025",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 7 aug 2025 (zoekfragment)."
+   },
+   "gron": {
+    "waarde": "~ Groninger akte met NHG mogelijk; zonder NHG alleen bij nieuwbouw",
+    "bron": [
+     "https://www.vrijlevenhypotheek.nl/assets/uploads/2025/08/Acceptatiegids-Vrij-Leven-7-augustus-2025-.pdf"
+    ],
+    "brondatum": "aug 2025",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 7 aug 2025 (zoekfragment)."
+   },
+   "zbep": {
+    "waarde": "~ Altijd Inkomensverklaring Ondernemer door NHG-goedgekeurde rekenexpert; dga volgens NHG",
+    "bron": [
+     "https://www.vrijlevenhypotheek.nl/assets/uploads/2025/08/Acceptatiegids-Vrij-Leven-7-augustus-2025-.pdf"
+    ],
+    "brondatum": "aug 2025",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 7 aug 2025. Kosten niet vergoed. Horeca en drugs-/seksbranche niet geaccepteerd; inkomen uit hetzelfde bedrijf."
+   },
+   "zstart": {
+    "waarde": "- Ondernemersinkomen met NHG vanaf 12 mnd zelfstandig, zonder NHG pas vanaf 36 mnd",
+    "bron": [
+     "https://www.vrijlevenhypotheek.nl/assets/uploads/2025/08/Acceptatiegids-Vrij-Leven-7-augustus-2025-.pdf"
+    ],
+    "brondatum": "aug 2025",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 7 aug 2025 (zoekfragment). Geen regels over prognose of loon van voor de start gevonden."
+   },
+   "zbuit": {
+    "waarde": "- Onderneming moet in Nederland gevestigd zijn",
+    "bron": [
+     "https://www.vrijlevenhypotheek.nl/assets/uploads/2025/08/Acceptatiegids-Vrij-Leven-7-augustus-2025-.pdf"
+    ],
+    "brondatum": "aug 2025",
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Zoekfragment; vestigingseis staat met zekerheid in Hypotrust-kaders, voor Vrij Leven-gids niet volledig eenduidig."
+   },
+   "bkr": {
+    "waarde": "~ BKR-codering/negatieve registratie alleen na individuele beoordeling met plausibele verklaring; WSNP niet mogelijk",
+    "bron": [
+     "https://www.vrijlevenhypotheek.nl/assets/uploads/2025/08/Acceptatiegids-Vrij-Leven-7-augustus-2025-.pdf"
+    ],
+    "brondatum": "aug 2025",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 7 aug 2025. Max. 6 geregistreerde kredieten (1 klant) of 10 (2 klanten), daarboven individueel."
+   },
+   "duo": {
+    "waarde": "~ Conform Trhk: aflosfase werkelijke last uit DUO-overzicht; studie-/aanloopfase via DUO-rekenhulp",
+    "bron": [
+     "https://www.vrijlevenhypotheek.nl/assets/uploads/2025/08/Acceptatiegids-Vrij-Leven-7-augustus-2025-.pdf"
+    ],
+    "brondatum": "aug 2025",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 7 aug 2025 (zoekfragment)."
+   },
+   "plen": {
+    "waarde": "~ Aflopend krediet altijd op werkelijke last (BKR-bedrag / looptijd in maanden)",
+    "bron": [
+     "https://www.vrijlevenhypotheek.nl/assets/uploads/2025/08/Acceptatiegids-Vrij-Leven-7-augustus-2025-.pdf",
+     "https://www.vrijlevenhypotheek.nl/assets/uploads/2024/05/Acceptatievoorwaarden_Vrij-Leven_maart_2024.pdf"
+    ],
+    "brondatum": "aug 2025",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids aug 2025 / acceptatievoorwaarden mrt 2024 (zoekfragmenten)."
+   },
+   "dkr": {
+    "waarde": "~ 2% van de BKR-limiet, of hogere werkelijke last als die uit het dossier blijkt",
+    "bron": [
+     "https://www.vrijlevenhypotheek.nl/assets/uploads/2025/08/Acceptatiegids-Vrij-Leven-7-augustus-2025-.pdf",
+     "https://www.vrijlevenhypotheek.nl/assets/uploads/2024/05/Acceptatievoorwaarden_Vrij-Leven_maart_2024.pdf"
+    ],
+    "brondatum": "aug 2025",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Geldt ook voor creditcard/winkelpas. Uitwerking BKR-limiet uit versie mrt 2024."
+   },
+   "rsk": {
+    "waarde": "~ Meefinancieren restschuld niet mogelijk; externe restschuldlening (2012-2017, aftrekbaar, max. 15 jr, annuïtair) op werkelijke bruto last",
+    "bron": [
+     "https://www.vrijlevenhypotheek.nl/assets/uploads/2025/08/Acceptatiegids-Vrij-Leven-7-augustus-2025-.pdf"
+    ],
+    "brondatum": "aug 2025",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids 7 aug 2025: restschuld ontstaan 28-10-2012 t/m 31-12-2017, geen opnamemogelijkheid; notarisafrekening en IB-aangifte nodig."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Acceptatiegids Hypotrust Vrij Leven hypotheek",
+    "url": "https://www.vrijlevenhypotheek.nl/assets/uploads/2025/08/Acceptatiegids-Vrij-Leven-7-augustus-2025-.pdf",
+    "versie": "7 aug 2025"
+   },
+   {
+    "titel": "Acceptatievoorwaarden Vrij Leven",
+    "url": "https://www.vrijlevenhypotheek.nl/assets/uploads/2024/05/Acceptatievoorwaarden_Vrij-Leven_maart_2024.pdf",
+    "versie": "mrt 2024"
+   },
+   {
+    "titel": "Downloads (o.a. Acceptatiegids vanaf apr 2026)",
+    "url": "https://www.vrijlevenhypotheek.nl/downloads/",
+    "versie": "apr 2026 (niet ingezien)"
+   }
+  ]
+ }
+]

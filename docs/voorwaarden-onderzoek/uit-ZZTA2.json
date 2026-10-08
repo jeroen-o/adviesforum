@@ -1,0 +1,1224 @@
+[
+ {
+  "naam": "ABN AMRO",
+  "gecontroleerd": "2026-10-08",
+  "criteria": {
+   "ort": {
+    "waarde": "~ Structureel overwerk/ORT/provisie: totaal laatste 12 mnd op WGV; wisselende delen max. 25% van bruto jaarsalaris + vakantiegeld",
+    "bron": [
+     "https://intermediair.abnamro.nl/werkgeversverklaring",
+     "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-berekenen/inkomen.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Intermediairpagina werkgeversverklaring: structureel = algemeen bekend dat het bij de functie hoort, bedrag over afgelopen 12 maanden. Consumentenpagina inkomen: wisselende delen max. 25%."
+   },
+   "loondt": {
+    "waarde": "+ IBL (UWV-verzekeringsbericht) of werkgeversverklaring; IBL niet geschikt bij <3 mnd loondienst of starters",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-berekenen/inkomen.html",
+     "https://intermediair.abnamro.nl/starters"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Twee routes: IBL-rekentool (toetsinkomenberekenen.nl) of werkgeversverklaring. Starterspagina: via IBL kan bij elk dienstverband een toetsinkomen worden bepaald."
+   },
+   "intent": {
+    "waarde": "+ Tijdelijk contract met intentie voor onbepaalde tijd = vast contract; volledig huidig inkomen telt",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/wonen/hypotheek-zonder-vast-contract.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Zonder intentie of met intentie voor bepaalde tijd: flexibel contract, laagste van 3-jaarsgemiddelde, laatste kalenderjaar en huidig inkomen. Pagina is ouder (metadata)."
+   },
+   "toekst": {
+    "waarde": "~ Loonstijging binnen 6 mnd telt mee als werkgever die per brief bevestigt",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-berekenen/inkomen.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Consumentenpagina 'Financieren op basis van je inkomen'."
+   },
+   "proef": {
+    "waarde": "- Tijdens de proeftijd geen hypotheek mogelijk",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/wonen/hypotheek-zonder-vast-contract.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Consumentenpagina hypotheek zonder vast contract. Uitzondering: bij internationale organisaties buiten NL arbeidsrecht hoeft geen proeftijd in aanmerking te worden genomen (intermediair.abnamro.nl/bijzonderheden-internationale-organisaties)."
+   },
+   "buitw": {
+    "waarde": "~ Inkomen in vreemde valuta geaccepteerd; toets op 90% van omgerekend bedrag",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-berekenen/inkomen-in-vreemde-valuta.html",
+     "https://intermediair.abnamro.nl/expats"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Gaat over valuta, niet expliciet over buitenlandse werkgever. Brief bij koersdaling >20%."
+   },
+   "ikb": {
+    "waarde": "+ Flexibel budget (IKB) kan als inkomensdeel in de werkgeversverklaring worden opgenomen en telt dan mee",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/huis-kopen/documenten/werkgeversverklaring.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "ABN AMRO accepteert NHG-model WGV (ook zonder NHG), waarin flexibel budget kan worden opgenomen. Homefinance.nl noemt ook IKB in de berekening (derde partij)."
+   },
+   "aios": {
+    "waarde": "+ AIOS/ANIOS: tijdelijk contract geldt als vast contract; volledig inkomen telt mee",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/speciaal-voor/medici/hypotheek-voor-medici.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Hypotheek voor medici: soepelere acceptatie, ook tijdens specialisatie en als waarnemer; zelfde voorwaarden en rentes."
+   },
+   "promo": {
+    "waarde": "! PhD-student met tijdelijk contract krijgt vaak geen intentie; dan flexregels (laagste inkomen) of IBL",
+    "bron": [
+     "https://intermediair.abnamro.nl/starters",
+     "https://www.abnamro.nl/nl/prive/hypotheken/wonen/hypotheek-zonder-vast-contract.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Starterspagina noemt PhD-student expliciet als groep zonder intentie; geen aparte promovendusregeling gevonden. Combinatie met flexregel is afgeleid."
+   },
+   "lijfr": {
+    "waarde": "~ AOW, aanvullend pensioen en lijfrente tellen mee in de berekening",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-berekenen/inkomen.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Consumentenpagina inkomen; geen voorwaarden (duur, toekomstige lijfrente) gevonden."
+   },
+   "senior": {
+    "waarde": "+ 57+ hypotheek: toetsing op werkelijke woonlasten vanaf pensioendatum",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/speciaal-voor/senioren/ouder-worden-wonen/huis-kopen-voordat-je-met-pensioen-gaat.html",
+     "https://www.abnamro.nl/nl/prive/hypotheken/actueel/hypotheek-op-latere-leeftijd.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Pagina 'hypotheek op latere leeftijd' is circa 8 jaar oud. Daarnaast Overwaarde Hypotheek vanaf 62 jaar (intermediair.abnamro.nl/overwaarde-hypotheek)."
+   },
+   "brut": {
+    "waarde": "~ Bruteren bij medewerkers internationale organisaties (vrijgesteld inkomen) met bruteringsfactoren; bij volledig vrijgesteld voor gehele looptijd",
+    "bron": [
+     "https://intermediair.abnamro.nl/bijzonderheden-internationale-organisaties"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Factoren volgens Kredietgids (staffel op de pagina). Fiscal/post-adjustment mag vóór bruteren worden opgeteld. Pagina ongedateerd."
+   },
+   "vblf": {
+    "waarde": "+ 100% LTV mogelijk bij verblijfsvergunning voor bepaalde tijd met niet-tijdelijk verblijfsdoel",
+    "bron": [
+     "https://intermediair.abnamro.nl/expats"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Expatpagina intermediair; ruim acceptatiebeleid kennismigranten. Geen voorwaarden over resterende geldigheid gevonden."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Hypotheek voor expats (intermediair)",
+    "url": "https://intermediair.abnamro.nl/expats",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "Bijzonderheden internationale organisaties (intermediair)",
+    "url": "https://intermediair.abnamro.nl/bijzonderheden-internationale-organisaties",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "Werkgeversverklaring (intermediair)",
+    "url": "https://intermediair.abnamro.nl/werkgeversverklaring",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "Starters (intermediair)",
+    "url": "https://intermediair.abnamro.nl/starters",
+    "versie": "onbekend"
+   }
+  ]
+ },
+ {
+  "naam": "bijBouwe",
+  "gecontroleerd": "2026-10-08",
+  "criteria": {
+   "ort": {
+    "waarde": "~ Structurele delen (bv. ORT, overwerk) tellen mee als ontvangen in laatste 12 mnd en blijkend uit voetnoot WGV, contract of cao",
+    "bron": [
+     "https://dynamic-credit-xmn7.files.prepr.io/2926eb8qexqw/acceptatiehandleiding-bijbouwe-vooruit-september-2026.pdf",
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/03/bijbouwe-vooruit-acceptatiehandleiding-012026-.pdf"
+    ],
+    "brondatum": "sep 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiehandleiding Vooruit: twee typen inkomensbestanddelen, structureel (laatste 12 mnd, bedrag niet vooraf bekend) en vast. ORT/overwerk niet letterlijk genoemd in gevonden fragment; versie (jan/sep 2026) van fragment niet zeker."
+   },
+   "uren": {
+    "waarde": "~ Bij meerdere dienstverbanden inkomen mee tot max. 40-urige werkweek",
+    "bron": [
+     "https://dynamic-credit-xmn7.files.prepr.io/2926eb8qexqw/acceptatiehandleiding-bijbouwe-vooruit-september-2026.pdf",
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/09/bijbouwe-basis-accgids-september-2026.pdf"
+    ],
+    "brondatum": "sep 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Staat in Vooruit- en basis-handleiding (hoofdstuk inkomen uit dienstverband)."
+   },
+   "meerink": {
+    "waarde": "+ Inkomen uit meerdere dienstverbanden telt mee, tot max. 40 uur per week",
+    "bron": [
+     "https://dynamic-credit-xmn7.files.prepr.io/2926eb8qexqw/acceptatiehandleiding-bijbouwe-vooruit-september-2026.pdf",
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/09/bijbouwe-basis-accgids-september-2026.pdf"
+    ],
+    "brondatum": "sep 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Zelfde passage als bij uren."
+   },
+   "loondt": {
+    "waarde": "+ IBL (UWV-verzekeringsbericht) of werkgeversverklaring + loonstrook, max. 3 mnd oud op datum bindend aanbod",
+    "bron": [
+     "https://www.bijbouwe.nl/online-hypotheek/bijbouwe-vooruit-hypotheek",
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/09/bijbouwe-basis-accgids-september-2026.pdf"
+    ],
+    "brondatum": "sep 2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Productpagina Vooruit (eigen site) en basis-handleiding sep 2026: tool 'Inkomensbepaling loondienst' toetst structureel en vast inkomen."
+   },
+   "intent": {
+    "waarde": "+ Tijdelijk contract met onvoorwaardelijke intentieverklaring geldt als vast inkomen",
+    "bron": [
+     "https://dynamic-credit-xmn7.files.prepr.io/2926eb8qexqw/acceptatiehandleiding-bijbouwe-vooruit-september-2026.pdf"
+    ],
+    "brondatum": "sep 2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Intentie mag niet afhankelijk zijn van bv. opleiding; bijBouwe kan schriftelijke verklaring werkgever opvragen. Zonder intentie: laagste van 3-jaarsgemiddelde/36 mnd, laatste kalenderjaar of huidig dienstverband."
+   },
+   "toekdv": {
+    "waarde": "~ Nieuwe baan telt mee bij vast contract of onvoorwaardelijke intentie, na proeftijd; indiensttreding binnen 6 mnd na bindend aanbod",
+    "bron": [
+     "https://dynamic-credit-xmn7.files.prepr.io/2926eb8qexqw/acceptatiehandleiding-bijbouwe-vooruit-september-2026.pdf",
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/03/bijbouwe-vooruit-acceptatiehandleiding-012026-.pdf"
+    ],
+    "brondatum": "sep 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Jan 2026: binnen 6 mnd in dienst voor onbepaalde tijd, geen proeftijd, toekomstig inkomen max. 50% afwijkend van huidig salaris. Sep 2026 lijkt soepeler (ook bepaalde tijd met intentie); fragmentarisch gelezen."
+   },
+   "toekst": {
+    "waarde": "~ Inkomensstijging telt mee volgens NHG-eisen als die binnen 6 mnd na bindend aanbod ingaat",
+    "bron": [
+     "https://dynamic-credit-xmn7.files.prepr.io/2926eb8qexqw/acceptatiehandleiding-bijbouwe-vooruit-september-2026.pdf"
+    ],
+    "brondatum": "sep 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Par. 4.1.4.2 acceptatiehandleiding Vooruit; bij verlenging met gewijzigde voorwaarden telt loondaling wel mee."
+   },
+   "proef": {
+    "waarde": "- Bindend kredietaanbod pas na afloop van de proeftijd",
+    "bron": [
+     "https://dynamic-credit-xmn7.files.prepr.io/2926eb8qexqw/acceptatiehandleiding-bijbouwe-vooruit-september-2026.pdf",
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/03/bijbouwe-vooruit-acceptatiehandleiding-012026-.pdf"
+    ],
+    "brondatum": "sep 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "'Wij brengen pas een Bindend Krediet Aanbod uit wanneer je eventuele proeftijd is verlopen.' Versie van fragment niet zeker."
+   },
+   "buitw": {
+    "waarde": "- Buitenlands inkomen in principe alleen uit BE, DE, FR of LU en in euro; overige gevallen individueel",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/03/bijbouwe-vooruit-acceptatiehandleiding-012026-.pdf",
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/09/bijbouwe-basis-accgids-september-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Vooruit jan 2026 en basis sep 2026: in NL wonen en in buitenland werken = buitenlands inkomen. Alleen in euro uitbetaald inkomen."
+   },
+   "expbel": {
+    "waarde": "~ Overige buitenlandse inkomens individueel; is hoofdinkomen in NL belastingplichtig dan toets als binnenlands inkomen",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/03/bijbouwe-vooruit-acceptatiehandleiding-012026-.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Afgeleid uit fragment over buitenlands inkomen (belastingsituatie bepalend). Sep 2026-versie niet gecontroleerd."
+   },
+   "nlwon": {
+    "waarde": "~ Aanvrager moet min. 6 mnd in Nederland wonen (blijkend uit documenten of BRP)",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/03/bijbouwe-vooruit-acceptatiehandleiding-012026-.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiehandleiding Vooruit jan 2026, woonvereiste."
+   },
+   "vblf": {
+    "waarde": "- Niet-EU/EER: vergunning onbepaalde tijd, EU-langdurig ingezetene, duurzaam verblijf of niet-tijdelijk verblijfsdoel vereist",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/03/bijbouwe-vooruit-acceptatiehandleiding-012026-.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Geen afwijkende max. LTV gevonden. Sep 2026-versie niet gecontroleerd."
+   },
+   "ivawao": {
+    "waarde": "~ IVA, WAO en WAZ acceptabel; niet-structurele uitkering alleen voor periode dat die zeker is (Vooruit). Basis: niet",
+    "bron": [
+     "https://dynamic-credit-xmn7.files.prepr.io/2926eb8qexqw/acceptatiehandleiding-bijbouwe-vooruit-september-2026.pdf",
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/09/bijbouwe-basis-accgids-september-2026.pdf"
+    ],
+    "brondatum": "sep 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Vooruit noemt IVA/WAO/WAZ als voorbeelden van acceptabele uitkeringen. Basis-handleiding: loonvervangende uitkeringen (WW, bijstand, AO) tellen niet mee."
+   },
+   "lijfr": {
+    "waarde": "~ Lijfrente telt mee als die loopt of is afgesloten maar nog niet ingegaan, voor de duur van de uitkering",
+    "bron": [
+     "https://dynamic-credit-xmn7.files.prepr.io/2926eb8qexqw/acceptatiehandleiding-bijbouwe-vooruit-september-2026.pdf"
+    ],
+    "brondatum": "sep 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiebevestiging met duur, bedrag en ingangsdatum vereist."
+   },
+   "verm": {
+    "waarde": "~ Inkomen uit vrij beschikbaar vermogen mogelijk zonder NHG, boven een minimumvermogen",
+    "bron": [
+     "https://dynamic-credit-xmn7.files.prepr.io/2926eb8qexqw/acceptatiehandleiding-bijbouwe-vooruit-september-2026.pdf",
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/03/bijbouwe-vooruit-acceptatiehandleiding-012026-.pdf"
+    ],
+    "brondatum": "sep 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Drempel: meer dan EUR 100.000 vrij beschikbaar vermogen; par. 4.4 'Inkomen uit vermogen'. Rekenregels niet gevonden."
+   },
+   "senior": {
+    "waarde": "~ Binnen 10 jr AOW: toets op verwacht pensioen + inkomen uit vrij vermogen; Vooruit gericht op senioren met (tijdelijk) ander inkomen",
+    "bron": [
+     "https://dynamic-credit-xmn7.files.prepr.io/2926eb8qexqw/acceptatiehandleiding-bijbouwe-vooruit-september-2026.pdf",
+     "https://www.bijbouwe.nl/online-hypotheek/bijbouwe-vooruit-hypotheek"
+    ],
+    "brondatum": "sep 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Pensioen via mijnpensioenoverzicht.nl (max. 3 mnd oud) of jaaropgaaf AOW. Geen apart seniorenbeleid buiten de Vooruit-propositie gevonden."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Acceptatiehandleiding bijBouwe Vooruit Hypotheek",
+    "url": "https://dynamic-credit-xmn7.files.prepr.io/2926eb8qexqw/acceptatiehandleiding-bijbouwe-vooruit-september-2026.pdf",
+    "versie": "september 2026"
+   },
+   {
+    "titel": "Wijzigingstabel acceptatiehandleiding bijBouwe Vooruit (jan -> sep 2026)",
+    "url": "https://dynamic-credit-xmn7.files.prepr.io/5sxn8pdn68q7/wijzigingstabel-acceptatiehandleiding-bijbouwe-vooruit-september-2026.pdf",
+    "versie": "september 2026"
+   },
+   {
+    "titel": "Acceptatiehandleiding bijBouwe (basis) Hypotheek (alleen bestaande klanten)",
+    "url": "https://hypotheekcompany.nl/wp-content/uploads/2026/09/bijbouwe-basis-accgids-september-2026.pdf",
+    "versie": "sep 2026"
+   },
+   {
+    "titel": "bijBouwe Vooruit Hypotheek (productpagina)",
+    "url": "https://www.bijbouwe.nl/online-hypotheek/bijbouwe-vooruit-hypotheek",
+    "versie": "actueel"
+   }
+  ]
+ },
+ {
+  "naam": "Groene Hart Hypotheken",
+  "gecontroleerd": "2026-10-08",
+  "criteria": {
+   "ort": {
+    "waarde": "~ Overwerk en ORT (indien structureel bij beroep) tellen elk mee tot max. 20% van vast bruto jaarsalaris (incl. vakantiegeld) volgens WGV",
+    "bron": [
+     "https://groeneharthypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Groene-Hart-april-2024-.pdf"
+    ],
+    "brondatum": "apr 2024",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatiegids apr 2024, inkomen loondienst. Versie 2021: ORT moest 'passen bij het beroep'. Ploegentoeslag niet apart genoemd.",
+    "status": "nieuw"
+   },
+   "uren": {
+    "waarde": "~ Bij meerdere dienstverbanden of één dienstverband >40 uur: bruto jaarsalaris op basis van max. 45 uur per week",
+    "bron": [
+     "https://groeneharthypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Groene-Hart-april-2024-.pdf"
+    ],
+    "brondatum": "apr 2024",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatiegids apr 2024, inkomen loondienst.",
+    "status": "nieuw"
+   },
+   "meerink": {
+    "waarde": "~ Meerdere dienstverbanden toegestaan; totaal getoetst op max. 45 uur per week",
+    "bron": [
+     "https://groeneharthypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Groene-Hart-april-2024-.pdf"
+    ],
+    "brondatum": "apr 2024",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatiegids apr 2024; verdere regels voor samentellen niet in gevonden fragment.",
+    "status": "nieuw"
+   },
+   "loondt": {
+    "waarde": "+ IBL of werkgeversverklaring toegestaan, plus recente loonstrook en UWV-verzekeringsbericht",
+    "bron": [
+     "https://groeneharthypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Groene-Hart-april-2024-.pdf",
+     "https://groeneharthypotheken.nl/wp-content/uploads/2021/11/Groene_Hart_Hypotheken_Acceptatiegids_V6_211028.pdf"
+    ],
+    "brondatum": "apr 2024",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatiegids, inkomen loondienst; fragment kon niet eenduidig aan versie 2024 of 2021 worden toegeschreven.",
+    "status": "nieuw"
+   },
+   "intent": {
+    "waarde": "+ Tijdelijk contract met intentieverklaring (model NHG-WGV) geldt als vast dienstverband; zonder intentie: flexinkomen (gemiddelde 3 jaar)",
+    "bron": [
+     "https://groeneharthypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Groene-Hart-april-2024-.pdf"
+    ],
+    "brondatum": "apr 2024",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatiegids apr 2024, inkomen loondienst / flexibele arbeidsrelatie.",
+    "status": "nieuw"
+   },
+   "toekdv": {
+    "waarde": "~ Toekomstig vast dienstverband telt mee; ingang binnen 6 mnd na renteaanbod, geen proeftijd, arbeidsovereenkomst overleggen",
+    "bron": [
+     "https://groeneharthypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Groene-Hart-april-2024-.pdf"
+    ],
+    "brondatum": "apr 2024",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatiegids apr 2024; zelfde regel in versie 2021.",
+    "status": "nieuw"
+   },
+   "toekst": {
+    "waarde": "+ Toekomstige salarisverhoging mag mee, bij vast contract en bij tijdelijk contract met intentieverklaring",
+    "bron": [
+     "https://groeneharthypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Groene-Hart-april-2024-.pdf"
+    ],
+    "brondatum": "apr 2024",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatiegids apr 2024; nadere bewijsstukken niet in fragment.",
+    "status": "nieuw"
+   },
+   "proef": {
+    "waarde": "- Bij werkgeversverklaring moet proeftijd verstreken zijn op datum WGV; toekomstig dienstverband zonder proeftijd",
+    "bron": [
+     "https://groeneharthypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Groene-Hart-april-2024-.pdf"
+    ],
+    "brondatum": "apr 2024",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatiegids apr 2024, inkomen loondienst.",
+    "status": "nieuw"
+   },
+   "buitw": {
+    "waarde": "~ Inkomen uit dienstverband in België of Duitsland mag mee, mits in euro's; salaris in vreemde valuta of contant niet toegestaan",
+    "bron": [
+     "https://groeneharthypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Groene-Hart-april-2024-.pdf"
+    ],
+    "brondatum": "apr 2024",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatiegids apr 2024; verdere voorwaarden afgekapt in zoekfragment.",
+    "status": "nieuw"
+   },
+   "aios": {
+    "waarde": "+ Inkomen AIOS/ANIOS uit tijdelijk dienstverband zonder intentieverklaring gelijkgesteld aan vast dienstverband",
+    "bron": [
+     "https://groeneharthypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Groene-Hart-april-2024-.pdf"
+    ],
+    "brondatum": "apr 2024",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatiegids apr 2024 (tekst noemt 'Bij Tulp'; Groene Hart is onderdeel van Tulp Group). Versie 2021: arts in opleiding volledig mee.",
+    "status": "nieuw"
+   },
+   "promo": {
+    "waarde": "+ Inkomen promovendus uit tijdelijk dienstverband zonder intentieverklaring gelijkgesteld aan vast dienstverband",
+    "bron": [
+     "https://groeneharthypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Groene-Hart-april-2024-.pdf"
+    ],
+    "brondatum": "apr 2024",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatiegids apr 2024, zelfde passage als AIOS/ANIOS.",
+    "status": "nieuw"
+   },
+   "verm": {
+    "waarde": "~ Inkomen uit vermogen telt mee voor 3% van het vrij beschikbare vermogen",
+    "bron": [
+     "https://groeneharthypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Groene-Hart-april-2024-.pdf",
+     "https://groeneharthypotheken.nl/wp-content/uploads/2021/11/Groene_Hart_Hypotheken_Acceptatiegids_V6_211028.pdf"
+    ],
+    "brondatum": "apr 2024",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatiegids, overige inkomsten; zoekfragment noemde '3% van het vrij beschikbare inkomen', vermoedelijk vermogen bedoeld. Versie niet eenduidig.",
+    "status": "nieuw"
+   },
+   "lijfr": {
+    "waarde": "~ Levenslange lijfrente telt mee; overbruggingslijfrente met nog min. 5 jaar looptijd voor de zekere periode; polis en storting koopsom aantonen",
+    "bron": [
+     "https://groeneharthypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Groene-Hart-april-2024-.pdf",
+     "https://groeneharthypotheken.nl/wp-content/uploads/2021/11/Groene_Hart_Hypotheken_Acceptatiegids_V6_211028.pdf"
+    ],
+    "brondatum": "apr 2024",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatiegids, overige inkomsten; versie van fragment niet eenduidig.",
+    "status": "nieuw"
+   },
+   "ivawao": {
+    "waarde": "~ Sociale uitkering voor onbepaalde tijd telt mee (uitkeringsbesluit); tijdelijke sociale uitkering niet. IVA/WAO/WAZ niet apart genoemd",
+    "bron": [
+     "https://groeneharthypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Groene-Hart-april-2024-.pdf"
+    ],
+    "brondatum": "apr 2024",
+    "zekerheid": "laag",
+    "toelichting": "Acceptatiegids apr 2024 noemt alleen algemene regel voor sociale uitkeringen; toepassing op IVA/WAO/WAZ is afgeleid.",
+    "status": "nieuw"
+   },
+   "senior": {
+    "waarde": "+ Seniorenpropositie (AOW bereikt of binnen 10 jaar): toetsing op werkelijke maandlast mits woning in bezit en last niet hoger dan huidige",
+    "bron": [
+     "https://groeneharthypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Groene-Hart-april-2024-.pdf",
+     "https://groeneharthypotheken.nl/wp-content/uploads/2021/11/Groene_Hart_Hypotheken_Seniorenpropositie-_V6_211028.pdf"
+    ],
+    "brondatum": "apr 2024",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatiegids apr 2024 en Verklaring seniorenpropositie V6 (okt 2021). Ook: geen max. aanvangsleeftijd; RVP <10 jaar alleen onder voorwaarden.",
+    "status": "nieuw"
+   },
+   "nlwon": {
+    "waarde": "~ Niet-EU-burgers: min. 6 maanden in Nederland wonen en werken, met vast dienstverband",
+    "bron": [
+     "https://groeneharthypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Groene-Hart-april-2024-.pdf",
+     "https://groeneharthypotheken.nl/wp-content/uploads/2021/11/Groene_Hart_Hypotheken_Acceptatiegids_V6_211028.pdf"
+    ],
+    "brondatum": "apr 2024",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatiegids, buitenlandse nationaliteit; versie van fragment niet eenduidig.",
+    "status": "nieuw"
+   },
+   "r30": {
+    "waarde": "~ Kennismigrant: 30%-regeling moet van toepassing zijn op dienstverband; dan max. 100% marktwaarde",
+    "bron": [
+     "https://groeneharthypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Groene-Hart-april-2024-.pdf"
+    ],
+    "brondatum": "apr 2024",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatiegids apr 2024; versie 2021 noemde max. 95% marktwaarde. Of de 30%-vergoeding zelf in het toetsinkomen telt, niet gevonden.",
+    "status": "nieuw"
+   },
+   "vblf": {
+    "waarde": "~ Derde landen: verblijfsvergunning niet van tijdelijke aard (art. 3.5 Vb); kennismigrant met 30%-regeling max. 100% marktwaarde",
+    "bron": [
+     "https://groeneharthypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Groene-Hart-april-2024-.pdf",
+     "https://groeneharthypotheken.nl/wp-content/uploads/2021/11/Groene_Hart_Hypotheken_Acceptatiegids_V6_211028.pdf"
+    ],
+    "brondatum": "apr 2024",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatiegids; versie 2021 stond ook vergunning voor bepaalde tijd toe en noemde 95% marktwaarde.",
+    "status": "nieuw"
+   },
+   "expbel": {
+    "waarde": "- Geen hypotheek als aanvrager in het buitenland belastingplichtig is",
+    "bron": [
+     "https://groeneharthypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Groene-Hart-april-2024-.pdf"
+    ],
+    "brondatum": "apr 2024",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatiegids apr 2024, buitenlandse nationaliteit/werkgever.",
+    "status": "nieuw"
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Acceptatiegids Groene Hart Hypotheken",
+    "url": "https://groeneharthypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Groene-Hart-april-2024-.pdf",
+    "versie": "apr 2024"
+   },
+   {
+    "titel": "Acceptatiegids Groene Hart Hypotheken V6",
+    "url": "https://groeneharthypotheken.nl/wp-content/uploads/2021/11/Groene_Hart_Hypotheken_Acceptatiegids_V6_211028.pdf",
+    "versie": "V6 okt 2021"
+   },
+   {
+    "titel": "Verklaring seniorenpropositie",
+    "url": "https://groeneharthypotheken.nl/wp-content/uploads/2021/11/Groene_Hart_Hypotheken_Seniorenpropositie-_V6_211028.pdf",
+    "versie": "V6 okt 2021"
+   }
+  ]
+ },
+ {
+  "naam": "IQWOON",
+  "gecontroleerd": "2026-10-08",
+  "criteria": {
+   "ort": {
+    "waarde": "~ Structureel overwerk, ORT en provisie tellen mee als bedrag over laatste 12 mnd, blijkend uit werkgeversverklaring",
+    "bron": [
+     "https://www.iqwoon.nl/uploads/iqwoon/files/Acceptatiegids-IQWOON-Januari.pdf",
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/01/IQWOON-Acceptatiegids-Januari-2026.pdf"
+    ],
+    "brondatum": "jan 2025",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatiegids IQWOON jan 2025, inkomen loondienst; zelfde in kopie jan 2026 (hypotheekcompany.nl). Geen max.-percentage gevonden. Juni 2026-versie niet ingezien.",
+    "status": "nieuw"
+   },
+   "uren": {
+    "waarde": "~ Inkomen uit meerdere dienstverbanden tot max. 40-urige werkweek; meerdere op individuele beoordeling",
+    "bron": [
+     "https://www.iqwoon.nl/uploads/iqwoon/files/Acceptatiegids-IQWOON-Januari.pdf",
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/01/IQWOON-Acceptatiegids-Januari-2026.pdf"
+    ],
+    "brondatum": "jan 2025",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatiegids jan 2025 en kopie jan 2026. Clarian Wonen-gids jan 2026 (op iqwoon.nl): meerdere volgens overwerkregels.",
+    "status": "nieuw"
+   },
+   "meerink": {
+    "waarde": "~ Meerdere dienstverbanden toegestaan tot max. 40 uur per week; meerdere individueel beoordeeld",
+    "bron": [
+     "https://www.iqwoon.nl/uploads/iqwoon/files/Acceptatiegids-IQWOON-Januari.pdf",
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/01/IQWOON-Acceptatiegids-Januari-2026.pdf"
+    ],
+    "brondatum": "jan 2025",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatiegids IQWOON jan 2025, inkomen loondienst.",
+    "status": "nieuw"
+   },
+   "intent": {
+    "waarde": "+ Tijdelijk contract na proeftijd met NHG-conforme intentieverklaring telt mee voor hele looptijd; zonder: flexibele arbeidsrelatie",
+    "bron": [
+     "https://www.iqwoon.nl/uploads/iqwoon/files/Acceptatiegids-IQWOON-Januari.pdf",
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/01/IQWOON-Acceptatiegids-Januari-2026.pdf"
+    ],
+    "brondatum": "jan 2025",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatiegids IQWOON jan 2025 en kopie jan 2026.",
+    "status": "nieuw"
+   },
+   "toekdv": {
+    "waarde": "~ Toekomstig vast dienstverband zonder proeftijd telt mee als het binnen 6 mnd na hypotheekofferte ingaat",
+    "bron": [
+     "https://www.iqwoon.nl/uploads/iqwoon/files/Acceptatiegids-IQWOON-Januari.pdf"
+    ],
+    "brondatum": "jan 2025",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatiegids IQWOON jan 2025, inkomen loondienst.",
+    "status": "nieuw"
+   },
+   "toekst": {
+    "waarde": "~ Inkomensverhoging telt mee als werkgever een onvoorwaardelijke verhoging verklaart (o.a. bij toekomstig dienstverband binnen 6 mnd)",
+    "bron": [
+     "https://www.iqwoon.nl/uploads/iqwoon/files/Acceptatiegids-IQWOON-Januari.pdf"
+    ],
+    "brondatum": "jan 2025",
+    "zekerheid": "laag",
+    "toelichting": "Acceptatiegids jan 2025; zoekfragment koppelt onvoorwaardelijke verhoging aan toekomstig dienstverband, tekst niet eenduidig.",
+    "status": "nieuw"
+   },
+   "proef": {
+    "waarde": "- Contract met lopende proeftijd geldt als flexibele arbeidsrelatie; vast inkomen pas mee na verstreken proeftijd",
+    "bron": [
+     "https://www.iqwoon.nl/uploads/iqwoon/files/Acceptatiegids-IQWOON-Januari.pdf",
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/01/IQWOON-Acceptatiegids-Januari-2026.pdf"
+    ],
+    "brondatum": "jan 2025",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatiegids jan 2025, flexibele en/of overige arbeidsrelatie.",
+    "status": "nieuw"
+   },
+   "buitw": {
+    "waarde": "- Geen inkomen in buitenlandse valuta toegestaan; alleen Nederlandse ingezetenen",
+    "bron": [
+     "https://www.iqwoon.nl/uploads/iqwoon/files/Acceptatiegids-IQWOON-Januari.pdf"
+    ],
+    "brondatum": "jan 2025",
+    "zekerheid": "laag",
+    "toelichting": "Acceptatiegids jan 2025 (ook in jan 2026). Fragment gaat over valuta, niet expliciet over buitenlandse werkgever in euro's.",
+    "status": "nieuw"
+   },
+   "ikb": {
+    "waarde": "~ Structureel flexibel budget telt mee als onvoorwaardelijk, vrij besteedbaar en geldelijk uit te keren, blijkend uit WGV",
+    "bron": [
+     "https://www.iqwoon.nl/uploads/iqwoon/files/Acceptatiegids-IQWOON-Januari.pdf"
+    ],
+    "brondatum": "jan 2025",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatiegids IQWOON jan 2025, inkomen loondienst.",
+    "status": "nieuw"
+   },
+   "aios": {
+    "waarde": "~ Specialisten in opleiding vallen onder flexibele/overige arbeidsrelatie (inkomensbepaling flex)",
+    "bron": [
+     "https://www.iqwoon.nl/uploads/iqwoon/files/Acceptatiegids-IQWOON-Januari.pdf"
+    ],
+    "brondatum": "jan 2025",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatiegids jan 2025: flex/overig o.a. oproepwerk, politieke ambtsdragers, promovendi, specialisten in opleiding. Ook in Clarian Wonen-gids jan 2026.",
+    "status": "nieuw"
+   },
+   "promo": {
+    "waarde": "~ Promovendi vallen onder flexibele/overige arbeidsrelatie (inkomensbepaling flex)",
+    "bron": [
+     "https://www.iqwoon.nl/uploads/iqwoon/files/Acceptatiegids-IQWOON-Januari.pdf"
+    ],
+    "brondatum": "jan 2025",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatiegids jan 2025, flexibele en/of overige arbeidsrelatie.",
+    "status": "nieuw"
+   },
+   "verm": {
+    "waarde": "~ Alleen zonder NHG: 3% van vermogen opgeteld bij toetsinkomen (lager als hypotheekrente lager is); min. vermogen vereist",
+    "bron": [
+     "https://www.iqwoon.nl/uploads/iqwoon/files/Acceptatiegids-IQWOON-Januari.pdf"
+    ],
+    "brondatum": "jan 2025",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatiegids jan 2025; minimaal vermogen 100.000 euro. Zelfde regel in Clarian Wonen-gids jan 2026.",
+    "status": "nieuw"
+   },
+   "lijfr": {
+    "waarde": "~ Toekomstige lijfrente telt mee als pensioeninkomen voor de gegarandeerde periode; offerte of polis vereist",
+    "bron": [
+     "https://www.iqwoon.nl/uploads/iqwoon/files/Clarian-Wonen-Acceptatiegids-Januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "laag",
+    "toelichting": "Gevonden in Clarian Wonen Acceptatiegids jan 2026 (gehost op iqwoon.nl); niet bevestigd in IQWOON-gids zelf.",
+    "status": "nieuw"
+   },
+   "senior": {
+    "waarde": "~ AOW-gat (max. 2 jaar en 3 mnd) alleen als lasten uit eigen middelen te betalen; adviseur levert berekening",
+    "bron": [
+     "https://www.iqwoon.nl/uploads/iqwoon/files/Acceptatiegids-IQWOON-Januari.pdf"
+    ],
+    "brondatum": "jan 2025",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatiegids jan 2025. Aparte seniorenregeling (oversluiten na AOW, lagere maandlast) alleen in Clarian Wonen-gids jan 2026 gevonden.",
+    "status": "nieuw"
+   },
+   "r30": {
+    "waarde": "~ Inkomen met 30%-regeling mogelijk, maar geen verhoging (bruteren) van het reguliere bruto toetsinkomen",
+    "bron": [
+     "https://www.iqwoon.nl/uploads/iqwoon/files/Acceptatiegids-IQWOON-Januari.pdf"
+    ],
+    "brondatum": "jan 2025",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatiegids IQWOON; zoekfragment niet eenduidig aan versie 2025 of Clarian 2026 toe te wijzen.",
+    "status": "nieuw"
+   },
+   "expbel": {
+    "waarde": "! Belastingplichtig in buitenland: toetsing op basis van box 3, tenzij belastingverdrag eigen woning in NL regelt; alleen NL-ingezetenen",
+    "bron": [
+     "https://www.iqwoon.nl/uploads/iqwoon/files/Clarian-Wonen-Acceptatiegids-Januari-2026.pdf",
+     "https://www.iqwoon.nl/uploads/iqwoon/files/Acceptatiegids-IQWOON-Januari.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "laag",
+    "toelichting": "Fragment toegeschreven aan jan 2026-gids (Clarian Wonen, gehost op iqwoon.nl); ook uitzondering als hoogste inkomen NL-belastingplichtig. Toewijzing aan IQWOON-gids niet zeker.",
+    "status": "nieuw"
+   }
+  },
+  "documenten": [
+   {
+    "titel": "IQWOON Acceptatiegids voor adviseurs",
+    "url": "https://www.iqwoon.nl/uploads/iqwoon/files/Acceptatiegids-IQWOON-Januari.pdf",
+    "versie": "jan 2025"
+   },
+   {
+    "titel": "Clarian Wonen Acceptatiegids voor adviseurs (gehost op iqwoon.nl)",
+    "url": "https://www.iqwoon.nl/uploads/iqwoon/files/Clarian-Wonen-Acceptatiegids-Januari-2026.pdf",
+    "versie": "jan 2026"
+   },
+   {
+    "titel": "IQWOON Acceptatiegids voor adviseurs (hypotheekcompany.nl)",
+    "url": "https://hypotheekcompany.nl/wp-content/uploads/2026/01/IQWOON-Acceptatiegids-Januari-2026.pdf",
+    "versie": "jan 2026"
+   }
+  ]
+ },
+ {
+  "naam": "Nationale-Nederlanden",
+  "gecontroleerd": "2026-10-08",
+  "criteria": {
+   "ort": {
+    "waarde": "~ Gemiddelde ORT, provisie en/of overwerk over laatste 12 mnd bij dezelfde werkgever telt mee, mits structureel; vermelden op WGV",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/01/nn-Acceptatiegids-Hypotheken-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "laag",
+    "toelichting": "Acceptatiegids Hypotheken jan 2026 (kopie hypotheekcompany.nl), par. 3.5/3.6; 'structureel' uit versie 2025. Geen max.-percentage gevonden.",
+    "status": "nieuw"
+   },
+   "meerink": {
+    "waarde": "~ Bij meerdere dienstverbanden: gemiddelde laatste 3 kalenderjaren, max. laatste jaar of WGV-inkomen als dat lager is",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/01/nn-Acceptatiegids-Hypotheken-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "laag",
+    "toelichting": "Acceptatiegids jan 2026 (kopie hypotheekcompany.nl); PDF-tekst deels door elkaar in zoekfragment.",
+    "status": "nieuw"
+   },
+   "loondt": {
+    "waarde": "+ IBL met UWV-verzekeringsbericht toegestaan; documenten max. 3 maanden oud",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/01/nn-Acceptatiegids-Hypotheken-2026.pdf",
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/03/nn-acceptatiebeleid-maart-2026.pdf"
+    ],
+    "brondatum": "mrt 2026",
+    "zekerheid": "laag",
+    "toelichting": "Acceptatiegids jan 2026 / acceptatiebeleid mrt 2026 (kopieën hypotheekcompany.nl); peildatum afgekapt. NN-medicipagina noemt ook UWV-verzekeringsbericht.",
+    "status": "nieuw"
+   },
+   "intent": {
+    "waarde": "+ Tijdelijk contract na proeftijd telt volledig mee met schriftelijke intentieverklaring voor vast dienstverband",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/01/nn-Acceptatiegids-Hypotheken-2026.pdf",
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/03/nn-acceptatiebeleid-maart-2026.pdf"
+    ],
+    "brondatum": "mrt 2026",
+    "zekerheid": "laag",
+    "toelichting": "Acceptatiegids jan 2026 en acceptatiebeleid mrt 2026 (kopieën hypotheekcompany.nl).",
+    "status": "nieuw"
+   },
+   "toekdv": {
+    "waarde": "~ Toekomstig dienstverband telt mee bij ingang binnen 6 mnd, arbeidsovereenkomst door beide partijen getekend en WGV",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/01/nn-Acceptatiegids-Hypotheken-2026.pdf",
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/03/nn-acceptatiebeleid-maart-2026.pdf"
+    ],
+    "brondatum": "mrt 2026",
+    "zekerheid": "laag",
+    "toelichting": "Acceptatiegids jan 2026; zelfde drie voorwaarden in acceptatiebeleid mrt 2026 (kopieën hypotheekcompany.nl).",
+    "status": "nieuw"
+   },
+   "proef": {
+    "waarde": "+ Zonder NHG: offerte en passeren van akte mogelijk tijdens proeftijd",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/01/nn-Acceptatiegids-Hypotheken-2026.pdf",
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/03/nn-acceptatiebeleid-maart-2026.pdf"
+    ],
+    "brondatum": "mrt 2026",
+    "zekerheid": "laag",
+    "toelichting": "Acceptatiegids jan 2026 / acceptatiebeleid mrt 2026 (kopieën hypotheekcompany.nl); nadere voorwaarden niet in fragment.",
+    "status": "nieuw"
+   },
+   "buitw": {
+    "waarde": "~ Grensarbeider: inkomen uit België of Duitsland mogelijk bij aankoop woning in NL en belastingplicht voor dat inkomen aldaar",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/03/nn-acceptatiebeleid-maart-2026.pdf",
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/01/nn-Acceptatiegids-Hypotheken-2026.pdf"
+    ],
+    "brondatum": "mrt 2026",
+    "zekerheid": "laag",
+    "toelichting": "Acceptatiebeleid mrt 2026 / gids jan 2026 (kopieën hypotheekcompany.nl), buitenlands inkomen.",
+    "status": "nieuw"
+   },
+   "aios": {
+    "waarde": "+ Medicihypotheek: AIOS/ANIOS met tijdelijk contract, ook zonder intentieverklaring; toetsinkomen dan op andere wijze bepaald",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Hypotheek-voor-Medici.htm"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "toelichting": "NN-consumentenpagina Hypotheek voor medici; methode zonder intentieverklaring niet beschreven.",
+    "status": "nieuw"
+   },
+   "verm": {
+    "waarde": "~ Max. 3% van vrij beschikbaar vermogen (percentage CHF) mag bij regulier inkomen worden opgeteld",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/01/nn-Acceptatiegids-Hypotheken-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "laag",
+    "toelichting": "Acceptatiegids jan 2026 (kopie hypotheekcompany.nl); bijbehorende voorwaarden slecht leesbaar in fragment.",
+    "status": "nieuw"
+   },
+   "lijfr": {
+    "waarde": "~ Toekomstige lijfrente alleen met fiscale lijfrenteclausule: 5% van opgebouwd saldo per jaar; lopende uitkering als looptijd die van lening dekt",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/03/nn-acceptatiebeleid-maart-2026.pdf",
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/01/nn-Acceptatiegids-Hypotheken-2026.pdf"
+    ],
+    "brondatum": "mrt 2026",
+    "zekerheid": "laag",
+    "toelichting": "Acceptatiebeleid mrt 2026 en gids jan 2026 (kopieën hypotheekcompany.nl).",
+    "status": "nieuw"
+   },
+   "wga": {
+    "waarde": "- WGA-uitkering telt niet mee in het toetsinkomen (ook niet met NHG)",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/03/nn-acceptatiebeleid-maart-2026.pdf"
+    ],
+    "brondatum": "mrt 2026",
+    "zekerheid": "laag",
+    "toelichting": "Acceptatiebeleid Hypotheken mrt 2026 (NN-adviseurspagina 18-03-2026, kopie hypotheekcompany.nl).",
+    "status": "nieuw"
+   },
+   "ivawao": {
+    "waarde": "+ IVA, WAO en WAZ gelden als blijvende uitkering en tellen mee",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/03/nn-acceptatiebeleid-maart-2026.pdf"
+    ],
+    "brondatum": "mrt 2026",
+    "zekerheid": "laag",
+    "toelichting": "Acceptatiebeleid mrt 2026 (kopie hypotheekcompany.nl); IVA-passage minder letterlijk in fragment.",
+    "status": "nieuw"
+   },
+   "wajong": {
+    "waarde": "~ Oude Wajong en Wajong 2015 blijvend, max. 75% WML (70% bij arbeidsvermogen); studietoeslag telt niet mee",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/03/nn-acceptatiebeleid-maart-2026.pdf"
+    ],
+    "brondatum": "mrt 2026",
+    "zekerheid": "laag",
+    "toelichting": "Acceptatiebeleid mrt 2026 (kopie hypotheekcompany.nl); drie Wajong-groepen onderscheiden.",
+    "status": "nieuw"
+   },
+   "senior": {
+    "waarde": "+ Tijdelijk inkomenstekort door AOW-verschil: toetsing op werkelijke lasten, max. 120 mnd; plus Senioren Verhuisregeling",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/01/nn-Acceptatiegids-Hypotheken-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "laag",
+    "toelichting": "Acceptatiegids jan 2026 (kopie hypotheekcompany.nl): oudste binnen 10 jaar AOW of al AOW. Verhuisregeling: overbrugging afkoopwaarde, RVP aflossingsvrij deel min. 20 jaar.",
+    "status": "nieuw"
+   },
+   "nlwon": {
+    "waarde": "~ Niet-EU met vergunning onbepaalde tijd: aanvrager moet bij aanvraag in NL wonen; aanvrager in buitenland moet zelf in woning gaan wonen",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/03/nn-acceptatiebeleid-maart-2026.pdf"
+    ],
+    "brondatum": "mrt 2026",
+    "zekerheid": "laag",
+    "toelichting": "Acceptatiebeleid mrt 2026 (kopie hypotheekcompany.nl). Geen minimale verblijfsduur gevonden.",
+    "status": "nieuw"
+   },
+   "vblf": {
+    "waarde": "- Bepaalde tijd: max. 75% marktwaarde alleen bij vergunning min. 5 jaar en min. gezinsinkomen; anders niet. Onbepaalde tijd: max. 75%",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/03/nn-acceptatiebeleid-maart-2026.pdf",
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/01/nn-Acceptatiegids-Hypotheken-2026.pdf"
+    ],
+    "brondatum": "mrt 2026",
+    "zekerheid": "laag",
+    "toelichting": "Acceptatiebeleid mrt 2026 (kopie hypotheekcompany.nl): minimaal gezinsinkomen uit loondienst 70.000 euro. EU/EER/CH regulier; VK met Residence Document.",
+    "status": "nieuw"
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Acceptatiegids Hypotheken Januari 2026 (hypotheekcompany.nl)",
+    "url": "https://hypotheekcompany.nl/wp-content/uploads/2026/01/nn-Acceptatiegids-Hypotheken-2026.pdf",
+    "versie": "jan 2026"
+   },
+   {
+    "titel": "Acceptatiebeleid Hypotheken (hypotheekcompany.nl)",
+    "url": "https://hypotheekcompany.nl/wp-content/uploads/2026/03/nn-acceptatiebeleid-maart-2026.pdf",
+    "versie": "mrt 2026"
+   },
+   {
+    "titel": "Hypotheek voor medici zonder vast contract",
+    "url": "https://www.nn.nl/Particulier/Hypotheken/Hypotheek-voor-Medici.htm",
+    "versie": "onbekend"
+   }
+  ]
+ },
+ {
+  "naam": "RegioBank",
+  "gecontroleerd": "2026-10-08",
+  "criteria": {
+   "intent": {
+    "waarde": "+ Met intentieverklaring telt huidig inkomen mee; zonder: gemiddelde laatste 3 jaar (lager laatste jaar telt) of arbeidsmarktscan/perspectiefverklaring",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/hypotheek-zonder-vast-contract-kan-dit/tijdelijk-contract.html",
+     "https://www.regiobank.nl/hypotheken/zaken-die-invloed-hebben-op-uw-hypotheek.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "toelichting": "Consumentenpagina's op regiobank.nl (deels ASN Bank-tekst). Geen RegioBank-acceptatiegids voor adviseurs gevonden.",
+    "status": "nieuw"
+   },
+   "toekst": {
+    "waarde": "~ Maximale hypotheek berekend op het inkomen dat de aanvrager in de toekomst naar verwachting bereikt",
+    "bron": [
+     "https://www.regiobank.nl/downloads/regiobank-uitgangspunten-voor-de-berekening-van-de-maximale-hypotheek.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "toelichting": "Uitgangspunten berekening maximale hypotheek; algemene formulering, geen cao/contract-voorwaarden genoemd.",
+    "status": "nieuw"
+   },
+   "senior": {
+    "waarde": "~ Bij pensioen binnen 10 jaar rekent de berekening met 70% van huidig inkomen; 67+: nadruk op betaalbaarheid, bestendig aanvullend inkomen telt",
+    "bron": [
+     "https://www.regiobank.nl/downloads/regiobank-uitgangspunten-voor-de-berekening-van-de-maximale-hypotheek.html",
+     "https://www.regiobank.nl/hypotheek-voor-67-plussers-regiobank/hypotheekmogelijkheden-voor-67-plussers.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "toelichting": "Uitgangspunten berekening (indicatieve berekening, geen acceptatiebeleid) en consumentenpagina 67-plussers; geen apart seniorenbeleid gevonden.",
+    "status": "nieuw"
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Uitgangspunten voor de berekening van de maximale hypotheek",
+    "url": "https://www.regiobank.nl/downloads/regiobank-uitgangspunten-voor-de-berekening-van-de-maximale-hypotheek.html",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "Hypotheek zonder vast contract: tijdelijk contract",
+    "url": "https://www.regiobank.nl/hypotheken/hypotheek-zonder-vast-contract-kan-dit/tijdelijk-contract.html",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "Informatiewijzer Hypotheken",
+    "url": "https://www.regiobank.nl/downloads/informatiewijzer-hypotheken.html",
+    "versie": "05-09-2025"
+   }
+  ]
+ },
+ {
+  "naam": "Tulp Hypotheken",
+  "gecontroleerd": "2026-10-08",
+  "criteria": {
+   "ort": {
+    "waarde": "~ ORT en overwerk tellen mee als passend bij beroep, elk max. 20% van vast bruto jaarsalaris incl. vakantiegeld (bedrag op WGV)",
+    "bron": [
+     "https://tulphypotheken.nl/wp-content/uploads/2025/03/acceptatiegids-Tulp-Hypotheek_maart-2025.pdf"
+    ],
+    "brondatum": "mrt 2025",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatiegids Tulp Hypotheek mrt 2025. Tulp Riant (jan 2025): max. 30% en 'structureel'. Compleet apr 2024-fragment: overwerk, provisie en ORT samen max. 20%.",
+    "status": "nieuw"
+   },
+   "uren": {
+    "waarde": "~ Bij meerdere dienstverbanden of één dienstverband >40 uur: bruto jaarsalaris op basis van max. 45 uur per week",
+    "bron": [
+     "https://tulphypotheken.nl/wp-content/uploads/2025/03/acceptatiegids-Tulp-Hypotheek_maart-2025.pdf"
+    ],
+    "brondatum": "mrt 2025",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatiegids Tulp Hypotheek mrt 2025, inkomen loondienst.",
+    "status": "nieuw"
+   },
+   "meerink": {
+    "waarde": "~ Meerdere dienstverbanden toegestaan; totaal getoetst op max. 45 uur per week",
+    "bron": [
+     "https://tulphypotheken.nl/wp-content/uploads/2025/03/acceptatiegids-Tulp-Hypotheek_maart-2025.pdf"
+    ],
+    "brondatum": "mrt 2025",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatiegids mrt 2025; verdere regels voor samentellen niet in fragment.",
+    "status": "nieuw"
+   },
+   "loondt": {
+    "waarde": "+ IBL of werkgeversverklaring (NHG-model) toegestaan, plus recente salarisstrook",
+    "bron": [
+     "https://tulphypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Tulp-Compleet-Hypotheek-april-2024.pdf"
+    ],
+    "brondatum": "apr 2024",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatiegids Tulp Compleet apr 2024 (ook in oudere gidsen); niet bevestigd in Tulp Hypotheek mrt 2025.",
+    "status": "nieuw"
+   },
+   "intent": {
+    "waarde": "+ Tijdelijk contract met intentieverklaring op WGV telt als vast; zonder: flexinkomen, gemiddelde 3 jaar met max. laatste jaar/huidig",
+    "bron": [
+     "https://tulphypotheken.nl/wp-content/uploads/2025/03/acceptatiegids-Tulp-Hypotheek_maart-2025.pdf",
+     "https://tulphypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Tulp-Compleet-Hypotheek-april-2024.pdf"
+    ],
+    "brondatum": "mrt 2025",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatiegids mrt 2025 (flexibele inkomens) en Compleet apr 2024 (vaste intentietekst op WGV).",
+    "status": "nieuw"
+   },
+   "toekdv": {
+    "waarde": "~ Toekomstig vast dienstverband telt mee: ingang binnen 6 mnd na renteaanbod, geen proeftijd, arbeidsovereenkomst overleggen",
+    "bron": [
+     "https://tulphypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Tulp-Compleet-Hypotheek-april-2024.pdf"
+    ],
+    "brondatum": "apr 2024",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatiegids Tulp Compleet apr 2024; niet bevestigd in mrt 2025-gids.",
+    "status": "nieuw"
+   },
+   "toekst": {
+    "waarde": "~ Salarisverhoging alleen als onvoorwaardelijk en ingaand binnen 6 mnd na renteaanbod, met aparte werkgeversverklaring",
+    "bron": [
+     "https://tulphypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Tulp-Compleet-Hypotheek-april-2024.pdf"
+    ],
+    "brondatum": "apr 2024",
+    "zekerheid": "laag",
+    "toelichting": "Acceptatiegids Tulp Compleet; tekst in zoekfragment deels onleesbaar.",
+    "status": "nieuw"
+   },
+   "proef": {
+    "waarde": "- WGV pas na verstreken proeftijd afgeven; max. 3 mnd oud op datum bindende overeenkomst",
+    "bron": [
+     "https://tulphypotheken.nl/wp-content/uploads/2025/03/acceptatiegids-Tulp-Hypotheek_maart-2025.pdf",
+     "https://tulphypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Tulp-Compleet-Hypotheek-april-2024.pdf"
+    ],
+    "brondatum": "mrt 2025",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatiegidsen Tulp (mrt 2025 / Compleet apr 2024), werkgeversverklaring.",
+    "status": "nieuw"
+   },
+   "aios": {
+    "waarde": "+ Inkomen AIOS/ANIOS uit tijdelijk dienstverband zonder intentieverklaring geldt als vast inkomen",
+    "bron": [
+     "https://tulphypotheken.nl/wp-content/uploads/2026/01/Productkaart-Tulp.pdf",
+     "https://tulphypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Tulp-Compleet-Hypotheek-april-2024.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "hoog",
+    "toelichting": "Productkaart Tulp jan 2026 (AIO als vast inkomen) en Compleet-gids apr 2024. Productkaart 2025 noemt eis huidig dienstverband.",
+    "status": "nieuw"
+   },
+   "promo": {
+    "waarde": "+ Inkomen promovendus uit tijdelijk dienstverband zonder intentieverklaring kan gelijkgesteld worden aan vast dienstverband",
+    "bron": [
+     "https://tulphypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Tulp-Compleet-Hypotheek-april-2024.pdf"
+    ],
+    "brondatum": "apr 2024",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatiegids Tulp Compleet apr 2024; in productkaart 2026 alleen AIO genoemd in fragment.",
+    "status": "nieuw"
+   },
+   "verm": {
+    "waarde": "~ 3% van vrij besteedbaar vermogen telt mee, tot max. 20% van het totale toetsinkomen",
+    "bron": [
+     "https://tulphypotheken.nl/wp-content/uploads/2026/01/Productkaart-Tulp.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "hoog",
+    "toelichting": "Productkaart Tulp jan 2026; 3%-regel ook in Compleet-gids apr 2024.",
+    "status": "nieuw"
+   },
+   "lijfr": {
+    "waarde": "~ Levenslange lijfrente telt mee; overbruggingslijfrente met min. 5 jaar looptijd voor die periode; polis/verklaring verzekeraar",
+    "bron": [
+     "https://tulphypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Tulp-Compleet-Hypotheek-april-2024.pdf"
+    ],
+    "brondatum": "apr 2024",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatiegids Tulp Compleet apr 2024; niet bevestigd in mrt 2025-gids.",
+    "status": "nieuw"
+   },
+   "senior": {
+    "waarde": "+ Seniorenpropositie met en zonder NHG voor wie AOW heeft of binnen 10 jaar bereikt; zonder NHG aanvullende verklaring",
+    "bron": [
+     "https://tulphypotheken.nl/wp-content/uploads/2026/01/Productkaart-Tulp.pdf",
+     "https://tulphypotheken.nl/wp-content/uploads/2025/03/acceptatiegids-Tulp-Hypotheek_maart-2025.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "hoog",
+    "toelichting": "Productkaart jan 2026 en acceptatiegids mrt 2025 (RVP-voorwaarden: jongste 85 jaar, <50% woningwaarde of afgelost). AOW-toets: binnen 10 jaar en 4 mnd.",
+    "status": "nieuw"
+   },
+   "nlwon": {
+    "waarde": "~ Niet-EU-ingezetenen en kennismigranten: min. 6 maanden in Nederland woonachtig en werkzaam",
+    "bron": [
+     "https://tulphypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Tulp-Compleet-Hypotheek-april-2024.pdf",
+     "https://tulphypotheken.nl/wp-content/uploads/2026/01/Productkaart-Tulp.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "toelichting": "Compleet-gids apr 2024 en productkaart jan 2026 (kennismigrant). Oudere gids eiste 3 jaar.",
+    "status": "nieuw"
+   },
+   "r30": {
+    "waarde": "~ Kennismigrant: 30%-regeling op dienstverband vereist (ook tijdelijk met intentie), min. 6 mnd in NL; max. 95% marktwaarde",
+    "bron": [
+     "https://tulphypotheken.nl/wp-content/uploads/2026/01/Productkaart-Tulp.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "toelichting": "Productkaart jan 2026; Compleet-gids apr 2024 noemde max. 100% marktwaarde en vast dienstverband.",
+    "status": "nieuw"
+   },
+   "vblf": {
+    "waarde": "~ Niet-EU: vergunning onbepaalde tijd, EU-langdurig ingezetene, duurzaam verblijf of bepaalde tijd (regulier) toegestaan",
+    "bron": [
+     "https://tulphypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Tulp-Compleet-Hypotheek-april-2024.pdf"
+    ],
+    "brondatum": "apr 2024",
+    "zekerheid": "middel",
+    "toelichting": "Acceptatiegids Tulp Compleet apr 2024. Max. LTV kennismigrant: zie r30.",
+    "status": "nieuw"
+   },
+   "expbel": {
+    "waarde": "- Geen hypotheek als aanvrager in het buitenland belastingplichtig is; buitenlands inkomen telt niet mee",
+    "bron": [
+     "https://tulphypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Tulp-Compleet-Hypotheek-april-2024.pdf"
+    ],
+    "brondatum": "apr 2024",
+    "zekerheid": "middel",
+    "toelichting": "Tulp-acceptatiegids (Compleet apr 2024 / oudere versies); niet bevestigd in mrt 2025-gids.",
+    "status": "nieuw"
+   },
+   "buitw": {
+    "waarde": "- Inkomen uit het buitenland telt niet mee in het toetsinkomen",
+    "bron": [
+     "https://tulphypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Tulp-Compleet-Hypotheek-april-2024.pdf"
+    ],
+    "brondatum": "apr 2024",
+    "zekerheid": "laag",
+    "toelichting": "Zelfde passage als belastingplicht buitenland; onduidelijk of dit ook geldt voor buitenlandse werkgever bij NL-belastingplicht.",
+    "status": "nieuw"
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Acceptatiegids Tulp Hypotheek",
+    "url": "https://tulphypotheken.nl/wp-content/uploads/2025/03/acceptatiegids-Tulp-Hypotheek_maart-2025.pdf",
+    "versie": "mrt 2025"
+   },
+   {
+    "titel": "Productkaart Tulp",
+    "url": "https://tulphypotheken.nl/wp-content/uploads/2026/01/Productkaart-Tulp.pdf",
+    "versie": "jan 2026"
+   },
+   {
+    "titel": "Acceptatiegids Tulp Compleet Hypotheek",
+    "url": "https://tulphypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Tulp-Compleet-Hypotheek-april-2024.pdf",
+    "versie": "apr 2024"
+   }
+  ]
+ }
+]
