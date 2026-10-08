@@ -1,7 +1,7 @@
 /* Verwerkt onderzoeksresultaten (uit-*.json) in data/voorwaarden-controle.js als const CONTROLE (gebruikt door voorwaarden-vergelijker.html).
  * Gebruik: node docs/voorwaarden-onderzoek/verwerk.js <map-met-uit-bestanden>
  * Status bevestigd/gewijzigd/nieuw wordt getoond. Alleen bronnen op de eigen site van de geldverstrekker (domeinen.json)
- * met zekerheid hoog/middel tellen als geverifieerd; overige informatie komt erin als 'nog niet geverifieerd', zonder bronvermelding. Bij dubbelcheck (veld dubbel:'bevestigd') toont de pagina "2× gecontroleerd". */
+ * met zekerheid hoog/middel tellen als geverifieerd; overige informatie komt erin als 'nog niet geverifieerd', zonder bronvermelding. Bij dubbelcheck (veld dubbel:'bevestigd') toont de pagina "2× gecontroleerd", bij dubbel:'drievoudig' "3× gecontroleerd". */
 const fs = require('fs'), path = require('path');
 const map = process.argv[2] || path.join(__dirname);
 const pagina = path.join(__dirname, '..', '..', 'data', 'voorwaarden-controle.js');
