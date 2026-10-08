@@ -1,0 +1,528 @@
+[
+ {
+  "naam": "Rabobank",
+  "gecontroleerd": "2026-10-09",
+  "criteria": {
+   "wkost": {
+    "waarde": "! Wijzigingskosten per leningdeel (gemaximeerd) bij renteaanpassing/wijziging; verhogen zonder advies kost een vast bedrag",
+    "bron": [
+     "https://www.rabobank.nl/particulieren/hypotheek/hypotheek-afsluiten/hypotheekadvies-en-kosten",
+     "https://www.rabobank.nl/particulieren/hypotheek/mijn-hypotheek-of-woning-aanpassen/rente-aanpassen",
+     "https://www.rabobank.nl/particulieren/hypotheek/mijn-hypotheek-of-woning-aanpassen/hypotheek-verhogen/zonder-advies"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Kostenbedrag verwijderd (geen tarieven in waarden)"
+   }
+  }
+ },
+ {
+  "naam": "a.s.r.",
+  "gecontroleerd": "2026-10-09",
+  "criteria": {
+   "oha": {
+    "waarde": "~ Lening op één naam met goedkeuring a.s.r.; administratiekosten",
+    "bron": [
+     "https://www.asr.nl/hypotheek/je-hypotheek-aanpassen"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Kostenbedrag verwijderd (geen tarieven in waarden)"
+   },
+   "rmid": {
+    "waarde": "! Tussentijds rente aanpassen tegen vergoeding + administratiekosten; rentemiddeling niet gevonden",
+    "bron": [
+     "https://www.asr.nl/hypotheek/je-hypotheek-aanpassen"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Kostenbedrag verwijderd (geen tarieven in waarden)"
+   },
+   "wkost": {
+    "waarde": "~ Administratiekosten bij aanpassing (o.a. renteaanpassing, lening op één naam)",
+    "bron": [
+     "https://www.asr.nl/hypotheek/je-hypotheek-aanpassen"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Kostenbedrag verwijderd (geen tarieven in waarden)"
+   }
+  }
+ },
+ {
+  "naam": "Centraal Beheer",
+  "gecontroleerd": "2026-10-09",
+  "criteria": {
+   "wkost": {
+    "waarde": "! Administratiekosten bij wijzigingen, o.a. bij rentemiddeling",
+    "bron": [
+     "https://www.centraalbeheer.nl/hypotheek/klant/rente-wijzigen",
+     "https://www.centraalbeheer.nl/hypotheek/klant/rente-vast-periode"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Kostenbedrag verwijderd (geen tarieven in waarden)"
+   }
+  }
+ },
+ {
+  "naam": "Allianz",
+  "gecontroleerd": "2026-10-09",
+  "criteria": {
+   "oha": {
+    "waarde": "~ Via adviseur met aanvraagformulier en inkomensstukken blijver; akkoord, daarna notaris; behandelingskosten",
+    "bron": [
+     "https://www.allianz.nl/particulier/hypotheken/beheren/hoofdelijk-ontslag.html",
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-47.pdf",
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/OHA-aanvraagformulier.pdf"
+    ],
+    "brondatum": "2026-04",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Kostenbedrag verwijderd (geen tarieven in waarden)"
+   },
+   "rmid": {
+    "waarde": "~ Rentemiddeling mogelijk; boete verwerkt in nieuwe rente; max. 2 voorstellen per jaar; behandelingskosten",
+    "bron": [
+     "https://www.allianz.nl/particulier/hypotheken/beheren/rentemiddeling.html",
+     "https://www.allianz.nl/particulier/hypotheken/afsluiten/kosten.html",
+     "https://www.allianz.nl/particulier/hypotheken/afsluiten/rente.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Kostenbedrag verwijderd (geen tarieven in waarden)"
+   },
+   "wkost": {
+    "waarde": "~ Behandelingskosten per wijziging (o.a. omzetting, rentemiddeling, OHA)",
+    "bron": [
+     "https://www.allianz.nl/particulier/hypotheken/afsluiten/kosten.html",
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-47.pdf"
+    ],
+    "brondatum": "2026-04",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Kostenbedrag verwijderd (geen tarieven in waarden)"
+   }
+  }
+ },
+ {
+  "naam": "Clarian Wonen",
+  "gecontroleerd": "2026-10-09",
+  "criteria": {
+   "rmid": {
+    "waarde": "~ Rentemiddeling via boetesmeren (opslag op nieuwe rente); daarna 12 mnd wachten; administratiekosten",
+    "bron": [
+     "https://www.clarianwonen.nl/uploads/clarian/files/Beheergids-Clarian-Wonen-April-2026.pdf",
+     "https://www.clarianwonen.nl/uploads/clarian/files/Beheergids-Clarian-Wonen-Januari-2025.pdf",
+     "https://www.clarianwonen.nl/uploads/clarian/files/Algemene-voorwaarden-Clarian-Wonen-2022-definitief.pdf"
+    ],
+    "brondatum": "2026-04",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Kostenbedrag verwijderd (geen tarieven in waarden)"
+   },
+   "wkost": {
+    "waarde": "+ Meeste beheerprocessen zonder administratiekosten (o.a. omzetten, OHA); rentemiddeling wel kosten",
+    "bron": [
+     "https://www.clarianwonen.nl/uploads/clarian/files/Beheergids-Clarian-Wonen-April-2026.pdf"
+    ],
+    "brondatum": "2026-04",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Kostenbedrag verwijderd (geen tarieven in waarden)"
+   }
+  }
+ },
+ {
+  "naam": "Groene Hart Hypotheken",
+  "gecontroleerd": "2026-10-09",
+  "criteria": {
+   "oha": {
+    "waarde": "~ Mogelijk na min. 6 mnd looptijd; administratiekosten",
+    "bron": [
+     "https://groeneharthypotheken.nl/hypotheek/veelgestelde-vragen/wijzigingen-hypotheek/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Kostenbedrag verwijderd (geen tarieven in waarden)"
+   },
+   "rmid": {
+    "waarde": "! Tussentijds omzetten naar actuele rente mogelijk tegen vergoeding + kosten; geen rentemiddeling gevonden",
+    "bron": [
+     "https://groeneharthypotheken.nl/hypotheek/veelgestelde-vragen/rente/",
+     "https://groeneharthypotheken.nl/hypotheek/veelgestelde-vragen/wijzigingen-hypotheek/"
+    ],
+    "brondatum": "2026-10",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Kostenbedrag verwijderd (geen tarieven in waarden)"
+   },
+   "wkost": {
+    "waarde": "~ Kosten voor OHA, verhoging, conversie naar lagere rente; gratis: aflosvorm, renteopslag, ORV",
+    "bron": [
+     "https://groeneharthypotheken.nl/hypotheek/veelgestelde-vragen/wijzigingen-hypotheek/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Kostenbedrag verwijderd (geen tarieven in waarden)"
+   }
+  }
+ },
+ {
+  "naam": "Handelsbanken",
+  "gecontroleerd": "2026-10-09",
+  "criteria": {
+   "oha": {
+    "waarde": "~ Via accountmanager; toestemming bank nodig; consumentenkanaal: advies + behandelkosten",
+    "bron": [
+     "https://www.handelsbanken.nl/nl/particulier/hypotheken/hypotheekadvies-en-kosten"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Kostenbedrag verwijderd (geen tarieven in waarden)"
+   },
+   "rmid": {
+    "waarde": "~ Rente tussentijds aanpassen mogelijk tegen behandelkosten; verwerking vergoeding onbekend",
+    "bron": [
+     "https://www.handelsbanken.nl/nl/particulier/hypotheken/hypotheekadvies-en-kosten"
+    ],
+    "brondatum": "2026-10",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Kostenbedrag verwijderd (geen tarieven in waarden)"
+   },
+   "wkost": {
+    "waarde": "~ Rente tussentijds aanpassen tegen behandelkosten (gemaximeerd bij combinatie); variabel naar vast gratis",
+    "bron": [
+     "https://www.handelsbanken.nl/nl/particulier/hypotheken/hypotheekadvies-en-kosten"
+    ],
+    "brondatum": "2026-10",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Kostenbedrag verwijderd (geen tarieven in waarden)"
+   }
+  }
+ },
+ {
+  "naam": "HollandWoont",
+  "gecontroleerd": "2026-10-09",
+  "criteria": {
+   "rmid": {
+    "waarde": "+ Rentemiddeling mogelijk, vergoeding in nieuwe rente; administratiekosten; daarna 12 mnd wachten",
+    "bron": [
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Acceptatiegids-Juni-2026.pdf",
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/Beheergids-HollandWoont-Juni-2025.pdf",
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Acceptatiegids-januari-2026.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Kostenbedrag verwijderd (geen tarieven in waarden)"
+   },
+   "wkost": {
+    "waarde": "+ Omzetten hypotheekvorm en rentevaste periode kosteloos; rentemiddeling met administratiekosten",
+    "bron": [
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/Beheergids-HollandWoont-Juni-2025.pdf"
+    ],
+    "brondatum": "2025-06",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "dubbel": null,
+    "toelichting": "Kostenbedrag verwijderd (geen tarieven in waarden)"
+   }
+  }
+ },
+ {
+  "naam": "Impact Hypotheken",
+  "gecontroleerd": "2026-10-09",
+  "criteria": {
+   "oha": {
+    "waarde": "! Ontslag hoofdelijkheid getoetst aan Hypotheekgids; niet binnen 12 mnd na afsluiten; administratiekosten",
+    "bron": [
+     "https://impacthypotheken.nl/app/uploads/2021/12/Algemene-voorwaarden-Impact-Hypotheken-2021_01.pdf",
+     "https://impacthypotheken.nl/app/uploads/2024/07/Algemene-voorwaarden-Impact-2024-01.pdf",
+     "https://impacthypotheken.nl/veelgestelde-vragen/"
+    ],
+    "brondatum": "2024-01",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Kostenbedrag verwijderd (geen tarieven in waarden)"
+   },
+   "wkost": {
+    "waarde": "! Vaste kosten per wijziging (hoofdelijkheid, omzetting, verpanding polis, tussentijdse rentewijziging)",
+    "bron": [
+     "https://impacthypotheken.nl/app/uploads/2021/12/Algemene-voorwaarden-Impact-Hypotheken-2021_01.pdf",
+     "https://impacthypotheken.nl/app/uploads/2024/07/Algemene-voorwaarden-Impact-2024-01.pdf",
+     "https://impacthypotheken.nl/veelgestelde-vragen/"
+    ],
+    "brondatum": "2024-01",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Kostenbedrag verwijderd (geen tarieven in waarden)"
+   },
+   "rmid": {
+    "waarde": "- Geen rentemiddeling gevonden; tussentijds rentevaste periode wijzigen tegen vergoeding plus kosten",
+    "bron": [
+     "https://impacthypotheken.nl/veelgestelde-vragen/",
+     "https://impacthypotheken.nl/app/uploads/2024/07/Algemene-voorwaarden-Impact-2024-01.pdf",
+     "https://impacthypotheken.nl/adviseur/aflossen/"
+    ],
+    "brondatum": "2024-01",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Kostenbedrag verwijderd (geen tarieven in waarden)"
+   }
+  }
+ },
+ {
+  "naam": "Neo Hypotheken",
+  "gecontroleerd": "2026-10-09",
+  "criteria": {
+   "oha": {
+    "waarde": "~ OHA mogelijk als achterblijver kan uitkopen en lasten draagt; administratiekosten",
+    "bron": [
+     "https://www.neohypotheken.nl/woonsituaties/uit-elkaar-gaan",
+     "https://www.neohypotheken.nl/storage/uploads/edceda35-7173-4496-b7ca-d4244f6cbf0c/Algemene-voorwaarden-Neo-Hypotheken-V1.3.8.pdf"
+    ],
+    "brondatum": "2025",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Kostenbedrag verwijderd (geen tarieven in waarden)"
+   },
+   "wkost": {
+    "waarde": "! Administratiekosten o.a. bij OHA, wijziging hypotheekvorm en tussentijdse rentewijziging",
+    "bron": [
+     "https://www.neohypotheken.nl/storage/uploads/edceda35-7173-4496-b7ca-d4244f6cbf0c/Algemene-voorwaarden-Neo-Hypotheken-V1.3.8.pdf",
+     "https://www.neohypotheken.nl/hypotheek/hypotheekrente-wijzigen",
+     "https://www.neohypotheken.nl/hypotheek/hypotheek-verhogen",
+     "https://www.neohypotheken.nl/woonsituaties/uit-elkaar-gaan",
+     "https://www.neohypotheken.nl/veelgestelde-vragen"
+    ],
+    "brondatum": "2025-07",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Kostenbedrag verwijderd (geen tarieven in waarden)"
+   }
+  }
+ },
+ {
+  "naam": "ING",
+  "gecontroleerd": "2026-10-09",
+  "criteria": {
+   "wkost": {
+    "waarde": "! Wijziging: vaste advies- én afhandelingskosten; ook verhogen zonder advies kost een vast bedrag",
+    "bron": [
+     "https://www.ing.nl/particulier/hypotheek/jouw-hypotheek/verhogen/verhogen-zonder-advies"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Kostenbedrag verwijderd (geen tarieven in waarden)"
+   }
+  }
+ },
+ {
+  "naam": "Robuust Hypotheken",
+  "gecontroleerd": "2026-10-09",
+  "criteria": {
+   "rmid": {
+    "waarde": "+ Rentemiddeling mogelijk via Mijn Robuust, max 4 aanvragen per jaar; eenmalige kosten",
+    "bron": [
+     "https://www.robuusthypotheken.nl/home/consument/rentemiddeling",
+     "https://www.robuusthypotheken.nl/uploads/robuust/files/Algemene-voorwaarden-Robuust-Hypotheken-B.V.-September-2023.pdf"
+    ],
+    "brondatum": "2023-09",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Kostenbedrag verwijderd (geen tarieven in waarden)"
+   },
+   "wkost": {
+    "waarde": "~ Renteaanpassing/middeling eenmalige kosten; uit elkaar zonder administratiekosten; advies soms verplicht",
+    "bron": [
+     "https://www.robuusthypotheken.nl/uploads/robuust/files/BeheerkaartRobuustV2.pdf",
+     "https://www.robuusthypotheken.nl/home/consument/rentemiddeling"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Kostenbedrag verwijderd (geen tarieven in waarden)"
+   }
+  }
+ },
+ {
+  "naam": "SocioHypotheek",
+  "gecontroleerd": "2026-10-09",
+  "criteria": {
+   "wkost": {
+    "waarde": "+ Geen administratiekosten voor wijzigen van een lopende SocioHypotheek; uitbetalingsschema zelf niet te verhogen of aan te passen",
+    "bron": [
+     "https://www.sociohypotheek.nl/rente/",
+     "https://www.sociohypotheek.nl/veelgestelde-vragen/"
+    ],
+    "brondatum": "2026-09-18",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Kostenbedrag verwijderd (geen tarieven in waarden)"
+   }
+  }
+ },
+ {
+  "naam": "Obvion",
+  "gecontroleerd": "2026-10-09",
+  "criteria": {
+   "oha": {
+    "waarde": "~ Alleen via adviseur; inkomenstoets blijvende partner; bindend aanbod + akte ontslag; administratiekosten",
+    "bron": [
+     "https://obvion.nl/situatie/persoonlijk/uit-elkaar/ontslag-hoofdelijke-aansprakelijkheid/",
+     "https://obvion.nl/situatie/persoonlijk/uit-elkaar/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Kostenbedrag verwijderd (geen tarieven in waarden)"
+   },
+   "wkost": {
+    "waarde": "! Administratiekosten bij wijziging buiten einde rentevast (vorm, rente aanpassen) en bij OHA",
+    "bron": [
+     "https://obvion.nl/hypotheekrente/tussentijds-aanpassen/",
+     "https://obvion.nl/situatie/persoonlijk/uit-elkaar/ontslag-hoofdelijke-aansprakelijkheid/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Kostenbedrag verwijderd (geen tarieven in waarden)"
+   }
+  }
+ },
+ {
+  "naam": "Venn Hypotheken",
+  "gecontroleerd": "2026-10-09",
+  "criteria": {
+   "wkost": {
+    "waarde": "! Vaste administratiekosten per wijziging, ook bij verhuisregeling",
+    "bron": [
+     "https://www.vennhypotheken.nl/mijnhypotheekonline/verhuisregeling/",
+     "https://www.vennhypotheken.nl/voor-adviseurs/verhuisregeling/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Kostenbedrag verwijderd (geen tarieven in waarden)"
+   }
+  }
+ },
+ {
+  "naam": "SNS",
+  "gecontroleerd": "2026-10-09",
+  "criteria": {
+   "wkost": {
+    "waarde": "~ Administratiekosten per wijziging (hoger bij meerdere tegelijk)",
+    "bron": [
+     "https://www.asnbank.nl/downloads/kostenoverzicht-wijzigen-hypotheek.html",
+     "https://www.asnbank.nl/hypotheek/hypotheekadvies/kosten-wijzigen-van-je-bestaande-hypotheek.html"
+    ],
+    "brondatum": "2026-05",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Kostenbedrag verwijderd (geen tarieven in waarden)"
+   }
+  }
+ },
+ {
+  "naam": "Florius",
+  "gecontroleerd": "2026-10-09",
+  "criteria": {
+   "rmid": {
+    "waarde": "+ Rentemiddeling mogelijk (vergoeding via opslag in maandlast) naast renteafkoop; administratiekosten",
+    "bron": [
+     "https://www.florius.nl/hypotheekrente/renteafkoop-en-rentemiddeling"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Kostenbedrag verwijderd (geen tarieven in waarden)"
+   },
+   "wkost": {
+    "waarde": "! Wijzigingskosten afhankelijk van soort wijziging, ook bij rentemiddeling/omzetting margerente",
+    "bron": [
+     "https://www.florius.nl/hypotheek/maandbedrag",
+     "https://www.florius.nl/hypotheekrente/renteafkoop-en-rentemiddeling"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Kostenbedrag verwijderd (geen tarieven in waarden)"
+   }
+  }
+ },
+ {
+  "naam": "Tulp Hypotheken",
+  "gecontroleerd": "2026-10-09",
+  "criteria": {
+   "oha": {
+    "waarde": "~ Aanvraag via Stater met nieuwe toets; administratiekosten",
+    "bron": [
+     "https://tulphypotheken.nl/over-ons/veelgestelde-vragen/wijzigingen-hypotheek/",
+     "https://tulphypotheken.nl/over-ons/wie-doet-wat/"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Kostenbedrag verwijderd (geen tarieven in waarden)"
+   },
+   "wkost": {
+    "waarde": "! Vaste kosten per wijziging (o.a. omzetting, verhoging, OHA, partner toevoegen)",
+    "bron": [
+     "https://tulphypotheken.nl/over-ons/veelgestelde-vragen/wijzigingen-hypotheek/"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Kostenbedrag verwijderd (geen tarieven in waarden)"
+   }
+  }
+ }
+]

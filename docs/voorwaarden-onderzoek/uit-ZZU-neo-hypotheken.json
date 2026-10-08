@@ -1,0 +1,1154 @@
+[
+ {
+  "naam": "Neo Hypotheken",
+  "gecontroleerd": "2026-10-09",
+  "criteria": {
+   "zzp": {
+    "waarde": "~ Zzp > 12 mnd (NHG) of > 24 mnd (zonder NHG); inkomen via Inkomensverklaring Ondernemer",
+    "bron": [
+     "https://www.neohypotheken.nl/begrippenlijst/ondernemershypotheek",
+     "https://www.neohypotheken.nl/storage/uploads/bc2b03c9-41d5-497e-8268-6f401d5cfb08/Acceptatiegids-Neo-Hypotheken-V1.6.7.pdf"
+    ],
+    "brondatum": "2025-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Hypotheek zonder NHG: Je dient langer dan 24 maanden als zelfstandig ondernemer actief te zijn geweest"
+   },
+   "flex": {
+    "waarde": "~ Gemiddelde laatste 3 kalenderjaren, max. laatste jaar; ook IBL en Arbeidsmarktscan mogelijk",
+    "bron": [
+     "https://www.neohypotheken.nl/storage/uploads/bc2b03c9-41d5-497e-8268-6f401d5cfb08/Acceptatiegids-Neo-Hypotheken-V1.6.7.pdf",
+     "https://www.neohypotheken.nl/faq/hypotheek-zonder-vast-contract",
+     "https://www.neohypotheken.nl/storage/uploads/6de308f3-f934-4cf6-9569-6f3e7a29b459/Acceptatiegids-Neo-Hypotheken-v.1.6.7.pdf"
+    ],
+    "brondatum": "2025-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. gemiddelde inkomen over de afgelopen 3 aaneensluitende kalenderjaren ... met als maximum het inkomen van het laatste jaar"
+   },
+   "persp": {
+    "waarde": "- Perspectiefverklaring niet geaccepteerd; alternatief IBL of Arbeidsmarktscan",
+    "bron": [
+     "https://www.neohypotheken.nl/storage/uploads/bc2b03c9-41d5-497e-8268-6f401d5cfb08/Acceptatiegids-Neo-Hypotheken-V1.6.7.pdf",
+     "https://www.neohypotheken.nl/faq/hypotheek-zonder-vast-contract",
+     "https://www.neohypotheken.nl/storage/uploads/6de308f3-f934-4cf6-9569-6f3e7a29b459/Acceptatiegids-Neo-Hypotheken-v.1.6.7.pdf"
+    ],
+    "brondatum": "2025-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Ook kan er geen Neo hypotheek worden aangevraagd op basis van een perspectiefverklaring."
+   },
+   "aow": {
+    "waarde": "~ Pensioeninkomen aantonen als pensioendatum < 10 jaar na offerte; tekort vóór pensioen aflossen",
+    "bron": [
+     "https://www.neohypotheken.nl/storage/uploads/bc2b03c9-41d5-497e-8268-6f401d5cfb08/Acceptatiegids-Neo-Hypotheken-V1.6.7.pdf",
+     "https://www.neohypotheken.nl/woonsituaties/met-pensioen"
+    ],
+    "brondatum": "2025-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Het deel van de lening dat op basis van het pensioeninkomen boven de leencapaciteit komt, moet voor de pensioendatum annuitäir / lineair zijn afgelost."
+   },
+   "erfp": {
+    "waarde": "! Alleen (semi-)overheidserfpacht conform NHG; particuliere erfpacht uitgesloten",
+    "bron": [
+     "https://www.neohypotheken.nl/begrippenlijst/erfpacht",
+     "https://www.neohypotheken.nl/productsheet",
+     "https://www.neohypotheken.nl/storage/uploads/764501b2-1a05-479b-bc8d-708743437cc4/Acceptatiegids-Neo-Hypotheken-V.1.6.6.pdf",
+     "https://www.neohypotheken.nl/storage/uploads/6de308f3-f934-4cf6-9569-6f3e7a29b459/Acceptatiegids-Neo-Hypotheken-v.1.6.7.pdf"
+    ],
+    "brondatum": "2025-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Neo Hypotheken verstrekt geen hypotheek om een woning met particulier erfpacht te financieren."
+   },
+   "rvp": {
+    "waarde": "~ 1, 5, 10, 15, 20 en 30 jaar vast",
+    "bron": [
+     "https://www.neohypotheken.nl/productsheet",
+     "https://www.neohypotheken.nl/storage/uploads/bc2b03c9-41d5-497e-8268-6f401d5cfb08/Acceptatiegids-Neo-Hypotheken-V1.6.7.pdf",
+     "https://www.neohypotheken.nl/actuele-hypotheekrente",
+     "https://www.neohypotheken.nl/storage/uploads/3ff723f1-3627-4cb3-8880-cd7005e22de5/Acceptatiegids-Neo-Hypotheken-V.1.6.6.pdf"
+    ],
+    "brondatum": "2025-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Rentevaste periodes: 1, 5, 10, 15, 20 en 30 jaar (samenvatting zoekresultaat, gids en rentepagina)"
+   },
+   "dag": {
+    "waarde": "+ Laagste rente van offerte of passeerdatum",
+    "bron": [
+     "https://www.neohypotheken.nl/storage/uploads/bc2b03c9-41d5-497e-8268-6f401d5cfb08/Acceptatiegids-Neo-Hypotheken-V1.6.7.pdf",
+     "https://www.neohypotheken.nl/storage/uploads/edceda35-7173-4496-b7ca-d4244f6cbf0c/Algemene-voorwaarden-Neo-Hypotheken-V1.3.8.pdf"
+    ],
+    "brondatum": "2025-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. hanteert bij het passeren van de hypotheekakte de laagste rente van de rente uit het hypotheekaanbod en ons actuele rente aanbod"
+   },
+   "geld": {
+    "waarde": "! Renteaanbod 2 mnd (offerte 6 mnd geldig); geen verlenging",
+    "bron": [
+     "https://www.neohypotheken.nl/voor-adviseurs",
+     "https://www.neohypotheken.nl/storage/uploads/edceda35-7173-4496-b7ca-d4244f6cbf0c/Algemene-voorwaarden-Neo-Hypotheken-V1.3.8.pdf",
+     "https://www.neohypotheken.nl/storage/uploads/bc2b03c9-41d5-497e-8268-6f401d5cfb08/Acceptatiegids-Neo-Hypotheken-V1.6.7.pdf",
+     "https://www.neohypotheken.nl/storage/uploads/91c8c2da-7182-4fbf-9fcc-ebfe49edad47/Acceptatiegids-Neo-Hypotheken-V1.6.3.pdf",
+     "https://www.neohypotheken.nl/productsheet"
+    ],
+    "brondatum": "2025-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Ons hypotheekaanbod is 6 maanden geldig, gerekend vanaf de datum waarop we het hebben uitgebracht, en er is geen verlengingstermijn."
+   },
+   "boete": {
+    "waarde": "+ 25% van oorspronkelijk bedrag per jaar boetevrij; onbeperkt met eigen middelen",
+    "bron": [
+     "https://www.neohypotheken.nl/hypotheek/extra-aflossen-hypotheek",
+     "https://www.neohypotheken.nl/storage/uploads/bc2b03c9-41d5-497e-8268-6f401d5cfb08/Acceptatiegids-Neo-Hypotheken-V1.6.7.pdf"
+    ],
+    "brondatum": "2025",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. dan is het vergoedingsvrije percentage 25% van de oorspronkelijke hoofdsom"
+   },
+   "ltv": {
+    "waarde": "+ Klassen NHG, ≤60/70/80/90/100%; automatische verlaging per 1e van volgende maand",
+    "bron": [
+     "https://www.neohypotheken.nl/storage/uploads/bc2b03c9-41d5-497e-8268-6f401d5cfb08/Acceptatiegids-Neo-Hypotheken-V1.6.7.pdf",
+     "https://www.neohypotheken.nl/begrippenlijst/risico-opslag-hypotheek",
+     "https://www.neohypotheken.nl/storage/uploads/3ff723f1-3627-4cb3-8880-cd7005e22de5/Acceptatiegids-Neo-Hypotheken-V.1.6.6.pdf",
+     "https://www.neohypotheken.nl/storage/uploads/edceda35-7173-4496-b7ca-d4244f6cbf0c/Algemene-voorwaarden-Neo-Hypotheken-V1.3.8.pdf"
+    ],
+    "brondatum": "2025-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. automatische rentedaling"
+   },
+   "bdduur": {
+    "waarde": "~ 18 mnd bestaande bouw / 24 mnd nieuwbouw; eenmalig +6 resp. +12 mnd",
+    "bron": [
+     "https://www.neohypotheken.nl/begrippenlijst/bouwdepot",
+     "https://www.neohypotheken.nl/begrippenlijst/verduurzamingshypotheek",
+     "https://www.neohypotheken.nl/storage/uploads/3ff723f1-3627-4cb3-8880-cd7005e22de5/Acceptatiegids-Neo-Hypotheken-V.1.6.6.pdf"
+    ],
+    "brondatum": "2025",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Bij bestaande bouw (verbouw) is een bouwdepot 18 maanden geldig en bij nieuwbouw 24 maanden; eenmalig verlengen +6 resp. +12 maanden"
+   },
+   "bdrnt": {
+    "waarde": "~ Gewogen leningrente over niet-opgenomen deel, verrekend; geen vergoeding in verlengperiode",
+    "bron": [
+     "https://www.neohypotheken.nl/begrippenlijst/bouwdepot",
+     "https://www.neohypotheken.nl/storage/uploads/3ff723f1-3627-4cb3-8880-cd7005e22de5/Acceptatiegids-Neo-Hypotheken-V.1.6.6.pdf",
+     "https://www.neohypotheken.nl/storage/uploads/edceda35-7173-4496-b7ca-d4244f6cbf0c/Algemene-voorwaarden-Neo-Hypotheken-V1.3.8.pdf"
+    ],
+    "brondatum": "2025",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Tijdens de verlenging vervalt de vergoeding."
+   },
+   "bddecl": {
+    "waarde": "+ Uitbetaling uiterlijk 3e werkdag na ontvangst declaratie; overzicht in MijnHypotheekOnline",
+    "bron": [
+     "https://www.neohypotheken.nl/begrippenlijst/bouwdepot"
+    ],
+    "brondatum": "2025",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Facturen die via MijnHypotheekOnline worden ingediend, worden uiterlijk de derde werkdag na ontvangst uitbetaald."
+   },
+   "ebb": {
+    "waarde": "~ EBB mogelijk zonder vooraf specificatie; via duurzaamheidsdepot",
+    "bron": [
+     "https://www.neohypotheken.nl/begrippenlijst/verduurzamingshypotheek",
+     "https://www.neohypotheken.nl/storage/uploads/bc2b03c9-41d5-497e-8268-6f401d5cfb08/Acceptatiegids-Neo-Hypotheken-V1.6.7.pdf",
+     "https://www.neohypotheken.nl/woonsituaties/verduurzamen-woning"
+    ],
+    "brondatum": "2025",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Hierbij hoeft op voorhand geen specificatie aangeleverd te worden als bewijs van de te maken kosten"
+   },
+   "duur": {
+    "waarde": "~ Tot 106% MW voor energiebesparende maatregelen (duurzaamheidsdepot); vergoeding nieuw energielabel; geen rentekorting gevonden",
+    "bron": [
+     "https://www.neohypotheken.nl/begrippenlijst/verduurzamingshypotheek",
+     "https://www.neohypotheken.nl/storage/uploads/6de308f3-f934-4cf6-9569-6f3e7a29b459/Acceptatiegids-Neo-Hypotheken-v.1.6.7.pdf",
+     "https://www.neohypotheken.nl/woonsituaties/verduurzamen-woning"
+    ],
+    "brondatum": "2025",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Voor energiebesparende maatregelen gaat dat naar 106%, maar alleen voor het bedrag dat daadwerkelijk aan die maatregelen wordt besteed."
+   },
+   "verh": {
+    "waarde": "~ Rente meenemen tot hoogte resterende schuld; tot 6 mnd na aflossing; 1 mnd vooraf aanvragen",
+    "bron": [
+     "https://www.neohypotheken.nl/woonsituaties/hypotheek-meenemen",
+     "https://www.neohypotheken.nl/storage/uploads/edceda35-7173-4496-b7ca-d4244f6cbf0c/Algemene-voorwaarden-Neo-Hypotheken-V1.3.8.pdf"
+    ],
+    "brondatum": "2025-07",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Er zit maximaal 6 maanden tussen de levering van de oude en de nieuwe woning."
+   },
+   "ondh": {
+    "waarde": "~ Restschuld meefinancieren tot 100% MW nieuwe woning als eigen middelen ontbreken; ook betalingsregeling restschuld",
+    "bron": [
+     "https://www.neohypotheken.nl/faq/ik-heb-een-restschuld-wat-te-doen"
+    ],
+    "brondatum": "2025",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Neo kan een restschuld meefinancieren, maar alleen als je zelf onvoldoende middelen hebt om die af te lossen. ... niet hoger dan 100% van de marktwaarde."
+   },
+   "oha": {
+    "waarde": "~ OHA mogelijk als achterblijver kan uitkopen en lasten draagt; €250 administratiekosten",
+    "bron": [
+     "https://www.neohypotheken.nl/woonsituaties/uit-elkaar-gaan",
+     "https://www.neohypotheken.nl/storage/uploads/edceda35-7173-4496-b7ca-d4244f6cbf0c/Algemene-voorwaarden-Neo-Hypotheken-V1.3.8.pdf"
+    ],
+    "brondatum": "2025",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. alleen als de achterblijver de ander kan uitkopen en de nieuwe en bestaande hypotheek zelf kan dragen"
+   },
+   "tweede": {
+    "waarde": "~ Onderhandse verhoging tot ingeschreven bedrag of 2e hypotheek; min. €5.000, taxatie nodig",
+    "bron": [
+     "https://www.neohypotheken.nl/hypotheek/hypotheek-verhogen",
+     "https://www.neohypotheken.nl/storage/uploads/bc2b03c9-41d5-497e-8268-6f401d5cfb08/Acceptatiegids-Neo-Hypotheken-V1.6.7.pdf",
+     "https://www.neohypotheken.nl/storage/uploads/6de308f3-f934-4cf6-9569-6f3e7a29b459/Acceptatiegids-Neo-Hypotheken-v.1.6.7.pdf"
+    ],
+    "brondatum": "2025-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Het minimale bedrag voor onderhandse verhoging of een tweede hypotheek is € 5.000."
+   },
+   "ovbr": {
+    "waarde": "~ Max. 30 mnd vaste rente, niet verlengbaar; onverkocht max. 98% getaxeerde marktwaarde minus schuld",
+    "bron": [
+     "https://www.neohypotheken.nl/storage/uploads/bc2b03c9-41d5-497e-8268-6f401d5cfb08/Acceptatiegids-Neo-Hypotheken-V1.6.7.pdf",
+     "https://www.neohypotheken.nl/productsheet"
+    ],
+    "brondatum": "2025-08-01",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Gewijzigd na controle (A/B/arbitrage): Gids 1.6.6 en 1.6.7 + productsheet: 98% (90% gold t/m 1.6.5; begrippenlijst nog 90%, verouderd). Actuele gids v1.6.8 genoemd op adviseurspagina maar niet in te zien. Acceptatiestop nieuwe klanten sinds 7-10-2025."
+   },
+   "avrij": {
+    "waarde": "~ Max. 50% van marktwaarde aflossingsvrij",
+    "bron": [
+     "https://www.neohypotheken.nl/storage/uploads/bc2b03c9-41d5-497e-8268-6f401d5cfb08/Acceptatiegids-Neo-Hypotheken-V1.6.7.pdf",
+     "https://www.neohypotheken.nl/hypotheek/aflossingsvrije-hypotheek",
+     "https://www.neohypotheken.nl/storage/uploads/6de308f3-f934-4cf6-9569-6f3e7a29b459/Acceptatiegids-Neo-Hypotheken-v.1.6.7.pdf"
+    ],
+    "brondatum": "2025-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Momenteel mag slechts 50% van de marktwaarde van je woning aflossingsvrij worden gefinancierd."
+   },
+   "rmid": {
+    "waarde": "~ Rentemiddeling mogelijk: vergoeding verwerkt als opslag over nieuwe rentevaste periode",
+    "bron": [
+     "https://www.neohypotheken.nl/begrippenlijst/boeterente",
+     "https://www.neohypotheken.nl/storage/uploads/edceda35-7173-4496-b7ca-d4244f6cbf0c/Algemene-voorwaarden-Neo-Hypotheken-V1.3.8.pdf",
+     "https://www.neohypotheken.nl/storage/uploads/3ff723f1-3627-4cb3-8880-cd7005e22de5/Acceptatiegids-Neo-Hypotheken-V.1.6.6.pdf"
+    ],
+    "brondatum": "2025-07",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. De vergoeding wordt uitgesmeerd over de gekozen nieuwe rentevastperiode en omgerekend naar een renteopslag."
+   },
+   "rverl": {
+    "waarde": "~ Rentevoorstel 3 mnd voor einde RVP o.b.v. dan geldende hypotheekrentes en resterende looptijd",
+    "bron": [
+     "https://www.neohypotheken.nl/faq/rentevaste-periode-loopt-af",
+     "https://www.neohypotheken.nl/storage/uploads/edceda35-7173-4496-b7ca-d4244f6cbf0c/Algemene-voorwaarden-Neo-Hypotheken-V1.3.8.pdf",
+     "https://www.neohypotheken.nl/begrippenlijst/boeterente",
+     "https://www.neohypotheken.nl/veelgestelde-vragen"
+    ],
+    "brondatum": "2025",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Je rente wordt dan gebaseerd op de op dat moment geldende hypotheekrente en de resterende looptijd van je hypotheek"
+   },
+   "rvoor": {
+    "waarde": "~ Rentevoorstel 3 mnd vóór einde rentevaste periode via MijnHypotheekOnline",
+    "bron": [
+     "https://www.neohypotheken.nl/faq/rentevaste-periode-loopt-af",
+     "https://www.neohypotheken.nl/begrippenlijst/boeterente"
+    ],
+    "brondatum": "2025",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Drie maanden voordat jouw rentevaste periode afloopt, stuurt Neo Hypotheken je een aanbod via het consumenten portal MijnHypotheekOnline"
+   },
+   "bbrk": {
+    "waarde": "~ AFM-methode: vergelijkingsrente zelfde risicoklasse en resterende periode, contante waarde",
+    "bron": [
+     "https://www.neohypotheken.nl/begrippenlijst/boeterente",
+     "https://www.neohypotheken.nl/hypotheek/hypotheekrente-wijzigen",
+     "https://www.neohypotheken.nl/storage/uploads/edceda35-7173-4496-b7ca-d4244f6cbf0c/Algemene-voorwaarden-Neo-Hypotheken-V1.3.8.pdf"
+    ],
+    "brondatum": "2025",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. De eventuele vergoeding berekenen wij aan de hand van de AFM-norm."
+   },
+   "o106": {
+    "waarde": "+ Tot 106% voor energiebesparing tegen tarief klasse >90-100%, geen extra opslag",
+    "bron": [
+     "https://www.neohypotheken.nl/storage/uploads/bc2b03c9-41d5-497e-8268-6f401d5cfb08/Acceptatiegids-Neo-Hypotheken-V1.6.7.pdf",
+     "https://www.neohypotheken.nl/begrippenlijst/verduurzamingshypotheek",
+     "https://www.neohypotheken.nl/storage/uploads/6de308f3-f934-4cf6-9569-6f3e7a29b459/Acceptatiegids-Neo-Hypotheken-v.1.6.7.pdf"
+    ],
+    "brondatum": "2025-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. That 106% portion is priced at the same rate as the 90-100% risk class (samenvatting gids v1.6.7)"
+   },
+   "bprov": {
+    "waarde": "- Geen verlenging renteaanbod of hypotheekofferte mogelijk; dus geen bereidstellingsprovisie",
+    "bron": [
+     "https://www.neohypotheken.nl/storage/uploads/bc2b03c9-41d5-497e-8268-6f401d5cfb08/Acceptatiegids-Neo-Hypotheken-V1.6.7.pdf",
+     "https://www.neohypotheken.nl/storage/uploads/edceda35-7173-4496-b7ca-d4244f6cbf0c/Algemene-voorwaarden-Neo-Hypotheken-V1.3.8.pdf",
+     "https://www.neohypotheken.nl/productsheet",
+     "https://www.neohypotheken.nl/begrippenlijst/bereidstellingsprovisie"
+    ],
+    "brondatum": "2025-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. er is geen verlengingstermijn"
+   },
+   "wkost": {
+    "waarde": "! €250 administratiekosten o.a. bij OHA, wijziging hypotheekvorm en tussentijdse rentewijziging",
+    "bron": [
+     "https://www.neohypotheken.nl/storage/uploads/edceda35-7173-4496-b7ca-d4244f6cbf0c/Algemene-voorwaarden-Neo-Hypotheken-V1.3.8.pdf",
+     "https://www.neohypotheken.nl/hypotheek/hypotheekrente-wijzigen",
+     "https://www.neohypotheken.nl/hypotheek/hypotheek-verhogen",
+     "https://www.neohypotheken.nl/woonsituaties/uit-elkaar-gaan",
+     "https://www.neohypotheken.nl/veelgestelde-vragen"
+    ],
+    "brondatum": "2025-07",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Neo Hypotheken brengt €250 aan administratiekosten in rekening voor een tussentijdse wijziging van de rentevaste periode."
+   },
+   "avlt": {
+    "waarde": "! Einde looptijd volledig aflossen; evt. betalingsregeling of oversluiten, geen garantie",
+    "bron": [
+     "https://www.neohypotheken.nl/hypotheek/aflossingsvrije-hypotheek"
+    ],
+    "brondatum": "2025",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Lukt dat niet, dan moet je met ons in gesprek moeten over een betalingsregeling of eventueel een nieuwe hypotheek."
+   },
+   "bproc": {
+    "waarde": "~ Betalingsproblemen via bijzonder beheer Mender (Stater): budget- en jobcoaching",
+    "bron": [
+     "https://www.neohypotheken.nl/begrippenlijst/hulp-van-mender-bij-betalingsproblemen"
+    ],
+    "brondatum": "2025",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Mender is de handelsnaam van Hypocasso B.V. en verzorgt het bijzonder beheer."
+   },
+   "elbl": {
+    "waarde": "- Geen labelafhankelijke rentekorting gevonden; wel vergoeding kosten nieuw energielabel na maatregelen",
+    "bron": [
+     "https://www.neohypotheken.nl/begrippenlijst/verduurzamingshypotheek",
+     "https://www.neohypotheken.nl/begrippenlijst/risico-opslag-hypotheek",
+     "https://www.neohypotheken.nl/woonsituaties/verduurzamen-woning"
+    ],
+    "brondatum": "2025",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Neo zegt een financiële vergoeding aan te bieden ... een nieuw energielabel te laten registreren"
+   },
+   "cons": {
+    "waarde": "~ Consumptieve besteding mogelijk zonder NHG tot max. 50% van de woningwaarde",
+    "bron": [
+     "https://www.neohypotheken.nl/begrippenlijst/overwaarde-verzilveren",
+     "https://www.neohypotheken.nl/productsheet"
+    ],
+    "brondatum": "2025",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Financiering van consumptieve bestedingen is mogelijk tot 50% van de waarde van de woning. Dit geldt alleen bij leningen zonder NHG."
+   },
+   "lensch": {
+    "waarde": "~ Onderhandse lening telt niet mee als rente en aflossing de hele looptijd definitief worden geschonken; niet vervroegd opeisbaar, geen hypotheekrecht",
+    "bron": [
+     "https://www.neohypotheken.nl/storage/uploads/bc2b03c9-41d5-497e-8268-6f401d5cfb08/Acceptatiegids-Neo-Hypotheken-V1.6.7.pdf",
+     "https://www.neohypotheken.nl/begrippenlijst/familiehypotheek",
+     "https://www.neohypotheken.nl/storage/uploads/6de308f3-f934-4cf6-9569-6f3e7a29b459/Acceptatiegids-Neo-Hypotheken-v.1.6.7.pdf"
+    ],
+    "brondatum": "2025-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. De rente en aflossing moeten gedurende de hele looptijd ... geschonken worden"
+   },
+   "desk": {
+    "waarde": "~ Desktoptaxatie (hybride) t/m 90% LTV; daarboven gevalideerd taxatierapport; geen WOZ/Calcasa-model; niet bij erfpacht of appartement met VvE",
+    "bron": [
+     "https://www.neohypotheken.nl/storage/uploads/bc2b03c9-41d5-497e-8268-6f401d5cfb08/Acceptatiegids-Neo-Hypotheken-V1.6.7.pdf",
+     "https://www.neohypotheken.nl/storage/uploads/6de308f3-f934-4cf6-9569-6f3e7a29b459/Acceptatiegids-Neo-Hypotheken-v.1.6.7.pdf"
+    ],
+    "brondatum": "2025-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Een desktoptaxatie is dus niet mogelijk bij erfpacht."
+   },
+   "ams": {
+    "waarde": "~ Arbeidsmarktscan mogelijk bij 12 van laatste 14 mnd in loondienst; niet voor uitzend- of 0-urencontract; laagste van inkomen en verdiencapaciteit",
+    "bron": [
+     "https://www.neohypotheken.nl/begrippenlijst/arbeidsmarktscan",
+     "https://www.neohypotheken.nl/storage/uploads/bc2b03c9-41d5-497e-8268-6f401d5cfb08/Acceptatiegids-Neo-Hypotheken-V1.6.7.pdf",
+     "https://www.neohypotheken.nl/storage/uploads/6de308f3-f934-4cf6-9569-6f3e7a29b459/Acceptatiegids-Neo-Hypotheken-v.1.6.7.pdf"
+    ],
+    "brondatum": "2025-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. minimaal 12 maanden van de afgelopen 14 maanden voor de hypotheekaanvraag in loondienst"
+   },
+   "vve": {
+    "waarde": "- VvE verplicht en actief (ingeschreven KvK) of in oprichting bij nieuwbouw/nieuwe splitsing; standaard taxatierapport",
+    "bron": [
+     "https://www.neohypotheken.nl/storage/uploads/bc2b03c9-41d5-497e-8268-6f401d5cfb08/Acceptatiegids-Neo-Hypotheken-V1.6.7.pdf",
+     "https://www.neohypotheken.nl/storage/uploads/6de308f3-f934-4cf6-9569-6f3e7a29b459/Acceptatiegids-Neo-Hypotheken-v.1.6.7.pdf"
+    ],
+    "brondatum": "2025-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. De VvE moet actief (te weten ingeschreven bij de Kamer van Koophandel) of in oprichting zijn"
+   },
+   "huur": {
+    "waarde": "- Huurinkomsten tellen niet mee in het toetsinkomen",
+    "bron": [
+     "https://www.neohypotheken.nl/storage/uploads/bc2b03c9-41d5-497e-8268-6f401d5cfb08/Acceptatiegids-Neo-Hypotheken-V1.6.7.pdf",
+     "https://www.neohypotheken.nl/storage/uploads/6de308f3-f934-4cf6-9569-6f3e7a29b459/Acceptatiegids-Neo-Hypotheken-v.1.6.7.pdf",
+     "https://www.neohypotheken.nl/storage/uploads/87433d44-2b19-41aa-914f-60458c6a08ce/Beheergids-Neo-Hypotheken-juni-'24.pdf"
+    ],
+    "brondatum": "2025-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Niet-regulier inkomen, zoals inkomen uit verhuuropbrengsten, vermogen, persoonsgebonden budget (PGB) ... worden buiten beschouwing gelaten."
+   },
+   "bonus": {
+    "waarde": "~ Bonus, provisie en overwerk alleen als persoonsgebonden en vast/structureel, blijkend uit recente werkgeversverklaring",
+    "bron": [
+     "https://www.neohypotheken.nl/storage/uploads/bc2b03c9-41d5-497e-8268-6f401d5cfb08/Acceptatiegids-Neo-Hypotheken-V1.6.7.pdf",
+     "https://www.neohypotheken.nl/storage/uploads/6de308f3-f934-4cf6-9569-6f3e7a29b459/Acceptatiegids-Neo-Hypotheken-v.1.6.7.pdf"
+    ],
+    "brondatum": "2025-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Bij provisie, bonus en overwerk geldt daarbij dat ze persoonsgebonden en vast zijn dan wel structureel."
+   },
+   "recr": {
+    "waarde": "- Geen financiering van recreatiewoningen of vakantie-/recreatieobjecten",
+    "bron": [
+     "https://www.neohypotheken.nl/storage/uploads/bc2b03c9-41d5-497e-8268-6f401d5cfb08/Acceptatiegids-Neo-Hypotheken-V1.6.7.pdf",
+     "https://www.neohypotheken.nl/productsheet",
+     "https://www.neohypotheken.nl/storage/uploads/6de308f3-f934-4cf6-9569-6f3e7a29b459/Acceptatiegids-Neo-Hypotheken-v.1.6.7.pdf"
+    ],
+    "brondatum": "2025-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Wij verstrekken geen leningen voor woonboten, woonwagens, winkelpanden, recreatiewoningen of woonboerderijen met een agrarische bestemming."
+   },
+   "aanv": {
+    "waarde": "~ Max. 2 aanvragers; familie (broer-zus, ouder-kind) mogelijk als beiden eigenaar, bewoner en hoofdelijk schuldenaar",
+    "bron": [
+     "https://www.neohypotheken.nl/storage/uploads/bc2b03c9-41d5-497e-8268-6f401d5cfb08/Acceptatiegids-Neo-Hypotheken-V1.6.7.pdf"
+    ],
+    "brondatum": "2025-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Een lening kan door maximaal twee aanvragers worden aangevraagd. Samenlevingsvormen in de familiesfeer zijn ook mogelijk, zoals broer-zus of moeder/vader-kind."
+   },
+   "pgb": {
+    "waarde": "- Inkomen uit persoonsgebonden budget (pgb) telt niet mee",
+    "bron": [
+     "https://www.neohypotheken.nl/storage/uploads/bc2b03c9-41d5-497e-8268-6f401d5cfb08/Acceptatiegids-Neo-Hypotheken-V1.6.7.pdf",
+     "https://www.neohypotheken.nl/storage/uploads/6de308f3-f934-4cf6-9569-6f3e7a29b459/Acceptatiegids-Neo-Hypotheken-v.1.6.7.pdf",
+     "https://www.neohypotheken.nl/storage/uploads/87433d44-2b19-41aa-914f-60458c6a08ce/Beheergids-Neo-Hypotheken-juni-'24.pdf"
+    ],
+    "brondatum": "2025-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Niet-regulier inkomen, zoals ... persoonsgebonden budget (PGB) ... worden buiten beschouwing gelaten."
+   },
+   "start": {
+    "waarde": "+ SVn-starterslening mogelijk mits Neo-hypotheek eerste rang; aflossen via verhoging bij Neo kan",
+    "bron": [
+     "https://www.neohypotheken.nl/storage/uploads/bc2b03c9-41d5-497e-8268-6f401d5cfb08/Acceptatiegids-Neo-Hypotheken-V1.6.7.pdf",
+     "https://www.neohypotheken.nl/begrippenlijst/startershypotheek",
+     "https://www.neohypotheken.nl/storage/uploads/6de308f3-f934-4cf6-9569-6f3e7a29b459/Acceptatiegids-Neo-Hypotheken-v.1.6.7.pdf"
+    ],
+    "brondatum": "2025-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Financiering in combinatie met de SVn Starterslening is mogelijk indien de Neo Hypotheek eerste rang is."
+   },
+   "verhuur": {
+    "waarde": "- Verhuur in principe niet toegestaan; tijdelijk alleen met toestemming (werk elders max. 3 jr, Leegstandwet max. 2 jr); zonder toestemming = fraude",
+    "bron": [
+     "https://www.neohypotheken.nl/storage/uploads/87433d44-2b19-41aa-914f-60458c6a08ce/Beheergids-Neo-Hypotheken-juni-'24.pdf",
+     "https://www.neohypotheken.nl/storage/uploads/bc2b03c9-41d5-497e-8268-6f401d5cfb08/Acceptatiegids-Neo-Hypotheken-V1.6.7.pdf",
+     "https://www.neohypotheken.nl/productsheet",
+     "https://www.neohypotheken.nl/storage/uploads/6de308f3-f934-4cf6-9569-6f3e7a29b459/Acceptatiegids-Neo-Hypotheken-v.1.6.7.pdf",
+     "https://www.neohypotheken.nl/veelgestelde-vragen"
+    ],
+    "brondatum": "2025",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. In principe niet toegestaan; in uitzonderlijke gevallen tijdelijke verhuur; Leegstandwet max. 2 jaar, werk elders max. 3 jaar"
+   },
+   "ort": {
+    "waarde": "~ ORT, overwerk en provisie/bonus alleen als structureel; gemiddelde over laatste 12 maanden",
+    "bron": [
+     "https://www.neohypotheken.nl/storage/uploads/bc2b03c9-41d5-497e-8268-6f401d5cfb08/Acceptatiegids-Neo-Hypotheken-V1.6.7.pdf"
+    ],
+    "brondatum": "2025-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Voor de berekening van het toetsinkomen neemt Neo Hypotheken deze bestanddelen alleen mee indien ze structureel zijn."
+   },
+   "uren": {
+    "waarde": "~ Uren boven 40 per week (één of meerdere banen samen) gelden als overwerk",
+    "bron": [
+     "https://www.neohypotheken.nl/storage/uploads/bc2b03c9-41d5-497e-8268-6f401d5cfb08/Acceptatiegids-Neo-Hypotheken-V1.6.7.pdf",
+     "https://www.neohypotheken.nl/begrippenlijst/intentieverklaring",
+     "https://www.neohypotheken.nl/storage/uploads/6de308f3-f934-4cf6-9569-6f3e7a29b459/Acceptatiegids-Neo-Hypotheken-v.1.6.7.pdf"
+    ],
+    "brondatum": "2025-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Als het dienstverband of meerdere dienstverbanden tezamen meer dan 40 uur beslaat(n), rekenen we deze extra uren als overwerk."
+   },
+   "meerink": {
+    "waarde": "~ Meerdere dienstverbanden mogelijk; samen max. 40 uur als vast, onderbouwing bestendigheid extra dienstverband kan worden gevraagd",
+    "bron": [
+     "https://www.neohypotheken.nl/storage/uploads/bc2b03c9-41d5-497e-8268-6f401d5cfb08/Acceptatiegids-Neo-Hypotheken-V1.6.7.pdf",
+     "https://www.neohypotheken.nl/begrippenlijst/intentieverklaring",
+     "https://www.neohypotheken.nl/storage/uploads/6de308f3-f934-4cf6-9569-6f3e7a29b459/Acceptatiegids-Neo-Hypotheken-v.1.6.7.pdf"
+    ],
+    "brondatum": "2025-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Neo kan ook onderbouwing van de bestendigheid ... zoals overwerk of een extra dienstverband vragen."
+   },
+   "loondt": {
+    "waarde": "~ Flexinkomen via IBL (MijnUWV), arbeidsmarktscan of jaaropgaven 3 jaar; bestendigheid aantonen; geen perspectiefverklaring",
+    "bron": [
+     "https://www.neohypotheken.nl/storage/uploads/bc2b03c9-41d5-497e-8268-6f401d5cfb08/Acceptatiegids-Neo-Hypotheken-V1.6.7.pdf",
+     "https://www.neohypotheken.nl/faq/hypotheek-zonder-vast-contract",
+     "https://www.neohypotheken.nl/storage/uploads/6de308f3-f934-4cf6-9569-6f3e7a29b459/Acceptatiegids-Neo-Hypotheken-v.1.6.7.pdf"
+    ],
+    "brondatum": "2025-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. gemiddelde inkomen over de afgelopen 3 aaneensluitende kalenderjaren of 36 maanden middels Inkomens Bepaling Loondienst (IBL)"
+   },
+   "intent": {
+    "waarde": "~ Contract bepaalde tijd met intentie = vast, maar pas na verstreken proeftijd; contract moet bij aanbod nog min. 1 mnd lopen",
+    "bron": [
+     "https://www.neohypotheken.nl/storage/uploads/bc2b03c9-41d5-497e-8268-6f401d5cfb08/Acceptatiegids-Neo-Hypotheken-V1.6.7.pdf",
+     "https://www.neohypotheken.nl/begrippenlijst/intentieverklaring"
+    ],
+    "brondatum": "2025-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. een contract voor bepaalde tijd met intentieverklaring geldt als vast dienstverband indien de proeftijd ook daadwerkelijk verstreken is (samenvatting)"
+   },
+   "toekst": {
+    "waarde": "~ Toekomstige verhoging of urenuitbreiding alleen als onvoorwaardelijk (definitieve cao/werkgever) en ingang binnen 6 mnd na aanbod",
+    "bron": [
+     "https://www.neohypotheken.nl/storage/uploads/bc2b03c9-41d5-497e-8268-6f401d5cfb08/Acceptatiegids-Neo-Hypotheken-V1.6.7.pdf"
+    ],
+    "brondatum": "2025-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. De salarisverhoging gaat in binnen 6 maanden na de datum van het hypotheekaanbod."
+   },
+   "proef": {
+    "waarde": "- Tijdens proeftijd wordt ook een vast contract als flexibel inkomen beoordeeld",
+    "bron": [
+     "https://www.neohypotheken.nl/begrippenlijst/intentieverklaring",
+     "https://www.neohypotheken.nl/storage/uploads/bc2b03c9-41d5-497e-8268-6f401d5cfb08/Acceptatiegids-Neo-Hypotheken-V1.6.7.pdf"
+    ],
+    "brondatum": "2025-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Zit je nog in de proeftijd, dan telt het inkomen als flexibel. (samenvatting)"
+   },
+   "buitw": {
+    "waarde": "- Geen inkomen in buitenlandse valuta; geen klanten die elders inkomstenbelasting verschuldigd zijn",
+    "bron": [
+     "https://www.neohypotheken.nl/storage/uploads/bc2b03c9-41d5-497e-8268-6f401d5cfb08/Acceptatiegids-Neo-Hypotheken-V1.6.7.pdf",
+     "https://www.neohypotheken.nl/storage/uploads/6de308f3-f934-4cf6-9569-6f3e7a29b459/Acceptatiegids-Neo-Hypotheken-v.1.6.7.pdf"
+    ],
+    "brondatum": "2025-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Daarnaast wordt geen inkomen in buitenlandse valuta geaccepteerd"
+   },
+   "verm": {
+    "waarde": "- Inkomen uit vermogen telt niet mee (niet-regulier inkomen wordt buiten beschouwing gelaten)",
+    "bron": [
+     "https://www.neohypotheken.nl/storage/uploads/bc2b03c9-41d5-497e-8268-6f401d5cfb08/Acceptatiegids-Neo-Hypotheken-V1.6.7.pdf",
+     "https://www.neohypotheken.nl/storage/uploads/6de308f3-f934-4cf6-9569-6f3e7a29b459/Acceptatiegids-Neo-Hypotheken-v.1.6.7.pdf",
+     "https://www.neohypotheken.nl/storage/uploads/87433d44-2b19-41aa-914f-60458c6a08ce/Beheergids-Neo-Hypotheken-juni-'24.pdf"
+    ],
+    "brondatum": "2025-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Niet-regulier inkomen, zoals inkomen uit verhuuropbrengsten, vermogen, ... worden buiten beschouwing gelaten."
+   },
+   "lijfr": {
+    "waarde": "+ Lopende lijfrente telt als bestendige uitkering; toekomstige lijfrente onder NHG-voorwaarden tot naderend pensioeninkomen",
+    "bron": [
+     "https://www.neohypotheken.nl/storage/uploads/bc2b03c9-41d5-497e-8268-6f401d5cfb08/Acceptatiegids-Neo-Hypotheken-V1.6.7.pdf",
+     "https://www.neohypotheken.nl/storage/uploads/6de308f3-f934-4cf6-9569-6f3e7a29b459/Acceptatiegids-Neo-Hypotheken-v.1.6.7.pdf"
+    ],
+    "brondatum": "2025-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Toekomstige lijfrente rekent Neo Hypotheken onder bepaalde voorwaarden tot het naderend pensioeninkomen. Deze voorwaarden zijn gelijk aan die van NHG."
+   },
+   "ivawao": {
+    "waarde": "~ IVA telt mee als gegarandeerd tot pensioen/AOW-leeftijd; WAO/WAZ en WGA niet genoemd",
+    "bron": [
+     "https://www.neohypotheken.nl/storage/uploads/bc2b03c9-41d5-497e-8268-6f401d5cfb08/Acceptatiegids-Neo-Hypotheken-V1.6.7.pdf",
+     "https://www.neohypotheken.nl/storage/uploads/6de308f3-f934-4cf6-9569-6f3e7a29b459/Acceptatiegids-Neo-Hypotheken-v.1.6.7.pdf"
+    ],
+    "brondatum": "2025-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Specifiek betreft dit de volgende uitkeringen: ANW, WAJONG en IVA."
+   },
+   "wajong": {
+    "waarde": "~ Wajong telt mee als gegarandeerd ontvangen tot pensioen/AOW-leeftijd",
+    "bron": [
+     "https://www.neohypotheken.nl/storage/uploads/bc2b03c9-41d5-497e-8268-6f401d5cfb08/Acceptatiegids-Neo-Hypotheken-V1.6.7.pdf",
+     "https://www.neohypotheken.nl/storage/uploads/6de308f3-f934-4cf6-9569-6f3e7a29b459/Acceptatiegids-Neo-Hypotheken-v.1.6.7.pdf"
+    ],
+    "brondatum": "2025-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Specifiek betreft dit de volgende uitkeringen: ANW, WAJONG en IVA."
+   },
+   "senior": {
+    "waarde": "~ AOW binnen 10 jaar: verwacht pensioeninkomen meegewogen; bij inkomensdip toets op werkelijke last max. 120 mnd",
+    "bron": [
+     "https://www.neohypotheken.nl/storage/uploads/bc2b03c9-41d5-497e-8268-6f401d5cfb08/Acceptatiegids-Neo-Hypotheken-V1.6.7.pdf"
+    ],
+    "brondatum": "2025-08-01",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Gewijzigd na controle (A/B/arbitrage): '10 jaar en 6 mnd' stond alleen in v1.6.5 (juli 2024); v1.6.6 en v1.6.7 noemen weer 'binnen tien jaar'. 120 mnd bevestigd. v1.6.8 niet in te zien. Volgt A."
+   },
+   "nlwon": {
+    "waarde": "- Niet-Nederlandse nationaliteit: min. 12 onafgebroken maanden woonadres in NL vóór aanvraag en belastingplichtig in NL",
+    "bron": [
+     "https://www.neohypotheken.nl/storage/uploads/bc2b03c9-41d5-497e-8268-6f401d5cfb08/Acceptatiegids-Neo-Hypotheken-V1.6.7.pdf",
+     "https://www.neohypotheken.nl/productsheet",
+     "https://www.neohypotheken.nl/veelgestelde-vragen"
+    ],
+    "brondatum": "2025-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. een woonadres in Nederland te hebben gehad voor 12 onafgebroken maanden voorafgaand aan de leningaanvraag, alsmede belastingplichtig te zijn in Nederland"
+   },
+   "r30": {
+    "waarde": "~ Bij 30%-regeling telt het hele inkomen als bruto inkomen; geen brutering van het vrijgestelde deel",
+    "bron": [
+     "https://www.neohypotheken.nl/storage/uploads/bc2b03c9-41d5-497e-8268-6f401d5cfb08/Acceptatiegids-Neo-Hypotheken-V1.6.7.pdf",
+     "https://www.neohypotheken.nl/storage/uploads/6de308f3-f934-4cf6-9569-6f3e7a29b459/Acceptatiegids-Neo-Hypotheken-v.1.6.7.pdf",
+     "https://www.neohypotheken.nl/begrippenlijst/intentieverklaring"
+    ],
+    "brondatum": "2025-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. In het geval dat er gebruikgemaakt wordt van de 30%-regeling, dan telt het gehele inkomen als bruto-inkomen. Neo Hypotheken bruteert dit deel dus niet."
+   },
+   "brut": {
+    "waarde": "- Neo bruteert het onbelaste deel (30%-regeling) niet",
+    "bron": [
+     "https://www.neohypotheken.nl/storage/uploads/bc2b03c9-41d5-497e-8268-6f401d5cfb08/Acceptatiegids-Neo-Hypotheken-V1.6.7.pdf",
+     "https://www.neohypotheken.nl/storage/uploads/6de308f3-f934-4cf6-9569-6f3e7a29b459/Acceptatiegids-Neo-Hypotheken-v.1.6.7.pdf",
+     "https://www.neohypotheken.nl/begrippenlijst/intentieverklaring"
+    ],
+    "brondatum": "2025-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Neo Hypotheken bruteert dit deel dus niet."
+   },
+   "vblf": {
+    "waarde": "- Niet-EU-nationaliteit alleen als medeaanvrager wiens inkomen niet nodig is; erkende vergunningen o.a. onbepaalde tijd, EU-langdurig ingezetene",
+    "bron": [
+     "https://www.neohypotheken.nl/storage/uploads/bc2b03c9-41d5-497e-8268-6f401d5cfb08/Acceptatiegids-Neo-Hypotheken-V1.6.7.pdf",
+     "https://www.neohypotheken.nl/storage/uploads/6de308f3-f934-4cf6-9569-6f3e7a29b459/Acceptatiegids-Neo-Hypotheken-v.1.6.7.pdf"
+    ],
+    "brondatum": "2025-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Niet-Europese nationaliteiten worden alleen als mede-leningnemers geaccepteerd waarvan het inkomen niet benodigd is voor de hypotheekaanvraag."
+   },
+   "expbel": {
+    "waarde": "- Geen klanten die elders inkomstenbelasting verschuldigd zijn; belastingplicht in NL vereist",
+    "bron": [
+     "https://www.neohypotheken.nl/storage/uploads/bc2b03c9-41d5-497e-8268-6f401d5cfb08/Acceptatiegids-Neo-Hypotheken-V1.6.7.pdf",
+     "https://www.neohypotheken.nl/veelgestelde-vragen",
+     "https://www.neohypotheken.nl/storage/uploads/6de308f3-f934-4cf6-9569-6f3e7a29b459/Acceptatiegids-Neo-Hypotheken-v.1.6.7.pdf"
+    ],
+    "brondatum": "2025-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Neo Hypotheken accepteert geen klanten die elders inkomstenbelasting verschuldigd zijn."
+   },
+   "mwbep": {
+    "waarde": "~ Desktoptaxatie t/m 90% LTV, daarboven gevalideerd taxatierapport (max. 6 mnd); nieuwbouw: laagste van stichtingskosten of getaxeerde waarde",
+    "bron": [
+     "https://www.neohypotheken.nl/storage/uploads/bc2b03c9-41d5-497e-8268-6f401d5cfb08/Acceptatiegids-Neo-Hypotheken-V1.6.7.pdf"
+    ],
+    "brondatum": "2025-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Tot en met 90% LTV: desktop taxatierapport, >90% LTV: standaard gevalideerd taxatierapport"
+   },
+   "woz": {
+    "waarde": "- Geen WOZ-beschikking of Calcasa-modelwaarde voor waardebepaling onderpand (wel hybride taxatie)",
+    "bron": [
+     "https://www.neohypotheken.nl/storage/uploads/bc2b03c9-41d5-497e-8268-6f401d5cfb08/Acceptatiegids-Neo-Hypotheken-V1.6.7.pdf",
+     "https://www.neohypotheken.nl/storage/uploads/764501b2-1a05-479b-bc8d-708743437cc4/Acceptatiegids-Neo-Hypotheken-V.1.6.6.pdf"
+    ],
+    "brondatum": "2025-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Een recente WOZ-beschikking of een Calcasa-modelmatige taxatie mag niet dienen als waardebepaling van het te financieren onderpand."
+   },
+   "ltvk": {
+    "waarde": "~ Max. 100% van marktwaarde (nieuwbouw: laagste van stichtingskosten of marktwaarde); non-NHG >80% LTV lager maximumbedrag",
+    "bron": [
+     "https://www.neohypotheken.nl/storage/uploads/bc2b03c9-41d5-497e-8268-6f401d5cfb08/Acceptatiegids-Neo-Hypotheken-V1.6.7.pdf",
+     "https://www.neohypotheken.nl/productsheet",
+     "https://www.neohypotheken.nl/storage/uploads/6de308f3-f934-4cf6-9569-6f3e7a29b459/Acceptatiegids-Neo-Hypotheken-v.1.6.7.pdf",
+     "https://www.neohypotheken.nl/storage/uploads/3ff723f1-3627-4cb3-8880-cd7005e22de5/Acceptatiegids-Neo-Hypotheken-V.1.6.6.pdf"
+    ],
+    "brondatum": "2025-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. De totale financiering mag niet meer bedragen dan 100% van de marktwaarde (na verbouwing)"
+   },
+   "wwp": {
+    "waarde": "- Winkelpanden worden niet gefinancierd",
+    "bron": [
+     "https://www.neohypotheken.nl/storage/uploads/bc2b03c9-41d5-497e-8268-6f401d5cfb08/Acceptatiegids-Neo-Hypotheken-V1.6.7.pdf",
+     "https://www.neohypotheken.nl/storage/uploads/6de308f3-f934-4cf6-9569-6f3e7a29b459/Acceptatiegids-Neo-Hypotheken-v.1.6.7.pdf"
+    ],
+    "brondatum": "2025-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Een pand dat uitsluitend commercieel is, wordt niet geaccepteerd. Een woon-winkelpand wel, mits het woongedeelte minimaal 75% ... (samenvatting)"
+   },
+   "wboer": {
+    "waarde": "~ Alleen zonder agrarische bestemming, permanent bewoond en max. 3 hectare grond",
+    "bron": [
+     "https://www.neohypotheken.nl/storage/uploads/bc2b03c9-41d5-497e-8268-6f401d5cfb08/Acceptatiegids-Neo-Hypotheken-V1.6.7.pdf",
+     "https://www.neohypotheken.nl/productsheet"
+    ],
+    "brondatum": "2025-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. boerderijen zonder agrarische bestemming en minder dan 3 hectare grond (samenvatting productsheet)"
+   },
+   "wboot": {
+    "waarde": "- Woonboten worden niet gefinancierd",
+    "bron": [
+     "https://www.neohypotheken.nl/storage/uploads/bc2b03c9-41d5-497e-8268-6f401d5cfb08/Acceptatiegids-Neo-Hypotheken-V1.6.7.pdf",
+     "https://www.neohypotheken.nl/storage/uploads/6de308f3-f934-4cf6-9569-6f3e7a29b459/Acceptatiegids-Neo-Hypotheken-v.1.6.7.pdf"
+    ],
+    "brondatum": "2025-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Wij verstrekken geen leningen voor woonboten, woonwagens, winkelpanden, recreatiewoningen of woonboerderijen met een agrarische bestemming."
+   },
+   "hsb": {
+    "waarde": "+ Houtskeletbouw toegestaan; houten of overwegend (>50%) uit hout opgetrokken woningen niet",
+    "bron": [
+     "https://www.neohypotheken.nl/storage/uploads/bc2b03c9-41d5-497e-8268-6f401d5cfb08/Acceptatiegids-Neo-Hypotheken-V1.6.7.pdf"
+    ],
+    "brondatum": "2025-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Houtskeletbouw is toegestaan. Woningen die houten of overwegend (>50%) uit hout opgetrokken zijn, worden niet geaccepteerd. (samenvatting)"
+   },
+   "zbep": {
+    "waarde": "~ Inkomensverklaring Ondernemer van NHG-erkende rekenexpert (Zakelijk Inkomen, Raadhuys, Overviewz, Pentrax); max. 6 mnd oud",
+    "bron": [
+     "https://www.neohypotheken.nl/begrippenlijst/ondernemershypotheek",
+     "https://www.neohypotheken.nl/storage/uploads/bc2b03c9-41d5-497e-8268-6f401d5cfb08/Acceptatiegids-Neo-Hypotheken-V1.6.7.pdf"
+    ],
+    "brondatum": "2025-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Neo werkt met vier rekenexperts: Zakelijk Inkomen, Raadhuys, Overviewz en Pentrax."
+   },
+   "z123": {
+    "waarde": "~ IKV analyseert de afgelopen 3 jaar (korter bij kortere bedrijfsduur) volgens NHG-toetskader",
+    "bron": [
+     "https://www.neohypotheken.nl/begrippenlijst/ondernemershypotheek",
+     "https://www.neohypotheken.nl/storage/uploads/bc2b03c9-41d5-497e-8268-6f401d5cfb08/Acceptatiegids-Neo-Hypotheken-V1.6.7.pdf"
+    ],
+    "brondatum": "2025-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. De IKV analyseert de onderneming over meestal de afgelopen drie jaar, of korter als het bedrijf jonger is."
+   },
+   "zstart": {
+    "waarde": "~ Min. 12 mnd zelfstandig met NHG, min. 24 mnd zonder NHG",
+    "bron": [
+     "https://www.neohypotheken.nl/begrippenlijst/ondernemershypotheek",
+     "https://www.neohypotheken.nl/storage/uploads/bc2b03c9-41d5-497e-8268-6f401d5cfb08/Acceptatiegids-Neo-Hypotheken-V1.6.7.pdf"
+    ],
+    "brondatum": "2025-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Hypotheek met NHG: Je dient langer dan 12 maanden als zelfstandig ondernemer actief te zijn geweest"
+   },
+   "bkr": {
+    "waarde": "~ Geen actieve negatieve registratie; herstelde achterstand (H) geaccepteerd als die >1 jaar voor aanvraag ligt",
+    "bron": [
+     "https://www.neohypotheken.nl/storage/uploads/bc2b03c9-41d5-497e-8268-6f401d5cfb08/Acceptatiegids-Neo-Hypotheken-V1.6.7.pdf",
+     "https://www.neohypotheken.nl/faq/kan-ik-een-hypotheek-met-bkr-afsluiten",
+     "https://www.neohypotheken.nl/storage/uploads/6de308f3-f934-4cf6-9569-6f3e7a29b459/Acceptatiegids-Neo-Hypotheken-v.1.6.7.pdf"
+    ],
+    "brondatum": "2025-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Herstelcodes (H) ... worden alleen geaccepteerd als het herstel meer dan een jaar geleden is. (samenvatting)"
+   },
+   "dkr": {
+    "waarde": "~ Hoogste van min. 2% (rente en aflossing) of de werkelijke maandlast",
+    "bron": [
+     "https://www.neohypotheken.nl/storage/uploads/764501b2-1a05-479b-bc8d-708743437cc4/Acceptatiegids-Neo-Hypotheken-V.1.6.6.pdf",
+     "https://www.neohypotheken.nl/storage/uploads/6de308f3-f934-4cf6-9569-6f3e7a29b459/Acceptatiegids-Neo-Hypotheken-v.1.6.7.pdf"
+    ],
+    "brondatum": "2025-01",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. berekend op basis van minimaal 2% rente- en aflossingsplicht of de werkelijke lasten per maand, waarbij de hoogste van de twee wordt genomen (samenvatting v1.6.6)"
+   },
+   "plen": {
+    "waarde": "~ Aflopend krediet op werkelijke last als BKR-code (AK) aflopend krediet aantoont",
+    "bron": [
+     "https://www.neohypotheken.nl/storage/uploads/764501b2-1a05-479b-bc8d-708743437cc4/Acceptatiegids-Neo-Hypotheken-V.1.6.6.pdf",
+     "https://www.neohypotheken.nl/storage/uploads/bc2b03c9-41d5-497e-8268-6f401d5cfb08/Acceptatiegids-Neo-Hypotheken-V1.6.7.pdf",
+     "https://www.neohypotheken.nl/storage/uploads/6de308f3-f934-4cf6-9569-6f3e7a29b459/Acceptatiegids-Neo-Hypotheken-v.1.6.7.pdf"
+    ],
+    "brondatum": "2025-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Aflopende kredieten mogen op de werkelijke last worden getoetst, mits de BKR-code AK is of duidelijk een aflopend krediet is. (samenvatting)"
+   },
+   "lease": {
+    "waarde": "~ Leasecontracten getoetst als niet aflopend krediet: hoogste van 2% of werkelijke last",
+    "bron": [
+     "https://www.neohypotheken.nl/storage/uploads/764501b2-1a05-479b-bc8d-708743437cc4/Acceptatiegids-Neo-Hypotheken-V.1.6.6.pdf",
+     "https://www.neohypotheken.nl/storage/uploads/6de308f3-f934-4cf6-9569-6f3e7a29b459/Acceptatiegids-Neo-Hypotheken-v.1.6.7.pdf"
+    ],
+    "brondatum": "2025-01",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Daaronder vallen doorlopende kredieten, persoonlijke leningen en leasecontracten. (samenvatting v1.6.6)"
+   },
+   "obmax": {
+    "waarde": "~ Verkocht: 98% verkoopprijs min hypotheekschuld (getekende koopovereenkomst); niet verkocht: % van getaxeerde marktwaarde min schuld",
+    "bron": [
+     "https://www.neohypotheken.nl/storage/uploads/bc2b03c9-41d5-497e-8268-6f401d5cfb08/Acceptatiegids-Neo-Hypotheken-V1.6.7.pdf",
+     "https://www.neohypotheken.nl/productsheet",
+     "https://www.neohypotheken.nl/storage/uploads/6de308f3-f934-4cf6-9569-6f3e7a29b459/Acceptatiegids-Neo-Hypotheken-v.1.6.7.pdf"
+    ],
+    "brondatum": "2025-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Maximale overbrugging (98% x verkoopprijs) -/- uitstaand saldo van de bestaande hypotheek."
+   },
+   "oblast": {
+    "waarde": "~ Dubbele lasten (huidige en nieuwe hypotheek plus overbruggingsrente) gedurende overbrugging aantonen met voldoende eigen middelen",
+    "bron": [
+     "https://www.neohypotheken.nl/begrippenlijst/overbruggingshypotheek",
+     "https://www.neohypotheken.nl/storage/uploads/bc2b03c9-41d5-497e-8268-6f401d5cfb08/Acceptatiegids-Neo-Hypotheken-V1.6.7.pdf"
+    ],
+    "brondatum": "2025-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Je moet de dubbele woonlasten kunnen dragen."
+   },
+   "obduur": {
+    "waarde": "- Max. 30 maanden met vaste rente; verlengen van de overbrugging niet mogelijk",
+    "bron": [
+     "https://www.neohypotheken.nl/begrippenlijst/overbruggingshypotheek",
+     "https://www.neohypotheken.nl/storage/uploads/bc2b03c9-41d5-497e-8268-6f401d5cfb08/Acceptatiegids-Neo-Hypotheken-V1.6.7.pdf",
+     "https://www.neohypotheken.nl/storage/uploads/6de308f3-f934-4cf6-9569-6f3e7a29b459/Acceptatiegids-Neo-Hypotheken-v.1.6.7.pdf",
+     "https://www.neohypotheken.nl/storage/uploads/87433d44-2b19-41aa-914f-60458c6a08ce/Beheergids-Neo-Hypotheken-juni-'24.pdf"
+    ],
+    "brondatum": "2025-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. De looptijd van de overbruggingslening is maximaal 30 maanden met een vaste rente gedurende de looptijd."
+   },
+   "obwaar": {
+    "waarde": "~ Desktoptaxatie toegestaan tot 90% LTV; daarboven gevalideerd taxatierapport; rapport max. 6 maanden oud",
+    "bron": [
+     "https://www.neohypotheken.nl/begrippenlijst/overbruggingshypotheek",
+     "https://www.neohypotheken.nl/storage/uploads/bc2b03c9-41d5-497e-8268-6f401d5cfb08/Acceptatiegids-Neo-Hypotheken-V1.6.7.pdf",
+     "https://www.neohypotheken.nl/storage/uploads/6de308f3-f934-4cf6-9569-6f3e7a29b459/Acceptatiegids-Neo-Hypotheken-v.1.6.7.pdf"
+    ],
+    "brondatum": "2025-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Je mag een desktop taxatierapport aanleveren indien de Loan to Value kleiner of gelijk aan 90% is."
+   },
+   "annul": {
+    "waarde": "! Annuleringskosten bij annuleren of laten verlopen na retour getekend aanbod; niet bij oversluiting/verhuisregeling",
+    "bron": [
+     "https://www.neohypotheken.nl/storage/uploads/764501b2-1a05-479b-bc8d-708743437cc4/Acceptatiegids-Neo-Hypotheken-V.1.6.6.pdf",
+     "https://www.neohypotheken.nl/productsheet",
+     "https://www.neohypotheken.nl/storage/uploads/edceda35-7173-4496-b7ca-d4244f6cbf0c/Algemene-voorwaarden-Neo-Hypotheken-V1.3.8.pdf",
+     "https://www.neohypotheken.nl/storage/uploads/3ff723f1-3627-4cb3-8880-cd7005e22de5/Acceptatiegids-Neo-Hypotheken-V.1.6.6.pdf"
+    ],
+    "brondatum": "2025",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. wanneer klanten na het retourneren van het getekende hypotheekaanbod het aanbod annuleren of de geldigheid laten verlopen dan zijn zij € 500 annuleringskosten over de hoofdsom verschuldigd"
+   },
+   "maxh": {
+    "waarde": "~ Boven 80% LTV geldt een maximaal leenbedrag (zie toelichting); max. 100% marktwaarde (106% met EBV)",
+    "bron": [
+     "https://www.neohypotheken.nl/productsheet",
+     "https://www.neohypotheken.nl/storage/uploads/bc2b03c9-41d5-497e-8268-6f401d5cfb08/Acceptatiegids-Neo-Hypotheken-V1.6.7.pdf",
+     "https://www.neohypotheken.nl/storage/uploads/6de308f3-f934-4cf6-9569-6f3e7a29b459/Acceptatiegids-Neo-Hypotheken-v.1.6.7.pdf",
+     "https://www.neohypotheken.nl/storage/uploads/3ff723f1-3627-4cb3-8880-cd7005e22de5/Acceptatiegids-Neo-Hypotheken-V.1.6.6.pdf"
+    ],
+    "brondatum": "2025-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. De totale Neo Hypotheek (uitstaande saldo) mag ... niet meer dan €950.000,- bedragen t/m 80% LTV en daarboven maximaal €750.000"
+   },
+   "zelfb": {
+    "waarde": "- Zelfbouw wordt niet gefinancierd",
+    "bron": [
+     "https://www.neohypotheken.nl/storage/uploads/764501b2-1a05-479b-bc8d-708743437cc4/Acceptatiegids-Neo-Hypotheken-V.1.6.6.pdf",
+     "https://www.neohypotheken.nl/storage/uploads/bc2b03c9-41d5-497e-8268-6f401d5cfb08/Acceptatiegids-Neo-Hypotheken-V1.6.7.pdf",
+     "https://www.neohypotheken.nl/storage/uploads/6de308f3-f934-4cf6-9569-6f3e7a29b459/Acceptatiegids-Neo-Hypotheken-v.1.6.7.pdf"
+    ],
+    "brondatum": "2025-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Wij bieden geen mogelijkheden om zelfbouw of CPO te financieren."
+   },
+   "cpo": {
+    "waarde": "- CPO wordt niet gefinancierd",
+    "bron": [
+     "https://www.neohypotheken.nl/storage/uploads/764501b2-1a05-479b-bc8d-708743437cc4/Acceptatiegids-Neo-Hypotheken-V.1.6.6.pdf",
+     "https://www.neohypotheken.nl/storage/uploads/bc2b03c9-41d5-497e-8268-6f401d5cfb08/Acceptatiegids-Neo-Hypotheken-V1.6.7.pdf",
+     "https://www.neohypotheken.nl/storage/uploads/6de308f3-f934-4cf6-9569-6f3e7a29b459/Acceptatiegids-Neo-Hypotheken-v.1.6.7.pdf"
+    ],
+    "brondatum": "2025-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Wij bieden geen mogelijkheden om zelfbouw of CPO te financieren."
+   },
+   "pnb": {
+    "waarde": "~ Afbouwgarantie goedgekeurd door Stichting GarantieWoning verplicht; bouwdepot max. 24 maanden, eenmalig 12 maanden verlengbaar",
+    "bron": [
+     "https://www.neohypotheken.nl/storage/uploads/764501b2-1a05-479b-bc8d-708743437cc4/Acceptatiegids-Neo-Hypotheken-V.1.6.6.pdf",
+     "https://www.neohypotheken.nl/begrippenlijst/bouwdepot",
+     "https://www.neohypotheken.nl/storage/uploads/6de308f3-f934-4cf6-9569-6f3e7a29b459/Acceptatiegids-Neo-Hypotheken-v.1.6.7.pdf",
+     "https://www.neohypotheken.nl/storage/uploads/3ff723f1-3627-4cb3-8880-cd7005e22de5/Acceptatiegids-Neo-Hypotheken-V.1.6.6.pdf"
+    ],
+    "brondatum": "2025",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Deze garantie moet door de Stichting GarantieWoning zijn goedgekeurd."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Acceptatiegids Neo Hypotheken",
+    "url": "https://www.neohypotheken.nl/storage/uploads/bc2b03c9-41d5-497e-8268-6f401d5cfb08/Acceptatiegids-Neo-Hypotheken-V1.6.7.pdf",
+    "versie": "v1.6.7, 01-08-2025"
+   },
+   {
+    "titel": "Acceptatiegids Neo Hypotheken",
+    "url": "https://www.neohypotheken.nl/storage/uploads/946a100e-c3c9-4b1b-8ef3-16822362da87/Acceptatiegids-Neo-Hypotheken-V.1.6.6.pdf",
+    "versie": "v1.6.6, 01-01-2025"
+   },
+   {
+    "titel": "Beheergids Neo Hypotheken",
+    "url": "https://www.neohypotheken.nl/storage/uploads/87433d44-2b19-41aa-914f-60458c6a08ce/Beheergids-Neo-Hypotheken-juni-'24.pdf",
+    "versie": "v1.0, juni 2024"
+   },
+   {
+    "titel": "Algemene voorwaarden Neo Hypotheken",
+    "url": "https://www.neohypotheken.nl/storage/uploads/edceda35-7173-4496-b7ca-d4244f6cbf0c/Algemene-voorwaarden-Neo-Hypotheken-V1.3.8.pdf",
+    "versie": "v1.3.8, juli 2025"
+   },
+   {
+    "titel": "Productsheet Neo Hypotheken",
+    "url": "https://www.neohypotheken.nl/productsheet",
+    "versie": "online"
+   },
+   {
+    "titel": "Voor adviseurs (verwijst naar acceptatiegids v1.6.8)",
+    "url": "https://www.neohypotheken.nl/voor-adviseurs",
+    "versie": "online"
+   },
+   {
+    "titel": "Startershypotheek (melding: geen nieuwe klanten per 7-10-2025)",
+    "url": "https://www.neohypotheken.nl/begrippenlijst/startershypotheek",
+    "versie": "online"
+   },
+   {
+    "titel": "Acceptatiegids Neo Hypotheken (andere upload)",
+    "url": "https://www.neohypotheken.nl/storage/uploads/6de308f3-f934-4cf6-9569-6f3e7a29b459/Acceptatiegids-Neo-Hypotheken-v.1.6.7.pdf",
+    "versie": "v1.6.7, 01-08-2025"
+   },
+   {
+    "titel": "Acceptatiegids Neo Hypotheken",
+    "url": "https://www.neohypotheken.nl/storage/uploads/764501b2-1a05-479b-bc8d-708743437cc4/Acceptatiegids-Neo-Hypotheken-V.1.6.6.pdf",
+    "versie": "v1.6.6, 01-01-2025"
+   },
+   {
+    "titel": "Acceptatiegids Neo Hypotheken",
+    "url": "https://www.neohypotheken.nl/storage/uploads/e0feb36c-b2f0-403a-a858-3ffb1d0b9b40/Acceptatiegids-Neo-Hypotheken-V1.6.2.pdf",
+    "versie": "v1.6.2, 28-09-2023"
+   },
+   {
+    "titel": "Ondernemershypotheek (begrippenlijst)",
+    "url": "https://www.neohypotheken.nl/begrippenlijst/ondernemershypotheek",
+    "versie": "online"
+   },
+   {
+    "titel": "Overbruggingshypotheek (begrippenlijst)",
+    "url": "https://www.neohypotheken.nl/begrippenlijst/overbruggingshypotheek",
+    "versie": "online"
+   },
+   {
+    "titel": "Acceptatiegids Neo Hypotheken",
+    "url": "https://www.neohypotheken.nl/storage/uploads/6de308f3-f934-4cf6-9569-6f3e7a29b459/Acceptatiegids-Neo-Hypotheken-v.1.6.7.pdf",
+    "versie": "1.6.7 (01-08-2025); v1.6.8 genoemd op voor-adviseurs"
+   },
+   {
+    "titel": "Acceptatiegids Neo Hypotheken",
+    "url": "https://www.neohypotheken.nl/storage/uploads/3ff723f1-3627-4cb3-8880-cd7005e22de5/Acceptatiegids-Neo-Hypotheken-V.1.6.6.pdf",
+    "versie": "1.6.6 (01-01-2025)"
+   },
+   {
+    "titel": "Algemene Voorwaarden Neo Hypotheken",
+    "url": "https://www.neohypotheken.nl/storage/uploads/edceda35-7173-4496-b7ca-d4244f6cbf0c/Algemene-voorwaarden-Neo-Hypotheken-V1.3.8.pdf",
+    "versie": "1.3.8 (juli 2025)"
+   },
+   {
+    "titel": "Beheergids Neo Hypotheken",
+    "url": "https://www.neohypotheken.nl/storage/uploads/87433d44-2b19-41aa-914f-60458c6a08ce/Beheergids-Neo-Hypotheken-juni-'24.pdf",
+    "versie": "1.0 (juni 2024)"
+   },
+   {
+    "titel": "Productsheet Neo Hypotheken",
+    "url": "https://www.neohypotheken.nl/productsheet",
+    "versie": null
+   }
+  ]
+ }
+]

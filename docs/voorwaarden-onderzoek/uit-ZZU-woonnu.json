@@ -1,0 +1,991 @@
+[
+ {
+  "naam": "Woonnu",
+  "gecontroleerd": "2026-10-09",
+  "criteria": {
+   "zzp": {
+    "waarde": "~ Min. 1 jaar ondernemer; 12-36 mnd KvK: inkomensverklaring verplicht; >3 jaar gemiddelde 3 jaar",
+    "bron": [
+     "https://adviseurs.woonnu.nl/media/rgchczmf/ondernemerspocket.pdf",
+     "https://woonnu.nl/media/cwcevjcx/20262603-woonnu-acceptatiegids_final.pdf"
+    ],
+    "brondatum": "2026-03",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. De ondernemer moet wel minimaal een jaar werkzaam zijn."
+   },
+   "flex": {
+    "waarde": "~ Uitzend/payroll getoetst als tijdelijk dienstverband zonder intentieverklaring; WGV max. 3 mnd oud",
+    "bron": [
+     "https://woonnu.nl/media/cwcevjcx/20262603-woonnu-acceptatiegids_final.pdf"
+    ],
+    "brondatum": "2026-03",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Payrollcontracten, waaronder uitzendwerk, worden gelijkgesteld aan een tijdelijk dienstverband zonder intentieverklaring"
+   },
+   "persp": {
+    "waarde": "~ Perspectiefverklaring opgenomen als inkomensbewijs in acceptatiegids (par. 3.7)",
+    "bron": [
+     "https://woonnu.nl/media/cwcevjcx/20262603-woonnu-acceptatiegids_final.pdf"
+    ],
+    "brondatum": "2026-03",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Inkomen uit een flexibele arbeidsrelatie kan ook worden aangetoond door middel van een Perspectiefverklaring."
+   },
+   "aow": {
+    "waarde": "~ Pensioeninkomen lager dan huidig inkomen: het lagere inkomen telt mee in de toets; senioren onder voorwaarden op werkelijke last",
+    "bron": [
+     "https://woonnu.nl/media/cwcevjcx/20262603-woonnu-acceptatiegids_final.pdf"
+    ],
+    "brondatum": "2026-03",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Indien één van de aanvragers binnen 10 jaar de AOW-leeftijd bereikt, zal bij de beoordeling ook rekening worden gehouden met (toekomstig) pensioeninkomen."
+   },
+   "erfp": {
+    "waarde": "~ Alleen erfpacht uitgegeven door overheidsinstelling; geen particuliere/institutionele erfpacht; canon telt mee in budgettering",
+    "bron": [
+     "https://woonnu.nl/media/cwcevjcx/20262603-woonnu-acceptatiegids_final.pdf",
+     "https://woonnu.nl/media/rvqnigvm/202601-woonnu-acceptatiegids_final.pdf"
+    ],
+    "brondatum": "2026-03",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Gewijzigd na controle (A/B/arbitrage): A en B bevestigd: huidige waarde mist de uitsluiting van particuliere/institutionele erfpacht. Canon in budgettering (par. 4.5) gevonden; afkoop-uitzondering (B) niet teruggevonden. Citaat via zoekfragmenten (PDF niet ophaalbaar). Let op: NN Bank stopt per 1 mei 2026 met nieuwe Woonnu-hypotheken (woonnu.nl/nieuws)."
+   },
+   "rvp": {
+    "waarde": "+ Alle rentevaste perioden van 1 t/m 30 jaar",
+    "bron": [
+     "https://adviseurs.woonnu.nl/over-ons/actuele-rentestanden/",
+     "https://adviseurs.woonnu.nl/veelgestelde-vragen/",
+     "https://woonnu.nl/actuele-rentestanden/",
+     "https://woonnu.nl/media/4gfnri0z/20251002.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Woonnu biedt rentevaste periodes aan van 1 tot en met 30 jaar. Inclusief 30 jaar aflosvrij."
+   },
+   "dag": {
+    "waarde": "- Aangeboden rente is passeerrente, ook als de rente vóór passeren wijzigt",
+    "bron": [
+     "https://adviseurs.woonnu.nl/over-ons/actuele-rentestanden/",
+     "https://adviseurs.woonnu.nl/veelgestelde-vragen/",
+     "https://woonnu.nl/media/4gfnri0z/20251002.pdf"
+    ],
+    "brondatum": "2025-10",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. De geoffreerde rente is de passeerrente, ook als de rente voor de passeerdatum wijzigt."
+   },
+   "geld": {
+    "waarde": "~ 3 mnd bestaande bouw, 6 mnd nieuwbouw; verlenging passeerdatum max. 6 mnd",
+    "bron": [
+     "https://woonnu.nl/media/cwcevjcx/20262603-woonnu-acceptatiegids_final.pdf",
+     "https://woonnu.nl/media/cujprh4b/20262503-woonnu-acceptatiegids_final.pdf"
+    ],
+    "brondatum": "2026-03",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. offertes hebben een geldigheid van drie maanden bij bestaande bouw en zes maanden bij nieuwbouw"
+   },
+   "boete": {
+    "waarde": "~ 10% van oorspronkelijke hoofdsom per kalenderjaar boetevrij; ook op renteherzieningsdatum",
+    "bron": [
+     "https://woonnu.nl/media/xtcghq4l/202405-woonnu_algemene-voorwaarden.pdf",
+     "https://woonnu.nl/over-woonnu/veelgestelde-vragen/"
+    ],
+    "brondatum": "2024-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Je mag per kalenderjaar tot 10% van de oorspronkelijke lening aflossen zonder dat je daarvoor een vergoeding moet betalen."
+   },
+   "ltv": {
+    "waarde": "+ Automatisch lagere risicoklasse bij aflossing; waardestijging (WOZ/taxatie) zelf melden via Mijn Woonnu",
+    "bron": [
+     "https://woonnu.nl/over-woonnu/veelgestelde-vragen/",
+     "https://woonnu.nl/groene-meeneemregeling/",
+     "https://woonnu.nl/media/xtcghq4l/202405-woonnu_algemene-voorwaarden.pdf",
+     "https://adviseurs.woonnu.nl/veelgestelde-vragen/"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Dan vragen we je om zelf bij ons aan te geven dat je in aanmerking komt voor een lagere rente."
+   },
+   "bdduur": {
+    "waarde": "~ Max. 24 mnd nieuwbouw, 12 mnd verbouw; verlenging max. 12 mnd (zonder rentevergoeding)",
+    "bron": [
+     "https://woonnu.nl/media/rvqnigvm/202601-woonnu-acceptatiegids_final.pdf",
+     "https://adviseurs.woonnu.nl/veelgestelde-vragen/",
+     "https://woonnu.nl/media/cwcevjcx/20262603-woonnu-acceptatiegids_final.pdf",
+     "https://verduurzamingscheck.woonnu.nl/ontdek-woonnu/hypotheekproducten/bouwdepot/"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Bij nieuwbouw heeft het bouwdepot een looptijd van 24 maanden."
+   },
+   "bdrnt": {
+    "waarde": "+ Depotvergoeding gelijk aan hypotheekrente (stopt bij verlenging)",
+    "bron": [
+     "https://woonnu.nl/media/rvqnigvm/202601-woonnu-acceptatiegids_final.pdf",
+     "https://verduurzamingscheck.woonnu.nl/ontdek-woonnu/hypotheekproducten/bouwdepot/"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Deze vergoeding is gelijk aan de hypotheekrente."
+   },
+   "bddecl": {
+    "waarde": "+ Declaratie via Mijn Woonnu; beoordeling binnen 5 werkdagen, betaling binnen 2 werkdagen",
+    "bron": [
+     "https://verduurzamingscheck.woonnu.nl/ontdek-woonnu/hypotheekproducten/bouwdepot/",
+     "https://verduurzamingscheck.woonnu.nl/adviseurs/vragen-adviseurs/",
+     "https://adviseurs.woonnu.nl/over-ons/doorlooptijden/"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Woonnu beoordeelt je declaratie binnen 5 werkdagen."
+   },
+   "ebb": {
+    "waarde": "~ EBB en EBV mogelijk tot 106% marktwaarde (max. 6% voor verduurzaming)",
+    "bron": [
+     "https://woonnu.nl/ik-wil-verduurzamen/ebv-en-ebb-je-huis-verduurzamen-en-financieren/",
+     "https://woonnu.nl/media/rvqnigvm/202601-woonnu-acceptatiegids_final.pdf",
+     "https://woonnu.nl/media/cwcevjcx/20262603-woonnu-acceptatiegids_final.pdf",
+     "https://adviseurs.woonnu.nl/ebb_ebv/"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. bedraagt in deze situatie 106%"
+   },
+   "duur": {
+    "waarde": "+ Rentekorting voor beter label, ook bij labelsprong tijdens looptijd; verduurzamingscheck",
+    "bron": [
+     "https://adviseurs.woonnu.nl/blog/rentekorting-dit-levert-het-op/",
+     "https://woonnu.nl/ik-wil-verduurzamen/ebv-en-ebb-je-huis-verduurzamen-en-financieren/",
+     "https://woonnu.nl/media/cwcevjcx/20262603-woonnu-acceptatiegids_final.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Een label-verbetering tijdens de looptijd wijzigt de korting."
+   },
+   "verh": {
+    "waarde": "+ Groene meeneemregeling: rentevast en basisrente mee, tot 6 mnd na verkoop; meerbedrag tegen actuele rente",
+    "bron": [
+     "https://woonnu.nl/groene-meeneemregeling/",
+     "https://woonnu.nl/media/xtcghq4l/202405-woonnu_algemene-voorwaarden.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. tot 6 maanden, na de verkoop van je oude huis en tot passeren van de nieuwe hypotheek"
+   },
+   "ondh": {
+    "waarde": "~ Restschuld na verkoop moet worden terugbetaald; bij (dreigende) betalingsproblemen tijdelijke regeling of andere oplossing in overleg; bij NHG betaalt WEW res",
+    "bron": [
+     "https://woonnu.nl/media/xtcghq4l/202405-woonnu_algemene-voorwaarden.pdf"
+    ],
+    "brondatum": "2024-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. hou je een restschuld over die je aan ons moet terugbetalen"
+   },
+   "oha": {
+    "waarde": "~ Aanvraagformulier ontslag hoofdelijke aansprakelijkheid beschikbaar; toets op draagkracht achterblijver",
+    "bron": [
+     "https://adviseurs.woonnu.nl/veelgestelde-vragen/"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Formulier en instructies voor de aanvraag van ontslag van hoofdelijke aansprakelijkheid"
+   },
+   "tweede": {
+    "waarde": "~ Verhoging als apart leningdeel (min. € 5.000) tegen dan geldende rente; onderhands binnen verhoogde inschrijving",
+    "bron": [
+     "https://woonnu.nl/media/cujprh4b/20262503-woonnu-acceptatiegids_final.pdf"
+    ],
+    "brondatum": "2026-03",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Het minimale bedrag voor het verhogen van de lening is € 5.000,-."
+   },
+   "ovbr": {
+    "waarde": "~ Max. 24 mnd; onverkocht max. 95% marktwaarde, verkocht max. 98% verkoopprijs; alleen met nieuwe Woonnu-hypotheek; min. € 2.500",
+    "bron": [
+     "https://woonnu.nl/media/cwcevjcx/20262603-woonnu-acceptatiegids_final.pdf",
+     "https://woonnu.nl/media/rvqnigvm/202601-woonnu-acceptatiegids_final.pdf"
+    ],
+    "brondatum": "2026-03",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Gewijzigd na controle (A/B/arbitrage): Acceptatiegids jan. en mrt. 2026 noemen 95%; adviseurs-FAQ (90%) is ouder en verwijst zelf naar par. 1.10 van de gids. Los overbruggingskrediet niet mogelijk; minimum € 2.500. Nieuwe aanvragen gestopt per 1 mei 2026."
+   },
+   "avrij": {
+    "waarde": "~ Max. 50% van de marktwaarde aflossingsvrij",
+    "bron": [
+     "https://woonnu.nl/media/cwcevjcx/20262603-woonnu-acceptatiegids_final.pdf"
+    ],
+    "brondatum": "2026-03",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. tot maximaal 50% van de marktwaarde van de woning aflossingsvrij"
+   },
+   "rvoor": {
+    "waarde": "~ Rentevoorstel min. 3 mnd voor einde RVP met min. 3 opties; geen keuze = zelfde periode",
+    "bron": [
+     "https://woonnu.nl/media/xtcghq4l/202405-woonnu_algemene-voorwaarden.pdf",
+     "https://woonnu.nl/over-woonnu/veelgestelde-vragen/"
+    ],
+    "brondatum": "2024-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. uiterlijk drie maanden van tevoren een renteaanbod"
+   },
+   "bbrk": {
+    "waarde": "~ Vergoeding o.b.v. renteverlies; berekening volgens ESIS par. 8; inzichtelijk in Mijn Woonnu",
+    "bron": [
+     "https://woonnu.nl/media/xtcghq4l/202405-woonnu_algemene-voorwaarden.pdf",
+     "https://woonnu.nl/over-woonnu/veelgestelde-vragen/"
+    ],
+    "brondatum": "2024-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Dat is een vergoeding voor het geld dat we mislopen, omdat je eerder terugbetaalt."
+   },
+   "elbl": {
+    "waarde": "+ Rentekorting vanaf label B (oplopend tot A++++); opslag bij label D of slechter",
+    "bron": [
+     "https://adviseurs.woonnu.nl/blog/rentekorting-dit-levert-het-op/",
+     "https://woonnu.nl/over-woonnu/veelgestelde-vragen/"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. De Woonnu duurzaamheidskorting is een korting op je rentetarief die je ontvangt vanaf energielabel B."
+   },
+   "o106": {
+    "waarde": "+ Bij financiering boven 100% voor energiebesparing geldt het tarief tot 100% marktwaarde",
+    "bron": [
+     "https://woonnu.nl/ik-wil-verduurzamen/ebv-en-ebb-je-huis-verduurzamen-en-financieren/",
+     "https://woonnu.nl/media/rvqnigvm/202601-woonnu-acceptatiegids_final.pdf",
+     "https://woonnu.nl/media/cwcevjcx/20262603-woonnu-acceptatiegids_final.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. krijg je het tarief tot 100%"
+   },
+   "bprov": {
+    "waarde": "+ Verlenging offerte max. 6 mnd bij bestaande bouw en nieuwbouw, zonder kosten voor de verlenging",
+    "bron": [
+     "https://woonnu.nl/media/cujprh4b/20262503-woonnu-acceptatiegids_final.pdf",
+     "https://woonnu.nl/media/rvqnigvm/202601-woonnu-acceptatiegids_final.pdf"
+    ],
+    "brondatum": "2026-03",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Gewijzigd na controle (A/B/arbitrage): Huidige waarde volgt de gids jan. 2026 (provisie bij bestaande bouw als rente gestegen); gids mrt. 2026 rekent niets meer. Bevestigt A en B."
+   },
+   "wkost": {
+    "waarde": "~ Kosten mogelijk bij omzetten naar andere hypotheekvorm/lening en bij verhogen; tussentijds rente wijzigen kan een vergoeding kosten",
+    "bron": [
+     "https://woonnu.nl/over-woonnu/veelgestelde-vragen/",
+     "https://woonnu.nl/media/xtcghq4l/202405-woonnu_algemene-voorwaarden.pdf"
+    ],
+    "brondatum": "2024-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. het kan zijn dat je klant hierbij een vergoeding moet betalen"
+   },
+   "avlt": {
+    "waarde": "! Aflossingsvrij deel aan einde looptijd (max. 30 jaar) ineens aflossen; verlengbeleid niet gevonden",
+    "bron": [
+     "https://woonnu.nl/media/xtcghq4l/202405-woonnu_algemene-voorwaarden.pdf"
+    ],
+    "brondatum": "2024-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Je moet er zelf voor zorgen dat je aan het einde van de looptijd dus genoeg geld hebt om het hele bedrag van de lening aan ons te betalen."
+   },
+   "bproc": {
+    "waarde": "~ Snel contact opnemen; tijdelijke regeling of andere oplossing in overleg",
+    "bron": [
+     "https://woonnu.nl/media/xtcghq4l/202405-woonnu_algemene-voorwaarden.pdf",
+     "https://woonnu.nl/over-woonnu/veelgestelde-vragen/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. Als je betalingsproblemen krijgt ... neem snel contact op. We kijken met je mee naar wat nu kan, zoals een tijdelijke regeling of andere oplossing."
+   },
+   "rverl": {
+    "waarde": "! Sinds 1-5-2026 geen nieuwe Woonnu-hypotheken; bestaande klanten krijgen rentevoorstel volgens voorwaarden, vergelijking met nieuwe klanten niet meer mogelijk",
+    "bron": [
+     "https://woonnu.nl/nieuws/nationale-nederlanden-bank-stopt-met-nieuwe-woonnu-hypotheken/"
+    ],
+    "brondatum": "2026-05",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Vanaf 1 mei 2026 worden er geen nieuwe hypotheken meer aangeboden onder het label Woonnu."
+   },
+   "cons": {
+    "waarde": "~ Consumptief lenen in box 3 mogelijk tot max. 50% van de marktwaarde; min. looptijd leningdeel 5 jaar",
+    "bron": [
+     "https://woonnu.nl/media/cwcevjcx/20262603-woonnu-acceptatiegids_final.pdf"
+    ],
+    "brondatum": "2026-03",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. de klant maximaal 50% van de marktwaarde voor consumptieve doeleinden kan lenen"
+   },
+   "desk": {
+    "waarde": "~ Calcasa Desktop Taxatie (geen nieuwbouw) tot 90% marktwaarde, hypotheek max. EUR 750.000, woningwaarde max. EUR 1 mln, max. 6 mnd oud",
+    "bron": [
+     "https://woonnu.nl/media/cwcevjcx/20262603-woonnu-acceptatiegids_final.pdf",
+     "https://woonnu.nl/media/cujprh4b/20262503-woonnu-acceptatiegids_final.pdf"
+    ],
+    "brondatum": "2026-03",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. maximaal 90% van de marktwaarde, een maximale hypotheeksom van € 750.000, en een maximale woningwaarde van € 1.000.000"
+   },
+   "vve": {
+    "waarde": "- Appartementsrecht alleen met actieve VvE (uitzondering nieuwbouw); actieve VvE aantonen met aanvullende stukken",
+    "bron": [
+     "https://woonnu.nl/media/cwcevjcx/20262603-woonnu-acceptatiegids_final.pdf",
+     "https://adviseurs.woonnu.nl/situaties/nieuwbouw/"
+    ],
+    "brondatum": "2026-03",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Dan moet op basis van aanvullende stukken worden aangetoond dat de VvE actief is."
+   },
+   "huur": {
+    "waarde": "- Huurinkomsten tellen niet mee in toetsinkomen; vaste huur (contract min. 1 jaar) verlaagt wel de mee te tellen lasten van verhuurde woning",
+    "bron": [
+     "https://woonnu.nl/media/cwcevjcx/20262603-woonnu-acceptatiegids_final.pdf"
+    ],
+    "brondatum": "2026-03",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Ook huurinkomsten vanuit reeds gefinancierde woningen worden ook niet meegenomen in het toetsinkomen"
+   },
+   "bonus": {
+    "waarde": "~ ORT, provisie, overwerk en bonus tellen mee als structureel; zonder NHG telt 50% van gemiddelde bonus",
+    "bron": [
+     "https://woonnu.nl/media/cwcevjcx/20262603-woonnu-acceptatiegids_final.pdf",
+     "https://woonnu.nl/media/rvqnigvm/202601-woonnu-acceptatiegids_final.pdf"
+    ],
+    "brondatum": "2026-03",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Bij aanvragen zonder NHG wordt de gemiddelde bonus als variabel inkomen gezien"
+   },
+   "recr": {
+    "waarde": "- Recreatiewoning niet financierbaar",
+    "bron": [
+     "https://woonnu.nl/media/cwcevjcx/20262603-woonnu-acceptatiegids_final.pdf"
+    ],
+    "brondatum": "2026-03",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Woonnu financiert geen recreatiewoningen."
+   },
+   "pgb": {
+    "waarde": "~ Inkomen uit pgb telt onder voorwaarden mee; pgb-inkomen max. de helft van het totale inkomen",
+    "bron": [
+     "https://woonnu.nl/media/cwcevjcx/20262603-woonnu-acceptatiegids_final.pdf"
+    ],
+    "brondatum": "2026-03",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. PGB income can be used for financing, with a cap of 50% of total income"
+   },
+   "start": {
+    "waarde": "- Starterslening SVn niet mogelijk (koop- en leenconstructies uitgesloten, met en zonder NHG)",
+    "bron": [
+     "https://woonnu.nl/media/cwcevjcx/20262603-woonnu-acceptatiegids_final.pdf"
+    ],
+    "brondatum": "2026-03",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. Denk hierbij aan MGE, MVE, Starterslening SVn. Dit geldt zowel voor leningen zonder als leningen met NHG."
+   },
+   "verhuur": {
+    "waarde": "~ Verhuur alleen met schriftelijke toestemming; tijdelijk via Leegstandwet (dubbele lasten) of diplomatenclausule (max. 3 jaar, +1 jaar)",
+    "bron": [
+     "https://woonnu.nl/media/cujprh4b/20262503-woonnu-acceptatiegids_final.pdf",
+     "https://woonnu.nl/media/xtcghq4l/202405-woonnu_algemene-voorwaarden.pdf"
+    ],
+    "brondatum": "2026-03",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Woonnu biedt alleen hypotheken aan woningen die volledig voor eigen gebruik bestemd zijn."
+   },
+   "ort": {
+    "waarde": "~ ORT, provisie, overwerk en bonus tellen mee als ze structureel worden verdiend",
+    "bron": [
+     "https://woonnu.nl/media/cwcevjcx/20262603-woonnu-acceptatiegids_final.pdf"
+    ],
+    "brondatum": "2026-03",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. neemt Woonnu onregelmatigheidstoeslag, provisie, overwerk en bonussen mee als ze structureel worden verdiend"
+   },
+   "loondt": {
+    "waarde": "~ IBL geaccepteerd; UWV-verzekeringsbericht max. 3 mnd oud plus recente salarisstrook; lager actueel inkomen (bv. WGA, ziekengeld) is leidend",
+    "bron": [
+     "https://woonnu.nl/media/cwcevjcx/20262603-woonnu-acceptatiegids_final.pdf"
+    ],
+    "brondatum": "2026-03",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Als de salarisstrook een lager inkomen laat zien dan het verzekeringsbericht, dient er met dit lagere inkomen getoetst te worden."
+   },
+   "intent": {
+    "waarde": "+ Tijdelijk contract met intentieverklaring: volledig inkomen telt mee; zonder intentie: gemiddeld inkomen",
+    "bron": [
+     "https://woonnu.nl/media/cwcevjcx/20262603-woonnu-acceptatiegids_final.pdf",
+     "https://woonnu.nl/media/cujprh4b/20262503-woonnu-acceptatiegids_final.pdf"
+    ],
+    "brondatum": "2026-03",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Bij een tijdelijk contract zonder intentieverklaring wordt het inkomen gebaseerd op het gemiddelde van de afgelopen drie jaar."
+   },
+   "proef": {
+    "waarde": "~ Zonder NHG aanbod en passeren in proeftijd mogelijk op gemiddelde laatste 3 kalenderjaren (max. laatste jaar of WGV)",
+    "bron": [
+     "https://woonnu.nl/media/cwcevjcx/20262603-woonnu-acceptatiegids_final.pdf"
+    ],
+    "brondatum": "2026-03",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. Voor aanvragen zonder NHG kan tijdens de proeftijd een hypotheekaanbod worden uitgebracht en de akte passeren (par. 3.8), op basis van de laatste drie kalenderjaren."
+   },
+   "aios": {
+    "waarde": "- Arts in loondienst met tijdelijk contract zonder intentieverklaring wordt als flexwerker beoordeeld",
+    "bron": [
+     "https://woonnu.nl/media/cwcevjcx/20262603-woonnu-acceptatiegids_final.pdf",
+     "https://woonnu.nl/media/cujprh4b/20262503-woonnu-acceptatiegids_final.pdf"
+    ],
+    "brondatum": "2026-03",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Artsen in loondienst met een tijdelijk contract zonder intentieverklaring worden als flexwerker behandeld."
+   },
+   "verm": {
+    "waarde": "- Woonnu houdt geen rekening met inkomen uit vermogen",
+    "bron": [
+     "https://woonnu.nl/media/cwcevjcx/20262603-woonnu-acceptatiegids_final.pdf"
+    ],
+    "brondatum": "2026-03",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Woonnu houdt geen rekening met inkomen uit vermogen."
+   },
+   "lijfr": {
+    "waarde": "+ Lijfrente-inkomsten tellen mee in het (toekomstig) pensioeninkomen; overzicht lijfrente-uitkeringen vereist",
+    "bron": [
+     "https://woonnu.nl/media/cwcevjcx/20262603-woonnu-acceptatiegids_final.pdf"
+    ],
+    "brondatum": "2026-03",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Het (toekomstig) pensioeninkomen wordt vastgesteld op basis van een opgave van de pensioen uitkerende instantie, het AOW-bedrag dat de aanvrager ontvangt en eventuele inkomsten uit lijfrente."
+   },
+   "senior": {
+    "waarde": "~ Aanvrager binnen 10 jaar van AOW: toets ook op (toekomstig) pensioeninkomen (opgave uitvoerder, AOW, lijfrente)",
+    "bron": [
+     "https://woonnu.nl/media/cwcevjcx/20262603-woonnu-acceptatiegids_final.pdf"
+    ],
+    "brondatum": "2026-03",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Indien één van de aanvragers binnen 10 jaar de AOW-leeftijd bereikt, zal bij de beoordeling ook rekening worden gehouden met (toekomstig) pensioeninkomen."
+   },
+   "wga": {
+    "waarde": "! Bij WGA of ander lager inkomen dan verwacht volgens UWV-verzekeringsbericht wordt met het lagere inkomen getoetst",
+    "bron": [
+     "https://woonnu.nl/media/cwcevjcx/20262603-woonnu-acceptatiegids_final.pdf"
+    ],
+    "brondatum": "2026-03",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Denk aan WGA, ziekengeld of demotie."
+   },
+   "vblf": {
+    "waarde": "~ Buitenlandse nationaliteit: NHG-acceptatiebeleid gevolgd, ook zonder NHG; buiten EU/EER paspoort plus verblijfstitel",
+    "bron": [
+     "https://woonnu.nl/media/cwcevjcx/20262603-woonnu-acceptatiegids_final.pdf"
+    ],
+    "brondatum": "2026-03",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Voor aanvragers met de buitenlandse nationaliteit volgt Woonnu het acceptatiebeleid van NHG, zowel voor aanvragen met NHG als voor aanvragen zonder NHG."
+   },
+   "nlwon": {
+    "waarde": "~ Aanvragers die in het buitenland wonen moeten bij (op)levering in de woning gaan wonen; geen verhogingen voor buitenland-bewoners",
+    "bron": [
+     "https://woonnu.nl/media/cwcevjcx/20262603-woonnu-acceptatiegids_final.pdf"
+    ],
+    "brondatum": "2026-03",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. Wonen de aanvragers op het moment van aanvraag in het buitenland, dan moeten zij bij de (op)levering in de woning gaan wonen."
+   },
+   "buitw": {
+    "waarde": "~ Inkomen alleen in euro; inkomen uit België of Duitsland kan, mits woning in NL en daar belastingplichtig",
+    "bron": [
+     "https://woonnu.nl/media/cwcevjcx/20262603-woonnu-acceptatiegids_final.pdf",
+     "https://woonnu.nl/media/rvqnigvm/202601-woonnu-acceptatiegids_final.pdf"
+    ],
+    "brondatum": "2026-03",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Woonnu may assess income earned in Belgium or Germany under box 1 of Dutch tax."
+   },
+   "expbel": {
+    "waarde": "~ In NL wonen met inkomen uit BE/DE en daar belastingplichtig: getoetst als box 1-inkomen",
+    "bron": [
+     "https://woonnu.nl/media/cwcevjcx/20262603-woonnu-acceptatiegids_final.pdf",
+     "https://woonnu.nl/media/rvqnigvm/202601-woonnu-acceptatiegids_final.pdf"
+    ],
+    "brondatum": "2026-03",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Woonnu may assess income earned in Belgium or Germany under box 1 of Dutch tax."
+   },
+   "mwbep": {
+    "waarde": "~ Taxatierapport max. 6 maanden oud bij uitbrengen offerte; Calcasa Desktop Taxatie mogelijk onder voorwaarden (o.a. akkoord NRVT-taxateur)",
+    "bron": [
+     "https://woonnu.nl/media/cwcevjcx/20262603-woonnu-acceptatiegids_final.pdf",
+     "https://woonnu.nl/media/cujprh4b/20262503-woonnu-acceptatiegids_final.pdf"
+    ],
+    "brondatum": "2026-03",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. the valuation date may be no older than 6 months at the time the mortgage offer is issued"
+   },
+   "wboer": {
+    "waarde": "~ Woonboerderij mogelijk zonder agrarische bestemming, in goede staat, aangesloten op nutsvoorzieningen en zonder agrarische opstallen",
+    "bron": [
+     "https://woonnu.nl/media/cwcevjcx/20262603-woonnu-acceptatiegids_final.pdf"
+    ],
+    "brondatum": "2026-03",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Woonboerderijen kunnen tot de wettelijk toegestane marktwaarde worden gefinancierd, mits aan de volgende voorwaarden wordt voldaan."
+   },
+   "wboot": {
+    "waarde": "- Woonboten, woonschepen en watervilla's niet gefinancierd",
+    "bron": [
+     "https://woonnu.nl/media/cwcevjcx/20262603-woonnu-acceptatiegids_final.pdf"
+    ],
+    "brondatum": "2026-03",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. woonboten, woonschepen, watervilla's"
+   },
+   "wbhuid": {
+    "waarde": "~ Overbrugging: niet verkochte woning max. 95% van marktwaarde; verkochte woning max. 98% van verkoopprijs",
+    "bron": [
+     "https://woonnu.nl/media/cwcevjcx/20262603-woonnu-acceptatiegids_final.pdf"
+    ],
+    "brondatum": "2026-03",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Gewijzigd na controle (A/B/arbitrage): Zelfde als ovbr: 90% stamt uit oudere adviseurs-FAQ; gids mrt. 2026 zegt 95%."
+   },
+   "zbep": {
+    "waarde": "~ Inkomensverklaring van door NHG aangewezen onafhankelijke partij; solvabiliteit onder 20% geen inkomensbepaling",
+    "bron": [
+     "https://adviseurs.woonnu.nl/media/rgchczmf/ondernemerspocket.pdf",
+     "https://woonnu.nl/media/cwcevjcx/20262603-woonnu-acceptatiegids_final.pdf"
+    ],
+    "brondatum": "2026-03",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Deze verklaring kan worden opgevraagd bij een door NHG aangewezen onafhankelijke partij."
+   },
+   "z123": {
+    "waarde": "~ Gemiddelde over laatste 3 jaar, max. laatste jaar; loondienstinkomen in die 3 jaar telt mee",
+    "bron": [
+     "https://woonnu.nl/media/cwcevjcx/20262603-woonnu-acceptatiegids_final.pdf",
+     "https://adviseurs.woonnu.nl/media/rgchczmf/ondernemerspocket.pdf"
+    ],
+    "brondatum": "2026-03",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Het inkomen uit de onderneming wordt bepaald als het gemiddelde van de afgelopen drie jaar, maar nooit hoger dan het inkomen van het laatste jaar"
+   },
+   "zstart": {
+    "waarde": "+ Startende ondernemers mogelijk na min. 1 jaar zelfstandig (12-36 maanden KvK-inschrijving)",
+    "bron": [
+     "https://woonnu.nl/media/cwcevjcx/20262603-woonnu-acceptatiegids_final.pdf",
+     "https://adviseurs.woonnu.nl/media/rgchczmf/ondernemerspocket.pdf"
+    ],
+    "brondatum": "2026-03",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. De ondernemer moet wel minimaal een jaar werkzaam zijn."
+   },
+   "duo": {
+    "waarde": "~ DUO-schuld getoetst volgens Tijdelijke regeling hypothecair krediet",
+    "bron": [
+     "https://woonnu.nl/media/cwcevjcx/20262603-woonnu-acceptatiegids_final.pdf"
+    ],
+    "brondatum": "2026-03",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. het termijnbedrag wordt altijd gebruteerd volgens de tabel in de TRHK"
+   },
+   "plen": {
+    "waarde": "~ Persoonlijke lening/aflopend krediet: werkelijke maandtermijn als last vast is; zonder inzage 2% p.m. van hoofdsom of fictieve last indien hoger",
+    "bron": [
+     "https://woonnu.nl/media/cwcevjcx/20262603-woonnu-acceptatiegids_final.pdf",
+     "https://woonnu.nl/media/cujprh4b/20262503-woonnu-acceptatiegids_final.pdf"
+    ],
+    "brondatum": "2026-03",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Gewijzigd na controle (A/B/arbitrage): De regel '2% of werkelijke last indien hoger' geldt voor kredieten in het algemeen; voor de persoonlijke lening is de werkelijke vaste termijn leidend (ook als die lager is). A en B bevestigd."
+   },
+   "dkr": {
+    "waarde": "~ 2% per maand van de kredietsom/limiet, of werkelijke last indien hoger",
+    "bron": [
+     "https://woonnu.nl/media/cwcevjcx/20262603-woonnu-acceptatiegids_final.pdf"
+    ],
+    "brondatum": "2026-03",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Bij een doorlopend krediet wordt er standaard getoetst op 2% per maand over de hoofdsom van een krediet."
+   },
+   "obmax": {
+    "waarde": "~ Verkocht: max. 98% verkoopprijs; niet definitief verkocht: max. 95% marktwaarde; beleggingswaarde overbruggen niet mogelijk",
+    "bron": [
+     "https://woonnu.nl/media/cwcevjcx/20262603-woonnu-acceptatiegids_final.pdf"
+    ],
+    "brondatum": "2026-03",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. maximaal 98% van de verkoopprijs als de woning verkocht is"
+   },
+   "oblast": {
+    "waarde": "~ Woonnu beoordeelt of aanvrager dubbele lasten kan dragen zolang oude woning niet verkocht/geleverd is",
+    "bron": [
+     "https://woonnu.nl/media/cwcevjcx/20262603-woonnu-acceptatiegids_final.pdf"
+    ],
+    "brondatum": "2026-03",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Woonnu beoordeelt of de aanvrager de dubbele lasten kan dragen"
+   },
+   "obduur": {
+    "waarde": "~ Max. 24 maanden of tot levering oude woning; nieuwbouw tot uiterlijk 1 maand na oplevering; verlenging in overleg",
+    "bron": [
+     "https://woonnu.nl/media/cwcevjcx/20262603-woonnu-acceptatiegids_final.pdf"
+    ],
+    "brondatum": "2026-03",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. De looptijd van de overbruggingsfinanciering is maximaal 24 maanden of, indien de te verkopen woning zoveel eerder wordt geleverd, tot levering van de te verkopen woning."
+   },
+   "obwaar": {
+    "waarde": "~ Calcasa desktoptaxatie toegestaan bij overbrugging (tot 90% marktwaarde, met waarde- en hoofdsomgrenzen); anders taxatierapport",
+    "bron": [
+     "https://woonnu.nl/media/cwcevjcx/20262603-woonnu-acceptatiegids_final.pdf",
+     "https://woonnu.nl/media/cujprh4b/20262503-woonnu-acceptatiegids_final.pdf"
+    ],
+    "brondatum": "2026-03",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Woonnu accepts the Calcasa desktop valuation"
+   },
+   "obels": {
+    "waarde": "- Overbrugging alleen bij een nieuwe lening bij Woonnu; los overbruggingskrediet niet mogelijk",
+    "bron": [
+     "https://woonnu.nl/media/cwcevjcx/20262603-woonnu-acceptatiegids_final.pdf"
+    ],
+    "brondatum": "2026-03",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Het is niet mogelijk een los overbruggingskrediet te sluiten."
+   },
+   "obvw": {
+    "waarde": "~ Minimumbedrag overbrugging vastgelegd (zie toelichting); oude woning hoeft nog niet verkocht te zijn",
+    "bron": [
+     "https://woonnu.nl/media/cwcevjcx/20262603-woonnu-acceptatiegids_final.pdf"
+    ],
+    "brondatum": "2026-03",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Het is niet vereist dat de huidige woning al verkocht moet zijn."
+   },
+   "geldnb": {
+    "waarde": "~ Nieuwbouw 6 maanden geldig + max. 6 maanden verlenging (totaal 12); geen bereidstellingsprovisie bij verlenging nieuwbouw",
+    "bron": [
+     "https://woonnu.nl/media/cujprh4b/20262503-woonnu-acceptatiegids_final.pdf"
+    ],
+    "brondatum": "2026-03",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. voor deze verlenging rekent Woonnu geen bereidstellingsprovisie"
+   },
+   "annul": {
+    "waarde": "~ Annuleringskosten als geaccepteerd aanbod niet tijdig tot akte leidt; niet bij ontbinding door verkoper of overlijden",
+    "bron": [
+     "https://woonnu.nl/media/cujprh4b/20262503-woonnu-acceptatiegids_final.pdf",
+     "https://woonnu.nl/media/cwcevjcx/20262603-woonnu-acceptatiegids_final.pdf"
+    ],
+    "brondatum": "2026-03",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Als de koop niet doorgaat door ontbinding of vernietiging van het koopcontract op initiatief van de verkoper."
+   },
+   "bvrij": {
+    "waarde": "~ Geen vergoeding bij aflossing binnen 12 maanden na overlijden (mede)schuldenaar; verkoop/executie niet eenduidig",
+    "bron": [
+     "https://woonnu.nl/media/xtcghq4l/202405-woonnu_algemene-voorwaarden.pdf"
+    ],
+    "brondatum": "2024-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. Wanneer er wordt afgelost binnen twaalf maanden nadat jijzelf of degene met wie je de lening hebt, is overleden."
+   },
+   "minh": {
+    "waarde": "~ Minimum eerste hypotheek en minimum verhoging vastgelegd (bedragen in toelichting)",
+    "bron": [
+     "https://woonnu.nl/media/cujprh4b/20262503-woonnu-acceptatiegids_final.pdf",
+     "https://woonnu.nl/media/rvqnigvm/202601-woonnu-acceptatiegids_final.pdf"
+    ],
+    "brondatum": "2026-03",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Het minimale leenbedrag voor een eerste hypotheek bedraagt € 75.000,-."
+   },
+   "maxh": {
+    "waarde": "~ Maximaal leenbedrag excl. overbruggingshypotheek vastgelegd (bedrag in toelichting)",
+    "bron": [
+     "https://woonnu.nl/media/cwcevjcx/20262603-woonnu-acceptatiegids_final.pdf"
+    ],
+    "brondatum": "2026-03",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. The maximum loan is € 1.000.000,- (exclusief overbruggingshypotheek)."
+   },
+   "rest": {
+    "waarde": "! Eigen middelen eerst inzetten voor aflossing restschuld (buffer toegestaan); apart restschuldkrediet alleen voor restschuld 2012-2017, max. 15 jaar",
+    "bron": [
+     "https://woonnu.nl/media/cujprh4b/20262503-woonnu-acceptatiegids_final.pdf",
+     "https://woonnu.nl/media/rvqnigvm/202601-woonnu-acceptatiegids_final.pdf"
+    ],
+    "brondatum": "2026-03",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Hierbij is het toegestaan dat klanten een buffer aanhouden van € 5.000,- per persoon."
+   },
+   "verhw": {
+    "waarde": "~ Verhoging: Calcasa desktoptaxatie mogelijk (tot 90% marktwaarde); WOZ-waarde kan als marktwaarde gelden; minimum zie toelichting",
+    "bron": [
+     "https://woonnu.nl/media/cwcevjcx/20262603-woonnu-acceptatiegids_final.pdf"
+    ],
+    "brondatum": "2026-03",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Woonnu accepts the Calcasa desktop valuation"
+   },
+   "zelfb": {
+    "waarde": "- Geen zelfbouw; wel projectmatige bouw en kavelbouw (kavelbouw met gevalideerd taxatierapport)",
+    "bron": [
+     "https://woonnu.nl/media/cwcevjcx/20262603-woonnu-acceptatiegids_final.pdf"
+    ],
+    "brondatum": "2026-03",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Woonnu financiert geen zelfbouw."
+   },
+   "cpo": {
+    "waarde": "~ CPO mogelijk onder nieuwbouwbeleid: onherroepelijke omgevingsvergunning, één aannemer, afbouwgarantie",
+    "bron": [
+     "https://adviseurs.woonnu.nl/nieuwsoverzicht/nu-ook-mogelijk-om-een-hypotheek-voor-een-cpo-af-te-sluiten-bij-woonnu/",
+     "https://woonnu.nl/media/cwcevjcx/20262603-woonnu-acceptatiegids_final.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Het is mogelijk om een hypotheek voor een CPO af te sluiten bij Woonnu."
+   },
+   "pnb": {
+    "waarde": "~ Waarborgcertificaat (keurmerk Stichting GarantieWoning) vereist; geen taxatie tot grens koop-aanneemsom, daarboven gevalideerd rapport",
+    "bron": [
+     "https://adviseurs.woonnu.nl/situaties/nieuwbouw/",
+     "https://woonnu.nl/media/cwcevjcx/20262603-woonnu-acceptatiegids_final.pdf"
+    ],
+    "brondatum": "2026-03",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Nieuwbouwwoningen met een koop- aanneemsom van meer dan € 1.000.000,-"
+   },
+   "minmw": {
+    "waarde": "~ Minimale marktwaarde van de woning vastgelegd (bedrag in toelichting)",
+    "bron": [
+     "https://woonnu.nl/media/rvqnigvm/202601-woonnu-acceptatiegids_final.pdf"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Woonnu financiert alleen woningen met een minimale marktwaarde van € 100.000,-."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Woonnu Acceptatiegids",
+    "url": "https://woonnu.nl/media/cwcevjcx/20262603-woonnu-acceptatiegids_final.pdf",
+    "versie": "maart 2026"
+   },
+   {
+    "titel": "Woonnu Acceptatiegids (alternatieve URL)",
+    "url": "https://woonnu.nl/media/cujprh4b/20262503-woonnu-acceptatiegids_final.pdf",
+    "versie": "maart 2026"
+   },
+   {
+    "titel": "Woonnu Acceptatiegids",
+    "url": "https://woonnu.nl/media/rvqnigvm/202601-woonnu-acceptatiegids_final.pdf",
+    "versie": "januari 2026"
+   },
+   {
+    "titel": "Woonnu Algemene Voorwaarden",
+    "url": "https://woonnu.nl/media/xtcghq4l/202405-woonnu_algemene-voorwaarden.pdf",
+    "versie": "augustus 2024"
+   },
+   {
+    "titel": "Ondernemerspocket Woonnu",
+    "url": "https://adviseurs.woonnu.nl/media/rgchczmf/ondernemerspocket.pdf",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "Woonnu Productkaart",
+    "url": "https://woonnu.nl/media/mnojflza/202512-woonnu-productkaart-04.pdf",
+    "versie": "december 2025"
+   },
+   {
+    "titel": "Acceptatiegids Maart 2026 (26-03)",
+    "url": "https://woonnu.nl/media/cwcevjcx/20262603-woonnu-acceptatiegids_final.pdf",
+    "versie": "2026-03"
+   },
+   {
+    "titel": "Acceptatiegids Maart 2026 (25-03)",
+    "url": "https://woonnu.nl/media/cujprh4b/20262503-woonnu-acceptatiegids_final.pdf",
+    "versie": "2026-03"
+   },
+   {
+    "titel": "Acceptatiegids Januari 2026",
+    "url": "https://woonnu.nl/media/rvqnigvm/202601-woonnu-acceptatiegids_final.pdf",
+    "versie": "2026-01"
+   },
+   {
+    "titel": "Productkaart",
+    "url": "https://woonnu.nl/media/mnojflza/202512-woonnu-productkaart-04.pdf",
+    "versie": "2025-12"
+   },
+   {
+    "titel": "Algemene Voorwaarden",
+    "url": "https://woonnu.nl/media/xtcghq4l/202405-woonnu_algemene-voorwaarden.pdf",
+    "versie": "2024-08"
+   },
+   {
+    "titel": "Ondernemerspocket",
+    "url": "https://adviseurs.woonnu.nl/media/rgchczmf/ondernemerspocket.pdf",
+    "versie": "onbekend"
+   }
+  ]
+ }
+]

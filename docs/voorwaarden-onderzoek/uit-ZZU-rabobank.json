@@ -1,0 +1,758 @@
+[
+ {
+  "naam": "Rabobank",
+  "gecontroleerd": "2026-10-09",
+  "criteria": {
+   "dag": {
+    "waarde": "! Alleen Plusvoorwaarden: lagere rente bij passeren binnen 3 mnd na renteaanbod; Basis: vaste offerterente",
+    "bron": [
+     "https://www.rabobank.nl/particulieren/hypotheek/hypotheekvormen-en-voorwaarden/plusvoorwaarden",
+     "https://www.rabobank.nl/particulieren/hypotheek/hypotheekvormen-en-voorwaarden/basisvoorwaarden"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Als de rente op de ingangsdatum lager is, krijg je die lagere rente, mits de lening binnen 3 maanden na het renteaanbod ingaat."
+   },
+   "zzp": {
+    "waarde": "+ Vanaf 1 jaar ondernemerschap; ½ jaar bij zelfde werk als eerder in loondienst; inkomensverklaring",
+    "bron": [
+     "https://www.rabobank.nl/particulieren/hypotheek/hypotheek-voor-ondernemers",
+     "https://www.rabobank.nl/particulieren/hypotheek/hypotheek-voor-ondernemers/zzp",
+     "https://www.rabobank.nl/particulieren/hypotheek/huis-kopen/ondernemer/"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Een hypotheek is al mogelijk voor ondernemers die één jaar een eigen bedrijf hebben. ... hetzelfde werk doet als in loondienst? Dan kan het al na 6 maanden."
+   },
+   "flex": {
+    "waarde": "~ Intentieverklaring of werkhistorie (UWV-data, gem. 3 kalenderjaren); Arbeidsmarktscan mogelijk",
+    "bron": [
+     "https://www.rabobank.nl/particulieren/hypotheek/eerste-huis-kopen/zonder-vast-contract"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. Doelgroep: seizoenswerk, oproep- of invalwerk en een tijdelijk dienstverband zonder intentieverklaring."
+   },
+   "persp": {
+    "waarde": "+ Perspectiefverklaring uitzendbureau geaccepteerd (na min. 1 jaar bij uitzendbureau)",
+    "bron": [
+     "https://www.rabobank.nl/particulieren/hypotheek/eerste-huis-kopen/uitzendkracht"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Je krijgt deze van je uitzendbureau als je hier minimaal 1 jaar voor werkt en als je werkgever vertrouwen heeft in je toekomst."
+   },
+   "aow": {
+    "waarde": "~ Pensioeninkomen telt mee vanaf 10 jaar vóór pensioendatum (ca. 57 jaar); geen maximumleeftijd",
+    "bron": [
+     "https://www.rabobank.nl/particulieren/hypotheek/toekomstbestendig-wonen/senioren/financien/hypotheek-afsluiten-op-latere-leeftijd"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Vanaf ongeveer 57 jaar verandert de manier waarop een hypotheek wordt berekend. We kijken ... ook naar het inkomen dat je straks krijgt als je met pensioen bent."
+   },
+   "erfp": {
+    "waarde": "! Erfpacht/opstal alleen na verplichte Rabobank Erfpachttoets (centraal Erfpachtloket); looptijd max. resterende duur recht; altijd volledig taxatierapport",
+    "bron": [
+     "https://www.rabobank.nl/bedrijven/intermediairs/hypotheek/aan-de-slag/rabobank-intermediair-gids",
+     "https://www.rabobank.nl/particulieren/hypotheek/taxatierapport-calcasa",
+     "https://media.rabobank.com/m/4e33ec563c784cda/original/Rabobank-als-Hypotheekverstrekker-acceptatie-en-beheerregels-vanaf-2-januari-2023.pdf",
+     "https://media.rabobank.com/m/1b8220caac690894/original/Plusvoorwaarden-IM-pdf.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Er moet een Rabobank Erfpachttoets worden gedaan; nieuwe aanvragen op erfpacht/opstal worden door het centrale Erfpachtloket getoetst."
+   },
+   "rvp": {
+    "waarde": "+ 1 t/m 30 jaar vast; variabel alleen bij Plusvoorwaarden",
+    "bron": [
+     "https://www.rabobank.nl/particulieren/hypotheek/hypotheekvormen-en-voorwaarden/lineaire-hypotheek/",
+     "https://www.rabobank.nl/particulieren/hypotheek/hypotheekvormen-en-voorwaarden/plusvoorwaarden"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. Basisvoorwaarden: alle rentevaste periodes mogelijk, geen variabele rente. Plusvoorwaarden: alle rentevaste periodes en variabele rente mogelijk."
+   },
+   "geld": {
+    "waarde": "+ Plus: 18 mnd om lening te laten ingaan; Basis: 12 mnd na renteaanbod",
+    "bron": [
+     "https://www.rabobank.nl/particulieren/hypotheek/hypotheekvormen-en-voorwaarden/plusvoorwaarden",
+     "https://www.rabobank.nl/particulieren/hypotheek/hypotheekvormen-en-voorwaarden/basisvoorwaarden"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Bij Basisvoorwaarden heb je 1 jaar de tijd ... Bij Plusvoorwaarden is dat 18 maanden."
+   },
+   "boete": {
+    "waarde": "~ Plus 20% / Basis 10% van oorspr. bedrag per jaar; boetevrij bij verkoop, verhuizen en overlijden",
+    "bron": [
+     "https://www.rabobank.nl/particulieren/hypotheek/hypotheekvormen-en-voorwaarden/plusvoorwaarden",
+     "https://www.rabobank.nl/particulieren/service/hypotheek/vergoeding-voor-vervroegd-aflossen",
+     "https://www.rabobank.nl/particulieren/hypotheek/service/hypotheek/vergoeding-voor-vervroegd-aflossen"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Basisvoorwaarden: jaarlijks 10% van het beginbedrag ... Plusvoorwaarden: 20% van het beginbedrag van de lening per jaar."
+   },
+   "ltv": {
+    "waarde": "+ Lagere opslag automatisch bij lagere tariefklasse door aflossen; bij waardestijging op verzoek (WOZ/taxatie)",
+    "bron": [
+     "https://www.rabobank.nl/particulieren/hypotheek/hypotheekrente/rente-opslag-hypotheek"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Rabobank schrijft dat als je in een lagere tariefklasse komt, passen we dit voortaan automatisch voor je aan."
+   },
+   "bdduur": {
+    "waarde": "~ Max. 24 mnd (nieuwbouw en verbouw/verduurzaming); daarna stopt depot automatisch",
+    "bron": [
+     "https://www.rabobank.nl/particulieren/hypotheek/hypotheekvormen-en-voorwaarden/hypotheekproducten/bouwdepot"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Het bouwdepot duurt bij Rabobank maximaal twee jaar. Na deze 2 jaar stopt het bouwdepot automatisch."
+   },
+   "bdrnt": {
+    "waarde": "~ Depotrente gelijk aan hypotheekrente bij start; na verlenging na 2 jaar geen rentevergoeding",
+    "bron": [
+     "https://www.rabobank.nl/particulieren/hypotheek/hypotheekvormen-en-voorwaarden/hypotheekproducten/bouwdepot"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. De rente die je betaalt over de hypotheek is gelijk aan de rente die je ontvangt over het bouwdepot."
+   },
+   "bddecl": {
+    "waarde": "+ Klant betaalt facturen zelf vanuit depot via Rabo Online Bankieren/App (limiet per transactie aanpasbaar)",
+    "bron": [
+     "https://www.rabobank.nl/particulieren/hypotheek/hypotheekvormen-en-voorwaarden/hypotheekproducten/bouwdepot"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Hiermee kun je zelf gemakkelijk rekeningen van leveranciers betalen via Online Bankieren. Via de Rabo App kan dat ook."
+   },
+   "duur": {
+    "waarde": "+ Duurzaamheidskorting bij definitief label A of hoger (alleen vaste rente), ook in lopende rvp; tot 106% van woningwaarde na verbouwing lenen",
+    "bron": [
+     "https://www.rabobank.nl/particulieren/hypotheek/hypotheekrente/duurzaamheidskorting",
+     "https://www.rabobank.nl/particulieren/hypotheek/hypotheekrente/duurzaamheidskorting/voorwaarden-duurzaamheidskorting",
+     "https://www.rabobank.nl/particulieren/hypotheek/duurzaam-wonen/financiering/verbouwing"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Gewijzigd na controle (A/B/arbitrage): Label A of hoger, niet A+. Geen korting bij variabele rente. 106%-regel bevestigd (ook met NHG)."
+   },
+   "verh": {
+    "waarde": "+ Rente + rest-rvp mee tot huidig bedrag; Plus binnen 6 mnd, Basis 3 mnd; ook vóór aankoop nieuwe woning",
+    "bron": [
+     "https://www.rabobank.nl/particulieren/hypotheek/ander-huis-kopen/verhuizen/hypotheek-meenemen",
+     "https://www.rabobank.nl/particulieren/hypotheek/hypotheekvormen-en-voorwaarden/plusvoorwaarden"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Bij Plusvoorwaarden ... mits je dit binnen 6 maanden doet. Bij Basisvoorwaarden ... binnen 3 maanden."
+   },
+   "tweede": {
+    "waarde": "+ Verhoging zonder notaris binnen inschrijving; ook zonder advies (kennistoets)",
+    "bron": [
+     "https://www.rabobank.nl/particulieren/hypotheek/mijn-hypotheek-of-woning-aanpassen/hypotheek-verhogen/zonder-advies"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Als je gewenste verhoging past binnen de bestaande hypothecaire inschrijving hoef je niet naar de notaris."
+   },
+   "ovbr": {
+    "waarde": "+ OverbruggingsHypotheek, ook zonder verkochte woning en als grond/woning al in bezit; norm 90% marktwaarde (was 81%)",
+    "bron": [
+     "https://www.rabobank.nl/bedrijven/intermediairs/hypotheek/aan-de-slag/rabobank-intermediair-gids/laatste-wijzigingen",
+     "https://www.rabobank.nl/particulieren/hypotheek/hypotheekvormen-en-voorwaarden/hypotheekproducten/overbruggingshypotheek"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Een OverbruggingsHypotheek kan ook aangevraagd worden als de grond of woning al in het bezit is van de klant."
+   },
+   "avrij": {
+    "waarde": "! Per 11-5-2026 max 30% van woningwaarde, max €150.000; ook bij verhuizen, oversluiten, verhogen",
+    "bron": [
+     "https://www.rabobank.nl/nieuws/011512344/rabobank-scherpt-beleid-voor-aflossingsvrije-hypotheek-aan-per-11-mei-2026"
+    ],
+    "brondatum": "2026-05",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Klanten kunnen vanaf 11 mei ... nog maximaal 30% van de waarde van hun woning aflossingsvrij lenen, tot een maximum van EUR 150.000."
+   },
+   "rmid": {
+    "waarde": "~ Rente aanpassen tijdens rvp: vergoeding ineens; rentemiddeling alleen bij aflossingsvrij deel met Plusvoorwaarden (nieuwe rvp 5 of 10 jaar)",
+    "bron": [
+     "https://www.rabobank.nl/particulieren/hypotheek/mijn-hypotheek-of-woning-aanpassen/rente-aanpassen",
+     "https://media.rabobank.com/m/7b2c705381193139/original/Klantinformatie-hypotheekrente-wijzigen-Plusvoorwaarden.pdf",
+     "https://media.rabobank.com/m/320dbd730acba469/original/Informatie-hypotheek-rente-wijzigen-Plusvoorwaarden.pdf"
+    ],
+    "brondatum": "2025-11",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Gewijzigd na controle (A/B/arbitrage): Huidige waarde suggereert rentemiddeling algemeen; Rabobank beperkt die tot aflossingsvrij + Plusvoorwaarden, eigen bewoning, niet op eerder gemiddelde rente. Bij Basisvoorwaarden geen rentemiddeling. B bevestigde maar noemde zelf dezelfde beperking."
+   },
+   "rvoor": {
+    "waarde": "~ Aankondiging ca. 3 mnd vóór einde rvp; rentevoorstel per brief/Rabo App",
+    "bron": [
+     "https://www.rabobank.nl/particulieren/hypotheek/mijn-hypotheek-of-woning-aanpassen/rente-verlengen"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Drie maanden voordat je rentevaste periode afloopt, ontvang je van ons een brief met een voorstel voor het verlengen van je rente."
+   },
+   "bbrk": {
+    "waarde": "~ Contante waarde renteverschil; vergelijkingsrente = rvp gelijk aan restduur, anders hoogste van naastliggende",
+    "bron": [
+     "https://www.rabobank.nl/particulieren/service/hypotheek/vergoeding-voor-vervroegd-aflossen/voorbeeldberekening-annuiteitenhypotheek",
+     "https://www.rabobank.nl/particulieren/hypotheek/service/hypotheek/vergoeding-voor-vervroegd-aflossen"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Omdat er alleen rentevaste periodes van hele jaren bestaan, wordt bij een tussenliggende looptijd de hogere van de twee dichtstbijzijnde rentes gebruikt."
+   },
+   "elbl": {
+    "waarde": "+ Duurzaamheidskorting bij definitief label A of hoger; geen aparte opslag voor slecht/geen label gevonden",
+    "bron": [
+     "https://www.rabobank.nl/particulieren/hypotheek/hypotheekrente/duurzaamheidskorting"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Bij een definitief energielabel A of hoger krijg je korting op je hypotheekrente."
+   },
+   "bprov": {
+    "waarde": "+ Plus: geen kosten bij annuleren/wijzigen aanbod; Basis: annuleringskosten",
+    "bron": [
+     "https://www.rabobank.nl/particulieren/hypotheek/hypotheekvormen-en-voorwaarden/plusvoorwaarden"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Bij Plusvoorwaarden betaal je geen kosten als je de offerte annuleert of aanpast."
+   },
+   "wkost": {
+    "waarde": "! €250 wijzigingskosten per leningdeel (max €500) bij renteaanpassing/wijziging; verhogen zonder advies €600",
+    "bron": [
+     "https://www.rabobank.nl/particulieren/hypotheek/hypotheek-afsluiten/hypotheekadvies-en-kosten",
+     "https://www.rabobank.nl/particulieren/hypotheek/mijn-hypotheek-of-woning-aanpassen/rente-aanpassen",
+     "https://www.rabobank.nl/particulieren/hypotheek/mijn-hypotheek-of-woning-aanpassen/hypotheek-verhogen/zonder-advies"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Rabobank rekent EUR 250 wijzigingskosten voor het aanpassen van je hypotheekrente per lening, met een maximum van EUR 500."
+   },
+   "avlt": {
+    "waarde": "! Contracten vóór 2023 zonder einddatum; nieuwere met einddatum: aflossen ineens, maatwerk",
+    "bron": [
+     "https://www.rabobank.nl/particulieren/hypotheek/mijn-hypotheek-of-woning-aanpassen/mijn-aflossingsvrije-hypotheek-nu-en-later"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Een aflossingsvrije hypotheek die vóór 2023 is afgesloten hoeft geen einddatum te hebben."
+   },
+   "bproc": {
+    "waarde": "~ Betalingsregeling mogelijk; gratis budgetcoach via bank bij achterstand",
+    "bron": [
+     "https://www.rabobank.nl/particulieren/service/betalingsachterstand/betalingsregeling-aanvragen",
+     "https://www.rabobank.nl/particulieren/service/betalingsachterstand/hulp-van-een-budgetcoach",
+     "https://www.rabobank.nl/particulieren/service/betalingsachterstand"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Bij een betalingsachterstand op je hypotheek, sturen we altijd een betalingsherinnering per brief."
+   },
+   "o106": {
+    "waarde": "~ Tot 106% van woningwaarde na verbouwing lenen voor energiebesparing; tarievenbeleid kent aparte LTV-band boven 100%",
+    "bron": [
+     "https://www.rabobank.nl/particulieren/hypotheek/duurzaam-wonen/financiering/verbouwing"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. De totale hypotheek mag niet meer dan 106% van de waarde van het huis ná verbouwing zijn."
+   },
+   "lensch": {
+    "waarde": "~ Leen-schenkconstructie alleen met ouders: onderhands, niet opeisbaar, max. 50% marktwaarde, schenking >= bruto lasten; overige familielening telt mee",
+    "bron": [
+     "https://www.rabobank.nl/particulieren/hypotheek/eerste-huis-kopen/familiehypotheek",
+     "https://www.rabobank.nl/particulieren/hypotheek/eerste-huis-kopen/kopen-met-hulp"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Deze lening mag maximaal 50% van de marktwaarde van de woning bedragen. ... moet schriftelijk worden vastgelegd en mag niet direct opeisbaar zijn."
+   },
+   "desk": {
+    "waarde": "~ Rabobank Desktop Taxatie (Plus) van Calcasa bij lening max. 90% van de waarde, vooral bij verhogen/oversluiten; nieuwe aankoop meestal NWWI-rapport",
+    "bron": [
+     "https://www.rabobank.nl/particulieren/hypotheek/taxatierapport-calcasa"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Calcasa Desktoptaxatie kan alleen als je tot 90% van de waarde van het huis wilt lenen. Voor een hogere hypotheek is een NWWI-taxatierapport nodig."
+   },
+   "ams": {
+    "waarde": "~ Arbeidsmarktscan min. 70 punten; niet voor uitzendkrachten; min. 12 van 14 mnd arbeidsinkomen; laagste van verdiencapaciteit of werkgeversverklaring",
+    "bron": [
+     "https://www.rabobank.nl/particulieren/hypotheek/eerste-huis-kopen/zonder-vast-contract/arbeidsmarktscan"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Als de score van de Arbeidsmarktscan 70 punten of meer is, dan kun je tegen betaling een gewaarmerkt rapport aanvragen."
+   },
+   "recr": {
+    "waarde": "~ Recreatiewoning NL max. 90% marktwaarde, max. 30 jaar; geen permanente bewoning; korte recreatieve verhuur naast eigen gebruik mag",
+    "bron": [
+     "https://media.rabobank.com/m/1b8220caac690894/original/Plusvoorwaarden-IM-pdf.pdf",
+     "https://www.rabobank.nl/particulieren/geld-lenen/recreatiewoning-financieren"
+    ],
+    "brondatum": "2023",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. Er mag géén sprake zijn van permanente bewoning door de aanvrager."
+   },
+   "start": {
+    "waarde": "~ Starterslening (SVn) alleen met NHG en annuïtaire/lineaire hypotheek; niet naast familiehypotheek; eerst SVn-offerte accepteren",
+    "bron": [
+     "https://www.rabobank.nl/particulieren/hypotheek/eerste-huis-kopen/starterslening",
+     "https://www.rabobank.nl/particulieren/hypotheek/eerste-huis-kopen/startershypotheek-en-starterslening"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Je mag deze lening alleen gebruiken naast een hypotheek met Nationale Hypotheek Garantie (NHG)."
+   },
+   "verhuur": {
+    "waarde": "~ Verhuur alleen met vooraf schriftelijke toestemming; tijdelijk via Leegstandwet of diplomatenclausule (max. 3 jaar), huur verpand",
+    "bron": [
+     "https://media.rabobank.com/m/4ec34b6795353b07/original/algemene-voorwaarden-lening-woning-plus-rabobank_29690965-pdf.pdf",
+     "https://www.rabobank.nl/particulieren/hypotheek/tweede-huis-kopen-om-te-verhuren",
+     "https://media.rabobank.com/m/4e33ec563c784cda/original/Rabobank-als-Hypotheekverstrekker-acceptatie-en-beheerregels-vanaf-2-januari-2023.pdf",
+     "https://media.rabobank.com/m/367ea1617117f5e0/original/Guidance-wijzigingen-hypotheek-via-intermediair-vanaf-13-februari-2023.pdf"
+    ],
+    "brondatum": "2023",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Tijdelijke verhuur van de woning is alléén toegestaan met toestemming van Rabobank op basis van de diplomatenclausule of de Leegstandwet onder verpanding van de huurpenningen."
+   },
+   "ort": {
+    "waarde": "~ Overwerk en ORT alleen als structureel, over laatste 12 mnd; provisie plus overwerk max. 30% van bruto jaarsalaris",
+    "bron": [
+     "https://media.rabobank.com/m/4e33ec563c784cda/original/Rabobank-als-Hypotheekverstrekker-acceptatie-en-beheerregels-vanaf-2-januari-2023.pdf"
+    ],
+    "brondatum": "2023",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. Overwerk, mits structureel: het bedrag over de laatste 12 maanden."
+   },
+   "loondt": {
+    "waarde": "+ IBL geaccepteerd: uitkomst IBL-rekentool is het toetsinkomen; ook vaststelling op UWV-verzekeringsbericht",
+    "bron": [
+     "https://media.rabobank.com/m/3b3d979f072a5f24/original/Basisvoorwaarden-IM-pdf.pdf",
+     "https://media.rabobank.com/m/4e33ec563c784cda/original/Rabobank-als-Hypotheekverstrekker-acceptatie-en-beheerregels-vanaf-2-januari-2023.pdf"
+    ],
+    "brondatum": "2023",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. IBL rekentool bepaalt het toetsinkomen, op basis van UWV-verzekeringsbericht."
+   },
+   "aios": {
+    "waarde": "+ Tijdelijke aanstelling AIOS: intentieverklaring niet nodig, beoordeling op huidig inkomen (loonstrook of IBL)",
+    "bron": [
+     "https://media.rabobank.com/m/3b3d979f072a5f24/original/Basisvoorwaarden-IM-pdf.pdf",
+     "https://media.rabobank.com/m/4e33ec563c784cda/original/Rabobank-als-Hypotheekverstrekker-acceptatie-en-beheerregels-vanaf-2-januari-2023.pdf"
+    ],
+    "brondatum": "2023",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. Intentieverklaring kan vervallen bij tijdelijke aanstelling als arts in opleiding, wetenschappelijk onderzoeker of promovendus; beoordeling op huidig inkomen."
+   },
+   "promo": {
+    "waarde": "+ Promovendus/wetenschappelijk onderzoeker met tijdelijke aanstelling: geen intentieverklaring nodig, huidig inkomen telt",
+    "bron": [
+     "https://media.rabobank.com/m/3b3d979f072a5f24/original/Basisvoorwaarden-IM-pdf.pdf",
+     "https://media.rabobank.com/m/4e33ec563c784cda/original/Rabobank-als-Hypotheekverstrekker-acceptatie-en-beheerregels-vanaf-2-januari-2023.pdf"
+    ],
+    "brondatum": "2023",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. Intentieverklaring kan vervallen bij tijdelijke aanstelling als promovendus of wetenschappelijk onderzoeker."
+   },
+   "intent": {
+    "waarde": "~ Tijdelijk contract met intentieverklaring telt mee; zonder intentie of bij flexcontract kijkt Rabobank naar arbeidsverleden",
+    "bron": [
+     "https://www.rabobank.nl/particulieren/hypotheek/eerste-huis-kopen/tijdelijk-contract",
+     "https://www.rabobank.nl/particulieren/hypotheek/eerste-huis-kopen/zonder-vast-contract/arbeidsmarktscan"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Met een intentieverklaring zegt je werkgever van plan te zijn om jouw tijdelijke contract als het afloopt om te zetten naar een vast contract."
+   },
+   "r30": {
+    "waarde": "! Geen rekening met voordelen uit 30%-regeling (2023); allowances voor expats kunnen wel meetellen in toetsinkomen",
+    "bron": [
+     "https://media.rabobank.com/m/4e33ec563c784cda/original/Rabobank-als-Hypotheekverstrekker-acceptatie-en-beheerregels-vanaf-2-januari-2023.pdf"
+    ],
+    "brondatum": "2023",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. Als sprake is van een 30%-regeling voor werknemers uit het buitenland, dan houden we geen rekening met de voordelen uit de 30%-regeling."
+   },
+   "mwbep": {
+    "waarde": "~ Marktwaarde op basis van volledig taxatierapport conform taxatiebeleid; Calcasa-desktop alleen bij beperkte percentages",
+    "bron": [
+     "https://www.rabobank.nl/particulieren/hypotheek/taxatierapport-calcasa"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Voor een hogere hypotheek is een NWWI-taxatierapport nodig."
+   },
+   "woz": {
+    "waarde": "- WOZ-waarde niet toegestaan als marktwaarde bij aankoop; wel bruikbaar om waardestijging (lagere LTV-opslag) aan te tonen",
+    "bron": [
+     "https://media.rabobank.com/m/4e33ec563c784cda/original/Rabobank-als-Hypotheekverstrekker-acceptatie-en-beheerregels-vanaf-2-januari-2023.pdf",
+     "https://www.rabobank.nl/particulieren/hypotheek/hypotheekrente/rente-opslag-hypotheek"
+    ],
+    "brondatum": "2023-01",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. Dit kan een WOZ-waarde, een officieel taxatierapport of een Rabobank Calcasa Desktoptaxatie zijn."
+   },
+   "wwp": {
+    "waarde": "~ Alleen in Plusvoorwaarden: eigen bewoning en eigen bedrijf, woongedeelte >50%; in Basisvoorwaarden niet mogelijk",
+    "bron": [
+     "https://media.rabobank.com/m/3b3d979f072a5f24/original/Basisvoorwaarden-IM-pdf.pdf",
+     "https://media.rabobank.com/m/1b8220caac690894/original/Plusvoorwaarden-IM-pdf.pdf"
+    ],
+    "brondatum": "2023",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. Financiering van een woon-/winkelpand is niet mogelijk met de basisvoorwaarden; met Plusvoorwaarden wel, object >50% eigen bewoning."
+   },
+   "wboer": {
+    "waarde": "~ Mogelijk bij woonbestemming of agrarisch met perceel max. 3 ha; 100% eigen bewoning, geen bedrijfsactiviteiten",
+    "bron": [
+     "https://media.rabobank.com/m/3b3d979f072a5f24/original/Basisvoorwaarden-IM-pdf.pdf",
+     "https://media.rabobank.com/m/1b8220caac690894/original/Plusvoorwaarden-IM-pdf.pdf"
+    ],
+    "brondatum": "2023",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. De totale oppervlakte van het perceel is niet meer dan 3 hectare."
+   },
+   "wboot": {
+    "waarde": "~ Woonboot alleen in Plusvoorwaarden: eigen bewoning, vaste ligplaats (vergunning/huur/eigendom), max. 90% van marktwaarde boot en ligplaats",
+    "bron": [
+     "https://media.rabobank.com/m/3b3d979f072a5f24/original/Basisvoorwaarden-IM-pdf.pdf",
+     "https://media.rabobank.com/m/1b8220caac690894/original/Plusvoorwaarden-IM-pdf.pdf"
+    ],
+    "brondatum": "2023",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. De maximale verstrekking is 90% van de marktwaarde van de woonboot en 90% van de waarde van de ligplaats."
+   },
+   "nhgk": {
+    "waarde": "~ KoopGarant/KoopStart mogelijk (met NHG); combinatie van koopoplossingen niet mogelijk",
+    "bron": [
+     "https://media.rabobank.com/m/3b3d979f072a5f24/original/Basisvoorwaarden-IM-pdf.pdf",
+     "https://media.rabobank.com/m/4e33ec563c784cda/original/Rabobank-als-Hypotheekverstrekker-acceptatie-en-beheerregels-vanaf-2-januari-2023.pdf"
+    ],
+    "brondatum": "2022-04",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. Rabobank accepteert KoopGarant, KoopStart, Slimmer Kopen en de SVn starterslening als koopoplossing, maar alleen met NHG."
+   },
+   "zbep": {
+    "waarde": "~ Inkomensverklaring door Rabobank (of partners Overviewz, Pentrax, Raadhuys, Zakelijk Inkomen); >25% belang = ondernemer",
+    "bron": [
+     "https://www.rabobank.nl/particulieren/hypotheek/inkomensverklaring-aanvragen"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. Sinds 13 januari kan de inkomensverklaring door externe rekenexperts (Raadhuys en Zakelijk Inkomen) worden opgesteld."
+   },
+   "z123": {
+    "waarde": "~ Cijfers laatste 3 jaar, elk jaar weegt even zwaar; groeiende onderneming: tussentijdse cijfers vanaf half jaar",
+    "bron": [
+     "https://www.rabobank.nl/bedrijven/intermediairs/hypotheek/ondernemer-in-prive"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Om het inkomen te bepalen, kijken we naar de cijfers van de afgelopen 3 jaar. ... vanaf minimaal een halfjaar."
+   },
+   "zstart": {
+    "waarde": "+ Mogelijk na 1 jaar; al na 6 maanden bij zelfde werk als in loondienst, met ruime inbreng eerder loon",
+    "bron": [
+     "https://www.rabobank.nl/bedrijven/intermediairs/hypotheek/ondernemer-in-prive",
+     "https://www.rabobank.nl/particulieren/hypotheek/hypotheek-voor-ondernemers",
+     "https://www.rabobank.nl/particulieren/hypotheek/huis-kopen/ondernemer/"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Heb je een bedrijf waarin je hetzelfde werk doet als in loondienst? Dan kan het al na 6 maanden."
+   },
+   "duo": {
+    "waarde": "~ Hoogste van werkelijk termijnbedrag en wettelijk termijnbedrag DUO",
+    "bron": [
+     "https://www.rabobank.nl/particulieren/hypotheek/eerste-huis-kopen/hypotheek-met-studieschuld"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Het hoogste bedrag van het berekende en het werkelijke bedrag wordt vermenigvuldigd met een bruteringsfactor."
+   },
+   "rsk": {
+    "waarde": "+ Restschuldlening mogelijk: annuïtair of lineair, standaard 15 jaar, onbeperkt boetevrij aflossen; blijft bij oorspronkelijke Rabobank",
+    "bron": [
+     "https://media.rabobank.com/m/1b8220caac690894/original/Plusvoorwaarden-IM-pdf.pdf"
+    ],
+    "brondatum": "2022",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. De Restschuldlening is geen los product dat we aan klanten verkopen."
+   },
+   "obmax": {
+    "waarde": "~ Niet verkocht: 95% taxatiewaarde reguliere woning, 90% marktwaarde Calcasa desktoptaxatie (was 81%); verkocht: verkoopprijs min kosten en restschuld",
+    "bron": [
+     "https://www.rabobank.nl/bedrijven/intermediairs/hypotheek/aan-de-slag/rabobank-intermediair-gids/laatste-wijzigingen"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Het wordt 90% (was 81%) van de marktwaarde uit een Desktoptaxatie van Calcasa en 95% van de taxatiewaarde voor de reguliere woning."
+   },
+   "oblast": {
+    "waarde": "~ Beoordeeld of klant tijdelijk lasten overbrugging plus andere hypotheken kan dragen; bij 24 maanden herbeoordeling na 12 maanden",
+    "bron": [
+     "https://www.rabobank.nl/particulieren/hypotheek/hypotheekvormen-en-voorwaarden/hypotheekproducten/overbruggingshypotheek"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Als de OverbruggingsHypotheek voor 24 maanden is afgesloten, bekijken we na 12 maanden of je de maandlasten nog kunt betalen."
+   },
+   "obduur": {
+    "waarde": "~ Looptijd 1 of 2 jaar (max. 24 maanden); verlenging met 6 maanden onder voorwaarden via Intermediairsdesk, met nieuwe toetsing",
+    "bron": [
+     "https://www.rabobank.nl/particulieren/hypotheek/hypotheekvormen-en-voorwaarden/hypotheekproducten/overbruggingshypotheek"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Verlenging van de looptijd is telkens mogelijk met 6 maanden tot 24 maanden."
+   },
+   "obwaar": {
+    "waarde": "~ Volledig taxatierapport (95%) of Calcasa desktoptaxatie/modelwaarde (90%); Calcasa-rapport max. 6 maanden oud",
+    "bron": [
+     "https://www.rabobank.nl/bedrijven/intermediairs/hypotheek/aan-de-slag/rabobank-intermediair-gids/laatste-wijzigingen",
+     "https://www.rabobank.nl/particulieren/hypotheek/taxatierapport-calcasa"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Het wordt 90% (was 81%) van de marktwaarde uit een Desktoptaxatie van Calcasa en 95% van de taxatiewaarde voor de reguliere woning."
+   },
+   "obvw": {
+    "waarde": "~ Advies- en afsluitkosten; nieuwe hypotheek ook bij Rabobank; ook mogelijk als grond of woning al in bezit van klant; alleen rente betalen",
+    "bron": [
+     "https://www.rabobank.nl/particulieren/hypotheek/hypotheekvormen-en-voorwaarden/hypotheekproducten/overbruggingshypotheek",
+     "https://www.rabobank.nl/bedrijven/intermediairs/hypotheek/aan-de-slag/rabobank-intermediair-gids/laatste-wijzigingen"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Bij het afsluiten van een OverbruggingsHypotheek betaal je advies- en afsluitkosten. Ook betaal je maandelijks rente."
+   },
+   "geldnb": {
+    "waarde": "~ Basisvoorwaarden: lening opnemen binnen 12 maanden na renteaanbod; Plusvoorwaarden: 18 maanden",
+    "bron": [
+     "https://www.rabobank.nl/particulieren/hypotheek/hypotheekvormen-en-voorwaarden/plusvoorwaarden",
+     "https://www.rabobank.nl/particulieren/hypotheek/samen-zelfbouwen/je-eigen-hypotheek-binnen-een-cpo-project",
+     "https://www.rabobank.nl/particulieren/hypotheek/hypotheekvormen-en-voorwaarden/basisvoorwaarden"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Bij Basisvoorwaarden heb je 1 jaar de tijd ... Bij Plusvoorwaarden is dat 18 maanden."
+   },
+   "annul": {
+    "waarde": "~ Basisvoorwaarden: annuleringskosten bij niet-opname binnen 12 maanden; Plusvoorwaarden: geen annuleringskosten bij wijzigen/annuleren/aflopen",
+    "bron": [
+     "https://www.rabobank.nl/particulieren/hypotheek/hypotheekvormen-en-voorwaarden/plusvoorwaarden",
+     "https://www.rabobank.nl/particulieren/hypotheek/samen-zelfbouwen/je-eigen-hypotheek-binnen-een-cpo-project"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Bij Basisvoorwaarden betaal je kosten als je de offerte annuleert. Bij Plusvoorwaarden betaal je geen kosten als je de offerte annuleert of aanpast."
+   },
+   "bvrij": {
+    "waarde": "~ Geen vergoeding bij verkoop van de woning en bij overlijden; restschuld altijd boetevrij af te lossen",
+    "bron": [
+     "https://www.rabobank.nl/particulieren/service/hypotheek/vergoeding-voor-vervroegd-aflossen"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. Bij verkoop van je woning hoef je geen vergoeding te betalen."
+   },
+   "cpo": {
+    "waarde": "+ CPO mogelijk: eigen hypotheek per deelnemer; afsluiten na koop-aanneemovereenkomst en onherroepelijke omgevingsvergunning",
+    "bron": [
+     "https://www.rabobank.nl/particulieren/hypotheek/samen-zelfbouwen/je-eigen-hypotheek-binnen-een-cpo-project",
+     "https://www.rabobank.nl/particulieren/hypotheek/samen-zelfbouwen/start-met-de-voorbereiding"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. koop-aanneemovereenkomst ... omgevingsvergunning"
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Rabobank Intermediair Gids",
+    "url": "https://www.rabobank.nl/bedrijven/intermediairs/hypotheek/aan-de-slag/rabobank-intermediair-gids",
+    "versie": "Acceptatie- en Beheerbeleid september 2026 (10-09-2026); tekst niet leesbaar"
+   },
+   {
+    "titel": "Laatste wijzigingen Rabobank als Hypotheekverstrekker",
+    "url": "https://www.rabobank.nl/bedrijven/intermediairs/hypotheek/aan-de-slag/rabobank-intermediair-gids/laatste-wijzigingen",
+    "versie": "beleid per 30 juni 2026"
+   },
+   {
+    "titel": "Plusvoorwaarden hypotheek",
+    "url": "https://www.rabobank.nl/particulieren/hypotheek/hypotheekvormen-en-voorwaarden/plusvoorwaarden",
+    "versie": "2026"
+   },
+   {
+    "titel": "Basisvoorwaarden hypotheek",
+    "url": "https://www.rabobank.nl/particulieren/hypotheek/hypotheekvormen-en-voorwaarden/basisvoorwaarden",
+    "versie": "2026"
+   },
+   {
+    "titel": "Rabobank scherpt beleid aflossingsvrij aan",
+    "url": "https://www.rabobank.nl/nieuws/011512344/rabobank-scherpt-beleid-voor-aflossingsvrije-hypotheek-aan-per-11-mei-2026",
+    "versie": "11 mei 2026"
+   },
+   {
+    "titel": "Klantinformatie hypotheekrente wijzigen (Plusvoorwaarden)",
+    "url": "https://media.rabobank.com/m/7b2c705381193139/original/Klantinformatie-hypotheekrente-wijzigen-Plusvoorwaarden.pdf",
+    "versie": "november 2025"
+   },
+   {
+    "titel": "Rabobank en Obvion passen hypotheeknormen aan per maart 2027",
+    "url": "https://www.rabobank.nl/over-ons/pers/persberichten/011549261/rabobank-en-obvion-passen-hypotheeknormen-aan-per-maart-2027",
+    "versie": "1 oktober 2026"
+   },
+   {
+    "titel": "Rabobank als Hypotheekverstrekker - Acceptatie- en beheerregels wonen",
+    "url": "https://media.rabobank.com/m/4e33ec563c784cda/original/Rabobank-als-Hypotheekverstrekker-acceptatie-en-beheerregels-vanaf-2-januari-2023.pdf",
+    "versie": "vanaf 2 januari 2023"
+   },
+   {
+    "titel": "Basisvoorwaarden via intermediair",
+    "url": "https://media.rabobank.com/m/3b3d979f072a5f24/original/Basisvoorwaarden-IM-pdf.pdf",
+    "versie": "april 2022"
+   },
+   {
+    "titel": "Plusvoorwaarden via intermediair",
+    "url": "https://media.rabobank.com/m/1b8220caac690894/original/Plusvoorwaarden-IM-pdf.pdf",
+    "versie": "16 mei 2022"
+   },
+   {
+    "titel": "Laatste wijzigingen Rabobank als Hypotheekverstrekker",
+    "url": "https://www.rabobank.nl/bedrijven/intermediairs/hypotheek/aan-de-slag/rabobank-intermediair-gids/laatste-wijzigingen",
+    "versie": "Acceptatiebeleid september 2026 genoemd (niet geopend)"
+   }
+  ]
+ }
+]

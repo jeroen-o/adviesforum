@@ -1,0 +1,605 @@
+[
+ {
+  "naam": "bijBouwe",
+  "gecontroleerd": "2026-10-09",
+  "criteria": {
+   "zzp": {
+    "waarde": "! Min. 36 mnd ondernemer; inkomensverklaring van geselecteerde partij",
+    "bron": [
+     "https://www.bijbouwe.nl/online-hypotheek/bijbouwe-vooruit-hypotheek",
+     "https://bijbouwe.nl/belangrijke-documenten",
+     "https://bijbouwe.nl/blog/een-bijbouwe-hypotheek-alle-productkenmerken-op-een-rijtje"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. zelfstandigen (die 36 maanden of langer ondernemer zijn)"
+   },
+   "flex": {
+    "waarde": "! Gemiddelde 3 kalenderjaren, maar huidig inkomen leidend als dat lager is",
+    "bron": [
+     "https://www.bijbouwe.nl/blog/hypotheek-voor-de-flexwerker-hoe-jij-een-huis-kan-kopen-zonder-vast-contract"
+    ],
+    "brondatum": "2026-09",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. bijBouwe stelt geen inkomen vast op basis van een perspectiefverklaring of arbeidsmarktscan ... berekenen het Toetsinkomen op basis van het laagste van de volgende drie opties"
+   },
+   "aow": {
+    "waarde": "~ Binnen 10 jaar voor AOW is toekomstig pensioeninkomen leidend",
+    "bron": [
+     "https://bijbouwe.nl/blog/een-hypotheek-afsluiten-na-65-jaar-hoe-zit-dat"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. Ook als je nog werkt, maar minder dan 10 jaar van de pensioenleeftijd verwijderd bent, dan is de hoogte van je toekomstige pensioen leidend"
+   },
+   "rvp": {
+    "waarde": "~ 1 t/m 30 jaar rentevast, met en zonder NHG",
+    "bron": [
+     "https://bijbouwe.nl/blog/een-bijbouwe-hypotheek-alle-productkenmerken-op-een-rijtje",
+     "https://bijbouwe.nl/je-bijbouwe-hypotheek/wijzigen-rentevaste-periode"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. bijBouwe hanteert variabele rentevastperioden t/m 30 jaar, met of zonder Nationale Hypotheek Garantie (NHG)."
+   },
+   "geld": {
+    "waarde": "~ Garantieverklaring 4 mnd geldig; eenmalig +2 mnd verlengen (max. 6 mnd)",
+    "bron": [
+     "https://bijbouwe.nl/adviseurs"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. De geldigheidstermijn van de garantieverklaring is vanaf de afgiftedatum vier maanden ... verlengen met 2 maanden tot een maximale geldigheidstermijn van 6 maanden"
+   },
+   "boete": {
+    "waarde": "~ 10% van oorspronkelijke hoofdsom per jaar; boetevrij bij verkoop",
+    "bron": [
+     "https://www.bijbouwe.nl/je-bijbouwe-hypotheek/extra-aflossen",
+     "https://www.bijbouwe.nl/online-hypotheek/bijbouwe-vooruit-hypotheek"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Per kalenderjaar is het bij ons mogelijk om tot 10% van het oorspronkelijke geleende bedrag extra af te lossen, zonder dat je hiervoor een extra vergoeding betaalt."
+   },
+   "ltv": {
+    "waarde": "+ Automatisch lagere risicoklasse bij aflossing; bij waardestijging via taxatierapport",
+    "bron": [
+     "https://bijbouwe.nl/je-bijbouwe-hypotheek/je-hypotheek-in-een-lagere-risicoklasse",
+     "https://www.bijbouwe.nl/online-hypotheek/bijbouwe-vooruit-hypotheek"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Bij de Vooruit Hypotheek daalt de risicoklasse automatisch bij aflossing; waardestijging aantonen met taxatierapport (max. 6 mnd oud)"
+   },
+   "bdduur": {
+    "waarde": "+ Nieuwbouw 24 mnd / bestaande bouw 12 mnd; 2x verlengen met 6 mnd",
+    "bron": [
+     "https://bijbouwe.nl/je-bijbouwe-hypotheek/je-bouwdepot",
+     "https://www.bijbouwe.nl/blog/het-bouwdepot-wat-is-het-en-hoe-werkt-het"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. standaardlooptijd 24 maanden bij nieuwbouw en 12 maanden bij bestaande bouw ... twee keer met 6 maanden verlengen"
+   },
+   "bdrnt": {
+    "waarde": "~ Rentevergoeding over niet-opgenomen depot; geen vergoeding in verlenging",
+    "bron": [
+     "https://bijbouwe.nl/je-bijbouwe-hypotheek/je-bouwdepot",
+     "https://www.bijbouwe.nl/blog/het-bouwdepot-wat-is-het-en-hoe-werkt-het"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Over het nog niet opgenomen bedrag van het bouwdepot ontvang je rente ... Tijdens de verlengde periode ontvang je geen rentevergoeding meer over het resterende saldo."
+   },
+   "bddecl": {
+    "waarde": "+ Declareren via MijnLeninginzicht; beoordeling 5 werkdagen, uitbetaling binnen 2 werkdagen",
+    "bron": [
+     "https://bijbouwe.nl/je-bijbouwe-hypotheek/je-bouwdepot"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Via MijnLeninginzicht ... Binnen 5 werkdagen beoordelen we je declaratie ... betalen we je binnen 2 werkdagen uit."
+   },
+   "ebb": {
+    "waarde": "+ Tot 106% marktwaarde voor energiebesparende maatregelen (via verduurzamingsdepot)",
+    "bron": [
+     "https://bijbouwe.nl/blog/wat-kun-je-met-extra-hypotheekruimte-voor-energiebesparing",
+     "https://bijbouwe.nl/verduurzaming",
+     "https://www.bijbouwe.nl/blog/je-huis-verduurzamen-met-het-energiebespaarbudget"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Normaal kun je maximaal 100% van de marktwaarde lenen. ... tot 106% ... die extra 6% moet volledig worden geinvesteerd in energiebesparende maatregelen"
+   },
+   "duur": {
+    "waarde": "+ Vooruit Hypotheek: scherpere rente op verduurzamingsleningdeel; verbeterplan bij label D of slechter",
+    "bron": [
+     "https://www.bijbouwe.nl/online-hypotheek/bijbouwe-vooruit-hypotheek",
+     "https://bijbouwe.nl/verduurzaming",
+     "https://www.bijbouwe.nl/verduurzaming/verbeterplan"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Een nieuwe hypotheek voor een woning met energielabel D of slechter? Dan maken wij automatisch een verbeterplan voor je op ... Profiteer van een scherpe rente met een groen leningdeel."
+   },
+   "verh": {
+    "waarde": "~ Meeneem-/verhuisregeling; NHG-tarief vervalt bij nieuwe woning boven NHG-grens",
+    "bron": [
+     "https://bijbouwe.nl/blog/hypotheek-met-nhg-de-voor-en-nadelen",
+     "https://bijbouwe.nl/je-bijbouwe-hypotheek/wijzigen-rentevaste-periode"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Als je een NHG-hypotheek had, en je nieuwe hypotheek komt boven de NHG-grens uit, dan kun je geen gebruik maken van de NHG-rente."
+   },
+   "ondh": {
+    "waarde": "~ Preventief en bijzonder beheer; verkoop/executie als oplossingen falen",
+    "bron": [
+     "https://bijbouwe.nl/je-bijbouwe-hypotheek/betalingsproblemen",
+     "https://bijbouwe.nl/je-bijbouwe-hypotheek/preventief-en-bijzonder-beheer"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. Werkt u niet mee, dan zet bijBouwe andere middelen in ... executieverkoop; passen we preventief beheer toe"
+   },
+   "oha": {
+    "waarde": "~ Via adviseur; toets of blijver hypotheek alleen kan dragen; looptijd kan opnieuw naar 30 jaar",
+    "bron": [
+     "https://bijbouwe.nl/je-bijbouwe-hypotheek/ontslag-hoofdelijke-aansprakelijkheid"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Het verzoek moet via een hypotheekadviseur lopen ... bijBouwe toetst of de blijvende partner de hypotheek alleen kan dragen ... looptijd kan opnieuw op 30 jaar"
+   },
+   "tweede": {
+    "waarde": "~ Verhogen min. EUR 5.000 (basis max. EUR 175.000; Vooruit tot totaal EUR 1.000.000); onderhands bij ruimte in inschrijving, anders notaris",
+    "bron": [
+     "https://bijbouwe.nl/je-bijbouwe-hypotheek/hypotheek-verhogen",
+     "https://www.bijbouwe.nl/online-hypotheek/bijbouwe-vooruit-hypotheek"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Gewijzigd na controle (A/B/arbitrage): Max. 175.000 geldt volgens de verhogingspagina alleen voor de basis-hypotheek; Vooruit kent alleen min. 5.000 en totaal max. 1 mln. Blog met algemene 175.000 is ruim 3 jaar oud. Onderhands/notaris bevestigd. Steunt A."
+   },
+   "ovbr": {
+    "waarde": "~ Overbruggingskrediet voor overwaarde onder voorwaarden; min. €10.000",
+    "bron": [
+     "https://bijbouwe.nl/blog/overwaarde-op-je-huis-bij-verkoop-denk-aan-je-overbruggingskrediet-hoe-het-werkt",
+     "https://bijbouwe.nl/blog/een-bijbouwe-hypotheek-alle-productkenmerken-op-een-rijtje"
+    ],
+    "brondatum": "2026-09",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Ongeacht of je woning is verkocht, moet de overbruggingshypotheek minimaal EUR 10.000 zijn en is de looptijd maximaal 24 maanden."
+   },
+   "avrij": {
+    "waarde": "~ Max. 50% van woningwaarde aflossingsvrij",
+    "bron": [
+     "https://bijbouwe.nl/aflossingsvrij",
+     "https://bijbouwe.nl/blog/een-bijbouwe-hypotheek-alle-productkenmerken-op-een-rijtje"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. bijBouwe biedt tot maximaal 50% aflossingsvrije hypotheken"
+   },
+   "rmid": {
+    "waarde": "! Rentevaste periode wijzigen alleen tegen vergoeding (ineens of meefinancieren)",
+    "bron": [
+     "https://bijbouwe.nl/je-bijbouwe-hypotheek/wijzigen-rentevaste-periode"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Je koopt in dit geval je huidige rentevaste periode af en betaalt een (eventuele) vergoeding ... vergoeding in een keer betalen of meefinancieren"
+   },
+   "rverl": {
+    "waarde": "+ Bestaande klanten kunnen uit alle tarieven kiezen, ook als die voor nieuwe klanten uitverkocht zijn",
+    "bron": [
+     "https://bijbouwe.nl/je-bijbouwe-hypotheek/wijzigen-rentevaste-periode",
+     "https://bijbouwe.nl/adviseurs/rente"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Bestaande klanten kunnen altijd uit alle rentetarieven kiezen voor een wijziging aan de hypotheek."
+   },
+   "rvoor": {
+    "waarde": "~ Renteaanbod ca. 3 mnd voor einde rentevaste periode",
+    "bron": [
+     "https://bijbouwe.nl/je-bijbouwe-hypotheek/wijzigen-rentevaste-periode"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. Meestal krijg je drie maanden voor afloop een nieuw renteaanbod"
+   },
+   "bbrk": {
+    "waarde": "~ Vergoeding o.b.v. vergelijkingsrente; geen vergoeding als die ≥ contractrente",
+    "bron": [
+     "https://bijbouwe.nl/je-bijbouwe-hypotheek/wijzigen-rentevaste-periode"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. geen vergoeding wanneer de vergelijkingsrente gelijk of hoger is dan jouw huidige rente"
+   },
+   "elbl": {
+    "waarde": "+ Vooruit Hypotheek: rentekorting vanaf energielabel C",
+    "bron": [
+     "https://www.bijbouwe.nl/online-hypotheek/bijbouwe-vooruit-hypotheek"
+    ],
+    "brondatum": "2026-09",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. bij energielabel C of beter kan een rentekorting van toepassing zijn; beschikbare kortingen staan op bijbouwe.nl"
+   },
+   "wkost": {
+    "waarde": "! Verhoging: administratie- en bemiddelingskosten (vaste bedragen)",
+    "bron": [
+     "https://bijbouwe.nl/je-bijbouwe-hypotheek/hypotheek-verhogen"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Zelf verhogen ... administratiekosten van EUR 250 en bemiddelingskosten van EUR 700"
+   },
+   "avlt": {
+    "waarde": "! Verlengen/nieuwe hypotheek niet zeker; afhankelijk van inkomen, schuld en waarde",
+    "bron": [
+     "https://bijbouwe.nl/aflossingsvrij"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. verlengen of herfinancieren is niet zeker. Dat hangt af van je (pensioen)inkomen, je restschuld en de waarde van de woning"
+   },
+   "bproc": {
+    "waarde": "+ Preventief beheer: betaalpauze, renteafkoop, budget-/jobcoach, betalingsregeling",
+    "bron": [
+     "https://bijbouwe.nl/je-bijbouwe-hypotheek/betalingsproblemen",
+     "https://bijbouwe.nl/je-bijbouwe-hypotheek/preventief-en-bijzonder-beheer"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. betaalpauze, rente afkoop, betaaltoezegging, betalingsregeling om de achterstand in te halen, tijdelijke maandlastenverlaging"
+   },
+   "erfp": {
+    "waarde": "~ Erfpacht van Staat, provincie, gemeente of waterschap toegestaan; particuliere erfpacht uitgegeven vóór 2013 alleen met (groen) erfpachtoordeel; looptijd erfp",
+    "bron": [
+     "https://bijbouwe.nl/belangrijke-documenten"
+    ],
+    "brondatum": "2026-09",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. erfpacht uitgegeven door de Staat, provincies, gemeenten of waterschappen ... particuliere partij voor 2013 ... erfpachtopinie"
+   },
+   "cons": {
+    "waarde": "~ Vooruit: consumptief benutten overwaarde mogelijk, alleen zonder NHG; consumptieve financieringslasttabel (box 3). Basis: niet toegestaan",
+    "bron": [
+     "https://www.bijbouwe.nl/online-hypotheek/bijbouwe-vooruit-hypotheek",
+     "https://bijbouwe.nl/je-bijbouwe-hypotheek/wijzigen-rentevaste-periode",
+     "https://bijbouwe.nl/je-bijbouwe-hypotheek/hypotheek-verhogen"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Consumptieve verhogingen zijn toegestaan, maar niet bij NHG-aanvragen"
+   },
+   "lensch": {
+    "waarde": "~ Familielening blijft buiten toets als rente en aflossing via schenkingsakte voor de hele looptijd worden teruggeschonken; geen borgstelling ouders",
+    "bron": [
+     "https://www.bijbouwe.nl/online-hypotheek/bijbouwe-vooruit-hypotheek"
+    ],
+    "brondatum": "2026-09",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Dit moet blijken uit een schenkingsovereenkomst, waarin vermeld staat dat de rente en aflossing door de uitlener gedurende de gehele Looptijd worden geschonken."
+   },
+   "desk": {
+    "waarde": "~ Vooruit: Calcasa Desktoptaxatie toegestaan (betrouwbaarheidsscore min. 5, max. 6 mnd oud), ook bij 90% MW. Basis: alleen gevalideerd rapport",
+    "bron": [
+     "https://www.bijbouwe.nl/online-hypotheek/bijbouwe-vooruit-hypotheek",
+     "https://bijbouwe.nl/je-bijbouwe-hypotheek/je-hypotheek-in-een-lagere-risicoklasse"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Voor een bijBouwe Vooruit Hypotheek kan je ook gebruik maken van een desktoptaxatie; basis alleen gevalideerd taxatierapport"
+   },
+   "huur": {
+    "waarde": "~ Huur van ander pand telt mee (alleen zonder NHG): huur -20% exploitatiekosten en -lasten hypotheek verhuurpand; huurcontract min. 12 mnd",
+    "bron": [
+     "https://bijbouwe.nl/blog/huurinkomsten-meenemen-bij-je-maximale-hypotheekberekening"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. bijBouwe neemt de huurinkomsten en vermindert deze met 20% exploitatiekosten en de lasten van een eventuele hypotheek op de verhuurwoning; alleen zonder NHG"
+   },
+   "start": {
+    "waarde": "~ Starterslening mogelijk via onafhankelijk adviseur (niet via website); basis-hypotheek alleen met NHG in combinatie met SVn-starterslening",
+    "bron": [
+     "https://bijbouwe.nl/documentenchecker"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. mortgage combined with a starterslening currently requires independent adviser"
+   },
+   "verhuur": {
+    "waarde": "- Onderpand moet vrij van huur en voor eigen permanente bewoning zijn; verhuurd of te verhuren onroerend goed (incl. B&B) niet toegestaan",
+    "bron": [
+     "https://bijbouwe.nl/blog/huurinkomsten-meenemen-bij-je-maximale-hypotheekberekening",
+     "https://bijbouwe.nl/blog/een-bijbouwe-hypotheek-alle-productkenmerken-op-een-rijtje"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. bijBouwe accepteert Nederlandse eengezinswoningen en appartementen bestemd voor eigen bewoning als onderpand ... voor verhuur heb je een verhuurhypotheek nodig"
+   },
+   "loondt": {
+    "waarde": "+ IBL (UWV-verzekeringsbericht) of werkgeversverklaring + loonstrook, max. 3 mnd oud op datum bindend aanbod",
+    "bron": [
+     "https://www.bijbouwe.nl/blog/hypotheek-voor-de-flexwerker-hoe-jij-een-huis-kan-kopen-zonder-vast-contract",
+     "https://www.bijbouwe.nl/online-hypotheek/bijbouwe-vooruit-hypotheek"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. De aan te leveren documenten mogen op de datum van het bindend kredietaanbod niet ouder zijn dan drie maanden."
+   },
+   "senior": {
+    "waarde": "~ Binnen 10 jr AOW: toets op verwacht pensioen + inkomen uit vrij vermogen; Vooruit gericht op senioren met (tijdelijk) ander inkomen",
+    "bron": [
+     "https://bijbouwe.nl/blog/een-hypotheek-afsluiten-na-65-jaar-hoe-zit-dat",
+     "https://www.bijbouwe.nl/online-hypotheek/bijbouwe-vooruit-hypotheek"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. doorstromers of senioren met (tijdelijk) ander inkomen; toekomstig pensioen leidend binnen 10 jaar"
+   },
+   "mwbep": {
+    "waarde": "~ Gevalideerd taxatierapport of Calcasa-desktoptaxatie, max. 6 maanden oud (gerekend vanaf bindend aanbod)",
+    "bron": [
+     "https://www.bijbouwe.nl/online-hypotheek/bijbouwe-vooruit-hypotheek",
+     "https://bijbouwe.nl/je-bijbouwe-hypotheek/je-hypotheek-in-een-lagere-risicoklasse"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Voor een bijBouwe Vooruit Hypotheek kan je ook gebruik maken van een desktoptaxatie; taxatierapport mag niet ouder zijn dan 6 maanden"
+   },
+   "ltvk": {
+    "waarde": "~ Max. 100% van de marktwaarde; met energiebesparende maatregelen max. 106% marktwaarde na verbouwing",
+    "bron": [
+     "https://www.bijbouwe.nl/online-hypotheek/bijbouwe-vooruit-hypotheek",
+     "https://bijbouwe.nl/blog/wat-kun-je-met-extra-hypotheekruimte-voor-energiebesparing",
+     "https://bijbouwe.nl/verduurzaming"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. 100% van de marktwaarde ... met energiebesparende voorzieningen 106% van de marktwaarde"
+   },
+   "zbep": {
+    "waarde": "~ Zakelijk inkomen via inkomensverklaring van door bijBouwe geaccepteerde externe partij (max. 6 mnd geldig)",
+    "bron": [
+     "https://www.bijbouwe.nl/online-hypotheek/bijbouwe-vooruit-hypotheek"
+    ],
+    "brondatum": "2026-09",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. Zakelijk inkomen beoordeelt bijBouwe op basis van een inkomensverklaring, afgegeven door een externe partij, maximaal 6 maanden geldig"
+   },
+   "duo": {
+    "waarde": "~ Termijnbedrag rente+aflossing; in aanloop-/aflosvrije fase berekend op actuele restschuld, rente en resterende looptijd",
+    "bron": [
+     "https://www.bijbouwe.nl/blog/een-hypotheek-met-studieschuld-kan-dat"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. maandbedrag voor rente en aflossing; berekend op actuele restschuld, rente en resterende looptijd bij aanloop-/aflosvrije fase of draagkrachtmeting"
+   },
+   "obvw": {
+    "waarde": "~ Overbrugging minimaal EUR 10.000; totaal hypotheken incl. overbrugging onder de 1 mln-grens",
+    "bron": [
+     "https://bijbouwe.nl/blog/een-bijbouwe-hypotheek-alle-productkenmerken-op-een-rijtje",
+     "https://www.bijbouwe.nl/blog/waarom-grenzen-hypotheken-verhogingen"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. minimale hoogte van € 10.000; grens van € 1.000.000 inclusief alle openstaande gelden"
+   },
+   "geldnb": {
+    "waarde": "! Geen aparte nieuwbouwtermijn gevonden; garantieverklaring 4 mnd, eenmalig te verlengen met 2 mnd tot max. 6 mnd",
+    "bron": [
+     "https://bijbouwe.nl/adviseurs"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Verlengen met 2 maanden ... max. 6 maanden ... handig bij de aankoop van een nieuwbouwwoning"
+   },
+   "bovw": {
+    "waarde": "+ Geen vergoeding bij aflossing door verkoop van de woning",
+    "bron": [
+     "https://www.bijbouwe.nl/je-bijbouwe-hypotheek/extra-aflossen"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. Als je jouw huis verkoopt is er geen extra vergoeding verbonden aan de aflossing."
+   },
+   "bvrij": {
+    "waarde": "+ Boetevrij aflossen binnen 6 maanden na overlijden",
+    "bron": [
+     "https://bijbouwe.nl/je-bijbouwe-hypotheek/overlijden",
+     "https://www.bijbouwe.nl/je-bijbouwe-hypotheek/extra-aflossen"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Binnen zes maanden na het overlijden mag er boetevrij worden afgelost op de nog resterende hypotheek."
+   },
+   "maxh": {
+    "waarde": "- Max. EUR 1.000.000 totale hoofdsom (incl. alle openstaande gelden); verhoging max. EUR 175.000 alleen bij basis-hypotheek, niet bij Vooruit",
+    "bron": [
+     "https://bijbouwe.nl/je-bijbouwe-hypotheek/hypotheek-verhogen",
+     "https://www.bijbouwe.nl/blog/waarom-grenzen-hypotheken-verhogingen"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Gewijzigd na controle (A/B/arbitrage): 1 mln bevestigd; 175.000-grens niet algemeen maar alleen voor basisproduct. Steunt A."
+   },
+   "verhw": {
+    "waarde": "~ Verhoging min. EUR 5.000; max. EUR 175.000 alleen bij basis-hypotheek; Vooruit: totale hoofdsom max. EUR 1.000.000, met hertaxatie",
+    "bron": [
+     "https://bijbouwe.nl/je-bijbouwe-hypotheek/hypotheek-verhogen"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Gewijzigd na controle (A/B/arbitrage): Zie tweede/maxh; B citeerde de basis-sectie. Steunt A."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Acceptatiehandleiding bijBouwe Vooruit Hypotheek",
+    "url": "https://hypotheekcompany.nl/wp-content/uploads/2026/03/bijbouwe-vooruit-acceptatiehandleiding-012026-.pdf",
+    "versie": "01-2026"
+   },
+   {
+    "titel": "bijBouwe Acceptatiehandleiding (basis) – via Belangrijke documenten",
+    "url": "https://bijbouwe.nl/belangrijke-documenten",
+    "versie": "genoemd: sep 2026 (niet geverifieerd)"
+   },
+   {
+    "titel": "bijBouwe Acceptatiehandleiding maart 2025",
+    "url": "https://hypotheekcompany.nl/wp-content/uploads/2025/03/bijBouwe_Acceptatiehandleiding_Maart_2025.pdf",
+    "versie": "mrt 2025"
+   },
+   {
+    "titel": "Acceptatiehandleiding bijBouwe Vooruit Hypotheek",
+    "url": "https://dynamic-credit-xmn7.files.prepr.io/2926eb8qexqw/acceptatiehandleiding-bijbouwe-vooruit-september-2026.pdf",
+    "versie": "september 2026"
+   },
+   {
+    "titel": "Algemene voorwaarden en productinformatieblad bijBouwe Hypotheek",
+    "url": "https://dynamic-credit-xmn7.files.prepr.io/4k4mlv3nh96n/bijbouwe-algemene-voorwaarden-en-productinformatieblad.pdf",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "Acceptatiehandleiding bijBouwe (basis) Hypotheek (alleen bestaande klanten)",
+    "url": "https://hypotheekcompany.nl/wp-content/uploads/2026/09/bijbouwe-basis-accgids-september-2026.pdf",
+    "versie": "sep 2026"
+   },
+   {
+    "titel": "Productkaart bijBouwe Vooruit Hypotheek",
+    "url": "https://hypotheekcompany.nl/wp-content/uploads/2025/10/Productkaart_bijBouwe_Vooruit.pdf",
+    "versie": "juli 2025"
+   },
+   {
+    "titel": "Wijzigingstabel acceptatiehandleiding bijBouwe Vooruit (jan -> sep 2026)",
+    "url": "https://dynamic-credit-xmn7.files.prepr.io/5sxn8pdn68q7/wijzigingstabel-acceptatiehandleiding-bijbouwe-vooruit-september-2026.pdf",
+    "versie": "september 2026"
+   },
+   {
+    "titel": "bijBouwe Vooruit Hypotheek (productpagina)",
+    "url": "https://www.bijbouwe.nl/online-hypotheek/bijbouwe-vooruit-hypotheek",
+    "versie": "actueel"
+   },
+   {
+    "titel": "bijBouwe Acceptatiehandleiding Januari 2025",
+    "url": "https://hypotheekcompany.nl/wp-content/uploads/2024/12/bijBouwe_Acceptatiehandleiding_Januari_2025.pdf",
+    "versie": "jan 2025"
+   },
+   {
+    "titel": "NHG-afwijkingstabel bijBouwe Vooruit (okt 2025)",
+    "url": "https://assets.ctfassets.net/6zr1dh5krozf/10hCEtmqyMHHcJPk1BkycO/67f3d1792ffe847f08bb728373e7d34e/NHG_Afwijkingstabel_bijBouwe_Vooruit_102025.pdf",
+    "versie": "oktober 2025"
+   },
+   {
+    "titel": "Acceptatiehandleiding bijBouwe Vooruit",
+    "url": "https://bijbouwe.nl/belangrijke-documenten",
+    "versie": "september 2026 (alleen titel gezien)"
+   },
+   {
+    "titel": "Acceptatiehandleiding bijBouwe (basis)",
+    "url": "https://bijbouwe.nl/belangrijke-documenten",
+    "versie": "september 2026 (alleen titel gezien)"
+   },
+   {
+    "titel": "Verschillendocument bijBouwe basis/Vooruit",
+    "url": "https://bijbouwe.nl/belangrijke-documenten",
+    "versie": "augustus 2026 (alleen titel gezien)"
+   }
+  ]
+ }
+]

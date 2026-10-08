@@ -1,0 +1,794 @@
+[
+ {
+  "naam": "ASN Bank",
+  "gecontroleerd": "2026-10-09",
+  "criteria": {
+   "zzp": {
+    "waarde": "+ Vanaf 1 boekjaar met inkomensverklaring: 75% (1-2 jr), 90% (2-3 jr), 100% (3+ jr) van vastgesteld inkomen",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/hypotheek-voor-zzp-of-ondernemer/inkomensverklaring.html",
+     "https://www.asnbank.nl/hypotheek/hypotheek-voor-zzp-of-ondernemer.html",
+     "https://www.asnbank.nl/hypotheek/hypotheek-voor-zzp-of-ondernemer/hypotheek-berekenen.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. ASN stelt dat je als zzp'er al na een jaar zelfstandigheid onder voorwaarden een hypotheek kunt afsluiten; 1 tot 2 jaar: 75% van fiscaal belastbare winst"
+   },
+   "flex": {
+    "waarde": "~ Gemiddelde laatste 3 jaar, max. inkomen laatste jaar (zonder perspectiefverklaring)",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/uitzendcontract.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Geen perspectiefverklaring: gemiddeld inkomen laatste 3 jaar, met een maximum van het laatste jaarinkomen"
+   },
+   "persp": {
+    "waarde": "+ Perspectiefverklaring geaccepteerd (max. 6 mnd oud, gecertificeerd uitzendbureau); als vast contract",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/uitzendcontract.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. ASN accepteert verklaring van uitzendbureaus gecertificeerd en ingeschreven in register Stichting Perspectiefverklaring; niet ouder dan 6 maanden"
+   },
+   "aow": {
+    "waarde": "~ Vanaf 57 jaar toets op toekomstig pensioeninkomen; ook vermogen/lijfrente meegewogen",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/hypotheek-voor-ouderen/hypotheek-voor-57-tot-67-jarigen-wat-is-er-mogelijk.html",
+     "https://www.asnbank.nl/hypotheek/hypotheek-voor-ouderen.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Rond je 57ste wordt je maximale hypotheek berekend op basis van je toekomstig pensioeninkomen"
+   },
+   "erfp": {
+    "waarde": "~ Erfpacht geaccepteerd; canon telt mee als last (afgekocht: geen invloed op leenruimte)",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/erfpacht.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Is de erfpacht voor altijd afgekocht? Dan heeft het geen invloed op je leencapaciteit; ASN houdt rekening met erfpachtcanon"
+   },
+   "rvp": {
+    "waarde": "~ Variabel, 1 t/m 7, 10, 12, 15 en 20 jaar vast",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/hypotheekvormen/asn-lineaire-hypotheek.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Kies uit rentevastperiodes van 1 t/m 7, 10, 12, 15 en 20 jaar; tarieventabel noemt variabel"
+   },
+   "geld": {
+    "waarde": "~ Max. 6 mnd bestaande bouw / 12 mnd nieuwbouw vanaf aanvraagdatum; daarna vervalt offerte",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/hypotheekofferte.html",
+     "https://www.asnbank.nl/downloads/informatiewijzer-hypotheek-afsluiten.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Bij bestaande bouw is de offerte maximaal 6 maanden geldig, bij nieuwbouw maximaal 12 maanden, gerekend vanaf de aanvraagdatum"
+   },
+   "boete": {
+    "waarde": "~ 10% van oorspronkelijk bedrag per leningdeel per kalenderjaar",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/mijn-asn-hypotheek/extra-aflossen.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. U mag maximaal 10% per leningdeel per kalenderjaar extra aflossen zonder een vergoeding voor het renteverlies van de bank"
+   },
+   "ltv": {
+    "waarde": "~ 12 tariefgroepen o.b.v. schuld/marktwaarde; lagere groep op verzoek met WOZ/taxatie, niet automatisch",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/hypotheekrentes/hypotheekrente-tariefgroepen.html",
+     "https://www.asnbank.nl/hypotheek/taxatie-van-je-huis.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. De aanpassing naar een lagere tariefgroep gaat niet vanzelf. Je moet hiervoor een marktwaarde aanleveren (recent WOZ-taxatieverslag of taxatierapport)"
+   },
+   "bdduur": {
+    "waarde": "~ Max. 24 mnd (1 jr, automatisch verlengd); daarna verlenging max. 12 mnd onder voorwaarden",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/mijn-asn-hypotheek/bouwdepot/regels-bouwdepot-declaratie.html",
+     "https://www.asnbank.nl/hypotheek/mijn-asn-hypotheek/bouwdepot.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Bouwdepot loopt een jaar en wordt automatisch verlengd; verlengen met een jaar na twee jaar onder voorwaarden. De maximale looptijd is 2 jaar vanaf de passeerdatum"
+   },
+   "bdrnt": {
+    "waarde": "~ Depotrente gelijk aan hypotheekrente",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/mijn-asn-hypotheek/bouwdepot.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. You earn interest on the amount still in the depot, and that rate matches your mortgage rate"
+   },
+   "bddecl": {
+    "waarde": "~ Online declareren via app/internetbankieren; binnen 5 werkdagen; min. €250, factuur max. 6 mnd oud",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/mijn-asn-hypotheek/bouwdepot/regels-bouwdepot-declaratie.html",
+     "https://www.asnbank.nl/downloads/aanvragen-bouwdepotdeclaratie-asn-hypotheek.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. We verwerken je declaratie binnen 5 werkdagen; totaalbedrag per formulier minimaal 250 euro; factuur niet ouder dan 6 maanden"
+   },
+   "ebb": {
+    "waarde": "+ Extra lenen tot 106% conform labeltabel (tot €50.000 bij beste label), via bouwdepot",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/asn-hypotheek/extra-lenen-voor-verduurzaming.html",
+     "https://www.asnbank.nl/hypotheek/online-hypotheek-verhogen.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Voor een energiebesparende renovatie mag je tot 106% van de woningwaarde lenen; het extra bedrag gaat in een bouwdepot"
+   },
+   "duur": {
+    "waarde": "+ Leningdeel ASN Duurzaam Wonen €2.500-30.000 tegen lager tarief, via bouwdepot",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/asn-duurzaam-wonen/hoe-werkt-asn-duurzaam-wonen.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. leningdeel... minimaal € 2.500 en maximaal € 30.000... Het geld komt in een bouwdepot... Voor Duurzaam Wonen betaal je een lagere rente."
+   },
+   "verh": {
+    "waarde": "+ Rente Meeneemregeling: rente meenemen; tarief hangt af van verhouding woningwaarde/hypotheek",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/rente-meeneemregeling.html",
+     "https://www.asnbank.nl/hypotheek/hypotheek-meenemen.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Je neemt de rentevoorwaarden van je oude hypotheek mee naar je nieuwe woning, inclusief de resterende rentevaste periode"
+   },
+   "ondh": {
+    "waarde": "~ Verkoop met verlies alleen met toestemming; restschuld meefinancieren tot €30.000 bij verhuizing",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/restschuldfinanciering.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Je mag je restschuld tot maximaal 30.000 euro meefinancieren; oude huis definitief verkocht"
+   },
+   "oha": {
+    "waarde": "~ Na inkomenstoets blijvende partner en geen achterstand in laatste 5 jaar; via notaris",
+    "bron": [
+     "https://www.asnbank.nl/blg-wonen/hoofdelijk-ontslag.html",
+     "https://www.asnbank.nl/downloads/kostenoverzicht-wijzigen-hypotheek.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. We kijken bijvoorbeeld of je voldoende inkomen hebt; akte van ontslag hoofdelijke aansprakelijkheid tekenen bij de notaris; 195 euro administratiekosten"
+   },
+   "tweede": {
+    "waarde": "+ Verhogen binnen inschrijving zonder notaris, 2e hypotheek, of online zelf (klein bedrag)",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/mijn-asn-hypotheek/hypotheek-verhogen.html",
+     "https://www.asnbank.nl/hypotheek/online-hypotheek-verhogen.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Als je hypotheekschuld lager is dan het ingeschreven bedrag kun je via een onderhandse verhoging zonder notaris; online verhogen max 25.000 euro (ander document 30.000)"
+   },
+   "ovbr": {
+    "waarde": "+ Ook bij onverkochte woning (95% marktwaarde min schuld); max. 18 mnd, nieuwbouw 30 mnd",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/overbruggingshypotheek.html",
+     "https://www.asnbank.nl/hypotheek/mijn-asn-hypotheek/overbruggingshypotheek.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Staat je oude huis nog te koop, dan rekent ASN met 95% van de marktwaarde min de hypotheekschuld; 18 maanden bestaande woning en 30 maanden nieuwbouw"
+   },
+   "avrij": {
+    "waarde": "! Aanvragen vanaf 11-5-2026 max. 30% van woningwaarde aflossingsvrij; bestaand blijft, ook bij einde rentevast; bij verhogen/verhuizen geldt 30%",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/hypotheekvormen/asn-aflossingsvrije-hypotheek/nieuwe-regels-voor-een-aflossingsvrije-hypotheek.html",
+     "https://newsroom.asnbank.nl/en/asn-bank-puts-30-cap-on-interest-only-mortgages/"
+    ],
+    "brondatum": "2026-05",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. vanaf 11 mei 2026 maximaal 30% van de marktwaarde aflossingsvrij; bestaande leningen: nieuwe limiet bij wijziging of einde looptijd, niet bij einde rentevaste periode"
+   },
+   "rmid": {
+    "waarde": "~ Mogelijk bij vaste rente; nieuwe rentevaste periode 6, 7, 10 of 12 jr en min. 5 jr langer dan resterende periode, binnen looptijd; niet bij spaarhypotheek of ",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/je-rente-middelen.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. Rentemiddeling kan alleen bij een vaste rente; nieuwe rentevaste periode minstens 5 jaar langer dan de resterende; binnen resterende looptijd; niet bij Bespaarhypotheek of Duurzaam Wonen"
+   },
+   "rvoor": {
+    "waarde": "~ Rentevoorstel 3 mnd voor einde rentevaste periode; nieuwe periode binnen resterende looptijd",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/mijn-asn-hypotheek/hypotheekrente-verlengen.html",
+     "https://www.asnbank.nl/hypotheek/hypotheekvormen/asn-lineaire-hypotheek.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Drie maanden voor het einde ontvang je een aanbod; de rentevaste perioden zijn niet langer dan de resterende looptijd van je hypotheek"
+   },
+   "bbrk": {
+    "waarde": "~ Contante waarde; vergelijkingsrente = actuele rente gelijke periode; boetevrije ruimte eraf",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/mijn-asn-hypotheek/extra-aflossen.html",
+     "https://www.asnbank.nl/downloads/toelichting-vergoeding-voor-het-renteverlies.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. De actuele rente voor dezelfde rentevaste periode is de vergelijkingsrente; bedrag contant gemaakt; verminderd met vergoedingsvrije ruimte"
+   },
+   "elbl": {
+    "waarde": "~ ASN Hypotheek: labelkorting alleen voor aanvragen voor 1-7-2025; Bespaarhypotheek rekent per energiegroep",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/rentekorting.html",
+     "https://www.asnbank.nl/downloads/informatiewijzer-asn-bespaarhypotheek.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. rentekorting op je ASN Hypotheek als je rentevoorstel of hypotheek voor 1 juli 2025 hebt aangevraagd; Bespaarhypotheek: tariefgroep en energiegroep bepalen samen de rente"
+   },
+   "o106": {
+    "waarde": "! Tariefgroep o.b.v. totale schuld/marktwaarde, met aparte klassen ≤106% en >106%",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/hypotheekrentes/hypotheekrente-tariefgroepen.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. 12 tariefgroepen, van <=40% tot >106% van de marktwaarde voor hypotheken zonder NHG"
+   },
+   "bprov": {
+    "waarde": "~ Nieuwbouw: geen verlengkosten tot 12 mnd; bestaande bouw max. 6 mnd, daarna vervalt offerte",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/hypotheekofferte.html",
+     "https://www.asnbank.nl/hypotheek/nieuwbouwhuis-kopen/kosten-nieuwbouwhuis.html",
+     "https://www.asnbank.nl/downloads/informatiewijzer-hypotheek-afsluiten.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Verlengen van een nieuwbouwofferte tot 12 maanden kost niets extra; na twaalf maanden vervalt de offerte; bestaande bouw 6 maanden"
+   },
+   "wkost": {
+    "waarde": "~ Administratiekosten per wijziging, hoger bij meerdere wijzigingen tegelijk",
+    "bron": [
+     "https://www.asnbank.nl/downloads/kostenoverzicht-wijzigen-hypotheek.html"
+    ],
+    "brondatum": "2026-05",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. 195 euro administratiekosten per wijziging; meerdere zaken tegelijk 390 euro"
+   },
+   "avlt": {
+    "waarde": "~ 18 mnd voor einddatum voorstel voor voortzetting aflossingsvrij deel na betaalbaarheidstoets",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/mijn-asn-hypotheek/aflossingsvrije-hypotheek-aanpassen.html",
+     "https://www.asnbank.nl/web/file?uuid=98bf31e4-9fef-4628-b5ba-3ee3784015df&owner=6916ad14-918d-4ea8-80ac-f71f0ff1928e&contentid=2742"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. voorstel om het aflossingsvrije leningdeel voort te zetten, 18 maanden voor de einddatum; ASN kijkt of je de werkelijke maandlasten kunt betalen (betaalbaarheidstoets)"
+   },
+   "bproc": {
+    "waarde": "+ Afdeling Bijzonder Beheer: gratis hulp, haalbare betalingsregeling, geen incassobureaus",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/mijn-asn-hypotheek/hypotheken-en-hulp-bij-betalingsproblemen.html",
+     "https://www.asnbank.nl/hulp-bij-financiele-zorgen/onze-servicebeloftes.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. De afdeling Bijzonder Beheer helpt bij betalingsproblemen. Hun hulp is vrijblijvend en gratis; samen zoeken naar een betaalregeling"
+   },
+   "cons": {
+    "waarde": "- Aflossingsvrij lenen voor consumptieve doelen (auto, vakantie) niet meer toegestaan voor aanvragen vanaf 11 mei 2026",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/hypotheekvormen/asn-aflossingsvrije-hypotheek/nieuwe-regels-voor-een-aflossingsvrije-hypotheek.html"
+    ],
+    "brondatum": "2026-05",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Borrowing interest-only for things other than your home, such as a car or holiday, is not possible (nieuwe regels vanaf 11 mei 2026)"
+   },
+   "desk": {
+    "waarde": "~ Calcasa Desktop Taxatie (Plus) bij bestaande woning (min. 2 jaar oud), hypotheek max. 90% marktwaarde; niet bij nieuwbouw, erfpacht, recreatie",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/desktop-taxatie.html",
+     "https://www.asnbank.nl/hypotheek/taxatie-van-je-huis.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Woningwaarde max 1.111.111 euro, hypotheek max 90% van de waarde en volgens andere pagina max 1.000.000 euro; geen Desktop Taxatie bij woon-/winkelpand"
+   },
+   "ams": {
+    "waarde": "+ Arbeidsmarktscan geaccepteerd bij tijdelijk/oproepcontract (score 70+, 12 van 14 mnd gewerkt); uitzendkrachten via Perspectiefverklaring",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/hypotheek-zonder-vast-contract.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. Bij een uitslag van 70 punten of hoger... in de afgelopen 14 maanden 12 maanden hebt gewerkt; uitzendcontract: via perspectiefverklaring"
+   },
+   "vve": {
+    "waarde": "! Slapende VvE (geen vergadering/bestuur, leeg reservefonds) kan reden zijn om geen hypotheek te verstrekken",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/een-huis-kopen-in-10-stappen/tips-voor-het-kopen-van-een-huis.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Een slapende VvE is een VvE die niet vergadert of geen bestuur heeft; dat kan betekenen dat je misschien geen hypotheek krijgt"
+   },
+   "huur": {
+    "waarde": "~ Huur van bestaande, permanent verhuurde woning (box 3, met toestemming financier) telt mee; Verhuurhypotheek: 85% huur, max. arbeidsinkomen",
+    "bron": [
+     "https://www.asnbank.nl/downloads/blg-wonen-informatiewijzer-verhuurhypotheek.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Huurinkomsten tellen voor 85% mee, tot maximaal het inkomen uit arbeid; verhuur moet permanent zijn"
+   },
+   "recr": {
+    "waarde": "~ Recreatiehypotheek max. 70% marktwaarde, annuitair/lineair, max. 30 jaar; geen permanente bewoning, geen NHG; NL, steen (hout vanaf 2020)",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/hypotheek-recreatiewoning.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Je kunt tot 70% van de marktwaarde lenen; NHG niet mogelijk; als hoofdverblijf geen Recreatiehypotheek"
+   },
+   "verhuur": {
+    "waarde": "! Verhuur (ook tijdelijk) alleen met schriftelijke toestemming; permanent niet; Airbnb max. 60 dagen/jaar; te koop: Leegstandswet",
+    "bron": [
+     "https://www.asnbank.nl/downloads/voorwaarden-asn-hypotheken-vanaf-27-juni-2023.html",
+     "https://www.asnbank.nl/hypotheek/hypotheek-recreatiewoning.html",
+     "https://www.asnbank.nl/downloads/informatiewijzer-hypotheek-afsluiten.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. je mag het huis niet verhuren zonder toestemming, ook niet tijdelijk; Airbnb niet meer dan 60 dagen per jaar; permanente verhuur niet toegestaan"
+   },
+   "intent": {
+    "waarde": "+ Werkgeversverklaring met intentieverklaring: aanvraag behandeld als vast contract, rekenen met huidig inkomen",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/hypotheek-zonder-vast-contract/intentieverklaring.html",
+     "https://www.asnbank.nl/hypotheek/uitzendcontract.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. ASN behandelt de aanvraag alsof je een vast contract hebt (intentieverklaring in werkgeversverklaring)"
+   },
+   "proef": {
+    "waarde": "- Tijdens proeftijd geen hypotheek mogelijk, ook niet met intentieverklaring",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/hypotheek-zonder-vast-contract/intentieverklaring.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. het is niet mogelijk om een hypotheek af te sluiten als je nog in je proeftijd zit. Ook niet met een intentieverklaring."
+   },
+   "ivawao": {
+    "waarde": "~ WAO-uitkering telt mee in de maximale hypotheek; bij WIA (IVA) afhankelijk van de vorm van de uitkering",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/veelgestelde-vragen.html",
+     "https://www.asnbank.nl/downloads/asn-informatiewijzer-hypotheken.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Met een WAO-uitkering wordt je uitkering meegenomen; met een WIA-uitkering is het afhankelijk van de vorm van de uitkering"
+   },
+   "wga": {
+    "waarde": "~ WIA-uitkering (o.a. WGA): afhankelijk van de vorm of deze meetelt in de maximale hypotheek",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/veelgestelde-vragen.html",
+     "https://www.asnbank.nl/downloads/asn-informatiewijzer-hypotheken.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Met een WIA-uitkering is het afhankelijk van de vorm van de uitkering of het inkomen wordt meegenomen in de berekening van je maximale hypotheek"
+   },
+   "wajong": {
+    "waarde": "+ Wajong-uitkering telt mee in de berekening van de maximale hypotheek",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/veelgestelde-vragen.html",
+     "https://www.asnbank.nl/downloads/asn-informatiewijzer-hypotheken.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Met een WAO-uitkering en een Wajong-uitkering wordt je uitkering meegenomen in de berekening van je maximale hypotheek"
+   },
+   "lijfr": {
+    "waarde": "~ Bij 67-plussers telt bestendige lijfrente-uitkering mee in de berekening",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek-voor-67-plussers-wat-is-er-mogelijk/hypotheek-voor-67-plussers-wat-is-er-mogelijk.html",
+     "https://www.asnbank.nl/hypotheek/hypotheek-voor-ouderen.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Heb je spaargeld, een lijfrente of andere aanvullende inkomsten en is dit inkomen bestendig? Dan nemen we dit mee in de berekening"
+   },
+   "verm": {
+    "waarde": "~ Bij 67-plussers kan spaargeld/aanvullend inkomen meetellen als het bestendig is; rekenregel niet gepubliceerd",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek-voor-67-plussers-wat-is-er-mogelijk/hypotheek-voor-67-plussers-wat-is-er-mogelijk.html",
+     "https://www.asnbank.nl/hypotheek/hypotheek-voor-ouderen.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Heb je spaargeld, een lijfrente of andere aanvullende inkomsten en is dit inkomen bestendig? Dan nemen we dit mee in de berekening"
+   },
+   "senior": {
+    "waarde": "~ Aparte info voor 57-67 en 67+; vanaf ca. 57 jaar toets op toekomstig pensioeninkomen, bij 75+ maatwerk via adviseur",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/hypotheek-voor-ouderen.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Rond je 57ste ... toekomstig pensioeninkomen; 67-plussers: kijken naar maandlasten; vanaf 75 jaar niet altijd vanzelfsprekend, adviseur zoekt oplossingen"
+   },
+   "mwbep": {
+    "waarde": "~ Getaxeerde marktwaarde via NWWI-gevalideerd rapport (NRVT); max. 6 mnd oud. Taxatie verplicht o.a. bij CPO/prefab/zelfbouw en > 1 mln",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/taxatie-van-je-huis.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Bij een hypotheekaanvraag is een gevalideerde taxatie verplicht (NWWI); taxatierapport mag niet ouder zijn dan 6 maanden"
+   },
+   "woz": {
+    "waarde": "~ Zonder taxatie als hypotheek <= 75% WOZ; marktwaarde = 85% WOZ. Woning moet volledige woonbestemming hebben en zelf bewoond worden",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/taxatie-van-je-huis.html",
+     "https://www.asnbank.nl/hypotheek/waardebepaling-huis.html",
+     "https://www.asnbank.nl/hypotheek/desktop-taxatie.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Als je totale openstaande hypotheekschuld maximaal 75% van de WOZ-waarde is, mag je een WOZ-taxatieverslag aanleveren. Dan stellen we de marktwaarde vast op 85% van deze WOZ-waarde"
+   },
+   "wboot": {
+    "waarde": "! Niet als ASN Hypotheek; ASN-adviseur kan woonboothypotheek van Orange Credit bemiddelen (o.a. vaste ligplaats, scheepsregister)",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/hypotheekaanbieders/orange-credit-hypotheek.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. ASN verkoopt de woonboothypotheek van Orange Credit; tot 90% van marktwaarde, 96% bij energiebesparende maatregelen; legale vaste ligplaats; scheepsregister"
+   },
+   "zbep": {
+    "waarde": "~ Inkomensverklaring ondernemer (IKV) van erkende rekenexpert; ASN rekent met saldo fiscale winstberekening",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/hypotheek-voor-zzp-of-ondernemer/inkomensverklaring.html",
+     "https://www.asnbank.nl/hypotheek/hypotheek-voor-zzp-of-ondernemer/hypotheek-berekenen.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Het toetsinkomen staat in de IKV en is het inkomen waarmee de maximale hypotheek wordt berekend; financiele analyse jaarcijfers tot 3 jaar terug"
+   },
+   "z123": {
+    "waarde": "~ 1-2 jaar: 75% van winst; 2-3 jaar: 90% van gemiddelde; 3+ jaar: gemiddelde 3 jaar, tenzij laatste jaar lager",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/hypotheek-voor-zzp-of-ondernemer/inkomensverklaring.html",
+     "https://www.asnbank.nl/hypotheek/hypotheek-voor-zzp-of-ondernemer/hypotheek-berekenen.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. 1 tot 2 jaar: 75% van fiscaal belastbare winst. 3 jaar of langer: gemiddelde van afgelopen drie jaar; was laatste jaar lager, dan laatste jaar"
+   },
+   "zstart": {
+    "waarde": "- Min. 12 maanden ondernemen; zonder jaarcijfers geen hypotheek (uitzondering mogelijk bij partner met vast inkomen)",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/hypotheek-voor-zzp-of-ondernemer/inkomensverklaring.html",
+     "https://www.asnbank.nl/hypotheek/hypotheek-voor-zzp-of-ondernemer/hypotheek-berekenen.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. als zzp'er al na een jaar zelfstandigheid onder voorwaarden een hypotheek"
+   },
+   "bkr": {
+    "waarde": "- Negatieve BKR-registratie (achterstand >= 90 dagen): hypotheek niet mogelijk; positieve registratie verlaagt maximum",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/hypotheek-met-bkr-registratie.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Met een negatieve BKR-registratie (achterstand van 90 dagen of langer) is het niet mogelijk een hypotheek af te sluiten; positieve registratie verlaagt maximale bedrag"
+   },
+   "rsk": {
+    "waarde": "~ Restschuld < 1 jaar oud: apart lineair leningdeel, max. 15 jaar, max. 110% MW; restschuld elders ontstaan gemaximeerd",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/restschuldfinanciering.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. restschuld tot maximaal € 30.000; samen max 110% marktwaarde; tweede lineaire hypotheek binnen 15 jaar afgelost"
+   },
+   "obmax": {
+    "waarde": "~ Niet verkocht: 95% van getaxeerde marktwaarde min hypotheekschuld; verkocht (ontbindende voorwaarden verlopen): 99% van verkoopprijs",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/overbruggingshypotheek.html",
+     "https://www.asnbank.nl/hypotheek/mijn-asn-hypotheek/overbruggingshypotheek.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. 95% van de marktwaarde min de hypotheekschuld; verkocht met verlopen ontbindende voorwaarden: 99% van de verkoopprijs min de hypotheekschuld"
+   },
+   "oblast": {
+    "waarde": "~ Toets of inkomen en/of spaargeld de hogere lasten (oud, nieuw, overbrugging) gedurende de overbruggingsperiode kan dragen",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/mijn-asn-hypotheek/overbruggingshypotheek.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. ASN kijkt of je inkomen en/of spaargeld de extra maandlasten kan dragen."
+   },
+   "obduur": {
+    "waarde": "~ Max. 18 maanden bestaande bouw, 30 maanden nieuwbouw; verlenging max. 2x 12 maanden onder voorwaarden",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/overbruggingshypotheek.html",
+     "https://www.asnbank.nl/hypotheek/mijn-asn-hypotheek/overbruggingshypotheek.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. maximale duur 18 maanden bij bestaande woning en 30 maanden bij nieuwbouwwoning"
+   },
+   "obvw": {
+    "waarde": "~ Alleen met ASN Hypotheek op nieuwe woning (1e hypotheek min. EUR 50.000); aflossingsvrij; overbrugging niet te verhogen",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/overbruggingshypotheek.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. je kunt een overbruggingskrediet alleen afsluiten voor je nieuwe huis als je ook kiest voor een ASN Hypotheek; een overbruggingskrediet kun je niet verhogen"
+   },
+   "geldnb": {
+    "waarde": "~ Offerte nieuwbouw max. 12 maanden geldig vanaf aanvraagdatum (bestaande bouw 6 maanden); verlengen binnen 12 mnd zonder verlengingskosten",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/hypotheekofferte.html",
+     "https://www.asnbank.nl/downloads/informatiewijzer-hypotheek-afsluiten.html",
+     "https://www.asnbank.nl/hypotheek/nieuwbouwhuis-kopen/kosten-nieuwbouwhuis.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Bij bestaande bouw is de offerte maximaal 6 maanden geldig, bij nieuwbouw maximaal 12 maanden, gerekend vanaf de aanvraagdatum"
+   },
+   "annul": {
+    "waarde": "~ Kosteloos annuleren t/m 3 maanden na aanvraagdatum; daarna of bij verlopen offerte annuleringskosten (vast bedrag); uitzonderingen o.a. ontbinding koop",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/hypotheekofferte.html",
+     "https://www.asnbank.nl/downloads/kostenoverzicht-wijzigen-hypotheek.html",
+     "https://www.asnbank.nl/downloads/informatiewijzer-hypotheek-afsluiten.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Tot 3 maanden na de aanvraagdatum kun je zonder kosten annuleren; later of bij verlopen offerte 750 euro"
+   },
+   "bgar": {
+    "waarde": "~ Bankgarantie alleen bij ASN Hypotheek, na goedkeuring en ontvangst getekende offerte; niet bij Bespaarhypotheek; ook via Nationale Waarborg",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/bankgarantie.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Je kunt die alleen in combinatie met een hypotheek bij ASN aanvragen; garantie pas na goedkeuring en getekende offerte; niet mogelijk bij de ASN Bespaarhypotheek"
+   },
+   "bovw": {
+    "waarde": "+ Aflossen bij verkoop woning (via notaris) meestal zonder vergoeding renteverlies; eigen geld onbeperkt vergoedingsvrij",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/mijn-asn-hypotheek/hypotheek-volledig-aflossen.html",
+     "https://www.asnbank.nl/hypotheek/mijn-asn-hypotheek/extra-aflossen-met-eigen-geld.html",
+     "https://www.asnbank.nl/hypotheek/mijn-asn-hypotheek/extra-aflossen.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Aflossen met eigen geld is bij ASN onbeperkt vergoedingsvrij; bij aflossing uit verkoopopbrengst geen vergoeding voor renteverlies"
+   },
+   "bvrij": {
+    "waarde": "+ Boetevrij aflossen binnen 12 maanden na overlijden (mede)schuldenaar; ook rente boetevrij voortijdig verlengen",
+    "bron": [
+     "https://www.asnbank.nl/je-situatie/overlijden/hypotheek-na-overlijden.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. als u binnen 1 jaar na overlijden de hypotheek aflost, betaalt u daar geen vergoeding voor het renteverlies. Dat geldt ook voor het vervroegd verlengen van de rente."
+   },
+   "rest": {
+    "waarde": "~ Restschuld max. EUR 30.000 meefinancieren; totaal max. 110% marktwaarde; lineair in max. 15 jaar; oude woning definitief verkocht",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/restschuldfinanciering.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Je mag je restschuld tot maximaal 30.000 euro meefinancieren; samen met je nieuwe hypotheek maximaal 110% van de marktwaarde; oude huis definitief verkocht"
+   },
+   "oversl": {
+    "waarde": "~ Oversluiten: marktwaarde = getaxeerde marktwaarde; Calcasa desktoptaxatie mogelijk bij max. 90% van de waarde, woning min. 2 jaar oud",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/hypotheek-oversluiten.html",
+     "https://www.asnbank.nl/hypotheek/desktop-taxatie.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Desktop Taxatie bij oversluiten mogelijk, hypotheek max 90% van de waarde; aflossingsvrij max 30% marktwaarde"
+   },
+   "verhw": {
+    "waarde": "~ Verhoging: taxatierapport (max. 6 mnd) als schuld >75% WOZ of >90% marktwaarde; anders WOZ (marktwaarde = 85% WOZ)",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/taxatie-van-je-huis.html",
+     "https://www.asnbank.nl/hypotheek/online-hypotheek-verhogen.html",
+     "https://www.asnbank.nl/hypotheek/hypotheekrentes/hypotheekrente-tariefgroepen.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. ligt je schuld boven 75% van de WOZ-waarde of boven 90% van de marktwaarde, dan is een recent taxatierapport nodig (max 6 maanden); WOZ: 85% marktwaarde"
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Nieuwe regels voor een aflossingsvrije hypotheek",
+    "url": "https://www.asnbank.nl/hypotheek/hypotheekvormen/asn-aflossingsvrije-hypotheek/nieuwe-regels-voor-een-aflossingsvrije-hypotheek.html",
+    "versie": "vanaf 11 mei 2026"
+   },
+   {
+    "titel": "Kostenoverzicht ASN Hypotheek",
+    "url": "https://www.asnbank.nl/downloads/kostenoverzicht-wijzigen-hypotheek.html",
+    "versie": "mei 2026"
+   },
+   {
+    "titel": "Regels voor het wijzigen van een hypotheek",
+    "url": "https://www.asnbank.nl/web/file?uuid=98bf31e4-9fef-4628-b5ba-3ee3784015df&owner=6916ad14-918d-4ea8-80ac-f71f0ff1928e&contentid=2742",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "Informatiewijzer Hypotheken",
+    "url": "https://www.asnbank.nl/downloads/asn-informatiewijzer-hypotheken.html",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "Informatiewijzer Hypotheken (9 maart 2026)",
+    "url": "https://www.asnbank.nl/downloads/asn-informatiewijzer-hypotheken.html",
+    "versie": "2026-03"
+   },
+   {
+    "titel": "Nieuwe regels aflossingsvrije hypotheek",
+    "url": "https://www.asnbank.nl/hypotheek/hypotheekvormen/asn-aflossingsvrije-hypotheek/nieuwe-regels-voor-een-aflossingsvrije-hypotheek.html",
+    "versie": "2026-05"
+   },
+   {
+    "titel": "Kostenoverzicht ASN Hypotheek",
+    "url": "https://www.asnbank.nl/downloads/kostenoverzicht-wijzigen-hypotheek.html",
+    "versie": "21-05-2026"
+   }
+  ]
+ }
+]

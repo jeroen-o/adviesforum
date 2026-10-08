@@ -1,0 +1,159 @@
+[
+ {
+  "naam": "Nestr",
+  "gecontroleerd": "2026-10-09",
+  "criteria": {
+   "huur": {
+    "waarde": "+ Beoordeling primair op object en huurstroom, niet op arbeidsinkomen (vastgoedfinanciering voor verhuurde woningen)",
+    "bron": [
+     "https://www.nestr.nl/kennisbank/verhuurhypotheek-versus-vastgoedfinanciering",
+     "https://www.nestr.nl/producten/verhuurde-woningen"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. bij een verhuurhypotheek [staan] het object en de huurstroom centraal"
+   },
+   "verhuur": {
+    "waarde": "+ Alleen verhuurd vastgoed; verhuur is uitgangspunt, bij voorkeur rechtstreekse huurovereenkomst eigenaar-huurder",
+    "bron": [
+     "https://www.nestr.nl/faqs-categories/over-hypotheekvoorwaarden"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Nestr wil dat het onderpand wordt verhuurd met een rechtstreekse huurovereenkomst tussen eigenaar / verhuurder en huurder / gebruiker / bewoner. Andere verhuursituaties zijn ook toegestaan."
+   },
+   "mwbep": {
+    "waarde": "~ Taxatierapport met waarde in verhuurde staat; bij renovatie ook waarde in verhuurde staat na verbouwing",
+    "bron": [
+     "https://nestr.nl/product/renovatiefinanciering",
+     "https://www.nestr.nl/kennisbank/het-taxatierapport-voor-een-woning",
+     "https://www.nestr.nl/producten/verhuurde-woningen"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. In het taxatierapport dient de waarde in verhuurde staat voor én de waarde in verhuurde staat na verbouwing te bedragen."
+   },
+   "ltvk": {
+    "waarde": "~ Verhuurde woningen tot 85% LTV op waarde in verhuurde staat (tot 80% aflossingsvrij); combipand max. 75%",
+    "bron": [
+     "https://www.nestr.nl/producten/verhuurde-woningen",
+     "https://nestr.nl/producten/combinatiepanden",
+     "https://www.nestr.nl/product/de-nestr-combipandfinanciering/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. We financieren residentieel vastgoed tot maximaal 85% LTV, waarbij tot 80% zelfs aflossingsvrij is."
+   },
+   "wwp": {
+    "waarde": "+ Combinatiepand (wonen + zakelijk) mogelijk tot 75% van waarde in verhuurde staat; zakelijk deel >50%: commerciële voorwaarden",
+    "bron": [
+     "https://nestr.nl/producten/combinatiepanden",
+     "https://www.nestr.nl/product/de-nestr-combipandfinanciering/",
+     "https://nestr.nl/algemene-voorwaarden"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. tot maximaal 75% van de getaxeerde waarde in verhuurde staat"
+   },
+   "minh": {
+    "waarde": "~ Minimale hoofdsom geldt (zie toelichting); alleen voor professionele vastgoedbeleggers",
+    "bron": [
+     "https://www.nestr.nl/faqs-categories/over-hypotheekvoorwaarden",
+     "https://www.nestr.nl/producten/verhuurde-woningen",
+     "https://www.nestr.nl/faqs-categories/over-nestr-smart-finance"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. De minimale financiering is EUR 100.000"
+   },
+   "maxh": {
+    "waarde": "~ Vast maximum per producttype; verhuurde woningen tot 85% LTV (tot 80% aflossingsvrij)",
+    "bron": [
+     "https://www.nestr.nl/faqs-categories/over-hypotheekvoorwaarden",
+     "https://www.nestr.nl/producten/verhuurde-woningen"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. het maximum is afhankelijk van het type vastgoed en de LTV"
+   },
+   "verhw": {
+    "waarde": "! Geen tweede hypotheek: bij verhoging wordt huidige financiering afgelost en nieuwe met hogere hoofdsom verstrekt",
+    "bron": [
+     "https://www.nestr.nl/faqs-categories/over-hypotheekvoorwaarden"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. want een tweede hypotheek is bij Nestr niet mogelijk. Daarom lossen we eerst je huidige financiering af en verstrekken we je daarna een nieuwe financiering met een hogere hoofdsom."
+   },
+   "dig": {
+    "waarde": "+ Conditionele offerte kan digitaal ondertekend worden aangeleverd",
+    "bron": [
+     "https://www.nestr.nl/rente"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Zodra je een Conditionele Offerte hebt ontvangen en deze (digitaal) getekend bij ons aanlevert, zetten wij je rente voor 3 maanden vast."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Nestr FAQ - Over hypotheekvoorwaarden",
+    "url": "https://www.nestr.nl/faqs-categories/over-hypotheekvoorwaarden",
+    "versie": "onbekend (ca. 937 dagen oud volgens zoekmachine)"
+   },
+   {
+    "titel": "Verhuurde Woningen",
+    "url": "https://www.nestr.nl/producten/verhuurde-woningen",
+    "versie": "online"
+   },
+   {
+    "titel": "Een mixed-use object financieren? (combinatiepanden)",
+    "url": "https://nestr.nl/producten/combinatiepanden",
+    "versie": "ca. 1400 dagen oud volgens zoekmachine"
+   },
+   {
+    "titel": "Rente Vastgoedfinanciering",
+    "url": "https://www.nestr.nl/rente",
+    "versie": "ca. 650 dagen oud volgens zoekmachine"
+   },
+   {
+    "titel": "Commercieel Vastgoed",
+    "url": "https://www.nestr.nl/producten/commercieel-vastgoed",
+    "versie": "online"
+   },
+   {
+    "titel": "Verhuurde woningen (productpagina)",
+    "url": "https://www.nestr.nl/producten/verhuurde-woningen",
+    "versie": null
+   },
+   {
+    "titel": "FAQ over hypotheekvoorwaarden",
+    "url": "https://www.nestr.nl/faqs-categories/over-hypotheekvoorwaarden",
+    "versie": null
+   },
+   {
+    "titel": "Algemene Voorwaarden commercieel vastgoed",
+    "url": "https://nestr.nl/algemene-voorwaarden",
+    "versie": "oktober 2019"
+   }
+  ]
+ }
+]

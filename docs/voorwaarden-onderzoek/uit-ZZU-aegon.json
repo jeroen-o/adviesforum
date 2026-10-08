@@ -1,0 +1,465 @@
+[
+ {
+  "naam": "Aegon",
+  "gecontroleerd": "2026-10-09",
+  "criteria": {
+   "zzp": {
+    "waarde": "~ Jaarcijfers 3 jaar of Inkomensverklaring Ondernemer; vergelijker meldt start na 1 jaar",
+    "bron": [
+     "https://www.asr.nl/zakelijk/alles-over-ondernemerschap/life-events/zelfstandig-en-hypotheek",
+     "https://www.asr.nl/blog/kun-je-als-zzper-een-hypotheek-krijgen"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Op basis daarvan wordt het gemiddelde inkomen van de afgelopen 3 jaar berekend"
+   },
+   "flex": {
+    "waarde": "~ Flex via perspectiefverklaring of arbeidsmarktscan (sinds 2025 ook zonder NHG); vast variabel deel telt mee",
+    "bron": [
+     "https://www.asr.nl/blog/geen-vast-contract-en-toch-een-hypotheek"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Zonder vast dienstverband kun je sinds 2020 ook een Arbeidsmarktscan gebruiken om je inkomen aan te tonen"
+   },
+   "persp": {
+    "waarde": "+ Perspectiefverklaring geaccepteerd; inkomen op WGV geldt dan als toetsinkomen",
+    "bron": [
+     "https://www.asr.nl/blog/geen-vast-contract-en-toch-een-hypotheek"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Vraag dan bij jouw uitzendorganisatie om een perspectiefverklaring"
+   },
+   "rvp": {
+    "waarde": "+ Variabel en vast tot 2, 5, 10, 15, 20, 25 en 30 jaar",
+    "bron": [
+     "https://www.asr.nl/hypotheek/hypotheekrente",
+     "https://www.asr.nl/hypotheek/asr-hypotheek",
+     "https://www2.aegon.nl/particulier/hypotheek/actuele-hypotheekrente"
+    ],
+    "brondatum": "2026-10",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. vrije keuze van het aantal rentevaste jaren binnen de looptijd, tot maximaal dertig"
+   },
+   "geld": {
+    "waarde": "~ Offerte 90 dagen geldig, daarna automatisch verlengd met max. 270 dagen (samen ca. 1 jaar); geen apart nieuwbouwonderscheid vermeld",
+    "bron": [
+     "https://www.asr.nl/hypotheek/asr-hypotheek",
+     "https://www.asrnederland.nl/nieuws-en-pers/nieuws/20260430-asr-introduceert-de-asr-hypotheek"
+    ],
+    "brondatum": "2026-04-30",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Gewijzigd na controle (A/B/arbitrage): Sinds 30-04-2026 is de ASR Hypotheek het product voor nieuwe leningen en worden Aegon-producten omgelabeld naar a.s.r. De Aegon-pagina (3/6 mnd) hoort bij het uitlopende Aegon-label."
+   },
+   "boete": {
+    "waarde": "+ 10% van oorspronkelijk bedrag per leningdeel per kalenderjaar; vervalt op 31 dec",
+    "bron": [
+     "https://www.asr.nl/hypotheek/je-hypotheek-aanpassen",
+     "https://www2.aegon.nl/particulier/klantenservice/veelgestelde-vragen/hoeveel-kan-ik-kosteloos-extra-aflossen-op-mijn-hypotheek"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Je mag elk kalenderjaar 10% van je oorspronkelijke leningdeel terugbetalen zonder extra kosten"
+   },
+   "ltv": {
+    "waarde": "+ Lagere tariefklasse automatisch bij (extra) aflossing, einde RVP en wijziging; waardestijging melden",
+    "bron": [
+     "https://www.asr.nl/hypotheek/hypotheek-aanpassen"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Kom je door extra terugbetalen in een lagere risicoklasse? Dan verlagen we automatisch je hypotheekrente."
+   },
+   "bdduur": {
+    "waarde": "~ Verbouwdepot 12 mnd, nieuwbouwdepot 24 mnd; eenmalige verlenging verbouw 12 mnd, nieuwbouw 6 mnd (zonder rentevergoeding, via a.s.r.-account)",
+    "bron": [
+     "https://www.asr.nl/hypotheek/mijn-bouwdepot",
+     "https://www.asr.nl/hypotheek/bouwdepot"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Gewijzigd na controle (A/B/arbitrage): aegon.nl (30 mnd) geldt voor het Aegon-product dat per mei 2026 is opgegaan in a.s.r.; actuele a.s.r.-pagina's noemen 24 mnd nieuwbouw. Eén oudere a.s.r.-pagina noemt 12 mnd verlenging nieuwbouw; meerderheid zegt 6 mnd."
+   },
+   "bdrnt": {
+    "waarde": "~ Rentevergoeding = gewogen gemiddelde hypotheekrente (nooit hoger); max. 12 mnd verbouw / 24 mnd nieuwbouw; geen vergoeding tijdens verlenging",
+    "bron": [
+     "https://www.asr.nl/asr/api/asrnl/pod/getdirectpdf?uri=%2FPOD%2Fr%2FPdf%2F53997.pdf",
+     "https://www.asr.nl/hypotheek/mijn-bouwdepot"
+    ],
+    "brondatum": "2026-05",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Gewijzigd na controle (A/B/arbitrage): AV mei 2026 ASR Hypotheek: vergoeding gelijk aan gewogen gemiddelde van de leningdelen, nooit hoger dan betaalde rente. Termijn 30 mnd nieuwbouw is Aegon-oud."
+   },
+   "bddecl": {
+    "waarde": "~ Declareren online (selfservice bouwdepot); start zodra saldo zichtbaar, ca. 5 werkdagen",
+    "bron": [
+     "https://www.aegon.nl/particulier/hypotheek/een-bouw-of-energiedepot-voor-je-huis"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. beginnen zodra het saldo zichtbaar is in MijnHypotheek ... ongeveer 5-10 werkdagen na het passeren"
+   },
+   "ebb": {
+    "waarde": "+ Tot 106% marktwaarde na verbouwing voor energiebesparende voorzieningen, met en zonder NHG; aflossen max. 30 jr",
+    "bron": [
+     "https://www.asr.nl/hypotheek/verduurzamingshypotheek"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Het bedrag dat je leent met de Verduurzamingshypotheek telt niet mee"
+   },
+   "duur": {
+    "waarde": "~ Extra lenen voor verduurzaming afhankelijk van energielabel (label A/B tot € 10.000)",
+    "bron": [
+     "https://www.asr.nl/hypotheek/verduurzamingshypotheek",
+     "https://www.aegon.nl/system/files/2024-01/Infographic%20regelingen%20voor%20verduurzamen%202024.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Het geld staat maximaal 24 maanden in je depot."
+   },
+   "verh": {
+    "waarde": "+ Rente meenemen naar nieuwe Aegon-hypotheek, binnen 6 mnd na verkoop oude woning",
+    "bron": [
+     "https://www.asr.nl/asr/api/asrnl/pod/getdirectpdf?uri=%2FPOD%2Fr%2FPdf%2F53997.pdf",
+     "https://www.asr.nl/hypotheek/volgend-huis-kopen",
+     "https://www.aegon.nl/particulier/hypotheek/ik-wil-mijn-hypotheek-oversluiten/uw-hypotheek-meenemen-dat-kan"
+    ],
+    "brondatum": "2026-05",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. kun je de rente van je huidige lening meenemen naar de nieuwe lening"
+   },
+   "ondh": {
+    "waarde": "~ Verkoop met tekort alleen met toestemming; eerst wordt woonbehoud bekeken",
+    "bron": [
+     "https://www.aegon.nl/particulier/klantenservice/veelgestelde-vragen/wat-gebeurt-er-als-ik-bij-de-verkoop-van-mijn-woning-de-hypotheek-niet-volledig-af-kan-lossen"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. voor verkoop onder de restschuld eerst toestemming nodig"
+   },
+   "oha": {
+    "waarde": "~ OHA als achterblijvende partner hypotheek overneemt; aanvraag via adviseur (Figlo)",
+    "bron": [
+     "https://www.asr.nl/hypotheek/je-hypotheek-aanpassen",
+     "https://www.asr.nl/situatie/uit-elkaar-gaan"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Hiervoor heb je goedkeuring van ons nodig."
+   },
+   "tweede": {
+    "waarde": "~ Verhoging via adviespakket/HDN naar Stater, met aanvraagformulier hypotheekaanpassing",
+    "bron": [
+     "https://www.asr.nl/hypotheek/hypotheek-aanpassen",
+     "https://www.asrnederland.nl/nieuws-en-pers/nieuws/hypotheekaanvragen-nieuwe-aegon-klanten-voortaan-via-stater"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Staat er in de akte een lager bedrag, dan heb je een extra lening nodig."
+   },
+   "ovbr": {
+    "waarde": "~ Overbrugging 1 jaar (bestaand) / 2 jaar (nieuwbouw), verlengbaar; alleen met nieuwe hypotheek bij Aegon",
+    "bron": [
+     "https://www.asr.nl/hypotheek/overbruggingshypotheek"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Je kunt de Overbruggingshypotheek alleen afsluiten als je ook je nieuwe hypotheek bij a.s.r. sluit."
+   },
+   "rmid": {
+    "waarde": "- Geen rentemiddeling sinds 1 september 2019",
+    "bron": [
+     "https://www.aegon.nl/particulier/hypotheek/rentemiddeling-het-iets-voor-mij"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. Aegon is per 1 september 2019 gestopt met het aanbieden van rentemiddeling"
+   },
+   "rvoor": {
+    "waarde": "~ Rentevoorstel 3 maanden voor einde rentevaste periode",
+    "bron": [
+     "https://www.asr.nl/asr/api/asrnl/pod/getdirectpdf?uri=%2FPOD%2Fr%2FPdf%2F53997.pdf",
+     "https://www.asr.nl/hypotheek/je-hypotheek-aanpassen",
+     "https://www2.aegon.nl/particulier/hypotheek/hypotheek-aanpassen/rente-aanpassen/de-rentevaste-periode-van-jouw-hypotheek-loopt-bijna-af/meer-informatie"
+    ],
+    "brondatum": "2026-05",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Uiterlijk drie maanden voor de einddatum van je rentevaste periode krijg je van ons een brief"
+   },
+   "bbrk": {
+    "waarde": "~ Contante waarde renteverschil over resterende RVP; vergelijkingsrente = actuele rente gelijke resterende periode",
+    "bron": [
+     "https://www.asr.nl/asr/api/asrnl/pod/getdirectpdf?uri=%2FPOD%2Fr%2FPdf%2F53997.pdf"
+    ],
+    "brondatum": "2026-05",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Dit verschil maken wij contant tegen de Vergelijkingsrente."
+   },
+   "bprov": {
+    "waarde": "~ Bij verlenging alleen kosten als dagrente bij passeren hoger is dan offerterente; per verlengde dag",
+    "bron": [
+     "https://www.asr.nl/hypotheek/asr-hypotheek"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Als de rente in die periode stijgt, moet je kosten betalen."
+   },
+   "wkost": {
+    "waarde": "! Omzetten hypotheekvorm, ook van aflossingsvrij naar annuïtair/lineair, kost administratiekosten; meestal ook vergoeding renteverlies",
+    "bron": [
+     "https://www.asr.nl/hypotheek/je-hypotheek-aanpassen",
+     "https://www.asr.nl/hypotheek/aflossingsblij"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Gewijzigd na controle (A/B/arbitrage): a.s.r. rekent kosten bij omzetten van aflossingsvrij; 'kosteloos' stond alleen in een ouder Aegon-FAQ. Bedrag bewust weggelaten."
+   },
+   "avlt": {
+    "waarde": "! Op einddatum volledig aflossen; lukt dat niet, nieuwe hypotheek aanvragen via adviseur",
+    "bron": [
+     "https://www.asr.nl/hypotheek/aflossingsblij"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Op de einddatum moet je de aflossingsvrije hypotheek in één keer helemaal terugbetalen."
+   },
+   "bproc": {
+    "waarde": "+ Betalingsregeling, budgetcoach op kosten Aegon, geen rente over achterstand",
+    "bron": [
+     "https://www.asr.nl/contact/problemen-met-betalen/hypotheek",
+     "https://www.aegon.nl/particulier/klantenservice/veelgestelde-vragen/betaal-ik-extra-kosten-over-de-betalingsachterstand-op-mijn-hypotheek"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Wij betalen de kosten van de budgetcoach."
+   },
+   "aow": {
+    "waarde": "+ Seniorenregeling: AOW bereikt of binnen 10 jaar, bij verhuizen; nieuwe maandlast gelijk aan of lager dan huidige",
+    "bron": [
+     "https://www.aegon.nl/particulier/hypotheek/hypotheek-afsluiten-op-latere-leeftijd"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. nieuwe maandlasten zijn gelijk aan of lager dan je huidige maandlasten"
+   },
+   "o106": {
+    "waarde": "+ Tot 106% marktwaarde voor verduurzaming (Verduurzamingshypotheek); dat bedrag telt niet mee voor de risicoklasse",
+    "bron": [
+     "https://www.asr.nl/hypotheek/verduurzamingshypotheek",
+     "https://www.asr.nl/hypotheek/huis-kopen/maximale-hypotheek"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Gewijzigd na controle (A/B/arbitrage): Verduurzamingshypotheek is onderdeel van de ASR Hypotheek (30-04-2026). Oude Aegon-indeling (95-112,5% hoogste klasse) niet meer gevonden."
+   },
+   "desk": {
+    "waarde": "~ Calcasa desktoptaxatie volstaat bij lening t/m 90% marktwaarde; daarboven standaard taxatierapport",
+    "bron": [
+     "https://www.asr.nl/hypotheek/je-hypotheek-oversluiten"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. desktoptaxatie voldoende"
+   },
+   "ams": {
+    "waarde": "+ Arbeidsmarktscan geaccepteerd, ook zonder NHG",
+    "bron": [
+     "https://www.asr.nl/blog/geen-vast-contract-en-toch-een-hypotheek"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Er is een score van minimaal 70 punten nodig om het inkomen aan te tonen met de arbeidsmarktscan."
+   },
+   "recr": {
+    "waarde": "- Geen financiering van recreatiewoning of tweede woning; alleen permanent bewoonde eigen woning in NL",
+    "bron": [
+     "https://www2.aegon.nl/particulier/klantenservice/veelgestelde-vragen?page=45"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. Wij verstrekken alleen hypotheken voor een eigen woning die u permanent gaat bewonen en in Nederland ligt. Wij financieren geen tweede woning."
+   },
+   "verhuur": {
+    "waarde": "- Verhuur (ook kamerverhuur, kortdurend/Airbnb, B&B) niet toegestaan zonder toestemming; lening kan worden opgeëist",
+    "bron": [
+     "https://www.asr.nl/asr/api/asrnl/pod/getdirectpdf?uri=%2FPOD%2Fr%2FPdf%2F53997.pdf",
+     "https://www.aegon.nl/particulier/klantenservice/veelgestelde-vragen/mag-ik-mijn-woning-verhuren-als-ik-een-hypotheek-bij-jullie-heb"
+    ],
+    "brondatum": "2026-05",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Onder verhuur verstaan wij ook kortdurende verhuur, bed & breakfast-activiteiten"
+   },
+   "loondt": {
+    "waarde": "~ IBL voor tijdelijk contract zonder intentie, uitzendkrachten, oproepkrachten en flexwerkers",
+    "bron": [
+     "https://www.asr.nl/blog/geen-vast-contract-en-toch-een-hypotheek"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Je kunt voor een hypotheekaanvraag ook jouw inkomen aantonen via Inkomensbepaling Loondienst."
+   },
+   "ltvk": {
+    "waarde": "~ Max. 100% van de marktwaarde",
+    "bron": [
+     "https://www.asr.nl/hypotheek/asr-hypotheek",
+     "https://www.aegon.nl/particulier/klantenservice/veelgestelde-vragen/wat-loan-value"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Je kunt maximaal 100% van de marktwaarde van de woning lenen."
+   },
+   "zbep": {
+    "waarde": "~ Inkomensverklaring Ondernemer of beoordelingsverklaring; geen beoordelingsverklaring bij slapende/kleinschalige onderneming",
+    "bron": [
+     "https://www.asr.nl/zakelijk/alles-over-ondernemerschap/life-events/zelfstandig-en-hypotheek"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. vraagt je adviseur een Inkomensverklaring Ondernemer aan"
+   },
+   "obduur": {
+    "waarde": "~ Max. 12 maanden bestaande bouw, 24 maanden nieuwbouw; verlenging met 6 maanden mogelijk",
+    "bron": [
+     "https://www.asr.nl/hypotheek/overbruggingshypotheek"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Bij nieuwbouw is dit maximaal 24 maanden."
+   },
+   "obels": {
+    "waarde": "- Overbrugging alleen als de nieuwe hypotheek ook bij a.s.r./Aegon wordt afgesloten",
+    "bron": [
+     "https://www.asr.nl/hypotheek/overbruggingshypotheek"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Je kunt de Overbruggingshypotheek alleen afsluiten als je ook je nieuwe hypotheek bij a.s.r. sluit."
+   },
+   "obvw": {
+    "waarde": "~ Geen afsluitkosten voor de overbrugging; hypotheekrecht op nieuwe woning en overbruggingspand",
+    "bron": [
+     "https://www.asr.nl/hypotheek/overbruggingshypotheek"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Je betaalt geen kosten aan a.s.r."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Algemene voorwaarden ASR Hypotheek en ASR ZorgeloosThuis Hypotheek",
+    "url": "https://www.asr.nl/asr/api/asrnl/pod/getdirectpdf?uri=%2FPOD%2Fr%2FPdf%2F53997.pdf",
+    "versie": "mei 2026"
+   },
+   {
+    "titel": "Overbruggingshypotheek van a.s.r.",
+    "url": "https://www.asr.nl/hypotheek/overbruggingshypotheek",
+    "versie": "online"
+   },
+   {
+    "titel": "Bouwdepot bij je hypotheek",
+    "url": "https://www.asr.nl/hypotheek/bouwdepot",
+    "versie": "online"
+   },
+   {
+    "titel": "Je hypotheek aanpassen bij a.s.r.",
+    "url": "https://www.asr.nl/hypotheek/je-hypotheek-aanpassen",
+    "versie": "online"
+   },
+   {
+    "titel": "Verduurzamingshypotheek",
+    "url": "https://www.asr.nl/hypotheek/verduurzamingshypotheek",
+    "versie": "online"
+   },
+   {
+    "titel": "ASR Hypotheek",
+    "url": "https://www.asr.nl/hypotheek/asr-hypotheek",
+    "versie": "online"
+   },
+   {
+    "titel": "Aegon Hypotheekgids (2023-12)",
+    "url": "https://aegon.nl/system/files/2023-12/Aegon_Hypotheekgids.pdf",
+    "versie": "2023-12"
+   },
+   {
+    "titel": "Algemene voorwaarden ASR Hypotheek en ASR ZorgeloosThuis Hypotheek",
+    "url": "https://www.asr.nl/asr/api/asrnl/pod/getdirectpdf?uri=%2FPOD%2Fr%2FPdf%2F53997.pdf",
+    "versie": "2026-05"
+   }
+  ]
+ }
+]

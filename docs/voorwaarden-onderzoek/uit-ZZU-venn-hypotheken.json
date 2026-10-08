@@ -1,0 +1,633 @@
+[
+ {
+  "naam": "Venn Hypotheken",
+  "gecontroleerd": "2026-10-09",
+  "criteria": {
+   "zzp": {
+    "waarde": "+ Gewogen gemiddelde 3 jaar (laatste jaar 3x); IKV met prognose; zelfde rente als loondienst",
+    "bron": [
+     "https://www.vennhypotheken.nl/voor-adviseurs/hypotheek-voor-ondernemers/",
+     "https://www.vennhypotheken.nl/voor-adviseurs/pluspunten/",
+     "https://www.vennhypotheken.nl/kennisplein/hypotheek-voor-ondernemers/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Gewogen gemiddelde (1-2-3 regeling) ZONDER OPSLAG"
+   },
+   "flex": {
+    "waarde": "+ Flexinkomen 100% meegeteld (gewogen 3-jaarsgemiddelde); zelfde rente, tot 100%",
+    "bron": [
+     "https://www.vennhypotheken.nl/hypotheken/",
+     "https://www.vennhypotheken.nl/veelgestelde-hypotheekvragen/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. 100% van je toetsinkomen (gemiddelde laatste 3 jaar) wordt meegenomen; zelfde rente als vaste loondienst"
+   },
+   "aow": {
+    "waarde": "~ Binnen 10 jaar voor AOW toets op pensioeninkomen; senioren 57+ toets op werkelijke lasten",
+    "bron": [
+     "https://www.vennhypotheken.nl/voor-adviseurs/pluspunten/",
+     "https://www.vennhypotheken.nl/voor-adviseurs/ontslag-hoofdelijk-aansprakelijkheid/",
+     "https://www.vennhypotheken.nl/voor_adviseurs/nieuws/gewijzigde-acceptatievoorwaarden/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. minder dan 10 jaar van de AOW-leeftijd ... getoetst met pensioeninkomen"
+   },
+   "rvp": {
+    "waarde": "+ 1, 2, 3, 5, 6, 7, 10, 12, 15, 20 en 30 jaar",
+    "bron": [
+     "https://www.vennhypotheken.nl/rente/",
+     "https://www.vennhypotheken.nl/wp-content/uploads/Bijlage-2.pdf"
+    ],
+    "brondatum": "2026-08",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Keuze rentevastperiode: 1,2,3,5,6,7,10,12,15,20 en 30 jaar"
+   },
+   "dag": {
+    "waarde": "- Offerterente (geen dagrente) voor aanvragen vanaf 1-4-2022",
+    "bron": [
+     "https://www.vennhypotheken.nl/voor_adviseurs/nieuws/venn-hypotheken-past-hypotheekvoorwaarden-aan/",
+     "https://www.vennhypotheken.nl/veelgestelde-hypotheekvragen/",
+     "https://www.vennhypotheken.nl/voor-adviseurs/bakkievenndoen/"
+    ],
+    "brondatum": "2022-04",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Sinds 1 april 2022 is dagrente vervangen door offerterente"
+   },
+   "geld": {
+    "waarde": "~ Offerte 4 mnd geldig; eenmaal kosteloos 2 mnd te verlengen",
+    "bron": [
+     "https://www.vennhypotheken.nl/hypotheken/voordelen/",
+     "https://www.vennhypotheken.nl/voor-adviseurs/pluspunten/",
+     "https://www.vennhypotheken.nl/voor-adviseurs/bakkievenndoen/",
+     "https://www.vennhypotheken.nl/wp-content/uploads/Algemene-Voorwaarden-2022-2.0-Venn-Hypotheken-B.V.-.pdf"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. vanaf datum uitgifte 4 maanden geldig ... met 2 maanden verlengen"
+   },
+   "boete": {
+    "waarde": "+ 15% van oorspronkelijke hoofdsom per kalenderjaar; boetevrij bij verkoop en verhuizing",
+    "bron": [
+     "https://www.vennhypotheken.nl/mijnhypotheekonline/extra-aflossen/",
+     "https://www.vennhypotheken.nl/kennisplein/bespaar-door-automatische-rentedaling/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. 15% (van de oorspronkelijke hoofdsom) per kalenderjaar extra aflossen"
+   },
+   "ltv": {
+    "waarde": "+ Maandelijks automatisch lagere tariefklasse bij lagere LTV",
+    "bron": [
+     "https://www.vennhypotheken.nl/kennisplein/bespaar-door-automatische-rentedaling/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Venn controleert elke maand de LTV ... verlagen wij automatisch de rente"
+   },
+   "bdduur": {
+    "waarde": "~ Nieuwbouw 18 mnd / verbouw 12 mnd, elk +6 mnd verlenging zonder rentevergoeding",
+    "bron": [
+     "https://www.vennhypotheken.nl/veelgestelde-hypotheekvragen/",
+     "https://www.vennhypotheken.nl/kennisplein/bouwdepot-bij-nieuwbouw/",
+     "https://www.vennhypotheken.nl/kennisplein/bouwdepot-bij-bestaand-huis-hoe-werkt-dat/",
+     "https://www.vennhypotheken.nl/wp-content/uploads/Algemene-Voorwaarden-2022-2.0-Venn-Hypotheken-B.V.-.pdf"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. 12 maanden ... kan (zonder rentevergoeding) met 6 maanden worden verlengd ... nieuwbouw 18 maanden met 6 maanden verlenging"
+   },
+   "bdrnt": {
+    "waarde": "! Depotvergoeding lager dan hypotheekrente (korting op gemiddelde hypotheekrente)",
+    "bron": [
+     "https://www.vennhypotheken.nl/veelgestelde-hypotheekvragen/",
+     "https://www.vennhypotheken.nl/kennisplein/bouwdepot-bij-bestaand-huis-hoe-werkt-dat/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Over het niet-opgenomen saldo ... rentepercentage van het Krediet verminderd met 1 procentpunt"
+   },
+   "bddecl": {
+    "waarde": "~ Online declareren via MijnHypotheekOnline met actueel saldo-overzicht",
+    "bron": [
+     "https://www.vennhypotheken.nl/kennisplein/bouwdepot-bij-nieuwbouw/",
+     "https://www.vennhypotheken.nl/kennisplein/bouwdepot-bij-bestaand-huis-hoe-werkt-dat/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. nadat Venn Hypotheken facturen heeft ontvangen en heeft geaccordeerd"
+   },
+   "duur": {
+    "waarde": "+ Gemakkelijk Groen: €5.000-10.000 extra voor energiebesparing met eigen gunstige rente",
+    "bron": [
+     "https://www.vennhypotheken.nl/voor-adviseurs/gemakkelijkgroen/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Gemakkelijk Groen leningdeel (minimaal EUR 5.000 en maximaal EUR 10.000) ... rente ligt vast voor de hele looptijd"
+   },
+   "verh": {
+    "waarde": "~ Rente mee voor resterende rentevast; melden 30 dgn vooraf, aanbod binnen 6 mnd, max €1 mln",
+    "bron": [
+     "https://www.vennhypotheken.nl/voor-adviseurs/verhuisregeling/",
+     "https://www.vennhypotheken.nl/mijnhypotheekonline/verhuisregeling/",
+     "https://www.vennhypotheken.nl/wp-content/uploads/Algemene-Voorwaarden-Venn-Hypotheken-versie-2021-2.0.pdf"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. uiterlijk 30 dagen vóór de volledige aflossing"
+   },
+   "oha": {
+    "waarde": "+ Eigen OHA-kader: draagkrachttoets tussen reguliere en beheertoets; pensioen 10 jr",
+    "bron": [
+     "https://www.vennhypotheken.nl/voor-adviseurs/ontslag-hoofdelijk-aansprakelijkheid/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Draagkrachttoets ... 50% van het verschil tussen reguliere en beheernormen; <10 jaar van AOW pensioeninkomen"
+   },
+   "tweede": {
+    "waarde": "+ Onderhands binnen (standaard verhoogde) inschrijving; anders tweede hypotheek bij Venn",
+    "bron": [
+     "https://www.vennhypotheken.nl/mijnhypotheekonline/verhogen/",
+     "https://www.vennhypotheken.nl/nieuws/vanaf-nu-standaard-verhoogde-inschrijving/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. onderhands verhogen binnen inschrijving; anders tweede hypotheek"
+   },
+   "ovbr": {
+    "waarde": "+ Overbrugging max 24 mnd, ook bij onverkochte woning (te koop); geen kosten behalve rente",
+    "bron": [
+     "https://www.vennhypotheken.nl/voor-adviseurs/bakkievenndoen/",
+     "https://www.vennhypotheken.nl/wp-content/uploads/Algemene-Voorwaarden-2022-2.0-Venn-Hypotheken-B.V.-.pdf",
+     "https://www.vennhypotheken.nl/kennisplein/een-overbruggingskrediet-hoe-werkt-dat-eigenlijk/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Naast de rente berekent Venn geen extra kosten voor de overbrugging; maximale looptijd 24 maanden"
+   },
+   "avrij": {
+    "waarde": "~ Max. 50% van marktwaarde aflossingsvrij",
+    "bron": [
+     "https://www.vennhypotheken.nl/hypotheken/hypotheekvormen/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. maximaal 50% van de marktwaarde met aflossingsvrij wordt gefinancierd"
+   },
+   "rmid": {
+    "waarde": "- Geen rentemiddeling; verzoeken worden afgewezen",
+    "bron": [
+     "https://www.vennhypotheken.nl/wp-content/uploads/Algemene-Voorwaarden-2022-2.0-Venn-Hypotheken-B.V.-.pdf"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Venn biedt geen rentemiddeling ... verzoek daartoe zal worden afgewezen"
+   },
+   "rverl": {
+    "waarde": "+ Verlengingsrente gebaseerd op actuele Venn-rente voor vergelijkbare leningen",
+    "bron": [
+     "https://www.vennhypotheken.nl/mijnhypotheekonline/einde-rentevastperiode/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. gaat uit van het op dat moment geldende tarief voor soortgelijke leningen"
+   },
+   "rvoor": {
+    "waarde": "~ Voorstel min. 3 mnd vooraf; reageren tot 1 mnd voor einde rentevast",
+    "bron": [
+     "https://www.vennhypotheken.nl/mijnhypotheekonline/einde-rentevastperiode/",
+     "https://www.vennhypotheken.nl/wp-content/uploads/Algemene-Voorwaarden-Venn-Hypotheken-versie-2021-2.0.pdf"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. minimaal drie maanden voor het einde van de rentevastperiode ... tot uiterlijk één maand voor het einde"
+   },
+   "bbrk": {
+    "waarde": "~ Contante waarde renteverschil met Venn-rente voor vergelijkbare lening tot einde rentevast",
+    "bron": [
+     "https://www.vennhypotheken.nl/wp-content/uploads/Algemene-Voorwaarden-2022-2.0-Venn-Hypotheken-B.V.-.pdf"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. verschil tussen contractrente en tarief Venn voor vergelijkbare lening over resterende rentevastperiode, contant gemaakt"
+   },
+   "elbl": {
+    "waarde": "- Rente niet afhankelijk van energielabel",
+    "bron": [
+     "https://www.vennhypotheken.nl/rente/",
+     "https://www.vennhypotheken.nl/voor-adviseurs/bakkievenndoen/",
+     "https://www.vennhypotheken.nl/veelgestelde-hypotheekvragen/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Het energielabel van de woning heeft geen invloed op de rente"
+   },
+   "bprov": {
+    "waarde": "+ Offerte kosteloos 2 mnd verlengen; geen annuleringskosten",
+    "bron": [
+     "https://www.vennhypotheken.nl/hypotheken/voordelen/",
+     "https://www.vennhypotheken.nl/voor-adviseurs/pluspunten/",
+     "https://www.vennhypotheken.nl/voor-adviseurs/bakkievenndoen/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. geen kosten voor het verlengen van de offertegeldigheid ... geen bereidstellingsprovisie of annuleringskosten"
+   },
+   "wkost": {
+    "waarde": "! Vaste administratiekosten (€300) per wijziging, ook bij verhuisregeling",
+    "bron": [
+     "https://www.vennhypotheken.nl/mijnhypotheekonline/verhuisregeling/",
+     "https://www.vennhypotheken.nl/voor-adviseurs/verhuisregeling/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Venn rekent EUR 300 administratiekosten ... mutaties"
+   },
+   "bproc": {
+    "waarde": "~ Achterstanden begeleid door Mender, gericht op herstel met behoud van woning",
+    "bron": [
+     "https://www.vennhypotheken.nl/veelgestelde-hypotheekvragen/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. Mender helpt mensen met een betalingsachterstand op weg naar duurzaam herstel, behoud van de woning"
+   },
+   "persp": {
+    "waarde": "~ Intentieverklaring vast dienstverband: huidig inkomen 100% meegeteld; perspectiefverklaring niet expliciet genoemd",
+    "bron": [
+     "https://www.vennhypotheken.nl/hypotheken/",
+     "https://www.vennhypotheken.nl/veelgestelde-hypotheekvragen/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Intentieverklaring tot vaste loondienst: huidig inkomen 100% meegeteld"
+   },
+   "erfp": {
+    "waarde": "! Alleen erfpacht uitgegeven door (semi-)overheid; particuliere erfpacht niet geaccepteerd",
+    "bron": [
+     "https://www.vennhypotheken.nl/wp-content/uploads/Bijlage-2.pdf"
+    ],
+    "brondatum": "2024-01",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Erfpacht wordt alleen geaccepteerd als uitgegeven door de overheid of semi-overheid"
+   },
+   "avlt": {
+    "waarde": "! Op einddatum moet uitstaand bedrag zijn afgelost, tenzij looptijd wordt verlengd; geen gepubliceerd verlengingsbeleid",
+    "bron": [
+     "https://www.vennhypotheken.nl/wp-content/uploads/Algemene-Voorwaarden-2022-2.0-Venn-Hypotheken-B.V.-.pdf",
+     "https://www.vennhypotheken.nl/hypotheken/hypotheekvormen/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. het uitstaande bedrag op de einddatum moet zijn afbetaald, tenzij de looptijd wordt verlengd"
+   },
+   "lensch": {
+    "waarde": "! Geleende eigen middelen (ook van familie) tellen als verplichting in de toets; herkomst aantonen, schenking via schenkingsovereenkomst",
+    "bron": [
+     "https://www.vennhypotheken.nl/wp-content/uploads/Formulier-eigen-middelen-Venn-Hypotheken.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Als het geld geleend is, moet die verplichting meegenomen worden in het maximaal verantwoord te lenen bedrag; schenking: schenkingsovereenkomst"
+   },
+   "vve": {
+    "waarde": "~ Actieve VvE vereist; VvE in oprichting (nieuwbouw/splitsing) of jaarlijkse reservering min. 0,5% herbouwwaarde als uitzondering",
+    "bron": [
+     "https://www.vennhypotheken.nl/wp-content/uploads/Bijlage-2.pdf"
+    ],
+    "brondatum": "2024-01",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. actieve VvE; uitzondering VvE in oprichting of min. 0,5% van de herbouwwaarde jaarlijks gereserveerd"
+   },
+   "verhuur": {
+    "waarde": "- Verhuur (aangaan/wijzigen huurovereenkomst) alleen met schriftelijke toestemming van Venn",
+    "bron": [
+     "https://www.vennhypotheken.nl/wp-content/uploads/Algemene-Voorwaarden-2022-2.0-Venn-Hypotheken-B.V.-.pdf",
+     "https://www.vennhypotheken.nl/veelgestelde-hypotheekvragen/"
+    ],
+    "brondatum": "2022",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. huur- of pachtovereenkomst ... schriftelijke toestemming van Venn Hypotheken"
+   },
+   "loondt": {
+    "waarde": "~ Toetsinkomen loondienst via IBL (UWV-verzekeringsbericht, toetsinkomenberekenen.nl); flex/tijdelijk: gemiddelde laatste 3 jaar telt 100%",
+    "bron": [
+     "https://www.vennhypotheken.nl/voor_adviseurs/nieuws/gewijzigde-website-berekenen-ibl/"
+    ],
+    "brondatum": "2024-06",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. 100% van je toetsinkomen (gemiddelde laatste 3 jaar)"
+   },
+   "intent": {
+    "waarde": "+ Intentieverklaring tot vaste loondienst: huidig inkomen telt voor 100% mee",
+    "bron": [
+     "https://www.vennhypotheken.nl/hypotheken/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. intentieverklaring tot vaste loondienst ... huidige inkomen voor 100% meegenomen"
+   },
+   "senior": {
+    "waarde": "+ Seniorenpropositie (57+): werkelijke-lastentoets met en zonder NHG bij verhuizen/oversluiten tot 80% marktwaarde",
+    "bron": [
+     "https://www.vennhypotheken.nl/voor-adviseurs/pluspunten/",
+     "https://www.vennhypotheken.nl/voor_adviseurs/nieuws/gewijzigde-acceptatievoorwaarden/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. werkelijke last, met en zonder NHG, senioren die verhuizen of oversluiten, tot 80% marktwaarde"
+   },
+   "nlwon": {
+    "waarde": "~ Bij tijdelijke vergunning (niet-tijdelijk doel): min. 36 maanden wonen en werken in NL",
+    "bron": [
+     "https://www.vennhypotheken.nl/wp-content/uploads/Bijlage-2.pdf",
+     "https://www.vennhypotheken.nl/voor_adviseurs/nieuws/gewijzigde-acceptatievoorwaarden/"
+    ],
+    "brondatum": "2024-01",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Arbitrage: Afwijkingenkaart jan 2024 eist in beginsel onbepaalde tijd maar verwijst voor niet-tijdelijk verblijfsdoel naar voorwaarden par. 4.2.1; dat sluit aan op de route uit 2023 (type I, 36 mnd, vast dienstverband, max 80% LMTV). Geen bron dat die route vervallen is; par. 4.2.1 zelf niet gezien en bronnen zijn oud."
+   },
+   "vblf": {
+    "waarde": "! Afwijkingenkaart 2024: vergunning onbepaalde tijd vereist als inkomen nodig is; in 2023 nog tijdelijke vergunning type I tot 80% LTV",
+    "bron": [
+     "https://www.vennhypotheken.nl/wp-content/uploads/Bijlage-2.pdf",
+     "https://www.vennhypotheken.nl/voor_adviseurs/nieuws/gewijzigde-acceptatievoorwaarden/"
+    ],
+    "brondatum": "2024-01",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. verblijfsvergunning voor onbepaalde tijd ... Hypotheek tot maximaal 80% LMTV, bepaalde tijd type I (2023)"
+   },
+   "z123": {
+    "waarde": "+ Gewogen gemiddelde laatste 3 volledige boekjaren (laatste jaar 3x, daarvoor 2x en 1x, gedeeld door 6)",
+    "bron": [
+     "https://www.vennhypotheken.nl/voor-adviseurs/pluspunten/",
+     "https://www.vennhypotheken.nl/voor-adviseurs/hypotheek-voor-ondernemers/",
+     "https://www.vennhypotheken.nl/kennisplein/hypotheek-voor-ondernemers/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. laatste volledige boekjaar drie keer ... gedeeld door 6"
+   },
+   "zbep": {
+    "waarde": "~ Venn bepaalt toetsinkomen zelf via gewogen gemiddelde over volledige boekjaren; lopend jaar telt niet mee",
+    "bron": [
+     "https://www.vennhypotheken.nl/voor-adviseurs/pluspunten/",
+     "https://www.vennhypotheken.nl/voor-adviseurs/hypotheek-voor-ondernemers/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. gewogen gemiddelde over volledige boekjaren"
+   },
+   "zltv": {
+    "waarde": "+ Ondernemer kan gewoon tot 100% van de marktwaarde lenen, ook bij gewogen gemiddelde",
+    "bron": [
+     "https://www.vennhypotheken.nl/voor-adviseurs/hypotheek-voor-ondernemers/",
+     "https://www.vennhypotheken.nl/voor-adviseurs/pluspunten/",
+     "https://www.vennhypotheken.nl/kennisplein/hypotheek-voor-ondernemers/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. financieren wij ook voor ondernemers de volledige woningwaarde (100%)"
+   },
+   "ltvk": {
+    "waarde": "~ Max. 100% van de marktwaarde",
+    "bron": [
+     "https://www.vennhypotheken.nl/hypotheken/",
+     "https://www.vennhypotheken.nl/voor-adviseurs/hypotheek-voor-ondernemers/",
+     "https://www.vennhypotheken.nl/rente/tariefklassen/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. niet meer kan lenen dan 100% van de waarde van je woning"
+   },
+   "mwbep": {
+    "waarde": "! Taxatierapport vereist; desktoptaxatie volgens derden niet toegestaan (bij beperkte verhoging soms Calcasa)",
+    "bron": [
+     "https://www.vennhypotheken.nl/rente/tariefklassen/",
+     "https://www.vennhypotheken.nl/veelgestelde-hypotheekvragen/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. hogere marktwaarde kan worden aangetoond met een taxatierapport of Calcasa Desktoptaxatie"
+   },
+   "obmax": {
+    "waarde": "~ Niet verkocht: standaard 80% van de overwaarde (vraag-/verkoopprijs min restschuld)",
+    "bron": [
+     "https://www.vennhypotheken.nl/kennisplein/hypotheek-voor-doorstromers/",
+     "https://www.vennhypotheken.nl/kennisplein/een-overbruggingskrediet-hoe-werkt-dat-eigenlijk/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Venn rekent standaard met 80% overwaarde ... (verkoopprijs min restschuld) x 80%"
+   },
+   "obduur": {
+    "waarde": "~ Max. 24 maanden vanaf de maand na passeren; daarna volledig opeisbaar",
+    "bron": [
+     "https://www.vennhypotheken.nl/wp-content/uploads/Algemene-Voorwaarden-2022-2.0-Venn-Hypotheken-B.V.-.pdf"
+    ],
+    "brondatum": "2022",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. maximale looptijd 24 maanden vanaf eerste dag van de maand na passeren"
+   },
+   "obwaar": {
+    "waarde": "+ Geen taxatierapport nodig voor de oude woning; Venn hanteert de vraagprijs",
+    "bron": [
+     "https://www.vennhypotheken.nl/voor-adviseurs/bakkievenndoen/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Venn vraagt geen taxatierapport en hanteert de vraagprijs"
+   },
+   "obvw": {
+    "waarde": "+ Naast de rente geen extra kosten voor overbrugging; niet mogelijk voor woning van nieuwe partner; hypotheekrecht op oude en nieuwe woning",
+    "bron": [
+     "https://www.vennhypotheken.nl/voor-adviseurs/bakkievenndoen/",
+     "https://www.vennhypotheken.nl/voor-adviseurs/verhuisregeling/",
+     "https://www.vennhypotheken.nl/wp-content/uploads/Algemene-Voorwaarden-2022-2.0-Venn-Hypotheken-B.V.-.pdf",
+     "https://www.vennhypotheken.nl/mijnhypotheekonline/verhuisregeling/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Naast de rente geen extra kosten; hypotheekrecht op nieuwe en te overbruggen woning; geen overbrugging voor woning nieuwe partner"
+   },
+   "bovw": {
+    "waarde": "+ Aflossen overbruggingskrediet bij verkoop en levering zonder boete",
+    "bron": [
+     "https://www.vennhypotheken.nl/wp-content/uploads/Algemene-Voorwaarden-2022-2.0-Venn-Hypotheken-B.V.-.pdf"
+    ],
+    "brondatum": "2022",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. aflossen bij levering oude woning zonder boete"
+   },
+   "geldnb": {
+    "waarde": "~ Kredietvoorstel 4 maanden geldig, 2 maanden verlengbaar na bindend aanbod, zonder bereidstellingsprovisie",
+    "bron": [
+     "https://www.vennhypotheken.nl/voor-adviseurs/bakkievenndoen/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. 4 maanden geldig... verlengen met 2 maanden, mits het bindend kredietaanbod is uitgebracht"
+   },
+   "annul": {
+    "waarde": "+ Geen annuleringsvergoeding als de klant afziet van de offerte",
+    "bron": [
+     "https://www.vennhypotheken.nl/hypotheken/voordelen/",
+     "https://www.vennhypotheken.nl/voor-adviseurs/bakkievenndoen/",
+     "https://www.vennhypotheken.nl/voor-adviseurs/pluspunten/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. jouw klant betaalt dus geen bereidstellingsprovisie of annuleringskosten"
+   },
+   "pnb": {
+    "waarde": "~ Bouwdepot nieuwbouw 18 maanden, max. 6 maanden verlengbaar; betaling rechtstreeks aan hoofdaannemer",
+    "bron": [
+     "https://www.vennhypotheken.nl/kennisplein/bouwdepot-bij-nieuwbouw/",
+     "https://www.vennhypotheken.nl/wp-content/uploads/Algemene-Voorwaarden-2022-2.0-Venn-Hypotheken-B.V.-.pdf"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. bij nieuwbouw ... betaling rechtstreeks aan de hoofdaannemer; 18 maanden + 6 maanden"
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Algemene Voorwaarden Venn Hypotheken 2022 2.0",
+    "url": "https://www.vennhypotheken.nl/wp-content/uploads/Algemene-Voorwaarden-2022-2.0-Venn-Hypotheken-B.V.-.pdf",
+    "versie": "2022 2.0"
+   },
+   {
+    "titel": "Bijlage 2: NHG-afwijkingenkaart januari 2024",
+    "url": "https://www.vennhypotheken.nl/wp-content/uploads/Bijlage-2.pdf",
+    "versie": "jan 2024"
+   },
+   {
+    "titel": "Formulier eigen middelen",
+    "url": "https://www.vennhypotheken.nl/wp-content/uploads/Formulier-eigen-middelen-Venn-Hypotheken.pdf",
+    "versie": "2026.V1.0"
+   },
+   {
+    "titel": "Hypotheekrente actueel overzicht",
+    "url": "https://www.vennhypotheken.nl/rente/",
+    "versie": "5 aug 2026"
+   },
+   {
+    "titel": "NHG-afwijkingenkaart / Kredietgids (Bijlage 2)",
+    "url": "https://www.vennhypotheken.nl/wp-content/uploads/Bijlage-2.pdf",
+    "versie": "januari 2024"
+   },
+   {
+    "titel": "Algemene Voorwaarden Venn Hypotheken",
+    "url": "https://www.vennhypotheken.nl/wp-content/uploads/Algemene-Voorwaarden-2022-2.0-Venn-Hypotheken-B.V.-.pdf",
+    "versie": "2022 2.0 (website noemt 2026 1.0)"
+   },
+   {
+    "titel": "Formulier eigen middelen",
+    "url": "https://www.vennhypotheken.nl/wp-content/uploads/Formulier-eigen-middelen-Venn-Hypotheken.pdf",
+    "versie": "2026.V1.0"
+   }
+  ]
+ }
+]

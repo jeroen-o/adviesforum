@@ -1,0 +1,691 @@
+[
+ {
+  "naam": "Nationale-Nederlanden",
+  "gecontroleerd": "2026-10-09",
+  "criteria": {
+   "zzp": {
+    "waarde": "~ Vanaf 1 jaar ondernemerschap met inkomensverklaring, met of zonder NHG; anders 3 jaar cijfers",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Een-hypotheek-voor-ondernemers.htm",
+     "https://www.nn.nl/Particulier/Hypotheken/Hypotheek-voor-Medici.htm"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. mogelijk, met of zonder NHG ... Omdat je nog geen jaarcijfers van drie jaar kunt aanleveren, vragen we een inkomensverklaring"
+   },
+   "flex": {
+    "waarde": "~ Tijdelijk contract met intentieverklaring: toetsinkomen via werkgeversverklaring of UWV-verzekeringsbericht; ook perspectiefverklaring",
+    "bron": [
+     "https://www.nn.nl/Inspiratie/Perspectiefverklaring-hypotheek.htm",
+     "https://www.nn.nl/Particulier/Hypotheken/Hypotheek-voor-Medici.htm"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Bij een tijdelijk contract met intentieverklaring bepaalt NN eerst je toetsinkomen, met je werkgeversverklaring of UWV-verzekeringsbericht"
+   },
+   "persp": {
+    "waarde": "+ Perspectiefverklaring geaccepteerd (ook met NHG)",
+    "bron": [
+     "https://www.nn.nl/Inspiratie/Perspectiefverklaring-hypotheek.htm"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Met de verklaring kun je bij bijna alle grote hypotheekverstrekkers terecht, ook bij NN"
+   },
+   "aow": {
+    "waarde": "+ Toets op pensioeninkomen; Senioren Verhuisregeling toetst op werkelijke lasten bij gelijke/lagere lasten",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Hypotheek-voor-ouderen.htm",
+     "https://nn.nl/Over-NationaleNederlanden/Actualiteiten/Nieuwsbericht/NationaleNederlanden-lanceert-Senioren-Verhuisregeling.htm",
+     "https://www.nn.nl/Particulier/Hypotheken/Je-hypotheek/Pensioen-en-je-hypotheek.htm"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Zijn de nieuwe bruto lasten gelijk aan of lager dan die van de huidige hypotheek, dan is een nieuwe hypotheek vaak toch mogelijk"
+   },
+   "erfp": {
+    "waarde": "~ Erfpacht mogelijk; aanvullende eisen in hypotheekvoorwaarden (o.a. bij einde erfpacht voor einde lening)",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Je-hypotheek/Erfpacht.htm",
+     "https://www.nn.nl/Download/Voorwaarden-NN-Hypotheek.htm"
+    ],
+    "brondatum": "2024-01",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Nationale-Nederlanden krijgt niet uiterlijk zes maanden voor de einddatum van het erfpachtrecht een eerste hypotheek op het nieuwe erfpachtrecht"
+   },
+   "rvp": {
+    "waarde": "+ Variabel en vast, rentevaste periode 1 t/m 30 jaar (o.a. 1, 2, 5, 6, 7, 10, 12, 15, 20, 30 jaar)",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Hypotheekrente.htm",
+     "https://www.nn.nl/Download/1-februari-2026-FLH01112025.htm",
+     "https://www.nn.nl/Particulier/Hypotheken/Variabele-Hypotheekrente.htm"
+    ],
+    "brondatum": "2026-02-01",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Gewijzigd na controle (A/B/arbitrage): Huidige waarde noemt slechts zes looptijden; NN biedt 1 t/m 30 jaar met meer tussenliggende perioden. Tabel is van verlengingen bestaande hypotheken (feb 2026), productpagina noemt 1-30 jaar."
+   },
+   "dag": {
+    "waarde": "! Standaard offerterente; dagrente alleen bij oude NN Variant (ex-Delta Lloyd) hypotheken",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Je-hypotheek/Einde-rentevaste-periode.htm",
+     "https://www.nn.nl/Particulier/Hypotheken/Je-hypotheek/NN-Variant-Hypotheek.htm",
+     "https://www.nn.nl/Download/1-november-2025-FLH01082025.htm"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Je krijgt het tarief dat geldt op de datum van ons voorstel ... Bij de NN Variant Hypotheek met dagrente geldt een uitzondering"
+   },
+   "geld": {
+    "waarde": "~ Nieuwbouw: offerte 12 mnd geldig; bestaande bouw-termijn niet gevonden",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Hypotheek-voor-nieuwbouw.htm",
+     "https://www.nn.nl/Particulier/Hypotheken/Hypotheek-voor-Nieuwbouw.htm"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Volgens NN krijg je bij nieuwbouw een hypotheekofferte die 12 maanden geldig is"
+   },
+   "boete": {
+    "waarde": "+ 10% van oorspronkelijk bedrag per leningdeel per kalenderjaar boetevrij",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Je-hypotheek/Extra-aflossen.htm"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. tot maximaal 10% van het oorspronkelijke bedrag per leningdeel"
+   },
+   "ltv": {
+    "waarde": "+ Maandelijkse automatische check; lagere tariefklasse direct tijdens RVP",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Hypotheekrente/Tariefklassen.htm"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. NN bekijkt elke maand of je hypotheek in een lagere tariefklasse valt"
+   },
+   "bdduur": {
+    "waarde": "~ Nieuwbouw 24 mnd; automatisch 12 mnd verlengd (zonder depotvergoeding)",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Je-hypotheek/Bouwdepot/Bouwdepot-verlengen-en-beeindigen.htm",
+     "https://www.nn.nl/Particulier/Hypotheken/Je-hypotheek/Bouwdepot/Nieuwbouwdepot-en-verbouwdepot.htm"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. NN verlengt je bouwdepot automatisch met 12 maanden op de einddatum"
+   },
+   "bdrnt": {
+    "waarde": "~ Nieuwbouw: vergoeding = gemiddelde hypotheekrente; verbouw: lager dan hypotheekrente",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Je-hypotheek/Bouwdepot/Nieuwbouwdepot-en-verbouwdepot.htm"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Bij nieuwbouw is het percentage van de depotrente meestal even hoog als je hypotheekrente"
+   },
+   "bddecl": {
+    "waarde": "+ Declareren via NN App/mijn.nn; beoordeling max. 3 werkdagen, daarna direct uitbetaald",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Je-hypotheek/Bouwdepot/Bouwdepot-declareren.htm",
+     "https://www.nn.nl/Particulier/Hypotheken/Je-hypotheek/Bouwdepot/Bouwdepot-verlengen-en-beeindigen.htm"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. een declaratie doorgaans binnen 3 werkdagen wordt verwerkt"
+   },
+   "ebb": {
+    "waarde": "+ Duurzaamheidsdepot: EBB en EBV; tot 106% woningwaarde voor energiebesparing",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Je-hypotheek/Bouwdepot/Duurzaamheidsdepot.htm"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Duurzaamheidsdepot van NN: EBB en EBV voor energiebesparing"
+   },
+   "duur": {
+    "waarde": "~ Extra leenruimte op basis van energielabel; geen labelrentekorting gevonden",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/verbouwen-en-verduurzamen/Extra-hypotheek-voor-verduurzamen.htm",
+     "https://www.nn.nl/Particulier/Hypotheken/Je-hypotheek/Verbouwen/Verbouwing-financieren/Energiezuinige-verbouwing-financieren.htm"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Bij een E-, F- of G-label is dat maximaal € 20.000, bij C of D € 15.000 en bij B tot en met A++ € 10.000"
+   },
+   "verh": {
+    "waarde": "+ Rente meenemen tot einde RVP; nieuwe akte binnen 6 mnd na aflossing oude hypotheek",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Ander-huis-kopen/Hypotheek-meenemen.htm",
+     "https://www.nn.nl/Particulier/Hypotheken/Hypotheek-meenemen.htm"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. je nieuwe hypotheek binnen 6 maanden na de verkoop laat ingaan ... De 6 maanden gaan in vanaf het moment dat je oude hypotheek is afgelost"
+   },
+   "ondh": {
+    "waarde": "~ Verkoop alleen met toestemming NN; restschuld aflossen, betalingsregeling of meefinancieren (max. 15 jr)",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Je-hypotheek/Restschuld-op-je-hypotheek.htm",
+     "https://www.nn.nl/Download/Voorwaarden-NN-Hypotheek.htm"
+    ],
+    "brondatum": "2024-01",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Je hele hypotheek, met de restschuld, moet je terugbetalen"
+   },
+   "oha": {
+    "waarde": "~ Ontslag hoofdelijkheid met toestemming NN; achterblijver moet lasten alleen kunnen dragen",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Je-hypotheek/Uit-elkaar-en-een-hypotheek.htm"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Het ontslag kan alleen als de blijvende partner genoeg inkomen heeft om de hypotheek te betalen. De bank moet hier toestemming voor geven"
+   },
+   "tweede": {
+    "waarde": "+ Verhogen binnen inschrijving zonder notaris, anders 2e hypotheek; min. € 10.000",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Je-hypotheek/Verbouwen/Verbouwing-financieren/Verbouwing-financieren-vanuit-je-hypotheek.htm",
+     "https://nn.nl/Particulier/Hypotheken/Je-hypotheek/Verbouwen/Verbouwing-financieren/Verbouwing-financieren-vanuit-je-hypotheek.htm"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. De minimale verhoging is € 10.000,-"
+   },
+   "ovbr": {
+    "waarde": "~ Overbrugging 1 jr (bestaand) / 2 jr (nieuwbouw), 1 jr verlengbaar; max 95% taxatiewaarde minus schuld",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Hypotheekvormen/Overbruggingskrediet.htm"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. NN rekent met maximaal 95% van die waarde, minus je hypotheekschuld"
+   },
+   "avrij": {
+    "waarde": "~ Max. 50% van de woningwaarde aflossingsvrij (geen 2026-aanscherping gevonden)",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Hypotheekvormen/Aflossingsvrije-Hypotheek.htm"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Je mag maximaal 50% van de woningwaarde aflossingsvrij lenen"
+   },
+   "rmid": {
+    "waarde": "+ Rentemiddeling mogelijk: renteverlies verwerkt als opslag over nieuwe RVP",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Je-hypotheek/Hypotheekrente-wijzigen/Tussentijdse-rentewijziging-met-rentemiddeling.htm"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. NN rekent de opslag uit het renteverlies, verdeeld over de nieuwe rentevaste periode"
+   },
+   "rverl": {
+    "waarde": "~ Renteaanbod 3 mnd voor einde rvp tegen rente geldend op datum voorstel; geen reactie = zelfde periode verlengd",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Je-hypotheek/Einde-rentevaste-periode.htm"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Drie maanden vóór het einde van die periode ontvang je van ons een nieuw renteaanbod ... Dan zetten wij de rente automatisch vast voor dezelfde periode"
+   },
+   "rvoor": {
+    "waarde": "~ Rentevoorstel 3 maanden voor einde rentevaste periode",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Je-hypotheek/Einde-rentevaste-periode.htm"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Drie maanden vóór het einde van die periode ontvang je van ons een nieuw renteaanbod"
+   },
+   "wkost": {
+    "waarde": "! Extra aflossen zonder administratiekosten; vormwijziging tijdens rentevaste periode kost administratiekosten; aan einde rentevaste periode geen NN-kosten",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Je-hypotheek/Hypotheekvorm-aanpassen.htm",
+     "https://www.nn.nl/Particulier/Hypotheken/Je-hypotheek/Extra-aflossen.htm"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Gewijzigd na controle (A/B/arbitrage): 'Hypotheekvorm wijzigen kosteloos' klopt alleen aan het einde van de RVP; tijdens de RVP gelden administratiekosten. Bedrag weggelaten (tarief)."
+   },
+   "avlt": {
+    "waarde": "! Op einddatum volledig aflossen; verlenging alleen als dan geldende leennormen het toelaten",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Je-hypotheek/Einde-looptijd-hypotheek.htm"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Dan is een verlenging of een nieuwe hypotheek nodig, maar deze moet voldoen aan de geldende leennormen"
+   },
+   "bproc": {
+    "waarde": "+ Specialisten bij betalingsproblemen: betaalregeling, betaalpauze op maat, budgetcoach",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Hulp-bij-betalingsproblemen.htm"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. NN noemt ook een betalingsregeling bij een achterstand of restschuld"
+   },
+   "o106": {
+    "waarde": "- Boven 100% marktwaarde aparte tariefklasse met risico-opslag; 106% alleen voor energiebesparing",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Hypotheekrente/Tariefklassen.htm"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Volgens NN kun je maximaal 106% van de nieuwe woningwaarde lenen, terwijl normaal gesproken is dit 100%"
+   },
+   "elbl": {
+    "waarde": "~ Geen labelrentekorting gevonden; energielabel bepaalt alleen extra leenruimte",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/verbouwen-en-verduurzamen/Extra-hypotheek-voor-verduurzamen.htm"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Ik vond geen ... koppeling tussen energielabel en risico-opslag"
+   },
+   "cons": {
+    "waarde": "+ Overwaarde vrij te besteden (bijv. auto, vakantiehuis) via extra hypotheek; box 3, rente niet aftrekbaar; aflossingsvrij totaal max. 50% MW",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Woning-overwaarde-benutten.htm"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle A. Omdat de overwaarde niet voor een verbouwing wordt gebruikt, valt de lening in box 3, en is de rente niet aftrekbaar"
+   },
+   "desk": {
+    "waarde": "~ Calcasa Desktop Taxatie alleen bij oversluiten, ontslag hoofdelijke aansprakelijkheid en verhogen; max. 6 mnd oud vanaf waardepeildatum",
+    "bron": [
+     "https://www.nn.nl/Inspiratie/Taxatie-voor-hypotheek.htm"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. Calcasa Desktop Taxatie (maximaal 6 maanden oud)"
+   },
+   "huur": {
+    "waarde": "~ Huur van ander pand telt voor 85% (kale huur) mee; NL-object, schriftelijk contract, min. 2 jaar ontvangen; niet bij kamerverhuur/short-stay/recreatie",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Maximale-Hypotheek-Berekenen.htm"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Je mag 85% van de huurinkomsten meetellen"
+   },
+   "start": {
+    "waarde": "- NN verstrekt geen hypotheken in combinatie met de starterslening",
+    "bron": [
+     "https://www.nn.nl/Wonen/Starterslening.htm",
+     "https://www.nn.nl/Inspiratie/Lening-starter.htm"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Nationale-Nederlanden geen hypotheken verstrekt in combinatie met de starterslening"
+   },
+   "verhuur": {
+    "waarde": "~ Verhuur alleen met toestemming NN; tijdelijk bij uitzending buitenland door werkgever max. 5 jaar (NHG mogelijk korter), huur dekt lasten",
+    "bron": [
+     "https://www.nn.nl/Download/Voorwaarden-NN-Hypotheek.htm",
+     "https://www.nn.nl/Particulier/Hypotheken/Hulp-bij-betalingsproblemen.htm"
+    ],
+    "brondatum": "2024-01",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Je mag de woning alleen verhuren met toestemming van NN"
+   },
+   "aios": {
+    "waarde": "+ Medicihypotheek: AIOS/ANIOS met tijdelijk contract, ook zonder intentieverklaring; toetsinkomen dan op andere wijze bepaald",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Hypotheek-voor-Medici.htm"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Voor medici in opleiding geldt dat een hypotheek ook mogelijk is met een tijdelijk contract zonder intentieverklaring"
+   },
+   "lijfr": {
+    "waarde": "~ Lopende lijfrente-uitkering telt mee als looptijd minimaal die van de hypotheek; toekomstige lijfrente-uitkeringen worden niet meegenomen",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Hypotheek-voor-ouderen.htm",
+     "https://nn.nl/particulier/hypotheken/hypotheek-voor-ouderen/senioren-verhuisregeling.htm"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Gewijzigd na controle (A/B/arbitrage): Eigen bron (seniorenpagina) sluit toekomstige lijfrente uit; de 5%-van-saldo-regel is op nn.nl niet terug te vinden (3 zoekopdrachten). Context van bron is senioren (57+); voor andere aanvragen geen afwijkende regel gevonden."
+   },
+   "senior": {
+    "waarde": "+ Tijdelijk inkomenstekort door AOW-verschil: toetsing op werkelijke lasten, max. 120 mnd; plus Senioren Verhuisregeling",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Hypotheek-voor-ouderen.htm"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Senioren Tijdelijk Tekort (AOW-gat) ... beoordeelt de aanvraag dan ook op werkelijke maandlasten"
+   },
+   "mwbep": {
+    "waarde": "~ Taxatierapport; Calcasa desktoptaxatie mag bij aankoop bestaande woning (niet bij erfpacht), max. 6 mnd oud",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Hypotheekrente/Tariefklassen.htm",
+     "https://www.nn.nl/Inspiratie/Hoe-werkt-een-hypotheek-aanvragen.htm",
+     "https://www.nn.nl/Inspiratie/Taxatie-voor-hypotheek.htm"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Een gevalideerd taxatierapport of Calcasa Desktop Taxatie, niet ouder dan zes maanden"
+   },
+   "zbep": {
+    "waarde": "~ Inkomensverklaring van onafhankelijke rekenexpert bepaalt toetsinkomen; gebroken boekjaar telt mee",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Een-hypotheek-voor-ondernemers.htm",
+     "https://www.nn.nl/Particulier/Hypotheken/Een-hypotheek-voor-ondernemers/Inkomensverklaring.htm",
+     "https://www.nn.nl/Particulier/Hypotheken/Hypotheek-voor-Medici.htm"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Bij een korter bestaan kunnen gebroken boekjaren meetellen"
+   },
+   "zstart": {
+    "waarde": "+ Vanaf 1 jaar ondernemerschap (12-36 mnd met inkomensverklaring); loondienstinkomen uit 3 jaar ervoor telt mee in gemiddelde",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Een-hypotheek-voor-ondernemers.htm"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Wie minimaal één jaar zelfstandig ondernemer is en in de drie jaar daarvoor in loondienst werkte, kan het loondienstinkomen laten meetellen"
+   },
+   "duo": {
+    "waarde": "~ Werkelijk DUO-termijnbedrag; nog niet aflossend via DUO-rekenhulp; gebruteerd, minimaal annuïteit",
+    "bron": [
+     "https://www.nn.nl/Inspiratie/Studieschuld-hypotheek.htm"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. De maandlasten van je DUO-lening tellen namelijk mee, niet het oorspronkelijke bedrag van die lening"
+   },
+   "rsk": {
+    "waarde": "+ Restschuld onbeperkt mee te financieren (geen max. LTV) onder voorwaarden, o.a. bestaande NN-hypotheek; tijdstip ontstaan speelt geen rol",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Je-hypotheek/Restschuld-op-je-hypotheek.htm"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. meefinancieren van de restschuld in een nieuwe hypotheek"
+   },
+   "obmax": {
+    "waarde": "~ Definitief verkocht: 100% van de overwaarde; niet verkocht: max. 95% taxatiewaarde min hypotheekschuld (90% bij desktoptaxatie)",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Hypotheekvormen/Overbruggingskrediet.htm"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. NN rekent met maximaal 95% van die waarde, minus je hypotheekschuld"
+   },
+   "oblast": {
+    "waarde": "~ Bij niet verkochte woning moeten dubbele lasten 12 maanden gedragen kunnen worden",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Hypotheekvormen/Overbruggingskrediet.htm"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Je moet de lasten kunnen dragen voor 12 maanden"
+   },
+   "obduur": {
+    "waarde": "~ Bestaande bouw max. 12 maanden, nieuwbouw max. 24 maanden; verlenging max. 1 jaar",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Hypotheekvormen/Overbruggingskrediet.htm"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. De looptijd is een jaar als je huidige woning nog niet verkocht is, en twee jaar bij nieuwbouw. Daarna kun je maximaal één jaar verlengen"
+   },
+   "obwaar": {
+    "waarde": "~ Gevalideerd taxatierapport, Calcasa desktoptaxatie (max. 6 mnd oud) of getekende koopovereenkomst",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Hypotheekvormen/Overbruggingskrediet.htm"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. Bij een digitale Calcasa Desktop Taxatie rekent NN met 90%"
+   },
+   "obels": {
+    "waarde": "- Overbruggingskrediet alleen als de (nieuwe) hypotheek ook bij NN wordt gesloten",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Hypotheekvormen/Overbruggingskrediet.htm"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Je kunt een overbruggingskrediet bij Nationale-Nederlanden krijgen als je ook een hypotheek bij ons afsluit"
+   },
+   "geldnb": {
+    "waarde": "+ Offerte bij nieuwbouw 12 maanden geldig",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Hypotheek-voor-nieuwbouw.htm",
+     "https://www.nn.nl/Particulier/Hypotheken/Hypotheek-voor-Nieuwbouw.htm"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Volgens NN krijg je bij nieuwbouw een hypotheekofferte die 12 maanden geldig is"
+   },
+   "bovw": {
+    "waarde": "+ Overwaarde vorige woning boetevrij aflossen, ook boven 10%, binnen 4 weken na ontvangst",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Je-hypotheek/Hypotheek-aflossen-met-overwaarde.htm",
+     "https://www.nn.nl/Particulier/Hypotheken/Je-hypotheek/Extra-aflossen.htm"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. binnen vier weken na ontvangst van de overwaarde"
+   },
+   "bvrij": {
+    "waarde": "+ Boetevrij bij verkoop woning (zonder 'boete bij verkoop'-afspraak) en binnen 12 maanden na overlijden",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Wanneer-betaal-je-een-vergoeding.htm",
+     "https://www.nn.nl/Particulier/Hypotheken/Je-hypotheek/Extra-aflossen.htm"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. geen vergoeding bij volledige aflossing bij verkoop zonder 'Boete bij verkoop' afspraak"
+   },
+   "minh": {
+    "waarde": "~ Min. EUR 25.000 eerste hypotheek",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Verbouwen/Verduurzaming-verbouwing-financieren-hypotheek.htm",
+     "https://nn.nl/Particulier/Hypotheken/Je-hypotheek/Verbouwen/Verbouwing-financieren/Verbouwing-financieren-vanuit-je-hypotheek.htm"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Minimale nieuwe lening bij Nationale-Nederlanden: € 25.000"
+   },
+   "rest": {
+    "waarde": "~ Restschuld van door NN gefinancierde woning meefinancieren zonder max. LTV, mits voorwaarden; overig max. 112,5% MW",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Je-hypotheek/Restschuld-op-je-hypotheek.htm"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Volgens NN blijft het mogelijk om een restschuld boven 100% van de woningwaarde mee te financieren"
+   },
+   "zelfb": {
+    "waarde": "+ Zelfbouw mogelijk met nieuwbouwhypotheek; bouwvergunning, aannemingsovereenkomst, afbouwgarantie en taxatierapport nodig",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Hypotheek-voor-nieuwbouw.htm",
+     "https://www.nn.nl/Inspiratie/Zelf-huis-bouwen.htm"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. Voor de hypotheekaanvraag bij zelfbouw heb je onder meer een bouwvergunning, een aannemingsovereenkomst, een afbouwgarantie en een taxatierapport nodig"
+   },
+   "cpo": {
+    "waarde": "+ CPO mogelijk met de NN nieuwbouwhypotheek",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Hypotheek-voor-nieuwbouw.htm",
+     "https://www.nn.nl/Wonen/CPO-bouwen.htm"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "drievoudig",
+    "toelichting": "Bevestigd bij controle A B. De nieuwbouwhypotheek is ook geschikt voor zelfbouw en Collectief Particulier Opdrachtgeverschap (CPO)"
+   },
+   "verhw": {
+    "waarde": "~ Calcasa desktoptaxatie toegestaan bij verhogen (max. 6 maanden oud)",
+    "bron": [
+     "https://www.nn.nl/Inspiratie/Taxatie-voor-hypotheek.htm"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. Calcasa desktoptaxatie, WOZ-beschikking of gevalideerd taxatierapport; max. 6 maanden oud"
+   },
+   "oversl": {
+    "waarde": "~ Calcasa desktoptaxatie toegestaan bij oversluiten; max. LTV volgens acceptatiebeleid",
+    "bron": [
+     "https://www.nn.nl/Inspiratie/Taxatie-voor-hypotheek.htm"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Bevestigd bij controle  B. Calcasa desktoptaxatie of gevalideerd taxatierapport accepteren bij waardestijging/oversluiten"
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Voorwaarden bij uw Nationale-Nederlanden Hypotheek",
+    "url": "https://www.nn.nl/Download/Voorwaarden-NN-Hypotheek.htm",
+    "versie": "jan 2024"
+   },
+   {
+    "titel": "Rentetarieven Hypotheken (aflopende rentevaste periode)",
+    "url": "https://www.nn.nl/Download/1-februari-2026-FLH01112025.htm",
+    "versie": "1 feb 2026"
+   },
+   {
+    "titel": "Vergelijkingskaart Hypotheek",
+    "url": "https://www.nn.nl/Download/Vergelijkingskaart-Hypotheek.htm",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "Checklist hypotheekaanvraag voor ondernemers",
+    "url": "https://www.nn.nl/Version-of-Version-of-Version-of-Version-of-Versie-van-Download-1/Checklist-hypotheekaanvraag-voor-ondernemers.htm",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "Voorwaarden bij uw Nationale-Nederlanden Hypotheek",
+    "url": "https://www.nn.nl/Download/Voorwaarden-NN-Hypotheek.htm",
+    "versie": "januari 2024"
+   },
+   {
+    "titel": "Overbruggingskrediet voor aankoop nieuw huis",
+    "url": "https://www.nn.nl/Particulier/Hypotheken/Hypotheekvormen/Overbruggingskrediet.htm",
+    "versie": null
+   },
+   {
+    "titel": "Nieuwbouwdepot en verbouwdepot",
+    "url": "https://www.nn.nl/Particulier/Hypotheken/Je-hypotheek/Bouwdepot/Nieuwbouwdepot-en-verbouwdepot.htm",
+    "versie": null
+   }
+  ]
+ }
+]
