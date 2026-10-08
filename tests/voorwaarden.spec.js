@@ -249,7 +249,7 @@ test.describe('voorwaardenvergelijker', () => {
       logo: getComputedStyle(document.querySelector('#matrix img.plogo')).backgroundColor,
       cel: getComputedStyle(document.querySelector('#matrix tbody th.vast')).backgroundColor
     }));
-    expect(k.body).toBe('rgb(24, 26, 61)');
+    expect(k.body).toBe('rgb(38, 48, 110)');
     expect(k.logo).toBe('rgb(255, 255, 255)');
     expect(k.cel).not.toBe('rgb(255, 255, 255)');
   });

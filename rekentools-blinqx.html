@@ -19,22 +19,22 @@
 :root{
   --geel-donker:#D9700A;--geel-zacht:#FEF0E2;--tekst:#15162F;--grijs:#55576F;--lijn:#E3E3EC;--vlak:#F7F7FA;--wit:#fff;
   --rood:#9E2F45;--rood-zacht:#FFF1F0;--rood-tekst:#7A1F14;--oranje:#9A5B00;--oranje-zacht:#FFF4E0;--groen:#1F7A52;--groen-zacht:#E8F5EE;--blauw:#1F4E79;
-  --kop:#181A3D;--kop-tekst:#FFFFFF;--body:#fff;
+  --kop:#26306E;--kop-tekst:#FFFFFF;--body:#fff;
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
   --geel-zacht:#3F3018;--tekst:#F1F1F6;--grijs:#C3C4D3;--lijn:#333;--vlak:#1C1E3A;--wit:#12132B;--rood-zacht:#3f1a18;--rood-tekst:#f3c2bd;
-  --oranje:#f6cb8e;--oranje-zacht:#3f3118;--groen:#9de7c1;--groen-zacht:#1b3328;--blauw:#9ec3e6;--kop:#12132B;--kop-tekst:#F1F1F6;--body:#181A3D;color-scheme:dark}}
+  --oranje:#f6cb8e;--oranje-zacht:#3f3118;--groen:#9de7c1;--groen-zacht:#1b3328;--blauw:#9ec3e6;--kop:#12132B;--kop-tekst:#F1F1F6;--body:#26306E;color-scheme:dark}}
 :root[data-theme="dark"]{
   --geel-zacht:#3F3018;--tekst:#F1F1F6;--grijs:#C3C4D3;--lijn:#333;--vlak:#1C1E3A;--wit:#12132B;--rood-zacht:#3f1a18;--rood-tekst:#f3c2bd;
-  --oranje:#f6cb8e;--oranje-zacht:#3f3118;--groen:#9de7c1;--groen-zacht:#1b3328;--blauw:#9ec3e6;--kop:#12132B;--kop-tekst:#F1F1F6;--body:#181A3D;color-scheme:dark}
+  --oranje:#f6cb8e;--oranje-zacht:#3f3118;--groen:#9de7c1;--groen-zacht:#1b3328;--blauw:#9ec3e6;--kop:#12132B;--kop-tekst:#F1F1F6;--body:#26306E;color-scheme:dark}
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
 body{font-family:Segoe UI,Roboto,Helvetica Neue,Arial,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;color:var(--tekst);background:var(--body);line-height:1.55;font-size:15px;overflow-x:hidden}
 a{color:inherit}
 button,input{font-family:inherit}
 [hidden]{display:none!important}
-.skiplink{position:absolute;left:-9999px}.skiplink:focus{left:12px;top:12px;background:#F68712;color:#181A3D;padding:8px 12px;z-index:9}
-.balk{background:#181A3D;color:#fff;font-size:12.5px;padding:8px 16px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.skiplink{position:absolute;left:-9999px}.skiplink:focus{left:12px;top:12px;background:#F68712;color:#26306E;padding:8px 12px;z-index:9}
+.balk{background:#26306E;color:#fff;font-size:12.5px;padding:8px 16px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 .balk a{color:#fff;text-decoration:none;opacity:.88}.balk a:hover{opacity:1;text-decoration:underline}
 .kop{background:var(--kop);color:var(--kop-tekst);padding:30px 16px 34px;border-bottom:3px solid #F68712}
 .kop-in,.romp{max-width:1100px;margin:0 auto}
@@ -62,7 +62,7 @@ h2.groep{font-size:20px;margin:28px 0 10px}
 .tool p{margin:4px 0 0;font-size:14px;color:var(--grijs)}
 .tool-acties{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
 .tool-acties a{font-size:13.5px}
-.knop{border:1px solid var(--geel-donker);background:#F68712;color:#181A3D;border-radius:999px;padding:7px 14px;font-weight:700;font-size:14px;cursor:pointer;min-height:38px}
+.knop{border:1px solid var(--geel-donker);background:#F68712;color:#26306E;border-radius:999px;padding:7px 14px;font-weight:700;font-size:14px;cursor:pointer;min-height:38px}
 .vak{margin-top:12px}
 /* Ruime minimale hoogte: de tools passen hun hoogte zelf aan (iframeResizer), maar zakken nooit onder deze maat. */
 .vak iframe{display:block;width:100%;min-height:max(900px,88vh);border:0;background:#fff;border-radius:10px}

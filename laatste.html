@@ -18,7 +18,7 @@
 <style>
 :root{
   --geel:#F68712;--geel-donker:#D9700A;--geel-zacht:#FEF0E2;
-  --zwart:#181A3D;--tekst:#15162F;--grijs:#55576F;--lijn:#E3E3EC;--vlak:#F7F7FA;
+  --zwart:#26306E;--tekst:#15162F;--grijs:#55576F;--lijn:#E3E3EC;--vlak:#F7F7FA;
   --rood:#9E2F45;--rood-zacht:#FFF1F0;--groen:#1E7A4B;
 }
 *{box-sizing:border-box}
@@ -76,17 +76,17 @@ a.terug{display:inline-block;padding:8px 0}
 </style>
 <style id="a11y">
 /* Toegankelijkheid en donkere modus (zie docs/toegankelijkheid.md). Staat in een eigen <style>, zodat printvensters licht blijven. */
-.skiplink{position:absolute;left:12px;top:-200px;z-index:10000;background:#181A3D;color:#fff;padding:10px 16px;border-radius:8px;font-weight:700;text-decoration:none;font-family:Segoe UI,Roboto,Helvetica Neue,Arial,system-ui,sans-serif}
+.skiplink{position:absolute;left:12px;top:-200px;z-index:10000;background:#26306E;color:#fff;padding:10px 16px;border-radius:8px;font-weight:700;text-decoration:none;font-family:Segoe UI,Roboto,Helvetica Neue,Arial,system-ui,sans-serif}
 .skiplink:focus{top:12px;outline:3px solid #F68712;outline-offset:2px}
 main[tabindex="-1"]:focus{outline:none}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus,textarea:focus,summary:focus-visible,[tabindex]:not([tabindex="-1"]):focus-visible{outline:3px solid #181A3D!important;outline-offset:2px!important}
+a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus,textarea:focus,summary:focus-visible,[tabindex]:not([tabindex="-1"]):focus-visible{outline:3px solid #26306E!important;outline-offset:2px!important}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 @media print{.skiplink{display:none}}
 @media screen and (prefers-color-scheme:dark){
 :root:not([data-theme="light"]){color-scheme:dark}
 :root:not([data-theme="light"]){--geel-zacht:#3F3018;--zwart:#F1F1F6;--tekst:#F1F1F6;--grijs:#C3C4D3;--lijn:#1E2040;--vlak:#1C1E3A;--rood:#e9a29b;--rood-zacht:#3f1a18;--groen:#9de7c1}
-:root:not([data-theme="light"]) body{color:#F1F1F6;background:#181A3D}
+:root:not([data-theme="light"]) body{color:#F1F1F6;background:#26306E}
 :root:not([data-theme="light"]) .balk{background:#23254A;color:#fff}
 :root:not([data-theme="light"]) .balk a{color:#fff}
 :root:not([data-theme="light"]) .kop{background:#12132B;color:#F1F1F6;border-bottom:3px solid #F68712}
@@ -100,8 +100,8 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
 :root:not([data-theme="light"]) .tegel .getal small{color:#C3C4D3}
 :root:not([data-theme="light"]) .tegel span{color:#C3C4D3}
 :root:not([data-theme="light"]) .chip{border:1px solid #1E2040;background:#12132B;color:#F1F1F6}
-:root:not([data-theme="light"]) .chip[aria-pressed="true"]{background:#F68712;color:#181A3D;border-color:#F68712}
-:root:not([data-theme="light"]) .dag h3 .tel{background:#F68712;color:#181A3D}
+:root:not([data-theme="light"]) .chip[aria-pressed="true"]{background:#F68712;color:#26306E;border-color:#F68712}
+:root:not([data-theme="light"]) .dag h3 .tel{background:#F68712;color:#26306E}
 :root:not([data-theme="light"]) .item{border-left:4px solid #F68712;background:#1C1E3A}
 :root:not([data-theme="light"]) .item .meta{color:#C3C4D3}
 :root:not([data-theme="light"]) .item .meta .th{color:#f6db8e}
@@ -111,10 +111,10 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
 :root:not([data-theme="light"]) .voet{color:#C3C4D3}
 :root:not([data-theme="light"]) .voet a{color:#F1F1F6}
 :root:not([data-theme="light"]) a:focus-visible,:root:not([data-theme="light"]) button:focus-visible,:root:not([data-theme="light"]) input:focus,:root:not([data-theme="light"]) input:focus-within,:root:not([data-theme="light"]) select:focus,:root:not([data-theme="light"]) textarea:focus,:root:not([data-theme="light"]) summary:focus-visible,:root:not([data-theme="light"]) [tabindex]:not([tabindex="-1"]):focus-visible{outline-color:#F68712!important}
-:root:not([data-theme="light"]) .skiplink{background:#F68712;color:#181A3D}
+:root:not([data-theme="light"]) .skiplink{background:#F68712;color:#26306E}
 :root:not([data-theme="light"]) [style*="background:#fff"],:root:not([data-theme="light"]) [style*="background:#FFF"]{background:#12132B!important}
 :root:not([data-theme="light"]) [style*="color:#555"]{color:#C3C4D3!important}
-:root:not([data-theme="light"]) [style*="color:#181A3D"]{color:#F1F1F6!important}
+:root:not([data-theme="light"]) [style*="color:#26306E"]{color:#F1F1F6!important}
 :root:not([data-theme="light"]) .back-inline{color:#F1F1F6!important;border-bottom-color:#F68712!important}
 :root:not([data-theme="light"]) .skiplink:focus{outline-color:#F1F1F6}
 }
@@ -131,7 +131,7 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
 .kaart .meta{font-size:11.5px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--grijs);display:flex;gap:8px;flex-wrap:wrap}
 .kaart b{display:block;font-size:15px;margin:3px 0 4px;line-height:1.35}
 .kaart span.t{display:block;font-size:13.5px;color:#333;overflow:hidden;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical}
-.lbl{background:var(--geel);color:#181A3D;border-radius:999px;padding:0 8px;letter-spacing:0;text-transform:none}
+.lbl{background:var(--geel);color:#26306E;border-radius:999px;padding:0 8px;letter-spacing:0;text-transform:none}
 .meer{display:inline-block;margin:12px 0 0;font-weight:700;font-size:14px;padding:8px 0}
 .leeg{color:var(--grijs);font-style:italic}
 @media (max-width:560px){.lijst2{grid-template-columns:minmax(0,1fr)}}

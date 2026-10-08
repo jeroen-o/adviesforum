@@ -115,10 +115,10 @@ test('volgen: blok toont items sinds het vorige bezoek uit de cookie', async ({ 
 test('#zoek= vult de zoekbalk en filtert', async ({ page }) => {
   const fouten = await volgFouten(page);
   await page.goto('/index.html#zoek=overbruggingskrediet');
-  await expect(page.locator('#search')).toHaveValue('overbruggingskrediet');
+  await expect(page.locator('.sitenav-zoek input')).toHaveValue('overbruggingskrediet');
   await expect(page.locator('#app .sub').first()).toContainText('voor “overbruggingskrediet”');
   await page.goto('/index.html#zoek=nhg+grens&in=kennisbank');
-  await expect(page.locator('#search')).toHaveValue('nhg grens');
+  await expect(page.locator('.sitenav-zoek input')).toHaveValue('nhg grens');
   await expect(page.locator('#app h1')).toHaveText('Kennisbank');
   expect(fouten).toEqual([]);
 });

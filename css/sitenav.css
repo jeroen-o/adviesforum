@@ -1,18 +1,18 @@
-/* Vaste navigatiebalk van het Adviesforum (tools/sitenav.js), huisstijl Venn (indigo, oranje, mint; afgeleid uit het Venn-logo). Donker in licht en donker thema. */
-.sitenav{background:#181A3D;color:#fff;font-family:Segoe UI,Roboto,Helvetica Neue,Arial,system-ui,sans-serif;font-size:13.5px;line-height:1.4;border-bottom:3px solid #F68712;border-image:linear-gradient(90deg,#F68712,#F14A1C 45%,#73D1E1) 1}
+/* Vaste navigatiebalk van het Adviesforum (tools/sitenav.js), huisstijl op basis van Venn: indigo (aangepast, #26306E), oranje, mint, plus turquoise (#0B7C77/#14B8B0). Donker in licht en donker thema. */
+.sitenav{background:#26306E;color:#fff;font-family:Segoe UI,Roboto,Helvetica Neue,Arial,system-ui,sans-serif;font-size:13.5px;line-height:1.4;border-bottom:3px solid #F68712;border-image:linear-gradient(90deg,#F68712,#F14A1C 45%,#14B8B0) 1}
 .sitenav-in{max-width:1180px;margin:0 auto;padding:8px 24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 18px}
 .sitenav-merk{display:inline-flex;align-items:center;gap:9px;color:#fff;font-weight:700;font-size:16px;letter-spacing:-.01em;text-decoration:none}
-.sitenav-teken{width:28px;height:28px;border-radius:7px;background:linear-gradient(135deg,#F68712,#F14A1C);color:#181A3D;display:grid;place-items:center;font-weight:800;font-size:14px;flex:none}
+.sitenav-teken{width:28px;height:28px;border-radius:7px;background:linear-gradient(135deg,#F68712,#F14A1C);color:#26306E;display:grid;place-items:center;font-weight:800;font-size:14px;flex:none}
 .sitenav-zoek{flex:1 1 260px;max-width:460px;display:flex;margin:0}
-.sitenav-zoek input{flex:1;min-width:0;font:inherit;font-size:14px;padding:7px 12px;border:1px solid #2A2C55;border-right:0;border-radius:7px 0 0 7px;background:#fff;color:#1E2040}
+.sitenav-zoek input{flex:1;min-width:0;font:inherit;font-size:14px;padding:7px 12px;border:1px solid #1C2456;border-right:0;border-radius:7px 0 0 7px;background:#fff;color:#1E2040}
 .sitenav-zoek input::placeholder{color:#55576F}
-.sitenav-zoek button{font:inherit;font-size:13.5px;font-weight:700;padding:7px 14px;border:0;border-radius:0 7px 7px 0;background:#F68712;color:#181A3D;cursor:pointer}
+.sitenav-zoek button{font:inherit;font-size:13.5px;font-weight:700;padding:7px 14px;border:0;border-radius:0 7px 7px 0;background:#F68712;color:#26306E;cursor:pointer}
 .sitenav-zoek button:hover{background:#F9A54D}
 .sitenav ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:2px 4px}
 .sitenav li{margin:0}
 .sitenav ul a{display:inline-block;color:#fff;text-decoration:none;padding:5px 9px;border-radius:6px;font-weight:600}
 .sitenav a:hover{text-decoration:underline}
 .sitenav a:focus-visible,.sitenav-zoek input:focus-visible,.sitenav-zoek button:focus-visible{outline:3px solid #F68712;outline-offset:2px}
-.sitenav ul a[aria-current="page"]{background:#F68712;color:#181A3D}
+.sitenav ul a[aria-current="page"]{background:#F68712;color:#26306E}
 @media (max-width:640px){.sitenav-in{padding:8px 16px}.sitenav ul a{padding:5px 7px}.sitenav-zoek{order:3;flex-basis:100%;max-width:none}}
 @media print{.sitenav{display:none}}

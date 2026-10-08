@@ -22,8 +22,8 @@
 <style>
 
 :root{
-  --bg:#F7F7FA;--surface:#FFFFFF;--surface-2:#F7F7FA;--border:#E3E3EC;--text:#1E2040;--muted:#55576F;--black:#181A3D;
-  --accent:#1D7F8C;--accent-deep:#2A2C55;--accent-soft:#E6F6F1;--yellow:#F68712;--yellow-soft:#FEF0E2;--ink-on-yellow:#181A3D;
+  --bg:#F7F7FA;--surface:#FFFFFF;--surface-2:#F7F7FA;--border:#E3E3EC;--text:#1E2040;--muted:#55576F;--black:#26306E;
+  --accent:#0B7C77;--accent-deep:#1C2456;--accent-soft:#E6F6F1;--yellow:#F68712;--yellow-soft:#FEF0E2;--ink-on-yellow:#26306E;
   --ok:#1F7A52;--ok-soft:#E3F3EA;--warn:#7A5500;--warn-soft:#FEF0E2;--danger:#9E2F45;--header:#FFFFFF;--header-2:#F7F7FA;--header-border:#E3E3EC;
   --hex:inset(0 round 10px);
   --r:6px;--shadow:0 1px 2px rgba(29,38,50,.06);
@@ -32,20 +32,20 @@
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]){
     --bg:#0E0F24;--surface:#15172F;--surface-2:#1C1E3B;--border:#30325A;--text:#E9EFF3;--muted:#A8B3BD;
-    --accent:#73D1E1;--accent-deep:#95DBC4;--accent-soft:#262850;--yellow-soft:#3A3410;--ok-soft:#1D3327;--warn-soft:#3A3410;--warn:#E3C04B;
+    --accent:#14B8B0;--accent-deep:#95DBC4;--accent-soft:#262850;--yellow-soft:#3A3410;--ok-soft:#1D3327;--warn-soft:#3A3410;--warn:#E3C04B;
     --header:#0A0B1C;--header-2:#121330;--header-border:#2A3744;--shadow:none;
   }
 }
 :root[data-theme="dark"]{
   --bg:#0E0F24;--surface:#15172F;--surface-2:#1C1E3B;--border:#30325A;--text:#E9EFF3;--muted:#A8B3BD;
-  --accent:#73D1E1;--accent-deep:#95DBC4;--accent-soft:#262850;--yellow-soft:#3A3410;--ok-soft:#1D3327;--warn-soft:#3A3410;--warn:#E3C04B;
+  --accent:#14B8B0;--accent-deep:#95DBC4;--accent-soft:#262850;--yellow-soft:#3A3410;--ok-soft:#1D3327;--warn-soft:#3A3410;--warn:#E3C04B;
   --header:#0A0B1C;--header-2:#121330;--header-border:#2A3744;--shadow:none;
 }
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
 *,*::before,*::after{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--text);font-family:Segoe UI,Roboto,Helvetica Neue,Arial,"Segoe UI",system-ui,-apple-system,sans-serif;font-size:15px;line-height:1.55}
 button,input,select,textarea{font:inherit;color:inherit}
-a{color:var(--accent-deep)}
+a{color:var(--accent)}
 h1,h2,h3{margin:0;line-height:1.25;letter-spacing:-.01em}
 h1{font-size:26px;font-weight:800}
 h2{font-size:18px;font-weight:700}
@@ -53,7 +53,7 @@ h2{font-size:18px;font-weight:700}
 h3{font-size:15px;font-weight:600}
 p{margin:0 0 12px}
 ul{margin:0 0 12px;padding-left:20px}
-:focus-visible{outline:3px solid var(--yellow);outline-offset:2px;border-radius:4px}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:4px}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 
 /* Utility-balk */
@@ -67,6 +67,9 @@ ul{margin:0 0 12px;padding-left:20px}
 .top{background:#FFFFFF;color:#1E2040;border-bottom:1px solid #E3E3EC}
 .top .wrap{max-width:1240px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
 .brand{display:flex;align-items:center;gap:14px;cursor:pointer;background:none;border:0;padding:0;color:#1E2040;text-align:left}
+.top .brand,.top .search{display:none}
+.top .wrap{justify-content:flex-end}
+.top .btn-black{background:var(--yellow);color:var(--black)}
 .brand .logo{width:40px;height:40px;border-radius:9px;background:linear-gradient(135deg,var(--yellow),#F14A1C);color:var(--black);display:grid;place-items:center;font-weight:800;font-size:19px;flex:none}
 .brand-sep{width:1px;height:34px;background:#C3C4D3}
 .brand-name{font-size:17px;font-weight:700;letter-spacing:-.01em;white-space:nowrap}
@@ -125,9 +128,12 @@ h2[id],h3[id],details[id],.guide [id]{scroll-margin-top:calc(var(--kop-h,170px) 
 @media (max-height:500px){.sticky-kop{position:static}h2[id],h3[id],details[id],.guide [id]{scroll-margin-top:12px}}
 @media (max-width:700px){.sticky-kop .top .wrap{padding:8px 14px;gap:8px;flex-wrap:wrap}.sticky-kop .top .search{order:10;flex:1 1 100%}.sticky-kop .top .who{margin-left:auto}.sticky-kop .top .who .btn,.sticky-kop .top>.wrap>.btn{padding:7px 10px;font-size:12px}.sticky-kop .top .search input{padding:8px 12px}.sticky-kop .tabs .wrap{padding:6px 14px}.sticky-kop .tab{padding:6px 12px}.sticky-kop .logo{height:26px;width:auto}.sticky-kop .brand-sep,.sticky-kop .brand-name{display:none}}
 .tabs .wrap{max-width:1240px;margin:0 auto;padding:10px 20px;display:flex;gap:8px;overflow-x:auto}
+a.tab{text-decoration:none;display:inline-flex;align-items:center;border-color:var(--accent);color:var(--accent)}
 .tab{padding:8px 16px;border:1px solid var(--border);border-radius:999px;background:var(--surface);font-weight:600;color:var(--text);cursor:pointer;white-space:nowrap}
 .tab:hover{border-color:var(--text)}
-.tab.on{background:var(--yellow);border-color:var(--yellow);color:var(--black)}
+.tab.on{background:var(--accent);border-color:var(--accent);color:#fff}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .tab.on{color:#0A0B1C}}
+:root[data-theme="dark"] .tab.on{color:#0A0B1C}
 .tab .n{display:inline-block;margin-left:6px;padding:1px 7px;border-radius:999px;background:rgba(0,0,0,.08);font-size:12px;color:inherit}
 
 /* Raster */
@@ -452,13 +458,13 @@ details>summary{min-height:36px}
 .tool .tp,.verif,.tbl .who-cell span.verif,.expert,.hex span{font-size:12px}
 
 /* Toegankelijkheid: skiplink, contrast in donkere modus, klikdoelen */
-.skiplink{position:absolute;left:8px;top:-60px;z-index:200;background:#181A3D;color:#fff;padding:10px 14px;border-radius:6px;font-weight:700;text-decoration:none}
+.skiplink{position:absolute;left:8px;top:-60px;z-index:200;background:#26306E;color:#fff;padding:10px 14px;border-radius:6px;font-weight:700;text-decoration:none}
 .skiplink:focus{top:8px}
 #app:focus{outline:none}
-.cats button.on .n{color:#181A3D}
+.cats button.on .n{color:#26306E}
 p>button[data-act="tab"]{min-height:28px;padding:4px 2px}
 footer a{display:inline-block;padding:4px 0}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .top,:root:not([data-theme="light"]) .sticky-kop .top{background:var(--header);color:var(--text);border-bottom-color:var(--header-border)}:root:not([data-theme="light"]) .skiplink{background:#F68712;color:#181A3D}}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .top,:root:not([data-theme="light"]) .sticky-kop .top{background:var(--header);color:var(--text);border-bottom-color:var(--header-border)}:root:not([data-theme="light"]) .skiplink{background:#F68712;color:#26306E}}
 :root[data-theme="dark"] .top,:root[data-theme="dark"] .sticky-kop .top{background:var(--header);color:var(--text);border-bottom-color:var(--header-border)}
 /* Favorieten en volgen (functionele cookie af_favorieten) */
 .fav-knop[aria-pressed="true"],.volg-knop[aria-pressed="true"]{background:var(--yellow-soft);border-color:var(--yellow);color:var(--text)}
@@ -1216,8 +1222,8 @@ function renderShell(){
   $('#who').innerHTML=S.me?`<span class="ikn">${esc(me().naam)}</span>${verif(me())}<button class="btn btn-line btn-sm" data-act="uitloggen">Uitloggen</button>`:`<button class="btn btn-line btn-sm" data-act="inloggen">Inloggen adviseur</button>`;
   const open=VRAGEN.filter(v=>vraagStatus(v)==='open').length;
   $('#tabs').innerHTML=[
-    ['forum','Forum',VRAGEN.length],['kennisbank','Kennisbank',KENNIS_GELADEN?ARTIKELEN.length:null],['faq','FAQ',FAQ_GELADEN?FAQ.length:null],['hulpmiddelen','Hulpmiddelen',HULP.length],['begrippen','Begrippen A-Z',BEGRIPPEN.length],['adviseurs','Adviseurs',USERS.length],['favorieten','★ Mijn favorieten',FAV.fav.length||null],['handleiding','Handleiding',null],['voorwie','Voor wie',null]
-  ].map(([id,t,n])=>`<button class="tab ${S.tab===id?'on':''}" data-act="tab" data-tab="${id}">${t}${n!=null?`<span class="n">${fmtInt(n)}</span>`:''}</button>`).join('')
+    ['forum','Forum',VRAGEN.length],['vergelijker','Voorwaarden vergelijken',null,'voorwaarden-vergelijker.html'],['kennisbank','Kennisbank',KENNIS_GELADEN?ARTIKELEN.length:null],['faq','FAQ',FAQ_GELADEN?FAQ.length:null],['hulpmiddelen','Hulpmiddelen',HULP.length],['begrippen','Begrippen A-Z',BEGRIPPEN.length],['adviseurs','Adviseurs',USERS.length],['favorieten','★ Mijn favorieten',FAV.fav.length||null],['handleiding','Handleiding',null],['voorwie','Voor wie',null]
+  ].map(([id,t,n,href])=>href?`<a class="tab" href="${href}">${t}</a>`:`<button class="tab ${S.tab===id?'on':''}" data-act="tab" data-tab="${id}">${t}${n!=null?`<span class="n">${fmtInt(n)}</span>`:''}</button>`).join('')
   +(open?`<span style="margin-left:auto;align-self:center;font-size:13px;color:var(--muted);padding:0 8px;white-space:nowrap">${plural(open,'onbeantwoorde vraag','onbeantwoorde vragen')}</span>`:'');
 }
 
@@ -1231,6 +1237,7 @@ function zetTitel(){const T={forum:'Forum',nieuw:'Vraag stellen',kennisbank:'Ken
   else if(S.view==='forum'&&S.cat!=='alle'&&cat(S.cat))t=cat(S.cat).naam;
   document.title=t+' – Adviesforum';}
 function render(keepScroll){
+  {const i=document.querySelector('.sitenav-zoek input'),z=$('#search');if(i&&z&&document.activeElement!==i&&i.value!==z.value)i.value=z.value;}
   if(S.me&&S.bron)S.bron=null; // na inloggen blijft de bron-markering niet hangen
   renderShell();
   $('#hero').innerHTML=heroZichtbaar()?heroHtml():'';
@@ -1975,6 +1982,10 @@ document.addEventListener('submit',async e=>{if(e.target.id!=='f-login')return;e
   S.me=u.id;zetCookie(code,f.onthoud.checked);$('#login-dlg').close();render(true);toast('Welkom terug, '+u.naam);},true);
 document.addEventListener('click',e=>{if(e.target.closest('[data-act="login-sluit"]')){const d=$('#login-dlg');if(d)d.close();}});
 herstelLogin();
+/* De zoekbalk in de navigatie bovenaan is op de homepage het zoekveld: hij zoekt direct mee via het (verborgen) #search. */
+(function(){const f=document.querySelector('.sitenav-zoek');if(!f)return;const i=f.querySelector('input');
+  const door=()=>{const s=$('#search');s.value=i.value;s.dispatchEvent(new Event('input',{bubbles:true}));};
+  i.addEventListener('input',door);f.addEventListener('submit',e=>{e.preventDefault();door();});})();
 $('#search').addEventListener('input',e=>{
   const was=S.q.trim();
   S.q=e.target.value;if(S.q.trim()){laadKennis();laadFaq();laadExtra();}
