@@ -11,7 +11,7 @@ const BRON_VOORWAARDEN = ['Zzp / ondernemer', 'Flexwerk & uitzend', 'Perspectief
   'Rentevastperioden', 'Dagrentegarantie', 'Geldigheidsduur aanbod', 'Boetevrij aflossen', 'Risicoklassen & LTV-daling',
   'Looptijd bouwdepot', 'Rentevergoeding depot', 'Declaratie & uitbetaling', 'Energiebespaarbudget', 'Verduurzamingsvoordeel',
   'Verhuisregeling', 'Onderhandse verkoop', 'Ontslag hoofdelijkheid', 'Verhoging / 2e hypotheek', 'Overbruggingskrediet', 'Bron / peildatum'];
-const TOTAAL = 50, HOOFD = 43, OVERIG = 7, VOORWAARDEN = 32, INGEVULD = 32;
+const TOTAAL = 50, HOOFD = 43, OVERIG = 7, VOORWAARDEN = 44, INGEVULD = 32;
 
 const rijen = page => page.locator('#matrix tbody tr[data-id]');
 const exact = naam => new RegExp('^' + naam.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '$');
@@ -47,7 +47,7 @@ test.describe('voorwaardenvergelijker', () => {
     // brondata 1-op-1, inclusief kleurcode
     const abn = rij(page, 'ABN AMRO');
     await expect(abn).toContainText('1 jaar met Inkomensverklaring Ondernemer (NHG); 3 jaar daarbuiten');
-    await expect(abn.locator('td.val').nth(4).locator('.tint')).toHaveClass(/t-a/);
+    await expect(abn.locator('td.val').nth(10).locator('.tint')).toHaveClass(/t-a/); // Erfpacht (na de nieuwe acceptatievoorwaarden)
     // overige financiers inklapbaar
     await page.locator('#overigKnop').click();
     await expect(page.locator('#overigKnop')).toHaveAttribute('aria-expanded', 'true');
@@ -526,4 +526,15 @@ test.describe('voorwaardenvergelijker: filters op geverifieerde waarden', () => 
     await page.locator('#ufWis').click();
     await expect(nv).toHaveCount(aantal);
   });
+});
+
+test('knop Meest gezocht kiest de veelgezochte voorwaarden in volgorde van zoekvolume', async ({ page }) => {
+  await page.goto('/voorwaarden-vergelijker.html');
+  await page.locator('#tab-cmp').click();
+  const knop = page.locator('#kenmChips button', { hasText: 'Meest gezocht' });
+  await knop.click();
+  await expect(knop).toHaveAttribute('aria-pressed', 'true');
+  await expect(page.locator('#kenmTeller')).toHaveText(/^20 van 44 gekozen$/);
+  await expect(page).toHaveURL(/[#&]k=[^&]*ovbr/);
+  await expect(page).toHaveURL(/[#&]k=[^&]*cons/);
 });

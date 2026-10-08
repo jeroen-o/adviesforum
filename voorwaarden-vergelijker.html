@@ -1117,7 +1117,19 @@ const EXTRA_CRITS = [
   {"id":"bprov","cat":"P","naam":"Offerte verlengen","kort":"Bereidstellingsprovisie bij verlenging","waarom":"Duurt de aankoop of bouw langer dan de geldigheid van de offerte, dan rekenen sommige verstrekkers een provisie per maand verlenging en andere niets. Dat bepaalt of je de offerterente goedkoop kunt vasthouden.","genoemdDoor":["Independer (bron niet geverifieerd)"],"bronnen":["https://www.actuelerentestanden.nl/?p=129319"]},
   {"id":"wkost","cat":"N","naam":"Kosten van wijzigingen","kort":"Administratiekosten bij aanpassing","waarom":"Voor renteverlenging, renteaanpassing of het verlagen van de risico-opslag rekent de ene verstrekker niets en de andere een vast bedrag. Bij meerdere wijzigingen tijdens de looptijd telt dat op.","genoemdDoor":["Vereniging Eigen Huis"],"bronnen":["https://internetconsultatie.nl/regelinghypothecairkrediet2024/reactie/232047/bestand"]},
   {"id":"avlt","cat":"N","naam":"Einde looptijd aflosvrij","kort":"Verlengen aflossingsvrij deel na 30 jaar","waarom":"Veel oude aflossingsvrije leningen lopen af terwijl de eigenaar al ouder is. Een verstrekker die de looptijd wil verlengen voorkomt dat je moet verkopen of herfinancieren op een lastig moment.","genoemdDoor":["Vereniging Eigen Huis"],"bronnen":["https://nos.nl/l/2294137","https://nos.nl/l/2252623"]},
-  {"id":"bproc","cat":"N","naam":"Hulp bij betalingsproblemen","kort":"Beleid bij (dreigende) achterstand","waarom":"Hoe soepel een verstrekker meedenkt bij geldzorgen, bijvoorbeeld met tijdelijke verlaging, uitstel of rentemiddeling, bepaalt of een tijdelijke tegenvaller uitmondt in een achterstand of gedwongen verkoop.","genoemdDoor":["Vereniging Eigen Huis"],"bronnen":["https://www.banken.nl/nieuws/808/vereniging-eigen-huis-opent-meldpunt-betalingsproblemen","https://www.taxlive.nl/nl/documenten/nieuws/banken-moeten-huiseigenaren-met-betalingsproblemen-helpen/"]}
+  {"id":"bproc","cat":"N","naam":"Hulp bij betalingsproblemen","kort":"Beleid bij (dreigende) achterstand","waarom":"Hoe soepel een verstrekker meedenkt bij geldzorgen, bijvoorbeeld met tijdelijke verlaging, uitstel of rentemiddeling, bepaalt of een tijdelijke tegenvaller uitmondt in een achterstand of gedwongen verkoop.","genoemdDoor":["Vereniging Eigen Huis"],"bronnen":["https://www.banken.nl/nieuws/808/vereniging-eigen-huis-opent-meldpunt-betalingsproblemen","https://www.taxlive.nl/nl/documenten/nieuws/banken-moeten-huiseigenaren-met-betalingsproblemen-helpen/"]},
+  {"id":"bonus","cat":"A","naam":"Bonus en variabel inkomen","kort":"Bonus, 13e maand, provisie","na":"flex","waarom":"Bonus en ander variabel inkomen tellen alleen mee als het structureel is; welke bewijzen en welke middeling een verstrekker vraagt, verschilt. Veel gezocht door adviseurs."},
+  {"id":"ams","cat":"A","naam":"Arbeidsmarktscan","kort":"Arbeidsmarktscan als toetsinkomen","na":"persp","waarom":"De Arbeidsmarktscan beoordeelt het verdienvermogen van flexwerkers en zelfstandigen. Niet elke verstrekker accepteert die als basis voor het toetsinkomen."},
+  {"id":"pgb","cat":"A","naam":"Inkomen uit pgb","kort":"Persoonsgebonden budget als inkomen","na":"ams","waarom":"Wie als zorgverlener uit een persoonsgebonden budget wordt betaald, heeft niet bij elke verstrekker een erkend toetsinkomen."},
+  {"id":"huur","cat":"A","naam":"Huurinkomsten in toets","kort":"Verhuurinkomsten meetellen","na":"pgb","waarom":"Huurinkomsten, bijvoorbeeld uit kamerverhuur, tellen niet bij elke verstrekker mee in de inkomenstoets, en als ze meetellen vaak maar voor een deel."},
+  {"id":"lensch","cat":"A","naam":"Leen- en schenkingsconstructies","kort":"Familielening / schenking in de toets","na":"aow","waarom":"Een lening van ouders (familiebank) naast de hypotheek telt de ene verstrekker mee als financiële verplichting; de andere toetst op de werkelijke last of stelt voorwaarden."},
+  {"id":"aanv","cat":"A","naam":"Meer dan 2 aanvragers","kort":"Drie of meer aanvragers, familie samen","na":"lensch","waarom":"Samen kopen met drie of meer personen, of als ouder en kind samen, kan niet bij elke verstrekker."},
+  {"id":"desk","cat":"A","naam":"Modelmatige / desktoptaxatie","kort":"Marktwaarde zonder volledig taxatierapport","na":"erfp","waarom":"Een modelmatige waardebepaling is sneller en goedkoper dan een volledig taxatierapport, maar niet elke verstrekker accepteert die, en vaak alleen tot een bepaalde verstrekking."},
+  {"id":"vve","cat":"A","naam":"Niet-actieve VvE","kort":"Appartement zonder actieve VvE","na":"desk","waarom":"Bij een appartement met een slapende VvE ontbreken vaak een reservefonds en een onderhoudsplan; verstrekkers stellen dan eisen of financieren niet."},
+  {"id":"recr","cat":"A","naam":"Recreatiewoning","kort":"Financiering vakantie- of recreatiewoning","na":"vve","waarom":"Een recreatiewoning is geen eigen woning voor de belasting (geen hypotheekrenteaftrek). Niet elke verstrekker financiert die, en vaak gelden lagere maxima."},
+  {"id":"cons","cat":"P","naam":"Consumptief deel","kort":"Vrij besteedbaar deel in de hypotheek","na":"avrij","waarom":"Een deel van de hypotheek vrij besteden (bijvoorbeeld voor een auto of verbouwing elders) is fiscaal niet aftrekbaar en valt niet onder NHG. Of en hoeveel het mag, verschilt per verstrekker."},
+  {"id":"start","cat":"P","naam":"Starterslening","kort":"Starterslening naast de hypotheek","na":"cons","waarom":"Een starterslening (SVn of gemeente) komt naast de hypotheek. De verstrekker moet die accepteren en meenemen in de toets."},
+  {"id":"verhuur","cat":"N","naam":"Verhuur toegestaan","kort":"Woning (tijdelijk) verhuren","na":"verh","waarom":"Een eigen-woninghypotheek gaat ervan uit dat je er zelf woont. Verhuren of kamers verhuren mag vaak alleen met toestemming, soms tegen andere voorwaarden."}
 ];
 
 /* Ingevulde waarden voor aanvullende voorwaarden, per voorwaarde-id en verstrekkersnaam:
@@ -1206,6 +1218,7 @@ const HINTS = {
   'Woonfonds':'nu Centraal Beheer',
   'IQWOON':'geen nieuwe aanvragen',
   'Woonnu':'label gestopt per 1 mei 2026',
+  'Neo Hypotheken':'geen nieuwe klanten sinds 7 okt 2025',
   'Vrij Leven (Hypotrust)':'hypotheeklabel van Hypotrust'
 };
 /* Logo's uit img/logos/ (zie data/partijen.js, veld logo). Bewust GEEN logo
@@ -1242,6 +1255,9 @@ let editMode = false;
 let overigOpen = false;
 let activeCats = new Set(CATS.map(c=>c.id));
 const sel = new Set();
+/* Volgorde naar zoekvolume in de gebruiksanalyse van de FinData voorwaarden-app (jan-sep 2026): overbrugging, boetevrij
+   aflossen, offertegeldigheid, consumptief deel, leen/schenkingsconstructies, verhuisregeling, desktoptaxatie, dagrente enz. */
+const MEEST_GEZOCHT = ['ovbr','boete','geld','cons','lensch','verh','desk','dag','bprov','bonus','ams','vve','huur','recr','aanv','pgb','start','verhuur','bdduur','ltv'];
 let ksel = new Set();   // gekozen kenmerken (voorwaarde-id's) voor Vergelijken
 
 /* Uitgebreid zoeken en filteren. Staat alleen in het geheugen en in de hash (&f=…), nooit in browseropslag. */
@@ -1816,6 +1832,14 @@ function renderCmpPaneel(){
   alle.setAttribute('aria-pressed', String(alleAan));
   alle.addEventListener('click',()=>{ crits.forEach(c=>ksel.add(c.id)); render(); });
   chips.appendChild(alle);
+  /* Meest gezochte voorwaarden volgens de gebruiksanalyse van de FinData voorwaarden-app (jan-sep 2026), in volgorde van zoekvolume. */
+  const gezocht = MEEST_GEZOCHT.filter(id=>crits.some(c=>c.id===id));
+  const mg = el('button','chip','Meest gezocht'); mg.type = 'button'; mg.dataset.sleutel = 'kc:gezocht';
+  const mgAan = gezocht.length === ksel.size && gezocht.every(id=>ksel.has(id));
+  mg.setAttribute('aria-pressed', String(mgAan));
+  mg.title = 'De voorwaarden waarop adviseurs het vaakst zoeken (gebruiksanalyse FinData voorwaarden-app, januari t/m september 2026)';
+  mg.addEventListener('click',()=>{ ksel = new Set(gezocht); render(); });
+  chips.appendChild(mg);
   CATS.forEach(cat=>{
     const ids = crits.filter(c=>c.cat===cat.id).map(c=>c.id);
     if(!ids.length) return;
