@@ -197,7 +197,7 @@ window.AANBIEDERS=[
     "naam": "Voorbeeld Verzekeringen",
     "type": "verzekeraar",
     "initialen": "VV",
-    "kleur": "#2E7D4F",
+    "kleur": "#1F7A52",
     "omschrijving": "Fictieve verzekeraar als voorbeeld: overlijdensrisico- en arbeidsongeschiktheidsverzekeringen via het intermediair.",
     "website": "https://example.com/",
     "extranet": {

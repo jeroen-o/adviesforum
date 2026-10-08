@@ -4,60 +4,55 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Rekentools van Blinqx – Adviesforum</title>
-<link rel="canonical" href="https://jeroen-o.github.io/adviesforum/rekentools-blinqx.html">
-<meta property="og:url" content="https://jeroen-o.github.io/adviesforum/rekentools-blinqx.html">
+<link rel="canonical" href="https://adviesforum.nl/rekentools-blinqx.html">
+<meta property="og:url" content="https://adviesforum.nl/rekentools-blinqx.html">
 <meta property="og:site_name" content="Adviesforum">
 <meta property="og:locale" content="nl_NL">
-<meta name="theme-color" content="#FFD200">
+<meta name="theme-color" content="#F5A623">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="description" content="Rekentools van Blinqx op het Adviesforum: maximale hypotheek, maandlasten, aflossen, ORV, woningwaarde, inventarisatie en meer. De tools laden pas na een klik.">
-<meta name="googlebot" content="noindex, follow">
-<meta name="bingbot" content="noindex, follow">
 <meta property="og:title" content="Rekentools van Blinqx – Adviesforum">
 <meta property="og:description" content="Rekentools van Blinqx: hypotheek, maandlasten, aflossen, ORV, woningwaarde en meer.">
 <meta property="og:type" content="website">
 <style>
-@font-face{font-family:Montserrat;font-style:normal;font-weight:400;font-display:swap;src:url(fonts/montserrat-latin-400-normal.woff2) format('woff2')}
-@font-face{font-family:Montserrat;font-style:normal;font-weight:700;font-display:swap;src:url(fonts/montserrat-latin-700-normal.woff2) format('woff2')}
-@font-face{font-family:Montserrat;font-style:normal;font-weight:800;font-display:swap;src:url(fonts/montserrat-latin-800-normal.woff2) format('woff2')}
 :root{
-  --geel-donker:#E6BD00;--geel-zacht:#FFF6C7;--tekst:#1F1F1F;--grijs:#5E5E5E;--lijn:#E4E4E4;--vlak:#F7F7F5;--wit:#fff;
-  --rood:#C0392B;--rood-zacht:#FFF1F0;--rood-tekst:#7A1F14;--oranje:#9A5B00;--oranje-zacht:#FFF4E0;--groen:#1F7A52;--groen-zacht:#E8F5EE;--blauw:#1F4E79;
-  --kop:#FFD200;--kop-tekst:#141414;--body:#fff;
+  --geel-donker:#D98E0F;--geel-zacht:#FDF3E2;--tekst:#112033;--grijs:#4A5765;--lijn:#DCE3EB;--vlak:#F5F7FA;--wit:#fff;
+  --rood:#9E2F45;--rood-zacht:#FFF1F0;--rood-tekst:#7A1F14;--oranje:#9A5B00;--oranje-zacht:#FFF4E0;--groen:#1F7A52;--groen-zacht:#E8F5EE;--blauw:#1F4E79;
+  --kop:#0C2340;--kop-tekst:#FFFFFF;--body:#fff;
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --geel-zacht:#3f3918;--tekst:#F2F2F2;--grijs:#BDBDBD;--lijn:#333;--vlak:#262626;--wit:#1E1E1E;--rood-zacht:#3f1a18;--rood-tekst:#f3c2bd;
-  --oranje:#f6cb8e;--oranje-zacht:#3f3118;--groen:#9de7c1;--groen-zacht:#1b3328;--blauw:#9ec3e6;--kop:#1E1E1E;--kop-tekst:#F2F2F2;--body:#141414;color-scheme:dark}}
+  --geel-zacht:#3F3018;--tekst:#EDF1F6;--grijs:#B8C4D1;--lijn:#333;--vlak:#162538;--wit:#0F1B2B;--rood-zacht:#3f1a18;--rood-tekst:#f3c2bd;
+  --oranje:#f6cb8e;--oranje-zacht:#3f3118;--groen:#9de7c1;--groen-zacht:#1b3328;--blauw:#9ec3e6;--kop:#0F1B2B;--kop-tekst:#EDF1F6;--body:#0C2340;color-scheme:dark}}
 :root[data-theme="dark"]{
-  --geel-zacht:#3f3918;--tekst:#F2F2F2;--grijs:#BDBDBD;--lijn:#333;--vlak:#262626;--wit:#1E1E1E;--rood-zacht:#3f1a18;--rood-tekst:#f3c2bd;
-  --oranje:#f6cb8e;--oranje-zacht:#3f3118;--groen:#9de7c1;--groen-zacht:#1b3328;--blauw:#9ec3e6;--kop:#1E1E1E;--kop-tekst:#F2F2F2;--body:#141414;color-scheme:dark}
+  --geel-zacht:#3F3018;--tekst:#EDF1F6;--grijs:#B8C4D1;--lijn:#333;--vlak:#162538;--wit:#0F1B2B;--rood-zacht:#3f1a18;--rood-tekst:#f3c2bd;
+  --oranje:#f6cb8e;--oranje-zacht:#3f3118;--groen:#9de7c1;--groen-zacht:#1b3328;--blauw:#9ec3e6;--kop:#0F1B2B;--kop-tekst:#EDF1F6;--body:#0C2340;color-scheme:dark}
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
-body{font-family:Montserrat,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;color:var(--tekst);background:var(--body);line-height:1.55;font-size:15px;overflow-x:hidden}
+body{font-family:Segoe UI,Roboto,Helvetica Neue,Arial,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;color:var(--tekst);background:var(--body);line-height:1.55;font-size:15px;overflow-x:hidden}
 a{color:inherit}
 button,input{font-family:inherit}
 [hidden]{display:none!important}
-.skiplink{position:absolute;left:-9999px}.skiplink:focus{left:12px;top:12px;background:#FFD200;color:#141414;padding:8px 12px;z-index:9}
-.balk{background:#141414;color:#fff;font-size:12.5px;padding:8px 16px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.skiplink{position:absolute;left:-9999px}.skiplink:focus{left:12px;top:12px;background:#F5A623;color:#0C2340;padding:8px 12px;z-index:9}
+.balk{background:#0C2340;color:#fff;font-size:12.5px;padding:8px 16px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 .balk a{color:#fff;text-decoration:none;opacity:.88}.balk a:hover{opacity:1;text-decoration:underline}
-.kop{background:var(--kop);color:var(--kop-tekst);padding:30px 16px 34px;border-bottom:3px solid #FFD200}
+.kop{background:var(--kop);color:var(--kop-tekst);padding:30px 16px 34px;border-bottom:3px solid #F5A623}
 .kop-in,.romp{max-width:1100px;margin:0 auto}
 .merk{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.08em;font-size:12px;text-transform:uppercase;margin-bottom:14px}
-.zeshoek{width:22px;height:25px;background:currentColor;clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);flex:none}
+.zeshoek{width:22px;height:22px;background:#F5A623;border-radius:7px;flex:none}
 .terugs{display:flex;gap:8px 18px;flex-wrap:wrap;margin-bottom:12px}
 .terug{font-size:13.5px;font-weight:700;text-decoration:none;border-bottom:2px solid currentColor}
 .kop h1{margin:0 0 10px;font-size:clamp(26px,4.2vw,38px);line-height:1.12;font-weight:800}
 .kop p{margin:0;max-width:72ch}
 .kop p a{color:inherit;font-weight:700;text-decoration:underline}
-.kop p.eigen{margin-top:12px;padding:10px 14px;border-radius:10px;background:rgba(255,255,255,.55);max-width:72ch}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .kop p.eigen{background:#2a2a2a}}
-:root[data-theme="dark"] .kop p.eigen{background:#2a2a2a}
+.kop p.eigen{margin-top:12px;padding:10px 14px;border-radius:10px;background:#1B2C42;color:#fff;max-width:72ch}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .kop p.eigen{background:#1B2C42}}
+:root[data-theme="dark"] .kop p.eigen{background:#1B2C42}
 .romp{padding:22px 16px 56px}
 .compliance{border:2px solid var(--rood);border-left-width:8px;border-radius:0 12px 12px 0;padding:12px 16px;margin:0 0 18px;background:var(--rood-zacht);color:var(--rood-tekst);font-size:14px}
 .compliance h2,.compliance h3{margin:0 0 4px;font-size:14px;font-weight:800;text-transform:uppercase;letter-spacing:.03em}
 .compliance ul{margin:0;padding-left:18px}
-.info{border:1px solid var(--lijn);border-left:6px solid #FFD200;border-radius:0 12px 12px 0;padding:12px 16px;margin:0 0 18px;background:var(--vlak);font-size:14px}
+.info{border:1px solid var(--lijn);border-left:6px solid #F5A623;border-radius:0 12px 12px 0;padding:12px 16px;margin:0 0 18px;background:var(--vlak);font-size:14px}
 .info p{margin:0 0 6px}.info p:last-child{margin:0}
 h2.groep{font-size:20px;margin:28px 0 10px}
 .tools{display:grid;gap:12px}
@@ -67,7 +62,7 @@ h2.groep{font-size:20px;margin:28px 0 10px}
 .tool p{margin:4px 0 0;font-size:14px;color:var(--grijs)}
 .tool-acties{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
 .tool-acties a{font-size:13.5px}
-.knop{border:1px solid var(--geel-donker);background:#FFD200;color:#141414;border-radius:999px;padding:7px 14px;font-weight:700;font-size:14px;cursor:pointer;min-height:38px}
+.knop{border:1px solid var(--geel-donker);background:#F5A623;color:#0C2340;border-radius:999px;padding:7px 14px;font-weight:700;font-size:14px;cursor:pointer;min-height:38px}
 .vak{margin-top:12px}
 /* Ruime minimale hoogte: de tools passen hun hoogte zelf aan (iframeResizer), maar zakken nooit onder deze maat. */
 .vak iframe{display:block;width:100%;min-height:max(900px,88vh);border:0;background:#fff;border-radius:10px}
@@ -79,7 +74,7 @@ h2.groep{font-size:20px;margin:28px 0 10px}
 <body>
 <a class="skiplink" href="#inhoud">Naar de inhoud</a>
 <!-- sitenav: gegenereerd door tools/sitenav.js, niet met de hand wijzigen -->
-<nav class="sitenav" aria-label="Adviesforum"><div class="sitenav-in"><a class="sitenav-merk" href="index.html">Adviesforum</a><ul><li><a href="index.html">Home</a></li><li><a href="voorwaarden.html">Voorwaarden</a></li><li><a href="index.html#hulpmiddelen">Hulpmiddelen</a></li><li><a href="laatste.html">Laatste nieuws</a></li><li><a href="aanmelden.html">Aanmelden</a></li></ul></div></nav>
+<nav class="sitenav" aria-label="Adviesforum"><div class="sitenav-in"><a class="sitenav-merk" href="index.html"><span class="sitenav-teken" aria-hidden="true">A</span>Adviesforum</a><form class="sitenav-zoek" action="index.html" method="get" role="search"><input type="search" name="zoek" placeholder="Zoek op de hele site" aria-label="Zoek op de hele site" autocomplete="off"><button type="submit">Zoeken</button></form><ul><li><a href="index.html">Home</a></li><li><a href="voorwaarden.html">Voorwaarden</a></li><li><a href="index.html#hulpmiddelen">Hulpmiddelen</a></li><li><a href="laatste.html">Laatste nieuws</a></li><li><a href="aanmelden.html">Aanmelden</a></li></ul></div></nav>
 <!-- /sitenav -->
 
 <header class="kop">

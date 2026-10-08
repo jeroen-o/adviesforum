@@ -18,7 +18,7 @@
  *   INTERCOM_TOKEN       verplicht, access token van de Intercom-app
  *   INTERCOM_REGION      eu (standaard) | us | au
  *   INTERCOM_VERSION     API-versie (standaard 2.14)
- *   SITE_BASE            canonieke basis-URL (standaard https://jeroen-o.github.io/adviesforum)
+ *   SITE_BASE            canonieke basis-URL (standaard https://adviesforum.nl/)
  *
  * Configuratie: scripts/intercom-sync.config.json (zie --bootstrap)
  */
@@ -36,7 +36,7 @@ const MAP_PATH = path.join(ROOT, 'data', 'intercom-map.json');
 const TOKEN = process.env.INTERCOM_TOKEN;
 const REGION = (process.env.INTERCOM_REGION || 'eu').toLowerCase();
 const VERSION = process.env.INTERCOM_VERSION || '2.14';
-const SITE_BASE = (process.env.SITE_BASE || 'https://jeroen-o.github.io/adviesforum').replace(/\/$/, '');
+const SITE_BASE = (process.env.SITE_BASE || 'https://adviesforum.nl/').replace(/\/$/, '');
 
 const BASE = { eu: 'https://api.eu.intercom.io', us: 'https://api.intercom.io', au: 'https://api.au.intercom.io' }[REGION];
 if (!BASE) fail(`Onbekende INTERCOM_REGION: ${REGION}`);

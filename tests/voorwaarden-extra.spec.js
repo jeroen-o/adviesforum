@@ -161,9 +161,9 @@ test('node tools/bronnen-lijst.js --check: bronnenlijst voor de linkcontrole is 
 });
 test('Klopt dit niet? opent een voorbereide mail in vergelijker en productvoorwaarden', async ({ page }) => {
   await page.goto('/voorwaarden-vergelijker.html#vergelijk=bunq&k=zzp');
-  await expect(page.locator('td.val .meld').first()).toHaveAttribute('href', /^mailto:forumadvies@gmail\.com\?subject=Correctie/);
+  await expect(page.locator('td.val .meld').first()).toHaveAttribute('href', /^mailto:jeroen@oversteegen\.nl\?subject=Correctie/);
   await page.goto('/productvoorwaarden.html#p=orv');
-  await expect(page.locator('#tabel td .meld').first()).toHaveAttribute('href', /^mailto:forumadvies@gmail\.com\?subject=Correctie/);
+  await expect(page.locator('#tabel td .meld').first()).toHaveAttribute('href', /^mailto:jeroen@oversteegen\.nl\?subject=Correctie/);
   await expect(page.locator('#tabel td .bron a', { hasText: 'archief' }).first()).toHaveAttribute('href', /^https:\/\/web\.archive\.org\/web\//);
 });
 

@@ -23,7 +23,7 @@ test('balk heeft overal dezelfde vijf links en markeert de huidige pagina', asyn
     await page.goto(url);
     const nav = page.locator('nav.sitenav');
     await expect(nav.locator('ul a')).toHaveText(LINKS);
-    await expect(nav).toHaveCSS('background-color', 'rgb(26, 26, 26)');
+    await expect(nav).toHaveCSS('background-color', 'rgb(12, 35, 64)');
     if (huidig) await expect(nav.locator('a[aria-current="page"]')).toHaveText(huidig);
     else await expect(nav.locator('a[aria-current="page"]')).toHaveCount(0);
   }

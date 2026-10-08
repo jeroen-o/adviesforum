@@ -53,7 +53,7 @@ jobs:
       INTERCOM_TOKEN: ${{ secrets.INTERCOM_TOKEN }}
       INTERCOM_REGION: eu
       INTERCOM_VERSION: '2.14'
-      SITE_BASE: ${{ vars.SITE_BASE || 'https://jeroen-o.github.io/adviesforum' }}
+      SITE_BASE: ${{ vars.SITE_BASE || 'https://adviesforum.nl/' }}
 
     steps:
       - uses: actions/checkout@v5

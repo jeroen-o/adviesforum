@@ -37,7 +37,7 @@ test('vraag stellen vraagt contactgegevens en toont alleen de naam', async ({ pa
   await expect(page.locator('main')).not.toContainText('test@kantoor.nl');
   await expect(page.locator('.notice.ok')).toContainText('Verzenden');
   const mail = decodeURIComponent(await page.getAttribute('#mail-opnieuw', 'href'));
-  expect(mail).toMatch(/^mailto:forumadvies@gmail\.com\?subject=Nieuwe vraag Adviesforum: Overbrugging/);
+  expect(mail).toMatch(/^mailto:jeroen@oversteegen\.nl\?subject=Nieuwe vraag Adviesforum: Overbrugging/);
   expect(mail).toContain('Telefoonnummer: 0612345678');
   expect(mail).toContain('LinkedIn: https://linkedin.com/in/testadviseur');
   // automatisch antwoord zonder AI vindt de rekenhulp
@@ -55,7 +55,7 @@ test('aanmeldformulier zet een e-mail klaar voor de beheerder', async ({ page })
   await page.click('#verstuur');
   await expect(page.locator('#succes')).toBeVisible();
   const mail = decodeURIComponent(await page.getAttribute('#mail-opnieuw', 'href'));
-  expect(mail).toMatch(/^mailto:forumadvies@gmail\.com\?subject=Aanmelding adviseur: Sanne de Vries/);
+  expect(mail).toMatch(/^mailto:jeroen@oversteegen\.nl\?subject=Aanmelding adviseur: Sanne de Vries/);
   expect(mail).toContain('═══ 1. CONTACT ═══');
   expect(mail).toContain('Telefoonnummer: 06 12 34 56 78');
 });

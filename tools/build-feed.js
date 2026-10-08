@@ -23,7 +23,7 @@ const path = require('path');
 const vm = require('vm');
 
 const ROOT = path.join(__dirname, '..');
-const BASE = 'https://jeroen-o.github.io/adviesforum/';
+const BASE = 'https://adviesforum.nl/';
 const MAX_ITEMS = 50;
 
 function fout(msg) { console.error('build-feed: ' + msg); process.exit(1); }

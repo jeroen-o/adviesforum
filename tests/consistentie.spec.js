@@ -44,7 +44,7 @@ test('consistentie: elke pagina in de paginatests staat in de sitemap of is noin
   const sitemap = fs.readFileSync(path.join(ROOT, 'sitemap.xml'), 'utf8');
   const fout = PAGINAS.filter(p => {
     const html = fs.readFileSync(path.join(ROOT, p), 'utf8');
-    const loc = p === 'index.html' ? '/adviesforum/<' : '/' + p + '<';
+    const loc = p === 'index.html' ? 'adviesforum.nl/<' : '/' + p + '<';
     return !sitemap.includes(loc) && !/noindex/.test(html);
   });
   expect(fout).toEqual([]);

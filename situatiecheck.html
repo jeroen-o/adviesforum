@@ -4,47 +4,42 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Situatiecheck voorwaarden – Adviesforum</title>
-<link rel="canonical" href="https://jeroen-o.github.io/adviesforum/situatiecheck.html">
-<meta property="og:url" content="https://jeroen-o.github.io/adviesforum/situatiecheck.html">
+<link rel="canonical" href="https://adviesforum.nl/situatiecheck.html">
+<meta property="og:url" content="https://adviesforum.nl/situatiecheck.html">
 <meta property="og:site_name" content="Adviesforum">
 <meta property="og:locale" content="nl_NL">
-<meta name="theme-color" content="#FFD200">
+<meta name="theme-color" content="#F5A623">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="description" content="Vink de situatie van de klant aan en zie per geldverstrekker of dat volgens de gecontroleerde hypotheekvoorwaarden kan, met bron. Alfabetisch, zonder rangorde en zonder advies.">
-<meta name="googlebot" content="noindex, follow">
-<meta name="bingbot" content="noindex, follow">
 <meta property="og:title" content="Situatiecheck hypotheekvoorwaarden – Adviesforum">
 <meta property="og:description" content="Per geldverstrekker: kan deze klantsituatie volgens de gecontroleerde voorwaarden? Met bron, zonder rangorde of advies.">
 <meta property="og:type" content="website">
 <style>
-@font-face{font-family:Montserrat;font-style:normal;font-weight:400;font-display:swap;src:url(fonts/montserrat-latin-400-normal.woff2) format('woff2')}
-@font-face{font-family:Montserrat;font-style:normal;font-weight:700;font-display:swap;src:url(fonts/montserrat-latin-700-normal.woff2) format('woff2')}
-@font-face{font-family:Montserrat;font-style:normal;font-weight:800;font-display:swap;src:url(fonts/montserrat-latin-800-normal.woff2) format('woff2')}
 :root{
-  --geel-donker:#E6BD00;--geel-zacht:#FFF6C7;--tekst:#1F1F1F;--grijs:#5E5E5E;--lijn:#E4E4E4;--vlak:#F7F7F5;--wit:#fff;
-  --rood:#C0392B;--rood-zacht:#FFF1F0;--rood-tekst:#7A1F14;--oranje:#9A5B00;--oranje-zacht:#FFF4E0;--groen:#1F7A52;--groen-zacht:#E8F5EE;--blauw:#1F4E79;
-  --kop:#FFD200;--kop-tekst:#141414;--body:#fff;
+  --geel-donker:#D98E0F;--geel-zacht:#FDF3E2;--tekst:#112033;--grijs:#4A5765;--lijn:#DCE3EB;--vlak:#F5F7FA;--wit:#fff;
+  --rood:#9E2F45;--rood-zacht:#FFF1F0;--rood-tekst:#7A1F14;--oranje:#9A5B00;--oranje-zacht:#FFF4E0;--groen:#1F7A52;--groen-zacht:#E8F5EE;--blauw:#1F4E79;
+  --kop:#0C2340;--kop-tekst:#FFFFFF;--body:#fff;
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --geel-zacht:#3f3918;--tekst:#F2F2F2;--grijs:#BDBDBD;--lijn:#333;--vlak:#262626;--wit:#1E1E1E;--rood-zacht:#3f1a18;--rood-tekst:#f3c2bd;
-  --oranje:#f6cb8e;--oranje-zacht:#3f3118;--groen:#9de7c1;--groen-zacht:#1b3328;--blauw:#9ec3e6;--kop:#1E1E1E;--kop-tekst:#F2F2F2;--body:#141414;color-scheme:dark}}
+  --geel-zacht:#3F3018;--tekst:#EDF1F6;--grijs:#B8C4D1;--lijn:#333;--vlak:#162538;--wit:#0F1B2B;--rood-zacht:#3f1a18;--rood-tekst:#f3c2bd;
+  --oranje:#f6cb8e;--oranje-zacht:#3f3118;--groen:#9de7c1;--groen-zacht:#1b3328;--blauw:#9ec3e6;--kop:#0F1B2B;--kop-tekst:#EDF1F6;--body:#0C2340;color-scheme:dark}}
 :root[data-theme="dark"]{
-  --geel-zacht:#3f3918;--tekst:#F2F2F2;--grijs:#BDBDBD;--lijn:#333;--vlak:#262626;--wit:#1E1E1E;--rood-zacht:#3f1a18;--rood-tekst:#f3c2bd;
-  --oranje:#f6cb8e;--oranje-zacht:#3f3118;--groen:#9de7c1;--groen-zacht:#1b3328;--blauw:#9ec3e6;--kop:#1E1E1E;--kop-tekst:#F2F2F2;--body:#141414;color-scheme:dark}
+  --geel-zacht:#3F3018;--tekst:#EDF1F6;--grijs:#B8C4D1;--lijn:#333;--vlak:#162538;--wit:#0F1B2B;--rood-zacht:#3f1a18;--rood-tekst:#f3c2bd;
+  --oranje:#f6cb8e;--oranje-zacht:#3f3118;--groen:#9de7c1;--groen-zacht:#1b3328;--blauw:#9ec3e6;--kop:#0F1B2B;--kop-tekst:#EDF1F6;--body:#0C2340;color-scheme:dark}
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
-body{font-family:Montserrat,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;color:var(--tekst);background:var(--body);line-height:1.55;font-size:15px;overflow-x:hidden}
+body{font-family:Segoe UI,Roboto,Helvetica Neue,Arial,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;color:var(--tekst);background:var(--body);line-height:1.55;font-size:15px;overflow-x:hidden}
 a{color:inherit}
 button,input{font-family:inherit}
 [hidden]{display:none!important}
-.skiplink{position:absolute;left:-9999px}.skiplink:focus{left:12px;top:12px;background:#FFD200;color:#141414;padding:8px 12px;z-index:9}
-.balk{background:#141414;color:#fff;font-size:12.5px;padding:8px 16px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.skiplink{position:absolute;left:-9999px}.skiplink:focus{left:12px;top:12px;background:#F5A623;color:#0C2340;padding:8px 12px;z-index:9}
+.balk{background:#0C2340;color:#fff;font-size:12.5px;padding:8px 16px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 .balk a{color:#fff;text-decoration:none;opacity:.88}.balk a:hover{opacity:1;text-decoration:underline}
-.kop{background:var(--kop);color:var(--kop-tekst);padding:30px 16px 34px;border-bottom:3px solid #FFD200}
+.kop{background:var(--kop);color:var(--kop-tekst);padding:30px 16px 34px;border-bottom:3px solid #F5A623}
 .kop-in,.romp{max-width:1100px;margin:0 auto}
 .merk{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.08em;font-size:12px;text-transform:uppercase;margin-bottom:14px}
-.zeshoek{width:22px;height:25px;background:currentColor;clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);flex:none}
+.zeshoek{width:22px;height:22px;background:#F5A623;border-radius:7px;flex:none}
 .terugs{display:flex;gap:8px 18px;flex-wrap:wrap;margin-bottom:12px}
 .terug{font-size:13.5px;font-weight:700;text-decoration:none;border-bottom:2px solid currentColor}
 .kop h1{margin:0 0 10px;font-size:clamp(26px,4.2vw,38px);line-height:1.12;font-weight:800}
@@ -57,18 +52,18 @@ button,input{font-family:inherit}
 .knop{display:inline-flex;align-items:center;text-decoration:none}
 .tabs{display:inline-flex;flex-wrap:wrap;border:1px solid var(--lijn);border-radius:999px;padding:3px;background:var(--wit);gap:2px;margin:0 0 12px}
 .tabs button{border:0;background:transparent;color:var(--tekst);border-radius:999px;padding:8px 16px;font-weight:700;font-size:14px;cursor:pointer;min-height:40px}
-.tabs button[aria-selected="true"]{background:#FFD200;color:#141414}
+.tabs button[aria-selected="true"]{background:#F5A623;color:#0C2340}
 fieldset{border:1px solid var(--lijn);border-radius:14px;padding:12px 14px 14px;margin:0 0 14px;background:var(--vlak)}
 legend{font-weight:800;font-size:15px;padding:0 6px}
 .sits{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:8px}
 .sit{display:flex;gap:10px;align-items:flex-start;background:var(--wit);border:1px solid var(--lijn);border-radius:10px;padding:9px 11px;cursor:pointer}
-.sit input{margin-top:3px;width:18px;height:18px;accent-color:#E6BD00;flex:none}
+.sit input{margin-top:3px;width:18px;height:18px;accent-color:#D98E0F;flex:none}
 .sit b{display:block;font-size:14px}
 .sit span{font-size:12.5px;color:var(--grijs)}
 .sit a.aw{display:block;font-size:12.5px;margin-top:4px}
 .opties{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:14px;margin-top:10px}
 .opties label{display:inline-flex;gap:6px;align-items:center}
-.knop{border:1px solid var(--geel-donker);background:#FFD200;color:#141414;border-radius:999px;padding:7px 14px;font-weight:700;font-size:14px;cursor:pointer;min-height:38px}
+.knop{border:1px solid var(--geel-donker);background:#F5A623;color:#0C2340;border-radius:999px;padding:7px 14px;font-weight:700;font-size:14px;cursor:pointer;min-height:38px}
 .knop.licht{background:var(--wit);color:var(--tekst);border-color:var(--lijn)}
 .samen{font-size:14.5px;margin:6px 0 12px}
 .gv{border:1px solid var(--lijn);border-radius:12px;padding:12px 14px;margin:0 0 10px;background:var(--wit)}
@@ -97,7 +92,7 @@ legend{font-weight:800;font-size:15px;padding:0 6px}
 <body>
 <a class="skiplink" href="#inhoud">Naar de inhoud</a>
 <!-- sitenav: gegenereerd door tools/sitenav.js, niet met de hand wijzigen -->
-<nav class="sitenav" aria-label="Adviesforum"><div class="sitenav-in"><a class="sitenav-merk" href="index.html">Adviesforum</a><ul><li><a href="index.html">Home</a></li><li><a href="voorwaarden.html" aria-current="page">Voorwaarden</a></li><li><a href="index.html#hulpmiddelen">Hulpmiddelen</a></li><li><a href="laatste.html">Laatste nieuws</a></li><li><a href="aanmelden.html">Aanmelden</a></li></ul></div></nav>
+<nav class="sitenav" aria-label="Adviesforum"><div class="sitenav-in"><a class="sitenav-merk" href="index.html"><span class="sitenav-teken" aria-hidden="true">A</span>Adviesforum</a><form class="sitenav-zoek" action="index.html" method="get" role="search"><input type="search" name="zoek" placeholder="Zoek op de hele site" aria-label="Zoek op de hele site" autocomplete="off"><button type="submit">Zoeken</button></form><ul><li><a href="index.html">Home</a></li><li><a href="voorwaarden.html" aria-current="page">Voorwaarden</a></li><li><a href="index.html#hulpmiddelen">Hulpmiddelen</a></li><li><a href="laatste.html">Laatste nieuws</a></li><li><a href="aanmelden.html">Aanmelden</a></li></ul></div></nav>
 <!-- /sitenav -->
 <header class="kop">
   <div class="kop-in">
@@ -241,7 +236,7 @@ function render(){
         else r.appendChild(el('span','nv','onderliggende voorwaarde nog niet geverifieerd'));
       }
       var m = el('a','meld','Klopt deze indeling niet?');
-      m.href = 'mailto:forumadvies@gmail.com?subject=' + encodeURIComponent('Correctie situatiecheck: ' + g.naam + ' \u2013 ' + x.naam) + '&body=' + encodeURIComponent('Aanbieder: ' + g.naam + '\nSituatie: ' + x.naam + '\nHuidige indeling: ' + LABEL[r0.o] + ' \u2013 ' + (r0.t||'') + '\nPagina: ' + location.href + '\n\nWat klopt er niet?\n\n\nBron (link naar de voorwaarden van de aanbieder):\n\n');
+      m.href = 'mailto:jeroen@oversteegen.nl?subject=' + encodeURIComponent('Correctie situatiecheck: ' + g.naam + ' \u2013 ' + x.naam) + '&body=' + encodeURIComponent('Aanbieder: ' + g.naam + '\nSituatie: ' + x.naam + '\nHuidige indeling: ' + LABEL[r0.o] + ' \u2013 ' + (r0.t||'') + '\nPagina: ' + location.href + '\n\nWat klopt er niet?\n\n\nBron (link naar de voorwaarden van de aanbieder):\n\n');
       r.appendChild(m);
       li.appendChild(r); ul.appendChild(li);
     });

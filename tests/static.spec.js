@@ -27,7 +27,7 @@ test('JSON-LD is geldig en elke kennisbankpagina heeft een canonical', () => {
     }
     if (p.startsWith('kennisbank/')) {
       const naam = p.slice('kennisbank/'.length);
-      const verwacht = 'https://jeroen-o.github.io/adviesforum/kennisbank/' + (naam === 'index.html' ? '' : naam);
+      const verwacht = 'https://adviesforum.nl/kennisbank/' + (naam === 'index.html' ? '' : naam);
       expect(html, p).toContain('<link rel="canonical" href="' + verwacht + '">');
     }
   }
@@ -40,7 +40,7 @@ test('llms.txt en manifest zijn bruikbaar', () => {
   expect(llms).toContain('geen klantadvies');
   expect(llms).not.toMatch(/berekenhet/i);
   const m = JSON.parse(lees('manifest.webmanifest'));
-  expect(m.theme_color).toBe('#FFD200');
+  expect(m.theme_color).toBe('#F5A623');
   expect(m.lang).toBe('nl');
 });
 
