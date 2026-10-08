@@ -1,0 +1,831 @@
+[
+ {
+  "naam": "Allianz",
+  "gecontroleerd": "2026-10-08",
+  "criteria": {
+   "cons": {
+    "waarde": "~ Consumptief deel mogelijk; hypotheek + consumptief samen max. 80% marktwaarde",
+    "bron": [
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-47.pdf",
+     "https://www.allianz.nl/particulier/hypotheken/hypotheekvormen/aflossingsvrij.html"
+    ],
+    "brondatum": "2026-04",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Hypotheekwijzer: hypotheek plus consumptief krediet mag niet hoger zijn dan 80% van de marktwaarde (consumptief = auto, caravan, vakanties e.d.). Algemene voorwaarden: consumptief bedrag moet passen op basis van inkomen. Bij sommige oversluitingen geen consumptieve opname. Aflossingsvrij zonder NHG max. 50% marktwaarde."
+   },
+   "lensch": {
+    "waarde": "! Lening van ouders telt mee als schuld (verlaagt max. hypotheek); schenking/schenk-leenovereenkomst als eigen middelen",
+    "bron": [
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-47.pdf"
+    ],
+    "brondatum": "2026-04",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Hypotheekwijzer noemt lening van ouders (en studielening) bij schulden die van de maximale hypotheek worden afgetrokken. Voor schenking: schenkingsovereenkomst + kopie ID schenker + bewijs overboeking; ook schenk-leenovereenkomst genoemd. Onderhandse lening (familie/vrienden): documenten niet ouder dan 3 maanden. Of toetsing op werkelijke last plaatsvindt is niet gevonden. Gebaseerd op zoekresultaat-tekst, PDF niet zelf ingezien."
+   },
+   "desk": {
+    "waarde": "~ Calcasa Desktop Taxatie: met NHG tot 90%, zonder NHG tot 80% marktwaarde; WOZ-/Calcasa-rapport niet meer",
+    "bron": [
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-47.pdf",
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-46.pdf"
+    ],
+    "brondatum": "2026-04",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Hypotheekwijzer 2026-04: statische rapporten (WOZ, Calcasa-rapport) niet meer bruikbaar i.v.m. wijziging BGFO; waarde aantonen met taxatierapport of Calcasa Desktop Taxatie. Algemene voorwaarden 2025-06 noemden nog Calcasa-rapport tot 80%. Tekst in zoekresultaat deels onduidelijk; verifiëren in PDF."
+   },
+   "ams": {
+    "waarde": "- Arbeidsmarktscan wordt niet geaccepteerd; flexinkomen via gemiddelde laatste 3 jaar",
+    "bron": [
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-47.pdf",
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/OHA-aanvraagformulier.pdf"
+    ],
+    "brondatum": "2026-04",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Hypotheekwijzer: Allianz accepteert de Arbeidsmarktscan niet. Uitzend/payroll fase A/B = flexwerker; fase C = vast. Aanvraagformulier: bij flexibel dienstverband gemiddelde over afgelopen 3 jaar opgeven."
+   },
+   "vve": {
+    "waarde": "! VvE-akkoord Allianz vereist; VvE moet KvK-ingeschreven zijn, formulier toetst o.a. of VvE inactief is",
+    "bron": [
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-58.pdf",
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-47.pdf"
+    ],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "VvE-formulier (500083-58) vraagt o.a. naar KvK-inschrijving, bestaan > 1 jaar, inactiviteit, max. 3 appartementsrechten, bouwkundige staat en verzekering; voor actieve VvE geldt aanvullend o.a. LTV < 60%, bouw na 2000 of MJOP met voldoende reserves. Gevolg van een inactieve VvE voor het akkoord is niet eenduidig gevonden; tekst in zoekresultaat rommelig."
+   },
+   "huur": {
+    "waarde": "~ Huurinkomsten verhuurde woning voor 75% meegeteld en verrekend met hypotheeklasten; tekort telt als last",
+    "bron": [
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-47.pdf"
+    ],
+    "brondatum": "2026-04",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Hypotheekwijzer: hypotheeklasten van het verhuurde pand worden verrekend met 75% van de huurinkomsten; resterend tekort telt als last in de inkomenstoets. Bewijs: getekend huurcontract + bankafschrift laatste 2 maanden met huurbetalingen. Kamerverhuur in eigen woning niet apart gevonden."
+   },
+   "bonus": {
+    "waarde": "~ Vaste 13e maand telt mee; bonus/provisie/overwerk alleen als structureel en niet afhankelijk van bedrijfsresultaat",
+    "bron": [
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-47.pdf"
+    ],
+    "brondatum": "2026-04",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Hypotheekwijzer: vaste dertiende maand/eindejaarsuitkering (onafhankelijk van bedrijfsresultaat) telt mee. Onregelmatigheidstoeslag, provisie, bonus en overwerk: structureel karakter, niet afhankelijk van bedrijfsresultaat; basis laatste 12 maanden volgens werkgeversverklaring; overwerk en provisie samen max. helft basisinkomen (PDF-tekst in zoekresultaat deels onduidelijk)."
+   },
+   "recr": {
+    "waarde": "! (Ex-)recreatiewoning geldt als niet-courant onderpand; aparte beoordeling",
+    "bron": [
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-47.pdf",
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-46.pdf"
+    ],
+    "brondatum": "2026-04",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Hypotheekwijzer noemt (ex-)recreatiewoning in de lijst niet-courante onderpanden (naast woonwagen, woonboot, tiny house). Algemene voorwaarden: woning alleen voor eigen bewoning; gebruik als vakantiewoning leidt tot herbeoordeling. Geen expliciete weigering of max. % gevonden."
+   },
+   "aanv": {
+    "waarde": "- Maximaal twee aanvragers per hypotheek",
+    "bron": [
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-47.pdf"
+    ],
+    "brondatum": "2026-04",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Hypotheekwijzer: Allianz accepteert maximaal twee aanvragers per hypotheek. Gehuwden/geregistreerd partners beiden op de hypotheek."
+   },
+   "pgb": {
+    "waarde": "~ Pgb-inkomen zonder KvK-inschrijving mogelijk (NHG en tot 80% zonder NHG) bij meerdere zorgvragers of structurele zorg naaste",
+    "bron": [
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-47.pdf"
+    ],
+    "brondatum": "2026-04",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Hypotheekwijzer: pgb-inkomen zonder KvK-inschrijving geaccepteerd bij NHG en zonder NHG tot 80% marktwaarde, als zorg aan meerdere zorgvragers wordt verleend of structureel aan een naaste (zorgovereenkomst voor onbepaalde tijd met partner/familielid). PDF-tekst in zoekresultaat deels gefragmenteerd."
+   },
+   "start": {
+    "waarde": "~ Starterslening (SVn) naast Allianz-hypotheek mogelijk; aanvraagformulier vraagt naar starterslening",
+    "bron": [
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/OHA-aanvraagformulier.pdf",
+     "https://www.homefinance.nl/hypotheek/aanbieders/starterslening-huizen/"
+    ],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Allianz-aanvraagformulier vraagt of een starterslening/koopconstructie van toepassing is. Homefinance (derde partij) noemt Allianz bij geldverstrekkers waarmee combinatie met SVn-starterslening kan. Hoe de lening in de toets wordt meegenomen niet gevonden."
+   },
+   "verhuur": {
+    "waarde": "- Verhuur van de woning zonder toestemming niet toegestaan; toestemming alleen in uitzonderlijke gevallen",
+    "bron": [
+     "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-46.pdf"
+    ],
+    "brondatum": "2025-06",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Algemene voorwaarden 2025-06: verhuren, verbouwen, splitsen e.d. niet zonder toestemming; Allianz kan in uitzonderlijk geval toestemming geven. Gevolgen voor rente/voorwaarden niet gevonden."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Hypotheekwijzer Allianz Hypotheek",
+    "url": "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-47.pdf",
+    "versie": "2026-04"
+   },
+   {
+    "titel": "Algemene Voorwaarden Allianz Hypotheek",
+    "url": "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-46.pdf",
+    "versie": "2025-06"
+   },
+   {
+    "titel": "VvE-acceptatie Allianz (500083-58)",
+    "url": "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-58.pdf",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "OHA-aanvraagformulier",
+    "url": "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/OHA-aanvraagformulier.pdf",
+    "versie": "onbekend"
+   }
+  ]
+ },
+ {
+  "naam": "bunq",
+  "gecontroleerd": "2026-10-08",
+  "criteria": {
+   "bonus": {
+    "waarde": "~ Vaste toeslagen en variabele bonussen waarop recht bestaat worden meegenomen in het inkomen",
+    "bron": [
+     "https://mortgages.bunq.com/calculator"
+    ],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Calculatorpagina bunq Easy Mortgages: bij de leencapaciteit wordt gekeken naar bruto jaarsalaris incl. vakantiegeld plus vaste toeslagen of variabele bonussen 'you're due to receive'. Pagina ca. 3 jaar oud volgens zoekmachine; voorwaarden (structureel, gemiddelde) niet gevonden. Acceptatiegids niet in te zien."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Acceptance Guide - Easy Mortgages",
+    "url": "https://mortgages.bunq.com/mortgage-documents/acceptance-guide",
+    "versie": "onbekend (alleen PDF, niet in te zien)"
+   },
+   {
+    "titel": "Acceptatiegids bunq Easy Mortgage",
+    "url": "https://static.bunq.com/website/documents/bunq-mortgages-acceptation-guide-2026-nl.pdf",
+    "versie": "februari 2026 (niet op te halen)"
+   },
+   {
+    "titel": "Documents - Easy Mortgages (overzicht)",
+    "url": "https://mortgages.bunq.com/mortgage-documents",
+    "versie": "-"
+   }
+  ]
+ },
+ {
+  "naam": "HollandWoont",
+  "gecontroleerd": "2026-10-08",
+  "criteria": {
+   "cons": {
+    "waarde": "- Consumptief deel niet mogelijk; box 3-leningdeel wel mogelijk",
+    "bron": [
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Acceptatiegids-Juni-2026.pdf",
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/Acceptatiegids-HollandWoont-Juni-2025-1.pdf"
+    ],
+    "brondatum": "jun 2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids jun 2026, kopje consumptief deel: 'Niet mogelijk, box 3 leningdeel wel mogelijk.' Box 3-deel bedoeld voor niet-aftrekbare financieringskosten gekoppeld aan investeringen in het onderpand. Let op: informatiekaart jun 2025 noemt nog 'consumptief lenen'; acceptatiegids is leidend."
+   },
+   "lensch": {
+    "waarde": "~ Lening ouders alleen bij aankoop/oversluiting, min. annuïtair/lineair, max. 30 jr; toets op bruto werkelijke last, buiten toets als lasten geschonken",
+    "bron": [
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Acceptatiegids-Juni-2026.pdf",
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Acceptatiegids-januari-2026.pdf"
+    ],
+    "brondatum": "jun 2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids: lening van ouders ten minste annuïtair of lineair aflossend, max. looptijd 30 jaar; lasten tellen mee op basis van bruto werkelijke last. Worden de lasten geschonken (schenkingsovereenkomst waarin leninggevers verklaren de lasten terug te schenken), dan blijven ze buiten de toetsing. Eigen middelen > EUR 15.000: herkomst aantonen; schenkingsovereenkomst (zonder ID schenkers) of bankafschrift 'schenking ten behoeve van de eigen woning'."
+   },
+   "desk": {
+    "waarde": "~ Calcasa Desktop Taxatie tot 90% marktwaarde (betrouwbaarheid min. 5), alleen bestaande bouw; niet bij nieuwbouw/veiling",
+    "bron": [
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Acceptatiegids-Juni-2026.pdf",
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Acceptatiegids-januari-2026.pdf",
+     "https://www.hollandwoont.nl/nieuws/een-goedkope-taxatie-met-calcasa"
+    ],
+    "brondatum": "jun 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegidsen jan/jun 2026: desktoptaxatie max. 90% marktwaarde, betrouwbaarheidsniveau minimaal 5. Gids jun 2025: alleen bestaande bouw, niet bij veilingwoningen en niet bij erfpacht (erfpacht-uitsluiting in jun 2026 niet bevestigd). Calcasa Woningcheck is geen waardebepaling en volstaat niet. Fragmenten uit zoekresultaten."
+   },
+   "ams": {
+    "waarde": "- Arbeidsmarktscan niet toegestaan; perspectiefverklaring wel mogelijk",
+    "bron": [
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Acceptatiegids-Juni-2026.pdf",
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/Acceptatiegids-HollandWoont-Juni-2025-1.pdf"
+    ],
+    "brondatum": "jun 2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids jun 2026: 'Perspectiefverklaring; mogelijk / Arbeidsmarktscan; niet toegestaan.' Flexibel inkomen: gemiddelde jaarinkomen laatste 3 kalenderjaren op basis van jaaropgaven."
+   },
+   "vve": {
+    "waarde": "- VvE moet bij KvK ingeschreven en actief zijn; niet-actieve VvE voldoet niet (uitzondering kleine gebouwen max. 3 app.rechten)",
+    "bron": [
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Acceptatiegids-Juni-2026.pdf"
+    ],
+    "brondatum": "jun 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids jun 2026: bij appartementsrecht moet de VvE ingeschreven zijn bij de KvK en 'De VvE is actief.' Voor gebouwen met max. drie appartementsrechten lijkt een uitzondering met aanvullende eisen (o.a. bouwkundige staat minimaal redelijk) te gelden; precieze uitwerking niet volledig leesbaar in zoekresultaat."
+   },
+   "huur": {
+    "waarde": "- Huurinkomsten tellen niet mee in het toetsinkomen",
+    "bron": [
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Acceptatiegids-Juni-2026.pdf",
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Acceptatiegids-januari-2026.pdf"
+    ],
+    "brondatum": "jun 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids jun 2026 (en jun 2025): 'Huurinkomsten Niet mogelijk.' Gids jan 2026: bij verhuur van de huidige woning worden vaste huurinkomsten verrekend met de werkelijke lasten; een positief saldo telt niet mee voor het toetsinkomen (huurcontract onbepaalde tijd + verklaring geldverstrekker over toegestane verhuur vereist)."
+   },
+   "bonus": {
+    "waarde": "~ Bonus/eindejaarsuitkering alleen als aantoonbaar vast en niet afhankelijk van bedrijfsresultaat; provisie/overwerk structureel: laatste 12 mnd",
+    "bron": [
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Acceptatiegids-Juni-2026.pdf"
+    ],
+    "brondatum": "jun 2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids jun 2026: eindejaarsuitkering/bonus telt mee als aantoonbaar vast en niet afhankelijk van het bedrijfsresultaat (werkgeversverklaring leidend); provisie en overwerk mits structureel, over de laatste 12 maanden; vaste 13e maand telt mee."
+   },
+   "recr": {
+    "waarde": "- Recreatie-/vakantiewoning niet financierbaar",
+    "bron": [
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Acceptatiegids-Juni-2026.pdf",
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Acceptatiegids-januari-2026.pdf"
+    ],
+    "brondatum": "jun 2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids jun 2026, lijst 'Niet mogelijk om te financieren': o.a. recreatie-/vakantiewoningen, stacaravans, woonwagens, verhuurde woningen en beleggingspanden."
+   },
+   "aanv": {
+    "waarde": "- Maximaal twee schuldenaren per lening",
+    "bron": [
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Acceptatiegids-januari-2026.pdf",
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/Beheergids-HollandWoont-Juni-2025.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids jan 2026: 'Maximaal aantal schuldenaren: Maximaal twee schuldenaren.' Beheergids jun 2025: een lening kan niet meer dan twee schuldenaren hebben. Niet bevestigd in versie jun 2026."
+   },
+   "pgb": {
+    "waarde": "~ Pgb-inkomen in bepaalde gevallen mogelijk (o.a. zelfstandige zonder KvK); tot zorgontvanger 77 jaar is",
+    "bron": [
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Acceptatiegids-Juni-2026.pdf",
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Acceptatiegids-januari-2026.pdf",
+     "https://www.hollandwoont.nl/home-consument/hypotheek-met-een-eigen-zaak"
+    ],
+    "brondatum": "jun 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids jun 2026: pgb-inkomen kan in bepaalde gevallen worden meegenomen (schema in de gids, niet leesbaar in zoekresultaat); inkomen uit pgb/gastouder mag worden meegenomen tot de zorgontvanger 77 jaar is. Gids jan 2026: met KvK op basis van Inkomensverklaring Ondernemer; pgb valt onder zelfstandigen zonder KvK-inschrijving."
+   },
+   "start": {
+    "waarde": "~ SVn-starterslening alleen in combinatie met NHG; niet zonder NHG",
+    "bron": [
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Acceptatiegids-Juni-2026.pdf",
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Acceptatiegids-januari-2026.pdf",
+     "https://www.hollandwoont.nl/nieuws/starterslening-en-nhg-hoe-mitch-en-kelly-hun-eerste-huis-financieren"
+    ],
+    "brondatum": "jun 2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids jun 2026: starterslening SVn mogelijk met NHG, niet mogelijk zonder NHG. Gids jan 2026 noemt o.a. max. looptijd 15 jaar en minimaal annuïtaire aflossing (niet bevestigd voor jun 2026). Beheergids: meeneemregeling niet mogelijk zolang SVn-lening niet is afgelost."
+   },
+   "verhuur": {
+    "waarde": "~ Gedeeltelijke/tijdelijke verhuur niet toegestaan; wel tijdelijke verhuur onder Leegstandwet, max. 2 jaar",
+    "bron": [
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Acceptatiegids-Juni-2026.pdf",
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/Beheergids-HollandWoont-Juni-2025.pdf",
+     "https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Algemene-voorwaarden-2022.pdf"
+    ],
+    "brondatum": "jun 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids jun 2026: 'Gedeeltelijke/tijdelijke verhuur Niet toegestaan.' Beheergids jun 2025: tijdelijke verhuur op basis van de Leegstandwet onder voorwaarden mogelijk, toestemming max. twee jaar. Algemene voorwaarden 2022: verhuur zonder toestemming kan gevolgen hebben. Kamerverhuur niet apart gevonden."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "HollandWoont Acceptatiegids voor adviseurs",
+    "url": "https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Acceptatiegids-Juni-2026.pdf",
+    "versie": "jun 2026"
+   },
+   {
+    "titel": "HollandWoont Acceptatiegids voor adviseurs",
+    "url": "https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Acceptatiegids-januari-2026.pdf",
+    "versie": "jan 2026"
+   },
+   {
+    "titel": "HollandWoont Beheergids voor adviseurs",
+    "url": "https://www.hollandwoont.nl/uploads/hollandwoont/files/Beheergids-HollandWoont-Juni-2025.pdf",
+    "versie": "jun 2025"
+   },
+   {
+    "titel": "HollandWoont Algemene voorwaarden 2022",
+    "url": "https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Algemene-voorwaarden-2022.pdf",
+    "versie": "2022"
+   }
+  ]
+ },
+ {
+  "naam": "Lloyds Bank",
+  "gecontroleerd": "2026-10-08",
+  "criteria": {
+   "cons": {
+    "waarde": "~ Consumptief (box 3) mogelijk zonder NHG tot en met 90% marktwaarde; niet met NHG",
+    "bron": [
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf",
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-lloyds-bank-hypotheek",
+     "https://www.lloydsbank.nl/hypotheken/verhogen-hypotheek-lloyds"
+    ],
+    "brondatum": "feb 2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids: bij NHG geen consumptieve opname. Zonder NHG: box 3 consumptief mogelijk tot en met 90% LTV; boven 90% alleen ten behoeve van de woning. Rente consumptief deel niet aftrekbaar in box 1."
+   },
+   "lensch": {
+    "waarde": "~ Familielening (ouder-kind) toegestaan, telt mee in toets; terugschenking lasten = lastenvrij; saldering niet met NHG",
+    "bron": [
+     "https://www.lloydsbank.nl/hypotheken/hulp-van-uw-ouders",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf"
+    ],
+    "brondatum": "feb 2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Familielening alleen tussen ouder en kind, voor aankoop/verbouwing eigen woning; lening telt mee bij maximale hypotheek. Leen-/schenkconstructie (gids 5.9.4): geldgever eerstegraads familielid, schenking onvoorwaardelijk en onherroepelijk; schenking lastenvrij als periodiek bedrag >= maandlast familielening, anders saldering (niet toegestaan met NHG). Totaal Lloyds-lening + starterslening + familielening binnen maxima art. 5.2."
+   },
+   "desk": {
+    "waarde": "~ Calcasa Desktop Taxatie: met NHG tot 90%, zonder NHG tot 65% marktwaarde; niet bij nieuwbouw; WOZ niet geaccepteerd",
+    "bron": [
+     "https://www.lloydsbank.nl/hypotheken/desktoptaxatie",
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-onderpand",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf"
+    ],
+    "brondatum": "feb 2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Desktop Taxatie van Calcasa is de enige hybride waardebepaling die Lloyds accepteert: nieuwe hypotheek met NHG t/m 90%, zonder NHG t/m 65% marktwaarde; ook overbrugging tot 90%. Max. 6 maanden oud bij bindend aanbod; opgemaakt t.b.v. aanvraag bij Lloyds Bank GmbH; niet voor nieuwbouw of Verhuurhypotheek. Kosten volgens site ca. EUR 110."
+   },
+   "ams": {
+    "waarde": "- Arbeidsmarktscan en perspectiefverklaring niet mogelijk; flexinkomen via gemiddelde laatste 3 kalenderjaren",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-inkomen",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf"
+    ],
+    "brondatum": "feb 2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids: 'Financiering op basis van een perspectiefverklaring of arbeidsmarktscan is niet mogelijk.' (met en zonder NHG). Flexinkomen: gemiddelde laatste drie kalenderjaren, max. laatste jaar, met jaaropgaven."
+   },
+   "vve": {
+    "waarde": "~ VvE moet actief zijn (blijkend uit taxatie); niet-actieve VvE kan ter beoordeling worden voorgelegd",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-onderpand",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf"
+    ],
+    "brondatum": "feb 2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Taxatierapport moet tonen dat VvE actief is, onderhoudsfonds voldoende en MJOP aanwezig. Bij niet-actieve VvE of onvoldoende fonds: voorleggen met kopie opstalpolis, KvK-inschrijving VvE en onderhoudsverklaring complex."
+   },
+   "huur": {
+    "waarde": "~ Alleen zonder NHG: lasten verhuurde panden saldeerbaar tot nul met 80% bruto huur; overschot telt niet mee",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-financiele-verplichtingen",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf"
+    ],
+    "brondatum": "feb 2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids par. 11.5: bij aanvraag zonder NHG en verhuurde andere woning(en) worden lasten gesaldeerd tot max. nul met 80% van ontvangen bruto huur (bankafschriften 3 maanden); overschot niet in toetsinkomen. Pand bij Lloyds gefinancierd: 80% van verwachte huur volgens taxatie. Huurinkomsten tellen niet als toetsinkomen. Verhuurhypotheek sinds 1-10-2025 niet meer voor nieuwe klanten."
+   },
+   "bonus": {
+    "waarde": "~ Provisie en bonus bij 3 jr structureel, gemiddelde 3 jr; bonus/tantième niet bij NHG, zonder NHG max. 20% bruto inkomen",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-inkomen",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf"
+    ],
+    "brondatum": "feb 2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids 8.2.2: variabel inkomen telt mee als aantoonbaar en structureel ontvangen afgelopen 3 jaar bij dezelfde werkgever; gemiddelde laatste 3 jaar tot max. het laagste van laatste jaar of huidig bedrag op werkgeversverklaring; passend bij beroep/branche. Provisie met en zonder NHG; bonus en tantième niet bij NHG, zonder NHG tot 20% van bruto inkomen incl. vakantiegeld."
+   },
+   "recr": {
+    "waarde": "- Vakantie-, recreatie- en tweede woningen niet financierbaar (met en zonder NHG)",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-onderpand",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf"
+    ],
+    "brondatum": "feb 2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids: alleen woningen voor permanente bewoning die hoofdverblijf van aanvrager(s) zijn of worden; vakantie-, recreatie- of tweede woningen uitgesloten, met en zonder NHG."
+   },
+   "aanv": {
+    "waarde": "- Max. twee aanvragers; duurzame relatie vereist, familieverbanden (bijv. broers/zussen) niet geaccepteerd",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-aanvragers"
+    ],
+    "brondatum": "feb 2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids hfst. 7: samenlevingsvormen met meer dan twee aanvragers niet acceptabel (met en zonder NHG); samenleving moet duurzaam en relationeel zijn (gehuwd, geregistreerd partner, samenwonend); samenleving in familiaire sfeer zoals broers/zussen niet geaccepteerd. Ouder-kind niet expliciet gevonden in de hypotheekgids."
+   },
+   "pgb": {
+    "waarde": "- Inkomen uit pgb wordt niet geaccepteerd (met en zonder NHG)",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-inkomen",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf"
+    ],
+    "brondatum": "feb 2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids par. 8.12 Persoonsgebonden Budget: inkomen uit pgb is niet acceptabel voor Lloyds Bank, met en zonder NHG."
+   },
+   "start": {
+    "waarde": "~ SVn-starterslening mogelijk bij aanvraag met NHG; totaal met familielening binnen maximale verstrekking",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-lloyds-bank-hypotheek",
+     "https://www.lloydsbank.nl/hypotheken/starterslening",
+     "https://www.lloydsbank.nl/dam/jcr:88c9d654-7afe-4c25-ba56-1ad826ad1bf9/productkaart-lloyds-bank-hypotheek.pdf"
+    ],
+    "brondatum": "feb 2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids: Lloyds Bank Hypotheek met NHG-voorwaarden te combineren met SVn-starterslening; productkaart: 'Starterslening mogelijk bij aanvragen met NHG.' Totaal van Lloyds-lening, starterslening en familielening niet boven maxima art. 5.2. Consumentenpagina noemt o.a. rentevaste periode hypotheek min. 10 jaar en geen tussentijdse verhoging."
+   },
+   "verhuur": {
+    "waarde": "~ Verhuur alleen met vooraf expliciete toestemming; tijdelijke verhuur onder Leegstandwet (via overbruggingsverhuur.nl) of diplomatenclausule",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-beheer",
+     "https://www.lloydsbank.nl/hypotheken/ander-huis-kopen"
+    ],
+    "brondatum": "feb 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Hypotheekgids beheer: Lloyds moet vooraf expliciet toestemming geven; tijdelijke verhuur alleen als aan Leegstandwet is voldaan en verhuur via overbruggingsverhuur.nl loopt; tussenhuur/diplomatenclausule onder voorwaarden. Bij verhuizen ook Wet doorstroming huurmarkt genoemd; aanvragen via afdeling Bijzonder Beheer. Kamerverhuur bij eigen-woninghypotheek niet expliciet gevonden (verbod op kamerverhuur gevonden in Verhuurhypotheek-voorwaarden)."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Lloyds Bank Hypotheekgids",
+    "url": "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf",
+    "versie": "feb 2026"
+   },
+   {
+    "titel": "Hypotheekgids (online, adviseurs)",
+    "url": "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids",
+    "versie": "online"
+   },
+   {
+    "titel": "Productkaart Lloyds Bank Hypotheek",
+    "url": "https://www.lloydsbank.nl/dam/jcr:88c9d654-7afe-4c25-ba56-1ad826ad1bf9/productkaart-lloyds-bank-hypotheek.pdf",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "Lloyds Bank Verhuurhypotheek Beheergids",
+    "url": "https://www.lloydsbank.nl/dam/jcr:d5704316-8a90-4c75-9e1f-41a853d9673a/Lloyds%20Bank%20Hypotheekgids%20Verhuurhypotheek.pdf",
+    "versie": "dec 2025"
+   }
+  ]
+ },
+ {
+  "naam": "Nestr",
+  "gecontroleerd": "2026-10-08",
+  "criteria": {
+   "huur": {
+    "waarde": "+ Beoordeling primair op object en huurstroom, niet op arbeidsinkomen (vastgoedfinanciering voor verhuurde woningen)",
+    "bron": [
+     "https://www.nestr.nl/kennisbank/verhuurhypotheek-versus-vastgoedfinanciering",
+     "https://www.nestr.nl/producten/verhuurde-woningen"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Nestr: bij een consumentenhypotheek kijkt een geldverstrekker primair naar (arbeids)inkomen, bij een verhuurfinanciering primair naar het object en de huurstroom. Residentieel vastgoed EUR 100.000 - 4.000.000, tot 85% LTV (waarde in verhuurde staat). Concrete ICR/DSCR-normen niet gevonden. Let op: Nestr richt zich uitsluitend op professionele vastgoedbeleggers, niet op consumenten (Wft)."
+   },
+   "verhuur": {
+    "waarde": "+ Alleen verhuurd vastgoed; verhuur is uitgangspunt, bij voorkeur rechtstreekse huurovereenkomst eigenaar-huurder",
+    "bron": [
+     "https://www.nestr.nl/faqs-categories/over-hypotheekvoorwaarden",
+     "https://www.nestr.nl/veelgestelde-vragen"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Nestr financiert alleen verhuurd vastgoed in Nederland, voor professionele beleggers (geen eigen-woninghypotheek). In beginsel verhuur via rechtstreekse huurovereenkomst tussen eigenaar/verhuurder en huurder/bewoner. Altijd eerste recht van hypotheek, geen tweede hypotheek. FAQ-pagina mogelijk ouder (ca. 2,5 jaar volgens zoekmachine)."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Nestr FAQ - Over hypotheekvoorwaarden",
+    "url": "https://www.nestr.nl/faqs-categories/over-hypotheekvoorwaarden",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "Nestr Algemene Voorwaarden",
+    "url": "https://nestr.nl/algemene-voorwaarden",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "Product Verhuurde Woningen",
+    "url": "https://www.nestr.nl/producten/verhuurde-woningen",
+    "versie": "online"
+   }
+  ]
+ },
+ {
+  "naam": "SNS",
+  "gecontroleerd": "2026-10-08",
+  "criteria": {
+   "cons": {
+    "waarde": "! Extra Ruimte Hypotheek (consumptief, box 3) niet meer af te sluiten; actuele regel voor consumptief deel niet gevonden",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/overwaarde-hypotheek.html",
+     "https://www.snsbank.nl/particulier/hypotheken/extra-ruimte-hypotheek.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "ASN Bank (voorheen SNS) zet de Extra Ruimte Hypotheek op de lijst van hypotheekvormen die niet meer af te sluiten zijn; bestaande delen lopen door (hele opnamelimiet telt mee in de LTV). SNS-pagina beschreef ERH als aflossingsvrije krediethypotheek voor consumptieve uitgaven, rente niet aftrekbaar (box 3). Overwaarde opnemen via verhoging/2e hypotheek tot max. 100% (106% bij verduurzaming). Bronnen 2-3 jaar oud."
+   },
+   "lensch": {
+    "waarde": "~ Familiehypotheek: schriftelijk, marktconforme rente, annuïtair/lineair; ouders kunnen als medeschuldenaar meetekenen (maatwerk)",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/help-je-kind-met-het-kopen-van-een-huis.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "ASN Bank: bij familiehypotheek afspraken schriftelijk vastleggen, marktconforme rente, annuïtaire of lineaire aflossing. Meetekenen: ouder wordt hoofdelijk medeschuldenaar (geen eigenaar); bank toetst of ouders eigen woonlasten plus het deel van de maandlast boven het maximum van het kind kunnen dragen; BKR-toets ouders. Hoe een familielening in de toets van het kind wordt meegenomen niet gevonden."
+   },
+   "desk": {
+    "waarde": "~ Calcasa Desktop Taxatie tot 90% marktwaarde, woning min. 2 jaar oud; niet bij nieuwbouw, erfpacht, opstal, recreatiewoning, verbouwing",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/desktop-taxatie.html",
+     "https://www.snsbank.nl/particulier/hypotheken/taxatie-huis.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "ASN/SNS: desktop taxatie voor aankoop bestaande woning, oversluiten of wijzigen; hypotheek max. 90% van de waarde; max. woningwaarde ca. EUR 1,1 mln (bronnen wisselen tussen 1.100.000 en 1.111.111); woning min. 2 jaar oud; niet bij andere aflosvormen dan annuïtair/lineair/(bank)spaar; rapport max. 6 maanden oud. Desktop Plus (met foto's) bij verbouwing alleen als hypotheek past binnen waarde vóór verbouwing (SNS-pagina)."
+   },
+   "ams": {
+    "waarde": "+ Arbeidsmarktscan bruikbaar bij flexibel contract (score 70 of hoger); perspectiefverklaring bij uitzendcontract",
+    "bron": [
+     "https://www.snsbank.nl/particulier/hypotheken/hypotheek-aanvragen-met-de-arbeidsmarktscan.html",
+     "https://www.asnbank.nl/hypotheek/hypotheek-zonder-vast-contract.html",
+     "https://www.asnbank.nl/hypotheek/uitzendcontract.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "SNS/ASN: met een arbeidsmarktscan-score van 70 of hoger (SNS-pagina: 'meer dan 70') kom je eerder in aanmerking; resultaat bruikbaar in de hypotheekaanvraag; voorwaarde o.a. 12 maanden gewerkt in de afgelopen 14 maanden. Perspectiefverklaring alleen van gecertificeerde uitzendbureaus; dan behandeling als vast contract. Zonder deze: gemiddeld bruto inkomen laatste 3 jaar (lager laatste jaar = laagste)."
+   },
+   "vve": {
+    "waarde": "! Bij slapende VvE (geen vergadering/bestuur) mogelijk geen hypotheek; geen expliciete acceptatieregel gevonden",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/een-huis-kopen-in-10-stappen/tips-voor-het-kopen-van-een-huis.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "ASN-tips: een VvE die niet vergadert of geen bestuur heeft is een slapende VvE; door leeg reservefonds of achterstallig onderhoud 'krijg je misschien geen hypotheek'. Geen acceptatievoorwaarde voor de eigen-woninghypotheek gevonden."
+   },
+   "huur": {
+    "waarde": "~ Huur uit andere permanent verhuurde woning (box 3) telt voor 85% minus hypotheeklasten, max. arbeidsinkomen",
+    "bron": [
+     "https://www.asnbank.nl/downloads/blg-wonen-informatiewijzer-verhuurhypotheek.html",
+     "https://www.snsbank.nl/particulier/support/download-tonen-op-pagina/sns-informatiewijzer-verhuurhypotheek.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Regel staat in de informatiewijzers Verhuurhypotheek (BLG Wonen/SNS, versie 3.0): huur uit al verhuurde woningen in box 3 telt voor 85% mee, verminderd met hypotheeklasten van die woning, tot max. inkomen uit arbeid; schriftelijke verhuurtoestemming geldverstrekker vereist; geen recreatie-/Airbnb-huur. Of dit ook geldt voor de gewone eigen-woninghypotheek is niet bevestigd. Kamerverhuur in gefinancierde woning niet toegestaan bij Verhuurhypotheek."
+   },
+   "recr": {
+    "waarde": "~ Recreatiehypotheek (ASN, voorheen SNS) tot 70% marktwaarde; eigen gebruik, geen permanente bewoning; annuïtair/lineair max. 30 jr",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/hypotheek-recreatiewoning.html",
+     "https://www.asnbank.nl/hypotheek/hypotheek-recreatiewoning/checklist-recreatiewoning-kopen.html",
+     "https://snsbank.nl/particulier/hypotheken/ander-huis-kopennew-1/recreatiewoning-kopen.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "ASN Bank: recreatiehypotheek max. 70% marktwaarde, annuïtair of lineair, max. 30 jaar; woning in NL op eigen grond of eeuwigdurende/voortdurende erfpacht, steenbouw (houtbouw vanaf bouwjaar 2020), aangesloten op water/elektra, niet verplaatsbaar, recreatiebestemming, hoofdzakelijk eigen gebruik; verhuur met toestemming max. 60 dagen per jaar. Recreatiewoninghypotheek niet meer onder SNS-label maar via ASN. Opslag op tarief (zie tarievenblad)."
+   },
+   "start": {
+    "waarde": "~ SVn-starterslening te combineren; vereist NHG-hypotheek en rentevaste periode min. 10 jaar",
+    "bron": [
+     "https://www.asnbank.nl/hypotheek/je-eerste-huis-kopen/starterslening.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "ASN Bank-pagina starterslening: starterslening (SVn) overbrugt verschil tussen maximale hypotheek en koopsom; voorwaarden: hypotheek met NHG en rente minimaal 10 jaar vast; aanvraag via gemeente/SVn. Of elke ASN-hypotheekvorm combineerbaar is niet bevestigd."
+   },
+   "verhuur": {
+    "waarde": "- Verhuur zonder toestemming niet toegestaan (ook niet tijdelijk); tijdelijke recreatieve verhuur max. 60 dgn/jr met schriftelijke toestemming",
+    "bron": [
+     "https://www.snsbank.nl/particulier/support/download-tonen-op-pagina/informatiewijzer-sns-hypotheken.html",
+     "https://www.snsbank.nl/particulier/hypotheken/ander-huis-kopen/koophuis-tijdelijk-verhuren.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Informatiewijzer SNS Hypotheken: zelf bewonen; niet verhuren zonder toestemming, ook niet tijdelijk. Tijdelijke recreatieve verhuur (bijv. Airbnb) na vooraf schriftelijke toestemming, o.a. max. 60 dagen per jaar, nooit langer dan 4 weken aaneen, opstalverzekering die dit dekt, gemeentelijke regels en bij appartement VvE-toestemming. Verhuur bij verkoop/leegstand via Leegstandwet (toestemming via overbruggingsverhuur.nl, oudere bron). Permanente verhuur zonder toestemming: dossier naar Bijzonder Beheer."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Informatiewijzer SNS Hypotheken",
+    "url": "https://www.snsbank.nl/particulier/support/download-tonen-op-pagina/informatiewijzer-sns-hypotheken.html",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "ASN Informatiewijzer Hypotheken",
+    "url": "https://www.asnbank.nl/downloads/asn-informatiewijzer-hypotheken.html",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "Algemene voorwaarden ASN Hypotheken (vanaf 27 juni 2023)",
+    "url": "https://www.asnbank.nl/downloads/voorwaarden-asn-hypotheken-vanaf-27-juni-2023.html",
+    "versie": "27-06-2023"
+   },
+   {
+    "titel": "Informatiewijzer Verhuurhypotheek (SNS, versie 3.0)",
+    "url": "https://www.snsbank.nl/particulier/support/download-tonen-op-pagina/sns-informatiewijzer-verhuurhypotheek.html",
+    "versie": "3.0"
+   },
+   {
+    "titel": "Algemene voorwaarden SNS Hypotheken",
+    "url": "https://www.snsbank.nl/particulier/support/download-tonen-op-pagina/algemene-voorwaarden-sns-hypotheken-27-juni-2023.html",
+    "versie": "27-06-2023"
+   }
+  ]
+ },
+ {
+  "naam": "Vista Hypotheken",
+  "gecontroleerd": "2026-10-08",
+  "criteria": {
+   "cons": {
+    "waarde": "~ Consumptief deel mogelijk tot max. 80% LTV (totale financiering), annuïtair/lineair max. 30 jr, verklaring bestedingsdoel",
+    "bron": [
+     "https://files.vistahypotheken.nl/1767082949-hypothekengids-januari-2026.pdf",
+     "https://files.vistahypotheken.nl/1736755831-250110_vista_informatiekaart_consumptief.pdf",
+     "https://www.vistahypotheken.nl/verhalen/nieuw-consumptief-box-3"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Hypothekengids/informatiekaart consumptief: lening voor consumptieve doeleinden (auto, camper, boot, schenking aan (klein)kinderen) mogelijk; max. 80% LTV voor de totale financiering; alleen annuïtair of lineair, max. 30 jaar, niet aflossingsvrij; niet voor zakelijke doeleinden; klant levert verklaring van het bestedingsdoel. Box 3, rente niet aftrekbaar; duurzaamheidskorting geldt niet voor dit leningdeel."
+   },
+   "lensch": {
+    "waarde": "! Lening ouders telt mee in toets (box 1: annuïteit 30 jr of werkelijke looptijd); borgstelling/hoofdelijkheid ouders niet mogelijk",
+    "bron": [
+     "https://files.vistahypotheken.nl/1727868389-hypothekengids-vista-hypotheken-versie-september-2024-1.pdf"
+    ],
+    "brondatum": "sep 2024",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Hypothekengids sep 2024: lasten van een lening van ouders met aftrekbare rente (box 1) op basis van 30-jarige annuïteit of kortere werkelijke looptijd; aflossingsvrije ouderlening ook als 30-jarige annuïteit. Borgstelling en hoofdelijke medeschuldenaarschap van ouders: niet mogelijk. Schenking: bij eigen inbreng > EUR 25.000 aantonen met schenkingsovereenkomst of ander bewijs. Niet bevestigd in versie jan 2026."
+   },
+   "desk": {
+    "waarde": "~ Vista Desktop Taxatie (Calcasa) tot 90% van de waarde; bestaande woning min. 2 jaar oud, geen erfpacht/opstal",
+    "bron": [
+     "https://www.vistahypotheken.nl/verhalen/meer-gemak-bij-taxatie",
+     "https://files.vistahypotheken.nl/1767082949-hypothekengids-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Vista Desktop Taxatie van Calcasa (modelwaarde + controle door desktoptaxateur) bruikbaar voor aankoop, overbrugging, ophogen, oversluiten, wijzigen leningvorm en renteaanpassing; totale lening max. 90% van de desktopwaarde; bestaande woning eigen bewoning min. 2 jaar oud, geen erfpacht of opstal; max. 6 maanden oud; bij verbouwing waarde vóór verbouwing. Desktoptaxatie opgenomen sinds Algemene Voorwaarden 2025."
+   },
+   "huur": {
+    "waarde": "- Huurinkomsten tellen niet mee in het toetsinkomen",
+    "bron": [
+     "https://files.vistahypotheken.nl/1767082949-hypothekengids-januari-2026.pdf",
+     "https://files.vistahypotheken.nl/1727868389-hypothekengids-vista-hypotheken-versie-september-2024-1.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Hypothekengids jan 2026: 'Huurinkomsten | Niet mogelijk'; geen inkomen uit bijzondere inkomensvormen (o.a. vermogen, huur) bij toetsinkomen. Verhuurde onderpanden/beleggingsobjecten niet mogelijk."
+   },
+   "bonus": {
+    "waarde": "~ Provisie/prestatiebonus/overwerk structureel: laatste 12 mnd, samen max. 25% basisinkomen; winstafh. bonus: laagste van 3 jaar",
+    "bron": [
+     "https://files.vistahypotheken.nl/1767082949-hypothekengids-januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Hypothekengids jan 2026: provisie, individuele prestatiebonus en overwerk tellen mee als structureel, bedrag laatste 12 maanden; samen met onregelmatigheidstoeslag max. 25% van vast bruto basisinkomen. Vaste 13e maand en vaste eindejaarsuitkering (niet afhankelijk van bedrijfsresultaat) tellen mee. Jaarlijkse bedrijfsresultaatafhankelijke bonus/tantième/winstuitkering: indien structureel het laagste bedrag van de laatste 3 kalenderjaren, met specificatie werkgever."
+   },
+   "recr": {
+    "waarde": "! Alleen courante woningen voor permanente eigen bewoning als hoofdverblijf; recreatiewoning niet expliciet genoemd",
+    "bron": [
+     "https://files.vistahypotheken.nl/1727868389-hypothekengids-vista-hypotheken-versie-september-2024-1.pdf",
+     "https://files.vistahypotheken.nl/1736755903-250110_vista_productkaart_acceptatie.pdf"
+    ],
+    "brondatum": "sep 2024",
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Hypothekengids sep 2024: Vista verstrekt alleen hypotheken op 'reguliere' en courante woonhuizen/appartementen voor permanente eigen bewoning, die dienen als hoofdverblijf. Lijst niet-geaccepteerde woningen staat in hfst. 10 'Zekerheden' (niet ingezien); expliciete vermelding recreatiewoning niet gevonden."
+   },
+   "aanv": {
+    "waarde": "- Meer dan twee schuldenaren niet mogelijk; partnerschap/duurzaam samenlevingsverband vereist",
+    "bron": [
+     "https://files.vistahypotheken.nl/1767082949-hypothekengids-januari-2026.pdf",
+     "https://files.vistahypotheken.nl/1727868389-hypothekengids-vista-hypotheken-versie-september-2024-1.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Hypothekengids jan 2026: 'Meer dan twee schuldenaren: Niet mogelijk.' Gids sep 2024: max. 2 debiteuren, woning hoofdverblijf voor beide, partnerschap of duurzaam samenlevingsverband tussen beide debiteuren/eigenaren."
+   },
+   "pgb": {
+    "waarde": "- Inkomen uit pgb telt niet mee",
+    "bron": [
+     "https://files.vistahypotheken.nl/1767082949-hypothekengids-januari-2026.pdf",
+     "https://files.vistahypotheken.nl/1727868389-hypothekengids-vista-hypotheken-versie-september-2024-1.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Hypothekengids jan 2026: 'PGB | Niet mogelijk'; gids sep 2024: 'Wij nemen geen PGB mee bij het bepalen van het toetsinkomen.'"
+   },
+   "start": {
+    "waarde": "- Kortingsconstructies (koopstart, SVn-starterslening e.d.) niet mogelijk",
+    "bron": [
+     "https://files.vistahypotheken.nl/1727868389-hypothekengids-vista-hypotheken-versie-september-2024-1.pdf",
+     "https://files.vistahypotheken.nl/1747747691-oha-aanvraagformulier.pdf"
+    ],
+    "brondatum": "sep 2024",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Hypothekengids sep 2024: kortingsconstructies (koopstart, SvN Starterslening e.d.) niet mogelijk. Aanvraagformulier vraagt nog wel of een starterslening/koopconstructie van toepassing is. Niet bevestigd in versie jan 2026."
+   },
+   "verhuur": {
+    "waarde": "- Verhuur zonder schriftelijke toestemming niet toegestaan; alleen bij tijdelijke uitzending buitenland met diplomatenclausule",
+    "bron": [
+     "https://files.vistahypotheken.nl/1751270459-algemene-voorwaarden-vista-2025.pdf",
+     "https://files.vistahypotheken.nl/1736755968-250110_vista_productkaart_beheer.pdf"
+    ],
+    "brondatum": "2025",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Algemene voorwaarden 2025: zonder schriftelijke toestemming van Vista onderpand niet verhuren, in gebruik geven of gebruik door anderen dulden; Vista kan voorwaarden verbinden. Productkaart Beheer (10-01-2025): verhuur alleen toegestaan bij tijdelijke uitzending naar het buitenland, huurovereenkomst met diplomatenclausule; aanvraagformulier via klantportaal. Kamerverhuur niet apart genoemd."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Vista Hypothekengids januari 2026",
+    "url": "https://files.vistahypotheken.nl/1767082949-hypothekengids-januari-2026.pdf",
+    "versie": "jan 2026"
+   },
+   {
+    "titel": "Hypothekengids Vista Hypotheken versie september 2024",
+    "url": "https://files.vistahypotheken.nl/1727868389-hypothekengids-vista-hypotheken-versie-september-2024-1.pdf",
+    "versie": "sep 2024"
+   },
+   {
+    "titel": "Informatiekaart Lening voor consumptieve doeleinden",
+    "url": "https://files.vistahypotheken.nl/1736755831-250110_vista_informatiekaart_consumptief.pdf",
+    "versie": "10-01-2025"
+   },
+   {
+    "titel": "Vista in Vogelvlucht – productkaart Beheer",
+    "url": "https://files.vistahypotheken.nl/1736755968-250110_vista_productkaart_beheer.pdf",
+    "versie": "10-01-2025"
+   },
+   {
+    "titel": "Algemene voorwaarden Vista 2025",
+    "url": "https://files.vistahypotheken.nl/1751270459-algemene-voorwaarden-vista-2025.pdf",
+    "versie": "2025"
+   }
+  ]
+ }
+]

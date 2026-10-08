@@ -1,0 +1,982 @@
+[
+ {
+  "naam": "ABN AMRO",
+  "gecontroleerd": "2026-10-08",
+  "criteria": {
+   "cons": {
+    "waarde": "- Reguliere hypotheek niet voor consumptieve doelen (auto, boot, reis); vrij besteedbaar alleen via Overwaarde Hypotheek (62+)",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-afsluiten/hypotheekvormen/aflossingsvrije-hypotheek/index.html",
+     "https://www.abnamro.nl/nl/prive/hypotheken/overwaarde/overwaarde-hypotheek.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Aflossingsvrije-pagina: niet aan te vragen voor consumptieve uitgave (auto, boot, verre reis, studiekosten kinderen). Overwaarde Hypotheek (62+, woning meer waard dan hypotheek): vrij besteedbaar, eenmalige of maandelijkse opname (max. 20 jaar), rente bijgeschreven, niet aftrekbaar; genoemde bedragen min. EUR 35.000 / max. EUR 300.000 (bronnen verschillen). Bij verhogen: rente over deel voor andere doelen niet aftrekbaar."
+   },
+   "lensch": {
+    "waarde": "~ Familielening: maandlast telt mee in toets. Leen-schenkcombinatie (groot)ouder-kind tot 50% van max. ABN-hypotheek, mits volledig aflossend",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-afsluiten/huis-kopen-met-hulp-van-familie.html",
+     "https://intermediair.abnamro.nl/met-hulp-van-familie-een-woning-financieren",
+     "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-afsluiten/familiehypotheek/index.html"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Familiehypotheek is geen ABN-product maar onderhandse lening naast de hypotheek; maandlasten worden meegenomen, max. ABN-hypotheek daalt. Leen-schenkcombinatie sinds 13-01-2025: tot 50% (was 20%) van max. ABN-hypotheek extra lenen van (groot)ouders; alleen tussen natuurlijke personen (geen BV), ABN-hypotheek volledig aflossend (geen aflossingsvrij), lening onderhands/niet hypothecair ingeschreven, marktconforme rente. Schenking: bankafschrift schenker + schenkingsakte."
+   },
+   "desk": {
+    "waarde": "~ Calcasa Desktop Taxatie (Plus) o.a. bij overbrugging (max. 85-90% MW naar confidence level) en verhoging; Calcasa-model voor tariefklasse",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/huis-kopen/documenten/desktoptaxatie.html",
+     "https://www.abnamro.nl/nl/prive/hypotheken/huis-kopen/calcasa-model-taxatie-rapport.html",
+     "https://intermediair.abnamro.nl/overbruggingslening?q=overbruggings"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Calcasa Model Taxatie: vooral voor aanpassen tariefklasse; rapport max. 6 mnd, geen NHG, hypotheek max. 90% van geschatte waarde, eigen bewoning; niet voor looptijdverlenging. Desktop Taxatie / Desktop Taxatie Plus (NRVT-taxateur op afstand): bij verhogen onder voorwaarden mogelijk. Overbruggingslening: Calcasa Desktop Taxatie (Plus) max. 85% MW bij Confidence Level 5, max. 90% bij level 6 (intermediairpagina, mogelijk ouder). Of desktoptaxatie bij aankoop nieuwe woning volstaat niet gevonden."
+   },
+   "ams": {
+    "waarde": "+ Arbeidsmarktscan geaccepteerd voor flexwerkers (tijdelijk zonder intentie, oproep, seizoen) met min. 12 mnd loon in 14 mnd; niet uitzendkrachten",
+    "bron": [
+     "https://intermediair.abnamro.nl/arbeidsmarktscan",
+     "https://www.abnamro.nl/nl/prive/hypotheken/wonen/hypotheek-zonder-vast-contract.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Arbeidsmarktscan (aanvraag via arbeidsmarktkansen.nl) als alternatief voor perspectiefverklaring; levert arbeidsmarktscore en verdiencapaciteit. Uitzendkrachten: perspectiefverklaring of gemiddelde inkomen laatste 3 jaar. Zelfstandigen niet genoemd."
+   },
+   "huur": {
+    "waarde": "~ Bij Hypotheek voor verhuur telt bruto huur mee als toetsinkomen (100% bij huurcontract >12 mnd); maatwerk o.b.v. 90% netto huur",
+    "bron": [
+     "https://intermediair.abnamro.nl/hypotheek-voor-verhuur"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Standaardberekening: bruto huurinkomsten als toetsinkomen, 100% bij contract >12 maanden tenzij huur in taxatierapport lager. Maatwerk: toegestane financieringslast over inkomen plus 90% van netto huur, met min. 15% exploitatiekosten. Kamerverhuur bij eigen woning niet gevonden."
+   },
+   "bonus": {
+    "waarde": "~ Vaste 13e maand telt mee; bonus, provisie, winstuitkering en overwerk samen max. 25% van bruto jaarsalaris + vakantiegeld (werkgeversverklaring)",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-berekenen/inkomen.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Inkomen volgens werkgeversverklaring. Middelingsperiode voor bonus niet vermeld."
+   },
+   "recr": {
+    "waarde": "- Geen hypotheek voor recreatiewoningen; tweede woning (pied-a-terre) eigen gebruik wel, max. 85% van waarde",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/speciaal-voor/preferred-banking/smart/wonen-hypotheek/vakantiehuis-kopen.html",
+     "https://www.abnamro.nl/nl/prive/hypotheken/hypotheek-afsluiten/hypotheek-voor-een-tweede-huis.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Vakantiehuispagina (Preferred Banking, enkele jaren oud) zegt dat ABN AMRO geen hypotheek voor recreatiewoningen verstrekt. Tweede huis: hoogste inkomen aanvrager min. EUR 60.000. Alternatief: overwaarde eigen woning (verhoging/box 3-lening)."
+   },
+   "start": {
+    "waarde": "~ SVn Starterslening geaccepteerd als koopconstructie, alleen bij hypotheek met NHG",
+    "bron": [
+     "https://intermediair.abnamro.nl/starters",
+     "https://intermediair.abnamro.nl/koopconstructies-voor-starters?pos=CP0003142_nogmeerstarterstips_starterscampagne",
+     "https://www.abnamro.nl/nl/prive/hypotheken/wonen/financiele-voordelen-starters.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Starterslening overbrugt verschil tussen koopprijs (tot max. LTV) en eerste hypotheek; bij NHG 10 koopconstructies geaccepteerd, waaronder SVn Starterslening. Hoe de last in de toets wordt meegenomen niet gevonden."
+   },
+   "verhuur": {
+    "waarde": "~ Verhuur alleen met vooraf schriftelijke toestemming (tijdelijk: uitzending, woning te koop/Leegstandwet); permanent via Hypotheek voor verhuur",
+    "bron": [
+     "https://www.abnamro.nl/nl/prive/hypotheken/verhuur/index.html",
+     "https://www.abnamro.nl/nl/prive/hypotheken/huis-kopen/verhuizen/hypotheek-voor-verhuur.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Zonder toestemming ongeoorloofde verhuur, kan leiden tot opeisen. Huur moet maandlasten dekken; per nieuwe huurder opnieuw toestemming; aanvraag tijdelijke/gedeeltelijke verhuur gratis. Ook toestemming gemeente en (appartement) VvE. Permanente verhuur: Hypotheek voor verhuur met renteopslag, tot 80% marktwaarde in verhuurde staat bij label A/B, max. 2 verhuurde woningen."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Voorwaarden Woning Hypotheek",
+    "url": "https://assets.abnamro.com/api/public/content/voorwaarden-woning-hypotheek.pdf",
+    "versie": "juni 2025"
+   },
+   {
+    "titel": "Voorwaarden Budget Hypotheek - ABN AMRO Intermediair",
+    "url": "https://intermediair.abnamro.nl/download-document/642",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "Voorwaarden hypotheek (intermediair download-document 645)",
+    "url": "https://intermediair.abnamro.nl/download-document/645",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "Productvoorwaarden ABN AMRO",
+    "url": "https://www.abnamro.nl/nl/prive/abnamro/productvoorwaarden.html",
+    "versie": "actueel"
+   }
+  ]
+ },
+ {
+  "naam": "bijBouwe",
+  "gecontroleerd": "2026-10-08",
+  "criteria": {
+   "cons": {
+    "waarde": "~ Vooruit: consumptief benutten overwaarde mogelijk, alleen zonder NHG; consumptieve financieringslasttabel (box 3). Basis: niet toegestaan",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/03/bijbouwe-vooruit-acceptatiehandleiding-012026-.pdf",
+     "https://bijbouwe.nl/je-bijbouwe-hypotheek/hypotheek-verhogen",
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/09/bijbouwe-basis-accgids-september-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Acceptatiehandleiding Vooruit (01-2026): consumptief = leningdeel met vrij bestedingsdoel met woning als onderpand; alleen zonder NHG; verhoging consumptief niet in combinatie met (bestaande Vooruit-hypotheek met) NHG; verhoging begrensd o.b.v. gevalideerd taxatierapport of Calcasa Desktoptaxatie (max. 6 mnd oud); consumptieve financieringslasttabel. Verhogingspagina bijbouwe.nl: min. EUR 5.000, totaal max. EUR 1.000.000, looptijd max. 30 jaar, LTV binnen oorspronkelijke risicoklasse, geen betalingsproblemen 6 mnd; boete vervroegd aflossen meefinancieren telt als consumptief en mag niet. Basis-handleiding (sep 2026, alleen bestaande klanten): verhogen voor consumptieve besteding niet toegestaan."
+   },
+   "lensch": {
+    "waarde": "~ Familielening blijft buiten toets als rente en aflossing via schenkingsakte voor de hele looptijd worden teruggeschonken; geen borgstelling ouders",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/03/bijbouwe-vooruit-acceptatiehandleiding-012026-.pdf",
+     "https://bijbouwe.nl/blog/een-bijbouwe-hypotheek-alle-productkenmerken-op-een-rijtje"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Vooruit-handleiding (zoekfragment): onderhandse lening van ouders buiten de toets als lasten worden teruggeschonken, vastgelegd in schenkingsakte waarin de geldgever rente en aflossing voor de volledige looptijd terugschenkt. Behandeling familielening zonder terugschenking niet gevonden. Productkenmerken-blog (ouder): kopen met borgstelling (bijv. ouders) niet mogelijk; bij schenking/lening schenkings- of leenovereenkomst + kopie ID schenker."
+   },
+   "desk": {
+    "waarde": "~ Vooruit: Calcasa Desktoptaxatie toegestaan (betrouwbaarheidsscore min. 5, max. 6 mnd oud), ook bij 90% MW. Basis: alleen gevalideerd rapport",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/03/bijbouwe-vooruit-acceptatiehandleiding-012026-.pdf",
+     "https://bijbouwe.nl/je-bijbouwe-hypotheek/hypotheek-verhogen"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Vooruit-handleiding 01-2026: marktwaarde aantonen met gevalideerd taxatierapport of Calcasa Desktoptaxatie (niet ouder dan 6 maanden); bij desktoptaxatie betrouwbaarheidsscore minimaal 5. bijbouwe.nl: voor bijBouwe (basis) Hypotheek alleen gevalideerd taxatierapport, voor Vooruit kan ook desktoptaxatie."
+   },
+   "ams": {
+    "waarde": "- Geen inkomen o.b.v. arbeidsmarktscan of perspectiefverklaring; behandeld als inkomen uit flexibele arbeidsrelatie",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/09/bijbouwe-basis-accgids-september-2026.pdf",
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/03/bijbouwe-vooruit-acceptatiehandleiding-012026-.pdf"
+    ],
+    "brondatum": "sep 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Basis-handleiding sep 2026 (alleen bestaande klanten). Vooruit 01-2026: flexibel inkomen = laagste van gemiddelde 36 maanden, laatste loonstrook kalenderjaar of IBL/inkomensverklaring (wijkt af van NHG). Of de Vooruit-handleiding dezelfde uitsluiting van de arbeidsmarktscan bevat niet bevestigd."
+   },
+   "vve": {
+    "waarde": "~ VvE moet ingeschreven bij KvK en actief zijn; onderhoud/bouwkundige staat min. 'voldoende' (Vooruit) resp. 'redelijk' (basis) in taxatierapport",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/03/bijbouwe-vooruit-acceptatiehandleiding-012026-.pdf",
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/09/bijbouwe-basis-accgids-september-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Slapende VvE valt daarmee buiten de voorwaarden; activeringsroute niet gevonden. Handleiding maart 2025: nieuwbouw uitgezonderd mits oprichting VvE in koopovereenkomst is vastgelegd."
+   },
+   "huur": {
+    "waarde": "~ Huur van ander pand telt mee (alleen zonder NHG): huur -20% exploitatiekosten en -lasten hypotheek verhuurpand; huurcontract min. 12 mnd",
+    "bron": [
+     "https://bijbouwe.nl/blog/huurinkomsten-meenemen-bij-je-maximale-hypotheekberekening",
+     "https://hypotheekcompany.nl/wp-content/uploads/2025/03/bijBouwe_Acceptatiehandleiding_Maart_2025.pdf"
+    ],
+    "brondatum": "2023-11",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Blog bijbouwe.nl (bijgewerkt 28-11-2023): max. 80% van huur bovenop toetsinkomen; te financieren woning voor eigen bewoning; verhuurd pand hypotheekvrij of verklaring geldverstrekker dat verhuur is toegestaan; bankafschriften 3 maanden huurbijschrijving; huur vrij beschikbaar en niet nodig voor eigen lasten; kamerverhuur: min. 1 kamer aan familielid t/m 2e graad; extra checks als toetsinkomen voor helft of meer uit huur bestaat."
+   },
+   "bonus": {
+    "waarde": "~ Variabele bestanddelen alleen als structureel (afgelopen 12 mnd ontvangen, blijkend uit werkgeversverklaring/contract/cao); overwerk max. 20%",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/03/bijbouwe-vooruit-acceptatiehandleiding-012026-.pdf",
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/09/bijbouwe-basis-accgids-september-2026.pdf"
+    ],
+    "brondatum": "2026",
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Uit zoekfragmenten: inkomensbestanddeel structureel als in laatste 12 maanden ontvangen maar bedrag vooraf onbekend, aan te tonen via voetnoot werkgeversverklaring, arbeidscontract, addendum of cao; vast als vooraf benoemd. Overwerk bij meerdere dienstverbanden max. 20% van totaal inkomen o.b.v. 40-urige werkweek. Specifieke bonusregel (percentage, bedrijfsresultaat) niet gevonden; welke van de twee handleidingen exact niet zeker."
+   },
+   "recr": {
+    "waarde": "- Vakantie-/recreatiewoning (ook met woonbestemming op recreatieterrein) niet toegestaan als onderpand (Vooruit)",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/03/bijbouwe-vooruit-acceptatiehandleiding-012026-.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Vooruit-handleiding 01-2026, sectie 'Niet toegestaan'. Onderpand moet bestemd zijn voor permanente bewoning. De basis-handleiding sep 2026 noemt dezelfde lijst, maar door PDF-opmaak was niet eenduidig of het om een uitsluitingslijst gaat."
+   },
+   "aanv": {
+    "waarde": "- Maximaal 2 aanvragers; tweede aanvrager mag ook familielid of vriend zijn. Eigenaar moet hoofdelijk schuldenaar zijn",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/03/bijbouwe-vooruit-acceptatiehandleiding-012026-.pdf",
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/09/bijbouwe-basis-accgids-september-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Vooruit-handleiding par. 3.1 'Vereisten aanvrager': hypotheek door maximaal 2 personen; 'partner' kan ook familielid of vriend zijn. Partner die geen eigenaar wordt kan niet als schuldenaar worden toegevoegd (ontruimingsverklaring)."
+   },
+   "start": {
+    "waarde": "~ Starterslening mogelijk via onafhankelijk adviseur (niet via website); basis-hypotheek alleen met NHG in combinatie met SVn-starterslening",
+    "bron": [
+     "https://www.bijbouwe.nl/veelgestelde-vragen/is-het-mogelijk-om-een-bijBouwe-Hypotheek-af-te-sluiten-in-combinatie-met-een-starterslening.aspx",
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/09/bijbouwe-basis-accgids-september-2026.pdf",
+     "https://bijbouwe.nl/documentenchecker"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "FAQ (ouder): combinatie mogelijk, maar alleen via onafhankelijk hypotheekadviseur. Basis-handleiding sep 2026 (en mrt 2025): bijBouwe Hypotheek met SVn-starterslening alleen met NHG. Documentenchecker vraagt offerte Starterslening (SVn) en toekenningsbesluit gemeente. Regel voor Vooruit-product niet gevonden."
+   },
+   "verhuur": {
+    "waarde": "- Onderpand moet vrij van huur en voor eigen permanente bewoning zijn; verhuurd of te verhuren onroerend goed (incl. B&B) niet toegestaan",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/03/bijbouwe-vooruit-acceptatiehandleiding-012026-.pdf",
+     "https://bijbouwe.nl/blog/huurinkomsten-meenemen-bij-je-maximale-hypotheekberekening"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Betreft acceptatie bij aanvraag (ook woningen geschikt voor dubbele bewoning/verhuur zoals kangoeroewoning uitgesloten). Regeling voor (tijdelijke) verhuur of kamerverhuur na afsluiten/toestemmingsprocedure niet gevonden."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Acceptatiehandleiding bijBouwe Vooruit Hypotheek",
+    "url": "https://hypotheekcompany.nl/wp-content/uploads/2026/03/bijbouwe-vooruit-acceptatiehandleiding-012026-.pdf",
+    "versie": "01-2026"
+   },
+   {
+    "titel": "Acceptatiehandleiding bijBouwe Vooruit Hypotheek",
+    "url": "https://dynamic-credit-xmn7.files.prepr.io/2926eb8qexqw/acceptatiehandleiding-bijbouwe-vooruit-september-2026.pdf",
+    "versie": "september 2026 (niet in te zien)"
+   },
+   {
+    "titel": "Acceptatiehandleiding bijBouwe (basis) Hypotheek (alleen bestaande klanten)",
+    "url": "https://hypotheekcompany.nl/wp-content/uploads/2026/09/bijbouwe-basis-accgids-september-2026.pdf",
+    "versie": "sep 2026"
+   },
+   {
+    "titel": "bijBouwe Acceptatiehandleiding maart 2025",
+    "url": "https://hypotheekcompany.nl/wp-content/uploads/2025/03/bijBouwe_Acceptatiehandleiding_Maart_2025.pdf",
+    "versie": "mrt 2025"
+   },
+   {
+    "titel": "Productkaart bijBouwe Vooruit Hypotheek",
+    "url": "https://hypotheekcompany.nl/wp-content/uploads/2025/10/Productkaart_bijBouwe_Vooruit.pdf",
+    "versie": "juli 2025"
+   },
+   {
+    "titel": "Alle belangrijke documenten",
+    "url": "https://bijbouwe.nl/belangrijke-documenten",
+    "versie": "actueel"
+   },
+   {
+    "titel": "Algemene voorwaarden en productinformatieblad bijBouwe Hypotheek",
+    "url": "https://dynamic-credit-xmn7.files.prepr.io/4k4mlv3nh96n/bijbouwe-algemene-voorwaarden-en-productinformatieblad.pdf",
+    "versie": "onbekend"
+   }
+  ]
+ },
+ {
+  "naam": "Groene Hart Hypotheken",
+  "gecontroleerd": "2026-10-08",
+  "criteria": {
+   "cons": {
+    "waarde": "+ Consumptief deel mogelijk: tot 90% marktwaarde geen maximum; boven 90% MW max. EUR 40.000 consumptief",
+    "bron": [
+     "https://groeneharthypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Groene-Hart-april-2024-.pdf"
+    ],
+    "brondatum": "apr 2024",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids april 2024. Let op: dezelfde gids noemt als doelen aankoop, verbouwing/verduurzaming en oversluiting van de hoofdverblijf-woning; NHG-combinatie en fiscale behandeling niet vermeld. Nieuwere versie dan april 2024 niet gevonden."
+   },
+   "lensch": {
+    "waarde": "~ Familielening telt als financiele verplichting in toets; geen last als rente en aflossing aantoonbaar worden teruggeschonken en lening niet direct opeisbaar",
+    "bron": [
+     "https://groeneharthypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Groene-Hart-april-2024-.pdf"
+    ],
+    "brondatum": "apr 2024",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Lening binnen familiebank = financiele verplichting, maandlast mee in toets. Bij terugschenken van rente en aflossing, voldoende aangetoond met aanvullende documenten, hoeft geen maandlast te worden meegenomen; lening mag niet direct opeisbaar zijn. Schenking: ondertekende schenkingsovereenkomst aanleveren."
+   },
+   "desk": {
+    "waarde": "~ Calcasa desktoptaxatie of NRVT Bureauwaardering in bepaalde gevallen (o.a. oversluiting), max. 90% van getaxeerde marktwaarde",
+    "bron": [
+     "https://groeneharthypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Groene-Hart-april-2024-.pdf",
+     "https://groeneharthypotheken.nl/wp-content/uploads/2021/11/Groene_Hart_Hypotheken_Acceptatiegids_V6_211028.pdf",
+     "https://groeneharthypotheken.nl/hypotheek/veelgestelde-vragen/hypotheek/"
+    ],
+    "brondatum": "apr 2024",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Gids V6 (okt 2021): desktoptaxatie alleen bij oversluiting, max. 90% van marktwaarde uit desktoprapport. Gids april 2024 noemt desktoptaxatie/NRVT Bureauwaardering (mits voldoet aan betrouwbaarheidseisen) bij oversluiting en als waardebewijs bij schenking; of de 90%-grens in 2024 ongewijzigd is niet bevestigd. FAQ: in de meeste gevallen taxatierapport nodig, desktoptaxatie onder voorwaarden."
+   },
+   "vve": {
+    "waarde": "- Actieve VvE vereist; onderhoudsstaat min. voldoende/goed en onderhoudsfonds min. voldoende (zwakker fonds bij goede staat + MJOP)",
+    "bron": [
+     "https://groeneharthypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Groene-Hart-april-2024-.pdf"
+    ],
+    "brondatum": "apr 2024",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids april 2024, paragraaf VvE. Activeringsroute voor slapende VvE niet gevonden."
+   },
+   "huur": {
+    "waarde": "~ Huur uit andere eigen panden individueel voor te leggen; uitgangspunt max. 20% van netto huurinkomsten in toets",
+    "bron": [
+     "https://groeneharthypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Groene-Hart-april-2024-.pdf",
+     "https://groeneharthypotheken.nl/wp-content/uploads/2021/11/Groene_Hart_Hypotheken_Acceptatiegids_V6_211028.pdf"
+    ],
+    "brondatum": "apr 2024",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Gids 2021: inkomen uit vermogen/verhuur telt niet mee. Gids april 2024: inkomen uit verhuur van andere in bezit zijnde onderpanden op individuele basis voorleggen; uitgangspunt nooit meer dan 20% van netto huurinkomsten. Inkomen uit vermogen max. 3% van vrij besteedbaar inkomen. Kamerverhuur niet gevonden."
+   },
+   "bonus": {
+    "waarde": "~ Overwerk, provisie (indien structureel) en onregelmatigheidstoeslag max. 20% van vast bruto jaarsalaris incl. vakantiegeld; bonus niet apart genoemd",
+    "bron": [
+     "https://groeneharthypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Groene-Hart-april-2024-.pdf"
+    ],
+    "brondatum": "apr 2024",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Bedrag op werkgeversverklaring (laatste NHG-model, max. 3 maanden oud) voor max. 20% van vast bruto jaarsalaris (salaris + vakantiegeld). Vaste delen flexbudget en VEB tellen mee. Bonus niet expliciet geregeld in gevonden tekst."
+   },
+   "recr": {
+    "waarde": "- Vakantiewoningen niet geaccepteerd als onderpand; alleen bestaande woningen/appartementen in NL als hoofdverblijf",
+    "bron": [
+     "https://groeneharthypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Groene-Hart-april-2024-.pdf",
+     "https://groeneharthypotheken.nl/hypotheek/veelgestelde-vragen/hypotheek/"
+    ],
+    "brondatum": "apr 2024",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Uitgesloten o.a. woningen in buitenland, vakantiewoningen, winkel-/bedrijfswoningen, beleggingspanden, woonboten, caravans en garages. Min. waarde onderpand EUR 100.000 (FAQ)."
+   },
+   "aanv": {
+    "waarde": "- Maximaal 2 aanvragers; ieder min. 40% eigenaar en hoofdverblijf in de woning",
+    "bron": [
+     "https://groeneharthypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Groene-Hart-april-2024-.pdf"
+    ],
+    "brondatum": "apr 2024",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Aanvrager natuurlijk persoon van min. 18 jaar. Of familieleden (ouder/kind) samen mogen aanvragen niet expliciet gevonden; de eis van eigendom en hoofdverblijf geldt voor beide aanvragers."
+   },
+   "pgb": {
+    "waarde": "- Inkomen uit pgb telt niet mee als toetsinkomen",
+    "bron": [
+     "https://groeneharthypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Groene-Hart-april-2024-.pdf"
+    ],
+    "brondatum": "apr 2024",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids april 2024: inkomen uit een persoonsgebonden budget wordt niet tot het toetsinkomen gerekend."
+   },
+   "verhuur": {
+    "waarde": "~ Tijdelijke verhuur alleen met schriftelijke toestemming (tijdelijk werk elders, dubbele woonlasten); huur dekt lasten, verpand, via erkend verhuurbedrijf",
+    "bron": [
+     "https://groeneharthypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Groene-Hart-april-2024-.pdf",
+     "https://groeneharthypotheken.nl/wp-content/uploads/2021/11/Groene_Hart_Hypotheken_Acceptatiegids_V6_211028.pdf"
+    ],
+    "brondatum": "apr 2024",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Huurpenningen minimaal gelijk aan maandelijkse rente + aflossing, huur verpand aan geldverstrekker, verhuur gecoordineerd door erkend verhuurbedrijf; bij NHG ook voorafgaande toestemming WEW. Kamerverhuur niet gevonden. Hypotheek alleen voor eigen bewoning, niet voor verhuurde woningen."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Acceptatiegids Groene Hart Hypotheken",
+    "url": "https://groeneharthypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Groene-Hart-april-2024-.pdf",
+    "versie": "apr 2024 (nieuwste gevonden)"
+   },
+   {
+    "titel": "Acceptatiegids Groene Hart Hypotheken V6",
+    "url": "https://groeneharthypotheken.nl/wp-content/uploads/2021/11/Groene_Hart_Hypotheken_Acceptatiegids_V6_211028.pdf",
+    "versie": "V6 okt 2021"
+   },
+   {
+    "titel": "Acceptatiegids (adviseurspagina)",
+    "url": "https://groeneharthypotheken.nl/adviseurs/adviseur/acceptatiegids/",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "Belangrijke documenten",
+    "url": "https://groeneharthypotheken.nl/hypotheek/belangrijke-documenten/",
+    "versie": "onbekend"
+   }
+  ]
+ },
+ {
+  "naam": "IQWOON",
+  "gecontroleerd": "2026-10-08",
+  "criteria": {
+   "cons": {
+    "waarde": "- Consumptief deel niet mogelijk; wel box 3-leningdeel voor niet-aftrekbare financieringskosten. Alleen bestaande klanten (nieuw gestopt per 1-5-2023)",
+    "bron": [
+     "https://www.iqwoon.nl/uploads/iqwoon/files/Acceptatiegids-IQWOON-Januari.pdf",
+     "https://www.iqwoon.nl/uploads/iqwoon/files/IQWOON-Beheergids-Januari-2026.pdf",
+     "https://www.iqwoon.nl/adviseur"
+    ],
+    "brondatum": "jan 2025",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids jan 2025: consumptief deel niet mogelijk, box 3-leningdeel wel (voor niet-aftrekbare financieringskosten). Beheergids jan 2026: verhoging min. EUR 12.500, geen achterstanden afgelopen 6 mnd; aflossingsvrije verhoging in principe als box 3 getoetst. IQWOON neemt sinds 1 mei 2023 geen nieuwe klanten aan; bestaande klanten kunnen verhogen/meenemen. Gids juni 2026 bestaat maar niet ingezien."
+   },
+   "lensch": {
+    "waarde": "~ Lening ouders bij aankoop/oversluiting alleen met aflosverplichting; bruto werkelijke last in toets, buiten toets als lasten worden geschonken",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/01/IQWOON-Acceptatiegids-Januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "IQWOON Acceptatiegids jan 2026 (gehost op hypotheekcompany.nl): lening van ouders moet een aflosverplichting hebben; lasten tegen bruto werkelijke last; als de lasten worden geschonken blijven ze buiten de toetsing. Schenking: bankafschrift volstaat als bewijs; schenkingsovereenkomst nodig bij overmaking via de notaris."
+   },
+   "desk": {
+    "waarde": "~ Calcasa Desktoptaxatie: max. 90% marktwaarde, betrouwbaarheid min. 5, alleen bestaande bouw, niet bij veiling of erfpacht; NRVT-bureauwaardering niet",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/01/IQWOON-Acceptatiegids-Januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Ook voor wijziging risicoklasse na waardestijging: taxatierapport of Calcasa desktoptaxatie (tot 90% MW). Bij desktoptaxatie rekent IQWOON met verkoopperiode van 12 maanden voor dubbele lasten."
+   },
+   "vve": {
+    "waarde": "- VvE moet bij KvK ingeschreven en actief zijn; reservefonds toereikend voor MJOP (bouw v.a. 2000: alleen inschrijving + actief)",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/01/IQWOON-Acceptatiegids-Januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Uit taxatierapport moet blijken dat reservefondsen toereikend zijn voor het MJOP. Uitzondering mogelijk bij gebouwen met max. drie appartementsrechten."
+   },
+   "huur": {
+    "waarde": "- Huurinkomsten tellen niet mee in de toets",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/01/IQWOON-Acceptatiegids-Januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids jan 2026: huurinkomsten 'niet mogelijk'. Wel: bij niet-NHG 3% van vermogen bij toetsinkomen (min. vermogen EUR 100.000)."
+   },
+   "bonus": {
+    "waarde": "~ Eindejaarsuitkering/bonus alleen als aantoonbaar vast en niet afhankelijk van bedrijfsresultaat; structureel overwerk/provisie/ORT o.b.v. laatste 12 mnd",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/01/IQWOON-Acceptatiegids-Januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids jan 2026, inkomen uit loondienst."
+   },
+   "recr": {
+    "waarde": "- Vakantie- en recreatiewoningen niet mogelijk; onderpand moet bestemd en geschikt zijn voor permanente bewoning door geldnemer",
+    "bron": [
+     "https://www.iqwoon.nl/uploads/iqwoon/files/Acceptatiegids-IQWOON-Januari.pdf",
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/01/IQWOON-Acceptatiegids-Januari-2026.pdf"
+    ],
+    "brondatum": "jan 2025",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Uitsluiting expliciet in gids jan 2025; gids jan 2026 eist permanente bewoning door geldnemer."
+   },
+   "pgb": {
+    "waarde": "~ Pgb-inkomen in sommige gevallen: met KvK via IBO; zonder KvK meer dan 1 zorgontvanger; familiezorg met vaste zorgovereenkomst, tot zorgontvanger 77 is",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/01/IQWOON-Acceptatiegids-Januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids jan 2026: zelfstandige met KvK-inschrijving via Inkomensverklaring Ondernemer; zonder KvK-inschrijving moet er meer dan een zorgontvanger zijn; bij zorg voor familie zorgovereenkomst voor onbepaalde tijd, inkomen tot zorgontvanger 77 jaar is."
+   },
+   "start": {
+    "waarde": "! Verhoging niet mogelijk zolang SVn Starterslening of Combinatielening niet volledig is afgelost",
+    "bron": [
+     "https://www.iqwoon.nl/uploads/iqwoon/files/IQWOON-Beheergids-Januari-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Regel uit zoekfragment, toegeschreven aan IQWOON-gidsen 2026 (welk document precies niet zeker). Acceptatie van een starterslening bij aankoop niet relevant: geen nieuwe klanten sinds 1 mei 2023."
+   },
+   "verhuur": {
+    "waarde": "~ Verhuur alleen met schriftelijke toestemming (via Mijn IQWOON) en vergunning gemeente; Leegstandwet max. 2 jaar (+1 jr), uitzending werk max. 3 jaar",
+    "bron": [
+     "https://www.iqwoon.nl/veelgestelde-vragen/ik-wil-mijn-woning-verhuren-wat-moet-ik-doen",
+     "https://www.iqwoon.nl/uploads/iqwoon/files/Algemene-voorwaarden-IQWOON-Juni-2025.pdf",
+     "https://www.iqwoon.nl/uploads/iqwoon/files/IQWOON-Beheergids-Januari-2026.pdf"
+    ],
+    "brondatum": "jun 2025",
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Algemene voorwaarden juni 2025: niet verhuren zonder toestemming. Leegstandwet: woning te koop, geen achterstand, alleen zelfstandige bewoning, max. 2 jaar, telkens max. 1 jaar verlengen binnen gemeentelijke vergunning (max. 5 jaar). Tijdelijke verhuur wegens werk elders via werkgever max. 3 jaar. Bij aanvraag moet onderpand vrij van huur zijn."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "IQWOON Acceptatiegids voor adviseurs (hypotheekcompany.nl)",
+    "url": "https://hypotheekcompany.nl/wp-content/uploads/2026/01/IQWOON-Acceptatiegids-Januari-2026.pdf",
+    "versie": "jan 2026"
+   },
+   {
+    "titel": "IQWOON adviseurspagina (acceptatiegids en beheergids juni 2026, publicatie 22-06-2026)",
+    "url": "https://www.iqwoon.nl/adviseur",
+    "versie": "jun 2026 (PDF niet ingezien)"
+   },
+   {
+    "titel": "IQWOON Beheergids voor adviseurs",
+    "url": "https://www.iqwoon.nl/uploads/iqwoon/files/IQWOON-Beheergids-Januari-2026.pdf",
+    "versie": "jan 2026"
+   },
+   {
+    "titel": "IQWOON Acceptatiegids voor adviseurs",
+    "url": "https://www.iqwoon.nl/uploads/iqwoon/files/Acceptatiegids-IQWOON-Januari.pdf",
+    "versie": "jan 2025"
+   },
+   {
+    "titel": "IQWOON Hypotheek Algemene voorwaarden",
+    "url": "https://www.iqwoon.nl/uploads/iqwoon/files/Algemene-voorwaarden-IQWOON-Juni-2025.pdf",
+    "versie": "jun 2025"
+   },
+   {
+    "titel": "Clarian Wonen Acceptatiegids voor adviseurs (gehost op iqwoon.nl, ander label)",
+    "url": "https://www.iqwoon.nl/uploads/iqwoon/files/Clarian-Wonen-Acceptatiegids-Januari-2026.pdf",
+    "versie": "jan 2026"
+   }
+  ]
+ },
+ {
+  "naam": "Nationale-Nederlanden",
+  "gecontroleerd": "2026-10-08",
+  "criteria": {
+   "cons": {
+    "waarde": "+ Overwaarde vrij te besteden (bijv. auto, vakantiehuis) via extra hypotheek; box 3, rente niet aftrekbaar; aflossingsvrij totaal max. 50% MW",
+    "bron": [
+     "https://www.nn.nl/Particulier/Hypotheken/Woning-overwaarde-benutten.htm"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "NN-site 'Overwaarde benutten': overwaarde ook te gebruiken voor andere doelen, zoals aanschaf vakantiehuis of nieuwe auto of meer maandelijkse bestedingsruimte, via extra hypotheek bij NN. Maandlasten moeten passen bij inkomen; vanaf 57 jaar toetsing op AOW/pensioen. Max. consumptief deel/LTV en combinatie met NHG niet gevonden."
+   },
+   "desk": {
+    "waarde": "~ Calcasa Desktop Taxatie alleen bij oversluiten, ontslag hoofdelijke aansprakelijkheid en verhogen; max. 6 mnd oud vanaf waardepeildatum",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/01/nn-Acceptatiegids-Hypotheken-2026.pdf",
+     "https://www.nn.nl/Particulier/Hypotheken/Hypotheekrente/Tariefklassen.htm"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids Hypotheken jan 2026 (gehost op hypotheekcompany.nl). Max. LTV bij desktoptaxatie niet gevonden. Voor herindexatie tariefklasse accepteert NN o.a. recent taxatierapport, Calcasa Desktop Taxatie of WOZ-beschikking."
+   },
+   "ams": {
+    "waarde": "- Arbeidsmarktscan niet bruikbaar voor vaststelling toetsinkomen",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/01/nn-Acceptatiegids-Hypotheken-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Kopje 'inkomen vaststellen met een arbeidsmarktscan' gevolgd door 'Het is niet mogelijk om gebruik te maken van een ...'; tekst in zoekresultaat afgebroken, dus niet volledig eenduidig. Zonder vaste inkomsten: gemiddelde laatste 3 kalenderjaren."
+   },
+   "huur": {
+    "waarde": "~ Huur van ander pand telt voor 85% (kale huur) mee; NL-object, schriftelijk contract, min. 2 jaar ontvangen; niet bij kamerverhuur/short-stay/recreatie",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/03/nn-acceptatiebeleid-maart-2026.pdf",
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/01/nn-Acceptatiegids-Hypotheken-2026.pdf"
+    ],
+    "brondatum": "mrt 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Huur min. twee jaar ontvangen op NL-betaalrekening; bij all-in huur kosten aftrekken; negatieve netto huurinkomsten tellen als financiele verplichting. Max. vier andere panden naast eigen woning (samenvatting zoekresultaat)."
+   },
+   "bonus": {
+    "waarde": "~ Bedrijfsresultaatafhankelijke bonus 50% van laatste 12 mnd; persoonlijke bonus, prestatietoeslag, provisie, tantieme 100% van laatste 12 mnd",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/03/nn-acceptatiebeleid-maart-2026.pdf",
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/01/nn-Acceptatiegids-Hypotheken-2026.pdf"
+    ],
+    "brondatum": "mrt 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Onregelmatigheidstoeslag, provisie, overwerk en bonussen tellen alleen mee als structureel."
+   },
+   "recr": {
+    "waarde": "~ Woning op recreatiepark alleen met bestemming 'wonen' en vergunning permanente bewoning, plus gevalideerd taxatierapport",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/01/nn-Acceptatiegids-Hypotheken-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Uit zoekfragment: NN accepteert woningen op een recreatiepark onder voorwaarde van o.a. gevalideerd taxatierapport, kadastrale vermelding 'wonen' en vergunning permanente bewoning. Financiering van een recreatiewoning zonder permanente bewoning niet gevonden. NN Verhuurhypotheek niet geschikt voor vakantiewoningen."
+   },
+   "aanv": {
+    "waarde": "- Maximaal 2 natuurlijke personen, beiden hoofdelijk schuldenaar; familie samen (bijv. broers/zussen, vader en zoon) wel mogelijk",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/01/nn-Acceptatiegids-Hypotheken-2026.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids jan 2026: hypothecaire geldlening kan door maximaal twee natuurlijke personen tegelijk worden aangevraagd; aanvragers kunnen familie zijn."
+   },
+   "pgb": {
+    "waarde": "- Inkomsten uit pgb tellen niet mee als inkomen",
+    "bron": [
+     "https://hypotheekcompany.nl/wp-content/uploads/2026/03/nn-acceptatiebeleid-maart-2026.pdf"
+    ],
+    "brondatum": "mrt 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiebeleid maart 2026, par. 3.10.4: 'Inkomsten uit een persoonsgebonden budget rekenen we niet tot het inkomen.' Ook zo in eerdere versie."
+   },
+   "start": {
+    "waarde": "- NN verstrekt geen hypotheken in combinatie met de starterslening",
+    "bron": [
+     "https://nn.nl/Wonen/Starterslening.htm"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "NN-pagina 'Wat is een starterslening?'."
+   },
+   "verhuur": {
+    "waarde": "~ Verhuur alleen met toestemming NN; tijdelijk bij uitzending buitenland door werkgever max. 5 jaar (NHG mogelijk korter), huur dekt lasten",
+    "bron": [
+     "https://www.nn.nl/Download/Voorwaarden-NN-Hypotheek.htm"
+    ],
+    "brondatum": "jan 2024",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Voorwaarden NN Hypotheek jan 2024 (art. 9 en 11): huis alleen verkopen of verhuren met toestemming. Bij uitzending: huur min. gelijk aan hypotheeklasten, huurovereenkomst volgens ROZ-model met diplomatenclausule; NN kan verpanding van huurpenningen eisen. Kamerverhuur niet gevonden."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Acceptatiebeleid Hypotheken (hypotheekcompany.nl)",
+    "url": "https://hypotheekcompany.nl/wp-content/uploads/2026/03/nn-acceptatiebeleid-maart-2026.pdf",
+    "versie": "mrt 2026"
+   },
+   {
+    "titel": "Acceptatiegids Hypotheken Januari 2026 (hypotheekcompany.nl)",
+    "url": "https://hypotheekcompany.nl/wp-content/uploads/2026/01/nn-Acceptatiegids-Hypotheken-2026.pdf",
+    "versie": "jan 2026"
+   },
+   {
+    "titel": "Voorwaarden bij uw Nationale-Nederlanden Hypotheek",
+    "url": "https://www.nn.nl/Download/Voorwaarden-NN-Hypotheek.htm",
+    "versie": "jan 2024"
+   },
+   {
+    "titel": "Hypotheken downloads (o.a. Acceptatiegids Hypotheken, via adviseur.nn.nl)",
+    "url": "https://www.nn.nl/Particulier/Hypotheken/Hypotheken-downloads.htm",
+    "versie": "onbekend"
+   }
+  ]
+ },
+ {
+  "naam": "RegioBank",
+  "gecontroleerd": "2026-10-08",
+  "criteria": {
+   "cons": {
+    "waarde": "! Krediethypotheek (consumptief, box 3) staat onder 'uit de verkoop'; actueel beleid voor consumptief deel in gewone hypotheek niet gevonden",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/uit-de-verkoop/krediethypotheek.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Krediethypotheek: aflossingsvrije lening met kredietlimiet en variabele rente voor consumptieve aankopen, woning als onderpand, rente niet aftrekbaar (box 3). Pagina staat in sectie 'uit de verkoop', dus product lijkt niet meer nieuw af te sluiten. RegioBank is inmiddels handelsnaam van ASN Bank N.V."
+   },
+   "lensch": {
+    "waarde": "~ Lening van ouders (marktconforme rente) wordt meegenomen in de toets; ouders kunnen ook hoofdelijk medeschuldenaar worden",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/huis-kopen-voor-kind.html",
+     "https://www.regiobank.nl/hypotheken/hulp-bij-het-kopen-van-een-huis.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Consumentenpagina's: hypotheekverstrekker houdt rekening met de lening van ouders zodat je niet te veel leent. Of op werkelijke last wordt getoetst of een leen-schenkconstructie buiten de toets blijft, niet gevonden. Schenking: jaarlijkse belastingvrije schenking; eenmalige verhoogde vrijstelling eigen woning vervallen per 1-1-2024."
+   },
+   "desk": {
+    "waarde": "~ Calcasa Desktop Taxatie (Plus) bij aankoop bestaande woning, oversluiten of wijzigen: max. 90% van waarde, woning min. 2 jaar oud; geen andere aanbieders",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/marktwaarde.html",
+     "https://www.regiobank.nl/service/hypotheken/hypotheekrente-verlengen/wat-is-de-marktwaarde-van-uw-woning.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Max. woningwaarde EUR 1.100.000 (andere pagina: EUR 1.111.111 bij max. hypotheek EUR 1.000.000); rapport max. 6 maanden oud bij ontvangst; bij verbouwing alleen als hypotheek past op waarde voor verbouwing. Hybride/desktoptaxaties van andere aanbieders niet geaccepteerd. Boven 90% van desktopwaarde (of 75% WOZ) volledig taxatierapport nodig."
+   },
+   "huur": {
+    "waarde": "~ Verhuurhypotheek: huur telt voor 85% mee minus lasten verhuurd pand, max. tot inkomen uit arbeid; niet bij recreatiewoning of Airbnb",
+    "bron": [
+     "https://www.regiobank.nl/downloads/informatiewijzer-verhuurhypotheek.html",
+     "https://www.regiobank.nl/downloads/regiobank-uitgangspunten-voor-de-berekening-van-de-maximale-hypotheek.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Informatiewijzer Verhuurhypotheek versie 3.0 (ongedateerd): huurbron = laagste van contracthuur, markthuur uit taxatie of WWS-maximum; netto huur moet min. 80% van financieringslasten dekken; huur via NL-bankrekening, niet contant. Kamerverhuur in eigen woning niet gevonden."
+   },
+   "recr": {
+    "waarde": "~ Recreatiehypotheek: max. 70% marktwaarde, annuitair/lineair binnen 30 jaar, geen NHG; geen permanente bewoning, verhuur max. 60 dagen/jaar",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/hypotheek-recreatiewoning.html",
+     "https://www.regiobank.nl/hypotheken/hypotheek-recreatiewoning/checklist-recreatiewoning-kopen.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "nieuw",
+    "toelichting": "Woning in NL, eigen grond of eeuwigdurende/voortdurende erfpacht, aangesloten op water en elektriciteit, niet verplaatsbaar, steen (houtbouw alleen bouwjaar 2020 of later), recreatiebestemming. Ook mogelijk naast hypotheek op hoofdwoning. Renteopslag voor recreatiewoning (zie tarievenblad). Pagina's dragen inmiddels ASN Bank-titel."
+   },
+   "aanv": {
+    "waarde": "~ Ouders kunnen bij start van de hypotheek van hun kind hoofdelijk medeschuldenaar worden zonder eigenaar te zijn; max. aantal aanvragers niet gevonden",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/huis-kopen-voor-kind.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Ouders worden hoofdelijk aansprakelijk voor de hele hypotheek; bank toetst of ouders eigen woonlasten en extra maandlast kunnen dragen en toetst BKR."
+   },
+   "start": {
+    "waarde": "+ Starterslening via SVn mogelijk naast RegioBank-hypotheek",
+    "bron": [
+     "https://regiobank.nl/hypotheken/starterslening.html",
+     "https://www.regiobank.nl/nieuws/hypotheken/artikel/starterslening-hoe-werkt-het.html"
+    ],
+    "brondatum": null,
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Zoekfragment 'Mogelijkheid tot starterslening via SVn' werd toegeschreven aan een RegioBank-tarievenoverzicht; exact document niet vastgesteld. Voorwaarden (bijv. NHG) volgens RegioBank-bron niet gevonden."
+   },
+   "verhuur": {
+    "waarde": "~ Verhuur (ook tijdelijk) alleen met schriftelijke toestemming; tijdelijke verhuur via Overbruggingsverhuur.nl en met Leegstandwet-vergunning",
+    "bron": [
+     "https://www.regiobank.nl/hypotheken/huis-tijdelijk-verhuren.html",
+     "https://www.regiobank.nl/hypotheken/voorwaarden.html"
+    ],
+    "brondatum": "2023-06",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Algemene voorwaarden RegioBank Hypotheken (27-06-2023): woning niet verhuren zonder toestemming, ook niet tijdelijk. Pagina tijdelijk verhuren (ca. 2,5 jaar oud): alleen via Overbruggingsverhuur.nl, Leegstandwet-vergunning gemeente (max. 5 jaar). Kamerverhuur niet gevonden."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Algemene Voorwaarden RegioBank Hypotheken",
+    "url": "https://www.regiobank.nl/hypotheken/voorwaarden.html",
+    "versie": "27-06-2023"
+   },
+   {
+    "titel": "Informatiewijzer Hypotheken",
+    "url": "https://www.regiobank.nl/downloads/informatiewijzer-hypotheken.html",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "Informatiewijzer RegioBank Verhuurhypotheek",
+    "url": "https://www.regiobank.nl/downloads/informatiewijzer-verhuurhypotheek.html",
+    "versie": "3.0"
+   },
+   {
+    "titel": "Uitgangspunten voor de berekening van de maximale hypotheek",
+    "url": "https://www.regiobank.nl/downloads/regiobank-uitgangspunten-voor-de-berekening-van-de-maximale-hypotheek.html",
+    "versie": "onbekend"
+   },
+   {
+    "titel": "Informatiewijzer Bespaarhypotheek",
+    "url": "https://www.regiobank.nl/downloads/informatiewijzer-bespaarhypotheek.html",
+    "versie": "onbekend"
+   }
+  ]
+ },
+ {
+  "naam": "Tulp Hypotheken",
+  "gecontroleerd": "2026-10-08",
+  "criteria": {
+   "cons": {
+    "waarde": "+ Consumptieve opname: tot 90% marktwaarde geen maximumbedrag; boven 90% MW max. EUR 40.000",
+    "bron": [
+     "https://tulphypotheken.nl/wp-content/uploads/2026/01/Productkaart-Tulp.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Productkaart Tulp jan 2026; tekstextractie was gefragmenteerd, cijfers controleren in PDF. NHG-combinatie en aparte leningdelen niet gevonden."
+   },
+   "lensch": {
+    "waarde": "~ Familielening telt als financiele verplichting (maandlast in toets), niet direct opeisbaar; bij schriftelijke terugschenking (Riant) geen last in toets",
+    "bron": [
+     "https://tulphypotheken.nl/wp-content/uploads/2025/03/acceptatiegids-Tulp-Hypotheek_maart-2025.pdf",
+     "https://tulphypotheken.nl/wp-content/uploads/2025/01/Acceptatiegids-Tulp-Riant-Hypotheek-2025.pdf"
+    ],
+    "brondatum": "mrt 2025",
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids Tulp Hypotheek maart 2025: lening binnen familiebank = financiele verplichting, maandlast mee in toets, lening niet direct opeisbaar; passage over terugschenken in zoekfragment onduidelijk. Riant-gids jan 2025: bij terugschenking vastgelegd in schenkingsovereenkomst hoeven geen maandlasten te worden meegenomen. Schenking: schenkingsovereenkomst aanleveren; herkomst eigen middelen > EUR 25.000 aantonen."
+   },
+   "desk": {
+    "waarde": "~ Desktoptaxatie alleen bij oversluiten/verhogen: max. 90% MW; Calcasa betrouwbaarheid min. 5, NRVT Bureauwaardering min. 4",
+    "bron": [
+     "https://tulphypotheken.nl/wp-content/uploads/2026/01/Productkaart-Tulp.pdf",
+     "https://tulphypotheken.nl/wp-content/uploads/2025/03/acceptatiegids-Tulp-Hypotheek_maart-2025.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Productkaart 2026: oversluiten tot 90% MW met Calcasa (score 5) of NRVT Bureauwaardering (score 4). Acceptatiegids maart 2025 noemt verhogen bestaande lening, max. 90% van desktopwaarde. Een ouder nieuwsbericht noemt Calcasa bij aankoop tot 80% MW (sinds maart 2022); of dat nog geldt is niet bevestigd."
+   },
+   "vve": {
+    "waarde": "~ Actieve VvE vereist; niet-actieve VvE alleen bij heractivering of kleine VvE (<3 appartementen) met MJOP of bouwkundig rapport",
+    "bron": [
+     "https://tulphypotheken.nl/wp-content/uploads/2022/10/acceptatiegids-Tulp_oktober-2022_definitief.pdf",
+     "https://tulphypotheken.nl/wp-content/uploads/2024/02/Acceptatiegids-Tulp-Riant-Hypotheek-Januari-2024.pdf"
+    ],
+    "brondatum": "okt 2022",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids Tulp okt 2022. Riant-gids jan 2024: als VvE niet actief is, moet die in oprichting zijn; reservefonds verplicht, bijv. via MJOP van min. 10 jaar. Nieuwere bevestiging (2025/2026) niet gevonden."
+   },
+   "huur": {
+    "waarde": "~ Huur uit andere panden case-by-case voor te leggen (productkaart 2026); eerdere gidsen: niet mee (mrt 2025) of max. 20% netto huur",
+    "bron": [
+     "https://tulphypotheken.nl/wp-content/uploads/2026/01/Productkaart-Tulp.pdf",
+     "https://tulphypotheken.nl/wp-content/uploads/2025/03/acceptatiegids-Tulp-Hypotheek_maart-2025.pdf",
+     "https://tulphypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Tulp-Compleet-Hypotheek-april-2024.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Bronnen tegenstrijdig: acceptatiegids maart 2025 zegt huurinkomsten niet in toetsinkomen; Compleet april 2024 en Riant: max. 20% van netto huurinkomsten; productkaart 2026: kan worden voorgelegd. Inkomen uit vermogen: 3% van vrij besteedbaar vermogen, max. 20% van toetsinkomen (productkaart 2026)."
+   },
+   "bonus": {
+    "waarde": "~ Bonus alleen als structureel en blijvend en afhankelijk van persoonlijke prestatie (werkgeversverklaring); overwerk max. 20% van vast bruto jaarsalaris",
+    "bron": [
+     "https://tulphypotheken.nl/wp-content/uploads/2026/01/Productkaart-Tulp.pdf",
+     "https://tulphypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Tulp-Compleet-Hypotheek-april-2024.pdf"
+    ],
+    "brondatum": "jan 2026",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Productkaart 2026: bonus mee als structureel, blijvend en persoonsgebonden, met werkgeversverklaring. Overwerk max. 20% (Compleet-gids april 2024). Flexibel inkomen: gemiddelde 3 jaar, max. laatste jaar/huidig inkomen."
+   },
+   "recr": {
+    "waarde": "- Recreatiewoning niet geaccepteerd; alleen woningen en appartementen in Nederland voor eigen bewoning",
+    "bron": [
+     "https://tulphypotheken.nl/wp-content/uploads/2022/10/acceptatiegids-Tulp_oktober-2022_definitief.pdf",
+     "https://tulphypotheken.nl/wp-content/uploads/2026/01/Productkaart-Tulp.pdf"
+    ],
+    "brondatum": "okt 2022",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids okt 2022 (en Riant/Compleet-gidsen) noemen recreatiewoning bij niet-acceptabele onderpanden; productkaart 2026 beperkt tot woningen/appartementen in NL voor eigen bewoning."
+   },
+   "aanv": {
+    "waarde": "- Maximaal 2 aanvragers; ieder min. 40% eigenaar en woning als hoofdverblijf",
+    "bron": [
+     "https://tulphypotheken.nl/wp-content/uploads/2022/01/Acceptatiegids-Tulp-Compleet-092021.pdf"
+    ],
+    "brondatum": "sep 2021",
+    "zekerheid": "laag",
+    "status": "nieuw",
+    "toelichting": "Uit Tulp Compleet-gids sep 2021; voor huidige Tulp Hypotheek niet bevestigd. Familie als mede-aanvrager niet expliciet gevonden."
+   },
+   "pgb": {
+    "waarde": "- Inkomen uit pgb telt niet mee in het toetsinkomen",
+    "bron": [
+     "https://tulphypotheken.nl/wp-content/uploads/2025/03/acceptatiegids-Tulp-Hypotheek_maart-2025.pdf"
+    ],
+    "brondatum": "mrt 2025",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids Tulp Hypotheek maart 2025."
+   },
+   "start": {
+    "waarde": "- Geen SVn-/starterslening naast de Tulp-hypotheek",
+    "bron": [
+     "https://tulphypotheken.nl/wp-content/uploads/2022/10/acceptatiegids-Tulp_oktober-2022_definitief.pdf"
+    ],
+    "brondatum": "okt 2022",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Acceptatiegids okt 2022: Tulp accepteert geen SVn- of starterslening naast de Tulp-hypotheek. Nieuwere bevestiging niet gevonden."
+   },
+   "verhuur": {
+    "waarde": "~ Tijdelijke verhuur alleen met expliciete schriftelijke toestemming; huur dekt rente+aflossing, verpand aan Tulp, via erkend verhuurbedrijf",
+    "bron": [
+     "https://tulphypotheken.nl/wp-content/uploads/2025/03/acceptatiegids-Tulp-Hypotheek_maart-2025.pdf",
+     "https://tulphypotheken.nl/wp-content/uploads/2026/01/Productkaart-Tulp.pdf"
+    ],
+    "brondatum": "mrt 2025",
+    "zekerheid": "middel",
+    "status": "nieuw",
+    "toelichting": "Bij NHG ook voorafgaande toestemming Stichting WEW. Productkaart 2026: verhuur mogelijk onder voorwaarden van de acceptatiegids. Kamerverhuur niet gevonden."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Acceptatiegids Tulp Hypotheek",
+    "url": "https://tulphypotheken.nl/wp-content/uploads/2025/03/acceptatiegids-Tulp-Hypotheek_maart-2025.pdf",
+    "versie": "mrt 2025"
+   },
+   {
+    "titel": "Productkaart Tulp",
+    "url": "https://tulphypotheken.nl/wp-content/uploads/2026/01/Productkaart-Tulp.pdf",
+    "versie": "jan 2026"
+   },
+   {
+    "titel": "Acceptatiegids Tulp Riant Hypotheek 2025",
+    "url": "https://tulphypotheken.nl/wp-content/uploads/2025/01/Acceptatiegids-Tulp-Riant-Hypotheek-2025.pdf",
+    "versie": "jan 2025"
+   },
+   {
+    "titel": "Acceptatiegids Tulp Compleet Hypotheek",
+    "url": "https://tulphypotheken.nl/wp-content/uploads/2024/06/Acceptatiegids-Tulp-Compleet-Hypotheek-april-2024.pdf",
+    "versie": "apr 2024"
+   },
+   {
+    "titel": "Acceptatiegids Tulp Hypotheken",
+    "url": "https://tulphypotheken.nl/wp-content/uploads/2022/10/acceptatiegids-Tulp_oktober-2022_definitief.pdf",
+    "versie": "okt 2022"
+   },
+   {
+    "titel": "Productkaart Tulp Riant Hypotheek 2025-1",
+    "url": "https://tulphypotheken.nl/wp-content/uploads/2025/01/2025-1-Tulp-riant-hypotheek-productkaart-1.pdf",
+    "versie": "2025-1"
+   },
+   {
+    "titel": "Algemene Voorwaarden Tulp Riant Hypotheek",
+    "url": "https://tulphypotheken.nl/wp-content/uploads/2025/11/Algemene-Voorwaarden-Tulp-Riant-Hypotheek-PXB-maart-2022.pdf",
+    "versie": "PXB-maart 2022"
+   }
+  ]
+ }
+]
