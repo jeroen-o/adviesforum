@@ -67,6 +67,9 @@ ul{margin:0 0 12px;padding-left:20px}
 .top{background:#FFFFFF;color:#1E2040;border-bottom:1px solid #E3E3EC}
 .top .wrap{max-width:1240px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
 .brand{display:flex;align-items:center;gap:14px;cursor:pointer;background:none;border:0;padding:0;color:#1E2040;text-align:left}
+.top .brand,.top .search{display:none}
+.top .wrap{justify-content:flex-end}
+.top .btn-black{background:var(--yellow);color:var(--black)}
 .brand .logo{width:40px;height:40px;border-radius:9px;background:linear-gradient(135deg,var(--yellow),#F14A1C);color:var(--black);display:grid;place-items:center;font-weight:800;font-size:19px;flex:none}
 .brand-sep{width:1px;height:34px;background:#C3C4D3}
 .brand-name{font-size:17px;font-weight:700;letter-spacing:-.01em;white-space:nowrap}
@@ -1231,6 +1234,7 @@ function zetTitel(){const T={forum:'Forum',nieuw:'Vraag stellen',kennisbank:'Ken
   else if(S.view==='forum'&&S.cat!=='alle'&&cat(S.cat))t=cat(S.cat).naam;
   document.title=t+' – Adviesforum';}
 function render(keepScroll){
+  {const i=document.querySelector('.sitenav-zoek input'),z=$('#search');if(i&&z&&document.activeElement!==i&&i.value!==z.value)i.value=z.value;}
   if(S.me&&S.bron)S.bron=null; // na inloggen blijft de bron-markering niet hangen
   renderShell();
   $('#hero').innerHTML=heroZichtbaar()?heroHtml():'';
@@ -1975,6 +1979,10 @@ document.addEventListener('submit',async e=>{if(e.target.id!=='f-login')return;e
   S.me=u.id;zetCookie(code,f.onthoud.checked);$('#login-dlg').close();render(true);toast('Welkom terug, '+u.naam);},true);
 document.addEventListener('click',e=>{if(e.target.closest('[data-act="login-sluit"]')){const d=$('#login-dlg');if(d)d.close();}});
 herstelLogin();
+/* De zoekbalk in de navigatie bovenaan is op de homepage het zoekveld: hij zoekt direct mee via het (verborgen) #search. */
+(function(){const f=document.querySelector('.sitenav-zoek');if(!f)return;const i=f.querySelector('input');
+  const door=()=>{const s=$('#search');s.value=i.value;s.dispatchEvent(new Event('input',{bubbles:true}));};
+  i.addEventListener('input',door);f.addEventListener('submit',e=>{e.preventDefault();door();});})();
 $('#search').addEventListener('input',e=>{
   const was=S.q.trim();
   S.q=e.target.value;if(S.q.trim()){laadKennis();laadFaq();laadExtra();}
