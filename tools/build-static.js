@@ -378,6 +378,38 @@ for (const v of VRAGEN) {
   });
 }
 
+/* ---------- Statische inhoud van de homepage ----------
+ * index.html is een app die zijn inhoud in de browser opbouwt. Tussen de markeringen in <div id="app"> staat een
+ * statische versie voor zoekmachines en AI-diensten zonder JavaScript; de app vervangt die bij het laden. */
+{
+  const B = '<!-- statisch:start (tools/build-static.js) -->', E = '<!-- statisch:eind -->';
+  const i = indexHtml.indexOf(B), j = indexHtml.indexOf(E);
+  if (i === -1 || j === -1) fout('Markeringen voor de statische homepage ontbreken in index.html');
+  const nieuwsteArt = kbSort.slice(0, 8);
+  const blok = `${B}
+<section class="statisch" aria-label="Adviesforum">
+<h1>Adviesforum: voor en door financieel adviseurs</h1>
+<p>Collegiale kennisdeling over hypotheken, verzekeringen, pensioen, krediet en compliance. Geen klantadvies.</p>
+<ul>
+<li><a href="voorwaarden-vergelijker.html">Voorwaarden vergelijken</a>: acceptatievoorwaarden van geldverstrekkers naast elkaar, met bron</li>
+<li><a href="kennisbank/">Kennisbank</a>: ${ARTIKELEN.length} artikelen, <a href="faq/">veelgestelde vragen</a> en <a href="begrippen/">${BEGRIPPEN.length} begrippen</a></li>
+<li><a href="index.html#hulpmiddelen">Hulpmiddelen</a>: rekenhulpen, klantscans, checklists en naslag</li>
+<li><a href="woningtools.html">Woningdata en adviseurstools</a> en <a href="kennispartner.html">Kennispartner worden</a></li>
+</ul>
+<h2>Nieuw in de kennisbank</h2>
+<ul>
+${nieuwsteArt.map(a => `<li><a href="kennisbank/${esc(a.id)}.html">${esc(a.titel)}</a></li>`).join('\n')}
+</ul>
+<h2>Onderwerpen</h2>
+<ul>
+${kbCats.map(c => `<li><a href="kennisbank/#${esc(c.id)}">${esc(c.naam)}</a> (${ARTIKELEN.filter(a => a.cat === c.id).length})</li>`).join('\n')}
+</ul>
+<noscript><p>Het forum, zoeken en de hulpmiddelen werken met JavaScript. Zonder JavaScript kun je de kennisbank, de veelgestelde vragen en de begrippen gewoon lezen.</p></noscript>
+</section>
+${E}`;
+  uit['index.html'] = indexHtml.slice(0, i) + blok + indexHtml.slice(j + E.length);
+}
+
 /* ---------- llms.txt en llms-full.txt ---------- */
 const PAGINAS_LLMS = [
   ['Belangrijkste pagina\'s', [
@@ -398,7 +430,7 @@ const PAGINAS_LLMS = [
     ['woningtools.html', 'Woningdata en adviseurstools', 'Woningcijfer, PandWise, Funderingscijfer, Klimaatcijfer, Hypotheekcijfer, Duurzaamheidsprofiel en Adviseurstools: werking, bronnen en grenzen'],
     ['kennispartner.html', 'Kennispartner worden', 'adviseurs claimen een kennisbankartikel of onderwerp en krijgen na controle een vermelding en een badge'],
     ['adviesroute.html', 'Adviesroute', 'het adviesproces stap voor stap met dossierstukken en aandachtspunten'],
-    ['rekentools-blinqx.html', 'Rekentools van Blinqx', 'tools van Blinqx voor hypotheek, maandlasten, aflossen, ORV en woningwaarde'],
+    ['rekentools-blinqx.html', 'Externe rekentools', 'rekentools van een externe partij (Blinqx, via hypotheekbond.nl) voor hypotheek, maandlasten, aflossen, ORV en woningwaarde'],
     ['vergelijken.html', 'Thema\'s naast elkaar', 'kenmerken uit de Aanbiederwegwijzer per thema naast elkaar'],
     ['voorwaarden.html', 'Voorwaarden van aanbieders', 'gecontroleerde voorwaarden per aanbieder met bron en brondatum'],
     ['kalender.html', 'Kalender', 'belangrijke data en deadlines voor adviseurs'],

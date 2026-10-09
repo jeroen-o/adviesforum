@@ -66,6 +66,7 @@ ${kol}
 </div>
 <div class="sitevoet-onder"><p>Informatie voor adviseurs, geen advies aan consumenten. Voorwaarden en normen van aanbieders zijn leidend: controleer altijd de actuele bron.</p><p>&copy; ${JAAR} Adviesforum &middot; adviesforum.nl</p></div>
 </footer>
+<script src="${pre}js/statistiek.js" defer></script>
 ${VOET_EIND}`;
 }
 

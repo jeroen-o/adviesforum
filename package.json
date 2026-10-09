@@ -3,7 +3,9 @@
   "private": true,
   "description": "Tests voor het Adviesforum (statische site, geen build-stap)",
   "scripts": {
-    "test": "playwright test"
+    "test": "playwright test",
+    "bijwerken": "node tools/bijwerken.js",
+    "controle": "node tools/bijwerken.js --check"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.13.0",

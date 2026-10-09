@@ -60,3 +60,21 @@
 :where(a, button, input, select, textarea, summary, [tabindex]):focus-visible { outline: 3px solid #F68712; outline-offset: 2px; }
 /* Homepage: de links in de infobalk staan nu in de voettekst */
 @media (max-width: 640px) { aside.demo .util { display: none; } }
+
+/* Homepage: drie ingangen in de hero */
+.hero-sub { font-size: 18px; line-height: 1.5; margin: 14px 0 18px; max-width: 640px; color: var(--hs-inkt, #171043); }
+.hero-ingangen { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: 0 0 18px; max-width: 900px; }
+.hero-ingangen .ingang { display: flex; flex-direction: column; gap: 4px; text-align: left; background: #fff; color: #171043; text-decoration: none; padding: 16px 18px; border: 0; border-left: 4px solid #F68712; box-shadow: 0 6px 22px rgba(70,160,210,.16); font: inherit; cursor: pointer; border-radius: 2px; }
+.hero-ingangen .ingang:nth-child(2) { border-left-color: #0B7C77; }
+.hero-ingangen .ingang:nth-child(3) { border-left-color: #E85B3F; }
+.hero-ingangen .ingang:hover { transform: translateY(-1px); box-shadow: 0 10px 26px rgba(70,160,210,.24); }
+.ingang-kop { font-weight: 800; font-size: 17px; }
+.ingang-kop::after { content: " →"; }
+.ingang-tekst { font-size: 14px; color: #4A4770; line-height: 1.4; }
+.demo-kort { display: none; }
+@media (max-width: 640px) {
+  .hero-ingangen { grid-template-columns: 1fr; gap: 10px; }
+  .hero-sub { font-size: 16px; }
+  aside.demo .demo-lang { display: none; }
+  aside.demo .demo-kort { display: inline; white-space: normal; }
+}

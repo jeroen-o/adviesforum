@@ -304,7 +304,7 @@ function n(x){return Number(x||0).toLocaleString('nl-NL');}
 var MAAND=['jan','feb','mrt','apr','mei','jun','jul','aug','sep','okt','nov','dec'];
 function dtm(s){if(!s)return '';var p=String(s).slice(0,10).split('-');return (+p[2])+' '+MAAND[+p[1]-1]+' '+p[0];}
 
-var CATS={hyp:'Hypotheken',verz:'Verzekeringen',pens:'Pensioen & vermogen',fisc:'Fiscaal',kred:'Kredieten',adv:'Adviespakket (Blinqx)',crm:'CRM (Blinqx)',comp:'Compliance & AFM',ov:'Overig'};
+var CATS={hyp:'Hypotheken',verz:'Verzekeringen',pens:'Pensioen & vermogen',fisc:'Fiscaal',kred:'Kredieten',adv:'Adviessoftware',crm:'CRM-software',comp:'Compliance & AFM',ov:'Overig'};
 var FAQ_THEMAS={'hypotheek-normen':'Leennormen en maximale hypotheek','hypotheek-nhg-woning':'NHG, woning en verduurzaming','fiscaal-eigen-woning':'Fiscaal: eigen woning','hypotheek-producten':'Hypotheekproducten en rente','doelgroepen':'Doelgroepen','verzekeringen':'Verzekeringen','pensioen':'Pensioen','compliance':'Compliance en Wft','krediet-vermogen':'Krediet en vermogen','praktijk-software':'Praktijk en dossier'};
 var USERS={};(window.ADVISEURS||[]).forEach(function(u){USERS[u.id]=u;});
 function auteur(id){var u=USERS[id];return u?u.naam:(id||'onbekend');}
@@ -442,6 +442,7 @@ if(!N||!N._geverifieerd){
 </div>
 <div class="sitevoet-onder"><p>Informatie voor adviseurs, geen advies aan consumenten. Voorwaarden en normen van aanbieders zijn leidend: controleer altijd de actuele bron.</p><p>&copy; 2026 Adviesforum &middot; adviesforum.nl</p></div>
 </footer>
+<script src="js/statistiek.js" defer></script>
 <!-- /sitevoet -->
 </body>
 </html>
