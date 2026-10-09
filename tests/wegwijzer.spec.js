@@ -49,3 +49,11 @@ test('mobiel 390px: voorwaarden passen zonder horizontaal scrollen', async ({ pa
   const det = await page.locator('#partij-handelsbanken details.voorwaarden').boundingBox();
   expect(det.x + det.width).toBeLessThanOrEqual(kaart.x + kaart.width + 1);
 });
+
+test('wegwijzer: links bovenaan staan als knoppen boven de regel Laatst bijgewerkt', async ({ page }) => {
+  await page.goto('/partijen.html');
+  const knoppen = page.locator('header.hero .hero-knoppen a.btn');
+  await expect(knoppen).toHaveText(['Voorwaarden van geldverstrekkers vergelijken →', "Thema's naast elkaar", 'Aanbieders voor adviseurs', 'Welke pagina waarvoor?']);
+  const k = await page.locator('header.hero .hero-knoppen').boundingBox(), m = await page.locator('#meta').boundingBox();
+  expect(k.y + k.height).toBeLessThanOrEqual(m.y);
+});
