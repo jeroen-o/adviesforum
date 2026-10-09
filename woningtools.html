@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="nl" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Woningdata en adviseurstools – Adviesforum</title>
+<meta name="description" content="Woningcijfer, PandWise, Funderingscijfer, Klimaatcijfer, Hypotheekcijfer, Duurzaamheidsprofiel en Adviseurstools: wat ze doen, de bronnen en de grenzen.">
+<link rel="canonical" href="https://adviesforum.nl/woningtools.html">
+<meta property="og:title" content="Woningdata en adviseurstools – Adviesforum">
+<meta property="og:description" content="Woningcijfer, PandWise, Funderingscijfer, Klimaatcijfer, Hypotheekcijfer, Duurzaamheidsprofiel en Adviseurstools: wat ze doen, de bronnen en de grenzen.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://adviesforum.nl/woningtools.html">
+<meta property="og:site_name" content="Adviesforum">
+<meta property="og:locale" content="nl_NL">
+<meta name="theme-color" content="#F68712">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="manifest.webmanifest">
+<style>
+  :root{--inkt:#171043;--indigo:#26306E;--tekst:#2E2B4F;--grijs:#5D5A7A;--lijn:#DFDEE5;--licht:#ECF7FD;--oranje:#F68712;--koraal:#E85B3F;--turq:#0B7C77;--rood:#9E2F45;--groen:#1E7A4B}
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{font-family:Segoe UI,Roboto,Helvetica Neue,Arial,system-ui,sans-serif;color:var(--tekst);background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:var(--turq)}
+  .kop{background:var(--licht);padding:44px 24px 40px}
+  .kop-in,.romp{max-width:1080px;margin:0 auto}
+  .kop .label{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--turq);margin-bottom:10px}
+  .kop h1{font-family:"Source Serif 4",Georgia,"Times New Roman",serif;font-weight:400;font-size:clamp(30px,4.6vw,46px);line-height:1.12;margin:0 0 14px;color:var(--inkt)}
+  .kop p{font-size:18px;max-width:720px;margin:0 0 20px;color:var(--inkt)}
+  .kop-grid{display:grid;grid-template-columns:1fr 240px;gap:36px;align-items:center}
+  .knop{display:inline-block;background:var(--oranje);color:var(--inkt);font-weight:700;text-decoration:none;padding:12px 20px;border-radius:2px;border:0;font:inherit;font-weight:700;cursor:pointer}
+  .knop:hover{background:#F9A54D}
+  .knop-rand{display:inline-block;background:#fff;color:var(--inkt);border:1.5px solid var(--inkt);font-weight:700;text-decoration:none;padding:10.5px 18px;border-radius:2px;cursor:pointer;font:inherit;font-weight:700}
+  .knoppen{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+  .romp{padding:8px 24px 24px}
+  section{margin:44px 0}
+  h2{font-family:"Source Serif 4",Georgia,"Times New Roman",serif;font-weight:400;font-size:clamp(24px,3vw,32px);color:var(--inkt);margin:0 0 14px;line-height:1.2}
+  h3{font-size:17px;color:var(--inkt);margin:0 0 6px}
+  .stappen{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;list-style:none;margin:0;padding:0;counter-reset:stap}
+  .stappen li{background:#fff;box-shadow:0 6px 22px rgba(70,160,210,.16);padding:22px 20px;counter-increment:stap;position:relative}
+  .stappen li::before{content:counter(stap);display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--koraal);color:#fff;font-weight:800;margin-bottom:10px}
+  .stappen p{margin:0;font-size:15px}
+  .twee{display:grid;grid-template-columns:1.3fr 1fr;gap:28px;align-items:start}
+  .kaart{background:#fff;box-shadow:0 6px 22px rgba(70,160,210,.16);padding:24px}
+  .kaart.licht{background:var(--licht);box-shadow:none}
+  ul.vink{list-style:none;padding:0;margin:0}
+  ul.vink li{padding-left:28px;position:relative;margin:0 0 10px}
+  ul.vink li::before{content:"";position:absolute;left:4px;top:7px;width:12px;height:7px;border-left:3px solid var(--turq);border-bottom:3px solid var(--turq);transform:rotate(-45deg)}
+  form label{display:block;font-weight:700;font-size:14px;color:var(--inkt);margin:14px 0 5px}
+  form .hint{font-weight:400;color:var(--grijs);font-size:13px}
+  input,select,textarea{width:100%;font:inherit;font-size:15px;padding:10px 12px;border:1.5px solid #C9C8D6;border-radius:2px;background:#fff;color:var(--inkt)}
+  textarea{min-height:120px;resize:vertical}
+  input:focus,select:focus,textarea:focus{border-color:var(--turq);outline:3px solid rgba(11,124,119,.25);outline-offset:0}
+  .rij{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+  fieldset{border:0;padding:0;margin:14px 0 0}
+  legend{font-weight:700;font-size:14px;color:var(--inkt);margin-bottom:6px;padding:0}
+  .keuze{display:flex;gap:10px;align-items:flex-start;font-weight:400;margin:6px 0;font-size:15px;color:var(--tekst)}
+  .keuze input{width:auto;margin-top:5px}
+  .verplicht{color:var(--rood)}
+  .melding{background:#FFF4E5;border-left:4px solid var(--oranje);padding:12px 14px;font-size:14px;margin:16px 0}
+  .fout{color:var(--rood);font-size:14px;margin:8px 0 0}
+  .gelukt{background:#E8F6EF;border-left:4px solid var(--groen);padding:14px 16px;margin-top:16px}
+  .badge-voorbeeld{display:flex;flex-wrap:wrap;gap:18px;align-items:flex-start}
+  .badge-voorbeeld svg{max-width:100%;height:auto}
+  pre.code{background:#171043;color:#F1F1F6;padding:14px 16px;font-size:12.5px;overflow:auto;white-space:pre-wrap;word-break:break-all;border-radius:2px;margin:8px 0}
+  .partners{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
+  .partner{background:#fff;box-shadow:0 6px 22px rgba(70,160,210,.16);padding:20px;scroll-margin-top:20px}
+  .partner:target{outline:3px solid var(--oranje)}
+  .partner .geverifieerd{display:inline-block;font-size:12px;font-weight:700;color:var(--groen);background:#E8F6EF;padding:3px 8px;margin:4px 0 10px}
+  .leeg{background:var(--licht);padding:22px;font-size:15px}
+  details{border-top:1px solid var(--lijn);padding:12px 0}
+  details:last-of-type{border-bottom:1px solid var(--lijn)}
+  summary{cursor:pointer;font-weight:700;color:var(--inkt)}
+  details p,details ul{margin:8px 0 0}
+  .compliance{border-left:4px solid var(--rood);background:#FDF1F3;padding:16px 18px}
+  .compliance h3{color:var(--rood);text-transform:uppercase;letter-spacing:.06em;font-size:13px}
+  .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+  @media (max-width:820px){.kop-grid,.twee{grid-template-columns:1fr}.stappen{grid-template-columns:1fr}.kop-grid .kop-badge{display:none}.rij{grid-template-columns:1fr}}
+  @media print{.knop,.knop-rand,form{display:none}}
+</style>
+<link rel="stylesheet" href="css/sitenav.css">
+<!-- sitenav-ld: gegenereerd door tools/sitenav.js -->
+<meta property="og:image" content="https://adviesforum.nl/img/og-adviesforum.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Adviesforum: voor adviseurs die elkaar vooruithelpen">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://adviesforum.nl/woningtools.html#webpage","url":"https://adviesforum.nl/woningtools.html","name":"Woningdata en adviseurstools","description":"Woningcijfer, PandWise, Funderingscijfer, Klimaatcijfer, Hypotheekcijfer, Duurzaamheidsprofiel en Adviseurstools: wat ze doen, de bronnen en de grenzen.","inLanguage":"nl-NL","isPartOf":{"@id":"https://adviesforum.nl/#website"},"breadcrumb":{"@id":"https://adviesforum.nl/woningtools.html#kruimelpad"}},{"@type":"BreadcrumbList","@id":"https://adviesforum.nl/woningtools.html#kruimelpad","itemListElement":[{"@type":"ListItem","position":1,"name":"Adviesforum","item":"https://adviesforum.nl/"},{"@type":"ListItem","position":2,"name":"Woningdata en adviseurstools","item":"https://adviesforum.nl/woningtools.html"}]}]}</script>
+<!-- /sitenav-ld -->
+<link rel="stylesheet" href="css/huisstijl.css">
+</head>
+<body>
+<!-- sitenav: gegenereerd door tools/sitenav.js, niet met de hand wijzigen -->
+<a class="sitenav-skip" href="#inhoud">Naar de inhoud</a>
+<nav class="sitenav" aria-label="Hoofdmenu"><div class="sitenav-in"><a class="sitenav-merk" href="index.html"><img class="sitenav-teken" src="favicon.svg" alt="" width="34" height="34"><span>Advies<span class="sitenav-forum">forum</span></span></a><form class="sitenav-zoek" action="index.html" method="get" role="search"><input type="search" name="zoek" placeholder="Zoek op de hele site" aria-label="Zoek op de hele site" autocomplete="off"><button type="submit">Zoeken</button></form><ul><li><a href="index.html">Home</a></li><li><a href="voorwaarden.html">Voorwaarden</a></li><li><a href="index.html#hulpmiddelen">Hulpmiddelen</a></li><li><a href="kennisbank/" aria-current="page">Kennisbank</a></li><li><a href="laatste.html">Laatste nieuws</a></li><li><a href="aanmelden.html">Aanmelden</a></li></ul></div></nav>
+<!-- /sitenav -->
+
+<header class="kop">
+  <div class="kop-in">
+    <span class="label">Hulpmiddelen · woning</span>
+    <h1>Woningdata en adviseurstools</h1>
+    <p>Zeven tools die openbare gegevens over een woning, het klimaat of de betaalbaarheid van een hypotheek samenvatten. Per tool: wat het doet, wat je er als adviseur mee kunt en waar de grenzen liggen, met een link naar de site als bron en naar het kennisbankartikel.</p>
+  </div>
+</header>
+
+<main id="inhoud" tabindex="-1" class="romp">
+<div class="compliance" style="margin-top:32px">
+  <h3>Compliance / AFM</h3>
+  <ul style="margin:6px 0 0;padding-left:20px">
+    <li>Alle tools geven een indicatie uit openbare bronnen: geen taxatie, geen funderingsonderzoek en geen advies in de zin van de Wft. Leg in het dossier de bron, de datum en de modelversie vast.</li>
+    <li>Buurtkenmerken zoals inkomen of criminaliteit mogen niet meewegen in het oordeel over een klant (Algemene wet gelijke behandeling).</li>
+    <li>Een adres is, gekoppeld aan een klant, een persoonsgegeven: neem de bronhouders op in je verwerkingsregister. Een vermelding hier is geen aanbeveling.</li>
+  </ul>
+</div>
+<section aria-labelledby="h-tools">
+  <h2 id="h-tools" class="sr-only">De tools</h2>
+  <div id="tools" class="partners">
+<article class="partner"><h3 style="font-size:20px">Woningcijfer</h3><p style="margin:4px 0 10px"><a href="https://www.woningcijfer.nl/" target="_blank" rel="noopener">woningcijfer.nl<span class="sr-only"> (opent in een nieuw venster)</span></a></p>
+<p style="margin:0 0 8px">Cijfer van 1 tot 10 voor de bouwkundige staat en de omgeving van een woning, met bandbreedte en een herkomsttabel per gegeven.</p><p style="margin:0 0 8px;font-size:15px"><strong>Wat kun je ermee:</strong> Gesprek over staat, ligging en voorzieningen; signaal voor een bouwkundige keuring.</p><p style="margin:0 0 8px;font-size:15px"><strong>Grenzen:</strong> Geen taxatie. De gewichten zijn een redactionele keuze; kijk naar de deelscores.</p>
+<h4 style="margin:12px 0 4px;font-size:14px">In de kennisbank</h4><ul style="margin:0;padding-left:20px;font-size:14px"><li><a href="kennisbank/k350.html">Woningcijfer.nl: bouw- en omgevingsscore uit openbare registers, en hoe je die verantwoord gebruikt</a></li></ul></article>
+<article class="partner"><h3 style="font-size:20px">PandWise</h3><p style="margin:4px 0 10px"><a href="https://pandwise.nl/" target="_blank" rel="noopener">pandwise.nl<span class="sr-only"> (opent in een nieuw venster)</span></a></p>
+<p style="margin:0 0 8px">Woningdossier dat de advertentie naast BAG, kadaster, WOZ en CBS zet, met signalen en een bied- en verkoopstrategie.</p><p style="margin:0 0 8px;font-size:15px"><strong>Wat kun je ermee:</strong> Feitencheck vóór bezichtiging of bod; vragen voor de verkopend makelaar.</p><p style="margin:0 0 8px;font-size:15px"><strong>Grenzen:</strong> Geen waardebepaling (NRVT/NWWI). WOZ loopt ruim een jaar achter op de markt.</p>
+<h4 style="margin:12px 0 4px;font-size:14px">In de kennisbank</h4><ul style="margin:0;padding-left:20px;font-size:14px"><li><a href="kennisbank/k351.html">PandWise: woningdossier en feitencheck vóór aankoop, met signalen, buurtcijfers en bied- en verkoopstrategie</a></li></ul></article>
+<article class="partner"><h3 style="font-size:20px">Funderingscijfer</h3><p style="margin:4px 0 10px"><a href="https://www.funderingscijfer.nl" target="_blank" rel="noopener">funderingscijfer.nl<span class="sr-only"> (opent in een nieuw venster)</span></a></p>
+<p style="margin:0 0 8px">Indicatief funderingsrisico per adres op een schaal van 2 tot 8, uit bouwjaar, bodem, maaiveldhoogte, RVO-aandachtsgebied en grondwater.</p><p style="margin:0 0 8px;font-size:15px"><strong>Wat kun je ermee:</strong> Vroeg signaleren of fundering een thema wordt, vóór het taxatierapport.</p><p style="margin:0 0 8px;font-size:15px"><strong>Grenzen:</strong> Geen KCAF-klasse en geen funderingsonderzoek. De taxatie is leidend.</p>
+<h4 style="margin:12px 0 4px;font-size:14px">In de kennisbank</h4><ul style="margin:0;padding-left:20px;font-size:14px"><li><a href="kennisbank/k352.html">Het Funderingscijfer (schaal 2 tot 8): zo wordt de indicatie opgebouwd en zo lees je haar</a></li><li><a href="kennisbank/k330.html">Funderingscijfer.nl: een gratis eerste indicatie voor adviseurs, en waar de grenzen liggen</a></li><li><a href="kennisbank/k331.html">Betrouwbaarheid van funderingsinformatie: vastgesteld, afgeleid of indicatief, en de stappen van risicorapport naar onderzoek</a></li></ul></article>
+<article class="partner"><h3 style="font-size:20px">Klimaatcijfer</h3><p style="margin:4px 0 10px"><a href="https://www.klimaatcijfer.nl/" target="_blank" rel="noopener">klimaatcijfer.nl<span class="sr-only"> (opent in een nieuw venster)</span></a></p>
+<p style="margin:0 0 8px">Klimaatrisico in één cijfer uit fundering, overstroming, hitte, wateroverlast en droogte, met een zwakste-schakelregel.</p><p style="margin:0 0 8px;font-size:15px"><strong>Wat kun je ermee:</strong> Risico’s bespreken die de klant zelf draagt of verzekert.</p><p style="margin:0 0 8px;font-size:15px"><strong>Grenzen:</strong> Weging is een expertinschatting, niet gekalibreerd op schadedata.</p>
+<h4 style="margin:12px 0 4px;font-size:14px">In de kennisbank</h4><ul style="margin:0;padding-left:20px;font-size:14px"><li><a href="kennisbank/k353.html">Klimaatcijfer: klimaatrisico per adres in één cijfer, de vijf dimensies en de grenzen van de score</a></li></ul></article>
+<article class="partner"><h3 style="font-size:20px">Hypotheekcijfer</h3><p style="margin:4px 0 10px"><a href="https://www.hypotheekcijfer.nl/" target="_blank" rel="noopener">hypotheekcijfer.nl<span class="sr-only"> (opent in een nieuw venster)</span></a></p>
+<p style="margin:0 0 8px">Betaalbaarheidscheck van de Nationale Hypotheekbond die geldverstrekkers hun klanten laten doen.</p><p style="margin:0 0 8px;font-size:15px"><strong>Wat kun je ermee:</strong> Klanten begeleiden die een brief van hun geldverstrekker krijgen; aanleiding voor een adviesgesprek.</p><p style="margin:0 0 8px;font-size:15px"><strong>Grenzen:</strong> De rekenmethode is niet openbaar beschreven; geen advies.</p>
+<h4 style="margin:12px 0 4px;font-size:14px">In de kennisbank</h4><ul style="margin:0;padding-left:20px;font-size:14px"><li><a href="kennisbank/k320.html">Hypotheekcijfer.nl: betaalbaarheidscheck van geldverstrekkers, wat de adviseur ermee kan en de grenzen</a></li><li><a href="kennisbank/k321.html">Hypotheekcijfer: gebeurtenissen, maatregelen en gebruik in het adviesgesprek</a></li></ul></article>
+<article class="partner"><h3 style="font-size:20px">Duurzaamheidsprofiel</h3><p style="margin:4px 0 10px"><a href="https://www.duurzaamheidsprofiel.nl/" target="_blank" rel="noopener">duurzaamheidsprofiel.nl<span class="sr-only"> (opent in een nieuw venster)</span></a></p>
+<p style="margin:0 0 8px">Rapport per woning met verduurzamingsmogelijkheden, besparing en leenruimte.</p><p style="margin:0 0 8px;font-size:15px"><strong>Wat kun je ermee:</strong> Gespreksstarter over verduurzaming, passend bij de AFM-leidraad hypotheekadvisering.</p><p style="margin:0 0 8px;font-size:15px"><strong>Grenzen:</strong> Voor extra leenruimte telt het geregistreerde energielabel. Controleer de actuele werking op de site.</p>
+<h4 style="margin:12px 0 4px;font-size:14px">In de kennisbank</h4><ul style="margin:0;padding-left:20px;font-size:14px"><li><a href="kennisbank/k332.html">Duurzaamheidsprofiel.nl: herkomst, wat het rapport laat zien en hoe u het in het hypotheekgesprek gebruikt</a></li><li><a href="kennisbank/k333.html">Verduurzaming in het hypotheekadvies: wat de AFM-leidraad vraagt en wat een duurzaamheidsprofiel daaraan bijdraagt</a></li></ul></article>
+<article class="partner"><h3 style="font-size:20px">Adviseurstools</h3><p style="margin:4px 0 10px"><a href="https://www.adviseurstools.nl/" target="_blank" rel="noopener">adviseurstools.nl<span class="sr-only"> (opent in een nieuw venster)</span></a></p>
+<p style="margin:0 0 8px">Tool-lab met experimentele (AI-)rekentools voor adviseurs, zoals scans en calculators.</p><p style="margin:0 0 8px;font-size:15px"><strong>Wat kun je ermee:</strong> Ideeën en prototypes voor de eigen praktijk.</p><p style="margin:0 0 8px;font-size:15px"><strong>Grenzen:</strong> Experimenteel: uitkomsten zelf controleren; geen advies of aanbod. Let op AVG bij klantgegevens.</p>
+<h4 style="margin:12px 0 4px;font-size:14px">In de kennisbank</h4><ul style="margin:0;padding-left:20px;font-size:14px"><li><a href="kennisbank/k340.html">Adviseurstools.nl: experimentele AI-rekentools voor adviseurs en hoe er verantwoord mee om te gaan</a></li></ul></article>
+</div>
+</section>
+<p style="font-size:14px">Ben je specialist in woningdata, fundering of verduurzaming? <a href="kennispartner.html#claimen">Word Kennispartner</a> en claim een van deze artikelen.</p>
+</main>
+
+<!-- sitevoet: gegenereerd door tools/sitenav.js, niet met de hand wijzigen -->
+<footer class="sitevoet"><div class="sitevoet-in">
+<div class="sitevoet-over"><a class="sitevoet-merk" href="index.html"><img class="sitenav-teken" src="favicon.svg" alt="" width="34" height="34"><span>Advies<span class="sitenav-forum">forum</span></span></a><p>Voor en door financieel adviseurs: collegiale kennisdeling over hypotheken, verzekeringen, pensioen en krediet.</p><p><strong>Vraag, idee of fout gezien?</strong><br>Mail de beheerder:<br><a href="mailto:jeroen@oversteegen.nl">jeroen@oversteegen.nl</a></p><p class="sitevoet-volg"><a href="feed.xml" type="application/rss+xml">RSS: nieuw en bijgewerkt</a><a href="aanbieders-feed.xml" type="application/rss+xml">RSS: nieuws van aanbieders</a></p></div>
+<nav class="sitevoet-kol" aria-labelledby="sv-k0"><h2 id="sv-k0">Voorwaarden</h2><ul><li><a href="voorwaarden.html">Alle voorwaarden</a></li><li><a href="voorwaarden-vergelijker.html">Voorwaarden vergelijken</a></li><li><a href="situatiecheck.html">Situatiecheck</a></li><li><a href="acceptatiewijzer.html">Acceptatiewijzer</a></li><li><a href="productvoorwaarden.html">Productvoorwaarden</a></li><li><a href="partijen.html">Aanbiederwegwijzer</a></li></ul></nav><nav class="sitevoet-kol" aria-labelledby="sv-k1"><h2 id="sv-k1">Hulpmiddelen</h2><ul><li><a href="index.html#hulpmiddelen">Alle hulpmiddelen</a></li><li><a href="rekentools.html">Rekentools</a></li><li><a href="leennormen-2026.html">Leennormen 2026</a></li><li><a href="nhg-check.html">NHG-check</a></li><li><a href="documentenchecklist.html">Documentenchecklist</a></li><li><a href="wetgeving.html">Wet- en regelgeving</a></li></ul></nav><nav class="sitevoet-kol" aria-labelledby="sv-k2"><h2 id="sv-k2">Kennis</h2><ul><li><a href="kennisbank/">Kennisbank</a></li><li><a href="faq/">Veelgestelde vragen</a></li><li><a href="begrippen/">Begrippen A-Z</a></li><li><a href="index.html">Forum</a></li><li><a href="laatste.html">Laatste nieuws</a></li><li><a href="nieuw.html">Wat is nieuw</a></li></ul></nav><nav class="sitevoet-kol" aria-labelledby="sv-k3"><h2 id="sv-k3">Meedoen</h2><ul><li><a href="aanmelden.html">Aanmelden</a></li><li><a href="kennispartner.html">Kennispartner worden</a></li><li><a href="uitnodigen.html">Collega uitnodigen</a></li><li><a href="koppelingen.html">Koppelen met je adviessoftware</a></li><li><a href="aanbieders-info.html">Voor aanbieders</a></li><li><a href="privacy.html">Privacy en cookies</a></li></ul></nav>
+</div>
+<div class="sitevoet-onder"><p>Informatie voor adviseurs, geen advies aan consumenten. Voorwaarden en normen van aanbieders zijn leidend: controleer altijd de actuele bron.</p><p>&copy; 2026 Adviesforum &middot; adviesforum.nl</p></div>
+</footer>
+<!-- /sitevoet -->
+</body>
+</html>

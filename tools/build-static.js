@@ -41,7 +41,8 @@ const VRAAG_BESTANDEN = [...indexHtml.matchAll(/<script\s+src="(data\/vragen[^"]
 if (!VRAAG_BESTANDEN.length) fout('Geen data/vragen*.js scripts gevonden in index.html');
 
 global.window = {};
-for (const b of [...KB_BESTANDEN, ...FAQ_BESTANDEN, 'data/begrippen.js', ...VRAAG_BESTANDEN, 'data/voorwaarden-onderwerpen.js']) require(path.join(ROOT, b));
+for (const b of [...KB_BESTANDEN, ...FAQ_BESTANDEN, 'data/begrippen.js', ...VRAAG_BESTANDEN, 'data/voorwaarden-onderwerpen.js', 'data/kennispartners.js']) require(path.join(ROOT, b));
+const KENNISPARTNERS = window.KENNISPARTNERS || [];
 const VW_ONDERWERPEN = window.VOORWAARDEN_ONDERWERPEN;
 const ARTIKELEN = window.KENNISBANK || [];
 const FAQ = window.FAQ || [];
@@ -227,6 +228,12 @@ const vwKader = (tekst, c) => {
   return l.length ? `<div class="kader"><h2>Vergelijk de voorwaarden per geldverstrekker</h2><ul class="lijst">${l.map(x => `<li><a href="${esc(x.href)}">${esc(x.naam[0].toUpperCase() + x.naam.slice(1))}</a></li>`).join('')}</ul><p style="font-size:13px;margin:6px 0 0">Gecontroleerde voorwaarden met bron; geen rentes en geen advies.</p></div>\n` : '';
 };
 const KR_KB = ['Kennisbank', './', BASE + 'kennisbank/'];
+/* Kennispartner bij het artikel (data/kennispartners.js), of een uitnodiging om het artikel te claimen */
+const kpKader = (a, pre) => {
+  const kp = KENNISPARTNERS.filter(p => (p.artikelen || []).includes(a.id));
+  if (kp.length) return `<div class="kader kennispartner"><h2>Kennispartner bij dit artikel</h2><ul class="lijst">${kp.map(p => `<li><a href="${pre}kennispartner.html#partner-${esc(p.id)}">${esc(p.naam)}</a>, ${esc(p.kantoor)}${p.plaats ? ' (' + esc(p.plaats) + ')' : ''}</li>`).join('')}</ul><p style="font-size:13px;margin:6px 0 0">Vakinhoudelijk aanspreekpunt, gecontroleerd door de beheerder. Een vermelding is geen aanbeveling.</p></div>\n`;
+  return `<div class="kader kennispartner"><h2>Specialist in dit onderwerp?</h2><p style="margin:0">Claim dit artikel als <a href="${pre}kennispartner.html?artikel=${esc(a.id)}#claimen">Kennispartner van het Adviesforum</a>: je naam en kantoor staan dan bij het artikel en je krijgt een badge voor je website en LinkedIn.</p></div>\n`;
+};
 
 for (const a of ARTIKELEN) {
   const gewijzigd = a.bijgewerkt || a.datum;
@@ -240,6 +247,7 @@ for (const a of ARTIKELEN) {
     '</article>\n' +
     `<p style="margin-top:26px"><a class="knop" href="../index.html#artikel-${esc(a.id)}">Open in het forum</a></p>\n` +
     vwKader(a.titel + ' ' + a.body, a.cat) +
+    kpKader(a, '../') +
     (verwant.length ? `<div class="kader"><h2>Meer over ${esc(catNaam(a.cat))}</h2><ul class="lijst">${verwant.map(x => `<li><a href="${esc(x.id)}.html">${esc(x.titel)}</a></li>`).join('')}</ul></div>` : '');
   uit['kennisbank/' + a.id + '.html'] = pagina({
     pre: '../', pad: 'kennisbank/' + a.id + '.html', titel: a.titel + ' – ' + SITE, beschrijving: beschr, type: 'article', h1: a.titel, actief: 'kb',
@@ -387,6 +395,8 @@ const PAGINAS_LLMS = [
     ['acceptatiewijzer.html', 'Acceptatiewijzer', 'aandachtspunten per bijzondere klantsituatie (zzp, flexwerk, expat, scheiding, senioren en meer)'],
     ['wetgeving.html', 'Wet- en regelgeving', 'wetten, besluiten en bronnen voor adviseurs, met wat er verandert in 2026–2027'],
     ['partijen.html', 'Aanbiederwegwijzer', 'geldverstrekkers, verzekeraars en pensioenuitvoerders met portals en voorwaarden'],
+    ['woningtools.html', 'Woningdata en adviseurstools', 'Woningcijfer, PandWise, Funderingscijfer, Klimaatcijfer, Hypotheekcijfer, Duurzaamheidsprofiel en Adviseurstools: werking, bronnen en grenzen'],
+    ['kennispartner.html', 'Kennispartner worden', 'adviseurs claimen een kennisbankartikel of onderwerp en krijgen na controle een vermelding en een badge'],
     ['adviesroute.html', 'Adviesroute', 'het adviesproces stap voor stap met dossierstukken en aandachtspunten'],
     ['rekentools-blinqx.html', 'Rekentools van Blinqx', 'tools van Blinqx voor hypotheek, maandlasten, aflossen, ORV en woningwaarde'],
     ['vergelijken.html', 'Thema\'s naast elkaar', 'kenmerken uit de Aanbiederwegwijzer per thema naast elkaar'],

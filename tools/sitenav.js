@@ -27,7 +27,7 @@ const VOORWAARDEN = ['voorwaarden.html', 'voorwaarden-vergelijker.html', 'produc
   'partijen.html', 'vergelijken.html', 'aanbieders.html', 'aanbieders-info.html', 'aanbieders-voorwaarden.html', 'aanbieder-aanleveren.html',
   'aanbieder-beheer.html', 'beheer-voorwaarden.html', 'verantwoording-voorwaarden.html'];
 const HOORT_BIJ = Object.assign(
-  { 'index.html': 'Home', 'laatste.html': 'Laatste nieuws', 'nieuw.html': 'Laatste nieuws', 'aanmelden.html': 'Aanmelden', 'uitnodigen.html': 'Aanmelden', kennisbank: 'Kennisbank' },
+  { 'index.html': 'Home', 'laatste.html': 'Laatste nieuws', 'nieuw.html': 'Laatste nieuws', 'aanmelden.html': 'Aanmelden', 'uitnodigen.html': 'Aanmelden', 'kennispartner.html': 'Kennisbank', 'woningtools.html': 'Kennisbank', kennisbank: 'Kennisbank' },
   Object.fromEntries(VOORWAARDEN.map(f => [f, 'Voorwaarden'])));
 /* Pagina's buiten het menu (geen aria-current, geen kruimelpad). */
 const GEEN = ['404.html', 'privacy.html', 'beheer-code.html', 'koppelingen.html', 'compliance-overzicht.html', 'hypotheekbond-tools.html'];
@@ -43,7 +43,7 @@ const PREFIX = { '404.html': '/' };
 function navHtml(pre = '', bestand = '', doel = 'inhoud') {
   const huidig = sectie(bestand);
   const li = LINKS.map(([u, t]) => `<li><a href="${pre}${u}"${t === huidig ? ' aria-current="page"' : ''}>${t}</a></li>`).join('');
-  return `${BEGIN}\n<a class="sitenav-skip" href="#${doel}">Naar de inhoud</a>\n<nav class="sitenav" aria-label="Hoofdmenu"><div class="sitenav-in"><a class="sitenav-merk" href="${pre}index.html"><span class="sitenav-teken" aria-hidden="true">A</span>Adviesforum</a><form class="sitenav-zoek" action="${pre}index.html" method="get" role="search"><input type="search" name="zoek" placeholder="Zoek op de hele site" aria-label="Zoek op de hele site" autocomplete="off"><button type="submit">Zoeken</button></form><ul>${li}</ul></div></nav>\n${EIND}`;
+  return `${BEGIN}\n<a class="sitenav-skip" href="#${doel}">Naar de inhoud</a>\n<nav class="sitenav" aria-label="Hoofdmenu"><div class="sitenav-in"><a class="sitenav-merk" href="${pre}index.html"><img class="sitenav-teken" src="${pre}favicon.svg" alt="" width="34" height="34"><span>Advies<span class="sitenav-forum">forum</span></span></a><form class="sitenav-zoek" action="${pre}index.html" method="get" role="search"><input type="search" name="zoek" placeholder="Zoek op de hele site" aria-label="Zoek op de hele site" autocomplete="off"><button type="submit">Zoeken</button></form><ul>${li}</ul></div></nav>\n${EIND}`;
 }
 
 const VOET_BEGIN = '<!-- sitevoet: gegenereerd door tools/sitenav.js, niet met de hand wijzigen -->';
@@ -55,13 +55,13 @@ const VOET_KOLOMMEN = [
   ['Voorwaarden', [['voorwaarden.html', 'Alle voorwaarden'], ['voorwaarden-vergelijker.html', 'Voorwaarden vergelijken'], ['situatiecheck.html', 'Situatiecheck'], ['acceptatiewijzer.html', 'Acceptatiewijzer'], ['productvoorwaarden.html', 'Productvoorwaarden'], ['partijen.html', 'Aanbiederwegwijzer']]],
   ['Hulpmiddelen', [['index.html#hulpmiddelen', 'Alle hulpmiddelen'], ['rekentools.html', 'Rekentools'], ['leennormen-2026.html', 'Leennormen 2026'], ['nhg-check.html', 'NHG-check'], ['documentenchecklist.html', 'Documentenchecklist'], ['wetgeving.html', 'Wet- en regelgeving']]],
   ['Kennis', [['kennisbank/', 'Kennisbank'], ['faq/', 'Veelgestelde vragen'], ['begrippen/', 'Begrippen A-Z'], ['index.html', 'Forum'], ['laatste.html', 'Laatste nieuws'], ['nieuw.html', 'Wat is nieuw']]],
-  ['Meedoen', [['aanmelden.html', 'Aanmelden'], ['uitnodigen.html', 'Collega uitnodigen'], ['koppelingen.html', 'Koppelen met je adviessoftware'], ['aanbieders-info.html', 'Voor aanbieders'], ['privacy.html', 'Privacy en cookies']]],
+  ['Meedoen', [['aanmelden.html', 'Aanmelden'], ['kennispartner.html', 'Kennispartner worden'], ['uitnodigen.html', 'Collega uitnodigen'], ['koppelingen.html', 'Koppelen met je adviessoftware'], ['aanbieders-info.html', 'Voor aanbieders'], ['privacy.html', 'Privacy en cookies']]],
 ];
 function voetHtml(pre = '') {
   const kol = VOET_KOLOMMEN.map(([kop, links], i) => `<nav class="sitevoet-kol" aria-labelledby="sv-k${i}"><h2 id="sv-k${i}">${kop}</h2><ul>${links.map(([u, t]) => `<li><a href="${pre}${u}">${t}</a></li>`).join('')}</ul></nav>`).join('');
   return `${VOET_BEGIN}
 <footer class="sitevoet"><div class="sitevoet-in">
-<div class="sitevoet-over"><a class="sitevoet-merk" href="${pre}index.html"><span class="sitenav-teken" aria-hidden="true">A</span>Adviesforum</a><p>Voor en door financieel adviseurs: collegiale kennisdeling over hypotheken, verzekeringen, pensioen en krediet.</p><p><strong>Vraag, idee of fout gezien?</strong><br>Mail de beheerder:<br><a href="mailto:${BEHEER_MAIL}">${BEHEER_MAIL}</a></p><p class="sitevoet-volg"><a href="${pre}feed.xml" type="application/rss+xml">RSS: nieuw en bijgewerkt</a><a href="${pre}aanbieders-feed.xml" type="application/rss+xml">RSS: nieuws van aanbieders</a></p></div>
+<div class="sitevoet-over"><a class="sitevoet-merk" href="${pre}index.html"><img class="sitenav-teken" src="${pre}favicon.svg" alt="" width="34" height="34"><span>Advies<span class="sitenav-forum">forum</span></span></a><p>Voor en door financieel adviseurs: collegiale kennisdeling over hypotheken, verzekeringen, pensioen en krediet.</p><p><strong>Vraag, idee of fout gezien?</strong><br>Mail de beheerder:<br><a href="mailto:${BEHEER_MAIL}">${BEHEER_MAIL}</a></p><p class="sitevoet-volg"><a href="${pre}feed.xml" type="application/rss+xml">RSS: nieuw en bijgewerkt</a><a href="${pre}aanbieders-feed.xml" type="application/rss+xml">RSS: nieuws van aanbieders</a></p></div>
 ${kol}
 </div>
 <div class="sitevoet-onder"><p>Informatie voor adviseurs, geen advies aan consumenten. Voorwaarden en normen van aanbieders zijn leidend: controleer altijd de actuele bron.</p><p>&copy; ${JAAR} Adviesforum &middot; adviesforum.nl</p></div>

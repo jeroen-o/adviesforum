@@ -43,3 +43,8 @@
 @media (max-width:900px){.sitevoet-in{grid-template-columns:repeat(2,minmax(0,1fr))}.sitevoet-over{grid-column:1/-1}}
 @media (max-width:640px){.sitevoet-in{padding:32px 16px 20px;gap:24px 20px}.sitevoet-onder{padding:14px 16px 24px}.paginanoot{padding:14px 16px 0}}
 @media print{.sitevoet,.sitenav-skip{display:none}}
+/* Logo: beeldmerk (twee tekstballonnen met ster) en woordmerk Advies|forum */
+img.sitenav-teken{width:34px;height:34px;background:none!important;border:0!important;border-radius:0!important;display:block}
+.sitenav-merk{font-size:18px}
+.sitenav-forum{color:#0B7C77}
+.sitevoet .sitenav-forum{color:#7FD6CF}
