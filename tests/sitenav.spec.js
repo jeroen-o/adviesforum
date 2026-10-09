@@ -6,7 +6,7 @@ const { execFileSync } = require('child_process');
 const { volgFouten } = require('./helpers');
 
 const ROOT = path.join(__dirname, '..');
-const LINKS = ['Home', 'Voorwaarden', 'Hulpmiddelen', 'Kennisbank', 'Laatste nieuws', 'Aanmelden'];
+const LINKS = ['Home', 'Voorwaarden', 'Hypotheekrentetarieven', 'Hulpmiddelen', 'Kennisbank', 'Laatste nieuws', 'Handleiding', 'Voor wie', 'Aanmelden'];
 
 test('node tools/sitenav.js --check: alle pagina\'s hebben de actuele balk', () => {
   expect(execFileSync(process.execPath, [path.join(ROOT, 'tools', 'sitenav.js'), '--check'], { cwd: ROOT, encoding: 'utf8' })).toMatch(/actueel/);
@@ -17,7 +17,7 @@ test('node tools/sitenav.js --check: alle pagina\'s hebben de actuele balk', () 
   }
 });
 
-test('balk heeft overal dezelfde zes links en markeert de huidige pagina', async ({ page }) => {
+test('balk heeft overal dezelfde menulinks en markeert de huidige pagina', async ({ page }) => {
   const fouten = await volgFouten(page);
   for (const [url, huidig] of [['/voorwaarden-vergelijker.html', 'Voorwaarden'], ['/laatste.html', 'Laatste nieuws'], ['/orv.html', 'Hulpmiddelen'], ['/kennisbank/', 'Kennisbank'], ['/privacy.html', null]]) {
     await page.goto(url);
@@ -112,14 +112,16 @@ test('gestructureerde data: WebPage met kruimelpad op indexeerbare pagina\'s', (
   expect(fout).toEqual([]);
 });
 
-test('kop van twee regels: renteoverzicht als externe link, inloggen en vraag stellen in de eerste regel', async ({ page }) => {
+test('kop van twee regels: rentetarieven rechts van Voorwaarden, handleiding en voor wie links van Aanmelden', async ({ page }) => {
   const fouten = await volgFouten(page);
   await page.goto('/voorwaarden.html');
-  const r = page.locator('nav.sitenav .sitenav-extern');
-  await expect(r).toHaveAttribute('href', /tools\.hypotheekbond\.nl\/renteoverzicht\/all$/);
-  await expect(r).toHaveAttribute('target', '_blank');
-  await expect(r).toHaveAttribute('rel', 'noopener');
-  await expect(r).toContainText('Renteoverzicht');
+  const teksten = await page.locator('nav.sitenav .sitenav-rij2 li a').allTextContents();
+  expect(teksten).toEqual(['Home', 'Voorwaarden', 'Hypotheekrentetarieven', 'Hulpmiddelen', 'Kennisbank', 'Laatste nieuws', 'Handleiding', 'Voor wie', 'Aanmelden']);
+  await page.goto('/hypotheekrentetarieven.html');
+  await expect(page.locator('nav.sitenav a[aria-current="page"]')).toHaveText('Hypotheekrentetarieven');
+  await expect(page.locator('main iframe')).toHaveAttribute('src', /tools\.hypotheekbond\.nl\/renteoverzicht\/all$/);
+  await expect(page.locator('main iframe')).toHaveAttribute('title', /Renteoverzicht/);
+  await expect(page.locator('h1')).toHaveText('Hypotheekrentetarieven');
   await page.goto('/index.html');
   await expect(page.locator('#sitenav-acties #who')).toHaveCount(1);
   await expect(page.locator('#sitenav-acties [data-act="nieuw"]')).toHaveCount(1);

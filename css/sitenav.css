@@ -57,8 +57,6 @@ img.sitenav-teken{width:34px;height:34px;background:none!important;border:0!impo
 .sitenav-acties:empty{display:none}
 .sitenav-rij2{display:flex;align-items:center;justify-content:space-between;gap:4px 16px;flex-wrap:wrap}
 .sitenav-rij2 ul{margin-left:-9px}
-.sitenav-extern{display:inline-flex;align-items:center;gap:2px;font-weight:700;color:#0B7C77;text-decoration:none;padding:5px 9px;border:1.5px solid #0B7C77;border-radius:2px;white-space:nowrap}
-.sitenav-extern:hover{background:#0B7C77;color:#fff;text-decoration:none}
 .sitenav-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 @media (max-width:640px){
   .sitenav-rij1{flex-wrap:wrap}
