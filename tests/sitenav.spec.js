@@ -111,3 +111,19 @@ test('gestructureerde data: WebPage met kruimelpad op indexeerbare pagina\'s', (
   }
   expect(fout).toEqual([]);
 });
+
+test('kop van twee regels: renteoverzicht als externe link, inloggen en vraag stellen in de eerste regel', async ({ page }) => {
+  const fouten = await volgFouten(page);
+  await page.goto('/voorwaarden.html');
+  const r = page.locator('nav.sitenav .sitenav-extern');
+  await expect(r).toHaveAttribute('href', /tools\.hypotheekbond\.nl\/renteoverzicht\/all$/);
+  await expect(r).toHaveAttribute('target', '_blank');
+  await expect(r).toHaveAttribute('rel', 'noopener');
+  await expect(r).toContainText('Renteoverzicht');
+  await page.goto('/index.html');
+  await expect(page.locator('#sitenav-acties #who')).toHaveCount(1);
+  await expect(page.locator('#sitenav-acties [data-act="nieuw"]')).toHaveCount(1);
+  await expect(page.locator('header.top')).toBeHidden();
+  await expect(page.locator('aside.demo')).toHaveCount(0);
+  expect(fouten).toEqual([]);
+});

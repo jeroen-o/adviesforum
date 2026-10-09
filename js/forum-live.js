@@ -9,12 +9,6 @@
   var LIVE = 'live:';
   var mijnProfiel = null;
 
-  /* Infobalk aanpassen */
-  document.querySelectorAll('aside.demo .demo-lang, aside.demo .demo-kort').forEach(function (s) {
-    s.textContent = s.classList.contains('demo-kort') ? 'Live forum: bijdragen verschijnen na controle door een moderator.'
-      : 'Voor en door financieel adviseurs. Vragen en antwoorden van geverifieerde adviseurs verschijnen na controle door een moderator. Zie de gebruiksvoorwaarden.';
-  });
-
   function liveGebruiker(uid, p) {
     var id = LIVE + uid, u = USERS.find(function (x) { return x.id === id; });
     var gegevens = { naam: (p && p.naam) || 'Adviseur', functie: (p && p.functie) || 'Financieel adviseur', kantoor: (p && p.kantoor) || '', geverifieerd: !!(p && p.geverifieerd) };

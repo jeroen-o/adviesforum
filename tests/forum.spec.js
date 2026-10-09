@@ -22,7 +22,7 @@ test('houdbaarheid: na de herzieningsdatum staat er "mogelijk verouderd"', async
 test('vraag stellen vraagt contactgegevens en toont alleen de naam', async ({ page }) => {
   await volgFouten(page);
   await page.goto('/index.html');
-  await page.click('header [data-act="nieuw"]');
+  await page.click('#sitenav-acties [data-act="nieuw"]');
   await page.fill('#nv-titel', 'Overbrugging bij nog niet verkochte woning: hoeveel?');
   await page.fill('#nv-body', 'Klant koopt eerst en verkoopt later. Hoe bepalen jullie het maximale overbruggingskrediet?');
   await page.fill('#nv-naam', 'Test Adviseur');
@@ -67,7 +67,9 @@ test('mobiel: alle tabbladen zonder horizontale scroll en volle formuliervelden'
     await page.goto('/index.html' + h);
     expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(392);
   }
-  await page.click('header [data-act="nieuw"]');
+  /* Op mobiel staat Vraag stellen als ingang in de hero (de knop in de menubalk is daar verborgen) */
+  await page.goto('/index.html');
+  await page.click('.hero-ingangen [data-act="nieuw"]');
   const smal = await page.$$eval('#f-vraag input:not([type=checkbox]), #f-vraag textarea, #f-vraag select', els => els.filter(e => e.getBoundingClientRect().width < 250).map(e => e.name));
   expect(smal).toEqual([]);
   expect(fouten).toEqual([]);
