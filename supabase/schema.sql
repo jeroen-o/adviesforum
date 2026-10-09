@@ -20,6 +20,9 @@ create table if not exists public.profielen (
   rol text not null default 'adviseur' check (rol in ('adviseur', 'moderator')),
   aangemaakt timestamptz not null default now()
 );
+-- Soort account: adviseur of medewerker van een aanbieder (label 'Aanbieder' bij bijdragen). Kolom apart toegevoegd zodat
+-- opnieuw uitvoeren ook werkt op een database die al bestond.
+alter table public.profielen add column if not exists soort text not null default 'adviseur' check (soort in ('adviseur', 'aanbieder'));
 
 -- Hulpfuncties (security definer: lezen profielen zonder dat de toegangsregels zichzelf aanroepen)
 create or replace function public.is_moderator() returns boolean
@@ -48,8 +51,8 @@ begin
   if not public.is_moderator() then
     new.geverifieerd := old.geverifieerd;
     new.rol := old.rol;
-    -- Naam, kantoor of AFM-nummer gewijzigd: opnieuw laten controleren (voorkomt dat iemand zich als een ander voordoet)
-    if old.geverifieerd and (new.naam <> old.naam or new.kantoor <> old.kantoor or new.afm <> old.afm) then
+    -- Naam, kantoor, AFM-nummer of soort account gewijzigd: opnieuw laten controleren (voorkomt dat iemand zich als een ander voordoet)
+    if old.geverifieerd and (new.naam <> old.naam or new.kantoor <> old.kantoor or new.afm <> old.afm or new.soort <> old.soort) then
       new.geverifieerd := false;
     end if;
   end if;
@@ -124,6 +127,7 @@ create policy beoordeling_lezen on public.beoordelingen for select using (true);
 drop policy if exists beoordeling_geven on public.beoordelingen;
 create policy beoordeling_geven on public.beoordelingen for insert with check (
   auteur = auth.uid() and public.is_geverifieerd()
+  and not exists (select 1 from public.profielen p where p.id = auth.uid() and p.soort = 'aanbieder') -- aanbieders beoordelen niet
   and not exists (select 1 from public.antwoorden a where a.id = antwoord_id and a.auteur = auth.uid()));
 drop policy if exists beoordeling_wijzigen on public.beoordelingen;
 create policy beoordeling_wijzigen on public.beoordelingen for update using (auteur = auth.uid());

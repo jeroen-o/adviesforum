@@ -17,6 +17,8 @@ Alles staat al klaar in de code. Zolang `js/backend-config.js` leeg is, verander
 
 Daarmee staan de tabellen (profielen, vragen, antwoorden, beoordelingen, meldingen) en de toegangsregels klaar. Alles wat een adviseur plaatst, krijgt status `wacht` en is pas zichtbaar na goedkeuring.
 
+Accounts hebben een soort: `adviseur` of `aanbieder` (medewerker van een geldverstrekker, verzekeraar of andere aanbieder). Aanbieders kiezen dat zelf in hun profiel; na verificatie staat het label **Aanbieder** bij hun bijdragen. Aanbieders kunnen vragen stellen en beantwoorden, maar geen antwoorden beoordelen en ze staan niet in de ranglijst van adviseurs. Wijzigt iemand de soort, dan moet het account opnieuw worden geverifieerd. Had je het schema al eerder uitgevoerd, voer het dan opnieuw uit om de kolom `soort` toe te voegen.
+
 ## 3. Inloggen instellen
 
 1. **Authentication → Providers → Email**: aan. Wachtwoorden zijn niet nodig; de site gebruikt alleen de e-maillink (magic link).

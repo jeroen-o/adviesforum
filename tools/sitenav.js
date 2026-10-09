@@ -19,6 +19,7 @@ const LINKS = [
   ['hypotheekrentetarieven.html', 'Hypotheekrentetarieven'],
   ['index.html#hulpmiddelen', 'Hulpmiddelen'],
   ['kennisbank/', 'Kennisbank'],
+  ['aanbieders.html', 'Aanbieders'],
   ['laatste.html', 'Laatste nieuws'],
   ['index.html#handleiding', 'Handleiding'],
   ['index.html#voorwie', 'Voor wie'],
@@ -27,11 +28,11 @@ const LINKS = [
 /* Pagina's die bij een menu-item horen (voor aria-current en het kruimelpad in de gestructureerde data).
    Pagina's die hier niet staan en geen GEEN-pagina zijn, horen bij Hulpmiddelen. */
 const VOORWAARDEN = ['voorwaarden.html', 'voorwaarden-vergelijker.html', 'productvoorwaarden.html', 'situatiecheck.html', 'acceptatiewijzer.html',
-  'partijen.html', 'vergelijken.html', 'aanbieders.html', 'aanbieders-info.html', 'aanbieders-voorwaarden.html', 'aanbieder-aanleveren.html',
-  'aanbieder-beheer.html', 'beheer-voorwaarden.html', 'verantwoording-voorwaarden.html'];
+  'partijen.html', 'vergelijken.html', 'beheer-voorwaarden.html', 'verantwoording-voorwaarden.html'];
+const AANBIEDERS = ['aanbieders.html', 'aanbieders-info.html', 'aanbieders-voorwaarden.html', 'aanbieder-aanleveren.html', 'aanbieder-beheer.html'];
 const HOORT_BIJ = Object.assign(
   { 'index.html': 'Home', 'laatste.html': 'Laatste nieuws', 'nieuw.html': 'Laatste nieuws', 'aanmelden.html': 'Aanmelden', 'uitnodigen.html': 'Aanmelden', 'kennispartner.html': 'Kennisbank', 'gebruiksvoorwaarden.html': 'Aanmelden', 'woningtools.html': 'Kennisbank', 'hypotheekrentetarieven.html': 'Hypotheekrentetarieven', kennisbank: 'Kennisbank' },
-  Object.fromEntries(VOORWAARDEN.map(f => [f, 'Voorwaarden'])));
+  Object.fromEntries(VOORWAARDEN.map(f => [f, 'Voorwaarden'])), Object.fromEntries(AANBIEDERS.map(f => [f, 'Aanbieders'])));
 /* Pagina's buiten het menu (geen aria-current, geen kruimelpad). */
 const GEEN = ['404.html', 'moderatie.html', 'privacy.html', 'beheer-code.html', 'koppelingen.html', 'compliance-overzicht.html', 'hypotheekbond-tools.html'];
 const sectie = bestand => HOORT_BIJ[bestand] || (GEEN.includes(bestand) || !bestand ? null : 'Hulpmiddelen');
@@ -58,7 +59,7 @@ const VOET_KOLOMMEN = [
   ['Voorwaarden', [['voorwaarden.html', 'Alle voorwaarden'], ['voorwaarden-vergelijker.html', 'Voorwaarden vergelijken'], ['situatiecheck.html', 'Situatiecheck'], ['acceptatiewijzer.html', 'Acceptatiewijzer'], ['productvoorwaarden.html', 'Productvoorwaarden'], ['hypotheekrentetarieven.html', 'Hypotheekrentetarieven'], ['partijen.html', 'Aanbiederwegwijzer']]],
   ['Hulpmiddelen', [['index.html#hulpmiddelen', 'Alle hulpmiddelen'], ['rekentools.html', 'Rekentools'], ['leennormen-2026.html', 'Leennormen 2026'], ['nhg-check.html', 'NHG-check'], ['documentenchecklist.html', 'Documentenchecklist'], ['wetgeving.html', 'Wet- en regelgeving']]],
   ['Kennis', [['kennisbank/', 'Kennisbank'], ['faq/', 'Veelgestelde vragen'], ['begrippen/', 'Begrippen A-Z'], ['index.html', 'Forum'], ['laatste.html', 'Laatste nieuws'], ['nieuw.html', 'Wat is nieuw']]],
-  ['Meedoen', [['aanmelden.html', 'Aanmelden'], ['kennispartner.html', 'Kennispartner worden'], ['uitnodigen.html', 'Collega uitnodigen'], ['koppelingen.html', 'Koppelen met je adviessoftware'], ['aanbieders-info.html', 'Voor aanbieders'], ['gebruiksvoorwaarden.html', 'Gebruiksvoorwaarden'], ['privacy.html', 'Privacy en cookies']]],
+  ['Meedoen', [['aanmelden.html', 'Aanmelden'], ['kennispartner.html', 'Kennispartner worden'], ['uitnodigen.html', 'Collega uitnodigen'], ['koppelingen.html', 'Koppelen met je adviessoftware'], ['aanbieders-info.html', 'Voor aanbieders'], ['aanbieder-beheer.html', 'Inloggen aanbieders'], ['gebruiksvoorwaarden.html', 'Gebruiksvoorwaarden'], ['privacy.html', 'Privacy en cookies']]],
 ];
 function voetHtml(pre = '') {
   const kol = VOET_KOLOMMEN.map(([kop, links], i) => `<nav class="sitevoet-kol" aria-labelledby="sv-k${i}"><h2 id="sv-k${i}">${kop}</h2><ul>${links.map(([u, t]) => `<li><a href="${pre}${u}">${t}</a></li>`).join('')}</ul></nav>`).join('');

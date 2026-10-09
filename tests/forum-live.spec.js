@@ -8,7 +8,7 @@ const U = 'aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa';
 const VR = '11111111-1111-4111-8111-111111111111';
 const AN = '22222222-2222-4222-8222-222222222222';
 
-async function nepSupabase(page, { rol = 'adviseur', geverifieerd = true } = {}) {
+async function nepSupabase(page, { rol = 'adviseur', geverifieerd = true, soort = 'adviseur', antwoordSoort = 'adviseur' } = {}) {
   const log = [];
   await page.addInitScript(api => { window.ADVIESFORUM_BACKEND = { url: api, anonKey: 'test-anon' }; window.prompt = () => 'Bevat klantgegevens'; }, API);
   await page.route(API + '/**', async route => {
@@ -16,7 +16,7 @@ async function nepSupabase(page, { rol = 'adviseur', geverifieerd = true } = {})
     const body = r.postData() ? JSON.parse(r.postData()) : null;
     log.push({ m, pad, q: url.search, body, auth: r.headers()['authorization'] || '' });
     const json = (status, d) => route.fulfill({ status, contentType: 'application/json', body: JSON.stringify(d) });
-    const profiel = { id: U, naam: 'Sanne Test', functie: 'Hypotheekadviseur', kantoor: 'Test Advies', plaats: 'Utrecht', afm: '12345678', linkedin: '', geverifieerd, rol };
+    const profiel = { id: U, naam: 'Sanne Test', functie: 'Hypotheekadviseur', kantoor: 'Test Advies', plaats: 'Utrecht', afm: '12345678', linkedin: '', geverifieerd, rol, soort };
     if (pad === '/auth/v1/otp') return json(200, {});
     if (pad === '/auth/v1/token') return json(200, { access_token: 'at2', refresh_token: 'rt2', expires_in: 3600, user: { id: U } });
     if (pad === '/auth/v1/user') return json(200, { id: U, email: 'sanne@test.nl' });
@@ -29,7 +29,7 @@ async function nepSupabase(page, { rol = 'adviseur', geverifieerd = true } = {})
     }
     if (pad === '/rest/v1/antwoorden' && m === 'GET') {
       if (url.search.includes('status=eq.wacht')) return json(200, []);
-      return json(200, [{ id: AN, vraag_ref: VR, body: 'Live antwoord: dat verschilt per geldverstrekker, kijk in de vergelijker.', aangemaakt: '2026-10-09T11:00:00Z', auteur: 'dddddddd-dddd-4ddd-8ddd-dddddddddddd', profielen: { naam: 'Piet Collega', kantoor: 'Collega BV', functie: 'Adviseur', geverifieerd: true } }]);
+      return json(200, [{ id: AN, vraag_ref: VR, body: 'Live antwoord: dat verschilt per geldverstrekker, kijk in de vergelijker.', aangemaakt: '2026-10-09T11:00:00Z', auteur: 'dddddddd-dddd-4ddd-8ddd-dddddddddddd', profielen: { naam: 'Piet Collega', kantoor: 'Collega BV', functie: 'Adviseur', geverifieerd: true, soort: antwoordSoort } }]);
     }
     if (pad === '/rest/v1/beoordelingen' && m === 'GET') return json(200, []);
     if (pad === '/rest/v1/meldingen' && m === 'GET') return json(200, []);
@@ -101,6 +101,21 @@ test('live: niet-geverifieerd account kan nog niet plaatsen', async ({ page }) =
   await page.locator('#f-antwoord [type="submit"]').click();
   await expect(page.locator('#toast')).toContainText('wacht nog op controle');
   expect(log.some(x => x.pad === '/rest/v1/antwoorden' && x.m === 'POST')).toBe(false);
+});
+
+test('live: aanbieder krijgt een label, staat niet in de ranglijst en kan niet beoordelen', async ({ page }) => {
+  const fouten = await volgFouten(page);
+  const log = await nepSupabase(page, { soort: 'aanbieder', antwoordSoort: 'aanbieder' });
+  await page.goto('/index.html#access_token=at1&refresh_token=rt1&expires_in=3600&type=magiclink');
+  await expect(page.locator('#who')).toContainText('Sanne Test');
+  await page.evaluate(id => { location.hash = 'vraag-' + id; }, VR);
+  await expect(page.locator('article.ans .aanbieder-badge')).toHaveText('Aanbieder');
+  await page.locator('article.ans [data-act="rate"][data-kind="a"][data-val="4"]').first().click();
+  await expect(page.locator('#toast')).toContainText('Als aanbieder kun je antwoorden niet beoordelen');
+  expect(log.some(x => x.pad === '/rest/v1/beoordelingen' && x.m === 'POST')).toBe(false);
+  await page.evaluate(() => { location.hash = 'adviseurs'; });
+  await expect(page.locator('.tbl')).not.toContainText('Piet Collega');
+  expect(fouten).toEqual([]);
 });
 
 test('moderatie: wachtrij, publiceren en account verifiëren', async ({ page }) => {
