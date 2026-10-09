@@ -1,0 +1,67 @@
+[
+ {
+  "naam": "Lloyds Bank",
+  "gecontroleerd": "2026-10-09",
+  "criteria": {
+   "toekst": {
+    "waarde": "~ Loonsverhoging binnen 6 mnd na bindend aanbod telt mee mits werkgever schriftelijk bevestigt; alleen vast of tijdelijk + intentieverklaring; niet bij familie",
+    "bron": [
+     "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/hypotheekgids/lbh-inkomen",
+     "https://www.lloydsbank.nl/dam/jcr:96a5a341-9ea6-4015-b53d-8bf87a36a681/hypotheekgids.pdf"
+    ],
+    "brondatum": "2026-02",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Nacontrole 9 oktober 2026: Huidige waarde klopt maar mist de voorwaarde over het type dienstverband (aanvulling, geen tegenstrijdigheid). Familie-uitsluiting geldt bij dienstverband bij (schoon)familie/(ex-)partner."
+   }
+  }
+ },
+ {
+  "naam": "Venn Hypotheken",
+  "gecontroleerd": "2026-10-09",
+  "criteria": {
+   "ebb": {
+    "waarde": "~ EBB als aanvullende lening via bouwdepot; ook met energiebesparende voorzieningen max. 100% van de woningwaarde",
+    "bron": [
+     "https://www.vennhypotheken.nl/kennisplein/energiebespaarbudget-voor-het-verduurzamen-van-je-woning/",
+     "https://www.vennhypotheken.nl/hypotheken/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Nacontrole 9 oktober 2026: Eigen pagina's noemen 100% (extra lenen voor EBV max. EUR 10.000, NOM EUR 25.000); 106% nergens op venn-domeinen gevonden (gezocht o.a. op \"106%\"). Kennispleinpagina is enkele jaren oud; actuele acceptatiegids niet gevonden."
+   },
+   "o106": {
+    "waarde": "+ Gemakkelijk Groen-deel (EUR 5.000-10.000) telt niet mee voor tariefklasse; max. LTV 100% inclusief dit leningdeel",
+    "bron": [
+     "https://www.vennhypotheken.nl/voor-adviseurs/gemakkelijkgroen/",
+     "https://www.vennhypotheken.nl/gemakkelijkgroen/"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Nacontrole 9 oktober 2026: Tariefklasse-uitsluiting bevestigd; 'tot 106% bij EBV' niet: eigen bron noemt max. 100% LTV inclusief Gemakkelijk Groen."
+   }
+  }
+ },
+ {
+  "naam": "Lot Hypotheken",
+  "gecontroleerd": "2026-10-09",
+  "criteria": {
+   "ebb": {
+    "waarde": "~ Energiebespaarbudget mogelijk als maatregelen nog onbekend zijn, o.b.v. marktwaarde vóór uitvoering, in bouwdepot (max. 24 mnd); tot 106% MW",
+    "bron": [
+     "https://adviseur.lothypotheken.nl/media/koxceg2q/hypotheekgids-lot-hypotheken-versie-januari-2026.pdf"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "dubbel": "bevestigd",
+    "toelichting": "Nacontrole 9 oktober 2026: Volgens zoekfragmenten uit de hypotheekgids (jan 2026) gaat het EBB in het bouwdepot. Het duurzaamheidsdepot hoort bij het duurzaamheidsleningdeel (rentevergoeding = rente duurzaamheidsleningdeel; bestaande klanten EUR 5.000-25.000). Dat het EBB in het bouwdepot gaat, staat niet letterlijk in een citaat: in de pdf nalopen."
+   }
+  }
+ }
+]

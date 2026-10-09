@@ -1,4 +1,4 @@
-// Rekentools van Blinqx (gehost op hypotheekbond.nl): pas laden na een klik, rentetools apart met compliance-melding
+// Externe rekentools van Blinqx (gehost op hypotheekbond.nl): pas laden na een klik, rentetools apart met compliance-melding
 const { test, expect } = require('@playwright/test');
 const { volgFouten } = require('./helpers');
 
@@ -12,8 +12,8 @@ test('geen verkeer naar Hypotheekbond tot je een tool opent', async ({ page }) =
   const fouten = await volgFouten(page);
   const verzoeken = await blokkeerDerden(page);
   await page.goto('/rekentools-blinqx.html');
-  await expect(page.locator('h1')).toHaveText('Rekentools van Blinqx');
-  await expect(page.locator('.kop p.eigen')).toContainText('accountmanager van Blinqx');
+  await expect(page.locator('h1')).toHaveText('Externe rekentools');
+  await expect(page.locator('.kop p.eigen')).toHaveCount(0);
   const n = await page.evaluate(() => window.HYPOTHEEKBOND_TOOLS.reduce((s, g) => s + g.tools.length, 0));
   expect(n).toBe(23);
   await expect(page.locator('article.tool')).toHaveCount(23);

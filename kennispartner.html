@@ -326,8 +326,12 @@
       'Akkoord met de voorwaarden voor Kennispartners: ja'];
     var href='mailto:'+ONTVANGER+'?subject='+encodeURIComponent('Kennispartner-claim: '+wat)+'&body='+encodeURIComponent(regels.filter(function(r,i){return r!==''||regels[i-1]!=='';}).join('\n'));
     var g=$('kp-gelukt');
-    g.innerHTML='<strong>Je e-mail staat klaar in je mailprogramma.</strong> Verstuur hem om je claim in te dienen. Opent er niets? <a href="'+esc(href)+'">Open de e-mail opnieuw</a> of mail je gegevens naar <a href="mailto:'+ONTVANGER+'">'+ONTVANGER+'</a>.';
+    var tekst=regels.filter(function(r,i){return r!==''||regels[i-1]!=='';}).join('\n');
+    g.innerHTML='<strong>Je e-mail staat klaar in je mailprogramma.</strong> Verstuur hem om je claim in te dienen.<div class="knoppen" style="margin:10px 0"><a class="knop" href="'+esc(href)+'">Open de e-mail opnieuw</a><button type="button" class="knop-rand" id="kp-kopieer">Tekst kopiëren</button></div><p style="font-size:14px;margin:0">Opent er niets, bijvoorbeeld op een telefoon zonder mail-app? Kopieer de tekst en mail hem naar <a href="mailto:'+ONTVANGER+'">'+ONTVANGER+'</a>.</p><label for="kp-kopietekst" class="sr-only">Tekst van je claim</label><textarea id="kp-kopietekst" readonly hidden style="margin-top:10px;min-height:180px;font-size:13px"></textarea>';
     g.hidden=false;g.focus();
+    $('kp-kopieer').addEventListener('click',function(){var ta=$('kp-kopietekst'),k=this;ta.value=tekst;ta.hidden=false;ta.select();
+      var klaar=function(ok){k.textContent=ok?'Gekopieerd ✓':'Selecteer de tekst hieronder';};
+      if(navigator.clipboard&&window.isSecureContext)navigator.clipboard.writeText(tekst).then(function(){klaar(true);},function(){klaar(false);});else klaar(false);});
     window.location.href=href;
   });
 
@@ -365,6 +369,7 @@
 </div>
 <div class="sitevoet-onder"><p>Informatie voor adviseurs, geen advies aan consumenten. Voorwaarden en normen van aanbieders zijn leidend: controleer altijd de actuele bron.</p><p>&copy; 2026 Adviesforum &middot; adviesforum.nl</p></div>
 </footer>
+<script src="js/statistiek.js" defer></script>
 <!-- /sitevoet -->
 </body>
 </html>

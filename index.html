@@ -497,7 +497,7 @@ footer a{display:inline-block;padding:4px 0}
 <nav class="sitenav" aria-label="Hoofdmenu"><div class="sitenav-in"><a class="sitenav-merk" href="index.html"><img class="sitenav-teken" src="favicon.svg" alt="" width="34" height="34"><span>Advies<span class="sitenav-forum">forum</span></span></a><form class="sitenav-zoek" action="index.html" method="get" role="search"><input type="search" name="zoek" placeholder="Zoek op de hele site" aria-label="Zoek op de hele site" autocomplete="off"><button type="submit">Zoeken</button></form><ul><li><a href="index.html" aria-current="page">Home</a></li><li><a href="voorwaarden.html">Voorwaarden</a></li><li><a href="index.html#hulpmiddelen">Hulpmiddelen</a></li><li><a href="kennisbank/">Kennisbank</a></li><li><a href="laatste.html">Laatste nieuws</a></li><li><a href="aanmelden.html">Aanmelden</a></li></ul></div></nav>
 <!-- /sitenav -->
 
-<aside class="demo" aria-label="Over deze versie"><div class="wrap"><span>Voor en door financieel adviseurs. Nieuwe vragen gaan naar de beheerder en verschijnen na controle; antwoorden en beoordelingen in deze versie blijven alleen in je eigen sessie.</span><span class="util"><a href="uitnodigen.html">Uitnodigen</a><a href="aanbieders.html">Aanbieders</a></span></div></aside>
+<aside class="demo" aria-label="Over deze versie"><div class="wrap"><span class="demo-lang">Voor en door financieel adviseurs. Nieuwe vragen gaan naar de beheerder en verschijnen na controle; antwoorden en beoordelingen in deze versie blijven alleen in je eigen sessie.</span><span class="demo-kort">Testversie: nieuwe vragen verschijnen na controle; je antwoorden blijven in je eigen sessie.</span><span class="util"><a href="uitnodigen.html">Uitnodigen</a><a href="aanbieders.html">Aanbieders</a></span></div></aside>
 <div class="sticky-kop">
 <header class="top">
   <div class="wrap">
@@ -514,7 +514,42 @@ footer a{display:inline-block;padding:4px 0}
 <nav class="tabs" aria-label="Onderdelen"><div class="wrap" id="tabs"></div></nav>
 </div>
 
-<main id="inhoud" tabindex="-1"><div id="hero"></div><div id="app" class="wrap" tabindex="-1"></div></main>
+<main id="inhoud" tabindex="-1"><div id="hero"></div><div id="app" class="wrap" tabindex="-1"><!-- statisch:start (tools/build-static.js) -->
+<section class="statisch" aria-label="Adviesforum">
+<h1>Adviesforum: voor en door financieel adviseurs</h1>
+<p>Collegiale kennisdeling over hypotheken, verzekeringen, pensioen, krediet en compliance. Geen klantadvies.</p>
+<ul>
+<li><a href="voorwaarden-vergelijker.html">Voorwaarden vergelijken</a>: acceptatievoorwaarden van geldverstrekkers naast elkaar, met bron</li>
+<li><a href="kennisbank/">Kennisbank</a>: 242 artikelen, <a href="faq/">veelgestelde vragen</a> en <a href="begrippen/">424 begrippen</a></li>
+<li><a href="index.html#hulpmiddelen">Hulpmiddelen</a>: rekenhulpen, klantscans, checklists en naslag</li>
+<li><a href="woningtools.html">Woningdata en adviseurstools</a> en <a href="kennispartner.html">Kennispartner worden</a></li>
+</ul>
+<h2>Nieuw in de kennisbank</h2>
+<ul>
+<li><a href="kennisbank/k320.html">Hypotheekcijfer.nl: betaalbaarheidscheck van geldverstrekkers, wat de adviseur ermee kan en de grenzen</a></li>
+<li><a href="kennisbank/k321.html">Hypotheekcijfer: gebeurtenissen, maatregelen en gebruik in het adviesgesprek</a></li>
+<li><a href="kennisbank/k330.html">Funderingscijfer.nl: een gratis eerste indicatie voor adviseurs, en waar de grenzen liggen</a></li>
+<li><a href="kennisbank/k331.html">Betrouwbaarheid van funderingsinformatie: vastgesteld, afgeleid of indicatief, en de stappen van risicorapport naar onderzoek</a></li>
+<li><a href="kennisbank/k332.html">Duurzaamheidsprofiel.nl: herkomst, wat het rapport laat zien en hoe u het in het hypotheekgesprek gebruikt</a></li>
+<li><a href="kennisbank/k333.html">Verduurzaming in het hypotheekadvies: wat de AFM-leidraad vraagt en wat een duurzaamheidsprofiel daaraan bijdraagt</a></li>
+<li><a href="kennisbank/k340.html">Adviseurstools.nl: experimentele AI-rekentools voor adviseurs en hoe er verantwoord mee om te gaan</a></li>
+<li><a href="kennisbank/k350.html">Woningcijfer.nl: bouw- en omgevingsscore uit openbare registers, en hoe je die verantwoord gebruikt</a></li>
+</ul>
+<h2>Onderwerpen</h2>
+<ul>
+<li><a href="kennisbank/#hyp">Hypotheken</a> (60)</li>
+<li><a href="kennisbank/#verz">Verzekeringen</a> (42)</li>
+<li><a href="kennisbank/#pens">Pensioen &amp; vermogen</a> (10)</li>
+<li><a href="kennisbank/#fisc">Fiscaal</a> (20)</li>
+<li><a href="kennisbank/#kred">Kredieten</a> (9)</li>
+<li><a href="kennisbank/#adv">Adviessoftware</a> (22)</li>
+<li><a href="kennisbank/#crm">CRM-software</a> (3)</li>
+<li><a href="kennisbank/#comp">Compliance &amp; AFM</a> (72)</li>
+<li><a href="kennisbank/#ov">Overig</a> (4)</li>
+</ul>
+<noscript><p>Het forum, zoeken en de hulpmiddelen werken met JavaScript. Zonder JavaScript kun je de kennisbank, de veelgestelde vragen en de begrippen gewoon lezen.</p></noscript>
+</section>
+<!-- statisch:eind --></div></main>
 
 
 <div id="toast" role="status" aria-live="polite"></div>
@@ -554,7 +589,7 @@ const SITE_URL='https://adviesforum.nl/';
 const USERS=window.ADVISEURS||[];
 const CATS=[
  {id:'hyp',naam:'Hypotheken'},{id:'verz',naam:'Verzekeringen'},{id:'pens',naam:'Pensioen & vermogen'},{id:'fisc',naam:'Fiscaal'},{id:'kred',naam:'Kredieten'},
- {id:'adv',naam:'Adviespakket (Blinqx)'},{id:'crm',naam:'CRM (Blinqx)'},{id:'comp',naam:'Compliance & AFM'},{id:'ov',naam:'Overig'}
+ {id:'adv',naam:'Adviessoftware'},{id:'crm',naam:'CRM-software'},{id:'comp',naam:'Compliance & AFM'},{id:'ov',naam:'Overig'}
 ];
 const LEVELS=[[300,'Autoriteit'],[150,'Expert'],[50,'Kenner'],[0,'Starter']];
 
@@ -652,15 +687,15 @@ const FAQ_THEMAS={'hypotheek-normen':'Leennormen en maximale hypotheek','hypothe
 /* Hulpmiddelen: losse pagina's en documenten in deze repository */
 const HULP=[
  {groep:'Naslag',tp:'Aanbieders',titel:'Aanbieders: nieuws, voorwaarden en contact',url:'aanbieders.html',tekst:'Aangeleverd door de aanbieders zelf (niet door het Adviesforum gecontroleerd): geldverstrekkers en verzekeraars delen hier hun nieuws, voorwaarden en acceptatiegidsen, richtlijnen, links naar hun extranet en hun accountmanagers. Aanbieders krijgen een eigen account om dit bij te houden.',kw:'aanbieders geldverstrekker verzekeraar nieuws voorwaarden acceptatiegids richtlijnen extranet accountmanager contactpersoon productinformatie documenten aanbiedersnieuws'},
- {groep:'Naslag',tp:'E-learning',titel:'E-learning Blinqx: 17 software-instructies',url:'elearning.html#blinqx',tekst:'Interactieve rondleidingen door de software van Blinqx V&H: inloggen, klant zoeken en aanmaken, mailbox, agenda, taken, schade, dossier splitsen, SMART en eBLINQX hypotheekadvies.',kw:'blinqx elearning e-learning storylane instructie software handleiding mailbox agenda kalender taken schade schademelding dossier smart eblinqx hypotheekadvies klant aanmaken inloggen'},
+ {groep:'Naslag',tp:'E-learning',titel:'E-learning adviessoftware: 17 instructies',url:'elearning.html#blinqx',tekst:'Interactieve rondleidingen door de software van Blinqx V&H: inloggen, klant zoeken en aanmaken, mailbox, agenda, taken, schade, dossier splitsen, SMART en eBLINQX hypotheekadvies.',kw:'blinqx elearning e-learning storylane instructie software handleiding mailbox agenda kalender taken schade schademelding dossier smart eblinqx hypotheekadvies klant aanmaken inloggen'},
  {groep:'Naslag',tp:'E-learning',titel:'E-learning: 10 korte modules',url:'elearning.html',tekst:'Modules van 12–18 minuten met lessen, tussenvragen, eindtoets en deelnamebewijs: leennormen, NHG, fundering, duurzaam wonen, Wwft, zorgplicht, AOV/BAZ, Wtp, compliance en AI. Geen PE-punten.',kw:'elearning e-learning cursus module training leren toets deelnamebewijs certificaat leennormen nhg fundering duurzaam wwft zorgplicht aov baz wtp compliance ai'},
- {groep:'Naslag',tp:'Wegwijzer',titel:'Partners van Blinqx Verzekering & Hypotheek',url:'partners.html',tekst:'18 partners per categorie (brondata, taxatie, verduurzaming, compliance, KYC, financiering, opleiding) met wat je er als adviseur aan hebt en waar ze in het adviesproces passen.',kw:'partners blinqx ecosysteem ockto findesk hdn taxatheek positief wonen nationale waarborg jens hyarchis kyc m+ compliance dfo expertbox draagplicht dathuis aplaza vcn ratio letselschade huizengids yes-co integraties koppelingen'},
+ {groep:'Naslag',tp:'Wegwijzer',titel:'Partners en koppelingen in adviessoftware',url:'partners.html',tekst:'18 partners per categorie (brondata, taxatie, verduurzaming, compliance, KYC, financiering, opleiding) met wat je er als adviseur aan hebt en waar ze in het adviesproces passen.',kw:'partners blinqx ecosysteem ockto findesk hdn taxatheek positief wonen nationale waarborg jens hyarchis kyc m+ compliance dfo expertbox draagplicht dathuis aplaza vcn ratio letselschade huizengids yes-co integraties koppelingen'},
  {groep:'Naslag',tp:'Bronnen',titel:'Brancheorganisaties en vakbronnen',url:'index.html#kennisbank',tekst:'Kennis uit Adfiz, SEH, het Verbond van Verzekeraars, Kifid, DFO Signalen en de vakpers (VVP, InFinance), samengevat in de kennisbank met bronlinks.',kw:'adfiz seh erkend financieel adviseur verbond van verzekeraars kifid uitspraken dfo signalen vvp infinance vakpers brancheorganisatie nieuws actualiteiten'},
  {groep:'Naslag',tp:'Wegwijzer',titel:'Acceptatiewijzer per klantsituatie',url:'acceptatiewijzer.html',tekst:'19 bijzondere situaties (zzp, flexwerk, expat, BKR, studieschuld, tweede woning, scheiding, erfpacht, woonboot, senioren, hulp van ouders en meer): NHG-regel, leennormen, aandachtspunten, documenten en welke partijen er iets over vermelden.',kw:'acceptatie acceptatiebeleid acceptatiegids bijzondere situatie zzp starter ondernemer flexwerker uitzendkracht tijdelijk contract expat buitenlands inkomen verblijfsvergunning bkr studieschuld duo tweede woning recreatiewoning buy to let verhuur senioren verzilveren overwaarde schenking familiebank ouders scheiding erfpacht woonboot woonwagen verduurzamen ebb nieuwbouw bouwdepot zelfbouw alimentatie samenwonen ongelijke inbreng aow'},
  {groep:'Rekenhulpen',titel:'Inkomensbepaling: toetsinkomen per inkomenssoort',url:'inkomensbepaling.html',tekst:'Loondienst vast en flexibel, IBL, ondernemer, Perspectiefverklaring, AOW binnen 10 jaar en uitkeringen/alimentatie: indicatief toetsinkomen, benodigde documenten en aandachtspunten volgens NHG 2026.',kw:'inkomen toetsinkomen inkomensbepaling ibl inkomensbepaling loondienst uwv verzekeringsbericht flexibel inkomen oproepkracht tijdelijk contract intentieverklaring werkgeversverklaring ondernemer zzp inkomensverklaring rekenexpert ikv perspectiefverklaring arbeidsmarktscan aow pensioen alimentatie wajong wia anw'},
  {groep:'Rekenhulpen',titel:'NHG-check 2026: past het binnen NHG?',url:'nhg-check.html',tekst:'Kostentoets, leningtoets en LTV volgens de V&N 2026, plus borgtochtprovisie bij aankoop, nieuwbouw, oversluiten en verhogen.',kw:'nhg check grens 470000 498200 borgtochtprovisie kostengrens oversluiten verhogen nieuwbouw ebv'},
  {groep:'Rekenhulpen',titel:'NHG-beheertoets: woonlasten bijlage 5',url:'nhg-beheertoets.html',tekst:'Financieringslastpercentage en maximale woonlast volgens de NHG-beheertabel 2026, met ruimte of tekort.',kw:'nhg beheer beheertoets financieringslast bijlage 5 woningbehoud betalingsproblemen ontslag hoofdelijke aansprakelijkheid'},
- {groep:'Rekenhulpen',tp:'Blinqx',titel:'Rekentools van Blinqx',url:'rekentools-blinqx.html',tekst:'Tools van Blinqx: maximale hypotheek, kan ik deze woning kopen, huren naar kopen, maandlasten, aflossen, sparen, topafslag, ORV, woningwaarde, inventarisatie, werkgeversverklaring en duurzaamheidsprofiel. Rentetools staan apart, met compliance-melding. De tools laden pas na een klik. Ook op je eigen website te zetten: vraag je accountmanager van Blinqx.',kw:'blinqx hypotheekbond tools rekentools websitetools iframe eigen website accountmanager maximale hypotheek maandlasten aflossen beleggen sparen topafslag orv woningwaarde inventarisatie werkgeversverklaring duurzaamheidsprofiel zelfreflectie renteoverzicht rente top 5 spaarrente bespaarcheck'},
+ {groep:'Rekenhulpen',tp:'Extern',titel:'Externe rekentools',url:'rekentools-blinqx.html',tekst:'Rekentools van een externe partij (Blinqx, via hypotheekbond.nl): maximale hypotheek, kan ik deze woning kopen, huren naar kopen, maandlasten, aflossen, sparen, topafslag, ORV, woningwaarde, inventarisatie, werkgeversverklaring en duurzaamheidsprofiel. Rentetools staan apart, met compliance-melding. De tools laden pas na een klik. Ook op je eigen website te zetten: vraag je accountmanager van Blinqx.',kw:'blinqx hypotheekbond tools rekentools websitetools iframe eigen website accountmanager maximale hypotheek maandlasten aflossen beleggen sparen topafslag orv woningwaarde inventarisatie werkgeversverklaring duurzaamheidsprofiel zelfreflectie renteoverzicht rente top 5 spaarrente bespaarcheck'},
  {groep:'Rekenhulpen',titel:'Rekentools: alle '+((window.REKENTOOLS||[]).length||275).toLocaleString('nl-NL')+' berekeningen',url:'rekentools.html',tekst:'Aanbiedingen vergelijken, bouwdepot, risicoklasse, omslagrente, slottermijn, renteherziening, gewogen rente, partner uitkopen, verduurzaming, vermogensopbouw, contante waarde, werkdagen en meer.',kw:'rekentools renteherziening gewogen rente leningdelen uitkopen partner woningwaarde verduurzaming terugverdientijd aflostijd effectieve rente restschuld vermogen inleg interen contante waarde inflatie jaarinkomen werkdagen termijn datum'},
  {groep:'Rekenhulpen',titel:'Leennormen 2026',url:'leennormen-2026.html',tekst:'Maximale hypotheek volgens de Nibud-tabellen 2026, met energielabel, studieschuld, AOW en box 3.',kw:'leennormen maximale hypotheek financieringslast financieringslastpercentage nibud trhk energielabel studieschuld toetsrente woonquote toetsinkomen'},
  {groep:'Rekenhulpen',titel:'Eigenwoningreserve en bijleenregeling',url:'bijleenregeling.html',tekst:'Bereken de eigenwoningreserve, de maximale nieuwe eigenwoningschuld en het deel in box 3.',kw:'bijleenregeling eigenwoningreserve ewr eigenwoningschuld ews box overwaarde verkoop restschuld doorstromer'},
@@ -1279,13 +1314,13 @@ function heroHtml(){
   return `<div class="hero"><div class="hero-wrap">
     <div class="hero-text">
       <h1><span class="outline">Voor adviseurs</span><br><span class="outline">die elkaar</span><br>vooruithelpen.</h1>
-      <ul class="hero-points">
-        <li>Voor en door financieel adviseurs die elkaar helpen</li>
-        <li>Stel je vraag en krijg direct een automatisch antwoord</li>
-        <li>Antwoorden én adviseurs beoordeeld door vakgenoten</li>
-        <li>Gecontroleerde kennisbank, rekenhulpen en wetgeving op één plek</li>
-      </ul>
-      <div class="hero-cta"><button class="btn btn-black" data-act="nieuw">Stel je vraag →</button><button class="arrow-link" data-act="tab" data-tab="handleiding">of lees hoe het werkt →</button><a class="arrow-link" href="aanmelden.html">Nieuw hier? Meld je aan →</a></div>
+      <p class="hero-sub">Voor en door financieel adviseurs: vergelijk voorwaarden, zoek in de kennisbank of stel je vraag aan collega's.</p>
+      <nav class="hero-ingangen" aria-label="Snel naar">
+        <a class="ingang" href="voorwaarden-vergelijker.html"><span class="ingang-kop">Voorwaarden vergelijken</span><span class="ingang-tekst">Acceptatievoorwaarden van 43 geldverstrekkers naast elkaar, met bron</span></a>
+        <a class="ingang" href="kennisbank/"><span class="ingang-kop">Kennisbank</span><span class="ingang-tekst">Artikelen, veelgestelde vragen en begrippen, met bronnen</span></a>
+        <button class="ingang" type="button" data-act="nieuw"><span class="ingang-kop">Vraag stellen</span><span class="ingang-tekst">Direct een automatisch antwoord, daarna collega's</span></button>
+      </nav>
+      <div class="hero-cta"><button class="arrow-link" data-act="tab" data-tab="handleiding">Lees hoe het werkt →</button><a class="arrow-link" href="aanmelden.html">Nieuw hier? Meld je aan →</a></div>
     </div>
   </div></div><div class="hero-notch"></div>`;
 }
@@ -2207,6 +2242,7 @@ if(document.readyState==='complete')setTimeout(()=>{laadKennis().then(laadFaq);}
 </div>
 <div class="sitevoet-onder"><p>Informatie voor adviseurs, geen advies aan consumenten. Voorwaarden en normen van aanbieders zijn leidend: controleer altijd de actuele bron.</p><p>&copy; 2026 Adviesforum &middot; adviesforum.nl</p></div>
 </footer>
+<script src="js/statistiek.js" defer></script>
 <!-- /sitevoet -->
 </body>
 </html>

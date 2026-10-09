@@ -50,7 +50,7 @@ Antwoorden worden niet op de site opgeslagen: na plaatsen opent het mailprogramm
 ## Formulieren (via het mailprogramma, geen formulierdienst)
 Aanmelden, vraag stellen en "niets gevonden" openen het mailprogramma van de bezoeker met een kant-en-klare e-mail aan jeroen@oversteegen.nl (net als op dierenkliniek.nl). De bezoeker klikt op Verzenden; de mail komt van zijn eigen adres binnen, zodat je direct kunt antwoorden. Er is geen activatie, geen externe dienst en geen opslag. Opent er geen mailprogramma, dan kan de bezoeker de tekst kopiëren.
 
-Het mailadres staat in `aanmelden.html` (`ONTVANGER`), `index.html` (`FORM_MAIL`) en `privacy.html`.
+Het mailadres staat in `aanmelden.html` (`ONTVANGER`), `kennispartner.html` (`ONTVANGER`), `index.html` (`FORM_MAIL`), `tools/sitenav.js` (`BEHEER_MAIL`, voettekst) en `privacy.html`.
 
 ## AVG: nog te regelen
 - [ ] Een zakelijk mailadres op een eigen domein in plaats van Gmail (met Gmail is geen verwerkersovereenkomst mogelijk).
@@ -61,6 +61,22 @@ Het mailadres staat in `aanmelden.html` (`ONTVANGER`), `index.html` (`FORM_MAIL`
 1. Koop een domein, bijvoorbeeld `adviesforum.nl`.
 2. DNS: A-records naar 185.199.108.153, 185.199.109.153, 185.199.110.153 en 185.199.111.153 (en AAAA naar 2606:50c0:8000::153 t/m 2606:50c0:8003::153), of voor een subdomein een CNAME naar `jeroen-o.github.io`.
 3. GitHub: Settings → Pages → Custom domain invullen en **Enforce HTTPS** aanzetten.
+
+## Alles bijwerken met één commando
+Na een wijziging in `data/` of `docs/`:
+```
+npm run bijwerken            # alle generators in de goede volgorde
+npx playwright test
+git commit ...
+npm run bijwerken -- --log   # wijzigingslogs en RSS (lezen de git-geschiedenis), daarna opnieuw committen
+```
+`npm run controle` controleert alleen (wijzigt niets) en draait ook in de GitHub-workflow Tests. Welke stappen er zijn, staat bovenin `tools/bijwerken.js`.
+
+## Kennispartners
+Claims komen per e-mail binnen via `kennispartner.html`. Controleer het AFM-vergunningnummer van het kantoor en of de persoon er werkt, voeg de kennispartner toe aan `data/kennispartners.js` en draai `npm run bijwerken` (maakt de badges in `badges/`). Werven en berichtteksten: `docs/kennispartners-werven.md`.
+
+## Bezoekersstatistiek (staat uit)
+`js/statistiek.js` laadt GoatCounter (zonder cookies) zodra daar een `CODE` is ingevuld. Maak eerst een account op goatcounter.com, vul de code in en pas in `privacy.html` het kopje Bezoekersstatistiek aan naar "staat aan".
 
 ## Tests lokaal draaien
 ```

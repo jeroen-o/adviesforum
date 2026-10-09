@@ -102,6 +102,7 @@ thead .plogo{background:#fff;padding:2px 4px;box-sizing:content-box}
 thead .hint{color:#F68712}
 .vt{display:block;font-size:11.5px;color:var(--grijs);margin-top:1px}
 thead .vt{color:#D0D1DC}
+.geen-nieuw{display:inline-block;margin-top:4px;font-size:10.5px;font-weight:800;letter-spacing:.02em;background:#FDE7E3;color:#8A2A16;padding:2px 6px;border-radius:2px;white-space:nowrap}
 .cel{display:flex;gap:6px;align-items:flex-start}
 .cel .txt{flex:1 1 auto;overflow-wrap:anywhere}
 .leegwaarde{color:#7C7E95}
@@ -506,6 +507,7 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
   <p>Logo's en merknamen zijn eigendom van de betreffende partijen en worden alleen gebruikt ter herkenning; vermelding betekent geen samenwerking of aanbeveling.</p></div>
 
 <script src="data/voorwaarden-controle.js"></script>
+<script src="data/geldverstrekkers-status.js"></script>
 <script src="data/voorwaarden-wijzigingen.js"></script>
 <script>
 (function(){
@@ -1851,6 +1853,13 @@ function partijKop(l, doel, inKop){
   const h = hintVan(l.naam);
   if(h) doel.appendChild(el('span','hint','(' + h + ')'));
   doel.appendChild(vt);
+  /* Geldverstrekker die geen nieuwe klanten aanneemt (data/geldverstrekkers-status.js) */
+  const st = (window.GELDVERSTREKKERS_STATUS || {})[l.naam];
+  if(st && st.geenNieuweKlanten){
+    const b = el('span','geen-nieuw','Geen nieuwe klanten');
+    b.title = st.tekst + (st.sinds ? ' (sinds ' + st.sinds.split('-').reverse().join('-') + ')' : '');
+    doel.appendChild(b);
+  }
 }
 
 function render(){
@@ -2810,6 +2819,7 @@ $('btnDossier').addEventListener('click',doDossier);
 </div>
 <div class="sitevoet-onder"><p>Informatie voor adviseurs, geen advies aan consumenten. Voorwaarden en normen van aanbieders zijn leidend: controleer altijd de actuele bron.</p><p>&copy; 2026 Adviesforum &middot; adviesforum.nl</p></div>
 </footer>
+<script src="js/statistiek.js" defer></script>
 <!-- /sitevoet -->
 </body>
 </html>
