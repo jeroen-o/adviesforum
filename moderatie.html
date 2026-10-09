@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="nl" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Moderatie – Adviesforum</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Moderatie van het live forum: vragen, antwoorden, meldingen en accounts.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<style>
+  :root{--inkt:#171043;--tekst:#2E2B4F;--grijs:#5D5A7A;--lijn:#DFDEE5;--licht:#ECF7FD;--oranje:#F68712;--turq:#0B7C77;--rood:#9E2F45;--groen:#1E7A4B}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Segoe UI,Roboto,Helvetica Neue,Arial,system-ui,sans-serif;color:var(--tekst);background:#fff;line-height:1.55}
+  main{max-width:1000px;margin:0 auto;padding:28px 24px 40px}
+  h1{font-family:Georgia,"Times New Roman",serif;font-weight:400;color:var(--inkt);margin:0 0 8px}
+  h2{color:var(--inkt);font-size:20px;margin:28px 0 10px}
+  .knop{background:var(--oranje);color:var(--inkt);border:0;padding:9px 14px;font:inherit;font-weight:700;border-radius:2px;cursor:pointer}
+  .knop.rand{background:#fff;border:1.5px solid var(--inkt)}
+  .knop.nee{background:#fff;border:1.5px solid var(--rood);color:var(--rood)}
+  .item{border:1px solid var(--lijn);padding:14px 16px;margin:0 0 12px;background:#fff}
+  .item .meta{font-size:13px;color:var(--grijs);margin-bottom:6px}
+  .item .tekst{white-space:pre-wrap;margin:6px 0 10px}
+  .knoppen{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+  .leeg{background:var(--licht);padding:14px 16px;font-size:15px}
+  .melding{background:#FFF4E5;border-left:4px solid var(--oranje);padding:12px 14px;margin:12px 0}
+  input{font:inherit;padding:9px 12px;border:1.5px solid #C9C8D6;border-radius:2px;width:min(360px,100%)}
+  label{display:block;font-weight:700;margin:10px 0 4px}
+  .tel{display:inline-block;background:var(--inkt);color:#fff;border-radius:10px;padding:0 8px;font-size:12px;margin-left:6px}
+</style>
+<link rel="stylesheet" href="css/sitenav.css">
+<link rel="stylesheet" href="css/huisstijl.css">
+</head>
+<body>
+<!-- sitenav: gegenereerd door tools/sitenav.js, niet met de hand wijzigen -->
+<a class="sitenav-skip" href="#inhoud">Naar de inhoud</a>
+<nav class="sitenav" aria-label="Hoofdmenu"><div class="sitenav-in"><a class="sitenav-merk" href="index.html"><img class="sitenav-teken" src="favicon.svg" alt="" width="34" height="34"><span>Advies<span class="sitenav-forum">forum</span></span></a><form class="sitenav-zoek" action="index.html" method="get" role="search"><input type="search" name="zoek" placeholder="Zoek op de hele site" aria-label="Zoek op de hele site" autocomplete="off"><button type="submit">Zoeken</button></form><ul><li><a href="index.html">Home</a></li><li><a href="voorwaarden.html">Voorwaarden</a></li><li><a href="index.html#hulpmiddelen">Hulpmiddelen</a></li><li><a href="kennisbank/">Kennisbank</a></li><li><a href="laatste.html">Laatste nieuws</a></li><li><a href="aanmelden.html">Aanmelden</a></li></ul></div></nav>
+<!-- /sitenav -->
+<main id="inhoud" tabindex="-1">
+<h1>Moderatie</h1>
+<p>Bijdragen van adviseurs verschijnen pas op het forum als je ze hier goedkeurt. Controleer of er geen klantgegevens, rentes, tarieven of reclame in staan en of het geen advies aan een consument is. Zie de <a href="gebruiksvoorwaarden.html">gebruiksvoorwaarden</a>.</p>
+<div id="status" role="status" aria-live="polite"></div>
+<div id="uit" hidden class="melding">Het live forum staat nog uit. Vul eerst <code>js/backend-config.js</code> in (zie <code>docs/backend.md</code>).</div>
+<form id="login" hidden>
+  <label for="m-email">E-mailadres van je moderatoraccount</label>
+  <input id="m-email" type="email" autocomplete="email" required>
+  <div class="knoppen" style="margin-top:10px"><button class="knop" type="submit">Stuur inloglink</button></div>
+</form>
+<div id="werk" hidden>
+  <div class="knoppen"><button class="knop rand" type="button" id="verversen">Verversen</button><button class="knop rand" type="button" id="uitloggen">Uitloggen</button></div>
+  <h2>Accounts te controleren <span class="tel" id="n-accounts">0</span></h2>
+  <p style="font-size:14px;margin:0 0 10px">Zoek het AFM-vergunningnummer op in het register van de AFM (afm.nl) en controleer via de website van het kantoor of LinkedIn dat de persoon daar werkt.</p>
+  <div id="accounts"></div>
+  <h2>Vragen <span class="tel" id="n-vragen">0</span></h2><div id="vragen"></div>
+  <h2>Antwoorden <span class="tel" id="n-antwoorden">0</span></h2><div id="antwoorden"></div>
+  <h2>Meldingen <span class="tel" id="n-meldingen">0</span></h2><div id="meldingen"></div>
+</div>
+</main>
+<script src="js/backend-config.js"></script>
+<script src="js/forum-backend.js"></script>
+<script>
+(function(){
+  'use strict';
+  var B=window.ForumBackend,$=function(id){return document.getElementById(id);};
+  var esc=function(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});};
+  var datum=function(d){return new Date(d).toLocaleString('nl-NL',{dateStyle:'medium',timeStyle:'short'});};
+  var status=function(t){$('status').textContent=t;};
+  if(!B||!B.actief){$('uit').hidden=false;return;}
+  if(B.foutInLink)status('De inloglink werkt niet (meer): '+B.foutInLink);
+  $('login').addEventListener('submit',function(e){e.preventDefault();var m=$('m-email').value.trim();
+    B.stuurLink(m,location.origin+location.pathname).then(function(){status('Inloglink verstuurd naar '+m+'. Klik op de link in je mail.');}).catch(function(err){status('Versturen lukte niet: '+err.message);});});
+  $('uitloggen').addEventListener('click',function(){B.uitloggen().then(function(){location.reload();});});
+  $('verversen').addEventListener('click',laad);
+  function auteur(x){var p=x.profielen||{};return esc(p.naam||'onbekend')+(p.kantoor?', '+esc(p.kantoor):'')+(p.afm?' · AFM '+esc(p.afm):'')+(p.geverifieerd?'':' · <b>niet geverifieerd</b>');}
+  function knoppen(tabel,id){return '<div class="knoppen"><button class="knop" data-tabel="'+tabel+'" data-id="'+esc(id)+'" data-status="gepubliceerd">Publiceren</button><button class="knop nee" data-tabel="'+tabel+'" data-id="'+esc(id)+'" data-status="afgewezen">Afwijzen</button></div>';}
+  function lijst(el,items,html,leeg){$(el).innerHTML=items.length?items.map(html).join(''):'<div class="leeg">'+leeg+'</div>';$('n-'+el).textContent=items.length;}
+  function laad(){
+    status('Laden…');
+    B.wachtrij().then(function(w){
+      lijst('accounts',w.accounts,function(p){return '<div class="item"><div class="meta">Aangemeld '+datum(p.aangemaakt)+'</div><b>'+esc(p.naam)+'</b>, '+esc(p.functie)+' · '+esc(p.kantoor)+(p.plaats?' ('+esc(p.plaats)+')':'')+'<br>AFM-vergunningnummer kantoor: <b>'+esc(p.afm||'-')+'</b>'+(p.linkedin?' · <a href="'+esc(p.linkedin)+'" target="_blank" rel="noopener">LinkedIn</a>':'')+'<div class="knoppen" style="margin-top:8px"><button class="knop" data-verifieer="'+esc(p.id)+'">Verifiëren</button></div></div>';},'Geen accounts om te controleren.');
+      lijst('vragen',w.vragen,function(v){return '<div class="item"><div class="meta">'+auteur(v)+' · '+datum(v.aangemaakt)+' · categorie '+esc(v.cat)+'</div><b>'+esc(v.titel)+'</b><div class="tekst">'+esc(v.body)+'</div>'+knoppen('vragen',v.id)+'</div>';},'Geen vragen in de wachtrij.');
+      lijst('antwoorden',w.antwoorden,function(a){return '<div class="item"><div class="meta">'+auteur(a)+' · '+datum(a.aangemaakt)+' · bij <a href="index.html#vraag-'+encodeURIComponent(a.vraag_ref)+'" target="_blank" rel="noopener">vraag '+esc(a.vraag_ref)+'</a></div><div class="tekst">'+esc(a.body)+'</div>'+knoppen('antwoorden',a.id)+'</div>';},'Geen antwoorden in de wachtrij.');
+      lijst('meldingen',w.meldingen,function(m){return '<div class="item"><div class="meta">'+datum(m.aangemaakt)+' · '+esc(m.soort)+' '+esc(m.ref)+'</div><div class="tekst">'+esc(m.reden)+'</div><div class="knoppen"><button class="knop nee" data-tabel="'+(m.soort==='vraag'?'vragen':'antwoorden')+'" data-id="'+esc(m.ref)+'" data-status="afgewezen" data-melding="'+esc(m.id)+'">Bijdrage offline halen</button><button class="knop rand" data-afhandelen="'+esc(m.id)+'">Afhandelen zonder actie</button></div></div>';},'Geen open meldingen.');
+      status('Bijgewerkt '+new Date().toLocaleTimeString('nl-NL'));
+    }).catch(function(err){status(err.status===401?'Je bent niet ingelogd.':'Laden lukte niet: '+err.message+' (ben je moderator?)');});
+  }
+  document.addEventListener('click',function(e){
+    var t=e.target.closest('button');if(!t)return;
+    var klaar=function(){laad();},fout=function(err){status('Mislukt: '+err.message);};
+    if(t.dataset.verifieer){B.verifieer(t.dataset.verifieer,true).then(klaar,fout);}
+    else if(t.dataset.afhandelen){B.handelMeldingAf(t.dataset.afhandelen).then(klaar,fout);}
+    else if(t.dataset.tabel){
+      var reden=t.dataset.status==='afgewezen'?(window.prompt('Reden (alleen intern):','')||''):'';
+      B.zetStatus(t.dataset.tabel,t.dataset.id,t.dataset.status,reden).then(function(){return t.dataset.melding?B.handelMeldingAf(t.dataset.melding):null;}).then(klaar,fout);
+    }
+  });
+  B.start().then(function(r){if(r&&r.user){$('werk').hidden=false;
+      if(!r.profiel||r.profiel.rol!=='moderator'){status('Je bent ingelogd, maar je account is (nog) geen moderator. Zie docs/backend.md.');return;}
+      laad();}
+    else $('login').hidden=false;});
+})();
+</script>
+<!-- sitevoet: gegenereerd door tools/sitenav.js, niet met de hand wijzigen -->
+<footer class="sitevoet"><div class="sitevoet-in">
+<div class="sitevoet-over"><a class="sitevoet-merk" href="index.html"><img class="sitenav-teken" src="favicon.svg" alt="" width="34" height="34"><span>Advies<span class="sitenav-forum">forum</span></span></a><p>Voor en door financieel adviseurs: collegiale kennisdeling over hypotheken, verzekeringen, pensioen en krediet.</p><p><strong>Vraag, idee of fout gezien?</strong><br>Mail de beheerder:<br><a href="mailto:jeroen@oversteegen.nl">jeroen@oversteegen.nl</a></p><p class="sitevoet-volg"><a href="feed.xml" type="application/rss+xml">RSS: nieuw en bijgewerkt</a><a href="aanbieders-feed.xml" type="application/rss+xml">RSS: nieuws van aanbieders</a></p></div>
+<nav class="sitevoet-kol" aria-labelledby="sv-k0"><h2 id="sv-k0">Voorwaarden</h2><ul><li><a href="voorwaarden.html">Alle voorwaarden</a></li><li><a href="voorwaarden-vergelijker.html">Voorwaarden vergelijken</a></li><li><a href="situatiecheck.html">Situatiecheck</a></li><li><a href="acceptatiewijzer.html">Acceptatiewijzer</a></li><li><a href="productvoorwaarden.html">Productvoorwaarden</a></li><li><a href="partijen.html">Aanbiederwegwijzer</a></li></ul></nav><nav class="sitevoet-kol" aria-labelledby="sv-k1"><h2 id="sv-k1">Hulpmiddelen</h2><ul><li><a href="index.html#hulpmiddelen">Alle hulpmiddelen</a></li><li><a href="rekentools.html">Rekentools</a></li><li><a href="leennormen-2026.html">Leennormen 2026</a></li><li><a href="nhg-check.html">NHG-check</a></li><li><a href="documentenchecklist.html">Documentenchecklist</a></li><li><a href="wetgeving.html">Wet- en regelgeving</a></li></ul></nav><nav class="sitevoet-kol" aria-labelledby="sv-k2"><h2 id="sv-k2">Kennis</h2><ul><li><a href="kennisbank/">Kennisbank</a></li><li><a href="faq/">Veelgestelde vragen</a></li><li><a href="begrippen/">Begrippen A-Z</a></li><li><a href="index.html">Forum</a></li><li><a href="laatste.html">Laatste nieuws</a></li><li><a href="nieuw.html">Wat is nieuw</a></li></ul></nav><nav class="sitevoet-kol" aria-labelledby="sv-k3"><h2 id="sv-k3">Meedoen</h2><ul><li><a href="aanmelden.html">Aanmelden</a></li><li><a href="kennispartner.html">Kennispartner worden</a></li><li><a href="uitnodigen.html">Collega uitnodigen</a></li><li><a href="koppelingen.html">Koppelen met je adviessoftware</a></li><li><a href="aanbieders-info.html">Voor aanbieders</a></li><li><a href="gebruiksvoorwaarden.html">Gebruiksvoorwaarden</a></li><li><a href="privacy.html">Privacy en cookies</a></li></ul></nav>
+</div>
+<div class="sitevoet-onder"><p>Informatie voor adviseurs, geen advies aan consumenten. Voorwaarden en normen van aanbieders zijn leidend: controleer altijd de actuele bron.</p><p>&copy; 2026 Adviesforum &middot; adviesforum.nl</p></div>
+</footer>
+<script src="js/statistiek.js" defer></script>
+<!-- /sitevoet -->
+</body>
+</html>
