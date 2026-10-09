@@ -432,6 +432,7 @@ const PAGINAS_LLMS = [
     ['adviesroute.html', 'Adviesroute', 'het adviesproces stap voor stap met dossierstukken en aandachtspunten'],
     ['rekentools-blinqx.html', 'Externe rekentools', 'rekentools van een externe partij (Blinqx, via hypotheekbond.nl) voor hypotheek, maandlasten, aflossen, ORV en woningwaarde'],
     ['vergelijken.html', 'Thema\'s naast elkaar', 'kenmerken uit de Aanbiederwegwijzer per thema naast elkaar'],
+    ['hypotheekrentetarieven.html', 'Hypotheekrentetarieven', 'actueel renteoverzicht per geldverstrekker, rentevaste periode en risicoklasse (externe bron), met uitleg over wat de hypotheekrente bepaalt'],
     ['voorwaarden.html', 'Voorwaarden van aanbieders', 'gecontroleerde voorwaarden per aanbieder met bron en brondatum'],
     ['kalender.html', 'Kalender', 'belangrijke data en deadlines voor adviseurs'],
     ['levensgebeurtenissen.html', 'Levensgebeurtenissen', 'wegwijzer per levensgebeurtenis met checklist'],

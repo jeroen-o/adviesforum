@@ -16,9 +16,12 @@ const ROOT = path.join(__dirname, '..');
 const LINKS = [
   ['index.html', 'Home'],
   ['voorwaarden.html', 'Voorwaarden'],
+  ['hypotheekrentetarieven.html', 'Hypotheekrentetarieven'],
   ['index.html#hulpmiddelen', 'Hulpmiddelen'],
   ['kennisbank/', 'Kennisbank'],
   ['laatste.html', 'Laatste nieuws'],
+  ['index.html#handleiding', 'Handleiding'],
+  ['index.html#voorwie', 'Voor wie'],
   ['aanmelden.html', 'Aanmelden'],
 ];
 /* Pagina's die bij een menu-item horen (voor aria-current en het kruimelpad in de gestructureerde data).
@@ -27,7 +30,7 @@ const VOORWAARDEN = ['voorwaarden.html', 'voorwaarden-vergelijker.html', 'produc
   'partijen.html', 'vergelijken.html', 'aanbieders.html', 'aanbieders-info.html', 'aanbieders-voorwaarden.html', 'aanbieder-aanleveren.html',
   'aanbieder-beheer.html', 'beheer-voorwaarden.html', 'verantwoording-voorwaarden.html'];
 const HOORT_BIJ = Object.assign(
-  { 'index.html': 'Home', 'laatste.html': 'Laatste nieuws', 'nieuw.html': 'Laatste nieuws', 'aanmelden.html': 'Aanmelden', 'uitnodigen.html': 'Aanmelden', 'kennispartner.html': 'Kennisbank', 'gebruiksvoorwaarden.html': 'Aanmelden', 'woningtools.html': 'Kennisbank', kennisbank: 'Kennisbank' },
+  { 'index.html': 'Home', 'laatste.html': 'Laatste nieuws', 'nieuw.html': 'Laatste nieuws', 'aanmelden.html': 'Aanmelden', 'uitnodigen.html': 'Aanmelden', 'kennispartner.html': 'Kennisbank', 'gebruiksvoorwaarden.html': 'Aanmelden', 'woningtools.html': 'Kennisbank', 'hypotheekrentetarieven.html': 'Hypotheekrentetarieven', kennisbank: 'Kennisbank' },
   Object.fromEntries(VOORWAARDEN.map(f => [f, 'Voorwaarden'])));
 /* Pagina's buiten het menu (geen aria-current, geen kruimelpad). */
 const GEEN = ['404.html', 'moderatie.html', 'privacy.html', 'beheer-code.html', 'koppelingen.html', 'compliance-overzicht.html', 'hypotheekbond-tools.html'];
@@ -40,13 +43,10 @@ const HUISSTIJL_LINK = 'css/huisstijl.css';
 /* 404.html wordt ook in submappen getoond (GitHub Pages, domein adviesforum.nl) en heeft daarom absolute links nodig. */
 const PREFIX = { '404.html': '/' };
 
-/* Renteoverzicht van alle aanbieders (externe tool van Hypotheekbond, zelfde bron als de externe rekentools) */
-const RENTE_URL = 'https://a19472c3-dc16-47aa-940c-8d060b9d7238.tools.hypotheekbond.nl/renteoverzicht/all';
-
 function navHtml(pre = '', bestand = '', doel = 'inhoud') {
   const huidig = sectie(bestand);
   const li = LINKS.map(([u, t]) => `<li><a href="${pre}${u}"${t === huidig ? ' aria-current="page"' : ''}>${t}</a></li>`).join('');
-  return `${BEGIN}\n<a class="sitenav-skip" href="#${doel}">Naar de inhoud</a>\n<nav class="sitenav" aria-label="Hoofdmenu"><div class="sitenav-in"><div class="sitenav-rij1"><a class="sitenav-merk" href="${pre}index.html"><img class="sitenav-teken" src="${pre}favicon.svg" alt="" width="34" height="34"><span>Advies<span class="sitenav-forum">forum</span></span></a><form class="sitenav-zoek" action="${pre}index.html" method="get" role="search"><input type="search" name="zoek" placeholder="Zoek op de hele site" aria-label="Zoek op de hele site" autocomplete="off"><button type="submit">Zoeken</button></form><div class="sitenav-acties" id="sitenav-acties"></div></div><div class="sitenav-rij2"><ul>${li}</ul><a class="sitenav-extern" href="${RENTE_URL}" target="_blank" rel="noopener">Renteoverzicht<span aria-hidden="true"> ↗</span><span class="sitenav-sr"> (externe tool van Hypotheekbond, opent in een nieuw venster)</span></a></div></div></nav>\n${EIND}`;
+  return `${BEGIN}\n<a class="sitenav-skip" href="#${doel}">Naar de inhoud</a>\n<nav class="sitenav" aria-label="Hoofdmenu"><div class="sitenav-in"><div class="sitenav-rij1"><a class="sitenav-merk" href="${pre}index.html"><img class="sitenav-teken" src="${pre}favicon.svg" alt="" width="34" height="34"><span>Advies<span class="sitenav-forum">forum</span></span></a><form class="sitenav-zoek" action="${pre}index.html" method="get" role="search"><input type="search" name="zoek" placeholder="Zoek op de hele site" aria-label="Zoek op de hele site" autocomplete="off"><button type="submit">Zoeken</button></form><div class="sitenav-acties" id="sitenav-acties"></div></div><div class="sitenav-rij2"><ul>${li}</ul></div></div></nav>\n${EIND}`;
 }
 
 const VOET_BEGIN = '<!-- sitevoet: gegenereerd door tools/sitenav.js, niet met de hand wijzigen -->';
@@ -55,7 +55,7 @@ const BEHEER_MAIL = 'jeroen@oversteegen.nl';
 const JAAR = 2026;
 /* Dezelfde voettekst op elke pagina: korte uitleg, contact en de belangrijkste ingangen per onderdeel. */
 const VOET_KOLOMMEN = [
-  ['Voorwaarden', [['voorwaarden.html', 'Alle voorwaarden'], ['voorwaarden-vergelijker.html', 'Voorwaarden vergelijken'], ['situatiecheck.html', 'Situatiecheck'], ['acceptatiewijzer.html', 'Acceptatiewijzer'], ['productvoorwaarden.html', 'Productvoorwaarden'], ['partijen.html', 'Aanbiederwegwijzer']]],
+  ['Voorwaarden', [['voorwaarden.html', 'Alle voorwaarden'], ['voorwaarden-vergelijker.html', 'Voorwaarden vergelijken'], ['situatiecheck.html', 'Situatiecheck'], ['acceptatiewijzer.html', 'Acceptatiewijzer'], ['productvoorwaarden.html', 'Productvoorwaarden'], ['hypotheekrentetarieven.html', 'Hypotheekrentetarieven'], ['partijen.html', 'Aanbiederwegwijzer']]],
   ['Hulpmiddelen', [['index.html#hulpmiddelen', 'Alle hulpmiddelen'], ['rekentools.html', 'Rekentools'], ['leennormen-2026.html', 'Leennormen 2026'], ['nhg-check.html', 'NHG-check'], ['documentenchecklist.html', 'Documentenchecklist'], ['wetgeving.html', 'Wet- en regelgeving']]],
   ['Kennis', [['kennisbank/', 'Kennisbank'], ['faq/', 'Veelgestelde vragen'], ['begrippen/', 'Begrippen A-Z'], ['index.html', 'Forum'], ['laatste.html', 'Laatste nieuws'], ['nieuw.html', 'Wat is nieuw']]],
   ['Meedoen', [['aanmelden.html', 'Aanmelden'], ['kennispartner.html', 'Kennispartner worden'], ['uitnodigen.html', 'Collega uitnodigen'], ['koppelingen.html', 'Koppelen met je adviessoftware'], ['aanbieders-info.html', 'Voor aanbieders'], ['gebruiksvoorwaarden.html', 'Gebruiksvoorwaarden'], ['privacy.html', 'Privacy en cookies']]],
