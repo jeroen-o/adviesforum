@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="nl" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kennispartner worden – Adviesforum</title>
+<meta name="description" content="Claim als financieel adviseur een kennisbankartikel of onderwerp, word Kennispartner van het Adviesforum en plaats de badge op je website en LinkedIn.">
+<link rel="canonical" href="https://adviesforum.nl/kennispartner.html">
+<meta property="og:title" content="Kennispartner worden – Adviesforum">
+<meta property="og:description" content="Claim als financieel adviseur een kennisbankartikel of onderwerp, word Kennispartner van het Adviesforum en plaats de badge op je website en LinkedIn.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://adviesforum.nl/kennispartner.html">
+<meta property="og:site_name" content="Adviesforum">
+<meta property="og:locale" content="nl_NL">
+<meta name="theme-color" content="#F68712">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="manifest.webmanifest">
+<style>
+  :root{--inkt:#171043;--indigo:#26306E;--tekst:#2E2B4F;--grijs:#5D5A7A;--lijn:#DFDEE5;--licht:#ECF7FD;--oranje:#F68712;--koraal:#E85B3F;--turq:#0B7C77;--rood:#9E2F45;--groen:#1E7A4B}
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{font-family:Segoe UI,Roboto,Helvetica Neue,Arial,system-ui,sans-serif;color:var(--tekst);background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:var(--turq)}
+  .kop{background:var(--licht);padding:44px 24px 40px}
+  .kop-in,.romp{max-width:1080px;margin:0 auto}
+  .kop .label{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--turq);margin-bottom:10px}
+  .kop h1{font-family:"Source Serif 4",Georgia,"Times New Roman",serif;font-weight:400;font-size:clamp(30px,4.6vw,46px);line-height:1.12;margin:0 0 14px;color:var(--inkt)}
+  .kop p{font-size:18px;max-width:720px;margin:0 0 20px;color:var(--inkt)}
+  .kop-grid{display:grid;grid-template-columns:1fr 240px;gap:36px;align-items:center}
+  .knop{display:inline-block;background:var(--oranje);color:var(--inkt);font-weight:700;text-decoration:none;padding:12px 20px;border-radius:2px;border:0;font:inherit;font-weight:700;cursor:pointer}
+  .knop:hover{background:#F9A54D}
+  .knop-rand{display:inline-block;background:#fff;color:var(--inkt);border:1.5px solid var(--inkt);font-weight:700;text-decoration:none;padding:10.5px 18px;border-radius:2px;cursor:pointer;font:inherit;font-weight:700}
+  .knoppen{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+  .romp{padding:8px 24px 24px}
+  section{margin:44px 0}
+  h2{font-family:"Source Serif 4",Georgia,"Times New Roman",serif;font-weight:400;font-size:clamp(24px,3vw,32px);color:var(--inkt);margin:0 0 14px;line-height:1.2}
+  h3{font-size:17px;color:var(--inkt);margin:0 0 6px}
+  .stappen{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;list-style:none;margin:0;padding:0;counter-reset:stap}
+  .stappen li{background:#fff;box-shadow:0 6px 22px rgba(70,160,210,.16);padding:22px 20px;counter-increment:stap;position:relative}
+  .stappen li::before{content:counter(stap);display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--koraal);color:#fff;font-weight:800;margin-bottom:10px}
+  .stappen p{margin:0;font-size:15px}
+  .twee{display:grid;grid-template-columns:1.3fr 1fr;gap:28px;align-items:start}
+  .kaart{background:#fff;box-shadow:0 6px 22px rgba(70,160,210,.16);padding:24px}
+  .kaart.licht{background:var(--licht);box-shadow:none}
+  ul.vink{list-style:none;padding:0;margin:0}
+  ul.vink li{padding-left:28px;position:relative;margin:0 0 10px}
+  ul.vink li::before{content:"";position:absolute;left:4px;top:7px;width:12px;height:7px;border-left:3px solid var(--turq);border-bottom:3px solid var(--turq);transform:rotate(-45deg)}
+  form label{display:block;font-weight:700;font-size:14px;color:var(--inkt);margin:14px 0 5px}
+  form .hint{font-weight:400;color:var(--grijs);font-size:13px}
+  input,select,textarea{width:100%;font:inherit;font-size:15px;padding:10px 12px;border:1.5px solid #C9C8D6;border-radius:2px;background:#fff;color:var(--inkt)}
+  textarea{min-height:120px;resize:vertical}
+  input:focus,select:focus,textarea:focus{border-color:var(--turq);outline:3px solid rgba(11,124,119,.25);outline-offset:0}
+  .rij{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+  fieldset{border:0;padding:0;margin:14px 0 0}
+  legend{font-weight:700;font-size:14px;color:var(--inkt);margin-bottom:6px;padding:0}
+  .keuze{display:flex;gap:10px;align-items:flex-start;font-weight:400;margin:6px 0;font-size:15px;color:var(--tekst)}
+  .keuze input{width:auto;margin-top:5px}
+  .verplicht{color:var(--rood)}
+  .melding{background:#FFF4E5;border-left:4px solid var(--oranje);padding:12px 14px;font-size:14px;margin:16px 0}
+  .fout{color:var(--rood);font-size:14px;margin:8px 0 0}
+  .gelukt{background:#E8F6EF;border-left:4px solid var(--groen);padding:14px 16px;margin-top:16px}
+  .badge-voorbeeld{display:flex;flex-wrap:wrap;gap:18px;align-items:flex-start}
+  .badge-voorbeeld svg{max-width:100%;height:auto}
+  pre.code{background:#171043;color:#F1F1F6;padding:14px 16px;font-size:12.5px;overflow:auto;white-space:pre-wrap;word-break:break-all;border-radius:2px;margin:8px 0}
+  .partners{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
+  .partner{background:#fff;box-shadow:0 6px 22px rgba(70,160,210,.16);padding:20px;scroll-margin-top:20px}
+  .partner:target{outline:3px solid var(--oranje)}
+  .partner .geverifieerd{display:inline-block;font-size:12px;font-weight:700;color:var(--groen);background:#E8F6EF;padding:3px 8px;margin:4px 0 10px}
+  .leeg{background:var(--licht);padding:22px;font-size:15px}
+  details{border-top:1px solid var(--lijn);padding:12px 0}
+  details:last-of-type{border-bottom:1px solid var(--lijn)}
+  summary{cursor:pointer;font-weight:700;color:var(--inkt)}
+  details p,details ul{margin:8px 0 0}
+  .compliance{border-left:4px solid var(--rood);background:#FDF1F3;padding:16px 18px}
+  .compliance h3{color:var(--rood);text-transform:uppercase;letter-spacing:.06em;font-size:13px}
+  .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+  @media (max-width:820px){.kop-grid,.twee{grid-template-columns:1fr}.stappen{grid-template-columns:1fr}.kop-grid .kop-badge{display:none}.rij{grid-template-columns:1fr}}
+  @media print{.knop,.knop-rand,form{display:none}}
+</style>
+<link rel="stylesheet" href="css/sitenav.css">
+<!-- sitenav-ld: gegenereerd door tools/sitenav.js -->
+<meta property="og:image" content="https://adviesforum.nl/img/og-adviesforum.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Adviesforum: voor adviseurs die elkaar vooruithelpen">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://adviesforum.nl/kennispartner.html#webpage","url":"https://adviesforum.nl/kennispartner.html","name":"Kennispartner worden","description":"Claim als financieel adviseur een kennisbankartikel of onderwerp, word Kennispartner van het Adviesforum en plaats de badge op je website en LinkedIn.","inLanguage":"nl-NL","isPartOf":{"@id":"https://adviesforum.nl/#website"},"breadcrumb":{"@id":"https://adviesforum.nl/kennispartner.html#kruimelpad"}},{"@type":"BreadcrumbList","@id":"https://adviesforum.nl/kennispartner.html#kruimelpad","itemListElement":[{"@type":"ListItem","position":1,"name":"Adviesforum","item":"https://adviesforum.nl/"},{"@type":"ListItem","position":2,"name":"Kennispartner worden","item":"https://adviesforum.nl/kennispartner.html"}]}]}</script>
+<!-- /sitenav-ld -->
+<link rel="stylesheet" href="css/huisstijl.css">
+</head>
+<body>
+<!-- sitenav: gegenereerd door tools/sitenav.js, niet met de hand wijzigen -->
+<a class="sitenav-skip" href="#inhoud">Naar de inhoud</a>
+<nav class="sitenav" aria-label="Hoofdmenu"><div class="sitenav-in"><a class="sitenav-merk" href="index.html"><img class="sitenav-teken" src="favicon.svg" alt="" width="34" height="34"><span>Advies<span class="sitenav-forum">forum</span></span></a><form class="sitenav-zoek" action="index.html" method="get" role="search"><input type="search" name="zoek" placeholder="Zoek op de hele site" aria-label="Zoek op de hele site" autocomplete="off"><button type="submit">Zoeken</button></form><ul><li><a href="index.html">Home</a></li><li><a href="voorwaarden.html">Voorwaarden</a></li><li><a href="index.html#hulpmiddelen">Hulpmiddelen</a></li><li><a href="kennisbank/" aria-current="page">Kennisbank</a></li><li><a href="laatste.html">Laatste nieuws</a></li><li><a href="aanmelden.html">Aanmelden</a></li></ul></div></nav>
+<!-- /sitenav -->
+
+<header class="kop">
+  <div class="kop-in kop-grid">
+    <div>
+      <span class="label">Kennispartner</span>
+      <h1>Deel je vakkennis en word Kennispartner van het Adviesforum</h1>
+      <p>Ben je specialist in een onderwerp? Claim een artikel of onderwerp in de kennisbank. Na controle staan je naam en kantoor bij het artikel als vakinhoudelijk aanspreekpunt, en krijg je een badge voor je website en LinkedIn.</p>
+      <div class="knoppen"><a class="knop" href="#claimen">Claim een artikel</a><a class="knop-rand" href="#badge">Bekijk de badge</a></div>
+    </div>
+    <div class="kop-badge" id="kop-badge" aria-hidden="true"></div>
+  </div>
+</header>
+
+<main id="inhoud" tabindex="-1" class="romp">
+
+<section aria-labelledby="h-werkt">
+  <h2 id="h-werkt">Zo werkt het</h2>
+  <ol class="stappen">
+    <li><h3>Kies een artikel of onderwerp</h3><p>Bij elk kennisbankartikel staat de link <em>Claim dit artikel</em>. Mist er een onderwerp? Claim dan een nieuw onderwerp.</p></li>
+    <li><h3>Stuur je claim</h3><p>Vul het formulier in. Er opent een e-mail aan de beheerder in je eigen mailprogramma; de site slaat niets op.</p></li>
+    <li><h3>Controle en vermelding</h3><p>De beheerder controleert je AFM-registratie en je bijdrage. Daarna sta je bij het artikel en ontvang je je badge met de code voor je website.</p></li>
+  </ol>
+</section>
+
+<section class="twee" aria-labelledby="h-krijg">
+  <div>
+    <h2 id="h-krijg">Wat je krijgt</h2>
+    <ul class="vink">
+      <li><strong>Vermelding bij het artikel</strong> als vakinhoudelijk aanspreekpunt, met je naam, kantoor en een link naar je profiel op deze pagina.</li>
+      <li><strong>De Kennispartner-badge</strong> met je naam en kantoor, als vierkante badge voor je website en als banner voor je e-mailhandtekening.</li>
+      <li><strong>Een verificatielink</strong>: de badge linkt naar je vermelding op deze pagina, zodat iedereen kan zien dat hij echt is.</li>
+      <li><strong>Zichtbaarheid onder collega's</strong>: je naam staat bij een onderwerp waar adviseurs naar zoeken.</li>
+    </ul>
+    <p>Kennispartner worden is gratis. Er is geen betaalde vermelding en geen rangorde tussen kennispartners.</p>
+  </div>
+  <div class="kaart licht">
+    <h3>Wie kan Kennispartner worden?</h3>
+    <ul class="vink">
+      <li>Financieel adviseurs die werken bij een kantoor met een AFM-vergunning, of bij een aanbieder met een eigen vakinhoudelijke rol.</li>
+      <li>Met aantoonbare kennis van het onderwerp, bijvoorbeeld door specialisatie, opleiding of praktijkervaring.</li>
+      <li>Die hun bijdrage neutraal houden: geen reclame, acties, rentes of tarieven.</li>
+    </ul>
+  </div>
+</section>
+
+<section aria-labelledby="h-claimen" id="claimen" style="scroll-margin-top:20px">
+  <div class="twee">
+    <div class="kaart">
+      <h2 id="h-claimen">Claim een artikel of onderwerp</h2>
+      <p style="margin-top:0">Velden met <span class="verplicht">*</span> zijn verplicht.</p>
+      <form id="claim-form" novalidate>
+        <fieldset>
+          <legend>Wat wil je claimen? <span class="verplicht">*</span></legend>
+          <label class="keuze"><input type="radio" name="soort" value="artikel" checked> Een bestaand artikel in de kennisbank</label>
+          <label class="keuze"><input type="radio" name="soort" value="onderwerp"> Een nieuw onderwerp dat nog ontbreekt</label>
+        </fieldset>
+        <div id="veld-artikel">
+          <label for="kp-zoek">Artikel <span class="verplicht">*</span> <span class="hint">typ een paar woorden van de titel</span></label>
+          <input id="kp-zoek" list="kp-artikelen" autocomplete="off" placeholder="Bijvoorbeeld: funderingsrisico">
+          <datalist id="kp-artikelen"></datalist>
+          <p class="hint" id="kp-gekozen" aria-live="polite" style="margin:6px 0 0"></p>
+        </div>
+        <div id="veld-onderwerp" hidden>
+          <label for="kp-onderwerp">Onderwerp <span class="verplicht">*</span></label>
+          <input id="kp-onderwerp" name="onderwerp" placeholder="Bijvoorbeeld: hypotheek voor arbeidsmigranten">
+        </div>
+        <div class="rij">
+          <div><label for="kp-naam">Je naam <span class="verplicht">*</span></label><input id="kp-naam" name="naam" autocomplete="name" required></div>
+          <div><label for="kp-kantoor">Kantoor <span class="verplicht">*</span></label><input id="kp-kantoor" name="kantoor" autocomplete="organization" required></div>
+        </div>
+        <div class="rij">
+          <div><label for="kp-email">E-mail <span class="verplicht">*</span></label><input id="kp-email" name="email" type="email" autocomplete="email" required></div>
+          <div><label for="kp-afm">AFM-vergunningnummer kantoor <span class="verplicht">*</span></label><input id="kp-afm" name="afm" inputmode="numeric" required placeholder="8 cijfers"></div>
+        </div>
+        <div class="rij">
+          <div><label for="kp-plaats">Plaats</label><input id="kp-plaats" name="plaats" autocomplete="address-level2"></div>
+          <div><label for="kp-tel">Telefoon</label><input id="kp-tel" name="telefoon" type="tel" autocomplete="tel"></div>
+        </div>
+        <div class="rij">
+          <div><label for="kp-web">Website kantoor</label><input id="kp-web" name="website" type="url" placeholder="https://"></div>
+          <div><label for="kp-li">LinkedIn-profiel</label><input id="kp-li" name="linkedin" type="url" placeholder="https://www.linkedin.com/in/..."></div>
+        </div>
+        <label for="kp-waarom">Waarom ben je specialist in dit onderwerp? <span class="verplicht">*</span></label>
+        <textarea id="kp-waarom" name="waarom" required placeholder="Bijvoorbeeld je specialisatie, opleiding of ervaring met dit soort dossiers."></textarea>
+        <label for="kp-tekst">Aanvulling of eigen tekst <span class="hint">(optioneel)</span></label>
+        <textarea id="kp-tekst" name="tekst" placeholder="Wil je het artikel aanvullen of verbeteren? Plak je tekst hier. Laat leeg als je alleen als aanspreekpunt vermeld wilt worden."></textarea>
+        <label class="keuze" style="margin-top:14px"><input type="checkbox" id="kp-akkoord" required> <span>Ik ga akkoord met de <a href="#voorwaarden">voorwaarden voor Kennispartners</a> en de <a href="privacy.html">privacyverklaring</a>. <span class="verplicht">*</span></span></label>
+        <div class="fout" id="kp-fout" role="alert"></div>
+        <div class="knoppen" style="margin-top:16px"><button class="knop" type="submit">Claim versturen</button></div>
+        <div id="kp-gelukt" class="gelukt" hidden tabindex="-1"></div>
+      </form>
+    </div>
+    <aside class="kaart licht" aria-label="Voorbeeld van je badge">
+      <h3>Zo ziet je badge eruit</h3>
+      <p style="font-size:14px;margin:0 0 12px">Het voorbeeld past zich aan aan je naam en kantoor. De echte badge, met verificatielink, krijg je na goedkeuring.</p>
+      <div id="claim-voorbeeld" class="badge-voorbeeld"></div>
+      <p style="font-size:13px;margin:12px 0 0;color:var(--grijs)">Je gegevens gaan vanuit je eigen mailprogramma naar de beheerder. Er is geen formulierdienst en niets wordt op de site opgeslagen.</p>
+    </aside>
+  </div>
+</section>
+
+<section aria-labelledby="h-badge" id="badge" style="scroll-margin-top:20px">
+  <h2 id="h-badge">De Kennispartner-badge plaatsen</h2>
+  <div class="twee">
+    <div>
+      <h3>Op je eigen website</h3>
+      <p>Na goedkeuring vind je je badge onder je naam bij <a href="#partners">Onze Kennispartners</a>, met de code om te kopiëren. Plak die in een HTML-blok, bijvoorbeeld in WordPress een blok <em>Aangepaste HTML</em>, in Wix of Squarespace een <em>Embed</em>- of <em>Code</em>-blok. Goede plekken zijn je over-ons-pagina, de pagina van je specialisme of de footer. De code ziet er zo uit:</p>
+      <pre class="code" id="code-voorbeeld"></pre>
+      <p>De badge staat op adviesforum.nl, dus je hoeft niets te uploaden. De link gaat naar je vermelding: zo kan iedere bezoeker controleren dat de badge echt is.</p>
+      <h3 style="margin-top:22px">Op LinkedIn</h3>
+      <ul class="vink">
+        <li><strong>Uitgelicht</strong>: kies op je profiel <em>Sectie toevoegen</em>, dan <em>Aanbevolen</em> en <em>Uitgelicht</em>, en voeg de link naar je vermelding toe. Upload de PNG van je badge als afbeelding.</li>
+        <li><strong>Bericht</strong>: deel het artikel waarbij je Kennispartner bent, met de PNG van je badge. Noem het onderwerp en waarom je het belangrijk vindt.</li>
+        <li><strong>Licenties en certificaten</strong>: gebruik deze sectie niet. De badge is geen certificaat, diploma of keurmerk.</li>
+        <li><strong>Bannerafbeelding of e-mailhandtekening</strong>: gebruik de banner-variant van je badge.</li>
+      </ul>
+    </div>
+    <div class="kaart">
+      <h3>Twee varianten</h3>
+      <div id="badge-varianten" class="badge-voorbeeld"></div>
+      <p style="font-size:13px;color:var(--grijs);margin:10px 0 0">Vierkant (240 × 240) voor je website, banner (360 × 96) voor je footer of e-mailhandtekening. Je kunt beide downloaden als SVG en als PNG.</p>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="h-partners" id="partners" style="scroll-margin-top:20px">
+  <h2 id="h-partners">Onze Kennispartners</h2>
+  <p>Iedere Kennispartner is gecontroleerd door de beheerder. Een vermelding is geen aanbeveling en zegt niets over de kwaliteit van het advies van een kantoor.</p>
+  <div id="partner-lijst"></div>
+</section>
+
+<section aria-labelledby="h-voorwaarden" id="voorwaarden" style="scroll-margin-top:20px">
+  <h2 id="h-voorwaarden">Voorwaarden en veelgestelde vragen</h2>
+  <div class="compliance" style="margin-bottom:18px">
+    <h3>Compliance / AFM</h3>
+    <ul style="margin:6px 0 0;padding-left:20px">
+      <li>De badge is geen keurmerk, certificaat of kwaliteitsoordeel. Gebruik hem niet zo, en niet in combinatie met teksten als <em>gecertificeerd</em>, <em>erkend</em> of <em>door de AFM goedgekeurd</em>.</li>
+      <li>Een bijdrage aan de kennisbank is collegiale kennisdeling, geen advies aan consumenten en geen reclame voor een product of aanbieder.</li>
+      <li>Aangeleverde tekst wordt een concept en verschijnt pas als gecontroleerd artikel na goedkeuring door compliance.</li>
+    </ul>
+  </div>
+  <details><summary>Kost het iets?</summary><p>Nee. Kennispartner worden is gratis en er is geen betaalde voorrang of rangorde.</p></details>
+  <details><summary>Hoe wordt mijn claim gecontroleerd?</summary><p>De beheerder kijkt of je kantoor in het register van de AFM staat, of je daar werkt (bijvoorbeeld via de website van het kantoor of je LinkedIn-profiel) en of je bijdrage inhoudelijk klopt. Bij twijfel nemen we contact met je op.</p></details>
+  <details><summary>Kunnen meerdere adviseurs hetzelfde artikel claimen?</summary><p>Ja, maximaal drie per artikel. Bij meer aanmeldingen kiest de beheerder op basis van specialisatie en bijdrage.</p></details>
+  <details><summary>Mag ik mijn eigen tekst aanleveren?</summary><p>Ja. Je tekst wordt verwerkt in het artikel of als nieuw artikel. Hij blijft een concept tot compliance hem heeft gecontroleerd. Noem geen rentes, tarieven, acties of productnamen als aanbeveling.</p></details>
+  <details><summary>Wanneer vervalt de badge?</summary><p>Als je niet meer bij het kantoor werkt, als de AFM-vergunning van het kantoor vervalt, op je eigen verzoek, of als de badge wordt gebruikt in strijd met deze voorwaarden. Je vermelding verdwijnt dan van de site en de badge-afbeelding en verificatielink werken niet meer. Haal de code dan ook van je eigen website.</p></details>
+  <details><summary>Wat gebeurt er met mijn gegevens?</summary><p>Je claim gaat per e-mail naar de beheerder. Op de site komen alleen je naam, kantoor, plaats en de links die je zelf opgeeft. Je e-mailadres en telefoonnummer worden niet gepubliceerd. Zie de <a href="privacy.html">privacyverklaring</a>.</p></details>
+</section>
+
+</main>
+
+<script src="js/kennispartner-badge.js"></script>
+<script src="data/kennispartners.js"></script>
+<script src="data/kennisbank.js"></script>
+<script src="data/kennisbank-planning.js"></script>
+<script src="data/kennisbank-geldverstrekkers.js"></script>
+<script src="data/kennisbank-eblinqx.js"></script>
+<script src="data/kennisbank-afm.js"></script>
+<script src="data/kennisbank-nhg.js"></script>
+<script src="data/kennisbank-thema.js"></script>
+<script src="data/kennisbank-kifid.js"></script>
+<script src="data/kennisbank-wetgeving.js"></script>
+<script src="data/kennisbank-blinqx.js"></script>
+<script src="data/kennisbank-woning.js"></script>
+<script src="data/kennisbank-opleiding.js"></script>
+<script src="data/kennisbank-compliance2.js"></script>
+<script src="data/kennisbank-seh.js"></script>
+<script src="data/kennisbank-seh2.js"></script>
+<script src="data/kennisbank-vakpers.js"></script>
+<script src="data/kennisbank-kifid2.js"></script>
+<script src="data/kennisbank-verzekeraars.js"></script>
+<script src="data/kennisbank-adfiz.js"></script>
+<script src="data/kennisbank-dfosignalen.js"></script>
+<script src="data/kennisbank-aanvulling.js"></script>
+<script src="data/kennisbank-woningtools.js"></script>
+<script>
+(function(){
+  'use strict';
+  var ONTVANGER = "jeroen@oversteegen.nl";
+  var BASIS = "https://adviesforum.nl/";
+  var B = window.KennispartnerBadge;
+  var KP = window.KENNISPARTNERS || [];
+  var ART = (window.KENNISBANK || []).slice().sort(function(a,b){return a.titel.localeCompare(b.titel,'nl');});
+  var $ = function(id){return document.getElementById(id);};
+  var esc = function(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});};
+  var artikel = function(id){for(var i=0;i<ART.length;i++)if(ART[i].id===id)return ART[i];return null;};
+  var datum = function(d){var m=['januari','februari','maart','april','mei','juni','juli','augustus','september','oktober','november','december'];var p=String(d).split('-');return Number(p[2])+' '+m[Number(p[1])-1]+' '+p[0];};
+
+  /* Badgevoorbeelden */
+  $('kop-badge').innerHTML = B.svg({naam:'Uw naam',kantoor:'Uw kantoor'},'vierkant');
+  $('badge-varianten').innerHTML = B.svg({naam:'Uw naam',kantoor:'Uw kantoor'},'vierkant') + B.svg({naam:'Uw naam',kantoor:'Uw kantoor'},'banner');
+  function embed(p){
+    return '<a href="'+BASIS+'kennispartner.html#partner-'+p.id+'" target="_blank" rel="noopener" title="Kennispartner van Adviesforum">\n  <img src="'+BASIS+'badges/kennispartner-'+p.id+'.svg" width="200" height="200" alt="Kennispartner van Adviesforum: '+p.naam+(p.kantoor?', '+p.kantoor:'')+'">\n</a>';
+  }
+  $('code-voorbeeld').textContent = embed({id:'kp-uw-naam',naam:'Uw naam',kantoor:'Uw kantoor'});
+  function voorbeeld(){$('claim-voorbeeld').innerHTML = B.svg({naam:$('kp-naam').value||'Uw naam',kantoor:$('kp-kantoor').value||'Uw kantoor'},'vierkant');}
+  $('kp-naam').addEventListener('input',voorbeeld);$('kp-kantoor').addEventListener('input',voorbeeld);voorbeeld();
+
+  /* Artikelkeuze */
+  var dl = $('kp-artikelen'), gekozen = null;
+  dl.innerHTML = ART.map(function(a){return '<option value="'+esc(a.titel)+'"></option>';}).join('');
+  function kies(a){gekozen=a;$('kp-gekozen').innerHTML = a ? 'Gekozen: <a href="kennisbank/'+esc(a.id)+'.html">'+esc(a.titel)+'</a>' : '';}
+  $('kp-zoek').addEventListener('input',function(){var v=this.value.trim().toLowerCase();var a=null;for(var i=0;i<ART.length;i++)if(ART[i].titel.toLowerCase()===v){a=ART[i];break;}kies(a);});
+  var q = new URLSearchParams(location.search).get('artikel');
+  if(q&&artikel(q)){var a0=artikel(q);$('kp-zoek').value=a0.titel;kies(a0);}
+  function soort(){var s=document.querySelector('input[name="soort"]:checked').value;$('veld-artikel').hidden=s!=='artikel';$('veld-onderwerp').hidden=s!=='onderwerp';}
+  Array.prototype.forEach.call(document.querySelectorAll('input[name="soort"]'),function(r){r.addEventListener('change',soort);});
+
+  /* Versturen: e-mail openen in het eigen mailprogramma */
+  $('claim-form').addEventListener('submit',function(e){
+    e.preventDefault();
+    var s=document.querySelector('input[name="soort"]:checked').value, f=[], v=function(id){return $(id).value.trim();};
+    if(s==='artikel'&&!gekozen)f.push('Kies een artikel uit de lijst.');
+    if(s==='onderwerp'&&!v('kp-onderwerp'))f.push('Vul het onderwerp in.');
+    if(!v('kp-naam'))f.push('Vul je naam in.');
+    if(!v('kp-kantoor'))f.push('Vul je kantoor in.');
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v('kp-email')))f.push('Vul een geldig e-mailadres in.');
+    if(!/^\d{8}$/.test(v('kp-afm').replace(/\s/g,'')))f.push('Het AFM-vergunningnummer heeft 8 cijfers.');
+    if(!v('kp-waarom'))f.push('Vertel kort waarom je specialist bent in dit onderwerp.');
+    ['kp-web','kp-li'].forEach(function(id){if(v(id)&&!/^https:\/\/\S+$/.test(v(id)))f.push('Links beginnen met https://.');});
+    if(!$('kp-akkoord').checked)f.push('Ga akkoord met de voorwaarden.');
+    $('kp-fout').textContent=f.filter(function(x,i){return f.indexOf(x)===i;}).join(' ');
+    if(f.length)return;
+    var wat = s==='artikel' ? gekozen.titel : v('kp-onderwerp');
+    var regels=['Claim als Kennispartner via adviesforum.nl','',
+      s==='artikel' ? 'Artikel: '+gekozen.titel+' ('+gekozen.id+')' : 'Nieuw onderwerp: '+wat,
+      s==='artikel' ? 'Pagina: '+BASIS+'kennisbank/'+gekozen.id+'.html' : '','',
+      'Naam: '+v('kp-naam'),'Kantoor: '+v('kp-kantoor'),'Plaats: '+(v('kp-plaats')||'-'),'AFM-vergunningnummer: '+v('kp-afm'),
+      'E-mail: '+v('kp-email'),'Telefoon: '+(v('kp-tel')||'-'),'Website: '+(v('kp-web')||'-'),'LinkedIn: '+(v('kp-li')||'-'),'',
+      'Waarom specialist:',v('kp-waarom'),'','Aanvulling of eigen tekst:',v('kp-tekst')||'(geen, alleen vermelding als aanspreekpunt)','',
+      'Akkoord met de voorwaarden voor Kennispartners: ja'];
+    var href='mailto:'+ONTVANGER+'?subject='+encodeURIComponent('Kennispartner-claim: '+wat)+'&body='+encodeURIComponent(regels.filter(function(r,i){return r!==''||regels[i-1]!=='';}).join('\n'));
+    var g=$('kp-gelukt');
+    g.innerHTML='<strong>Je e-mail staat klaar in je mailprogramma.</strong> Verstuur hem om je claim in te dienen. Opent er niets? <a href="'+esc(href)+'">Open de e-mail opnieuw</a> of mail je gegevens naar <a href="mailto:'+ONTVANGER+'">'+ONTVANGER+'</a>.';
+    g.hidden=false;g.focus();
+    window.location.href=href;
+  });
+
+  /* Kennispartners met badge, verificatie, downloads en code */
+  function download(naam,inhoud,type){var a=document.createElement('a');a.href=URL.createObjectURL(new Blob([inhoud],{type:type}));a.download=naam;document.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);a.remove();},500);}
+  function png(svg,naam){var img=new Image(),url=URL.createObjectURL(new Blob([svg],{type:'image/svg+xml'}));img.onload=function(){var c=document.createElement('canvas'),s=4;c.width=img.width*s;c.height=img.height*s;var x=c.getContext('2d');x.fillStyle='#fff';x.fillRect(0,0,c.width,c.height);x.drawImage(img,0,0,c.width,c.height);URL.revokeObjectURL(url);c.toBlob(function(b){var a=document.createElement('a');a.href=URL.createObjectURL(b);a.download=naam;document.body.appendChild(a);a.click();setTimeout(function(){a.remove();},500);},'image/png');};img.src=url;}
+  var lijst=$('partner-lijst');
+  if(!KP.length){lijst.innerHTML='<div class="leeg"><strong>Nog geen Kennispartners.</strong> Word de eerste: <a href="#claimen">claim een artikel of onderwerp</a>.</div>';}
+  else{
+    lijst.className='partners';
+    lijst.innerHTML=KP.map(function(p){
+      var arts=(p.artikelen||[]).map(function(id){var a=artikel(id);return a?'<li><a href="kennisbank/'+esc(id)+'.html">'+esc(a.titel)+'</a></li>':'';}).join('')+(p.onderwerpen||[]).map(function(o){return '<li>'+esc(o)+'</li>';}).join('');
+      var links=[p.website?'<a href="'+esc(p.website)+'" rel="noopener" target="_blank">Website</a>':'',p.linkedin?'<a href="'+esc(p.linkedin)+'" rel="noopener" target="_blank">LinkedIn</a>':''].filter(Boolean).join(' · ');
+      return '<article class="partner" id="partner-'+esc(p.id)+'" tabindex="-1"><div>'+B.svg(p,'vierkant')+'</div><h3>'+esc(p.naam)+'</h3><div>'+esc(p.kantoor)+(p.plaats?', '+esc(p.plaats):'')+'</div>'+
+        '<span class="geverifieerd">Gecontroleerd door de beheerder · sinds '+esc(datum(p.sinds))+'</span>'+(p.afm?'<div style="font-size:13px">AFM-vergunning kantoor: '+esc(p.afm)+'</div>':'')+(links?'<div style="font-size:14px;margin:4px 0">'+links+'</div>':'')+
+        '<h4 style="margin:12px 0 4px;font-size:14px">Aanspreekpunt voor</h4><ul style="margin:0;padding-left:20px;font-size:14px">'+arts+'</ul>'+
+        '<details><summary>Badge downloaden en code voor je website</summary><div class="knoppen" style="margin:10px 0"><button type="button" class="knop-rand" data-dl="svg" data-id="'+esc(p.id)+'">SVG</button><button type="button" class="knop-rand" data-dl="png" data-id="'+esc(p.id)+'">PNG</button><button type="button" class="knop-rand" data-dl="banner" data-id="'+esc(p.id)+'">Banner (PNG)</button></div><label for="code-'+esc(p.id)+'" style="font-weight:700;font-size:13px">Code voor je website</label><textarea id="code-'+esc(p.id)+'" readonly style="min-height:110px;font-family:monospace;font-size:12px">'+esc(embed(p))+'</textarea><button type="button" class="knop-rand" data-kopie="code-'+esc(p.id)+'" style="margin-top:8px">Code kopiëren</button></details></article>';
+    }).join('');
+    lijst.addEventListener('click',function(e){
+      var t=e.target.closest('button');if(!t)return;
+      if(t.dataset.kopie){var ta=$(t.dataset.kopie);ta.select();try{navigator.clipboard.writeText(ta.value);}catch(x){document.execCommand('copy');}t.textContent='Gekopieerd';return;}
+      var p=KP.filter(function(x){return x.id===t.dataset.id;})[0];if(!p)return;
+      if(t.dataset.dl==='svg')download('kennispartner-'+p.id+'.svg',B.svg(p,'vierkant'),'image/svg+xml');
+      if(t.dataset.dl==='png')png(B.svg(p,'vierkant'),'kennispartner-'+p.id+'.png');
+      if(t.dataset.dl==='banner')png(B.svg(p,'banner'),'kennispartner-'+p.id+'-banner.png');
+    });
+    var h=location.hash.match(/^#partner-([a-z0-9-]+)$/);if(h&&$('partner-'+h[1])){$('partner-'+h[1]).scrollIntoView();$('partner-'+h[1]).focus();}
+  }
+})();
+</script>
+<!-- sitevoet: gegenereerd door tools/sitenav.js, niet met de hand wijzigen -->
+<footer class="sitevoet"><div class="sitevoet-in">
+<div class="sitevoet-over"><a class="sitevoet-merk" href="index.html"><img class="sitenav-teken" src="favicon.svg" alt="" width="34" height="34"><span>Advies<span class="sitenav-forum">forum</span></span></a><p>Voor en door financieel adviseurs: collegiale kennisdeling over hypotheken, verzekeringen, pensioen en krediet.</p><p><strong>Vraag, idee of fout gezien?</strong><br>Mail de beheerder:<br><a href="mailto:jeroen@oversteegen.nl">jeroen@oversteegen.nl</a></p><p class="sitevoet-volg"><a href="feed.xml" type="application/rss+xml">RSS: nieuw en bijgewerkt</a><a href="aanbieders-feed.xml" type="application/rss+xml">RSS: nieuws van aanbieders</a></p></div>
+<nav class="sitevoet-kol" aria-labelledby="sv-k0"><h2 id="sv-k0">Voorwaarden</h2><ul><li><a href="voorwaarden.html">Alle voorwaarden</a></li><li><a href="voorwaarden-vergelijker.html">Voorwaarden vergelijken</a></li><li><a href="situatiecheck.html">Situatiecheck</a></li><li><a href="acceptatiewijzer.html">Acceptatiewijzer</a></li><li><a href="productvoorwaarden.html">Productvoorwaarden</a></li><li><a href="partijen.html">Aanbiederwegwijzer</a></li></ul></nav><nav class="sitevoet-kol" aria-labelledby="sv-k1"><h2 id="sv-k1">Hulpmiddelen</h2><ul><li><a href="index.html#hulpmiddelen">Alle hulpmiddelen</a></li><li><a href="rekentools.html">Rekentools</a></li><li><a href="leennormen-2026.html">Leennormen 2026</a></li><li><a href="nhg-check.html">NHG-check</a></li><li><a href="documentenchecklist.html">Documentenchecklist</a></li><li><a href="wetgeving.html">Wet- en regelgeving</a></li></ul></nav><nav class="sitevoet-kol" aria-labelledby="sv-k2"><h2 id="sv-k2">Kennis</h2><ul><li><a href="kennisbank/">Kennisbank</a></li><li><a href="faq/">Veelgestelde vragen</a></li><li><a href="begrippen/">Begrippen A-Z</a></li><li><a href="index.html">Forum</a></li><li><a href="laatste.html">Laatste nieuws</a></li><li><a href="nieuw.html">Wat is nieuw</a></li></ul></nav><nav class="sitevoet-kol" aria-labelledby="sv-k3"><h2 id="sv-k3">Meedoen</h2><ul><li><a href="aanmelden.html">Aanmelden</a></li><li><a href="kennispartner.html">Kennispartner worden</a></li><li><a href="uitnodigen.html">Collega uitnodigen</a></li><li><a href="koppelingen.html">Koppelen met je adviessoftware</a></li><li><a href="aanbieders-info.html">Voor aanbieders</a></li><li><a href="privacy.html">Privacy en cookies</a></li></ul></nav>
+</div>
+<div class="sitevoet-onder"><p>Informatie voor adviseurs, geen advies aan consumenten. Voorwaarden en normen van aanbieders zijn leidend: controleer altijd de actuele bron.</p><p>&copy; 2026 Adviesforum &middot; adviesforum.nl</p></div>
+</footer>
+<!-- /sitevoet -->
+</body>
+</html>
