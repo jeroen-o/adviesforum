@@ -537,3 +537,11 @@ test('knop Meest gezocht kiest de veelgezochte voorwaarden (meest gezocht eerst)
   await expect(page).toHaveURL(/[#&]k=[^&]*obmax/);
   await expect(page).toHaveURL(/[#&]k=[^&]*cons/);
 });
+
+test('vergelijker: geldverstrekker zonder nieuwe klanten krijgt een label met uitleg', async ({ page }) => {
+  await page.goto('/voorwaarden-vergelijker.html#vergelijk=woonnu,rabobank');
+  const kop = page.locator('#vergelijking thead');
+  await expect(kop.locator('.geen-nieuw')).toHaveCount(1);
+  await expect(kop.locator('.geen-nieuw')).toHaveText('Geen nieuwe klanten');
+  await expect(kop.locator('.geen-nieuw')).toHaveAttribute('title', /1 mei 2026|01-05-2026/);
+});
