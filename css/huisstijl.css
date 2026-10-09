@@ -55,3 +55,8 @@
   & .tab { border-radius: 2px; }
   & .btn, & .knop { border-radius: 2px; }
 }
+
+/* Toegankelijkheid: overal een duidelijke focusrand bij toetsenbordgebruik (specificiteit 0, paginastijlen gaan voor) */
+:where(a, button, input, select, textarea, summary, [tabindex]):focus-visible { outline: 3px solid #F68712; outline-offset: 2px; }
+/* Homepage: de links in de infobalk staan nu in de voettekst */
+@media (max-width: 640px) { aside.demo .util { display: none; } }
