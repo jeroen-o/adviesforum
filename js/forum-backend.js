@@ -94,13 +94,13 @@
     },
     bewaarProfiel: function (p) {
       return metSessie(function (s) {
-        var velden = {}; ['naam', 'kantoor', 'functie', 'plaats', 'afm', 'linkedin'].forEach(function (k) { if (k in p) velden[k] = String(p[k] || '').trim(); });
+        var velden = {}; ['naam', 'kantoor', 'functie', 'plaats', 'afm', 'linkedin', 'soort'].forEach(function (k) { if (k in p) velden[k] = String(p[k] || '').trim(); });
         return verzoek('/rest/v1/profielen?id=eq.' + encodeURIComponent(s.user.id), { method: 'PATCH', body: velden, prefer: 'return=representation' }).then(function (d) { return d && d[0]; });
       });
     },
     /* Gepubliceerde inhoud (ook zonder inloggen) */
-    liveVragen: function () { return verzoek('/rest/v1/vragen?status=eq.gepubliceerd&select=id,cat,titel,body,tags,aangemaakt,auteur,profielen(naam,kantoor,functie,geverifieerd)&order=aangemaakt.desc&limit=500'); },
-    liveAntwoorden: function () { return verzoek('/rest/v1/antwoorden?status=eq.gepubliceerd&select=id,vraag_ref,body,aangemaakt,auteur,profielen(naam,kantoor,functie,geverifieerd)&order=aangemaakt.asc&limit=2000'); },
+    liveVragen: function () { return verzoek('/rest/v1/vragen?status=eq.gepubliceerd&select=id,cat,titel,body,tags,aangemaakt,auteur,profielen(naam,kantoor,functie,geverifieerd,soort)&order=aangemaakt.desc&limit=500'); },
+    liveAntwoorden: function () { return verzoek('/rest/v1/antwoorden?status=eq.gepubliceerd&select=id,vraag_ref,body,aangemaakt,auteur,profielen(naam,kantoor,functie,geverifieerd,soort)&order=aangemaakt.asc&limit=2000'); },
     beoordelingen: function () { return verzoek('/rest/v1/beoordelingen?select=antwoord_id,auteur,score&limit=10000'); },
     /* Plaatsen (status 'wacht'; verschijnt na moderatie) */
     plaatsVraag: function (v) { return metSessie(function () { return verzoek('/rest/v1/vragen', { method: 'POST', body: { cat: v.cat, titel: v.titel, body: v.body, tags: v.tags || [] }, prefer: 'return=representation' }); }); },
@@ -113,8 +113,8 @@
     wachtrij: function () {
       return metSessie(function () {
         return Promise.all([
-          verzoek('/rest/v1/vragen?status=eq.wacht&select=*,profielen(naam,kantoor,afm,geverifieerd)&order=aangemaakt.asc'),
-          verzoek('/rest/v1/antwoorden?status=eq.wacht&select=*,profielen(naam,kantoor,afm,geverifieerd)&order=aangemaakt.asc'),
+          verzoek('/rest/v1/vragen?status=eq.wacht&select=*,profielen(naam,kantoor,afm,geverifieerd,soort)&order=aangemaakt.asc'),
+          verzoek('/rest/v1/antwoorden?status=eq.wacht&select=*,profielen(naam,kantoor,afm,geverifieerd,soort)&order=aangemaakt.asc'),
           verzoek('/rest/v1/meldingen?afgehandeld=eq.false&select=*&order=aangemaakt.asc'),
           verzoek('/rest/v1/profielen?geverifieerd=eq.false&naam=neq.&select=*&order=aangemaakt.asc')
         ]).then(function (r) { return { vragen: r[0] || [], antwoorden: r[1] || [], meldingen: r[2] || [], accounts: r[3] || [] }; });

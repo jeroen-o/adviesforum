@@ -11,7 +11,8 @@
 
   function liveGebruiker(uid, p) {
     var id = LIVE + uid, u = USERS.find(function (x) { return x.id === id; });
-    var gegevens = { naam: (p && p.naam) || 'Adviseur', functie: (p && p.functie) || 'Financieel adviseur', kantoor: (p && p.kantoor) || '', geverifieerd: !!(p && p.geverifieerd) };
+    var aanbieder = !!(p && p.soort === 'aanbieder');
+    var gegevens = { naam: (p && p.naam) || (aanbieder ? 'Medewerker aanbieder' : 'Adviseur'), functie: (p && p.functie) || (aanbieder ? 'Aanbieder' : 'Financieel adviseur'), kantoor: (p && p.kantoor) || '', geverifieerd: !!(p && p.geverifieerd), soort: aanbieder ? 'aanbieder' : 'adviseur' };
     if (u) { Object.assign(u, gegevens); return u; }
     u = Object.assign({ id: id, rol: 'adviseur', live: true }, gegevens);
     USERS.push(u);
@@ -68,12 +69,15 @@
     var d = document.getElementById('profiel-dlg');
     if (!d) { d = document.createElement('dialog'); d.id = 'profiel-dlg'; document.body.appendChild(d); }
     d.innerHTML = '<form method="dialog" class="pad form" id="f-profiel"><h2 style="margin:0 0 8px">' + (verplicht ? 'Welkom! Vul je profiel in' : 'Je profiel') + '</h2>' +
-      '<p style="margin:0 0 12px;font-size:14px">Je naam, functie en kantoor staan bij je bijdragen. Je AFM-vergunningnummer gebruikt de beheerder alleen om je te controleren. Wijzig je later je naam of kantoor, dan controleren we opnieuw.</p>' +
+      '<p style="margin:0 0 12px;font-size:14px">Je naam, functie en kantoor staan bij je bijdragen. Je AFM-vergunningnummer gebruikt de beheerder alleen om je te controleren. Wijzig je later je naam, kantoor of soort account, dan controleren we opnieuw.</p>' +
+      '<fieldset style="border:0;padding:0;margin:0 0 6px"><legend style="font-weight:700;font-size:14px">Ik ben</legend>' +
+      '<label style="display:flex;gap:8px;align-items:center;font-weight:400"><input type="radio" name="soort" value="adviseur" style="width:auto"' + (p.soort === 'aanbieder' ? '' : ' checked') + '> Financieel adviseur</label>' +
+      '<label style="display:flex;gap:8px;align-items:center;font-weight:400"><input type="radio" name="soort" value="aanbieder" style="width:auto"' + (p.soort === 'aanbieder' ? ' checked' : '') + '> Medewerker van een aanbieder (geldverstrekker, verzekeraar of andere aanbieder)</label></fieldset>' +
       '<label for="pf-naam">Naam</label><input id="pf-naam" name="naam" required maxlength="80" value="' + esc(p.naam || '') + '">' +
       '<label for="pf-functie">Functie</label><input id="pf-functie" name="functie" maxlength="80" value="' + esc(p.functie || '') + '" placeholder="Bijvoorbeeld Hypotheekadviseur">' +
-      '<label for="pf-kantoor">Kantoor</label><input id="pf-kantoor" name="kantoor" required maxlength="120" value="' + esc(p.kantoor || '') + '">' +
+      '<label for="pf-kantoor">Kantoor of aanbieder</label><input id="pf-kantoor" name="kantoor" required maxlength="120" value="' + esc(p.kantoor || '') + '">' +
       '<label for="pf-plaats">Plaats</label><input id="pf-plaats" name="plaats" maxlength="80" value="' + esc(p.plaats || '') + '">' +
-      '<label for="pf-afm">AFM-vergunningnummer kantoor</label><input id="pf-afm" name="afm" required inputmode="numeric" pattern="[0-9]{8}" value="' + esc(p.afm || '') + '" placeholder="8 cijfers">' +
+      '<label for="pf-afm">AFM-vergunningnummer kantoor of aanbieder <span style="font-weight:400">(voor een aanbieder zonder AFM-nummer: leeg laten)</span></label><input id="pf-afm" name="afm" inputmode="numeric" pattern="[0-9]{8}" value="' + esc(p.afm || '') + '" placeholder="8 cijfers">' +
       '<label for="pf-li">LinkedIn-profiel (optioneel)</label><input id="pf-li" name="linkedin" type="url" value="' + esc(p.linkedin || '') + '" placeholder="https://www.linkedin.com/in/...">' +
       '<div class="actions" style="margin-top:14px"><button class="btn btn-black" type="submit">Opslaan</button>' + (verplicht ? '' : '<button class="btn btn-line" type="button" data-act="profiel-sluit">Annuleren</button>') + '</div></form>';
     d.showModal();
@@ -82,9 +86,10 @@
     if (e.target.id !== 'f-profiel') return;
     e.preventDefault(); e.stopImmediatePropagation();
     var f = e.target;
-    var p = { naam: f.naam.value, functie: f.functie.value, kantoor: f.kantoor.value, plaats: f.plaats.value, afm: f.afm.value.replace(/\s/g, ''), linkedin: f.linkedin.value.trim() };
-    if (p.naam.trim().length < 3 || p.kantoor.trim().length < 2) { toast('Vul je naam en kantoor in'); return; }
-    if (!/^\d{8}$/.test(p.afm)) { toast('Het AFM-vergunningnummer heeft 8 cijfers'); return; }
+    var soort = f.querySelector('input[name="soort"]:checked');
+    var p = { naam: f.naam.value, functie: f.functie.value, kantoor: f.kantoor.value, plaats: f.plaats.value, afm: f.afm.value.replace(/\s/g, ''), linkedin: f.linkedin.value.trim(), soort: soort && soort.value === 'aanbieder' ? 'aanbieder' : 'adviseur' };
+    if (p.naam.trim().length < 3 || p.kantoor.trim().length < 2) { toast('Vul je naam en kantoor of aanbieder in'); return; }
+    if (!(p.soort === 'aanbieder' && p.afm === '') && !/^\d{8}$/.test(p.afm)) { toast('Het AFM-vergunningnummer heeft 8 cijfers'); return; }
     if (p.linkedin && !/^https:\/\/([a-z]+\.)?linkedin\.com\//.test(p.linkedin)) { toast('Vul een LinkedIn-link in (https://www.linkedin.com/in/...)'); return; }
     B.bewaarProfiel(p).then(function (nieuw) {
       mijnProfiel = nieuw || Object.assign(mijnProfiel || {}, p);
@@ -147,6 +152,7 @@
       e.preventDefault(); e.stopImmediatePropagation();
       if (!isLive()) { openLogin(); return; }
       if (a.auteur === S.me) { toast('Je eigen antwoord kun je niet beoordelen'); return; }
+      if (mijnProfiel && mijnProfiel.soort === 'aanbieder') { toast('Als aanbieder kun je antwoorden niet beoordelen'); return; }
       if (!geverifieerd()) { toast('Je account wacht nog op controle door de beheerder'); return; }
       var val = +el.dataset.val;
       B.beoordeel(a.liveId, val).then(function () { a.rA[S.me] = val; render(true); toast('Antwoord beoordeeld met ' + val + (val === 1 ? ' ster' : ' sterren')); })

@@ -6,7 +6,7 @@ const { execFileSync } = require('child_process');
 const { volgFouten } = require('./helpers');
 
 const ROOT = path.join(__dirname, '..');
-const LINKS = ['Home', 'Voorwaarden', 'Hypotheekrentetarieven', 'Hulpmiddelen', 'Kennisbank', 'Laatste nieuws', 'Handleiding', 'Voor wie', 'Aanmelden'];
+const LINKS = ['Home', 'Voorwaarden', 'Hypotheekrentetarieven', 'Hulpmiddelen', 'Kennisbank', 'Aanbieders', 'Laatste nieuws', 'Handleiding', 'Voor wie', 'Aanmelden'];
 
 test('node tools/sitenav.js --check: alle pagina\'s hebben de actuele balk', () => {
   expect(execFileSync(process.execPath, [path.join(ROOT, 'tools', 'sitenav.js'), '--check'], { cwd: ROOT, encoding: 'utf8' })).toMatch(/actueel/);
@@ -116,12 +116,19 @@ test('kop van twee regels: rentetarieven rechts van Voorwaarden, handleiding en 
   const fouten = await volgFouten(page);
   await page.goto('/voorwaarden.html');
   const teksten = await page.locator('nav.sitenav .sitenav-rij2 li a').allTextContents();
-  expect(teksten).toEqual(['Home', 'Voorwaarden', 'Hypotheekrentetarieven', 'Hulpmiddelen', 'Kennisbank', 'Laatste nieuws', 'Handleiding', 'Voor wie', 'Aanmelden']);
+  expect(teksten).toEqual(['Home', 'Voorwaarden', 'Hypotheekrentetarieven', 'Hulpmiddelen', 'Kennisbank', 'Aanbieders', 'Laatste nieuws', 'Handleiding', 'Voor wie', 'Aanmelden']);
   await page.goto('/hypotheekrentetarieven.html');
   await expect(page.locator('nav.sitenav a[aria-current="page"]')).toHaveText('Hypotheekrentetarieven');
   await expect(page.locator('main iframe')).toHaveAttribute('src', /tools\.hypotheekbond\.nl\/renteoverzicht\/all$/);
   await expect(page.locator('main iframe')).toHaveAttribute('title', /Renteoverzicht/);
   await expect(page.locator('h1')).toHaveText('Hypotheekrentetarieven');
+  for (const f of ['aanbieders.html', 'aanbieders-info.html', 'aanbieder-beheer.html']) {
+    await page.goto('/' + f);
+    await expect(page.locator('nav.sitenav a[aria-current="page"]'), f).toHaveText('Aanbieders');
+  }
+  await expect(page.locator('#voor-aanbieders a[href="aanbieder-beheer.html"]')).toHaveCount(0);
+  await page.goto('/aanbieders.html');
+  await expect(page.locator('#voor-aanbieders a[href="aanbieder-beheer.html"]')).toContainText('Inloggen als aanbieder');
   await page.goto('/index.html');
   await expect(page.locator('#sitenav-acties #who')).toHaveCount(1);
   await expect(page.locator('#sitenav-acties [data-act="nieuw"]')).toHaveCount(1);
