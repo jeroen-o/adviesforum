@@ -30,7 +30,7 @@ const HOORT_BIJ = {
 const BEGIN = '<!-- sitenav: gegenereerd door tools/sitenav.js, niet met de hand wijzigen -->';
 const EIND = '<!-- /sitenav -->';
 const CSS_LINK = 'css/sitenav.css';
-/* Huisstijl (Venn-stijl, lichte modus): altijd de laatste stylesheet vóór </head>, zodat hij de stijlen van de pagina overschrijft. */
+/* Huisstijl (Venn-stijl, altijd licht): altijd de laatste stylesheet vóór </head>, zodat hij de stijlen van de pagina overschrijft. */
 const HUISSTIJL_LINK = 'css/huisstijl.css';
 /* 404.html wordt ook in submappen getoond (GitHub Pages, domein adviesforum.nl) en heeft daarom absolute links nodig. */
 const PREFIX = { '404.html': '/' };
@@ -74,6 +74,8 @@ function bijwerken(bestand, tekst) {
     if (h === -1 || h > t.indexOf('<body')) throw new Error(bestand + ': geen </head> gevonden');
     t = t.slice(0, h) + link + '\n' + t.slice(h);
   }
+  /* Venn-stijl altijd licht: data-theme="light" zet de donkere modus van alle pagina's uit. */
+  t = t.replace(/<html lang="nl"(?: data-theme="[a-z]+")?>/, '<html lang="nl" data-theme="light">');
   const hs = `<link rel="stylesheet" href="${pre}${HUISSTIJL_LINK}">`;
   t = t.replace(/<link rel="stylesheet" href="[^"]*css\/huisstijl\.css">\n?/g, '');
   const h2 = t.indexOf('</head>');

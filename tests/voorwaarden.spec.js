@@ -242,16 +242,14 @@ test.describe('voorwaardenvergelijker', () => {
     expect(m.sticky).toBe('sticky');
   });
 
-  test('donkere modus: donkere achtergrond en logo op wit', async ({ page }) => {
+  test('donkere systeemmodus: site blijft in de lichte Venn-stijl', async ({ page }) => {
     await page.emulateMedia({ colorScheme: 'dark' });
     const k = await page.evaluate(() => ({
       body: getComputedStyle(document.body).backgroundColor,
       logo: getComputedStyle(document.querySelector('#matrix img.plogo')).backgroundColor,
       cel: getComputedStyle(document.querySelector('#matrix tbody th.vast')).backgroundColor
     }));
-    expect(k.body).toBe('rgb(38, 48, 110)');
-    expect(k.logo).toBe('rgb(255, 255, 255)');
-    expect(k.cel).not.toBe('rgb(255, 255, 255)');
+    expect(k.body).toBe('rgb(255, 255, 255)');
   });
 
   test('printen opent een eigen venster', async ({ page }) => {
@@ -480,7 +478,7 @@ test.describe('voorwaardenvergelijker: uitgebreid zoeken en filteren', () => {
     expect(breed).toBeLessThanOrEqual(0);
     await page.emulateMedia({ colorScheme: 'dark' });
     const bg = await page.evaluate(() => getComputedStyle(document.querySelector('.ufblok')).backgroundColor);
-    expect(bg).toBe('rgb(18, 19, 43)');
+    expect(bg).not.toBe('rgb(18, 19, 43)');
   });
 });
 

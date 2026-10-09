@@ -84,7 +84,7 @@ test('zoeken: #zoek= deeplink toont het overzicht met de nieuwe groepen; niets g
   expect(fouten).toEqual([]);
 });
 
-test('zoeken: mobiel 390px zonder horizontale scroll, donkere modus', async ({ page }) => {
+test('zoeken: mobiel 390px zonder horizontale scroll, ook bij donkere systeemmodus licht', async ({ page }) => {
   const fouten = await volgFouten(page);
   await page.emulateMedia({ colorScheme: 'dark' });
   await page.setViewportSize({ width: 390, height: 844 });
@@ -92,7 +92,6 @@ test('zoeken: mobiel 390px zonder horizontale scroll, donkere modus', async ({ p
   await expect(page.locator('#zg-aanbieders')).toBeVisible();
   await expect(page.locator('#zg-partijen')).toBeVisible();
   expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(392);
-  const bg = await page.evaluate(() => getComputedStyle(document.querySelector('.zg')).backgroundColor);
-  expect(bg).not.toBe('rgb(255, 255, 255)');
+  expect(await page.evaluate(() => getComputedStyle(document.body).backgroundColor)).toBe('rgb(255, 255, 255)');
   expect(fouten).toEqual([]);
 });

@@ -163,7 +163,7 @@ function pagina({ pre, pad, titel, ogTitel, beschrijving, type = 'website', h1, 
   const kr = kruimel.length ? `<nav class="kruimel" aria-label="Kruimelpad"><ol>${kruimel.map((k, i) => i === kruimel.length - 1 ? `<li aria-current="page">${esc(k[0])}</li>` : `<li><a href="${k[1]}">${esc(k[0])}</a></li>`).join('')}</ol></nav>` : '';
   const bc = kruimel.length ? [ld({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: kruimel.map((k, i) => ({ '@type': 'ListItem', position: i + 1, name: k[0], item: k[2] })) })] : [];
   return `<!DOCTYPE html>
-<html lang="nl">
+<html lang="nl" data-theme="light">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
