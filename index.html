@@ -69,7 +69,7 @@ ul{margin:0 0 12px;padding-left:20px}
 .brand{display:flex;align-items:center;gap:14px;cursor:pointer;background:none;border:0;padding:0;color:#1E2040;text-align:left}
 .top .brand,.top .search{display:none}
 .top .wrap{justify-content:flex-end}
-.top .btn-black{background:var(--yellow);color:var(--black)}
+.top .btn-black,.sitenav-acties .btn-black{background:var(--yellow);color:var(--black)}
 .brand .logo{width:40px;height:40px;border-radius:9px;background:linear-gradient(135deg,var(--yellow),#F14A1C);color:var(--black);display:grid;place-items:center;font-weight:800;font-size:19px;flex:none}
 .brand-sep{width:1px;height:34px;background:#C3C4D3}
 .brand-name{font-size:17px;font-weight:700;letter-spacing:-.01em;white-space:nowrap}
@@ -494,10 +494,9 @@ footer a{display:inline-block;padding:4px 0}
 <body>
 <!-- sitenav: gegenereerd door tools/sitenav.js, niet met de hand wijzigen -->
 <a class="sitenav-skip" href="#inhoud">Naar de inhoud</a>
-<nav class="sitenav" aria-label="Hoofdmenu"><div class="sitenav-in"><a class="sitenav-merk" href="index.html"><img class="sitenav-teken" src="favicon.svg" alt="" width="34" height="34"><span>Advies<span class="sitenav-forum">forum</span></span></a><form class="sitenav-zoek" action="index.html" method="get" role="search"><input type="search" name="zoek" placeholder="Zoek op de hele site" aria-label="Zoek op de hele site" autocomplete="off"><button type="submit">Zoeken</button></form><ul><li><a href="index.html" aria-current="page">Home</a></li><li><a href="voorwaarden.html">Voorwaarden</a></li><li><a href="index.html#hulpmiddelen">Hulpmiddelen</a></li><li><a href="kennisbank/">Kennisbank</a></li><li><a href="laatste.html">Laatste nieuws</a></li><li><a href="aanmelden.html">Aanmelden</a></li></ul></div></nav>
+<nav class="sitenav" aria-label="Hoofdmenu"><div class="sitenav-in"><div class="sitenav-rij1"><a class="sitenav-merk" href="index.html"><img class="sitenav-teken" src="favicon.svg" alt="" width="34" height="34"><span>Advies<span class="sitenav-forum">forum</span></span></a><form class="sitenav-zoek" action="index.html" method="get" role="search"><input type="search" name="zoek" placeholder="Zoek op de hele site" aria-label="Zoek op de hele site" autocomplete="off"><button type="submit">Zoeken</button></form><div class="sitenav-acties" id="sitenav-acties"></div></div><div class="sitenav-rij2"><ul><li><a href="index.html" aria-current="page">Home</a></li><li><a href="voorwaarden.html">Voorwaarden</a></li><li><a href="index.html#hulpmiddelen">Hulpmiddelen</a></li><li><a href="kennisbank/">Kennisbank</a></li><li><a href="laatste.html">Laatste nieuws</a></li><li><a href="aanmelden.html">Aanmelden</a></li></ul><a class="sitenav-extern" href="https://a19472c3-dc16-47aa-940c-8d060b9d7238.tools.hypotheekbond.nl/renteoverzicht/all" target="_blank" rel="noopener">Renteoverzicht<span aria-hidden="true"> ↗</span><span class="sitenav-sr"> (externe tool van Hypotheekbond, opent in een nieuw venster)</span></a></div></div></nav>
 <!-- /sitenav -->
 
-<aside class="demo" aria-label="Over deze versie"><div class="wrap"><span class="demo-lang">Voor en door financieel adviseurs. Nieuwe vragen gaan naar de beheerder en verschijnen na controle; antwoorden en beoordelingen in deze versie blijven alleen in je eigen sessie.</span><span class="demo-kort">Testversie: nieuwe vragen verschijnen na controle; je antwoorden blijven in je eigen sessie.</span><span class="util"><a href="uitnodigen.html">Uitnodigen</a><a href="aanbieders.html">Aanbieders</a></span></div></aside>
 <div class="sticky-kop">
 <header class="top">
   <div class="wrap">
@@ -2222,6 +2221,8 @@ function naFaqGeladen(){
   if(S.view==='vraag'){const v=VRAGEN.find(x=>x.id===S.vraag);const kaart=v&&document.getElementById('auto-'+v.id);
     if(v&&v.auto&&!v.auto.metFaq&&kaart){autoAnswer(v,true);kaart.outerHTML=autoCard(v);}}
 }
+/* Inloggen en Vraag stellen staan in de eerste regel van de menubalk (kop van twee regels) */
+{const a=document.getElementById('sitenav-acties'),w=document.getElementById('who'),k=document.querySelector('header.top .btn[data-act="nieuw"]');if(a&&w){a.appendChild(w);if(k)a.appendChild(k);document.querySelector('header.top').hidden=true;}}
 volgBezoek();
 route();
 render();

@@ -55,7 +55,6 @@ test('live: gepubliceerde vraag en antwoord zichtbaar, inloggen stuurt een e-mai
   await expect(page.locator('h1')).toHaveText('Live testvraag over overbruggingskrediet');
   await expect(page.locator('article.ans')).toContainText('Live antwoord');
   await expect(page.locator('article.ans [data-act="meld-live"]')).toHaveCount(1);
-  await expect(page.locator('aside.demo .demo-lang')).toContainText('na controle door een moderator');
   await page.locator('#who [data-act="inloggen"]').click();
   await page.locator('#lg-email').fill('sanne@test.nl');
   await page.locator('#f-login-live button[type="submit"]').click();

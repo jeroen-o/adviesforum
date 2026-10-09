@@ -62,8 +62,6 @@
 
 /* Toegankelijkheid: overal een duidelijke focusrand bij toetsenbordgebruik (specificiteit 0, paginastijlen gaan voor) */
 :where(a, button, input, select, textarea, summary, [tabindex]):focus-visible { outline: 3px solid #F68712; outline-offset: 2px; }
-/* Homepage: de links in de infobalk staan nu in de voettekst */
-@media (max-width: 640px) { aside.demo .util { display: none; } }
 
 /* Homepage: drie ingangen in de hero */
 .hero-sub { font-size: 18px; line-height: 1.5; margin: 14px 0 18px; max-width: 640px; color: var(--hs-inkt, #171043); }
@@ -75,10 +73,7 @@
 .ingang-kop { font-weight: 800; font-size: 17px; }
 .ingang-kop::after { content: " →"; }
 .ingang-tekst { font-size: 14px; color: #4A4770; line-height: 1.4; }
-.demo-kort { display: none; }
 @media (max-width: 640px) {
   .hero-ingangen { grid-template-columns: 1fr; gap: 10px; }
   .hero-sub { font-size: 16px; }
-  aside.demo .demo-lang { display: none; }
-  aside.demo .demo-kort { display: inline; white-space: normal; }
 }
