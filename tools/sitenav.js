@@ -27,10 +27,10 @@ const VOORWAARDEN = ['voorwaarden.html', 'voorwaarden-vergelijker.html', 'produc
   'partijen.html', 'vergelijken.html', 'aanbieders.html', 'aanbieders-info.html', 'aanbieders-voorwaarden.html', 'aanbieder-aanleveren.html',
   'aanbieder-beheer.html', 'beheer-voorwaarden.html', 'verantwoording-voorwaarden.html'];
 const HOORT_BIJ = Object.assign(
-  { 'index.html': 'Home', 'laatste.html': 'Laatste nieuws', 'nieuw.html': 'Laatste nieuws', 'aanmelden.html': 'Aanmelden', 'uitnodigen.html': 'Aanmelden', 'kennispartner.html': 'Kennisbank', 'woningtools.html': 'Kennisbank', kennisbank: 'Kennisbank' },
+  { 'index.html': 'Home', 'laatste.html': 'Laatste nieuws', 'nieuw.html': 'Laatste nieuws', 'aanmelden.html': 'Aanmelden', 'uitnodigen.html': 'Aanmelden', 'kennispartner.html': 'Kennisbank', 'gebruiksvoorwaarden.html': 'Aanmelden', 'woningtools.html': 'Kennisbank', kennisbank: 'Kennisbank' },
   Object.fromEntries(VOORWAARDEN.map(f => [f, 'Voorwaarden'])));
 /* Pagina's buiten het menu (geen aria-current, geen kruimelpad). */
-const GEEN = ['404.html', 'privacy.html', 'beheer-code.html', 'koppelingen.html', 'compliance-overzicht.html', 'hypotheekbond-tools.html'];
+const GEEN = ['404.html', 'moderatie.html', 'privacy.html', 'beheer-code.html', 'koppelingen.html', 'compliance-overzicht.html', 'hypotheekbond-tools.html'];
 const sectie = bestand => HOORT_BIJ[bestand] || (GEEN.includes(bestand) || !bestand ? null : 'Hulpmiddelen');
 const BEGIN = '<!-- sitenav: gegenereerd door tools/sitenav.js, niet met de hand wijzigen -->';
 const EIND = '<!-- /sitenav -->';
@@ -55,7 +55,7 @@ const VOET_KOLOMMEN = [
   ['Voorwaarden', [['voorwaarden.html', 'Alle voorwaarden'], ['voorwaarden-vergelijker.html', 'Voorwaarden vergelijken'], ['situatiecheck.html', 'Situatiecheck'], ['acceptatiewijzer.html', 'Acceptatiewijzer'], ['productvoorwaarden.html', 'Productvoorwaarden'], ['partijen.html', 'Aanbiederwegwijzer']]],
   ['Hulpmiddelen', [['index.html#hulpmiddelen', 'Alle hulpmiddelen'], ['rekentools.html', 'Rekentools'], ['leennormen-2026.html', 'Leennormen 2026'], ['nhg-check.html', 'NHG-check'], ['documentenchecklist.html', 'Documentenchecklist'], ['wetgeving.html', 'Wet- en regelgeving']]],
   ['Kennis', [['kennisbank/', 'Kennisbank'], ['faq/', 'Veelgestelde vragen'], ['begrippen/', 'Begrippen A-Z'], ['index.html', 'Forum'], ['laatste.html', 'Laatste nieuws'], ['nieuw.html', 'Wat is nieuw']]],
-  ['Meedoen', [['aanmelden.html', 'Aanmelden'], ['kennispartner.html', 'Kennispartner worden'], ['uitnodigen.html', 'Collega uitnodigen'], ['koppelingen.html', 'Koppelen met je adviessoftware'], ['aanbieders-info.html', 'Voor aanbieders'], ['privacy.html', 'Privacy en cookies']]],
+  ['Meedoen', [['aanmelden.html', 'Aanmelden'], ['kennispartner.html', 'Kennispartner worden'], ['uitnodigen.html', 'Collega uitnodigen'], ['koppelingen.html', 'Koppelen met je adviessoftware'], ['aanbieders-info.html', 'Voor aanbieders'], ['gebruiksvoorwaarden.html', 'Gebruiksvoorwaarden'], ['privacy.html', 'Privacy en cookies']]],
 ];
 function voetHtml(pre = '') {
   const kol = VOET_KOLOMMEN.map(([kop, links], i) => `<nav class="sitevoet-kol" aria-labelledby="sv-k${i}"><h2 id="sv-k${i}">${kop}</h2><ul>${links.map(([u, t]) => `<li><a href="${pre}${u}">${t}</a></li>`).join('')}</ul></nav>`).join('');
