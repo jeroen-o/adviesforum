@@ -17,16 +17,21 @@ const LINKS = [
   ['index.html', 'Home'],
   ['voorwaarden.html', 'Voorwaarden'],
   ['index.html#hulpmiddelen', 'Hulpmiddelen'],
+  ['kennisbank/', 'Kennisbank'],
   ['laatste.html', 'Laatste nieuws'],
   ['aanmelden.html', 'Aanmelden'],
 ];
-/* Pagina's die bij een menu-item horen (voor aria-current). */
-const HOORT_BIJ = {
-  'index.html': 'Home',
-  'voorwaarden.html': 'Voorwaarden', 'voorwaarden-vergelijker.html': 'Voorwaarden', 'productvoorwaarden.html': 'Voorwaarden',
-  'situatiecheck.html': 'Voorwaarden',
-  'laatste.html': 'Laatste nieuws', 'aanmelden.html': 'Aanmelden',
-};
+/* Pagina's die bij een menu-item horen (voor aria-current en het kruimelpad in de gestructureerde data).
+   Pagina's die hier niet staan en geen GEEN-pagina zijn, horen bij Hulpmiddelen. */
+const VOORWAARDEN = ['voorwaarden.html', 'voorwaarden-vergelijker.html', 'productvoorwaarden.html', 'situatiecheck.html', 'acceptatiewijzer.html',
+  'partijen.html', 'vergelijken.html', 'aanbieders.html', 'aanbieders-info.html', 'aanbieders-voorwaarden.html', 'aanbieder-aanleveren.html',
+  'aanbieder-beheer.html', 'beheer-voorwaarden.html', 'verantwoording-voorwaarden.html'];
+const HOORT_BIJ = Object.assign(
+  { 'index.html': 'Home', 'laatste.html': 'Laatste nieuws', 'nieuw.html': 'Laatste nieuws', 'aanmelden.html': 'Aanmelden', 'uitnodigen.html': 'Aanmelden', kennisbank: 'Kennisbank' },
+  Object.fromEntries(VOORWAARDEN.map(f => [f, 'Voorwaarden'])));
+/* Pagina's buiten het menu (geen aria-current, geen kruimelpad). */
+const GEEN = ['404.html', 'privacy.html', 'beheer-code.html', 'koppelingen.html', 'compliance-overzicht.html', 'hypotheekbond-tools.html'];
+const sectie = bestand => HOORT_BIJ[bestand] || (GEEN.includes(bestand) || !bestand ? null : 'Hulpmiddelen');
 const BEGIN = '<!-- sitenav: gegenereerd door tools/sitenav.js, niet met de hand wijzigen -->';
 const EIND = '<!-- /sitenav -->';
 const CSS_LINK = 'css/sitenav.css';
@@ -35,10 +40,62 @@ const HUISSTIJL_LINK = 'css/huisstijl.css';
 /* 404.html wordt ook in submappen getoond (GitHub Pages, domein adviesforum.nl) en heeft daarom absolute links nodig. */
 const PREFIX = { '404.html': '/' };
 
-function navHtml(pre = '', bestand = '') {
-  const huidig = HOORT_BIJ[bestand];
+function navHtml(pre = '', bestand = '', doel = 'inhoud') {
+  const huidig = sectie(bestand);
   const li = LINKS.map(([u, t]) => `<li><a href="${pre}${u}"${t === huidig ? ' aria-current="page"' : ''}>${t}</a></li>`).join('');
-  return `${BEGIN}\n<nav class="sitenav" aria-label="Adviesforum"><div class="sitenav-in"><a class="sitenav-merk" href="${pre}index.html"><span class="sitenav-teken" aria-hidden="true">A</span>Adviesforum</a><form class="sitenav-zoek" action="${pre}index.html" method="get" role="search"><input type="search" name="zoek" placeholder="Zoek op de hele site" aria-label="Zoek op de hele site" autocomplete="off"><button type="submit">Zoeken</button></form><ul>${li}</ul></div></nav>\n${EIND}`;
+  return `${BEGIN}\n<a class="sitenav-skip" href="#${doel}">Naar de inhoud</a>\n<nav class="sitenav" aria-label="Hoofdmenu"><div class="sitenav-in"><a class="sitenav-merk" href="${pre}index.html"><span class="sitenav-teken" aria-hidden="true">A</span>Adviesforum</a><form class="sitenav-zoek" action="${pre}index.html" method="get" role="search"><input type="search" name="zoek" placeholder="Zoek op de hele site" aria-label="Zoek op de hele site" autocomplete="off"><button type="submit">Zoeken</button></form><ul>${li}</ul></div></nav>\n${EIND}`;
+}
+
+const VOET_BEGIN = '<!-- sitevoet: gegenereerd door tools/sitenav.js, niet met de hand wijzigen -->';
+const VOET_EIND = '<!-- /sitevoet -->';
+const BEHEER_MAIL = 'jeroen@oversteegen.nl';
+const JAAR = 2026;
+/* Dezelfde voettekst op elke pagina: korte uitleg, contact en de belangrijkste ingangen per onderdeel. */
+const VOET_KOLOMMEN = [
+  ['Voorwaarden', [['voorwaarden.html', 'Alle voorwaarden'], ['voorwaarden-vergelijker.html', 'Voorwaarden vergelijken'], ['situatiecheck.html', 'Situatiecheck'], ['acceptatiewijzer.html', 'Acceptatiewijzer'], ['productvoorwaarden.html', 'Productvoorwaarden'], ['partijen.html', 'Aanbiederwegwijzer']]],
+  ['Hulpmiddelen', [['index.html#hulpmiddelen', 'Alle hulpmiddelen'], ['rekentools.html', 'Rekentools'], ['leennormen-2026.html', 'Leennormen 2026'], ['nhg-check.html', 'NHG-check'], ['documentenchecklist.html', 'Documentenchecklist'], ['wetgeving.html', 'Wet- en regelgeving']]],
+  ['Kennis', [['kennisbank/', 'Kennisbank'], ['faq/', 'Veelgestelde vragen'], ['begrippen/', 'Begrippen A-Z'], ['index.html', 'Forum'], ['laatste.html', 'Laatste nieuws'], ['nieuw.html', 'Wat is nieuw']]],
+  ['Meedoen', [['aanmelden.html', 'Aanmelden'], ['uitnodigen.html', 'Collega uitnodigen'], ['koppelingen.html', 'Koppelen met je adviessoftware'], ['aanbieders-info.html', 'Voor aanbieders'], ['privacy.html', 'Privacy en cookies']]],
+];
+function voetHtml(pre = '') {
+  const kol = VOET_KOLOMMEN.map(([kop, links], i) => `<nav class="sitevoet-kol" aria-labelledby="sv-k${i}"><h2 id="sv-k${i}">${kop}</h2><ul>${links.map(([u, t]) => `<li><a href="${pre}${u}">${t}</a></li>`).join('')}</ul></nav>`).join('');
+  return `${VOET_BEGIN}
+<footer class="sitevoet"><div class="sitevoet-in">
+<div class="sitevoet-over"><a class="sitevoet-merk" href="${pre}index.html"><span class="sitenav-teken" aria-hidden="true">A</span>Adviesforum</a><p>Voor en door financieel adviseurs: collegiale kennisdeling over hypotheken, verzekeringen, pensioen en krediet.</p><p><strong>Vraag, idee of fout gezien?</strong><br>Mail de beheerder:<br><a href="mailto:${BEHEER_MAIL}">${BEHEER_MAIL}</a></p><p class="sitevoet-volg"><a href="${pre}feed.xml" type="application/rss+xml">RSS: nieuw en bijgewerkt</a><a href="${pre}aanbieders-feed.xml" type="application/rss+xml">RSS: nieuws van aanbieders</a></p></div>
+${kol}
+</div>
+<div class="sitevoet-onder"><p>Informatie voor adviseurs, geen advies aan consumenten. Voorwaarden en normen van aanbieders zijn leidend: controleer altijd de actuele bron.</p><p>&copy; ${JAAR} Adviesforum &middot; adviesforum.nl</p></div>
+</footer>
+${VOET_EIND}`;
+}
+
+const LD_BEGIN = '<!-- sitenav-ld: gegenereerd door tools/sitenav.js -->';
+const LD_EIND = '<!-- /sitenav-ld -->';
+const BASE = 'https://adviesforum.nl/';
+const SECTIE_URL = { Voorwaarden: 'voorwaarden.html', 'Laatste nieuws': 'laatste.html', Aanmelden: 'aanmelden.html' };
+const ontsnap = t => String(t).replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&middot;/g, '·').replace(/&ndash;/g, '–');
+/* Gestructureerde data (schema.org WebPage + kruimelpad) voor zoekmachines en AI-zoekdiensten; niet op noindex-pagina's en de homepage (die heeft een eigen @graph). */
+const OG_BEELD = BASE + 'img/og-adviesforum.png';
+const ogHtml = kop => /property="og:image"/.test(kop.replace(/<!-- sitenav-ld[\s\S]*?<!-- \/sitenav-ld -->/, '')) || !/property="og:title"/.test(kop) ? ''
+  : `<meta property="og:image" content="${OG_BEELD}">\n<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="630">\n<meta property="og:image:alt" content="Adviesforum: voor adviseurs die elkaar vooruithelpen">\n<meta name="twitter:card" content="summary_large_image">\n`;
+function ldHtml(bestand, kop) {
+  const og = ogHtml(kop);
+  const blok = x => og + x ? `${LD_BEGIN}\n${og}${x}${LD_EIND}\n` : '';
+  if (bestand === 'index.html' || GEEN.includes(bestand) || /<meta name="robots" content="[^"]*noindex/.test(kop)) return blok('');
+  const titel = (/<title>([\s\S]*?)<\/title>/.exec(kop) || [])[1];
+  const canon = (/<link rel="canonical" href="([^"]+)"/.exec(kop) || [])[1];
+  if (!titel || !canon) return blok('');
+  const besch = (/<meta name="description" content="([^"]*)"/.exec(kop) || [])[1] || '';
+  const naam = ontsnap(titel.trim()).replace(/\s+[–|-]\s+Adviesforum$/, '');
+  const kr = [{ name: 'Adviesforum', item: BASE }];
+  const sec = sectie(bestand);
+  if (SECTIE_URL[sec] && SECTIE_URL[sec] !== bestand) kr.push({ name: sec, item: BASE + SECTIE_URL[sec] });
+  kr.push({ name: naam, item: canon });
+  const ld = { '@context': 'https://schema.org', '@graph': [
+    { '@type': 'WebPage', '@id': canon + '#webpage', url: canon, name: naam, description: ontsnap(besch), inLanguage: 'nl-NL', isPartOf: { '@id': BASE + '#website' }, breadcrumb: { '@id': canon + '#kruimelpad' } },
+    { '@type': 'BreadcrumbList', '@id': canon + '#kruimelpad', itemListElement: kr.map((k, i) => ({ '@type': 'ListItem', position: i + 1, name: k.name, item: k.item })) },
+  ] };
+  return blok(`<script type="application/ld+json">${JSON.stringify(ld).replace(/</g, '\\u003c')}</script>\n`);
 }
 
 /* Oude balken die door de vaste balk worden vervangen. */
@@ -50,7 +107,10 @@ const OUD = [
 function bijwerken(bestand, tekst) {
   let t = tekst;
   const pre = PREFIX[bestand] || '';
-  const nav = navHtml(pre, bestand);
+  /* Doel van de link 'Naar de inhoud': het id van <main>; zonder id krijgt <main> id="inhoud". */
+  let doel = (/<main\b[^>]*\bid="([^"]+)"/.exec(t) || [])[1];
+  if (!doel) { doel = 'inhoud'; t = t.replace(/<main\b/, '<main id="inhoud" tabindex="-1"'); }
+  const nav = navHtml(pre, bestand, doel);
   const b = t.indexOf(BEGIN);
   if (b !== -1) {
     const e = t.indexOf(EIND, b);
@@ -78,8 +138,14 @@ function bijwerken(bestand, tekst) {
   t = t.replace(/<html lang="nl"(?: data-theme="[a-z]+")?>/, '<html lang="nl" data-theme="light">');
   const hs = `<link rel="stylesheet" href="${pre}${HUISSTIJL_LINK}">`;
   t = t.replace(/<link rel="stylesheet" href="[^"]*css\/huisstijl\.css">\n?/g, '');
+  t = t.replace(new RegExp(LD_BEGIN.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '[\\s\\S]*?' + LD_EIND + '\\n?'), '');
   const h2 = t.indexOf('</head>');
-  t = t.slice(0, h2) + hs + '\n' + t.slice(h2);
+  t = t.slice(0, h2) + ldHtml(bestand, t.slice(0, h2)) + hs + '\n' + t.slice(h2);
+  /* Voettekst: vervang het bestaande blok of zet hem direct vóór </body>. */
+  const voet = voetHtml(pre);
+  const vb = t.indexOf(VOET_BEGIN);
+  if (vb !== -1) t = t.slice(0, vb) + voet + t.slice(t.indexOf(VOET_EIND, vb) + VOET_EIND.length);
+  else { const eb = t.lastIndexOf('</body>'); t = t.slice(0, eb) + voet + '\n' + t.slice(eb); }
   return t;
 }
 
@@ -96,4 +162,4 @@ if (require.main === module) {
   console.log((check ? 'Navigatiebalk is actueel' : 'Navigatiebalk bijgewerkt') + ' (' + paginas.length + ' pagina\'s).');
 }
 
-module.exports = { navHtml, LINKS, CSS_LINK, HUISSTIJL_LINK };
+module.exports = { navHtml, voetHtml, OG_BEELD, LINKS, CSS_LINK, HUISSTIJL_LINK, BEHEER_MAIL };

@@ -17,7 +17,7 @@ const fs = require('fs');
 const path = require('path');
 const vm = require('vm');
 const { execFileSync } = require('child_process');
-const { navHtml, CSS_LINK, HUISSTIJL_LINK } = require('./sitenav');
+const { navHtml, voetHtml, OG_BEELD, CSS_LINK, HUISSTIJL_LINK } = require('./sitenav');
 
 const ROOT = path.join(__dirname, '..');
 const BASE = 'https://adviesforum.nl/';
@@ -177,6 +177,10 @@ ${robots ? `<meta name="robots" content="${esc(robots)}">` : ''}
 <meta property="og:url" content="${esc(url)}">
 <meta property="og:site_name" content="${SITE}">
 <meta property="og:locale" content="nl_NL">
+<meta property="og:image" content="${OG_BEELD}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#F68712">
 <link rel="icon" href="${pre}favicon.svg" type="image/svg+xml">
 <link rel="manifest" href="${pre}manifest.webmanifest">
@@ -188,11 +192,10 @@ ${[...jsonld.map(ld), ...bc].join('\n')}
 <link rel="stylesheet" href="${pre}${HUISSTIJL_LINK}">
 </head>
 <body>
-<a class="skiplink" href="#inhoud">Naar de inhoud</a>
-${navHtml(pre)}
+${navHtml(pre, actief === 'forum' ? '' : 'kennisbank')}
 <header class="site">
   <a class="merk" href="${pre}index.html"><span class="hex" aria-hidden="true"></span><span><span class="merknaam">ADVIESFORUM</span><br><span class="merksub">Voor en door financieel adviseurs</span></span></a>
-  <nav class="hoofd" aria-label="Hoofdnavigatie">${nav}</nav>
+  <nav class="hoofd" aria-label="Kennis">${nav}</nav>
 </header>
 <main id="inhoud" tabindex="-1">
 <div class="hero"><div class="hero-in">
@@ -205,19 +208,7 @@ ${inhoud}
 <p class="disclaimer">${esc(DISCLAIMER)}</p>
 </div></div>
 </main>
-<footer>
-  <nav aria-label="Voettekst">
-    <a href="${pre}index.html">Forum</a>
-    <a href="${pre}index.html#hulpmiddelen">Hulpmiddelen</a>
-    <a href="${pre}kennisbank/">Kennisbank</a>
-    <a href="${pre}faq/">FAQ</a>
-    <a href="${pre}begrippen/">Begrippen</a>
-    <a href="${pre}aanmelden.html">Aanmelden</a>
-    <a href="${pre}uitnodigen.html">Uitnodigen</a>
-    <a href="${pre}privacy.html">Privacy</a>
-  </nav>
-  ${SITE} · collegiale kennisdeling, geen klantadvies
-</footer>
+${voetHtml(pre)}
 </body>
 </html>
 `;

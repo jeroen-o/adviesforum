@@ -16,3 +16,30 @@
 .sitenav ul a[aria-current="page"]{background:#F68712;color:#26306E}
 @media (max-width:640px){.sitenav-in{padding:8px 16px}.sitenav ul a{padding:5px 7px}.sitenav-zoek{order:3;flex-basis:100%;max-width:none}}
 @media print{.sitenav{display:none}}
+/* Link 'Naar de inhoud' (eerste tabstop op elke pagina) */
+.sitenav-skip{position:absolute;left:12px;top:-200px;z-index:1000;background:#171043;color:#fff;padding:10px 16px;border-radius:6px;font:700 15px/1.3 Segoe UI,Roboto,Helvetica Neue,Arial,system-ui,sans-serif;text-decoration:none}
+.sitenav-skip:focus{top:12px;outline:3px solid #F68712;outline-offset:2px}
+/* Paginaspecifieke noot (disclaimer, bronnen) boven de voettekst */
+.paginanoot{max-width:1180px;margin:32px auto 0;padding:16px 24px 0;border-top:1px solid #DFDEE5;font-size:13px;line-height:1.55;color:#4A4770}
+.paginanoot p{margin:0 0 6px}
+.paginanoot a{color:#0B7C77}
+/* Voettekst, gelijk op elke pagina (tools/sitenav.js) */
+.sitevoet{margin-top:48px;padding:0;border:0;max-width:none;background:#171043;color:#E7E6F2;font-family:Segoe UI,Roboto,Helvetica Neue,Arial,system-ui,sans-serif;font-size:14px;line-height:1.55;text-align:left}
+.sitevoet-in{max-width:1180px;margin:0 auto;padding:40px 24px 24px;display:grid;grid-template-columns:minmax(220px,1.4fr) repeat(4,minmax(140px,1fr));gap:28px 32px}
+.sitevoet a{color:#fff;text-decoration:none}
+.sitevoet a:hover{text-decoration:underline}
+.sitevoet a:focus-visible{outline:3px solid #F68712;outline-offset:2px;border-radius:2px}
+.sitevoet-merk{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:17px;margin-bottom:10px}
+.sitevoet-merk .sitenav-teken{background:#fff;color:#F68712;border:2px solid #F68712}
+.sitevoet p{margin:0 0 12px}
+.sitevoet-over a[href^="mailto:"]{text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}
+.sitevoet-volg{display:flex;flex-direction:column;gap:4px;font-size:13px}
+.sitevoet-volg a::before{content:"";display:inline-block;width:8px;height:8px;margin-right:8px;border-radius:50%;background:#F68712;vertical-align:1px}
+.sitevoet h2{margin:2px 0 10px;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#FFB873;font-family:inherit}
+.sitevoet ul{list-style:none;margin:0;padding:0}
+.sitevoet li{margin:0 0 7px}
+.sitevoet-onder{max-width:1180px;margin:0 auto;padding:16px 24px 28px;border-top:1px solid #3A3570;display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 24px;font-size:12.5px;color:#C9C6E0}
+.sitevoet-onder p{margin:0}
+@media (max-width:900px){.sitevoet-in{grid-template-columns:repeat(2,minmax(0,1fr))}.sitevoet-over{grid-column:1/-1}}
+@media (max-width:640px){.sitevoet-in{padding:32px 16px 20px;gap:24px 20px}.sitevoet-onder{padding:14px 16px 24px}.paginanoot{padding:14px 16px 0}}
+@media print{.sitevoet,.sitenav-skip{display:none}}
