@@ -28,7 +28,11 @@
   & :is(header.hero, .kop:not(h1, h2, h3), .hero) :is(h1, .sub, .meta, p, li) { color: var(--hs-inkt); }
   & :is(header.hero, .kop:not(h1, h2, h3), .hero) h1 { font-family: var(--hs-serif); font-weight: 400; letter-spacing: 0; }
   & :is(header.hero, .kop:not(h1, h2, h3), .hero) a:not(.btn):not(.knop) { color: var(--hs-inkt) !important; border-bottom-color: var(--hs-koraal) !important; }
-  & .zeshoek, & .hex, & .hero-points li::before { background: var(--hs-koraal) !important; }
+  & .zeshoek, & .hero-points li::before { background: var(--hs-koraal) !important; }
+  /* "In cijfers" op de homepage: drie kleuren uit de huisstijl */
+  & .hex-y { background: var(--hs-oranje) !important; color: var(--hs-inkt) !important; }
+  & .hex-b { background: var(--hs-turq) !important; color: #fff !important; }
+  & .hex-k { background: var(--hs-indigo) !important; color: #fff !important; }
   & .eigen { background: #fff !important; color: var(--hs-inkt) !important; box-shadow: var(--hs-schaduw); }
 
   /* Dubbel merk onder de navigatiebalk weg; donkere balken licht */
