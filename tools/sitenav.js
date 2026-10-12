@@ -28,7 +28,7 @@ const LINKS = [
 /* Pagina's die bij een menu-item horen (voor aria-current en het kruimelpad in de gestructureerde data).
    Pagina's die hier niet staan en geen GEEN-pagina zijn, horen bij Hulpmiddelen. */
 const VOORWAARDEN = ['voorwaarden.html', 'voorwaarden-vergelijker.html', 'productvoorwaarden.html', 'situatiecheck.html', 'acceptatiewijzer.html',
-  'partijen.html', 'vergelijken.html', 'beheer-voorwaarden.html', 'verantwoording-voorwaarden.html'];
+  'partijen.html', 'vergelijken.html', 'documenteisen.html', 'beheer-voorwaarden.html', 'verantwoording-voorwaarden.html'];
 const AANBIEDERS = ['aanbieders.html', 'aanbieders-info.html', 'aanbieders-voorwaarden.html', 'aanbieder-aanleveren.html', 'aanbieder-beheer.html'];
 const HOORT_BIJ = Object.assign(
   { 'index.html': 'Home', 'laatste.html': 'Laatste nieuws', 'nieuw.html': 'Laatste nieuws', 'aanmelden.html': 'Aanmelden', 'uitnodigen.html': 'Aanmelden', 'kennispartner.html': 'Kennisbank', 'gebruiksvoorwaarden.html': 'Aanmelden', 'woningtools.html': 'Kennisbank', 'hypotheekrentetarieven.html': 'Hypotheekrentetarieven', kennisbank: 'Kennisbank' },
@@ -56,8 +56,8 @@ const BEHEER_MAIL = 'jeroen@oversteegen.nl';
 const JAAR = 2026;
 /* Dezelfde voettekst op elke pagina: korte uitleg, contact en de belangrijkste ingangen per onderdeel. */
 const VOET_KOLOMMEN = [
-  ['Voorwaarden', [['voorwaarden.html', 'Alle voorwaarden'], ['voorwaarden-vergelijker.html', 'Voorwaarden vergelijken'], ['situatiecheck.html', 'Situatiecheck'], ['acceptatiewijzer.html', 'Acceptatiewijzer'], ['productvoorwaarden.html', 'Productvoorwaarden'], ['hypotheekrentetarieven.html', 'Hypotheekrentetarieven'], ['partijen.html', 'Aanbiederwegwijzer']]],
-  ['Hulpmiddelen', [['index.html#hulpmiddelen', 'Alle hulpmiddelen'], ['rekentools.html', 'Rekentools'], ['leennormen-2026.html', 'Leennormen 2026'], ['nhg-check.html', 'NHG-check'], ['documentenchecklist.html', 'Documentenchecklist'], ['documenteisen.html', 'Documenteisen'], ['wetgeving.html', 'Wet- en regelgeving']]],
+  ['Voorwaarden', [['voorwaarden.html', 'Alle voorwaarden'], ['voorwaarden-vergelijker.html', 'Voorwaarden vergelijken'], ['situatiecheck.html', 'Situatiecheck'], ['acceptatiewijzer.html', 'Acceptatiewijzer'], ['productvoorwaarden.html', 'Productvoorwaarden'], ['documenteisen.html', 'Documenteisen'], ['hypotheekrentetarieven.html', 'Hypotheekrentetarieven'], ['partijen.html', 'Aanbiederwegwijzer']]],
+  ['Hulpmiddelen', [['index.html#hulpmiddelen', 'Alle hulpmiddelen'], ['rekentools.html', 'Rekentools'], ['leennormen-2026.html', 'Leennormen 2026'], ['nhg-check.html', 'NHG-check'], ['documentenchecklist.html', 'Documentenchecklist'], ['wetgeving.html', 'Wet- en regelgeving']]],
   ['Kennis', [['kennisbank/', 'Kennisbank'], ['faq/', 'Veelgestelde vragen'], ['begrippen/', 'Begrippen A-Z'], ['index.html', 'Forum'], ['laatste.html', 'Laatste nieuws'], ['nieuw.html', 'Wat is nieuw']]],
   ['Meedoen', [['aanmelden.html', 'Aanmelden'], ['kennispartner.html', 'Kennispartner worden'], ['uitnodigen.html', 'Collega uitnodigen'], ['koppelingen.html', 'Koppelen met je adviessoftware'], ['aanbieders-info.html', 'Voor aanbieders'], ['aanbieder-beheer.html', 'Inloggen aanbieders'], ['gebruiksvoorwaarden.html', 'Gebruiksvoorwaarden'], ['privacy.html', 'Privacy en cookies']]],
 ];

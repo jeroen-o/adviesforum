@@ -56,9 +56,10 @@ test('thema\'s naast elkaar verwijst voor hypotheken naar de vergelijker', async
 test('voorwaarden.html legt uit welke pagina waarvoor is', async ({ page }) => {
   await page.goto('/voorwaarden.html#welke');
   const t = page.locator('table.welke');
-  await expect(t.locator('tbody tr')).toHaveCount(5);
+  await expect(t.locator('tbody tr')).toHaveCount(6);
   await expect(t).toContainText('De aanbieder zelf');
   await expect(t.locator('a[href="partijen.html"]')).toBeVisible();
+  await expect(t.locator('a[href="documenteisen.html"]')).toBeVisible();
 });
 
 test('huisstijl.css is in elke pagina de laatste stylesheet vóór </head>', () => {
