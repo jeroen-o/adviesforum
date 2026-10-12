@@ -427,6 +427,7 @@ const PAGINAS_LLMS = [
     ['acceptatiewijzer.html', 'Acceptatiewijzer', 'aandachtspunten per bijzondere klantsituatie (zzp, flexwerk, expat, scheiding, senioren en meer)'],
     ['wetgeving.html', 'Wet- en regelgeving', 'wetten, besluiten en bronnen voor adviseurs, met wat er verandert in 2026–2027'],
     ['partijen.html', 'Aanbiederwegwijzer', 'geldverstrekkers, verzekeraars en pensioenuitvoerders met portals en voorwaarden'],
+    ['documenteisen.html', 'Documenteisen', 'geldigheid en vormvereisten van hypotheekdocumenten (werkgeversverklaring, salarisstrook, UWV-bericht, taxatierapport en meer) van NHG en per geldverstrekker, met bron'],
     ['woningtools.html', 'Woningdata en adviseurstools', 'Woningcijfer, PandWise, Funderingscijfer, Klimaatcijfer, Hypotheekcijfer, Duurzaamheidsprofiel en Adviseurstools: werking, bronnen en grenzen'],
     ['kennispartner.html', 'Kennispartner worden', 'adviseurs claimen een kennisbankartikel of onderwerp en krijgen na controle een vermelding en een badge'],
     ['adviesroute.html', 'Adviesroute', 'het adviesproces stap voor stap met dossierstukken en aandachtspunten'],
