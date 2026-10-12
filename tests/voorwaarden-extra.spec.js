@@ -175,7 +175,7 @@ test('voorwaarden.html: kerncijfers, kaarten en laatste wijzigingen', async ({ p
   const fouten = await volgFouten(page);
   await page.goto('/voorwaarden.html');
   await expect(page.locator('#tegels .tegel')).toHaveCount(4);
-  await expect(page.locator('.kaart')).toHaveCount(6);
+  await expect(page.locator('.kaart')).toHaveCount(7);
   await expect(page.locator('#wijz li').first()).toBeVisible();
   await expect(page.locator('#producten li')).toHaveCount(await page.evaluate(() => window.VOORWAARDEN_KWALITEIT.producten.length));
   expect(fouten).toEqual([]);

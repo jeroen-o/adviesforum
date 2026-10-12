@@ -1,6 +1,6 @@
 /* Documenteisen hypotheekaanvraag (documenteisen.html): eisen per document van NHG, markt en geldverstrekkers, elk met bron.
  * Peildatum onderzoek: 12 oktober 2026. z = zekerheid: hoog (officiële bron of acceptatiegids van de geldverstrekker), middel (secundaire bron of oudere versie).
- * Eisen die niet met een bron te onderbouwen waren, staan hier niet in. */
+ * Alleen bronnen van geldverstrekkers uit het overzicht (eigen domein) en van NHG, HDN en overheid. Eisen die niet met zo'n bron te onderbouwen waren, staan hier niet in. */
 window.DOCUMENTEISEN = {peildatum:"2026-10-12",documenten:[
 {
 "id": "werkgeversverklaring",
@@ -81,21 +81,15 @@ window.DOCUMENTEISEN = {peildatum:"2026-10-12",documenten:[
 "e": "Geldigheidstermijn gekoppeld aan datum bindend aanbod (sinds 1-1-2017; daarvoor aanvraagdatum).",
 "b": "https://www.nhg.nl/media/yr4j2nih/toelichting-vn2016-2.pdf",
 "z": "hoog"
-},
-{
-"p": "Markt",
-"e": "Geen correcties (doorhalingen/correctievloeistof); alle vragen beantwoorden; functie en datum in dienst moeten overeenkomen met salarisstrook/arbeidsovereenkomst.",
-"b": "https://www.hypotheker.nl/werkgeversverklaring-richtlijnen/",
-"z": "middel"
-},
-{
-"p": "Markt",
-"e": "Veel geldverstrekkers verwachten digitaal ingevuld en ondertekend formulier door één bevoegde persoon (HR/directie); handmatig ingevuld kan worden afgewezen.",
-"b": "https://bieb.knab.nl/hypotheken/werkgeversverklaring-hypotheek-5-fouten-om-te-vermijden",
-"z": "middel"
 }
 ],
 "gv": [
+{
+"p": "Knab",
+"e": "Veel geldverstrekkers verwachten digitaal ingevuld en ondertekend formulier door één bevoegde persoon (HR/directie); handmatig ingevuld kan worden afgewezen.",
+"b": "https://bieb.knab.nl/hypotheken/werkgeversverklaring-hypotheek-5-fouten-om-te-vermijden",
+"z": "middel"
+},
 {
 "p": "ABN AMRO",
 "e": "Werkgeversverklaring niet ouder dan 3 maanden.",
@@ -103,43 +97,7 @@ window.DOCUMENTEISEN = {peildatum:"2026-10-12",documenten:[
 "z": "hoog"
 },
 {
-"p": "Rabobank",
-"e": "Werkgeversverklaring niet ouder dan 3 maanden, conform NHG-format; ondertekend (digitaal of handmatig) door werkgever, HR of accountant (acc.beleid dec 2025).",
-"b": "https://hypotheekcompany.nl/wp-content/uploads/2025/12/Rabobank-acc-beleid-dec-2025-gecomprimeerd-1.pdf",
-"z": "hoog"
-},
-{
-"p": "Rabobank",
-"e": "Toetsinkomen uit werkgeversverklaring o.b.v. model werkgeversverklaring NHG (acceptatiegids 14 sept 2026).",
-"b": "https://www.zelfhypotheekafsluiten.nl/Uploads/geldverstrekkers/2026/09/rabobank-hypotheek-acceptatiegids-14-september-2026.pdf",
-"z": "hoog"
-},
-{
-"p": "ING",
-"e": "Indien werkgeversverklaring nodig: geldende vragen en antwoordmogelijkheden van model NHG-werkgeversverklaring gebruiken (acc.beleid 2026-1).",
-"b": "https://hypotheekcompany.nl/wp-content/uploads/2025/12/ING-acc-beleid-jan-2026.pdf",
-"z": "hoog"
-},
-{
-"p": "Nationale-Nederlanden",
-"e": "Werkgeversverklaring en salarisstrook niet ouder dan 3 maanden, gerekend vanaf datum uitbrengen hypotheekofferte (gids jan 2025; 2026 niet bevestigd).",
-"b": "https://hypotheekcompany.nl/wp-content/uploads/2025/01/Acceptatiegids-Hypotheken-4041-40_2501_compressed.pdf",
-"z": "hoog"
-},
-{
-"p": "Nationale-Nederlanden",
-"e": "Perspectiefverklaring vervangt werkgeversverklaring niet; beide nodig.",
-"b": "https://hypotheekcompany.nl/wp-content/uploads/2026/03/nn-acceptatiebeleid-maart-2026.pdf",
-"z": "middel"
-},
-{
-"p": "a.s.r.",
-"e": "Werkgeversverklaring, salarisstrook, Mijnpensioenoverzicht, DUO-schuldoverzicht en UWV-bericht op moment bindend aanbod niet ouder dan 3 maanden; actueel NHG-model (hypotheekgids juni 2025).",
-"b": "https://hypotheekcompany.nl/wp-content/uploads/2025/06/Hypotheekgids-juni-2025.pdf",
-"z": "hoog"
-},
-{
-"p": "ASN Bank (Volksbank)",
+"p": "ASN Bank",
 "e": "Werkgeversverklaring niet ouder dan 3 maanden; volledig ingevuld en ondertekend door werkgever; onbeantwoorde vragen = ongeldig; datum in dienst, inkomen en adres moeten overeenkomen met loonstrook.",
 "b": "https://www.asnbank.nl/hypotheek/werkgeversverklaring-hypotheek.html",
 "z": "hoog"
@@ -175,15 +133,9 @@ window.DOCUMENTEISEN = {peildatum:"2026-10-12",documenten:[
 "z": "middel"
 },
 {
-"p": "MUNT Hypotheken",
+"p": "Munt Hypotheken",
 "e": "Recente werkgeversverklaring, digitaal ingevuld via nhg.nl, plus recente salarisstrook (gids 2026).",
 "b": "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf",
-"z": "hoog"
-},
-{
-"p": "MUNT-PPF (Philips Pensioenfonds Hypotheken)",
-"e": "Werkgeversverklaring op datum bindend aanbod maximaal 3 maanden oud.",
-"b": "https://www.philipspensioenfonds-hypotheek.nl/media/1946/acceptatiegids_munt-ppf_20260401.pdf",
 "z": "hoog"
 },
 {
@@ -193,7 +145,7 @@ window.DOCUMENTEISEN = {peildatum:"2026-10-12",documenten:[
 "z": "hoog"
 },
 {
-"p": "Attens (Achmea)",
+"p": "Attens Hypotheken",
 "e": "Werkgeversverklaring volgens model NHG, op offertedatum niet ouder dan 3 maanden.",
 "b": "https://www.attens.nl/-/media/attens/documenten/documenten-en-formulieren/2026/acceptatiegids-attens-1-januari-2026.pdf",
 "z": "middel"
@@ -205,34 +157,10 @@ window.DOCUMENTEISEN = {peildatum:"2026-10-12",documenten:[
 "z": "middel"
 },
 {
-"p": "ING",
-"e": "Werkgeversverklaring niet ouder dan 3 maanden op datum bindend aanbod; bij perspectiefverklaring mag de perspectiefverklaring max 6 maanden oud zijn op datum bindend aanbod.",
-"b": "https://homeinvest.nl/wp-content/uploads/2021/08/Acceptatiegids-ING-07-2021.pdf",
-"z": "middel"
-},
-{
-"p": "Aegon",
-"e": "Werkgeversverklaring model NHG met uitsplitsing inkomensonderdelen plus salarisspecificatie; max 3 maanden oud op datum bindend aanbod; verklaring afgegeven in de proeftijd is niet geldig; tijdelijk contract met intentieverklaring onbepaalde tijd telt als vast.",
-"b": "https://www.hypotheekvoorwaarden.net/wp-content/uploads/acceptatiebeleid_aegon_hypotheek_september_2023.pdf",
-"z": "middel"
-},
-{
-"p": "Tulp",
+"p": "Tulp Hypotheken",
 "e": "Werkgeversverklaring niet ouder dan 3 maanden op datum bindend aanbod en afgegeven na afloop proeftijd; daarnaast recente salarisstrook en bankafschrift met salarisstorting.",
 "b": "https://tulphypotheken.nl/wp-content/uploads/2022/10/acceptatiegids-Tulp_oktober-2022_definitief.pdf",
 "z": "hoog"
-},
-{
-"p": "Centraal Beheer",
-"e": "Werkgeversverklaring volgens model NHG, op datum Definitief Aanbod niet ouder dan 3 maanden; bij werkgever = familie ook UWV-verzekeringsbericht en recente salarisstroken.",
-"b": "https://www.hypotheekvoorwaarden.net/wp-content/uploads/acceptatiebeleid_centraal_beheer_basis_hypotheek_plus_hypotheek_en_thuis_hypotheek_januari_2024.pdf",
-"z": "middel"
-},
-{
-"p": "Woonfonds",
-"e": "Woningverhuur Hypotheek: recente salarisstrook en werkgeversverklaring NHG-model, op datum bindend aanbod niet ouder dan 3 maanden. Bij BV werkgeversverklaring mede ondertekend door accountant/boekhouder plus loonstrook (Zelfstandigenhypotheek).",
-"b": "https://www.hypotheekvoorwaarden.net/wp-content/uploads/acceptatiebeleid_woonfonds_woningverhuur_hypotheek_januari_2024.pdf",
-"z": "middel"
 },
 {
 "p": "Allianz",
@@ -245,12 +173,6 @@ window.DOCUMENTEISEN = {peildatum:"2026-10-12",documenten:[
 "e": "Werkgeversverklaring moet voldoen aan NHG-voorwaarden en -normen.",
 "b": "https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf",
 "z": "hoog"
-},
-{
-"p": "Obvion",
-"e": "Toetsinkomen op basis van werkgeversverklaring en salarisstrook; inkomensstijging binnen 6 maanden na bindend aanbod alleen met schriftelijke werkgeversverklaring; werknemer bij familiebedrijf: verklaring door accountant ondertekend (2020). Geen maximale ouderdom in snippet gevonden.",
-"b": "https://homeinvest.nl/wp-content/uploads/2024/09/Acceptatiebeleid-van-Obvion-16-09-2024.pdf",
-"z": "middel"
 }
 ]
 },
@@ -305,18 +227,6 @@ window.DOCUMENTEISEN = {peildatum:"2026-10-12",documenten:[
 "e": "Salarisstrook maximaal 3 maanden oud.",
 "b": "https://www.florius.nl/hypotheek/hypotheekaanvraag",
 "z": "middel"
-},
-{
-"p": "Nationale-Nederlanden",
-"e": "Salarisstrook niet ouder dan 3 maanden vanaf datum hypotheekofferte (gids jan 2025).",
-"b": "https://hypotheekcompany.nl/wp-content/uploads/2025/01/Acceptatiegids-Hypotheken-4041-40_2501_compressed.pdf",
-"z": "hoog"
-},
-{
-"p": "a.s.r.",
-"e": "Salarisstrook niet ouder dan 3 maanden op moment bindend aanbod (juni 2025).",
-"b": "https://hypotheekcompany.nl/wp-content/uploads/2025/06/Hypotheekgids-juni-2025.pdf",
-"z": "hoog"
 },
 {
 "p": "bijBouwe",
@@ -380,12 +290,6 @@ window.DOCUMENTEISEN = {peildatum:"2026-10-12",documenten:[
 "z": "hoog"
 },
 {
-"p": "a.s.r.",
-"e": "UWV-bericht niet ouder dan 3 maanden op moment bindend aanbod (juni 2025).",
-"b": "https://hypotheekcompany.nl/wp-content/uploads/2025/06/Hypotheekgids-juni-2025.pdf",
-"z": "hoog"
-},
-{
 "p": "Aegon",
 "e": "Via Ockto/iWize-route wordt UWV-verzekeringsbericht gebruikt in plaats van werkgeversverklaring.",
 "b": "https://www.aegon.nl/system/files/2023-03/H30203%20a%20Stappenplan%20iWize.pdf",
@@ -401,12 +305,6 @@ window.DOCUMENTEISEN = {peildatum:"2026-10-12",documenten:[
 "p": "bijBouwe",
 "e": "UWV-verzekeringsbericht (IBL) mogelijk in plaats van werkgeversverklaring; max 3 maanden oud op datum definitieve offerte.",
 "b": "https://bijbouwe.nl/documentenchecker",
-"z": "middel"
-},
-{
-"p": "Aegon",
-"e": "UWV-verzekeringsbericht mag in plaats van werkgeversverklaring; max 3 maanden oud op datum bindend aanbod.",
-"b": "https://www.hypotheekvoorwaarden.net/wp-content/uploads/acceptatiebeleid_aegon_hypotheek_september_2023.pdf",
 "z": "middel"
 }
 ]
@@ -500,12 +398,6 @@ window.DOCUMENTEISEN = {peildatum:"2026-10-12",documenten:[
 "z": "middel"
 },
 {
-"p": "ING",
-"e": "Inkomen ondernemer/directeur: IB-aangiftes en jaarrapporten van de afgelopen drie boekjaren; gemiddelde netto winst 3 boekjaren, laatste boekjaar als maximum.",
-"b": "https://hypotheekcompany.nl/wp-content/uploads/2024/07/Acceptatiebeleid-ING-Hypotheken-versie-juli-2024.pdf",
-"z": "middel"
-},
-{
 "p": "Woonfonds",
 "e": "Zelfstandigenhypotheek: KvK-uittreksel max 3 maanden oud en drie jaar jaarstukken.",
 "b": "https://www.woonfonds.nl/voor-adviseurs/zelfstandigenhypotheek/aanvragen",
@@ -548,12 +440,6 @@ window.DOCUMENTEISEN = {peildatum:"2026-10-12",documenten:[
 ],
 "gv": [
 {
-"p": "Nationale-Nederlanden",
-"e": "Gevalideerd taxatierapport of Calcasa Desktop Taxatie, maximaal 6 maanden oud vanaf waardepeildatum bij uitbrengen offerte.",
-"b": "https://hypotheekcompany.nl/wp-content/uploads/2026/01/nn-Acceptatiegids-Hypotheken-2026.pdf",
-"z": "hoog"
-},
-{
 "p": "Obvion",
 "e": "NWWI-gevalideerd taxatierapport van NRVT-taxateur of Calcasa Desktop Taxatie (t/m 90% MW); max 6 maanden oud op datum bindend aanbod (productkaart mei 2026).",
 "b": "https://obvion.nl/media/kxudk0d2/product-en-acceptatiekaart.pdf",
@@ -566,19 +452,7 @@ window.DOCUMENTEISEN = {peildatum:"2026-10-12",documenten:[
 "z": "hoog"
 },
 {
-"p": "bijBouwe",
-"e": "Taxatierapport nooit ouder dan 6 maanden (basis, sept 2026).",
-"b": "https://hypotheekcompany.nl/wp-content/uploads/2026/09/bijbouwe-basis-accgids-september-2026.pdf",
-"z": "hoog"
-},
-{
-"p": "bijBouwe",
-"e": "Taxatie door erkend taxateur, NWWI-gevalideerd (indien van toepassing), met waarde voor en na verbouwing.",
-"b": "https://homeinvest.nl/wp-content/uploads/2023/05/bijBouwe-Checklist-Vormvereisten-Dossierstukken.pdf",
-"z": "middel"
-},
-{
-"p": "MUNT Hypotheken",
+"p": "Munt Hypotheken",
 "e": "Taxatierapport of Desktop Taxatie maximaal 6 maanden oud; onderhouds- en bouwkundige staat 'voldoende' of 'goed'.",
 "b": "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf",
 "z": "hoog"
@@ -590,46 +464,16 @@ window.DOCUMENTEISEN = {peildatum:"2026-10-12",documenten:[
 "z": "hoog"
 },
 {
-"p": "ASN Bank (Volksbank)",
-"e": "Gevalideerd taxatierapport niet ouder dan 6 maanden (of laatste WOZ-waarde in bepaalde situaties).",
-"b": "https://hypotheekcompany.nl/wp-content/uploads/2026/01/ASN-Regels-voor-het-accepteren-verstrekken-en-wijzigen-van-een-ASN-Hypotheek.pdf",
-"z": "hoog"
-},
-{
-"p": "a.s.r.",
-"e": "Taxatie max 6 maanden oud op moment bindend aanbod (juni 2025).",
-"b": "https://hypotheekcompany.nl/wp-content/uploads/2025/06/Hypotheekgids-juni-2025.pdf",
-"z": "middel"
-},
-{
-"p": "Allianz",
-"e": "Taxatierapport niet ouder dan 6 maanden op datum bindend kredietaanbod (juni 2025); Calcasa Desktop Taxatie toegestaan bij NHG t/m 90% LTV (2026-03).",
-"b": "https://www.hypotheekgo.nl/assets/files/allianz-hypotheek-hypotheekwijzer-juni-2025.pdf",
-"z": "hoog"
-},
-{
 "p": "Argenta",
 "e": "Taxatierapport of Calcasa-desktoptaxatie; desktop tot 90% LTV, max hoofdsom 750.000, min. betrouwbaarheid 4,0 (5,0 bij NHG).",
 "b": "https://Argenta.nl/sites/default/files/documents/Argenta_Hypotheekkaart.pdf",
 "z": "hoog"
 },
 {
-"p": "Rabobank",
-"e": "Taxateur NWWI-gevalideerd, rapport volgens actueel model 'Taxatierapport woonruimte'.",
-"b": "https://www.zelfhypotheekafsluiten.nl/Uploads/geldverstrekkers/2026/09/rabobank-hypotheek-acceptatiegids-14-september-2026.pdf",
-"z": "middel"
-},
-{
 "p": "Knab",
 "e": "Taxatierapport (bestaande bouw) max 6 maanden oud bij ontvangst bindende offerte, gevalideerd door gecertificeerd instituut.",
 "b": "https://bieb.knab.nl/hypotheken/checklist-documenten-eerste-woning",
 "z": "hoog"
-},
-{
-"p": "ING",
-"e": "Taxatierapport op model 'Taxatierapport woonruimte', gevalideerd door NWWI; waardepeildatum max 6 maanden op datum bindend aanbod; taxateur mag niet betrokken zijn bij de financiering. Vanaf hypotheek 1 mln (excl. overbrugging) of recreatiewoning altijd taxatierapport (geen desktoptaxatie).",
-"b": "https://hypotheekcompany.nl/wp-content/uploads/2024/07/Acceptatiebeleid-ING-Hypotheken-versie-juli-2024.pdf",
-"z": "middel"
 },
 {
 "p": "Allianz",
@@ -670,21 +514,9 @@ window.DOCUMENTEISEN = {peildatum:"2026-10-12",documenten:[
 "e": "Koopovereenkomst staat op NHG-checklist dossier (eigendom).",
 "b": "https://www.nhg.nl/media/5dfhx03w/v-n-2024-1-checklist-dossier.pdf",
 "z": "hoog"
-},
-{
-"p": "Markt",
-"e": "Veel geldverstrekkers verlangen dat elke bladzijde door koper en verkoper is geparafeerd.",
-"b": "https://www.burovanhoof.nl/over-burovanhoof/blog/hypotheken-blogs/hypotheek-documenten-stukken-lijst/",
-"z": "middel"
 }
 ],
 "gv": [
-{
-"p": "Lloyds Bank",
-"e": "Volledig getekende en geparafeerde koopovereenkomst; digitale handtekening alleen als gekwalificeerd/gecertificeerd (gids 2021).",
-"b": "https://flexfront.nl/site-flexfront/assets/files/7226/hypotheekgids_lloyds_bank_april_2021.pdf",
-"z": "middel"
-},
 {
 "p": "Knab",
 "e": "Koopovereenkomst bij voorkeur door beide partijen getekend.",
@@ -712,18 +544,6 @@ window.DOCUMENTEISEN = {peildatum:"2026-10-12",documenten:[
 "e": "Geaccepteerd: geldig paspoort of ID-kaart EU/Zwitserland/IJsland/Noorwegen/Liechtenstein, of IND-vreemdelingendocument (C.3.1).",
 "b": "https://www.nhg.nl/voorwaarden-en-normen/",
 "z": "hoog"
-},
-{
-"p": "Markt",
-"e": "Geldverstrekkers weigeren documenten met leesbaar BSN; BSN afschermen (bijv. KopieID-app).",
-"b": "https://www.hypotheker.nl/campagnes/documenten-aanleveren-zonder-burgerservicenummer/",
-"z": "middel"
-},
-{
-"p": "Markt",
-"e": "Legitimatiebewijs moet op ingangsdatum hypotheek nog enige tijd geldig zijn.",
-"b": "https://www.homefinance.nl/hypotheek/informatie/hypotheekbescheiden.asp",
-"z": "middel"
 }
 ],
 "gv": [
@@ -766,21 +586,20 @@ window.DOCUMENTEISEN = {peildatum:"2026-10-12",documenten:[
 "altijd"
 ],
 "geldig": "",
-"algemeen": [
+"algemeen": [],
+"gv": [
 {
-"p": "Markt",
+"p": "Knab",
 "e": "Bankafschrift meestal niet ouder dan 3 maanden; officiële PDF (geen screenshot) met naam, adres, IBAN en saldo zichtbaar.",
 "b": "https://bieb.knab.nl/hypotheken/bankafschriften-aanleveren-voor-je-hypotheek-de-top-5-aandachtspunten-video",
 "z": "middel"
 },
 {
-"p": "Markt",
+"p": "Argenta",
 "e": "Herkomst eigen middelen: schenking/lening vereist overeenkomst plus ID schenker/lener.",
 "b": "https://www.argenta.nl/adviseur/eigenmiddelen",
 "z": "middel"
-}
-],
-"gv": [
+},
 {
 "p": "Argenta",
 "e": "Spaargeld aantonen met kopie bankafschrift met actueel saldo; bij schenking/lening overeenkomst + ID-bewijs schenkers/leners.",
@@ -792,18 +611,6 @@ window.DOCUMENTEISEN = {peildatum:"2026-10-12",documenten:[
 "e": "Bankafschrift niet ouder dan 3 maanden met naam rekeninghouder en bedrag/herkomst; recent afschrift per IBAN met SEPA-machtiging.",
 "b": "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/lbh-stukkenlijst-gids",
 "z": "hoog"
-},
-{
-"p": "SVn",
-"e": "Bankafschrift niet ouder dan 3 maanden met minstens het in te brengen bedrag; boven 25.000 ook meest recente jaaroverzicht spaarrekening; alleen onvoorwaardelijke schenking.",
-"b": "https://svn.nl/media/ka4ky5ei/svn-avf-aantonen-herkomst-eigen-middelen-maart-2026.pdf",
-"z": "hoog"
-},
-{
-"p": "Venn",
-"e": "Apart formulier eigen middelen (versie 2026.V1.0).",
-"b": "https://www.vennhypotheken.nl/wp-content/uploads/Formulier-eigen-middelen-Venn-Hypotheken.pdf",
-"z": "middel"
 }
 ]
 },
@@ -840,14 +647,7 @@ window.DOCUMENTEISEN = {peildatum:"2026-10-12",documenten:[
 "z": "middel"
 }
 ],
-"gv": [
-{
-"p": "Nationale-Nederlanden",
-"e": "Perspectiefverklaring is geen vervanging van werkgeversverklaring.",
-"b": "https://hypotheekcompany.nl/wp-content/uploads/2026/03/nn-acceptatiebeleid-maart-2026.pdf",
-"z": "middel"
-}
-]
+"gv": []
 },
 {
 "id": "bouwkundig-rapport",
@@ -882,20 +682,7 @@ window.DOCUMENTEISEN = {peildatum:"2026-10-12",documenten:[
 "z": "middel"
 }
 ],
-"gv": [
-{
-"p": "bijBouwe",
-"e": "Niet ouder dan 12 maanden vanaf datum bindend kredietaanbod; opgemaakt door bouwkundig bedrijf, gemeente of VEH; in documentenchecker 'indien opgemaakt'.",
-"b": "https://homeinvest.nl/wp-content/uploads/2023/05/bijBouwe-Checklist-Vormvereisten-Dossierstukken.pdf",
-"z": "middel"
-},
-{
-"p": "a.s.r.",
-"e": "Bouwkundig rapport niet ouder dan 12 maanden (juni 2025).",
-"b": "https://hypotheekcompany.nl/wp-content/uploads/2025/06/Hypotheekgids-juni-2025.pdf",
-"z": "middel"
-}
-]
+"gv": []
 },
 {
 "id": "echtscheiding-pensioen",
@@ -911,28 +698,9 @@ window.DOCUMENTEISEN = {peildatum:"2026-10-12",documenten:[
 "e": "Alle van toepassing zijnde echtscheidingsstukken; bij scheiding > 12 jaar geleden volstaat recent afschrift burgerlijke stand + meest recente belastingaangifte.",
 "b": "https://nhg.nl/faq/de-klant/de-klant-is-jaren-geleden-gescheiden-zijn-de-echtscheidingsstukken-dan-wel-nodig/",
 "z": "hoog"
-},
-{
-"p": "Markt (HDN)",
-"e": "Pensioeninkomen via Inkomensbepaling Pensioen (HDN-rekenregels) o.b.v. download Mijnpensioenoverzicht.nl.",
-"b": "https://www.hypotheker.nl/actueel/persberichten/altijd-het-juiste-pensioeninkomen-bij-de-hand-met-de-inkomensbepaling-pensioen/",
-"z": "middel"
 }
 ],
-"gv": [
-{
-"p": "bijBouwe",
-"e": "Scheiding < 12 jaar: (concept)akte van levering/verdeling, echtscheidingsvonnis (evt. convenant) en inschrijving; > 12 jaar: inschrijving burgerlijke stand + meest recente IB-aangifte.",
-"b": "https://hypotheekcompany.nl/wp-content/uploads/2026/09/bijbouwe-basis-accgids-september-2026.pdf",
-"z": "hoog"
-},
-{
-"p": "a.s.r.",
-"e": "Mijnpensioenoverzicht niet ouder dan 3 maanden op moment bindend aanbod (juni 2025).",
-"b": "https://hypotheekcompany.nl/wp-content/uploads/2025/06/Hypotheekgids-juni-2025.pdf",
-"z": "middel"
-}
-]
+"gv": []
 },
 {
 "id": "arbeidsmarktscan",
@@ -1021,20 +789,7 @@ window.DOCUMENTEISEN = {peildatum:"2026-10-12",documenten:[
 "z": "hoog"
 }
 ],
-"gv": [
-{
-"p": "bijBouwe",
-"e": "Schuldrestopgave hypotheek niet ouder dan 3 maanden; documentenchecker noemt ook verkoopopdracht, kredieten en eigen middelen.",
-"b": "https://homeinvest.nl/wp-content/uploads/2023/05/bijBouwe-Checklist-Vormvereisten-Dossierstukken.pdf",
-"z": "middel"
-},
-{
-"p": "a.s.r.",
-"e": "DUO-schuldenoverzicht niet ouder dan 3 maanden op moment bindend aanbod (juni 2025).",
-"b": "https://hypotheekcompany.nl/wp-content/uploads/2025/06/Hypotheekgids-juni-2025.pdf",
-"z": "middel"
-}
-]
+"gv": []
 },
 {
 "id": "technisch",
@@ -1073,12 +828,6 @@ window.DOCUMENTEISEN = {peildatum:"2026-10-12",documenten:[
 "e": "Bij meer dan 25.000 euro eigen middelen altijd bewijs herkomst vermogen. Aantonen via spaargeld (kopie bankafschrift/printscreen), schenking (schenkingsovereenkomst), lening (leningsovereenkomst) of afkoop polis; overzicht moet gedateerd zijn zodat recentheid blijkt. Bewijs ook gevraagd als lening lager is dan koop-/overdrachtskosten, bij aflossing schuld met eigen middelen of bij verkoopverlies.",
 "b": "https://www.aegon.nl/system/files/2022-09/Checklist_documenten_hypotheekaanvraag.pdf",
 "z": "hoog"
-},
-{
-"p": "Lloyds",
-"e": "Herkomst eigen middelen boven 25.000 euro met formulier Herkomst Eigen middelen; bij lening ook leningsovereenkomst (zie stukkenlijst).",
-"b": "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/lbh-stukkenlijst-gids",
-"z": "middel"
 }
 ]
 },
@@ -1090,13 +839,6 @@ window.DOCUMENTEISEN = {peildatum:"2026-10-12",documenten:[
 ],
 "geldig": "",
 "algemeen": [],
-"gv": [
-{
-"p": "Woonfonds",
-"e": "Bewijs schenking via kopie bankafschrift, notarisverklaring of schenkingsovereenkomst; schenking boven 25.000 euro altijd schriftelijk vastleggen (onderhands of notarieel).",
-"b": "https://www.hypotheekvoorwaarden.net/wp-content/uploads/acceptatiebeleid_woonfonds_woningverhuur_hypotheek_januari_2024.pdf",
-"z": "middel"
-}
-]
+"gv": []
 }
 ]};
