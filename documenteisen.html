@@ -51,7 +51,17 @@
   .doc{background:#fff;box-shadow:0 6px 22px rgba(70,160,210,.16);margin:18px 0;padding:20px 22px;scroll-margin-top:16px}
   .doc-kop{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:baseline;justify-content:space-between;margin-bottom:10px}
   .geldig{font-size:13px;font-weight:700;background:#E8F6EF;color:var(--groen);padding:3px 10px;border-radius:999px}
-  .doc h4{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--grijs);margin:14px 0 6px}
+  .doc h5{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--grijs);margin:14px 0 6px}
+  h3.cat{font-family:"Source Serif 4",Georgia,serif;font-weight:400;font-size:24px;color:var(--inkt);margin:34px 0 6px;padding-bottom:6px;border-bottom:2px solid var(--oranje)}
+  .doc-titel{font-size:19px;color:var(--inkt);margin:0}
+  .badges{display:flex;flex-wrap:wrap;gap:6px}
+  .tag{font-size:12px;font-weight:700;background:#ECEFF6;color:var(--inkt);padding:3px 10px;border-radius:999px}
+  .tag-c{background:#FFF1DF;color:#8A4A00}
+  .wat{margin:0 0 6px;font-size:15px}
+  ul.vv{margin:0;padding-left:20px;font-size:15px}
+  ul.vv li{margin:3px 0}
+  .doc details{border-top:1px solid var(--lijn);margin-top:12px;padding:10px 0 0}
+  .doc details:last-of-type{border-bottom:0}
   .eisen{list-style:none;margin:0;padding:0}
   .eisen li{border-top:1px solid var(--lijn);padding:9px 0;display:grid;grid-template-columns:190px 1fr;gap:4px 14px;font-size:15px}
   .eisen li:first-child{border-top:0}
@@ -96,9 +106,11 @@
 
 <main id="inhoud" tabindex="-1" class="romp">
 <p class="melding"><strong>Let op:</strong> dit overzicht is samengesteld uit openbare bronnen (peildatum onderzoek 12 oktober 2026). Een deel van de acceptatiegidsen is gevonden als kopie op een andere site of is een oudere versie; dat staat bij de eis en is gemarkeerd met &lsquo;controleer&rsquo;. Het actuele acceptatiebeleid van de geldverstrekker is altijd leidend. Geen advies.</p>
+<p class="melding"><strong>Dekking:</strong> eisen met bron zijn verzameld voor onder meer NHG, ABN AMRO, Rabobank, ING, NN, a.s.r., Aegon, ASN Bank, Lloyds, Argenta, Allianz, Hypotrust, MUNT, NIBC, Attens, Tulp, Centraal Beheer, Woonfonds, Florius, Knab en bijBouwe. Voor Venn, Hollandse Hypotheekbank, SNS en RegioBank zijn nog geen eisen met bron gevonden, en voor Obvion en ING is de dekking beperkt. Ontbreekt een geldverstrekker of document, dan betekent dat niet dat er geen eis is.</p>
 
 <section aria-labelledby="h-checker">
   <h2 id="h-checker">Documenteisen opzoeken</h2>
+  <p>Een generiek model van de documenten bij een hypotheekaanvraag, met de vormvereisten die geldverstrekkers gewoonlijk stellen. Open per document de eisen met bron van NHG en per geldverstrekker. Zonder keuze zie je alle documenten.</p>
   <div class="filters">
     <fieldset><legend>Situatie van de klant</legend>
       <div class="chips" id="situaties"></div>
@@ -152,15 +164,19 @@
 <script src="js/statistiek.js" defer></script>
 <!-- /sitevoet -->
 <script src="data/documenteisen.js"></script>
+<script src="data/documentenchecker.js"></script>
 <script>
 (function(){
   'use strict';
-  var D = window.DOCUMENTEISEN, DOCS = D.documenten;
-  var SIT = [['altijd','Altijd'],['loondienst','Loondienst'],['flex','Flexibel inkomen'],['ondernemer','Ondernemer'],['bestaand','Bestaande bouw'],['nieuwbouw','Nieuwbouw'],['doorstromer','Volgende woning'],['scheiding','Scheiding'],['pensioen','Pensioen']];
+  var M = window.DOCUMENTENCHECKER, E = {};
+  window.DOCUMENTEISEN.documenten.forEach(function(d){ E[d.id] = d; });
+  var DOCS = M.documenten;
+  var SIT = [['loondienst','Loondienst'],['flex','Flexibel inkomen'],['ondernemer','Ondernemer'],['uitkering','Uitkering'],['pensioen','Pensioen'],['bestaand','Bestaande bouw'],['nieuwbouw','Nieuwbouw'],['verbouw','Verbouwing of verduurzaming'],['doorstromer','Volgende woning'],['scheiding','Scheiding'],['eigengeld','Eigen geld'],['krediet','Lopende kredieten'],['starter','Starterslening'],['buitenland','Niet-Nederlandse nationaliteit']];
   var gekozen = new Set();
   var esc = function(s){ return String(s).replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); };
   var host = function(u){ try { return new URL(u).hostname.replace(/^www\./,''); } catch(e){ return 'bron'; } };
-  var OFFICIEEL = /nhg\.nl|abnamro|rabobank\.nl|asnbank|lloydsbank|hypotrust|munthypotheken|philipspensioenfonds|nibc|attens|allianz|obvion|florius|argenta|knab|svn\.nl|vennhypotheken|aegon|ing\.com|dynamic-credit|uwv|hdn\.nl|officielebekendmakingen/i;
+  var OFFICIEEL = /nhg\.nl|abnamro|rabobank\.nl|asnbank|lloydsbank|hypotrust|munthypotheken|philipspensioenfonds|nibc|attens|allianz|obvion|florius|argenta|knab|svn\.nl|vennhypotheken|aegon|ing\.com|ing\.nl|dynamic-credit|uwv|hdn\.nl|officielebekendmakingen|bijbouwe|centraalbeheer|woonfonds|tulp|hollandsehypotheekbank|snsbank|regiobank|volksbank/i;
+  var idsVan = function(d){ return d.eisen ? [].concat(d.eisen) : []; };
 
   var sc = document.getElementById('situaties');
   sc.innerHTML = SIT.map(function(s){ return '<button type="button" aria-pressed="false" data-s="'+s[0]+'">'+s[1]+'</button>'; }).join('');
@@ -169,7 +185,7 @@
     var s = b.dataset.s; if (gekozen.has(s)) gekozen.delete(s); else gekozen.add(s);
     b.setAttribute('aria-pressed', gekozen.has(s)); toon();
   });
-  var partijen = new Set(); DOCS.forEach(function(d){ d.gv.forEach(function(g){ partijen.add(g.p); }); });
+  var partijen = new Set(); Object.keys(E).forEach(function(k){ E[k].gv.forEach(function(g){ partijen.add(g.p); }); });
   var sel = document.getElementById('gv');
   Array.from(partijen).sort(function(a,b){ return a.localeCompare(b,'nl'); }).forEach(function(p){ var o = document.createElement('option'); o.value = p; o.textContent = p; sel.appendChild(o); });
   sel.addEventListener('change', toon);
@@ -180,20 +196,41 @@
     return '<li><span class="partij">'+esc(x.p)+'</span><span>'+esc(x.e)+(controle?'<span class="z-middel" title="Secundaire bron, kopie op een andere site of oudere versie: controleer bij de geldverstrekker">controleer</span>':'')+
       ' <a class="bron" href="'+esc(x.b)+'" target="_blank" rel="noopener">'+esc(host(x.b))+'<span class="sr-only"> (bron, opent in een nieuw venster)</span></a></span></li>';
   }
+  function badges(m){
+    var r = [];
+    if (m.max) r.push('<span class="geldig" title="Gerekend vanaf de datum van het bindend aanbod, tenzij de geldverstrekker anders bepaalt">Max. '+m.max+' maanden oud'+(m.basis==='NHG'?' (NHG)':' (gebruikelijk)')+'</span>');
+    if (m.handtekening) r.push('<span class="tag">Ondertekend</span>');
+    if (m.digitaal) r.push('<span class="tag">Digitaal ondertekenen mogelijk</span>');
+    if (m.geenBSN) r.push('<span class="tag">BSN afschermen</span>');
+    if (m.jaren) r.push('<span class="tag">'+m.jaren+' jaar</span>');
+    if (m.keuze) r.push('<span class="tag">Eén van meerdere bewijsmiddelen</span>');
+    if (m.conditioneel) r.push('<span class="tag tag-c">Alleen indien van toepassing</span>');
+    return r.join('');
+  }
   function toon(){
     var gv = sel.value, q = document.getElementById('zoek').value.trim().toLowerCase();
     var treft = function(x){ return !q || (x.e+' '+x.p).toLowerCase().indexOf(q) > -1; };
-    var html = '', n = 0, ne = 0;
-    DOCS.forEach(function(d){
-      if (gekozen.size && !d.situaties.some(function(s){ return gekozen.has(s); })) return;
-      var alg = d.algemeen.filter(treft);
-      var g = gv === '-' ? [] : d.gv.filter(function(x){ return (!gv || x.p === gv) && treft(x); });
-      if (q && !alg.length && !g.length && d.naam.toLowerCase().indexOf(q) < 0) return;
-      n++; ne += alg.length + g.length;
-      html += '<article class="doc" id="doc-'+d.id+'"><div class="doc-kop"><h3>'+esc(d.naam)+'</h3>'+(d.geldig?'<span class="geldig">NHG: max. '+esc(d.geldig)+'</span>':'')+'</div>'+
-        '<h4>NHG en algemene eisen</h4>'+(alg.length?'<ul class="eisen">'+alg.map(eisHtml).join('')+'</ul>':'<p class="leeg">Geen algemene eisen met bron gevonden.</p>')+
-        (gv === '-' ? '' : '<h4>'+(gv?esc(gv):'Per geldverstrekker')+'</h4>'+(g.length?'<ul class="eisen">'+g.map(eisHtml).join('')+'</ul>':'<p class="leeg">'+(gv?'Geen afwijkende eis met bron gevonden; ga uit van de algemene eisen en controleer de acceptatiegids.':'Geen eisen per geldverstrekker met bron gevonden.')+'</p>'))+
-        '</article>';
+    var html = '', n = 0, ne = 0, cat = '';
+    M.categorieen.forEach(function(c){
+      var blok = '';
+      DOCS.filter(function(d){ return d.cat === c; }).forEach(function(d){
+        if (gekozen.size && d.situaties.indexOf('altijd') < 0 && !d.situaties.some(function(s){ return gekozen.has(s); })) return;
+        var alg = [], g = [];
+        idsVan(d).forEach(function(id){ var e = E[id]; if (!e) return; alg = alg.concat(e.algemeen); g = g.concat(e.gv); });
+        alg = alg.filter(treft); g = gv === '-' ? [] : g.filter(function(x){ return (!gv || x.p === gv) && treft(x); });
+        var tekst = (d.naam+' '+d.wat+' '+d.vv.join(' ')).toLowerCase();
+        if (q && !alg.length && !g.length && tekst.indexOf(q) < 0) return;
+        n++; ne += alg.length + g.length;
+        blok += '<article class="doc" id="doc-'+d.id+'"><div class="doc-kop"><h4 class="doc-titel">'+esc(d.naam)+'</h4><span class="badges">'+badges(d.meta||{})+'</span></div>'+
+          '<p class="wat">'+esc(d.wat)+'</p>'+
+          '<h5>Gebruikelijke vormvereisten</h5><ul class="vv">'+d.vv.map(function(v){ return '<li>'+esc(v)+'</li>'; }).join('')+'</ul>'+
+          (idsVan(d).length ? '<details'+((gv||q)&&(alg.length||g.length)?' open':'')+'><summary>Eisen met bron: NHG, markt en geldverstrekkers ('+(alg.length+g.length)+')</summary>'+
+            (alg.length?'<h5>NHG en algemene eisen</h5><ul class="eisen">'+alg.map(eisHtml).join('')+'</ul>':'')+
+            (gv === '-' ? '' : '<h5>'+(gv?esc(gv):'Per geldverstrekker')+'</h5>'+(g.length?'<ul class="eisen">'+g.map(eisHtml).join('')+'</ul>':'<p class="leeg">'+(gv?'Geen afwijkende eis met bron gevonden; ga uit van de algemene eisen en controleer de acceptatiegids van '+esc(gv)+'.':'Geen eisen per geldverstrekker met bron gevonden.')+'</p>'))+'</details>'
+            : '<p class="leeg">Geen bronnen per geldverstrekker verzameld voor dit document; controleer de acceptatiegids van de geldverstrekker.</p>')+
+          '</article>';
+      });
+      if (blok) html += '<h3 class="cat">'+esc(c)+'</h3>'+blok;
     });
     document.getElementById('documenten').innerHTML = html || '<p class="leeg">Geen documenten voor deze keuze.</p>';
     document.getElementById('teller').textContent = n + (n === 1 ? ' document' : ' documenten') + ' · ' + ne + (ne === 1 ? ' eis' : ' eisen') + ' met bron';
@@ -201,10 +238,16 @@
   document.getElementById('print').addEventListener('click', function(){
     var w = window.open('', '_blank'); if (!w) { alert('Sta pop-ups toe om af te drukken.'); return; }
     var gv = sel.value, sit = SIT.filter(function(s){ return gekozen.has(s[0]); }).map(function(s){ return s[1]; }).join(', ') || 'alle situaties';
-    w.document.write('<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><title>Documenteisen – Adviesforum</title><style>body{font-family:Arial,sans-serif;font-size:12px;color:#000;margin:24px}h1{font-size:20px}h3{font-size:15px;margin:16px 0 4px}h4{font-size:11px;text-transform:uppercase;margin:8px 0 2px}ul{margin:0;padding-left:16px}li{margin:3px 0}.bron{color:#444}.geldig{font-weight:bold}.leeg{color:#555}.z-middel{font-weight:bold}.doc-kop{display:block}a{color:#000}</style></head><body>'+
-      '<h1>Documenteisen hypotheekaanvraag</h1><p>Situatie: '+esc(sit)+' · Geldverstrekker: '+esc(gv === '-' ? 'alleen NHG en algemeen' : (gv || 'alle'))+' · peildatum onderzoek 12 oktober 2026 · uitgedraaid '+new Date().toLocaleDateString('nl-NL')+'</p>'+
-      document.getElementById('documenten').innerHTML.replace(/<a class="bron" href="([^"]+)"[^>]*>[\s\S]*?<\/a>/g, '<span class="bron">($1)</span>')+
-      '<p style="margin-top:16px">Bron: adviesforum.nl/documenteisen.html. Samengesteld uit openbare bronnen; het actuele acceptatiebeleid van de geldverstrekker is leidend. Geen advies.</p></body></html>');
+    w.document.write('<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><title>Documenteisen – Adviesforum</title><style>body{font-family:Arial,sans-serif;font-size:12px;color:#000;margin:24px}h1{font-size:20px}h3{font-size:16px;margin:18px 0 4px;border-bottom:1px solid #000}h4{font-size:14px;margin:12px 0 2px}h5{font-size:11px;text-transform:uppercase;margin:8px 0 2px}ul{margin:0;padding-left:16px}li{margin:3px 0}.bron{color:#444}.geldig,.tag{font-weight:bold;margin-right:8px;font-size:11px}.leeg{color:#555}.z-middel{font-weight:bold}.doc{break-inside:avoid-page}a{color:#000}summary{font-weight:bold}</style></head><body>'+
+      '<h1>Documenteisen hypotheekaanvraag</h1><p>Situatie: '+esc(sit)+' · Geldverstrekker: '+esc(gv === '-' ? 'alleen NHG en algemeen' : (gv || 'alle'))+' · peildatum onderzoek '+esc(M.versie)+' · uitgedraaid '+new Date().toLocaleDateString('nl-NL')+'</p>'+
+      document.getElementById('documenten').innerHTML.replace(/<details[^>]*>/g,'<div>').replace(/<\/details>/g,'</div>').replace(/<a class="bron" href="([^"]+)"[^>]*>[\s\S]*?<\/a>/g, '<span class="bron">($1)</span>')+
+      '<p style="margin-top:16px">Bron: adviesforum.nl/documenteisen.html. Gebruikelijke vormvereisten zijn een generiek model; niet elke geldverstrekker stelt alle eisen. Het actuele acceptatiebeleid van de geldverstrekker is leidend. Geen advies.</p></body></html>');
+    w.document.close(); w.focus(); w.print();
+  });
+  toon();
+})();
+</script>
+</body></html>');
     w.document.close(); w.focus(); w.print();
   });
   toon();

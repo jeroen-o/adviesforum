@@ -203,6 +203,54 @@ window.DOCUMENTEISEN = {peildatum:"2026-10-12",documenten:[
 "e": "Werkgeversverklaring model maart 2024 of UWV-bericht bij inkomen uit loondienst (Hypotheekwijzer 2026).",
 "b": "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-47.pdf",
 "z": "middel"
+},
+{
+"p": "ING",
+"e": "Werkgeversverklaring niet ouder dan 3 maanden op datum bindend aanbod; bij perspectiefverklaring mag de perspectiefverklaring max 6 maanden oud zijn op datum bindend aanbod.",
+"b": "https://homeinvest.nl/wp-content/uploads/2021/08/Acceptatiegids-ING-07-2021.pdf",
+"z": "middel"
+},
+{
+"p": "Aegon",
+"e": "Werkgeversverklaring model NHG met uitsplitsing inkomensonderdelen plus salarisspecificatie; max 3 maanden oud op datum bindend aanbod; verklaring afgegeven in de proeftijd is niet geldig; tijdelijk contract met intentieverklaring onbepaalde tijd telt als vast.",
+"b": "https://www.hypotheekvoorwaarden.net/wp-content/uploads/acceptatiebeleid_aegon_hypotheek_september_2023.pdf",
+"z": "middel"
+},
+{
+"p": "Tulp",
+"e": "Werkgeversverklaring niet ouder dan 3 maanden op datum bindend aanbod en afgegeven na afloop proeftijd; daarnaast recente salarisstrook en bankafschrift met salarisstorting.",
+"b": "https://tulphypotheken.nl/wp-content/uploads/2022/10/acceptatiegids-Tulp_oktober-2022_definitief.pdf",
+"z": "hoog"
+},
+{
+"p": "Centraal Beheer",
+"e": "Werkgeversverklaring volgens model NHG, op datum Definitief Aanbod niet ouder dan 3 maanden; bij werkgever = familie ook UWV-verzekeringsbericht en recente salarisstroken.",
+"b": "https://www.hypotheekvoorwaarden.net/wp-content/uploads/acceptatiebeleid_centraal_beheer_basis_hypotheek_plus_hypotheek_en_thuis_hypotheek_januari_2024.pdf",
+"z": "middel"
+},
+{
+"p": "Woonfonds",
+"e": "Woningverhuur Hypotheek: recente salarisstrook en werkgeversverklaring NHG-model, op datum bindend aanbod niet ouder dan 3 maanden. Bij BV werkgeversverklaring mede ondertekend door accountant/boekhouder plus loonstrook (Zelfstandigenhypotheek).",
+"b": "https://www.hypotheekvoorwaarden.net/wp-content/uploads/acceptatiebeleid_woonfonds_woningverhuur_hypotheek_januari_2024.pdf",
+"z": "middel"
+},
+{
+"p": "Allianz",
+"e": "Origineel ingevulde en ondertekende werkgeversverklaring, max 3 maanden oud (oud formulier); huidige Hypotheekwijzer vraagt werkgeversverklaring NHG-model (maart 2024) of UWV-bericht.",
+"b": "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-47.pdf",
+"z": "middel"
+},
+{
+"p": "Argenta",
+"e": "Werkgeversverklaring moet voldoen aan NHG-voorwaarden en -normen.",
+"b": "https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf",
+"z": "hoog"
+},
+{
+"p": "Obvion",
+"e": "Toetsinkomen op basis van werkgeversverklaring en salarisstrook; inkomensstijging binnen 6 maanden na bindend aanbod alleen met schriftelijke werkgeversverklaring; werknemer bij familiebedrijf: verklaring door accountant ondertekend (2020). Geen maximale ouderdom in snippet gevonden.",
+"b": "https://homeinvest.nl/wp-content/uploads/2024/09/Acceptatiebeleid-van-Obvion-16-09-2024.pdf",
+"z": "middel"
 }
 ]
 },
@@ -275,6 +323,12 @@ window.DOCUMENTEISEN = {peildatum:"2026-10-12",documenten:[
 "e": "Recente salarisstrook max 3 maanden oud (naast werkgeversverklaring/UWV-bericht); checklist vraagt ook bankafschriften met salaris laatste 3 maanden bij werkgeversverklaring.",
 "b": "https://bijbouwe.nl/documentenchecker",
 "z": "middel"
+},
+{
+"p": "Argenta",
+"e": "Kopie recente salarisstrook (laat zien dat inkomen op rekening wordt gestort); vervalt bij nul pensioenpremie; bij afwijking met werkgeversverklaring: IBL (UWV) of toelichting meesturen. Ook SEPA-machtiging nodig.",
+"b": "https://www.argenta.nl/adviseur/documenten-voor-het-aanvragen-of-wijzigen-van-de-argenta-hypotheek",
+"z": "hoog"
 }
 ]
 },
@@ -347,6 +401,12 @@ window.DOCUMENTEISEN = {peildatum:"2026-10-12",documenten:[
 "p": "bijBouwe",
 "e": "UWV-verzekeringsbericht (IBL) mogelijk in plaats van werkgeversverklaring; max 3 maanden oud op datum definitieve offerte.",
 "b": "https://bijbouwe.nl/documentenchecker",
+"z": "middel"
+},
+{
+"p": "Aegon",
+"e": "UWV-verzekeringsbericht mag in plaats van werkgeversverklaring; max 3 maanden oud op datum bindend aanbod.",
+"b": "https://www.hypotheekvoorwaarden.net/wp-content/uploads/acceptatiebeleid_aegon_hypotheek_september_2023.pdf",
 "z": "middel"
 }
 ]
@@ -437,6 +497,24 @@ window.DOCUMENTEISEN = {peildatum:"2026-10-12",documenten:[
 "p": "bijBouwe",
 "e": "Ondernemers: inkomensverklaring afgegeven door een geselecteerde partij.",
 "b": "https://bijbouwe.nl/documentenchecker",
+"z": "middel"
+},
+{
+"p": "ING",
+"e": "Inkomen ondernemer/directeur: IB-aangiftes en jaarrapporten van de afgelopen drie boekjaren; gemiddelde netto winst 3 boekjaren, laatste boekjaar als maximum.",
+"b": "https://hypotheekcompany.nl/wp-content/uploads/2024/07/Acceptatiebeleid-ING-Hypotheken-versie-juli-2024.pdf",
+"z": "middel"
+},
+{
+"p": "Woonfonds",
+"e": "Zelfstandigenhypotheek: KvK-uittreksel max 3 maanden oud en drie jaar jaarstukken.",
+"b": "https://www.woonfonds.nl/voor-adviseurs/zelfstandigenhypotheek/aanvragen",
+"z": "hoog"
+},
+{
+"p": "Argenta",
+"e": "Ondernemer 1-3 jaar: inkomensverklaring alleen met NHG, zonder NHG geen hypotheek; >3 jaar: IB-aangiften en jaarstukken laatste 3 jaar.",
+"b": "https://www.argenta.nl/sites/default/files/documents/Argenta_OHA_Checklist.pdf",
 "z": "middel"
 }
 ]
@@ -546,6 +624,24 @@ window.DOCUMENTEISEN = {peildatum:"2026-10-12",documenten:[
 "e": "Taxatierapport (bestaande bouw) max 6 maanden oud bij ontvangst bindende offerte, gevalideerd door gecertificeerd instituut.",
 "b": "https://bieb.knab.nl/hypotheken/checklist-documenten-eerste-woning",
 "z": "hoog"
+},
+{
+"p": "ING",
+"e": "Taxatierapport op model 'Taxatierapport woonruimte', gevalideerd door NWWI; waardepeildatum max 6 maanden op datum bindend aanbod; taxateur mag niet betrokken zijn bij de financiering. Vanaf hypotheek 1 mln (excl. overbrugging) of recreatiewoning altijd taxatierapport (geen desktoptaxatie).",
+"b": "https://hypotheekcompany.nl/wp-content/uploads/2024/07/Acceptatiebeleid-ING-Hypotheken-versie-juli-2024.pdf",
+"z": "middel"
+},
+{
+"p": "Allianz",
+"e": "Waarde aantonen met taxatierapport of Calcasa desktoptaxatie (desktop toegestaan bij NHG tot 90% LTV); oud formulier: taxatierapport niet ouder dan 6 maanden.",
+"b": "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-47.pdf",
+"z": "hoog"
+},
+{
+"p": "Argenta",
+"e": "Actuele waarde via Calcasa desktoptaxatie of gevalideerd taxatierapport.",
+"b": "https://www.argenta.nl/sites/default/files/documents/Argenta_OHA_Checklist.pdf",
+"z": "hoog"
 }
 ]
 },
@@ -648,6 +744,18 @@ window.DOCUMENTEISEN = {peildatum:"2026-10-12",documenten:[
 "e": "Persoonsgegevens: o.a. bewijs min. 6 maanden ingezetene NL en BRP-uittreksel of officieel BSN-document (documentenchecker).",
 "b": "https://bijbouwe.nl/documentenchecker",
 "z": "middel"
+},
+{
+"p": "Allianz",
+"e": "Kopie paspoort of identiteitskaart, geen rijbewijs; BSN niet zichtbaar; niet-EU: bewijs verblijfsrecht of Nederlandse verblijfsvergunning. Oud formulier: ook QR-code afdekken.",
+"b": "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-47.pdf",
+"z": "hoog"
+},
+{
+"p": "Argenta",
+"e": "Kopie paspoort/ID-kaart, tenzij identificatie slaagt via iDIN/overheidsgegevens; BSN onleesbaar maken op alle documenten.",
+"b": "https://www.argenta.nl/adviseur/documenten-voor-het-aanvragen-of-wijzigen-van-de-argenta-hypotheek",
+"z": "hoog"
 }
 ]
 },
@@ -942,6 +1050,52 @@ window.DOCUMENTEISEN = {peildatum:"2026-10-12",documenten:[
 "e": "Upload als PDF of TIFF, 300 DPI, max 25 MB; één bestand per stuk; geen watermerken over tekst.",
 "b": "https://www.aegon.nl/system/files/2022-09/Checklist_documenten_hypotheekaanvraag.pdf",
 "z": "hoog"
+},
+{
+"p": "Argenta",
+"e": "Documenten niet ouder dan 3 maanden op datum bindend aanbod; aanlevering digitaal via HDN; rente-offerte digitaal zonder handtekening.",
+"b": "https://www.argenta.nl/adviseur/documenten-voor-het-aanvragen-of-wijzigen-van-de-argenta-hypotheek",
+"z": "hoog"
+}
+]
+},
+{
+"id": "herkomst-eigen-middelen",
+"naam": "Herkomst eigen middelen",
+"situaties": [
+"eigengeld"
+],
+"geldig": "",
+"algemeen": [],
+"gv": [
+{
+"p": "Aegon",
+"e": "Bij meer dan 25.000 euro eigen middelen altijd bewijs herkomst vermogen. Aantonen via spaargeld (kopie bankafschrift/printscreen), schenking (schenkingsovereenkomst), lening (leningsovereenkomst) of afkoop polis; overzicht moet gedateerd zijn zodat recentheid blijkt. Bewijs ook gevraagd als lening lager is dan koop-/overdrachtskosten, bij aflossing schuld met eigen middelen of bij verkoopverlies.",
+"b": "https://www.aegon.nl/system/files/2022-09/Checklist_documenten_hypotheekaanvraag.pdf",
+"z": "hoog"
+},
+{
+"p": "Lloyds",
+"e": "Herkomst eigen middelen boven 25.000 euro met formulier Herkomst Eigen middelen; bij lening ook leningsovereenkomst (zie stukkenlijst).",
+"b": "https://www.lloydsbank.nl/informatie-voor-financieel-adviseurs/lbh-stukkenlijst-gids",
+"z": "middel"
+}
+]
+},
+{
+"id": "schenking",
+"naam": "Schenking",
+"situaties": [
+"eigengeld"
+],
+"geldig": "",
+"algemeen": [],
+"gv": [
+{
+"p": "Woonfonds",
+"e": "Bewijs schenking via kopie bankafschrift, notarisverklaring of schenkingsovereenkomst; schenking boven 25.000 euro altijd schriftelijk vastleggen (onderhands of notarieel).",
+"b": "https://www.hypotheekvoorwaarden.net/wp-content/uploads/acceptatiebeleid_woonfonds_woningverhuur_hypotheek_januari_2024.pdf",
+"z": "middel"
 }
 ]
 }

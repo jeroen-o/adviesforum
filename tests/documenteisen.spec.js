@@ -7,14 +7,17 @@ test('documenteisen: filteren op situatie, geldverstrekker en zoekterm; elke eis
   await page.goto('/documenteisen.html');
   await expect(page.locator('h1')).toHaveText('Documenteisen');
   const docs = page.locator('#documenten article.doc');
-  await expect(docs).toHaveCount(16);
+  await expect(docs).toHaveCount(41);
   const eisen = page.locator('#documenten .eisen li');
   expect(await eisen.count()).toBeGreaterThan(100);
   expect(await page.locator('#documenten .eisen li a.bron[href^="https://"]').count()).toBe(await eisen.count());
+  await expect(page.locator('#doc-werkgeversverklaring .geldig')).toContainText('Max. 3 maanden');
   await page.locator('#situaties [data-s="ondernemer"]').click();
-  await expect(docs).toHaveCount(1);
-  await expect(docs.first()).toContainText('Inkomensverklaring Ondernemer is 6 maanden geldig');
+  await expect(page.locator('#doc-inkomensverklaring-ondernemer')).toContainText('rekenexpert');
+  await expect(page.locator('#doc-werkgeversverklaring')).toHaveCount(0);
+  await expect(page.locator('#doc-legitimatiebewijs')).toHaveCount(1); /* geldt altijd */
   await page.locator('#situaties [data-s="ondernemer"]').click();
+  await expect(docs).toHaveCount(41);
   await page.locator('#gv').selectOption('Lloyds Bank');
   await expect(page.locator('#doc-werkgeversverklaring')).toContainText('Lloyds Bank');
   await expect(page.locator('#doc-werkgeversverklaring')).not.toContainText('Rabobank');
