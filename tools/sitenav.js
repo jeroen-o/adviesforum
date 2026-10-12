@@ -57,7 +57,7 @@ const JAAR = 2026;
 /* Dezelfde voettekst op elke pagina: korte uitleg, contact en de belangrijkste ingangen per onderdeel. */
 const VOET_KOLOMMEN = [
   ['Voorwaarden', [['voorwaarden.html', 'Alle voorwaarden'], ['voorwaarden-vergelijker.html', 'Voorwaarden vergelijken'], ['situatiecheck.html', 'Situatiecheck'], ['acceptatiewijzer.html', 'Acceptatiewijzer'], ['productvoorwaarden.html', 'Productvoorwaarden'], ['hypotheekrentetarieven.html', 'Hypotheekrentetarieven'], ['partijen.html', 'Aanbiederwegwijzer']]],
-  ['Hulpmiddelen', [['index.html#hulpmiddelen', 'Alle hulpmiddelen'], ['rekentools.html', 'Rekentools'], ['leennormen-2026.html', 'Leennormen 2026'], ['nhg-check.html', 'NHG-check'], ['documentenchecklist.html', 'Documentenchecklist'], ['wetgeving.html', 'Wet- en regelgeving']]],
+  ['Hulpmiddelen', [['index.html#hulpmiddelen', 'Alle hulpmiddelen'], ['rekentools.html', 'Rekentools'], ['leennormen-2026.html', 'Leennormen 2026'], ['nhg-check.html', 'NHG-check'], ['documentenchecklist.html', 'Documentenchecklist'], ['documenteisen.html', 'Documenteisen'], ['wetgeving.html', 'Wet- en regelgeving']]],
   ['Kennis', [['kennisbank/', 'Kennisbank'], ['faq/', 'Veelgestelde vragen'], ['begrippen/', 'Begrippen A-Z'], ['index.html', 'Forum'], ['laatste.html', 'Laatste nieuws'], ['nieuw.html', 'Wat is nieuw']]],
   ['Meedoen', [['aanmelden.html', 'Aanmelden'], ['kennispartner.html', 'Kennispartner worden'], ['uitnodigen.html', 'Collega uitnodigen'], ['koppelingen.html', 'Koppelen met je adviessoftware'], ['aanbieders-info.html', 'Voor aanbieders'], ['aanbieder-beheer.html', 'Inloggen aanbieders'], ['gebruiksvoorwaarden.html', 'Gebruiksvoorwaarden'], ['privacy.html', 'Privacy en cookies']]],
 ];
