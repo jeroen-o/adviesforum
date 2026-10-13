@@ -81,10 +81,16 @@ function rich(t, kop = 'h2') {
 }
 /* Platte tekst: koppen en opsommingstekens weg, witruimte samengevoegd */
 const plat = t => String(t || '').split('\n').map(l => l.replace(/^## /, '').replace(/^- /, '').replace(/^\d+\. /, '')).join(' ').replace(/\s+/g, ' ').trim();
+/* Indexeerbare pagina's: volledige fragmenten en grote afbeeldingen toegestaan in zoekresultaten en AI-samenvattingen */
+const ROBOTS_INDEX = 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1';
 function kort(t, max = 155) {
   const s = plat(t); if (s.length <= max) return s;
-  const knip = s.slice(0, max); const sp = knip.lastIndexOf(' ');
-  return (sp > 80 ? knip.slice(0, sp) : knip).replace(/[\s,;:.–-]+$/, '') + '…';
+  const knip = s.slice(0, max);
+  /* liefst een hele zin; anders op een woordgrens, zonder weglatingsteken (Google toont zelf een passend fragment) */
+  const punt = Math.max(knip.lastIndexOf('. '), knip.lastIndexOf('? '), knip.lastIndexOf('! '));
+  if (punt >= 70) return knip.slice(0, punt + 1);
+  const sp = knip.lastIndexOf(' ');
+  return (sp > 80 ? knip.slice(0, sp) : knip).replace(/[\s,;:.–-]+$/, '') + '.';
 }
 /* Link uit de data: relatief = pagina in deze repository (vanuit een submap ../ ervoor) */
 const linkUrl = (u, pre) => /^(https?:|mailto:)/i.test(u) ? u : pre + u;
@@ -170,7 +176,7 @@ function pagina({ pre, pad, titel, ogTitel, beschrijving, type = 'website', h1, 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(titel)}</title>
 <meta name="description" content="${esc(beschrijving)}">
-${robots ? `<meta name="robots" content="${esc(robots)}">` : ''}
+<meta name="robots" content="${esc(robots || ROBOTS_INDEX)}">
 <link rel="canonical" href="${esc(url)}">
 <meta property="og:title" content="${esc(ogTitel || titel)}">
 <meta property="og:description" content="${esc(beschrijving)}">
@@ -215,7 +221,7 @@ ${voetHtml(pre)}
 `;
 }
 
-const ORG = { '@type': 'Organization', name: SITE, url: BASE, logo: { '@type': 'ImageObject', url: BASE + 'favicon.svg' } };
+const ORG = { '@type': 'Organization', name: SITE, url: BASE, logo: { '@type': 'ImageObject', url: BASE + 'img/icoon-512.png', width: 512, height: 512 } };
 const uit = {}; // relatief pad -> inhoud
 
 /* ---------- Kennisbank ---------- */

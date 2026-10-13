@@ -3,21 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Forum – Adviesforum</title>
+<title>Kennisplatform voor financieel adviseurs – Adviesforum</title>
 <link rel="canonical" href="https://adviesforum.nl/">
 <meta property="og:url" content="https://adviesforum.nl/">
 <meta property="og:site_name" content="Adviesforum">
 <meta property="og:locale" content="nl_NL">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Forum – Adviesforum">
-<meta property="og:description" content="Adviesforum: platform voor en door financieel adviseurs. Stel vragen aan collega’s, zoek in de kennisbank, FAQ en begrippenlijst, en gebruik rekentools…">
+<meta property="og:title" content="Kennisplatform voor financieel adviseurs – Adviesforum">
+<meta property="og:description" content="Adviesforum: platform voor en door financieel adviseurs. Stel vragen aan collega’s, zoek in de kennisbank, FAQ en begrippenlijst en gebruik rekentools.">
 <meta name="theme-color" content="#F68712">
 <link rel="manifest" href="manifest.webmanifest">
-<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://adviesforum.nl/#website", "name": "Adviesforum", "url": "https://adviesforum.nl/", "inLanguage": "nl-NL", "description": "Platform voor en door financieel adviseurs: collegiale vragen en antwoorden, kennisbank, FAQ, begrippenlijst, rekentools en dossierhulpmiddelen voor hypotheek, verzekeringen, pensioen en krediet.", "publisher": {"@id": "https://adviesforum.nl/#org"}, "potentialAction": {"@type": "SearchAction", "target": {"@type": "EntryPoint", "urlTemplate": "https://adviesforum.nl/index.html?zoek={zoekterm}"}, "query-input": "required name=zoekterm"}}, {"@type": "Organization", "@id": "https://adviesforum.nl/#org", "name": "Adviesforum", "url": "https://adviesforum.nl/", "logo": "https://adviesforum.nl/favicon.svg", "email": "jeroen@oversteegen.nl"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://adviesforum.nl/#website", "name": "Adviesforum", "url": "https://adviesforum.nl/", "inLanguage": "nl-NL", "description": "Platform voor en door financieel adviseurs: collegiale vragen en antwoorden, kennisbank, FAQ, begrippenlijst, rekentools en dossierhulpmiddelen voor hypotheek, verzekeringen, pensioen en krediet.", "publisher": {"@id": "https://adviesforum.nl/#org"}, "potentialAction": {"@type": "SearchAction", "target": {"@type": "EntryPoint", "urlTemplate": "https://adviesforum.nl/index.html?zoek={zoekterm}"}, "query-input": "required name=zoekterm"}}, {"@type": "Organization", "@id": "https://adviesforum.nl/#org", "name": "Adviesforum", "url": "https://adviesforum.nl/", "logo": {"@type": "ImageObject", "url": "https://adviesforum.nl/img/icoon-512.png", "width": 512, "height": 512}, "email": "jeroen@oversteegen.nl"}]}</script>
 <link rel="alternate" type="text/plain" title="llms.txt" href="llms.txt">
 <link rel="alternate" type="application/rss+xml" title="Adviesforum – nieuw en bijgewerkt" href="feed.xml">
 <link rel="alternate" type="application/rss+xml" title="Adviesforum – nieuws van aanbieders" href="aanbieders-feed.xml">
-<meta name="description" content="Adviesforum: platform voor en door financieel adviseurs. Stel vragen aan collega’s, zoek in de kennisbank, FAQ en begrippenlijst, en gebruik rekentools…">
+<meta name="description" content="Adviesforum: platform voor en door financieel adviseurs. Stel vragen aan collega’s, zoek in de kennisbank, FAQ en begrippenlijst en gebruik rekentools.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <style>
 
@@ -489,6 +489,7 @@ footer a{display:inline-block;padding:4px 0}
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Adviesforum: voor adviseurs die elkaar vooruithelpen">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <!-- /sitenav-ld -->
 <link rel="stylesheet" href="css/huisstijl.css">
 </head>
@@ -1279,7 +1280,7 @@ function zetTitel(){const T={forum:'Forum',nieuw:'Vraag stellen',kennisbank:'Ken
   else if(S.view==='artikel'){const a=ARTIKELEN.find(x=>x.id===S.artikel);if(a)t=a.titel;}
   else if(S.view==='adviseur'){const u=user(S.adviseur);if(u)t=u.naam;}
   else if(S.view==='forum'&&S.cat!=='alle'&&cat(S.cat))t=cat(S.cat).naam;
-  document.title=t+' – Adviesforum';}
+  document.title=(S.view==='forum'&&S.cat==='alle'&&!S.q)?'Kennisplatform voor financieel adviseurs – Adviesforum':t+' – Adviesforum';}
 function render(keepScroll){
   {const i=document.querySelector('.sitenav-zoek input'),z=$('#search');if(i&&z&&document.activeElement!==i&&i.value!==z.value)i.value=z.value;}
   if(S.me&&S.bron)S.bron=null; // na inloggen blijft de bron-markering niet hangen

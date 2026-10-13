@@ -75,6 +75,15 @@ npm run bijwerken -- --log   # wijzigingslogs en RSS (lezen de git-geschiedenis)
 ## Kennispartners
 Claims komen per e-mail binnen via `kennispartner.html`. Controleer het AFM-vergunningnummer van het kantoor en of de persoon er werkt, voeg de kennispartner toe aan `data/kennispartners.js` en draai `npm run bijwerken` (maakt de badges in `badges/`). Werven en berichtteksten: `docs/kennispartners-werven.md`.
 
+## Google Search Console en Bing
+De site staat op **https://adviesforum.nl/** (zonder www; zie `CNAME`). Voeg in Search Console daarom een **domeineigenschap** `adviesforum.nl` toe (verificatie met een DNS TXT-record), of een URL-voorvoegsel-eigenschap `https://adviesforum.nl/`. Een eigenschap voor `https://www.adviesforum.nl/` ziet alleen www-adressen en accepteert de sitemap met adressen zonder www niet.
+1. Verifieer de eigenschap. Alternatief voor DNS: een HTML-tag. Plak die dan in de `<head>` van `index.html` (vóór `</head>`) en publiceer.
+2. Dien onder Sitemaps `sitemap.xml` in (`https://adviesforum.nl/sitemap.xml`).
+3. Vraag via URL-inspectie indexering aan voor de homepage, `kennisbank/`, `faq/` en `voorwaarden.html`.
+4. Controleer na een paar dagen Pagina's (indexering) en Verbeteringen (kruimelpad, veelgestelde vragen).
+5. Bing: importeer de eigenschap vanuit Search Console in Bing Webmaster Tools; dat dekt ook Copilot en andere AI-zoekdiensten die Bing gebruiken.
+De sitemap wordt gemaakt door `npm run bijwerken` (`tools/build-static.js`) en bevat alleen indexeerbare pagina's. De voorbeeldvragen onder `vraag/` hebben `noindex` en staan er bewust niet in.
+
 ## Bezoekersstatistiek (staat uit)
 `js/statistiek.js` laadt GoatCounter (zonder cookies) zodra daar een `CODE` is ingevuld. Maak eerst een account op goatcounter.com, vul de code in en pas in `privacy.html` het kopje Bezoekersstatistiek aan naar "staat aan".
 
