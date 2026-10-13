@@ -86,11 +86,16 @@ const ROBOTS_INDEX = 'index, follow, max-snippet:-1, max-image-preview:large, ma
 function kort(t, max = 155) {
   const s = plat(t); if (s.length <= max) return s;
   const knip = s.slice(0, max);
-  /* liefst een hele zin; anders op een woordgrens, zonder weglatingsteken (Google toont zelf een passend fragment) */
-  const punt = Math.max(knip.lastIndexOf('. '), knip.lastIndexOf('? '), knip.lastIndexOf('! '));
-  if (punt >= 70) return knip.slice(0, punt + 1);
+  /* liefst een hele zin (niet na een voorletter of afkorting); anders op een woordgrens, zonder weglatingsteken */
+  const AFK = /^(o|m|d|e|bijv|enz|zgn|vgl|nr|blz|art|max|min|ca|dhr|mw|mr|drs|ir|prof|incl|excl|resp|evt|ong)$/i;
+  let punt = -1;
+  for (const m of knip.matchAll(/[.?!](?=\s+[A-Z0-9"“(])/g)) {
+    const woord = (knip.slice(0, m.index).match(/([A-Za-zÀ-ÿ]+)$/) || [])[1] || '';
+    if (m.index >= 70 && woord.length >= 3 && !AFK.test(woord)) punt = m.index;
+  }
+  if (punt >= 0) return knip.slice(0, punt + 1);
   const sp = knip.lastIndexOf(' ');
-  return (sp > 80 ? knip.slice(0, sp) : knip).replace(/[\s,;:.–-]+$/, '') + '.';
+  return (sp > 80 ? knip.slice(0, sp) : knip).replace(/[\s,;:.–-]+$/, '');
 }
 /* Link uit de data: relatief = pagina in deze repository (vanuit een submap ../ ervoor) */
 const linkUrl = (u, pre) => /^(https?:|mailto:)/i.test(u) ? u : pre + u;
@@ -259,7 +264,7 @@ for (const a of ARTIKELEN) {
     pre: '../', pad: 'kennisbank/' + a.id + '.html', titel: a.titel + ' – ' + SITE, beschrijving: beschr, type: 'article', h1: a.titel, actief: 'kb',
     kruimel: [KR_FORUM, KR_KB, [catNaam(a.cat), './#' + a.cat, BASE + 'kennisbank/#' + a.cat], [a.titel, '', BASE + 'kennisbank/' + a.id + '.html']],
     meta, inhoud,
-    jsonld: [{ '@context': 'https://schema.org', '@type': 'Article', headline: a.titel, description: beschr, datePublished: a.datum, dateModified: gewijzigd,
+    jsonld: [{ '@context': 'https://schema.org', '@type': 'Article', headline: a.titel, description: beschr, image: BASE + 'img/og-adviesforum.png', datePublished: a.datum, dateModified: gewijzigd,
       author: { '@type': 'Organization', name: SITE, url: BASE }, publisher: ORG, inLanguage: 'nl-NL', articleSection: catNaam(a.cat),
       mainEntityOfPage: { '@type': 'WebPage', '@id': BASE + 'kennisbank/' + a.id + '.html' }, isAccessibleForFree: true,
       ...(a.kw ? { keywords: a.kw } : {}) }]
@@ -449,6 +454,7 @@ const PAGINAS_LLMS = [
     ['sjablonen.html', 'Sjablonen', 'mails en brieven voor de advies- en nazorgpraktijk'],
   ]],
   ['Forum', [
+    ['over-adviesforum.html', 'Over Adviesforum', 'voor wie het platform is, welke vragen er thuishoren en hoe vragen, artikelen en voorwaarden worden gecontroleerd'],
     ['aanmelden.html', 'Aanmelden', 'aanmelden als adviseur om vragen te stellen en te beantwoorden'],
     ['privacy.html', 'Privacy', 'privacyverklaring van het forum'],
   ]],
