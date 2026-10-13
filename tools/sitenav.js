@@ -22,7 +22,7 @@ const LINKS = [
   ['aanbieders.html', 'Aanbieders'],
   ['laatste.html', 'Laatste nieuws'],
   ['index.html#handleiding', 'Handleiding'],
-  ['index.html#voorwie', 'Voor wie'],
+  ['over-adviesforum.html', 'Voor wie'],
   ['aanmelden.html', 'Aanmelden'],
 ];
 /* Pagina's die bij een menu-item horen (voor aria-current en het kruimelpad in de gestructureerde data).
@@ -31,7 +31,7 @@ const VOORWAARDEN = ['voorwaarden.html', 'voorwaarden-vergelijker.html', 'produc
   'partijen.html', 'vergelijken.html', 'documenteisen.html', 'beheer-voorwaarden.html', 'verantwoording-voorwaarden.html'];
 const AANBIEDERS = ['aanbieders.html', 'aanbieders-info.html', 'aanbieders-voorwaarden.html', 'aanbieder-aanleveren.html', 'aanbieder-beheer.html', 'contact-aanbieders.html'];
 const HOORT_BIJ = Object.assign(
-  { 'index.html': 'Home', 'laatste.html': 'Laatste nieuws', 'nieuw.html': 'Laatste nieuws', 'aanmelden.html': 'Aanmelden', 'uitnodigen.html': 'Aanmelden', 'kennispartner.html': 'Kennisbank', 'gebruiksvoorwaarden.html': 'Aanmelden', 'woningtools.html': 'Kennisbank', 'hypotheekrentetarieven.html': 'Hypotheekrentetarieven', kennisbank: 'Kennisbank' },
+  { 'index.html': 'Home', 'laatste.html': 'Laatste nieuws', 'over-adviesforum.html': 'Voor wie', 'nieuw.html': 'Laatste nieuws', 'aanmelden.html': 'Aanmelden', 'uitnodigen.html': 'Aanmelden', 'kennispartner.html': 'Kennisbank', 'gebruiksvoorwaarden.html': 'Aanmelden', 'woningtools.html': 'Kennisbank', 'hypotheekrentetarieven.html': 'Hypotheekrentetarieven', kennisbank: 'Kennisbank' },
   Object.fromEntries(VOORWAARDEN.map(f => [f, 'Voorwaarden'])), Object.fromEntries(AANBIEDERS.map(f => [f, 'Aanbieders'])));
 /* Pagina's buiten het menu (geen aria-current, geen kruimelpad). */
 const GEEN = ['404.html', 'moderatie.html', 'privacy.html', 'beheer-code.html', 'koppelingen.html', 'compliance-overzicht.html', 'hypotheekbond-tools.html'];
@@ -59,7 +59,7 @@ const VOET_KOLOMMEN = [
   ['Voorwaarden', [['voorwaarden.html', 'Alle voorwaarden'], ['voorwaarden-vergelijker.html', 'Voorwaarden vergelijken'], ['situatiecheck.html', 'Situatiecheck'], ['acceptatiewijzer.html', 'Acceptatiewijzer'], ['productvoorwaarden.html', 'Productvoorwaarden'], ['documenteisen.html', 'Documenteisen'], ['hypotheekrentetarieven.html', 'Hypotheekrentetarieven'], ['partijen.html', 'Aanbiederwegwijzer']]],
   ['Hulpmiddelen', [['index.html#hulpmiddelen', 'Alle hulpmiddelen'], ['rekentools.html', 'Rekentools'], ['leennormen-2026.html', 'Leennormen 2026'], ['nhg-check.html', 'NHG-check'], ['documentenchecklist.html', 'Documentenchecklist'], ['contact-aanbieders.html', 'Contact aanbieders'], ['wetgeving.html', 'Wet- en regelgeving']]],
   ['Kennis', [['kennisbank/', 'Kennisbank'], ['faq/', 'Veelgestelde vragen'], ['begrippen/', 'Begrippen A-Z'], ['index.html', 'Forum'], ['laatste.html', 'Laatste nieuws'], ['nieuw.html', 'Wat is nieuw']]],
-  ['Meedoen', [['aanmelden.html', 'Aanmelden'], ['kennispartner.html', 'Kennispartner worden'], ['uitnodigen.html', 'Collega uitnodigen'], ['koppelingen.html', 'Koppelen met je adviessoftware'], ['aanbieders-info.html', 'Voor aanbieders'], ['aanbieder-beheer.html', 'Inloggen aanbieders'], ['gebruiksvoorwaarden.html', 'Gebruiksvoorwaarden'], ['privacy.html', 'Privacy en cookies']]],
+  ['Meedoen', [['over-adviesforum.html', 'Over Adviesforum'], ['aanmelden.html', 'Aanmelden'], ['kennispartner.html', 'Kennispartner worden'], ['uitnodigen.html', 'Collega uitnodigen'], ['koppelingen.html', 'Koppelen met je adviessoftware'], ['aanbieders-info.html', 'Voor aanbieders'], ['aanbieder-beheer.html', 'Inloggen aanbieders'], ['gebruiksvoorwaarden.html', 'Gebruiksvoorwaarden'], ['privacy.html', 'Privacy en cookies']]],
 ];
 function voetHtml(pre = '') {
   const kol = VOET_KOLOMMEN.map(([kop, links], i) => `<nav class="sitevoet-kol" aria-labelledby="sv-k${i}"><h2 id="sv-k${i}">${kop}</h2><ul>${links.map(([u, t]) => `<li><a href="${pre}${u}">${t}</a></li>`).join('')}</ul></nav>`).join('');
@@ -77,7 +77,7 @@ ${VOET_EIND}`;
 const LD_BEGIN = '<!-- sitenav-ld: gegenereerd door tools/sitenav.js -->';
 const LD_EIND = '<!-- /sitenav-ld -->';
 const BASE = 'https://adviesforum.nl/';
-const SECTIE_URL = { Voorwaarden: 'voorwaarden.html', 'Laatste nieuws': 'laatste.html', Aanmelden: 'aanmelden.html' };
+const SECTIE_URL = { 'Voor wie': 'over-adviesforum.html', Voorwaarden: 'voorwaarden.html', 'Laatste nieuws': 'laatste.html', Aanmelden: 'aanmelden.html' };
 const ontsnap = t => String(t).replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&middot;/g, '·').replace(/&ndash;/g, '–');
 /* Gestructureerde data (schema.org WebPage + kruimelpad) voor zoekmachines en AI-zoekdiensten; niet op noindex-pagina's en de homepage (die heeft een eigen @graph). */
 const OG_BEELD = BASE + 'img/og-adviesforum.png';

@@ -44,3 +44,14 @@ test('seo: homepage met sprekende titel en organisatie met raster-logo; robots.t
   expect(robots).not.toMatch(/^Disallow:\s*\/\s*$/m);
   expect(fs.existsSync(path.join(ROOT, 'llms.txt'))).toBe(true);
 });
+
+test('seo: pagina Over Adviesforum (voor wie, werkwijze) staat in het menu, de sitemap en heeft FAQPage-data', async ({ page }) => {
+  const sm = fs.readFileSync(path.join(ROOT, 'sitemap.xml'), 'utf8');
+  expect(sm).toContain('<loc>https://adviesforum.nl/over-adviesforum.html</loc>');
+  await page.goto('/over-adviesforum.html');
+  await expect(page.locator('h1')).toContainText('kennisplatform voor en door financieel adviseurs');
+  await expect(page.locator('nav.sitenav a[aria-current="page"]')).toHaveText('Voor wie');
+  await expect(page.locator('nav.sitenav a[href="over-adviesforum.html"]')).toHaveText('Voor wie');
+  const types = await page.evaluate(() => Array.from(document.querySelectorAll('script[type="application/ld+json"]')).flatMap(s => { const j = JSON.parse(s.textContent); return (j['@graph'] || [j]).map(x => x['@type']); }));
+  expect(types).toEqual(expect.arrayContaining(['FAQPage', 'WebPage', 'BreadcrumbList']));
+});
