@@ -9,4 +9,19 @@ Allow: /
 Disallow: /beheer-code.html
 Disallow: /moderatie.html
 
+# AI-zoekdiensten en -assistenten mogen de openbare inhoud lezen en citeren (zie ook llms.txt).
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: CCBot
+Allow: /
+Disallow: /beheer-code.html
+Disallow: /moderatie.html
+
 Sitemap: https://adviesforum.nl/sitemap.xml

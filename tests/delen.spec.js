@@ -18,7 +18,7 @@ test('deelpagina van een bekende vraag heeft de juiste og:title, og:description,
   expect(meta(html, 'og:title')).toBe('Acceptatie overbruggingskrediet bij herstelde A-codering BKR');
   const d = meta(html, 'og:description');
   expect(d.startsWith('Een doorstromer heeft een herstelde A-codering')).toBe(true);
-  expect(d).toMatch(/… · Voorbeeldvraag met 1 voorbeeldantwoord$/);
+  expect(d).toMatch(/ · Voorbeeldvraag met 1 voorbeeldantwoord$/);
   expect(d.length).toBeLessThan(260);
   expect(meta(html, 'og:url')).toBe(BASE + 'vraag/v13.html');
   expect(html).toContain('<link rel="canonical" href="' + BASE + 'vraag/v13.html">');

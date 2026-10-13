@@ -83,8 +83,10 @@ const ontsnap = t => String(t).replace(/&amp;/g, '&').replace(/&quot;/g, '"').re
 const OG_BEELD = BASE + 'img/og-adviesforum.png';
 const ogHtml = kop => /property="og:image"/.test(kop.replace(/<!-- sitenav-ld[\s\S]*?<!-- \/sitenav-ld -->/, '')) || !/property="og:title"/.test(kop) ? ''
   : `<meta property="og:image" content="${OG_BEELD}">\n<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="630">\n<meta property="og:image:alt" content="Adviesforum: voor adviseurs die elkaar vooruithelpen">\n<meta name="twitter:card" content="summary_large_image">\n`;
+const ROBOTS_INDEX = '<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">\n';
 function ldHtml(bestand, kop) {
-  const og = ogHtml(kop);
+  const zonderRobots = !/<meta name="robots"/.test(kop.replace(/<!-- sitenav-ld[\s\S]*?<!-- \/sitenav-ld -->/, ''));
+  const og = ogHtml(kop) + (zonderRobots && !GEEN.includes(bestand) ? ROBOTS_INDEX : '');
   const blok = x => og + x ? `${LD_BEGIN}\n${og}${x}${LD_EIND}\n` : '';
   if (bestand === 'index.html' || GEEN.includes(bestand) || /<meta name="robots" content="[^"]*noindex/.test(kop)) return blok('');
   const titel = (/<title>([\s\S]*?)<\/title>/.exec(kop) || [])[1];
