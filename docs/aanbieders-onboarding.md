@@ -28,7 +28,7 @@ node tools/aanbieder-import.js aanbieder-<id>.json --nieuw
 
 Doe dat pas na de controles hieronder (deze paragraaf en paragraaf 2), en zet daarna de `codeHash` (stap 3). Controleer het voorgestelde `id` (afgeleid van de bedrijfsnaam) en pas het zo nodig aan in het JSON-bestand. Het logo plaatst de site nog niet: het datamodel kent alleen initialen en huiskleur.
 
-Daarnaast kan een korte aanvraag per mail binnenkomen op jeroen@oversteegen.nl, met onderwerp **Accountaanvraag aanbieder Adviesforum**. Controleer bij beide routes of je beschikt over:
+Daarnaast kan een korte aanvraag per mail binnenkomen op jeroen.oversteegen@blinqx.tech, met onderwerp **Accountaanvraag aanbieder Adviesforum**. Controleer bij beide routes of je beschikt over:
 
 - [ ] bedrijfsnaam, type aanbieder en KvK-nummer;
 - [ ] AFM-vergunningnummer, of een uitleg waarom geen vergunning nodig is;
@@ -197,7 +197,7 @@ Bronnen bij de toetsing: [Telecommunicatiewet art. 11.7a](https://wetten.overhei
 >
 > [naam]
 > Beheer Adviesforum
-> jeroen@oversteegen.nl
+> jeroen.oversteegen@blinqx.tech
 
 ## Sjabloon B: bevestigingsmail na goedkeuring (zonder code)
 
@@ -230,7 +230,7 @@ Bronnen bij de toetsing: [Telecommunicatiewet art. 11.7a](https://wetten.overhei
 >
 > [naam]
 > Beheer Adviesforum
-> jeroen@oversteegen.nl
+> jeroen.oversteegen@blinqx.tech
 
 ## Sjabloon C: bericht met de code (apart kanaal)
 

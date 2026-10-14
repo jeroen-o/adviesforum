@@ -61,7 +61,7 @@ Het Adviesforum wil voor iedere adviseur goed bruikbaar zijn, ook met een toetse
 
 ### Contact
 
-Loop je tegen een probleem aan, of kun je iets niet gebruiken? Mail naar jeroen@oversteegen.nl. Vermeld de pagina en wat er misging.
+Loop je tegen een probleem aan, of kun je iets niet gebruiken? Mail naar jeroen.oversteegen@blinqx.tech. Vermeld de pagina en wat er misging.
 
 ## Nog te doen in index.html
 

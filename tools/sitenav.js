@@ -52,7 +52,7 @@ function navHtml(pre = '', bestand = '', doel = 'inhoud') {
 
 const VOET_BEGIN = '<!-- sitevoet: gegenereerd door tools/sitenav.js, niet met de hand wijzigen -->';
 const VOET_EIND = '<!-- /sitevoet -->';
-const BEHEER_MAIL = 'jeroen@oversteegen.nl';
+const BEHEER_MAIL = 'jeroen.oversteegen@blinqx.tech';
 const JAAR = 2026;
 /* Dezelfde voettekst op elke pagina: korte uitleg, contact en de belangrijkste ingangen per onderdeel. */
 const VOET_KOLOMMEN = [
