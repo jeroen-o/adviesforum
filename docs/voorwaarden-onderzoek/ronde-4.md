@@ -28,3 +28,18 @@ Doel: status, nieuws en aangekondigde wijzigingen van alle 43 geldverstrekkers n
 | Argenta | Hypotheekgids augustus 2026: omslag '2 jaar' tegenover 36 maanden in de tekst (nieuwbouw overbrugging) |
 | bijBouwe | Wijzigingstabellen september 2026 niet te lezen; 39 waarden nog niet geverifieerd |
 | Handmatig dichten | Geen eigen domein-bron voor 188 waarden (vooral bijBouwe, Nationale-Nederlanden, ING, Aegon, BLG Wonen, a.s.r.) |
+
+## Ronde 5 (16 oktober 2026): bron op eigen domein zoeken voor de 188 niet-geverifieerde waarden
+Methode als ronde 4 (webzoekopdrachten op het eigen domein; alleen samenvattingen). Resultaat (`uit-ZZZ-ronde5.json`, 9 waarden nu met eigen bron; nog 179 niet geverifieerd):
+
+| Geldverstrekker | Bevestigd (nu geverifieerd) | Gedeeltelijk | Niet gevonden |
+|---|---|---|---|
+| bijBouwe | `zstart` (hoog), `nlwon` (middel) | 9 | 28 |
+| IQWOON | `huur`, `bonus`, `start`, `buitw` | 5 | 0 |
+| ING | `obduur` | 4 | 14 |
+| Rabobank | `plen`, `lease` (bron 2023, middel) | 4 | 0 |
+| ASN Bank, Nationale-Nederlanden, Aegon, BLG Wonen, a.s.r., Venn | geen | 3 tot 8 per geldverstrekker | de rest |
+
+- De acceptatiecriteria staan waarschijnlijk in adviseursportalen of in pdf's die niet via zoeken vindbaar zijn (bijBouwe: Acceptatiehandleiding september 2026 op `bijbouwe.nl/belangrijke-documenten`; ASN: `asnbank.nl/downloads/asn-uitgangspunten-berekening-maximale-hypotheek.html`; IQWOON: gids juni 2026 op `iqwoon.nl/adviseur`; Aegon en a.s.r.: portaal). Lees die handmatig en verwerk de waarden met een eigen bron.
+- **Tegenspraak, niet verwerkt:** Rabobank `vve`: opgeslagen 'actieve VvE niet vereist'; de acceptatieregels van 2 januari 2023 (`media.rabobank.com`) eisen een actieve VvE bij bestaande bouw (uitzondering complex tot 5 appartementen). De bron is ouder dan de opgeslagen waarde; controleer de huidige Rabobank-regels.
+- Gedeeltelijke bevestigingen (bijvoorbeeld bijBouwe `vve`, `bonus`, `ort`, `minh`; ASN `ltvk`, `wwp`; IQWOON `pgb`, `obvw` met tegenstrijdige gidsen; Venn `duo`, mogelijk verouderd) zijn bewust niet als geverifieerd verwerkt.
