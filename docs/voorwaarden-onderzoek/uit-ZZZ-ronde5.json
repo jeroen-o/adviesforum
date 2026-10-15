@@ -1,0 +1,119 @@
+[
+ {
+  "naam": "bijBouwe",
+  "gecontroleerd": "2026-10-09",
+  "criteria": {
+   "nlwon": {
+    "waarde": "~ Aanvrager moet min. 6 mnd in Nederland wonen (blijkend uit documenten of BRP)",
+    "bron": [
+     "https://bijbouwe.nl/documentenchecker"
+    ],
+    "brondatum": null,
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Ronde 5 (16 oktober 2026): bron op eigen domein gevonden. Documentenchecker vraagt bewijs van minimaal 6 maanden woonachtig in Nederland. BRP als bewijsvorm niet expliciet gezien."
+   },
+   "zstart": {
+    "waarde": "- Onderneming min. 36 maanden actief na KvK-inschrijving; toetreding tot bestaand bedrijf (36 mnd) na min. 12 maanden",
+    "bron": [
+     "https://www.bijbouwe.nl/inkomensverklaring"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Ronde 5 (16 oktober 2026): bron op eigen domein gevonden. Ondernemer moet meer dan 36 maanden actief zijn, of 12 maanden bij toetreding tot een bedrijf dat 36 maanden actief is."
+   }
+  }
+ },
+ {
+  "naam": "IQWOON",
+  "gecontroleerd": "2026-10-09",
+  "criteria": {
+   "huur": {
+    "waarde": "- Huurinkomsten tellen niet mee in de toets",
+    "bron": [
+     "https://www.iqwoon.nl/uploads/iqwoon/files/Acceptatiegids-IQWOON-Januari.pdf",
+     "https://www.iqwoon.nl/uploads/iqwoon/files/Clarian-Wonen-Acceptatiegids-Januari-2026.pdf"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Ronde 5 (16 oktober 2026): bron op eigen domein gevonden. Beide gidsen: huurinkomsten 'Niet mogelijk' als inkomen. Let op: de 2026-gids draagt de titel Clarian Wonen."
+   },
+   "bonus": {
+    "waarde": "~ Eindejaarsuitkering/bonus alleen als aantoonbaar vast en niet afhankelijk van bedrijfsresultaat; structureel overwerk/provisie/ORT o.b.v. laatste 12 mnd",
+    "bron": [
+     "https://www.iqwoon.nl/uploads/iqwoon/files/Acceptatiegids-IQWOON-Januari.pdf",
+     "https://www.iqwoon.nl/uploads/iqwoon/files/Clarian-Wonen-Acceptatiegids-Januari-2026.pdf"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Ronde 5 (16 oktober 2026): bron op eigen domein gevonden. Eindejaarsuitkering/bonus alleen als aantoonbaar vast en niet afhankelijk van bedrijfsresultaat; overwerk, provisie en ORT mits structureel op basis van laatste 12 maanden."
+   },
+   "start": {
+    "waarde": "! Verhoging niet mogelijk zolang SVn Starterslening of Combinatielening niet volledig is afgelost",
+    "bron": [
+     "https://www.iqwoon.nl/uploads/iqwoon/files/IQWOON-Beheergids-Januari-2026.pdf"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Ronde 5 (16 oktober 2026): bron op eigen domein gevonden. Beheergids jan 2026: onderhandse verhoging niet mogelijk zolang SVn Starterslening en Combinatielening niet volledig zijn afgelost."
+   },
+   "buitw": {
+    "waarde": "- Geen inkomen in buitenlandse valuta toegestaan; alleen Nederlandse ingezetenen",
+    "bron": [
+     "https://www.iqwoon.nl/uploads/iqwoon/files/Acceptatiegids-IQWOON-Januari.pdf",
+     "https://www.iqwoon.nl/uploads/iqwoon/files/Clarian-Wonen-Acceptatiegids-Januari-2026.pdf"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Ronde 5 (16 oktober 2026): bron op eigen domein gevonden. Hypotheek alleen mogelijk zonder inkomen in buitenlandse valuta; alleen Nederlandse ingezetenen toegestaan."
+   }
+  }
+ },
+ {
+  "naam": "ING",
+  "gecontroleerd": "2026-10-09",
+  "criteria": {
+   "obduur": {
+    "waarde": "! Looptijd overbrugging niet expliciet gevonden; rekenvoorbeeld ING gaat uit van 2 jaar, aflossen in één keer",
+    "bron": [
+     "https://www.ing.nl/particulier/hypotheek/hypotheekvormen/overbruggingshypotheek"
+    ],
+    "brondatum": null,
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Ronde 5 (16 oktober 2026): bron op eigen domein gevonden. ING-pagina Overbruggingshypotheek rekent met looptijd van 2 jaar, hoofdsom in één keer aan het eind afgelost (fictief rekenvoorbeeld); expliciete maximale looptijd staat er niet."
+   }
+  }
+ },
+ {
+  "naam": "Rabobank",
+  "gecontroleerd": "2026-10-09",
+  "criteria": {
+   "plen": {
+    "waarde": "~ Werkelijke last: geregistreerd leenbedrag (AK) gedeeld door looptijd in maanden",
+    "bron": [
+     "https://media.rabobank.com/m/4e33ec563c784cda/original/Rabobank-als-Hypotheekverstrekker-acceptatie-en-beheerregels-vanaf-2-januari-2023.pdf"
+    ],
+    "brondatum": "2023-01-02",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Ronde 5 (16 oktober 2026): bron op eigen domein gevonden. Acceptatieregels (versie 4.1, jan. 2023): BKR-geregistreerd krediet niet-hypotheek telt als geregistreerd bedrag gedeeld door de in BKR vermelde looptijd."
+   },
+   "lease": {
+    "waarde": "~ OA-registratie: bedrag/looptijd; bij eerste aflossing voor 1 april 2022 eerst gedeeld door 65%",
+    "bron": [
+     "https://media.rabobank.com/m/4e33ec563c784cda/original/Rabobank-als-Hypotheekverstrekker-acceptatie-en-beheerregels-vanaf-2-januari-2023.pdf"
+    ],
+    "brondatum": "2023-01-02",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Ronde 5 (16 oktober 2026): bron op eigen domein gevonden. Operational lease: BKR-bedrag gedeeld door looptijd; bij eerste aflossing voor 1 april 2022 eerst gedeeld door 65%, daarna niet. Bron van jan. 2023."
+   }
+  }
+ }
+]

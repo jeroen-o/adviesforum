@@ -382,11 +382,12 @@ test.describe('voorwaardenvergelijker: uitgebreid zoeken en filteren', () => {
     await page.locator('#ufWis').click();
     await expect(rijen(page)).toHaveCount(HOOFD);
     await page.locator('#ufGeenNieuw').check();
-    await expect(rijen(page)).toHaveCount(HOOFD - 4);
-    for (const n of ['Neo Hypotheken', 'Woonnu', 'Tellius Hypotheken', 'IQWOON']) await expect(naamCel(page, n)).toHaveCount(0);
+    await expect(rijen(page)).toHaveCount(HOOFD - 8);
+    /* dezelfde acht als het label 'Geen nieuwe klanten' (data/geldverstrekkers-status.js) */
+    for (const n of ['Neo Hypotheken', 'Woonnu', 'Tellius Hypotheken', 'IQWOON', 'Aegon', 'BLG Wonen', 'SNS', 'RegioBank']) await expect(naamCel(page, n)).toHaveCount(0);
     await page.locator('#ufOverig').check();
     await expect(page.locator('#overigKnop')).toHaveAttribute('aria-expanded', 'true');
-    await expect(rijen(page)).toHaveCount(TOTAAL - 4);
+    await expect(rijen(page)).toHaveCount(TOTAAL - 8);
   });
 
   test('sorteren: naam, meeste ruim en minste beperkingen', async ({ page }) => {

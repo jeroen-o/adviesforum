@@ -1345,7 +1345,8 @@ let ksel = new Set();   // gekozen kenmerken (voorwaarde-id's) voor Vergelijken
 
 /* Uitgebreid zoeken en filteren. Staat alleen in het geheugen en in de hash (&f=…), nooit in browseropslag. */
 /* Geen nieuwe klanten meer (stand oktober 2026). */
-const GEEN_NIEUWE_KLANTEN = ['Neo Hypotheken','Woonnu','Tellius Hypotheken','IQWOON'];
+/* Geldverstrekkers zonder nieuwe klanten: alleen uit data/geldverstrekkers-status.js, zodat filter en label dezelfde bron hebben */
+const GEEN_NIEUWE_KLANTEN = Object.keys(window.GELDVERSTREKKERS_STATUS || {}).filter(n => window.GELDVERSTREKKERS_STATUS[n].geenNieuweKlanten);
 const TYPE_SOORTEN = [['bank','Bank'],['regie','Geldverstrekker / regiepartij'],['verz','Verzekeraar'],['label','Label']];
 const REGEL_OPS = {is:'is kleurcode', bevat:'bevat tekst', niet:'bevat niet'};
 const REGEL_KLEUREN = [['g','ruim'],['n','marktconform'],['a','aandachtspunt'],['r','beperkend'],['e','nog in te vullen']];
