@@ -240,7 +240,7 @@ function render(){
       r.appendChild(el('span','tk', r0.t || (r0.o==='onbekend' ? 'De gecontroleerde voorwaarden zeggen hier niets over.' : '')));
       if(r0.tw){ var tw = el('span','tw','Twijfelgeval: controleer in de voorwaarden'); tw.title = 'De indeling is niet eenduidig uit de tekst van de voorwaarde af te leiden.'; r.appendChild(tw); }
       if(r0.o !== 'onbekend'){
-        if(r0.g){ var b = el('span','bron','✓ gecontroleerd'); var v = veilig(r0.b); if(v){ b.appendChild(document.createTextNode(' · bron: ')); var l = el('a', null, host(v)); l.href = v; l.target = '_blank'; l.rel = 'noopener'; b.appendChild(l); } r.appendChild(b); }
+        if(r0.g){ var b = el('span','bron','✓ eigen bron'); var v = veilig(r0.b); if(v){ b.appendChild(document.createTextNode(' · bron: ')); var l = el('a', null, host(v)); l.href = v; l.target = '_blank'; l.rel = 'noopener'; b.appendChild(l); } r.appendChild(b); }
         else r.appendChild(el('span','nv','onderliggende voorwaarde nog niet geverifieerd'));
       }
       var m = el('a','meld','Klopt deze indeling niet?');

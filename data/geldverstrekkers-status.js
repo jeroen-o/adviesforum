@@ -4,7 +4,7 @@
  *   sinds              JJJJ-MM-DD of null
  *   tekst              korte neutrale uitleg (max. 120 tekens)
  *   bron               https-link naar de eigen site
- * Gecontroleerd op 9 oktober 2026 (eigen bronnen van de geldverstrekkers).
+ * Gecontroleerd op 9 oktober 2026 en opnieuw nagelopen op 15 oktober 2026 (eigen bronnen van de geldverstrekkers).
  */
 window.GELDVERSTREKKERS_STATUS = {
   "Woonnu": {"geenNieuweKlanten":true,"sinds":"2026-05-01","tekst":"NN Bank biedt sinds 1 mei 2026 geen nieuwe Woonnu-hypotheken meer aan; bestaande klanten houden hun hypotheek.","bron":"https://woonnu.nl/nieuws/nationale-nederlanden-bank-stopt-met-nieuwe-woonnu-hypotheken/"},

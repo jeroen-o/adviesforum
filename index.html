@@ -1157,7 +1157,7 @@ function zoekItem(g,o){
       const d=(a.documenten||[]).find(x=>past(x.titel)),rl=(a.richtlijnen||[]).find(x=>past(x.titel));
       return li(a.naam,'aanbieders.html#aanbieder-'+a.id,d?'Document: '+d.titel:rl?'Richtlijn: '+rl.titel:kort(a.omschrijving,150),chip(AANB_TYPE[a.type]||a.type)+demo);}
     case 'partijen':return li(o.naam,'partijen.html#partij-'+partijSlug(o),(o.producten||[]).join(', '),chip(PARTIJ_TYPE[o.type]||o.type));
-    case 'voorwaarden':return li(o[1]+' – '+o[4],vwHref(o),kort(o[5],170),chip(VW_PRODUCT[o[0]]||o[0])+(o[6]?chip('✓ gecontroleerd'):chip('nog niet geverifieerd')));
+    case 'voorwaarden':return li(o[1]+' – '+o[4],vwHref(o),kort(o[5],170),chip(VW_PRODUCT[o[0]]||o[0])+(o[6]?chip('✓ eigen bron'):chip('nog niet geverifieerd')));
   }
   return '';}
 function zoekBlok(g,naam,lijst){
@@ -1816,7 +1816,7 @@ function viewHandleiding(){
       <p>Alles over voorwaarden van aanbieders begint op <a href="voorwaarden.html">Voorwaarden</a>. Daar staan de onderdelen bij elkaar, met de laatste wijzigingen en de aanbieders die je volgt.</p>
       <ol class="steps">
         <li><b>Situatiecheck</b> (<a href="situatiecheck.html">situatiecheck.html</a>): vink de situatie van de klant aan, bijvoorbeeld zzp 1 jaar, particuliere erfpacht of roker. Per aanbieder zie je ja, onder voorwaarden, nee of onbekend, met onderbouwing en bron. Met <b>Neem mee naar de vergelijker</b> open je de passende aanbieders met precies die kenmerken.</li>
-        <li><b>Voorwaarden-vergelijker</b> (<a href="voorwaarden-vergelijker.html">hypotheken</a>) en <b>Productvoorwaarden</b> (<a href="productvoorwaarden.html">ORV, AOV, woonlasten, uitvaart, lijfrente, opstal en inboedel, bankgarantie en krediet</a>): zet aanbieders naast elkaar op één, enkele of alle kenmerken. Een &#10003; betekent gecontroleerd op de site of in de gids van de aanbieder; de bron staat erbij, met een link naar de kopie in het Internet Archive. &lsquo;Nog niet geverifieerd&rsquo; betekent gevonden bij derden. Een &#9203; betekent dat de bron ouder is dan 6 maanden.</li>
+        <li><b>Voorwaarden-vergelijker</b> (<a href="voorwaarden-vergelijker.html">hypotheken</a>) en <b>Productvoorwaarden</b> (<a href="productvoorwaarden.html">ORV, AOV, woonlasten, uitvaart, lijfrente, opstal en inboedel, bankgarantie en krediet</a>): zet aanbieders naast elkaar op één, enkele of alle kenmerken. Een &#10003; betekent teruggevonden op de site of in de gids van de aanbieder; de bron staat erbij, met een link naar de kopie in het Internet Archive. &lsquo;Nog niet geverifieerd&rsquo; betekent gevonden bij derden. Een &#9203; betekent dat de bron ouder is dan 6 maanden.</li>
         <li><b>Vastleggen voor dossier</b>: maak een uitdraai van je vergelijking met status, bron, datum, dossierkenmerk en ruimte voor je motivatie. De vergeleken aanbieders en de gekozen voorwaarden neem je met één klik over in de <a href="adviesmotivatie.html">adviesmotivatie</a>.</li>
         <li><b>Volgen</b>: volg geldverstrekkers en verzekeraars. Wat er bij hen verandert, staat bovenaan <a href="laatste.html#voorwaarden">Laatste nieuws</a> en in de RSS-feed <a href="voorwaarden-feed.xml">wijzigingen voorwaarden</a>.</li>
         <li><b>Klopt dit niet?</b> Bij elke waarde staat een link die je mailprogramma opent met een voorbereide correctie. Voeg de juiste waarde en een bron toe; de beheerder verwerkt het.</li>

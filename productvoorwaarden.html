@@ -129,7 +129,7 @@ td .bron{display:block;font-size:11.5px;color:var(--blauw);margin-top:3px}
       <a class="terug" href="index.html#hulpmiddelen">Alle hulpmiddelen</a>
     </div>
     <h1>Productvoorwaarden verzekeringen, lijfrente en krediet</h1>
-    <p>Acceptatie- en productvoorwaarden per aanbieder naast elkaar: overlijdensrisicoverzekering, AOV voor zelfstandigen, woonlastenverzekering, uitvaartverzekering, lijfrente, opstal- en inboedelverzekering, bankgarantie en consumptief krediet. Elke waarde met &#10003; is gecontroleerd op de site van de aanbieder; de bron staat erbij.</p>
+    <p>Acceptatie- en productvoorwaarden per aanbieder naast elkaar: overlijdensrisicoverzekering, AOV voor zelfstandigen, woonlastenverzekering, uitvaartverzekering, lijfrente, opstal- en inboedelverzekering, bankgarantie en consumptief krediet. Elke waarde met &#10003; is teruggevonden op de site van de aanbieder; de bron staat erbij.</p>
   </div>
 </header>
 
@@ -157,7 +157,7 @@ td .bron{display:block;font-size:11.5px;color:var(--blauw);margin-top:3px}
 
   <div class="tabelvak"><table id="tabel"></table></div>
   <div class="legenda">
-    <span><b style="color:var(--groen)">&#10003;</b> Gecontroleerd op de site van de aanbieder, bron eronder</span>
+    <span><b style="color:var(--groen)">&#10003;</b> Teruggevonden op de site van de aanbieder, bron eronder</span>
     <span><i>(nog niet geverifieerd)</i> Gevonden bij derden, controleer bij de aanbieder</span>
     <span>&#9203; Bron ouder dan 6 maanden</span>
     <span>Fout gezien? Klik bij de waarde op &lsquo;Klopt dit niet?&rsquo;</span>
@@ -313,7 +313,7 @@ function render(){
   $('lijfrenteMelding').hidden = pr.id !== 'lijfrente';
   renderWijz();
   var gv = 0, tot = 0; pr.aanbieders.forEach(function(a){ gv += a.gv; tot += a.gv + a.nv; });
-  $('intro').textContent = pr.aanbieders.length + ' aanbieders en ' + pr.criteria.length + ' kenmerken; ' + gv + ' van ' + tot + ' waarden gecontroleerd op de site van de aanbieder. Peildatum ' + datumNL(pr.gecontroleerd) + '. Aanbieders staan op alfabet.';
+  $('intro').textContent = pr.aanbieders.length + ' aanbieders en ' + pr.criteria.length + ' kenmerken; ' + gv + ' van ' + tot + ' waarden teruggevonden op de site van de aanbieder. Peildatum ' + datumNL(pr.gecontroleerd) + '. Aanbieders staan op alfabet.';
   var ac = $('aanbChips'); ac.textContent = '';
   pr.aanbieders.forEach(function(a){ ac.appendChild(chip(a.naam, st.aanb.has(a.naam), function(){ if(st.aanb.has(a.naam)) st.aanb.delete(a.naam); else st.aanb.add(a.naam); render(); })); });
   var cc = $('critChips'); cc.textContent = '';
@@ -345,7 +345,7 @@ function dossier(){
   if(!as.length || !cs.length){ $('melding').textContent = 'Kies eerst aanbieders en kenmerken.'; return; }
   var nu = new Date(), stempel = nu.toLocaleDateString('nl-NL',{day:'numeric',month:'long',year:'numeric'}) + ' om ' + nu.toLocaleTimeString('nl-NL',{hour:'2-digit',minute:'2-digit'});
   var rijen = cs.map(function(c){ return '<tr><th>' + esc(c.naam) + '</th>' + as.map(function(a){ var w = a.crit[c.id]; if(!w) return '<td class="nl">niet gevonden</td>';
-    return '<td>' + esc(w.w.replace(/^[+~!-]\s*/,'')) + '<span class="st ' + (w.g ? 'ok">✓ gecontroleerd op de site van de aanbieder' : 'nv">nog niet geverifieerd') + '</span>' + (verouderd(w.bd) ? '<span class="st nv">bron ouder dan 6 maanden</span>' : '') +
+    return '<td>' + esc(w.w.replace(/^[+~!-]\s*/,'')) + '<span class="st ' + (w.g ? 'ok">✓ teruggevonden op de site van de aanbieder' : 'nv">nog niet geverifieerd') + '</span>' + (verouderd(w.bd) ? '<span class="st nv">bron ouder dan 6 maanden</span>' : '') +
       (w.g && w.b ? '<span class="br">Bron: ' + w.b.map(function(u){ var v = veilig(u); return v ? esc(v) + (isArchief(v) ? '' : ' (archief: ' + esc(archief(v)) + ')') : ''; }).filter(Boolean).join('<br>') + (w.bd ? ' (' + esc(w.bd) + ')' : '') + '</span>' : '') + '</td>'; }).join('') + '</tr>'; }).join('');
   var css = 'body{font-family:Segoe UI,Roboto,Helvetica Neue,Arial,Arial,sans-serif;font-size:9.5pt;color:#26306E;background:#fff;margin:14mm 10mm}h1{font-size:15pt;margin:0 0 2px}h2{font-size:11pt;margin:14px 0 4px}.meta{font-size:8pt;color:#444;margin:0 0 8px}' +
     '.disc{border:1.5px solid #9E2F45;border-left:6px solid #9E2F45;background:#FFF1F0;color:#7A1F14;padding:7px 9px;font-size:7.8pt;margin:0 0 12px}' +
@@ -357,7 +357,7 @@ function dossier(){
     '<div class="knoppen"><button type="button" onclick="window.print()">Afdrukken of opslaan als pdf</button></div>' +
     '<h1>Dossiervastlegging: voorwaarden ' + esc(pr.titel) + '</h1>' +
     '<p class="meta">Vastgelegd op ' + esc(stempel) + ' · bron: Productvoorwaarden Adviesforum (peildatum ' + esc(datumNL(pr.gecontroleerd)) + ')<br>Selectie: ' + esc(location.href) + '</p>' +
-    '<p class="disc"><b>Compliance / AFM:</b> waarden met ✓ zijn gecontroleerd op de site van de aanbieder op de peildatum; overige waarden zijn indicatief. Geen premies, rentes of advies. Leg de voorwaarden vast zoals de aanbieder die op het moment van advies publiceert.' + (pr.id==='krediet' ? ' Let op! Geld lenen kost geld.' : '') + '</p>' +
+    '<p class="disc"><b>Compliance / AFM:</b> waarden met ✓ zijn teruggevonden op de site van de aanbieder op de peildatum; overige waarden zijn indicatief. Geen premies, rentes of advies. Leg de voorwaarden vast zoals de aanbieder die op het moment van advies publiceert.' + (pr.id==='krediet' ? ' Let op! Geld lenen kost geld.' : '') + '</p>' +
     '<div class="lbl">Dossierkenmerk (geen BSN of andere persoonsgegevens)</div><div class="veld" contenteditable="true"></div><div class="lbl">Adviseur</div><div class="veld" contenteditable="true"></div>' +
     '<table><thead><tr><th>Kenmerk</th>' + as.map(function(a){ return '<th>' + esc(a.naam) + '</th>'; }).join('') + '</tr></thead><tbody>' + rijen + '</tbody></table>' +
     '<h2>Motivatie van de keuze</h2><div class="veld groot" contenteditable="true"></div></body></html>';
