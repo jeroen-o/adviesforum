@@ -14,7 +14,7 @@
  *   telefoon      optioneel: algemeen of intermediair-telefoonnummer (zakelijk, geen persoonlijke nummers)
  *   opgezocht     JJJJ-MM-DD: datum waarop website, telefoon en extranet door de redactie zijn opgezocht (bij voorbeeldprofielen)
  *   contactbronnen  lijst met bron-URL's van die gegevens
- *   toezicht      optioneel: AFM | DNB en AFM | ECB/DNB en AFM | Buitenlands toezicht en AFM | DNB en AFM (pensioenfonds) | Geen eigen vergunning | Geen Wft-vergunning
+ *   toezicht      optioneel: AFM | DNB en AFM | ECB/DNB en AFM | Buitenlands toezicht en AFM | DNB en AFM (pensioenfonds) | Label of handelsnaam; vergunning bij een andere partij | Geen Wft-vergunning
  *   toezichtNoot, toezichtBron  korte toelichting en bron-URL (peildatum 3-10-2026; controleer in het AFM-/DNB-register)
  *   omschrijving  korte zakelijke omschrijving (max. 400 tekens); website: https-url
  *   extranet      {url, naam}  portal of aanvraagomgeving voor adviseurs
@@ -776,7 +776,7 @@ window.AANBIEDERS=[
       "https://www.attens.nl/contact",
       "https://www.attens.nl/voor-adviseurs/adviseursportaal"
     ],
-    "toezicht": "Geen eigen vergunning",
+    "toezicht": "Label of handelsnaam; vergunning bij een andere partij",
     "toezichtNoot": "Hypotheekmerk van Achmea Bank (voor deelnemers van PFZW). De vergunning ligt bij Achmea Bank N.V., toezicht DNB en AFM.",
     "toezichtBron": "https://achmeabank.nl/en/"
   },
@@ -822,7 +822,7 @@ window.AANBIEDERS=[
       "https://www.averoachmea.nl/direct-regelen/contact",
       "https://www.averoachmea.nl/direct-regelen/inloggen"
     ],
-    "toezicht": "Geen eigen vergunning",
+    "toezicht": "Label of handelsnaam; vergunning bij een andere partij",
     "toezichtNoot": "Handelsnaam van Achmea Schadeverzekeringen N.V., die een vergunning heeft van DNB; toezicht DNB en AFM.",
     "toezichtBron": "https://www.averoachmea.nl/-/media/files/zakelijk/bap-bedrijfs-actief-polis/brochure-bedrijfactiefpolis-volmacht.pdf"
   },
@@ -903,7 +903,7 @@ window.AANBIEDERS=[
       "https://bijbouwe.nl/adviseurs/service-contact",
       "https://bijbouwe.nl/adviseurs"
     ],
-    "toezicht": "Geen eigen vergunning",
+    "toezicht": "Label of handelsnaam; vergunning bij een andere partij",
     "toezichtNoot": "Hypotheeklabel van Dynamic Credit, sinds 2022 onderdeel van BNP Paribas AM. Staat geregistreerd bij de AFM via Dynamic Credit Hypotheken B.V.; alleen AFM-toezicht, geen bank.",
     "toezichtBron": "https://www.lawinsider.com/nl/contracts/hhe8weBICXd"
   },
@@ -1331,7 +1331,7 @@ window.AANBIEDERS=[
       "https://www.centraalbeheer.nl/voor-adviseurs/contact/hypotheken",
       "https://www.centraalbeheer.nl/voor-adviseurs/adviseursportaal"
     ],
-    "toezicht": "Geen eigen vergunning",
+    "toezicht": "Label of handelsnaam; vergunning bij een andere partij",
     "toezichtNoot": "Merknaam van Achmea-entiteiten. Hypotheken lopen via Achmea Bank N.V.; toezicht DNB en AFM.",
     "toezichtBron": "https://www.bank.nl/banken/centraal-beheer/"
   },
@@ -1769,7 +1769,7 @@ window.AANBIEDERS=[
       "https://www.dezeeuwse.nl/adviseur",
       "https://www.dezeeuwse.nl/inloggen"
     ],
-    "toezicht": "Geen eigen vergunning",
+    "toezicht": "Label of handelsnaam; vergunning bij een andere partij",
     "toezichtNoot": "Handelsnaam van Goudse Schadeverzekeringen N.V.; toezicht DNB en AFM.",
     "toezichtBron": "https://www.dezeeuwse.nl/-/media/de-zeeuwse-documenten/compleetverzekerd-mijn-personeel---voorwaarden/wijzigingsoverzicht2022/uitvoeringsovereenkomst.pdf"
   },
@@ -2023,9 +2023,9 @@ window.AANBIEDERS=[
       "https://www.florius.nl/service-en-contact",
       "https://login.florius.nl/Login/"
     ],
-    "toezicht": "Geen eigen vergunning",
-    "toezichtNoot": "Handelsnaam van ABN AMRO Hypotheken Groep B.V. (AFM-register 12000025), dochter van ABN AMRO Bank; daarop is direct ECB-toezicht (met DNB) van toepassing, en AFM houdt toezicht op het gedrag.",
-    "toezichtBron": "https://www.florius.nl/-/media/florius/files/formulieren/voorwaarden/20240826-profijt-hypotheek.pdf"
+    "toezicht": "Label of handelsnaam; vergunning bij een andere partij",
+    "toezichtNoot": "Per 11 oktober 2026 juridisch gefuseerd met ABN AMRO Bank N.V. (afsplitsing Florius B.V. op 10 oktober 2026), met nieuwe hypotheekvoorwaarden en een nieuwe tenaamstelling van de offerte. Controleer de vergunninghouder in het AFM-register.",
+    "toezichtBron": "https://www.florius.nl/fusie"
   },
   {
     "id": "fondsen-platform",
@@ -2610,8 +2610,8 @@ window.AANBIEDERS=[
       "https://www.iqwoon.nl/service-contact",
       "https://www.iqwoon.nl/adviseur"
     ],
-    "toezicht": "Geen eigen vergunning",
-    "toezichtNoot": "Hypotheeklabel van Blauwtrust Groep, ingevoerd via dochter Hypotrust en nu verdeeld door Conneqt. Wordt gefinancierd door een buitenlandse instelling onder ECB-toezicht. Vergunninghouder vermoedelijk Hypotrust (AFM); het nummer is niet beve",
+    "toezicht": "Label of handelsnaam; vergunning bij een andere partij",
+    "toezichtNoot": "Hypotheeklabel van Blauwtrust Groep, ingevoerd via dochter Hypotrust en nu verdeeld door Conneqt. Wordt gefinancierd door een buitenlandse instelling onder ECB-toezicht. Vergunninghouder: controleer in het AFM-register.",
     "toezichtBron": "https://www.banken.nl/nieuws/8179/iqwoon-betreedt-nederlandse-hypotheekmarkt"
   },
   {
@@ -3102,7 +3102,7 @@ window.AANBIEDERS=[
       "https://www.munthypotheken.nl/contact/adviseur/",
       "https://www.munthypotheken.nl/servicepartner/"
     ],
-    "toezicht": "Geen eigen vergunning",
+    "toezicht": "Label of handelsnaam; vergunning bij een andere partij",
     "toezichtNoot": "Hypotheeklabel van DMFCO. De vergunning staat op naam van DMF Hypotheek Management B.V. (AFM-toezicht). Investeerders zijn o.a. pensioenfondsen en Achmea Bank.",
     "toezichtBron": "https://web.archive.org/web/20250211043656/https://www.achmeabank.nl/en/news/achmea-bank-treedt-toe-tot-platform-dmfco-en-investeert-in-munt-hypotheken"
   },
@@ -4225,7 +4225,7 @@ window.AANBIEDERS=[
       "https://hypact.advisor.hypotheken.triodos.nl/login"
     ],
     "toezicht": "DNB en AFM",
-    "toezichtNoot": "Nederlandse bank (niet als significant aangemerkt), dus prudentieel toezicht DNB en gedragstoezicht AFM. Uit eigen kennis; geen aparte bron gevonden.",
+    "toezichtNoot": "Nederlandse bank (niet als significant aangemerkt), dus prudentieel toezicht DNB en gedragstoezicht AFM. Controleer de vergunning in het AFM- en DNB-register.",
     "toezichtBron": "https://www.triodos.nl/intermediairs"
   },
   {
@@ -4267,7 +4267,7 @@ window.AANBIEDERS=[
       "https://tulphypotheken.nl/contact/"
     ],
     "toezicht": "AFM",
-    "toezichtNoot": "Niet-bancaire hypotheekverstrekker gefinancierd door institutionele beleggers (holding: Tulp Hypotheken Holding B.V.); overname door Bankinter vereiste AFM-goedkeuring. Eigen vergunning niet direct bevestigd.",
+    "toezichtNoot": "Niet-bancaire hypotheekverstrekker gefinancierd door institutionele beleggers (holding: Tulp Hypotheken Holding B.V.); Bankinter kondigde in juni 2026 de overname van Tulp Group aan, onder voorbehoud van goedkeuring door toezichthouders; afronding is niet bevestigd. Controleer de vergunning in het AFM-register.",
     "toezichtBron": "https://www.banken.nl/nieuws/20884/nieuwe-aanbieder-tulp-hypotheken-opent-deuren"
   },
   {
@@ -4741,7 +4741,7 @@ window.AANBIEDERS=[
       "https://www.vrijlevenhypotheek.nl/downloads/",
       "https://www.vrijlevenhypotheek.nl/hypotheek/"
     ],
-    "toezicht": "Geen eigen vergunning",
+    "toezicht": "Label of handelsnaam; vergunning bij een andere partij",
     "toezichtNoot": "Hypotheeklabel van Hypotrust, volgens Kifid een handelsnaam van Quion Hypotheekbemiddeling B.V. (Blauwtrust Groep; toezicht AFM). Geldverstrekker volgens de algemene voorwaarden is BAWAG P.S.K. (Oostenrijkse bank met Europees paspoort).",
     "toezichtBron": "https://www.vrijlevenhypotheek.nl/assets/uploads/2024/05/Algemene_Voorwaarden_Hypotrust_Vrij_Leven_Hypotheek_September-2023.pdf"
   },
@@ -4788,7 +4788,7 @@ window.AANBIEDERS=[
       "https://adviseurs.woonnu.nl/media/z12iizpm/202408-woonnu-productkaart.pdf",
       "https://adviseurs.woonnu.nl/veelgestelde-vragen/"
     ],
-    "toezicht": "Geen eigen vergunning",
+    "toezicht": "Label of handelsnaam; vergunning bij een andere partij",
     "toezichtNoot": "Handelsnaam van NN Bank (toezicht DNB en AFM). NN Bank stopte per april 2026 met nieuwe Woonnu-hypotheken.",
     "toezichtBron": "https://adviseurs.woonnu.nl/media/xtcghq4l/202405-woonnu_algemene-voorwaarden.pdf"
   },
@@ -4912,7 +4912,7 @@ window.AANBIEDERS=[
     "contactbronnen": [
       "https://www.directa.nl/klantenservice/contact"
     ],
-    "toezicht": "Geen eigen vergunning",
+    "toezicht": "Label of handelsnaam; vergunning bij een andere partij",
     "toezichtNoot": "Onderdeel van Qander; aanvragen lopen via Qander, dat een AFM-vergunning heeft voor aanbieden van krediet.",
     "toezichtBron": "https://www.bank.nl/lening/kredietverstrekkers/qander/"
   },

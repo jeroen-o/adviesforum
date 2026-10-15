@@ -325,7 +325,7 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
       <a class="terug" href="index.html#hulpmiddelen">Alle hulpmiddelen</a>
     </div>
     <h1>Voorwaardenvergelijker geldverstrekkers</h1>
-    <p>Hypotheekvoorwaarden van 42 geldverstrekkers naast elkaar: acceptatie en inkomen, product en rente, bouwdepot en verduurzaming, nazorg. Waarden met &#10003; zijn gecontroleerd op de site van de geldverstrekker, met bron. Vergelijk op één kenmerk of alle kenmerken, volg geldverstrekkers en leg je vergelijking vast voor het dossier.</p>
+    <p>Hypotheekvoorwaarden van 42 geldverstrekkers naast elkaar: acceptatie en inkomen, product en rente, bouwdepot en verduurzaming, nazorg. Waarden met &#10003; zijn teruggevonden op de site van de geldverstrekker, met bron. Vergelijk op één kenmerk of alle kenmerken, volg geldverstrekkers en leg je vergelijking vast voor het dossier.</p>
     <span class="stempel" id="stempel">Online gecontroleerd &middot; peildatum <span id="peil">4 oktober 2026</span></span>
   </div>
 </header>
@@ -334,7 +334,7 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
   <section class="compliance" role="note" aria-labelledby="comp-kop">
     <h2 id="comp-kop">Compliance / AFM: lees dit eerst</h2>
     <ul>
-      <li><strong>Gecontroleerd, maar momentopname.</strong> Waarden met &#10003; zijn gecontroleerd op de site of in de gids van de geldverstrekker op de peildatum; waarden met &lsquo;nog niet geverifieerd&rsquo; komen van derden en waarden zonder markering uit de oorspronkelijke, indicatieve dataset. Voorwaarden veranderen: let op de zandloper bij oude bronnen.</li>
+      <li><strong>Gecontroleerd, maar momentopname.</strong> Waarden met &#10003; zijn teruggevonden op de site of in de gids van de geldverstrekker op de peildatum; waarden met &lsquo;nog niet geverifieerd&rsquo; komen van derden en waarden zonder markering uit de oorspronkelijke, indicatieve dataset. Voorwaarden veranderen: let op de zandloper bij oude bronnen.</li>
       <li><strong>Alleen een intern oriëntatiemiddel.</strong> Verstrek dit overzicht niet aan consumenten en presenteer het niet als een volledige of actuele productvergelijking. Dat raakt de informatie- en zorgplicht (Wft art. 4:19 en 4:20) en kan tot een onjuist adviesdossier leiden.</li>
       <li><strong>Dossier:</strong> leg altijd de voorwaarde vast zoals de geldverstrekker die op het moment van advies heeft gepubliceerd, niet de waarde uit deze matrix.</li>
       <li><strong>Bevat geen rentes of tarieven.</strong> Termen als &lsquo;tariefgedreven&rsquo; of &lsquo;depotrente gelijk aan hypotheekrente&rsquo; beschrijven alleen een kenmerk, geen hoogte.</li>
@@ -490,7 +490,7 @@ a:focus-visible,button:focus-visible,input:focus,input:focus-within,select:focus
   </section>
 
   <div class="uitleg">
-    <p><b>Werkwijze.</b> Vink in de matrix aanbieders aan (of gebruik &lsquo;+ vergelijk&rsquo; in een kolomkop voor kenmerken) en open <b>Vergelijken</b>. Daar kiest u met zoeken en vinkjes de aanbieders en de kenmerken: alles, per categorie of los. Met één kenmerk ziet u een rangorde op kleurcode (ruim → beperkend → nog in te vullen). &lsquo;Alleen verschillen tonen&rsquo; verbergt rijen waarin alle gekozen aanbieders hetzelfde scoren. De selectie staat in het adres van de pagina, zodat u de link kunt delen. Printen en de CSV-export volgen wat u ziet. Met <b>Filter op voorwaarde</b> filtert u de matrix op één criterium en een van de waarden die daarbij voorkomen.</p>
+    <p><b>Werkwijze.</b> Vink in de matrix aanbieders aan (of gebruik &lsquo;+ vergelijk&rsquo; in een kolomkop voor kenmerken) en open <b>Vergelijken</b>. Daar kiest u met zoeken en vinkjes de aanbieders en de kenmerken: alles, per categorie of los. Met één kenmerk ziet u de gekozen aanbieders gesorteerd op kleurcode (ruim → beperkend → nog in te vullen). Dat is een sortering op dat ene kenmerk en zegt niets over de geschiktheid of kwaliteit van een aanbieder. &lsquo;Alleen verschillen tonen&rsquo; verbergt rijen waarin alle gekozen aanbieders hetzelfde scoren. De selectie staat in het adres van de pagina, zodat u de link kunt delen. Printen en de CSV-export volgen wat u ziet. Met <b>Filter op voorwaarde</b> filtert u de matrix op één criterium en een van de waarden die daarbij voorkomen.</p>
     <p><b>Data.</b> Correcties voert u door in de beheermodus en bewaart u door de dataset als JSON te exporteren; die JSON kunt u later weer importeren. De pagina bewaart zelf niets in de browser: zonder export zijn wijzigingen na het sluiten weg.</p>
     <p><b>Nog in te vullen.</b> Behalve de 25 geldverstrekkers uit de oorspronkelijke dataset staan ook de overige hypotheekverstrekkers uit de <a href="partijen.html">Aanbiederwegwijzer</a> en de <a href="aanbieders.html">aanbiederspagina</a> erin. Hun voorwaarden zijn bewust leeg gelaten (grijze cel &lsquo;nog in te vullen&rsquo;): er is niets op basis van aannames ingevuld. Financiers die alleen beleggers of zakelijke klanten bedienen staan apart onder &lsquo;Overige financiers (beleggers/zakelijk)&rsquo;.</p>
     <p><b>Bron.</b> Vul per verstrekker in de kolom &lsquo;Bron / peildatum&rsquo; de gebruikte bron en datum in, zodat het overzicht controleerbaar blijft.</p>
@@ -2315,7 +2315,7 @@ function cmpNode(){
 function rankingNode(m){
   const c = m.crit;
   if(!m.ranking.length) return leegNode('Niets te tonen','Bij dit kenmerk zijn alle cellen van de gekozen aanbieders nog leeg.');
-  const vak = vakNode('ranking', 'Rangorde van gekozen aanbieders op ' + c.naam);
+  const vak = vakNode('ranking', 'Gekozen aanbieders gesorteerd op kleurcode: ' + c.naam);
   const t = el('table'); t.id = 'ranking';
   t.appendChild(el('caption','sr-only','Gekozen aanbieders op ' + c.naam + ', gesorteerd op kleurcode: ruim, marktconform, aandachtspunt, beperkend, nog in te vullen'));
   const thead = el('thead'), kr = el('tr');
@@ -2447,7 +2447,7 @@ function exportCsv(){
     naam = 'voorwaarden-vergelijking.csv';
   }
   regels.push('');
-  r(['Momentopname, peildatum ' + $('peil').textContent.trim() + '; waarden met een bron zijn gecontroleerd op de site van de geldverstrekker, overige waarden zijn indicatief. Alleen voor intern gebruik door adviseurs; niet aan consumenten verstrekken. Geen volledige of actuele productvergelijking (Wft 4:19/4:20). Bevat geen rentes of tarieven. Leg in het dossier de voorwaarde vast zoals de geldverstrekker die op het moment van advies publiceerde.']);
+  r(['Momentopname, peildatum ' + $('peil').textContent.trim() + '; waarden met een bron zijn teruggevonden op de site van de geldverstrekker, overige waarden zijn indicatief. Alleen voor intern gebruik door adviseurs; niet aan consumenten verstrekken. Geen volledige of actuele productvergelijking (Wft 4:19/4:20). Bevat geen rentes of tarieven. Leg in het dossier de voorwaarde vast zoals de geldverstrekker die op het moment van advies publiceerde.']);
   download('\uFEFF' + regels.join('\r\n'), 'text/csv;charset=utf-8', naam);
 }
 function exportJson(){
@@ -2728,7 +2728,7 @@ function doDossier(){
     '<div class="knoppen"><button type="button" onclick="window.print()">Afdrukken of opslaan als pdf</button><a href="' + esc(new URL(motLink, location.href).href) + '" target="_blank" rel="noopener">Neem over in de adviesmotivatie</a></div>' +
     '<h1>Dossiervastlegging: voorwaarden geldverstrekkers</h1>' +
     '<p class="meta">Vastgelegd op ' + esc(stempel) + ' · bron: Voorwaardenvergelijker Adviesforum (stand online controle: ' + esc($('peil').textContent.trim()) + ')<br>Selectie: <a href="' + esc(link) + '">' + esc(link) + '</a></p>' +
-    '<p class="disc"><b>Compliance / AFM:</b> waarden met ✓ zijn gecontroleerd op de site van de geldverstrekker op de vermelde datum; overige waarden zijn indicatief. Leg de voorwaarde vast zoals de geldverstrekker die op het moment van advies publiceert en controleer bij twijfel de actuele gids. Dit overzicht is geen advies en geen productvergelijking en bevat geen rentes of tarieven (Wft art. 4:19/4:20).</p>' +
+    '<p class="disc"><b>Compliance / AFM:</b> waarden met ✓ zijn teruggevonden op de site van de geldverstrekker op de vermelde datum; overige waarden zijn indicatief. Leg de voorwaarde vast zoals de geldverstrekker die op het moment van advies publiceert en controleer bij twijfel de actuele gids. Dit overzicht is geen advies en geen productvergelijking en bevat geen rentes of tarieven (Wft art. 4:19/4:20).</p>' +
     '<div class="lbl">Dossierkenmerk (geen BSN of andere persoonsgegevens)</div><div class="veld" contenteditable="true"></div>' +
     '<div class="lbl">Adviseur</div><div class="veld" contenteditable="true"></div>' +
     '<table><thead><tr><th>Kenmerk</th>' + chosen.map(l=>'<th>' + esc(l.naam) + '</th>').join('') + '</tr></thead><tbody>' + rijen + '</tbody></table>' +

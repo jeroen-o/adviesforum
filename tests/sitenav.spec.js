@@ -120,6 +120,8 @@ test('kop van twee regels: rentetarieven rechts van Voorwaarden, handleiding en 
   expect(teksten).toEqual(['Home', 'Voorwaarden', 'Hypotheekrentetarieven', 'Hulpmiddelen', 'Kennisbank', 'Aanbieders', 'Laatste nieuws', 'Handleiding', 'Voor wie', 'Aanmelden']);
   await page.goto('/hypotheekrentetarieven.html');
   await expect(page.locator('nav.sitenav a[aria-current="page"]')).toHaveText('Hypotheekrentetarieven');
+  await expect(page.locator('main iframe')).toHaveCount(0); /* extern pas na een klik */
+  await page.locator('#rente-open').click();
   await expect(page.locator('main iframe')).toHaveAttribute('src', /tools\.hypotheekbond\.nl\/renteoverzicht\/all$/);
   await expect(page.locator('main iframe')).toHaveAttribute('title', /Renteoverzicht/);
   await expect(page.locator('h1')).toHaveText('Hypotheekrentetarieven');

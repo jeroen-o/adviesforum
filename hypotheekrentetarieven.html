@@ -37,6 +37,8 @@
   h2{font-family:"Source Serif 4",Georgia,"Times New Roman",serif;font-weight:400;font-size:clamp(24px,3vw,32px);color:var(--inkt);margin:0 0 14px;line-height:1.2}
   h3{font-size:17px;color:var(--inkt);margin:0 0 6px}
   .tool{box-shadow:0 6px 22px rgba(70,160,210,.16);background:#fff}
+  .laden{padding:28px 22px;background:var(--licht);text-align:left}
+  .laden p{margin:0 0 14px;max-width:720px}
   .tool iframe{display:block;width:100%;height:1400px;max-height:85vh;min-height:640px;border:0}
   .tool-onder{display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:space-between;padding:10px 14px;font-size:14px;color:var(--grijs);border-top:1px solid var(--lijn)}
   .melding{background:#FFF4E5;border-left:4px solid var(--oranje);padding:12px 14px;font-size:15px;margin:24px 0 0}
@@ -79,7 +81,7 @@
 <section aria-labelledby="h-overzicht">
   <h2 id="h-overzicht">Renteoverzicht van alle geldverstrekkers</h2>
   <div class="tool">
-    <iframe src="https://a19472c3-dc16-47aa-940c-8d060b9d7238.tools.hypotheekbond.nl/renteoverzicht/all" title="Renteoverzicht hypotheekrentetarieven (Hypotheekbond)" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    <div id="rente-laden" class="laden"><p><strong>Renteoverzicht van Hypotheekbond.</strong> Het overzicht wordt door een externe partij geleverd. Zodra je het opent, maakt je browser verbinding met Hypotheekbond, die je IP-adres en browsergegevens ziet. Zie de <a href="privacy.html#hypotheekbond">privacyverklaring</a>.</p><button type="button" class="knop" id="rente-open">Toon het renteoverzicht</button></div>
     <div class="tool-onder"><span>Bron: renteoverzicht van Hypotheekbond. Tarieven en peildatum staan in het overzicht.</span><a href="https://a19472c3-dc16-47aa-940c-8d060b9d7238.tools.hypotheekbond.nl/renteoverzicht/all" target="_blank" rel="noopener">Open het overzicht in een nieuw venster<span class="sitenav-sr"> (externe tool)</span></a></div>
   </div>
   <p class="melding"><strong>Let op:</strong> de tarieven zijn indicatief en komen van een externe bron, niet van het Adviesforum. De rente in de offerte van de geldverstrekker is leidend. Het overzicht is informatie voor adviseurs en geen advies aan consumenten.</p>
@@ -133,5 +135,17 @@
 </footer>
 <script src="js/statistiek.js" defer></script>
 <!-- /sitevoet -->
+<script>
+(function(){
+  var b=document.getElementById('rente-open'),h=document.getElementById('rente-laden');if(!b||!h)return;
+  b.addEventListener('click',function(){
+    var f=document.createElement('iframe');
+    f.src='https://a19472c3-dc16-47aa-940c-8d060b9d7238.tools.hypotheekbond.nl/renteoverzicht/all';
+    f.title='Renteoverzicht hypotheekrentetarieven (Hypotheekbond)';
+    f.referrerPolicy='strict-origin-when-cross-origin';
+    h.replaceWith(f);
+  });
+})();
+</script>
 </body>
 </html>
