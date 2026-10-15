@@ -11,7 +11,7 @@ Doel: status, nieuws en aangekondigde wijzigingen van alle 43 geldverstrekkers n
 | Geldverstrekker | Wat |
 |---|---|
 | ABN AMRO | Beleidsaanpassingen per 9-12-2026 (o.a. aflossingsvrij: eindschuld vastleggen, toets 50% woningwaarde bij 85 jaar); EBB-bouwdepot 18 + 6 maanden (welke termijn voor EBB?) |
-| Rabobank | Hypotheeknormen per maart 2027 (pensioeninkomen vanaf 15 jaar vóór pensioendatum, LTV-grens 70% op 85 jaar); nieuw acceptatiebeleid september 2026 |
+| Rabobank en Obvion | Hypotheeknormen per maart 2027 (pensioeninkomen vanaf 15 jaar vóór pensioendatum, bij AOW-leeftijd 67 vanaf 52 jaar; LTV-grens 70% op 85 jaar): verwerkt in `aow` van beide (Obvion zekerheid middel). Nog lezen: uitwerking in de acceptatiekaarten, en het nieuwe acceptatiebeleid van Rabobank van september 2026 |
 | Obvion | Mailing 8-9-2026: aangepaste regels waardebepaling onderpand (kan `desk`/`mwbep` raken) |
 | Clarian Wonen | Nieuwe acceptatiegids en beheergids 22-6-2026 (opgeslagen: januari 2025) |
 | Tellius | Acceptatiegids 1-7-2026 en nieuwe algemene voorwaarden 1-10-2026 |
