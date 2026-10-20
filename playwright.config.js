@@ -5,6 +5,8 @@ module.exports = defineConfig({
   timeout: 30000,
   use: {
     baseURL: 'http://127.0.0.1:4173',
+    // De site vraagt om een toegangswoord (js/toegang.js); de tests starten met de cookie die daarna wordt gezet.
+    storageState: { cookies: [{ name: 'af_toegang', value: '1', domain: '127.0.0.1', path: '/', expires: -1, httpOnly: false, secure: false, sameSite: 'Lax' }], origins: [] },
     launchOptions: process.env.PW_CHROMIUM_PATH ? { executablePath: process.env.PW_CHROMIUM_PATH } : {},
   },
   webServer: {
