@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="nl" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fastlane (eBlinqx Hypotheekadvies): releases juni en juli 2026 – Adviesforum</title>
+<meta name="description" content="Samenvatting in eigen woorden van de openbare releasenotes van Fastlane (eBlinqx Hypotheekadvies). Het is een selectie van wat een adviseur in de praktijk">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="canonical" href="https://adviesforum.nl/kennisbank/k413.html">
+<meta property="og:title" content="Fastlane (eBlinqx Hypotheekadvies): releases juni en juli 2026 – Adviesforum">
+<meta property="og:description" content="Samenvatting in eigen woorden van de openbare releasenotes van Fastlane (eBlinqx Hypotheekadvies). Het is een selectie van wat een adviseur in de praktijk">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://adviesforum.nl/kennisbank/k413.html">
+<meta property="og:site_name" content="Adviesforum">
+<meta property="og:locale" content="nl_NL">
+<meta property="og:image" content="https://adviesforum.nl/img/og-adviesforum.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#F68712">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="../manifest.webmanifest">
+<style>
+
+:root{--geel:#F68712;--zwart:#26306E;--tekst:#15162F;--grijs:#55576F;--lijn:#E3E3EC;--vlak:#F7F7FA;--rood:#9E2F45}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{font-family:Segoe UI,Roboto,Helvetica Neue,Arial,system-ui,sans-serif;color:var(--tekst);background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-wrap:anywhere}
+a{color:inherit}
+header.site{border-bottom:1px solid var(--lijn);padding:14px 20px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.merk{display:flex;align-items:center;gap:10px;text-decoration:none}
+.hex{width:26px;height:30px;background:var(--zwart);border-radius:7px;flex:none;position:relative}
+.hex::after{content:'';position:absolute;inset:7px 6px;background:var(--geel);clip-path:inherit}
+.merknaam{font-weight:800;letter-spacing:.06em;font-size:16px}
+.merksub{font-size:12px;color:var(--grijs);letter-spacing:.04em}
+nav.hoofd{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap}
+nav.hoofd a{font-size:13px;text-decoration:none;font-weight:600;border:1px solid var(--lijn);padding:7px 13px;border-radius:999px}
+nav.hoofd a:hover,nav.hoofd a[aria-current]{background:var(--vlak)}
+.hero{background:var(--zwart);color:#fff;border-bottom:3px solid var(--geel);padding:28px 20px 32px}
+.hero-in,.inhoud{max-width:820px;margin:0 auto}
+.hero h1{margin:6px 0 10px;font-size:clamp(25px,4.4vw,38px);line-height:1.15;font-weight:800}
+.hero p{margin:0;max-width:66ch}
+.kruimel{font-size:13px}.kruimel ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:4px}
+.kruimel li+li::before{content:'›';margin-right:4px}.kruimel a{text-decoration:underline}
+.meta{font-size:13px;margin-top:10px}
+.romp{padding:28px 20px 56px}
+.inhoud h2{font-size:20px;margin:30px 0 8px;line-height:1.3}
+.inhoud h3{font-size:16px;margin:22px 0 6px}
+.inhoud ul,.inhoud ol{padding-left:22px}.inhoud li{margin:4px 0}
+.melding{border:2px solid var(--zwart);background:#FEF0E2;border-radius:10px;padding:12px 16px;font-weight:700;margin:0 0 22px}
+.knop{display:inline-block;background:var(--zwart);color:#fff;text-decoration:none;font-weight:700;padding:11px 18px;border-radius:999px;font-size:14px}
+.knop:hover{background:#333}
+.kader{border:1px solid var(--lijn);border-radius:12px;padding:16px 18px;background:var(--vlak);margin:28px 0 0;font-size:14px}
+.kader h2{margin-top:0;font-size:16px}
+.lijst{list-style:none;padding:0!important}.lijst li{border-bottom:1px solid var(--lijn);padding:10px 0;margin:0}
+.lijst a{font-weight:600}.lijst small{display:block;color:var(--grijs)}
+details{border-bottom:1px solid var(--lijn);padding:10px 0}
+summary{cursor:pointer;font-weight:700;min-height:36px;padding:6px 0}.inhoud summary h2{display:inline;font-size:15.5px;margin:0;line-height:1.6}
+details .antw{margin-top:8px}details .waar,.waar{font-size:12.5px;color:var(--grijs)}
+.az{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 18px}.az a{display:inline-grid;place-items:center;min-width:36px;min-height:36px;text-align:center;border:1px solid var(--lijn);border-radius:8px;padding:4px 6px;text-decoration:none;font-weight:700}
+dl.begrippen dt{font-weight:700;margin-top:16px}dl.begrippen dd{margin:4px 0 0}
+.disclaimer{font-size:13px;color:var(--grijs);margin-top:32px}
+footer{border-top:1px solid var(--lijn);padding:22px 20px;font-size:13px;color:var(--grijs);text-align:center}
+footer nav{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 16px;margin-bottom:8px}
+footer a{color:var(--tekst)}
+:focus-visible{outline:3px solid #26306E;outline-offset:2px}
+.skiplink{position:absolute;left:12px;top:-200px;z-index:100;background:#26306E;color:#fff;padding:10px 16px;border-radius:8px;font-weight:700;text-decoration:none}
+.skiplink:focus{top:12px}
+main:focus{outline:none}
+@media (max-width:760px){input,select,textarea{font-size:16px}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+@media print{header.site nav,footer nav,.knop,.skiplink{display:none}.hero{background:none;padding:0}}
+/* Donkere modus (alleen op het scherm; printen blijft licht). Zelfde opzet als index.html: data-theme="light" zet hem uit. */
+@media screen and (prefers-color-scheme:dark){
+:root:not([data-theme="light"]){color-scheme:dark;--zwart:#F1F1F6;--tekst:#F1F1F6;--grijs:#C3C4D3;--lijn:#1E2040;--vlak:#12132B;--rood:#F08A80}
+:root:not([data-theme="light"]) body{background:#26306E}
+:root:not([data-theme="light"]) .hero{background:#12132B;border-bottom:3px solid var(--geel)}
+:root:not([data-theme="light"]) .hex::after{background:#26306E}
+:root:not([data-theme="light"]) nav.hoofd a:hover,:root:not([data-theme="light"]) nav.hoofd a[aria-current]{background:#1C1E3A}
+:root:not([data-theme="light"]) .melding,:root:not([data-theme="light"]) .slot{background:#2E2412;border-color:var(--geel)}
+:root:not([data-theme="light"]) .knop{background:var(--geel);color:#26306E}
+:root:not([data-theme="light"]) .knop:hover{background:#F9A54D}
+:root:not([data-theme="light"]) .knop-licht{background:transparent;color:#F1F1F6;border-color:#F1F1F6}
+:root:not([data-theme="light"]) .knop-licht:hover{background:#1C1E3A}
+:root:not([data-theme="light"]) .reacties li:target{background:#2E2412}
+:root:not([data-theme="light"]) :focus-visible{outline-color:var(--geel)}
+:root:not([data-theme="light"]) .skiplink{background:var(--geel);color:#26306E}
+}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Fastlane (eBlinqx Hypotheekadvies): releases juni en juli 2026","description":"Samenvatting in eigen woorden van de openbare releasenotes van Fastlane (eBlinqx Hypotheekadvies). Het is een selectie van wat een adviseur in de praktijk","image":"https://adviesforum.nl/img/og-adviesforum.png","datePublished":"2026-10-20T16:00:00","dateModified":"2026-10-20T16:00:00","author":{"@type":"Organization","name":"Adviesforum","url":"https://adviesforum.nl/"},"publisher":{"@type":"Organization","name":"Adviesforum","url":"https://adviesforum.nl/","logo":{"@type":"ImageObject","url":"https://adviesforum.nl/img/icoon-512.png","width":512,"height":512}},"inLanguage":"nl-NL","articleSection":"Adviessoftware","mainEntityOfPage":{"@type":"WebPage","@id":"https://adviesforum.nl/kennisbank/k413.html"},"isAccessibleForFree":true,"keywords":"Fastlane eBlinqx Hypotheekadvies releasenotes juni juli 2026 adviesrapport overdrachtsbelasting overbruggingshypotheek ORV Scildon Allianz TAF HDN AI-adviessamenvatting klantprofiel regulations 1 juli 2026 Credit Life Mx aanhef"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Adviesforum","item":"https://adviesforum.nl/"},{"@type":"ListItem","position":2,"name":"Kennisbank","item":"https://adviesforum.nl/kennisbank/"},{"@type":"ListItem","position":3,"name":"Adviessoftware","item":"https://adviesforum.nl/kennisbank/#adv"},{"@type":"ListItem","position":4,"name":"Fastlane (eBlinqx Hypotheekadvies): releases juni en juli 2026","item":"https://adviesforum.nl/kennisbank/k413.html"}]}</script>
+<link rel="stylesheet" href="../css/sitenav.css">
+<link rel="stylesheet" href="../css/huisstijl.css">
+</head>
+<body>
+<!-- sitenav: gegenereerd door tools/sitenav.js, niet met de hand wijzigen -->
+<a class="sitenav-skip" href="#inhoud">Naar de inhoud</a>
+<nav class="sitenav" aria-label="Hoofdmenu"><div class="sitenav-in"><div class="sitenav-rij1"><a class="sitenav-merk" href="../index.html"><img class="sitenav-teken" src="../favicon.svg" alt="" width="34" height="34"><span>Advies<span class="sitenav-forum">forum</span></span></a><form class="sitenav-zoek" action="../index.html" method="get" role="search"><input type="search" name="zoek" placeholder="Zoek op de hele site" aria-label="Zoek op de hele site" autocomplete="off"><button type="submit">Zoeken</button></form><div class="sitenav-acties" id="sitenav-acties"></div></div><div class="sitenav-rij2"><ul><li><a href="../index.html">Home</a></li><li><a href="../voorwaarden.html">Voorwaarden</a></li><li><a href="../hypotheekrentetarieven.html">Hypotheekrentetarieven</a></li><li><a href="../index.html#hulpmiddelen">Hulpmiddelen</a></li><li><a href="../kennisbank/" aria-current="page">Kennisbank</a></li><li><a href="../aanbieders.html">Aanbieders</a></li><li><a href="../laatste.html">Laatste nieuws</a></li><li><a href="../index.html#handleiding">Handleiding</a></li><li><a href="../over-adviesforum.html">Voor wie</a></li><li><a href="../aanmelden.html">Aanmelden</a></li></ul></div></div></nav>
+<!-- /sitenav -->
+<header class="site">
+  <a class="merk" href="../index.html"><span class="hex" aria-hidden="true"></span><span><span class="merknaam">ADVIESFORUM</span><br><span class="merksub">Voor en door financieel adviseurs</span></span></a>
+  <nav class="hoofd" aria-label="Kennis"><a href="../kennisbank/" aria-current="page">Kennisbank</a><a href="../faq/">FAQ</a><a href="../begrippen/">Begrippen</a><a href="../index.html">Forum</a></nav>
+</header>
+<main id="inhoud" tabindex="-1">
+<div class="hero"><div class="hero-in">
+<nav class="kruimel" aria-label="Kruimelpad"><ol><li><a href="../index.html">Adviesforum</a></li><li><a href="./">Kennisbank</a></li><li><a href="./#adv">Adviessoftware</a></li><li aria-current="page">Fastlane (eBlinqx Hypotheekadvies): releases juni en juli 2026</li></ol></nav>
+<h1>Fastlane (eBlinqx Hypotheekadvies): releases juni en juli 2026</h1>
+
+<div class="meta">Adviessoftware · Gepubliceerd 20 oktober 2026 · Herzien vóór 20 januari 2027</div>
+</div></div>
+<div class="romp"><div class="inhoud">
+<p class="melding" role="note">Concept – nog niet gecontroleerd door compliance</p>
+<article>
+<p>Samenvatting in eigen woorden van de openbare releasenotes van Fastlane (eBlinqx Hypotheekadvies). Het is een selectie van wat een adviseur in de praktijk merkt, geen officiële releasenote; de brontekst is leidend. Per wijziging staat het ticketnummer. Controleer na een release altijd in je eigen omgeving wat er is veranderd en leg vast vanaf wanneer je met de nieuwe versie werkt.</p>
+<h2>Juli 2026 (release 16 juli, 49 wijzigingen)</h2>
+<ul>
+<li>**Adviesrapport:** meerdere onderpanden, lopende hypotheken, verwachte verkoopopbrengsten en overbruggingen tegelijk in het rapport (IT-24098); renteblad en hypotheekvoorwaarden van de gekozen geldverstrekker als bijlage, per bijlage te kiezen (IT-31547); compactere opmaak (IT-28396); nummering leningdelen klopt weer met het scherm (IT-31166).</li>
+<li>**Berekening en financieringsopzet:** overdrachtsbelasting per persoon over het eigen aandeel bij twee kopers met een ongelijke eigendomsverhouding (IT-31255); een leningdeel met status Vervallen bevriest het schuldverloop en &quot;schuldrest&quot; heet nu &quot;Aflosstand&quot; (IT-30775); grafiek Bruto maandlast sluit aan op de financiële analyse (IT-31778).</li>
+<li>**Verzekeringen:** een maandelijkse onttrekking bij een ORV rekent met 0% rekenrente (IT-31682); een onverklaard restbedrag in de staafdiagrammen bij AO en ORV is weg (IT-31730).</li>
+<li>**Klantprofiel:** meerdere doelstellingen tegelijk kiezen (IT-25806); AOW-vraag vervangen door &quot;jonger dan de AOW-leeftijd&quot; of &quot;met (pre)pensioen&quot; (IT-27781); kortere vraagflow (IT-31377).</li>
+<li>**Inkomen:** onmogelijke datums en een einddatum vóór de begindatum worden geweigerd (IT-31913).</li>
+<li>**HDN:** bij een mislukte verzending van een ORV- of hypotheekaanvraag zie je de foutmelding en oorzaak in plaats van &quot;klaar om te verzenden&quot; (IT-31880, IT-31881).</li>
+<li>**Brieven en instellingen:** aanhef &quot;Mx.&quot; voor genderneutrale personen (IT-31473); de AFM-tekst in het adviesrapport staat nu altijd aan (IT-31573).</li>
+<li>**AI-adviessamenvatting (beta):** knop om automatisch een adviessamenvatting te genereren, met beta-label en disclaimer (IT-31588, IT-31959). Een AI-tekst blijft een concept: lees en corrigeer altijd zelf, jij blijft verantwoordelijk voor het advies.</li>
+<li>Techniek: formulieren gemigreerd naar een modernere opzet en mislukte achtergrondtaken worden opnieuw uitgevoerd.</li>
+</ul>
+<h2>Juni 2026 (releases 16, 29 en 30 juni)</h2>
+<ul>
+<li>**Normen en regelgeving:** de ingebouwde fiscale parameters en wettelijke regels zijn bijgewerkt naar de stand van 1 juli 2026 (IT-31541). Controleer of je lopende berekeningen hierdoor veranderen.</li>
+<li>**Berekening:** restschuld einde rentevaste periode en netto maandinkomen in de Wonen-schermen komen overeen met de financiële analyse (IT-31375, IT-31452); de grafiek &quot;binnen 10 jaar van de AOW-datum&quot; toont ook de einde-RVP-momenten per leningdeel (IT-31326); geen extra leningdeel van 0 euro meer bij maximale hypotheek (IT-31299); de plotlijn wordt rood bij overschrijding van de verantwoorde grens (IT-31257); automatisch aanvinken van rentekortingen werkt weer (IT-30112); de financieringsopzet krijgt een vierde vak &quot;Benodigd hypotheekbedrag&quot; (IT-30359).</li>
+<li>**Fiscaal:** Box 1/3-verdeling klopt bij een consumptieve verhoging en een volledig consumptief leningdeel valt automatisch buiten Box 1 (IT-27894, IT-30467); overdrachtsbelasting volgt de werkelijke kostenverdeling per persoon (IT-30751, IT-30744); verkoopkosten van de huidige woning kunnen bewust op 0 (IT-31005).</li>
+<li>**HDN:** geslacht wordt altijd voorgevuld (IT-31025); duidelijkere foutmelding bij een ontbrekende betaalrekening (IT-31836); het aanvraagformulier wordt tussentijds als concept bewaard (IT-31284); slimmere prefill bij aflossingsvrij, box 3 en verbouwingsdepot (IT-30176, IT-30175, IT-28489).</li>
+<li>**Verzekeringen:** Scildon ORV rekent de premie over de premieduur (IT-31164); Allianz ORV is weer selecteerbaar in de vergelijker (IT-31015); bij ondernemers wordt automatisch een AO-dekking bij TAF samengesteld (IT-31120); CreditLife-aanvragen lopen niet meer vast bij AO plus WW (IT-31601); het label &quot;ORV Gezamenlijk&quot; bij twee levens (IT-31821).</li>
+<li>**Adviesrapport:** de pdf toont de terugval bij AO, WW, overlijden partner, einde relatie en AOW weer correct (IT-31781, IT-31783); renteblad en voorwaarden als bijlage per geldverstrekker (IT-30262); geen valse melding &quot;Geen motivatie ingevuld&quot; meer (IT-31199).</li>
+<li>**Klantprofiel en inkomen:** Klantprofiel 2.0 (beta) stelt bij twee aanvragers 20 vragen per persoon (IT-31105); toekomstig inkomen van het type Anders telt pas mee vanaf de ingangsdatum (IT-31805).</li>
+<li>**Overig:** het maximumbedrag van de Groen hypotheek van Attens is bijgewerkt en aanpasbaar (IT-31661); brondata gaat automatisch mee in het bericht naar Accelerate (IT-30958); duidelijke melding bij een verlopen sessie (IT-31279).</li>
+</ul>
+<h2>Bronnen en links</h2>
+<ul>
+<li><a href="https://fastlane.hypotheekbond.nl/hoe-het-werkt/releasenotes/releasenotes-2026/" rel="noopener">Releasenotes Fastlane 2026 (Hypotheekbond)</a></li>
+</ul>
+</article>
+<p style="margin-top:26px"><a class="knop" href="../index.html#artikel-k413">Open in het forum</a></p>
+<div class="kader kennispartner"><h2>Specialist in dit onderwerp?</h2><p style="margin:0">Claim dit artikel als <a href="../kennispartner.html?artikel=k413#claimen">Kennispartner van het Adviesforum</a>: je naam en kantoor staan dan bij het artikel en je krijgt een badge voor je website en LinkedIn.</p></div>
+<div class="kader"><h2>Meer over Adviessoftware</h2><ul class="lijst"><li><a href="k416.html">eBlinqx releases juli t/m september 2026: Uwkluis, Quinn en AI-gebruik</a></li><li><a href="k417.html">eBlinqx releases april t/m juni 2026: performance en HDN 26</a></li><li><a href="k418.html">eBlinqx releases januari t/m maart 2026: boekhouding, gespreksopname en AI-koppeling</a></li><li><a href="k419.html">eBlinqx releases augustus t/m november 2025: HDN-certificaten, omnummeren en documentcontrole</a></li><li><a href="k420.html">eBlinqx releases januari t/m juli 2025: Office 365, HDN25 en pensioenkaart</a></li><li><a href="k414.html">Fastlane (eBlinqx Hypotheekadvies): releases maart, april en mei 2026</a></li></ul></div>
+<p class="disclaimer">Collegiale kennisdeling tussen financieel adviseurs, geen advies aan klanten of consumenten. Controleer altijd de actuele bron voordat je iets in een dossier gebruikt.</p>
+</div></div>
+</main>
+<!-- sitevoet: gegenereerd door tools/sitenav.js, niet met de hand wijzigen -->
+<footer class="sitevoet"><div class="sitevoet-in">
+<div class="sitevoet-over"><a class="sitevoet-merk" href="../index.html"><img class="sitenav-teken" src="../favicon.svg" alt="" width="34" height="34"><span>Advies<span class="sitenav-forum">forum</span></span></a><p>Voor en door financieel adviseurs: collegiale kennisdeling over hypotheken, verzekeringen, pensioen en krediet.</p><p><strong>Vraag, idee of fout gezien?</strong><br>Mail de beheerder:<br><a href="mailto:jeroen@oversteegen.nl">jeroen@oversteegen.nl</a></p><p class="sitevoet-volg"><a href="../feed.xml" type="application/rss+xml">RSS: nieuw en bijgewerkt</a><a href="../aanbieders-feed.xml" type="application/rss+xml">RSS: nieuws van aanbieders</a></p></div>
+<nav class="sitevoet-kol" aria-labelledby="sv-k0"><h2 id="sv-k0">Voorwaarden</h2><ul><li><a href="../voorwaarden.html">Alle voorwaarden</a></li><li><a href="../voorwaarden-vergelijker.html">Voorwaarden vergelijken</a></li><li><a href="../situatiecheck.html">Situatiecheck</a></li><li><a href="../acceptatiewijzer.html">Acceptatiewijzer</a></li><li><a href="../productvoorwaarden.html">Productvoorwaarden</a></li><li><a href="../documenteisen.html">Documenteisen</a></li><li><a href="../hypotheekrentetarieven.html">Hypotheekrentetarieven</a></li><li><a href="../partijen.html">Aanbiederwegwijzer</a></li></ul></nav><nav class="sitevoet-kol" aria-labelledby="sv-k1"><h2 id="sv-k1">Hulpmiddelen</h2><ul><li><a href="../index.html#hulpmiddelen">Alle hulpmiddelen</a></li><li><a href="../rekentools.html">Rekentools</a></li><li><a href="../leennormen-2026.html">Leennormen 2026</a></li><li><a href="../nhg-check.html">NHG-check</a></li><li><a href="../documentenchecklist.html">Documentenchecklist</a></li><li><a href="../contact-aanbieders.html">Contact aanbieders</a></li><li><a href="../wetgeving.html">Wet- en regelgeving</a></li></ul></nav><nav class="sitevoet-kol" aria-labelledby="sv-k2"><h2 id="sv-k2">Kennis</h2><ul><li><a href="../kennisbank/">Kennisbank</a></li><li><a href="../faq/">Veelgestelde vragen</a></li><li><a href="../begrippen/">Begrippen A-Z</a></li><li><a href="../index.html">Forum</a></li><li><a href="../laatste.html">Laatste nieuws</a></li><li><a href="../nieuw.html">Wat is nieuw</a></li></ul></nav><nav class="sitevoet-kol" aria-labelledby="sv-k3"><h2 id="sv-k3">Meedoen</h2><ul><li><a href="../over-adviesforum.html">Over Adviesforum</a></li><li><a href="../aanmelden.html">Aanmelden</a></li><li><a href="../kennispartner.html">Kennispartner worden</a></li><li><a href="../uitnodigen.html">Collega uitnodigen</a></li><li><a href="../koppelingen.html">Koppelen met je adviessoftware</a></li><li><a href="../aanbieders-info.html">Voor aanbieders</a></li><li><a href="../aanbieder-beheer.html">Inloggen aanbieders</a></li><li><a href="../gebruiksvoorwaarden.html">Gebruiksvoorwaarden</a></li><li><a href="../privacy.html">Privacy en cookies</a></li></ul></nav>
+</div>
+<div class="sitevoet-onder"><p>Informatie voor adviseurs, geen advies aan consumenten. Voorwaarden en normen van aanbieders zijn leidend: controleer altijd de actuele bron.</p><p>&copy; 2026 Adviesforum &middot; adviesforum.nl</p></div>
+</footer>
+<script src="../js/statistiek.js" defer></script>
+<!-- /sitevoet -->
+</body>
+</html>
