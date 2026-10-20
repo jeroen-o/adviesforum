@@ -446,7 +446,7 @@ window.PARTIJEN=[
    {tekst:'Premiepensioeninstelling BeFrank hoort bij NN Group',bron:'https://www.befrank.nl/en/impact/who-are-we/'},
    {thema:'Status',tekst:'Stopt per 1 mei 2026 met nieuwe hypotheken onder het label Woonnu en gaat verder met één merk (NN Hypotheken)',bron:'https://www.nn.nl/nieuws/nationale-nederlanden-bank-stopt-met-nieuwe-woonnu-hypotheken/'}
   ],bijgewerkt:'2026-10-02'},
- {naam:'Movir',toezicht:'DNB en AFM',toezichtNoot:'Nederlandse AOV-verzekeraar (onderdeel van a.s.r.) met DNB-vergunning; gedragstoezicht AFM.',toezichtBron:'https://www.movir.nl/arbeidsongeschiktheidsverzekering/advies-bij-je-aov',type:'verzekeraar',categorieen:['inkomen'],url:'https://www.movir.nl/arbeidsongeschiktheidsverzekering/advies-bij-je-aov',
+ {naam:'Movir',toezicht:'DNB en AFM',toezichtNoot:'Nederlandse AOV-verzekeraar (handelsnaam binnen NN Group, volgens movir.nl) met DNB-vergunning; gedragstoezicht AFM.',toezichtBron:'https://www.movir.nl/arbeidsongeschiktheidsverzekering/advies-bij-je-aov',type:'verzekeraar',categorieen:['inkomen'],url:'https://www.movir.nl/arbeidsongeschiktheidsverzekering/advies-bij-je-aov',
   producten:['AOV'],
   kenmerken:[
    {tekst:'AOV-specialist; de Movir Momentum AOV staat ook op de site van NN',bron:'https://www.nn.nl/Zakelijk/Inkomensverzekeringen/Individuele-arbeidsongeschiktheidsverzekering/Zelf-de-Movir-Momentum-AOV-afsluiten.htm'},

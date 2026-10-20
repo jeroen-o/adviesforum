@@ -1,0 +1,53 @@
+{
+ "product": "bankgarantie",
+ "aanbieders": [
+  {
+   "naam": "BLG Wonen (ASN Bank)",
+   "url": "https://www.blgwonen.nl/hypotheken/wat-is-een-bankgarantie.html",
+   "domeinen": [
+    "blgwonen.nl",
+    "asnbank.nl"
+   ],
+   "criteria": {
+    "voor": {
+     "waarde": "~ Eigen bankgarantie alleen bij een ASN Bank-hypotheek (ex-BLG Wonen) via adviseur, niet bij Bespaarhypotheek; via Nationale Waarborg ook zonder ASN-hypotheek",
+     "bron": [
+      "https://www.asnbank.nl/hypotheek/bankgarantie.html",
+      "https://www.asnbank.nl/hypotheek/nationale-waarborg-bankgarantie.html"
+     ],
+     "brondatum": null,
+     "zekerheid": "hoog",
+     "toelichting": "BLG Wonen is sinds 1 maart 2026 ASN Bank; nieuwe BLG-hypotheek kan niet meer, wel een ASN Hypotheek. ASN: geen eigen bankgarantie bij de Bespaarhypotheek; wel een garantie van Nationale Waarborg via een ASN-adviseur."
+    }
+   }
+  },
+  {
+   "naam": "Nationale Waarborg",
+   "url": "https://nationalewaarborg.nl/adviseur/producten/",
+   "domeinen": [
+    "nationalewaarborg.nl"
+   ],
+   "criteria": {
+    "maximum": {
+     "waarde": "~ Tot 10% van de koopsom; BankGarantieZeker: garantiebedrag max. € 99.999 bij een koopsom tot € 999.999 (certificaat 40 dagen geldig)",
+     "bron": [
+      "https://nationalewaarborg.nl/adviseur/producten/bankgarantiezeker/",
+      "https://nationalewaarborg.nl/site-waarborg/storage/files/1431/dienstverleningsdocument_bankgarantiezeker.pdf"
+     ],
+     "brondatum": null,
+     "zekerheid": "hoog",
+     "toelichting": "Aanvulling met de BankGarantieZeker-limieten. Update 149 (2024) noemde nog max. koopsom € 750.000; Update 175 en het dienstverleningsdocument noemen € 999.999."
+    },
+    "duur": {
+     "waarde": "+ Bestaande bouw max. 13 maanden (12 mnd + 1 mnd claimtermijn), kosteloos online verlengen binnen die termijn; nieuwbouw 12 mnd, eenmalig met 12 mnd te verlengen",
+     "bron": [
+      "https://nationalewaarborg.nl/adviseur/producten/nieuwbouw-bankgarantie/"
+     ],
+     "brondatum": null,
+     "zekerheid": "hoog",
+     "toelichting": "Opgeslagen: nieuwbouw 'verlengbaar per jaar'. Nationale Waarborg: standaard 12 maanden, eenmalig te verlengen met 12 maanden."
+    }
+   }
+  }
+ ]
+}
