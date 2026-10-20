@@ -58,7 +58,7 @@ test('favorieten: toevoegen, bewaard na herladen (cookie), verwijderen', async (
   expect(decodeURIComponent(cookie.value)).toContain('v.v13');
   expect(cookie.value.length).toBeLessThan(3500);
   expect(cookie.sameSite).toBe('Lax');
-  expect((await context.cookies()).some(c => /^af_/.test(c.name) && c.name !== 'af_favorieten')).toBe(false);
+  expect((await context.cookies()).some(c => /^af_/.test(c.name) && c.name !== 'af_favorieten' && c.name !== 'af_toegang')).toBe(false);
 
   await page.reload();
   await expect(page.locator('.fav-knop').first()).toHaveAttribute('aria-pressed', 'true');
