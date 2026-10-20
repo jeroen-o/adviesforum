@@ -1282,7 +1282,7 @@ function zetTitel(){const T={forum:'Forum',nieuw:'Vraag stellen',kennisbank:'Ken
   else if(S.view==='adviseur'){const u=user(S.adviseur);if(u)t=u.naam;}
   else if(S.view==='forum'&&S.cat!=='alle'&&cat(S.cat))t=cat(S.cat).naam;
   document.title=(S.view==='forum'&&S.cat==='alle'&&!S.q)?'Kennisplatform voor financieel adviseurs – Adviesforum':t+' – Adviesforum';}
-function render(keepScroll){
+function render(keepScroll){spraakStop();
   {const i=document.querySelector('.sitenav-zoek input'),z=$('#search');if(i&&z&&document.activeElement!==i&&i.value!==z.value)i.value=z.value;}
   if(S.me&&S.bron)S.bron=null; // na inloggen blijft de bron-markering niet hangen
   renderShell();
@@ -1498,6 +1498,8 @@ function viewNieuw(){
         <select id="nv-cat" name="cat">${CATS.map(c=>`<option value="${c.id}">${esc(c.naam)}</option>`).join('')}</select>
         <label for="nv-body">Situatie en vraag</label>
         <textarea id="nv-body" name="body" required minlength="30" placeholder="Beschrijf de klantsituatie geanonimiseerd (geen namen, adressen of klantnummers), wat je al hebt uitgezocht en waar je precies tegenaan loopt."></textarea>
+        ${SPRAAK?`<div class="spraak"><button class="btn btn-line" type="button" data-act="spraak" data-doel="nv-body" aria-pressed="false">🎤 Spreek je vraag in</button> <span class="hint" id="nv-spraak-status" role="status" aria-live="polite"></span></div>
+        <div class="hint">Spraakinvoer wordt door je browser verwerkt en kan het geluid naar de aanbieder van je browser sturen. Spreek geen namen of persoonsgegevens van klanten uit en controleer de tekst voordat je plaatst.</div>`:''}
         <div class="hint">Geen persoonsgegevens van klanten in het forum: gebruik rollen en afgeronde bedragen.</div>
         <label for="nv-tags">Trefwoorden</label>
         <input id="nv-tags" name="tags" type="text" placeholder="bijvoorbeeld: overbrugging, verkoop, NHG">
@@ -1915,7 +1917,24 @@ function go(view,extra={}){Object.assign(S,extra,{view});render();zetHash();cons
 function openVraag(id){const v=VRAGEN.find(x=>x.id===id);if(!v)return;v.views++;go('vraag',{tab:'forum',vraag:id,reactie:null});}
 function openArtikel(id){const a=ARTIKELEN.find(x=>x.id===id);if(!a)return;a.views++;go('artikel',{tab:'kennisbank',artikel:id});}
 
-document.addEventListener('click',e=>{
+/* Spraakinvoer (Web Speech API van de browser): alleen tonen als de browser het ondersteunt; er is geen eigen server of externe dienst. */
+const SPRAAK=!!(window.SpeechRecognition||window.webkitSpeechRecognition);
+let spraakHerkenner=null;
+function spraakStop(){if(spraakHerkenner){try{spraakHerkenner.stop();}catch(_){}spraakHerkenner=null;}}
+function spraakToggle(knop){
+  const doel=document.getElementById(knop.dataset.doel),status=document.getElementById('nv-spraak-status');
+  if(!doel)return;
+  if(spraakHerkenner){spraakStop();return;}
+  const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+  const r=new SR();r.lang='nl-NL';r.continuous=true;r.interimResults=false;
+  const klaar=(txt)=>{knop.setAttribute('aria-pressed','false');knop.textContent='🎤 Spreek je vraag in';if(status)status.textContent=txt||'';spraakHerkenner=null;};
+  r.onresult=ev=>{let nieuw='';for(let k=ev.resultIndex;k<ev.results.length;k++){if(ev.results[k].isFinal)nieuw+=ev.results[k][0].transcript;}
+    nieuw=nieuw.trim();if(!nieuw)return;const huidig=doel.value;doel.value=(huidig&&!/\s$/.test(huidig)?huidig+' ':huidig)+nieuw.charAt(0).toUpperCase()+nieuw.slice(1);doel.dispatchEvent(new Event('input',{bubbles:true}));};
+  r.onerror=ev=>klaar(ev.error==='not-allowed'||ev.error==='service-not-allowed'?'Geen toegang tot de microfoon. Sta de microfoon toe in je browser.':ev.error==='no-speech'?'Geen spraak gehoord.':'Spraakinvoer is gestopt.');
+  r.onend=()=>klaar(status&&status.textContent?status.textContent:'Spraakinvoer is gestopt. Controleer de tekst.');
+  try{r.start();spraakHerkenner=r;knop.setAttribute('aria-pressed','true');knop.textContent='⏹ Stop opname';if(status)status.textContent='Luisteren… spreek je vraag in.';}catch(_){klaar('Spraakinvoer starten lukt niet.');}
+}
+document.addEventListener('click',e=>{const sp=e.target.closest&&e.target.closest('[data-act="spraak"]');if(sp){spraakToggle(sp);return;}
   const el=e.target.closest('[data-act]');if(!el)return;
   if(el.tagName==='A'&&el.getAttribute('href')==='#')e.preventDefault();
   if(el.tagName==='SELECT')return;
