@@ -43,3 +43,19 @@ Methode als ronde 4 (webzoekopdrachten op het eigen domein; alleen samenvattinge
 - De acceptatiecriteria staan waarschijnlijk in adviseursportalen of in pdf's die niet via zoeken vindbaar zijn (bijBouwe: Acceptatiehandleiding september 2026 op `bijbouwe.nl/belangrijke-documenten`; ASN: `asnbank.nl/downloads/asn-uitgangspunten-berekening-maximale-hypotheek.html`; IQWOON: gids juni 2026 op `iqwoon.nl/adviseur`; Aegon en a.s.r.: portaal). Lees die handmatig en verwerk de waarden met een eigen bron.
 - **Tegenspraak, niet verwerkt:** Rabobank `vve`: opgeslagen 'actieve VvE niet vereist'; de acceptatieregels van 2 januari 2023 (`media.rabobank.com`) eisen een actieve VvE bij bestaande bouw (uitzondering complex tot 5 appartementen). De bron is ouder dan de opgeslagen waarde; controleer de huidige Rabobank-regels.
 - Gedeeltelijke bevestigingen (bijvoorbeeld bijBouwe `vve`, `bonus`, `ort`, `minh`; ASN `ltvk`, `wwp`; IQWOON `pgb`, `obvw` met tegenstrijdige gidsen; Venn `duo`, mogelijk verouderd) zijn bewust niet als geverifieerd verwerkt.
+
+## Ronde 7 (20 oktober 2026): acceptatiegidsen echt gedownload en gelezen
+Netwerktoegang stond nu op Full; gidsen zijn met curl opgehaald en met pdftotext gelezen (`uit-ZZZZ-ronde7-1.json` t/m `-6.json`). Van de 179 niet-geverifieerde waarden zijn er 102 nu geverifieerd met een bron op het eigen domein; 77 blijven open.
+
+| Geldverstrekker | Gelezen | Resultaat |
+|---|---|---|
+| bijBouwe | Acceptatiehandleiding Vooruit (oktober 2026) en basis (september 2026), productkaart, wijzigingstabellen | 37 van 37; 8 gewijzigd (o.a. VvE-onderhoudsstaat 'redelijk', bonus, IVA/WAO). PDF's staan op prepr.io; de overzichtspagina op bijbouwe.nl is als bron opgenomen |
+| Nationale-Nederlanden | Acceptatiebeleid Hypotheken (adviseur.nn.nl) | 28 van 28; 3 gewijzigd (woz/wbhuid, meerink) |
+| Venn, Tulp | Kredietgids oktober 2025, acceptatiegidsen Tulp | 4 van 4, alle gewijzigd (bkr, duo, wwp) |
+| ASN Bank, BLG Wonen | uitgangspunten maximale hypotheek (09-01-2025) en adviseurspagina's | 14 van 31; de acceptatiegids zelf staat achter de login |
+| Rabobank | Acceptatie- en beheerregels wonen v4.1 (2023) | 5 van 5, zekerheid middel; de actuele gids (rabobank.nl) geeft 403. `vve` en `bonus` gewijzigd |
+| IQWOON, Knab | Gidsen januari 2026, Knab 7 september 2026 | 6 van 7 |
+| Overige 15 | NIBC, Allianz, bunq, Clarian, Groene Hart, Impact, Lot, Neo, Tellius, Hypotrust, Vista, Merius | 12 van 18 |
+| Aegon, ING (en a.s.r.) | Hypotheekgids a.s.r. mei 2026 en ING Acceptatiebeleid 1 oktober 2026 (kopieën op hypotheekcompany.nl) | 37 waarden herzien, maar zonder bron op het eigen domein: blijven 'niet geverifieerd'. a.s.r. 17 en ABN AMRO 2, Handelsbanken 2, SNS 1 niet gevonden |
+
+Nog open (77): a.s.r. 17, Aegon 19, ING 18, BLG Wonen 12, ASN Bank 5, ABN AMRO 2, Handelsbanken 2, IQWOON 1, SNS 1. Voor deze zijn de acceptatiegidsen alleen via het adviseursportaal te krijgen.

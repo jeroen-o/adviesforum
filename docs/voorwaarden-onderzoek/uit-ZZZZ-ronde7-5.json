@@ -1,0 +1,188 @@
+[
+ {
+  "naam": "a.s.r.",
+  "gecontroleerd": "2026-10-09",
+  "criteria": {},
+  "documenten": [
+   {
+    "titel": "Algemene voorwaarden ASR Hypotheek en ASR ZorgeloosThuis Hypotheek",
+    "url": "https://www.asr.nl/asr/api/asrnl/pod/getpdf?uri=/POD/r/Pdf/53997.pdf",
+    "versie": "Mei 2026"
+   }
+  ]
+ },
+ {
+  "naam": "Rabobank",
+  "gecontroleerd": "2026-10-09",
+  "criteria": {
+   "vve": {
+    "waarde": "~ Bestaande bouw: actieve, in KvK ingeschreven VvE vereist (staat onderhoud, MJOP/reservering); uitzonderingen kleine complexen, nieuwbouw en bij vrij vermogen",
+    "bron": [
+     "https://media.rabobank.com/m/4e33ec563c784cda/original/Rabobank-als-Hypotheekverstrekker-acceptatie-en-beheerregels-vanaf-2-januari-2023.pdf"
+    ],
+    "brondatum": "2023-01-02",
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "Ronde 7 (20 oktober 2026): Tegenspraak met opgeslagen waarde. Acceptatie- en beheerregels wonen v4.1 (2 jan 2023), Bijlage Schema beoordeling VVE (p. 34) en hoofdstuk 10 afwijkingen: er moet een actieve VvE zijn ingeschreven bij de KvK; accepteren bij (1) redelijk onderhoud + MJOP + voldoende reservefonds 10 jaar, (2) redelijk onderhoud, geen MJOP maar jaarlijks 0,5% herbouwwaarde reservering, (3) slecht onderhoud met MJOP en gepland herstel. Complexen tot en met 5 appartementen: met 80% akkoord geen MJOP/reservering en VvE niet verplicht actief (wel KvK). Nieuwbouw: VvE en reservering (nog) niet verplicht. Voldoet de aanvrager niet aan situatie 1 of 2: toch accepteren bij 10% vrij vermogen of financieringsruimte (combinatie mag). Een nieuwere Rabobank-wijzigingsmelding (volgens zoekresultaat per 30 juni) spreekt over een VvE 'in oprichting of al opgericht'; de actuele acceptatiegids van sept 2026 staat op rabobank.nl (geblokkeerd voor download) en kon niet worden gelezen."
+   },
+   "huur": {
+    "waarde": "~ Huur uit permanent verhuurde zelfstandige woning NL telt mee tot max. 50% van toetsinkomen; huurcontract min. 6 mnd, geen kamerverhuur of Airbnb",
+    "bron": [
+     "https://media.rabobank.com/m/4e33ec563c784cda/original/Rabobank-als-Hypotheekverstrekker-acceptatie-en-beheerregels-vanaf-2-januari-2023.pdf"
+    ],
+    "brondatum": "2023-01-02",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Ronde 7 (20 oktober 2026): Acceptatie- en beheerregels wonen v4.1 (2 jan 2023), par. 4.12.1 (p. 20-21): toetsinkomen is het jaarbedrag huuropbrengst na aftrek van gas/water/elektra; toestemmingsbrief financier, huur per bank ontvangen, gedeeld eigendom pro rata. Huurhistorie-tabel: bij minder dan 3 jaar verhuur 50% van reeel verwachte kale huur uit taxatie, bij 3 jaar of langer 50% van gemiddelde bruto huur over 3 jaar. Rabobank Inkomensverklaring verplicht bij 5+ woningen of meer dan 50% van inkomen uit verhuur. Oudere versie (2023), actuele versie niet leesbaar."
+   },
+   "bonus": {
+    "waarde": "~ Overwerk en provisie (laatste 12 mnd) samen max. 30% van bruto jaarsalaris; bedrijfsresultaatafhankelijke bonus, tantieme of winstuitkering telt niet mee",
+    "bron": [
+     "https://media.rabobank.com/m/4e33ec563c784cda/original/Rabobank-als-Hypotheekverstrekker-acceptatie-en-beheerregels-vanaf-2-januari-2023.pdf"
+    ],
+    "brondatum": "2023-01-02",
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "Ronde 7 (20 oktober 2026): Afwijking van opgeslagen waarde. Acceptatie- en beheerregels wonen v4.1 (2 jan 2023), par. 4.2 (p. 16-17): onregelmatigheidstoeslag, overwerk en provisie op bedrag laatste 12 maanden; provisie en overwerk samen max. 30% van actueel bruto jaarsalaris incl. vakantietoeslag, 13e maand en vaste eindejaarsuitkering. 'Een bedrijfsresultaat afhankelijke bonus, tantieme of winstuitkering nemen we niet mee als toetsinkomen.' Een resultaatbonus met 3-jaarsgemiddelde of 50%-grens is niet gevonden. Oudere versie (2023)."
+   },
+   "pgb": {
+    "waarde": "~ Pgb-inkomen van zorgverlener telt mee bij KvK-inschrijving en Rabobank Inkomensverklaring; gemiddelde laatste 3 kalenderjaren, max. laatste jaar",
+    "bron": [
+     "https://media.rabobank.com/m/4e33ec563c784cda/original/Rabobank-als-Hypotheekverstrekker-acceptatie-en-beheerregels-vanaf-2-januari-2023.pdf"
+    ],
+    "brondatum": "2023-01-02",
+    "zekerheid": "middel",
+    "status": "bevestigd",
+    "toelichting": "Ronde 7 (20 oktober 2026): Acceptatie- en beheerregels wonen v4.1 (2 jan 2023), par. 4.6 (p. 19): pgb kan meetellen als de zorgverlener in de KvK staat en een Rabobank Inkomensverklaring is opgesteld; toetsinkomen is het gemiddelde jaarinkomen over de laatste 3 volledige kalenderjaren, max. het laatste jaar. Oudere versie (2023)."
+   },
+   "gron": {
+    "waarde": "+ Offerte op basis van Groninger akte toegestaan; lening pas te verstrekken als de akte van levering onherroepelijk is (notaris ziet hierop toe)",
+    "bron": [
+     "https://media.rabobank.com/m/4e33ec563c784cda/original/Rabobank-als-Hypotheekverstrekker-acceptatie-en-beheerregels-vanaf-2-januari-2023.pdf"
+    ],
+    "brondatum": "2023-01-02",
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "Ronde 7 (20 oktober 2026): Afwijking van opgeslagen waarde. Acceptatie- en beheerregels wonen v4.1 (2 jan 2023), par. 6.1.3 (p. 28): 'Het is toegestaan een offerte te verstrekken op basis van de Groninger akte'; de lening kan pas worden verstrekt als de akte van levering onherroepelijk is, de notaris is hiervoor verantwoordelijk. Beoordeling door een specialist en de uitzondering voor KoopGarant/KoopStart staan niet in deze versie. Oudere versie (2023)."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Rabobank als Hypotheekverstrekker: acceptatie- en beheerregels wonen",
+    "url": "https://media.rabobank.com/m/4e33ec563c784cda/original/Rabobank-als-Hypotheekverstrekker-acceptatie-en-beheerregels-vanaf-2-januari-2023.pdf",
+    "versie": "v4.1, 2 januari 2023"
+   },
+   {
+    "titel": "Rabobank als Hypotheekverstrekker: acceptatie- en beheerregels wonen",
+    "url": "https://media.rabobank.com/m/682602dc2ad55db/original/Rabobank-als-Hypotheekverstrekker-acceptatie-en-beheerregels-vanaf-3-oktober-2022.pdf",
+    "versie": "3 oktober 2022 (gedownload, niet gebruikt voor waarden)"
+   }
+  ]
+ },
+ {
+  "naam": "IQWOON",
+  "gecontroleerd": "2026-10-09",
+  "criteria": {
+   "lensch": {
+    "waarde": "~ Lening ouders bij aankoop/oversluiting alleen met aflosverplichting; bruto werkelijke last in toets, buiten toets als lasten worden geschonken",
+    "bron": [
+     "https://www.iqwoon.nl/uploads/iqwoon/files/Clarian-Wonen-Acceptatiegids-Januari-2026.pdf"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Ronde 7 (20 oktober 2026): Clarian Wonen Acceptatiegids Januari 2026 (gedeeld met IQWOON), p. 7 'Tweede hypotheek of lening ouders': mogelijk, lening van ouders met aflosverplichting, uitgaan van bruto werkelijke last; worden de lasten geschonken dan blijven ze buiten beschouwing. Ook bij herkomst eigen middelen: lasten van een lening tellen als verplichting tenzij teruggeschonken (schenkingsovereenkomst)."
+   },
+   "pgb": {
+    "waarde": "- Inkomen uit pgb en gastouderschap telt niet mee (gids 2026); in de gids van januari 2025 kon pgb nog onder voorwaarden meetellen",
+    "bron": [
+     "https://www.iqwoon.nl/uploads/iqwoon/files/Clarian-Wonen-Acceptatiegids-Januari-2026.pdf",
+     "https://www.iqwoon.nl/uploads/iqwoon/files/Acceptatiegids-IQWOON-Januari.pdf"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Ronde 7 (20 oktober 2026): Afwijking van opgeslagen waarde. Clarian Wonen Acceptatiegids Januari 2026, p. 4: 'Inkomen uit PGB/Gastouder: Niet mogelijk.' De IQWOON Acceptatiegids Januari 2025 (nu verouderd) noemde nog: met KvK via Inkomensverklaring Ondernemer, zonder KvK meer dan 1 zorgontvanger, familiezorg met zorgovereenkomst tot zorgontvanger 77 is (alleen met NHG). Die voorwaarden zijn in de 2026-gids vervallen."
+   },
+   "bsp": {
+    "waarde": "~ Bankspaarsaldo mag lening verlagen als geldverstrekker verrekening bij aflossing bevestigt; verpand saldo telt als eigen middelen",
+    "bron": [
+     "https://www.iqwoon.nl/uploads/iqwoon/files/Clarian-Wonen-Acceptatiegids-Januari-2026.pdf"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "hoog",
+    "status": "bevestigd",
+    "toelichting": "Ronde 7 (20 oktober 2026): Clarian Wonen Acceptatiegids Januari 2026, p. 6, hoofdstuk Overbruggingen: bij een gekoppelde (bank)spaarrekening kan de huidige lening met het saldo worden verlaagd als de geldverstrekker bevestigt dat het saldo bij aflossen wordt verrekend; doel overbruggingskrediet noemt 'eigen middelen (overwaarde) en saldo verpande bankspaarrekening'."
+   },
+   "obvw": {
+    "waarde": "~ Overbrugging met minimumbedrag en eenmalige kosten (te betalen bij terugbetaling); vaste rente, looptijd 24 mnd, verlenging 6 mnd mogelijk",
+    "bron": [
+     "https://www.iqwoon.nl/uploads/iqwoon/files/Clarian-Wonen-Acceptatiegids-Januari-2026.pdf",
+     "https://www.iqwoon.nl/uploads/iqwoon/files/IQWOON-Beheergids-Januari-2026.pdf",
+     "https://www.iqwoon.nl/uploads/iqwoon/files/Acceptatiegids-IQWOON-Januari.pdf"
+    ],
+    "brondatum": "2026-01",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Ronde 7 (20 oktober 2026): Clarian Wonen Acceptatiegids Januari 2026, p. 6: minimaal overbruggingskrediet EUR 2.500, eenmalige kosten EUR 250 die de klant bij terugbetaling voldoet, looptijd 24 maanden, vaste rente, overbrugging op twee onderpanden mogelijk. Gids januari 2025 had nog minimaal EUR 10.000 en EUR 0 kosten. Beheergids Januari 2026: looptijd overbruggingshypotheek met 6 maanden te verlengen na individuele beoordeling. 'Alleen in combinatie met IQWOON-hypotheek' is niet teruggevonden."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Clarian Wonen Acceptatiegids voor adviseurs",
+    "url": "https://www.iqwoon.nl/uploads/iqwoon/files/Clarian-Wonen-Acceptatiegids-Januari-2026.pdf",
+    "versie": "Januari 2026"
+   },
+   {
+    "titel": "IQWOON Acceptatiegids voor adviseurs",
+    "url": "https://www.iqwoon.nl/uploads/iqwoon/files/Acceptatiegids-IQWOON-Januari.pdf",
+    "versie": "Januari 2025"
+   },
+   {
+    "titel": "IQWOON Beheergids voor adviseurs",
+    "url": "https://www.iqwoon.nl/uploads/iqwoon/files/IQWOON-Beheergids-Januari-2026.pdf",
+    "versie": "Januari 2026"
+   }
+  ]
+ },
+ {
+  "naam": "Knab",
+  "gecontroleerd": "2026-10-09",
+  "criteria": {
+   "mwbep": {
+    "waarde": "~ Bestaande bouw: laagste van koopprijs en (desktop)taxatie; desktoptaxatie onder voorwaarden; nieuwbouw: gevalideerd taxatierapport; geen min. marktwaarde",
+    "bron": [
+     "https://www.knab.nl/assets/35355cb5-f8a5-0105-c237-9bab7d11ff84/a50a048d-3f34-4fd1-a920-6ada5d56cb7c/Knab%20Hypotheek_Acceptatiegids_07092026.pdf",
+     "https://www.knab.nl/assets/35355cb5-f8a5-0105-c237-9bab7d11ff84/892b3bcc-b0dd-430b-9b6e-359eba53ac11/KnabHypotheek_Acceptatiegids_24%20April%202026.pdf"
+    ],
+    "brondatum": "2026-09-07",
+    "zekerheid": "hoog",
+    "status": "gewijzigd",
+    "toelichting": "Ronde 7 (20 oktober 2026): Acceptatiegids Knab (Helder) Hypotheek 7 sept 2026 hoofdstuk 10 (p. 37-38) en Acceptatiegids Knab Hypotheek 24 april 2026: 10.1 geen minimale marktwaarde; 10.2 uitgangspunt is een volledig taxatierapport, Knab neemt het laagste van koopprijs of bedrag in de (desktop)taxatie (niet: verwachte verkoopprijs); 10.3 nieuwbouw altijd gevalideerd nieuwbouwtaxatierapport; 10.6 desktoptaxatie niet bij nieuwbouw, erfpacht, EBV, gedwongen verkoop of Calcasa confidence level lager dan 5, max. 6 mnd oud, binnen LTV- en hoofdsomgrenzen."
+   },
+   "zstart": {
+    "waarde": "~ Startende ondernemer = nog geen 36 mnd actief; inkomen volgens 1-1-1-methode via rekenexpert (Zakelijk Inkomen of ViiZ)",
+    "bron": [
+     "https://www.knab.nl/assets/35355cb5-f8a5-0105-c237-9bab7d11ff84/a50a048d-3f34-4fd1-a920-6ada5d56cb7c/Knab%20Hypotheek_Acceptatiegids_07092026.pdf",
+     "https://www.knab.nl/assets/35355cb5-f8a5-0105-c237-9bab7d11ff84/892b3bcc-b0dd-430b-9b6e-359eba53ac11/KnabHypotheek_Acceptatiegids_24%20April%202026.pdf"
+    ],
+    "brondatum": "2026-09-07",
+    "zekerheid": "middel",
+    "status": "gewijzigd",
+    "toelichting": "Ronde 7 (20 oktober 2026): Acceptatiegids Knab (Helder) Hypotheek 7 sept 2026, hoofdstuk 4.2 (p. 12) en gids 24 april 2026 (p. 11-12): startende ondernemer is wie nog geen 36 maanden als ondernemer werkt; inkomen op de 1-1-1-methode. De opgeslagen details (min. een volledig boekjaar, realisatie plus prognose, cv, zelfde branche) staan niet in de gidsen en zijn daarom niet bevestigd; de gids werkt de 1-1-1-methode niet verder uit."
+   }
+  },
+  "documenten": [
+   {
+    "titel": "Acceptatiegids Knab (Helder) Hypotheek",
+    "url": "https://www.knab.nl/assets/35355cb5-f8a5-0105-c237-9bab7d11ff84/a50a048d-3f34-4fd1-a920-6ada5d56cb7c/Knab%20Hypotheek_Acceptatiegids_07092026.pdf",
+    "versie": "7 september 2026"
+   },
+   {
+    "titel": "Acceptatiegids Knab Hypotheek",
+    "url": "https://www.knab.nl/assets/35355cb5-f8a5-0105-c237-9bab7d11ff84/892b3bcc-b0dd-430b-9b6e-359eba53ac11/KnabHypotheek_Acceptatiegids_24%20April%202026.pdf",
+    "versie": "24 april 2026"
+   }
+  ]
+ }
+]
