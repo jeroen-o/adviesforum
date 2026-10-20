@@ -1,0 +1,43 @@
+{
+ "product": "woonverzekering",
+ "aanbieders": [
+  {
+   "naam": "a.s.r.",
+   "url": "https://www.asr.nl/verzekeringen/woonhuisverzekering/asr",
+   "domeinen": [
+    "asr.nl"
+   ],
+   "criteria": {
+    "eigenrisico": {
+     "waarde": "~ Keuze € 0, € 100 of € 500; bij stormschade (ook hagel tijdens storm) standaard € 375, tenzij het polisblad anders vermeldt",
+     "bron": [
+      "https://downloads.asr.nl/pdf/37301.pdf",
+      "https://www.asr.nl/verzekeringen/woonhuisverzekering/ikkieszelf"
+     ],
+     "brondatum": "2026-01",
+     "zekerheid": "hoog",
+     "toelichting": "Voorwaarden Opstalverzekering Ik kies zelf IKZ WH 2026-01 noemen standaard stormeigen risico van € 375; gelezen via zoeksamenvatting (WebFetch niet bereikbaar), artikelnummer niet geverifieerd."
+    }
+   }
+  },
+  {
+   "naam": "Nationale-Nederlanden",
+   "url": "https://www.nn.nl/Particulier/Verzekeren/Opstalverzekering.htm",
+   "domeinen": [
+    "nn.nl"
+   ],
+   "criteria": {
+    "duurzaam": {
+     "waarde": "+ Laadpaal, zonnepanelen, (hybride) warmtepomp en thuisbatterij t/m 20 kWh standaard meeverzekerd, max. € 50.000 per gebeurtenis; montage conform fabrikant en NEN 1010",
+     "bron": [
+      "https://www.nn.nl/Particulier/Verzekeren/Opstalverzekering.htm",
+      "https://www.nn.nl/Particulier/Verzekeren/Woonverzekeringen/Duurzame-kenmerken.htm"
+     ],
+     "brondatum": "2026",
+     "zekerheid": "hoog",
+     "toelichting": "Verfijning van de bestaande waarde: grens thuisbatterij 20 kWh, maximum per gebeurtenis en installatie-eis volgens NN-pagina's/UNWV-03. 'Duurzaam herstel via netwerk' is in deze ronde niet opnieuw gezien, maar niet weerlegd."
+    }
+   }
+  }
+ ]
+}

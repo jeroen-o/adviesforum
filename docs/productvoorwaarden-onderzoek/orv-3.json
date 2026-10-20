@@ -1,0 +1,35 @@
+{
+ "product": "orv",
+ "aanbieders": [
+  {
+   "naam": "Allianz",
+   "criteria": {
+    "terminaal": {
+     "waarde": "~ Voorschot 50% van verzekerd bedrag (max. € 100.000) bij terminale ziekte; wachttijd 2 jaar na ingang, verzekerde max. 64 jaar, resterende looptijd min. 1 jaar",
+     "bron": [
+      "https://www.allianz.nl/particulier/producten/overlijdensrisicoverzekering.html",
+      "https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/l/L3764.pdf"
+     ],
+     "brondatum": null,
+     "zekerheid": "hoog",
+     "toelichting": "Actuele productpagina en brochure noemen voorwaarden die in de opgeslagen waarde (bron 2020-12) ontbreken: wachttijd 2 jaar, max. leeftijd 64, minimaal 1 jaar resterende looptijd. 'Levensverwachting <= 1 jaar' staat alleen in oudere voorwaarden RV2204; niet opnieuw bevestigd. Teken ~ i.p.v. + omdat het onder voorwaarden is. Controleer op pagina of de 64 jaar de actuele grens is (brochure en pagina noemen dit, brontekst niet geheel eenduidig)."
+    }
+   }
+  },
+  {
+   "naam": "Credit Life (voorheen Callas)",
+   "criteria": {
+    "instap": {
+     "waarde": "~ Instapleeftijd 18 tot 75 jaar (aanvragen kan tot de dag voor de 75e verjaardag)",
+     "bron": [
+      "https://www.creditlife.nl/faq/wat-is-de-maximum-leeftijd-bij-aanvang-van-de-credit-life-overlijdensrisicoverzekering/",
+      "https://www.creditlife.nl/overlijdensrisicoverzekering/"
+     ],
+     "brondatum": null,
+     "zekerheid": "hoog",
+     "toelichting": "Opgeslagen waarde noemt alleen de minimumleeftijd; de eigen FAQ noemt maximumleeftijd bij aanvang 75 jaar (eindleeftijd 85 jaar staat al bij looptijd)."
+    }
+   }
+  }
+ ]
+}
