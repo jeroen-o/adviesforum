@@ -244,5 +244,92 @@ Quinn Mail werd in het helpcentrum als pilot omschreven; aanmelden ging via quin
 
 - Releasenotes 2025: onder meer het verwijderen van commerciële rentes (alleen wijzigingen op het moment van ingang), automatische overgang naar de tabellen van 2026 per 1 januari 2026, toetsrente uit het gewogen gemiddelde en een WW-scenario voor DGA\'s (IT-27982).
 - Releasenotes 2026: de nieuwe financieringslastnormen 2026 van het Nibud zijn verwerkt en handmatig ingebrachte eigen middelen blijven behouden als andere onderdelen wijzigen (IT-28259). Er zijn nieuwe menunamen aangekondigd ter voorbereiding op een vernieuwde opzet eind 2026.
-- Het product heet sinds de bundeling van Blinqx eBlinqx Hypotheekadvies; de tab Fastlane is in de omgeving hernoemd naar Hypotheekadvies.`}
+- Het product heet sinds de bundeling van Blinqx eBlinqx Hypotheekadvies; de tab Fastlane is in de omgeving hernoemd naar Hypotheekadvies.`},
+ {id:'k311',cat:'adv',titel:'eBlinqx release 20 oktober 2026: dataverbruik, e-mailboxen, schadeverzekering en taken',auteur:'u6',datum:'2026-10-20T14:00:00',herzienVoor:'2027-01-20',bron:null,gecontroleerd:false,
+  kw:'eBlinqx release 20 oktober 2026 dataverbruik managementinformatie opslag IP-adres uitloggen klantportaal IMAP POP3 Office365 e-mailmanager authenticeren allen beantwoorden collectiviteit premiebetaler takenoverzicht kantoor SEPA AI e-mail dossier Finly API',
+  links:[{titel:'Release 20 oktober 2026: inzicht dataverbruik en verbeteringen Klantportaal, e-mail en inloggen (support.fasterforward.nl)',url:'https://support.fasterforward.nl/inzicht-dataverbruik-en-verbeteringen-klantportaal-e-mail-en-inloggen/'},{titel:'Managementinformatie (support.fasterforward.nl)',url:'https://support.fasterforward.nl/kennisbank/managementinformatie/'},{titel:'Systeemstatus eBlinqx',url:'https://status.fasterforward.nl/'}],
+  body:`Samenvatting in eigen woorden van de releasebeschrijving van eBlinqx (kantoorsysteem van Blinqx Verzekering & Hypotheek) van dinsdag 20 oktober 2026. Het bericht is op 16 oktober 2026 geplaatst op de supportsite. Dit is geen officiële releasenote; lees het bronbericht voor de actuele details en controleer na de release wat er in jouw omgeving is veranderd.
+
+## Inloggen en beveiliging
+
+- Je wordt niet meer automatisch uitgelogd als alleen je IP-adres wisselt, bijvoorbeeld in het buitenland of via een hotspot. Wisselen het IP-adres én de omgeving of de gebruiker, dan word je om veiligheidsredenen nog wel uitgelogd.
+- Tip voor je kantoor: dit is een gemak, geen reden om de tweestapsverificatie of je beleid voor thuiswerken en openbare netwerken te versoepelen.
+
+## Inzicht in dataverbruik
+
+- In Managementinformatie zie je het dataverbruik van bestanden en e-mail, dus hoeveel opslag je omgeving gebruikt. Ook bestanden die je niet als document ziet, zoals HDN- en ADN-berichten, tellen mee.
+- Het overzicht wordt elke maand op de 28e bijgewerkt. Je ziet het alleen met het juiste recht en als beheerder. Ontbreekt de module Totale opslag, vraag dan toegang aan via de support van Blinqx.
+
+## Klantportaal
+
+- Pas je in eBlinqx de naam van een stuk aan, dan wordt die naam ook gesynchroniseerd naar het verzoek in het Klantportaal, zodat beide gelijk blijven.
+
+## E-mail
+
+- Een mailbox van het type IMAP of POP3 kun je zelf omzetten naar Office365 via een knop in de e-mailmanager. Voorheen deed Blinqx dat met een script. Na de omzetting moet je de mailbox opnieuw authenticeren; eerder binnengekomen e-mail blijft zichtbaar. Het hosten van de adressen bij Microsoft regelt je eigen ICT-beheerder; gebruik de knop pas als dat is gebeurd.
+- Authenticeren, opnieuw authenticeren en de authenticatie intrekken kan nu ook in de e-mailmanager, door de beheerder zelf.
+- In een reply schakel je met één klik over naar "Allen beantwoorden" als je per ongeluk op "Beantwoorden" klikte.
+- De kenmerken waarmee AI een e-mail aan het juiste dossier koppelt zijn uitgebreid. Controleer de koppeling altijd zelf: een AI-koppeling is een hulpmiddel, geen zekerheid. Een mail bij een verwijderd dossier is weer te openen.
+
+## Schadeverzekering
+
+- In de productkaart kun je collectiviteit vastleggen, met collectiviteitsnummer, naam en percentage. De velden hebben tags, staan in de API en worden gevuld uit het ADN-bericht als de verzekeraar ze meestuurt in het AFD-bericht.
+- Je kunt een premiebetaler kiezen in de productkaart (ook in "Overige partij"). Dit geldt ook voor andere productkaarten met dat veld.
+
+## Taken en administratie
+
+- In het takenfilter kun je meerdere personen of workflowgroepen tegelijk selecteren, ook op dossierniveau. Zonder selectie zoek je op alle groepen en personen.
+- Het algemene takenoverzicht heeft een filter Kantoor (alleen als de instelling aanstaat; relevant voor omgevingen met meerdere deelnemers).
+- Per producttype kun je een standaardadministratie instellen, ook voor producten die via HDN, Aplaza, handmatig of API worden aangemaakt. Beheerders vragen de module aan via support.
+
+## Overig
+
+- Het SEPA-bestand wordt na het genereren bewaard, zodat je het opnieuw kunt downloaden zonder dat het opnieuw wordt opgebouwd; het bevat nu een gestructureerd adres.
+- Het premieblok van een levensverzekering kan via de API worden gevuld; via de API maak je ook een stukkenlijst en losse stukken in het klantdossier aan.
+- Het Finly-formulier vult zakelijke klantgegevens uitgebreider voor (IBAN, contactpersoon, directeur). Controleer deze gegevens op juistheid voordat je een zakelijk klantdossier gebruikt voor advies of identificatie.
+- Beheerdersmeldingen kun je negeren met een knop. Verder is de onderliggende softwaretechniek vernieuwd, zonder zichtbare wijziging, ook voor koppelingen en exports.
+
+## Aandachtspunten voor je kantoor
+
+- Leg vast per wanneer je met de nieuwe versie werkt en controleer je werkinstructies als je de e-mailmanager, het takenoverzicht of de standaardadministratie gebruikt.
+- Een storing of vertraging meld je via de support van Blinqx; de actuele status staat op de statuspagina.`},
+ {id:'k312',cat:'adv',titel:'Fastlane (eBlinqx Hypotheekadvies): releases augustus en september 2026',auteur:'u6',datum:'2026-10-20T15:00:00',herzienVoor:'2027-01-20',bron:null,gecontroleerd:false,
+  kw:'Fastlane eBlinqx Hypotheekadvies releasenotes augustus september 2026 klantprofiel AdviesCoach AFM Leidraad energielasten onderhoudskosten eigenaarslasten netto hypotheeklasten rapportage samenstellen brondata actualiseren verplichte velden Zurich ORV Allianz TAF HDN erfpacht',
+  links:[{titel:'Releasenotes Fastlane 2026 (Hypotheekbond)',url:'https://fastlane.hypotheekbond.nl/hoe-het-werkt/releasenotes/releasenotes-2026/'},{titel:'AFM Leidraad hypotheekadvisering',url:'https://www.afm.nl/nl/sector/adviseurs-bemiddelaars/themas/hypotheken'}],
+  body:`Samenvatting in eigen woorden van de openbare releasenotes van Fastlane (eBlinqx Hypotheekadvies) van augustus en september 2026. Het is geen officiële releasenote; de brontekst is leidend. Per wijziging staat het ticketnummer erbij.
+
+## Compliance: let op de AFM Leidraad
+
+- In de release van 9 september 2026 zijn energielasten, onderhoudskosten van de woning en overige eigenaarslasten opgenomen in het consumptief besteedbaar inkomen (IT-30415, IT-30417, IT-30419, IT-33019). De term "Netto woonlasten" heet nu overal "Netto hypotheeklasten" (IT-33161). De berekening van woonquote en toetslast verandert hierdoor niet.
+- Wat dit voor jouw advies betekent, bepaal je zelf. Leg vast vanaf welke datum je met de nieuwe weergave werkt en pas je adviesmotivatie en klantcommunicatie aan als je kantoor de oude term of de oude opbouw gebruikt.
+
+## Release 9 september 2026 (34 wijzigingen)
+
+- **Klantprofiel (beta):** je komt direct op de keuze Vooringevuld of Blanco (IT-32766); de terugval bij life events (arbeidsongeschiktheid, werkloosheid, overlijden partner, einde relatie, AOW) is meteen gevuld zonder eigen berekening (IT-32812); je kunt een blanco klantprofiel als pdf downloaden (IT-32213). Netto inkomen, aflosvormen en bekendheid met financiële begrippen worden vooringevuld uit de inventarisatie (IT-32821, IT-32957, IT-32992). Je kunt elke waarde overschrijven.
+- **Vragen en antwoordopties:** de antwoordoptie Anders vervalt bij elf vragen (IT-32904), de verplichte toelichting bij kennisachterstand vervalt (IT-32933) en gekozen uitgavencategorieën blijven bewaard (IT-32931). Bestaande antwoorden blijven leesbaar.
+- **AdviesCoach (eerste stap):** vergelijkt in de adviesmotivatie het klantprofiel met het advies en geeft per onderdeel een signaal (Matcht, Aandacht vereist, Niet van toepassing, Niet te beoordelen). Het blokkeert niets en geeft geen oordeel (IT-32963). De signalering is een hulpmiddel; de adviseur blijft zelf verantwoordelijk voor het advies.
+- **Berekening en inventarisatie:** een bestaande berekening actualiseren op gewijzigde leningdeelbedragen, inclusief tussentijdse aflossing (IT-30196); ouderdomspensioen staat bij brondata op de juiste plek (IT-31639).
+- **Rapportage:** opgeschoonde hoofdstukkenlijst en een voorblad per rapportsectie (IT-32955); de ingangsdatum van de rentewijziging staat in de vergelijking en de lijst (IT-29855).
+
+## Release 26 augustus 2026 (30 wijzigingen)
+
+- **Klantprofiel voorinvullen:** huidige woonsituatie, woonlasten, leningen en verplichtingen (alleen het type), spaargeld, voorzieningen van de werkgever en loondoorbetaling bij ziekte worden automatisch gevuld (IT-32216 t/m IT-32224). De terugval in besteedbaar inkomen staat bij de risicoscenario's in een gele balk (IT-32230).
+- **Rapport samenstellen:** vier vaste secties (Samenvatting, Adviesrapport, Inventarisatie, Bijlagen), vijf standaardrapporten en een onthouden eigen indeling (IT-32205, IT-32829).
+- **Brondata overnemen en actualiseren:** de naam van de geldverstrekker komt mee bij het overnemen van een verplichting; het schuldenaarschap van een hypotheek volgt de leninggegevens, niet het eigendom van de woning; je kiest zelf welk inkomen meetelt voor het rekeninkomen; per veld kies je wat je actualiseert, met een kolom Verschil (IT-32464, IT-31634, IT-31638, IT-32608).
+- **Verplichte velden:** een rood sterretje bij elk verplicht veld in alle dossierformulieren, ook hoorbaar voor schermlezers (IT-32656 t/m IT-32813).
+- Techniek: meting van het AI-gebruik, foutmonitoring, geen dubbele opslag van brondata meer.
+
+## Release 12 augustus 2026
+
+- **Inventarisatie:** einddatum legitimatiebewijs wordt weer aangevuld, afgifteplaats klopt, eigendomspercentage blijft bij de juiste persoon als je aanvrager en partner omdraait, Belgische en Duitse postcodes worden geaccepteerd bij woningen (IT-31032, IT-31644, IT-32237, IT-32548).
+- **Inkomen en brondata:** decimalen bij uren per week; rekeningen worden bij het inlezen aan de juiste persoon toegewezen; fout bij het opslaan van een werkgeversadres is verholpen (IT-30788, IT-31626, IT-32311).
+- **Verzekeringen:** Zurich ORV (TAF Personal Zurich en TAF Special Zurich) is beschikbaar via HDN (IT-30120). Allianz ORV wordt bij een gelijktijdige hypotheek getoond tot € 750.000 en anders tot € 500.000 (IT-32024). De standaard uitkeringsduur bij werkloosheid staat op 12 maanden in plaats van 24 (IT-31973).
+- **Berekenen en vergelijken:** bij een SpaarGerust-leningdeel gebruikt de vergelijking de werkelijke einddatum (IT-32106); bij "Wonen nu" telt de spaarpremie van banksparen mee (IT-32255); de kleur van de samenvatting klopt met de grafiek bij toetslast rond de AOW (IT-32253).
+- **Financieringsopzet:** keuze tussen koopsom en marktwaarde als grondslag voor overdrachtsbelasting (IT-31995); een handmatig consumptief bedrag blijft bewaard (IT-32388).
+- **HDN:** het veld Verkoop onder voorwaarden constructie wordt leeggemaakt als je Nee kiest (IT-32362).
+
+## Praktische tips
+
+- Controleer na elke release in je eigen omgeving of berekeningen, rapportages en werkinstructies nog kloppen.
+- Een veranderde term of berekening in het adviesrapport raakt je zorgplicht: leg vast vanaf wanneer je met de nieuwe versie werkt.`}
 ]);
