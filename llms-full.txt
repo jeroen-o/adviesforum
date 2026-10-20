@@ -7420,6 +7420,90 @@ Bronnen:
 
 ---
 
+# Fastlane (eBlinqx Hypotheekadvies): release oktober 2026 in het kort
+
+URL: https://adviesforum.nl/kennisbank/k310.html
+Categorie: Adviessoftware
+Gepubliceerd: 2026-10-20 · Herzien vóór: 2027-01-20
+Status: concept, nog niet gecontroleerd door compliance
+
+Dit is een samenvatting in eigen woorden van de vooraankondiging van de Fastlane-release van oktober 2026 (141 wijzigingen: 113 functioneel, 28 technisch). Volgens de aankondiging staat de livegang gepland op woensdag 21 oktober 2026 omstreeks 21:30. De aankondiging is onder voorbehoud: de definitieve samenstelling kan nog wijzigen. Gebruik na de livegang de officiële releasenotes als bron.
+
+## Let op bij het gebruik van deze pagina
+
+- Dit is geen officiële releasenote en komt niet van Blinqx. De volledige lijst met ticketnummers staat in de releasenotes van Fastlane en Blinqx (zie de links).
+- Controleer na de release in je eigen omgeving wat er echt is veranderd voordat je een werkinstructie of adviesrapport aanpast.
+- Een gewijzigde berekening of tekst in het adviesrapport raakt je zorgplicht: leg vast vanaf welke datum je met de nieuwe versie hebt gewerkt.
+
+## Inkomen en vermogen
+
+- Een tijdelijk inkomen vervalt nu correct op de einddatum.
+- Het AOW-bedrag in de inventarisatie kun je handmatig aanpassen; de eindleeftijd van een wezenpensioen is instelbaar.
+- Het netto maandinkomen is zichtbaar en voor loondienst geldt een maximum van 50 uur per week.
+- Banksparen is opgenomen in het scherm Vermogen, met een veld voor maandelijkse inleg; bij een rekening voegt Fastlane de maatschappij automatisch in op basis van de IBAN.
+- Dubbele import van inkomen en pensioen is verholpen. Opslaan wordt geblokkeerd bij een leeg rekeninkomen.
+- Brondata-inkomen wordt gebruikt voor de maximale hypotheekberekening.
+
+## Financieringsopzet, berekening en toetsing
+
+- Verbeteringen bij dubbele lasten bij overbrugging, het tarief overdrachtsbelasting en de rente bij een meeneemhypotheek.
+- Een signalering verschijnt als de klant over 10 jaar de AOW-leeftijd bereikt; de fiscale looptijd van een leningdeel is begrensd op 30 jaar.
+- Bij een variabele rentevastperiode toont het totaalscherm "Variabel" en de toetsrente wordt overal met 3 decimalen getoond.
+- Bij het splitsen van een meegenomen leningdeel kan het afgesplitste deel dezelfde meeneemrente en resterende looptijd houden.
+- De sectie Fiscaliteiten bij het bewerken van een leningdeel is nieuw.
+
+## Brondata en inventarisatie
+
+- Bij het vergelijken van brondata staan oude pensioengegevens nu aan beide kanten; de betaalrekening voor de hypotheek wordt automatisch gekozen als er maar één is. De geldigheid van brondata is 90 dagen.
+- Het afgifteland van een identiteitsbewijs staat standaard op Nederland.
+- Het woningenoverzicht toont verkoopstatus en te verwachten overbrugging, met een totaalregel.
+
+## Adviesrapport en motivatie
+
+- Het oriëntatierapport kan de hypotheekverklaring uit de tekstenbibliotheek bevatten en vermeldt de rekendatum van het verantwoord hypotheekbedrag.
+- Bij een woning met status "inwonend" noemt het rapport geen "huidige woning" meer; persoonlijke gegevens bevatten ook burgerlijke staat, titel verplichtingen en kinderen.
+- Teksten over NHG, toetsmomenten bij overschrijding van de norm en de draagplichtovereenkomst zijn gecorrigeerd. In de vergelijking van geldverstrekkers is de premie voor Blijven wonen uit het bruto maandbedrag gehaald.
+
+## HDN-aanvraag
+
+- Nieuwe notificatie bij een ontbrekende einddatum rentevaste periode, correcte prefill bij twee aanvragers en een DGA, en een nieuwe kolom Type/Productlijn.
+- Voor ING geldt een validatie op maximaal 4 leningdelen. Het menu-item "HDN-aanvrager" heet "Aanvragen" en er is een kolom "Voorbereid op".
+- Het inkomen kun je opnieuw inladen vanuit de inventarisatie.
+
+## Verzekeringen
+
+- Verbeteringen bij de overlijdensrisicoverzekering op twee levens (premieweergave, notificaties bij Centraal Beheer, Allianz-switch), een nieuw scherm om per verzekering "aflossen" of "inkomen aanvullen" te kiezen, en de bruto-variant bij woonlastenverzekering.
+- De inkomensbescherming rekent alleen op looninkomen uit dienstverband.
+
+## Erfpacht, onderpand en taxatie
+
+- Uitgebreide erfpachtvelden (lopend, eeuwigdurend, afgekocht of af te kopen), ook in de HDN-aanvraag, met een correcte berekening van het toetslastverschil. De vraag staat standaard op Nee.
+- De sidebar Onderpand is heringedeeld. Een taxatieaanvraag kan rechtstreeks bij Maximus Taxaties worden ingediend.
+- Een funderingsrisicocheck op adresniveau op basis van publieke bronnen is toegevoegd. Dit sluit aan op het funderingsvoorbehoud dat sinds 1 juli 2026 in de branchebrede koopovereenkomst staat. Het is een hulpmiddel bij het gesprek, geen oordeel over de fundering.
+
+## AI-teksten
+
+- Bij AI-teksten kun je extra instructies meegeven, zelf een tekst corrigeren en met duimpjes feedback geven. Een AI-tekst blijft een concept: de adviseur is verantwoordelijk voor de inhoud van het advies en leest het altijd na.
+
+## Overig
+
+- Aegon vervalt als veld "Rentekortingen"; HollandWoont wordt alleen getoond bij NHG-hypotheken. Private Lease wordt als maandlast meegenomen. Verplichtingen worden per aanvrager en gezamenlijk getoond.
+- Je kunt een standaard geldverstrekker en productlijn instellen.
+- Er zijn 28 technische verbeteringen: vernieuwde formuliertechniek zonder gedragswijziging, extra beveiliging van de hypotheekberekeningsservice en herstel van storingen (koppeling met verzekeraars, brondata-documenten, HDN-formulier versturen).
+
+## Eerdere releasenotes (openbaar)
+
+- Releasenotes 2025: onder meer het verwijderen van commerciële rentes (alleen wijzigingen op het moment van ingang), automatische overgang naar de tabellen van 2026 per 1 januari 2026, toetsrente uit het gewogen gemiddelde en een WW-scenario voor DGA's (IT-27982).
+- Releasenotes 2026: de nieuwe financieringslastnormen 2026 van het Nibud zijn verwerkt en handmatig ingebrachte eigen middelen blijven behouden als andere onderdelen wijzigen (IT-28259). Er zijn nieuwe menunamen aangekondigd ter voorbereiding op een vernieuwde opzet eind 2026.
+- Het product heet sinds de bundeling van Blinqx eBlinqx Hypotheekadvies; de tab Fastlane is in de omgeving hernoemd naar Hypotheekadvies.
+
+Bronnen:
+- Releasenotes Fastlane (Hypotheekbond): https://fastlane.hypotheekbond.nl/hoe-het-werkt/releasenotes/
+- Releasenotes Blinqx Verzekering & Hypotheek: https://verzekeringhypotheek.blinqx.tech/releasenotes
+- Blinqx bundelt hypotheeksoftware in eBlinqx Hypotheekadvies (InFinance): https://infinance.nl/ondernemen/ict/blinqx-bundelt-hypotheeksoftware-in-eblinqx-hypotheekadvies/
+
+---
+
 # Levenstestament, volmacht en bewind: wie beslist als de klant het niet meer kan?
 
 URL: https://adviesforum.nl/kennisbank/k301.html
