@@ -331,5 +331,88 @@ Quinn Mail werd in het helpcentrum als pilot omschreven; aanmelden ging via quin
 ## Praktische tips
 
 - Controleer na elke release in je eigen omgeving of berekeningen, rapportages en werkinstructies nog kloppen.
-- Een veranderde term of berekening in het adviesrapport raakt je zorgplicht: leg vast vanaf wanneer je met de nieuwe versie werkt.`}
+- Een veranderde term of berekening in het adviesrapport raakt je zorgplicht: leg vast vanaf wanneer je met de nieuwe versie werkt.`},
+ {id:'k313',cat:'adv',titel:'Fastlane (eBlinqx Hypotheekadvies): releases juni en juli 2026',auteur:'u6',datum:'2026-10-20T16:00:00',herzienVoor:'2027-01-20',bron:null,gecontroleerd:false,
+  kw:'Fastlane eBlinqx Hypotheekadvies releasenotes juni juli 2026 adviesrapport overdrachtsbelasting overbruggingshypotheek ORV Scildon Allianz TAF HDN AI-adviessamenvatting klantprofiel regulations 1 juli 2026 Credit Life Mx aanhef',
+  links:[{titel:'Releasenotes Fastlane 2026 (Hypotheekbond)',url:'https://fastlane.hypotheekbond.nl/hoe-het-werkt/releasenotes/releasenotes-2026/'}],
+  body:`Samenvatting in eigen woorden van de openbare releasenotes van Fastlane (eBlinqx Hypotheekadvies). Het is een selectie van wat een adviseur in de praktijk merkt, geen officiële releasenote; de brontekst is leidend. Per wijziging staat het ticketnummer. Controleer na een release altijd in je eigen omgeving wat er is veranderd en leg vast vanaf wanneer je met de nieuwe versie werkt.
+
+## Juli 2026 (release 16 juli, 49 wijzigingen)
+
+- **Adviesrapport:** meerdere onderpanden, lopende hypotheken, verwachte verkoopopbrengsten en overbruggingen tegelijk in het rapport (IT-24098); renteblad en hypotheekvoorwaarden van de gekozen geldverstrekker als bijlage, per bijlage te kiezen (IT-31547); compactere opmaak (IT-28396); nummering leningdelen klopt weer met het scherm (IT-31166).
+- **Berekening en financieringsopzet:** overdrachtsbelasting per persoon over het eigen aandeel bij twee kopers met een ongelijke eigendomsverhouding (IT-31255); een leningdeel met status Vervallen bevriest het schuldverloop en "schuldrest" heet nu "Aflosstand" (IT-30775); grafiek Bruto maandlast sluit aan op de financiële analyse (IT-31778).
+- **Verzekeringen:** een maandelijkse onttrekking bij een ORV rekent met 0% rekenrente (IT-31682); een onverklaard restbedrag in de staafdiagrammen bij AO en ORV is weg (IT-31730).
+- **Klantprofiel:** meerdere doelstellingen tegelijk kiezen (IT-25806); AOW-vraag vervangen door "jonger dan de AOW-leeftijd" of "met (pre)pensioen" (IT-27781); kortere vraagflow (IT-31377).
+- **Inkomen:** onmogelijke datums en een einddatum vóór de begindatum worden geweigerd (IT-31913).
+- **HDN:** bij een mislukte verzending van een ORV- of hypotheekaanvraag zie je de foutmelding en oorzaak in plaats van "klaar om te verzenden" (IT-31880, IT-31881).
+- **Brieven en instellingen:** aanhef "Mx." voor genderneutrale personen (IT-31473); de AFM-tekst in het adviesrapport staat nu altijd aan (IT-31573).
+- **AI-adviessamenvatting (beta):** knop om automatisch een adviessamenvatting te genereren, met beta-label en disclaimer (IT-31588, IT-31959). Een AI-tekst blijft een concept: lees en corrigeer altijd zelf, jij blijft verantwoordelijk voor het advies.
+- Techniek: formulieren gemigreerd naar een modernere opzet en mislukte achtergrondtaken worden opnieuw uitgevoerd.
+
+## Juni 2026 (releases 16, 29 en 30 juni)
+
+- **Normen en regelgeving:** de ingebouwde fiscale parameters en wettelijke regels zijn bijgewerkt naar de stand van 1 juli 2026 (IT-31541). Controleer of je lopende berekeningen hierdoor veranderen.
+- **Berekening:** restschuld einde rentevaste periode en netto maandinkomen in de Wonen-schermen komen overeen met de financiële analyse (IT-31375, IT-31452); de grafiek "binnen 10 jaar van de AOW-datum" toont ook de einde-RVP-momenten per leningdeel (IT-31326); geen extra leningdeel van 0 euro meer bij maximale hypotheek (IT-31299); de plotlijn wordt rood bij overschrijding van de verantwoorde grens (IT-31257); automatisch aanvinken van rentekortingen werkt weer (IT-30112); de financieringsopzet krijgt een vierde vak "Benodigd hypotheekbedrag" (IT-30359).
+- **Fiscaal:** Box 1/3-verdeling klopt bij een consumptieve verhoging en een volledig consumptief leningdeel valt automatisch buiten Box 1 (IT-27894, IT-30467); overdrachtsbelasting volgt de werkelijke kostenverdeling per persoon (IT-30751, IT-30744); verkoopkosten van de huidige woning kunnen bewust op 0 (IT-31005).
+- **HDN:** geslacht wordt altijd voorgevuld (IT-31025); duidelijkere foutmelding bij een ontbrekende betaalrekening (IT-31836); het aanvraagformulier wordt tussentijds als concept bewaard (IT-31284); slimmere prefill bij aflossingsvrij, box 3 en verbouwingsdepot (IT-30176, IT-30175, IT-28489).
+- **Verzekeringen:** Scildon ORV rekent de premie over de premieduur (IT-31164); Allianz ORV is weer selecteerbaar in de vergelijker (IT-31015); bij ondernemers wordt automatisch een AO-dekking bij TAF samengesteld (IT-31120); CreditLife-aanvragen lopen niet meer vast bij AO plus WW (IT-31601); het label "ORV Gezamenlijk" bij twee levens (IT-31821).
+- **Adviesrapport:** de pdf toont de terugval bij AO, WW, overlijden partner, einde relatie en AOW weer correct (IT-31781, IT-31783); renteblad en voorwaarden als bijlage per geldverstrekker (IT-30262); geen valse melding "Geen motivatie ingevuld" meer (IT-31199).
+- **Klantprofiel en inkomen:** Klantprofiel 2.0 (beta) stelt bij twee aanvragers 20 vragen per persoon (IT-31105); toekomstig inkomen van het type Anders telt pas mee vanaf de ingangsdatum (IT-31805).
+- **Overig:** het maximumbedrag van de Groen hypotheek van Attens is bijgewerkt en aanpasbaar (IT-31661); brondata gaat automatisch mee in het bericht naar Accelerate (IT-30958); duidelijke melding bij een verlopen sessie (IT-31279).`},
+
+ {id:'k314',cat:'adv',titel:'Fastlane (eBlinqx Hypotheekadvies): releases maart, april en mei 2026',auteur:'u6',datum:'2026-10-20T16:00:00',herzienVoor:'2027-01-20',bron:null,gecontroleerd:false,
+  kw:'Fastlane eBlinqx Hypotheekadvies releasenotes maart april mei 2026 maximale hypotheek toetsrente gewogen gemiddelde rente overdrachtsbelasting studielening DUO funderingsrisico klantprofiel rapport samenstellen Ockto Knab Helder rebranding',
+  links:[{titel:'Releasenotes Fastlane 2026 (Hypotheekbond)',url:'https://fastlane.hypotheekbond.nl/hoe-het-werkt/releasenotes/releasenotes-2026/'}],
+  body:`Samenvatting in eigen woorden van de openbare releasenotes van Fastlane (eBlinqx Hypotheekadvies). Het is een selectie van wat een adviseur in de praktijk merkt, geen officiële releasenote; de brontekst is leidend. Per wijziging staat het ticketnummer. Controleer na een release altijd in je eigen omgeving wat er is veranderd en leg vast vanaf wanneer je met de nieuwe versie werkt.
+
+## Mei 2026 (42 verbeteringen)
+
+- **Berekening en normen:** een nieuwe rekenmethode verdeelt leningdelen automatisch zo dat de gewogen toetsrente zo laag mogelijk is (IT-30860); de maximale hypotheek wordt pas berekend nadat de subdoelstelling is gekozen (IT-30783); bij tijdelijk doorlopende renteaftrek rekent de toetslast daar nu mee (IT-30425); de AOW-situatie (alleenstaand of gehuwd) klopt in de toetslag op AOW-leeftijd (IT-30395, IT-29850); een overbruggingshypotheek met renteaftrek over de verlengde looptijd van 3 jaar (IT-29803).
+- **Overdrachtsbelasting:** bij nieuwbouw is overdrachtsbelasting instelbaar over de koopsom grond en gaat door naar het HDN-formulier (IT-20995); de startersvrijstelling wordt alleen getoond als leeftijd en woningwaarde dat toelaten (IT-29972).
+- **Inventarisatie en klantprofiel:** het klantprofiel is opnieuw ontworpen (IT-30454); studieleningen met nieuwe benamingen, looptijd in maanden en een aanpasbaar maandbedrag (IT-27270); bij een doelstelling kies je direct of het advies op gedragscode of op besteedbaar inkomen is gebaseerd (IT-30778); een nieuwe Wonen-sectie voor advies op consumptief besteedbaar inkomen (IT-30371).
+- **Verzekeringen:** het verzekeringsvoorstel in de zijbalk doet alleen een voorstel bij een werkelijk tekort (IT-29237); uitgevinkte verzekeraars verdwijnen uit overzichten en berekeningen (IT-30341).
+- **HDN en brondata:** HDN-aanvragen gebruiken het ingestelde correspondentieadres (IT-30350); Ockto brondata versie 3.1 wordt ondersteund naast de bestaande versie (IT-30938).
+- **Rapportage:** verplichte teksten komen altijd in het oriëntatie- en adviesrapport, ook als je de adviesmotivatie niet opent (IT-30747); beheerders stellen in of adviseurs de opbouw en volgorde van rapporten mogen aanpassen (IT-30760).
+
+## April 2026 (38 verbeteringen)
+
+- **Berekening en normen:** de bruteringsfactor voor DUO-studieschuld volgt exact de staffel op de grenswaarde van de toetsrente; de leencapaciteit was hierdoor eerder te hoog (IT-30393); de verruiming voor alleenstaanden volgt het werkelijke aantal personen in het dossier (IT-30342); de grondslag voor overdrachtsbelasting is expliciet de hoogste van koopsom en getaxeerde marktwaarde, met een signalering bij verschil (IT-30476); bij 1% overdrachtsbelasting met één starter en één doorstromer geef je aan wie de belasting draagt (IT-28794).
+- **Verzekeringen:** in duo-dossiers volgt een ORV-voorstel alleen als het verplicht verzekerd bedrag voor minstens één persoon groter dan 0 is (IT-28688); ORV-premie voor twee levens wordt direct vernieuwd bij een wijziging van de rookstatus (IT-23419).
+- **HDN:** filter op verplichte velden (IT-30119), snellere lokale validatie (IT-28822) en een uitgebreidere keuzelijst "Soort regeling" (IT-28340).
+- **Brondata:** een reeks bevindingen verwerkt: ontbrekende velden, consistente eigendomsdata uit Ockto en GBA, betere verwerking van inkomen, vermogen en gezamenlijke rekeningen (IT-30378, IT-30012).
+- **Klantprofiel:** een nieuw hoofdstuk Funderingsrisico (IT-30437); bijna alle verplichte velden vervallen, met een niet-blokkerende volledigheidsindicator (IT-28541).
+- **Rapportage:** kies het rapporttype en een eigen titel op het voorblad (IT-30218); betere pdf-service met inhoudsopgave en interne links (IT-30394, IT-30348).
+- **Labels:** Knab Helder Hypotheek is selecteerbaar als label (IT-30423); rebranding naar eBlinqx Hypotheekadvies.
+
+## Maart 2026 (50 verbeteringen)
+
+- **Berekening en normen:** bij renteaftrek die binnen 10 jaar vervalt wordt de brutering van de fictieve last toegepast vanaf het werkelijke moment van vervallen (IT-29958); pensioeninkomen en aanvullend pensioen na de AOW-leeftijd van aanvrager 2 tellen correct mee in het toetsinkomen (IT-29747, IT-30032); validatie van de starterslening houdt rekening met koopsom, verbouwing en EBV (IT-29979); na definitieve verkoop van het onderpand wordt het eigen geld verwerkt en verdeeld volgens de eigendomsverhouding (IT-28840).
+- **Geldverstrekkers vergelijken:** een nieuwe kolom "Gewogen gemiddelde hypotheekrente" in de vergelijking en het adviesrapport, in plaats van de kolom Toetsrente in het rapport; acceptatie- en leennormberekeningen blijven ongewijzigd (IT-29665); sorteren op gemiddelde rente (IT-30002).
+- **Verzekeringen:** premiecorrecties voor Credit Life woonlastenverzekering, Scildon ORV op twee levens en Allianz ORV (IT-30192, IT-29918, IT-30033); TAF Maandlastenbeschermer Zelfstandige weer selecteerbaar (IT-29292); een ingangsdatum in het verleden geeft een melding (IT-30040).
+- **HDN:** foutmeldingen verschijnen direct en verdwijnen bij correctie (IT-30121); bij een gecombineerd tarief voor advies en bemiddeling verdwijnen de losse kostenposten (IT-30078).
+- **Rapportage:** een rapport zelf samenstellen met slepen, hoofdstuknummering en inhoudsopgave (IT-30005); herstel en verbetering van GHF- en CBI-rapportage (IT-29436, IT-29731, IT-29362); een gehuurde woning en de erfpachtcanon worden juist getoond (IT-29565, IT-28939).`},
+
+ {id:'k315',cat:'adv',titel:'Fastlane (eBlinqx Hypotheekadvies): releases januari en februari 2026',auteur:'u6',datum:'2026-10-20T16:00:00',herzienVoor:'2027-01-20',bron:null,gecontroleerd:false,
+  kw:'Fastlane eBlinqx Hypotheekadvies releasenotes januari februari 2026 NHG financieringslasttabel 2026 overdrachtsbelasting niet-zelfbewoning commerciële rentes overbrugging 36 maanden erfpacht financieringsopzet HDN Oriëntatie Advies samengevoegd',
+  links:[{titel:'Releasenotes Fastlane 2026 (Hypotheekbond)',url:'https://fastlane.hypotheekbond.nl/hoe-het-werkt/releasenotes/releasenotes-2026/'}],
+  body:`Samenvatting in eigen woorden van de openbare releasenotes van Fastlane (eBlinqx Hypotheekadvies). Het is een selectie van wat een adviseur in de praktijk merkt, geen officiële releasenote; de brontekst is leidend. Per wijziging staat het ticketnummer. Controleer na een release altijd in je eigen omgeving wat er is veranderd en leg vast vanaf wanneer je met de nieuwe versie werkt.
+
+## Februari 2026 (60 verbeteringen)
+
+- **Financieringsopzet:** bovenaan staan altijd de berekende toetslast, de toegestane toetslast en het verantwoorde hypotheekbedrag, met een rode markering bij overschrijding; de pagina Grafieken heet nu Visueel overzicht (IT-29680); een nieuwe module waarmee je zelf bepaalt hoe eigen geld, hypotheekbedrag en overbrugging het verschil opvullen (IT-29166); bedragen worden direct opnieuw doorgerekend bij een wijziging (IT-29619).
+- **NHG en overbrugging:** NHG-kosten zijn een berekend veld op basis van de NHG-keuze per leningdeel (IT-29546); de looptijd van de overbruggingslening is verlengd van maximaal 24 naar 36 maanden (IT-28432).
+- **Erfpacht:** de bruto-netto maandlast is uitgesplitst in hypotheeklasten, erfpachtcanon en belastingvoordeel (IT-29251).
+- **Normen en tarieven:** een vaste keuze voor het wettelijke overdrachtsbelastingtarief voor niet-zelfbewoning per 2026 (IT-29103); overdrachtsbelasting wordt afgerond op hele euro's volgens de wettelijke regel (IT-28590); "Acceptatienormen" heet nu "Financiële analyse" (IT-29662).
+- **Rentes en vergelijken:** commerciële rentes zijn volledig uitgefaseerd: rentes verschijnen pas op de werkelijke ingangsdatum (IT-29729); gekozen rentekortingen werken door in beide vergelijkweergaven (IT-28851); een nieuw filter "Verduurzamen" (IT-22653); tarieven in een opgeslagen berekening worden vastgezet (IT-29424); een knop "Renteblad" in de header (IT-29682).
+- **HDN:** een aanvraag kan alleen worden verstuurd als de berekening sluitend is (IT-29801); advies- en bemiddelingskosten gaan exact naar HDN (IT-29008).
+- **Rapportage:** duidelijkere beoordeling bij Overlijden in GHF-advies (IT-29362); bij CBI krijgt Einde relatie een aparte alinea Advies (IT-29337).
+
+## Januari 2026 (53 verbeteringen, releases op 8, 15, 22 en 29 januari)
+
+- **Normen 2026:** de door NHG gecorrigeerde Financieringslasttabel Beheer 2026 wordt automatisch toegepast voor NHG-dossiers met ingangsdatum 2026 (IT-28712, 8 januari); voor bepaalde alleenstaanden wordt het wettelijk vrij te laten bedrag buiten beschouwing gelaten, afhankelijk van toetsinkomen en AOW-leeftijd (IT-29064, 15 januari); bij een volledig niet-aftrekbare hypotheekrente gelden de Box 3-financieringslastpercentages (IT-28121, 29 januari); Lloyds-aflossingsvrije leningdelen krijgen een volledig bruto toetslast (IT-28737, 15 januari).
+- **Berekening en financieringsopzet:** meerdere hypotheken samenvoegen tot een hoofdhypotheek in de inventarisatie (IT-27489, 8 januari); een overbruggingshypotheek valt buiten pro-resto, restschuld, toetsmomenten en de CBI-terugval bij life events (IT-28827, 22 januari); de laatst opgeslagen berekening is leidend bij het openen of actualiseren (IT-28858, 8 januari).
+- **HDN:** de datum indiensttreding wordt niet meer automatisch ingevuld maar gecontroleerd (IT-28864, 8 januari); juiste verzekerde en verzekeringnemer bij AO-, AO/WW- en woonlastenverzekeringen (IT-23406, IT-23414, IT-28561, 22 januari).
+- **Verzekeringen:** optie "Tot AOW-datum" bij de gewenste looptijd (IT-28589, 15 januari); AO- en WW-onderdelen vervallen als er geen inkomen uit arbeid is (IT-28927, 29 januari).
+- **Rapportage:** het CBI-hoofdstuk Overlijden voor alleenstaanden en de onderdelen Huidige woning en Einde relatie zijn volledig in het adviesrapport (IT-29119, IT-28245, IT-27814, 22 januari).
+- **Proces:** Fastlane Oriëntatie en Advies zijn samengevoegd tot één proces onder eBlinqx Hypotheekadvies (IT-27910, 15 januari); het adviesrapport kan automatisch met het AX-bericht naar Elements (IT-26960, 29 januari).`}
 ]);
