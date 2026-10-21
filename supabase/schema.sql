@@ -70,7 +70,7 @@ create policy profiel_eigen on public.profielen for update using (id = auth.uid(
 -- ---------- Vragen ----------
 create table if not exists public.vragen (
   id uuid primary key default gen_random_uuid(),
-  cat text not null check (cat in ('hyp','verz','pens','fisc','kred','adv','crm','comp','ov')),
+  cat text not null check (cat in ('hyp','fl','verz','pens','fisc','kred','adv','crm','comp','ov')),
   titel text not null check (char_length(titel) between 12 and 200),
   body text not null check (char_length(body) between 30 and 6000),
   tags text[] not null default '{}' check (cardinality(tags) <= 6),
@@ -80,6 +80,9 @@ create table if not exists public.vragen (
   aangemaakt timestamptz not null default now(),
   gemodereerd_op timestamptz
 );
+-- Bestaande databases: categorie 'fl' (Fastlane / eBlinqx Hypotheekadvies) toestaan (idempotent).
+alter table public.vragen drop constraint if exists vragen_cat_check;
+alter table public.vragen add constraint vragen_cat_check check (cat in ('hyp','fl','verz','pens','fisc','kred','adv','crm','comp','ov'));
 alter table public.vragen enable row level security;
 drop policy if exists vraag_lezen on public.vragen;
 create policy vraag_lezen on public.vragen for select using (status = 'gepubliceerd' or auteur = auth.uid() or public.is_moderator());

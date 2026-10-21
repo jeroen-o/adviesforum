@@ -173,7 +173,7 @@ Quinn Mail werd in het helpcentrum als pilot omschreven; aanmelden ging via quin
 - Zet tweestapsverificatie voor iedereen aan, ook voor tijdelijke krachten.
 - Leg vast wie in je organisatie mutatiebevoegd is richting Blinqx en houd die lijst actueel.
 - Controleer na een release of je rechten en instellingen nog kloppen.`},
- {id:'k410',cat:'adv',titel:'Fastlane (eBlinqx Hypotheekadvies): release oktober 2026 in het kort',auteur:'u6',datum:'2026-10-20T12:00:00',herzienVoor:'2027-01-20',bron:null,gecontroleerd:false,
+ {id:'k410',cat:'fl',titel:'Fastlane (eBlinqx Hypotheekadvies): release oktober 2026 in het kort',auteur:'u6',datum:'2026-10-20T12:00:00',herzienVoor:'2027-01-20',bron:null,gecontroleerd:false,
   kw:'Fastlane eBlinqx Hypotheekadvies release oktober 2026 releasenotes vooraankondiging erfpacht HDN financieringsopzet inkomen vermogen AI-teksten funderingsrisico taxatie Maximus Private Lease Ockto brondata overbrugging meeneemregeling',
   links:[{titel:'Releasenotes Fastlane (Hypotheekbond)',url:'https://fastlane.hypotheekbond.nl/hoe-het-werkt/releasenotes/'},{titel:'Releasenotes Blinqx Verzekering & Hypotheek',url:'https://verzekeringhypotheek.blinqx.tech/releasenotes'},{titel:'Blinqx bundelt hypotheeksoftware in eBlinqx Hypotheekadvies (InFinance)',url:'https://infinance.nl/ondernemen/ict/blinqx-bundelt-hypotheeksoftware-in-eblinqx-hypotheekadvies/'}],
   body:`Dit is een samenvatting in eigen woorden van de vooraankondiging van de Fastlane-release van oktober 2026 (141 wijzigingen: 113 functioneel, 28 technisch). Volgens de aankondiging staat de livegang gepland op woensdag 21 oktober 2026 omstreeks 21:30. De aankondiging is onder voorbehoud: de definitieve samenstelling kan nog wijzigen. Gebruik na de livegang de officiële releasenotes als bron.
@@ -293,7 +293,7 @@ Quinn Mail werd in het helpcentrum als pilot omschreven; aanmelden ging via quin
 
 - Leg vast per wanneer je met de nieuwe versie werkt en controleer je werkinstructies als je de e-mailmanager, het takenoverzicht of de standaardadministratie gebruikt.
 - Een storing of vertraging meld je via de support van Blinqx; de actuele status staat op de statuspagina.`},
- {id:'k412',cat:'adv',titel:'Fastlane (eBlinqx Hypotheekadvies): releases augustus en september 2026',auteur:'u6',datum:'2026-10-20T15:00:00',herzienVoor:'2027-01-20',bron:null,gecontroleerd:false,
+ {id:'k412',cat:'fl',titel:'Fastlane (eBlinqx Hypotheekadvies): releases augustus en september 2026',auteur:'u6',datum:'2026-10-20T15:00:00',herzienVoor:'2027-01-20',bron:null,gecontroleerd:false,
   kw:'Fastlane eBlinqx Hypotheekadvies releasenotes augustus september 2026 klantprofiel AdviesCoach AFM Leidraad energielasten onderhoudskosten eigenaarslasten netto hypotheeklasten rapportage samenstellen brondata actualiseren verplichte velden Zurich ORV Allianz TAF HDN erfpacht',
   links:[{titel:'Releasenotes Fastlane 2026 (Hypotheekbond)',url:'https://fastlane.hypotheekbond.nl/hoe-het-werkt/releasenotes/releasenotes-2026/'},{titel:'AFM Leidraad hypotheekadvisering',url:'https://www.afm.nl/nl/sector/adviseurs-bemiddelaars/themas/hypotheken'}],
   body:`Samenvatting in eigen woorden van de openbare releasenotes van Fastlane (eBlinqx Hypotheekadvies) van augustus en september 2026. Het is geen officiële releasenote; de brontekst is leidend. Per wijziging staat het ticketnummer erbij.
@@ -332,7 +332,7 @@ Quinn Mail werd in het helpcentrum als pilot omschreven; aanmelden ging via quin
 
 - Controleer na elke release in je eigen omgeving of berekeningen, rapportages en werkinstructies nog kloppen.
 - Een veranderde term of berekening in het adviesrapport raakt je zorgplicht: leg vast vanaf wanneer je met de nieuwe versie werkt.`},
- {id:'k413',cat:'adv',titel:'Fastlane (eBlinqx Hypotheekadvies): releases juni en juli 2026',auteur:'u6',datum:'2026-10-20T16:00:00',herzienVoor:'2027-01-20',bron:null,gecontroleerd:false,
+ {id:'k413',cat:'fl',titel:'Fastlane (eBlinqx Hypotheekadvies): releases juni en juli 2026',auteur:'u6',datum:'2026-10-20T16:00:00',herzienVoor:'2027-01-20',bron:null,gecontroleerd:false,
   kw:'Fastlane eBlinqx Hypotheekadvies releasenotes juni juli 2026 adviesrapport overdrachtsbelasting overbruggingshypotheek ORV Scildon Allianz TAF HDN AI-adviessamenvatting klantprofiel regulations 1 juli 2026 Credit Life Mx aanhef',
   links:[{titel:'Releasenotes Fastlane 2026 (Hypotheekbond)',url:'https://fastlane.hypotheekbond.nl/hoe-het-werkt/releasenotes/releasenotes-2026/'}],
   body:`Samenvatting in eigen woorden van de openbare releasenotes van Fastlane (eBlinqx Hypotheekadvies). Het is een selectie van wat een adviseur in de praktijk merkt, geen officiële releasenote; de brontekst is leidend. Per wijziging staat het ticketnummer. Controleer na een release altijd in je eigen omgeving wat er is veranderd en leg vast vanaf wanneer je met de nieuwe versie werkt.
@@ -360,7 +360,7 @@ Quinn Mail werd in het helpcentrum als pilot omschreven; aanmelden ging via quin
 - **Klantprofiel en inkomen:** Klantprofiel 2.0 (beta) stelt bij twee aanvragers 20 vragen per persoon (IT-31105); toekomstig inkomen van het type Anders telt pas mee vanaf de ingangsdatum (IT-31805).
 - **Overig:** het maximumbedrag van de Groen hypotheek van Attens is bijgewerkt en aanpasbaar (IT-31661); brondata gaat automatisch mee in het bericht naar Accelerate (IT-30958); duidelijke melding bij een verlopen sessie (IT-31279).`},
 
- {id:'k414',cat:'adv',titel:'Fastlane (eBlinqx Hypotheekadvies): releases maart, april en mei 2026',auteur:'u6',datum:'2026-10-20T16:00:00',herzienVoor:'2027-01-20',bron:null,gecontroleerd:false,
+ {id:'k414',cat:'fl',titel:'Fastlane (eBlinqx Hypotheekadvies): releases maart, april en mei 2026',auteur:'u6',datum:'2026-10-20T16:00:00',herzienVoor:'2027-01-20',bron:null,gecontroleerd:false,
   kw:'Fastlane eBlinqx Hypotheekadvies releasenotes maart april mei 2026 maximale hypotheek toetsrente gewogen gemiddelde rente overdrachtsbelasting studielening DUO funderingsrisico klantprofiel rapport samenstellen Ockto Knab Helder rebranding',
   links:[{titel:'Releasenotes Fastlane 2026 (Hypotheekbond)',url:'https://fastlane.hypotheekbond.nl/hoe-het-werkt/releasenotes/releasenotes-2026/'}],
   body:`Samenvatting in eigen woorden van de openbare releasenotes van Fastlane (eBlinqx Hypotheekadvies). Het is een selectie van wat een adviseur in de praktijk merkt, geen officiële releasenote; de brontekst is leidend. Per wijziging staat het ticketnummer. Controleer na een release altijd in je eigen omgeving wat er is veranderd en leg vast vanaf wanneer je met de nieuwe versie werkt.
@@ -392,7 +392,7 @@ Quinn Mail werd in het helpcentrum als pilot omschreven; aanmelden ging via quin
 - **HDN:** foutmeldingen verschijnen direct en verdwijnen bij correctie (IT-30121); bij een gecombineerd tarief voor advies en bemiddeling verdwijnen de losse kostenposten (IT-30078).
 - **Rapportage:** een rapport zelf samenstellen met slepen, hoofdstuknummering en inhoudsopgave (IT-30005); herstel en verbetering van GHF- en CBI-rapportage (IT-29436, IT-29731, IT-29362); een gehuurde woning en de erfpachtcanon worden juist getoond (IT-29565, IT-28939).`},
 
- {id:'k415',cat:'adv',titel:'Fastlane (eBlinqx Hypotheekadvies): releases januari en februari 2026',auteur:'u6',datum:'2026-10-20T16:00:00',herzienVoor:'2027-01-20',bron:null,gecontroleerd:false,
+ {id:'k415',cat:'fl',titel:'Fastlane (eBlinqx Hypotheekadvies): releases januari en februari 2026',auteur:'u6',datum:'2026-10-20T16:00:00',herzienVoor:'2027-01-20',bron:null,gecontroleerd:false,
   kw:'Fastlane eBlinqx Hypotheekadvies releasenotes januari februari 2026 NHG financieringslasttabel 2026 overdrachtsbelasting niet-zelfbewoning commerciële rentes overbrugging 36 maanden erfpacht financieringsopzet HDN Oriëntatie Advies samengevoegd',
   links:[{titel:'Releasenotes Fastlane 2026 (Hypotheekbond)',url:'https://fastlane.hypotheekbond.nl/hoe-het-werkt/releasenotes/releasenotes-2026/'}],
   body:`Samenvatting in eigen woorden van de openbare releasenotes van Fastlane (eBlinqx Hypotheekadvies). Het is een selectie van wat een adviseur in de praktijk merkt, geen officiële releasenote; de brontekst is leidend. Per wijziging staat het ticketnummer. Controleer na een release altijd in je eigen omgeving wat er is veranderd en leg vast vanaf wanneer je met de nieuwe versie werkt.
