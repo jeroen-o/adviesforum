@@ -539,11 +539,12 @@ footer a{display:inline-block;padding:4px 0}
 <h2>Onderwerpen</h2>
 <ul>
 <li><a href="kennisbank/#hyp">Hypotheken</a> (60)</li>
+<li><a href="kennisbank/#fl">Fastlane / eBlinqx Hypotheekadvies</a> (5)</li>
 <li><a href="kennisbank/#verz">Verzekeringen</a> (42)</li>
 <li><a href="kennisbank/#pens">Pensioen &amp; vermogen</a> (10)</li>
 <li><a href="kennisbank/#fisc">Fiscaal</a> (20)</li>
 <li><a href="kennisbank/#kred">Kredieten</a> (9)</li>
-<li><a href="kennisbank/#adv">Adviessoftware</a> (33)</li>
+<li><a href="kennisbank/#adv">Adviessoftware</a> (28)</li>
 <li><a href="kennisbank/#crm">CRM-software</a> (3)</li>
 <li><a href="kennisbank/#comp">Compliance &amp; AFM</a> (72)</li>
 <li><a href="kennisbank/#ov">Overig</a> (4)</li>
@@ -591,7 +592,7 @@ const SITE_URL='https://adviesforum.nl/';
 /* Gegevens staan in data/adviseurs.js, data/vragen.js en data/kennisbank.js */
 const USERS=window.ADVISEURS||[];
 const CATS=[
- {id:'hyp',naam:'Hypotheken'},{id:'verz',naam:'Verzekeringen'},{id:'pens',naam:'Pensioen & vermogen'},{id:'fisc',naam:'Fiscaal'},{id:'kred',naam:'Kredieten'},
+ {id:'hyp',naam:'Hypotheken'},{id:'fl',naam:'Fastlane / eBlinqx Hypotheekadvies'},{id:'verz',naam:'Verzekeringen'},{id:'pens',naam:'Pensioen & vermogen'},{id:'fisc',naam:'Fiscaal'},{id:'kred',naam:'Kredieten'},
  {id:'adv',naam:'Adviessoftware'},{id:'crm',naam:'CRM-software'},{id:'comp',naam:'Compliance & AFM'},{id:'ov',naam:'Overig'}
 ];
 const LEVELS=[[300,'Autoriteit'],[150,'Expert'],[50,'Kenner'],[0,'Starter']];
@@ -1216,7 +1217,7 @@ function trunc(t,n=170){const p=String(t).split('\n').map(x=>x.replace(/^(## |- 
 function detectProduct(v){
   const txt=(v.titel+' '+v.body+' '+v.tags.join(' ')).toLowerCase();let best=null,max=0;
   for(const [k,re] of Object.entries(PRODUCT_WORDS)){const n=(txt.match(re)||[]).length;if(n>max){max=n;best=k;}}
-  if(!best){if(v.cat==='adv')best='hypotheekadvies';else if(v.cat==='crm')best='crm';}
+  if(!best){if(v.cat==='adv'||v.cat==='fl')best='hypotheekadvies';else if(v.cat==='crm')best='crm';}
   return best;
 }
 function autoAnswer(v,force,live){
@@ -1494,6 +1495,7 @@ function viewNieuw(){
         <label for="nv-titel">Titel</label>
         <input id="nv-titel" name="titel" type="text" required minlength="12" placeholder="Formuleer de vraag zoals je hem aan een collega zou stellen" value="${esc(S.prefill||'')}">
         <div class="hint">Concreet en herkenbaar, bijvoorbeeld "Overbrugging bij nog niet verkochte woning: hoe reken je de maximale overbrugging?"</div>
+        <div id="nv-gelijk" class="gelijk" aria-live="polite"></div>
         <label for="nv-cat">Categorie</label>
         <select id="nv-cat" name="cat">${CATS.map(c=>`<option value="${c.id}">${esc(c.naam)}</option>`).join('')}</select>
         <label for="nv-body">Situatie en vraag</label>
@@ -1917,6 +1919,29 @@ function go(view,extra={}){Object.assign(S,extra,{view});render();zetHash();cons
 function openVraag(id){const v=VRAGEN.find(x=>x.id===id);if(!v)return;v.views++;go('vraag',{tab:'forum',vraag:id,reactie:null});}
 function openArtikel(id){const a=ARTIKELEN.find(x=>x.id===id);if(!a)return;a.views++;go('artikel',{tab:'kennisbank',artikel:id});}
 
+/* Gelijksoortige vragen tonen tijdens het typen (niet blokkerend: je kunt altijd gewoon je vraag plaatsen). */
+function gelijkeVragen(titel,body){
+  const q=tokens(titel+' '+body);if(q.length<2)return [];const hits=[];
+  for(const o of VRAGEN){
+    if(!o.antwoorden.length)continue;
+    const s=scoreMatch(q,o.titel+' '+o.tags.join(' '),o.body+' '+o.antwoorden.map(a=>a.body).join(' '));
+    if(s>=MIN_SCORE)hits.push({type:'forum',id:o.id,titel:o.titel,status:vraagStatus(o),score:s+(o.beste?0.5:0)});
+  }
+  for(const k of ARTIKELEN){const s=scoreMatch(q,k.titel+' '+(k.kw||''),k.body);if(s>=MIN_SCORE+0.3)hits.push({type:'kb',id:k.id,titel:k.titel,score:s});}
+  hits.sort((a,b)=>b.score-a.score);
+  return hits.slice(0,4);
+}
+let gelijkTimer=null;
+function toonGelijkeVragen(){
+  const vak=document.getElementById('nv-gelijk'),t=document.getElementById('nv-titel'),b=document.getElementById('nv-body');
+  if(!vak||!t)return;
+  const tekst=(t.value+' '+(b?b.value:'')).trim();
+  if(tekst.length<12){vak.innerHTML='';return;}
+  const hits=gelijkeVragen(t.value,b?b.value:'');
+  if(!hits.length){vak.innerHTML='';return;}
+  vak.innerHTML='<div class="notice ok"><b>Wellicht is jouw vraag al beantwoord</b><ul>'+hits.map(h=>`<li><a href="index.html#${h.type==='forum'?'vraag':'artikel'}-${encodeURIComponent(h.id)}" target="_blank" rel="noopener">${esc(h.titel)}</a> <span class="hint">${h.type==='forum'?(h.status==='opgelost'?'Forum, opgelost':'Forum, beantwoord'):'Kennisbank'} (opent in een nieuw tabblad)</span></li>`).join('')+'</ul><div class="hint">Staat je antwoord er niet bij? Plaats gewoon je vraag.</div></div>';
+}
+document.addEventListener('input',e=>{const id=e.target&&e.target.id;if(id==='nv-titel'||id==='nv-body'){laadKennis();clearTimeout(gelijkTimer);gelijkTimer=setTimeout(toonGelijkeVragen,350);}});
 /* Spraakinvoer (Web Speech API van de browser): alleen tonen als de browser het ondersteunt; er is geen eigen server of externe dienst. */
 const SPRAAK=!!(window.SpeechRecognition||window.webkitSpeechRecognition);
 let spraakHerkenner=null;

@@ -28,6 +28,7 @@ const STAPPEN = [
   ['tools/voorwaarden-zoek.js', [], 'zoekindex voorwaarden', true],
   ['tools/bronnen-lijst.js', [], 'lijst met bronlinks', true],
   ['tools/build-rekentools-index.js', [], 'zoekcatalogus rekentools', true],
+  ['tools/regelgeving.js', [], 'regelgeving.json voor programmeurs en AI-tools', true],
   ['tools/kennispartners.js', [], 'kennispartner-badges', true],
   ['tools/sitenav.js', [], 'menubalk, voettekst en gestructureerde data', true],
   ['tools/paginas-index.js', [], "zoekindex pagina's", true],

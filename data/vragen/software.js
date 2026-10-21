@@ -1,39 +1,39 @@
 window.VRAGEN_DATA=(window.VRAGEN_DATA||[]).concat([
- {id:'vbl-001',cat:'adv',auteur:null,naam:'',voorbeeld:true,datum:'2025-10-01T15:10:00',views:275,tags:['eigen geld','schenking','financieringsopzet'],beste:'vbl-001-a1',
+ {id:'vbl-001',cat:'fl',auteur:null,naam:'',voorbeeld:true,datum:'2025-10-01T15:10:00',views:275,tags:['eigen geld','schenking','financieringsopzet'],beste:'vbl-001-a1',
   titel:'Schenking en spaargeld apart tonen als eigen geld in eBlinqx Hypotheekadvies',
   body:`Mijn klanten brengen eigen geld in uit spaargeld en een schenking van de ouders. In de financieringsopzet zie ik alleen één totaalbedrag eigen middelen. Kan ik de herkomst apart laten zien, zodat het rapport en het dossier duidelijk zijn?`,
   antwoorden:[
    {id:'vbl-001-a1',auteur:'u6',datum:'2025-10-02T03:57:00',rA:{u4:4,u1:5,u7:5,u3:5},rAdv:{u1:5,u7:5,u3:5},body:`Ja, eigen geld kun je in eBlinqx Hypotheekadvies specificeren naar herkomst, zoals spaargeld, schenking of beleggingen. Op de supportsite staat daar een apart artikel over ("Hoe specificeer ik eigen geld"). Vul per bron het bedrag in, dan sluit het totaal weer aan op de opzet. Controleer daarna of het totaal eigen geld gelijk is aan wat je in de berekening verwacht.`},
    {id:'vbl-001-a2',auteur:'u5',datum:'2025-10-02T10:36:00',rA:{u7:5,u8:3,u1:4,u3:5},rAdv:{u8:3,u1:4,u3:5},body:`Aanvulling vanuit de praktijk: leg in het dossier ook vast waarmee de herkomst is aangetoond, bijvoorbeeld een bankafschrift en een schenkingsovereenkomst. Bespreek met de klant of de schenking fiscale gevolgen heeft en verwijs voor de actuele vrijstellingen naar de geldende regels. Controleer ook welke bewijsstukken de geldverstrekker vraagt, want dat verschilt.`}
   ]},
- {id:'vbl-002',cat:'adv',auteur:null,naam:'',voorbeeld:true,datum:'2025-10-04T10:40:00',views:44,tags:['overbrugging','draagplicht','handmatige invoer'],beste:'vbl-002-a1',
+ {id:'vbl-002',cat:'fl',auteur:null,naam:'',voorbeeld:true,datum:'2025-10-04T10:40:00',views:44,tags:['overbrugging','draagplicht','handmatige invoer'],beste:'vbl-002-a1',
   titel:'Handmatig overbruggingsbedrag telt niet mee in de draagplicht',
   body:`Ik heb het overbruggingskrediet handmatig aangepast omdat de verwachte verkoopprijs lager uitvalt. Nu klopt de verdeling draagplicht tussen de partners niet meer. Is dat een fout in de software of doe ik iets verkeerd?`,
   antwoorden:[
    {id:'vbl-002-a1',auteur:'u6',datum:'2025-10-05T09:37:00',rA:{u2:4,u1:4},rAdv:{u2:4,u1:4},body:`Dat is bekend gedrag en geen storing: een handmatig ingevoerd overbruggingsbedrag wordt niet meegenomen in de draagplicht van de financieringsopzet. De supportsite heeft daar een apart artikel over. Wil je dat de draagplicht automatisch klopt, laat het overbruggingsbedrag dan zoveel mogelijk door de software berekenen via het overbruggingspercentage onder Eigen geld. Kies je toch voor handmatig, leg dan de verdeling en de onderbouwing vast in de motivatie.`},
    {id:'vbl-002-a2',auteur:'u4',datum:'2025-10-05T12:20:00',rA:{},rAdv:{},body:`Ik zet in zo een geval een korte notitie in het dossier met de berekening van de overbrugging en hoe de partners de lasten dragen. Dan is voor een collega of de compliance-check later te volgen waarom de opzet afwijkt van de standaard.`}
   ]},
- {id:'vbl-003',cat:'adv',auteur:null,naam:'',voorbeeld:true,datum:'2025-10-08T15:10:00',views:285,tags:['afronding','financieringsopzet','leningdelen'],beste:'vbl-003-a1',
+ {id:'vbl-003',cat:'fl',auteur:null,naam:'',voorbeeld:true,datum:'2025-10-08T15:10:00',views:285,tags:['afronding','financieringsopzet','leningdelen'],beste:'vbl-003-a1',
   titel:'Afrondingsverschil van een paar euro in de financieringsopzet',
   body:`Mijn financieringsopzet sluit niet: er blijft een verschil van een paar euro over tussen de totale investering en de financiering. Ik wil het rapport zo niet naar de klant sturen. Hoe lossen jullie dat op?`,
   antwoorden:[
    {id:'vbl-003-a1',auteur:'u6',datum:'2025-10-09T13:46:00',rA:{u1:3,u2:5},rAdv:{u1:3,u2:5},body:`Een afrondingsverschil los je op via de leningdelen: corrigeer het verschil op het kleinste leningdeel, zodat de optelsom weer aansluit. Er staat een artikel over op de supportsite van eBlinqx Hypotheekadvies. Let erop dat je bij een NHG-financiering niet boven de toegestane grens uitkomt door de correctie. Controleer daarna de maandlasten in het rapport nog even.`},
    {id:'vbl-003-a2',auteur:'u1',datum:'2025-10-10T03:31:00',rA:{u4:3,u7:3},rAdv:{u4:3},body:`Ik rond de hoofdsom vaak naar boven af op een rond bedrag en laat het restant als extra eigen geld of buffer zien. Overleg wel met de klant, want dan verandert de inbreng eigen middelen. Leg de keuze vast in de motivatie.`}
   ]},
- {id:'vbl-004',cat:'adv',auteur:null,naam:'',voorbeeld:true,datum:'2025-10-11T14:35:00',views:103,tags:['weergave','financieringsopzet','eblinqx'],beste:'vbl-004-a1',
+ {id:'vbl-004',cat:'fl',auteur:null,naam:'',voorbeeld:true,datum:'2025-10-11T14:35:00',views:103,tags:['weergave','financieringsopzet','eblinqx'],beste:'vbl-004-a1',
   titel:'Financieringsopzet in twee kolommen tonen voor vergelijking',
   body:`Een collega liet een financieringsopzet zien met twee kolommen naast elkaar. Bij mij zie ik maar één kolom. Hoe schakel ik dat om?`,
   antwoorden:[
    {id:'vbl-004-a1',auteur:'u6',datum:'2025-10-12T00:37:00',rA:{u3:4,u7:3},rAdv:{u3:4},body:`Je kunt in eBlinqx Hypotheekadvies wisselen tussen een 1- en 2-kolomsweergave van de financieringsopzet. De stappen staan in het supportartikel over de kolomsweergave. De weergave verandert niets aan de berekening zelf, alleen aan hoe het op het scherm staat. Gebruik de 2-kolomsweergave vooral als je situaties naast elkaar wilt bespreken met de klant.`}
   ]},
- {id:'vbl-005',cat:'adv',auteur:null,naam:'',voorbeeld:true,datum:'2025-10-15T17:20:00',views:103,tags:['geldverstrekker','financieringsopzet','weergave'],beste:null,
+ {id:'vbl-005',cat:'fl',auteur:null,naam:'',voorbeeld:true,datum:'2025-10-15T17:20:00',views:103,tags:['geldverstrekker','financieringsopzet','weergave'],beste:null,
   titel:'Geldverstrekker staat niet in de financieringsopzet',
   body:`Ik heb een berekening gemaakt, maar de naam van de geldverstrekker verschijnt niet in de financieringsopzet. In het rapport wil ik dat wel zien. Waar zit dat?`,
   antwoorden:[
    {id:'vbl-005-a1',auteur:'u6',datum:'2025-10-15T22:38:00',rA:{u4:5,u7:5},rAdv:{u4:5,u7:5},body:`Daar is een supportartikel over: "Waarom wordt de geldverstrekker niet getoond in de financieringsopzet". Meestal heeft het te maken met de manier waarop het product aan de leningdelen is gekoppeld. Controleer of je bij de leningdelen een product van een geldverstrekker hebt geselecteerd en niet alleen een vrije invoer. Lukt het daarna nog niet, stuur dan het dossiernummer naar support.`},
    {id:'vbl-005-a2',auteur:'u4',datum:'2025-10-16T05:48:00',rA:{u7:4},rAdv:{u7:4},body:`Bij mij lag het aan een leningdeel dat ik als vrij leningdeel had toegevoegd voor een vergelijking. Nadat ik het product opnieuw koos, stond de naam er weer.`}
   ]},
- {id:'vbl-006',cat:'adv',auteur:null,naam:'',voorbeeld:true,datum:'2025-10-19T11:10:00',views:359,tags:['erfpacht','afkoop','financieringsopzet'],beste:'vbl-006-a1',
+ {id:'vbl-006',cat:'fl',auteur:null,naam:'',voorbeeld:true,datum:'2025-10-19T11:10:00',views:359,tags:['erfpacht','afkoop','financieringsopzet'],beste:'vbl-006-a1',
   titel:'Afkoop erfpacht meenemen in de financieringsopzet',
   body:`De klant koopt een appartement met erfpacht en wil de canon eeuwigdurend afkopen bij de aankoop. Hoe neem ik de afkoopsom op in de financieringsopzet? En telt dat mee in de fiscale berekening?`,
   antwoorden:[
@@ -56,7 +56,7 @@ window.VRAGEN_DATA=(window.VRAGEN_DATA||[]).concat([
    {id:'vbl-008-a2',auteur:'u3',datum:'2025-10-27T12:08:00',rA:{u6:4,u5:3},rAdv:{u5:3},body:`Voordat de klant afkoopt: kijk of er een overlijdensrisicodekking aan de polis hangt die wegvalt. Dan moet je dat risico mogelijk op een andere manier afdekken. Leg vast dat je dat besproken hebt.`},
    {id:'vbl-008-a3',auteur:'u5',datum:'2025-10-27T19:52:00',rA:{u8:4},rAdv:{u8:4},body:`Check ook de fiscale status van de polis voordat je afkoopt, zeker bij oude polissen met een bijzonder fiscaal regime. Verwijs naar de geldende regels en laat het zo nodig door een fiscalist bevestigen.`}
   ]},
- {id:'vbl-009',cat:'adv',auteur:null,naam:'',voorbeeld:true,datum:'2025-10-30T13:25:00',views:546,tags:['box 1','box 3','leningdelen'],beste:'vbl-009-a1',
+ {id:'vbl-009',cat:'fl',auteur:null,naam:'',voorbeeld:true,datum:'2025-10-30T13:25:00',views:546,tags:['box 1','box 3','leningdelen'],beste:'vbl-009-a1',
   titel:'Gemengd leningdeel box 1 en box 3 geeft rare uitkomsten',
   body:`In een oversluitdossier heb ik één leningdeel dat deels aftrekbaar en deels niet aftrekbaar is. De netto maandlast lijkt niet te kloppen. Hoe gaan jullie hiermee om?`,
   antwoorden:[
@@ -84,7 +84,7 @@ window.VRAGEN_DATA=(window.VRAGEN_DATA||[]).concat([
    {id:'vbl-012-a1',auteur:'u6',datum:'2025-11-11T07:54:00',rA:{u3:3,u7:4,u2:4,u8:5},rAdv:{u3:3,u8:5},body:`Een familiehypotheek gaat niet via HDN. In combinatie met een reguliere hypotheek zijn soms twee berekeningen nodig: één voor de toetsing, met het familiebedrag als leningdeel, en één voor de aanvraag, met het familiebedrag als eigen middelen. Geef beide berekeningen een duidelijke naam zodat je ze niet door elkaar haalt.`},
    {id:'vbl-012-a2',auteur:'u5',datum:'2025-11-11T16:02:00',rA:{u7:3,u8:3},rAdv:{u8:3},body:`Controleer de voorwaarden van de geldverstrekker over hoe zij de lasten van de familielening meenemen in de toets. Leg de leningsovereenkomst, de rente-afspraken en de fiscale aspecten vast in het dossier. Verwijs voor de fiscale voorwaarden naar de actuele regels.`}
   ]},
- {id:'vbl-013',cat:'adv',auteur:null,naam:'',voorbeeld:true,datum:'2025-11-13T12:35:00',views:476,tags:['nieuwbouw','bouwdepot','financieringsopzet'],beste:null,
+ {id:'vbl-013',cat:'fl',auteur:null,naam:'',voorbeeld:true,datum:'2025-11-13T12:35:00',views:476,tags:['nieuwbouw','bouwdepot','financieringsopzet'],beste:null,
   titel:'Nieuwbouw: grondkosten en bouwdepot in de financieringsopzet',
   body:`Mijn eerste nieuwbouwdossier in eBlinqx. Grondkosten, aanneemsom, meerwerk en bouwrente: ik weet niet goed welke velden ik moet gebruiken. Is er een overzicht?`,
   antwoorden:[
@@ -99,13 +99,13 @@ window.VRAGEN_DATA=(window.VRAGEN_DATA||[]).concat([
    {id:'vbl-014-a2',auteur:'u5',datum:'2025-11-18T07:04:00',rA:{u3:5,u2:3},rAdv:{},body:`Let op dat de geldverstrekker vaak een bouwkundig rapport of specificatie wil zien en dat het bedrag in een bouwdepot komt. Check de voorwaarden van de geldverstrekker en de actuele leennormen voor verduurzaming.`},
    {id:'vbl-014-a3',auteur:'u6',datum:'2025-11-18T12:37:00',rA:{u4:3,u5:5},rAdv:{u4:3},body:`In eBlinqx neem je de verbouwing en het energiebespaarbudget op in de financieringsopzet; het kennisbankartikel over de financieringsopzet heeft daar een paragraaf over. Controleer daarna in het rapport of de bedragen apart te herkennen zijn.`}
   ]},
- {id:'vbl-015',cat:'adv',auteur:null,naam:'',voorbeeld:true,datum:'2025-11-21T11:55:00',views:258,tags:['fastlane','eblinqx','naamgeving'],beste:'vbl-015-a1',
+ {id:'vbl-015',cat:'fl',auteur:null,naam:'',voorbeeld:true,datum:'2025-11-21T11:55:00',views:258,tags:['fastlane','eblinqx','naamgeving'],beste:'vbl-015-a1',
   titel:'Is Fastlane hetzelfde als eBlinqx Hypotheekadvies?',
   body:`Een nieuwe collega vraagt of hij Fastlane of eBlinqx Hypotheekadvies moet gebruiken. In supportartikelen kom ik beide namen tegen. Is dat hetzelfde pakket?`,
   antwoorden:[
    {id:'vbl-015-a1',auteur:'u6',datum:'2025-11-21T13:59:00',rA:{u7:5},rAdv:{},body:`Ja, eBlinqx Hypotheekadvies en Fastlane (Fastlane Advies) zijn hetzelfde pakket; supportartikelen gebruiken beide namen. Adviesbox Online is wel een ander adviespakket, dat je via een koppeling met eBlinqx gebruikt. Leg dat in je werkinstructie vast, dan voorkom je verwarring bij nieuwe collega's.`}
   ]},
- {id:'vbl-016',cat:'adv',auteur:null,naam:'',voorbeeld:true,datum:'2025-11-24T15:25:00',views:356,tags:['rapport','huisstijl','pdf'],beste:'vbl-016-a1',
+ {id:'vbl-016',cat:'fl',auteur:null,naam:'',voorbeeld:true,datum:'2025-11-24T15:25:00',views:356,tags:['rapport','huisstijl','pdf'],beste:'vbl-016-a1',
   titel:'Logo en huisstijl in het adviesrapport',
   body:`Wij willen dat het adviesrapport uit eBlinqx Hypotheekadvies in onze huisstijl komt, met logo. Ik vind de instelling niet. Bestaat die?`,
   antwoorden:[
@@ -119,7 +119,7 @@ window.VRAGEN_DATA=(window.VRAGEN_DATA||[]).concat([
    {id:'vbl-017-a1',auteur:'u6',datum:'2025-11-29T05:27:00',rA:{u2:5,u5:4},rAdv:{u5:4},body:`Open de berekening, klik rechtsboven op "Berekeningen vergelijken" en daarna op het PDF-icoon. Zo komen beide varianten in de PDF. Sla de PDF die de klant krijgt op in het dossier, met datum.`},
    {id:'vbl-017-a2',auteur:'u1',datum:'2025-11-29T09:39:00',rA:{u3:4,u2:5,u6:3,u8:4},rAdv:{u2:5,u6:3},body:`Tip: geef je varianten vooraf een duidelijke naam, bijvoorbeeld met de rentevaste periode erin. Dat leest voor de klant veel prettiger dan Berekening 1 en 2.`}
   ]},
- {id:'vbl-018',cat:'adv',auteur:null,naam:'',voorbeeld:true,datum:'2025-12-02T16:45:00',views:14,tags:['starterslening','financieringsopzet','toetsing'],beste:null,
+ {id:'vbl-018',cat:'fl',auteur:null,naam:'',voorbeeld:true,datum:'2025-12-02T16:45:00',views:14,tags:['starterslening','financieringsopzet','toetsing'],beste:null,
   titel:'Starterslening opnemen in de financieringsopzet',
   body:`Mijn klant maakt gebruik van een starterslening van de gemeente. Hoe neem ik die op in eBlinqx zodat de toets en de opzet kloppen?`,
   antwoorden:[
@@ -132,7 +132,7 @@ window.VRAGEN_DATA=(window.VRAGEN_DATA||[]).concat([
   antwoorden:[
    {id:'vbl-019-a1',auteur:'u6',datum:'2025-12-05T14:10:00',rA:{u3:4,u8:4},rAdv:{},body:`Is de optelsom van de leningdelen niet gelijk aan de hoofdsom, dan vraagt eBlinqx automatisch om een extra leningdeel. Tel de drie delen na en vergelijk met de hoofdsom; vaak zit er een klein verschil in. Pas het kleinste leningdeel aan, dan verdwijnt de melding.`}
   ]},
- {id:'vbl-020',cat:'adv',auteur:null,naam:'',voorbeeld:true,datum:'2025-12-09T10:40:00',views:325,tags:['overbrugging','verkoop','overwaarde'],beste:'vbl-020-a1',
+ {id:'vbl-020',cat:'fl',auteur:null,naam:'',voorbeeld:true,datum:'2025-12-09T10:40:00',views:325,tags:['overbrugging','verkoop','overwaarde'],beste:'vbl-020-a1',
   titel:'Overbrugging bij een al verkochte woning',
   body:`De huidige woning is verkocht en de ontbindende voorwaarden zijn verlopen. In eBlinqx rekent de overbrugging met een lager bedrag dan de verkoopprijs. Hoe pas ik dat aan?`,
   antwoorden:[
@@ -176,7 +176,7 @@ window.VRAGEN_DATA=(window.VRAGEN_DATA||[]).concat([
    {id:'vbl-025-a1',auteur:'u6',datum:'2025-12-27T20:28:00',rA:{u8:5,u7:4},rAdv:{},body:`Ja, via "Voeg extra veld toe" onder Kosten van de woning kun je eigen kostenposten opnemen, bijvoorbeeld taxatiekosten. Omschrijf de post duidelijk, zodat hij in het rapport herkenbaar is.`},
    {id:'vbl-025-a2',auteur:'u1',datum:'2025-12-28T05:30:00',rA:{u2:3},rAdv:{u2:3},body:`Ik neem het bedrag over uit de opdrachtbevestiging van de taxateur en sla die op in het dossier. Kosten die de klant al zelf heeft betaald, laat ik als eigen inbreng zien.`}
   ]},
- {id:'vbl-026',cat:'adv',auteur:null,naam:'',voorbeeld:true,datum:'2025-12-30T08:35:00',views:247,tags:['HDN','aanvraag','validatie'],beste:'vbl-026-a1',
+ {id:'vbl-026',cat:'fl',auteur:null,naam:'',voorbeeld:true,datum:'2025-12-30T08:35:00',views:247,tags:['HDN','aanvraag','validatie'],beste:'vbl-026-a1',
   titel:'HDN-aanvraag geeft validatiefout bij versturen',
   body:`Ik wil een aanvraag via HDN versturen vanuit eBlinqx Hypotheekadvies, maar krijg een validatiefout. De melding noemt een veld dat volgens mij gewoon is ingevuld. Hoe vinden jullie snel waar het probleem zit?`,
   antwoorden:[
@@ -190,7 +190,7 @@ window.VRAGEN_DATA=(window.VRAGEN_DATA||[]).concat([
    {id:'vbl-027-a1',auteur:'u6',datum:'2026-01-04T22:55:00',rA:{u1:3},rAdv:{u1:3},body:`Controleer eerst of de aanvraag echt als verzonden staat en of er een ontvangstbevestiging is. Statusberichten worden gekoppeld op basis van het aanvraagnummer; als de aanvraag opnieuw is ingediend of handmatig is aangemaakt bij de geldverstrekker, kan de koppeling ontbreken. Kijk ook in de algemene berichtenbox of het bericht daar zonder dossierkoppeling staat. Blijft het leeg, meld het dan bij de support met het aanvraagnummer en de verzenddatum.`},
    {id:'vbl-027-a2',auteur:'u1',datum:'2026-01-05T00:07:00',rA:{u4:5,u8:4},rAdv:{u4:5,u8:4},body:`Praktische tip: noteer in het dossier wanneer je telefonisch een status hebt gekregen en van wie. Dan kun je de klant toch informeren en is het later terug te vinden als het bericht alsnog binnenkomt.`}
   ]},
- {id:'vbl-028',cat:'adv',auteur:null,naam:'',voorbeeld:true,datum:'2026-01-06T15:45:00',views:155,tags:['HDN','offerte','koppeling'],beste:'vbl-028-a1',
+ {id:'vbl-028',cat:'fl',auteur:null,naam:'',voorbeeld:true,datum:'2026-01-06T15:45:00',views:155,tags:['HDN','offerte','koppeling'],beste:'vbl-028-a1',
   titel:'Offerte via HDN ontvangen maar niet gekoppeld aan het dossier',
   body:`De offerte is binnengekomen via HDN, maar staat niet bij het juiste dossier. Ik zie hem alleen in een algemeen overzicht van ontvangen berichten. Kan ik hem alsnog handmatig koppelen?`,
   antwoorden:[
@@ -249,7 +249,7 @@ Controleer ingelezen gegevens altijd tegen de brondocumenten, zeker inkomensbest
   antwoorden:[
    {id:'vbl-035-a1',auteur:'u6',datum:'2026-02-02T10:09:00',rA:{u8:4,u2:5},rAdv:{u2:5},body:`Als de geldverstrekker geen intrekkingsbericht terugstuurt, blijft de status staan zoals hij was. Je kunt de aanvraag in het dossier meestal handmatig afsluiten of als vervallen markeren. Zet er een notitie bij met de datum en de reden van intrekking. Dan klopt je overzicht weer en is het later uit te leggen.`}
   ]},
- {id:'vbl-036',cat:'adv',auteur:null,naam:'',voorbeeld:true,datum:'2026-02-04T14:55:00',views:376,tags:['HDN','bijlagen','documenten'],beste:null,
+ {id:'vbl-036',cat:'fl',auteur:null,naam:'',voorbeeld:true,datum:'2026-02-04T14:55:00',views:376,tags:['HDN','bijlagen','documenten'],beste:null,
   titel:'Bijlagen meesturen met een HDN-aanvraag',
   body:`Kan ik documenten zoals werkgeversverklaring en salarisstroken direct meesturen met de HDN-aanvraag? Of moet ik ze apart uploaden bij de geldverstrekker? Ik wil voorkomen dat stukken dubbel binnenkomen.`,
   antwoorden:[
