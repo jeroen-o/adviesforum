@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="nl" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hulp vanuit het adviesscherm: prototype – Adviesforum</title>
+<meta name="description" content="Prototype van een hulppaneel naast het adviesscherm: eerst zelfbediening met de kennisbank en opgeloste vragen, daarna doorzetten naar experts of support, zonder dossiergegevens.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://adviesforum.nl/hulp.html">
+<meta name="theme-color" content="#F68712">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/sitenav.css">
+<style>
+  :root{--inkt:#171043;--tekst:#2E2B4F;--grijs:#5D5A7A;--lijn:#DFDEE5;--licht:#ECF7FD;--oranje:#F68712;--oranje-zacht:#FFF3E3;--turq:#0B7C77;--rood:#9E2F45;--groen:#1E7A4B}
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{font-family:Segoe UI,Roboto,Helvetica Neue,Arial,system-ui,sans-serif;color:var(--tekst);background:#fff;line-height:1.55;-webkit-font-smoothing:antialiased}
+  a{color:var(--turq)}
+  .kop{background:var(--licht);padding:36px 16px 30px}
+  .in{max-width:1080px;margin:0 auto}
+  .kop .label{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--turq);margin-bottom:8px}
+  .kop h1{font-family:"Source Serif 4",Georgia,"Times New Roman",serif;font-weight:400;font-size:clamp(28px,4.2vw,40px);line-height:1.15;margin:0 0 10px;color:var(--inkt)}
+  .kop p{font-size:17px;max-width:760px;margin:0;color:var(--inkt)}
+  .proto{background:var(--oranje-zacht);border-left:4px solid var(--oranje);padding:10px 14px;margin:18px 0 0;font-size:15px;color:var(--inkt)}
+  .raster{display:grid;grid-template-columns:minmax(0,520px) minmax(0,1fr);gap:28px;padding:24px 16px 40px;align-items:start}
+  @media (max-width:860px){.raster{grid-template-columns:1fr}}
+  .paneel{border:1px solid var(--lijn);border-radius:12px;box-shadow:0 6px 22px rgba(70,160,210,.14);overflow:hidden;background:#fff}
+  .paneel-kop{background:var(--inkt);color:#fff;padding:14px 18px;font-weight:700;font-size:18px}
+  .paneel-in{padding:18px}
+  h2{font-family:"Source Serif 4",Georgia,"Times New Roman",serif;font-weight:400;font-size:22px;color:var(--inkt);margin:0 0 10px;line-height:1.2}
+  h3{font-size:16px;color:var(--inkt);margin:18px 0 6px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 4px}
+  .chip{background:#F2F1F6;border-radius:999px;padding:3px 12px;font-size:14px;color:var(--inkt)}
+  .klein{font-size:14px;color:var(--grijs)}
+  label{display:block;font-weight:600;margin:12px 0 4px;color:var(--inkt)}
+  input[type=text],select,textarea{width:100%;font:inherit;padding:9px 11px;border:1px solid #8A87A3;border-radius:8px;background:#fff;color:var(--tekst)}
+  textarea{min-height:96px;resize:vertical}
+  button{font:inherit;cursor:pointer}
+  .knop{display:inline-block;border:2px solid var(--inkt);background:#fff;color:var(--inkt);border-radius:8px;padding:8px 14px;font-weight:600;margin:6px 8px 0 0}
+  .knop.hoofd{background:var(--inkt);color:#fff}
+  .knop.geel{background:var(--oranje);border-color:var(--oranje);color:#171043}
+  :is(button,input,select,textarea,a):focus-visible{outline:3px solid var(--oranje);outline-offset:2px}
+  .kader{border:1px solid var(--lijn);border-radius:10px;padding:12px 14px;margin:12px 0;background:#fff}
+  .kader.geel{background:var(--oranje-zacht);border-color:#F2C58A}
+  .kader.waarschuwing{background:#FDECEF;border-color:#E3A3B0}
+  .bron{font-size:14px;margin-top:8px}
+  .badge{display:inline-block;font-size:12px;font-weight:700;border-radius:999px;padding:1px 9px;background:var(--inkt);color:#fff;margin-left:6px;vertical-align:middle}
+  .badge.licht{background:#E9E8F0;color:var(--inkt)}
+  ul.lijst{list-style:none;padding:0;margin:6px 0}
+  ul.lijst li{padding:8px 0;border-top:1px solid var(--lijn)}
+  ul.lijst li:first-child{border-top:0}
+  ol.stappen{list-style:none;margin:10px 0;padding:0}
+  ol.stappen li{position:relative;padding:0 0 14px 34px}
+  ol.stappen li::before{content:"";position:absolute;left:0;top:2px;width:20px;height:20px;border-radius:50%;border:2px solid #B9B7C9;background:#fff}
+  ol.stappen li.klaar::before{background:var(--inkt);border-color:var(--inkt)}
+  ol.stappen li.nu::before{background:var(--oranje);border-color:var(--oranje)}
+  ol.stappen b{display:block;color:var(--inkt)}
+  .uitleg h2{margin-top:0}
+  .uitleg ul{padding-left:20px}
+  .uitleg li{margin:0 0 6px}
+  .demo{display:grid;grid-template-columns:1fr 1fr;gap:10px 14px}
+  @media (max-width:520px){.demo{grid-template-columns:1fr}}
+  .verborgen{display:none!important}
+  mark{background:#FDE1B3;padding:0 2px}
+</style>
+<link rel="stylesheet" href="css/huisstijl.css">
+</head>
+<body>
+<!-- sitenav: gegenereerd door tools/sitenav.js, niet met de hand wijzigen -->
+<a class="sitenav-skip" href="#inhoud">Naar de inhoud</a>
+<nav class="sitenav" aria-label="Hoofdmenu"><div class="sitenav-in"><div class="sitenav-rij1"><a class="sitenav-merk" href="index.html"><img class="sitenav-teken" src="favicon.svg" alt="" width="34" height="34"><span>Advies<span class="sitenav-forum">forum</span></span></a><form class="sitenav-zoek" action="index.html" method="get" role="search"><input type="search" name="zoek" placeholder="Zoek op de hele site" aria-label="Zoek op de hele site" autocomplete="off"><button type="submit">Zoeken</button></form><div class="sitenav-acties" id="sitenav-acties"></div></div><div class="sitenav-rij2"><ul><li><a href="index.html">Home</a></li><li><a href="voorwaarden.html">Voorwaarden</a></li><li><a href="hypotheekrentetarieven.html">Hypotheekrentetarieven</a></li><li><a href="index.html#hulpmiddelen" aria-current="page">Hulpmiddelen</a></li><li><a href="kennisbank/">Kennisbank</a></li><li><a href="aanbieders.html">Aanbieders</a></li><li><a href="laatste.html">Laatste nieuws</a></li><li><a href="index.html#handleiding">Handleiding</a></li><li><a href="over-adviesforum.html">Voor wie</a></li><li><a href="aanmelden.html">Aanmelden</a></li></ul></div></div></nav>
+<!-- /sitenav -->
+<main id="inhoud" tabindex="-1">
+<header class="kop"><div class="in">
+  <span class="label">Prototype</span>
+  <h1>Hulp vanuit het adviesscherm</h1>
+  <p>Een adviseur loopt vast in het adviesscherm. Dit hulppaneel probeert het eerst met de kennisbank en opgeloste vragen, en zet daarna door naar experts of support, zonder dossiergegevens.</p>
+  <p class="proto"><b>Prototype.</b> Er is geen koppeling met eBlinqx, Intercom of Jira, er wordt niets verstuurd en niets bewaard. De antwoorden komen uit de kennisbank en de voorbeeldvragen van Adviesforum; dit is geen AI en geen advies.</p>
+</div></header>
+
+<div class="in raster">
+  <section class="paneel" aria-labelledby="h-paneel">
+    <div class="paneel-kop" id="h-paneel">Hulp · Mijn vraag</div>
+    <div class="paneel-in" id="paneel" aria-live="polite">
+
+      <div id="s-context">
+        <h3 style="margin-top:0">Context die meegaat</h3>
+        <div class="chips" id="chips"></div>
+        <p class="klein">🔒 Ingevulde dossiergegevens worden niet meegestuurd.</p>
+        <details class="kader" style="margin-top:10px"><summary>Demo-instellingen: ander scherm of veld simuleren</summary>
+          <div class="demo">
+            <div><label for="d-scherm">Scherm</label><select id="d-scherm"></select></div>
+            <div><label for="d-veld">Veld</label><input id="d-veld" type="text" maxlength="60" autocomplete="off"></div>
+            <div><label for="d-versie">Softwareversie</label><input id="d-versie" type="text" maxlength="20" autocomplete="off"></div>
+          </div>
+        </details>
+      </div>
+
+      <section id="s-proactief" aria-labelledby="h-proactief">
+        <h3 id="h-proactief">Veel gestelde en opgeloste vragen bij dit scherm</h3>
+        <ul class="lijst" id="proactief"></ul>
+      </section>
+
+      <form id="f-vraag" novalidate>
+        <label for="vraag">Je vraag</label>
+        <textarea id="vraag" maxlength="1200" placeholder="Bijvoorbeeld: Kan ik bij een geldverstrekker verder als de partner na de scheiding de woning alleen houdt?"></textarea>
+        <div id="pii" class="kader waarschuwing verborgen" role="status"></div>
+        <p class="klein">Zet er geen namen, adressen of andere gegevens van de klant in.</p>
+        <button class="knop hoofd" type="submit">Zoek een antwoord</button>
+      </form>
+
+      <div id="s-antwoord" class="verborgen">
+        <div class="kader geel" id="herformulering"></div>
+        <div class="kader" id="kb-antwoord"></div>
+        <div id="beoordeel">
+          <button class="knop geel" type="button" id="b-ja">Dit lost mijn vraag op</button>
+          <button class="knop" type="button" id="b-nee">Niet opgelost</button>
+        </div>
+        <section aria-labelledby="h-vergelijk" id="vergelijk-blok"><h3 id="h-vergelijk">Vergelijkbare opgeloste vragen</h3><ul class="lijst" id="vergelijk"></ul></section>
+      </div>
+
+      <div id="s-opgelost" class="verborgen">
+        <div class="kader geel"><b>Fijn dat het is opgelost.</b>
+          <p class="klein" style="margin:6px 0 0">In het echte product wordt dit gegeneraliseerde antwoord als bevestigde oplossing teruggeschreven naar de kennisbank, na triage en moderatie. De volgende adviseur ziet het dan direct, ook bij dit scherm en veld.</p></div>
+        <button class="knop" type="button" id="b-opnieuw">Nieuwe vraag</button>
+      </div>
+
+      <div id="s-route" class="verborgen">
+        <h2 id="route-kop">Niet opgelost</h2>
+        <fieldset style="border:0;padding:0;margin:0">
+          <legend class="klein">Waar gaat je vraag over?</legend>
+          <label style="font-weight:400"><input type="radio" name="type" value="vak" checked> Vakinhoud (acceptatie, fiscaal, regelgeving): naar experts op dit onderwerp</label>
+          <label style="font-weight:400"><input type="radio" name="type" value="software"> De werking van de software: naar support</label>
+        </fieldset>
+        <h3>Zo staat je vraag op het forum</h3>
+        <div class="kader"><p id="preview" style="margin:0 0 6px;font-size:17px"></p><div class="klein">Geen dossier- of klantgegevens. De moderatie controleert vóór publicatie op privacy, commerciële uitingen en juistheid.</div><button class="knop" type="button" id="b-aanpas">Formulering aanpassen</button></div>
+        <label style="font-weight:400"><input type="checkbox" id="alleen-support"> Niet op het forum plaatsen, alleen naar support sturen</label>
+        <p><button class="knop hoofd" type="button" id="b-door">Doorzetten</button></p>
+      </div>
+
+      <div id="s-status" class="verborgen">
+        <h2 id="status-kop">Mijn vraag</h2>
+        <p id="status-vraag" style="font-weight:600;color:var(--inkt)"></p>
+        <ol class="stappen" id="stappen"></ol>
+        <div id="support-blok" class="kader verborgen">
+          <b>Gaat het om de werking van de software?</b>
+          <p class="klein" style="margin:6px 0">Dan wordt je vraag doorgezet naar support. Een eventuele bug wordt gekoppeld aan je vraag, zodat je de status hier ziet. Meekijken in je dossier gebeurt alleen besloten en met jouw toestemming.</p>
+          <div class="chips"><span class="chip">Intercom-ticket [nummer]</span><span class="chip">Jira-issue [nummer]</span></div>
+        </div>
+        <p class="klein">Blijft je vraag na [x uur] zonder antwoord, dan gaat hij automatisch naar een kennisambassadeur of naar support.</p>
+        <button class="knop" type="button" id="b-opnieuw2">Nieuwe vraag</button>
+      </div>
+
+    </div>
+  </section>
+
+  <aside class="uitleg" aria-labelledby="h-uitleg">
+    <h2 id="h-uitleg">Wat dit prototype laat zien</h2>
+    <ul>
+      <li><b>Context mee, dossier niet.</b> Scherm, veld en softwareversie komen uit de link (<code>hulp.html?scherm=…&amp;veld=…&amp;versie=…</code>). Er worden geen dossiergegevens gebruikt.</li>
+      <li><b>Eerst zelfbediening.</b> De kennisbank en de opgeloste vragen van Adviesforum geven een antwoord met bronvermelding, peildatum en controlestatus.</li>
+      <li><b>De vraag achter de vraag.</b> Hier als voorstel op basis van een vergelijkbare vraag. Een AI-herformulering komt later en is dan duidelijk gelabeld.</li>
+      <li><b>Privacy.</b> Het prototype herkent e-mailadressen, telefoonnummers, IBAN's, postcodes en nummers van negen cijfers en haalt die uit de forumtekst. Namen herkent het niet; controleer de tekst altijd zelf.</li>
+      <li><b>Routering.</b> Vakinhoud gaat naar experts, softwarevragen naar support. De status van forumvraag, ticket en issue staat in één overzicht.</li>
+    </ul>
+    <h3>Nog niet in dit prototype</h3>
+    <ul class="klein">
+      <li>Echte AI-antwoorden, stemmen, triage en moderatie, expertrollen en SSO.</li>
+      <li>De koppeling met eBlinqx, Intercom en Jira, en de adminweergave van langlopende tickets.</li>
+      <li>Echte nummers voor ticket en issue: die staan hier als <i>[nummer]</i>.</li>
+    </ul>
+    <p class="klein">Zie ook <a href="docs/ai-deelnemer.md">het ontwerp voor de AI-deelnemer</a>.</p>
+  </aside>
+</div>
+</main>
+
+<script src="data/vragen/hyp-acceptatie.js"></script>
+<script src="data/vragen/hyp-woning.js"></script>
+<script src="data/vragen/hyp-doelgroepen.js"></script>
+<script src="data/vragen/hyp-producten.js"></script>
+<script src="data/vragen/fisc-eigenwoning.js"></script>
+<script src="data/vragen/fisc-vermogen.js"></script>
+<script src="data/vragen/pens.js"></script>
+<script src="data/vragen/verz-inkomen.js"></script>
+<script src="data/vragen/verz-schade.js"></script>
+<script src="data/vragen/kred.js"></script>
+<script src="data/vragen/comp.js"></script>
+<script src="data/vragen/software.js"></script>
+<script src="js/hulp.js"></script>
+<!-- sitevoet: gegenereerd door tools/sitenav.js, niet met de hand wijzigen -->
+<footer class="sitevoet"><div class="sitevoet-in">
+<div class="sitevoet-over"><a class="sitevoet-merk" href="index.html"><img class="sitenav-teken" src="favicon.svg" alt="" width="34" height="34"><span>Advies<span class="sitenav-forum">forum</span></span></a><p>Voor en door financieel adviseurs: collegiale kennisdeling over hypotheken, verzekeringen, pensioen en krediet.</p><p><strong>Vraag, idee of fout gezien?</strong><br>Mail de beheerder:<br><a href="mailto:jeroen@oversteegen.nl">jeroen@oversteegen.nl</a></p><p class="sitevoet-volg"><a href="feed.xml" type="application/rss+xml">RSS: nieuw en bijgewerkt</a><a href="aanbieders-feed.xml" type="application/rss+xml">RSS: nieuws van aanbieders</a></p></div>
+<nav class="sitevoet-kol" aria-labelledby="sv-k0"><h2 id="sv-k0">Voorwaarden</h2><ul><li><a href="voorwaarden.html">Alle voorwaarden</a></li><li><a href="voorwaarden-vergelijker.html">Voorwaarden vergelijken</a></li><li><a href="situatiecheck.html">Situatiecheck</a></li><li><a href="acceptatiewijzer.html">Acceptatiewijzer</a></li><li><a href="productvoorwaarden.html">Productvoorwaarden</a></li><li><a href="documenteisen.html">Documenteisen</a></li><li><a href="hypotheekrentetarieven.html">Hypotheekrentetarieven</a></li><li><a href="partijen.html">Aanbiederwegwijzer</a></li></ul></nav><nav class="sitevoet-kol" aria-labelledby="sv-k1"><h2 id="sv-k1">Hulpmiddelen</h2><ul><li><a href="index.html#hulpmiddelen">Alle hulpmiddelen</a></li><li><a href="rekentools.html">Rekentools</a></li><li><a href="leennormen-2026.html">Leennormen 2026</a></li><li><a href="nhg-check.html">NHG-check</a></li><li><a href="documentenchecklist.html">Documentenchecklist</a></li><li><a href="contact-aanbieders.html">Contact aanbieders</a></li><li><a href="wetgeving.html">Wet- en regelgeving</a></li></ul></nav><nav class="sitevoet-kol" aria-labelledby="sv-k2"><h2 id="sv-k2">Kennis</h2><ul><li><a href="kennisbank/">Kennisbank</a></li><li><a href="faq/">Veelgestelde vragen</a></li><li><a href="begrippen/">Begrippen A-Z</a></li><li><a href="index.html">Forum</a></li><li><a href="laatste.html">Laatste nieuws</a></li><li><a href="nieuw.html">Wat is nieuw</a></li></ul></nav><nav class="sitevoet-kol" aria-labelledby="sv-k3"><h2 id="sv-k3">Meedoen</h2><ul><li><a href="over-adviesforum.html">Over Adviesforum</a></li><li><a href="aanmelden.html">Aanmelden</a></li><li><a href="kennispartner.html">Kennispartner worden</a></li><li><a href="uitnodigen.html">Collega uitnodigen</a></li><li><a href="koppelingen.html">Koppelen met je adviessoftware</a></li><li><a href="aanbieders-info.html">Voor aanbieders</a></li><li><a href="aanbieder-beheer.html">Inloggen aanbieders</a></li><li><a href="gebruiksvoorwaarden.html">Gebruiksvoorwaarden</a></li><li><a href="privacy.html">Privacy en cookies</a></li></ul></nav>
+</div>
+<div class="sitevoet-onder"><p>Informatie voor adviseurs, geen advies aan consumenten. Voorwaarden en normen van aanbieders zijn leidend: controleer altijd de actuele bron.</p><p>&copy; 2026 Adviesforum &middot; adviesforum.nl</p></div>
+</footer>
+<script src="js/toegang.js"></script>
+<script src="js/statistiek.js" defer></script>
+<!-- /sitevoet -->
+</body>
+</html>
