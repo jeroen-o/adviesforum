@@ -10,7 +10,7 @@
  * Regels (gelijk aan de hypotheekvoorwaarden):
  * - geverifieerd = minstens één bron op een eigen domein van de aanbieder én zekerheid hoog of middel;
  * - niet geverifieerd: bronnen van derden worden weggelaten, de waarde krijgt de markering "nog niet geverifieerd";
- * - waarden die een premie, rente, tarief of korting noemen worden geweigerd (AFM-regel van de site).
+ * - waarden die een premie, rente, tarief of korting noemen worden geweigerd (regel van de site: ze veranderen vaak).
  */
 'use strict';
 const fs = require('fs');

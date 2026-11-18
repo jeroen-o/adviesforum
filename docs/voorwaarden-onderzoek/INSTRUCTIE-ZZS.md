@@ -12,7 +12,7 @@ Regels (streng):
 - Verzin niets. Geen bron = laat het criterium weg. Schrijf geen algemene NHG- of marktregels op als beleid van de geldverstrekker, tenzij de bron dat voor deze geldverstrekker zegt.
 - Bron-URL's altijd volledig (https) opnemen. Bronnen buiten de eigen domeinen mogen, maar het verwerkscript markeert die waarde dan als "nog niet geverifieerd".
 - Zekerheid: 'hoog' = eigen site of eigen document, actueel (2025-2026); 'middel' = eigen bron, ouder of samenvatting niet helemaal eenduidig; 'laag' = derde partij of vaag.
-- Geen rentes, rentekortingen, tarieven of premies in `waarde` (AFM-regel van de site). Maxima (percentages van marktwaarde, termijnen) mogen wel; bedragen en kosten alleen in `toelichting`.
+- Geen rentes, rentekortingen, tarieven of premies in `waarde` (regel van de site: ze veranderen vaak). Maxima (percentages van marktwaarde, termijnen) mogen wel; bedragen en kosten alleen in `toelichting`.
 - `waarde`: max. 160 tekens, Nederlands, begint met een teken: "+ " (mogelijk/ruim), "~ " (onder voorwaarden), "- " (niet mogelijk), "! " (let op/kosten). Voorbeeld: "~ Consumptief deel max. 20% marktwaarde, niet met NHG; apart leningdeel".
 - `brondatum`: versie/maand van de bron als bekend ("2026-07", "jan 2026"), anders null.
 
