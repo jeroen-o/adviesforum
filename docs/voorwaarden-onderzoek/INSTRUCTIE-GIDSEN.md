@@ -13,7 +13,7 @@ Doel: vul de `open` criteria en probeer de `nietGeverifieerd` criteria alsnog me
 Regels:
 - Neem informatie van andere sites (bijv. hypotheekcompany.nl, vergelijkers) WEL mee, maar zet de bron-URL gewoon in `bron`: het verwerkscript laat bronnen buiten de eigen domeinen automatisch weg en markeert de waarde als "nog niet geverifieerd".
 - Zekerheid: 'hoog' = eigen site/document, actueel (2025-2026); 'middel' = eigen bron ouder of samenvatting onduidelijk; 'laag' = derde partij of vaag.
-- Geen rentes/tarieven/percentage-opslagen in `waarde` (AFM-regel van de site); bedragen als plafonds en kosten alleen in `toelichting`.
+- Geen rentes/tarieven/percentage-opslagen in `waarde` (regel van de site: ze veranderen vaak); bedragen als plafonds en kosten alleen in `toelichting`.
 - Verzin niets; geen bron = laat het criterium weg.
 
 Uitvoer `uit-GN.json`: array met per geldverstrekker {naam, gecontroleerd:'2026-10-04', criteria:{id:{waarde, bron[], brondatum, zekerheid, status:'nieuw'|'bevestigd'|'gewijzigd', dubbel?, toelichting}}, documenten:[{titel,url,versie}] }. Neem ALLEEN criteria op die je in deze ronde gevonden/bevestigd hebt. Schrijf tussentijds na elke geldverstrekker. Rapporteer kort per geldverstrekker: aantal nieuw gevuld, aantal alsnog geverifieerd, gevonden gidsen (titel + versie).

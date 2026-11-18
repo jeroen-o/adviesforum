@@ -38,9 +38,7 @@ test('niet opgelost: klantgegevens uit de forumtekst, routering en status', asyn
   await expect(page.locator('#stappen')).toContainText('Bij support');
 });
 
-test('de pagina is niet indexeerbaar en heeft het toegangsscherm niet nodig met cookie', async ({ page, request }) => {
+test('de pagina is niet indexeerbaar', async ({ request }) => {
   const html = await (await request.get('/hulp.html')).text();
   expect(html).toMatch(/<meta name="robots" content="noindex, nofollow">/);
-  await page.goto('/hulp.html');
-  await expect(page.getByRole('dialog')).toHaveCount(0);
 });

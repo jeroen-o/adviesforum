@@ -199,7 +199,7 @@ h2.sectie{font-size:22px;font-weight:800;margin:34px 0 10px;padding-bottom:8px;b
         <li>Acties, kortingen, cashback en tijdelijke aanbiedingen</li>
         <li>Wervende of vergelijkende claims, zoals &lsquo;de beste&rsquo; of &lsquo;de goedkoopste&rsquo;</li>
       </ul>
-      <p style="margin:10px 0 0;font-size:14px">Waarom: informatie over financiële producten moet volgens de Wet op het financieel toezicht correct, duidelijk en niet misleidend zijn, en het Adviesforum is een informatieplek voor adviseurs, geen advertentieruimte. Het Adviesforum toont zelf geen rentes, tarieven, premies of acties. Aanbieders kunnen wel verwijzen naar hun eigen renteblad; de actuele rente staat altijd bij de aanbieder. Zie <a href="aanbieders-voorwaarden.html">de deelnamevoorwaarden</a>, artikel 3.</p>
+      <p style="margin:10px 0 0;font-size:14px">Waarom: rentes, tarieven, premies en acties veranderen vaak en horen uit een actuele bron te komen, en het Adviesforum is een informatieplek voor adviseurs, geen advertentieruimte. Het Adviesforum toont zelf geen rentes, tarieven, premies of acties. Aanbieders kunnen wel verwijzen naar hun eigen renteblad; de actuele rente staat altijd bij de aanbieder. Zie <a href="aanbieders-voorwaarden.html">de deelnamevoorwaarden</a>, artikel 3.</p>
     </section>
   </div>
 
@@ -396,9 +396,9 @@ var LIJSTEN={
 };
 var VOLGORDE=['nieuws','documenten','richtlijnen','contact','elearning','agenda'];
 var MET_ID={nieuws:1,agenda:1};
-var AFM_RE=/\d\s?%|\brente(?:s|tarie[fv]en|korting)?\b|\bactie(?:s)?\b|\bkorting|\bcashback|\bgratis\b|\bpremies?\b|\btarie[fv]en\b/i;
+var RENTE_RE=/\d\s?%|\brente(?:s|tarie[fv]en|korting)?\b|\bactie(?:s)?\b|\bkorting|\bcashback|\bgratis\b|\bpremies?\b|\btarie[fv]en\b/i;
 /* Titel van een renteblad mag het woord rente noemen; percentages en acties niet. */
-var AFM_RENTEBLAD_RE=/\d\s?%|\bactie(?:s)?\b|\bkorting|\bcashback|\bgratis\b/i;
+var RENTEBLAD_RE=/\d\s?%|\bactie(?:s)?\b|\bkorting|\bcashback|\bgratis\b/i;
 function vandaag(){var d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
 /* Huidig moment als JJJJ-MM-DDTuu:mm (lokale tijd). */
 function nu(){var d=new Date();return vandaag()+'T'+String(d.getHours()).padStart(2,'0')+':'+String(d.getMinutes()).padStart(2,'0');}
@@ -450,7 +450,7 @@ function valideer(o){
         if(v.alleen&&it.soort!==v.alleen)fout(pad,nr+v.l.replace(/ \(.*\)$/,'').toLowerCase()+' hoort alleen bij een '+v.alleen+'.');
         if(v.t==='time'&&!/^([01]\d|2[0-3]):[0-5]\d$/.test(val))fout(pad,nr+'tijd is ongeldig (uu:mm).');
         if(v.t==='select'&&!v.opties[val])fout(pad,nr+'kies een soort.');
-        if((v.k==='titel'||v.k==='tekst')&&(k==='documenten'&&it.soort==='renteblad'?AFM_RENTEBLAD_RE:AFM_RE).test(val))w.push({pad:pad,msg:nr+'lijkt een rente, tarief, premie of actie te noemen. Die plaatsen we niet (AFM); de beheerder kan dit weigeren.'});
+        if((v.k==='titel'||v.k==='tekst')&&(k==='documenten'&&it.soort==='renteblad'?RENTEBLAD_RE:RENTE_RE).test(val))w.push({pad:pad,msg:nr+'lijkt een rente, tarief, premie of actie te noemen. Die plaatsen we niet, omdat ze vaak veranderen: verwijs naar je eigen bron. De beheerder kan dit weigeren.'});
       });
       if(k==='nieuws'&&okDatum(it.datum)&&it.datum>vandaag())w.push({pad:p+'datum',msg:nr+'datum ligt in de toekomst.'});
       if(k==='documenten'){
@@ -464,7 +464,7 @@ function valideer(o){
       }
     });
   });
-  if(AFM_RE.test(o.omschrijving))w.push({pad:'omschrijving',msg:'Omschrijving lijkt een rente, tarief, premie of actie te noemen. Die plaatsen we niet (AFM).'});
+  if(RENTE_RE.test(o.omschrijving))w.push({pad:'omschrijving',msg:'Omschrijving lijkt een rente, tarief, premie of actie te noemen. Die plaatsen we niet, omdat ze vaak veranderen: verwijs naar je eigen bron.'});
   return {fouten:f,waarschuwingen:w};
 }
 /* EINDE-KOPIE-VALIDATIE */
@@ -783,7 +783,6 @@ window.addEventListener('beforeunload',function(e){if(verstuurd){verstuurd=false
 </div>
 <div class="sitevoet-onder"><p>Informatie voor adviseurs, geen advies aan consumenten. Voorwaarden en normen van aanbieders zijn leidend: controleer altijd de actuele bron.</p><p>&copy; 2026 Adviesforum &middot; adviesforum.nl</p></div>
 </footer>
-<script src="js/toegang.js"></script>
 <script src="js/statistiek.js" defer></script>
 <!-- /sitevoet -->
 </body>

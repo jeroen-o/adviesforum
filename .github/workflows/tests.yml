@@ -5,7 +5,8 @@ on:
   pull_request:
 jobs:
   tests:
-    runs-on: ubuntu-latest
+    # Vast op 24.04: ubuntu-latest is inmiddels 26.04 en daar installeert Playwright 1.56 geen Chromium.
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v5
         with:

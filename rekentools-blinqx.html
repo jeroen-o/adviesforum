@@ -182,7 +182,7 @@ GROEPEN.forEach(function(g){
   var h = el('h2', 'groep', g.titel); h.id = 'kop-' + g.id; sec.appendChild(h);
   if(g.rente){
     var c = el('div', 'compliance'); c.setAttribute('role', 'note'); c.id = 'renteMelding';
-    c.appendChild(el('h3', null, 'Compliance / AFM: rentes in de tools'));
+    c.appendChild(el('h3', null, 'Let op: rentes in de tools'));
     var ul = el('ul');
     ['Deze tools tonen actuele rentes zoals de tool die weergeeft. Het Adviesforum stelt deze rentes niet zelf samen en controleert ze niet.',
      'Een volgorde of top 5/top 10 is de weergave van de tool; het is geen aanbeveling, geen aanbod en geen advies van het Adviesforum.',
@@ -224,7 +224,6 @@ window.addEventListener('hashchange', leesHash);
 </div>
 <div class="sitevoet-onder"><p>Informatie voor adviseurs, geen advies aan consumenten. Voorwaarden en normen van aanbieders zijn leidend: controleer altijd de actuele bron.</p><p>&copy; 2026 Adviesforum &middot; adviesforum.nl</p></div>
 </footer>
-<script src="js/toegang.js"></script>
 <script src="js/statistiek.js" defer></script>
 <!-- /sitevoet -->
 </body>
